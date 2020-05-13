@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 723482d1-d1a1-410a-a405-677eeb04e2bf
 topic_type:
 - apiref
-ms.openlocfilehash: 402ffa232691bc8d0c77a9fa5aeb524dd5a9409b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e96d7c6fcb25a05deb7301e36b76b528a7982760
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137737"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83376006"
 ---
-# <a name="icordebugreferencevaluedereferencestrong-method"></a><span data-ttu-id="aeeca-102">ICorDebugReferenceValue::DereferenceStrong メソッド</span><span class="sxs-lookup"><span data-stu-id="aeeca-102">ICorDebugReferenceValue::DereferenceStrong Method</span></span>
-<span data-ttu-id="aeeca-103">`DereferenceStrong` は実装されていません。</span><span class="sxs-lookup"><span data-stu-id="aeeca-103">`DereferenceStrong` is not implemented.</span></span> <span data-ttu-id="aeeca-104">このメソッドを呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="aeeca-104">Do not call this method.</span></span>  
+# <a name="icordebugreferencevaluedereferencestrong-method"></a><span data-ttu-id="0aa7c-102">ICorDebugReferenceValue::DereferenceStrong メソッド</span><span class="sxs-lookup"><span data-stu-id="0aa7c-102">ICorDebugReferenceValue::DereferenceStrong Method</span></span>
+<span data-ttu-id="0aa7c-103">`DereferenceStrong`が実装されていません。</span><span class="sxs-lookup"><span data-stu-id="0aa7c-103">`DereferenceStrong` is not implemented.</span></span> <span data-ttu-id="0aa7c-104">このメソッドは呼び出さないでください。</span><span class="sxs-lookup"><span data-stu-id="0aa7c-104">Do not call this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aeeca-105">構文</span><span class="sxs-lookup"><span data-stu-id="aeeca-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0aa7c-105">構文</span><span class="sxs-lookup"><span data-stu-id="0aa7c-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT DereferenceStrong (  
@@ -33,11 +33,11 @@ HRESULT DereferenceStrong (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="aeeca-106">［要件］</span><span class="sxs-lookup"><span data-stu-id="aeeca-106">Requirements</span></span>  
- <span data-ttu-id="aeeca-107">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="aeeca-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0aa7c-106">必要条件</span><span class="sxs-lookup"><span data-stu-id="0aa7c-106">Requirements</span></span>  
+ <span data-ttu-id="0aa7c-107">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0aa7c-107">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="aeeca-108">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="aeeca-108">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0aa7c-108">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0aa7c-108">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="aeeca-109">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="aeeca-109">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0aa7c-109">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0aa7c-109">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="aeeca-110">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aeeca-110">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="0aa7c-110">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0aa7c-110">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

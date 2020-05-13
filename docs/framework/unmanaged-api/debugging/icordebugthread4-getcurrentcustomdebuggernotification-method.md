@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 57e0f2d2-5f0e-4e2d-99ec-3f26632eb693
 topic_type:
 - apiref
-ms.openlocfilehash: a8a377074ca1005ad8089dfd8e2a6a464bb86f60
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 76ad1c0ac421f05cf30f6d3d1f3e65848796a0c7
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791364"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378696"
 ---
-# <a name="icordebugthread4getcurrentcustomdebuggernotification-method"></a><span data-ttu-id="a1c29-102">ICorDebugThread4::GetCurrentCustomDebuggerNotification メソッド</span><span class="sxs-lookup"><span data-stu-id="a1c29-102">ICorDebugThread4::GetCurrentCustomDebuggerNotification Method</span></span>
+# <a name="icordebugthread4getcurrentcustomdebuggernotification-method"></a><span data-ttu-id="af24d-102">ICorDebugThread4::GetCurrentCustomDebuggerNotification メソッド</span><span class="sxs-lookup"><span data-stu-id="af24d-102">ICorDebugThread4::GetCurrentCustomDebuggerNotification Method</span></span>
 
-<span data-ttu-id="a1c29-103">現在のスレッドの現在の[ICorDebugManagedCallback3:: CustomNotification](icordebugmanagedcallback3-customnotification-method.md)オブジェクトを取得します。</span><span class="sxs-lookup"><span data-stu-id="a1c29-103">Gets the current [ICorDebugManagedCallback3::CustomNotification](icordebugmanagedcallback3-customnotification-method.md) object on the current thread.</span></span>
+<span data-ttu-id="af24d-103">現在のスレッドの現在の[ICorDebugManagedCallback3:: CustomNotification](icordebugmanagedcallback3-customnotification-method.md)オブジェクトを取得します。</span><span class="sxs-lookup"><span data-stu-id="af24d-103">Gets the current [ICorDebugManagedCallback3::CustomNotification](icordebugmanagedcallback3-customnotification-method.md) object on the current thread.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="a1c29-104">構文</span><span class="sxs-lookup"><span data-stu-id="a1c29-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="af24d-104">構文</span><span class="sxs-lookup"><span data-stu-id="af24d-104">Syntax</span></span>
 
 ```cpp
 HRESULT GetCurrentCustomDebuggerNotification(
@@ -34,27 +34,27 @@ HRESULT GetCurrentCustomDebuggerNotification(
     );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="a1c29-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a1c29-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="af24d-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="af24d-105">Parameters</span></span>
 
 `ppNotificationObject`\
-<span data-ttu-id="a1c29-106">入出力現在のスレッド上の現在の `ICorDebugManagedCallback3::CustomNotification` オブジェクトへのポインター。</span><span class="sxs-lookup"><span data-stu-id="a1c29-106">[out] A pointer to the current `ICorDebugManagedCallback3::CustomNotification` object on the current thread.</span></span>
+<span data-ttu-id="af24d-106">入出力現在のスレッド上の現在のオブジェクトへのポインター `ICorDebugManagedCallback3::CustomNotification` 。</span><span class="sxs-lookup"><span data-stu-id="af24d-106">[out] A pointer to the current `ICorDebugManagedCallback3::CustomNotification` object on the current thread.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="a1c29-107">コメント</span><span class="sxs-lookup"><span data-stu-id="a1c29-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="af24d-107">Remarks</span><span class="sxs-lookup"><span data-stu-id="af24d-107">Remarks</span></span>
 
-<span data-ttu-id="a1c29-108">`ICorDebugManagedCallback3::CustomNotification` コールバック内からメソッドが呼び出されていない場合、または現在の通知オブジェクトが存在しない場合は、`ppNotificationObject` の値が null になります。</span><span class="sxs-lookup"><span data-stu-id="a1c29-108">The value of `ppNotificationObject` is null if the method is not called from within a `ICorDebugManagedCallback3::CustomNotification` callback, or if no current notification object exists.</span></span>
+<span data-ttu-id="af24d-108">`ppNotificationObject`コールバック内からメソッドが呼び出されていない場合 `ICorDebugManagedCallback3::CustomNotification` 、または現在の通知オブジェクトが存在しない場合は、の値が null になります。</span><span class="sxs-lookup"><span data-stu-id="af24d-108">The value of `ppNotificationObject` is null if the method is not called from within a `ICorDebugManagedCallback3::CustomNotification` callback, or if no current notification object exists.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="a1c29-109">要件</span><span class="sxs-lookup"><span data-stu-id="a1c29-109">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="af24d-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="af24d-109">Requirements</span></span>
 
-<span data-ttu-id="a1c29-110">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a1c29-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+<span data-ttu-id="af24d-110">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="af24d-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>
 
-<span data-ttu-id="a1c29-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a1c29-111">**Header:** CorDebug.idl, CorDebug.h</span></span>
+<span data-ttu-id="af24d-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="af24d-111">**Header:** CorDebug.idl, CorDebug.h</span></span>
 
-<span data-ttu-id="a1c29-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a1c29-112">**Library:** CorGuids.lib</span></span>
+<span data-ttu-id="af24d-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="af24d-112">**Library:** CorGuids.lib</span></span>
 
-<span data-ttu-id="a1c29-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a1c29-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>
+<span data-ttu-id="af24d-113">**.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="af24d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="a1c29-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="a1c29-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="af24d-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="af24d-114">See also</span></span>
 
-- [<span data-ttu-id="a1c29-115">ICorDebugThread4 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a1c29-115">ICorDebugThread4 Interface</span></span>](icordebugthread4-interface.md)
-- [<span data-ttu-id="a1c29-116">デバッグ インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a1c29-116">Debugging Interfaces</span></span>](debugging-interfaces.md)
-- [<span data-ttu-id="a1c29-117">デバッグ</span><span class="sxs-lookup"><span data-stu-id="a1c29-117">Debugging</span></span>](index.md)
+- [<span data-ttu-id="af24d-115">ICorDebugThread4 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="af24d-115">ICorDebugThread4 Interface</span></span>](icordebugthread4-interface.md)
+- [<span data-ttu-id="af24d-116">デバッグのインターフェイス</span><span class="sxs-lookup"><span data-stu-id="af24d-116">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="af24d-117">デバッグ</span><span class="sxs-lookup"><span data-stu-id="af24d-117">Debugging</span></span>](index.md)

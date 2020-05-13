@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2b94bda7-09ee-435d-91b9-c4e31af1896c
 topic_type:
 - apiref
-ms.openlocfilehash: e23133176cbd703a58c92f9bf1ead530b0bbb8a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c154d4ad561e0bd9d82adaca77d2e30f11a5237
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178502"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379664"
 ---
-# <a name="icordebugstringvaluegetstring-method"></a><span data-ttu-id="a104c-102">ICorDebugStringValue::GetString メソッド</span><span class="sxs-lookup"><span data-stu-id="a104c-102">ICorDebugStringValue::GetString Method</span></span>
-<span data-ttu-id="a104c-103">この ICorDebug 文字列値によって参照される文字列を取得します。</span><span class="sxs-lookup"><span data-stu-id="a104c-103">Gets the string referenced by this ICorDebugStringValue.</span></span>  
+# <a name="icordebugstringvaluegetstring-method"></a><span data-ttu-id="906fe-102">ICorDebugStringValue::GetString メソッド</span><span class="sxs-lookup"><span data-stu-id="906fe-102">ICorDebugStringValue::GetString Method</span></span>
+<span data-ttu-id="906fe-103">このによって参照される文字列を取得します。</span><span class="sxs-lookup"><span data-stu-id="906fe-103">Gets the string referenced by this ICorDebugStringValue.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a104c-104">構文</span><span class="sxs-lookup"><span data-stu-id="a104c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="906fe-104">構文</span><span class="sxs-lookup"><span data-stu-id="906fe-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetString (  
@@ -36,21 +36,21 @@ HRESULT GetString (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a104c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a104c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="906fe-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="906fe-105">Parameters</span></span>  
  `cchString`  
- <span data-ttu-id="a104c-106">[in] `szString` 配列のサイズ。</span><span class="sxs-lookup"><span data-stu-id="a104c-106">[in] The size of the `szString` array.</span></span>  
+ <span data-ttu-id="906fe-106">[in] `szString` 配列のサイズ。</span><span class="sxs-lookup"><span data-stu-id="906fe-106">[in] The size of the `szString` array.</span></span>  
   
  `pcchString`  
- <span data-ttu-id="a104c-107">[アウト]`szString`配列に返される文字数へのポインター。</span><span class="sxs-lookup"><span data-stu-id="a104c-107">[out] A pointer to the number of characters returned in the `szString` array.</span></span>  
+ <span data-ttu-id="906fe-107">入出力配列で返された文字数へのポインター `szString` 。</span><span class="sxs-lookup"><span data-stu-id="906fe-107">[out] A pointer to the number of characters returned in the `szString` array.</span></span>  
   
  `szString`  
- <span data-ttu-id="a104c-108">[アウト]取得した文字列を格納する配列。</span><span class="sxs-lookup"><span data-stu-id="a104c-108">[out] An array that stores the retrieved string.</span></span>  
+ <span data-ttu-id="906fe-108">入出力取得した文字列を格納する配列。</span><span class="sxs-lookup"><span data-stu-id="906fe-108">[out] An array that stores the retrieved string.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a104c-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="a104c-109">Requirements</span></span>  
- <span data-ttu-id="a104c-110">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a104c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="906fe-109">必要条件</span><span class="sxs-lookup"><span data-stu-id="906fe-109">Requirements</span></span>  
+ <span data-ttu-id="906fe-110">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="906fe-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a104c-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a104c-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="906fe-111">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="906fe-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a104c-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a104c-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="906fe-112">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="906fe-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a104c-113">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a104c-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="906fe-113">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="906fe-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

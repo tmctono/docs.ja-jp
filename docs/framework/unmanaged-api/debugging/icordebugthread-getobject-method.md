@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1590febe-96c2-4046-97db-d81d81d67e01
 topic_type:
 - apiref
-ms.openlocfilehash: 5cb95fb7cf70dbf7616e9bc59ebf44de090de883
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 624469ca1ae4c96b4143f8768b4c5ff9c2601a2f
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133429"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378882"
 ---
-# <a name="icordebugthreadgetobject-method"></a><span data-ttu-id="4c438-102">ICorDebugThread::GetObject メソッド</span><span class="sxs-lookup"><span data-stu-id="4c438-102">ICorDebugThread::GetObject Method</span></span>
-<span data-ttu-id="4c438-103">共通言語ランタイム (CLR) スレッドへのインターフェイスポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="4c438-103">Gets an interface pointer to the common language runtime (CLR) thread.</span></span>  
+# <a name="icordebugthreadgetobject-method"></a><span data-ttu-id="cbc2f-102">ICorDebugThread::GetObject メソッド</span><span class="sxs-lookup"><span data-stu-id="cbc2f-102">ICorDebugThread::GetObject Method</span></span>
+<span data-ttu-id="cbc2f-103">共通言語ランタイム (CLR) スレッドへのインターフェイスポインターを取得します。</span><span class="sxs-lookup"><span data-stu-id="cbc2f-103">Gets an interface pointer to the common language runtime (CLR) thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4c438-104">構文</span><span class="sxs-lookup"><span data-stu-id="4c438-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cbc2f-104">構文</span><span class="sxs-lookup"><span data-stu-id="cbc2f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetObject (  
@@ -33,19 +33,19 @@ HRESULT GetObject (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4c438-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="4c438-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cbc2f-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="cbc2f-105">Parameters</span></span>  
  `ppObject`  
- <span data-ttu-id="4c438-106">入出力CLR スレッドを表す ICorDebugValue インターフェイスオブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="4c438-106">[out] A pointer to the address of an ICorDebugValue interface object that represents the CLR thread.</span></span>  
+ <span data-ttu-id="cbc2f-106">入出力CLR スレッドを表す ICorDebugValue インターフェイスオブジェクトのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="cbc2f-106">[out] A pointer to the address of an ICorDebugValue interface object that represents the CLR thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4c438-107">［要件］</span><span class="sxs-lookup"><span data-stu-id="4c438-107">Requirements</span></span>  
- <span data-ttu-id="4c438-108">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4c438-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cbc2f-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="cbc2f-107">Requirements</span></span>  
+ <span data-ttu-id="cbc2f-108">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="cbc2f-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4c438-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4c438-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="cbc2f-109">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cbc2f-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4c438-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4c438-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cbc2f-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cbc2f-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4c438-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4c438-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="cbc2f-111">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cbc2f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4c438-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="4c438-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cbc2f-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="cbc2f-112">See also</span></span>
 
 - <xref:System.Threading.Thread>
