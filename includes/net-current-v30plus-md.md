@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: f40b888efacfc1b524ff6b6683675b6bb4a33585
 ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/14/2019
 ms.locfileid: "74089304"
 ---
-<span data-ttu-id="25b31-101">3\.0 以降で使用可能</span><span class="sxs-lookup"><span data-stu-id="25b31-101">Available since 3.0</span></span>
+<span data-ttu-id="38a89-101">3\.0 以降で利用可能</span><span class="sxs-lookup"><span data-stu-id="38a89-101">Available since 3.0</span></span>
