@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataModule::Request メソッド
+title: 'IXCLRDataModule:: Request メソッド'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataModule::Request Method
@@ -15,20 +15,20 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 7d04e5630bd196ef534f72a0c3924019315f3774
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 44ee4fc7fc2368b65f6f2fffe6ac239beddc6293
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632223"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395266"
 ---
-# <a name="ixclrdatamodulerequest-method"></a><span data-ttu-id="65e3a-102">IXCLRDataModule::Request メソッド</span><span class="sxs-lookup"><span data-stu-id="65e3a-102">IXCLRDataModule::Request Method</span></span>
+# <a name="ixclrdatamodulerequest-method"></a><span data-ttu-id="19a32-102">IXCLRDataModule:: Request メソッド</span><span class="sxs-lookup"><span data-stu-id="19a32-102">IXCLRDataModule::Request Method</span></span>
 
-<span data-ttu-id="65e3a-103">要求をモジュールのデータで指定されたバッファーを設定します。</span><span class="sxs-lookup"><span data-stu-id="65e3a-103">Requests to populate the buffer given with the module's data.</span></span>
+<span data-ttu-id="19a32-103">モジュールのデータで指定されたバッファーへの読み込みを要求します。</span><span class="sxs-lookup"><span data-stu-id="19a32-103">Requests to populate the buffer given with the module's data.</span></span>
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a><span data-ttu-id="65e3a-104">構文</span><span class="sxs-lookup"><span data-stu-id="65e3a-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="19a32-104">構文</span><span class="sxs-lookup"><span data-stu-id="19a32-104">Syntax</span></span>
 
 ```cpp
 HRESULT Request([in] ULONG32 reqCode,
@@ -38,33 +38,33 @@ HRESULT Request([in] ULONG32 reqCode,
     [out, size_is(outBufferSize)] BYTE* outBuffer);
 ```
 
-## <a name="parameters"></a><span data-ttu-id="65e3a-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="65e3a-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="19a32-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="19a32-105">Parameters</span></span>
 
 `reqCode`\
-<span data-ttu-id="65e3a-106">[in]要求の種類を送信します。</span><span class="sxs-lookup"><span data-stu-id="65e3a-106">[in] Request type to be sent.</span></span>
+<span data-ttu-id="19a32-106">から送信される要求の種類。</span><span class="sxs-lookup"><span data-stu-id="19a32-106">[in] Request type to be sent.</span></span>
 
 `inBufferSize`\
-<span data-ttu-id="65e3a-107">[in] で渡される入力バッファーのサイズ。</span><span class="sxs-lookup"><span data-stu-id="65e3a-107">[in] size of the input buffer to be passed in.</span></span>
+<span data-ttu-id="19a32-107">[in] 渡される入力バッファーのサイズ。</span><span class="sxs-lookup"><span data-stu-id="19a32-107">[in] size of the input buffer to be passed in.</span></span>
 
 `inBuffer`\
-<span data-ttu-id="65e3a-108">[in、size_is(inBufferSize)]要求で送信される生データのバッファー ポインター。</span><span class="sxs-lookup"><span data-stu-id="65e3a-108">[in, size_is(inBufferSize)] Buffer pointer for the raw data to be sent in the request.</span></span>
+<span data-ttu-id="19a32-108">[in、size_is (inBufferSize)]要求で送信される生データのバッファーポインター。</span><span class="sxs-lookup"><span data-stu-id="19a32-108">[in, size_is(inBufferSize)] Buffer pointer for the raw data to be sent in the request.</span></span>
 
 `outBufferSize`\
-<span data-ttu-id="65e3a-109">[in]出力バッファーのサイズ。</span><span class="sxs-lookup"><span data-stu-id="65e3a-109">[in] Size of the output buffer.</span></span>
+<span data-ttu-id="19a32-109">から出力バッファーのサイズ。</span><span class="sxs-lookup"><span data-stu-id="19a32-109">[in] Size of the output buffer.</span></span>
 
 `outBuffer`\
-<span data-ttu-id="65e3a-110">[out, size_is(outBufferSize)]要求の応答を格納するために使用するバッファーのポインター。</span><span class="sxs-lookup"><span data-stu-id="65e3a-110">[out, size_is(outBufferSize)] Buffer pointer to used to store the request response.</span></span>
+<span data-ttu-id="19a32-110">[out、size_is (outBufferSize)]要求応答を格納するために使用するバッファーポインター。</span><span class="sxs-lookup"><span data-stu-id="19a32-110">[out, size_is(outBufferSize)] Buffer pointer to used to store the request response.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="65e3a-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="65e3a-111">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="19a32-111">解説</span><span class="sxs-lookup"><span data-stu-id="19a32-111">Remarks</span></span>
 
-<span data-ttu-id="65e3a-112">指定されたメソッドは、`IXCLRDataModule`インターフェイスし、仮想メソッド テーブルの 36th スロットに対応しています。</span><span class="sxs-lookup"><span data-stu-id="65e3a-112">The provided method is part of the `IXCLRDataModule` interface and corresponds to the 36th slot of the virtual method table.</span></span>
+<span data-ttu-id="19a32-112">指定されたメソッドはインターフェイスの一部で `IXCLRDataModule` あり、仮想メソッドテーブルの37th スロットに対応します。</span><span class="sxs-lookup"><span data-stu-id="19a32-112">The provided method is part of the `IXCLRDataModule` interface and corresponds to the 37th slot of the virtual method table.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="65e3a-113">必要条件</span><span class="sxs-lookup"><span data-stu-id="65e3a-113">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="19a32-113">要件</span><span class="sxs-lookup"><span data-stu-id="19a32-113">Requirements</span></span>
 
-<span data-ttu-id="65e3a-114">**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="65e3a-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
-<span data-ttu-id="65e3a-115">**ヘッダー:** None**ライブラリ。** None **.NET Framework のバージョン。** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="65e3a-115">**Header:** None **Library:** None **.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>
+<span data-ttu-id="19a32-114">**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="19a32-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+<span data-ttu-id="19a32-115">**ヘッダー:** None **Library:** None **.NET Framework バージョン:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="19a32-115">**Header:** None **Library:** None **.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="65e3a-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="65e3a-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="19a32-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="19a32-116">See also</span></span>
 
-- [<span data-ttu-id="65e3a-117">デバッグ</span><span class="sxs-lookup"><span data-stu-id="65e3a-117">Debugging</span></span>](index.md)
-- [<span data-ttu-id="65e3a-118">IXCLRDataModule インターフェイス</span><span class="sxs-lookup"><span data-stu-id="65e3a-118">IXCLRDataModule Interface</span></span>](ixclrdatamodule-interface.md)
+- [<span data-ttu-id="19a32-117">デバッグ</span><span class="sxs-lookup"><span data-stu-id="19a32-117">Debugging</span></span>](index.md)
+- [<span data-ttu-id="19a32-118">IXCLRDataModule インターフェイス</span><span class="sxs-lookup"><span data-stu-id="19a32-118">IXCLRDataModule Interface</span></span>](ixclrdatamodule-interface.md)
