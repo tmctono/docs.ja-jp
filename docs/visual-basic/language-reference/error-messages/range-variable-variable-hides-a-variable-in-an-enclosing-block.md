@@ -9,24 +9,24 @@ helpviewer_keywords:
 ms.assetid: 5d5470e4-3de5-49c2-8831-1087625f4a77
 ms.openlocfilehash: 5e071970eec70828841c686e89aa673d38ff9918
 ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64661623"
 ---
-# <a name="range-variable-variable-hides-a-variable-in-an-enclosing-block-a-previously-defined-range-variable-or-an-implicitly-declared-variable-in-a-query-expression"></a><span data-ttu-id="4fdf8-102">範囲変数\<変数 >、それを囲むブロック、以前に定義された範囲変数、またはクエリ式で、暗黙的に宣言された変数内の変数を非表示になります</span><span class="sxs-lookup"><span data-stu-id="4fdf8-102">Range variable \<variable> hides a variable in an enclosing block, a previously defined range variable, or an implicitly declared variable in a query expression</span></span>
-<span data-ttu-id="4fdf8-103">指定された範囲変数の名前、 `Select`、 `From`、 `Aggregate`、または`Let`句、クエリまたはクエリで暗黙的に宣言されている変数の名前で既に指定されて範囲変数の名前に重複など、フィールド名または集計関数の名前。</span><span class="sxs-lookup"><span data-stu-id="4fdf8-103">A range variable name specified in a `Select`, `From`, `Aggregate`, or `Let` clause duplicates the name of a range variable already specified previously in the query, or the name of a variable that is implicitly declared by the query, such as a field name or the name of an aggregate function.</span></span>  
+# <a name="range-variable-variable-hides-a-variable-in-an-enclosing-block-a-previously-defined-range-variable-or-an-implicitly-declared-variable-in-a-query-expression"></a><span data-ttu-id="66926-102">範囲変数 \<variable> により、それを囲むブロック内の変数、以前に定義された範囲変数、またはクエリ式内で暗黙的に宣言された変数が非表示になります</span><span class="sxs-lookup"><span data-stu-id="66926-102">Range variable \<variable> hides a variable in an enclosing block, a previously defined range variable, or an implicitly declared variable in a query expression</span></span>
+<span data-ttu-id="66926-103">`Select`、`From`、`Aggregate`、または `Let` 句で指定された範囲変数名が、クエリで既に指定されている範囲変数の名前、またはクエリによって暗黙的に宣言された変数の名前 (フィールド名や集計関数の名前など) と重複しています。</span><span class="sxs-lookup"><span data-stu-id="66926-103">A range variable name specified in a `Select`, `From`, `Aggregate`, or `Let` clause duplicates the name of a range variable already specified previously in the query, or the name of a variable that is implicitly declared by the query, such as a field name or the name of an aggregate function.</span></span>  
   
- <span data-ttu-id="4fdf8-104">**エラー ID:** BC36633</span><span class="sxs-lookup"><span data-stu-id="4fdf8-104">**Error ID:** BC36633</span></span>  
+ <span data-ttu-id="66926-104">**エラー ID:** BC36633</span><span class="sxs-lookup"><span data-stu-id="66926-104">**Error ID:** BC36633</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="4fdf8-105">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="4fdf8-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="66926-105">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="66926-105">To correct this error</span></span>  
   
-- <span data-ttu-id="4fdf8-106">特定のクエリ スコープ内のすべての範囲変数に一意の名前があることを確認します。</span><span class="sxs-lookup"><span data-stu-id="4fdf8-106">Ensure that all range variables in a particular query scope have unique names.</span></span> <span data-ttu-id="4fdf8-107">クエリは、入れ子になったクエリは、一意のスコープでいることを確認するためにかっこで囲むことができます。</span><span class="sxs-lookup"><span data-stu-id="4fdf8-107">You can enclose a query in parentheses to ensure that nested queries have a unique scope.</span></span>  
+- <span data-ttu-id="66926-106">特定のクエリ スコープ内のすべての範囲変数の名前が一意であることを確認します。</span><span class="sxs-lookup"><span data-stu-id="66926-106">Ensure that all range variables in a particular query scope have unique names.</span></span> <span data-ttu-id="66926-107">入れ子になったクエリのスコープが一意になるように、クエリをかっこで囲むことができます。</span><span class="sxs-lookup"><span data-stu-id="66926-107">You can enclose a query in parentheses to ensure that nested queries have a unique scope.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4fdf8-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="4fdf8-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="66926-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="66926-108">See also</span></span>
 
-- [<span data-ttu-id="4fdf8-109">Visual Basic における LINQ の概要</span><span class="sxs-lookup"><span data-stu-id="4fdf8-109">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [<span data-ttu-id="4fdf8-110">From 句</span><span class="sxs-lookup"><span data-stu-id="4fdf8-110">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)
-- [<span data-ttu-id="4fdf8-111">Let 句</span><span class="sxs-lookup"><span data-stu-id="4fdf8-111">Let Clause</span></span>](../../../visual-basic/language-reference/queries/let-clause.md)
-- [<span data-ttu-id="4fdf8-112">Aggregate 句</span><span class="sxs-lookup"><span data-stu-id="4fdf8-112">Aggregate Clause</span></span>](../../../visual-basic/language-reference/queries/aggregate-clause.md)
-- [<span data-ttu-id="4fdf8-113">Select 句</span><span class="sxs-lookup"><span data-stu-id="4fdf8-113">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)
+- [<span data-ttu-id="66926-109">Visual Basic における LINQ の概要</span><span class="sxs-lookup"><span data-stu-id="66926-109">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [<span data-ttu-id="66926-110">From 句</span><span class="sxs-lookup"><span data-stu-id="66926-110">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)
+- [<span data-ttu-id="66926-111">Let 句</span><span class="sxs-lookup"><span data-stu-id="66926-111">Let Clause</span></span>](../../../visual-basic/language-reference/queries/let-clause.md)
+- [<span data-ttu-id="66926-112">Aggregate 句</span><span class="sxs-lookup"><span data-stu-id="66926-112">Aggregate Clause</span></span>](../../../visual-basic/language-reference/queries/aggregate-clause.md)
+- [<span data-ttu-id="66926-113">Select 句</span><span class="sxs-lookup"><span data-stu-id="66926-113">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)
