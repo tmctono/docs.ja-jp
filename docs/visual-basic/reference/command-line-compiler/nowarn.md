@@ -8,53 +8,53 @@ helpviewer_keywords:
 ms.assetid: 7ebf2106-0652-4fdc-bf60-70fc86465d83
 ms.openlocfilehash: 880fdf4931dadea547d64d0506bd3e978956468e
 ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72005397"
 ---
-# <a name="-nowarn"></a><span data-ttu-id="6449e-102">-nowarn</span><span class="sxs-lookup"><span data-stu-id="6449e-102">-nowarn</span></span>
-<span data-ttu-id="6449e-103">警告を生成するコンパイラの機能を無効にします。</span><span class="sxs-lookup"><span data-stu-id="6449e-103">Suppresses the compiler's ability to generate warnings.</span></span>  
+# <a name="-nowarn"></a><span data-ttu-id="84473-102">-nowarn</span><span class="sxs-lookup"><span data-stu-id="84473-102">-nowarn</span></span>
+<span data-ttu-id="84473-103">警告を生成するコンパイラの機能を無効にします。</span><span class="sxs-lookup"><span data-stu-id="84473-103">Suppresses the compiler's ability to generate warnings.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6449e-104">構文</span><span class="sxs-lookup"><span data-stu-id="6449e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="84473-104">構文</span><span class="sxs-lookup"><span data-stu-id="84473-104">Syntax</span></span>  
   
 ```console  
 -nowarn[:numberList]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="6449e-105">引数</span><span class="sxs-lookup"><span data-stu-id="6449e-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="84473-105">引数</span><span class="sxs-lookup"><span data-stu-id="84473-105">Arguments</span></span>  
   
-|<span data-ttu-id="6449e-106">項目</span><span class="sxs-lookup"><span data-stu-id="6449e-106">Term</span></span>|<span data-ttu-id="6449e-107">定義</span><span class="sxs-lookup"><span data-stu-id="6449e-107">Definition</span></span>|  
+|<span data-ttu-id="84473-106">用語</span><span class="sxs-lookup"><span data-stu-id="84473-106">Term</span></span>|<span data-ttu-id="84473-107">定義</span><span class="sxs-lookup"><span data-stu-id="84473-107">Definition</span></span>|  
 |---|---|  
-|`numberList`|<span data-ttu-id="6449e-108">任意。</span><span class="sxs-lookup"><span data-stu-id="6449e-108">Optional.</span></span> <span data-ttu-id="6449e-109">コンパイラによって抑制される警告 ID 番号のコンマ区切りの一覧。</span><span class="sxs-lookup"><span data-stu-id="6449e-109">Comma-delimited list of the warning ID numbers that the compiler should suppress.</span></span> <span data-ttu-id="6449e-110">警告 Id が指定されていない場合は、すべての警告が抑制されます。</span><span class="sxs-lookup"><span data-stu-id="6449e-110">If the warning IDs are not specified, all warnings are suppressed.</span></span>|  
+|`numberList`|<span data-ttu-id="84473-108">任意。</span><span class="sxs-lookup"><span data-stu-id="84473-108">Optional.</span></span> <span data-ttu-id="84473-109">コンパイラにより非表示にされるべき警告 ID 番号のコンマ区切りの一覧。</span><span class="sxs-lookup"><span data-stu-id="84473-109">Comma-delimited list of the warning ID numbers that the compiler should suppress.</span></span> <span data-ttu-id="84473-110">警告 ID が指定されていない場合、すべての警告は非表示になります。</span><span class="sxs-lookup"><span data-stu-id="84473-110">If the warning IDs are not specified, all warnings are suppressed.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6449e-111">コメント</span><span class="sxs-lookup"><span data-stu-id="6449e-111">Remarks</span></span>  
- <span data-ttu-id="6449e-112">@No__t-0 オプションを指定すると、コンパイラは警告を生成しません。</span><span class="sxs-lookup"><span data-stu-id="6449e-112">The `-nowarn` option causes the compiler to not generate warnings.</span></span> <span data-ttu-id="6449e-113">個々の警告を非表示にするには、警告 ID をコロンの後の `-nowarn` オプションに指定します。</span><span class="sxs-lookup"><span data-stu-id="6449e-113">To suppress an individual warning, supply the warning ID to the `-nowarn` option following the colon.</span></span> <span data-ttu-id="6449e-114">複数の警告番号はコンマで区切ります。</span><span class="sxs-lookup"><span data-stu-id="6449e-114">Separate multiple warning numbers with commas.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="84473-111">Remarks</span><span class="sxs-lookup"><span data-stu-id="84473-111">Remarks</span></span>  
+ <span data-ttu-id="84473-112">`-nowarn` オプションを指定すると、コンパイラにより警告が生成されなくなります。</span><span class="sxs-lookup"><span data-stu-id="84473-112">The `-nowarn` option causes the compiler to not generate warnings.</span></span> <span data-ttu-id="84473-113">個々の警告を非表示にするには、`-nowarn` オプションの後にコロンを追加し、警告 ID を指定します。</span><span class="sxs-lookup"><span data-stu-id="84473-113">To suppress an individual warning, supply the warning ID to the `-nowarn` option following the colon.</span></span> <span data-ttu-id="84473-114">警告が複数ある場合は、番号をコンマで区切ります。</span><span class="sxs-lookup"><span data-stu-id="84473-114">Separate multiple warning numbers with commas.</span></span>  
   
- <span data-ttu-id="6449e-115">警告 id の数値部分のみを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="6449e-115">You need to specify only the numeric part of the warning identifier.</span></span> <span data-ttu-id="6449e-116">たとえば、BC42024 を抑制する場合は、使用されていないローカル変数の警告として、`-nowarn:42024` を指定します。</span><span class="sxs-lookup"><span data-stu-id="6449e-116">For example, if you want to suppress BC42024, the warning for unused local variables, specify `-nowarn:42024`.</span></span>  
+ <span data-ttu-id="84473-115">警告 ID は、数値部分のみを指定します。</span><span class="sxs-lookup"><span data-stu-id="84473-115">You need to specify only the numeric part of the warning identifier.</span></span> <span data-ttu-id="84473-116">たとえば、BC42024 を非表示にする場合は、使用されていないローカル変数の警告に、`-nowarn:42024` を指定します。</span><span class="sxs-lookup"><span data-stu-id="84473-116">For example, if you want to suppress BC42024, the warning for unused local variables, specify `-nowarn:42024`.</span></span>  
   
- <span data-ttu-id="6449e-117">警告 ID 番号の詳細については、「[Visual Basic での警告の構成](/visualstudio/ide/configuring-warnings-in-visual-basic)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6449e-117">For more information on the warning ID numbers, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
+ <span data-ttu-id="84473-117">警告 ID の番号の詳細については、「[Visual Basic での警告の構成](/visualstudio/ide/configuring-warnings-in-visual-basic)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="84473-117">For more information on the warning ID numbers, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
-|<span data-ttu-id="6449e-118">Visual Studio 統合開発環境で-nowarn を設定するには</span><span class="sxs-lookup"><span data-stu-id="6449e-118">To set -nowarn in the Visual Studio integrated development environment</span></span>|  
+|<span data-ttu-id="84473-118">Visual Studio 統合開発環境で -nowarn を設定するには</span><span class="sxs-lookup"><span data-stu-id="84473-118">To set -nowarn in the Visual Studio integrated development environment</span></span>|  
 |---|  
-|<span data-ttu-id="6449e-119">1. **ソリューション エクスプローラー**でプロジェクトを選択します。</span><span class="sxs-lookup"><span data-stu-id="6449e-119">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="6449e-120">**[プロジェクト]** メニューの **[プロパティ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6449e-120">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="6449e-121">2. **[コンパイル]** タブをクリックします。</span><span class="sxs-lookup"><span data-stu-id="6449e-121">2.  Click the **Compile** tab.</span></span><br /><span data-ttu-id="6449e-122">3.すべての警告を無効にするには、[**すべての警告を無効**にする] チェックボックスをオンにします。</span><span class="sxs-lookup"><span data-stu-id="6449e-122">3.  Select the **Disable all warnings** check box to disable all warnings.</span></span><br />     <span data-ttu-id="6449e-123">または</span><span class="sxs-lookup"><span data-stu-id="6449e-123">- or -</span></span><br />     <span data-ttu-id="6449e-124">特定の警告を無効にするには、警告の隣にあるドロップダウンリストから **[なし]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="6449e-124">To disable a particular warning, click **None** from the drop-down list adjacent to the warning.</span></span>|  
+|<span data-ttu-id="84473-119">1.**ソリューション エクスプローラー**でプロジェクトを選択します。</span><span class="sxs-lookup"><span data-stu-id="84473-119">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="84473-120">**[プロジェクト]** メニューの **[プロパティ]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="84473-120">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="84473-121">2. **[コンパイル]** タブをクリックします。</span><span class="sxs-lookup"><span data-stu-id="84473-121">2.  Click the **Compile** tab.</span></span><br /><span data-ttu-id="84473-122">3.警告をすべて無効にするには、 **[すべての警告を表示しない]** チェック ボックスをオンにします。</span><span class="sxs-lookup"><span data-stu-id="84473-122">3.  Select the **Disable all warnings** check box to disable all warnings.</span></span><br />     <span data-ttu-id="84473-123">または</span><span class="sxs-lookup"><span data-stu-id="84473-123">- or -</span></span><br />     <span data-ttu-id="84473-124">特定の警告を無効にするには、その警告の隣のドロップダウン リストから **[なし]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="84473-124">To disable a particular warning, click **None** from the drop-down list adjacent to the warning.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="6449e-125">例</span><span class="sxs-lookup"><span data-stu-id="6449e-125">Example</span></span>  
- <span data-ttu-id="6449e-126">次のコードは `T2.vb` をコンパイルし、警告を表示しません。</span><span class="sxs-lookup"><span data-stu-id="6449e-126">The following code compiles `T2.vb` and does not display any warnings.</span></span>  
+## <a name="example"></a><span data-ttu-id="84473-125">例</span><span class="sxs-lookup"><span data-stu-id="84473-125">Example</span></span>  
+ <span data-ttu-id="84473-126">次のコードでは `T2.vb` がコンパイルされ、警告が表示されません。</span><span class="sxs-lookup"><span data-stu-id="84473-126">The following code compiles `T2.vb` and does not display any warnings.</span></span>  
   
 ```console
 vbc -nowarn t2.vb  
 ```  
   
-## <a name="example"></a><span data-ttu-id="6449e-127">例</span><span class="sxs-lookup"><span data-stu-id="6449e-127">Example</span></span>  
- <span data-ttu-id="6449e-128">次のコードは `T2.vb` をコンパイルし、使用されていないローカル変数 (42024) の警告を表示しません。</span><span class="sxs-lookup"><span data-stu-id="6449e-128">The following code compiles `T2.vb` and does not display the warnings for unused local variables (42024).</span></span>  
+## <a name="example"></a><span data-ttu-id="84473-127">例</span><span class="sxs-lookup"><span data-stu-id="84473-127">Example</span></span>  
+ <span data-ttu-id="84473-128">次のコードでは `T2.vb` がコンパイルされ、使用されていないローカル変数 (42024) の警告が表示されません。</span><span class="sxs-lookup"><span data-stu-id="84473-128">The following code compiles `T2.vb` and does not display the warnings for unused local variables (42024).</span></span>  
   
 ```console
 vbc -nowarn:42024 t2.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6449e-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="6449e-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="84473-129">関連項目</span><span class="sxs-lookup"><span data-stu-id="84473-129">See also</span></span>
 
-- [<span data-ttu-id="6449e-130">Visual Basic コマンドラインコンパイラ</span><span class="sxs-lookup"><span data-stu-id="6449e-130">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="6449e-131">コンパイルコマンドラインのサンプル</span><span class="sxs-lookup"><span data-stu-id="6449e-131">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [<span data-ttu-id="6449e-132">Visual Basic での警告の構成</span><span class="sxs-lookup"><span data-stu-id="6449e-132">Configuring Warnings in Visual Basic</span></span>](/visualstudio/ide/configuring-warnings-in-visual-basic)
+- [<span data-ttu-id="84473-130">Visual Basic のコマンド ライン コンパイラ</span><span class="sxs-lookup"><span data-stu-id="84473-130">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="84473-131">コンパイル コマンド ラインのサンプル</span><span class="sxs-lookup"><span data-stu-id="84473-131">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="84473-132">Configuring Warnings in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="84473-132">Configuring Warnings in Visual Basic</span></span>](/visualstudio/ide/configuring-warnings-in-visual-basic)

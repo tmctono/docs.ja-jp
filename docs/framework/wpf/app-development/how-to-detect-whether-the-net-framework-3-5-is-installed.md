@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
 ms.openlocfilehash: 18e5c819eb4deb62208280816d11dce0940d134d
 ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053428"
 ---
-# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a><span data-ttu-id="efdd2-102">方法: .NET Framework 3.5 がインストールされているかどうかを確認する</span><span class="sxs-lookup"><span data-stu-id="efdd2-102">How to: Detect Whether the .NET Framework 3.5 Is Installed</span></span>
-<span data-ttu-id="efdd2-103">.NET Framework 3.5 を対象とするシステムに管理者が Windows Presentation Foundation (WPF) アプリケーションを配置できるようにするには、まず .NET Framework 3.5 ランタイムが存在することを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="efdd2-103">Before administrators can deploy Windows Presentation Foundation (WPF) applications on a system that targets the .NET Framework 3.5, they must first confirm that the .NET Framework 3.5 runtime is present.</span></span> <span data-ttu-id="efdd2-104">このトピックでは、.NET Framework 3.5 がシステムに存在するかどうかを確認するために管理者が使用できる HTML/JavaScript で記述されたスクリプトについて説明します。</span><span class="sxs-lookup"><span data-stu-id="efdd2-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the .NET Framework 3.5 is present on a system.</span></span>  
+# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a><span data-ttu-id="c743f-102">方法: .NET Framework 3.5 がインストールされているかどうかを確認する</span><span class="sxs-lookup"><span data-stu-id="c743f-102">How to: Detect Whether the .NET Framework 3.5 Is Installed</span></span>
+<span data-ttu-id="c743f-103">管理者は、.NET Framework 3.5 を対象とするシステムに Windows Presentation Foundation (WPF) アプリケーションを配置する前に、まず、.NET Framework 3.5 ランタイムが存在することを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c743f-103">Before administrators can deploy Windows Presentation Foundation (WPF) applications on a system that targets the .NET Framework 3.5, they must first confirm that the .NET Framework 3.5 runtime is present.</span></span> <span data-ttu-id="c743f-104">このトピックでは、.NET Framework 3.5 がシステムに存在するかどうかを確認するために管理者が使用できる HTML/JavaScript で記述されたスクリプトを提供します。</span><span class="sxs-lookup"><span data-stu-id="c743f-104">This topic provides a script written in HTML/JavaScript that administrators can use to determine whether the .NET Framework 3.5 is present on a system.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="efdd2-105">.NET Framework のインストール、配置、および検出の詳細については、「[開発者向けの .NET Framework のインストール](../../install/guide-for-developers.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="efdd2-105">For more detailed information on installing, deploying, and detecting the .NET Framework, see [Install the .NET Framework for developers](../../install/guide-for-developers.md).</span></span>  
+> <span data-ttu-id="c743f-105">.NET Framework のインストール、配置、検出について詳しくは、「[開発者向けの .NET Framework のインストール](../../install/guide-for-developers.md)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="c743f-105">For more detailed information on installing, deploying, and detecting the .NET Framework, see [Install the .NET Framework for developers](../../install/guide-for-developers.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="efdd2-106">例</span><span class="sxs-lookup"><span data-stu-id="efdd2-106">Example</span></span>  
- <span data-ttu-id="efdd2-107">.NET Framework 3.5 がインストールされている場合、MSI は UserAgent 文字列に ".NET CLR" とバージョン番号を追加します。</span><span class="sxs-lookup"><span data-stu-id="efdd2-107">When the .NET Framework 3.5 is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="efdd2-108">次の例は、単純な HTML ページに埋め込まれたスクリプトを示しています。</span><span class="sxs-lookup"><span data-stu-id="efdd2-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="efdd2-109">このスクリプトは、UserAgent 文字列を検索して .NET Framework 3.5 がインストールされているかどうかを確認し、検索結果にステータスメッセージを表示します。</span><span class="sxs-lookup"><span data-stu-id="efdd2-109">The script searches the UserAgent string to determine whether the .NET Framework 3.5 is installed, and displays a status message on the results of the search.</span></span>  
+## <a name="example"></a><span data-ttu-id="c743f-106">例</span><span class="sxs-lookup"><span data-stu-id="c743f-106">Example</span></span>  
+ <span data-ttu-id="c743f-107">.NET Framework 3.5 がインストールされている場合、MSI によって UserAgent 文字列に ".NET CLR" とバージョン番号が追加されます。</span><span class="sxs-lookup"><span data-stu-id="c743f-107">When the .NET Framework 3.5 is installed, the MSI adds ".NET CLR" and the version number to the UserAgent string.</span></span> <span data-ttu-id="c743f-108">次の例は、単純な HTML ページに埋め込まれたスクリプトを示しています。</span><span class="sxs-lookup"><span data-stu-id="c743f-108">The following example shows a script embedded in a simple HTML page.</span></span> <span data-ttu-id="c743f-109">このスクリプトでは、UserAgent 文字列を検索し .NET Framework 3.5 がインストールされているかどうかを判断し、検索結果に状態メッセージを表示します。</span><span class="sxs-lookup"><span data-stu-id="c743f-109">The script searches the UserAgent string to determine whether the .NET Framework 3.5 is installed, and displays a status message on the results of the search.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="efdd2-110">このスクリプトは Internet Explorer 向けに設計されています。</span><span class="sxs-lookup"><span data-stu-id="efdd2-110">This script is designed for Internet Explorer.</span></span> <span data-ttu-id="efdd2-111">他のブラウザーでは、.NET CLR 情報を UserAgent 文字列に含めることはできません。</span><span class="sxs-lookup"><span data-stu-id="efdd2-111">Other browsers may not include .NET CLR information in the UserAgent string.</span></span>  
+> <span data-ttu-id="c743f-110">このスクリプトは、Internet Explorer 向けに設計されています。</span><span class="sxs-lookup"><span data-stu-id="c743f-110">This script is designed for Internet Explorer.</span></span> <span data-ttu-id="c743f-111">他のブラウザーでは、.NET CLR の情報が UserAgent 文字列に含まれていないことがあります。</span><span class="sxs-lookup"><span data-stu-id="c743f-111">Other browsers may not include .NET CLR information in the UserAgent string.</span></span>  
   
 ```html  
 <HTML>  
@@ -116,18 +116,18 @@ ms.locfileid: "71053428"
 </HTML>  
 ```  
   
- <span data-ttu-id="efdd2-112">".NET CLR" バージョンの検索に成功すると、次の種類のステータスメッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="efdd2-112">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
+ <span data-ttu-id="c743f-112">".NET CLR" バージョンの検索に成功すると、次の種類の状態メッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="c743f-112">If the search for the ".NET CLR " version is successful, the following type of status message appears:</span></span>  
   
  `This machine has the correct version of the .NET Framework 3.5.`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; InfoPath.2; .NET CLR 3.0.590; .NET CLR 3.5.20726; MS-RTC LM 8).`  
   
- <span data-ttu-id="efdd2-113">それ以外の場合は、次の種類のステータスメッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="efdd2-113">Otherwise, the following type of status message appears:</span></span>  
+ <span data-ttu-id="c743f-113">それ以外の場合は、次の種類の状態メッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="c743f-113">Otherwise, the following type of status message appears:</span></span>  
   
  `This machine does not have the correct version of the .NET Framework 3.5. The required version is v3.5.0.0.`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; InfoPath.2; .NET CLR 3.0.590; MS-RTC LM 8).`  
   
-## <a name="see-also"></a><span data-ttu-id="efdd2-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="efdd2-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c743f-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="c743f-114">See also</span></span>
 
-- [<span data-ttu-id="efdd2-115">.NET Framework 3.0 がインストールされているかどうかを確認する</span><span class="sxs-lookup"><span data-stu-id="efdd2-115">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-0-is-installed.md)
+- [<span data-ttu-id="c743f-115">.NET Framework 3.0 がインストールされているかどうかを確認する</span><span class="sxs-lookup"><span data-stu-id="c743f-115">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-0-is-installed.md)
