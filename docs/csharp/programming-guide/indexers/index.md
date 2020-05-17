@@ -53,7 +53,7 @@ ms.locfileid: "79167543"
   
 - <span data-ttu-id="2be11-125">インデクサーには、2 次元配列にアクセスする場合など、複数の仮パラメーターを指定できます。</span><span class="sxs-lookup"><span data-stu-id="2be11-125">Indexers can have more than one formal parameter, for example, when accessing a two-dimensional array.</span></span>  
   
-## <a name="BKMK_RelatedSections"></a> <span data-ttu-id="2be11-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="2be11-126">Related Sections</span></span>  
+## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a> <span data-ttu-id="2be11-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="2be11-126">Related Sections</span></span>  
   
 - [<span data-ttu-id="2be11-127">インデクサーの使用</span><span class="sxs-lookup"><span data-stu-id="2be11-127">Using Indexers</span></span>](./using-indexers.md)  
   

@@ -92,7 +92,7 @@ ms.locfileid: "79398071"
 
 <span data-ttu-id="5d454-132">`>>` 演算子の右側のオペランドでのシフト数の定義方法については、「[シフト演算子のシフト数](#shift-count-of-the-shift-operators)」セクションをご覧ください。</span><span class="sxs-lookup"><span data-stu-id="5d454-132">For information about how the right-hand operand of the `>>` operator defines the shift count, see the [Shift count of the shift operators](#shift-count-of-the-shift-operators) section.</span></span>
 
-## <a name="logical-and-operator-"></a> <span data-ttu-id="5d454-133">論理 AND 演算子 &amp;</span><span class="sxs-lookup"><span data-stu-id="5d454-133">Logical AND operator &amp;</span></span>
+## <a name="logical-and-operator-amp"></a><a name="logical-and-operator-"></a> <span data-ttu-id="5d454-133">論理 AND 演算子 &amp;</span><span class="sxs-lookup"><span data-stu-id="5d454-133">Logical AND operator &amp;</span></span>
 
 <span data-ttu-id="5d454-134">`&` 演算子では、そのオペランドのビットごとの論理 AND が計算されます。</span><span class="sxs-lookup"><span data-stu-id="5d454-134">The `&` operator computes the bitwise logical AND of its operands:</span></span>
 
