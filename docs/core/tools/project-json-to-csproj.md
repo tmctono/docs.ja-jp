@@ -10,17 +10,17 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "77451106"
 ---
-# <a name="a-mapping-between-projectjson-and-csproj-properties"></a><span data-ttu-id="9d18a-103">project.json プロパティと csproj プロパティの間のマッピング</span><span class="sxs-lookup"><span data-stu-id="9d18a-103">A mapping between project.json and csproj properties</span></span>
+# <a name="a-mapping-between-projectjson-and-csproj-properties"></a><span data-ttu-id="d1350-103">project.json プロパティと csproj プロパティの間のマッピング</span><span class="sxs-lookup"><span data-stu-id="d1350-103">A mapping between project.json and csproj properties</span></span>
 
-<span data-ttu-id="9d18a-104">作成者: [Nate McMaster](https://github.com/natemcmaster)</span><span class="sxs-lookup"><span data-stu-id="9d18a-104">By [Nate McMaster](https://github.com/natemcmaster)</span></span>
+<span data-ttu-id="d1350-104">作成者: [Nate McMaster](https://github.com/natemcmaster)</span><span class="sxs-lookup"><span data-stu-id="d1350-104">By [Nate McMaster](https://github.com/natemcmaster)</span></span>
 
-<span data-ttu-id="9d18a-105">.NET Core ツールの開発中、重要なデザイン変更が行われました。*project.json* ファイルのサポートが終了となり、代わりに.NET Core プロジェクトが MSBuild/csproj 形式に移行されました。</span><span class="sxs-lookup"><span data-stu-id="9d18a-105">During the development of the .NET Core tooling, an important design change was made to no longer support *project.json* files and instead move the .NET Core projects to the MSBuild/csproj format.</span></span>
+<span data-ttu-id="d1350-105">.NET Core ツールの開発中、重要なデザイン変更が行われました。*project.json* ファイルのサポートが終了となり、代わりに.NET Core プロジェクトが MSBuild/csproj 形式に移行されました。</span><span class="sxs-lookup"><span data-stu-id="d1350-105">During the development of the .NET Core tooling, an important design change was made to no longer support *project.json* files and instead move the .NET Core projects to the MSBuild/csproj format.</span></span>
 
-<span data-ttu-id="9d18a-106">この記事では、*project.json* の設定が MSBuild/csproj 形式でどのように表示されるか説明します。最新バージョンのツールにプロジェクトをアップグレードするとき、新しい形式の利用方法を知り、移行ツールで行われた変更を理解できます。</span><span class="sxs-lookup"><span data-stu-id="9d18a-106">This article shows how the settings in *project.json* are represented in the MSBuild/csproj format so you can learn how to use the new format and understand the changes made by the migration tools when you're upgrading your project to the latest version of the tooling.</span></span>
+<span data-ttu-id="d1350-106">この記事では、*project.json* の設定が MSBuild/csproj 形式でどのように表示されるか説明します。最新バージョンのツールにプロジェクトをアップグレードするとき、新しい形式の利用方法を知り、移行ツールで行われた変更を理解できます。</span><span class="sxs-lookup"><span data-stu-id="d1350-106">This article shows how the settings in *project.json* are represented in the MSBuild/csproj format so you can learn how to use the new format and understand the changes made by the migration tools when you're upgrading your project to the latest version of the tooling.</span></span>
 
-## <a name="the-csproj-format"></a><span data-ttu-id="9d18a-107">csproj 形式</span><span class="sxs-lookup"><span data-stu-id="9d18a-107">The csproj format</span></span>
+## <a name="the-csproj-format"></a><span data-ttu-id="d1350-107">csproj 形式</span><span class="sxs-lookup"><span data-stu-id="d1350-107">The csproj format</span></span>
 
-<span data-ttu-id="9d18a-108">新しい形式の \*.csproj は XML ベースの形式です。</span><span class="sxs-lookup"><span data-stu-id="9d18a-108">The new format, \*.csproj, is an XML-based format.</span></span> <span data-ttu-id="9d18a-109">次の例は、`Microsoft.NET.Sdk` を利用した .NET Core プロジェクトのルート ノードです。</span><span class="sxs-lookup"><span data-stu-id="9d18a-109">The following example shows the root node of a .NET Core project using the `Microsoft.NET.Sdk`.</span></span> <span data-ttu-id="9d18a-110">Web プロジェクトの場合、使用される SDK は `Microsoft.NET.Sdk.Web` です。</span><span class="sxs-lookup"><span data-stu-id="9d18a-110">For web projects, the SDK used is `Microsoft.NET.Sdk.Web`.</span></span>
+<span data-ttu-id="d1350-108">新しい形式の \*.csproj は XML ベースの形式です。</span><span class="sxs-lookup"><span data-stu-id="d1350-108">The new format, \*.csproj, is an XML-based format.</span></span> <span data-ttu-id="d1350-109">次の例は、`Microsoft.NET.Sdk` を利用した .NET Core プロジェクトのルート ノードです。</span><span class="sxs-lookup"><span data-stu-id="d1350-109">The following example shows the root node of a .NET Core project using the `Microsoft.NET.Sdk`.</span></span> <span data-ttu-id="d1350-110">Web プロジェクトの場合、使用される SDK は `Microsoft.NET.Sdk.Web` です。</span><span class="sxs-lookup"><span data-stu-id="d1350-110">For web projects, the SDK used is `Microsoft.NET.Sdk.Web`.</span></span>
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -28,9 +28,9 @@ ms.locfileid: "77451106"
 </Project>
 ```
 
-## <a name="common-top-level-properties"></a><span data-ttu-id="9d18a-111">一般的な最上位プロパティ</span><span class="sxs-lookup"><span data-stu-id="9d18a-111">Common top-level properties</span></span>
+## <a name="common-top-level-properties"></a><span data-ttu-id="d1350-111">一般的な最上位プロパティ</span><span class="sxs-lookup"><span data-stu-id="d1350-111">Common top-level properties</span></span>
 
-### <a name="name"></a><span data-ttu-id="9d18a-112">name</span><span class="sxs-lookup"><span data-stu-id="9d18a-112">name</span></span>
+### <a name="name"></a><span data-ttu-id="d1350-112">name</span><span class="sxs-lookup"><span data-stu-id="d1350-112">name</span></span>
 
 ```json
 {
@@ -38,9 +38,9 @@ ms.locfileid: "77451106"
 }
 ```
 
-<span data-ttu-id="9d18a-113">サポート対象から除外されました。</span><span class="sxs-lookup"><span data-stu-id="9d18a-113">No longer supported.</span></span> <span data-ttu-id="9d18a-114">csproj では、これはプロジェクト ファイル名により決定され、通常はディレクトリ名と一致します。</span><span class="sxs-lookup"><span data-stu-id="9d18a-114">In csproj, this is determined by the project filename, which usually matches the directory name.</span></span> <span data-ttu-id="9d18a-115">たとえば、「 `MyProjectName.csproj` 」のように入力します。</span><span class="sxs-lookup"><span data-stu-id="9d18a-115">For example, `MyProjectName.csproj`.</span></span>
+<span data-ttu-id="d1350-113">サポート対象から除外されました。</span><span class="sxs-lookup"><span data-stu-id="d1350-113">No longer supported.</span></span> <span data-ttu-id="d1350-114">csproj では、これはプロジェクト ファイル名により決定され、通常はディレクトリ名と一致します。</span><span class="sxs-lookup"><span data-stu-id="d1350-114">In csproj, this is determined by the project filename, which usually matches the directory name.</span></span> <span data-ttu-id="d1350-115">たとえば、「 `MyProjectName.csproj` 」のように入力します。</span><span class="sxs-lookup"><span data-stu-id="d1350-115">For example, `MyProjectName.csproj`.</span></span>
 
-<span data-ttu-id="9d18a-116">既定では、プロジェクト ファイル名により、`<AssemblyName>` プロパティと `<PackageId>` プロパティの値も指定されます。</span><span class="sxs-lookup"><span data-stu-id="9d18a-116">By default, the project filename also specifies the value of the `<AssemblyName>` and `<PackageId>` properties.</span></span>
+<span data-ttu-id="d1350-116">既定では、プロジェクト ファイル名により、`<AssemblyName>` プロパティと `<PackageId>` プロパティの値も指定されます。</span><span class="sxs-lookup"><span data-stu-id="d1350-116">By default, the project filename also specifies the value of the `<AssemblyName>` and `<PackageId>` properties.</span></span>
 
 ```xml
 <PropertyGroup>
@@ -49,10 +49,10 @@ ms.locfileid: "77451106"
 </PropertyGroup>
 ```
 
-<span data-ttu-id="9d18a-117">project.json に `<AssemblyName>` プロパティが定義されている場合、`<PackageId>` には `buildOptions\outputName` 以外の値が設定されます。</span><span class="sxs-lookup"><span data-stu-id="9d18a-117">The `<AssemblyName>` will have a different value than `<PackageId>` if `buildOptions\outputName` property was defined in project.json.</span></span>
-<span data-ttu-id="9d18a-118">詳細については、「[その他の共通ビルド オプション](#other-common-build-options)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9d18a-118">For more information, see [Other common build options](#other-common-build-options).</span></span>
+<span data-ttu-id="d1350-117">project.json に `buildOptions\outputName` プロパティが定義されている場合、`<AssemblyName>` には `<PackageId>` 以外の値が設定されます。</span><span class="sxs-lookup"><span data-stu-id="d1350-117">The `<AssemblyName>` will have a different value than `<PackageId>` if `buildOptions\outputName` property was defined in project.json.</span></span>
+<span data-ttu-id="d1350-118">詳細については、「[その他の共通ビルド オプション](#other-common-build-options)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d1350-118">For more information, see [Other common build options](#other-common-build-options).</span></span>
 
-### <a name="version"></a><span data-ttu-id="9d18a-119">version</span><span class="sxs-lookup"><span data-stu-id="9d18a-119">version</span></span>
+### <a name="version"></a><span data-ttu-id="d1350-119">version</span><span class="sxs-lookup"><span data-stu-id="d1350-119">version</span></span>
 
 ```json
 {
@@ -60,7 +60,7 @@ ms.locfileid: "77451106"
 }
 ```
 
-<span data-ttu-id="9d18a-120">`VersionPrefix` プロパティおよび `VersionSuffix` プロパティを使用します。</span><span class="sxs-lookup"><span data-stu-id="9d18a-120">Use the `VersionPrefix` and `VersionSuffix` properties:</span></span>
+<span data-ttu-id="d1350-120">`VersionPrefix` プロパティおよび `VersionSuffix` プロパティを使用します。</span><span class="sxs-lookup"><span data-stu-id="d1350-120">Use the `VersionPrefix` and `VersionSuffix` properties:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -69,7 +69,7 @@ ms.locfileid: "77451106"
 </PropertyGroup>
 ```
 
-<span data-ttu-id="9d18a-121">`Version` プロパティを使用することもできますが、これにより、パッケージ処理中にバージョン設定がオーバーライドされることがあります。</span><span class="sxs-lookup"><span data-stu-id="9d18a-121">You can also use the `Version` property, but this may override version settings during packaging:</span></span>
+<span data-ttu-id="d1350-121">`Version` プロパティを使用することもできますが、これにより、パッケージ処理中にバージョン設定がオーバーライドされることがあります。</span><span class="sxs-lookup"><span data-stu-id="d1350-121">You can also use the `Version` property, but this may override version settings during packaging:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -77,7 +77,7 @@ ms.locfileid: "77451106"
 </PropertyGroup>
 ```
 
-### <a name="other-common-root-level-options"></a><span data-ttu-id="9d18a-122">その他の共通のルートレベル オプション</span><span class="sxs-lookup"><span data-stu-id="9d18a-122">Other common root-level options</span></span>
+### <a name="other-common-root-level-options"></a><span data-ttu-id="d1350-122">その他の共通のルートレベル オプション</span><span class="sxs-lookup"><span data-stu-id="d1350-122">Other common root-level options</span></span>
 
 ```json
 {
@@ -104,9 +104,9 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-## <a name="frameworks"></a><span data-ttu-id="9d18a-123">frameworks</span><span class="sxs-lookup"><span data-stu-id="9d18a-123">frameworks</span></span>
+## <a name="frameworks"></a><span data-ttu-id="d1350-123">frameworks</span><span class="sxs-lookup"><span data-stu-id="d1350-123">frameworks</span></span>
 
-### <a name="one-target-framework"></a><span data-ttu-id="9d18a-124">1 つのターゲット フレームワーク</span><span class="sxs-lookup"><span data-stu-id="9d18a-124">One target framework</span></span>
+### <a name="one-target-framework"></a><span data-ttu-id="d1350-124">1 つのターゲット フレームワーク</span><span class="sxs-lookup"><span data-stu-id="d1350-124">One target framework</span></span>
 
 ```json
 {
@@ -122,7 +122,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-### <a name="multiple-target-frameworks"></a><span data-ttu-id="9d18a-125">複数のターゲット フレームワーク</span><span class="sxs-lookup"><span data-stu-id="9d18a-125">Multiple target frameworks</span></span>
+### <a name="multiple-target-frameworks"></a><span data-ttu-id="d1350-125">複数のターゲット フレームワーク</span><span class="sxs-lookup"><span data-stu-id="d1350-125">Multiple target frameworks</span></span>
 
 ```json
 {
@@ -133,7 +133,7 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="9d18a-126">`TargetFrameworks` プロパティを使用し、ターゲット フレームワークの一覧を定義します。</span><span class="sxs-lookup"><span data-stu-id="9d18a-126">Use the `TargetFrameworks` property to define your list of target frameworks.</span></span> <span data-ttu-id="9d18a-127">複数のフレームワーク値を区切るには、セミコロンを使用します。</span><span class="sxs-lookup"><span data-stu-id="9d18a-127">Use semi-colon to separate multiple framework values.</span></span>
+<span data-ttu-id="d1350-126">`TargetFrameworks` プロパティを使用し、ターゲット フレームワークの一覧を定義します。</span><span class="sxs-lookup"><span data-stu-id="d1350-126">Use the `TargetFrameworks` property to define your list of target frameworks.</span></span> <span data-ttu-id="d1350-127">複数のフレームワーク値を区切るには、セミコロンを使用します。</span><span class="sxs-lookup"><span data-stu-id="d1350-127">Use semi-colon to separate multiple framework values.</span></span>
 
 ```xml
 <PropertyGroup>
@@ -141,13 +141,13 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-## <a name="dependencies"></a><span data-ttu-id="9d18a-128">dependencies</span><span class="sxs-lookup"><span data-stu-id="9d18a-128">dependencies</span></span>
+## <a name="dependencies"></a><span data-ttu-id="d1350-128">dependencies</span><span class="sxs-lookup"><span data-stu-id="d1350-128">dependencies</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="9d18a-129">依存関係がパッケージではなく、**プロジェクト**の場合、形式は異なります。</span><span class="sxs-lookup"><span data-stu-id="9d18a-129">If the dependency is a **project** and not a package, the format is different.</span></span>
-> <span data-ttu-id="9d18a-130">詳細については、「[依存関係の種類](#dependency-type)」セクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="9d18a-130">For more information, see the [dependency type](#dependency-type) section.</span></span>
+> <span data-ttu-id="d1350-129">依存関係がパッケージではなく、**プロジェクト**の場合、形式は異なります。</span><span class="sxs-lookup"><span data-stu-id="d1350-129">If the dependency is a **project** and not a package, the format is different.</span></span>
+> <span data-ttu-id="d1350-130">詳細については、「[依存関係の種類](#dependency-type)」セクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="d1350-130">For more information, see the [dependency type](#dependency-type) section.</span></span>
 
-### <a name="netstandardlibrary-metapackage"></a><span data-ttu-id="9d18a-131">NETStandard.Library のメタパッケージ</span><span class="sxs-lookup"><span data-stu-id="9d18a-131">NETStandard.Library metapackage</span></span>
+### <a name="netstandardlibrary-metapackage"></a><span data-ttu-id="d1350-131">NETStandard.Library のメタパッケージ</span><span class="sxs-lookup"><span data-stu-id="d1350-131">NETStandard.Library metapackage</span></span>
 
 ```json
 {
@@ -163,7 +163,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-### <a name="microsoftnetcoreapp-metapackage"></a><span data-ttu-id="9d18a-132">Microsoft.NETCore.App のメタパッケージ</span><span class="sxs-lookup"><span data-stu-id="9d18a-132">Microsoft.NETCore.App metapackage</span></span>
+### <a name="microsoftnetcoreapp-metapackage"></a><span data-ttu-id="d1350-132">Microsoft.NETCore.App のメタパッケージ</span><span class="sxs-lookup"><span data-stu-id="d1350-132">Microsoft.NETCore.App metapackage</span></span>
 
 ```json
 {
@@ -179,9 +179,9 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-<span data-ttu-id="9d18a-133">移行されたプロジェクトの `<RuntimeFrameworkVersion>` 値はインストールした SDK のバージョンにより決定されます。</span><span class="sxs-lookup"><span data-stu-id="9d18a-133">Note that the `<RuntimeFrameworkVersion>` value in the migrated project is determined by the version of the SDK you have installed.</span></span>
+<span data-ttu-id="d1350-133">移行されたプロジェクトの `<RuntimeFrameworkVersion>` 値はインストールした SDK のバージョンにより決定されます。</span><span class="sxs-lookup"><span data-stu-id="d1350-133">Note that the `<RuntimeFrameworkVersion>` value in the migrated project is determined by the version of the SDK you have installed.</span></span>
 
-### <a name="top-level-dependencies"></a><span data-ttu-id="9d18a-134">最上位の依存関係</span><span class="sxs-lookup"><span data-stu-id="9d18a-134">Top-level dependencies</span></span>
+### <a name="top-level-dependencies"></a><span data-ttu-id="d1350-134">最上位の依存関係</span><span class="sxs-lookup"><span data-stu-id="d1350-134">Top-level dependencies</span></span>
 
 ```json
 {
@@ -197,7 +197,7 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-### <a name="per-framework-dependencies"></a><span data-ttu-id="9d18a-135">フレームワーク別の依存関係</span><span class="sxs-lookup"><span data-stu-id="9d18a-135">Per-framework dependencies</span></span>
+### <a name="per-framework-dependencies"></a><span data-ttu-id="d1350-135">フレームワーク別の依存関係</span><span class="sxs-lookup"><span data-stu-id="d1350-135">Per-framework dependencies</span></span>
 
 ```json
 {
@@ -226,7 +226,7 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-### <a name="imports"></a><span data-ttu-id="9d18a-136">インポート</span><span class="sxs-lookup"><span data-stu-id="9d18a-136">imports</span></span>
+### <a name="imports"></a><span data-ttu-id="d1350-136">インポート</span><span class="sxs-lookup"><span data-stu-id="d1350-136">imports</span></span>
 
 ```json
 {
@@ -253,9 +253,9 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-### <a name="dependency-type"></a><span data-ttu-id="9d18a-137">依存関係の種類</span><span class="sxs-lookup"><span data-stu-id="9d18a-137">dependency type</span></span>
+### <a name="dependency-type"></a><span data-ttu-id="d1350-137">依存関係の種類</span><span class="sxs-lookup"><span data-stu-id="d1350-137">dependency type</span></span>
 
-#### <a name="type-project"></a><span data-ttu-id="9d18a-138">type: project</span><span class="sxs-lookup"><span data-stu-id="9d18a-138">type: project</span></span>
+#### <a name="type-project"></a><span data-ttu-id="d1350-138">type: project</span><span class="sxs-lookup"><span data-stu-id="d1350-138">type: project</span></span>
 
 ```json
 {
@@ -276,9 +276,9 @@ And it's really great!</Description>
 ```
 
 > [!NOTE]
-> <span data-ttu-id="9d18a-139">`dotnet pack --version-suffix $suffix` がプロジェクト参照の依存関係バージョンを決定する方法が無効になります。</span><span class="sxs-lookup"><span data-stu-id="9d18a-139">This will break the way that `dotnet pack --version-suffix $suffix` determines the dependency version of a project reference.</span></span>
+> <span data-ttu-id="d1350-139">`dotnet pack --version-suffix $suffix` がプロジェクト参照の依存関係バージョンを決定する方法が無効になります。</span><span class="sxs-lookup"><span data-stu-id="d1350-139">This will break the way that `dotnet pack --version-suffix $suffix` determines the dependency version of a project reference.</span></span>
 
-#### <a name="type-build"></a><span data-ttu-id="9d18a-140">type: build</span><span class="sxs-lookup"><span data-stu-id="9d18a-140">type: build</span></span>
+#### <a name="type-build"></a><span data-ttu-id="d1350-140">type: build</span><span class="sxs-lookup"><span data-stu-id="d1350-140">type: build</span></span>
 
 ```json
 {
@@ -297,7 +297,7 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-#### <a name="type-platform"></a><span data-ttu-id="9d18a-141">type: platform</span><span class="sxs-lookup"><span data-stu-id="9d18a-141">type: platform</span></span>
+#### <a name="type-platform"></a><span data-ttu-id="d1350-141">type: platform</span><span class="sxs-lookup"><span data-stu-id="d1350-141">type: platform</span></span>
 
 ```json
 {
@@ -310,9 +310,9 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="9d18a-142">csproj には同等のものがありません。</span><span class="sxs-lookup"><span data-stu-id="9d18a-142">There is no equivalent in csproj.</span></span>
+<span data-ttu-id="d1350-142">csproj には同等のものがありません。</span><span class="sxs-lookup"><span data-stu-id="d1350-142">There is no equivalent in csproj.</span></span>
 
-## <a name="runtimes"></a><span data-ttu-id="9d18a-143">runtimes</span><span class="sxs-lookup"><span data-stu-id="9d18a-143">runtimes</span></span>
+## <a name="runtimes"></a><span data-ttu-id="d1350-143">runtimes</span><span class="sxs-lookup"><span data-stu-id="d1350-143">runtimes</span></span>
 
 ```json
 {
@@ -330,16 +330,16 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-### <a name="standalone-apps-self-contained-deployment"></a><span data-ttu-id="9d18a-144">スタンドアロン アプリ (自己完結型の展開)</span><span class="sxs-lookup"><span data-stu-id="9d18a-144">Standalone apps (self-contained deployment)</span></span>
+### <a name="standalone-apps-self-contained-deployment"></a><span data-ttu-id="d1350-144">スタンドアロン アプリ (自己完結型の展開)</span><span class="sxs-lookup"><span data-stu-id="d1350-144">Standalone apps (self-contained deployment)</span></span>
 
-<span data-ttu-id="9d18a-145">project.json では、`runtimes` セクションを定義することは、ビルドと公開の間にアプリがスタンドアロンであったことを意味します。</span><span class="sxs-lookup"><span data-stu-id="9d18a-145">In project.json, defining a `runtimes` section means the app was standalone during build and publish.</span></span>
-<span data-ttu-id="9d18a-146">MSBuild では、ビルド中、すべてのプロジェクトが*移植可能*ですが、スタンドアロンとして公開できます。</span><span class="sxs-lookup"><span data-stu-id="9d18a-146">In MSBuild, all projects are *portable* during build, but can be published as standalone.</span></span>
+<span data-ttu-id="d1350-145">project.json では、`runtimes` セクションを定義することは、ビルドと公開の間にアプリがスタンドアロンであったことを意味します。</span><span class="sxs-lookup"><span data-stu-id="d1350-145">In project.json, defining a `runtimes` section means the app was standalone during build and publish.</span></span>
+<span data-ttu-id="d1350-146">MSBuild では、ビルド中、すべてのプロジェクトが*移植可能*ですが、スタンドアロンとして公開できます。</span><span class="sxs-lookup"><span data-stu-id="d1350-146">In MSBuild, all projects are *portable* during build, but can be published as standalone.</span></span>
 
 `dotnet publish --framework netcoreapp1.0 --runtime osx.10.11-x64`
 
-<span data-ttu-id="9d18a-147">詳細については、「[自己完結型の展開 (SCD)](../deploying/index.md#publish-self-contained)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9d18a-147">For more information, see [Self-contained deployments (SCD)](../deploying/index.md#publish-self-contained).</span></span>
+<span data-ttu-id="d1350-147">詳細については、「[自己完結型の展開 (SCD)](../deploying/index.md#publish-self-contained)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d1350-147">For more information, see [Self-contained deployments (SCD)](../deploying/index.md#publish-self-contained).</span></span>
 
-## <a name="tools"></a><span data-ttu-id="9d18a-148">ツール</span><span class="sxs-lookup"><span data-stu-id="9d18a-148">tools</span></span>
+## <a name="tools"></a><span data-ttu-id="d1350-148">ツール</span><span class="sxs-lookup"><span data-stu-id="d1350-148">tools</span></span>
 
 ```json
 {
@@ -356,13 +356,13 @@ And it's really great!</Description>
 ```
 
 > [!NOTE]
-> <span data-ttu-id="9d18a-149">ツールの `imports` は、csproj ではサポートされません。</span><span class="sxs-lookup"><span data-stu-id="9d18a-149">`imports` on tools are not supported in csproj.</span></span> <span data-ttu-id="9d18a-150">インポートを必要とするツールは、新しい `Microsoft.NET.Sdk` で機能しません。</span><span class="sxs-lookup"><span data-stu-id="9d18a-150">Tools that need imports will not work with the new `Microsoft.NET.Sdk`.</span></span>
+> <span data-ttu-id="d1350-149">ツールの `imports` は、csproj ではサポートされません。</span><span class="sxs-lookup"><span data-stu-id="d1350-149">`imports` on tools are not supported in csproj.</span></span> <span data-ttu-id="d1350-150">インポートを必要とするツールは、新しい `Microsoft.NET.Sdk` で機能しません。</span><span class="sxs-lookup"><span data-stu-id="d1350-150">Tools that need imports will not work with the new `Microsoft.NET.Sdk`.</span></span>
 
-## <a name="buildoptions"></a><span data-ttu-id="9d18a-151">buildOptions</span><span class="sxs-lookup"><span data-stu-id="9d18a-151">buildOptions</span></span>
+## <a name="buildoptions"></a><span data-ttu-id="d1350-151">buildOptions</span><span class="sxs-lookup"><span data-stu-id="d1350-151">buildOptions</span></span>
 
-<span data-ttu-id="9d18a-152">「[Files](#files)」も参照してください。</span><span class="sxs-lookup"><span data-stu-id="9d18a-152">See also [Files](#files).</span></span>
+<span data-ttu-id="d1350-152">「[Files](#files)」も参照してください。</span><span class="sxs-lookup"><span data-stu-id="d1350-152">See also [Files](#files).</span></span>
 
-### <a name="emitentrypoint"></a><span data-ttu-id="9d18a-153">emitEntryPoint</span><span class="sxs-lookup"><span data-stu-id="9d18a-153">emitEntryPoint</span></span>
+### <a name="emitentrypoint"></a><span data-ttu-id="d1350-153">emitEntryPoint</span><span class="sxs-lookup"><span data-stu-id="d1350-153">emitEntryPoint</span></span>
 
 ```json
 {
@@ -378,7 +378,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-<span data-ttu-id="9d18a-154">`emitEntryPoint` が `false` であった場合、`OutputType` の値は `Library` に変換されます。これが既定値です。</span><span class="sxs-lookup"><span data-stu-id="9d18a-154">If `emitEntryPoint` was `false`, the value of `OutputType` is converted to `Library`, which is the default value:</span></span>
+<span data-ttu-id="d1350-154">`emitEntryPoint` が `false` であった場合、`OutputType` の値は `Library` に変換されます。これが既定値です。</span><span class="sxs-lookup"><span data-stu-id="d1350-154">If `emitEntryPoint` was `false`, the value of `OutputType` is converted to `Library`, which is the default value:</span></span>
 
 ```json
 {
@@ -395,7 +395,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-### <a name="keyfile"></a><span data-ttu-id="9d18a-155">keyFile</span><span class="sxs-lookup"><span data-stu-id="9d18a-155">keyFile</span></span>
+### <a name="keyfile"></a><span data-ttu-id="d1350-155">keyFile</span><span class="sxs-lookup"><span data-stu-id="d1350-155">keyFile</span></span>
 
 ```json
 {
@@ -405,7 +405,7 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="9d18a-156">`keyFile` 要素は、MSBuild で 3 つのプロパティになりました。</span><span class="sxs-lookup"><span data-stu-id="9d18a-156">The `keyFile` element expands to three properties in MSBuild:</span></span>
+<span data-ttu-id="d1350-156">`keyFile` 要素は、MSBuild で 3 つのプロパティになりました。</span><span class="sxs-lookup"><span data-stu-id="d1350-156">The `keyFile` element expands to three properties in MSBuild:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -415,7 +415,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-### <a name="other-common-build-options"></a><span data-ttu-id="9d18a-157">その他の共通ビルド オプション</span><span class="sxs-lookup"><span data-stu-id="9d18a-157">Other common build options</span></span>
+### <a name="other-common-build-options"></a><span data-ttu-id="d1350-157">その他の共通ビルド オプション</span><span class="sxs-lookup"><span data-stu-id="d1350-157">Other common build options</span></span>
 
 ```json
 {
@@ -445,11 +445,11 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-## <a name="packoptions"></a><span data-ttu-id="9d18a-158">packOptions</span><span class="sxs-lookup"><span data-stu-id="9d18a-158">packOptions</span></span>
+## <a name="packoptions"></a><span data-ttu-id="d1350-158">packOptions</span><span class="sxs-lookup"><span data-stu-id="d1350-158">packOptions</span></span>
 
-<span data-ttu-id="9d18a-159">「[Files](#files)」も参照してください。</span><span class="sxs-lookup"><span data-stu-id="9d18a-159">See also [Files](#files).</span></span>
+<span data-ttu-id="d1350-159">「[Files](#files)」も参照してください。</span><span class="sxs-lookup"><span data-stu-id="d1350-159">See also [Files](#files).</span></span>
 
-### <a name="common-pack-options"></a><span data-ttu-id="9d18a-160">共通パック オプション</span><span class="sxs-lookup"><span data-stu-id="9d18a-160">Common pack options</span></span>
+### <a name="common-pack-options"></a><span data-ttu-id="d1350-160">共通パック オプション</span><span class="sxs-lookup"><span data-stu-id="d1350-160">Common pack options</span></span>
 
 ```json
 {
@@ -485,10 +485,10 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-<span data-ttu-id="9d18a-161">MSBuild では、`owners` 要素に相当するものはありません。</span><span class="sxs-lookup"><span data-stu-id="9d18a-161">There is no equivalent for the `owners` element in MSBuild.</span></span>
-<span data-ttu-id="9d18a-162">`summary` の場合、MSBuild の `<Description>` プロパティを利用できます (ただし、`summary` の値はそのプロパティに自動的に移行されません)。そのプロパティが [`description`](#other-common-root-level-options) 要素にマッピングされているためです。</span><span class="sxs-lookup"><span data-stu-id="9d18a-162">For `summary`, you can use the MSBuild `<Description>` property, even though the value of `summary` is not migrated automatically to that property, since that property is mapped to the [`description`](#other-common-root-level-options) element.</span></span>
+<span data-ttu-id="d1350-161">MSBuild では、`owners` 要素に相当するものはありません。</span><span class="sxs-lookup"><span data-stu-id="d1350-161">There is no equivalent for the `owners` element in MSBuild.</span></span>
+<span data-ttu-id="d1350-162">`summary` の場合、MSBuild の `<Description>` プロパティを利用できます (ただし、`summary` の値はそのプロパティに自動的に移行されません)。そのプロパティが [`description`](#other-common-root-level-options) 要素にマッピングされているためです。</span><span class="sxs-lookup"><span data-stu-id="d1350-162">For `summary`, you can use the MSBuild `<Description>` property, even though the value of `summary` is not migrated automatically to that property, since that property is mapped to the [`description`](#other-common-root-level-options) element.</span></span>
 
-## <a name="scripts"></a><span data-ttu-id="9d18a-163">スクリプト</span><span class="sxs-lookup"><span data-stu-id="9d18a-163">scripts</span></span>
+## <a name="scripts"></a><span data-ttu-id="d1350-163">スクリプト</span><span class="sxs-lookup"><span data-stu-id="d1350-163">scripts</span></span>
 
 ```json
 {
@@ -499,7 +499,7 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="9d18a-164">MSBuild でこれに相当するものは[ターゲット](/visualstudio/msbuild/msbuild-targets)です。</span><span class="sxs-lookup"><span data-stu-id="9d18a-164">Their equivalent in MSBuild are [targets](/visualstudio/msbuild/msbuild-targets):</span></span>
+<span data-ttu-id="d1350-164">MSBuild でこれに相当するものは[ターゲット](/visualstudio/msbuild/msbuild-targets)です。</span><span class="sxs-lookup"><span data-stu-id="d1350-164">Their equivalent in MSBuild are [targets](/visualstudio/msbuild/msbuild-targets):</span></span>
 
 ```xml
 <Target Name="MyPreCompileTarget" BeforeTargets="Build">
@@ -512,7 +512,7 @@ And it's really great!</Description>
 </Target>
 ```
 
-## <a name="runtimeoptions"></a><span data-ttu-id="9d18a-165">runtimeOptions</span><span class="sxs-lookup"><span data-stu-id="9d18a-165">runtimeOptions</span></span>
+## <a name="runtimeoptions"></a><span data-ttu-id="d1350-165">runtimeOptions</span><span class="sxs-lookup"><span data-stu-id="d1350-165">runtimeOptions</span></span>
 
 ```json
 {
@@ -528,7 +528,7 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="9d18a-166">"System.GC.Server" プロパティを除き、このグループのすべての設定がプロジェクト フォルダーの *runtimeconfig.template.json* というファイルに配置されます。オプションは移行プロセス中にルート オブジェクトに移動します。</span><span class="sxs-lookup"><span data-stu-id="9d18a-166">All settings in this group, except for the "System.GC.Server" property, are placed into a file called *runtimeconfig.template.json* in the project folder, with options lifted to the root object during the migration process:</span></span>
+<span data-ttu-id="d1350-166">"System.GC.Server" プロパティを除き、このグループのすべての設定がプロジェクト フォルダーの *runtimeconfig.template.json* というファイルに配置されます。オプションは移行プロセス中にルート オブジェクトに移動します。</span><span class="sxs-lookup"><span data-stu-id="d1350-166">All settings in this group, except for the "System.GC.Server" property, are placed into a file called *runtimeconfig.template.json* in the project folder, with options lifted to the root object during the migration process:</span></span>
 
 ```json
 {
@@ -541,7 +541,7 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="9d18a-167">"System.GC.Server" プロパティは csproj ファイルに移行されます。</span><span class="sxs-lookup"><span data-stu-id="9d18a-167">The "System.GC.Server" property is migrated into the csproj file:</span></span>
+<span data-ttu-id="d1350-167">"System.GC.Server" プロパティは csproj ファイルに移行されます。</span><span class="sxs-lookup"><span data-stu-id="d1350-167">The "System.GC.Server" property is migrated into the csproj file:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -549,7 +549,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-<span data-ttu-id="9d18a-168">ただし、csproj のこれらの値はすべて MSBuild プロパティと共に設定できます。</span><span class="sxs-lookup"><span data-stu-id="9d18a-168">However, you can set all those values in the csproj as well as MSBuild properties:</span></span>
+<span data-ttu-id="d1350-168">ただし、csproj のこれらの値はすべて MSBuild プロパティと共に設定できます。</span><span class="sxs-lookup"><span data-stu-id="d1350-168">However, you can set all those values in the csproj as well as MSBuild properties:</span></span>
 
 ```xml
 <PropertyGroup>
@@ -561,7 +561,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-## <a name="shared"></a><span data-ttu-id="9d18a-169">shared</span><span class="sxs-lookup"><span data-stu-id="9d18a-169">shared</span></span>
+## <a name="shared"></a><span data-ttu-id="d1350-169">shared</span><span class="sxs-lookup"><span data-stu-id="d1350-169">shared</span></span>
 
 ```json
 {
@@ -569,13 +569,13 @@ And it's really great!</Description>
 }
 ```
 
-<span data-ttu-id="9d18a-170">csproj ではサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="9d18a-170">Not supported in csproj.</span></span> <span data-ttu-id="9d18a-171">代わりに、 *.nuspec* ファイルにコンテンツ ファイルを追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9d18a-171">You must instead create include content files in your *.nuspec* file.</span></span>
-<span data-ttu-id="9d18a-172">詳細については、「[Including content files](/nuget/schema/nuspec#including-content-files)」 (コンテンツ ファイルを追加する) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9d18a-172">For more information, see [Including content files](/nuget/schema/nuspec#including-content-files).</span></span>
+<span data-ttu-id="d1350-170">csproj ではサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="d1350-170">Not supported in csproj.</span></span> <span data-ttu-id="d1350-171">代わりに、 *.nuspec* ファイルにコンテンツ ファイルを追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d1350-171">You must instead create include content files in your *.nuspec* file.</span></span>
+<span data-ttu-id="d1350-172">詳細については、「[Including content files](/nuget/schema/nuspec#including-content-files)」 (コンテンツ ファイルを追加する) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d1350-172">For more information, see [Including content files](/nuget/schema/nuspec#including-content-files).</span></span>
 
-## <a name="files"></a><span data-ttu-id="9d18a-173">ファイル</span><span class="sxs-lookup"><span data-stu-id="9d18a-173">files</span></span>
+## <a name="files"></a><span data-ttu-id="d1350-173">ファイル</span><span class="sxs-lookup"><span data-stu-id="d1350-173">files</span></span>
 
-<span data-ttu-id="9d18a-174">*project.json* では、ビルドとパックは、複数のフォルダーからのコンパイルと埋め込みまで拡張できます。</span><span class="sxs-lookup"><span data-stu-id="9d18a-174">In *project.json*, build and pack could be extended to compile and embed from different folders.</span></span>
-<span data-ttu-id="9d18a-175">MSBuild では、これは[項目](/visualstudio/msbuild/common-msbuild-project-items)の使用により行われます。</span><span class="sxs-lookup"><span data-stu-id="9d18a-175">In MSBuild, this is done using [items](/visualstudio/msbuild/common-msbuild-project-items).</span></span> <span data-ttu-id="9d18a-176">次の例は一般的な変換です。</span><span class="sxs-lookup"><span data-stu-id="9d18a-176">The following example is a common conversion:</span></span>
+<span data-ttu-id="d1350-174">*project.json* では、ビルドとパックは、複数のフォルダーからのコンパイルと埋め込みまで拡張できます。</span><span class="sxs-lookup"><span data-stu-id="d1350-174">In *project.json*, build and pack could be extended to compile and embed from different folders.</span></span>
+<span data-ttu-id="d1350-175">MSBuild では、これは[項目](/visualstudio/msbuild/common-msbuild-project-items)の使用により行われます。</span><span class="sxs-lookup"><span data-stu-id="d1350-175">In MSBuild, this is done using [items](/visualstudio/msbuild/common-msbuild-project-items).</span></span> <span data-ttu-id="d1350-176">次の例は一般的な変換です。</span><span class="sxs-lookup"><span data-stu-id="d1350-176">The following example is a common conversion:</span></span>
 
 ```json
 {
@@ -621,21 +621,21 @@ And it's really great!</Description>
 ```
 
 > [!NOTE]
-> <span data-ttu-id="9d18a-177">既定の [Glob パターン](https://en.wikipedia.org/wiki/Glob_(programming))の多くは .NET Core SDK により自動的に追加されます。</span><span class="sxs-lookup"><span data-stu-id="9d18a-177">Many of the default [globbing patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are added automatically by the .NET Core SDK.</span></span>
-> <span data-ttu-id="9d18a-178">詳細については、「[Default Compile Item Values](https://aka.ms/sdkimplicititems)」 (既定のコンパイル項目値) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9d18a-178">For more information, see [Default Compile Item Values](https://aka.ms/sdkimplicititems).</span></span>
+> <span data-ttu-id="d1350-177">既定の [Glob パターン](https://en.wikipedia.org/wiki/Glob_(programming))の多くは .NET Core SDK により自動的に追加されます。</span><span class="sxs-lookup"><span data-stu-id="d1350-177">Many of the default [globbing patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are added automatically by the .NET Core SDK.</span></span>
+> <span data-ttu-id="d1350-178">詳細については、「[Default Compile Item Values](https://aka.ms/sdkimplicititems)」 (既定のコンパイル項目値) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d1350-178">For more information, see [Default Compile Item Values](https://aka.ms/sdkimplicititems).</span></span>
 
-<span data-ttu-id="9d18a-179">すべての MSBuild `ItemGroup` 要素で `Include`、`Exclude`、`Remove` がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="9d18a-179">All MSBuild `ItemGroup` elements support `Include`, `Exclude`, and `Remove`.</span></span>
+<span data-ttu-id="d1350-179">すべての MSBuild `ItemGroup` 要素で `Include`、`Exclude`、`Remove` がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="d1350-179">All MSBuild `ItemGroup` elements support `Include`, `Exclude`, and `Remove`.</span></span>
 
-<span data-ttu-id="9d18a-180">.nupkg 内のパッケージ レイアウトは `PackagePath="path"` で変更できます。</span><span class="sxs-lookup"><span data-stu-id="9d18a-180">Package layout inside the .nupkg can be modified with `PackagePath="path"`.</span></span>
+<span data-ttu-id="d1350-180">.nupkg 内のパッケージ レイアウトは `PackagePath="path"` で変更できます。</span><span class="sxs-lookup"><span data-stu-id="d1350-180">Package layout inside the .nupkg can be modified with `PackagePath="path"`.</span></span>
 
-<span data-ttu-id="9d18a-181">`Content` を除き、ほとんどの項目グループで、パッケージに `Pack="true"` を明示的に追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9d18a-181">Except for `Content`, most item groups require explicitly adding `Pack="true"` to be included in the package.</span></span> <span data-ttu-id="9d18a-182">MSBuild の `Content` プロパティが既定で  *に設定されているため、* はパッケージの`<IncludeContentInPack>`コンテンツ`true` フォルダーに置かれます。</span><span class="sxs-lookup"><span data-stu-id="9d18a-182">`Content` will be put in the *content* folder in a package since the MSBuild `<IncludeContentInPack>` property is set to `true` by default.</span></span>
-<span data-ttu-id="9d18a-183">詳細については、「[Including content in a package](/nuget/schema/msbuild-targets#including-content-in-a-package)」 (パッケージにコンテンツを追加する) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9d18a-183">For more information, see [Including content in a package](/nuget/schema/msbuild-targets#including-content-in-a-package).</span></span>
+<span data-ttu-id="d1350-181">`Content` を除き、ほとんどの項目グループで、パッケージに `Pack="true"` を明示的に追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d1350-181">Except for `Content`, most item groups require explicitly adding `Pack="true"` to be included in the package.</span></span> <span data-ttu-id="d1350-182">MSBuild の `<IncludeContentInPack>` プロパティが既定で `true` に設定されているため、`Content` はパッケージの*コンテンツ* フォルダーに置かれます。</span><span class="sxs-lookup"><span data-stu-id="d1350-182">`Content` will be put in the *content* folder in a package since the MSBuild `<IncludeContentInPack>` property is set to `true` by default.</span></span>
+<span data-ttu-id="d1350-183">詳細については、「[Including content in a package](/nuget/schema/msbuild-targets#including-content-in-a-package)」 (パッケージにコンテンツを追加する) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d1350-183">For more information, see [Including content in a package](/nuget/schema/msbuild-targets#including-content-in-a-package).</span></span>
 
-<span data-ttu-id="9d18a-184">`PackagePath="%(Identity)"` は、パッケージ パスをプロジェクト関連のファイル パスに設定する簡単な方法です。</span><span class="sxs-lookup"><span data-stu-id="9d18a-184">`PackagePath="%(Identity)"` is a short way of setting package path to the project-relative file path.</span></span>
+<span data-ttu-id="d1350-184">`PackagePath="%(Identity)"` は、パッケージ パスをプロジェクト関連のファイル パスに設定する簡単な方法です。</span><span class="sxs-lookup"><span data-stu-id="d1350-184">`PackagePath="%(Identity)"` is a short way of setting package path to the project-relative file path.</span></span>
 
-## <a name="testrunner"></a><span data-ttu-id="9d18a-185">testRunner</span><span class="sxs-lookup"><span data-stu-id="9d18a-185">testRunner</span></span>
+## <a name="testrunner"></a><span data-ttu-id="d1350-185">testRunner</span><span class="sxs-lookup"><span data-stu-id="d1350-185">testRunner</span></span>
 
-### <a name="xunit"></a><span data-ttu-id="9d18a-186">xUnit</span><span class="sxs-lookup"><span data-stu-id="9d18a-186">xUnit</span></span>
+### <a name="xunit"></a><span data-ttu-id="d1350-186">xUnit</span><span class="sxs-lookup"><span data-stu-id="d1350-186">xUnit</span></span>
 
 ```json
 {
@@ -654,7 +654,7 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-### <a name="mstest"></a><span data-ttu-id="9d18a-187">MSTest</span><span class="sxs-lookup"><span data-stu-id="9d18a-187">MSTest</span></span>
+### <a name="mstest"></a><span data-ttu-id="d1350-187">MSTest</span><span class="sxs-lookup"><span data-stu-id="d1350-187">MSTest</span></span>
 
 ```json
 {
@@ -673,6 +673,6 @@ And it's really great!</Description>
 </ItemGroup>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="9d18a-188">参照</span><span class="sxs-lookup"><span data-stu-id="9d18a-188">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d1350-188">参照</span><span class="sxs-lookup"><span data-stu-id="d1350-188">See also</span></span>
 
-- [<span data-ttu-id="9d18a-189">CLI の変更の概要</span><span class="sxs-lookup"><span data-stu-id="9d18a-189">High-level overview of changes in CLI</span></span>](../tools/cli-msbuild-architecture.md)
+- [<span data-ttu-id="d1350-189">CLI の変更の概要</span><span class="sxs-lookup"><span data-stu-id="d1350-189">High-level overview of changes in CLI</span></span>](../tools/cli-msbuild-architecture.md)
