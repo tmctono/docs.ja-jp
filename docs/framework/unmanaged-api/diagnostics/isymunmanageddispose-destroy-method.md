@@ -15,28 +15,28 @@ helpviewer_keywords:
 ms.assetid: a854ab9f-d2ba-470e-867f-808c1e7bd07a
 topic_type:
 - apiref
-ms.openlocfilehash: e930a9a3753ccf2b8aff798916c876fbedad4df4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5bd94cb851d4bb044d4ce03b97d6342a2c9652e4
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430703"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441319"
 ---
-# <a name="isymunmanageddisposedestroy-method"></a><span data-ttu-id="71e9d-102">ISymUnmanagedDispose::Destroy メソッド</span><span class="sxs-lookup"><span data-stu-id="71e9d-102">ISymUnmanagedDispose::Destroy Method</span></span>
-<span data-ttu-id="71e9d-103">基になるオブジェクトがすべての内部参照を解放し、後続のメソッド呼び出しの失敗を返します。</span><span class="sxs-lookup"><span data-stu-id="71e9d-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>  
+# <a name="isymunmanageddisposedestroy-method"></a><span data-ttu-id="5fda4-102">ISymUnmanagedDispose::Destroy メソッド</span><span class="sxs-lookup"><span data-stu-id="5fda4-102">ISymUnmanagedDispose::Destroy Method</span></span>
+<span data-ttu-id="5fda4-103">基になるオブジェクトがすべての内部参照を解放し、後続のメソッド呼び出しの失敗を返します。</span><span class="sxs-lookup"><span data-stu-id="5fda4-103">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="71e9d-104">構文</span><span class="sxs-lookup"><span data-stu-id="71e9d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5fda4-104">構文</span><span class="sxs-lookup"><span data-stu-id="5fda4-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Destroy();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="71e9d-105">戻り値</span><span class="sxs-lookup"><span data-stu-id="71e9d-105">Return Value</span></span>  
- <span data-ttu-id="71e9d-106">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="71e9d-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5fda4-105">戻り値</span><span class="sxs-lookup"><span data-stu-id="5fda4-105">Return Value</span></span>  
+ <span data-ttu-id="5fda4-106">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="5fda4-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="71e9d-107">要件</span><span class="sxs-lookup"><span data-stu-id="71e9d-107">Requirements</span></span>  
- <span data-ttu-id="71e9d-108">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="71e9d-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5fda4-107">要件</span><span class="sxs-lookup"><span data-stu-id="5fda4-107">Requirements</span></span>  
+ <span data-ttu-id="5fda4-108">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="5fda4-108">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="71e9d-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="71e9d-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5fda4-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="5fda4-109">See also</span></span>
 
-- [<span data-ttu-id="71e9d-110">ISymUnmanagedDispose インターフェイス</span><span class="sxs-lookup"><span data-stu-id="71e9d-110">ISymUnmanagedDispose Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-interface.md)
+- [<span data-ttu-id="5fda4-110">ISymUnmanagedDispose インターフェイス</span><span class="sxs-lookup"><span data-stu-id="5fda4-110">ISymUnmanagedDispose Interface</span></span>](isymunmanageddispose-interface.md)

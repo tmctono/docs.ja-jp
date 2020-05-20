@@ -14,27 +14,27 @@ helpviewer_keywords:
 ms.assetid: e11c9baa-4cf1-4bb4-a95f-b1908893b46c
 topic_type:
 - apiref
-ms.openlocfilehash: ca5afa8c0cf0198dbc8ab65824605f18c22dcdbb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 58d81fd150684f254333c17374d06f7dd5b95823
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449250"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441415"
 ---
-# <a name="isymunmanagedconstant-interface"></a><span data-ttu-id="34cb0-102">ISymUnmanagedConstant インターフェイス</span><span class="sxs-lookup"><span data-stu-id="34cb0-102">ISymUnmanagedConstant Interface</span></span>
-<span data-ttu-id="34cb0-103">アンマネージ定数へのアクセスを提供します。</span><span class="sxs-lookup"><span data-stu-id="34cb0-103">Provides access to unmanaged constants.</span></span>  
+# <a name="isymunmanagedconstant-interface"></a><span data-ttu-id="3f4cf-102">ISymUnmanagedConstant インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3f4cf-102">ISymUnmanagedConstant Interface</span></span>
+<span data-ttu-id="3f4cf-103">アンマネージ定数へのアクセスを提供します。</span><span class="sxs-lookup"><span data-stu-id="3f4cf-103">Provides access to unmanaged constants.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="34cb0-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="34cb0-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="3f4cf-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="3f4cf-104">Methods</span></span>  
   
-|<span data-ttu-id="34cb0-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="34cb0-105">Method</span></span>|<span data-ttu-id="34cb0-106">説明</span><span class="sxs-lookup"><span data-stu-id="34cb0-106">Description</span></span>|  
+|<span data-ttu-id="3f4cf-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="3f4cf-105">Method</span></span>|<span data-ttu-id="3f4cf-106">説明</span><span class="sxs-lookup"><span data-stu-id="3f4cf-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="34cb0-107">GetName メソッド</span><span class="sxs-lookup"><span data-stu-id="34cb0-107">GetName Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)|<span data-ttu-id="34cb0-108">定数の名前を取得します。</span><span class="sxs-lookup"><span data-stu-id="34cb0-108">Gets the name of the constant.</span></span>|  
-|[<span data-ttu-id="34cb0-109">GetSignature メソッド</span><span class="sxs-lookup"><span data-stu-id="34cb0-109">GetSignature Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)|<span data-ttu-id="34cb0-110">定数の署名を取得します。</span><span class="sxs-lookup"><span data-stu-id="34cb0-110">Gets the signature of the constant.</span></span>|  
-|[<span data-ttu-id="34cb0-111">GetValue メソッド</span><span class="sxs-lookup"><span data-stu-id="34cb0-111">GetValue Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)|<span data-ttu-id="34cb0-112">定数の値を取得します。</span><span class="sxs-lookup"><span data-stu-id="34cb0-112">Gets the value of the constant.</span></span>|  
+|[<span data-ttu-id="3f4cf-107">GetName メソッド</span><span class="sxs-lookup"><span data-stu-id="3f4cf-107">GetName Method</span></span>](isymunmanagedconstant-getname-method.md)|<span data-ttu-id="3f4cf-108">定数の名前を取得します。</span><span class="sxs-lookup"><span data-stu-id="3f4cf-108">Gets the name of the constant.</span></span>|  
+|[<span data-ttu-id="3f4cf-109">GetSignature メソッド</span><span class="sxs-lookup"><span data-stu-id="3f4cf-109">GetSignature Method</span></span>](isymunmanagedconstant-getsignature-method.md)|<span data-ttu-id="3f4cf-110">定数の署名を取得します。</span><span class="sxs-lookup"><span data-stu-id="3f4cf-110">Gets the signature of the constant.</span></span>|  
+|[<span data-ttu-id="3f4cf-111">GetValue メソッド</span><span class="sxs-lookup"><span data-stu-id="3f4cf-111">GetValue Method</span></span>](isymunmanagedconstant-getvalue-method.md)|<span data-ttu-id="3f4cf-112">定数の値を取得します。</span><span class="sxs-lookup"><span data-stu-id="3f4cf-112">Gets the value of the constant.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="34cb0-113">要件</span><span class="sxs-lookup"><span data-stu-id="34cb0-113">Requirements</span></span>  
- <span data-ttu-id="34cb0-114">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="34cb0-114">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3f4cf-113">要件</span><span class="sxs-lookup"><span data-stu-id="3f4cf-113">Requirements</span></span>  
+ <span data-ttu-id="3f4cf-114">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="3f4cf-114">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="34cb0-115">参照</span><span class="sxs-lookup"><span data-stu-id="34cb0-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3f4cf-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="3f4cf-115">See also</span></span>
 
-- [<span data-ttu-id="34cb0-116">シンボル ストア診断インターフェイス</span><span class="sxs-lookup"><span data-stu-id="34cb0-116">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="3f4cf-116">シンボル ストア診断インターフェイス</span><span class="sxs-lookup"><span data-stu-id="3f4cf-116">Diagnostics Symbol Store Interfaces</span></span>](diagnostics-symbol-store-interfaces.md)

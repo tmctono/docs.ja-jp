@@ -1,5 +1,5 @@
 ---
-title: ILCodeKind 列挙体
+title: ILCodeKind 列挙型
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -12,19 +12,19 @@ api_type:
 ms.assetid: b91765e4-82db-46f9-a6dc-6b80610276af
 topic_type:
 - apiref
-ms.openlocfilehash: 20e2e3f177b12221832786f4fab86635098d1989
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0586b9e184a0958b978837601db002e035881cbc
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790489"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421034"
 ---
-# <a name="ilcodekind-enumeration"></a><span data-ttu-id="01e2b-102">ILCodeKind 列挙体</span><span class="sxs-lookup"><span data-stu-id="01e2b-102">ILCodeKind Enumeration</span></span>
-<span data-ttu-id="01e2b-103">[.NET Framework 4.5.2 以降のバージョンでのみでサポート]</span><span class="sxs-lookup"><span data-stu-id="01e2b-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="ilcodekind-enumeration"></a><span data-ttu-id="b3d18-102">ILCodeKind 列挙型</span><span class="sxs-lookup"><span data-stu-id="b3d18-102">ILCodeKind Enumeration</span></span>
+<span data-ttu-id="b3d18-103">[.NET Framework 4.5.2 以降のバージョンでのみでサポート]</span><span class="sxs-lookup"><span data-stu-id="b3d18-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="01e2b-104">デバッガーがローカル変数またはプロファイラー ReJIT インストルメンテーションに追加されたコードにアクセスできるかどうかを指定する値を提供します。</span><span class="sxs-lookup"><span data-stu-id="01e2b-104">Provides values that specify whether the debugger is able to access local variables or code added in profiler ReJIT instrumentation.</span></span>  
+ <span data-ttu-id="b3d18-104">デバッガーがローカル変数またはプロファイラー ReJIT インストルメンテーションに追加されたコードにアクセスできるかどうかを指定する値を提供します。</span><span class="sxs-lookup"><span data-stu-id="b3d18-104">Provides values that specify whether the debugger is able to access local variables or code added in profiler ReJIT instrumentation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="01e2b-105">構文</span><span class="sxs-lookup"><span data-stu-id="01e2b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b3d18-105">構文</span><span class="sxs-lookup"><span data-stu-id="b3d18-105">Syntax</span></span>  
   
 ```cpp
 typedef enum ILCodeKind {  
@@ -33,27 +33,27 @@ typedef enum ILCodeKind {
 } ILCodeKind;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="01e2b-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="01e2b-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="b3d18-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="b3d18-106">Members</span></span>  
   
-|<span data-ttu-id="01e2b-107">メンバー名</span><span class="sxs-lookup"><span data-stu-id="01e2b-107">Member name</span></span>|<span data-ttu-id="01e2b-108">説明</span><span class="sxs-lookup"><span data-stu-id="01e2b-108">Description</span></span>|  
+|<span data-ttu-id="b3d18-107">メンバー名</span><span class="sxs-lookup"><span data-stu-id="b3d18-107">Member name</span></span>|<span data-ttu-id="b3d18-108">説明</span><span class="sxs-lookup"><span data-stu-id="b3d18-108">Description</span></span>|  
 |-----------------|-----------------|  
-|`ILCODE_ORIGINAL_IL`|<span data-ttu-id="01e2b-109">デバッガーは、ReJIT インストルメンテーションからの情報に対してアクセスできません。</span><span class="sxs-lookup"><span data-stu-id="01e2b-109">The debugger does not have access to information from ReJIT instrumentation.</span></span>|  
-|`ILCODE_REJIT_IL`|<span data-ttu-id="01e2b-110">デバッガーは、ReJIT インストルメンテーションからの情報に対してアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="01e2b-110">The debugger has access to information from ReJIT instrumentation.</span></span>|  
+|`ILCODE_ORIGINAL_IL`|<span data-ttu-id="b3d18-109">デバッガーは、ReJIT インストルメンテーションからの情報に対してアクセスできません。</span><span class="sxs-lookup"><span data-stu-id="b3d18-109">The debugger does not have access to information from ReJIT instrumentation.</span></span>|  
+|`ILCODE_REJIT_IL`|<span data-ttu-id="b3d18-110">デバッガーは、ReJIT インストルメンテーションからの情報に対してアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="b3d18-110">The debugger has access to information from ReJIT instrumentation.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="01e2b-111">コメント</span><span class="sxs-lookup"><span data-stu-id="01e2b-111">Remarks</span></span>  
- <span data-ttu-id="01e2b-112">`ILCodeKind` 列挙体のメンバーを[EnumerateLocalVariablesEx](icordebugilframe4-enumeratelocalvariablesex-method.md)メソッドおよび[Getlocalvariables ex](icordebugilframe4-getlocalvariableex-method.md)メソッドに渡して、デバッガーがプロファイラー rejit インストルメンテーションに追加された変数にアクセスできるかどうかを判断し、 [getcodeex](icordebugilframe4-getcodeex-method.md)メソッドに渡すことで、デバッガーがインストルメント化された IL にアクセスできるかどうかを判断できます。</span><span class="sxs-lookup"><span data-stu-id="01e2b-112">A member of the `ILCodeKind` enumeration can be passed to the [EnumerateLocalVariablesEx](icordebugilframe4-enumeratelocalvariablesex-method.md) and [GetLocalVariableEx](icordebugilframe4-getlocalvariableex-method.md) methods to determine whether the debugger can access variables added in profiler ReJIT instrumentation, and to the [GetCodeEx](icordebugilframe4-getcodeex-method.md) method to determine whether the debugger can access instrumented IL.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b3d18-111">解説</span><span class="sxs-lookup"><span data-stu-id="b3d18-111">Remarks</span></span>  
+ <span data-ttu-id="b3d18-112">列挙体のメンバーを `ILCodeKind` [EnumerateLocalVariablesEx](icordebugilframe4-enumeratelocalvariablesex-method.md)メソッドおよび[getlocalvariables ex](icordebugilframe4-getlocalvariableex-method.md)メソッドに渡して、デバッガーがプロファイラー rejit インストルメンテーションに追加された変数にアクセスできるかどうかを判断し、 [getcodeex](icordebugilframe4-getcodeex-method.md)メソッドに渡して、デバッガーがインストルメント化された IL にアクセスできるかどうかを判断できます。</span><span class="sxs-lookup"><span data-stu-id="b3d18-112">A member of the `ILCodeKind` enumeration can be passed to the [EnumerateLocalVariablesEx](icordebugilframe4-enumeratelocalvariablesex-method.md) and [GetLocalVariableEx](icordebugilframe4-getlocalvariableex-method.md) methods to determine whether the debugger can access variables added in profiler ReJIT instrumentation, and to the [GetCodeEx](icordebugilframe4-getcodeex-method.md) method to determine whether the debugger can access instrumented IL.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="01e2b-113">要件</span><span class="sxs-lookup"><span data-stu-id="01e2b-113">Requirements</span></span>  
- <span data-ttu-id="01e2b-114">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="01e2b-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b3d18-113">要件</span><span class="sxs-lookup"><span data-stu-id="b3d18-113">Requirements</span></span>  
+ <span data-ttu-id="b3d18-114">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b3d18-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="01e2b-115">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="01e2b-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b3d18-115">**ヘッダー:** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b3d18-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="01e2b-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="01e2b-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b3d18-116">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b3d18-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="01e2b-117">**.NET Framework のバージョン:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01e2b-117">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="b3d18-117">**.NET Framework のバージョン:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b3d18-117">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="01e2b-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="01e2b-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b3d18-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="b3d18-118">See also</span></span>
 
-- [<span data-ttu-id="01e2b-119">列挙型のデバッグ</span><span class="sxs-lookup"><span data-stu-id="01e2b-119">Debugging Enumerations</span></span>](debugging-enumerations.md)
-- [<span data-ttu-id="01e2b-120">ICorDebugILFrame4 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="01e2b-120">ICorDebugILFrame4 Interface</span></span>](icordebugilframe4-interface.md)
-- [<span data-ttu-id="01e2b-121">ReJIT: ハウツーガイド</span><span class="sxs-lookup"><span data-stu-id="01e2b-121">ReJIT: A How-To Guide</span></span>](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)
+- [<span data-ttu-id="b3d18-119">列挙体のデバッグ</span><span class="sxs-lookup"><span data-stu-id="b3d18-119">Debugging Enumerations</span></span>](debugging-enumerations.md)
+- [<span data-ttu-id="b3d18-120">ICorDebugILFrame4 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="b3d18-120">ICorDebugILFrame4 Interface</span></span>](icordebugilframe4-interface.md)
+- [<span data-ttu-id="b3d18-121">ReJIT: ハウツーガイド</span><span class="sxs-lookup"><span data-stu-id="b3d18-121">ReJIT: A How-To Guide</span></span>](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)
