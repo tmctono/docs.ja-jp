@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 78c1ba28-a410-4360-805c-23a95408964a
 topic_type:
 - apiref
-ms.openlocfilehash: 2939d9cf3991a9e0b8f93bb301925b1092eca50e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a3ec0af33f3f1201ce2f6b62291dfc67696fecab
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446045"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610445"
 ---
-# <a name="isymunmanagedvariablegetsignature-method"></a><span data-ttu-id="d0dbd-102">ISymUnmanagedVariable::GetSignature メソッド</span><span class="sxs-lookup"><span data-stu-id="d0dbd-102">ISymUnmanagedVariable::GetSignature Method</span></span>
-<span data-ttu-id="d0dbd-103">この変数のシグネチャを取得します。</span><span class="sxs-lookup"><span data-stu-id="d0dbd-103">Gets the signature of this variable.</span></span>  
+# <a name="isymunmanagedvariablegetsignature-method"></a><span data-ttu-id="72041-102">ISymUnmanagedVariable::GetSignature メソッド</span><span class="sxs-lookup"><span data-stu-id="72041-102">ISymUnmanagedVariable::GetSignature Method</span></span>
+<span data-ttu-id="72041-103">この変数のシグネチャを取得します。</span><span class="sxs-lookup"><span data-stu-id="72041-103">Gets the signature of this variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d0dbd-104">構文</span><span class="sxs-lookup"><span data-stu-id="d0dbd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="72041-104">構文</span><span class="sxs-lookup"><span data-stu-id="72041-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSignature(  
@@ -35,22 +35,22 @@ HRESULT GetSignature(
         length_is(*pcSig)] BYTE sig[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d0dbd-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="d0dbd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="72041-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="72041-105">Parameters</span></span>  
  `cSig`  
- <span data-ttu-id="d0dbd-106">から`sig` パラメーターが指すバッファーの長さ。</span><span class="sxs-lookup"><span data-stu-id="d0dbd-106">[in] The length of the buffer pointed to by the `sig` parameter.</span></span>  
+ <span data-ttu-id="72041-106">からパラメーターが指すバッファーの長さ `sig` 。</span><span class="sxs-lookup"><span data-stu-id="72041-106">[in] The length of the buffer pointed to by the `sig` parameter.</span></span>  
   
  `pcSig`  
- <span data-ttu-id="d0dbd-107">入出力署名を格納するために必要なバッファーのサイズ (文字数) を受け取る `ULONG32` へのポインター。</span><span class="sxs-lookup"><span data-stu-id="d0dbd-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span></span>  
+ <span data-ttu-id="72041-107">入出力`ULONG32`署名を格納するために必要なバッファーのサイズ (文字数) を受け取るへのポインター。</span><span class="sxs-lookup"><span data-stu-id="72041-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span></span>  
   
  `sig`  
- <span data-ttu-id="d0dbd-108">入出力署名を格納するバッファー。</span><span class="sxs-lookup"><span data-stu-id="d0dbd-108">[out] The buffer that stores the signature.</span></span>  
+ <span data-ttu-id="72041-108">入出力署名を格納するバッファー。</span><span class="sxs-lookup"><span data-stu-id="72041-108">[out] The buffer that stores the signature.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d0dbd-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="d0dbd-109">Return Value</span></span>  
- <span data-ttu-id="d0dbd-110">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="d0dbd-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="72041-109">戻り値</span><span class="sxs-lookup"><span data-stu-id="72041-109">Return Value</span></span>  
+ <span data-ttu-id="72041-110">メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。</span><span class="sxs-lookup"><span data-stu-id="72041-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d0dbd-111">要件</span><span class="sxs-lookup"><span data-stu-id="d0dbd-111">Requirements</span></span>  
- <span data-ttu-id="d0dbd-112">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="d0dbd-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="72041-111">要件</span><span class="sxs-lookup"><span data-stu-id="72041-111">Requirements</span></span>  
+ <span data-ttu-id="72041-112">**ヘッダー:** CorSym .idl、CorSym .h</span><span class="sxs-lookup"><span data-stu-id="72041-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d0dbd-113">参照</span><span class="sxs-lookup"><span data-stu-id="d0dbd-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="72041-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="72041-113">See also</span></span>
 
-- [<span data-ttu-id="d0dbd-114">ISymUnmanagedVariable インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d0dbd-114">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [<span data-ttu-id="72041-114">ISymUnmanagedVariable インターフェイス</span><span class="sxs-lookup"><span data-stu-id="72041-114">ISymUnmanagedVariable Interface</span></span>](isymunmanagedvariable-interface.md)

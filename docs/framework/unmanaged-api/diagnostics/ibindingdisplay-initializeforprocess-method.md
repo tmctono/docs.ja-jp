@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 59417acb-4e59-46ad-acfe-d827e6ab6078
 topic_type:
 - apiref
-ms.openlocfilehash: bb796a12868cc3e44394ab493f7838dc48ab4dc5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8645878132359b6218cd62b1ff707208de53704b
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448485"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442151"
 ---
-# <a name="ibindingdisplayinitializeforprocess-method"></a><span data-ttu-id="7cfe7-102">IBindingDisplay::InitializeForProcess メソッド</span><span class="sxs-lookup"><span data-stu-id="7cfe7-102">IBindingDisplay::InitializeForProcess Method</span></span>
-<span data-ttu-id="7cfe7-103">[IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)オブジェクトを初期化します。</span><span class="sxs-lookup"><span data-stu-id="7cfe7-103">Initializes the [IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md) object.</span></span>  
+# <a name="ibindingdisplayinitializeforprocess-method"></a><span data-ttu-id="2e6ce-102">IBindingDisplay::InitializeForProcess メソッド</span><span class="sxs-lookup"><span data-stu-id="2e6ce-102">IBindingDisplay::InitializeForProcess Method</span></span>
+<span data-ttu-id="2e6ce-103">[IBindingDisplay](ibindingdisplay-interface.md)オブジェクトを初期化します。</span><span class="sxs-lookup"><span data-stu-id="2e6ce-103">Initializes the [IBindingDisplay](ibindingdisplay-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7cfe7-104">構文</span><span class="sxs-lookup"><span data-stu-id="7cfe7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2e6ce-104">構文</span><span class="sxs-lookup"><span data-stu-id="2e6ce-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT InitializeForProcess (  
@@ -33,22 +33,22 @@ HRESULT InitializeForProcess (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7cfe7-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="7cfe7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2e6ce-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="2e6ce-105">Parameters</span></span>  
  `pid`  
- <span data-ttu-id="7cfe7-106">からプロセス識別子。</span><span class="sxs-lookup"><span data-stu-id="7cfe7-106">[in] The process identifier.</span></span>  
+ <span data-ttu-id="2e6ce-106">からプロセス識別子。</span><span class="sxs-lookup"><span data-stu-id="2e6ce-106">[in] The process identifier.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7cfe7-107">コメント</span><span class="sxs-lookup"><span data-stu-id="7cfe7-107">Remarks</span></span>  
- <span data-ttu-id="7cfe7-108">デバッガーは、作成時に `InitializeForProcess` メソッドを呼び出して、バインド表示を初期化します。</span><span class="sxs-lookup"><span data-stu-id="7cfe7-108">The debugger calls the `InitializeForProcess` method at creation time to initialize the binding display.</span></span> <span data-ttu-id="7cfe7-109">`IBindingDisplay` の他のメソッドが呼び出される前に、作成時に `InitializeForProcess` を呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="7cfe7-109">`InitializeForProcess` must be called at creation time before any other method on `IBindingDisplay` is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2e6ce-107">解説</span><span class="sxs-lookup"><span data-stu-id="2e6ce-107">Remarks</span></span>  
+ <span data-ttu-id="2e6ce-108">デバッガーは、 `InitializeForProcess` 作成時にメソッドを呼び出して、バインド表示を初期化します。</span><span class="sxs-lookup"><span data-stu-id="2e6ce-108">The debugger calls the `InitializeForProcess` method at creation time to initialize the binding display.</span></span> <span data-ttu-id="2e6ce-109">`InitializeForProcess`の他のメソッドが呼び出される前に、作成時にを呼び出す必要があり `IBindingDisplay` ます。</span><span class="sxs-lookup"><span data-stu-id="2e6ce-109">`InitializeForProcess` must be called at creation time before any other method on `IBindingDisplay` is called.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7cfe7-110">要件</span><span class="sxs-lookup"><span data-stu-id="7cfe7-110">Requirements</span></span>  
- <span data-ttu-id="7cfe7-111">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7cfe7-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2e6ce-110">要件</span><span class="sxs-lookup"><span data-stu-id="2e6ce-110">Requirements</span></span>  
+ <span data-ttu-id="2e6ce-111">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="2e6ce-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7cfe7-112">**ヘッダー:** BindingDisplay. h</span><span class="sxs-lookup"><span data-stu-id="7cfe7-112">**Header:** BindingDisplay.h</span></span>  
+ <span data-ttu-id="2e6ce-112">**ヘッダー:** BindingDisplay. h</span><span class="sxs-lookup"><span data-stu-id="2e6ce-112">**Header:** BindingDisplay.h</span></span>  
   
- <span data-ttu-id="7cfe7-113">**ライブラリ:** BindingDisplay .idl</span><span class="sxs-lookup"><span data-stu-id="7cfe7-113">**Library:** BindingDisplay.idl</span></span>  
+ <span data-ttu-id="2e6ce-113">**ライブラリ:** BindingDisplay .idl</span><span class="sxs-lookup"><span data-stu-id="2e6ce-113">**Library:** BindingDisplay.idl</span></span>  
   
- <span data-ttu-id="7cfe7-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7cfe7-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2e6ce-114">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2e6ce-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7cfe7-115">参照</span><span class="sxs-lookup"><span data-stu-id="7cfe7-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2e6ce-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="2e6ce-115">See also</span></span>
 
-- [<span data-ttu-id="7cfe7-116">IBindingDisplay インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7cfe7-116">IBindingDisplay Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)
+- [<span data-ttu-id="2e6ce-116">IBindingDisplay インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2e6ce-116">IBindingDisplay Interface</span></span>](ibindingdisplay-interface.md)
