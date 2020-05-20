@@ -14,39 +14,39 @@ helpviewer_keywords:
 ms.assetid: 5c834aa1-f2db-408a-b230-c7bec093d364
 topic_type:
 - apiref
-ms.openlocfilehash: 59aa904d4c67326b60381d3476eaab179d7fa42b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 631301a10aee96bb00aeda6b0b8695f0aea186a8
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140802"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703479"
 ---
-# <a name="iclrpolicymanager-interface"></a><span data-ttu-id="9db31-102">ICLRPolicyManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9db31-102">ICLRPolicyManager Interface</span></span>
-<span data-ttu-id="9db31-103">エラーやタイムアウトが発生した場合に実行されるポリシーアクションをホストが指定できるようにするメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="9db31-103">Provides methods that allow the host to specify policy actions to be taken in the event of failures and timeouts.</span></span>  
+# <a name="iclrpolicymanager-interface"></a><span data-ttu-id="6b1f0-102">ICLRPolicyManager インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6b1f0-102">ICLRPolicyManager Interface</span></span>
+<span data-ttu-id="6b1f0-103">エラーやタイムアウトが発生した場合に実行されるポリシーアクションをホストが指定できるようにするメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="6b1f0-103">Provides methods that allow the host to specify policy actions to be taken in the event of failures and timeouts.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="9db31-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="9db31-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="6b1f0-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="6b1f0-104">Methods</span></span>  
   
-|<span data-ttu-id="9db31-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="9db31-105">Method</span></span>|<span data-ttu-id="9db31-106">説明</span><span class="sxs-lookup"><span data-stu-id="9db31-106">Description</span></span>|  
+|<span data-ttu-id="6b1f0-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="6b1f0-105">Method</span></span>|<span data-ttu-id="6b1f0-106">説明</span><span class="sxs-lookup"><span data-stu-id="6b1f0-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="9db31-107">SetActionOnFailure メソッド</span><span class="sxs-lookup"><span data-stu-id="9db31-107">SetActionOnFailure Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md)|<span data-ttu-id="9db31-108">指定したエラーが発生したときに共通言語ランタイム (CLR) が実行するポリシーアクションを指定します。</span><span class="sxs-lookup"><span data-stu-id="9db31-108">Specifies the policy action the common language runtime (CLR) should take when the specified failure occurs.</span></span>|  
-|[<span data-ttu-id="9db31-109">SetActionOnTimeout メソッド</span><span class="sxs-lookup"><span data-stu-id="9db31-109">SetActionOnTimeout Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md)|<span data-ttu-id="9db31-110">指定された操作がタイムアウトしたときに CLR が実行するポリシーアクションを指定します。</span><span class="sxs-lookup"><span data-stu-id="9db31-110">Specifies the policy action the CLR should take when the specified operation times out.</span></span>|  
-|[<span data-ttu-id="9db31-111">SetDefaultAction メソッド</span><span class="sxs-lookup"><span data-stu-id="9db31-111">SetDefaultAction Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setdefaultaction-method.md)|<span data-ttu-id="9db31-112">指定された操作が発生したときに CLR が実行するポリシーアクションを指定します。</span><span class="sxs-lookup"><span data-stu-id="9db31-112">Specifies the policy action the CLR should take when the specified operation occurs.</span></span>|  
-|[<span data-ttu-id="9db31-113">SetTimeout メソッド</span><span class="sxs-lookup"><span data-stu-id="9db31-113">SetTimeout Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md)|<span data-ttu-id="9db31-114">指定された操作のタイムアウト値を設定します。</span><span class="sxs-lookup"><span data-stu-id="9db31-114">Sets a timeout value for the specified operation.</span></span>|  
-|[<span data-ttu-id="9db31-115">SetTimeoutAndAction メソッド</span><span class="sxs-lookup"><span data-stu-id="9db31-115">SetTimeoutAndAction Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeoutandaction-method.md)|<span data-ttu-id="9db31-116">指定された操作のタイムアウト値を設定し、操作が発生したときに CLR が実行する必要があるポリシーアクションを指定します。</span><span class="sxs-lookup"><span data-stu-id="9db31-116">Sets a timeout value for the specified operation, and specifies the policy action the CLR should take when the operation occurs.</span></span>|  
-|[<span data-ttu-id="9db31-117">SetUnhandledExceptionPolicy メソッド</span><span class="sxs-lookup"><span data-stu-id="9db31-117">SetUnhandledExceptionPolicy Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md)|<span data-ttu-id="9db31-118">未処理の例外が発生した場合の CLR の動作を指定します。</span><span class="sxs-lookup"><span data-stu-id="9db31-118">Specifies the behavior of the CLR when an unhandled exception occurs.</span></span>|  
+|[<span data-ttu-id="6b1f0-107">SetActionOnFailure メソッド</span><span class="sxs-lookup"><span data-stu-id="6b1f0-107">SetActionOnFailure Method</span></span>](iclrpolicymanager-setactiononfailure-method.md)|<span data-ttu-id="6b1f0-108">指定したエラーが発生したときに共通言語ランタイム (CLR) が実行するポリシーアクションを指定します。</span><span class="sxs-lookup"><span data-stu-id="6b1f0-108">Specifies the policy action the common language runtime (CLR) should take when the specified failure occurs.</span></span>|  
+|[<span data-ttu-id="6b1f0-109">SetActionOnTimeout メソッド</span><span class="sxs-lookup"><span data-stu-id="6b1f0-109">SetActionOnTimeout Method</span></span>](iclrpolicymanager-setactionontimeout-method.md)|<span data-ttu-id="6b1f0-110">指定された操作がタイムアウトしたときに CLR が実行するポリシーアクションを指定します。</span><span class="sxs-lookup"><span data-stu-id="6b1f0-110">Specifies the policy action the CLR should take when the specified operation times out.</span></span>|  
+|[<span data-ttu-id="6b1f0-111">SetDefaultAction メソッド</span><span class="sxs-lookup"><span data-stu-id="6b1f0-111">SetDefaultAction Method</span></span>](iclrpolicymanager-setdefaultaction-method.md)|<span data-ttu-id="6b1f0-112">指定された操作が発生したときに CLR が実行するポリシーアクションを指定します。</span><span class="sxs-lookup"><span data-stu-id="6b1f0-112">Specifies the policy action the CLR should take when the specified operation occurs.</span></span>|  
+|[<span data-ttu-id="6b1f0-113">SetTimeout メソッド</span><span class="sxs-lookup"><span data-stu-id="6b1f0-113">SetTimeout Method</span></span>](iclrpolicymanager-settimeout-method.md)|<span data-ttu-id="6b1f0-114">指定された操作のタイムアウト値を設定します。</span><span class="sxs-lookup"><span data-stu-id="6b1f0-114">Sets a timeout value for the specified operation.</span></span>|  
+|[<span data-ttu-id="6b1f0-115">SetTimeoutAndAction メソッド</span><span class="sxs-lookup"><span data-stu-id="6b1f0-115">SetTimeoutAndAction Method</span></span>](iclrpolicymanager-settimeoutandaction-method.md)|<span data-ttu-id="6b1f0-116">指定された操作のタイムアウト値を設定し、操作が発生したときに CLR が実行する必要があるポリシーアクションを指定します。</span><span class="sxs-lookup"><span data-stu-id="6b1f0-116">Sets a timeout value for the specified operation, and specifies the policy action the CLR should take when the operation occurs.</span></span>|  
+|[<span data-ttu-id="6b1f0-117">SetUnhandledExceptionPolicy メソッド</span><span class="sxs-lookup"><span data-stu-id="6b1f0-117">SetUnhandledExceptionPolicy Method</span></span>](iclrpolicymanager-setunhandledexceptionpolicy-method.md)|<span data-ttu-id="6b1f0-118">未処理の例外が発生した場合の CLR の動作を指定します。</span><span class="sxs-lookup"><span data-stu-id="6b1f0-118">Specifies the behavior of the CLR when an unhandled exception occurs.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9db31-119">［要件］</span><span class="sxs-lookup"><span data-stu-id="9db31-119">Requirements</span></span>  
- <span data-ttu-id="9db31-120">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9db31-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6b1f0-119">要件</span><span class="sxs-lookup"><span data-stu-id="6b1f0-119">Requirements</span></span>  
+ <span data-ttu-id="6b1f0-120">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6b1f0-120">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9db31-121">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="9db31-121">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="6b1f0-121">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="6b1f0-121">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="9db31-122">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="9db31-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="6b1f0-122">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="6b1f0-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9db31-123">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9db31-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6b1f0-123">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6b1f0-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9db31-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="9db31-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6b1f0-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="6b1f0-124">See also</span></span>
 
-- [<span data-ttu-id="9db31-125">EClrFailure 列挙型</span><span class="sxs-lookup"><span data-stu-id="9db31-125">EClrFailure Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
-- [<span data-ttu-id="9db31-126">EClrOperation 列挙型</span><span class="sxs-lookup"><span data-stu-id="9db31-126">EClrOperation Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
-- [<span data-ttu-id="9db31-127">EPolicyAction 列挙型</span><span class="sxs-lookup"><span data-stu-id="9db31-127">EPolicyAction Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
-- [<span data-ttu-id="9db31-128">ICLRControl インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9db31-128">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="6b1f0-125">EClrFailure 列挙型</span><span class="sxs-lookup"><span data-stu-id="6b1f0-125">EClrFailure Enumeration</span></span>](eclrfailure-enumeration.md)
+- [<span data-ttu-id="6b1f0-126">EClrOperation 列挙型</span><span class="sxs-lookup"><span data-stu-id="6b1f0-126">EClrOperation Enumeration</span></span>](eclroperation-enumeration.md)
+- [<span data-ttu-id="6b1f0-127">EPolicyAction 列挙型</span><span class="sxs-lookup"><span data-stu-id="6b1f0-127">EPolicyAction Enumeration</span></span>](epolicyaction-enumeration.md)
+- [<span data-ttu-id="6b1f0-128">ICLRControl インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6b1f0-128">ICLRControl Interface</span></span>](iclrcontrol-interface.md)
