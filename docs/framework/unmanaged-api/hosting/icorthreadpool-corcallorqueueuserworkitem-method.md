@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a2081223-84ca-4331-a8d3-9352f422f3e7
 topic_type:
 - apiref
-ms.openlocfilehash: 92282b09c4fbc0a5ed63c0dbca0f1a234bb421a9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a2d2d6307136f0f8983e409d9f17fbcae1c55705
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133330"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83760340"
 ---
-# <a name="icorthreadpoolcorcallorqueueuserworkitem-method"></a><span data-ttu-id="03425-102">ICorThreadpool::CorCallOrQueueUserWorkItem メソッド</span><span class="sxs-lookup"><span data-stu-id="03425-102">ICorThreadpool::CorCallOrQueueUserWorkItem Method</span></span>
-<span data-ttu-id="03425-103">このメソッドは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。</span><span class="sxs-lookup"><span data-stu-id="03425-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icorthreadpoolcorcallorqueueuserworkitem-method"></a><span data-ttu-id="46494-102">ICorThreadpool::CorCallOrQueueUserWorkItem メソッド</span><span class="sxs-lookup"><span data-stu-id="46494-102">ICorThreadpool::CorCallOrQueueUserWorkItem Method</span></span>
+<span data-ttu-id="46494-103">このメソッドは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。</span><span class="sxs-lookup"><span data-stu-id="46494-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="03425-104">構文</span><span class="sxs-lookup"><span data-stu-id="03425-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="46494-104">構文</span><span class="sxs-lookup"><span data-stu-id="46494-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CorCallOrQueueUserWorkItem (  
@@ -35,15 +35,15 @@ HRESULT CorCallOrQueueUserWorkItem (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="03425-105">［要件］</span><span class="sxs-lookup"><span data-stu-id="03425-105">Requirements</span></span>  
- <span data-ttu-id="03425-106">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="03425-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="46494-105">要件</span><span class="sxs-lookup"><span data-stu-id="46494-105">Requirements</span></span>  
+ <span data-ttu-id="46494-106">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="46494-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="03425-107">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="03425-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="46494-107">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="46494-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="03425-108">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="03425-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="46494-108">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="46494-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="03425-109">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03425-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="46494-109">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="46494-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="03425-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="03425-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="46494-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="46494-110">See also</span></span>
 
-- [<span data-ttu-id="03425-111">ICorThreadpool インターフェイス</span><span class="sxs-lookup"><span data-stu-id="03425-111">ICorThreadpool Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)
+- [<span data-ttu-id="46494-111">ICorThreadpool インターフェイス</span><span class="sxs-lookup"><span data-stu-id="46494-111">ICorThreadpool Interface</span></span>](icorthreadpool-interface.md)

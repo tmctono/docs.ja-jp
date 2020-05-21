@@ -15,31 +15,31 @@ helpviewer_keywords:
 ms.assetid: 34ffc4a6-6553-43df-9b43-779effb67e2c
 topic_type:
 - apiref
-ms.openlocfilehash: 4598e3588cbcb6f5e6911709692152969071cd5b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 13b0cdb5f1bd90d04ff52042de892e3defc5ff84
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139600"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762280"
 ---
-# <a name="icorruntimehostdeletelogicalthreadstate-method"></a><span data-ttu-id="c1228-102">ICorRuntimeHost::DeleteLogicalThreadState メソッド</span><span class="sxs-lookup"><span data-stu-id="c1228-102">ICorRuntimeHost::DeleteLogicalThreadState Method</span></span>
-<span data-ttu-id="c1228-103">このメソッドは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。</span><span class="sxs-lookup"><span data-stu-id="c1228-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icorruntimehostdeletelogicalthreadstate-method"></a><span data-ttu-id="d0575-102">ICorRuntimeHost::DeleteLogicalThreadState メソッド</span><span class="sxs-lookup"><span data-stu-id="d0575-102">ICorRuntimeHost::DeleteLogicalThreadState Method</span></span>
+<span data-ttu-id="d0575-103">このメソッドは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。</span><span class="sxs-lookup"><span data-stu-id="d0575-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c1228-104">構文</span><span class="sxs-lookup"><span data-stu-id="c1228-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d0575-104">構文</span><span class="sxs-lookup"><span data-stu-id="d0575-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DeleteLogicalThreadState ( );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="c1228-105">［要件］</span><span class="sxs-lookup"><span data-stu-id="c1228-105">Requirements</span></span>  
- <span data-ttu-id="c1228-106">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c1228-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d0575-105">要件</span><span class="sxs-lookup"><span data-stu-id="d0575-105">Requirements</span></span>  
+ <span data-ttu-id="d0575-106">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d0575-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c1228-107">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="c1228-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="d0575-107">**ヘッダー:** Mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="d0575-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c1228-108">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="c1228-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="d0575-108">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="d0575-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c1228-109">**.NET Framework のバージョン:** 1.0、1.1</span><span class="sxs-lookup"><span data-stu-id="c1228-109">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="d0575-109">**.NET Framework のバージョン:** 1.0、1.1</span><span class="sxs-lookup"><span data-stu-id="d0575-109">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c1228-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="c1228-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d0575-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="d0575-110">See also</span></span>
 
-- [<span data-ttu-id="c1228-111">ICorRuntimeHost インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c1228-111">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="d0575-111">ICorRuntimeHost インターフェイス</span><span class="sxs-lookup"><span data-stu-id="d0575-111">ICorRuntimeHost Interface</span></span>](icorruntimehost-interface.md)
