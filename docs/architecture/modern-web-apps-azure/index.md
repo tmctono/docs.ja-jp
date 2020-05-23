@@ -35,7 +35,7 @@ ms.locfileid: "82507194"
 
 <span data-ttu-id="60785-116">ここに記載したいくつかの例は、説明のためだけに提供された架空のものです。</span><span class="sxs-lookup"><span data-stu-id="60785-116">Some examples depicted herein are provided for illustration only and are fictitious.</span></span> <span data-ttu-id="60785-117">実在のものとの関連性または関係性は一切ありません。</span><span class="sxs-lookup"><span data-stu-id="60785-117">No real association or connection is intended or should be inferred.</span></span>
 
-<span data-ttu-id="60785-118">https://www.microsoft.com の "商標" Web ページに記載されている Microsoft および商標は、Microsoft グループの商標です。</span><span class="sxs-lookup"><span data-stu-id="60785-118">Microsoft and the trademarks listed at https://www.microsoft.com on the "Trademarks" webpage are trademarks of the Microsoft group of companies.</span></span>
+<span data-ttu-id="60785-118"><https://www.microsoft.com> の "商標" Web ページに記載されている Microsoft および商標は、Microsoft グループの商標です。</span><span class="sxs-lookup"><span data-stu-id="60785-118">Microsoft and the trademarks listed at <https://www.microsoft.com> on the "Trademarks" webpage are trademarks of the Microsoft group of companies.</span></span>
 
 <span data-ttu-id="60785-119">Mac および macOS は Apple Inc. の商標です。</span><span class="sxs-lookup"><span data-stu-id="60785-119">Mac and macOS are trademarks of Apple Inc.</span></span>
 
