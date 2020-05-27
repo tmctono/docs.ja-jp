@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c9df4087-12b3-46d9-b075-9067dd7805df
 topic_type:
 - apiref
-ms.openlocfilehash: c037b9dce4b7530c952c75122f86335da82e1b27
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 63e81e822eb55b4090aeee6d6be3c72adbd94451
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446031"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009133"
 ---
-# <a name="imetadataassemblyimportcloseenum-method"></a><span data-ttu-id="9d5be-102">IMetaDataAssemblyImport::CloseEnum メソッド</span><span class="sxs-lookup"><span data-stu-id="9d5be-102">IMetaDataAssemblyImport::CloseEnum Method</span></span>
-<span data-ttu-id="9d5be-103">指定した列挙インスタンスへの参照を解放します。</span><span class="sxs-lookup"><span data-stu-id="9d5be-103">Releases a reference to the specified enumeration instance.</span></span>  
+# <a name="imetadataassemblyimportcloseenum-method"></a><span data-ttu-id="db13a-102">IMetaDataAssemblyImport::CloseEnum メソッド</span><span class="sxs-lookup"><span data-stu-id="db13a-102">IMetaDataAssemblyImport::CloseEnum Method</span></span>
+<span data-ttu-id="db13a-103">指定した列挙インスタンスへの参照を解放します。</span><span class="sxs-lookup"><span data-stu-id="db13a-103">Releases a reference to the specified enumeration instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9d5be-104">構文</span><span class="sxs-lookup"><span data-stu-id="9d5be-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="db13a-104">構文</span><span class="sxs-lookup"><span data-stu-id="db13a-104">Syntax</span></span>  
   
 ```cpp  
 void CloseEnum (  
@@ -33,19 +33,19 @@ void CloseEnum (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9d5be-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="9d5be-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="db13a-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="db13a-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="9d5be-106">から閉じられる列挙体のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="9d5be-106">[in] The enumeration instance to be closed.</span></span>  
+ <span data-ttu-id="db13a-106">から閉じられる列挙体のインスタンス。</span><span class="sxs-lookup"><span data-stu-id="db13a-106">[in] The enumeration instance to be closed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9d5be-107">要件</span><span class="sxs-lookup"><span data-stu-id="9d5be-107">Requirements</span></span>  
- <span data-ttu-id="9d5be-108">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9d5be-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="db13a-107">必要条件</span><span class="sxs-lookup"><span data-stu-id="db13a-107">Requirements</span></span>  
+ <span data-ttu-id="db13a-108">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="db13a-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9d5be-109">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="9d5be-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="db13a-109">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="db13a-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9d5be-110">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="9d5be-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="db13a-110">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="db13a-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="9d5be-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9d5be-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="db13a-111">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="db13a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9d5be-112">参照</span><span class="sxs-lookup"><span data-stu-id="9d5be-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="db13a-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="db13a-112">See also</span></span>
 
-- [<span data-ttu-id="9d5be-113">IMetaDataAssemblyImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9d5be-113">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="db13a-113">IMetaDataAssemblyImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="db13a-113">IMetaDataAssemblyImport Interface</span></span>](imetadataassemblyimport-interface.md)
