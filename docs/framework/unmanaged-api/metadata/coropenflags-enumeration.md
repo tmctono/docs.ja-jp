@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: e27a83b5-2698-4996-9032-1e0fed8b91ca
 topic_type:
 - apiref
-ms.openlocfilehash: ad582fc2fd1bd1d2fc9d5a0d483fdb3a51309a10
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7318a7ea3eb1ddb047a799e58ebdfd9ce6cd76d1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436507"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007586"
 ---
-# <a name="coropenflags-enumeration"></a><span data-ttu-id="e6174-102">CorOpenFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="e6174-102">CorOpenFlags Enumeration</span></span>
-<span data-ttu-id="e6174-103">マニフェスト ファイルを開くときにメタデータの動作を制御するフラグ値を含めます。</span><span class="sxs-lookup"><span data-stu-id="e6174-103">Contains flag values that control metadata behavior upon opening manifest files.</span></span>  
+# <a name="coropenflags-enumeration"></a><span data-ttu-id="46b04-102">CorOpenFlags 列挙型</span><span class="sxs-lookup"><span data-stu-id="46b04-102">CorOpenFlags Enumeration</span></span>
+<span data-ttu-id="46b04-103">マニフェスト ファイルを開くときにメタデータの動作を制御するフラグ値を含めます。</span><span class="sxs-lookup"><span data-stu-id="46b04-103">Contains flag values that control metadata behavior upon opening manifest files.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e6174-104">構文</span><span class="sxs-lookup"><span data-stu-id="e6174-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="46b04-104">構文</span><span class="sxs-lookup"><span data-stu-id="46b04-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorOpenFlags  
@@ -46,31 +46,31 @@ typedef enum CorOpenFlags
 } CorOpenFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="e6174-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="e6174-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="46b04-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="46b04-105">Members</span></span>  
   
-|<span data-ttu-id="e6174-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="e6174-106">Member</span></span>|<span data-ttu-id="e6174-107">説明</span><span class="sxs-lookup"><span data-stu-id="e6174-107">Description</span></span>|  
+|<span data-ttu-id="46b04-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="46b04-106">Member</span></span>|<span data-ttu-id="46b04-107">説明</span><span class="sxs-lookup"><span data-stu-id="46b04-107">Description</span></span>|  
 |------------|-----------------|  
-|`ofRead`|<span data-ttu-id="e6174-108">ファイルが読み取り専用で開かれることを示します。</span><span class="sxs-lookup"><span data-stu-id="e6174-108">Indicates that the file should be opened for reading only.</span></span>|  
-|`ofWrite`|<span data-ttu-id="e6174-109">ファイルが書き込み用に開かれることを示します。</span><span class="sxs-lookup"><span data-stu-id="e6174-109">Indicates that the file should be opened for writing.</span></span><br /><br /> <span data-ttu-id="e6174-110">.winmd ファイルを開くときに `ofWrite` フラグを使用する場合は、`ofNoTransform` フラグも渡す必要があります。</span><span class="sxs-lookup"><span data-stu-id="e6174-110">If you are using the `ofWrite` flag when opening a .winmd file, you should also pass the `ofNoTransform` flag.</span></span>|  
-|`ofReadWriteMask`|<span data-ttu-id="e6174-111">読み取りおよび書き込み用のマスク。</span><span class="sxs-lookup"><span data-stu-id="e6174-111">A mask for reading and writing.</span></span>|  
-|`ofCopyMemory`|<span data-ttu-id="e6174-112">ファイルがメモリ内に読み込まれることを示します。</span><span class="sxs-lookup"><span data-stu-id="e6174-112">Indicates that the file should be read into memory.</span></span> <span data-ttu-id="e6174-113">メタデータは自身のコピーを保持する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e6174-113">Metadata should maintain its own copy.</span></span>|  
-|`ofCacheImage`|<span data-ttu-id="e6174-114">互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="e6174-114">Obsolete.</span></span> <span data-ttu-id="e6174-115">このフラグは無視されます。</span><span class="sxs-lookup"><span data-stu-id="e6174-115">This flag is ignored.</span></span>|  
-|`ofManifestMetadata`|<span data-ttu-id="e6174-116">互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="e6174-116">Obsolete.</span></span> <span data-ttu-id="e6174-117">このフラグは無視されます。</span><span class="sxs-lookup"><span data-stu-id="e6174-117">This flag is ignored.</span></span>|  
-|`ofReadOnly`|<span data-ttu-id="e6174-118">は、ファイルを読み取り用に開く必要があること、および[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)の `QueryInterface` の呼び出しを行うことができないことを示します。</span><span class="sxs-lookup"><span data-stu-id="e6174-118">Indicates that the file should be opened for reading, and that a call to `QueryInterface` for an [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) cannot be made.</span></span>|  
-|`ofTakeOwnership`|<span data-ttu-id="e6174-119">[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)への呼び出しを使用してメモリが割り当てられ、メタデータによって解放されることを示します。</span><span class="sxs-lookup"><span data-stu-id="e6174-119">Indicates that the memory was allocated using a call to [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) and will be freed by the metadata.</span></span>|  
-|`ofNoTypeLib`|<span data-ttu-id="e6174-120">互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="e6174-120">Obsolete.</span></span> <span data-ttu-id="e6174-121">このフラグは無視されます。</span><span class="sxs-lookup"><span data-stu-id="e6174-121">This flag is ignored.</span></span>|  
-|`ofNoTransform`|<span data-ttu-id="e6174-122">.winmd ファイルの自動変換を無効にする必要があることを示します。</span><span class="sxs-lookup"><span data-stu-id="e6174-122">Indicates that automatic transforms of .winmd files should be disabled.</span></span> <span data-ttu-id="e6174-123">つまり、Windows Runtime タイプから .NET Framework タイプへの投射は無効になります。</span><span class="sxs-lookup"><span data-stu-id="e6174-123">In other words, the projection of a Windows Runtime type to a .NET Framework type should be disabled.</span></span> <span data-ttu-id="e6174-124">詳細については、「 [Windows ランタイムと CLR-.net と Windows ランタイム](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e6174-124">For more information, see [Windows Runtime and the CLR - Underneath the Hood with .NET and the Windows Runtime](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime).</span></span>|  
-|`ofReserved1`|<span data-ttu-id="e6174-125">内部使用のために予約済みです。</span><span class="sxs-lookup"><span data-stu-id="e6174-125">Reserved for internal use.</span></span>|  
-|`ofReserved2`|<span data-ttu-id="e6174-126">内部使用のために予約済みです。</span><span class="sxs-lookup"><span data-stu-id="e6174-126">Reserved for internal use.</span></span>|  
-|`ofReserved`|<span data-ttu-id="e6174-127">内部使用のために予約済みです。</span><span class="sxs-lookup"><span data-stu-id="e6174-127">Reserved for internal use.</span></span>|  
+|`ofRead`|<span data-ttu-id="46b04-108">ファイルが読み取り専用で開かれることを示します。</span><span class="sxs-lookup"><span data-stu-id="46b04-108">Indicates that the file should be opened for reading only.</span></span>|  
+|`ofWrite`|<span data-ttu-id="46b04-109">ファイルが書き込み用に開かれることを示します。</span><span class="sxs-lookup"><span data-stu-id="46b04-109">Indicates that the file should be opened for writing.</span></span><br /><br /> <span data-ttu-id="46b04-110">.winmd ファイルを開くときに `ofWrite` フラグを使用する場合は、`ofNoTransform` フラグも渡す必要があります。</span><span class="sxs-lookup"><span data-stu-id="46b04-110">If you are using the `ofWrite` flag when opening a .winmd file, you should also pass the `ofNoTransform` flag.</span></span>|  
+|`ofReadWriteMask`|<span data-ttu-id="46b04-111">読み取りおよび書き込み用のマスク。</span><span class="sxs-lookup"><span data-stu-id="46b04-111">A mask for reading and writing.</span></span>|  
+|`ofCopyMemory`|<span data-ttu-id="46b04-112">ファイルがメモリ内に読み込まれることを示します。</span><span class="sxs-lookup"><span data-stu-id="46b04-112">Indicates that the file should be read into memory.</span></span> <span data-ttu-id="46b04-113">メタデータは自身のコピーを保持する必要があります。</span><span class="sxs-lookup"><span data-stu-id="46b04-113">Metadata should maintain its own copy.</span></span>|  
+|`ofCacheImage`|<span data-ttu-id="46b04-114">互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="46b04-114">Obsolete.</span></span> <span data-ttu-id="46b04-115">このフラグは無視されます。</span><span class="sxs-lookup"><span data-stu-id="46b04-115">This flag is ignored.</span></span>|  
+|`ofManifestMetadata`|<span data-ttu-id="46b04-116">互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="46b04-116">Obsolete.</span></span> <span data-ttu-id="46b04-117">このフラグは無視されます。</span><span class="sxs-lookup"><span data-stu-id="46b04-117">This flag is ignored.</span></span>|  
+|`ofReadOnly`|<span data-ttu-id="46b04-118">は、ファイルを読み取り用に開く必要があること、および IMetaDataEmit に対するの呼び出しを行うことができないことを示し `QueryInterface` ます。 [IMetaDataEmit](imetadataemit-interface.md)</span><span class="sxs-lookup"><span data-stu-id="46b04-118">Indicates that the file should be opened for reading, and that a call to `QueryInterface` for an [IMetaDataEmit](imetadataemit-interface.md) cannot be made.</span></span>|  
+|`ofTakeOwnership`|<span data-ttu-id="46b04-119">[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)への呼び出しを使用してメモリが割り当てられ、メタデータによって解放されることを示します。</span><span class="sxs-lookup"><span data-stu-id="46b04-119">Indicates that the memory was allocated using a call to [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) and will be freed by the metadata.</span></span>|  
+|`ofNoTypeLib`|<span data-ttu-id="46b04-120">互換性のために残されています。</span><span class="sxs-lookup"><span data-stu-id="46b04-120">Obsolete.</span></span> <span data-ttu-id="46b04-121">このフラグは無視されます。</span><span class="sxs-lookup"><span data-stu-id="46b04-121">This flag is ignored.</span></span>|  
+|`ofNoTransform`|<span data-ttu-id="46b04-122">.winmd ファイルの自動変換を無効にする必要があることを示します。</span><span class="sxs-lookup"><span data-stu-id="46b04-122">Indicates that automatic transforms of .winmd files should be disabled.</span></span> <span data-ttu-id="46b04-123">つまり、Windows Runtime タイプから .NET Framework タイプへの投射は無効になります。</span><span class="sxs-lookup"><span data-stu-id="46b04-123">In other words, the projection of a Windows Runtime type to a .NET Framework type should be disabled.</span></span> <span data-ttu-id="46b04-124">詳細については、「 [Windows ランタイムと CLR-.net と Windows ランタイム](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="46b04-124">For more information, see [Windows Runtime and the CLR - Underneath the Hood with .NET and the Windows Runtime](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime).</span></span>|  
+|`ofReserved1`|<span data-ttu-id="46b04-125">内部使用のために予約されています。</span><span class="sxs-lookup"><span data-stu-id="46b04-125">Reserved for internal use.</span></span>|  
+|`ofReserved2`|<span data-ttu-id="46b04-126">内部使用のために予約されています。</span><span class="sxs-lookup"><span data-stu-id="46b04-126">Reserved for internal use.</span></span>|  
+|`ofReserved`|<span data-ttu-id="46b04-127">内部使用のために予約されています。</span><span class="sxs-lookup"><span data-stu-id="46b04-127">Reserved for internal use.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="e6174-128">要件</span><span class="sxs-lookup"><span data-stu-id="e6174-128">Requirements</span></span>  
- <span data-ttu-id="e6174-129">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e6174-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="46b04-128">必要条件</span><span class="sxs-lookup"><span data-stu-id="46b04-128">Requirements</span></span>  
+ <span data-ttu-id="46b04-129">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="46b04-129">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e6174-130">**ヘッダー:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="e6174-130">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="46b04-130">**ヘッダー:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="46b04-130">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="e6174-131">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e6174-131">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="46b04-131">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="46b04-131">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e6174-132">参照</span><span class="sxs-lookup"><span data-stu-id="e6174-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="46b04-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="46b04-132">See also</span></span>
 
-- [<span data-ttu-id="e6174-133">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="e6174-133">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="46b04-133">メタデータ列挙体</span><span class="sxs-lookup"><span data-stu-id="46b04-133">Metadata Enumerations</span></span>](metadata-enumerations.md)

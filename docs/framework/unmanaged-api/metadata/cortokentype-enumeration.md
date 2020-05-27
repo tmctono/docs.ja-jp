@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 93c9a369-225f-4eff-9b78-3fbee4902cf1
 topic_type:
 - apiref
-ms.openlocfilehash: 74807a678b5c0c2738f33fe552f6462af93ca1f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 629e18b6cd2fd7910804ecc608a45d2406dddea1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436469"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007495"
 ---
-# <a name="cortokentype-enumeration"></a><span data-ttu-id="99ce7-102">CorTokenType 列挙型</span><span class="sxs-lookup"><span data-stu-id="99ce7-102">CorTokenType Enumeration</span></span>
-<span data-ttu-id="99ce7-103">メタデータトークンの種類を示します。</span><span class="sxs-lookup"><span data-stu-id="99ce7-103">Indicates the type of a metadata token.</span></span>  
+# <a name="cortokentype-enumeration"></a><span data-ttu-id="5b71b-102">CorTokenType 列挙型</span><span class="sxs-lookup"><span data-stu-id="5b71b-102">CorTokenType Enumeration</span></span>
+<span data-ttu-id="5b71b-103">メタデータトークンの種類を示します。</span><span class="sxs-lookup"><span data-stu-id="5b71b-103">Indicates the type of a metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="99ce7-104">構文</span><span class="sxs-lookup"><span data-stu-id="99ce7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5b71b-104">構文</span><span class="sxs-lookup"><span data-stu-id="5b71b-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorTokenType {  
@@ -59,47 +59,47 @@ typedef enum CorTokenType {
 } CorTokenType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="99ce7-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="99ce7-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="5b71b-105">メンバー</span><span class="sxs-lookup"><span data-stu-id="5b71b-105">Members</span></span>  
   
-|<span data-ttu-id="99ce7-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="99ce7-106">Member</span></span>|<span data-ttu-id="99ce7-107">説明</span><span class="sxs-lookup"><span data-stu-id="99ce7-107">Description</span></span>|  
+|<span data-ttu-id="5b71b-106">メンバー</span><span class="sxs-lookup"><span data-stu-id="5b71b-106">Member</span></span>|<span data-ttu-id="5b71b-107">説明</span><span class="sxs-lookup"><span data-stu-id="5b71b-107">Description</span></span>|  
 |------------|-----------------|  
-|`mdtModule`|<span data-ttu-id="99ce7-108">`mdModule` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-108">An `mdModule` token.</span></span>|  
-|`mdtTypeRef`|<span data-ttu-id="99ce7-109">`mdTypeRef` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-109">An `mdTypeRef` token.</span></span>|  
-|`mdtTypeDef`|<span data-ttu-id="99ce7-110">`mdTypeDef` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-110">An `mdTypeDef` token.</span></span>|  
-|`mdtFieldDef`|<span data-ttu-id="99ce7-111">`mdFieldDef` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-111">An `mdFieldDef` token.</span></span>|  
-|`mdtMethodDef`|<span data-ttu-id="99ce7-112">`mdMethodDef` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-112">An `mdMethodDef` token.</span></span>|  
-|`mdtParamDef`|<span data-ttu-id="99ce7-113">`mdParamDef` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-113">An `mdParamDef` token.</span></span>|  
-|`mdtInterfaceImpl`|<span data-ttu-id="99ce7-114">`mdInterfaceImpl` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-114">An `mdInterfaceImpl` token.</span></span>|  
-|`mdtMemberRef`|<span data-ttu-id="99ce7-115">`mdMemberRef` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-115">An `mdMemberRef` token.</span></span>|  
-|`mdtCustomAttribute`|<span data-ttu-id="99ce7-116">`mdCustomAttribute` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-116">An `mdCustomAttribute` token.</span></span>|  
-|`mdtPermission`|<span data-ttu-id="99ce7-117">`mdPermission` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-117">An `mdPermission` token.</span></span>|  
-|`mdtSignature`|<span data-ttu-id="99ce7-118">`mdSignature` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-118">An `mdSignature` token.</span></span>|  
-|`mdtEvent`|<span data-ttu-id="99ce7-119">`mdEvent` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-119">An `mdEvent` token.</span></span>|  
-|`mdtProperty`|<span data-ttu-id="99ce7-120">`mdProperty` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-120">An `mdProperty` token.</span></span>|  
-|`mdtModuleRef`|<span data-ttu-id="99ce7-121">`mdModuleRef` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-121">An `mdModuleRef` token.</span></span>|  
-|`mdtTypeSpec`|<span data-ttu-id="99ce7-122">`mdTypeSpec` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-122">An `mdTypeSpec` token.</span></span>|  
-|`mdtAssembly`|<span data-ttu-id="99ce7-123">`mdAssembly` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-123">An `mdAssembly` token.</span></span>|  
-|`mdtAssemblyRef`|<span data-ttu-id="99ce7-124">`mdAssemblyRef` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-124">An `mdAssemblyRef` token.</span></span>|  
-|`mdtFile`|<span data-ttu-id="99ce7-125">`mdFile` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-125">An `mdFile` token.</span></span>|  
-|`mdtExportedType`|<span data-ttu-id="99ce7-126">`mdExportedType` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-126">An `mdExportedType` token.</span></span>|  
-|`mdtManifestResource`|<span data-ttu-id="99ce7-127">`mdManifestResource` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-127">An `mdManifestResource` token.</span></span>|  
-|`mdtGenericParam`|<span data-ttu-id="99ce7-128">`mdGenericParam` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-128">An `mdGenericParam` token.</span></span>|  
-|`mdtMethodSpec`|<span data-ttu-id="99ce7-129">`mdMethodSpec` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-129">An `mdMethodSpec` token.</span></span>|  
-|`mdtGenericParamConstraint`|<span data-ttu-id="99ce7-130">`mdGenericParamConstraint` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-130">An `mdGenericParamConstraint` token.</span></span>|  
-|`mdtString`|<span data-ttu-id="99ce7-131">`mdString` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-131">An `mdString` token.</span></span>|  
-|`mdtName`|<span data-ttu-id="99ce7-132">`mdName` トークンです。</span><span class="sxs-lookup"><span data-stu-id="99ce7-132">An `mdName` token.</span></span>|  
-|`mdtBaseType`|<span data-ttu-id="99ce7-133">使用しません。</span><span class="sxs-lookup"><span data-stu-id="99ce7-133">Not used.</span></span>|  
+|`mdtModule`|<span data-ttu-id="5b71b-108">`mdModule`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-108">An `mdModule` token.</span></span>|  
+|`mdtTypeRef`|<span data-ttu-id="5b71b-109">`mdTypeRef`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-109">An `mdTypeRef` token.</span></span>|  
+|`mdtTypeDef`|<span data-ttu-id="5b71b-110">`mdTypeDef`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-110">An `mdTypeDef` token.</span></span>|  
+|`mdtFieldDef`|<span data-ttu-id="5b71b-111">`mdFieldDef`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-111">An `mdFieldDef` token.</span></span>|  
+|`mdtMethodDef`|<span data-ttu-id="5b71b-112">`mdMethodDef`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-112">An `mdMethodDef` token.</span></span>|  
+|`mdtParamDef`|<span data-ttu-id="5b71b-113">`mdParamDef`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-113">An `mdParamDef` token.</span></span>|  
+|`mdtInterfaceImpl`|<span data-ttu-id="5b71b-114">`mdInterfaceImpl`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-114">An `mdInterfaceImpl` token.</span></span>|  
+|`mdtMemberRef`|<span data-ttu-id="5b71b-115">`mdMemberRef`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-115">An `mdMemberRef` token.</span></span>|  
+|`mdtCustomAttribute`|<span data-ttu-id="5b71b-116">`mdCustomAttribute`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-116">An `mdCustomAttribute` token.</span></span>|  
+|`mdtPermission`|<span data-ttu-id="5b71b-117">`mdPermission`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-117">An `mdPermission` token.</span></span>|  
+|`mdtSignature`|<span data-ttu-id="5b71b-118">`mdSignature`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-118">An `mdSignature` token.</span></span>|  
+|`mdtEvent`|<span data-ttu-id="5b71b-119">`mdEvent`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-119">An `mdEvent` token.</span></span>|  
+|`mdtProperty`|<span data-ttu-id="5b71b-120">`mdProperty`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-120">An `mdProperty` token.</span></span>|  
+|`mdtModuleRef`|<span data-ttu-id="5b71b-121">`mdModuleRef`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-121">An `mdModuleRef` token.</span></span>|  
+|`mdtTypeSpec`|<span data-ttu-id="5b71b-122">`mdTypeSpec`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-122">An `mdTypeSpec` token.</span></span>|  
+|`mdtAssembly`|<span data-ttu-id="5b71b-123">`mdAssembly`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-123">An `mdAssembly` token.</span></span>|  
+|`mdtAssemblyRef`|<span data-ttu-id="5b71b-124">`mdAssemblyRef`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-124">An `mdAssemblyRef` token.</span></span>|  
+|`mdtFile`|<span data-ttu-id="5b71b-125">`mdFile`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-125">An `mdFile` token.</span></span>|  
+|`mdtExportedType`|<span data-ttu-id="5b71b-126">`mdExportedType`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-126">An `mdExportedType` token.</span></span>|  
+|`mdtManifestResource`|<span data-ttu-id="5b71b-127">`mdManifestResource`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-127">An `mdManifestResource` token.</span></span>|  
+|`mdtGenericParam`|<span data-ttu-id="5b71b-128">`mdGenericParam`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-128">An `mdGenericParam` token.</span></span>|  
+|`mdtMethodSpec`|<span data-ttu-id="5b71b-129">`mdMethodSpec`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-129">An `mdMethodSpec` token.</span></span>|  
+|`mdtGenericParamConstraint`|<span data-ttu-id="5b71b-130">`mdGenericParamConstraint`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-130">An `mdGenericParamConstraint` token.</span></span>|  
+|`mdtString`|<span data-ttu-id="5b71b-131">`mdString`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-131">An `mdString` token.</span></span>|  
+|`mdtName`|<span data-ttu-id="5b71b-132">`mdName`トークン。</span><span class="sxs-lookup"><span data-stu-id="5b71b-132">An `mdName` token.</span></span>|  
+|`mdtBaseType`|<span data-ttu-id="5b71b-133">使用されていません。</span><span class="sxs-lookup"><span data-stu-id="5b71b-133">Not used.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="99ce7-134">コメント</span><span class="sxs-lookup"><span data-stu-id="99ce7-134">Remarks</span></span>  
- <span data-ttu-id="99ce7-135">各値は、対応するメタデータトークンの上位バイトの値に相当します。</span><span class="sxs-lookup"><span data-stu-id="99ce7-135">Each value is equal to the value of the top byte in the corresponding metadata token.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5b71b-134">コメント</span><span class="sxs-lookup"><span data-stu-id="5b71b-134">Remarks</span></span>  
+ <span data-ttu-id="5b71b-135">各値は、対応するメタデータトークンの上位バイトの値に相当します。</span><span class="sxs-lookup"><span data-stu-id="5b71b-135">Each value is equal to the value of the top byte in the corresponding metadata token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="99ce7-136">要件</span><span class="sxs-lookup"><span data-stu-id="99ce7-136">Requirements</span></span>  
- <span data-ttu-id="99ce7-137">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="99ce7-137">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5b71b-136">必要条件</span><span class="sxs-lookup"><span data-stu-id="5b71b-136">Requirements</span></span>  
+ <span data-ttu-id="5b71b-137">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5b71b-137">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="99ce7-138">**ヘッダー:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="99ce7-138">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="5b71b-138">**ヘッダー:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="5b71b-138">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="99ce7-139">**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="99ce7-139">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5b71b-139">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5b71b-139">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="99ce7-140">参照</span><span class="sxs-lookup"><span data-stu-id="99ce7-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5b71b-140">関連項目</span><span class="sxs-lookup"><span data-stu-id="5b71b-140">See also</span></span>
 
-- [<span data-ttu-id="99ce7-141">メタデータ列挙型</span><span class="sxs-lookup"><span data-stu-id="99ce7-141">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="5b71b-141">メタデータ列挙体</span><span class="sxs-lookup"><span data-stu-id="5b71b-141">Metadata Enumerations</span></span>](metadata-enumerations.md)
