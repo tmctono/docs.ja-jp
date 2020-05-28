@@ -14,33 +14,33 @@ helpviewer_keywords:
 ms.assetid: b297e3b0-20f9-478f-b707-5e2eecb2b5b2
 topic_type:
 - apiref
-ms.openlocfilehash: 1a732e59d539c330f91e8665e81dc4771b40e2d0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d8e5ab607f9310341ded482b35f02f3845926328
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123286"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008561"
 ---
-# <a name="ivalidator-interface"></a><span data-ttu-id="6fd48-102">IValidator インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6fd48-102">IValidator Interface</span></span>
-<span data-ttu-id="6fd48-103">ポータブル実行可能 (PE) イメージを検証し、検証エラーを報告するためのメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="6fd48-103">Provides methods for validating portable executable (PE) images and reporting validation errors.</span></span>  
+# <a name="ivalidator-interface"></a><span data-ttu-id="7958f-102">IValidator インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7958f-102">IValidator Interface</span></span>
+<span data-ttu-id="7958f-103">ポータブル実行可能 (PE) イメージを検証し、検証エラーを報告するためのメソッドを提供します。</span><span class="sxs-lookup"><span data-stu-id="7958f-103">Provides methods for validating portable executable (PE) images and reporting validation errors.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="6fd48-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="6fd48-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="7958f-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="7958f-104">Methods</span></span>  
   
-|<span data-ttu-id="6fd48-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="6fd48-105">Method</span></span>|<span data-ttu-id="6fd48-106">説明</span><span class="sxs-lookup"><span data-stu-id="6fd48-106">Description</span></span>|  
+|<span data-ttu-id="7958f-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="7958f-105">Method</span></span>|<span data-ttu-id="7958f-106">説明</span><span class="sxs-lookup"><span data-stu-id="7958f-106">Description</span></span>|  
 |------------|-----------------|  
-|<span data-ttu-id="6fd48-107">検証</span><span class="sxs-lookup"><span data-stu-id="6fd48-107">Validate</span></span>|<span data-ttu-id="6fd48-108">指定された PE または Microsoft 中間言語 (MSIL) ファイルを検証します。</span><span class="sxs-lookup"><span data-stu-id="6fd48-108">Validates the specified PE or Microsoft intermediate language (MSIL) file.</span></span>|  
-|<span data-ttu-id="6fd48-109">FormatEventInfo</span><span class="sxs-lookup"><span data-stu-id="6fd48-109">FormatEventInfo</span></span>|<span data-ttu-id="6fd48-110">指定した検証エラーに対応するエラーメッセージを取得します。</span><span class="sxs-lookup"><span data-stu-id="6fd48-110">Gets the error message corresponding to the specified validation error.</span></span>|  
+|<span data-ttu-id="7958f-107">[検証]</span><span class="sxs-lookup"><span data-stu-id="7958f-107">Validate</span></span>|<span data-ttu-id="7958f-108">指定された PE または Microsoft 中間言語 (MSIL) ファイルを検証します。</span><span class="sxs-lookup"><span data-stu-id="7958f-108">Validates the specified PE or Microsoft intermediate language (MSIL) file.</span></span>|  
+|<span data-ttu-id="7958f-109">FormatEventInfo</span><span class="sxs-lookup"><span data-stu-id="7958f-109">FormatEventInfo</span></span>|<span data-ttu-id="7958f-110">指定した検証エラーに対応するエラーメッセージを取得します。</span><span class="sxs-lookup"><span data-stu-id="7958f-110">Gets the error message corresponding to the specified validation error.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="6fd48-111">［要件］</span><span class="sxs-lookup"><span data-stu-id="6fd48-111">Requirements</span></span>  
- <span data-ttu-id="6fd48-112">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="6fd48-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7958f-111">必要条件</span><span class="sxs-lookup"><span data-stu-id="7958f-111">Requirements</span></span>  
+ <span data-ttu-id="7958f-112">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7958f-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6fd48-113">**ヘッダー:** IValidator、IValidator</span><span class="sxs-lookup"><span data-stu-id="6fd48-113">**Header:** IValidator.idl, IValidator.h</span></span>  
+ <span data-ttu-id="7958f-113">**ヘッダー:** IValidator、IValidator</span><span class="sxs-lookup"><span data-stu-id="7958f-113">**Header:** IValidator.idl, IValidator.h</span></span>  
   
- <span data-ttu-id="6fd48-114">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="6fd48-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="7958f-114">**ライブラリ:** Mscoree.dll にリソースとして含まれています</span><span class="sxs-lookup"><span data-stu-id="7958f-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="6fd48-115">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6fd48-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7958f-115">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7958f-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6fd48-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="6fd48-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7958f-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="7958f-116">See also</span></span>
 
-- [<span data-ttu-id="6fd48-117">ホスト インターフェイス</span><span class="sxs-lookup"><span data-stu-id="6fd48-117">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="6fd48-118">CorRuntimeHost コクラス</span><span class="sxs-lookup"><span data-stu-id="6fd48-118">CorRuntimeHost Coclass</span></span>](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
+- [<span data-ttu-id="7958f-117">ホスト インターフェイス</span><span class="sxs-lookup"><span data-stu-id="7958f-117">Hosting Interfaces</span></span>](hosting-interfaces.md)
+- [<span data-ttu-id="7958f-118">CorRuntimeHost コクラス</span><span class="sxs-lookup"><span data-stu-id="7958f-118">CorRuntimeHost Coclass</span></span>](corruntimehost-coclass.md)
