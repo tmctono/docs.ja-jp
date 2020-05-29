@@ -1,90 +1,48 @@
 ---
-ms.openlocfilehash: 16ee73bfc0ab33b04ea3e2fa6d0eec521a9b8634
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f24a29a00a1bff34a452c43716d76bf72ef277b5
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78968182"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206222"
 ---
-### <a name="resource-manifest-file-names"></a><span data-ttu-id="0f217-101">リソース マニフェストのファイル名</span><span class="sxs-lookup"><span data-stu-id="0f217-101">Resource manifest file names</span></span>
+### <a name="resource-manifest-file-name-change"></a><span data-ttu-id="e8869-101">リソース マニフェストのファイル名の変更</span><span class="sxs-lookup"><span data-stu-id="e8869-101">Resource manifest file name change</span></span>
 
-<span data-ttu-id="0f217-102">.NET Core 3.0 以降、生成されるリソース マニフェストのファイル名が変更されています。</span><span class="sxs-lookup"><span data-stu-id="0f217-102">Starting in .NET Core 3.0, the generated resource manifest file name has changed.</span></span>
+<span data-ttu-id="e8869-102">.NET Core 3.0 以降では、既定の場合、MSBuild によってリソース ファイルに対して異なるマニフェスト ファイル名が生成されます。</span><span class="sxs-lookup"><span data-stu-id="e8869-102">Starting in .NET Core 3.0, in the default case, MSBuild generates a different manifest file name for resource files.</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="0f217-103">導入されたバージョン</span><span class="sxs-lookup"><span data-stu-id="0f217-103">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="e8869-103">導入されたバージョン</span><span class="sxs-lookup"><span data-stu-id="e8869-103">Version introduced</span></span>
 
-<span data-ttu-id="0f217-104">3.0</span><span class="sxs-lookup"><span data-stu-id="0f217-104">3.0</span></span>
+<span data-ttu-id="e8869-104">3.0</span><span class="sxs-lookup"><span data-stu-id="e8869-104">3.0</span></span>
 
-#### <a name="change-description"></a><span data-ttu-id="0f217-105">変更の説明</span><span class="sxs-lookup"><span data-stu-id="0f217-105">Change description</span></span>
+#### <a name="change-description"></a><span data-ttu-id="e8869-105">変更の説明</span><span class="sxs-lookup"><span data-stu-id="e8869-105">Change description</span></span>
 
-<span data-ttu-id="0f217-106">.NET Core 3.0 より前は、[DependentUpon](/visualstudio/msbuild/common-msbuild-project-items#compile) メタデータが MSBuild プロジェクト ファイルのリソース ( *.resx*) ファイルに対して設定された場合、生成されるマニフェスト名は *Namespace.Classname.resources* でした。</span><span class="sxs-lookup"><span data-stu-id="0f217-106">Prior to .NET Core 3.0, when [DependentUpon](/visualstudio/msbuild/common-msbuild-project-items#compile) metadata was set for a resource (*.resx*) file in the MSBuild project file, the generated manifest name was *Namespace.Classname.resources*.</span></span> <span data-ttu-id="0f217-107">[DependentUpon](/visualstudio/msbuild/common-msbuild-project-items#compile) が設定されなかった場合、生成されるマニフェスト名は *Namespace.Classname.FolderPathRelativeToRoot.Culture.resources* でした。</span><span class="sxs-lookup"><span data-stu-id="0f217-107">When [DependentUpon](/visualstudio/msbuild/common-msbuild-project-items#compile) was not set, the generated manifest name was *Namespace.Classname.FolderPathRelativeToRoot.Culture.resources*.</span></span>
+<span data-ttu-id="e8869-106">.NET Core 3.0 より前では、プロジェクト ファイルの `EmbeddedResource` 項目に `LogicalName`、`ManifestResourceName`、または `DependentUpon` メタデータが指定されなかった場合、MSBuild ではパターン `<RootNamespace>.<ResourceFilePathFromProjectRoot>.resources` でマニフェスト ファイル名が生成されていました。</span><span class="sxs-lookup"><span data-stu-id="e8869-106">Prior to .NET Core 3.0, if no `LogicalName`, `ManifestResourceName`, or `DependentUpon` metadata was specified for an `EmbeddedResource` item in the project file, MSBuild generated a manifest file name in the pattern `<RootNamespace>.<ResourceFilePathFromProjectRoot>.resources`.</span></span> <span data-ttu-id="e8869-107">`RootNamespace` がプロジェクト ファイルで定義されていない場合は、既定でそのプロジェクトの名前になります。</span><span class="sxs-lookup"><span data-stu-id="e8869-107">If `RootNamespace` is not defined in the project file, it defaults to the project name.</span></span> <span data-ttu-id="e8869-108">たとえば、ルート プロジェクト ディレクトリ内の *Form1* という名前のリソース ファイルに対して生成されたマニフェスト名は、*MyProject.Form1.resources* でした。</span><span class="sxs-lookup"><span data-stu-id="e8869-108">For example, the generated manifest name for a resource file named *Form1.resx* in the root project directory was *MyProject.Form1.resources*.</span></span>
 
-<span data-ttu-id="0f217-108">.NET Core 3.0 以降、たとえば Windows フォーム アプリで *.resx* ファイルが同じ名前のソース ファイルと併置される場合、リソース マニフェスト名は、ソース ファイル内の最初の型のフル ネームから生成されます。</span><span class="sxs-lookup"><span data-stu-id="0f217-108">Starting in .NET Core 3.0, when a *.resx* file is colocated with a source file of the same name, for example, in Windows Forms apps, the resource manifest name is generated from the full name of the first type in the source file.</span></span> <span data-ttu-id="0f217-109">たとえば、*Type.cs* が *Type.resx* と併置される場合、生成されるマニフェスト名は *Namespace.Classname.resources* になります。</span><span class="sxs-lookup"><span data-stu-id="0f217-109">For example, if *Type.cs* is colocated with *Type.resx*, the generated manifest name is *Namespace.Classname.resources*.</span></span> <span data-ttu-id="0f217-110">ただし、 *.resx* ファイルの `EmbeddedResource` プロパティの属性を変更した場合、生成されるマニフェスト ファイル名は異なる場合があります。</span><span class="sxs-lookup"><span data-stu-id="0f217-110">However, if you modify any of the attributes on the `EmbeddedResource` property for the *.resx* file, the generated manifest file name may be different:</span></span>
+<span data-ttu-id="e8869-109">.NET Core 3.0 以降では、あるリソース ファイルが同じ名前のソース ファイルと併置されている場合 (たとえば、*Form1.resx* と *Form1.cs*)、MSBuild ではそのソース ファイルの型情報が使用されてパターン `<Namespace>.<ClassName>.resources` でマニフェスト ファイル名が生成されます。</span><span class="sxs-lookup"><span data-stu-id="e8869-109">Starting in .NET Core 3.0, if a resource file is colocated with a source file of the same name (for example, *Form1.resx* and *Form1.cs*), MSBuild uses type information from the source file to generate the manifest file name in the pattern `<Namespace>.<ClassName>.resources`.</span></span> <span data-ttu-id="e8869-110">名前空間とクラス名は、併置されたソース ファイルの最初の型から抽出されます。</span><span class="sxs-lookup"><span data-stu-id="e8869-110">The namespace and class name are extracted from the first type in the colocated source file.</span></span> <span data-ttu-id="e8869-111">たとえば、*Form1.cs* という名前のソース ファイルと併置されている *Form1* という名前のリソース ファイルに対して生成されたマニフェスト名は、*MyNamespace.Form1.resources* になります。</span><span class="sxs-lookup"><span data-stu-id="e8869-111">For example, the generated manifest name for a resource file named *Form1.resx* that's colocated with a source file named *Form1.cs* is *MyNamespace.Form1.resources*.</span></span> <span data-ttu-id="e8869-112">重要な注意点として、.NET Core の以前のバージョンとはファイル名の最初の部分が異なります (*MyProject* ではなく *MyNamespace*)。</span><span class="sxs-lookup"><span data-stu-id="e8869-112">The key thing to note is that the first part of the file name is different to prior versions of .NET Core (*MyNamespace* instead of *MyProject*).</span></span>
 
-- <span data-ttu-id="0f217-111">`EmbeddedResource` プロパティの `LogicalName` 属性が設定されている場合は、その値がリソース マニフェストのファイル名として使用されます。</span><span class="sxs-lookup"><span data-stu-id="0f217-111">If the `LogicalName` attribute on the `EmbeddedResource` property is set, that value is used as the resource manifest file name.</span></span>
+> [!NOTE]
+> <span data-ttu-id="e8869-113">プロジェクト ファイルの `EmbeddedResource` 項目で `LogicalName`、`ManifestResourceName`、または `DependentUpon` メタデータが指定されている場合、この変更はそのリソース ファイルには影響しません。</span><span class="sxs-lookup"><span data-stu-id="e8869-113">If you have `LogicalName`, `ManifestResourceName`, or `DependentUpon` metadata specified on an `EmbeddedResource` item in the project file, then this change does not affect that resource file.</span></span>
 
-  <span data-ttu-id="0f217-112">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="0f217-112">Examples:</span></span>
+<span data-ttu-id="e8869-114">この破壊的変更は、.NET Core プロジェクトへの `EmbeddedResourceUseDependentUponConvention` プロパティの追加によって導入されました。</span><span class="sxs-lookup"><span data-stu-id="e8869-114">This breaking change was introduced with the addition of the `EmbeddedResourceUseDependentUponConvention` property to .NET Core projects.</span></span> <span data-ttu-id="e8869-115">既定では、リソース ファイルは .NET Core プロジェクト ファイルに明示的にリストされていないため、生成された *.resources* ファイルに名前を付ける方法を指定するための `DependentUpon` メタデータはありません。</span><span class="sxs-lookup"><span data-stu-id="e8869-115">By default, resource files aren't explicitly listed in a .NET Core project file, so they have no `DependentUpon` metadata to specify how to name the generated *.resources* file.</span></span> <span data-ttu-id="e8869-116">`EmbeddedResourceUseDependentUponConvention` が `true` に設定されている場合 (既定)、MSBuild では併置されたソース ファイルが検索され、そのファイルから名前空間とクラス名が抽出されます。</span><span class="sxs-lookup"><span data-stu-id="e8869-116">When `EmbeddedResourceUseDependentUponConvention` is set to `true`, which is the default, MSBuild looks for a colocated source file and extracts a namespace and class name from that file.</span></span> <span data-ttu-id="e8869-117">`EmbeddedResourceUseDependentUponConvention` を `false` に設定すると、MSBuild では `RootNamespace` と相対ファイル パスを組み合わせた前の動作に従ってマニフェスト名が生成されます。</span><span class="sxs-lookup"><span data-stu-id="e8869-117">If you set `EmbeddedResourceUseDependentUponConvention` to `false`, MSBuild generates the manifest name according to the previous behavior, which combines `RootNamespace` and the relative file path.</span></span>
 
-  ```xml
-  <EmbeddedResource Include="X.resx" LogicalName="SomeName.resources" />
-  -or-
-  <EmbeddedResource Include="X.fr-FR.resx" LogicalName="SomeName.resources" />
-  ```
+#### <a name="recommended-action"></a><span data-ttu-id="e8869-118">推奨アクション</span><span class="sxs-lookup"><span data-stu-id="e8869-118">Recommended action</span></span>
 
-  <span data-ttu-id="0f217-113">**生成されるリソース マニフェストのファイル名**:*SomeName.resources* ( *.resx* ファイル名、カルチャ、またはその他のメタデータには関係しません)。</span><span class="sxs-lookup"><span data-stu-id="0f217-113">**Generated resource manifest file name**: *SomeName.resources* (regardless of the *.resx* file name or culture or any other metadata).</span></span>
+<span data-ttu-id="e8869-119">ほとんどの場合、開発者側でアクションを取る必要はなく、アプリは引き続き動作するはずです。</span><span class="sxs-lookup"><span data-stu-id="e8869-119">In most cases, no action is required on the part of the developer, and your app should continue to work.</span></span> <span data-ttu-id="e8869-120">ただし、この変更によってアプリに影響が出ている場合は、次のいずれかを実行してください。</span><span class="sxs-lookup"><span data-stu-id="e8869-120">However, if this change breaks your app, you can either:</span></span>
 
-- <span data-ttu-id="0f217-114">`LogicalName` は設定されていないが、`EmbeddedResource` プロパティの `ManifestResourceName` 属性が設定されている場合は、その値とファイル拡張子 *.resources* の組み合わせがリソース マニフェストのファイル名として使用されます。</span><span class="sxs-lookup"><span data-stu-id="0f217-114">If `LogicalName` is not set, but the `ManifestResourceName` attribute on the `EmbeddedResource` property is set, its value, combined with the file extension *.resources*, is used as the resource manifest file name.</span></span>
+- <span data-ttu-id="e8869-121">新しいマニフェスト名を要求するようにコードを変更する。</span><span class="sxs-lookup"><span data-stu-id="e8869-121">Change your code to expect the new manifest name.</span></span>
 
-  <span data-ttu-id="0f217-115">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="0f217-115">Examples:</span></span>
+- <span data-ttu-id="e8869-122">プロジェクト ファイルで `EmbeddedResourceUseDependentUponConvention` を `false` に設定して、新しい名前付け規則を無効にする。</span><span class="sxs-lookup"><span data-stu-id="e8869-122">Opt out of the new naming convention by setting `EmbeddedResourceUseDependentUponConvention` to `false` in your project file.</span></span>
 
   ```xml
-  <EmbeddedResource Include="X.resx" ManifestResourceName="SomeName" />
-  -or-
-  <EmbeddedResource Include="X.fr-FR.resx" ManifestResourceName="SomeName.fr-FR" />
+  <PropertyGroup>
+    <EmbeddedResourceUseDependentUponConvention>false</EmbeddedResourceUseDependentUponConvention>
+  </PropertyGroup>
   ```
 
-  <span data-ttu-id="0f217-116">**生成されるリソース マニフェストのファイル名**:*SomeName.resources* または *SomeName.fr-FR.resources*。</span><span class="sxs-lookup"><span data-stu-id="0f217-116">**Generated resource manifest file name**: *SomeName.resources* or *SomeName.fr-FR.resources*.</span></span>
+#### <a name="category"></a><span data-ttu-id="e8869-123">カテゴリ</span><span class="sxs-lookup"><span data-stu-id="e8869-123">Category</span></span>
 
-- <span data-ttu-id="0f217-117">前の規則が適用されず、`EmbeddedResource` 要素の `DependentUpon` 属性がソース ファイルに設定されている場合、ソース ファイル内の最初のクラスの型名がリソース マニフェストのファイル名の中で使用されます。</span><span class="sxs-lookup"><span data-stu-id="0f217-117">If the previous rules don't apply, and the `DependentUpon` attribute on the `EmbeddedResource` element is set to a source file, the type name of the first class in the source file is used in the resource manifest file name.</span></span> <span data-ttu-id="0f217-118">具体的には、生成されるファイル名は *Namespace.Classname\[.Culture].resources* になります。</span><span class="sxs-lookup"><span data-stu-id="0f217-118">More specifically, the generated file name is *Namespace.Classname\[.Culture].resources*.</span></span>
+<span data-ttu-id="e8869-124">MSBuild</span><span class="sxs-lookup"><span data-stu-id="e8869-124">MSBuild</span></span>
 
-  <span data-ttu-id="0f217-119">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="0f217-119">Examples:</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="e8869-125">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="e8869-125">Affected APIs</span></span>
 
-  ```xml
-  <EmbeddedResource Include="X.resx" DependentUpon="MyTypes.cs">
-  -or-
-  <EmbeddedResource Include="X.fr-FR.resx" DependentUpon="MyTypes.cs">
-  ```
-
-  <span data-ttu-id="0f217-120">**生成されるリソース マニフェストのファイル名**:*Namespace.Classname.resources* または *Namespace.Classname.fr-FR.resources* (この `Namespace.Classname` が *MyTypes.cs* 内の最初のクラスの名前です)。</span><span class="sxs-lookup"><span data-stu-id="0f217-120">**Generated resource manifest file name**: *Namespace.Classname.resources* or *Namespace.Classname.fr-FR.resources* (where `Namespace.Classname` is the name of the first class in *MyTypes.cs*).</span></span>
-
-- <span data-ttu-id="0f217-121">前の規則が適用されず、`EmbeddedResourceUseDependentUponConvention` が `true` であり (.NET Core の既定値)、同じ基本ファイル名を持つ *.resx* ファイルと併置されるソース ファイルが存在する場合、 *.resx* ファイルは一致するソース ファイルに依存し、生成される名前は前の規則と同じになります。</span><span class="sxs-lookup"><span data-stu-id="0f217-121">If the previous rules don't apply, `EmbeddedResourceUseDependentUponConvention` is `true` (the default for .NET Core), and there's a source file colocated with a *.resx* file that has the same base file name, the *.resx* file is made dependent upon the matching source file, and the generated name is the same as in the previous rule.</span></span> <span data-ttu-id="0f217-122">これは、.NET Core プロジェクトの "既定の設定" 規則です。</span><span class="sxs-lookup"><span data-stu-id="0f217-122">This is the "default settings" rule for .NET Core projects.</span></span>
-  
-  <span data-ttu-id="0f217-123">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="0f217-123">Examples:</span></span>
-  
-  <span data-ttu-id="0f217-124">*MyTypes.cs* ファイル、*MyTypes.resx* ファイル、*MyTypes.fr-FR.resx* ファイルが同じフォルダーに存在します。</span><span class="sxs-lookup"><span data-stu-id="0f217-124">Files *MyTypes.cs* and *MyTypes.resx* or *MyTypes.fr-FR.resx* exist in the same folder.</span></span>
-  
-  <span data-ttu-id="0f217-125">**生成されるリソース マニフェストのファイル名**:*Namespace.Classname.resources* または *Namespace.Classname.fr-FR.resources* (この `Namespace.Classname` が *MyTypes.cs* 内の最初のクラスの名前です)。</span><span class="sxs-lookup"><span data-stu-id="0f217-125">**Generated resource manifest file name**: *Namespace.Classname.resources* or *Namespace.Classname.fr-FR.resources* (where `Namespace.Classname` is the name of the first class in *MyTypes.cs*).</span></span>
-
-- <span data-ttu-id="0f217-126">上記の規則のいずれも当てはまらない場合、生成されるリソース マニフェストのファイル名は *RootNamespace.RelativePathWithDotsForSlashes.\[Culture.]resources* になります。</span><span class="sxs-lookup"><span data-stu-id="0f217-126">If none of the previous rules apply, the generated resource manifest file name is *RootNamespace.RelativePathWithDotsForSlashes.\[Culture.]resources*.</span></span> <span data-ttu-id="0f217-127">相対パスは、`EmbeddedResource` 要素の `Link` 属性が設定されていれば、その値になります。</span><span class="sxs-lookup"><span data-stu-id="0f217-127">The relative path is the value of the `Link` attribute of the `EmbeddedResource` element if it's set.</span></span> <span data-ttu-id="0f217-128">それ以外の場合、相対パスは、`EmbeddedResource` 要素の `Identity` 属性の値になります。</span><span class="sxs-lookup"><span data-stu-id="0f217-128">Otherwise, the relative path is the value of the `Identity` attribute of the `EmbeddedResource` element.</span></span> <span data-ttu-id="0f217-129">Visual Studio では、これはプロジェクト ルートからソリューション エクスプローラー内のファイルへのパスです。</span><span class="sxs-lookup"><span data-stu-id="0f217-129">In Visual Studio, this is the path from the project root to the file in Solution Explorer.</span></span>
-
-#### <a name="recommended-action"></a><span data-ttu-id="0f217-130">推奨アクション</span><span class="sxs-lookup"><span data-stu-id="0f217-130">Recommended action</span></span>
-
-<span data-ttu-id="0f217-131">生成されるマニフェスト名に満足できない場合は、以下を実行できます。</span><span class="sxs-lookup"><span data-stu-id="0f217-131">If you're unsatisfied with the generated manifest names, you can:</span></span>
-
-- <span data-ttu-id="0f217-132">前述の名前付け規則のいずれかに従って、リソース ファイルのメタデータを変更します。</span><span class="sxs-lookup"><span data-stu-id="0f217-132">Modify your resource file metadata according to one of the previously described naming rules.</span></span>
-
-- <span data-ttu-id="0f217-133">プロジェクト ファイルで `EmbeddedResourceUseDependentUponConvention` を `false` に設定して、新しい規則全体が無効になるようにします。</span><span class="sxs-lookup"><span data-stu-id="0f217-133">Set `EmbeddedResourceUseDependentUponConvention` to `false` in your project file to opt out of the new convention entirely:</span></span>
-
-   ```xml
-   <EmbeddedResourceUseDependentUponConvention>false</EmbeddedResourceUseDependentUponConvention>
-   ```
-
-   > [!NOTE]
-   > <span data-ttu-id="0f217-134">`LogicalName` または `ManifestResourceName` 属性が存在する場合は、生成されるファイル名でそれらの値が引き続き使用されます。</span><span class="sxs-lookup"><span data-stu-id="0f217-134">If the `LogicalName` or `ManifestResourceName` attributes are present, their values will still be used for the generated file name.</span></span>
-
-#### <a name="category"></a><span data-ttu-id="0f217-135">カテゴリ</span><span class="sxs-lookup"><span data-stu-id="0f217-135">Category</span></span>
-
-<span data-ttu-id="0f217-136">MSBuild</span><span class="sxs-lookup"><span data-stu-id="0f217-136">MSBuild</span></span>
-
-#### <a name="affected-apis"></a><span data-ttu-id="0f217-137">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="0f217-137">Affected APIs</span></span>
-
-<span data-ttu-id="0f217-138">N/A</span><span class="sxs-lookup"><span data-stu-id="0f217-138">N/A</span></span>
+<span data-ttu-id="e8869-126">N/A</span><span class="sxs-lookup"><span data-stu-id="e8869-126">N/A</span></span>

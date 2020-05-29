@@ -1,73 +1,74 @@
 ---
-title: .Net を使用してC# JSON をシリアル化および逆シリアル化する方法
-ms.date: 01/10/2020
+title: ''
+description: この記事では、System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について説明します。 これにはサンプル コードが含まれます。
+ms.date: ''
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-helpviewer_keywords:
-- JSON serialization
-- serializing objects
-- serialization
-- objects, serializing
-ms.openlocfilehash: 8025f84f2425f5b91e08b28ddb24d105d8c4d1a3
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+helpviewer_keywords: []
+ms.openlocfilehash: f1a5da448b08f9b4f1cf3fa6cba67fb376b00a6f
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159586"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702292"
 ---
-# <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a><span data-ttu-id="d5d0f-102">.NET で JSON のシリアル化と逆シリアル化 (マーシャリングとマーシャリング解除) を行う方法</span><span class="sxs-lookup"><span data-stu-id="d5d0f-102">How to serialize and deserialize (marshal and unmarshal) JSON in .NET</span></span>
+# <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a><span data-ttu-id="e5e74-103">.NET 内で JSON のシリアル化と逆シリアル化 (マーシャリングとマーシャリングの解除) を行う方法</span><span class="sxs-lookup"><span data-stu-id="e5e74-103">How to serialize and deserialize (marshal and unmarshal) JSON in .NET</span></span>
 
-<span data-ttu-id="d5d0f-103">この記事では、<xref:System.Text.Json> 名前空間を使用して、JavaScript Object Notation (JSON) との間でシリアル化および逆シリアル化を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-103">This article shows how to use the <xref:System.Text.Json> namespace to serialize and deserialize to and from JavaScript Object Notation (JSON).</span></span>
+<span data-ttu-id="e5e74-104">この記事では、<xref:System.Text.Json> 名前空間を使用して JavaScript Object Notation (JSON) のシリアル化と逆シリアル化を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-104">This article shows how to use the <xref:System.Text.Json> namespace to serialize and deserialize to and from JavaScript Object Notation (JSON).</span></span> <span data-ttu-id="e5e74-105">`Newtonsoft.Json` から既存のコードを移植する場合は、[`System.Text.Json` に移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md)に関する記事を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e5e74-105">If you're porting existing code from `Newtonsoft.Json`, see [How to migrate to `System.Text.Json`](system-text-json-migrate-from-newtonsoft-how-to.md).</span></span>
 
-<span data-ttu-id="d5d0f-104">指示とサンプルコードは、ライブラリを直接使用します。 [ASP.NET Core](/aspnet/core/)などのフレームワークでは使用されません。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-104">The directions and sample code use the library directly, not through a framework such as [ASP.NET Core](/aspnet/core/).</span></span>
+<span data-ttu-id="e5e74-106">指示とサンプル コードでは、ライブラリを [ASP.NET Core](/aspnet/core/) などのフレームワーク経由ではなく直接使用します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-106">The directions and sample code use the library directly, not through a framework such as [ASP.NET Core](/aspnet/core/).</span></span>
 
-<span data-ttu-id="d5d0f-105">シリアル化のサンプルコードの大部分では、JSON を "見栄えよく" するように `true` に <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> を設定します (ユーザーが読みやすくするためにインデントと空白文字が使用されます)。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-105">Most of the serialization sample code sets <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> to `true` to "pretty-print" the JSON (with indentation and whitespace for human readability).</span></span> <span data-ttu-id="d5d0f-106">実稼働環境で使用する場合は、通常、この設定の `false` の既定値をそのまま使用します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-106">For production use, you would typically accept the default value of `false` for this setting.</span></span>
+<span data-ttu-id="e5e74-107">シリアル化のサンプル コードの大部分では、JSON を "整形" するために <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> を `true` に設定します (人間が読みやすいようにインデントと空白文字が使用されます)。</span><span class="sxs-lookup"><span data-stu-id="e5e74-107">Most of the serialization sample code sets <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> to `true` to "pretty-print" the JSON (with indentation and whitespace for human readability).</span></span> <span data-ttu-id="e5e74-108">実稼働環境で使用する場合、通常、この設定には既定値の `false` をそのまま使用します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-108">For production use, you would typically accept the default value of `false` for this setting.</span></span>
 
-## <a name="namespaces"></a><span data-ttu-id="d5d0f-107">名前空間</span><span class="sxs-lookup"><span data-stu-id="d5d0f-107">Namespaces</span></span>
+<span data-ttu-id="e5e74-109">コード例では、次のクラスとそのバリアントを参照しています。</span><span class="sxs-lookup"><span data-stu-id="e5e74-109">The code examples refer to the following class and variants of it:</span></span>
 
-<span data-ttu-id="d5d0f-108"><xref:System.Text.Json> 名前空間には、すべてのエントリポイントと主要な型が含まれます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-108">The <xref:System.Text.Json> namespace contains all the entry points and the main types.</span></span> <span data-ttu-id="d5d0f-109"><xref:System.Text.Json.Serialization> 名前空間には、シリアル化と逆シリアル化に固有の高度なシナリオとカスタマイズのための属性と Api が含まれています。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-109">The <xref:System.Text.Json.Serialization> namespace contains attributes and APIs for advanced scenarios and customization specific to serialization and deserialization.</span></span> <span data-ttu-id="d5d0f-110">この記事に示されているコード例では、次のいずれかまたは両方の名前空間に `using` ディレクティブが必要です。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-110">The code examples shown in this article require `using` directives for one or both of these namespaces:</span></span>
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWF)]
+
+## <a name="namespaces"></a><span data-ttu-id="e5e74-110">名前空間</span><span class="sxs-lookup"><span data-stu-id="e5e74-110">Namespaces</span></span>
+
+<span data-ttu-id="e5e74-111"><xref:System.Text.Json> 名前空間には、すべてのエントリ ポイントと主要な型が含まれています。</span><span class="sxs-lookup"><span data-stu-id="e5e74-111">The <xref:System.Text.Json> namespace contains all the entry points and the main types.</span></span> <span data-ttu-id="e5e74-112"><xref:System.Text.Json.Serialization> 名前空間には、シリアル化と逆シリアル化に固有の高度なシナリオとカスタマイズのための属性と API が含まれています。</span><span class="sxs-lookup"><span data-stu-id="e5e74-112">The <xref:System.Text.Json.Serialization> namespace contains attributes and APIs for advanced scenarios and customization specific to serialization and deserialization.</span></span> <span data-ttu-id="e5e74-113">この記事に示されているコード例では、次のいずれかまたは両方の名前空間に `using` ディレクティブが必要です。</span><span class="sxs-lookup"><span data-stu-id="e5e74-113">The code examples shown in this article require `using` directives for one or both of these namespaces:</span></span>
 
 ```csharp
 using System.Text.Json;
 using System.Text.Json.Serialization;
 ```
 
-<span data-ttu-id="d5d0f-111"><xref:System.Runtime.Serialization> 名前空間の属性は、現在 `System.Text.Json`ではサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-111">Attributes from the <xref:System.Runtime.Serialization> namespace aren't currently supported in `System.Text.Json`.</span></span>
+<span data-ttu-id="e5e74-114"><xref:System.Runtime.Serialization> 名前空間からの属性は、現在 `System.Text.Json`ではサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="e5e74-114">Attributes from the <xref:System.Runtime.Serialization> namespace aren't currently supported in `System.Text.Json`.</span></span>
 
-## <a name="how-to-write-net-objects-to-json-serialize"></a><span data-ttu-id="d5d0f-112">.NET オブジェクトを JSON に書き込む方法 (シリアル化)</span><span class="sxs-lookup"><span data-stu-id="d5d0f-112">How to write .NET objects to JSON (serialize)</span></span>
+## <a name="how-to-write-net-objects-to-json-serialize"></a><span data-ttu-id="e5e74-115">.NET オブジェクトを JSON に書き込む方法 (シリアル化)</span><span class="sxs-lookup"><span data-stu-id="e5e74-115">How to write .NET objects to JSON (serialize)</span></span>
 
-<span data-ttu-id="d5d0f-113">JSON を文字列またはファイルに書き込むには、<xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-113">To write JSON to a string or to a file, call the <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> method.</span></span>
+<span data-ttu-id="e5e74-116">JSON を文字列またはファイルに書き込むには、<xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-116">To write JSON to a string or to a file, call the <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> method.</span></span>
 
-<span data-ttu-id="d5d0f-114">次の例では、JSON を文字列として作成します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-114">The following example creates JSON as a string:</span></span>
+<span data-ttu-id="e5e74-117">次の例では、JSON を文字列として作成します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-117">The following example creates JSON as a string:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToString.cs?name=SnippetSerialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripToString.cs?name=SnippetSerialize)]
 
-<span data-ttu-id="d5d0f-115">次の例では、同期コードを使用して JSON ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-115">The following example uses synchronous code to create a JSON file:</span></span>
+<span data-ttu-id="e5e74-118">次の例では、同期コードを使用して JSON ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-118">The following example uses synchronous code to create a JSON file:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToFile.cs?name=SnippetSerialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripToFile.cs?name=SnippetSerialize)]
 
-<span data-ttu-id="d5d0f-116">次の例では、非同期コードを使用して JSON ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-116">The following example uses asynchronous code to create a JSON file:</span></span>
+<span data-ttu-id="e5e74-119">次の例では、非同期コードを使用して JSON ファイルを作成します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-119">The following example uses asynchronous code to create a JSON file:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToFileAsync.cs?name=SnippetSerialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripToFileAsync.cs?name=SnippetSerialize)]
 
-<span data-ttu-id="d5d0f-117">前の例では、シリアル化する型の型の推定を使用します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-117">The preceding examples use type inference for the type being serialized.</span></span> <span data-ttu-id="d5d0f-118">`Serialize()` のオーバーロードは、ジェネリック型パラメーターを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-118">An overload of `Serialize()` takes a generic type parameter:</span></span>
+<span data-ttu-id="e5e74-120">前の例では、シリアル化する型に型の推定を使用しています。</span><span class="sxs-lookup"><span data-stu-id="e5e74-120">The preceding examples use type inference for the type being serialized.</span></span> <span data-ttu-id="e5e74-121">`Serialize()` のオーバーロードでは、ジェネリック型パラメーターを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="e5e74-121">An overload of `Serialize()` takes a generic type parameter:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToString.cs?name=SnippetSerializeWithGenericParameter)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripToString.cs?name=SnippetSerializeWithGenericParameter)]
 
-### <a name="serialization-example"></a><span data-ttu-id="d5d0f-119">シリアル化の例</span><span class="sxs-lookup"><span data-stu-id="d5d0f-119">Serialization example</span></span>
+### <a name="serialization-example"></a><span data-ttu-id="e5e74-122">シリアル化の例</span><span class="sxs-lookup"><span data-stu-id="e5e74-122">Serialization example</span></span>
 
-<span data-ttu-id="d5d0f-120">コレクションと入れ子になったクラスを含むクラスの例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-120">Here's an example class that contains collections and a nested class:</span></span>
+<span data-ttu-id="e5e74-123">コレクションと入れ子になったクラスを含むクラスの例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-123">Here's an example class that contains collections and a nested class:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPOCOs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithPOCOs)]
 
-<span data-ttu-id="d5d0f-121">前の型のインスタンスをシリアル化した JSON 出力は、次の例のようになります。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-121">The JSON output from serializing an instance of the preceding type looks like the following example.</span></span> <span data-ttu-id="d5d0f-122">既定では、JSON 出力が縮小されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-122">The JSON output is minified by default:</span></span>
+<span data-ttu-id="e5e74-124">前の型のインスタンスをシリアル化した場合の JSON 出力は、次の例のようになります。</span><span class="sxs-lookup"><span data-stu-id="e5e74-124">The JSON output from serializing an instance of the preceding type looks like the following example.</span></span> <span data-ttu-id="e5e74-125">JSON 出力は既定で縮小されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-125">The JSON output is minified by default:</span></span>
 
 ```json
 {"Date":"2019-08-01T00:00:00-07:00","TemperatureCelsius":25,"Summary":"Hot","DatesAvailable":["2019-08-01T00:00:00-07:00","2019-08-02T00:00:00-07:00"],"TemperatureRanges":{"Cold":{"High":20,"Low":-10},"Hot":{"High":60,"Low":20}},"SummaryWords":["Cool","Windy","Humid"]}
 ```
 
-<span data-ttu-id="d5d0f-123">次の例では、同じ JSON が書式設定されています (空白とインデントで整形されています)。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-123">The following example shows the same JSON, formatted (that is, pretty-printed with whitespace and indentation):</span></span>
+<span data-ttu-id="e5e74-126">次の例では、同じ JSON が書式設定されて示されています (空白とインデントで整形されています)。</span><span class="sxs-lookup"><span data-stu-id="e5e74-126">The following example shows the same JSON, formatted (that is, pretty-printed with whitespace and indentation):</span></span>
 
 ```json
 {
@@ -96,84 +97,84 @@ using System.Text.Json.Serialization;
 }
 ```
 
-### <a name="serialize-to-utf-8"></a><span data-ttu-id="d5d0f-124">UTF-8 にシリアル化する</span><span class="sxs-lookup"><span data-stu-id="d5d0f-124">Serialize to UTF-8</span></span>
+### <a name="serialize-to-utf-8"></a><span data-ttu-id="e5e74-127">UTF-8 にシリアル化する</span><span class="sxs-lookup"><span data-stu-id="e5e74-127">Serialize to UTF-8</span></span>
 
-<span data-ttu-id="d5d0f-125">UTF-8 にシリアル化するには、<xref:System.Text.Json.JsonSerializer.SerializeToUtf8Bytes%2A?displayProperty=nameWithType> メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-125">To serialize to UTF-8, call the <xref:System.Text.Json.JsonSerializer.SerializeToUtf8Bytes%2A?displayProperty=nameWithType> method:</span></span>
+<span data-ttu-id="e5e74-128">UTF-8 にシリアル化するには、<xref:System.Text.Json.JsonSerializer.SerializeToUtf8Bytes%2A?displayProperty=nameWithType> メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-128">To serialize to UTF-8, call the <xref:System.Text.Json.JsonSerializer.SerializeToUtf8Bytes%2A?displayProperty=nameWithType> method:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToUtf8.cs?name=SnippetSerialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripToUtf8.cs?name=SnippetSerialize)]
 
-<span data-ttu-id="d5d0f-126"><xref:System.Text.Json.Utf8JsonWriter> を受け取る <xref:System.Text.Json.JsonSerializer.Serialize%2A> のオーバーロードも使用できます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-126">A <xref:System.Text.Json.JsonSerializer.Serialize%2A> overload that takes a <xref:System.Text.Json.Utf8JsonWriter> is also available.</span></span>
+<span data-ttu-id="e5e74-129"><xref:System.Text.Json.Utf8JsonWriter> を受け取る <xref:System.Text.Json.JsonSerializer.Serialize%2A> オーバーロードも使用できます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-129">A <xref:System.Text.Json.JsonSerializer.Serialize%2A> overload that takes a <xref:System.Text.Json.Utf8JsonWriter> is also available.</span></span>
 
-<span data-ttu-id="d5d0f-127">UTF-8 へのシリアル化は、文字列ベースのメソッドを使用するよりも約5-10% 高速です。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-127">Serializing to UTF-8 is about 5-10% faster than using the string-based methods.</span></span> <span data-ttu-id="d5d0f-128">違いは、バイト (UTF-8) を文字列 (UTF-16) に変換する必要がないためです。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-128">The difference is because the bytes (as UTF-8) don't need to be converted to strings (UTF-16).</span></span>
+<span data-ttu-id="e5e74-130">UTF-8 へのシリアル化は、文字列ベースのメソッドを使用するよりも約 5-10% 高速です。</span><span class="sxs-lookup"><span data-stu-id="e5e74-130">Serializing to UTF-8 is about 5-10% faster than using the string-based methods.</span></span> <span data-ttu-id="e5e74-131">違いは、バイト (UTF-8) を文字列 (UTF-16) に変換する必要がないことから生じます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-131">The difference is because the bytes (as UTF-8) don't need to be converted to strings (UTF-16).</span></span>
 
-## <a name="serialization-behavior"></a><span data-ttu-id="d5d0f-129">シリアル化の動作</span><span class="sxs-lookup"><span data-stu-id="d5d0f-129">Serialization behavior</span></span>
+## <a name="serialization-behavior"></a><span data-ttu-id="e5e74-132">シリアル化の動作</span><span class="sxs-lookup"><span data-stu-id="e5e74-132">Serialization behavior</span></span>
 
-* <span data-ttu-id="d5d0f-130">既定では、すべてのパブリックプロパティがシリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-130">By default, all public properties are serialized.</span></span> <span data-ttu-id="d5d0f-131">[除外するプロパティを指定](#exclude-properties-from-serialization)できます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-131">You can [specify properties to exclude](#exclude-properties-from-serialization).</span></span>
-* <span data-ttu-id="d5d0f-132">[既定のエンコーダー](xref:System.Text.Encodings.Web.JavaScriptEncoder.Default)は、非 ascii 文字、ascii 範囲内の HTML を区別する文字、および[RFC 8259 JSON 仕様](https://tools.ietf.org/html/rfc8259#section-7)に従ってエスケープされる必要がある文字をエスケープします。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-132">The [default encoder](xref:System.Text.Encodings.Web.JavaScriptEncoder.Default) escapes non-ASCII characters, HTML-sensitive characters within the ASCII-range, and characters that must be escaped according to [the RFC 8259 JSON spec](https://tools.ietf.org/html/rfc8259#section-7).</span></span>
-* <span data-ttu-id="d5d0f-133">既定では、JSON は縮小されています。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-133">By default, JSON is minified.</span></span> <span data-ttu-id="d5d0f-134">[JSON はかなり印刷](#serialize-to-formatted-json)できます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-134">You can [pretty-print the JSON](#serialize-to-formatted-json).</span></span>
-* <span data-ttu-id="d5d0f-135">既定では、JSON 名の大文字と小文字の区別は .NET 名と一致します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-135">By default, casing of JSON names matches the .NET names.</span></span> <span data-ttu-id="d5d0f-136">[JSON 名の大文字と小文字](#customize-json-names-and-values)の区別をカスタマイズできます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-136">You can [customize JSON name casing](#customize-json-names-and-values).</span></span>
-* <span data-ttu-id="d5d0f-137">循環参照が検出され、例外がスローされました。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-137">Circular references are detected and exceptions thrown.</span></span>
-* <span data-ttu-id="d5d0f-138">現在、フィールドは除外されています。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-138">Currently, fields are excluded.</span></span>
+* <span data-ttu-id="e5e74-133">既定では、すべてのパブリック プロパティがシリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-133">By default, all public properties are serialized.</span></span> <span data-ttu-id="e5e74-134">[除外するプロパティを指定](#exclude-properties-from-serialization)できます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-134">You can [specify properties to exclude](#exclude-properties-from-serialization).</span></span>
+* <span data-ttu-id="e5e74-135">[既定のエンコーダー](xref:System.Text.Encodings.Web.JavaScriptEncoder.Default)では、ASCII 以外の文字、ASCII 範囲内の HTML に影響する文字、および [RFC 8259 JSON 仕様](https://tools.ietf.org/html/rfc8259#section-7)に従ってエスケープする必要のある文字がエスケープされます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-135">The [default encoder](xref:System.Text.Encodings.Web.JavaScriptEncoder.Default) escapes non-ASCII characters, HTML-sensitive characters within the ASCII-range, and characters that must be escaped according to [the RFC 8259 JSON spec](https://tools.ietf.org/html/rfc8259#section-7).</span></span>
+* <span data-ttu-id="e5e74-136">既定では、JSON は縮小されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-136">By default, JSON is minified.</span></span> <span data-ttu-id="e5e74-137">[JSON を整形](#serialize-to-formatted-json)することができます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-137">You can [pretty-print the JSON](#serialize-to-formatted-json).</span></span>
+* <span data-ttu-id="e5e74-138">既定では、JSON 名の大文字と小文字の区別は .NET 名と一致します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-138">By default, casing of JSON names matches the .NET names.</span></span> <span data-ttu-id="e5e74-139">[JSON 名の大文字と小文字の区別をカスタマイズ](#customize-json-names-and-values)することができます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-139">You can [customize JSON name casing](#customize-json-names-and-values).</span></span>
+* <span data-ttu-id="e5e74-140">循環参照が検出され、例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-140">Circular references are detected and exceptions thrown.</span></span>
+* <span data-ttu-id="e5e74-141">現在、フィールドは除外されています。</span><span class="sxs-lookup"><span data-stu-id="e5e74-141">Currently, fields are excluded.</span></span>
 
-<span data-ttu-id="d5d0f-139">サポートされている種類は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-139">Supported types include:</span></span>
+<span data-ttu-id="e5e74-142">サポートされる型には次のようなものがあります。</span><span class="sxs-lookup"><span data-stu-id="e5e74-142">Supported types include:</span></span>
 
-* <span data-ttu-id="d5d0f-140">数値型、文字列、ブール値など、JavaScript プリミティブにマップされる .NET プリミティブ。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-140">.NET primitives that map to JavaScript primitives, such as numeric types, strings, and Boolean.</span></span>
-* <span data-ttu-id="d5d0f-141">ユーザー定義の[Plain OLD CLR オブジェクト (POCOs)](https://stackoverflow.com/questions/250001/poco-definition)。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-141">User-defined [Plain Old CLR Objects (POCOs)](https://stackoverflow.com/questions/250001/poco-definition).</span></span>
-* <span data-ttu-id="d5d0f-142">1次元配列とジャグ配列 (`ArrayName[][]`)。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-142">One-dimensional and jagged arrays (`ArrayName[][]`).</span></span>
-* <span data-ttu-id="d5d0f-143">`Dictionary<string,TValue>` `TValue` が `object`、`JsonElement`、または POCO です。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-143">`Dictionary<string,TValue>` where `TValue` is `object`, `JsonElement`, or a POCO.</span></span>
-* <span data-ttu-id="d5d0f-144">次の名前空間のコレクション。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-144">Collections from the following namespaces.</span></span>
+* <span data-ttu-id="e5e74-143">数値型、文字列、ブール値など、JavaScript プリミティブにマップされる .NET プリミティブ。</span><span class="sxs-lookup"><span data-stu-id="e5e74-143">.NET primitives that map to JavaScript primitives, such as numeric types, strings, and Boolean.</span></span>
+* <span data-ttu-id="e5e74-144">ユーザー定義の [Plain Old CLR Objects (POCO)](https://stackoverflow.com/questions/250001/poco-definition)。</span><span class="sxs-lookup"><span data-stu-id="e5e74-144">User-defined [Plain Old CLR Objects (POCOs)](https://stackoverflow.com/questions/250001/poco-definition).</span></span>
+* <span data-ttu-id="e5e74-145">1 次元配列とジャグ配列 (`ArrayName[][]`)。</span><span class="sxs-lookup"><span data-stu-id="e5e74-145">One-dimensional and jagged arrays (`ArrayName[][]`).</span></span>
+* <span data-ttu-id="e5e74-146">`Dictionary<string,TValue>`。`TValue` は `object`、`JsonElement`、または POCO です。</span><span class="sxs-lookup"><span data-stu-id="e5e74-146">`Dictionary<string,TValue>` where `TValue` is `object`, `JsonElement`, or a POCO.</span></span>
+* <span data-ttu-id="e5e74-147">次の名前空間からのコレクション。</span><span class="sxs-lookup"><span data-stu-id="e5e74-147">Collections from the following namespaces.</span></span>
   * <xref:System.Collections>
   * <xref:System.Collections.Generic>
   * <xref:System.Collections.Immutable>
 
-<span data-ttu-id="d5d0f-145">[カスタムコンバーターを実装](system-text-json-converters-how-to.md)して、追加の型を処理したり、組み込みのコンバーターでサポートされていない機能を提供したりすることができます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-145">You can [implement custom converters](system-text-json-converters-how-to.md) to handle additional types or to provide functionality that isn't supported by the built-in converters.</span></span>
+<span data-ttu-id="e5e74-148">[カスタム コンバーターを実装](system-text-json-converters-how-to.md)して、追加の型を処理したり、組み込みコンバーターではサポートされていない機能を提供したりすることができます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-148">You can [implement custom converters](system-text-json-converters-how-to.md) to handle additional types or to provide functionality that isn't supported by the built-in converters.</span></span>
 
-## <a name="how-to-read-json-into-net-objects-deserialize"></a><span data-ttu-id="d5d0f-146">JSON を .NET オブジェクトに読み込む方法 (逆シリアル化)</span><span class="sxs-lookup"><span data-stu-id="d5d0f-146">How to read JSON into .NET objects (deserialize)</span></span>
+## <a name="how-to-read-json-into-net-objects-deserialize"></a><span data-ttu-id="e5e74-149">JSON を .NET オブジェクトに読み取る方法 (逆シリアル化)</span><span class="sxs-lookup"><span data-stu-id="e5e74-149">How to read JSON into .NET objects (deserialize)</span></span>
 
-<span data-ttu-id="d5d0f-147">文字列またはファイルから逆シリアル化するには、<xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-147">To deserialize from a string or a file, call the <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> method.</span></span>
+<span data-ttu-id="e5e74-150">文字列またはファイルから逆シリアル化するには、<xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-150">To deserialize from a string or a file, call the <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> method.</span></span>
 
-<span data-ttu-id="d5d0f-148">次の例では、文字列から JSON を読み取り、[シリアル化の例](#serialization-example)で前に示した `WeatherForecast` クラスのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-148">The following example reads JSON from a string and creates an instance of the `WeatherForecast` class shown earlier for the [serialization example](#serialization-example):</span></span>
+<span data-ttu-id="e5e74-151">次の例では、文字列から JSON を読み取り、前に[シリアル化の例](#serialization-example)で示した `WeatherForecast` クラスのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-151">The following example reads JSON from a string and creates an instance of the `WeatherForecast` class shown earlier for the [serialization example](#serialization-example):</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToString.cs?name=SnippetDeserialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripToString.cs?name=SnippetDeserialize)]
 
-<span data-ttu-id="d5d0f-149">同期コードを使用してファイルから逆シリアル化するには、次の例に示すように、ファイルを文字列に読み取ります。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-149">To deserialize from a file by using synchronous code, read the file into a string, as shown in the following example:</span></span>
+<span data-ttu-id="e5e74-152">同期コードを使用してファイルから逆シリアル化するには、次の例に示すように、ファイルを文字列に読み取ります。</span><span class="sxs-lookup"><span data-stu-id="e5e74-152">To deserialize from a file by using synchronous code, read the file into a string, as shown in the following example:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToFile.cs?name=SnippetDeserialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripToFile.cs?name=SnippetDeserialize)]
 
-<span data-ttu-id="d5d0f-150">非同期コードを使用してファイルから逆シリアル化するには、<xref:System.Text.Json.JsonSerializer.DeserializeAsync%2A> メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-150">To deserialize from a file by using asynchronous code, call the <xref:System.Text.Json.JsonSerializer.DeserializeAsync%2A> method:</span></span>
+<span data-ttu-id="e5e74-153">非同期コードを使用してファイルから逆シリアル化するには、<xref:System.Text.Json.JsonSerializer.DeserializeAsync%2A> メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-153">To deserialize from a file by using asynchronous code, call the <xref:System.Text.Json.JsonSerializer.DeserializeAsync%2A> method:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToFileAsync.cs?name=SnippetDeserialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripToFileAsync.cs?name=SnippetDeserialize)]
 
-### <a name="deserialize-from-utf-8"></a><span data-ttu-id="d5d0f-151">UTF-8 からの逆シリアル化</span><span class="sxs-lookup"><span data-stu-id="d5d0f-151">Deserialize from UTF-8</span></span>
+### <a name="deserialize-from-utf-8"></a><span data-ttu-id="e5e74-154">UTF-8 からの逆シリアル化</span><span class="sxs-lookup"><span data-stu-id="e5e74-154">Deserialize from UTF-8</span></span>
 
-<span data-ttu-id="d5d0f-152">UTF-8 から逆シリアル化するには、次の例に示すように、`Utf8JsonReader` または `ReadOnlySpan<byte>`を受け取る <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> オーバーロードを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-152">To deserialize from UTF-8, call a <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> overload that takes a `Utf8JsonReader` or a `ReadOnlySpan<byte>`, as shown in the following examples.</span></span> <span data-ttu-id="d5d0f-153">この例では、JSON が jsonUtf8Bytes という名前のバイト配列にあることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-153">The examples assume the JSON is in a byte array named jsonUtf8Bytes.</span></span>
+<span data-ttu-id="e5e74-155">UTF-8 から逆シリアル化するには、次の例に示すように、`Utf8JsonReader` または `ReadOnlySpan<byte>` を受け取る <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> オーバーロードを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-155">To deserialize from UTF-8, call a <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> overload that takes a `Utf8JsonReader` or a `ReadOnlySpan<byte>`, as shown in the following examples.</span></span> <span data-ttu-id="e5e74-156">この例では、JSON が jsonUtf8Bytes という名前のバイト配列内にあることを想定しています。</span><span class="sxs-lookup"><span data-stu-id="e5e74-156">The examples assume the JSON is in a byte array named jsonUtf8Bytes.</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToUtf8.cs?name=SnippetDeserialize1)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripToUtf8.cs?name=SnippetDeserialize1)]
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToUtf8.cs?name=SnippetDeserialize2)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripToUtf8.cs?name=SnippetDeserialize2)]
 
-## <a name="deserialization-behavior"></a><span data-ttu-id="d5d0f-154">逆シリアル化の動作</span><span class="sxs-lookup"><span data-stu-id="d5d0f-154">Deserialization behavior</span></span>
+## <a name="deserialization-behavior"></a><span data-ttu-id="e5e74-157">逆シリアル化の動作</span><span class="sxs-lookup"><span data-stu-id="e5e74-157">Deserialization behavior</span></span>
 
-* <span data-ttu-id="d5d0f-155">既定では、プロパティ名の照合では大文字と小文字が区別されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-155">By default, property name matching is case-sensitive.</span></span> <span data-ttu-id="d5d0f-156">[大文字と小文字を区別](#case-insensitive-property-matching)しないように指定できます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-156">You can [specify case-insensitivity](#case-insensitive-property-matching).</span></span>
-* <span data-ttu-id="d5d0f-157">JSON に読み取り専用プロパティの値が含まれている場合、この値は無視され、例外はスローされません。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-157">If the JSON contains a value for a read-only property, the value is ignored and no exception is thrown.</span></span>
-* <span data-ttu-id="d5d0f-158">パラメーターなしのコンストラクターを使用しない参照型への逆シリアル化はサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-158">Deserialization to reference types without a parameterless constructor isn't supported.</span></span>
-* <span data-ttu-id="d5d0f-159">変更できないオブジェクトまたは読み取り専用プロパティへの逆シリアル化はサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-159">Deserialization to immutable objects or read-only properties isn't supported.</span></span>
-* <span data-ttu-id="d5d0f-160">既定では、列挙型は数値としてサポートされています。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-160">By default, enums are supported as numbers.</span></span> <span data-ttu-id="d5d0f-161">[列挙型名を文字列としてシリアル化](#enums-as-strings)できます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-161">You can [serialize enum names as strings](#enums-as-strings).</span></span>
-* <span data-ttu-id="d5d0f-162">フィールドはサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-162">Fields aren't supported.</span></span>
-* <span data-ttu-id="d5d0f-163">既定では、JSON のコメントまたは末尾のコンマによって例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-163">By default, comments or trailing commas in the JSON throw exceptions.</span></span> <span data-ttu-id="d5d0f-164">[コメントと末尾のコンマを許可](#allow-comments-and-trailing-commas)できます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-164">You can [allow comments and trailing commas](#allow-comments-and-trailing-commas).</span></span>
-* <span data-ttu-id="d5d0f-165">[既定の最大の深さ](xref:System.Text.Json.JsonReaderOptions.MaxDepth)は64です。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-165">The [default maximum depth](xref:System.Text.Json.JsonReaderOptions.MaxDepth) is 64.</span></span>
+* <span data-ttu-id="e5e74-158">既定では、プロパティ名の照合では大文字と小文字が区別されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-158">By default, property name matching is case-sensitive.</span></span> <span data-ttu-id="e5e74-159">[大文字と小文字を区別しないことを指定](#case-insensitive-property-matching)できます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-159">You can [specify case-insensitivity](#case-insensitive-property-matching).</span></span>
+* <span data-ttu-id="e5e74-160">JSON に読み取り専用プロパティの値が含まれている場合、その値は無視され、例外はスローされません。</span><span class="sxs-lookup"><span data-stu-id="e5e74-160">If the JSON contains a value for a read-only property, the value is ignored and no exception is thrown.</span></span>
+* <span data-ttu-id="e5e74-161">パラメーターなしのコンストラクターがない参照型への逆シリアル化はサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="e5e74-161">Deserialization to reference types without a parameterless constructor isn't supported.</span></span>
+* <span data-ttu-id="e5e74-162">不変オブジェクトまたは読み取り専用プロパティへの逆シリアル化はサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="e5e74-162">Deserialization to immutable objects or read-only properties isn't supported.</span></span>
+* <span data-ttu-id="e5e74-163">既定では、列挙型は数値としてサポートされています。</span><span class="sxs-lookup"><span data-stu-id="e5e74-163">By default, enums are supported as numbers.</span></span> <span data-ttu-id="e5e74-164">[列挙型名を文字列としてシリアル化](#enums-as-strings)することができます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-164">You can [serialize enum names as strings](#enums-as-strings).</span></span>
+* <span data-ttu-id="e5e74-165">フィールドはサポートされません。</span><span class="sxs-lookup"><span data-stu-id="e5e74-165">Fields aren't supported.</span></span>
+* <span data-ttu-id="e5e74-166">既定では、JSON にコメントまたは末尾のコンマがあると例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-166">By default, comments or trailing commas in the JSON throw exceptions.</span></span> <span data-ttu-id="e5e74-167">[コメントと末尾のコンマを許可](#allow-comments-and-trailing-commas)することができます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-167">You can [allow comments and trailing commas](#allow-comments-and-trailing-commas).</span></span>
+* <span data-ttu-id="e5e74-168">[既定の最大深度](xref:System.Text.Json.JsonReaderOptions.MaxDepth)は 64 です。</span><span class="sxs-lookup"><span data-stu-id="e5e74-168">The [default maximum depth](xref:System.Text.Json.JsonReaderOptions.MaxDepth) is 64.</span></span>
 
-<span data-ttu-id="d5d0f-166">組み込みのコンバーターでサポートされていない機能を提供するために、[カスタムコンバーターを実装](system-text-json-converters-how-to.md)することができます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-166">You can [implement custom converters](system-text-json-converters-how-to.md) to provide functionality that isn't supported by the built-in converters.</span></span>
+<span data-ttu-id="e5e74-169">[カスタム コンバーターを実装](system-text-json-converters-how-to.md)して、組み込みコンバーターではサポートされていない機能を提供できます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-169">You can [implement custom converters](system-text-json-converters-how-to.md) to provide functionality that isn't supported by the built-in converters.</span></span>
 
-## <a name="serialize-to-formatted-json"></a><span data-ttu-id="d5d0f-167">書式設定された JSON にシリアル化する</span><span class="sxs-lookup"><span data-stu-id="d5d0f-167">Serialize to formatted JSON</span></span>
+## <a name="serialize-to-formatted-json"></a><span data-ttu-id="e5e74-170">書式設定された JSON へのシリアル化</span><span class="sxs-lookup"><span data-stu-id="e5e74-170">Serialize to formatted JSON</span></span>
 
-<span data-ttu-id="d5d0f-168">JSON 出力を整形するには、<xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> を `true`に設定します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-168">To pretty-print the JSON output, set <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> to `true`:</span></span>
+<span data-ttu-id="e5e74-171">JSON 出力を整形するには、<xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> を `true` に設定します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-171">To pretty-print the JSON output, set <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> to `true`:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripToString.cs?name=SnippetSerializePrettyPrint)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripToString.cs?name=SnippetSerializePrettyPrint)]
 
-<span data-ttu-id="d5d0f-169">シリアル化され、整形された JSON 出力の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-169">Here's an example type to be serialized and pretty-printed JSON output:</span></span>
+<span data-ttu-id="e5e74-172">シリアル化され、整形された JSON 出力の型の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-172">Here's an example type to be serialized and pretty-printed JSON output:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWF)]
 
 ```json
 {
@@ -183,25 +184,25 @@ using System.Text.Json.Serialization;
 }
 ```
 
-## <a name="customize-json-names-and-values"></a><span data-ttu-id="d5d0f-170">JSON の名前と値をカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="d5d0f-170">Customize JSON names and values</span></span>
+## <a name="customize-json-names-and-values"></a><span data-ttu-id="e5e74-173">JSON の名前と値をカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="e5e74-173">Customize JSON names and values</span></span>
 
-<span data-ttu-id="d5d0f-171">既定では、プロパティ名とディクショナリキーは、大文字と小文字を含め、JSON の出力では変更されません。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-171">By default, property names and dictionary keys are unchanged in the JSON output, including case.</span></span> <span data-ttu-id="d5d0f-172">列挙値は数値として表されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-172">Enum values are represented as numbers.</span></span> <span data-ttu-id="d5d0f-173">このセクションでは、次の方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-173">This section explains how to:</span></span>
+<span data-ttu-id="e5e74-174">既定では、プロパティ名とディクショナリ キーは、大文字と小文字の区別を含め、JSON の出力では変更されません。</span><span class="sxs-lookup"><span data-stu-id="e5e74-174">By default, property names and dictionary keys are unchanged in the JSON output, including case.</span></span> <span data-ttu-id="e5e74-175">列挙型の値は数値として表されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-175">Enum values are represented as numbers.</span></span> <span data-ttu-id="e5e74-176">このセクションでは、次の方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-176">This section explains how to:</span></span>
 
-* [<span data-ttu-id="d5d0f-174">個々のプロパティ名をカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="d5d0f-174">Customize individual property names</span></span>](#customize-individual-property-names)
-* [<span data-ttu-id="d5d0f-175">すべてのプロパティ名を camel 形式に変換します</span><span class="sxs-lookup"><span data-stu-id="d5d0f-175">Convert all property names to camel case</span></span>](#use-camel-case-for-all-json-property-names)
-* [<span data-ttu-id="d5d0f-176">カスタムプロパティの名前付けポリシーを実装する</span><span class="sxs-lookup"><span data-stu-id="d5d0f-176">Implement a custom property naming policy</span></span>](#use-a-custom-json-property-naming-policy)
-* [<span data-ttu-id="d5d0f-177">ディクショナリキーを camel 形式に変換する</span><span class="sxs-lookup"><span data-stu-id="d5d0f-177">Convert dictionary keys to camel case</span></span>](#camel-case-dictionary-keys)
-* [<span data-ttu-id="d5d0f-178">列挙型を文字列および camel 形式に変換する</span><span class="sxs-lookup"><span data-stu-id="d5d0f-178">Convert enums to strings and camel case</span></span>](#enums-as-strings)
+* [<span data-ttu-id="e5e74-177">個々のプロパティ名をカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="e5e74-177">Customize individual property names</span></span>](#customize-individual-property-names)
+* [<span data-ttu-id="e5e74-178">すべてのプロパティ名をキャメル ケースに変換する</span><span class="sxs-lookup"><span data-stu-id="e5e74-178">Convert all property names to camel case</span></span>](#use-camel-case-for-all-json-property-names)
+* [<span data-ttu-id="e5e74-179">カスタム プロパティの名前付けポリシーを実装する</span><span class="sxs-lookup"><span data-stu-id="e5e74-179">Implement a custom property naming policy</span></span>](#use-a-custom-json-property-naming-policy)
+* [<span data-ttu-id="e5e74-180">ディクショナリ キーをキャメル ケースに変換する</span><span class="sxs-lookup"><span data-stu-id="e5e74-180">Convert dictionary keys to camel case</span></span>](#camel-case-dictionary-keys)
+* [<span data-ttu-id="e5e74-181">列挙型を文字列およびキャメル ケースに変換する</span><span class="sxs-lookup"><span data-stu-id="e5e74-181">Convert enums to strings and camel case</span></span>](#enums-as-strings)
 
-<span data-ttu-id="d5d0f-179">JSON プロパティの名前と値の特別な処理を必要とするその他のシナリオでは、[カスタムコンバーターを実装](system-text-json-converters-how-to.md)できます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-179">For other scenarios that require special handling of JSON property names and values, you can [implement custom converters](system-text-json-converters-how-to.md).</span></span>
+<span data-ttu-id="e5e74-182">JSON プロパティの名前と値の特別な処理を必要とするその他のシナリオでは、[カスタム コンバーターを実装](system-text-json-converters-how-to.md)することができます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-182">For other scenarios that require special handling of JSON property names and values, you can [implement custom converters](system-text-json-converters-how-to.md).</span></span>
 
-### <a name="customize-individual-property-names"></a><span data-ttu-id="d5d0f-180">個々のプロパティ名をカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="d5d0f-180">Customize individual property names</span></span>
+### <a name="customize-individual-property-names"></a><span data-ttu-id="e5e74-183">個々のプロパティ名をカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="e5e74-183">Customize individual property names</span></span>
 
-<span data-ttu-id="d5d0f-181">個々のプロパティの名前を設定するには、 [[Jsonpropertyname]](xref:System.Text.Json.Serialization.JsonPropertyNameAttribute)属性を使用します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-181">To set the name of individual properties, use the [[JsonPropertyName]](xref:System.Text.Json.Serialization.JsonPropertyNameAttribute) attribute.</span></span>
+<span data-ttu-id="e5e74-184">個々のプロパティの名前を設定するには、[[JsonPropertyName]](xref:System.Text.Json.Serialization.JsonPropertyNameAttribute) 属性を使用します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-184">To set the name of individual properties, use the [[JsonPropertyName]](xref:System.Text.Json.Serialization.JsonPropertyNameAttribute) attribute.</span></span>
 
-<span data-ttu-id="d5d0f-182">シリアル化し、結果として得られる JSON の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-182">Here's an example type to serialize and resulting JSON:</span></span>
+<span data-ttu-id="e5e74-185">シリアル化する型と、結果として得られる JSON の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-185">Here's an example type to serialize and resulting JSON:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPropertyNameAttribute)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithPropertyNameAttribute)]
 
 ```json
 {
@@ -212,20 +213,20 @@ using System.Text.Json.Serialization;
 }
 ```
 
-<span data-ttu-id="d5d0f-183">この属性によって設定されるプロパティ名:</span><span class="sxs-lookup"><span data-stu-id="d5d0f-183">The property name set by this attribute:</span></span>
+<span data-ttu-id="e5e74-186">この属性によって設定されるプロパティ名は:</span><span class="sxs-lookup"><span data-stu-id="e5e74-186">The property name set by this attribute:</span></span>
 
-* <span data-ttu-id="d5d0f-184">シリアル化と逆シリアル化の両方の方向で適用されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-184">Applies in both directions, for serialization and deserialization.</span></span>
-* <span data-ttu-id="d5d0f-185">は、プロパティの名前付けポリシーよりも優先されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-185">Takes precedence over property naming policies.</span></span>
+* <span data-ttu-id="e5e74-187">シリアル化と逆シリアル化の両方の方向に適用されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-187">Applies in both directions, for serialization and deserialization.</span></span>
+* <span data-ttu-id="e5e74-188">プロパティの名前付けポリシーよりも優先されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-188">Takes precedence over property naming policies.</span></span>
 
-### <a name="use-camel-case-for-all-json-property-names"></a><span data-ttu-id="d5d0f-186">すべての JSON プロパティ名にキャメルケースを使用する</span><span class="sxs-lookup"><span data-stu-id="d5d0f-186">Use camel case for all JSON property names</span></span>
+### <a name="use-camel-case-for-all-json-property-names"></a><span data-ttu-id="e5e74-189">すべての JSON プロパティ名にキャメル ケースを使用する</span><span class="sxs-lookup"><span data-stu-id="e5e74-189">Use camel case for all JSON property names</span></span>
 
-<span data-ttu-id="d5d0f-187">すべての JSON プロパティ名にキャメルケースを使用するには、次の例に示すように、<xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> を `JsonNamingPolicy.CamelCase`に設定します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-187">To use camel case for all JSON property names, set <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> to `JsonNamingPolicy.CamelCase`, as shown in the following example:</span></span>
+<span data-ttu-id="e5e74-190">すべての JSON プロパティ名にキャメル ケースを使用するには、次の例に示すように、<xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> を `JsonNamingPolicy.CamelCase` に設定します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-190">To use camel case for all JSON property names, set <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> to `JsonNamingPolicy.CamelCase`, as shown in the following example:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundTripCamelCasePropertyNames.cs?name=Serialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundTripCamelCasePropertyNames.cs?name=Serialize)]
 
-<span data-ttu-id="d5d0f-188">シリアル化と JSON 出力の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-188">Here's an example class to serialize and JSON output:</span></span>
+<span data-ttu-id="e5e74-191">シリアル化するクラスと JSON 出力の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-191">Here's an example class to serialize and JSON output:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPropertyNameAttribute)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithPropertyNameAttribute)]
 
 ```json
 {
@@ -236,24 +237,24 @@ using System.Text.Json.Serialization;
 }
 ```
 
-<span data-ttu-id="d5d0f-189">Camel 形式のプロパティの名前付けポリシー:</span><span class="sxs-lookup"><span data-stu-id="d5d0f-189">The camel case property naming policy:</span></span>
+<span data-ttu-id="e5e74-192">キャメル ケースのプロパティの名前付けポリシーは:</span><span class="sxs-lookup"><span data-stu-id="e5e74-192">The camel case property naming policy:</span></span>
 
-* <span data-ttu-id="d5d0f-190">シリアル化および逆シリアル化に適用されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-190">Applies to serialization and deserialization.</span></span>
-* <span data-ttu-id="d5d0f-191">は `[JsonPropertyName]` 属性によってオーバーライドされます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-191">Is overridden by `[JsonPropertyName]` attributes.</span></span> <span data-ttu-id="d5d0f-192">このため、この例の JSON プロパティ名 `Wind` は camel 形式ではありません。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-192">This is why the JSON property name `Wind` in the example is not camel case.</span></span>
+* <span data-ttu-id="e5e74-193">シリアル化と逆シリアル化に適用されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-193">Applies to serialization and deserialization.</span></span>
+* <span data-ttu-id="e5e74-194">`[JsonPropertyName]` 属性によってオーバーライドされます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-194">Is overridden by `[JsonPropertyName]` attributes.</span></span> <span data-ttu-id="e5e74-195">このため、この例の JSON プロパティ名 `Wind` はキャメル ケースではありません。</span><span class="sxs-lookup"><span data-stu-id="e5e74-195">This is why the JSON property name `Wind` in the example is not camel case.</span></span>
 
-### <a name="use-a-custom-json-property-naming-policy"></a><span data-ttu-id="d5d0f-193">カスタム JSON プロパティの名前付けポリシーを使用する</span><span class="sxs-lookup"><span data-stu-id="d5d0f-193">Use a custom JSON property naming policy</span></span>
+### <a name="use-a-custom-json-property-naming-policy"></a><span data-ttu-id="e5e74-196">カスタム JSON プロパティの名前付けポリシーを使用する</span><span class="sxs-lookup"><span data-stu-id="e5e74-196">Use a custom JSON property naming policy</span></span>
 
-<span data-ttu-id="d5d0f-194">カスタム JSON プロパティの名前付けポリシーを使用するには、次の例に示すように、<xref:System.Text.Json.JsonNamingPolicy> から派生するクラスを作成し、<xref:System.Text.Json.JsonNamingPolicy.ConvertName%2A> メソッドをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-194">To use a custom JSON property naming policy, create a class that derives from <xref:System.Text.Json.JsonNamingPolicy> and override the <xref:System.Text.Json.JsonNamingPolicy.ConvertName%2A> method, as shown in the following example:</span></span>
+<span data-ttu-id="e5e74-197">カスタム JSON プロパティの名前付けポリシーを使用するには、次の例に示すように、<xref:System.Text.Json.JsonNamingPolicy> から派生するクラスを作成し、<xref:System.Text.Json.JsonNamingPolicy.ConvertName%2A> メソッドをオーバーライドします。</span><span class="sxs-lookup"><span data-stu-id="e5e74-197">To use a custom JSON property naming policy, create a class that derives from <xref:System.Text.Json.JsonNamingPolicy> and override the <xref:System.Text.Json.JsonNamingPolicy.ConvertName%2A> method, as shown in the following example:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/UpperCaseNamingPolicy.cs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/UpperCaseNamingPolicy.cs)]
 
-<span data-ttu-id="d5d0f-195">次に、[<xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType>] プロパティを名前付けポリシークラスのインスタンスに設定します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-195">Then set the <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> property to an instance of your naming policy class:</span></span>
+<span data-ttu-id="e5e74-198">次に、<xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> プロパティを名前付けポリシー クラスのインスタンスに設定します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-198">Then set the <xref:System.Text.Json.JsonSerializerOptions.PropertyNamingPolicy?displayProperty=nameWithType> property to an instance of your naming policy class:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripPropertyNamingPolicy.cs?name=SnippetSerialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripPropertyNamingPolicy.cs?name=SnippetSerialize)]
 
-<span data-ttu-id="d5d0f-196">シリアル化と JSON 出力の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-196">Here's an example class to serialize and JSON output:</span></span>
+<span data-ttu-id="e5e74-199">シリアル化するクラスと JSON 出力の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-199">Here's an example class to serialize and JSON output:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPropertyNameAttribute)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithPropertyNameAttribute)]
 
 ```json
 {
@@ -264,18 +265,18 @@ using System.Text.Json.Serialization;
 }
 ```
 
-<span data-ttu-id="d5d0f-197">JSON プロパティの名前付けポリシー:</span><span class="sxs-lookup"><span data-stu-id="d5d0f-197">The JSON property naming policy:</span></span>
+<span data-ttu-id="e5e74-200">JSON プロパティの名前付けポリシーは:</span><span class="sxs-lookup"><span data-stu-id="e5e74-200">The JSON property naming policy:</span></span>
 
-* <span data-ttu-id="d5d0f-198">シリアル化および逆シリアル化に適用されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-198">Applies to serialization and deserialization.</span></span>
-* <span data-ttu-id="d5d0f-199">は `[JsonPropertyName]` 属性によってオーバーライドされます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-199">Is overridden by `[JsonPropertyName]` attributes.</span></span> <span data-ttu-id="d5d0f-200">このため、この例の JSON プロパティ名 `Wind` は大文字ではありません。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-200">This is why the JSON property name `Wind` in the example is not upper case.</span></span>
+* <span data-ttu-id="e5e74-201">シリアル化と逆シリアル化に適用されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-201">Applies to serialization and deserialization.</span></span>
+* <span data-ttu-id="e5e74-202">`[JsonPropertyName]` 属性によってオーバーライドされます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-202">Is overridden by `[JsonPropertyName]` attributes.</span></span> <span data-ttu-id="e5e74-203">このため、この例の JSON プロパティ名 `Wind` は大文字ではありません。</span><span class="sxs-lookup"><span data-stu-id="e5e74-203">This is why the JSON property name `Wind` in the example is not upper case.</span></span>
 
-### <a name="camel-case-dictionary-keys"></a><span data-ttu-id="d5d0f-201">Camel ケースディクショナリキー</span><span class="sxs-lookup"><span data-stu-id="d5d0f-201">Camel case dictionary keys</span></span>
+### <a name="camel-case-dictionary-keys"></a><span data-ttu-id="e5e74-204">キャメル ケースのディクショナリ キー</span><span class="sxs-lookup"><span data-stu-id="e5e74-204">Camel case dictionary keys</span></span>
 
-<span data-ttu-id="d5d0f-202">シリアル化するオブジェクトのプロパティが `Dictionary<string,TValue>`型である場合は、`string` キーを camel 形式に変換できます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-202">If a property of an object to be serialized is of type `Dictionary<string,TValue>`, the `string` keys can be converted to camel case.</span></span> <span data-ttu-id="d5d0f-203">これを行うには、次の例に示すように、<xref:System.Text.Json.JsonSerializerOptions.DictionaryKeyPolicy> を `JsonNamingPolicy.CamelCase`に設定します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-203">To do that, set <xref:System.Text.Json.JsonSerializerOptions.DictionaryKeyPolicy> to `JsonNamingPolicy.CamelCase`, as shown in the following example:</span></span>
+<span data-ttu-id="e5e74-205">シリアル化するオブジェクトのプロパティが `Dictionary<string,TValue>` 型である場合は、`string` キーをキャメル ケースに変換できます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-205">If a property of an object to be serialized is of type `Dictionary<string,TValue>`, the `string` keys can be converted to camel case.</span></span> <span data-ttu-id="e5e74-206">これを行うには、次の例に示すように、<xref:System.Text.Json.JsonSerializerOptions.DictionaryKeyPolicy> を `JsonNamingPolicy.CamelCase` に設定します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-206">To do that, set <xref:System.Text.Json.JsonSerializerOptions.DictionaryKeyPolicy> to `JsonNamingPolicy.CamelCase`, as shown in the following example:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeCamelCaseDictionaryKeys.cs?name=SnippetSerialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/SerializeCamelCaseDictionaryKeys.cs?name=SnippetSerialize)]
 
-<span data-ttu-id="d5d0f-204">キーと値の `"ColdMinTemp", 20` ペアを持つ `TemperatureRanges` という名前のディクショナリを使用してオブジェクトをシリアル化すると `"HotMinTemp", 40`、次の例のように JSON 出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-204">Serializing an object with a dictionary named `TemperatureRanges` that has key-value pairs `"ColdMinTemp", 20` and `"HotMinTemp", 40` would result in JSON output like the following example:</span></span>
+<span data-ttu-id="e5e74-207">キーと値のペア `"ColdMinTemp", 20` および `"HotMinTemp", 40` を持つ `TemperatureRanges` という名前のディクショナリを使用してオブジェクトをシリアル化すると、次の例のような JSON 出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-207">Serializing an object with a dictionary named `TemperatureRanges` that has key-value pairs `"ColdMinTemp", 20` and `"HotMinTemp", 40` would result in JSON output like the following example:</span></span>
 
 ```json
 {
@@ -289,17 +290,17 @@ using System.Text.Json.Serialization;
 }
 ```
 
-<span data-ttu-id="d5d0f-205">ディクショナリキーの camel ケースの名前付けポリシーは、シリアル化にのみ適用されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-205">The camel case naming policy for dictionary keys applies to serialization only.</span></span> <span data-ttu-id="d5d0f-206">ディクショナリを逆シリアル化すると、`DictionaryKeyPolicy`に `JsonNamingPolicy.CamelCase` を指定した場合でも、キーが JSON ファイルと一致します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-206">If you deserialize a dictionary, the keys will match the JSON file even if you specify `JsonNamingPolicy.CamelCase` for the `DictionaryKeyPolicy`.</span></span>
+<span data-ttu-id="e5e74-208">ディクショナリ キーに対するキャメル ケースの名前付けポリシーは、シリアル化にのみ適用されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-208">The camel case naming policy for dictionary keys applies to serialization only.</span></span> <span data-ttu-id="e5e74-209">ディクショナリを逆シリアル化すると、`DictionaryKeyPolicy` に `JsonNamingPolicy.CamelCase` を指定した場合でも、キーが JSON ファイルと一致します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-209">If you deserialize a dictionary, the keys will match the JSON file even if you specify `JsonNamingPolicy.CamelCase` for the `DictionaryKeyPolicy`.</span></span>
 
-### <a name="enums-as-strings"></a><span data-ttu-id="d5d0f-207">列挙 (文字列として)</span><span class="sxs-lookup"><span data-stu-id="d5d0f-207">Enums as strings</span></span>
+### <a name="enums-as-strings"></a><span data-ttu-id="e5e74-210">文字列としての列挙型</span><span class="sxs-lookup"><span data-stu-id="e5e74-210">Enums as strings</span></span>
 
-<span data-ttu-id="d5d0f-208">既定では、列挙型は数値としてシリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-208">By default, enums are serialized as numbers.</span></span> <span data-ttu-id="d5d0f-209">列挙型名を文字列としてシリアル化するには、<xref:System.Text.Json.Serialization.JsonStringEnumConverter>を使用します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-209">To serialize enum names as strings, use the <xref:System.Text.Json.Serialization.JsonStringEnumConverter>.</span></span>
+<span data-ttu-id="e5e74-211">既定では、列挙型は数値としてシリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-211">By default, enums are serialized as numbers.</span></span> <span data-ttu-id="e5e74-212">列挙型名を文字列としてシリアル化するには、<xref:System.Text.Json.Serialization.JsonStringEnumConverter> を使用します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-212">To serialize enum names as strings, use the <xref:System.Text.Json.Serialization.JsonStringEnumConverter>.</span></span>
 
-<span data-ttu-id="d5d0f-210">たとえば、列挙型を持つ次のクラスをシリアル化する必要があるとします。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-210">For example, suppose you need to serialize the following class that has an enum:</span></span>
+<span data-ttu-id="e5e74-213">たとえば、列挙型を持つ次のクラスをシリアル化する必要があるとします。</span><span class="sxs-lookup"><span data-stu-id="e5e74-213">For example, suppose you need to serialize the following class that has an enum:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithEnum)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithEnum)]
 
-<span data-ttu-id="d5d0f-211">概要が `Hot`の場合、既定では、シリアル化された JSON の数値は3になります。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-211">If the Summary is `Hot`, by default the serialized JSON has the numeric value 3:</span></span>
+<span data-ttu-id="e5e74-214">Summary が `Hot` の場合、既定では、シリアル化された JSON には数値 3 があります。</span><span class="sxs-lookup"><span data-stu-id="e5e74-214">If the Summary is `Hot`, by default the serialized JSON has the numeric value 3:</span></span>
 
 ```json
 {
@@ -309,11 +310,11 @@ using System.Text.Json.Serialization;
 }
 ```
 
-<span data-ttu-id="d5d0f-212">次のサンプルコードでは、数値ではなく列挙型名をシリアル化し、名前を camel 形式に変換します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-212">The following sample code serializes the enum names instead of the numeric values, and converts the names to camel case:</span></span>
+<span data-ttu-id="e5e74-215">次のサンプル コードでは、数値ではなく列挙型名をシリアル化し、名前をキャメル ケースに変換します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-215">The following sample code serializes the enum names instead of the numeric values, and converts the names to camel case:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripEnumAsString.cs?name=SnippetSerialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripEnumAsString.cs?name=SnippetSerialize)]
 
-<span data-ttu-id="d5d0f-213">結果として得られる JSON は、次の例のようになります。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-213">The resulting JSON looks like the following example:</span></span>
+<span data-ttu-id="e5e74-216">結果として生成される JSON は、次の例のようになります。</span><span class="sxs-lookup"><span data-stu-id="e5e74-216">The resulting JSON looks like the following example:</span></span>
 
 ```json
 {
@@ -323,25 +324,25 @@ using System.Text.Json.Serialization;
 }
 ```
 
-<span data-ttu-id="d5d0f-214">列挙文字列名も、次の例に示すように逆シリアル化できます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-214">Enum string names can be deserialized as well, as shown in the following example:</span></span>
+<span data-ttu-id="e5e74-217">列挙型の文字列名も、次の例に示すように逆シリアル化できます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-217">Enum string names can be deserialized as well, as shown in the following example:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripEnumAsString.cs?name=SnippetDeserialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripEnumAsString.cs?name=SnippetDeserialize)]
 
-## <a name="exclude-properties-from-serialization"></a><span data-ttu-id="d5d0f-215">シリアル化からプロパティを除外する</span><span class="sxs-lookup"><span data-stu-id="d5d0f-215">Exclude properties from serialization</span></span>
+## <a name="exclude-properties-from-serialization"></a><span data-ttu-id="e5e74-218">シリアル化からプロパティを除外する</span><span class="sxs-lookup"><span data-stu-id="e5e74-218">Exclude properties from serialization</span></span>
 
-<span data-ttu-id="d5d0f-216">既定では、すべてのパブリックプロパティがシリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-216">By default, all public properties are serialized.</span></span> <span data-ttu-id="d5d0f-217">一部のオプションが JSON 出力に表示されないようにするには、いくつかのオプションがあります。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-217">If you don't want some of them to appear in the JSON output, you have several options.</span></span> <span data-ttu-id="d5d0f-218">ここでは、を除外する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-218">This section explains how to exclude:</span></span>
+<span data-ttu-id="e5e74-219">既定では、すべてのパブリック プロパティがシリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-219">By default, all public properties are serialized.</span></span> <span data-ttu-id="e5e74-220">その一部が JSON 出力に出現しないようにするには、いくつかのオプションがあります。</span><span class="sxs-lookup"><span data-stu-id="e5e74-220">If you don't want some of them to appear in the JSON output, you have several options.</span></span> <span data-ttu-id="e5e74-221">このセクションでは、以下を除外する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-221">This section explains how to exclude:</span></span>
 
-* [<span data-ttu-id="d5d0f-219">個々のプロパティ</span><span class="sxs-lookup"><span data-stu-id="d5d0f-219">Individual properties</span></span>](#exclude-individual-properties)
-* [<span data-ttu-id="d5d0f-220">すべての読み取り専用プロパティ</span><span class="sxs-lookup"><span data-stu-id="d5d0f-220">All read-only properties</span></span>](#exclude-all-read-only-properties)
-* [<span data-ttu-id="d5d0f-221">すべての null 値プロパティ</span><span class="sxs-lookup"><span data-stu-id="d5d0f-221">All null-value properties</span></span>](#exclude-all-null-value-properties)
+* [<span data-ttu-id="e5e74-222">個々のプロパティ</span><span class="sxs-lookup"><span data-stu-id="e5e74-222">Individual properties</span></span>](#exclude-individual-properties)
+* [<span data-ttu-id="e5e74-223">すべての読み取り専用プロパティ</span><span class="sxs-lookup"><span data-stu-id="e5e74-223">All read-only properties</span></span>](#exclude-all-read-only-properties)
+* [<span data-ttu-id="e5e74-224">すべての null 値プロパティ</span><span class="sxs-lookup"><span data-stu-id="e5e74-224">All null-value properties</span></span>](#exclude-all-null-value-properties)
 
-### <a name="exclude-individual-properties"></a><span data-ttu-id="d5d0f-222">個々のプロパティを除外する</span><span class="sxs-lookup"><span data-stu-id="d5d0f-222">Exclude individual properties</span></span>
+### <a name="exclude-individual-properties"></a><span data-ttu-id="e5e74-225">個々のプロパティを除外する</span><span class="sxs-lookup"><span data-stu-id="e5e74-225">Exclude individual properties</span></span>
 
-<span data-ttu-id="d5d0f-223">個々のプロパティを無視するには、 [[Jsonignore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute)属性を使用します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-223">To ignore individual properties, use the [[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) attribute.</span></span>
+<span data-ttu-id="e5e74-226">個々のプロパティを無視するには、[[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) 属性を使用します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-226">To ignore individual properties, use the [[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) attribute.</span></span>
 
-<span data-ttu-id="d5d0f-224">シリアル化する型と JSON 出力の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-224">Here's an example type to serialize and JSON output:</span></span>
+<span data-ttu-id="e5e74-227">シリアル化する型と JSON 出力の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-227">Here's an example type to serialize and JSON output:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithIgnoreAttribute)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithIgnoreAttribute)]
 
 ```json
 {
@@ -350,15 +351,15 @@ using System.Text.Json.Serialization;
 }
 ```
 
-### <a name="exclude-all-read-only-properties"></a><span data-ttu-id="d5d0f-225">すべての読み取り専用プロパティを除外する</span><span class="sxs-lookup"><span data-stu-id="d5d0f-225">Exclude all read-only properties</span></span>
+### <a name="exclude-all-read-only-properties"></a><span data-ttu-id="e5e74-228">すべての読み取り専用プロパティを除外する</span><span class="sxs-lookup"><span data-stu-id="e5e74-228">Exclude all read-only properties</span></span>
 
-<span data-ttu-id="d5d0f-226">パブリックゲッターが含まれていてもパブリック setter がない場合、プロパティは読み取り専用です。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-226">A property is read-only if it contains a public getter but not a public setter.</span></span> <span data-ttu-id="d5d0f-227">すべての読み取り専用プロパティを除外するには、次の例に示すように、<xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties?displayProperty=nameWithType> を `true`に設定します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-227">To exclude all read-only properties, set the <xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties?displayProperty=nameWithType> to `true`, as shown in the following example:</span></span>
+<span data-ttu-id="e5e74-229">パブリック ゲッターが含まれていてもパブリック セッターがない場合、プロパティは読み取り専用です。</span><span class="sxs-lookup"><span data-stu-id="e5e74-229">A property is read-only if it contains a public getter but not a public setter.</span></span> <span data-ttu-id="e5e74-230">すべての読み取り専用プロパティを除外するには、次の例に示すように、<xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties?displayProperty=nameWithType> を `true` に設定します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-230">To exclude all read-only properties, set the <xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties?displayProperty=nameWithType> to `true`, as shown in the following example:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeExcludeReadOnlyProperties.cs?name=SnippetSerialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/SerializeExcludeReadOnlyProperties.cs?name=SnippetSerialize)]
 
-<span data-ttu-id="d5d0f-228">シリアル化する型と JSON 出力の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-228">Here's an example type to serialize and JSON output:</span></span>
+<span data-ttu-id="e5e74-231">シリアル化する型と JSON 出力の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-231">Here's an example type to serialize and JSON output:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithROProperty)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithROProperty)]
 
 ```json
 {
@@ -368,21 +369,57 @@ using System.Text.Json.Serialization;
 }
 ```
 
-<span data-ttu-id="d5d0f-229">このオプションは、シリアル化にのみ適用されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-229">This option applies only to serialization.</span></span> <span data-ttu-id="d5d0f-230">逆シリアル化中、読み取り専用プロパティは既定では無視されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-230">During deserialization, read-only properties are ignored by default.</span></span>
+<span data-ttu-id="e5e74-232">このオプションは、シリアル化にのみ適用されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-232">This option applies only to serialization.</span></span> <span data-ttu-id="e5e74-233">逆シリアル化中、既定では読み取り専用プロパティが無視されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-233">During deserialization, read-only properties are ignored by default.</span></span>
 
-### <a name="exclude-all-null-value-properties"></a><span data-ttu-id="d5d0f-231">すべての null 値プロパティを除外する</span><span class="sxs-lookup"><span data-stu-id="d5d0f-231">Exclude all null value properties</span></span>
+### <a name="exclude-all-null-value-properties"></a><span data-ttu-id="e5e74-234">すべての null 値プロパティを除外する</span><span class="sxs-lookup"><span data-stu-id="e5e74-234">Exclude all null value properties</span></span>
 
-<span data-ttu-id="d5d0f-232">すべての null 値プロパティを除外するには、次の例に示すように、<xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues> プロパティを `true`に設定します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-232">To exclude all null value properties, set the <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues> property to `true`, as shown in the following example:</span></span>
+<span data-ttu-id="e5e74-235">すべての null 値プロパティを除外するには、次の例に示すように、<xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues> プロパティを `true` に設定します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-235">To exclude all null value properties, set the <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues> property to `true`, as shown in the following example:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeExcludeNullValueProperties.cs?name=SnippetSerialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/SerializeExcludeNullValueProperties.cs?name=SnippetSerialize)]
 
-<span data-ttu-id="d5d0f-233">シリアル化し、JSON 出力を行うオブジェクトの例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-233">Here's an example object to serialize and JSON output:</span></span>
+<span data-ttu-id="e5e74-236">シリアル化するオブジェクトと JSON 出力の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-236">Here's an example object to serialize and JSON output:</span></span>
 
-|<span data-ttu-id="d5d0f-234">プロパティ</span><span class="sxs-lookup"><span data-stu-id="d5d0f-234">Property</span></span> |<span data-ttu-id="d5d0f-235">値</span><span class="sxs-lookup"><span data-stu-id="d5d0f-235">Value</span></span>  |
-|---------|---------|
-| <span data-ttu-id="d5d0f-236">Date</span><span class="sxs-lookup"><span data-stu-id="d5d0f-236">Date</span></span>    | <span data-ttu-id="d5d0f-237">8/1/2019 12:00:00 AM-07:00</span><span class="sxs-lookup"><span data-stu-id="d5d0f-237">8/1/2019 12:00:00 AM -07:00</span></span>|
-| <span data-ttu-id="d5d0f-238">TemperatureCelsius</span><span class="sxs-lookup"><span data-stu-id="d5d0f-238">TemperatureCelsius</span></span>| <span data-ttu-id="d5d0f-239">25</span><span class="sxs-lookup"><span data-stu-id="d5d0f-239">25</span></span> |
-| <span data-ttu-id="d5d0f-240">まとめ</span><span class="sxs-lookup"><span data-stu-id="d5d0f-240">Summary</span></span>| <span data-ttu-id="d5d0f-241">null</span><span class="sxs-lookup"><span data-stu-id="d5d0f-241">null</span></span>|
+|<span data-ttu-id="e5e74-237">プロパティ</span><span class="sxs-lookup"><span data-stu-id="e5e74-237">Property</span></span> |<span data-ttu-id="e5e74-238">[値]</span><span class="sxs-lookup"><span data-stu-id="e5e74-238">Value</span></span>  |
+|---
+<span data-ttu-id="e5e74-239">title: description:「この記事では、System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-239">title: description: 'This article shows you how to use the System.Text.Json namespace to serialize to and deserialize from JSON in .NET.</span></span> <span data-ttu-id="e5e74-240">これにはサンプル コードが含まれます。」</span><span class="sxs-lookup"><span data-stu-id="e5e74-240">It includes sample code.'</span></span>
+<span data-ttu-id="e5e74-241">ms.date: no-loc:</span><span class="sxs-lookup"><span data-stu-id="e5e74-241">ms.date: no-loc:</span></span>
+- <span data-ttu-id="e5e74-242">'System.Text.Json'</span><span class="sxs-lookup"><span data-stu-id="e5e74-242">'System.Text.Json'</span></span>
+- <span data-ttu-id="e5e74-243">'Newtonsoft.Json' helpviewer_keywords:</span><span class="sxs-lookup"><span data-stu-id="e5e74-243">'Newtonsoft.Json' helpviewer_keywords:</span></span>
+- 
+- 
+- 
+- 
+
+-
+<span data-ttu-id="e5e74-244">title: description:「この記事では、System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-244">title: description: 'This article shows you how to use the System.Text.Json namespace to serialize to and deserialize from JSON in .NET.</span></span> <span data-ttu-id="e5e74-245">これにはサンプル コードが含まれます。」</span><span class="sxs-lookup"><span data-stu-id="e5e74-245">It includes sample code.'</span></span>
+<span data-ttu-id="e5e74-246">ms.date: no-loc:</span><span class="sxs-lookup"><span data-stu-id="e5e74-246">ms.date: no-loc:</span></span>
+- <span data-ttu-id="e5e74-247">'System.Text.Json'</span><span class="sxs-lookup"><span data-stu-id="e5e74-247">'System.Text.Json'</span></span>
+- <span data-ttu-id="e5e74-248">'Newtonsoft.Json' helpviewer_keywords:</span><span class="sxs-lookup"><span data-stu-id="e5e74-248">'Newtonsoft.Json' helpviewer_keywords:</span></span>
+- 
+- 
+- 
+- 
+
+<span data-ttu-id="e5e74-249">-----|--- title: description:「この記事では、System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-249">-----|--- title: description: 'This article shows you how to use the System.Text.Json namespace to serialize to and deserialize from JSON in .NET.</span></span> <span data-ttu-id="e5e74-250">これにはサンプル コードが含まれます。」</span><span class="sxs-lookup"><span data-stu-id="e5e74-250">It includes sample code.'</span></span>
+<span data-ttu-id="e5e74-251">ms.date: no-loc:</span><span class="sxs-lookup"><span data-stu-id="e5e74-251">ms.date: no-loc:</span></span>
+- <span data-ttu-id="e5e74-252">'System.Text.Json'</span><span class="sxs-lookup"><span data-stu-id="e5e74-252">'System.Text.Json'</span></span>
+- <span data-ttu-id="e5e74-253">'Newtonsoft.Json' helpviewer_keywords:</span><span class="sxs-lookup"><span data-stu-id="e5e74-253">'Newtonsoft.Json' helpviewer_keywords:</span></span>
+- 
+- 
+- 
+- 
+
+-
+<span data-ttu-id="e5e74-254">title: description:「この記事では、System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-254">title: description: 'This article shows you how to use the System.Text.Json namespace to serialize to and deserialize from JSON in .NET.</span></span> <span data-ttu-id="e5e74-255">これにはサンプル コードが含まれます。」</span><span class="sxs-lookup"><span data-stu-id="e5e74-255">It includes sample code.'</span></span>
+<span data-ttu-id="e5e74-256">ms.date: no-loc:</span><span class="sxs-lookup"><span data-stu-id="e5e74-256">ms.date: no-loc:</span></span>
+- <span data-ttu-id="e5e74-257">'System.Text.Json'</span><span class="sxs-lookup"><span data-stu-id="e5e74-257">'System.Text.Json'</span></span>
+- <span data-ttu-id="e5e74-258">'Newtonsoft.Json' helpviewer_keywords:</span><span class="sxs-lookup"><span data-stu-id="e5e74-258">'Newtonsoft.Json' helpviewer_keywords:</span></span>
+- 
+- 
+- 
+- 
+
+<span data-ttu-id="e5e74-259">-----| | Date    | 8/1/2019 12:00:00 AM -07:00| | TemperatureCelsius| 25 | | Summary| null|</span><span class="sxs-lookup"><span data-stu-id="e5e74-259">-----| | Date    | 8/1/2019 12:00:00 AM -07:00| | TemperatureCelsius| 25 | | Summary| null|</span></span>
 
 ```json
 {
@@ -391,11 +428,11 @@ using System.Text.Json.Serialization;
 }
 ```
 
-<span data-ttu-id="d5d0f-242">この設定は、シリアル化と逆シリアル化に適用されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-242">This setting applies to serialization and deserialization.</span></span> <span data-ttu-id="d5d0f-243">逆シリアル化に対する影響については、「[逆シリアル化するときに null を無視する](#ignore-null-when-deserializing)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-243">For information about its effect on deserialization, see [Ignore null when deserializing](#ignore-null-when-deserializing).</span></span>
+<span data-ttu-id="e5e74-260">この設定はシリアル化と逆シリアル化に適用されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-260">This setting applies to serialization and deserialization.</span></span> <span data-ttu-id="e5e74-261">逆シリアル化に対する影響については、「[逆シリアル化時に null を無視する](#ignore-null-when-deserializing)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e5e74-261">For information about its effect on deserialization, see [Ignore null when deserializing](#ignore-null-when-deserializing).</span></span>
 
-## <a name="customize-character-encoding"></a><span data-ttu-id="d5d0f-244">文字エンコードのカスタマイズ</span><span class="sxs-lookup"><span data-stu-id="d5d0f-244">Customize character encoding</span></span>
+## <a name="customize-character-encoding"></a><span data-ttu-id="e5e74-262">文字エンコードをカスタマイズする</span><span class="sxs-lookup"><span data-stu-id="e5e74-262">Customize character encoding</span></span>
 
-<span data-ttu-id="d5d0f-245">既定では、シリアライザーは ASCII 以外のすべての文字をエスケープします。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-245">By default, the serializer escapes all non-ASCII characters.</span></span>  <span data-ttu-id="d5d0f-246">つまり、`xxxx` が文字の Unicode コードである `\uxxxx` に置き換えます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-246">That is, it replaces them with `\uxxxx` where `xxxx` is the Unicode code of the character.</span></span>  <span data-ttu-id="d5d0f-247">たとえば、`Summary` プロパティがキリルжаркоに設定されている場合、次の例に示すように `WeatherForecast` オブジェクトがシリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-247">For example, if the `Summary` property is set to Cyrillic жарко, the `WeatherForecast` object is serialized as shown in this example:</span></span>
+<span data-ttu-id="e5e74-263">既定では、シリアライザーでは ASCII 以外のすべての文字がエスケープされます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-263">By default, the serializer escapes all non-ASCII characters.</span></span>  <span data-ttu-id="e5e74-264">つまり、`\uxxxx` に置き換えられます。`xxxx` は文字の Unicode コードです。</span><span class="sxs-lookup"><span data-stu-id="e5e74-264">That is, it replaces them with `\uxxxx` where `xxxx` is the Unicode code of the character.</span></span>  <span data-ttu-id="e5e74-265">たとえば、`Summary` プロパティがキリル文字の жарко に設定されている場合、`WeatherForecast` オブジェクトは次の例に示すようにシリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-265">For example, if the `Summary` property is set to Cyrillic жарко, the `WeatherForecast` object is serialized as shown in this example:</span></span>
 
 ```json
 {
@@ -405,15 +442,15 @@ using System.Text.Json.Serialization;
 }
 ```
 
-### <a name="serialize-language-character-sets"></a><span data-ttu-id="d5d0f-248">言語文字セットのシリアル化</span><span class="sxs-lookup"><span data-stu-id="d5d0f-248">Serialize language character sets</span></span>
+### <a name="serialize-language-character-sets"></a><span data-ttu-id="e5e74-266">言語文字セットのシリアル化</span><span class="sxs-lookup"><span data-stu-id="e5e74-266">Serialize language character sets</span></span>
 
-<span data-ttu-id="d5d0f-249">エスケープせずに1つ以上の言語の文字セットをシリアル化するには、次の例に示すように、<xref:System.Text.Encodings.Web.JavaScriptEncoder?displayProperty=fullName>のインスタンスを作成するときに[Unicode 範囲](xref:System.Text.Unicode.UnicodeRanges)を指定します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-249">To serialize the character set(s) of one or more languages without escaping, specify [Unicode range(s)](xref:System.Text.Unicode.UnicodeRanges) when creating an instance of <xref:System.Text.Encodings.Web.JavaScriptEncoder?displayProperty=fullName>, as shown in the following example:</span></span>
+<span data-ttu-id="e5e74-267">1 つ以上の言語の文字セットをエスケープせずにシリアル化するには、次の例に示すように、<xref:System.Text.Encodings.Web.JavaScriptEncoder?displayProperty=fullName> のインスタンスを作成するときに [Unicode 範囲](xref:System.Text.Unicode.UnicodeRanges)を指定します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-267">To serialize the character set(s) of one or more languages without escaping, specify [Unicode range(s)](xref:System.Text.Unicode.UnicodeRanges) when creating an instance of <xref:System.Text.Encodings.Web.JavaScriptEncoder?displayProperty=fullName>, as shown in the following example:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeCustomEncoding.cs?name=SnippetUsings)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/SerializeCustomEncoding.cs?name=SnippetUsings)]
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeCustomEncoding.cs?name=SnippetLanguageSets)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/SerializeCustomEncoding.cs?name=SnippetLanguageSets)]
 
-<span data-ttu-id="d5d0f-250">このコードでは、キリル文字やギリシャ文字はエスケープされません。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-250">This code doesn't escape Cyrillic or Greek characters.</span></span> <span data-ttu-id="d5d0f-251">`Summary` プロパティがキリルжаркоに設定されている場合、次の例に示すように `WeatherForecast` オブジェクトがシリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-251">If the `Summary` property is set to Cyrillic жарко, the `WeatherForecast` object is serialized as shown in this example:</span></span>
+<span data-ttu-id="e5e74-268">このコードでは、キリル文字やギリシャ文字はエスケープされません。</span><span class="sxs-lookup"><span data-stu-id="e5e74-268">This code doesn't escape Cyrillic or Greek characters.</span></span> <span data-ttu-id="e5e74-269">`Summary` プロパティがキリル文字の жарко に設定されている場合、`WeatherForecast` オブジェクトは次の例に示すようにシリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-269">If the `Summary` property is set to Cyrillic жарко, the `WeatherForecast` object is serialized as shown in this example:</span></span>
 
 ```json
 {
@@ -423,17 +460,17 @@ using System.Text.Json.Serialization;
 }
 ```
 
-<span data-ttu-id="d5d0f-252">エスケープせずにすべての言語セットをシリアル化するには、<xref:System.Text.Unicode.UnicodeRanges.All?displayProperty=nameWithType>を使用します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-252">To serialize all language sets without escaping, use <xref:System.Text.Unicode.UnicodeRanges.All?displayProperty=nameWithType>.</span></span>
+<span data-ttu-id="e5e74-270">すべての言語セットをエスケープせずにシリアル化するには、<xref:System.Text.Unicode.UnicodeRanges.All?displayProperty=nameWithType> を使用します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-270">To serialize all language sets without escaping, use <xref:System.Text.Unicode.UnicodeRanges.All?displayProperty=nameWithType>.</span></span>
 
-### <a name="serialize-specific-characters"></a><span data-ttu-id="d5d0f-253">特定の文字のシリアル化</span><span class="sxs-lookup"><span data-stu-id="d5d0f-253">Serialize specific characters</span></span>
+### <a name="serialize-specific-characters"></a><span data-ttu-id="e5e74-271">特定の文字のシリアル化</span><span class="sxs-lookup"><span data-stu-id="e5e74-271">Serialize specific characters</span></span>
 
-<span data-ttu-id="d5d0f-254">別の方法として、エスケープせずにを使用して許可する個々の文字を指定する方法もあります。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-254">An alternative is to specify individual characters that you want to allow through without being escaped.</span></span> <span data-ttu-id="d5d0f-255">次の例では、жаркоの最初の2つの文字のみをシリアル化します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-255">The following example serializes only the first two characters of жарко:</span></span>
+<span data-ttu-id="e5e74-272">別の方法として、エスケープせずに許可する個々の文字を指定することもできます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-272">An alternative is to specify individual characters that you want to allow through without being escaped.</span></span> <span data-ttu-id="e5e74-273">次の例では、жарко の最初の 2 文字のみをシリアル化します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-273">The following example serializes only the first two characters of жарко:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeCustomEncoding.cs?name=SnippetUsings)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/SerializeCustomEncoding.cs?name=SnippetUsings)]
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeCustomEncoding.cs?name=SnippetSelectedCharacters)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/SerializeCustomEncoding.cs?name=SnippetSelectedCharacters)]
 
-<span data-ttu-id="d5d0f-256">上記のコードによって生成される JSON の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-256">Here's an example of JSON produced by the preceding code:</span></span>
+<span data-ttu-id="e5e74-274">上記のコードによって生成される JSON の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-274">Here's an example of JSON produced by the preceding code:</span></span>
 
 ```json
 {
@@ -443,37 +480,37 @@ using System.Text.Json.Serialization;
 }
 ```
 
-### <a name="serialize-all-characters"></a><span data-ttu-id="d5d0f-257">すべての文字をシリアル化する</span><span class="sxs-lookup"><span data-stu-id="d5d0f-257">Serialize all characters</span></span>
+### <a name="serialize-all-characters"></a><span data-ttu-id="e5e74-275">すべての文字のシリアル化</span><span class="sxs-lookup"><span data-stu-id="e5e74-275">Serialize all characters</span></span>
 
-<span data-ttu-id="d5d0f-258">エスケープを最小限に抑えるには、次の例に示すように <xref:System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping?displayProperty=nameWithType>を使用します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-258">To minimize escaping you can use <xref:System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping?displayProperty=nameWithType>, as shown in the following example:</span></span>
+<span data-ttu-id="e5e74-276">エスケープを最小化するには、次の例に示すように、<xref:System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping?displayProperty=nameWithType> を使用できます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-276">To minimize escaping you can use <xref:System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping?displayProperty=nameWithType>, as shown in the following example:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeCustomEncoding.cs?name=SnippetUsings)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/SerializeCustomEncoding.cs?name=SnippetUsings)]
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializeCustomEncoding.cs?name=SnippetUnsafeRelaxed)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/SerializeCustomEncoding.cs?name=SnippetUnsafeRelaxed)]
 
 > [!CAUTION]
-> <span data-ttu-id="d5d0f-259">既定のエンコーダーと比較して、`UnsafeRelaxedJsonEscaping` エンコーダーでは、エスケープ解除された文字を通過できるようにすることが制限されています。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-259">Compared to the default encoder, the `UnsafeRelaxedJsonEscaping` encoder is more permissive about allowing characters to pass through unescaped:</span></span>
+> <span data-ttu-id="e5e74-277">既定のエンコーダーと比較して、`UnsafeRelaxedJsonEscaping` エンコーダーは、文字をエスケープせずにそのまま渡すことについて、より寛容です。</span><span class="sxs-lookup"><span data-stu-id="e5e74-277">Compared to the default encoder, the `UnsafeRelaxedJsonEscaping` encoder is more permissive about allowing characters to pass through unescaped:</span></span>
 >
-> * <span data-ttu-id="d5d0f-260">`<`、`>`、`&`、`'`など、HTML に依存する文字はエスケープされません。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-260">It doesn't escape HTML-sensitive characters such as `<`, `>`, `&`, and `'`.</span></span>
-> * <span data-ttu-id="d5d0f-261">XSS または情報漏えい攻撃 (クライアントとサーバーが*文字セット*に対して無効な場合に発生する可能性があります) に対する追加の多層防御は提供されません。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-261">It doesn't offer any additional defense-in-depth protections against XSS or information disclosure attacks, such as those which might result from the client and server disagreeing on the *charset*.</span></span>
+> * <span data-ttu-id="e5e74-278">`<`、`>`、`&`、`'` など、HTML に影響する文字はエスケープされません。</span><span class="sxs-lookup"><span data-stu-id="e5e74-278">It doesn't escape HTML-sensitive characters such as `<`, `>`, `&`, and `'`.</span></span>
+> * <span data-ttu-id="e5e74-279">クライアントとサーバーが "*文字セット*" について合意していない場合の結果など、XSS または情報漏えい攻撃に対する追加の多層防御は提供されません。</span><span class="sxs-lookup"><span data-stu-id="e5e74-279">It doesn't offer any additional defense-in-depth protections against XSS or information disclosure attacks, such as those which might result from the client and server disagreeing on the *charset*.</span></span>
 >
-> <span data-ttu-id="d5d0f-262">クライアントが結果のペイロードを UTF-8 でエンコードされた JSON として解釈することがわかっている場合にのみ、unsafe エンコーダーを使用します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-262">Use the unsafe encoder only when it's known that the client will be interpreting the resulting payload as UTF-8 encoded JSON.</span></span> <span data-ttu-id="d5d0f-263">たとえば、サーバーが応答ヘッダー `Content-Type: application/json; charset=utf-8`を送信している場合に使用できます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-263">For example, you can use it if the server is sending the response header `Content-Type: application/json; charset=utf-8`.</span></span> <span data-ttu-id="d5d0f-264">未加工の `UnsafeRelaxedJsonEscaping` 出力が HTML ページまたは `<script>` 要素に出力されないようにします。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-264">Never allow the raw `UnsafeRelaxedJsonEscaping` output to be emitted into an HTML page or a `<script>` element.</span></span>
+> <span data-ttu-id="e5e74-280">安全でないエンコーダーは、クライアントによって結果のペイロードが UTF-8 でエンコードされた JSON として解釈されることがわかっている場合にのみ使用してください。</span><span class="sxs-lookup"><span data-stu-id="e5e74-280">Use the unsafe encoder only when it's known that the client will be interpreting the resulting payload as UTF-8 encoded JSON.</span></span> <span data-ttu-id="e5e74-281">たとえば、サーバーが応答ヘッダー `Content-Type: application/json; charset=utf-8` を送信している場合は使用できます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-281">For example, you can use it if the server is sending the response header `Content-Type: application/json; charset=utf-8`.</span></span> <span data-ttu-id="e5e74-282">未加工の `UnsafeRelaxedJsonEscaping` 出力が HTML ページまたは `<script>` 要素に決して出力されないようにしてください。</span><span class="sxs-lookup"><span data-stu-id="e5e74-282">Never allow the raw `UnsafeRelaxedJsonEscaping` output to be emitted into an HTML page or a `<script>` element.</span></span>
 
-## <a name="serialize-properties-of-derived-classes"></a><span data-ttu-id="d5d0f-265">派生クラスのプロパティのシリアル化</span><span class="sxs-lookup"><span data-stu-id="d5d0f-265">Serialize properties of derived classes</span></span>
+## <a name="serialize-properties-of-derived-classes"></a><span data-ttu-id="e5e74-283">派生クラスのプロパティのシリアル化</span><span class="sxs-lookup"><span data-stu-id="e5e74-283">Serialize properties of derived classes</span></span>
 
-<span data-ttu-id="d5d0f-266">ポリモーフィックな型階層のシリアル化はサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-266">Serialization of a polymorphic type hierarchy is not supported.</span></span> <span data-ttu-id="d5d0f-267">たとえば、プロパティがインターフェイスまたは抽象クラスとして定義されている場合、ランタイム型に追加のプロパティがある場合でも、インターフェイスまたは抽象クラスで定義されたプロパティのみがシリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-267">For example, if a property is defined as an interface or an abstract class, only the properties defined on the interface or abstract class are serialized, even if the runtime type has additional properties.</span></span> <span data-ttu-id="d5d0f-268">この動作の例外については、このセクションで説明します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-268">The exceptions to this behavior are explained in this section.</span></span>
+<span data-ttu-id="e5e74-284">ポリモーフィックな型階層のシリアル化はサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="e5e74-284">Serialization of a polymorphic type hierarchy is not supported.</span></span> <span data-ttu-id="e5e74-285">たとえば、プロパティがインターフェイスまたは抽象クラスとして定義されている場合は、ランタイム型に追加のプロパティがある場合でも、インターフェイスまたは抽象クラスに定義されたプロパティのみがシリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-285">For example, if a property is defined as an interface or an abstract class, only the properties defined on the interface or abstract class are serialized, even if the runtime type has additional properties.</span></span> <span data-ttu-id="e5e74-286">この動作の例外については、このセクションで説明します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-286">The exceptions to this behavior are explained in this section.</span></span>
 
-<span data-ttu-id="d5d0f-269">たとえば、`WeatherForecast` クラスと派生クラス `WeatherForecastDerived`があるとします。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-269">For example, suppose you have a `WeatherForecast` class and a derived class `WeatherForecastDerived`:</span></span>
+<span data-ttu-id="e5e74-287">たとえば、`WeatherForecast` クラスと派生クラス `WeatherForecastDerived` があるとします。</span><span class="sxs-lookup"><span data-stu-id="e5e74-287">For example, suppose you have a `WeatherForecast` class and a derived class `WeatherForecastDerived`:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWF)]
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFDerived)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFDerived)]
 
-<span data-ttu-id="d5d0f-270">また、コンパイル時に `Serialize` メソッドの型引数が `WeatherForecast`であるとします。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-270">And suppose the type argument of the `Serialize` method at compile time is `WeatherForecast`:</span></span>
+<span data-ttu-id="e5e74-288">また、コンパイル時の `Serialize` メソッドの型引数が `WeatherForecast` であるとします。</span><span class="sxs-lookup"><span data-stu-id="e5e74-288">And suppose the type argument of the `Serialize` method at compile time is `WeatherForecast`:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeDefault)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/SerializePolymorphic.cs?name=SnippetSerializeDefault)]
 
-<span data-ttu-id="d5d0f-271">このシナリオでは、`weatherForecast` オブジェクトが実際には `WeatherForecastDerived` オブジェクトであっても、`WindSpeed` プロパティはシリアル化されません。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-271">In this scenario, the `WindSpeed` property is not serialized even if the `weatherForecast` object is actually a `WeatherForecastDerived` object.</span></span> <span data-ttu-id="d5d0f-272">基本クラスのプロパティのみがシリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-272">Only the base class properties are serialized:</span></span>
+<span data-ttu-id="e5e74-289">このシナリオでは、`weatherForecast` オブジェクトが実際には `WeatherForecastDerived` オブジェクトであっても、`WindSpeed` プロパティはシリアル化されません。</span><span class="sxs-lookup"><span data-stu-id="e5e74-289">In this scenario, the `WindSpeed` property is not serialized even if the `weatherForecast` object is actually a `WeatherForecastDerived` object.</span></span> <span data-ttu-id="e5e74-290">基本クラスのプロパティのみがシリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-290">Only the base class properties are serialized:</span></span>
 
 ```json
 {
@@ -483,19 +520,19 @@ using System.Text.Json.Serialization;
 }
 ```
 
-<span data-ttu-id="d5d0f-273">この動作は、派生したランタイムによって作成された型でデータが誤って公開されるのを防ぐためのものです。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-273">This behavior is intended to help prevent accidental exposure of data in a derived runtime-created type.</span></span>
+<span data-ttu-id="e5e74-291">この動作は、ランタイムによって作成される派生型内でデータが誤って公開されるのを防ぐためのものです。</span><span class="sxs-lookup"><span data-stu-id="e5e74-291">This behavior is intended to help prevent accidental exposure of data in a derived runtime-created type.</span></span>
 
-<span data-ttu-id="d5d0f-274">前の例で派生型のプロパティをシリアル化するには、次のいずれかの方法を使用します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-274">To serialize the properties of the derived type in the preceding example, use one of the following approaches:</span></span>
+<span data-ttu-id="e5e74-292">前の例で派生型のプロパティをシリアル化するには、次のいずれかのアプローチを使用します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-292">To serialize the properties of the derived type in the preceding example, use one of the following approaches:</span></span>
 
-* <span data-ttu-id="d5d0f-275">実行時に型を指定できるようにする <xref:System.Text.Json.JsonSerializer.Serialize%2A> のオーバーロードを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-275">Call an overload of <xref:System.Text.Json.JsonSerializer.Serialize%2A> that lets you specify the type at runtime:</span></span>
+* <span data-ttu-id="e5e74-293">実行時に型を指定できるようにする <xref:System.Text.Json.JsonSerializer.Serialize%2A> のオーバーロードを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-293">Call an overload of <xref:System.Text.Json.JsonSerializer.Serialize%2A> that lets you specify the type at runtime:</span></span>
 
-  [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeGetType)]
+  [!code-csharp[](snippets/system-text-json-how-to/csharp/SerializePolymorphic.cs?name=SnippetSerializeGetType)]
 
-* <span data-ttu-id="d5d0f-276">`object`としてシリアル化するオブジェクトを宣言します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-276">Declare the object to be serialized as `object`.</span></span>
+* <span data-ttu-id="e5e74-294">オブジェクトを `object` としてシリアル化するように宣言します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-294">Declare the object to be serialized as `object`.</span></span>
 
-  [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeObject)]
+  [!code-csharp[](snippets/system-text-json-how-to/csharp/SerializePolymorphic.cs?name=SnippetSerializeObject)]
 
-<span data-ttu-id="d5d0f-277">前の例のシナリオでは、どちらの方法でも、`WindSpeed` プロパティが JSON 出力に含まれるようになっています。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-277">In the preceding example scenario, both approaches cause the `WindSpeed` property to be included in the JSON output:</span></span>
+<span data-ttu-id="e5e74-295">前の例のシナリオでは、どちらのアプローチでも、`WindSpeed` プロパティが JSON 出力に含まれるようになります。</span><span class="sxs-lookup"><span data-stu-id="e5e74-295">In the preceding example scenario, both approaches cause the `WindSpeed` property to be included in the JSON output:</span></span>
 
 ```json
 {
@@ -507,24 +544,24 @@ using System.Text.Json.Serialization;
 ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="d5d0f-278">これらの方法では、ルートオブジェクトのプロパティではなく、シリアル化するルートオブジェクトに対してのみ、ポリモーフィックなシリアル化が提供されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-278">These approaches provide polymorphic serialization only for the root object to be serialized, not for properties of that root object.</span></span>
+> <span data-ttu-id="e5e74-296">これらのアプローチでは、シリアル化するルート オブジェクトに対してのみポリモーフィックなシリアル化が提供され、そのルート オブジェクトのプロパティに対しては提供されません。</span><span class="sxs-lookup"><span data-stu-id="e5e74-296">These approaches provide polymorphic serialization only for the root object to be serialized, not for properties of that root object.</span></span>
 
-<span data-ttu-id="d5d0f-279">`object`型として定義すると、下位レベルのオブジェクトのポリモーフィックなシリアル化を取得できます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-279">You can get polymorphic serialization for lower-level objects if you define them as type `object`.</span></span> <span data-ttu-id="d5d0f-280">たとえば、`WeatherForecast` クラスに `PreviousForecast` という名前のプロパティがあり、`WeatherForecast` または `object`型として定義できるとします。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-280">For example, suppose your `WeatherForecast` class has a property named `PreviousForecast` that can be defined as type `WeatherForecast` or `object`:</span></span>
+<span data-ttu-id="e5e74-297">`object` 型として定義すると、下位レベルのオブジェクトのポリモーフィックなシリアル化を取得できます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-297">You can get polymorphic serialization for lower-level objects if you define them as type `object`.</span></span> <span data-ttu-id="e5e74-298">たとえば、`WeatherForecast` クラスに、`WeatherForecast` または `object` 型として定義できる `PreviousForecast` という名前のプロパティがあるとします。</span><span class="sxs-lookup"><span data-stu-id="e5e74-298">For example, suppose your `WeatherForecast` class has a property named `PreviousForecast` that can be defined as type `WeatherForecast` or `object`:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPrevious)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithPrevious)]
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPreviousAsObject)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithPreviousAsObject)]
 
-<span data-ttu-id="d5d0f-281">`PreviousForecast` プロパティに `WeatherForecastDerived`のインスタンスが含まれている場合は、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-281">If the `PreviousForecast` property contains an instance of `WeatherForecastDerived`:</span></span>
+<span data-ttu-id="e5e74-299">`PreviousForecast` プロパティに `WeatherForecastDerived` のインスタンスが含まれる場合:</span><span class="sxs-lookup"><span data-stu-id="e5e74-299">If the `PreviousForecast` property contains an instance of `WeatherForecastDerived`:</span></span>
 
-* <span data-ttu-id="d5d0f-282">`WeatherForecastWithPrevious` のシリアル化からの JSON 出力には `WindSpeed`**が含まれていません**。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-282">The JSON output from serializing `WeatherForecastWithPrevious` **doesn't include** `WindSpeed`.</span></span>
-* <span data-ttu-id="d5d0f-283">`WeatherForecastWithPreviousAsObject` をシリアル化するための JSON 出力には、`WindSpeed`**が含まれて**います。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-283">The JSON output from serializing `WeatherForecastWithPreviousAsObject` **includes** `WindSpeed`.</span></span>
+* <span data-ttu-id="e5e74-300">`WeatherForecastWithPrevious` のシリアル化からの JSON 出力には `WindSpeed` が**含まれていません**。</span><span class="sxs-lookup"><span data-stu-id="e5e74-300">The JSON output from serializing `WeatherForecastWithPrevious` **doesn't include** `WindSpeed`.</span></span>
+* <span data-ttu-id="e5e74-301">`WeatherForecastWithPreviousAsObject` のシリアル化からの JSON 出力には `WindSpeed` が**含まれています**。</span><span class="sxs-lookup"><span data-stu-id="e5e74-301">The JSON output from serializing `WeatherForecastWithPreviousAsObject` **includes** `WindSpeed`.</span></span>
 
-<span data-ttu-id="d5d0f-284">`WeatherForecastWithPreviousAsObject`をシリアル化するには、ルートオブジェクトが派生型である可能性のあるものではないため、`Serialize<object>` または `GetType` を呼び出す必要はありません。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-284">To serialize `WeatherForecastWithPreviousAsObject`, it isn't necessary to call `Serialize<object>` or `GetType` because the root object isn't the one that may be of a derived type.</span></span> <span data-ttu-id="d5d0f-285">次のコード例では、`Serialize<object>` または `GetType`を呼び出しません。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-285">The following code example doesn't call `Serialize<object>` or `GetType`:</span></span>
+<span data-ttu-id="e5e74-302">ルート オブジェクトは派生型である可能性があるものではないため、`WeatherForecastWithPreviousAsObject` をシリアル化するために `Serialize<object>` または `GetType` を呼び出す必要はありません。</span><span class="sxs-lookup"><span data-stu-id="e5e74-302">To serialize `WeatherForecastWithPreviousAsObject`, it isn't necessary to call `Serialize<object>` or `GetType` because the root object isn't the one that may be of a derived type.</span></span> <span data-ttu-id="e5e74-303">次のコード例では `Serialize<object>` または `GetType` は呼び出されません。</span><span class="sxs-lookup"><span data-stu-id="e5e74-303">The following code example doesn't call `Serialize<object>` or `GetType`:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeSecondLevel)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/SerializePolymorphic.cs?name=SnippetSerializeSecondLevel)]
 
-<span data-ttu-id="d5d0f-286">上記のコードは、`WeatherForecastWithPreviousAsObject`を正しくシリアル化します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-286">The preceding code correctly serializes `WeatherForecastWithPreviousAsObject`:</span></span>
+<span data-ttu-id="e5e74-304">上記のコードでは、`WeatherForecastWithPreviousAsObject` が正しくシリアル化されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-304">The preceding code correctly serializes `WeatherForecastWithPreviousAsObject`:</span></span>
 
 ```json
 {
@@ -540,15 +577,15 @@ using System.Text.Json.Serialization;
 }
 ```
 
-<span data-ttu-id="d5d0f-287">`object` としてプロパティを定義するのと同じアプローチが、インターフェイスで動作します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-287">The same approach of defining properties as `object` works with interfaces.</span></span> <span data-ttu-id="d5d0f-288">次のインターフェイスと実装があり、実装インスタンスを含むプロパティを使用してクラスをシリアル化するとします。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-288">Suppose you have the following interface and implementation, and you want to serialize a class with properties that contain implementation instances:</span></span>
+<span data-ttu-id="e5e74-305">`object` と同じプロパティ定義のアプローチがインターフェイスで機能します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-305">The same approach of defining properties as `object` works with interfaces.</span></span> <span data-ttu-id="e5e74-306">次のインターフェイスと実装があり、実装インスタンスを含むプロパティを使用してクラスをシリアル化するとします。</span><span class="sxs-lookup"><span data-stu-id="e5e74-306">Suppose you have the following interface and implementation, and you want to serialize a class with properties that contain implementation instances:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/IForecast.cs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/IForecast.cs)]
 
-<span data-ttu-id="d5d0f-289">`Forecasts`のインスタンスをシリアル化する場合、`Tuesday` は `object`として定義されているので、`Tuesday` のみが `WindSpeed` プロパティを表示します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-289">When you serialize an instance of `Forecasts`, only `Tuesday` shows the `WindSpeed` property, because `Tuesday` is defined as `object`:</span></span>
+<span data-ttu-id="e5e74-307">`Forecasts` のインスタンスをシリアル化する場合、`Tuesday` は `object` として定義されているので、`Tuesday` にのみ `WindSpeed` プロパティが表示されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-307">When you serialize an instance of `Forecasts`, only `Tuesday` shows the `WindSpeed` property, because `Tuesday` is defined as `object`:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeInterface)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/SerializePolymorphic.cs?name=SnippetSerializeInterface)]
 
-<span data-ttu-id="d5d0f-290">次の例は、上記のコードの結果として得られる JSON を示しています。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-290">The following example shows the JSON that results from the preceding code:</span></span>
+<span data-ttu-id="e5e74-308">次の例は、前のコードから生成された JSON を示しています。</span><span class="sxs-lookup"><span data-stu-id="e5e74-308">The following example shows the JSON that results from the preceding code:</span></span>
 
 ```json
 {
@@ -566,16 +603,16 @@ using System.Text.Json.Serialization;
 }
 ```
 
-<span data-ttu-id="d5d0f-291">ポリモーフィックな**シリアル化**の詳細、および**逆シリアル**化の詳細については、「 [newtonsoft. json から system.string に移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-291">For more information about polymorphic **serialization**, and for information about **deserialization**, see [How to migrate from Newtonsoft.Json to System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization).</span></span>
+<span data-ttu-id="e5e74-309">ポリモーフィック **シリアル化**の詳細、および**逆シリアル化**の詳細については、「[Newtonsoft.Json から System.Text.Json に移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e5e74-309">For more information about polymorphic **serialization**, and for information about **deserialization**, see [How to migrate from Newtonsoft.Json to System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization).</span></span>
 
-## <a name="allow-comments-and-trailing-commas"></a><span data-ttu-id="d5d0f-292">コメントと末尾のコンマを許可する</span><span class="sxs-lookup"><span data-stu-id="d5d0f-292">Allow comments and trailing commas</span></span>
+## <a name="allow-comments-and-trailing-commas"></a><span data-ttu-id="e5e74-310">コメントと末尾のコンマを許可する</span><span class="sxs-lookup"><span data-stu-id="e5e74-310">Allow comments and trailing commas</span></span>
 
-<span data-ttu-id="d5d0f-293">JSON では、コメントと末尾のコンマは既定で許可されていません。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-293">By default, comments and trailing commas are not allowed in JSON.</span></span> <span data-ttu-id="d5d0f-294">JSON でコメントを許可するには、<xref:System.Text.Json.JsonSerializerOptions.ReadCommentHandling?displayProperty=nameWithType> プロパティを `JsonCommentHandling.Skip`に設定します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-294">To allow comments in the JSON, set the <xref:System.Text.Json.JsonSerializerOptions.ReadCommentHandling?displayProperty=nameWithType> property to `JsonCommentHandling.Skip`.</span></span>
-<span data-ttu-id="d5d0f-295">また、末尾のコンマを許可するには、<xref:System.Text.Json.JsonSerializerOptions.AllowTrailingCommas?displayProperty=nameWithType> プロパティを `true`に設定します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-295">And to allow trailing commas, set the <xref:System.Text.Json.JsonSerializerOptions.AllowTrailingCommas?displayProperty=nameWithType> property to `true`.</span></span> <span data-ttu-id="d5d0f-296">次の例では、両方を許可する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-296">The following example shows how to allow both:</span></span>
+<span data-ttu-id="e5e74-311">既定では、JSON 内でコメントと末尾のコンマは使用できません。</span><span class="sxs-lookup"><span data-stu-id="e5e74-311">By default, comments and trailing commas are not allowed in JSON.</span></span> <span data-ttu-id="e5e74-312">JSON 内でコメントを許可するには、<xref:System.Text.Json.JsonSerializerOptions.ReadCommentHandling?displayProperty=nameWithType> プロパティを `JsonCommentHandling.Skip` に設定します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-312">To allow comments in the JSON, set the <xref:System.Text.Json.JsonSerializerOptions.ReadCommentHandling?displayProperty=nameWithType> property to `JsonCommentHandling.Skip`.</span></span>
+<span data-ttu-id="e5e74-313">また、末尾のコンマを許可するには、<xref:System.Text.Json.JsonSerializerOptions.AllowTrailingCommas?displayProperty=nameWithType> プロパティを `true` に設定します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-313">And to allow trailing commas, set the <xref:System.Text.Json.JsonSerializerOptions.AllowTrailingCommas?displayProperty=nameWithType> property to `true`.</span></span> <span data-ttu-id="e5e74-314">両方を許可する方法を次の例に示します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-314">The following example shows how to allow both:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DeserializeCommasComments.cs?name=SnippetDeserialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/DeserializeCommasComments.cs?name=SnippetDeserialize)]
 
-<span data-ttu-id="d5d0f-297">次に、コメントと末尾のコンマを含む JSON の例を示します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-297">Here's example JSON with comments and a trailing comma:</span></span>
+<span data-ttu-id="e5e74-315">次に、コメントと末尾のコンマを含む JSON の例を示します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-315">Here's example JSON with comments and a trailing comma:</span></span>
 
 ```json
 {
@@ -585,13 +622,13 @@ using System.Text.Json.Serialization;
 }
 ```
 
-## <a name="case-insensitive-property-matching"></a><span data-ttu-id="d5d0f-298">大文字と小文字を区別しないプロパティ照合</span><span class="sxs-lookup"><span data-stu-id="d5d0f-298">Case-insensitive property matching</span></span>
+## <a name="case-insensitive-property-matching"></a><span data-ttu-id="e5e74-316">大文字と小文字を区別しないプロパティ照合</span><span class="sxs-lookup"><span data-stu-id="e5e74-316">Case-insensitive property matching</span></span>
 
-<span data-ttu-id="d5d0f-299">既定では、逆シリアル化では、JSON とターゲットオブジェクトのプロパティの間で大文字と小文字が区別されるプロパティ名の一致が検索されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-299">By default, deserialization looks for case-sensitive property name matches between JSON and the target object properties.</span></span> <span data-ttu-id="d5d0f-300">この動作を変更するには、<xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive?displayProperty=nameWithType> を `true`に設定します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-300">To change that behavior, set <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive?displayProperty=nameWithType> to `true`:</span></span>
+<span data-ttu-id="e5e74-317">既定では、逆シリアル化では JSON とターゲット オブジェクトのプロパティとの間で大文字と小文字を区別したプロパティ名の一致が検索されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-317">By default, deserialization looks for case-sensitive property name matches between JSON and the target object properties.</span></span> <span data-ttu-id="e5e74-318">この動作を変更するには、<xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive?displayProperty=nameWithType> を `true` に設定します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-318">To change that behavior, set <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive?displayProperty=nameWithType> to `true`:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DeserializeCaseInsensitive.cs?name=SnippetDeserialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/DeserializeCaseInsensitive.cs?name=SnippetDeserialize)]
 
-<span data-ttu-id="d5d0f-301">Camel 形式のプロパティ名を持つ JSON の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-301">Here's example JSON with camel case property names.</span></span> <span data-ttu-id="d5d0f-302">Pascal 形式のプロパティ名を持つ次の型に逆シリアル化できます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-302">It can be deserialized into the following type that has Pascal case property names.</span></span>
+<span data-ttu-id="e5e74-319">キャメル ケースのプロパティ名を持つ JSON の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-319">Here's example JSON with camel case property names.</span></span> <span data-ttu-id="e5e74-320">これはパスカル ケースのプロパティ名を持つ次の型に逆シリアル化できます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-320">It can be deserialized into the following type that has Pascal case property names.</span></span>
 
 ```json
 {
@@ -601,15 +638,15 @@ using System.Text.Json.Serialization;
 }
 ```
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWF)]
 
-## <a name="handle-overflow-json"></a><span data-ttu-id="d5d0f-303">Overflow JSON の処理</span><span class="sxs-lookup"><span data-stu-id="d5d0f-303">Handle overflow JSON</span></span>
+## <a name="handle-overflow-json"></a><span data-ttu-id="e5e74-321">オーバーフロー JSON の処理</span><span class="sxs-lookup"><span data-stu-id="e5e74-321">Handle overflow JSON</span></span>
 
-<span data-ttu-id="d5d0f-304">逆シリアル化中に、対象の型のプロパティで表されないデータを JSON で受け取ることがあります。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-304">While deserializing, you might receive data in the JSON that is not represented by properties of the target type.</span></span> <span data-ttu-id="d5d0f-305">たとえば、対象の型が次のようになっているとします。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-305">For example, suppose your target type is this:</span></span>
+<span data-ttu-id="e5e74-322">逆シリアル化中に、ターゲット型のプロパティで表されないデータを JSON 内で受け取ることがあります。</span><span class="sxs-lookup"><span data-stu-id="e5e74-322">While deserializing, you might receive data in the JSON that is not represented by properties of the target type.</span></span> <span data-ttu-id="e5e74-323">たとえば、ターゲット型が次のようになっているとします。</span><span class="sxs-lookup"><span data-stu-id="e5e74-323">For example, suppose your target type is this:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWF)]
 
-<span data-ttu-id="d5d0f-306">逆シリアル化される JSON は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-306">And the JSON to be deserialized is this:</span></span>
+<span data-ttu-id="e5e74-324">逆シリアル化される JSON は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="e5e74-324">And the JSON to be deserialized is this:</span></span>
 
 ```json
 {
@@ -628,22 +665,74 @@ using System.Text.Json.Serialization;
 }
 ```
 
-<span data-ttu-id="d5d0f-307">示されている型に表示されている JSON を逆シリアル化すると、`DatesAvailable` と `SummaryWords` のプロパティがなくなり、失われます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-307">If you deserialize the JSON shown into the type shown, the `DatesAvailable` and `SummaryWords` properties have nowhere to go and are lost.</span></span> <span data-ttu-id="d5d0f-308">これらのプロパティなどの追加データをキャプチャするには、 [Jsonextensiondata](xref:System.Text.Json.Serialization.JsonExtensionDataAttribute)属性を `Dictionary<string,object>` 型または `Dictionary<string,JsonElement>`型のプロパティに適用します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-308">To capture extra data such as these properties, apply the [JsonExtensionData](xref:System.Text.Json.Serialization.JsonExtensionDataAttribute) attribute to a property of type `Dictionary<string,object>` or `Dictionary<string,JsonElement>`:</span></span>
+<span data-ttu-id="e5e74-325">表示されている JSON を示されている型に逆シリアル化すると、`DatesAvailable` と `SummaryWords` のプロパティは行き先がなくなり、失われます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-325">If you deserialize the JSON shown into the type shown, the `DatesAvailable` and `SummaryWords` properties have nowhere to go and are lost.</span></span> <span data-ttu-id="e5e74-326">これらのプロパティなどの余分なデータをキャプチャするには、[JsonExtensionData](xref:System.Text.Json.Serialization.JsonExtensionDataAttribute) 属性を型 `Dictionary<string,object>` または `Dictionary<string,JsonElement>` のプロパティに適用します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-326">To capture extra data such as these properties, apply the [JsonExtensionData](xref:System.Text.Json.Serialization.JsonExtensionDataAttribute) attribute to a property of type `Dictionary<string,object>` or `Dictionary<string,JsonElement>`:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithExtensionData)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithExtensionData)]
 
-<span data-ttu-id="d5d0f-309">前に示した JSON をこのサンプル型に逆シリアル化すると、余分なデータが `ExtensionData` プロパティのキーと値のペアになります。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-309">When you deserialize the JSON shown earlier into this sample type, the extra data becomes key-value pairs of the `ExtensionData` property:</span></span>
+<span data-ttu-id="e5e74-327">前に示した JSON をこのサンプル型に逆シリアル化すると、余分なデータが `ExtensionData` プロパティのキーと値のペアになります。</span><span class="sxs-lookup"><span data-stu-id="e5e74-327">When you deserialize the JSON shown earlier into this sample type, the extra data becomes key-value pairs of the `ExtensionData` property:</span></span>
 
-|<span data-ttu-id="d5d0f-310">プロパティ</span><span class="sxs-lookup"><span data-stu-id="d5d0f-310">Property</span></span> |<span data-ttu-id="d5d0f-311">値</span><span class="sxs-lookup"><span data-stu-id="d5d0f-311">Value</span></span>  |<span data-ttu-id="d5d0f-312">メモ</span><span class="sxs-lookup"><span data-stu-id="d5d0f-312">Notes</span></span>  |
-|---------|---------|---------|
-| <span data-ttu-id="d5d0f-313">Date</span><span class="sxs-lookup"><span data-stu-id="d5d0f-313">Date</span></span>    | <span data-ttu-id="d5d0f-314">8/1/2019 12:00:00 AM-07:00</span><span class="sxs-lookup"><span data-stu-id="d5d0f-314">8/1/2019 12:00:00 AM -07:00</span></span>||
-| <span data-ttu-id="d5d0f-315">TemperatureCelsius</span><span class="sxs-lookup"><span data-stu-id="d5d0f-315">TemperatureCelsius</span></span>| <span data-ttu-id="d5d0f-316">0</span><span class="sxs-lookup"><span data-stu-id="d5d0f-316">0</span></span> | <span data-ttu-id="d5d0f-317">大文字と小文字が区別されない (JSON で`temperatureCelsius`) ため、プロパティが設定されていません。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-317">Case-sensitive mismatch (`temperatureCelsius` in the JSON), so the property isn't set.</span></span> |
-| <span data-ttu-id="d5d0f-318">まとめ</span><span class="sxs-lookup"><span data-stu-id="d5d0f-318">Summary</span></span> | <span data-ttu-id="d5d0f-319">ホット</span><span class="sxs-lookup"><span data-stu-id="d5d0f-319">Hot</span></span> ||
-| <span data-ttu-id="d5d0f-320">ExtensionData</span><span class="sxs-lookup"><span data-stu-id="d5d0f-320">ExtensionData</span></span> | <span data-ttu-id="d5d0f-321">temperatureCelsius:25</span><span class="sxs-lookup"><span data-stu-id="d5d0f-321">temperatureCelsius: 25</span></span> |<span data-ttu-id="d5d0f-322">大文字と小文字が一致しなかったため、この JSON プロパティは余分で、ディクショナリ内のキーと値のペアになります。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-322">Since the case didn't match, this JSON property is an extra and becomes a key-value pair in the dictionary.</span></span>|
-|| <span data-ttu-id="d5d0f-323">使用可能な日:</span><span class="sxs-lookup"><span data-stu-id="d5d0f-323">DatesAvailable:</span></span><br>  <span data-ttu-id="d5d0f-324">8/1/2019 12:00:00 AM-07:00</span><span class="sxs-lookup"><span data-stu-id="d5d0f-324">8/1/2019 12:00:00 AM -07:00</span></span><br><span data-ttu-id="d5d0f-325">8/2/2019 12:00:00 AM-07:00</span><span class="sxs-lookup"><span data-stu-id="d5d0f-325">8/2/2019 12:00:00 AM -07:00</span></span> |<span data-ttu-id="d5d0f-326">JSON からの追加のプロパティはキーと値のペアになり、値オブジェクトとして配列が使用されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-326">Extra property from the JSON becomes a key-value pair, with an array as the value object.</span></span>|
-| |<span data-ttu-id="d5d0f-327">概要語:</span><span class="sxs-lookup"><span data-stu-id="d5d0f-327">SummaryWords:</span></span><br><span data-ttu-id="d5d0f-328">クール</span><span class="sxs-lookup"><span data-stu-id="d5d0f-328">Cool</span></span><br><span data-ttu-id="d5d0f-329">強風</span><span class="sxs-lookup"><span data-stu-id="d5d0f-329">Windy</span></span><br><span data-ttu-id="d5d0f-330">Humid</span><span class="sxs-lookup"><span data-stu-id="d5d0f-330">Humid</span></span> |<span data-ttu-id="d5d0f-331">JSON からの追加のプロパティはキーと値のペアになり、値オブジェクトとして配列が使用されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-331">Extra property from the JSON becomes a key-value pair, with an array as the value object.</span></span>|
+|<span data-ttu-id="e5e74-328">プロパティ</span><span class="sxs-lookup"><span data-stu-id="e5e74-328">Property</span></span> |<span data-ttu-id="e5e74-329">[値]</span><span class="sxs-lookup"><span data-stu-id="e5e74-329">Value</span></span>  |<span data-ttu-id="e5e74-330">メモ</span><span class="sxs-lookup"><span data-stu-id="e5e74-330">Notes</span></span>  |
+|---
+<span data-ttu-id="e5e74-331">title: description:「この記事では、System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-331">title: description: 'This article shows you how to use the System.Text.Json namespace to serialize to and deserialize from JSON in .NET.</span></span> <span data-ttu-id="e5e74-332">これにはサンプル コードが含まれます。」</span><span class="sxs-lookup"><span data-stu-id="e5e74-332">It includes sample code.'</span></span>
+<span data-ttu-id="e5e74-333">ms.date: no-loc:</span><span class="sxs-lookup"><span data-stu-id="e5e74-333">ms.date: no-loc:</span></span>
+- <span data-ttu-id="e5e74-334">'System.Text.Json'</span><span class="sxs-lookup"><span data-stu-id="e5e74-334">'System.Text.Json'</span></span>
+- <span data-ttu-id="e5e74-335">'Newtonsoft.Json' helpviewer_keywords:</span><span class="sxs-lookup"><span data-stu-id="e5e74-335">'Newtonsoft.Json' helpviewer_keywords:</span></span>
+- 
+- 
+- 
+- 
 
-<span data-ttu-id="d5d0f-332">ターゲットオブジェクトがシリアル化されると、拡張データのキーと値のペアは、受信 JSON の場合と同様に JSON プロパティになります。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-332">When the target object is serialized, the extension data key value pairs become JSON properties just as they were in the incoming JSON:</span></span>
+-
+<span data-ttu-id="e5e74-336">title: description:「この記事では、System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-336">title: description: 'This article shows you how to use the System.Text.Json namespace to serialize to and deserialize from JSON in .NET.</span></span> <span data-ttu-id="e5e74-337">これにはサンプル コードが含まれます。」</span><span class="sxs-lookup"><span data-stu-id="e5e74-337">It includes sample code.'</span></span>
+<span data-ttu-id="e5e74-338">ms.date: no-loc:</span><span class="sxs-lookup"><span data-stu-id="e5e74-338">ms.date: no-loc:</span></span>
+- <span data-ttu-id="e5e74-339">'System.Text.Json'</span><span class="sxs-lookup"><span data-stu-id="e5e74-339">'System.Text.Json'</span></span>
+- <span data-ttu-id="e5e74-340">'Newtonsoft.Json' helpviewer_keywords:</span><span class="sxs-lookup"><span data-stu-id="e5e74-340">'Newtonsoft.Json' helpviewer_keywords:</span></span>
+- 
+- 
+- 
+- 
+
+<span data-ttu-id="e5e74-341">-----|--- title: description:「この記事では、System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-341">-----|--- title: description: 'This article shows you how to use the System.Text.Json namespace to serialize to and deserialize from JSON in .NET.</span></span> <span data-ttu-id="e5e74-342">これにはサンプル コードが含まれます。」</span><span class="sxs-lookup"><span data-stu-id="e5e74-342">It includes sample code.'</span></span>
+<span data-ttu-id="e5e74-343">ms.date: no-loc:</span><span class="sxs-lookup"><span data-stu-id="e5e74-343">ms.date: no-loc:</span></span>
+- <span data-ttu-id="e5e74-344">'System.Text.Json'</span><span class="sxs-lookup"><span data-stu-id="e5e74-344">'System.Text.Json'</span></span>
+- <span data-ttu-id="e5e74-345">'Newtonsoft.Json' helpviewer_keywords:</span><span class="sxs-lookup"><span data-stu-id="e5e74-345">'Newtonsoft.Json' helpviewer_keywords:</span></span>
+- 
+- 
+- 
+- 
+
+-
+<span data-ttu-id="e5e74-346">title: description:「この記事では、System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-346">title: description: 'This article shows you how to use the System.Text.Json namespace to serialize to and deserialize from JSON in .NET.</span></span> <span data-ttu-id="e5e74-347">これにはサンプル コードが含まれます。」</span><span class="sxs-lookup"><span data-stu-id="e5e74-347">It includes sample code.'</span></span>
+<span data-ttu-id="e5e74-348">ms.date: no-loc:</span><span class="sxs-lookup"><span data-stu-id="e5e74-348">ms.date: no-loc:</span></span>
+- <span data-ttu-id="e5e74-349">'System.Text.Json'</span><span class="sxs-lookup"><span data-stu-id="e5e74-349">'System.Text.Json'</span></span>
+- <span data-ttu-id="e5e74-350">'Newtonsoft.Json' helpviewer_keywords:</span><span class="sxs-lookup"><span data-stu-id="e5e74-350">'Newtonsoft.Json' helpviewer_keywords:</span></span>
+- 
+- 
+- 
+- 
+
+<span data-ttu-id="e5e74-351">-----|--- title: description:「この記事では、System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-351">-----|--- title: description: 'This article shows you how to use the System.Text.Json namespace to serialize to and deserialize from JSON in .NET.</span></span> <span data-ttu-id="e5e74-352">これにはサンプル コードが含まれます。」</span><span class="sxs-lookup"><span data-stu-id="e5e74-352">It includes sample code.'</span></span>
+<span data-ttu-id="e5e74-353">ms.date: no-loc:</span><span class="sxs-lookup"><span data-stu-id="e5e74-353">ms.date: no-loc:</span></span>
+- <span data-ttu-id="e5e74-354">'System.Text.Json'</span><span class="sxs-lookup"><span data-stu-id="e5e74-354">'System.Text.Json'</span></span>
+- <span data-ttu-id="e5e74-355">'Newtonsoft.Json' helpviewer_keywords:</span><span class="sxs-lookup"><span data-stu-id="e5e74-355">'Newtonsoft.Json' helpviewer_keywords:</span></span>
+- 
+- 
+- 
+- 
+
+-
+<span data-ttu-id="e5e74-356">title: description:「この記事では、System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-356">title: description: 'This article shows you how to use the System.Text.Json namespace to serialize to and deserialize from JSON in .NET.</span></span> <span data-ttu-id="e5e74-357">これにはサンプル コードが含まれます。」</span><span class="sxs-lookup"><span data-stu-id="e5e74-357">It includes sample code.'</span></span>
+<span data-ttu-id="e5e74-358">ms.date: no-loc:</span><span class="sxs-lookup"><span data-stu-id="e5e74-358">ms.date: no-loc:</span></span>
+- <span data-ttu-id="e5e74-359">'System.Text.Json'</span><span class="sxs-lookup"><span data-stu-id="e5e74-359">'System.Text.Json'</span></span>
+- <span data-ttu-id="e5e74-360">'Newtonsoft.Json' helpviewer_keywords:</span><span class="sxs-lookup"><span data-stu-id="e5e74-360">'Newtonsoft.Json' helpviewer_keywords:</span></span>
+- 
+- 
+- 
+- 
+
+<span data-ttu-id="e5e74-361">-----| | Date    | 8/1/2019 12:00:00 AM -07:00|| | TemperatureCelsius| 0 | 大文字と小文字の区別が一致しないため (JSON では `temperatureCelsius`)、プロパティは設定されません。</span><span class="sxs-lookup"><span data-stu-id="e5e74-361">-----| | Date    | 8/1/2019 12:00:00 AM -07:00|| | TemperatureCelsius| 0 | Case-sensitive mismatch (`temperatureCelsius` in the JSON), so the property isn't set.</span></span> <span data-ttu-id="e5e74-362">| | Summary | Hot || | ExtensionData | temperatureCelsius:25 |大文字と小文字の区別が一致しなかったため、この JSON プロパティは余分で、ディクショナリ内のキーと値のペアになります。| || DatesAvailable:</span><span class="sxs-lookup"><span data-stu-id="e5e74-362">| | Summary | Hot || | ExtensionData | temperatureCelsius: 25 |Since the case didn't match, this JSON property is an extra and becomes a key-value pair in the dictionary.| || DatesAvailable:</span></span><br>  <span data-ttu-id="e5e74-363">8/1/2019 12:00:00 AM -07:00</span><span class="sxs-lookup"><span data-stu-id="e5e74-363">8/1/2019 12:00:00 AM -07:00</span></span><br><span data-ttu-id="e5e74-364">8/2/2019 12:00:00 AM -07:00 |JSON からの余分なプロパティは、値オブジェクトとしての配列を持つキーと値のペアになります。| | |SummaryWords:</span><span class="sxs-lookup"><span data-stu-id="e5e74-364">8/2/2019 12:00:00 AM -07:00 |Extra property from the JSON becomes a key-value pair, with an array as the value object.| | |SummaryWords:</span></span><br><span data-ttu-id="e5e74-365">Cool</span><span class="sxs-lookup"><span data-stu-id="e5e74-365">Cool</span></span><br><span data-ttu-id="e5e74-366">強風</span><span class="sxs-lookup"><span data-stu-id="e5e74-366">Windy</span></span><br><span data-ttu-id="e5e74-367">Humid |JSON からの余分なプロパティは、値オブジェクトとしての配列を持つキーと値のペアになります。|</span><span class="sxs-lookup"><span data-stu-id="e5e74-367">Humid |Extra property from the JSON becomes a key-value pair, with an array as the value object.|</span></span>
+
+<span data-ttu-id="e5e74-368">ターゲット オブジェクトがシリアル化されると、拡張データのキーと値のペアは、受信 JSON 内にあった場合と同様に JSON プロパティになります。</span><span class="sxs-lookup"><span data-stu-id="e5e74-368">When the target object is serialized, the extension data key value pairs become JSON properties just as they were in the incoming JSON:</span></span>
 
 ```json
 {
@@ -663,17 +752,17 @@ using System.Text.Json.Serialization;
 }
 ```
 
-<span data-ttu-id="d5d0f-333">JSON には `ExtensionData` プロパティ名が表示されないことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-333">Notice that the `ExtensionData` property name doesn't appear in the JSON.</span></span> <span data-ttu-id="d5d0f-334">この動作により、JSON は、逆シリアル化されない余分なデータを失うことなく、ラウンドトリップを行うことができます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-334">This behavior lets the JSON make a round trip without losing any extra data that otherwise wouldn't be deserialized.</span></span>
+<span data-ttu-id="e5e74-369">JSON には `ExtensionData` プロパティ名が表示されないことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="e5e74-369">Notice that the `ExtensionData` property name doesn't appear in the JSON.</span></span> <span data-ttu-id="e5e74-370">この動作により、JSON は、逆シリアル化されない余分なデータを失うことなく、ラウンド トリップを行うことができます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-370">This behavior lets the JSON make a round trip without losing any extra data that otherwise wouldn't be deserialized.</span></span>
 
-## <a name="ignore-null-when-deserializing"></a><span data-ttu-id="d5d0f-335">逆シリアル化時に null を無視する</span><span class="sxs-lookup"><span data-stu-id="d5d0f-335">Ignore null when deserializing</span></span>
+## <a name="ignore-null-when-deserializing"></a><span data-ttu-id="e5e74-371">逆シリアル化時に null を無視する</span><span class="sxs-lookup"><span data-stu-id="e5e74-371">Ignore null when deserializing</span></span>
 
-<span data-ttu-id="d5d0f-336">既定では、JSON のプロパティが null の場合、対象オブジェクト内の対応するプロパティは null に設定されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-336">By default, if a property in JSON is null, the corresponding property in the target object is set to null.</span></span> <span data-ttu-id="d5d0f-337">場合によっては、ターゲットプロパティに既定値が設定されていて、null 値を使用して既定値をオーバーライドしないことがあります。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-337">In some scenarios, the target property might have a default value, and you don't want a null value to override the default.</span></span>
+<span data-ttu-id="e5e74-372">既定では、JSON 内のプロパティが null の場合、ターゲット オブジェクト内の対応するプロパティは null に設定されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-372">By default, if a property in JSON is null, the corresponding property in the target object is set to null.</span></span> <span data-ttu-id="e5e74-373">場合によっては、ターゲット プロパティに既定値が設定されていて、既定値を null 値でオーバーライドしたくないことがあります。</span><span class="sxs-lookup"><span data-stu-id="e5e74-373">In some scenarios, the target property might have a default value, and you don't want a null value to override the default.</span></span>
 
-<span data-ttu-id="d5d0f-338">たとえば、次のコードがターゲットオブジェクトを表しているとします。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-338">For example, suppose the following code represents your target object:</span></span>
+<span data-ttu-id="e5e74-374">たとえば、次のコードがターゲット オブジェクトを表しているとします。</span><span class="sxs-lookup"><span data-stu-id="e5e74-374">For example, suppose the following code represents your target object:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithDefault)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithDefault)]
 
-<span data-ttu-id="d5d0f-339">次の JSON が逆シリアル化されたとします。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-339">And suppose the following JSON is deserialized:</span></span>
+<span data-ttu-id="e5e74-375">次の JSON が逆シリアル化されるとします。</span><span class="sxs-lookup"><span data-stu-id="e5e74-375">And suppose the following JSON is deserialized:</span></span>
 
 ```json
 {
@@ -683,106 +772,124 @@ using System.Text.Json.Serialization;
 }
 ```
 
-<span data-ttu-id="d5d0f-340">逆シリアル化後、`WeatherForecastWithDefault` オブジェクトの `Summary` プロパティは null になります。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-340">After deserialization, the `Summary` property of the `WeatherForecastWithDefault` object is null.</span></span>
+<span data-ttu-id="e5e74-376">逆シリアル化後、`WeatherForecastWithDefault` オブジェクトの `Summary` プロパティは null になります。</span><span class="sxs-lookup"><span data-stu-id="e5e74-376">After deserialization, the `Summary` property of the `WeatherForecastWithDefault` object is null.</span></span>
 
-<span data-ttu-id="d5d0f-341">この動作を変更するには、次の例に示すように、<xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType> を `true`に設定します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-341">To change this behavior, set <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType> to `true`, as shown in the following example:</span></span>
+<span data-ttu-id="e5e74-377">この動作を変更するには、次の例に示すように、<xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType> を `true` に設定します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-377">To change this behavior, set <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType> to `true`, as shown in the following example:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DeserializeIgnoreNull.cs?name=SnippetDeserialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/DeserializeIgnoreNull.cs?name=SnippetDeserialize)]
 
-<span data-ttu-id="d5d0f-342">このオプションを使用すると、逆シリアル化後に、`WeatherForecastWithDefault` オブジェクトの `Summary` プロパティが既定値の "No summary" になります。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-342">With this option, the `Summary` property of the `WeatherForecastWithDefault` object is the default value "No summary" after deserialization.</span></span>
+<span data-ttu-id="e5e74-378">このオプションを使用すると、逆シリアル化後に、`WeatherForecastWithDefault` オブジェクトの `Summary` プロパティが既定値の "No summary" になります。</span><span class="sxs-lookup"><span data-stu-id="e5e74-378">With this option, the `Summary` property of the `WeatherForecastWithDefault` object is the default value "No summary" after deserialization.</span></span>
 
-<span data-ttu-id="d5d0f-343">JSON 内の Null 値は、有効な場合にのみ無視されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-343">Null values in the JSON are ignored only if they are valid.</span></span> <span data-ttu-id="d5d0f-344">Null 非許容値型に対して Null 値を指定すると、例外が発生します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-344">Null values for non-nullable value types cause exceptions.</span></span>
+<span data-ttu-id="e5e74-379">JSON 内の Null 値は、有効な場合にのみ無視されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-379">Null values in the JSON are ignored only if they are valid.</span></span> <span data-ttu-id="e5e74-380">null 非許容の値の型に対して Null 値を指定すると、例外が発生します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-380">Null values for non-nullable value types cause exceptions.</span></span>
 
-## <a name="utf8jsonreader-utf8jsonwriter-and-jsondocument"></a><span data-ttu-id="d5d0f-345">Utf8JsonReader、Utf8JsonWriter、JsonDocument</span><span class="sxs-lookup"><span data-stu-id="d5d0f-345">Utf8JsonReader, Utf8JsonWriter, and JsonDocument</span></span>
+## <a name="utf8jsonreader-utf8jsonwriter-and-jsondocument"></a><span data-ttu-id="e5e74-381">Utf8JsonReader、Utf8JsonWriter、JsonDocument</span><span class="sxs-lookup"><span data-stu-id="e5e74-381">Utf8JsonReader, Utf8JsonWriter, and JsonDocument</span></span>
 
-<span data-ttu-id="d5d0f-346"><xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName> は、UTF-8 でエンコードされた JSON テキストの高パフォーマンス、低割り当て、順方向専用のリーダーであり、`ReadOnlySpan<byte>` または `ReadOnlySequence<byte>`から読み取ります。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-346"><xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName> is a high-performance, low allocation, forward-only reader for UTF-8 encoded JSON text, read from a `ReadOnlySpan<byte>` or `ReadOnlySequence<byte>`.</span></span> <span data-ttu-id="d5d0f-347">`Utf8JsonReader` は、カスタムパーサーとデシリアライザーを構築するために使用できる低レベルの型です。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-347">The `Utf8JsonReader` is a low-level type that can be used to build custom parsers and deserializers.</span></span> <span data-ttu-id="d5d0f-348"><xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> メソッドは、内部で `Utf8JsonReader` を使用します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-348">The <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> method uses `Utf8JsonReader` under the covers.</span></span>
+<span data-ttu-id="e5e74-382"><xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName> は、UTF-8 でエンコードされた JSON テキスト用の、ハイパフォーマンス、低割り当て、順方向専用のリーダーです。`ReadOnlySpan<byte>` または `ReadOnlySequence<byte>` から読み取られます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-382"><xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName> is a high-performance, low allocation, forward-only reader for UTF-8 encoded JSON text, read from a `ReadOnlySpan<byte>` or `ReadOnlySequence<byte>`.</span></span> <span data-ttu-id="e5e74-383">`Utf8JsonReader` は低レベルの型であり、カスタム パーサーとデシリアライザーを構築するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-383">The `Utf8JsonReader` is a low-level type that can be used to build custom parsers and deserializers.</span></span> <span data-ttu-id="e5e74-384"><xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> メソッドでは、内部で `Utf8JsonReader` が使用されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-384">The <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> method uses `Utf8JsonReader` under the covers.</span></span>
 
-<span data-ttu-id="d5d0f-349"><xref:System.Text.Json.Utf8JsonWriter?displayProperty=fullName> は、`String`、`Int32`、`DateTime`などの一般的な .NET 型から、UTF-8 でエンコードされた JSON テキストを書き込むための高パフォーマンスの方法です。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-349"><xref:System.Text.Json.Utf8JsonWriter?displayProperty=fullName> is a high-performance way to write UTF-8 encoded JSON text from common .NET types like `String`, `Int32`, and `DateTime`.</span></span> <span data-ttu-id="d5d0f-350">ライターは、カスタムシリアライザーを構築するために使用できる低レベルの型です。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-350">The writer is a low-level type that can be used to build custom serializers.</span></span> <span data-ttu-id="d5d0f-351"><xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> メソッドは、内部で `Utf8JsonWriter` を使用します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-351">The <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> method uses `Utf8JsonWriter` under the covers.</span></span>
+<span data-ttu-id="e5e74-385"><xref:System.Text.Json.Utf8JsonWriter?displayProperty=fullName> は、`String`、`Int32`、`DateTime` のような一般的な .NET 型から UTF-8 でエンコードされた JSON テキストを書き込むための、ハイパフォーマンスな方法です。</span><span class="sxs-lookup"><span data-stu-id="e5e74-385"><xref:System.Text.Json.Utf8JsonWriter?displayProperty=fullName> is a high-performance way to write UTF-8 encoded JSON text from common .NET types like `String`, `Int32`, and `DateTime`.</span></span> <span data-ttu-id="e5e74-386">ライターは低レベルの型であり、カスタム シリアライザーを構築するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-386">The writer is a low-level type that can be used to build custom serializers.</span></span> <span data-ttu-id="e5e74-387"><xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> メソッドでは、内部で `Utf8JsonWriter` が使用されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-387">The <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> method uses `Utf8JsonWriter` under the covers.</span></span>
 
-<span data-ttu-id="d5d0f-352"><xref:System.Text.Json.JsonDocument?displayProperty=fullName> は、`Utf8JsonReader`を使用して、読み取り専用ドキュメントオブジェクトモデル (DOM) を構築する機能を提供します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-352"><xref:System.Text.Json.JsonDocument?displayProperty=fullName> provides the ability to build a read-only Document Object Model (DOM) by using `Utf8JsonReader`.</span></span> <span data-ttu-id="d5d0f-353">DOM は、JSON ペイロード内のデータへのランダムアクセスを提供します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-353">The DOM provides random access to data in a JSON payload.</span></span> <span data-ttu-id="d5d0f-354">ペイロードを構成する JSON 要素には、<xref:System.Text.Json.JsonElement> の種類を使用してアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-354">The JSON elements that compose the payload can be accessed via the <xref:System.Text.Json.JsonElement> type.</span></span> <span data-ttu-id="d5d0f-355">`JsonElement` 型は、JSON テキストを共通の .NET 型に変換するための Api と共に配列とオブジェクトの列挙子を提供します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-355">The `JsonElement` type provides array and object enumerators along with APIs to convert JSON text to common .NET types.</span></span> <span data-ttu-id="d5d0f-356">`JsonDocument` は <xref:System.Text.Json.JsonDocument.RootElement> プロパティを公開します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-356">`JsonDocument` exposes a <xref:System.Text.Json.JsonDocument.RootElement> property.</span></span>
+<span data-ttu-id="e5e74-388"><xref:System.Text.Json.JsonDocument?displayProperty=fullName> では、`Utf8JsonReader` を使用して、読み取り専用のドキュメント オブジェクト モデル (DOM) を構築する機能が提供されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-388"><xref:System.Text.Json.JsonDocument?displayProperty=fullName> provides the ability to build a read-only Document Object Model (DOM) by using `Utf8JsonReader`.</span></span> <span data-ttu-id="e5e74-389">DOM では、JSON ペイロード内のデータへのランダム アクセスが提供されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-389">The DOM provides random access to data in a JSON payload.</span></span> <span data-ttu-id="e5e74-390">ペイロードを構成する JSON 要素には、<xref:System.Text.Json.JsonElement> 型を使用してアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-390">The JSON elements that compose the payload can be accessed via the <xref:System.Text.Json.JsonElement> type.</span></span> <span data-ttu-id="e5e74-391">`JsonElement` 型では、配列とオブジェクト列挙子と共に、JSON テキストを一般的な .NET 型に変換する API が提供されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-391">The `JsonElement` type provides array and object enumerators along with APIs to convert JSON text to common .NET types.</span></span> <span data-ttu-id="e5e74-392">`JsonDocument` では <xref:System.Text.Json.JsonDocument.RootElement> プロパティが公開されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-392">`JsonDocument` exposes a <xref:System.Text.Json.JsonDocument.RootElement> property.</span></span>
 
-<span data-ttu-id="d5d0f-357">以下のセクションでは、これらのツールを使用して JSON の読み取りと書き込みを行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-357">The following sections show how to use these tools for reading and writing JSON.</span></span>
+<span data-ttu-id="e5e74-393">以下のセクションでは、これらのツールを使用して JSON の読み取りと書き込みを行う方法を示します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-393">The following sections show how to use these tools for reading and writing JSON.</span></span>
 
-## <a name="use-jsondocument-for-access-to-data"></a><span data-ttu-id="d5d0f-358">データへのアクセスに JsonDocument を使用する</span><span class="sxs-lookup"><span data-stu-id="d5d0f-358">Use JsonDocument for access to data</span></span>
+## <a name="use-jsondocument-for-access-to-data"></a><span data-ttu-id="e5e74-394">JsonDocument を使用してデータにアクセスする</span><span class="sxs-lookup"><span data-stu-id="e5e74-394">Use JsonDocument for access to data</span></span>
 
-<span data-ttu-id="d5d0f-359">次の例は、JSON 文字列内のデータへのランダムアクセスに <xref:System.Text.Json.JsonDocument> クラスを使用する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-359">The following example shows how to use the <xref:System.Text.Json.JsonDocument> class for random access to data in a JSON string:</span></span>
+<span data-ttu-id="e5e74-395">次の例は、<xref:System.Text.Json.JsonDocument> クラスを使用して JSON 文字列内のデータにランダム アクセスする方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="e5e74-395">The following example shows how to use the <xref:System.Text.Json.JsonDocument> class for random access to data in a JSON string:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/JsonDocumentDataAccess.cs?name=SnippetAverageGrades1)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/JsonDocumentDataAccess.cs?name=SnippetAverageGrades1)]
 
-<span data-ttu-id="d5d0f-360">上のコードでは以下の操作が行われます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-360">The preceding code:</span></span>
+<span data-ttu-id="e5e74-396">上記のコードでは次の操作が行われます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-396">The preceding code:</span></span>
 
-* <span data-ttu-id="d5d0f-361">は、分析する JSON が `jsonString`という名前の文字列に含まれていると想定します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-361">Assumes the JSON to analyze is in a string named `jsonString`.</span></span>
-* <span data-ttu-id="d5d0f-362">`Grade` プロパティを持つ `Students` 配列内のオブジェクトの平均グレードを計算します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-362">Calculates an average grade for objects in a `Students` array that have a `Grade` property.</span></span>
-* <span data-ttu-id="d5d0f-363">学年のない学生に対して既定のグレード70を割り当てます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-363">Assigns a default grade of 70 for students who don't have a grade.</span></span>
-* <span data-ttu-id="d5d0f-364">各イテレーションで `count` 変数をインクリメントして生徒をカウントします。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-364">Counts students by incrementing a `count` variable with each iteration.</span></span> <span data-ttu-id="d5d0f-365">別の方法として、次の例に示すように <xref:System.Text.Json.JsonElement.GetArrayLength%2A>を呼び出すこともできます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-365">An alternative is to call <xref:System.Text.Json.JsonElement.GetArrayLength%2A>, as shown in the following example:</span></span>
+* <span data-ttu-id="e5e74-397">分析する JSON が `jsonString` という名前の文字列に含まれていると想定します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-397">Assumes the JSON to analyze is in a string named `jsonString`.</span></span>
+* <span data-ttu-id="e5e74-398">`Grade` プロパティを持つ `Students` 配列内のオブジェクトの平均グレードを計算します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-398">Calculates an average grade for objects in a `Students` array that have a `Grade` property.</span></span>
+* <span data-ttu-id="e5e74-399">グレードのない学生には既定のグレード 70 を割り当てます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-399">Assigns a default grade of 70 for students who don't have a grade.</span></span>
+* <span data-ttu-id="e5e74-400">反復するたびに `count` 変数をインクリメントして学生をカウントします。</span><span class="sxs-lookup"><span data-stu-id="e5e74-400">Counts students by incrementing a `count` variable with each iteration.</span></span> <span data-ttu-id="e5e74-401">別の方法として、次の例に示すように <xref:System.Text.Json.JsonElement.GetArrayLength%2A> を呼び出すこともできます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-401">An alternative is to call <xref:System.Text.Json.JsonElement.GetArrayLength%2A>, as shown in the following example:</span></span>
 
-  [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/JsonDocumentDataAccess.cs?name=SnippetAverageGrades2)]
+  [!code-csharp[](snippets/system-text-json-how-to/csharp/JsonDocumentDataAccess.cs?name=SnippetAverageGrades2)]
 
-<span data-ttu-id="d5d0f-366">このコードで処理される JSON の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-366">Here's an example of the JSON that this code processes:</span></span>
+<span data-ttu-id="e5e74-402">このコードで処理される JSON の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-402">Here's an example of the JSON that this code processes:</span></span>
 
-[!code-json[](~/samples/snippets/core/system-text-json/csharp/GradesPrettyPrint.json)]
+[!code-json[](snippets/system-text-json-how-to/csharp/GradesPrettyPrint.json)]
 
-## <a name="use-jsondocument-to-write-json"></a><span data-ttu-id="d5d0f-367">JsonDocument を使用した JSON の記述</span><span class="sxs-lookup"><span data-stu-id="d5d0f-367">Use JsonDocument to write JSON</span></span>
+## <a name="use-jsondocument-to-write-json"></a><span data-ttu-id="e5e74-403">JsonDocument を使用して JSON を書き込む</span><span class="sxs-lookup"><span data-stu-id="e5e74-403">Use JsonDocument to write JSON</span></span>
 
-<span data-ttu-id="d5d0f-368">次の例は、<xref:System.Text.Json.JsonDocument>から JSON を書き込む方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-368">The following example shows how to write JSON from a <xref:System.Text.Json.JsonDocument>:</span></span>
+<span data-ttu-id="e5e74-404">次の例では、<xref:System.Text.Json.JsonDocument> から JSON を書き込む方法を示します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-404">The following example shows how to write JSON from a <xref:System.Text.Json.JsonDocument>:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/JsonDocumentWriteJson.cs?name=SnippetSerialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/JsonDocumentWriteJson.cs?name=SnippetSerialize)]
 
-<span data-ttu-id="d5d0f-369">上のコードでは以下の操作が行われます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-369">The preceding code:</span></span>
+<span data-ttu-id="e5e74-405">上記のコードでは次の操作が行われます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-405">The preceding code:</span></span>
 
-* <span data-ttu-id="d5d0f-370">JSON ファイルを読み取り、データを `JsonDocument`に読み込み、書式設定された (非常に印刷された) JSON をファイルに書き込みます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-370">Reads a JSON file, loads the data into a `JsonDocument`, and writes formatted (pretty-printed) JSON to a file.</span></span>
-* <span data-ttu-id="d5d0f-371"><xref:System.Text.Json.JsonDocumentOptions> を使用して、入力 JSON 内のコメントを許可しますが、無視することを指定します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-371">Uses <xref:System.Text.Json.JsonDocumentOptions> to specify that comments in the input JSON are allowed but ignored.</span></span>
-* <span data-ttu-id="d5d0f-372">完了すると、はライターで <xref:System.Text.Json.Utf8JsonWriter.Flush%2A> を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-372">When finished, calls <xref:System.Text.Json.Utf8JsonWriter.Flush%2A> on the writer.</span></span> <span data-ttu-id="d5d0f-373">別の方法として、破棄されたときにライターを autoflush することもできます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-373">An alternative is to let the writer autoflush when it's disposed.</span></span>
+* <span data-ttu-id="e5e74-406">JSON ファイルを読み取り、データを `JsonDocument` に読み込み、書式設定された (整形された) JSON をファイルに書き込みます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-406">Reads a JSON file, loads the data into a `JsonDocument`, and writes formatted (pretty-printed) JSON to a file.</span></span>
+* <span data-ttu-id="e5e74-407"><xref:System.Text.Json.JsonDocumentOptions> を使用して、入力 JSON 内でコメントは許可されるが無視されることを指定します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-407">Uses <xref:System.Text.Json.JsonDocumentOptions> to specify that comments in the input JSON are allowed but ignored.</span></span>
+* <span data-ttu-id="e5e74-408">完了したら、ライターに対して <xref:System.Text.Json.Utf8JsonWriter.Flush%2A> を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-408">When finished, calls <xref:System.Text.Json.Utf8JsonWriter.Flush%2A> on the writer.</span></span> <span data-ttu-id="e5e74-409">別の方法として、破棄されたときにライターを自動フラッシュすることもできます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-409">An alternative is to let the writer autoflush when it's disposed.</span></span>
 
-<span data-ttu-id="d5d0f-374">コード例によって処理される JSON 入力の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-374">Here's an example of JSON input to be processed by the example code:</span></span>
+<span data-ttu-id="e5e74-410">コード例によって処理される JSON 入力の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-410">Here's an example of JSON input to be processed by the example code:</span></span>
 
-[!code-json[](~/samples/snippets/core/system-text-json/csharp/Grades.json)]
+[!code-json[](snippets/system-text-json-how-to/csharp/Grades.json)]
 
-<span data-ttu-id="d5d0f-375">その結果、次のような整形出力の JSON 出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-375">The result is the following pretty-printed JSON output:</span></span>
+<span data-ttu-id="e5e74-411">その結果は、次のような整形された JSON 出力になります。</span><span class="sxs-lookup"><span data-stu-id="e5e74-411">The result is the following pretty-printed JSON output:</span></span>
 
-[!code-json[](~/samples/snippets/core/system-text-json/csharp/GradesPrettyPrint.json)]
+[!code-json[](snippets/system-text-json-how-to/csharp/GradesPrettyPrint.json)]
 
-## <a name="use-utf8jsonwriter"></a><span data-ttu-id="d5d0f-376">Utf8JsonWriter を使用する</span><span class="sxs-lookup"><span data-stu-id="d5d0f-376">Use Utf8JsonWriter</span></span>
+## <a name="use-utf8jsonwriter"></a><span data-ttu-id="e5e74-412">Utf8JsonWriter を使用する</span><span class="sxs-lookup"><span data-stu-id="e5e74-412">Use Utf8JsonWriter</span></span>
 
-<span data-ttu-id="d5d0f-377">次の例は、<xref:System.Text.Json.Utf8JsonWriter> クラスの使用方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-377">The following example shows how to use the <xref:System.Text.Json.Utf8JsonWriter> class:</span></span>
+<span data-ttu-id="e5e74-413"><xref:System.Text.Json.Utf8JsonWriter> クラスを使用する方法を示す例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-413">The following example shows how to use the <xref:System.Text.Json.Utf8JsonWriter> class:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/Utf8WriterToStream.cs?name=SnippetSerialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/Utf8WriterToStream.cs?name=SnippetSerialize)]
 
-## <a name="use-utf8jsonreader"></a><span data-ttu-id="d5d0f-378">Utf8JsonReader を使用する</span><span class="sxs-lookup"><span data-stu-id="d5d0f-378">Use Utf8JsonReader</span></span>
+## <a name="use-utf8jsonreader"></a><span data-ttu-id="e5e74-414">Utf8JsonReader を使用する</span><span class="sxs-lookup"><span data-stu-id="e5e74-414">Use Utf8JsonReader</span></span>
 
-<span data-ttu-id="d5d0f-379">次の例は、<xref:System.Text.Json.Utf8JsonReader> クラスの使用方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-379">The following example shows how to use the <xref:System.Text.Json.Utf8JsonReader> class:</span></span>
+<span data-ttu-id="e5e74-415"><xref:System.Text.Json.Utf8JsonReader> クラスを使用する方法を示す例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-415">The following example shows how to use the <xref:System.Text.Json.Utf8JsonReader> class:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/Utf8ReaderFromBytes.cs?name=SnippetDeserialize)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/Utf8ReaderFromBytes.cs?name=SnippetDeserialize)]
 
-<span data-ttu-id="d5d0f-380">上記のコードでは、`jsonUtf8` 変数が、UTF-8 としてエンコードされた有効な JSON を含むバイト配列であることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-380">The preceding code assumes that the `jsonUtf8` variable is a byte array that contains valid JSON, encoded as UTF-8.</span></span>
+<span data-ttu-id="e5e74-416">上記のコードでは、`jsonUtf8` 変数が、UTF-8 としてエンコードされた有効な JSON を含むバイト配列であることを想定しています。</span><span class="sxs-lookup"><span data-stu-id="e5e74-416">The preceding code assumes that the `jsonUtf8` variable is a byte array that contains valid JSON, encoded as UTF-8.</span></span>
 
-### <a name="filter-data-using-utf8jsonreader"></a><span data-ttu-id="d5d0f-381">Utf8JsonReader を使用してデータをフィルター処理する</span><span class="sxs-lookup"><span data-stu-id="d5d0f-381">Filter data using Utf8JsonReader</span></span>
+### <a name="filter-data-using-utf8jsonreader"></a><span data-ttu-id="e5e74-417">Utf8JsonReader を使用してデータをフィルター処理する</span><span class="sxs-lookup"><span data-stu-id="e5e74-417">Filter data using Utf8JsonReader</span></span>
 
-<span data-ttu-id="d5d0f-382">次の例は、ファイルを同期的に読み取り、値を検索する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-382">The following example shows how to read a file synchronously and search for a value:</span></span>
+<span data-ttu-id="e5e74-418">次の例は、ファイルを同期的に読み取り、値を検索する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="e5e74-418">The following example shows how to read a file synchronously and search for a value:</span></span>
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/Utf8ReaderFromFile.cs)]
+[!code-csharp[](snippets/system-text-json-how-to/csharp/Utf8ReaderFromFile.cs)]
 
-<span data-ttu-id="d5d0f-383">上のコードでは以下の操作が行われます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-383">The preceding code:</span></span>
+<span data-ttu-id="e5e74-419">上記のコードでは次の操作が行われます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-419">The preceding code:</span></span>
 
-* <span data-ttu-id="d5d0f-384">JSON にオブジェクトの配列が含まれており、各オブジェクトに文字列型の "name" プロパティが含まれていると仮定します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-384">Assumes the JSON contains an array of objects and each object may contain a "name" property of type string.</span></span>
-* <span data-ttu-id="d5d0f-385">"大学" で終わるオブジェクトと "name" プロパティ値をカウントします。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-385">Counts objects and "name" property values that end with "University".</span></span>
-* <span data-ttu-id="d5d0f-386">は、ファイルが UTF-16 としてエンコードされているものと想定し、UTF-8 にトランスコードします。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-386">Assumes the file is encoded as UTF-16 and transcodes it into UTF-8.</span></span> <span data-ttu-id="d5d0f-387">UTF-8 としてエンコードされたファイルは、次のコードを使用して、`ReadOnlySpan<byte>`に直接読み取ることができます。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-387">A file encoded as UTF-8 can be read directly into a `ReadOnlySpan<byte>`, by using the following code:</span></span>
+* <span data-ttu-id="e5e74-420">JSON にオブジェクトの配列が含まれ、各オブジェクトに文字列型の "name" プロパティが含まれている可能性があると想定します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-420">Assumes the JSON contains an array of objects and each object may contain a "name" property of type string.</span></span>
+* <span data-ttu-id="e5e74-421">オブジェクトと "University" で終わる "name" プロパティ値をカウントします。</span><span class="sxs-lookup"><span data-stu-id="e5e74-421">Counts objects and "name" property values that end with "University".</span></span>
+* <span data-ttu-id="e5e74-422">ファイルが UTF-16 としてエンコードされ、UTF-8 にトランスコードされるものと想定します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-422">Assumes the file is encoded as UTF-16 and transcodes it into UTF-8.</span></span> <span data-ttu-id="e5e74-423">UTF-8 としてエンコードされたファイルは、次のコードを使用して、`ReadOnlySpan<byte>` に直接読み取ることができます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-423">A file encoded as UTF-8 can be read directly into a `ReadOnlySpan<byte>`, by using the following code:</span></span>
 
   ```csharp
   ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName);
   ```
 
-  <span data-ttu-id="d5d0f-388">ファイルに UTF-8 バイト順マーク (BOM) が含まれている場合は、リーダーがテキストを受け取るため、バイトを `Utf8JsonReader`に渡す前に削除します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-388">If the file contains a UTF-8 byte order mark (BOM), remove it before passing the bytes to the `Utf8JsonReader`, since the reader expects text.</span></span> <span data-ttu-id="d5d0f-389">それ以外の場合、BOM は無効な JSON と見なされ、リーダーは例外をスローします。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-389">Otherwise, the BOM is considered invalid JSON, and the reader throws an exception.</span></span>
+  <span data-ttu-id="e5e74-424">リーダーではテキストが想定されるため、ファイルに UTF-8 バイト オーダー マーク (BOM) が含まれている場合は、バイトを `Utf8JsonReader` に渡す前にそれを削除します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-424">If the file contains a UTF-8 byte order mark (BOM), remove it before passing the bytes to the `Utf8JsonReader`, since the reader expects text.</span></span> <span data-ttu-id="e5e74-425">そうしないと、BOM は無効な JSON と見なされ、リーダーによって例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-425">Otherwise, the BOM is considered invalid JSON, and the reader throws an exception.</span></span>
 
-<span data-ttu-id="d5d0f-390">上記のコードが読み取ることができる JSON のサンプルを次に示します。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-390">Here's a JSON sample that the preceding code can read.</span></span> <span data-ttu-id="d5d0f-391">結果として生成される概要メッセージは、"2 ~ 4 個の名前が ' 大学 ' で終わっています" です。</span><span class="sxs-lookup"><span data-stu-id="d5d0f-391">The resulting summary message is "2 out of 4 have names that end with 'University'":</span></span>
+<span data-ttu-id="e5e74-426">上記のコードで読み取ることができる JSON のサンプルを次に示します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-426">Here's a JSON sample that the preceding code can read.</span></span> <span data-ttu-id="e5e74-427">結果として生成される概要メッセージは、"2 out of 4 have names that end with 'University'" です。</span><span class="sxs-lookup"><span data-stu-id="e5e74-427">The resulting summary message is "2 out of 4 have names that end with 'University'":</span></span>
 
-[!code-json[](~/samples/snippets/core/system-text-json/csharp/Universities.json)]
+[!code-json[](snippets/system-text-json-how-to/csharp/Universities.json)]
 
-## <a name="additional-resources"></a><span data-ttu-id="d5d0f-392">その他のリソース</span><span class="sxs-lookup"><span data-stu-id="d5d0f-392">Additional resources</span></span>
+### <a name="read-from-a-stream-using-utf8jsonreader"></a><span data-ttu-id="e5e74-428">Utf8JsonReader を使用してストリームから読み取る</span><span class="sxs-lookup"><span data-stu-id="e5e74-428">Read from a stream using Utf8JsonReader</span></span>
 
-* <span data-ttu-id="d5d0f-393">[System.Text.Json の概要](system-text-json-overview.md)</span><span class="sxs-lookup"><span data-stu-id="d5d0f-393">[System.Text.Json overview](system-text-json-overview.md)</span></span>
-* [<span data-ttu-id="d5d0f-394">カスタムコンバーターを記述する方法</span><span class="sxs-lookup"><span data-stu-id="d5d0f-394">How to write custom converters</span></span>](system-text-json-converters-how-to.md)
-* <span data-ttu-id="d5d0f-395">[Newtonsoft.Json から移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md)</span><span class="sxs-lookup"><span data-stu-id="d5d0f-395">[How to migrate from Newtonsoft.Json](system-text-json-migrate-from-newtonsoft-how-to.md)</span></span>
-* <span data-ttu-id="d5d0f-396">[System.Text.Json での DateTime と DateTimeOffset のサポート](../datetime/system-text-json-support.md)</span><span class="sxs-lookup"><span data-stu-id="d5d0f-396">[DateTime and DateTimeOffset support in System.Text.Json](../datetime/system-text-json-support.md)</span></span>
-* <span data-ttu-id="d5d0f-397">[System.Text.Json API リファレンス](xref:System.Text.Json)</span><span class="sxs-lookup"><span data-stu-id="d5d0f-397">[System.Text.Json API reference](xref:System.Text.Json)</span></span>
+<span data-ttu-id="e5e74-429">大きなファイル (ギガバイト以上のサイズなど) を読み取る場合、一度にファイル全体をメモリに読み込む必要を回避することができます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-429">When reading a large file (a gigabyte or more in size, for example), you might want to avoid having to load the entire file into memory at once.</span></span> <span data-ttu-id="e5e74-430">このシナリオでは、<xref:System.IO.FileStream> を使用できます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-430">For this scenario, you can use a <xref:System.IO.FileStream>.</span></span>
+
+<span data-ttu-id="e5e74-431">`Utf8JsonReader` を使用してストリームから読み取る場合、次の規則が適用されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-431">When using the `Utf8JsonReader` to read from a stream, the following rules apply:</span></span>
+
+* <span data-ttu-id="e5e74-432">部分的な JSON ペイロードを含むバッファーは、リーダーが処理を進めることができるように、少なくともその中で最大の JSON トークンと同じ大きさにする必要があります。</span><span class="sxs-lookup"><span data-stu-id="e5e74-432">The buffer containing the partial JSON payload must be at least as big as the largest JSON token within it so that the reader can make forward progress.</span></span>
+* <span data-ttu-id="e5e74-433">バッファーは、少なくとも JSON 内の空白の最大シーケンスと同じ大きさである必要があります。</span><span class="sxs-lookup"><span data-stu-id="e5e74-433">The buffer must be at least as big as the largest sequence of white space within the JSON.</span></span>
+* <span data-ttu-id="e5e74-434">リーダーでは、JSON ペイロード内の次の <xref:System.Text.Json.Utf8JsonReader.TokenType%2A> が完全に読み取られるまで、読み取られたデータが追跡されません。</span><span class="sxs-lookup"><span data-stu-id="e5e74-434">The reader doesn't keep track of the data it has read until it completely reads the next <xref:System.Text.Json.Utf8JsonReader.TokenType%2A> in the JSON payload.</span></span> <span data-ttu-id="e5e74-435">そのため、バッファー内にバイトが残っている場合は、再びリーダーに渡す必要があります。</span><span class="sxs-lookup"><span data-stu-id="e5e74-435">So when there are bytes left over in the buffer, you have to pass them to the reader again.</span></span> <span data-ttu-id="e5e74-436"><xref:System.Text.Json.Utf8JsonReader.BytesConsumed%2A> を使用して、残っているバイト数を確認できます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-436">You can use <xref:System.Text.Json.Utf8JsonReader.BytesConsumed%2A> to determine how many bytes are left over.</span></span>
+
+<span data-ttu-id="e5e74-437">次のコードは、ストリームから読み取る方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="e5e74-437">The following code illustrates how to read from a stream.</span></span> <span data-ttu-id="e5e74-438">この例は、<xref:System.IO.MemoryStream> を示しています。</span><span class="sxs-lookup"><span data-stu-id="e5e74-438">The example shows a <xref:System.IO.MemoryStream>.</span></span> <span data-ttu-id="e5e74-439">同様のコードが <xref:System.IO.FileStream> で機能しますが、開始時に UTF-8 BOM が `FileStream` に含まれている場合を除きます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-439">Similar code will work with a <xref:System.IO.FileStream>, except when the `FileStream` contains a UTF-8 BOM at the start.</span></span> <span data-ttu-id="e5e74-440">その場合は、残りのバイトを `Utf8JsonReader` に渡す前に、バッファーからこれらの 3 バイトを取り除く必要があります。</span><span class="sxs-lookup"><span data-stu-id="e5e74-440">In that case, you need to strip those three bytes from the buffer before passing the remaining bytes to the `Utf8JsonReader`.</span></span> <span data-ttu-id="e5e74-441">そうしないと、BOM は JSON の有効な部分と見なされないため、リーダーによって例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-441">Otherwise the reader would throw an exception, since the BOM is not considered a valid part of the JSON.</span></span>
+
+<span data-ttu-id="e5e74-442">このサンプル コードでは、4 KB のバッファーから開始し、サイズが完全な JSON トークンに対応するのに十分な大きさではないことが判明するたびにバッファー サイズを 2 倍にします。これは、リーダーが JSON ペイロードの処理を進めるために必要です。</span><span class="sxs-lookup"><span data-stu-id="e5e74-442">The sample code starts with a 4KB buffer and doubles the buffer size each time it finds that the size is not big enough to fit a complete JSON token, which is required for the reader to make forward progress on the JSON payload.</span></span> <span data-ttu-id="e5e74-443">スニペットに用意されている JSON サンプルでは、非常に小さい初期バッファー サイズ (たとえば、10 バイト) を設定した場合にのみ、バッファー サイズが増加します。</span><span class="sxs-lookup"><span data-stu-id="e5e74-443">The JSON sample provided in the snippet triggers a buffer size increase only if you set a very small initial buffer size, for example, 10 bytes.</span></span> <span data-ttu-id="e5e74-444">初期バッファー サイズを 10 に設定すると、`Console.WriteLine` ステートメントによって、バッファー サイズの増加の原因と影響が示されます。</span><span class="sxs-lookup"><span data-stu-id="e5e74-444">If you set the initial buffer size to 10, the `Console.WriteLine` statements illustrate the cause and effect of buffer size increases.</span></span> <span data-ttu-id="e5e74-445">4 KB の初期バッファー サイズで、サンプルの JSON 全体が各 `Console.WriteLine` によって表示され、バッファー サイズを増やす必要はありません。</span><span class="sxs-lookup"><span data-stu-id="e5e74-445">At the 4KB initial buffer size, the entire sample JSON is shown by each `Console.WriteLine`, and the buffer size never has to be increased.</span></span>
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/Utf8ReaderPartialRead.cs)]
+
+<span data-ttu-id="e5e74-446">前の例では、バッファーをどの大きさまで拡大できるかに対して無制限を設定しています。</span><span class="sxs-lookup"><span data-stu-id="e5e74-446">The preceding example sets no limit to how big the buffer can grow.</span></span> <span data-ttu-id="e5e74-447">トークン サイズが大きすぎる場合、コードは <xref:System.OutOfMemoryException> 例外で失敗する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="e5e74-447">If the token size is too large, the code could fail with an <xref:System.OutOfMemoryException> exception.</span></span> <span data-ttu-id="e5e74-448">これは、JSON にサイズが約 1 GB 以上のトークンが含まれている場合に発生する可能性があります。1 GB のサイズを 2 倍にすると、サイズが大きすぎて `int32` バッファーに入り切らないためです。</span><span class="sxs-lookup"><span data-stu-id="e5e74-448">This can happen if the JSON contains a token that is around 1 GB or more in size, because doubling the 1 GB size results in a size that is too large to fit into an `int32` buffer.</span></span>
+
+## <a name="additional-resources"></a><span data-ttu-id="e5e74-449">その他の技術情報</span><span class="sxs-lookup"><span data-stu-id="e5e74-449">Additional resources</span></span>
+
+* <span data-ttu-id="e5e74-450">[System.Text.Json の概要](system-text-json-overview.md)</span><span class="sxs-lookup"><span data-stu-id="e5e74-450">[System.Text.Json overview](system-text-json-overview.md)</span></span>
+* [<span data-ttu-id="e5e74-451">カスタム コンバーターを記述する方法</span><span class="sxs-lookup"><span data-stu-id="e5e74-451">How to write custom converters</span></span>](system-text-json-converters-how-to.md)
+* <span data-ttu-id="e5e74-452">[Newtonsoft.Json から移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md)</span><span class="sxs-lookup"><span data-stu-id="e5e74-452">[How to migrate from Newtonsoft.Json](system-text-json-migrate-from-newtonsoft-how-to.md)</span></span>
+* <span data-ttu-id="e5e74-453">[System.Text.Json での DateTime と DateTimeOffset のサポート](../datetime/system-text-json-support.md)</span><span class="sxs-lookup"><span data-stu-id="e5e74-453">[DateTime and DateTimeOffset support in System.Text.Json](../datetime/system-text-json-support.md)</span></span>
+* <span data-ttu-id="e5e74-454">[System.Text.Json API リファレンス](xref:System.Text.Json)</span><span class="sxs-lookup"><span data-stu-id="e5e74-454">[System.Text.Json API reference](xref:System.Text.Json)</span></span>
 <!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->
