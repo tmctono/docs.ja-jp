@@ -3,81 +3,82 @@ title: Windows 10 への .NET Framework のインストール
 description: Windows 10 または Windows Server 2016 に .NET Framework をインストールする方法について説明します。
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: eed15b9088d6ba46d8f5bc6d16ba779dd6115b0d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1443ae8f8d4e61b0561f4827fafc9ecedd80fccc
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76965972"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144735"
 ---
-# <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a><span data-ttu-id="95f7e-103">Windows 10 と Windows Server 2016 以降に .NET Framework をインストールする</span><span class="sxs-lookup"><span data-stu-id="95f7e-103">Install the .NET Framework on Windows 10 and Windows Server 2016 and later</span></span>
+# <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a><span data-ttu-id="8c535-103">Windows 10 と Windows Server 2016 以降に .NET Framework をインストールする</span><span class="sxs-lookup"><span data-stu-id="8c535-103">Install the .NET Framework on Windows 10 and Windows Server 2016 and later</span></span>
 
-<span data-ttu-id="95f7e-104">.NET Framework は、Windows でさまざまなアプリケーションを実行するために必要です。</span><span class="sxs-lookup"><span data-stu-id="95f7e-104">The .NET Framework is required to run many applications on Windows.</span></span> <span data-ttu-id="95f7e-105">この記事の指示は、必要なバージョンの .NET Framework をインストールする際に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="95f7e-105">The instructions in this article should help you install the .NET Framework versions that you need.</span></span> <span data-ttu-id="95f7e-106">最新版は [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) です。</span><span class="sxs-lookup"><span data-stu-id="95f7e-106">The [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) is the latest available version.</span></span>
+<span data-ttu-id="8c535-104">.NET Framework は、Windows でさまざまなアプリケーションを実行するために必要です。</span><span class="sxs-lookup"><span data-stu-id="8c535-104">The .NET Framework is required to run many applications on Windows.</span></span> <span data-ttu-id="8c535-105">この記事の指示は、必要なバージョンの .NET Framework をインストールする際に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="8c535-105">The instructions in this article should help you install the .NET Framework versions that you need.</span></span> <span data-ttu-id="8c535-106">最新版は [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) です。</span><span class="sxs-lookup"><span data-stu-id="8c535-106">The [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) is the latest available version.</span></span>
 
-<span data-ttu-id="95f7e-107">このページをご覧になっている理由は、アプリケーションを実行しようとして次のようなダイアログがコンピューターに表示されたからではないでしょうか。</span><span class="sxs-lookup"><span data-stu-id="95f7e-107">You may have arrived on this page after trying to run an application and seeing a dialog on your machine similar to the following one:</span></span>
+<span data-ttu-id="8c535-107">このページをご覧になっている理由は、アプリケーションを実行しようとして次のようなダイアログがコンピューターに表示されたからではないでしょうか。</span><span class="sxs-lookup"><span data-stu-id="8c535-107">You may have arrived on this page after trying to run an application and seeing a dialog on your machine similar to the following one:</span></span>
 
 ![このアプリケーションを開始できませんでした。](./media/this-application-could-not-be-started.png)
 
-## <a name="net-framework-48"></a><span data-ttu-id="95f7e-109">.NET Framework 4.8</span><span class="sxs-lookup"><span data-stu-id="95f7e-109">.NET Framework 4.8</span></span>
+## <a name="net-framework-48"></a><span data-ttu-id="8c535-109">.NET Framework 4.8</span><span class="sxs-lookup"><span data-stu-id="8c535-109">.NET Framework 4.8</span></span>
 
-<span data-ttu-id="95f7e-110">.NET Framework 4.8 は次の Windows に付属しています。</span><span class="sxs-lookup"><span data-stu-id="95f7e-110">The .NET Framework 4.8 is included with:</span></span>
+<span data-ttu-id="8c535-110">.NET Framework 4.8 は次の Windows に付属しています。</span><span class="sxs-lookup"><span data-stu-id="8c535-110">The .NET Framework 4.8 is included with:</span></span>
 
-- [<span data-ttu-id="95f7e-111">Windows 10 May 2019 Update</span><span class="sxs-lookup"><span data-stu-id="95f7e-111">Windows 10 May 2019 Update</span></span>](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
+- [<span data-ttu-id="8c535-111">Windows 10 May 2019 Update</span><span class="sxs-lookup"><span data-stu-id="8c535-111">Windows 10 May 2019 Update</span></span>](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 > [!div class="button"]
-> [<span data-ttu-id="95f7e-112">.NET Framework 4.8 のダウンロード</span><span class="sxs-lookup"><span data-stu-id="95f7e-112">Download .NET Framework 4.8</span></span>](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+> [<span data-ttu-id="8c535-112">.NET Framework 4.8 のダウンロード</span><span class="sxs-lookup"><span data-stu-id="8c535-112">Download .NET Framework 4.8</span></span>](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
-<span data-ttu-id="95f7e-113">[.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) は、.NET Framework 4.0 から 4.7.2 用に構築されたアプリケーションを実行するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="95f7e-113">[.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) can be used to run applications built for the .NET Framework 4.0 through 4.7.2.</span></span>
+<span data-ttu-id="8c535-113">[.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) は、.NET Framework 4.0 から 4.7.2 用に構築されたアプリケーションを実行するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="8c535-113">[.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) can be used to run applications built for the .NET Framework 4.0 through 4.7.2.</span></span>
 
-<span data-ttu-id="95f7e-114">[.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) は次の Windows にインストールできます。</span><span class="sxs-lookup"><span data-stu-id="95f7e-114">You can install [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) on:</span></span>
+<span data-ttu-id="8c535-114">[.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) は次の Windows にインストールできます。</span><span class="sxs-lookup"><span data-stu-id="8c535-114">You can install [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) on:</span></span>
 
-- <span data-ttu-id="95f7e-115">Windows 10 October 2018 Update (バージョン 1809)</span><span class="sxs-lookup"><span data-stu-id="95f7e-115">Windows 10 October 2018 Update (version 1809)</span></span>
-- <span data-ttu-id="95f7e-116">Windows 10 April 2018 Update (バージョン 1803)</span><span class="sxs-lookup"><span data-stu-id="95f7e-116">Windows 10 April 2018 Update (version 1803)</span></span>
-- <span data-ttu-id="95f7e-117">Windows 10 Fall Creators Update (バージョン 1709)</span><span class="sxs-lookup"><span data-stu-id="95f7e-117">Windows 10 Fall Creators Update (version 1709)</span></span>
-- <span data-ttu-id="95f7e-118">Windows 10 Creators Update (バージョン 1703)</span><span class="sxs-lookup"><span data-stu-id="95f7e-118">Windows 10 Creators Update (version 1703)</span></span>
-- <span data-ttu-id="95f7e-119">Windows 10 Anniversary Update (バージョン 1607)</span><span class="sxs-lookup"><span data-stu-id="95f7e-119">Windows 10 Anniversary Update (version 1607)</span></span>
-- <span data-ttu-id="95f7e-120">Windows Server 2019</span><span class="sxs-lookup"><span data-stu-id="95f7e-120">Windows Server 2019</span></span>
-- <span data-ttu-id="95f7e-121">Windows Server、バージョン 1809</span><span class="sxs-lookup"><span data-stu-id="95f7e-121">Windows Server, version 1809</span></span>
-- <span data-ttu-id="95f7e-122">Windows Server、バージョン 1803</span><span class="sxs-lookup"><span data-stu-id="95f7e-122">Windows Server, version 1803</span></span>
-- <span data-ttu-id="95f7e-123">Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="95f7e-123">Windows Server 2016</span></span>
+- <span data-ttu-id="8c535-115">Windows 10 October 2018 Update (バージョン 1809)</span><span class="sxs-lookup"><span data-stu-id="8c535-115">Windows 10 October 2018 Update (version 1809)</span></span>
+- <span data-ttu-id="8c535-116">Windows 10 April 2018 Update (バージョン 1803)</span><span class="sxs-lookup"><span data-stu-id="8c535-116">Windows 10 April 2018 Update (version 1803)</span></span>
+- <span data-ttu-id="8c535-117">Windows 10 Fall Creators Update (バージョン 1709)</span><span class="sxs-lookup"><span data-stu-id="8c535-117">Windows 10 Fall Creators Update (version 1709)</span></span>
+- <span data-ttu-id="8c535-118">Windows 10 Creators Update (バージョン 1703)</span><span class="sxs-lookup"><span data-stu-id="8c535-118">Windows 10 Creators Update (version 1703)</span></span>
+- <span data-ttu-id="8c535-119">Windows 10 Anniversary Update (バージョン 1607)</span><span class="sxs-lookup"><span data-stu-id="8c535-119">Windows 10 Anniversary Update (version 1607)</span></span>
+- <span data-ttu-id="8c535-120">Windows Server 2019</span><span class="sxs-lookup"><span data-stu-id="8c535-120">Windows Server 2019</span></span>
+- <span data-ttu-id="8c535-121">Windows Server、バージョン 1809</span><span class="sxs-lookup"><span data-stu-id="8c535-121">Windows Server, version 1809</span></span>
+- <span data-ttu-id="8c535-122">Windows Server、バージョン 1803</span><span class="sxs-lookup"><span data-stu-id="8c535-122">Windows Server, version 1803</span></span>
+- <span data-ttu-id="8c535-123">Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="8c535-123">Windows Server 2016</span></span>
 
-<span data-ttu-id="95f7e-124">.NET Framework 4.8 はサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="95f7e-124">The .NET Framework 4.8 is not supported on:</span></span>
+<span data-ttu-id="8c535-124">.NET Framework 4.8 はサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="8c535-124">The .NET Framework 4.8 is not supported on:</span></span>
 
-- <span data-ttu-id="95f7e-125">Windows 10 1507</span><span class="sxs-lookup"><span data-stu-id="95f7e-125">Windows 10 1507</span></span>
-- <span data-ttu-id="95f7e-126">Windows 10 1511</span><span class="sxs-lookup"><span data-stu-id="95f7e-126">Windows 10 1511</span></span>
+- <span data-ttu-id="8c535-125">Windows 10 1507</span><span class="sxs-lookup"><span data-stu-id="8c535-125">Windows 10 1507</span></span>
+- <span data-ttu-id="8c535-126">Windows 10 1511</span><span class="sxs-lookup"><span data-stu-id="8c535-126">Windows 10 1511</span></span>
 
-<span data-ttu-id="95f7e-127">Windows 10 1507 または 1511 を使用しているとき、.NET Framework 4.8 をインストールする場合、それらより新しい Windows 10 バージョンに先にアップグレードする必要があります。</span><span class="sxs-lookup"><span data-stu-id="95f7e-127">If you're using Windows 10 1507 or 1511 and you want to install the .NET Framework 4.8, you first need to upgrade to a later Windows 10 version.</span></span>
+<span data-ttu-id="8c535-127">Windows 10 1507 または 1511 を使用しているとき、.NET Framework 4.8 をインストールする場合、それらより新しい Windows 10 バージョンに先にアップグレードする必要があります。</span><span class="sxs-lookup"><span data-stu-id="8c535-127">If you're using Windows 10 1507 or 1511 and you want to install the .NET Framework 4.8, you first need to upgrade to a later Windows 10 version.</span></span>
 
-## <a name="net-framework-462"></a><span data-ttu-id="95f7e-128">.NET Framework 4.6.2</span><span class="sxs-lookup"><span data-stu-id="95f7e-128">.NET Framework 4.6.2</span></span>
+## <a name="net-framework-462"></a><span data-ttu-id="8c535-128">.NET Framework 4.6.2</span><span class="sxs-lookup"><span data-stu-id="8c535-128">.NET Framework 4.6.2</span></span>
 
-<span data-ttu-id="95f7e-129">[.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462) は Windows 10 1507 と 1511 でサポートされている最も新しい .NET Framework バージョンです。</span><span class="sxs-lookup"><span data-stu-id="95f7e-129">The [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462) is the latest supported .NET Framework version on Windows 10 1507 and 1511.</span></span>
+<span data-ttu-id="8c535-129">[.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462) は Windows 10 1507 と 1511 でサポートされている最も新しい .NET Framework バージョンです。</span><span class="sxs-lookup"><span data-stu-id="8c535-129">The [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462) is the latest supported .NET Framework version on Windows 10 1507 and 1511.</span></span>
 
-<span data-ttu-id="95f7e-130">.NET Framework 4.6.2 は、.NET Framework 4.0 から 4.6.2 用に構築されたアプリケーションをサポートします。</span><span class="sxs-lookup"><span data-stu-id="95f7e-130">The .NET Framework 4.6.2 supports apps built for the .NET Framework 4.0 through 4.6.2.</span></span>
+<span data-ttu-id="8c535-130">.NET Framework 4.6.2 は、.NET Framework 4.0 から 4.6.2 用に構築されたアプリケーションをサポートします。</span><span class="sxs-lookup"><span data-stu-id="8c535-130">The .NET Framework 4.6.2 supports apps built for the .NET Framework 4.0 through 4.6.2.</span></span>
 
-## <a name="net-framework-35"></a><span data-ttu-id="95f7e-131">.NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="95f7e-131">.NET Framework 3.5</span></span>
+## <a name="net-framework-35"></a><span data-ttu-id="8c535-131">.NET Framework 3.5</span><span class="sxs-lookup"><span data-stu-id="8c535-131">.NET Framework 3.5</span></span>
 
-<span data-ttu-id="95f7e-132">手順に従って [.NET Framework 3.5 を Windows 10 に](dotnet-35-windows-10.md)インストールしてください。</span><span class="sxs-lookup"><span data-stu-id="95f7e-132">Follow the instructions to install the [.NET Framework 3.5 on Windows 10](dotnet-35-windows-10.md).</span></span>
+<span data-ttu-id="8c535-132">手順に従って [.NET Framework 3.5 を Windows 10 に](dotnet-35-windows-10.md)インストールしてください。</span><span class="sxs-lookup"><span data-stu-id="8c535-132">Follow the instructions to install the [.NET Framework 3.5 on Windows 10](dotnet-35-windows-10.md).</span></span>
 
-<span data-ttu-id="95f7e-133">.NET Framework 3.5 は、.NET Framework 1.0 から 3.5 用に構築されたアプリケーションをサポートします。</span><span class="sxs-lookup"><span data-stu-id="95f7e-133">The .NET Framework 3.5 supports apps built for the .NET Framework 1.0 through 3.5.</span></span>
+<span data-ttu-id="8c535-133">.NET Framework 3.5 は、.NET Framework 1.0 から 3.5 用に構築されたアプリケーションをサポートします。</span><span class="sxs-lookup"><span data-stu-id="8c535-133">The .NET Framework 3.5 supports apps built for the .NET Framework 1.0 through 3.5.</span></span>
 
-## <a name="additional-information"></a><span data-ttu-id="95f7e-134">追加情報</span><span class="sxs-lookup"><span data-stu-id="95f7e-134">Additional information</span></span>
+## <a name="additional-information"></a><span data-ttu-id="8c535-134">追加情報</span><span class="sxs-lookup"><span data-stu-id="8c535-134">Additional information</span></span>
 
-<span data-ttu-id="95f7e-135">.NET Framework 4.x バージョンは、前のバージョンのインプレース更新です。</span><span class="sxs-lookup"><span data-stu-id="95f7e-135">.NET Framework 4.x versions are in-place updates to earlier versions.</span></span> <span data-ttu-id="95f7e-136">これは次のことを意味します。</span><span class="sxs-lookup"><span data-stu-id="95f7e-136">That means the following:</span></span>
+<span data-ttu-id="8c535-135">.NET Framework 4.x バージョンは、前のバージョンのインプレース更新です。</span><span class="sxs-lookup"><span data-stu-id="8c535-135">.NET Framework 4.x versions are in-place updates to earlier versions.</span></span> <span data-ttu-id="8c535-136">これは次のことを意味します。</span><span class="sxs-lookup"><span data-stu-id="8c535-136">That means the following:</span></span>
 
-- <span data-ttu-id="95f7e-137">お使いのコンピューターにインストールできる .NET Framework 4.x バージョンは 1 つだけです。</span><span class="sxs-lookup"><span data-stu-id="95f7e-137">You can only have one version of the .NET Framework 4.x installed on your machine.</span></span>
+- <span data-ttu-id="8c535-137">お使いのコンピューターにインストールできる .NET Framework 4.x バージョンは 1 つだけです。</span><span class="sxs-lookup"><span data-stu-id="8c535-137">You can only have one version of the .NET Framework 4.x installed on your machine.</span></span>
 
-- <span data-ttu-id="95f7e-138">以降のバージョンが既にインストールされている場合、前のバージョンの .NET Framework をコンピューターにインストールすることはできません。</span><span class="sxs-lookup"><span data-stu-id="95f7e-138">You cannot install an earlier version of the .NET Framework on your machine if a later version is already installed.</span></span>
+- <span data-ttu-id="8c535-138">以降のバージョンが既にインストールされている場合、前のバージョンの .NET Framework をコンピューターにインストールすることはできません。</span><span class="sxs-lookup"><span data-stu-id="8c535-138">You cannot install an earlier version of the .NET Framework on your machine if a later version is already installed.</span></span>
 
-- <span data-ttu-id="95f7e-139">.NET Framework 4.x バージョンは、4.0 からそのバージョンまでの .NET Framework 用に構築されたアプリケーションを実行するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="95f7e-139">4.x versions of the .NET Framework can be used to run applications built for the .NET Framework 4.0 through that version.</span></span> <span data-ttu-id="95f7e-140">たとえば、.NET Framework 4.7 は、.NET Framework 4.0 から 4.7 用に構築されたアプリケーションを実行するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="95f7e-140">For example, .NET Framework 4.7 can be used to run applications built for the .NET Framework 4.0 through 4.7.</span></span> <span data-ttu-id="95f7e-141">最新版 (.NET Framework 4.8) は、4.0 以降のすべての .NET Framework バージョンで構築されたアプリケーションの実行に使用できます。</span><span class="sxs-lookup"><span data-stu-id="95f7e-141">The latest version (the .NET Framework 4.8) can be used to run applications built with all versions of the .NET Framework starting with 4.0.</span></span>
+- <span data-ttu-id="8c535-139">.NET Framework 4.x バージョンは、4.0 からそのバージョンまでの .NET Framework 用に構築されたアプリケーションを実行するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="8c535-139">4.x versions of the .NET Framework can be used to run applications built for the .NET Framework 4.0 through that version.</span></span> <span data-ttu-id="8c535-140">たとえば、.NET Framework 4.7 は、.NET Framework 4.0 から 4.7 用に構築されたアプリケーションを実行するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="8c535-140">For example, .NET Framework 4.7 can be used to run applications built for the .NET Framework 4.0 through 4.7.</span></span> <span data-ttu-id="8c535-141">最新版 (.NET Framework 4.8) は、4.0 以降のすべての .NET Framework バージョンで構築されたアプリケーションの実行に使用できます。</span><span class="sxs-lookup"><span data-stu-id="8c535-141">The latest version (the .NET Framework 4.8) can be used to run applications built with all versions of the .NET Framework starting with 4.0.</span></span>
 
-<span data-ttu-id="95f7e-142">ダウンロード可能な .NET Framework バージョンの一覧は、[.NET ダウンロード](https://dotnet.microsoft.com/download) ページでご覧ください。</span><span class="sxs-lookup"><span data-stu-id="95f7e-142">For a list of all the versions of the .NET Framework available to download, see the [.NET Downloads](https://dotnet.microsoft.com/download) page.</span></span>
+<span data-ttu-id="8c535-142">ダウンロード可能な .NET Framework バージョンの一覧は、[.NET ダウンロード](https://dotnet.microsoft.com/download) ページでご覧ください。</span><span class="sxs-lookup"><span data-stu-id="8c535-142">For a list of all the versions of the .NET Framework available to download, see the [.NET Downloads](https://dotnet.microsoft.com/download) page.</span></span>
 
-## <a name="help"></a><span data-ttu-id="95f7e-143">ヘルプ</span><span class="sxs-lookup"><span data-stu-id="95f7e-143">Help</span></span>
+## <a name="help"></a><span data-ttu-id="8c535-143">ヘルプ</span><span class="sxs-lookup"><span data-stu-id="8c535-143">Help</span></span>
 
-<span data-ttu-id="95f7e-144">正しいバージョンの .NET Framework をインストールできない場合、[Microsoft にお問い合わせください](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help)。</span><span class="sxs-lookup"><span data-stu-id="95f7e-144">If you cannot get the correct version of the .NET Framework installed, you can [contact Microsoft for help](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help).</span></span>
+<span data-ttu-id="8c535-144">正しいバージョンの .NET Framework をインストールできない場合、[Microsoft にお問い合わせください](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help)。</span><span class="sxs-lookup"><span data-stu-id="8c535-144">If you cannot get the correct version of the .NET Framework installed, you can [contact Microsoft for help](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="95f7e-145">参照</span><span class="sxs-lookup"><span data-stu-id="95f7e-145">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8c535-145">関連項目</span><span class="sxs-lookup"><span data-stu-id="8c535-145">See also</span></span>
 
-- [<span data-ttu-id="95f7e-146">.NET ダウンロード</span><span class="sxs-lookup"><span data-stu-id="95f7e-146">.NET Downloads</span></span>](https://dotnet.microsoft.com/download)
-- [<span data-ttu-id="95f7e-147">.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="95f7e-147">Troubleshoot blocked .NET Framework installations and uninstallations</span></span>](troubleshoot-blocked-installations-and-uninstallations.md)
-- [<span data-ttu-id="95f7e-148">開発者向けの .NET Framework のインストール</span><span class="sxs-lookup"><span data-stu-id="95f7e-148">Install the .NET Framework for developers</span></span>](guide-for-developers.md)
+- [<span data-ttu-id="8c535-146">.NET ダウンロード</span><span class="sxs-lookup"><span data-stu-id="8c535-146">.NET Downloads</span></span>](https://dotnet.microsoft.com/download)
+- [<span data-ttu-id="8c535-147">.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="8c535-147">Troubleshoot blocked .NET Framework installations and uninstallations</span></span>](troubleshoot-blocked-installations-and-uninstallations.md)
+- [<span data-ttu-id="8c535-148">開発者向けの .NET Framework のインストール</span><span class="sxs-lookup"><span data-stu-id="8c535-148">Install the .NET Framework for developers</span></span>](guide-for-developers.md)
+- [<span data-ttu-id="8c535-149">インストールされている .NET Framework バージョンを確認する</span><span class="sxs-lookup"><span data-stu-id="8c535-149">Determine which .NET Framework versions are installed</span></span>](../migration-guide/how-to-determine-which-versions-are-installed.md)
