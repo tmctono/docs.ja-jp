@@ -1,142 +1,124 @@
 ---
-title: C# および Visual Studio Code の使用を開始する
-description: Visual Studio Code を使用した、C# で初めての .NET Core アプリケーションを作成してデバッグする方法について説明します。
-author: kendrahavens
-ms.date: 04/23/2020
-ms.openlocfilehash: 3dd7c4602fbb27e29bad977f8d3df34b6061bc23
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+title: Visual Studio Code を使用して .NET Core でコンソール アプリケーションを作成する
+description: Visual Studio Code と .NET Core CLI を使用して .NET Core コンソール アプリケーションを作成する方法について説明します。
+ms.date: 05/22/2020
+ms.openlocfilehash: 673c4a639a2cab26261b7cdafd5d8e20acfafb94
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506899"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201701"
 ---
-# <a name="get-started-with-c-and-visual-studio-code"></a><span data-ttu-id="1b322-103">C# および Visual Studio Code の使用を開始する</span><span class="sxs-lookup"><span data-stu-id="1b322-103">Get started with C# and Visual Studio Code</span></span>
+# <a name="tutorial-create-a-console-application-with-net-core-using-visual-studio-code"></a><span data-ttu-id="fee80-103">チュートリアル: Visual Studio Code を使用して .NET Core でコンソール アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="fee80-103">Tutorial: Create a console application with .NET Core using Visual Studio Code</span></span>
 
-<span data-ttu-id="1b322-104">.NET Core は、Windows、Linux および macOS で実行されるアプリケーションを作成するための、高速でモジュール型のプラットフォームを提供します。</span><span class="sxs-lookup"><span data-stu-id="1b322-104">.NET Core gives you a fast and modular platform for creating applications that run on Windows, Linux, and macOS.</span></span> <span data-ttu-id="1b322-105">Visual Studio Code を C# 拡張機能とともに使用して、C# IntelliSense の完全サポート (スマート コード補完) とデバッグによる強力な編集機能をご活用ください。</span><span class="sxs-lookup"><span data-stu-id="1b322-105">Use Visual Studio Code with the C# extension to get a powerful editing experience with full support for C# IntelliSense (smart code completion) and debugging.</span></span>
+<span data-ttu-id="fee80-104">このチュートリアルでは、Visual Studio Code と .NET Core CLI を使用して .NET Core コンソール アプリケーションを作成して実行する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="fee80-104">This tutorial shows how to create and run a .NET Core console application by using Visual Studio Code and the .NET Core CLI.</span></span> <span data-ttu-id="fee80-105">プロジェクトの作成、コンパイル、実行などのプロジェクト タスクは CLI を使用して行われるため、このチュートリアルに従って別のコード エディターを使用し、必要に応じてターミナルでコマンドを実行できます。</span><span class="sxs-lookup"><span data-stu-id="fee80-105">Project tasks, such as creating, compiling, and running a project are done by using the CLI, so you can follow this tutorial with a different code editor and run commands in a terminal if you prefer.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="1b322-106">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="1b322-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="fee80-106">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="fee80-106">Prerequisites</span></span>
 
-1. <span data-ttu-id="1b322-107">[Visual Studio Code](https://code.visualstudio.com/) のインストール。</span><span class="sxs-lookup"><span data-stu-id="1b322-107">Install [Visual Studio Code](https://code.visualstudio.com/).</span></span>
-2. <span data-ttu-id="1b322-108">[.NET Core SDK](https://dotnet.microsoft.com/download) のインストール。</span><span class="sxs-lookup"><span data-stu-id="1b322-108">Install the [.NET Core SDK](https://dotnet.microsoft.com/download).</span></span>
-3. <span data-ttu-id="1b322-109">Visual Studio Code の [C# 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)のインストール。</span><span class="sxs-lookup"><span data-stu-id="1b322-109">Install the [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) for Visual Studio Code.</span></span> <span data-ttu-id="1b322-110">Visual Studio Code に拡張機能をインストールする方法については、[VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1b322-110">For more information about how to install extensions on Visual Studio Code, see [VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery).</span></span>
+1. <span data-ttu-id="fee80-107">[C# 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)がインストールされている [Visual Studio Code](https://code.visualstudio.com/)。</span><span class="sxs-lookup"><span data-stu-id="fee80-107">[Visual Studio Code](https://code.visualstudio.com/) with the [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) installed.</span></span> <span data-ttu-id="fee80-108">Visual Studio Code に拡張機能をインストールする方法については、[VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="fee80-108">For information about how to install extensions on Visual Studio Code, see [VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery).</span></span>
+2. <span data-ttu-id="fee80-109">[.Net Core 3.1 SDK 以降](https://dotnet.microsoft.com/download)</span><span class="sxs-lookup"><span data-stu-id="fee80-109">The [.NET Core 3.1 SDK or later](https://dotnet.microsoft.com/download)</span></span>
 
-## <a name="hello-world"></a><span data-ttu-id="1b322-111">Hello World</span><span class="sxs-lookup"><span data-stu-id="1b322-111">Hello World</span></span>
+## <a name="create-the-app"></a><span data-ttu-id="fee80-110">アプリを作成する</span><span class="sxs-lookup"><span data-stu-id="fee80-110">Create the app</span></span>
 
-<span data-ttu-id="1b322-112">.NET Core でシンプルな "Hello World" プログラムを作成します。</span><span class="sxs-lookup"><span data-stu-id="1b322-112">Get started with a simple "Hello World" program on .NET Core:</span></span>
+1. <span data-ttu-id="fee80-111">Visual Studio Code を開きます。</span><span class="sxs-lookup"><span data-stu-id="fee80-111">Open Visual Studio Code.</span></span>
 
-1. <span data-ttu-id="1b322-113">プロジェクトを開く</span><span class="sxs-lookup"><span data-stu-id="1b322-113">Open a project:</span></span>
+1. <span data-ttu-id="fee80-112">プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="fee80-112">Create a project.</span></span>
 
-    - <span data-ttu-id="1b322-114">Visual Studio Code を開きます。</span><span class="sxs-lookup"><span data-stu-id="1b322-114">Open Visual Studio Code.</span></span>
-    - <span data-ttu-id="1b322-115">メイン メニューから **[ファイル]** 、 **[フォルダーを開く]** の順に選択します。</span><span class="sxs-lookup"><span data-stu-id="1b322-115">Select **File** > **Open Folder** from the main menu.</span></span>
-    - <span data-ttu-id="1b322-116">*HelloWorld* という名前のフォルダーを作成し、 **[フォルダーを作成する]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="1b322-116">Create a folder named *HelloWorld*, and click **Select Folder**.</span></span> <span data-ttu-id="1b322-117">フォルダー名は既定でプロジェクト名と名前空間名になります。</span><span class="sxs-lookup"><span data-stu-id="1b322-117">The folder name becomes the project name and the namespace name by default.</span></span> <span data-ttu-id="1b322-118">このチュートリアルでは後でコードを追加しますが、プロジェクト名前空間は `HelloWorld` にします。</span><span class="sxs-lookup"><span data-stu-id="1b322-118">You'll add code later in the tutorial that assumes the project namespace is `HelloWorld`.</span></span>
+   1. <span data-ttu-id="fee80-113">メイン メニューから **[ファイル]**  >  **[フォルダーを開く]** / **[開く...]** の順に選択し、*HelloWorld* フォルダーを作成して、 **[フォルダーの選択]** / **[開く]** の順にクリックします。</span><span class="sxs-lookup"><span data-stu-id="fee80-113">Select **File** > **Open Folder**/**Open...** from the main menu, create a *HelloWorld* folder, and click **Select Folder**/**Open**.</span></span>
 
-1. <span data-ttu-id="1b322-119">C# プロジェクトを初期化する</span><span class="sxs-lookup"><span data-stu-id="1b322-119">Initialize a C# project:</span></span>
+      <span data-ttu-id="fee80-114">フォルダー名は既定でプロジェクト名と名前空間名になります。</span><span class="sxs-lookup"><span data-stu-id="fee80-114">The folder name becomes the project name and the namespace name by default.</span></span> <span data-ttu-id="fee80-115">このチュートリアルでは後でコードを追加しますが、プロジェクト名前空間は `HelloWorld` にします。</span><span class="sxs-lookup"><span data-stu-id="fee80-115">You'll add code later in the tutorial that assumes the project namespace is `HelloWorld`.</span></span>
 
-    - <span data-ttu-id="1b322-120">Visual Studio Code からターミナルを開きます。メイン メニューで **[表示]**  >  **[端末]** の順に選択してください。</span><span class="sxs-lookup"><span data-stu-id="1b322-120">Open the Terminal from Visual Studio Code by selecting **View** > **Terminal** from the main menu.</span></span>
-    - <span data-ttu-id="1b322-121">ターミナル ウィンドウで「`dotnet new console`」と入力します。</span><span class="sxs-lookup"><span data-stu-id="1b322-121">In the terminal window, enter `dotnet new console`.</span></span>
+   1. <span data-ttu-id="fee80-116">メイン メニューで **[表示]**  >  **[ターミナル]** の順に選択して、Visual Studio Code で**ターミナル**を開きます。</span><span class="sxs-lookup"><span data-stu-id="fee80-116">Open the **Terminal** in Visual Studio Code by selecting **View** > **Terminal** from the main menu.</span></span>
 
-      <span data-ttu-id="1b322-122">このコマンドは、*HelloWorld.csproj* という名前の C# プロジェクト ファイルと共に、単純な "Hello World" プログラムが既に書き込まれた *Program.cs* ファイルをフォルダーに作成します。</span><span class="sxs-lookup"><span data-stu-id="1b322-122">This command creates a *Program.cs* file in your folder with a simple "Hello World" program already written, along with a C# project file named *HelloWorld.csproj*.</span></span>
+      <span data-ttu-id="fee80-117">**ターミナル**が開き、*HelloWorld* フォルダーにコマンド プロンプトが表示されます。</span><span class="sxs-lookup"><span data-stu-id="fee80-117">The **Terminal** opens with the command prompt in the *HelloWorld* folder.</span></span>
 
-      ![dotnet new コマンド](media/with-visual-studio-code/dotnet-new-command.png)
+   1. <span data-ttu-id="fee80-118">**ターミナル**で、次のコマンドを入力します。</span><span class="sxs-lookup"><span data-stu-id="fee80-118">In the **Terminal**, enter the following command:</span></span>
 
-1. <span data-ttu-id="1b322-124">"Hello World" プログラムを実行する</span><span class="sxs-lookup"><span data-stu-id="1b322-124">Run the "Hello World" program:</span></span>
+      ```dotnetcli
+      dotnet new console
+      ```
 
-    - <span data-ttu-id="1b322-125">ターミナル ウィンドウで「`dotnet run`」と入力します。</span><span class="sxs-lookup"><span data-stu-id="1b322-125">In the terminal window, enter `dotnet run`.</span></span>
+<span data-ttu-id="fee80-119">.NET Core のコンソール アプリケーション テンプレートで、`Program` というクラスが、<xref:System.String> 配列を引数として必要とする単一のメソッド `Main` とともに定義されます。</span><span class="sxs-lookup"><span data-stu-id="fee80-119">The Console Application template for .NET Core defines a class, `Program`, with a single method, `Main`, that takes a <xref:System.String> array as an argument.</span></span> <span data-ttu-id="fee80-120">*Program.cs* ファイルには、次のコードが含まれています。</span><span class="sxs-lookup"><span data-stu-id="fee80-120">The *Program.cs* file has the following code:</span></span>
 
-      ![dotnet run コマンド](media/with-visual-studio-code/dotnet-run-command.png)
+```csharp
+using System;
 
-## <a name="debug"></a><span data-ttu-id="1b322-127">デバッグ</span><span class="sxs-lookup"><span data-stu-id="1b322-127">Debug</span></span>
-
-1. <span data-ttu-id="1b322-128">*Program.cs* をクリックして開きます。</span><span class="sxs-lookup"><span data-stu-id="1b322-128">Open *Program.cs* by clicking on it.</span></span> <span data-ttu-id="1b322-129">Visual Studio Code で初めて C# ファイルを開くと、[OmniSharp](https://www.omnisharp.net/) がエディターに読み込まれます。</span><span class="sxs-lookup"><span data-stu-id="1b322-129">The first time you open a C# file in Visual Studio Code, [OmniSharp](https://www.omnisharp.net/) loads in the editor.</span></span>
-
-    ![Program.cs ファイルを開く](media/with-visual-studio-code/open-program-cs.png)
-
-1. <span data-ttu-id="1b322-131">Visual Studio Code で、アプリのビルドとデバッグに必要なアセットの追加を求められます。</span><span class="sxs-lookup"><span data-stu-id="1b322-131">Visual Studio Code prompts you to add the missing assets to build and debug your app.</span></span> <span data-ttu-id="1b322-132">**[はい]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="1b322-132">Select **Yes**.</span></span>
-
-    ![足りない資産の入力を求める](media/with-visual-studio-code/missing-assets.png)
-
-1. <span data-ttu-id="1b322-134">デバッグ ビューを開くには、左側のメニューにある [デバッグ] アイコンをクリックします。</span><span class="sxs-lookup"><span data-stu-id="1b322-134">To open the Debug view, click on the Debugging icon on the left side menu.</span></span>
-
-    ![Visual Studio Code で [デバッグ] タブを開く](media/with-visual-studio-code/open-debug-tab.png)
-
-1. <span data-ttu-id="1b322-136">ウィンドウの上部で緑色の矢印を探します。</span><span class="sxs-lookup"><span data-stu-id="1b322-136">Locate the green arrow at the top of the pane.</span></span> <span data-ttu-id="1b322-137">その横にあるドロップダウン リストで **[.NET Core Launch (console)]** \(.NET Core の起動 (コンソール)\) が選択されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="1b322-137">Make sure the drop-down next to it has **.NET Core Launch (console)** selected.</span></span>
-
-    ![Visual Studio Code で .NET Core を選択する](media/with-visual-studio-code/select-net-core.png)
-
-1. <span data-ttu-id="1b322-139">9 行目の横にある**エディター余白** (エディター内の行番号の左側の領域) をクリックして、プロジェクトにブレークポイントを追加するか、またはエディター内でテキスト カーソルを 9 行目に移動して <kbd>F9</kbd> キーを押します。</span><span class="sxs-lookup"><span data-stu-id="1b322-139">Add a breakpoint to your project by clicking on the **editor margin**, which is the space on the left of the line numbers in the editor, next to line 9, or move the text cursor onto line 9 in the editor and  press <kbd>F9</kbd>.</span></span>
-
-    ![ブレークポイントの設定](media/with-visual-studio-code/set-breakpoint-vs-code.png)
-
-1. <span data-ttu-id="1b322-141">デバッグを開始するには、<kbd>F5</kbd> キーを押すか、緑色の矢印を選択します。</span><span class="sxs-lookup"><span data-stu-id="1b322-141">To start debugging, press <kbd>F5</kbd> or select the green arrow.</span></span> <span data-ttu-id="1b322-142">デバッガーは、前述の手順で設定したブレークポイントに達すると、プログラムの実行を停止します。</span><span class="sxs-lookup"><span data-stu-id="1b322-142">The debugger stops execution of your program when it reaches the breakpoint you set in the previous step.</span></span>
-    - <span data-ttu-id="1b322-143">デバッグ中は、左上のペインでローカル変数を確認するか、デバッグ コンソールを使用できます。</span><span class="sxs-lookup"><span data-stu-id="1b322-143">While debugging, you can view your local variables in the top-left pane or use the debug console.</span></span>
-
-1. <span data-ttu-id="1b322-144">上部にある青色の矢印を選択してデバッグを継続するか、上部にある赤色の四角形を選択して停止します。</span><span class="sxs-lookup"><span data-stu-id="1b322-144">Select the blue arrow at the top to continue debugging, or select the red square at the top to stop.</span></span>
-
-    ![Visual Studio Code の実行とデバッグ](media/with-visual-studio-code/run-debug-vs-code.png)
-
-> [!TIP]
-> <span data-ttu-id="1b322-146">Visual Studio Code で OmniSharp を使用した .NET Core のデバッグの詳細とトラブルシューティングのヒントについては、「[Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)」 (.NET Core デバッガーの設定に関する指示) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1b322-146">For more information and troubleshooting tips on .NET Core debugging with OmniSharp in Visual Studio Code, see [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).</span></span>
-
-## <a name="add-a-class"></a><span data-ttu-id="1b322-147">クラスを追加する</span><span class="sxs-lookup"><span data-stu-id="1b322-147">Add a class</span></span>
-
-1. <span data-ttu-id="1b322-148">新しいクラスを追加するには、*Program.cs* の下で VSCode エクスプローラーを右クリックし、 **[新しいファイル]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="1b322-148">To add a new class, right-click in the VSCode Explorer below *Program.cs* and select **New File**.</span></span> <span data-ttu-id="1b322-149">これで、新しいファイルが VSCode で開いたフォルダーに追加されます。</span><span class="sxs-lookup"><span data-stu-id="1b322-149">This adds a new file to the folder you have open in VSCode.</span></span>
-1. <span data-ttu-id="1b322-150">ファイルに *MyClass.cs* という名前を指定します。</span><span class="sxs-lookup"><span data-stu-id="1b322-150">Name your file *MyClass.cs*.</span></span> <span data-ttu-id="1b322-151">csharp ファイルとして認識されるには、最後に `.cs` 拡張子を付けて保存する必要があります。</span><span class="sxs-lookup"><span data-stu-id="1b322-151">You must save it with a `.cs` extension at the end for it to be recognized as a csharp file.</span></span>
-1. <span data-ttu-id="1b322-152">次のコードを追加し、最初のクラスを作成します。</span><span class="sxs-lookup"><span data-stu-id="1b322-152">Add the following code to create your first class.</span></span>
-
-    ``` csharp
-    using System;
-
-    namespace HelloWorld
+namespace HelloWorld
+{
+    class Program
     {
-        public class MyClass
+        static void Main(string[] args)
         {
-            public string ReturnMessage()
-            {
-                return "Happy coding!";
-            }
+            Console.WriteLine("Hello World!");
         }
     }
-    ```
+}
+```
 
-1. <span data-ttu-id="1b322-153">*Program.cs* のコードを次のコードに置換し、`Main` メソッドから新しいクラスを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="1b322-153">Call your new class from your `Main` method by replacing the code in *Program.cs* with the following code:</span></span>
+<span data-ttu-id="fee80-121">`Main` はアプリケーションのエントリ ポイントで、アプリケーションを起動するときに、ランタイムによって自動的に呼び出されるメソッドです。</span><span class="sxs-lookup"><span data-stu-id="fee80-121">`Main` is the application entry point, the method that's called automatically by the runtime when it launches the application.</span></span> <span data-ttu-id="fee80-122">アプリケーションが起動されるときに提供されるコマンドライン引数はすべて *args* 配列にあります。</span><span class="sxs-lookup"><span data-stu-id="fee80-122">Any command-line arguments supplied when the application is launched are available in the *args* array.</span></span>
 
-    ```csharp
-    using System;
+<span data-ttu-id="fee80-123">このテンプレートは、<xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> メソッドを呼び出して "Hello World!" を表示する単純なアプリケーションを作成し、</span><span class="sxs-lookup"><span data-stu-id="fee80-123">The template creates a simple application that calls the <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> method to display "Hello World!"</span></span> <span data-ttu-id="fee80-124">コンソール ウィンドウに表示します。</span><span class="sxs-lookup"><span data-stu-id="fee80-124">in the console window.</span></span>
 
-    namespace HelloWorld
-    {
-        class Program
-        {
-            static void Main(string[] args)
-            {
-                var c1 = new MyClass();
-                Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
-            }
-        }
-    }
-    ```
+## <a name="run-the-app"></a><span data-ttu-id="fee80-125">アプリを実行する</span><span class="sxs-lookup"><span data-stu-id="fee80-125">Run the app</span></span>
 
-1. <span data-ttu-id="1b322-154">変更内容を保存します。</span><span class="sxs-lookup"><span data-stu-id="1b322-154">Save your changes.</span></span>
+<span data-ttu-id="fee80-126">**ターミナル**で次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="fee80-126">Run the following command in the **Terminal**:</span></span>
 
-1. <span data-ttu-id="1b322-155">再びプログラムを実行します。</span><span class="sxs-lookup"><span data-stu-id="1b322-155">Run the program again.</span></span>
+```dotnetcli
+dotnet run
+```
 
-    ```dotnetcli
-    dotnet run
-    ```
+<span data-ttu-id="fee80-127">プログラムによって "Hello World!" が表示されて</span><span class="sxs-lookup"><span data-stu-id="fee80-127">The program displays "Hello World!"</span></span> <span data-ttu-id="fee80-128">終了します。</span><span class="sxs-lookup"><span data-stu-id="fee80-128">and ends.</span></span>
 
-    <span data-ttu-id="1b322-156">新しいメッセージと共に追加した文字列が表示されます。</span><span class="sxs-lookup"><span data-stu-id="1b322-156">The new message appears with the appended string.</span></span>
+![dotnet run コマンド](media/with-visual-studio-code/dotnet-run-command.png)
 
-    ```console
-    Hello World! Happy coding!
-    ```
+## <a name="enhance-the-app"></a><span data-ttu-id="fee80-130">アプリを拡張する</span><span class="sxs-lookup"><span data-stu-id="fee80-130">Enhance the app</span></span>
 
-## <a name="faq"></a><span data-ttu-id="1b322-157">よくあるご質問</span><span class="sxs-lookup"><span data-stu-id="1b322-157">FAQ</span></span>
+<span data-ttu-id="fee80-131">アプリケーションを拡張し、ユーザーに名前の入力を求め、日付と時刻と共にそれを表示するようにします。</span><span class="sxs-lookup"><span data-stu-id="fee80-131">Enhance the application to prompt the user for their name and display it along with the date and time.</span></span>
 
-### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a><span data-ttu-id="1b322-158">Visual Studio Code 内で C# をビルドおよびデバッグするのに必要な資産が欠落しています。</span><span class="sxs-lookup"><span data-stu-id="1b322-158">I'm missing required assets to build and debug C# in Visual Studio Code.</span></span> <span data-ttu-id="1b322-159">デバッガーには、"構成がありません" と表示されます。</span><span class="sxs-lookup"><span data-stu-id="1b322-159">My debugger says "No Configuration."</span></span>
+1. <span data-ttu-id="fee80-132">*Program.cs* をクリックして開きます。</span><span class="sxs-lookup"><span data-stu-id="fee80-132">Open *Program.cs* by clicking on it.</span></span>
 
-<span data-ttu-id="1b322-160">Visual Studio Code C# の拡張機能では、ビルドおよびデバッグする資産を自動的に作成することができます。</span><span class="sxs-lookup"><span data-stu-id="1b322-160">The Visual Studio Code C# extension can generate assets to build and debug for you.</span></span> <span data-ttu-id="1b322-161">C# プロジェクトを初めて開くと、これらの資産を作成するように Visual Studio Code から求められます。</span><span class="sxs-lookup"><span data-stu-id="1b322-161">Visual Studio Code prompts you to generate these assets when you first open a C# project.</span></span> <span data-ttu-id="1b322-162">資産を作成しなかった場合でも、このコマンドを実行する方法はあります。コマンド パレットを開き ( **[表示] > [コマンド パレット]** )、「>.NET:Generate Assets for Build and Debug」 と入力します。</span><span class="sxs-lookup"><span data-stu-id="1b322-162">If you didn't generate assets then, you can still run this command by opening the Command Palette (**View > Command Palette**) and typing ">.NET: Generate Assets for Build and Debug".</span></span> <span data-ttu-id="1b322-163">これを選択すると、必要としている *.vscode*、*launch.json* および *tasks.json* の各構成ファイルが作成されます。</span><span class="sxs-lookup"><span data-stu-id="1b322-163">Selecting this generates the *.vscode*, *launch.json*, and *tasks.json* configuration files that you need.</span></span>
+   <span data-ttu-id="fee80-133">Visual Studio Code で初めて C# ファイルを開くと、[OmniSharp](https://www.omnisharp.net/) がエディターに読み込まれます。</span><span class="sxs-lookup"><span data-stu-id="fee80-133">The first time you open a C# file in Visual Studio Code, [OmniSharp](https://www.omnisharp.net/) loads in the editor.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="1b322-164">関連項目</span><span class="sxs-lookup"><span data-stu-id="1b322-164">See also</span></span>
+   ![Program.cs ファイルを開く](media/with-visual-studio-code/open-program-cs.png)
 
-- [<span data-ttu-id="1b322-165">Visual Studio Code の設定</span><span class="sxs-lookup"><span data-stu-id="1b322-165">Setting up Visual Studio Code</span></span>](https://code.visualstudio.com/docs/setup/setup-overview)
-- [<span data-ttu-id="1b322-166">Visual Studio Code でのデバッグ</span><span class="sxs-lookup"><span data-stu-id="1b322-166">Debugging in Visual Studio Code</span></span>](https://code.visualstudio.com/Docs/editor/debugging)
+1. <span data-ttu-id="fee80-135">Visual Studio Code で、アプリのビルドとデバッグに必要なアセットの追加を求められたら、 **[はい]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="fee80-135">Select **Yes** when Visual Studio Code prompts you to add the missing assets to build and debug your app.</span></span>
+
+   ![足りない資産の入力を求める](media/with-visual-studio-code/missing-assets.png)
+
+1. <span data-ttu-id="fee80-137">*Program.cs* の `Main` メソッドの内容 (現在は `Console.WriteLine` を呼び出す行のみ) を以下のコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="fee80-137">Replace the contents of the `Main` method in *Program.cs*, which is currently just the line that calls `Console.WriteLine`, with the following code:</span></span>
+
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="Snippet1":::
+
+   <span data-ttu-id="fee80-138">このコードは、"What is your name?" と</span><span class="sxs-lookup"><span data-stu-id="fee80-138">This code displays "What is your name?"</span></span> <span data-ttu-id="fee80-139">コンソール ウィンドウに表示して、ユーザーが文字列を入力して **Enter** キーを押すまで待機します。</span><span class="sxs-lookup"><span data-stu-id="fee80-139">in the console window and waits until the user enters a string followed by the **Enter** key.</span></span> <span data-ttu-id="fee80-140">これはこの文字列を `name` という変数に格納します。</span><span class="sxs-lookup"><span data-stu-id="fee80-140">It stores this string in a variable named `name`.</span></span> <span data-ttu-id="fee80-141">さらに現在の現地時刻を含む <xref:System.DateTime.Now?displayProperty=nameWithType> プロパティの値を取得して、それを `date` という変数に代入します。</span><span class="sxs-lookup"><span data-stu-id="fee80-141">It also retrieves the value of the <xref:System.DateTime.Now?displayProperty=nameWithType> property, which contains the current local time, and assigns it to a variable named `date`.</span></span> <span data-ttu-id="fee80-142">最後に、これらの値がコンソール ウィンドウに表示されます。</span><span class="sxs-lookup"><span data-stu-id="fee80-142">Finally, it displays these values in the console window.</span></span>
+
+   <span data-ttu-id="fee80-143">`\n` は、改行文字を表します。</span><span class="sxs-lookup"><span data-stu-id="fee80-143">The `\n` represents a newline character.</span></span>
+
+   <span data-ttu-id="fee80-144">文字列の前にドル記号 (`$`) を付けると、変数名などの式を文字列で中かっこで囲むことができます。</span><span class="sxs-lookup"><span data-stu-id="fee80-144">The dollar sign (`$`) in front of a string lets you put expressions such as variable names in curly braces in the string.</span></span> <span data-ttu-id="fee80-145">式の値が、式の代わりに文字列に挿入されます。</span><span class="sxs-lookup"><span data-stu-id="fee80-145">The expression value is inserted into the string in place of the expression.</span></span> <span data-ttu-id="fee80-146">この構文は、[補間された文字列](../../csharp/language-reference/tokens/interpolated.md)と呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="fee80-146">This syntax is referred to as [interpolated strings](../../csharp/language-reference/tokens/interpolated.md).</span></span>
+
+1. <span data-ttu-id="fee80-147">変更内容を保存します。</span><span class="sxs-lookup"><span data-stu-id="fee80-147">Save your changes.</span></span>
+
+   > [!IMPORTANT]
+   > <span data-ttu-id="fee80-148">Visual Studio Code では、変更を明示的に保存する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fee80-148">In Visual Studio Code, you have to explicitly save changes.</span></span> <span data-ttu-id="fee80-149">Visual Studio とは異なり、アプリをビルドして実行してもファイルの変更は自動的には保存されません。</span><span class="sxs-lookup"><span data-stu-id="fee80-149">Unlike Visual Studio, file changes are not automatically saved when you build and run an app.</span></span>
+
+1. <span data-ttu-id="fee80-150">もう一度プログラムを実行します。</span><span class="sxs-lookup"><span data-stu-id="fee80-150">Run the program again:</span></span>
+
+   ```dotnetcli
+   dotnet run
+   ```
+
+1. <span data-ttu-id="fee80-151">プロンプトに対し、名前を入力し、**Enter** キーを押します。</span><span class="sxs-lookup"><span data-stu-id="fee80-151">Respond to the prompt by entering a name and pressing the **Enter** key.</span></span>
+
+   :::image type="content" source="media/debugging-with-visual-studio-code/run-modified-program.png" alt-text="プログラムの出力が変更されたターミナル ウィンドウ":::
+
+1. <span data-ttu-id="fee80-153">任意のキーを押してプログラムを終了します。</span><span class="sxs-lookup"><span data-stu-id="fee80-153">Press any key to exit the program.</span></span>
+
+## <a name="additional-resources"></a><span data-ttu-id="fee80-154">その他の技術情報</span><span class="sxs-lookup"><span data-stu-id="fee80-154">Additional resources</span></span>
+
+- [<span data-ttu-id="fee80-155">Visual Studio Code の設定</span><span class="sxs-lookup"><span data-stu-id="fee80-155">Setting up Visual Studio Code</span></span>](https://code.visualstudio.com/docs/setup/setup-overview)
+
+## <a name="next-steps"></a><span data-ttu-id="fee80-156">次の手順</span><span class="sxs-lookup"><span data-stu-id="fee80-156">Next steps</span></span>
+
+<span data-ttu-id="fee80-157">このチュートリアルでは、.NET Core アプリケーションを作成しました。</span><span class="sxs-lookup"><span data-stu-id="fee80-157">In this tutorial, you created a .NET Core application.</span></span> <span data-ttu-id="fee80-158">次のチュートリアルでは、アプリをデバッグします。</span><span class="sxs-lookup"><span data-stu-id="fee80-158">In the next tutorial, you debug the app.</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="fee80-159">Visual Studio Code を使用して .NET Core コンソール アプリケーションをデバッグする</span><span class="sxs-lookup"><span data-stu-id="fee80-159">Debug a .NET Core console application using Visual Studio Code</span></span>](debugging-with-visual-studio-code.md)
