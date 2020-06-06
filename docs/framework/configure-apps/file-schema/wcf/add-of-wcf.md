@@ -3,24 +3,24 @@ title: <add>WCF の
 ms.date: 03/30/2017
 ms.assetid: c196f6d7-77f6-4266-973c-305b2b4dd8a2
 ms.openlocfilehash: 0b21bdabc76ec4853a0f2664cdd3cead149417a1
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70850303"
 ---
-# <a name="add-of-wcf"></a><span data-ttu-id="d555d-102">\<WCF の > を追加する</span><span class="sxs-lookup"><span data-stu-id="d555d-102">\<add> of WCF</span></span>
-<span data-ttu-id="d555d-103">ランタイムから直接出力される追跡レコードをリッスンし、追跡レコードの構成方法に従って処理を行う追跡参加要素を構成します。</span><span class="sxs-lookup"><span data-stu-id="d555d-103">Configure a tracking participant that listens to the tracking records being emitted from the runtime directly and process them in whatever way it was configured.</span></span> <span data-ttu-id="d555d-104">これには、特定の出力 (ファイル、コンソール、ETW など) への書き込み、レコードの処理や集計、またはその他の必要な組み合わせが含まれます。</span><span class="sxs-lookup"><span data-stu-id="d555d-104">This includes writing to a specific output (e.g., file, Console, ETW), processing/aggregating the records, or any other combination that might be required.</span></span>  
+# <a name="add-of-wcf"></a><span data-ttu-id="c33a4-102">\<add>WCF の</span><span class="sxs-lookup"><span data-stu-id="c33a4-102">\<add> of WCF</span></span>
+<span data-ttu-id="c33a4-103">ランタイムから直接出力される追跡レコードをリッスンし、追跡レコードの構成方法に従って処理を行う追跡参加要素を構成します。</span><span class="sxs-lookup"><span data-stu-id="c33a4-103">Configure a tracking participant that listens to the tracking records being emitted from the runtime directly and process them in whatever way it was configured.</span></span> <span data-ttu-id="c33a4-104">これには、特定の出力 (ファイル、コンソール、ETW など) への書き込み、レコードの処理や集計、またはその他の必要な組み合わせが含まれます。</span><span class="sxs-lookup"><span data-stu-id="c33a4-104">This includes writing to a specific output (e.g., file, Console, ETW), processing/aggregating the records, or any other combination that might be required.</span></span>  
   
- <span data-ttu-id="d555d-105">ワークフロー追跡と追跡参加要素の詳細については、「[ワークフローの追跡とトレース](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)」と「[追跡参加要素](../../../windows-workflow-foundation/tracking-participants.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="d555d-105">For more information in workflow tracking and tracking participants, see [Workflow Tracking and Tracing](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Tracking Participants](../../../windows-workflow-foundation/tracking-participants.md).</span></span>  
+ <span data-ttu-id="c33a4-105">ワークフロー追跡と追跡参加要素の詳細については、「[ワークフローの追跡とトレース](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)」と「[追跡参加要素](../../../windows-workflow-foundation/tracking-participants.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c33a4-105">For more information in workflow tracking and tracking participants, see [Workflow Tracking and Tracing](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Tracking Participants](../../../windows-workflow-foundation/tracking-participants.md).</span></span>  
   
-<span data-ttu-id="d555d-106">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="d555d-106">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="d555d-107">&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)</span><span class="sxs-lookup"><span data-stu-id="d555d-107">&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)</span></span>\
-<span data-ttu-id="d555d-108">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<追跡 >** ](tracking-of-wcf.md)</span><span class="sxs-lookup"><span data-stu-id="d555d-108">&nbsp;&nbsp;&nbsp;&nbsp;[**\<tracking>**](tracking-of-wcf.md)</span></span>\
-<span data-ttu-id="d555d-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<参加者 >** ](participants-of-wcf.md)</span><span class="sxs-lookup"><span data-stu-id="d555d-109">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<participants>**](participants-of-wcf.md)</span></span>\
-<span data-ttu-id="d555d-110">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**</span><span class="sxs-lookup"><span data-stu-id="d555d-110">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span></span>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<tracking>**](tracking-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<participants>**](participants-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
-## <a name="syntax"></a><span data-ttu-id="d555d-111">構文</span><span class="sxs-lookup"><span data-stu-id="d555d-111">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c33a4-106">構文</span><span class="sxs-lookup"><span data-stu-id="c33a4-106">Syntax</span></span>  
   
 ```xml  
 <tracking>
@@ -32,37 +32,37 @@ ms.locfileid: "70850303"
 </tracking>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="d555d-112">属性および要素</span><span class="sxs-lookup"><span data-stu-id="d555d-112">Attributes and Elements</span></span>  
- <span data-ttu-id="d555d-113">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="d555d-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c33a4-107">属性および要素</span><span class="sxs-lookup"><span data-stu-id="c33a4-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="c33a4-108">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="c33a4-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="d555d-114">属性</span><span class="sxs-lookup"><span data-stu-id="d555d-114">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c33a4-109">属性</span><span class="sxs-lookup"><span data-stu-id="c33a4-109">Attributes</span></span>  
   
-|<span data-ttu-id="d555d-115">要素</span><span class="sxs-lookup"><span data-stu-id="d555d-115">Element</span></span>|<span data-ttu-id="d555d-116">説明</span><span class="sxs-lookup"><span data-stu-id="d555d-116">Description</span></span>|  
+|<span data-ttu-id="c33a4-110">要素</span><span class="sxs-lookup"><span data-stu-id="c33a4-110">Element</span></span>|<span data-ttu-id="c33a4-111">説明</span><span class="sxs-lookup"><span data-stu-id="c33a4-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="d555d-117">name</span><span class="sxs-lookup"><span data-stu-id="d555d-117">name</span></span>|<span data-ttu-id="d555d-118">追跡参加要素の名前を指定する文字列。</span><span class="sxs-lookup"><span data-stu-id="d555d-118">A string that specifies the name of a tracking participant.</span></span>|  
-|<span data-ttu-id="d555d-119">profileName</span><span class="sxs-lookup"><span data-stu-id="d555d-119">profileName</span></span>|<span data-ttu-id="d555d-120">追跡参加要素が定期受信した追跡レコードを定義する、追跡プロファイルの名前を指定する文字列。</span><span class="sxs-lookup"><span data-stu-id="d555d-120">A string that specifies the name of the tracking profile which defines the tracking records the tracking participant has subscribed to.</span></span>|  
-|<span data-ttu-id="d555d-121">型</span><span class="sxs-lookup"><span data-stu-id="d555d-121">type</span></span>|<span data-ttu-id="d555d-122">追跡参加要素の型を指定する文字列。</span><span class="sxs-lookup"><span data-stu-id="d555d-122">A string that specifies the type of a tracking participant.</span></span>|  
+|<span data-ttu-id="c33a4-112">name</span><span class="sxs-lookup"><span data-stu-id="c33a4-112">name</span></span>|<span data-ttu-id="c33a4-113">追跡参加要素の名前を指定する文字列。</span><span class="sxs-lookup"><span data-stu-id="c33a4-113">A string that specifies the name of a tracking participant.</span></span>|  
+|<span data-ttu-id="c33a4-114">profileName</span><span class="sxs-lookup"><span data-stu-id="c33a4-114">profileName</span></span>|<span data-ttu-id="c33a4-115">追跡参加要素が定期受信した追跡レコードを定義する、追跡プロファイルの名前を指定する文字列。</span><span class="sxs-lookup"><span data-stu-id="c33a4-115">A string that specifies the name of the tracking profile which defines the tracking records the tracking participant has subscribed to.</span></span>|  
+|<span data-ttu-id="c33a4-116">type</span><span class="sxs-lookup"><span data-stu-id="c33a4-116">type</span></span>|<span data-ttu-id="c33a4-117">追跡参加要素の型を指定する文字列。</span><span class="sxs-lookup"><span data-stu-id="c33a4-117">A string that specifies the type of a tracking participant.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="d555d-123">子要素</span><span class="sxs-lookup"><span data-stu-id="d555d-123">Child Elements</span></span>  
- <span data-ttu-id="d555d-124">なし。</span><span class="sxs-lookup"><span data-stu-id="d555d-124">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c33a4-118">子要素</span><span class="sxs-lookup"><span data-stu-id="c33a4-118">Child Elements</span></span>  
+ <span data-ttu-id="c33a4-119">なし。</span><span class="sxs-lookup"><span data-stu-id="c33a4-119">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="d555d-125">親要素</span><span class="sxs-lookup"><span data-stu-id="d555d-125">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c33a4-120">親要素</span><span class="sxs-lookup"><span data-stu-id="c33a4-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="d555d-126">要素</span><span class="sxs-lookup"><span data-stu-id="d555d-126">Element</span></span>|<span data-ttu-id="d555d-127">説明</span><span class="sxs-lookup"><span data-stu-id="d555d-127">Description</span></span>|  
+|<span data-ttu-id="c33a4-121">要素</span><span class="sxs-lookup"><span data-stu-id="c33a4-121">Element</span></span>|<span data-ttu-id="c33a4-122">説明</span><span class="sxs-lookup"><span data-stu-id="c33a4-122">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="d555d-128">\<participants></span><span class="sxs-lookup"><span data-stu-id="d555d-128">\<participants></span></span>](../windows-workflow-foundation/participants.md)|<span data-ttu-id="d555d-129">追跡参加要素の一覧</span><span class="sxs-lookup"><span data-stu-id="d555d-129">A list of tracking participants</span></span>|  
+|[\<participants>](../windows-workflow-foundation/participants.md)|<span data-ttu-id="c33a4-123">追跡参加要素の一覧</span><span class="sxs-lookup"><span data-stu-id="c33a4-123">A list of tracking participants</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d555d-130">Remarks</span><span class="sxs-lookup"><span data-stu-id="d555d-130">Remarks</span></span>  
- <span data-ttu-id="d555d-131">追跡参加要素は、ワークフローから生成される追跡データを取得し、それを別のメディアに保存するために使用します。</span><span class="sxs-lookup"><span data-stu-id="d555d-131">Tracking participants are used to get the tracking data emitted from the workflow and store it into different mediums.</span></span> <span data-ttu-id="d555d-132">同様に、追跡レコードの後処理はすべて、追跡参加要素内でも実行できます。</span><span class="sxs-lookup"><span data-stu-id="d555d-132">Likewise, any post processing on the tracking Records can also be done within the tracking participant.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c33a4-124">解説</span><span class="sxs-lookup"><span data-stu-id="c33a4-124">Remarks</span></span>  
+ <span data-ttu-id="c33a4-125">追跡参加要素は、ワークフローから生成される追跡データを取得し、それを別のメディアに保存するために使用します。</span><span class="sxs-lookup"><span data-stu-id="c33a4-125">Tracking participants are used to get the tracking data emitted from the workflow and store it into different mediums.</span></span> <span data-ttu-id="c33a4-126">同様に、追跡レコードの後処理はすべて、追跡参加要素内でも実行できます。</span><span class="sxs-lookup"><span data-stu-id="c33a4-126">Likewise, any post processing on the tracking Records can also be done within the tracking participant.</span></span>  
   
- <span data-ttu-id="d555d-133">複数の追跡参加要素が追跡イベントを同時に使用することができます。</span><span class="sxs-lookup"><span data-stu-id="d555d-133">Multiple tracking participants can consume the tracking events simultaneously.</span></span> <span data-ttu-id="d555d-134">各追跡参加要素は、それぞれ別の追跡プロファイルと関連付けることができます。</span><span class="sxs-lookup"><span data-stu-id="d555d-134">Each tracking participant can be associated with a different tracking profile.</span></span>  
+ <span data-ttu-id="c33a4-127">複数の追跡参加要素が追跡イベントを同時に使用することができます。</span><span class="sxs-lookup"><span data-stu-id="c33a4-127">Multiple tracking participants can consume the tracking events simultaneously.</span></span> <span data-ttu-id="c33a4-128">各追跡参加要素は、それぞれ別の追跡プロファイルと関連付けることができます。</span><span class="sxs-lookup"><span data-stu-id="c33a4-128">Each tracking participant can be associated with a different tracking profile.</span></span>  
   
- <span data-ttu-id="d555d-135">追跡レコードを ETW セッションに書き込む、標準の追跡参加要素が用意されています。</span><span class="sxs-lookup"><span data-stu-id="d555d-135">A standard tracking participant is provided which writes the tracking records to an ETW session.</span></span> <span data-ttu-id="d555d-136">参加要素は、追跡固有の動作を構成ファイルに追加することによって、ワークフロー サービスで構成されます。</span><span class="sxs-lookup"><span data-stu-id="d555d-136">The participant is configured on a workflow service by adding a tracking-specific behavior in a configuration file.</span></span> <span data-ttu-id="d555d-137">ETW 追跡参加要素を有効にすると、追跡レコードをイベント ビューアーで表示できます。</span><span class="sxs-lookup"><span data-stu-id="d555d-137">Enabling an ETW tracking participant allows tracking records to be viewed in the event viewer.</span></span> <span data-ttu-id="d555d-138">これで要件が満たされない場合は、カスタムの追跡参加要素を作成することもできます。</span><span class="sxs-lookup"><span data-stu-id="d555d-138">If that does not meet your requirements, you can also write a custom tracking participant.</span></span>  
+ <span data-ttu-id="c33a4-129">追跡レコードを ETW セッションに書き込む、標準の追跡参加要素が用意されています。</span><span class="sxs-lookup"><span data-stu-id="c33a4-129">A standard tracking participant is provided which writes the tracking records to an ETW session.</span></span> <span data-ttu-id="c33a4-130">参加要素は、追跡固有の動作を構成ファイルに追加することによって、ワークフロー サービスで構成されます。</span><span class="sxs-lookup"><span data-stu-id="c33a4-130">The participant is configured on a workflow service by adding a tracking-specific behavior in a configuration file.</span></span> <span data-ttu-id="c33a4-131">ETW 追跡参加要素を有効にすると、追跡レコードをイベント ビューアーで表示できます。</span><span class="sxs-lookup"><span data-stu-id="c33a4-131">Enabling an ETW tracking participant allows tracking records to be viewed in the event viewer.</span></span> <span data-ttu-id="c33a4-132">これで要件が満たされない場合は、カスタムの追跡参加要素を作成することもできます。</span><span class="sxs-lookup"><span data-stu-id="c33a4-132">If that does not meet your requirements, you can also write a custom tracking participant.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d555d-139">例</span><span class="sxs-lookup"><span data-stu-id="d555d-139">Example</span></span>  
- <span data-ttu-id="d555d-140">次の構成例は、Web.config ファイルで構成されている標準の ETW 追跡参加要素を示します。</span><span class="sxs-lookup"><span data-stu-id="d555d-140">The following configuration example shows the standard ETW tracking participant being configured in the Web.config file.</span></span>  
+## <a name="example"></a><span data-ttu-id="c33a4-133">例</span><span class="sxs-lookup"><span data-stu-id="c33a4-133">Example</span></span>  
+ <span data-ttu-id="c33a4-134">次の構成例は、Web.config ファイルで構成されている標準の ETW 追跡参加要素を示します。</span><span class="sxs-lookup"><span data-stu-id="c33a4-134">The following configuration example shows the standard ETW tracking participant being configured in the Web.config file.</span></span>  
   
- <span data-ttu-id="d555d-141">ETW 追跡参加要素が追跡レコードを ETW に書き込むために使用するプロバイダー ID は、`<diagnostics>` セクションで定義されます。</span><span class="sxs-lookup"><span data-stu-id="d555d-141">The Provider Id that the ETW Tracking Participant uses for writing the Tracking Records to ETW is defined in the `<diagnostics>` section.</span></span> <span data-ttu-id="d555d-142">追跡参加要素には、その要素が定期受信した追跡レコードを指定するためのプロファイルが関連付けられています。</span><span class="sxs-lookup"><span data-stu-id="d555d-142">The tracking participant has a profile associated with it to specify the tracking records it has subscribed to.</span></span> <span data-ttu-id="d555d-143">これは、`profileName` 要素の `<add>` 属性で定義されます。</span><span class="sxs-lookup"><span data-stu-id="d555d-143">This is defined by the `profileName` attribute of the `<add>` element.</span></span> <span data-ttu-id="d555d-144">これらが定義されると、追跡参加要素は `<etwTracking>` サービス動作に追加されます。</span><span class="sxs-lookup"><span data-stu-id="d555d-144">Once these are defined, the Tracking Participant is added to the `<etwTracking>` service behavior.</span></span> <span data-ttu-id="d555d-145">これにより、選択した追跡参加要素がワークフロー インスタンスの拡張機能に追加され、追跡レコードの受信が開始されます。</span><span class="sxs-lookup"><span data-stu-id="d555d-145">This will add the selected Tracking Participants to the Workflow instance’s extensions, so that they begin to receive the Tracking Records.</span></span>  
+ <span data-ttu-id="c33a4-135">ETW 追跡参加要素が追跡レコードを ETW に書き込むために使用するプロバイダー ID は、`<diagnostics>` セクションで定義されます。</span><span class="sxs-lookup"><span data-stu-id="c33a4-135">The Provider Id that the ETW Tracking Participant uses for writing the Tracking Records to ETW is defined in the `<diagnostics>` section.</span></span> <span data-ttu-id="c33a4-136">追跡参加要素には、その要素が定期受信した追跡レコードを指定するためのプロファイルが関連付けられています。</span><span class="sxs-lookup"><span data-stu-id="c33a4-136">The tracking participant has a profile associated with it to specify the tracking records it has subscribed to.</span></span> <span data-ttu-id="c33a4-137">これは、`profileName` 要素の `<add>` 属性で定義されます。</span><span class="sxs-lookup"><span data-stu-id="c33a4-137">This is defined by the `profileName` attribute of the `<add>` element.</span></span> <span data-ttu-id="c33a4-138">これらが定義されると、追跡参加要素は `<etwTracking>` サービス動作に追加されます。</span><span class="sxs-lookup"><span data-stu-id="c33a4-138">Once these are defined, the Tracking Participant is added to the `<etwTracking>` service behavior.</span></span> <span data-ttu-id="c33a4-139">これにより、選択した追跡参加要素がワークフロー インスタンスの拡張機能に追加され、追跡レコードの受信が開始されます。</span><span class="sxs-lookup"><span data-stu-id="c33a4-139">This will add the selected Tracking Participants to the Workflow instance’s extensions, so that they begin to receive the Tracking Records.</span></span>  
   
 ```xml  
 <configuration>
@@ -89,10 +89,10 @@ ms.locfileid: "70850303"
 </configuration>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d555d-146">関連項目</span><span class="sxs-lookup"><span data-stu-id="d555d-146">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c33a4-140">関連項目</span><span class="sxs-lookup"><span data-stu-id="c33a4-140">See also</span></span>
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
-- [<span data-ttu-id="d555d-147">ワークフローの追跡とトレース</span><span class="sxs-lookup"><span data-stu-id="d555d-147">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [<span data-ttu-id="d555d-148">追跡参加要素</span><span class="sxs-lookup"><span data-stu-id="d555d-148">Tracking Participants</span></span>](../../../windows-workflow-foundation/tracking-participants.md)
+- [<span data-ttu-id="c33a4-141">ワークフロー追跡とトレース</span><span class="sxs-lookup"><span data-stu-id="c33a4-141">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="c33a4-142">追跡参加要素</span><span class="sxs-lookup"><span data-stu-id="c33a4-142">Tracking Participants</span></span>](../../../windows-workflow-foundation/tracking-participants.md)
