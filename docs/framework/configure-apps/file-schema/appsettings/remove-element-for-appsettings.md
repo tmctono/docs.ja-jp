@@ -1,5 +1,5 @@
 ---
-title: <remove> の <appSettings> 要素
+title: <appSettings> の <remove> 要素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/remove
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <remove> Element
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
 ms.openlocfilehash: 83abbdbf0d3e4dfd16c0e8c649200c4ecc7329f7
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77215489"
 ---
-# <a name="remove-element-for-appsettings"></a><span data-ttu-id="1522c-102">\<appSettings > の > 要素を削除 \<には</span><span class="sxs-lookup"><span data-stu-id="1522c-102">\<remove> element for \<appSettings></span></span>
+# <a name="remove-element-for-appsettings"></a><span data-ttu-id="c2116-102">\<appSettings> の \<remove> 要素</span><span class="sxs-lookup"><span data-stu-id="c2116-102">\<remove> element for \<appSettings></span></span>
 
-<span data-ttu-id="1522c-103">カスタムアプリケーション設定を削除します。</span><span class="sxs-lookup"><span data-stu-id="1522c-103">Removes custom application settings.</span></span>
+<span data-ttu-id="c2116-103">カスタムアプリケーション設定を削除します。</span><span class="sxs-lookup"><span data-stu-id="c2116-103">Removes custom application settings.</span></span>
 
-<span data-ttu-id="1522c-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="1522c-104">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="1522c-105">&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)</span><span class="sxs-lookup"><span data-stu-id="1522c-105">&nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md)</span></span>\
-<span data-ttu-id="1522c-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<削除**></span><span class="sxs-lookup"><span data-stu-id="1522c-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span></span>
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
-## <a name="syntax"></a><span data-ttu-id="1522c-107">構文</span><span class="sxs-lookup"><span data-stu-id="1522c-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="c2116-104">構文</span><span class="sxs-lookup"><span data-stu-id="c2116-104">Syntax</span></span>
 
 ```xml
 <appSettings>
@@ -30,25 +30,25 @@ ms.locfileid: "77215489"
 </appSettings>
 ```
 
-### <a name="attribute"></a><span data-ttu-id="1522c-108">属性</span><span class="sxs-lookup"><span data-stu-id="1522c-108">Attribute</span></span>
+### <a name="attribute"></a><span data-ttu-id="c2116-105">属性</span><span class="sxs-lookup"><span data-stu-id="c2116-105">Attribute</span></span>
 
-|         | <span data-ttu-id="1522c-109">説明</span><span class="sxs-lookup"><span data-stu-id="1522c-109">Description</span></span> |
+|         | <span data-ttu-id="c2116-106">説明</span><span class="sxs-lookup"><span data-stu-id="c2116-106">Description</span></span> |
 | ------- | ----------- |
-| <span data-ttu-id="1522c-110">**key**</span><span class="sxs-lookup"><span data-stu-id="1522c-110">**key**</span></span> | <span data-ttu-id="1522c-111">必須の属性です。</span><span class="sxs-lookup"><span data-stu-id="1522c-111">Required attribute.</span></span><br><br><span data-ttu-id="1522c-112">削除するキーの名前を指定します。</span><span class="sxs-lookup"><span data-stu-id="1522c-112">Specifies the name of the key to remove.</span></span> |
+| <span data-ttu-id="c2116-107">**key**</span><span class="sxs-lookup"><span data-stu-id="c2116-107">**key**</span></span> | <span data-ttu-id="c2116-108">必須の属性です。</span><span class="sxs-lookup"><span data-stu-id="c2116-108">Required attribute.</span></span><br><br><span data-ttu-id="c2116-109">削除するキーの名前を指定します。</span><span class="sxs-lookup"><span data-stu-id="c2116-109">Specifies the name of the key to remove.</span></span> |
 
-### <a name="parent-element"></a><span data-ttu-id="1522c-113">親要素</span><span class="sxs-lookup"><span data-stu-id="1522c-113">Parent element</span></span>
+### <a name="parent-element"></a><span data-ttu-id="c2116-110">親要素</span><span class="sxs-lookup"><span data-stu-id="c2116-110">Parent element</span></span>
 
-|     | <span data-ttu-id="1522c-114">説明</span><span class="sxs-lookup"><span data-stu-id="1522c-114">Description</span></span> |
+|     | <span data-ttu-id="c2116-111">説明</span><span class="sxs-lookup"><span data-stu-id="c2116-111">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="1522c-115"> **\<appSettings>** </span><span class="sxs-lookup"><span data-stu-id="1522c-115">**\<appSettings>**</span></span>](appsettings-element-for-configuration.md) | <span data-ttu-id="1522c-116">ファイル パス、XML Web サービス URL、またはアプリケーションのその他のカスタム構成情報など、カスタム アプリケーションの設定が含まれています。</span><span class="sxs-lookup"><span data-stu-id="1522c-116">Contains custom application settings, such as file paths, XML Web service URLs, or any other custom configuration information for an application.</span></span> |
+| [**\<appSettings>**](appsettings-element-for-configuration.md) | <span data-ttu-id="c2116-112">ファイル パス、XML Web サービス URL、またはアプリケーションのその他のカスタム構成情報など、カスタム アプリケーションの設定が含まれています。</span><span class="sxs-lookup"><span data-stu-id="c2116-112">Contains custom application settings, such as file paths, XML Web service URLs, or any other custom configuration information for an application.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="1522c-117">子要素</span><span class="sxs-lookup"><span data-stu-id="1522c-117">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="c2116-113">子要素</span><span class="sxs-lookup"><span data-stu-id="c2116-113">Child elements</span></span>
 
-<span data-ttu-id="1522c-118">なし</span><span class="sxs-lookup"><span data-stu-id="1522c-118">None</span></span>
+<span data-ttu-id="c2116-114">なし</span><span class="sxs-lookup"><span data-stu-id="c2116-114">None</span></span>
 
-## <a name="example"></a><span data-ttu-id="1522c-119">例</span><span class="sxs-lookup"><span data-stu-id="1522c-119">Example</span></span>
+## <a name="example"></a><span data-ttu-id="c2116-115">例</span><span class="sxs-lookup"><span data-stu-id="c2116-115">Example</span></span>
 
-<span data-ttu-id="1522c-120">次の例は、`ApplicationName`のカスタム構成設定を削除する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="1522c-120">The following example shows how to remove a custom configuration setting for `ApplicationName`:</span></span>
+<span data-ttu-id="c2116-116">次の例は、のカスタム構成設定を削除する方法を示してい `ApplicationName` ます。</span><span class="sxs-lookup"><span data-stu-id="c2116-116">The following example shows how to remove a custom configuration setting for `ApplicationName`:</span></span>
 
 ```xml
 <appSettings>
@@ -56,6 +56,6 @@ ms.locfileid: "77215489"
 </appSettings>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="1522c-121">参照</span><span class="sxs-lookup"><span data-stu-id="1522c-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c2116-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="c2116-117">See also</span></span>
 
-- [<span data-ttu-id="1522c-122">.NET Framework の構成ファイルスキーマ</span><span class="sxs-lookup"><span data-stu-id="1522c-122">Configuration file schema for the .NET Framework</span></span>](../index.md)
+- [<span data-ttu-id="c2116-118">.NET Framework の構成ファイルスキーマ</span><span class="sxs-lookup"><span data-stu-id="c2116-118">Configuration file schema for the .NET Framework</span></span>](../index.md)
