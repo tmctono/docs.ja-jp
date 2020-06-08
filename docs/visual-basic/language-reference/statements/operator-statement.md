@@ -17,18 +17,18 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: aa6ae3977977ded05e47d12dabe72f09251f262d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f9e6ffe5a49715592399321ab471d73826e05d8e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353806"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404396"
 ---
-# <a name="operator-statement"></a><span data-ttu-id="0b492-102">Operator Statement</span><span class="sxs-lookup"><span data-stu-id="0b492-102">Operator Statement</span></span>
+# <a name="operator-statement"></a><span data-ttu-id="42e9b-102">Operator Statement</span><span class="sxs-lookup"><span data-stu-id="42e9b-102">Operator Statement</span></span>
 
-<span data-ttu-id="0b492-103">クラスまたは構造体に演算子プロシージャを定義する演算子シンボル、オペランド、およびコードを宣言します。</span><span class="sxs-lookup"><span data-stu-id="0b492-103">Declares the operator symbol, operands, and code that define an operator procedure on a class or structure.</span></span>
+<span data-ttu-id="42e9b-103">クラスまたは構造体に演算子プロシージャを定義する演算子シンボル、オペランド、およびコードを宣言します。</span><span class="sxs-lookup"><span data-stu-id="42e9b-103">Declares the operator symbol, operands, and code that define an operator procedure on a class or structure.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="0b492-104">構文</span><span class="sxs-lookup"><span data-stu-id="0b492-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="42e9b-104">構文</span><span class="sxs-lookup"><span data-stu-id="42e9b-104">Syntax</span></span>
 
 ```vb
 [ <attrlist> ] Public [ Overloads ] Shared [ Shadows ] [ Widening | Narrowing ]
@@ -40,153 +40,153 @@ Operator operatorsymbol ( operand1 [, operand2 ]) [ As [ <attrlist> ] type ]
 End Operator
 ```
 
-## <a name="parts"></a><span data-ttu-id="0b492-105">指定項目</span><span class="sxs-lookup"><span data-stu-id="0b492-105">Parts</span></span>
+## <a name="parts"></a><span data-ttu-id="42e9b-105">指定項目</span><span class="sxs-lookup"><span data-stu-id="42e9b-105">Parts</span></span>
 
 `attrlist`  
-<span data-ttu-id="0b492-106">任意。</span><span class="sxs-lookup"><span data-stu-id="0b492-106">Optional.</span></span> <span data-ttu-id="0b492-107">「[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0b492-107">See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).</span></span>
+<span data-ttu-id="42e9b-106">任意。</span><span class="sxs-lookup"><span data-stu-id="42e9b-106">Optional.</span></span> <span data-ttu-id="42e9b-107">「[属性リスト](attribute-list.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="42e9b-107">See [Attribute List](attribute-list.md).</span></span>
 
 `Public`  
-<span data-ttu-id="0b492-108">必須です。</span><span class="sxs-lookup"><span data-stu-id="0b492-108">Required.</span></span> <span data-ttu-id="0b492-109">この演算子プロシージャが [Public](../../../visual-basic/language-reference/modifiers/public.md) アクセス権を持つことを示します。</span><span class="sxs-lookup"><span data-stu-id="0b492-109">Indicates that this operator procedure has [Public](../../../visual-basic/language-reference/modifiers/public.md) access.</span></span>
+<span data-ttu-id="42e9b-108">必須です。</span><span class="sxs-lookup"><span data-stu-id="42e9b-108">Required.</span></span> <span data-ttu-id="42e9b-109">この演算子プロシージャが [Public](../modifiers/public.md) アクセス権を持つことを示します。</span><span class="sxs-lookup"><span data-stu-id="42e9b-109">Indicates that this operator procedure has [Public](../modifiers/public.md) access.</span></span>
 
 `Overloads`  
-<span data-ttu-id="0b492-110">任意。</span><span class="sxs-lookup"><span data-stu-id="0b492-110">Optional.</span></span> <span data-ttu-id="0b492-111">「[Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0b492-111">See [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md).</span></span>
+<span data-ttu-id="42e9b-110">任意。</span><span class="sxs-lookup"><span data-stu-id="42e9b-110">Optional.</span></span> <span data-ttu-id="42e9b-111">「[Overloads](../modifiers/overloads.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="42e9b-111">See [Overloads](../modifiers/overloads.md).</span></span>
 
 `Shared`  
-<span data-ttu-id="0b492-112">必須です。</span><span class="sxs-lookup"><span data-stu-id="0b492-112">Required.</span></span> <span data-ttu-id="0b492-113">この演算子プロシージャが [Shared](../../../visual-basic/language-reference/modifiers/shared.md)プロシージャであることを示します。</span><span class="sxs-lookup"><span data-stu-id="0b492-113">Indicates that this operator procedure is a [Shared](../../../visual-basic/language-reference/modifiers/shared.md) procedure.</span></span>
+<span data-ttu-id="42e9b-112">必須です。</span><span class="sxs-lookup"><span data-stu-id="42e9b-112">Required.</span></span> <span data-ttu-id="42e9b-113">この演算子プロシージャが [Shared](../modifiers/shared.md)プロシージャであることを示します。</span><span class="sxs-lookup"><span data-stu-id="42e9b-113">Indicates that this operator procedure is a [Shared](../modifiers/shared.md) procedure.</span></span>
 
 `Shadows`  
-<span data-ttu-id="0b492-114">任意。</span><span class="sxs-lookup"><span data-stu-id="0b492-114">Optional.</span></span> <span data-ttu-id="0b492-115">「[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0b492-115">See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).</span></span>
+<span data-ttu-id="42e9b-114">任意。</span><span class="sxs-lookup"><span data-stu-id="42e9b-114">Optional.</span></span> <span data-ttu-id="42e9b-115">「[Shadows](../modifiers/shadows.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="42e9b-115">See [Shadows](../modifiers/shadows.md).</span></span>
 
 `Widening`  
-<span data-ttu-id="0b492-116">`Narrowing` を指定しない場合、変換演算子に必須です。</span><span class="sxs-lookup"><span data-stu-id="0b492-116">Required for a conversion operator unless you specify `Narrowing`.</span></span> <span data-ttu-id="0b492-117">この演算子プロシージャでは、[拡大](../../../visual-basic/language-reference/modifiers/widening.md)変換を定義していることを示します。</span><span class="sxs-lookup"><span data-stu-id="0b492-117">Indicates that this operator procedure defines a [Widening](../../../visual-basic/language-reference/modifiers/widening.md) conversion.</span></span> <span data-ttu-id="0b492-118">このヘルプページの「拡大変換と縮小変換」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0b492-118">See "Widening and Narrowing Conversions" on this Help page.</span></span>
+<span data-ttu-id="42e9b-116">`Narrowing` を指定しない場合、変換演算子に必須です。</span><span class="sxs-lookup"><span data-stu-id="42e9b-116">Required for a conversion operator unless you specify `Narrowing`.</span></span> <span data-ttu-id="42e9b-117">この演算子プロシージャでは、[拡大](../modifiers/widening.md)変換を定義していることを示します。</span><span class="sxs-lookup"><span data-stu-id="42e9b-117">Indicates that this operator procedure defines a [Widening](../modifiers/widening.md) conversion.</span></span> <span data-ttu-id="42e9b-118">このヘルプページの「拡大変換と縮小変換」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="42e9b-118">See "Widening and Narrowing Conversions" on this Help page.</span></span>
 
 `Narrowing`  
-<span data-ttu-id="0b492-119">`Widening` を指定しない場合、変換演算子に必須です。</span><span class="sxs-lookup"><span data-stu-id="0b492-119">Required for a conversion operator unless you specify `Widening`.</span></span> <span data-ttu-id="0b492-120">この演算子プロシージャでは、[縮小](../../../visual-basic/language-reference/modifiers/narrowing.md)変換を定義していることを示します。</span><span class="sxs-lookup"><span data-stu-id="0b492-120">Indicates that this operator procedure defines a [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md) conversion.</span></span> <span data-ttu-id="0b492-121">このヘルプページの「拡大変換と縮小変換」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0b492-121">See "Widening and Narrowing Conversions" on this Help page.</span></span>
+<span data-ttu-id="42e9b-119">`Widening` を指定しない場合、変換演算子に必須です。</span><span class="sxs-lookup"><span data-stu-id="42e9b-119">Required for a conversion operator unless you specify `Widening`.</span></span> <span data-ttu-id="42e9b-120">この演算子プロシージャでは、[縮小](../modifiers/narrowing.md)変換を定義していることを示します。</span><span class="sxs-lookup"><span data-stu-id="42e9b-120">Indicates that this operator procedure defines a [Narrowing](../modifiers/narrowing.md) conversion.</span></span> <span data-ttu-id="42e9b-121">このヘルプページの「拡大変換と縮小変換」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="42e9b-121">See "Widening and Narrowing Conversions" on this Help page.</span></span>
 
 `operatorsymbol`  
-<span data-ttu-id="0b492-122">必須です。</span><span class="sxs-lookup"><span data-stu-id="0b492-122">Required.</span></span> <span data-ttu-id="0b492-123">この演算子プロシージャで定義する演算子のシンボルまたは識別子。</span><span class="sxs-lookup"><span data-stu-id="0b492-123">The symbol or identifier of the operator that this operator procedure defines.</span></span>
+<span data-ttu-id="42e9b-122">必須です。</span><span class="sxs-lookup"><span data-stu-id="42e9b-122">Required.</span></span> <span data-ttu-id="42e9b-123">この演算子プロシージャで定義する演算子のシンボルまたは識別子。</span><span class="sxs-lookup"><span data-stu-id="42e9b-123">The symbol or identifier of the operator that this operator procedure defines.</span></span>
 
 `operand1`  
-<span data-ttu-id="0b492-124">必須です。</span><span class="sxs-lookup"><span data-stu-id="0b492-124">Required.</span></span> <span data-ttu-id="0b492-125">単項演算子 (変換演算子を含む) の 1 つのオペランドまたは二項演算子の左オペランドの名前と型。</span><span class="sxs-lookup"><span data-stu-id="0b492-125">The name and type of the single operand of a unary operator (including a conversion operator) or the left operand of a binary operator.</span></span>
+<span data-ttu-id="42e9b-124">必須です。</span><span class="sxs-lookup"><span data-stu-id="42e9b-124">Required.</span></span> <span data-ttu-id="42e9b-125">単項演算子 (変換演算子を含む) の 1 つのオペランドまたは二項演算子の左オペランドの名前と型。</span><span class="sxs-lookup"><span data-stu-id="42e9b-125">The name and type of the single operand of a unary operator (including a conversion operator) or the left operand of a binary operator.</span></span>
 
 `operand2`  
-<span data-ttu-id="0b492-126">二項演算子に必須です。</span><span class="sxs-lookup"><span data-stu-id="0b492-126">Required for binary operators.</span></span> <span data-ttu-id="0b492-127">二項演算子の右オペランドの名前と型。</span><span class="sxs-lookup"><span data-stu-id="0b492-127">The name and type of the right operand of a binary operator.</span></span>
+<span data-ttu-id="42e9b-126">二項演算子に必須です。</span><span class="sxs-lookup"><span data-stu-id="42e9b-126">Required for binary operators.</span></span> <span data-ttu-id="42e9b-127">二項演算子の右オペランドの名前と型。</span><span class="sxs-lookup"><span data-stu-id="42e9b-127">The name and type of the right operand of a binary operator.</span></span>
 
-<span data-ttu-id="0b492-128">`operand1` と `operand2` の構文と指定項目は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="0b492-128">`operand1` and `operand2` have the following syntax and parts:</span></span>
+<span data-ttu-id="42e9b-128">`operand1` と `operand2` の構文と指定項目は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="42e9b-128">`operand1` and `operand2` have the following syntax and parts:</span></span>
 
 `[ ByVal ] operandname [ As operandtype ]`
 
-|<span data-ttu-id="0b492-129">パーツ</span><span class="sxs-lookup"><span data-stu-id="0b492-129">Part</span></span>|<span data-ttu-id="0b492-130">説明</span><span class="sxs-lookup"><span data-stu-id="0b492-130">Description</span></span>|
+|<span data-ttu-id="42e9b-129">パーツ</span><span class="sxs-lookup"><span data-stu-id="42e9b-129">Part</span></span>|<span data-ttu-id="42e9b-130">説明</span><span class="sxs-lookup"><span data-stu-id="42e9b-130">Description</span></span>|
 |----------|-----------------|
-|`ByVal`|<span data-ttu-id="0b492-131">省略可能ですが、引渡し方法は [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="0b492-131">Optional, but the passing mechanism must be [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).</span></span>|
-|`operandname`|<span data-ttu-id="0b492-132">必須です。</span><span class="sxs-lookup"><span data-stu-id="0b492-132">Required.</span></span> <span data-ttu-id="0b492-133">このオペランドを表す変数の名前。</span><span class="sxs-lookup"><span data-stu-id="0b492-133">Name of the variable representing this operand.</span></span> <span data-ttu-id="0b492-134">「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0b492-134">See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>|
-|`operandtype`|<span data-ttu-id="0b492-135">`Option Strict` が `On` である場合を除き、省略可能です。</span><span class="sxs-lookup"><span data-stu-id="0b492-135">Optional unless `Option Strict` is `On`.</span></span> <span data-ttu-id="0b492-136">このオペランドのデータ型。</span><span class="sxs-lookup"><span data-stu-id="0b492-136">Data type of this operand.</span></span>|
+|`ByVal`|<span data-ttu-id="42e9b-131">省略可能ですが、引渡し方法は [ByVal](../modifiers/byval.md) にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="42e9b-131">Optional, but the passing mechanism must be [ByVal](../modifiers/byval.md).</span></span>|
+|`operandname`|<span data-ttu-id="42e9b-132">必須です。</span><span class="sxs-lookup"><span data-stu-id="42e9b-132">Required.</span></span> <span data-ttu-id="42e9b-133">このオペランドを表す変数の名前。</span><span class="sxs-lookup"><span data-stu-id="42e9b-133">Name of the variable representing this operand.</span></span> <span data-ttu-id="42e9b-134">「 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="42e9b-134">See [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>|
+|`operandtype`|<span data-ttu-id="42e9b-135">`Option Strict` が `On` である場合を除き、省略可能です。</span><span class="sxs-lookup"><span data-stu-id="42e9b-135">Optional unless `Option Strict` is `On`.</span></span> <span data-ttu-id="42e9b-136">このオペランドのデータ型。</span><span class="sxs-lookup"><span data-stu-id="42e9b-136">Data type of this operand.</span></span>|
 
 `type`  
-<span data-ttu-id="0b492-137">`Option Strict` が `On` である場合を除き、省略可能です。</span><span class="sxs-lookup"><span data-stu-id="0b492-137">Optional unless `Option Strict` is `On`.</span></span> <span data-ttu-id="0b492-138">演算子プロシージャで返される値のデータ型。</span><span class="sxs-lookup"><span data-stu-id="0b492-138">Data type of the value the operator procedure returns.</span></span>
+<span data-ttu-id="42e9b-137">`Option Strict` が `On` である場合を除き、省略可能です。</span><span class="sxs-lookup"><span data-stu-id="42e9b-137">Optional unless `Option Strict` is `On`.</span></span> <span data-ttu-id="42e9b-138">演算子プロシージャで返される値のデータ型。</span><span class="sxs-lookup"><span data-stu-id="42e9b-138">Data type of the value the operator procedure returns.</span></span>
 
 `statements`  
-<span data-ttu-id="0b492-139">任意。</span><span class="sxs-lookup"><span data-stu-id="0b492-139">Optional.</span></span> <span data-ttu-id="0b492-140">演算子プロシージャで実行されるステートメントのブロック。</span><span class="sxs-lookup"><span data-stu-id="0b492-140">Block of statements that the operator procedure runs.</span></span>
+<span data-ttu-id="42e9b-139">任意。</span><span class="sxs-lookup"><span data-stu-id="42e9b-139">Optional.</span></span> <span data-ttu-id="42e9b-140">演算子プロシージャで実行されるステートメントのブロック。</span><span class="sxs-lookup"><span data-stu-id="42e9b-140">Block of statements that the operator procedure runs.</span></span>
 
 `returnvalue`  
-<span data-ttu-id="0b492-141">必須です。</span><span class="sxs-lookup"><span data-stu-id="0b492-141">Required.</span></span> <span data-ttu-id="0b492-142">演算子プロシージャから呼び出し元のコードに返される値。</span><span class="sxs-lookup"><span data-stu-id="0b492-142">The value that the operator procedure returns to the calling code.</span></span>
+<span data-ttu-id="42e9b-141">必須です。</span><span class="sxs-lookup"><span data-stu-id="42e9b-141">Required.</span></span> <span data-ttu-id="42e9b-142">演算子プロシージャから呼び出し元のコードに返される値。</span><span class="sxs-lookup"><span data-stu-id="42e9b-142">The value that the operator procedure returns to the calling code.</span></span>
 
-<span data-ttu-id="0b492-143">`End` `Operator`</span><span class="sxs-lookup"><span data-stu-id="0b492-143">`End` `Operator`</span></span>  
-<span data-ttu-id="0b492-144">必須です。</span><span class="sxs-lookup"><span data-stu-id="0b492-144">Required.</span></span> <span data-ttu-id="0b492-145">この演算子プロシージャの定義を終了します。</span><span class="sxs-lookup"><span data-stu-id="0b492-145">Terminates the definition of this operator procedure.</span></span>
+<span data-ttu-id="42e9b-143">`End` `Operator`</span><span class="sxs-lookup"><span data-stu-id="42e9b-143">`End` `Operator`</span></span>  
+<span data-ttu-id="42e9b-144">必須です。</span><span class="sxs-lookup"><span data-stu-id="42e9b-144">Required.</span></span> <span data-ttu-id="42e9b-145">この演算子プロシージャの定義を終了します。</span><span class="sxs-lookup"><span data-stu-id="42e9b-145">Terminates the definition of this operator procedure.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="0b492-146">Remarks</span><span class="sxs-lookup"><span data-stu-id="0b492-146">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="42e9b-146">Remarks</span><span class="sxs-lookup"><span data-stu-id="42e9b-146">Remarks</span></span>
 
-<span data-ttu-id="0b492-147">`Operator` は、クラスまたは構造体でのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="0b492-147">You can use `Operator` only in a class or structure.</span></span> <span data-ttu-id="0b492-148">つまり、演算子の*宣言コンテキスト*は、ソース ファイル、名前空間、モジュール、インターフェイス、プロシージャ、ブロックにすることができません。</span><span class="sxs-lookup"><span data-stu-id="0b492-148">This means the *declaration context* for an operator cannot be a source file, namespace, module, interface, procedure, or block.</span></span> <span data-ttu-id="0b492-149">詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0b492-149">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>
+<span data-ttu-id="42e9b-147">`Operator` は、クラスまたは構造体でのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="42e9b-147">You can use `Operator` only in a class or structure.</span></span> <span data-ttu-id="42e9b-148">つまり、演算子の*宣言コンテキスト*は、ソース ファイル、名前空間、モジュール、インターフェイス、プロシージャ、ブロックにすることができません。</span><span class="sxs-lookup"><span data-stu-id="42e9b-148">This means the *declaration context* for an operator cannot be a source file, namespace, module, interface, procedure, or block.</span></span> <span data-ttu-id="42e9b-149">詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="42e9b-149">For more information, see [Declaration Contexts and Default Access Levels](declaration-contexts-and-default-access-levels.md).</span></span>
 
-<span data-ttu-id="0b492-150">すべての演算子は `Public Shared` である必要があります。</span><span class="sxs-lookup"><span data-stu-id="0b492-150">All operators must be `Public Shared`.</span></span> <span data-ttu-id="0b492-151">どのオペランドにも `ByRef`、`Optional`、`ParamArray` を指定することはできません。</span><span class="sxs-lookup"><span data-stu-id="0b492-151">You cannot specify `ByRef`, `Optional`, or `ParamArray` for either operand.</span></span>
+<span data-ttu-id="42e9b-150">すべての演算子は `Public Shared` である必要があります。</span><span class="sxs-lookup"><span data-stu-id="42e9b-150">All operators must be `Public Shared`.</span></span> <span data-ttu-id="42e9b-151">どのオペランドにも `ByRef`、`Optional`、`ParamArray` を指定することはできません。</span><span class="sxs-lookup"><span data-stu-id="42e9b-151">You cannot specify `ByRef`, `Optional`, or `ParamArray` for either operand.</span></span>
 
-<span data-ttu-id="0b492-152">戻り値を保持するために、演算子シンボルや識別子を使用することはできません。</span><span class="sxs-lookup"><span data-stu-id="0b492-152">You cannot use the operator symbol or identifier to hold a return value.</span></span> <span data-ttu-id="0b492-153">`Return` ステートメントを使用する必要があり、それによって値を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0b492-153">You must use the `Return` statement, and it must specify a value.</span></span> <span data-ttu-id="0b492-154">任意の数の `Return` ステートメントをプロシージャ内の任意の場所に記述できます。</span><span class="sxs-lookup"><span data-stu-id="0b492-154">Any number of `Return` statements can appear anywhere in the procedure.</span></span>
+<span data-ttu-id="42e9b-152">戻り値を保持するために、演算子シンボルや識別子を使用することはできません。</span><span class="sxs-lookup"><span data-stu-id="42e9b-152">You cannot use the operator symbol or identifier to hold a return value.</span></span> <span data-ttu-id="42e9b-153">`Return` ステートメントを使用する必要があり、それによって値を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="42e9b-153">You must use the `Return` statement, and it must specify a value.</span></span> <span data-ttu-id="42e9b-154">任意の数の `Return` ステートメントをプロシージャ内の任意の場所に記述できます。</span><span class="sxs-lookup"><span data-stu-id="42e9b-154">Any number of `Return` statements can appear anywhere in the procedure.</span></span>
 
-<span data-ttu-id="0b492-155">この方法で演算子を定義することは、`Overloads` キーワードを使用するかどうかにかかわらず、*演算子のオーバーロード*と呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="0b492-155">Defining an operator in this way is called *operator overloading*, whether or not you use the `Overloads` keyword.</span></span> <span data-ttu-id="0b492-156">定義可能な演算子を次の表に示します。</span><span class="sxs-lookup"><span data-stu-id="0b492-156">The following table lists the operators you can define.</span></span>
+<span data-ttu-id="42e9b-155">この方法で演算子を定義することは、`Overloads` キーワードを使用するかどうかにかかわらず、*演算子のオーバーロード*と呼ばれます。</span><span class="sxs-lookup"><span data-stu-id="42e9b-155">Defining an operator in this way is called *operator overloading*, whether or not you use the `Overloads` keyword.</span></span> <span data-ttu-id="42e9b-156">定義可能な演算子を次の表に示します。</span><span class="sxs-lookup"><span data-stu-id="42e9b-156">The following table lists the operators you can define.</span></span>
 
-|<span data-ttu-id="0b492-157">種類</span><span class="sxs-lookup"><span data-stu-id="0b492-157">Type</span></span>|<span data-ttu-id="0b492-158">演算子</span><span class="sxs-lookup"><span data-stu-id="0b492-158">Operators</span></span>|
+|<span data-ttu-id="42e9b-157">種類</span><span class="sxs-lookup"><span data-stu-id="42e9b-157">Type</span></span>|<span data-ttu-id="42e9b-158">演算子</span><span class="sxs-lookup"><span data-stu-id="42e9b-158">Operators</span></span>|
 |----------|---------------|
-|<span data-ttu-id="0b492-159">単項</span><span class="sxs-lookup"><span data-stu-id="0b492-159">Unary</span></span>|<span data-ttu-id="0b492-160">`+`, `-`, `IsFalse`, `IsTrue`, `Not`</span><span class="sxs-lookup"><span data-stu-id="0b492-160">`+`, `-`, `IsFalse`, `IsTrue`, `Not`</span></span>|
-|<span data-ttu-id="0b492-161">2 項</span><span class="sxs-lookup"><span data-stu-id="0b492-161">Binary</span></span>|<span data-ttu-id="0b492-162">`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`</span><span class="sxs-lookup"><span data-stu-id="0b492-162">`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`</span></span>|
-|<span data-ttu-id="0b492-163">変換 (単項)</span><span class="sxs-lookup"><span data-stu-id="0b492-163">Conversion (unary)</span></span>|`CType`|
+|<span data-ttu-id="42e9b-159">単項</span><span class="sxs-lookup"><span data-stu-id="42e9b-159">Unary</span></span>|<span data-ttu-id="42e9b-160">`+`, `-`, `IsFalse`, `IsTrue`, `Not`</span><span class="sxs-lookup"><span data-stu-id="42e9b-160">`+`, `-`, `IsFalse`, `IsTrue`, `Not`</span></span>|
+|<span data-ttu-id="42e9b-161">2 項</span><span class="sxs-lookup"><span data-stu-id="42e9b-161">Binary</span></span>|<span data-ttu-id="42e9b-162">`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`</span><span class="sxs-lookup"><span data-stu-id="42e9b-162">`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`</span></span>|
+|<span data-ttu-id="42e9b-163">変換 (単項)</span><span class="sxs-lookup"><span data-stu-id="42e9b-163">Conversion (unary)</span></span>|`CType`|
 
-<span data-ttu-id="0b492-164">2 項の一覧に示した `=` 演算子は比較演算子であり、代入演算子ではありません。</span><span class="sxs-lookup"><span data-stu-id="0b492-164">Note that the `=` operator in the binary list is the comparison operator, not the assignment operator.</span></span>
+<span data-ttu-id="42e9b-164">2 項の一覧に示した `=` 演算子は比較演算子であり、代入演算子ではありません。</span><span class="sxs-lookup"><span data-stu-id="42e9b-164">Note that the `=` operator in the binary list is the comparison operator, not the assignment operator.</span></span>
 
-<span data-ttu-id="0b492-165">`CType` を定義する場合、`Widening` または `Narrowing` のどちらかを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0b492-165">When you define `CType`, you must specify either `Widening` or `Narrowing`.</span></span>
+<span data-ttu-id="42e9b-165">`CType` を定義する場合、`Widening` または `Narrowing` のどちらかを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="42e9b-165">When you define `CType`, you must specify either `Widening` or `Narrowing`.</span></span>
 
-## <a name="matched-pairs"></a><span data-ttu-id="0b492-166">一致したペア</span><span class="sxs-lookup"><span data-stu-id="0b492-166">Matched Pairs</span></span>
+## <a name="matched-pairs"></a><span data-ttu-id="42e9b-166">一致したペア</span><span class="sxs-lookup"><span data-stu-id="42e9b-166">Matched Pairs</span></span>
 
-<span data-ttu-id="0b492-167">特定の演算子を一致したペアとして定義する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0b492-167">You must define certain operators as matched pairs.</span></span> <span data-ttu-id="0b492-168">そのようなペアのどちらかの演算子を定義する場合は、他方の演算子も定義する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0b492-168">If you define either operator of such a pair, you must define the other as well.</span></span> <span data-ttu-id="0b492-169">一致したペアは次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="0b492-169">The matched pairs are the following:</span></span>
+<span data-ttu-id="42e9b-167">特定の演算子を一致したペアとして定義する必要があります。</span><span class="sxs-lookup"><span data-stu-id="42e9b-167">You must define certain operators as matched pairs.</span></span> <span data-ttu-id="42e9b-168">そのようなペアのどちらかの演算子を定義する場合は、他方の演算子も定義する必要があります。</span><span class="sxs-lookup"><span data-stu-id="42e9b-168">If you define either operator of such a pair, you must define the other as well.</span></span> <span data-ttu-id="42e9b-169">一致したペアは次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="42e9b-169">The matched pairs are the following:</span></span>
 
-- <span data-ttu-id="0b492-170">`=` および `<>`</span><span class="sxs-lookup"><span data-stu-id="0b492-170">`=` and `<>`</span></span>
+- <span data-ttu-id="42e9b-170">`=` および `<>`</span><span class="sxs-lookup"><span data-stu-id="42e9b-170">`=` and `<>`</span></span>
 
-- <span data-ttu-id="0b492-171">`>` および `<`</span><span class="sxs-lookup"><span data-stu-id="0b492-171">`>` and `<`</span></span>
+- <span data-ttu-id="42e9b-171">`>` および `<`</span><span class="sxs-lookup"><span data-stu-id="42e9b-171">`>` and `<`</span></span>
 
-- <span data-ttu-id="0b492-172">`>=` および `<=`</span><span class="sxs-lookup"><span data-stu-id="0b492-172">`>=` and `<=`</span></span>
+- <span data-ttu-id="42e9b-172">`>=` および `<=`</span><span class="sxs-lookup"><span data-stu-id="42e9b-172">`>=` and `<=`</span></span>
 
-- <span data-ttu-id="0b492-173">`IsTrue` および `IsFalse`</span><span class="sxs-lookup"><span data-stu-id="0b492-173">`IsTrue` and `IsFalse`</span></span>
+- <span data-ttu-id="42e9b-173">`IsTrue` および `IsFalse`</span><span class="sxs-lookup"><span data-stu-id="42e9b-173">`IsTrue` and `IsFalse`</span></span>
 
-## <a name="data-type-restrictions"></a><span data-ttu-id="0b492-174">データ型の制限</span><span class="sxs-lookup"><span data-stu-id="0b492-174">Data Type Restrictions</span></span>
+## <a name="data-type-restrictions"></a><span data-ttu-id="42e9b-174">データ型の制限</span><span class="sxs-lookup"><span data-stu-id="42e9b-174">Data Type Restrictions</span></span>
 
-<span data-ttu-id="0b492-175">定義するすべての演算子には、それを定義するクラスまたは構造体が関係している必要があります。</span><span class="sxs-lookup"><span data-stu-id="0b492-175">Every operator you define must involve the class or structure on which you define it.</span></span> <span data-ttu-id="0b492-176">つまり、クラスまたは構造体が、次のデータ型として指定されている必要があります。</span><span class="sxs-lookup"><span data-stu-id="0b492-176">This means that the class or structure must appear as the data type of the following:</span></span>
+<span data-ttu-id="42e9b-175">定義するすべての演算子には、それを定義するクラスまたは構造体が関係している必要があります。</span><span class="sxs-lookup"><span data-stu-id="42e9b-175">Every operator you define must involve the class or structure on which you define it.</span></span> <span data-ttu-id="42e9b-176">つまり、クラスまたは構造体が、次のデータ型として指定されている必要があります。</span><span class="sxs-lookup"><span data-stu-id="42e9b-176">This means that the class or structure must appear as the data type of the following:</span></span>
 
-- <span data-ttu-id="0b492-177">単項演算子のオペランド。</span><span class="sxs-lookup"><span data-stu-id="0b492-177">The operand of a unary operator.</span></span>
+- <span data-ttu-id="42e9b-177">単項演算子のオペランド。</span><span class="sxs-lookup"><span data-stu-id="42e9b-177">The operand of a unary operator.</span></span>
 
-- <span data-ttu-id="0b492-178">二項演算子の少なくとも 1 つのオペランド。</span><span class="sxs-lookup"><span data-stu-id="0b492-178">At least one of the operands of a binary operator.</span></span>
+- <span data-ttu-id="42e9b-178">二項演算子の少なくとも 1 つのオペランド。</span><span class="sxs-lookup"><span data-stu-id="42e9b-178">At least one of the operands of a binary operator.</span></span>
 
-- <span data-ttu-id="0b492-179">変換演算子のオペランドまたは戻り値の型。</span><span class="sxs-lookup"><span data-stu-id="0b492-179">Either the operand or the return type of a conversion operator.</span></span>
+- <span data-ttu-id="42e9b-179">変換演算子のオペランドまたは戻り値の型。</span><span class="sxs-lookup"><span data-stu-id="42e9b-179">Either the operand or the return type of a conversion operator.</span></span>
 
- <span data-ttu-id="0b492-180">特定の演算子には、次のような追加のデータ型の制限があります。</span><span class="sxs-lookup"><span data-stu-id="0b492-180">Certain operators have additional data type restrictions, as follows:</span></span>
+ <span data-ttu-id="42e9b-180">特定の演算子には、次のような追加のデータ型の制限があります。</span><span class="sxs-lookup"><span data-stu-id="42e9b-180">Certain operators have additional data type restrictions, as follows:</span></span>
 
-- <span data-ttu-id="0b492-181">`IsTrue` 演算子と `IsFalse` 演算子を定義する場合、それらはどちらも `Boolean` 型を返す必要があります。</span><span class="sxs-lookup"><span data-stu-id="0b492-181">If you define the `IsTrue` and `IsFalse` operators, they must both return the `Boolean` type.</span></span>
+- <span data-ttu-id="42e9b-181">`IsTrue` 演算子と `IsFalse` 演算子を定義する場合、それらはどちらも `Boolean` 型を返す必要があります。</span><span class="sxs-lookup"><span data-stu-id="42e9b-181">If you define the `IsTrue` and `IsFalse` operators, they must both return the `Boolean` type.</span></span>
 
-- <span data-ttu-id="0b492-182">`<<` 演算子と `>>` 演算子を定義する場合、それらはどちらも `operand2` の `operandtype` に `Integer` 型を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0b492-182">If you define the `<<` and `>>` operators, they must both specify the `Integer` type for the `operandtype` of `operand2`.</span></span>
+- <span data-ttu-id="42e9b-182">`<<` 演算子と `>>` 演算子を定義する場合、それらはどちらも `operand2` の `operandtype` に `Integer` 型を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="42e9b-182">If you define the `<<` and `>>` operators, they must both specify the `Integer` type for the `operandtype` of `operand2`.</span></span>
 
-<span data-ttu-id="0b492-183">戻り値の型は、どちらかのオペランドの型に対応している必要はありません。</span><span class="sxs-lookup"><span data-stu-id="0b492-183">The return type does not have to correspond to the type of either operand.</span></span> <span data-ttu-id="0b492-184">たとえば、`=` や `<>` などの比較演算子では、どちらのオペランドも `Boolean` でない場合でも `Boolean` を返すことができます。</span><span class="sxs-lookup"><span data-stu-id="0b492-184">For example, a comparison operator such as `=` or `<>` can return `Boolean` even if neither operand is `Boolean`.</span></span>
+<span data-ttu-id="42e9b-183">戻り値の型は、どちらかのオペランドの型に対応している必要はありません。</span><span class="sxs-lookup"><span data-stu-id="42e9b-183">The return type does not have to correspond to the type of either operand.</span></span> <span data-ttu-id="42e9b-184">たとえば、`=` や `<>` などの比較演算子では、どちらのオペランドも `Boolean` でない場合でも `Boolean` を返すことができます。</span><span class="sxs-lookup"><span data-stu-id="42e9b-184">For example, a comparison operator such as `=` or `<>` can return `Boolean` even if neither operand is `Boolean`.</span></span>
 
-## <a name="logical-and-bitwise-operators"></a><span data-ttu-id="0b492-185">論理演算子とビット処理演算子</span><span class="sxs-lookup"><span data-stu-id="0b492-185">Logical and Bitwise Operators</span></span>
+## <a name="logical-and-bitwise-operators"></a><span data-ttu-id="42e9b-185">論理演算子とビット処理演算子</span><span class="sxs-lookup"><span data-stu-id="42e9b-185">Logical and Bitwise Operators</span></span>
 
-<span data-ttu-id="0b492-186">`And`、`Or`、`Not`、および `Xor` の各演算子では、Visual Basic で論理演算またはビットごとの演算を実行できます。</span><span class="sxs-lookup"><span data-stu-id="0b492-186">The `And`, `Or`, `Not`, and `Xor` operators can perform either logical or bitwise operations in Visual Basic.</span></span> <span data-ttu-id="0b492-187">ただし、クラスまたは構造体でこれらの演算子のいずれかを定義した場合は、そのビットごとの演算のみを定義できます。</span><span class="sxs-lookup"><span data-stu-id="0b492-187">However, if you define one of these operators on a class or structure, you can define only its bitwise operation.</span></span>
+<span data-ttu-id="42e9b-186">`And`、`Or`、`Not`、および `Xor` の各演算子では、Visual Basic で論理演算またはビットごとの演算を実行できます。</span><span class="sxs-lookup"><span data-stu-id="42e9b-186">The `And`, `Or`, `Not`, and `Xor` operators can perform either logical or bitwise operations in Visual Basic.</span></span> <span data-ttu-id="42e9b-187">ただし、クラスまたは構造体でこれらの演算子のいずれかを定義した場合は、そのビットごとの演算のみを定義できます。</span><span class="sxs-lookup"><span data-stu-id="42e9b-187">However, if you define one of these operators on a class or structure, you can define only its bitwise operation.</span></span>
 
-<span data-ttu-id="0b492-188">`Operator` ステートメントで、`AndAlso` 演算子を直接定義することはできません。</span><span class="sxs-lookup"><span data-stu-id="0b492-188">You cannot define the `AndAlso` operator directly with an `Operator` statement.</span></span> <span data-ttu-id="0b492-189">ただし、次の条件を満たしている場合は、`AndAlso` を使用できます。</span><span class="sxs-lookup"><span data-stu-id="0b492-189">However, you can use `AndAlso` if you have fulfilled the following conditions:</span></span>
+<span data-ttu-id="42e9b-188">`Operator` ステートメントで、`AndAlso` 演算子を直接定義することはできません。</span><span class="sxs-lookup"><span data-stu-id="42e9b-188">You cannot define the `AndAlso` operator directly with an `Operator` statement.</span></span> <span data-ttu-id="42e9b-189">ただし、次の条件を満たしている場合は、`AndAlso` を使用できます。</span><span class="sxs-lookup"><span data-stu-id="42e9b-189">However, you can use `AndAlso` if you have fulfilled the following conditions:</span></span>
 
-- <span data-ttu-id="0b492-190">`AndAlso` に使用する同じオペランド型に対して `And` を定義している。</span><span class="sxs-lookup"><span data-stu-id="0b492-190">You have defined `And` on the same operand types you want to use for `AndAlso`.</span></span>
+- <span data-ttu-id="42e9b-190">`AndAlso` に使用する同じオペランド型に対して `And` を定義している。</span><span class="sxs-lookup"><span data-stu-id="42e9b-190">You have defined `And` on the same operand types you want to use for `AndAlso`.</span></span>
 
-- <span data-ttu-id="0b492-191">`And` の定義で、それを定義したクラスまたは構造体と同じ型を返す。</span><span class="sxs-lookup"><span data-stu-id="0b492-191">Your definition of `And` returns the same type as the class or structure on which you have defined it.</span></span>
+- <span data-ttu-id="42e9b-191">`And` の定義で、それを定義したクラスまたは構造体と同じ型を返す。</span><span class="sxs-lookup"><span data-stu-id="42e9b-191">Your definition of `And` returns the same type as the class or structure on which you have defined it.</span></span>
 
-- <span data-ttu-id="0b492-192">`And` を定義したクラスまたは構造体に `IsFalse` 演算子を定義している。</span><span class="sxs-lookup"><span data-stu-id="0b492-192">You have defined the `IsFalse` operator on the class or structure on which you have defined `And`.</span></span>
+- <span data-ttu-id="42e9b-192">`And` を定義したクラスまたは構造体に `IsFalse` 演算子を定義している。</span><span class="sxs-lookup"><span data-stu-id="42e9b-192">You have defined the `IsFalse` operator on the class or structure on which you have defined `And`.</span></span>
 
-<span data-ttu-id="0b492-193">同様に、クラスまたは構造体の戻り値の型で同じオペランドに対して `Or` を定義し、クラスまたは構造体に `IsTrue` を定義している場合、`OrElse` を使用できます。</span><span class="sxs-lookup"><span data-stu-id="0b492-193">Similarly, you can use `OrElse` if you have defined `Or` on the same operands, with the return type of the class or structure, and you have defined `IsTrue` on the class or structure.</span></span>
+<span data-ttu-id="42e9b-193">同様に、クラスまたは構造体の戻り値の型で同じオペランドに対して `Or` を定義し、クラスまたは構造体に `IsTrue` を定義している場合、`OrElse` を使用できます。</span><span class="sxs-lookup"><span data-stu-id="42e9b-193">Similarly, you can use `OrElse` if you have defined `Or` on the same operands, with the return type of the class or structure, and you have defined `IsTrue` on the class or structure.</span></span>
 
-## <a name="widening-and-narrowing-conversions"></a><span data-ttu-id="0b492-194">Widening and Narrowing Conversions</span><span class="sxs-lookup"><span data-stu-id="0b492-194">Widening and Narrowing Conversions</span></span>
+## <a name="widening-and-narrowing-conversions"></a><span data-ttu-id="42e9b-194">Widening and Narrowing Conversions</span><span class="sxs-lookup"><span data-stu-id="42e9b-194">Widening and Narrowing Conversions</span></span>
 
-<span data-ttu-id="0b492-195">*拡大変換*は実行時に常に成功しますが、*縮小変換*は実行時に失敗する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="0b492-195">A *widening conversion* always succeeds at run time, while a *narrowing conversion* can fail at run time.</span></span> <span data-ttu-id="0b492-196">詳細については、「 [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0b492-196">For more information, see [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).</span></span>
+<span data-ttu-id="42e9b-195">*拡大変換*は実行時に常に成功しますが、*縮小変換*は実行時に失敗する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="42e9b-195">A *widening conversion* always succeeds at run time, while a *narrowing conversion* can fail at run time.</span></span> <span data-ttu-id="42e9b-196">詳細については、「 [Widening and Narrowing Conversions](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="42e9b-196">For more information, see [Widening and Narrowing Conversions](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).</span></span>
 
-<span data-ttu-id="0b492-197">変換プロシージャを `Widening` として宣言する場合、プロシージャ コードでエラーが発生しないようにする必要があります。</span><span class="sxs-lookup"><span data-stu-id="0b492-197">If you declare a conversion procedure to be `Widening`, your procedure code must not generate any failures.</span></span> <span data-ttu-id="0b492-198">これは、次のことを意味します。</span><span class="sxs-lookup"><span data-stu-id="0b492-198">This means the following:</span></span>
+<span data-ttu-id="42e9b-197">変換プロシージャを `Widening` として宣言する場合、プロシージャ コードでエラーが発生しないようにする必要があります。</span><span class="sxs-lookup"><span data-stu-id="42e9b-197">If you declare a conversion procedure to be `Widening`, your procedure code must not generate any failures.</span></span> <span data-ttu-id="42e9b-198">これは、次のことを意味します。</span><span class="sxs-lookup"><span data-stu-id="42e9b-198">This means the following:</span></span>
 
-- <span data-ttu-id="0b492-199">常に `type` 型の有効な値を返す必要があります。</span><span class="sxs-lookup"><span data-stu-id="0b492-199">It must always return a valid value of type `type`.</span></span>
+- <span data-ttu-id="42e9b-199">常に `type` 型の有効な値を返す必要があります。</span><span class="sxs-lookup"><span data-stu-id="42e9b-199">It must always return a valid value of type `type`.</span></span>
 
-- <span data-ttu-id="0b492-200">これは、可能性のあるすべての例外とその他のエラー条件を処理する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0b492-200">It must handle all possible exceptions and other error conditions.</span></span>
+- <span data-ttu-id="42e9b-200">これは、可能性のあるすべての例外とその他のエラー条件を処理する必要があります。</span><span class="sxs-lookup"><span data-stu-id="42e9b-200">It must handle all possible exceptions and other error conditions.</span></span>
 
-- <span data-ttu-id="0b492-201">これが呼び出すすべてのプロシージャからのエラーを処理する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0b492-201">It must handle any error returns from any procedures it calls.</span></span>
+- <span data-ttu-id="42e9b-201">これが呼び出すすべてのプロシージャからのエラーを処理する必要があります。</span><span class="sxs-lookup"><span data-stu-id="42e9b-201">It must handle any error returns from any procedures it calls.</span></span>
 
-<span data-ttu-id="0b492-202">変換プロシージャが成功しない可能性がある場合、または未処理の例外が発生する可能性がある場合は、それを `Narrowing` として宣言する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0b492-202">If there is any possibility that a conversion procedure might not succeed, or that it might cause an unhandled exception, you must declare it to be `Narrowing`.</span></span>
+<span data-ttu-id="42e9b-202">変換プロシージャが成功しない可能性がある場合、または未処理の例外が発生する可能性がある場合は、それを `Narrowing` として宣言する必要があります。</span><span class="sxs-lookup"><span data-stu-id="42e9b-202">If there is any possibility that a conversion procedure might not succeed, or that it might cause an unhandled exception, you must declare it to be `Narrowing`.</span></span>
 
-## <a name="example"></a><span data-ttu-id="0b492-203">例</span><span class="sxs-lookup"><span data-stu-id="0b492-203">Example</span></span>
+## <a name="example"></a><span data-ttu-id="42e9b-203">例</span><span class="sxs-lookup"><span data-stu-id="42e9b-203">Example</span></span>
 
-<span data-ttu-id="0b492-204">次のコード例では、`Operator` ステートメントを使用して、`And`、`Or`、`IsFalse`、および `IsTrue` 演算子の演算子プロシージャを含む構造体のアウトラインを定義しています。</span><span class="sxs-lookup"><span data-stu-id="0b492-204">The following code example uses the `Operator` statement to define the outline of a structure that includes operator procedures for the `And`, `Or`, `IsFalse`, and `IsTrue` operators.</span></span> <span data-ttu-id="0b492-205">`And` および `Or` は、それぞれ `abc` 型の 2 つのオペランドを受け取り、`abc` 型を返します。</span><span class="sxs-lookup"><span data-stu-id="0b492-205">`And` and `Or` each take two operands of type `abc` and return type `abc`.</span></span> <span data-ttu-id="0b492-206">`IsFalse` および `IsTrue` は、それぞれ `abc` 型の 1 つのオペランドを受け取り、`Boolean` 型を返します。</span><span class="sxs-lookup"><span data-stu-id="0b492-206">`IsFalse` and `IsTrue` each take a single operand of type `abc` and return `Boolean`.</span></span> <span data-ttu-id="0b492-207">これらの定義により、呼び出し元のコードでは、`abc` 型のオペランドを使用して、`And`、`AndAlso`、`Or`、および `OrElse` を使用できます。</span><span class="sxs-lookup"><span data-stu-id="0b492-207">These definitions allow the calling code to use `And`, `AndAlso`, `Or`, and `OrElse` with operands of type `abc`.</span></span>
+<span data-ttu-id="42e9b-204">次のコード例では、`Operator` ステートメントを使用して、`And`、`Or`、`IsFalse`、および `IsTrue` 演算子の演算子プロシージャを含む構造体のアウトラインを定義しています。</span><span class="sxs-lookup"><span data-stu-id="42e9b-204">The following code example uses the `Operator` statement to define the outline of a structure that includes operator procedures for the `And`, `Or`, `IsFalse`, and `IsTrue` operators.</span></span> <span data-ttu-id="42e9b-205">`And` および `Or` は、それぞれ `abc` 型の 2 つのオペランドを受け取り、`abc` 型を返します。</span><span class="sxs-lookup"><span data-stu-id="42e9b-205">`And` and `Or` each take two operands of type `abc` and return type `abc`.</span></span> <span data-ttu-id="42e9b-206">`IsFalse` および `IsTrue` は、それぞれ `abc` 型の 1 つのオペランドを受け取り、`Boolean` 型を返します。</span><span class="sxs-lookup"><span data-stu-id="42e9b-206">`IsFalse` and `IsTrue` each take a single operand of type `abc` and return `Boolean`.</span></span> <span data-ttu-id="42e9b-207">これらの定義により、呼び出し元のコードでは、`abc` 型のオペランドを使用して、`And`、`AndAlso`、`Or`、および `OrElse` を使用できます。</span><span class="sxs-lookup"><span data-stu-id="42e9b-207">These definitions allow the calling code to use `And`, `AndAlso`, `Or`, and `OrElse` with operands of type `abc`.</span></span>
 
 [!code-vb[VbVbalrStatements#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#44)]
 
-## <a name="see-also"></a><span data-ttu-id="0b492-208">関連項目</span><span class="sxs-lookup"><span data-stu-id="0b492-208">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="42e9b-208">関連項目</span><span class="sxs-lookup"><span data-stu-id="42e9b-208">See also</span></span>
 
-- [<span data-ttu-id="0b492-209">IsFalse 演算子</span><span class="sxs-lookup"><span data-stu-id="0b492-209">IsFalse Operator</span></span>](../../../visual-basic/language-reference/operators/isfalse-operator.md)
-- [<span data-ttu-id="0b492-210">IsTrue 演算子</span><span class="sxs-lookup"><span data-stu-id="0b492-210">IsTrue Operator</span></span>](../../../visual-basic/language-reference/operators/istrue-operator.md)
-- [<span data-ttu-id="0b492-211">Widening</span><span class="sxs-lookup"><span data-stu-id="0b492-211">Widening</span></span>](../../../visual-basic/language-reference/modifiers/widening.md)
-- [<span data-ttu-id="0b492-212">Narrowing</span><span class="sxs-lookup"><span data-stu-id="0b492-212">Narrowing</span></span>](../../../visual-basic/language-reference/modifiers/narrowing.md)
-- [<span data-ttu-id="0b492-213">拡大変換と縮小変換</span><span class="sxs-lookup"><span data-stu-id="0b492-213">Widening and Narrowing Conversions</span></span>](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
-- [<span data-ttu-id="0b492-214">演算子プロシージャ</span><span class="sxs-lookup"><span data-stu-id="0b492-214">Operator Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
-- [<span data-ttu-id="0b492-215">方法: 演算子を定義する</span><span class="sxs-lookup"><span data-stu-id="0b492-215">How to: Define an Operator</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
-- [<span data-ttu-id="0b492-216">方法: 変換演算子を定義する</span><span class="sxs-lookup"><span data-stu-id="0b492-216">How to: Define a Conversion Operator</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
-- [<span data-ttu-id="0b492-217">方法: 演算子プロシージャを呼び出す</span><span class="sxs-lookup"><span data-stu-id="0b492-217">How to: Call an Operator Procedure</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)
-- [<span data-ttu-id="0b492-218">方法: 演算子を定義するクラスを使用する</span><span class="sxs-lookup"><span data-stu-id="0b492-218">How to: Use a Class that Defines Operators</span></span>](../../../visual-basic/programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)
+- [<span data-ttu-id="42e9b-209">IsFalse 演算子</span><span class="sxs-lookup"><span data-stu-id="42e9b-209">IsFalse Operator</span></span>](../operators/isfalse-operator.md)
+- [<span data-ttu-id="42e9b-210">IsTrue 演算子</span><span class="sxs-lookup"><span data-stu-id="42e9b-210">IsTrue Operator</span></span>](../operators/istrue-operator.md)
+- [<span data-ttu-id="42e9b-211">Widening</span><span class="sxs-lookup"><span data-stu-id="42e9b-211">Widening</span></span>](../modifiers/widening.md)
+- [<span data-ttu-id="42e9b-212">Narrowing</span><span class="sxs-lookup"><span data-stu-id="42e9b-212">Narrowing</span></span>](../modifiers/narrowing.md)
+- [<span data-ttu-id="42e9b-213">拡大変換と縮小変換</span><span class="sxs-lookup"><span data-stu-id="42e9b-213">Widening and Narrowing Conversions</span></span>](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [<span data-ttu-id="42e9b-214">演算子プロシージャ</span><span class="sxs-lookup"><span data-stu-id="42e9b-214">Operator Procedures</span></span>](../../programming-guide/language-features/procedures/operator-procedures.md)
+- [<span data-ttu-id="42e9b-215">方法: 演算子を定義する</span><span class="sxs-lookup"><span data-stu-id="42e9b-215">How to: Define an Operator</span></span>](../../programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [<span data-ttu-id="42e9b-216">方法: 変換演算子を定義する</span><span class="sxs-lookup"><span data-stu-id="42e9b-216">How to: Define a Conversion Operator</span></span>](../../programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [<span data-ttu-id="42e9b-217">方法: 演算子プロシージャを呼び出す</span><span class="sxs-lookup"><span data-stu-id="42e9b-217">How to: Call an Operator Procedure</span></span>](../../programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)
+- [<span data-ttu-id="42e9b-218">方法: 演算子を定義するクラスを使用する</span><span class="sxs-lookup"><span data-stu-id="42e9b-218">How to: Use a Class that Defines Operators</span></span>](../../programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)
