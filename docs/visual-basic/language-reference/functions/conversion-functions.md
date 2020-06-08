@@ -12,43 +12,43 @@ helpviewer_keywords:
 - functions [Visual Basic], conversion
 - dates [Visual Basic], converting
 ms.assetid: 8a8fb553-a8ac-424e-8103-26eea25eaa71
-ms.openlocfilehash: ea3c170b01b3d7b745a66fcf9fdd3c5aac15fd89
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c25ede7c86d11c108981acc4103ce6334803393a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348104"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406444"
 ---
-# <a name="conversion-functions-visual-basic"></a><span data-ttu-id="f777e-102">変換関数 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f777e-102">Conversion functions (Visual Basic)</span></span>
+# <a name="conversion-functions-visual-basic"></a><span data-ttu-id="e0d4a-102">変換関数 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e0d4a-102">Conversion functions (Visual Basic)</span></span>
 
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>
-- [<span data-ttu-id="f777e-103">CBool 関数</span><span class="sxs-lookup"><span data-stu-id="f777e-103">CBool Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [<span data-ttu-id="f777e-104">CByte 関数</span><span class="sxs-lookup"><span data-stu-id="f777e-104">CByte Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [<span data-ttu-id="f777e-105">CChar 関数</span><span class="sxs-lookup"><span data-stu-id="f777e-105">CChar Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [<span data-ttu-id="f777e-106">CDate 関数</span><span class="sxs-lookup"><span data-stu-id="f777e-106">CDate Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [<span data-ttu-id="f777e-107">CDbl 関数</span><span class="sxs-lookup"><span data-stu-id="f777e-107">CDbl Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [<span data-ttu-id="f777e-108">CDec 関数</span><span class="sxs-lookup"><span data-stu-id="f777e-108">CDec Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="e0d4a-103">CBool 関数</span><span class="sxs-lookup"><span data-stu-id="e0d4a-103">CBool Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="e0d4a-104">CByte 関数</span><span class="sxs-lookup"><span data-stu-id="e0d4a-104">CByte Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="e0d4a-105">CChar 関数</span><span class="sxs-lookup"><span data-stu-id="e0d4a-105">CChar Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="e0d4a-106">CDate 関数</span><span class="sxs-lookup"><span data-stu-id="e0d4a-106">CDate Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="e0d4a-107">CDbl 関数</span><span class="sxs-lookup"><span data-stu-id="e0d4a-107">CDbl Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="e0d4a-108">CDec 関数</span><span class="sxs-lookup"><span data-stu-id="e0d4a-108">CDec Function</span></span>](type-conversion-functions.md)
 - <xref:Microsoft.VisualBasic.Strings.Chr%2A>
 - <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
-- [<span data-ttu-id="f777e-109">CInt 関数</span><span class="sxs-lookup"><span data-stu-id="f777e-109">CInt Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [<span data-ttu-id="f777e-110">CLng 関数</span><span class="sxs-lookup"><span data-stu-id="f777e-110">CLng Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [<span data-ttu-id="f777e-111">CObj 関数</span><span class="sxs-lookup"><span data-stu-id="f777e-111">CObj Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [<span data-ttu-id="f777e-112">CSByte 関数</span><span class="sxs-lookup"><span data-stu-id="f777e-112">CSByte Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [<span data-ttu-id="f777e-113">CShort 関数</span><span class="sxs-lookup"><span data-stu-id="f777e-113">CShort Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [<span data-ttu-id="f777e-114">CSng 関数</span><span class="sxs-lookup"><span data-stu-id="f777e-114">CSng Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [<span data-ttu-id="f777e-115">CStr 関数</span><span class="sxs-lookup"><span data-stu-id="f777e-115">CStr Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [<span data-ttu-id="f777e-116">CType 関数</span><span class="sxs-lookup"><span data-stu-id="f777e-116">CType Function</span></span>](../../../visual-basic/language-reference/functions/ctype-function.md)
-- [<span data-ttu-id="f777e-117">CUInt 関数</span><span class="sxs-lookup"><span data-stu-id="f777e-117">CUInt Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [<span data-ttu-id="f777e-118">CULng 関数</span><span class="sxs-lookup"><span data-stu-id="f777e-118">CULng Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [<span data-ttu-id="f777e-119">CUShort 関数</span><span class="sxs-lookup"><span data-stu-id="f777e-119">CUShort Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="e0d4a-109">CInt 関数</span><span class="sxs-lookup"><span data-stu-id="e0d4a-109">CInt Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="e0d4a-110">CLng 関数</span><span class="sxs-lookup"><span data-stu-id="e0d4a-110">CLng Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="e0d4a-111">CObj 関数</span><span class="sxs-lookup"><span data-stu-id="e0d4a-111">CObj Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="e0d4a-112">CSByte 関数</span><span class="sxs-lookup"><span data-stu-id="e0d4a-112">CSByte Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="e0d4a-113">CShort 関数</span><span class="sxs-lookup"><span data-stu-id="e0d4a-113">CShort Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="e0d4a-114">CSng 関数</span><span class="sxs-lookup"><span data-stu-id="e0d4a-114">CSng Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="e0d4a-115">CStr 関数</span><span class="sxs-lookup"><span data-stu-id="e0d4a-115">CStr Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="e0d4a-116">CType 関数</span><span class="sxs-lookup"><span data-stu-id="e0d4a-116">CType Function</span></span>](ctype-function.md)
+- [<span data-ttu-id="e0d4a-117">CUInt 関数</span><span class="sxs-lookup"><span data-stu-id="e0d4a-117">CUInt Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="e0d4a-118">CULng 関数</span><span class="sxs-lookup"><span data-stu-id="e0d4a-118">CULng Function</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="e0d4a-119">CUShort 関数</span><span class="sxs-lookup"><span data-stu-id="e0d4a-119">CUShort Function</span></span>](type-conversion-functions.md)
 - <xref:Microsoft.VisualBasic.Strings.Format%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Hex%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Oct%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Str%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Val%2A>
 
-## <a name="see-also"></a><span data-ttu-id="f777e-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="f777e-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e0d4a-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="e0d4a-120">See also</span></span>
 
-- [<span data-ttu-id="f777e-121">データ型変換関数</span><span class="sxs-lookup"><span data-stu-id="f777e-121">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [<span data-ttu-id="f777e-122">データ型の変換</span><span class="sxs-lookup"><span data-stu-id="f777e-122">Converting Data Types</span></span>](../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)
+- [<span data-ttu-id="e0d4a-121">データ型変換関数</span><span class="sxs-lookup"><span data-stu-id="e0d4a-121">Type Conversion Functions</span></span>](type-conversion-functions.md)
+- [<span data-ttu-id="e0d4a-122">データ型の変換</span><span class="sxs-lookup"><span data-stu-id="e0d4a-122">Converting Data Types</span></span>](../../programming-guide/concepts/linq/converting-data-types.md)

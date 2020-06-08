@@ -2,26 +2,26 @@
 title: '方法: デリゲート メソッドを呼び出す'
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-ms.openlocfilehash: 520bacfbe6103490e0459cd5af149c1d55a8fce4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f319727c007b93c7b334af0598f1b9f7c034144d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345266"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410722"
 ---
-# <a name="how-to-invoke-a-delegate-method-visual-basic"></a><span data-ttu-id="f5736-102">方法: デリゲート メソッドを呼び出す (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f5736-102">How to: Invoke a Delegate Method (Visual Basic)</span></span>
+# <a name="how-to-invoke-a-delegate-method-visual-basic"></a><span data-ttu-id="dc14b-102">方法: デリゲート メソッドを呼び出す (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dc14b-102">How to: Invoke a Delegate Method (Visual Basic)</span></span>
 
-<span data-ttu-id="f5736-103">この例では、メソッドをデリゲートに関連付け、デリゲートからそのメソッドを呼び出す方法を示します。</span><span class="sxs-lookup"><span data-stu-id="f5736-103">This example shows how to associate a method with a delegate and then invoke that method through the delegate.</span></span>
+<span data-ttu-id="dc14b-103">この例では、メソッドをデリゲートに関連付け、デリゲートからそのメソッドを呼び出す方法を示します。</span><span class="sxs-lookup"><span data-stu-id="dc14b-103">This example shows how to associate a method with a delegate and then invoke that method through the delegate.</span></span>
 
-### <a name="create-the-delegate-and-matching-procedures"></a><span data-ttu-id="f5736-104">デリゲートおよび一致するプロシージャを作成する</span><span class="sxs-lookup"><span data-stu-id="f5736-104">Create the delegate and matching procedures</span></span>
+### <a name="create-the-delegate-and-matching-procedures"></a><span data-ttu-id="dc14b-104">デリゲートおよび一致するプロシージャを作成する</span><span class="sxs-lookup"><span data-stu-id="dc14b-104">Create the delegate and matching procedures</span></span>
 
-1. <span data-ttu-id="f5736-105">`MySubDelegate` という名前のデリゲートを作成します。</span><span class="sxs-lookup"><span data-stu-id="f5736-105">Create a delegate named `MySubDelegate`.</span></span>
+1. <span data-ttu-id="dc14b-105">`MySubDelegate` という名前のデリゲートを作成します。</span><span class="sxs-lookup"><span data-stu-id="dc14b-105">Create a delegate named `MySubDelegate`.</span></span>
 
     ```vb
     Delegate Sub MySubDelegate(ByVal x As Integer)
     ```
 
-2. <span data-ttu-id="f5736-106">デリゲートと同じシグネチャのメソッドを含むクラスを宣言します。</span><span class="sxs-lookup"><span data-stu-id="f5736-106">Declare a class that contains a method with the same signature as the delegate.</span></span>
+2. <span data-ttu-id="dc14b-106">デリゲートと同じシグネチャのメソッドを含むクラスを宣言します。</span><span class="sxs-lookup"><span data-stu-id="dc14b-106">Declare a class that contains a method with the same signature as the delegate.</span></span>
 
     ```vb
     Class class1
@@ -31,7 +31,7 @@ ms.locfileid: "74345266"
     End Class
     ```
 
-3. <span data-ttu-id="f5736-107">デリゲートのインスタンスを作成して、デリゲートに関連付けられているメソッドを、組み込みの `Invoke` メソッドを呼び出すことで起動するメソッドを定義します。</span><span class="sxs-lookup"><span data-stu-id="f5736-107">Define a method that creates an instance of the delegate and invokes the method associated with the delegate by calling the built-in `Invoke` method.</span></span>
+3. <span data-ttu-id="dc14b-107">デリゲートのインスタンスを作成して、デリゲートに関連付けられているメソッドを、組み込みの `Invoke` メソッドを呼び出すことで起動するメソッドを定義します。</span><span class="sxs-lookup"><span data-stu-id="dc14b-107">Define a method that creates an instance of the delegate and invokes the method associated with the delegate by calling the built-in `Invoke` method.</span></span>
 
     ```vb
     Protected Sub DelegateTest()
@@ -43,9 +43,9 @@ ms.locfileid: "74345266"
     End Sub
     ```
 
-## <a name="see-also"></a><span data-ttu-id="f5736-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="f5736-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dc14b-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="dc14b-108">See also</span></span>
 
-- [<span data-ttu-id="f5736-109">Delegate ステートメント</span><span class="sxs-lookup"><span data-stu-id="f5736-109">Delegate Statement</span></span>](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [<span data-ttu-id="f5736-110">デリゲート</span><span class="sxs-lookup"><span data-stu-id="f5736-110">Delegates</span></span>](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [<span data-ttu-id="f5736-111">イベント</span><span class="sxs-lookup"><span data-stu-id="f5736-111">Events</span></span>](../../../../visual-basic/programming-guide/language-features/events/index.md)
-- [<span data-ttu-id="f5736-112">マルチスレッド アプリケーション</span><span class="sxs-lookup"><span data-stu-id="f5736-112">Multithreaded Applications</span></span>](../../../../standard/threading/using-threads-and-threading.md)
+- [<span data-ttu-id="dc14b-109">Delegate ステートメント</span><span class="sxs-lookup"><span data-stu-id="dc14b-109">Delegate Statement</span></span>](../../../language-reference/statements/delegate-statement.md)
+- [<span data-ttu-id="dc14b-110">デリゲート</span><span class="sxs-lookup"><span data-stu-id="dc14b-110">Delegates</span></span>](index.md)
+- [<span data-ttu-id="dc14b-111">イベント</span><span class="sxs-lookup"><span data-stu-id="dc14b-111">Events</span></span>](../events/index.md)
+- [<span data-ttu-id="dc14b-112">マルチスレッド アプリケーション</span><span class="sxs-lookup"><span data-stu-id="dc14b-112">Multithreaded Applications</span></span>](../../../../standard/threading/using-threads-and-threading.md)

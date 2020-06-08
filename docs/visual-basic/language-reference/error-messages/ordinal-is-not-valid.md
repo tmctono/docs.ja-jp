@@ -4,30 +4,30 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
-ms.openlocfilehash: 740243c744a7ba5391659894812a00d80555fd80
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7b9bd8435b56dd5e33d14eb35d76aacc7d60c8b5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665662"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413054"
 ---
-# <a name="ordinal-is-not-valid"></a><span data-ttu-id="0fe68-102">序数が有効ではありません。</span><span class="sxs-lookup"><span data-stu-id="0fe68-102">Ordinal is not valid</span></span>
-<span data-ttu-id="0fe68-103">ダイナミック リンク ライブラリ (DLL) への呼び出しが、`#num` 構文を使用して、プロシージャ名の代わりに数値を使用するように指定されています。</span><span class="sxs-lookup"><span data-stu-id="0fe68-103">Your call to a dynamic-link library (DLL) indicated to use a number instead of a procedure name, using the `#num` syntax.</span></span> <span data-ttu-id="0fe68-104">このエラーには、次のような原因が考えられます。</span><span class="sxs-lookup"><span data-stu-id="0fe68-104">This error has the following possible causes:</span></span>  
+# <a name="ordinal-is-not-valid"></a><span data-ttu-id="5e057-102">序数が有効ではありません。</span><span class="sxs-lookup"><span data-stu-id="5e057-102">Ordinal is not valid</span></span>
+<span data-ttu-id="5e057-103">ダイナミック リンク ライブラリ (DLL) への呼び出しが、`#num` 構文を使用して、プロシージャ名の代わりに数値を使用するように指定されています。</span><span class="sxs-lookup"><span data-stu-id="5e057-103">Your call to a dynamic-link library (DLL) indicated to use a number instead of a procedure name, using the `#num` syntax.</span></span> <span data-ttu-id="5e057-104">このエラーには、次のような原因が考えられます。</span><span class="sxs-lookup"><span data-stu-id="5e057-104">This error has the following possible causes:</span></span>  
   
-- <span data-ttu-id="0fe68-105">`#num` 式を序数に変換しようとして失敗しました。</span><span class="sxs-lookup"><span data-stu-id="0fe68-105">An attempt to convert the `#num` expression to an ordinal failed.</span></span>  
+- <span data-ttu-id="5e057-105">`#num` 式を序数に変換しようとして失敗しました。</span><span class="sxs-lookup"><span data-stu-id="5e057-105">An attempt to convert the `#num` expression to an ordinal failed.</span></span>  
   
-- <span data-ttu-id="0fe68-106">指定された `#num` が、DLL 内の関数を指定していません。</span><span class="sxs-lookup"><span data-stu-id="0fe68-106">The `#num` specified does not specify any function in the DLL.</span></span>  
+- <span data-ttu-id="5e057-106">指定された `#num` が、DLL 内の関数を指定していません。</span><span class="sxs-lookup"><span data-stu-id="5e057-106">The `#num` specified does not specify any function in the DLL.</span></span>  
   
-- <span data-ttu-id="0fe68-107">タイプ ライブラリに無効な宣言が含まれているため、無効な序数が内部で使用されています。</span><span class="sxs-lookup"><span data-stu-id="0fe68-107">A type library has an invalid declaration resulting in internal use of an invalid ordinal number.</span></span>  
+- <span data-ttu-id="5e057-107">タイプ ライブラリに無効な宣言が含まれているため、無効な序数が内部で使用されています。</span><span class="sxs-lookup"><span data-stu-id="5e057-107">A type library has an invalid declaration resulting in internal use of an invalid ordinal number.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="0fe68-108">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="0fe68-108">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="5e057-108">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="5e057-108">To correct this error</span></span>  
   
-1. <span data-ttu-id="0fe68-109">式が有効な数値を表していること、または名前によってプロシージャを呼び出していることを確認します。</span><span class="sxs-lookup"><span data-stu-id="0fe68-109">Make sure the expression represents a valid number, or call the procedure by name.</span></span>  
+1. <span data-ttu-id="5e057-109">式が有効な数値を表していること、または名前によってプロシージャを呼び出していることを確認します。</span><span class="sxs-lookup"><span data-stu-id="5e057-109">Make sure the expression represents a valid number, or call the procedure by name.</span></span>  
   
-2. <span data-ttu-id="0fe68-110">`#num` が DLL 内の有効な関数を識別することを確認します。</span><span class="sxs-lookup"><span data-stu-id="0fe68-110">Make sure `#num` identifies a valid function in the DLL.</span></span>  
+2. <span data-ttu-id="5e057-110">`#num` が DLL 内の有効な関数を識別することを確認します。</span><span class="sxs-lookup"><span data-stu-id="5e057-110">Make sure `#num` identifies a valid function in the DLL.</span></span>  
   
-3. <span data-ttu-id="0fe68-111">コードをコメント アウトすることで、問題の原因となっているプロシージャ呼び出しを分離します。</span><span class="sxs-lookup"><span data-stu-id="0fe68-111">Isolate the procedure call causing the problem by commenting out the code.</span></span> <span data-ttu-id="0fe68-112">プロシージャの `Declare` ステートメントを記述し、その問題をタイプ ライブラリのベンダーに報告します。</span><span class="sxs-lookup"><span data-stu-id="0fe68-112">Write a `Declare` statement for the procedure, and report the problem to the type library vendor.</span></span>  
+3. <span data-ttu-id="5e057-111">コードをコメント アウトすることで、問題の原因となっているプロシージャ呼び出しを分離します。</span><span class="sxs-lookup"><span data-stu-id="5e057-111">Isolate the procedure call causing the problem by commenting out the code.</span></span> <span data-ttu-id="5e057-112">プロシージャの `Declare` ステートメントを記述し、その問題をタイプ ライブラリのベンダーに報告します。</span><span class="sxs-lookup"><span data-stu-id="5e057-112">Write a `Declare` statement for the procedure, and report the problem to the type library vendor.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0fe68-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="0fe68-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5e057-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="5e057-113">See also</span></span>
 
-- [<span data-ttu-id="0fe68-114">Declare ステートメント</span><span class="sxs-lookup"><span data-stu-id="0fe68-114">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [<span data-ttu-id="5e057-114">Declare ステートメント</span><span class="sxs-lookup"><span data-stu-id="5e057-114">Declare Statement</span></span>](../statements/declare-statement.md)
