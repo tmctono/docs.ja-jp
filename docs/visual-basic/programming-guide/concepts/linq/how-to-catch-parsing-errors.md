@@ -2,22 +2,22 @@
 title: '方法: 解析エラーをキャッチする'
 ms.date: 07/20/2015
 ms.assetid: 22e9068e-ea58-447b-816e-cd1852c11787
-ms.openlocfilehash: 14c4f76c5f10616f9346084cda276e2862b2b41d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c0b46d7df270dd6f081a0c736b6978088cfbd9c0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353340"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375149"
 ---
-# <a name="how-to-catch-parsing-errors-visual-basic"></a><span data-ttu-id="6b0c9-102">方法: 解析エラーをキャッチする (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6b0c9-102">How to: Catch Parsing Errors (Visual Basic)</span></span>
-<span data-ttu-id="6b0c9-103">このトピックでは、形式が正しくないか無効な XML を検出する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="6b0c9-103">This topic shows how to detect badly formed or invalid XML.</span></span>  
+# <a name="how-to-catch-parsing-errors-visual-basic"></a><span data-ttu-id="75447-102">方法: 解析エラーをキャッチする (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75447-102">How to: Catch Parsing Errors (Visual Basic)</span></span>
+<span data-ttu-id="75447-103">このトピックでは、形式が正しくないか無効な XML を検出する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="75447-103">This topic shows how to detect badly formed or invalid XML.</span></span>  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <span data-ttu-id="6b0c9-104">は、<xref:System.Xml.XmlReader> を使用して実装されます。</span><span class="sxs-lookup"><span data-stu-id="6b0c9-104">is implemented using <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="6b0c9-105">形式が正しくない XML や無効な XML が [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] に渡されると、基になる <xref:System.Xml.XmlReader> クラスから例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="6b0c9-105">If badly formed or invalid XML is passed to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], the underlying <xref:System.Xml.XmlReader> class will throw an exception.</span></span> <span data-ttu-id="6b0c9-106">XML を解析するさまざまなメソッド (<xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType> など) はこの例外をキャッチしません。この例外は、アプリケーションでキャッチできます。</span><span class="sxs-lookup"><span data-stu-id="6b0c9-106">The various methods that parse XML, such as <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, do not catch the exception; the exception can then be caught by your application.</span></span>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <span data-ttu-id="75447-104">は、<xref:System.Xml.XmlReader> を使用して実装されます。</span><span class="sxs-lookup"><span data-stu-id="75447-104">is implemented using <xref:System.Xml.XmlReader>.</span></span> <span data-ttu-id="75447-105">形式が正しくない XML や無効な XML が [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] に渡されると、基になる <xref:System.Xml.XmlReader> クラスから例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="75447-105">If badly formed or invalid XML is passed to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], the underlying <xref:System.Xml.XmlReader> class will throw an exception.</span></span> <span data-ttu-id="75447-106">XML を解析するさまざまなメソッド (<xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType> など) はこの例外をキャッチしません。この例外は、アプリケーションでキャッチできます。</span><span class="sxs-lookup"><span data-stu-id="75447-106">The various methods that parse XML, such as <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, do not catch the exception; the exception can then be caught by your application.</span></span>  
   
- <span data-ttu-id="6b0c9-107">XML リテラルを使用する場合は、解析エラーを検出できないことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="6b0c9-107">Note that you cannot get parse errors if you use XML literals.</span></span> <span data-ttu-id="6b0c9-108">Visual Basic コンパイラは、形式が正しくないか無効な XML をキャッチします。</span><span class="sxs-lookup"><span data-stu-id="6b0c9-108">The Visual Basic compiler will catch errors of badly formed or invalid XML.</span></span>  
+ <span data-ttu-id="75447-107">XML リテラルを使用する場合は、解析エラーを検出できないことに注意してください。</span><span class="sxs-lookup"><span data-stu-id="75447-107">Note that you cannot get parse errors if you use XML literals.</span></span> <span data-ttu-id="75447-108">Visual Basic コンパイラは、形式が正しくないか無効な XML をキャッチします。</span><span class="sxs-lookup"><span data-stu-id="75447-108">The Visual Basic compiler will catch errors of badly formed or invalid XML.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6b0c9-109">例</span><span class="sxs-lookup"><span data-stu-id="6b0c9-109">Example</span></span>  
- <span data-ttu-id="6b0c9-110">次のコードでは、無効な XML の解析を試行します。</span><span class="sxs-lookup"><span data-stu-id="6b0c9-110">The following code tries to parse invalid XML:</span></span>  
+## <a name="example"></a><span data-ttu-id="75447-109">例</span><span class="sxs-lookup"><span data-stu-id="75447-109">Example</span></span>  
+ <span data-ttu-id="75447-110">次のコードでは、無効な XML の解析を試行します。</span><span class="sxs-lookup"><span data-stu-id="75447-110">The following code tries to parse invalid XML:</span></span>  
   
 ```vb  
 Try  
@@ -33,14 +33,14 @@ Catch e As System.Xml.XmlException
 End Try  
 ```  
   
- <span data-ttu-id="6b0c9-111">このコードを実行すると、次の例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="6b0c9-111">When you run this code, it throws the following exception:</span></span>  
+ <span data-ttu-id="75447-111">このコードを実行すると、次の例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="75447-111">When you run this code, it throws the following exception:</span></span>  
   
 ```console  
 The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line 5, position 13.  
 ```  
   
- <span data-ttu-id="6b0c9-112"><xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>、<xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>、<xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>、および <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> メソッドによってスローされる例外の詳細については、<xref:System.Xml.XmlReader> のドキュメントを参照してください。</span><span class="sxs-lookup"><span data-stu-id="6b0c9-112">For information about the exceptions that you can expect the <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>, and <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> methods to throw, see the <xref:System.Xml.XmlReader> documentation.</span></span>  
+ <span data-ttu-id="75447-112"><xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>、<xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>、<xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>、および <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> メソッドによってスローされる例外の詳細については、<xref:System.Xml.XmlReader> のドキュメントを参照してください。</span><span class="sxs-lookup"><span data-stu-id="75447-112">For information about the exceptions that you can expect the <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>, and <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> methods to throw, see the <xref:System.Xml.XmlReader> documentation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6b0c9-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="6b0c9-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="75447-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="75447-113">See also</span></span>
 
-- [<span data-ttu-id="6b0c9-114">XML の解析 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6b0c9-114">Parsing XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [<span data-ttu-id="75447-114">XML の解析 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75447-114">Parsing XML (Visual Basic)</span></span>](parsing-xml.md)
