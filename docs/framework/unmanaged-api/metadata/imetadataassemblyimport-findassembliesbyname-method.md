@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4db97cf9-e4c1-4233-8efa-cbdc0e14a8e4
 topic_type:
 - apiref
-ms.openlocfilehash: 05902436c09d082f90af01f48c7e918650317ce7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: d2693a94f02214df6d7265b26e3d70d91adcf8a7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009419"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503836"
 ---
-# <a name="imetadataassemblyimportfindassembliesbyname-method"></a><span data-ttu-id="1511a-102">IMetaDataAssemblyImport::FindAssembliesByName メソッド</span><span class="sxs-lookup"><span data-stu-id="1511a-102">IMetaDataAssemblyImport::FindAssembliesByName Method</span></span>
-<span data-ttu-id="1511a-103">`szAssemblyName`参照を解決するために共通言語ランタイム (CLR) によって採用されている標準規則を使用して、指定したパラメーターを持つアセンブリの配列を取得します。</span><span class="sxs-lookup"><span data-stu-id="1511a-103">Gets an array of assemblies with the specified `szAssemblyName` parameter, using the standard rules employed by the common language runtime (CLR) for resolving references.</span></span>  
+# <a name="imetadataassemblyimportfindassembliesbyname-method"></a><span data-ttu-id="4ad2b-102">IMetaDataAssemblyImport::FindAssembliesByName メソッド</span><span class="sxs-lookup"><span data-stu-id="4ad2b-102">IMetaDataAssemblyImport::FindAssembliesByName Method</span></span>
+<span data-ttu-id="4ad2b-103">`szAssemblyName`参照を解決するために共通言語ランタイム (CLR) によって採用されている標準規則を使用して、指定したパラメーターを持つアセンブリの配列を取得します。</span><span class="sxs-lookup"><span data-stu-id="4ad2b-103">Gets an array of assemblies with the specified `szAssemblyName` parameter, using the standard rules employed by the common language runtime (CLR) for resolving references.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1511a-104">構文</span><span class="sxs-lookup"><span data-stu-id="1511a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4ad2b-104">構文</span><span class="sxs-lookup"><span data-stu-id="4ad2b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT FindAssembliesByName (  
@@ -38,51 +38,51 @@ HRESULT FindAssembliesByName (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1511a-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="1511a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4ad2b-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="4ad2b-105">Parameters</span></span>  
  `szAppBase`  
- <span data-ttu-id="1511a-106">から指定されたアセンブリを検索するルートディレクトリ。</span><span class="sxs-lookup"><span data-stu-id="1511a-106">[in] The root directory in which to search for the given assembly.</span></span> <span data-ttu-id="1511a-107">この値がに設定されている場合 `null` 、 `FindAssembliesByName` はアセンブリのグローバルアセンブリキャッシュ内だけを検索します。</span><span class="sxs-lookup"><span data-stu-id="1511a-107">If this value is set to `null`, `FindAssembliesByName` will look only in the global assembly cache for the assembly.</span></span>  
+ <span data-ttu-id="4ad2b-106">から指定されたアセンブリを検索するルートディレクトリ。</span><span class="sxs-lookup"><span data-stu-id="4ad2b-106">[in] The root directory in which to search for the given assembly.</span></span> <span data-ttu-id="4ad2b-107">この値がに設定されている場合 `null` 、 `FindAssembliesByName` はアセンブリのグローバルアセンブリキャッシュ内だけを検索します。</span><span class="sxs-lookup"><span data-stu-id="4ad2b-107">If this value is set to `null`, `FindAssembliesByName` will look only in the global assembly cache for the assembly.</span></span>  
   
  `szPrivateBin`  
- <span data-ttu-id="1511a-108">からルートディレクトリの下のセミコロンで区切られたサブディレクトリ (たとえば、"bin; bin2") の一覧。このディレクトリで、アセンブリを検索します。</span><span class="sxs-lookup"><span data-stu-id="1511a-108">[in] A list of semicolon-delimited subdirectories (for example, "bin;bin2"), under the root directory, in which to search for the assembly.</span></span> <span data-ttu-id="1511a-109">これらのディレクトリは、既定のプローブルールで指定されているものに加えてプローブされます。</span><span class="sxs-lookup"><span data-stu-id="1511a-109">These directories are probed in addition to those specified in the default probing rules.</span></span>  
+ <span data-ttu-id="4ad2b-108">からルートディレクトリの下のセミコロンで区切られたサブディレクトリ (たとえば、"bin; bin2") の一覧。このディレクトリで、アセンブリを検索します。</span><span class="sxs-lookup"><span data-stu-id="4ad2b-108">[in] A list of semicolon-delimited subdirectories (for example, "bin;bin2"), under the root directory, in which to search for the assembly.</span></span> <span data-ttu-id="4ad2b-109">これらのディレクトリは、既定のプローブルールで指定されているものに加えてプローブされます。</span><span class="sxs-lookup"><span data-stu-id="4ad2b-109">These directories are probed in addition to those specified in the default probing rules.</span></span>  
   
  `szAssemblyName`  
- <span data-ttu-id="1511a-110">から検索するアセンブリの名前。</span><span class="sxs-lookup"><span data-stu-id="1511a-110">[in] The name of the assembly to find.</span></span> <span data-ttu-id="1511a-111">この文字列の形式は、のクラス参照ページで定義されてい <xref:System.Reflection.AssemblyName> ます。</span><span class="sxs-lookup"><span data-stu-id="1511a-111">The format of this string is defined in the class reference page for <xref:System.Reflection.AssemblyName>.</span></span>  
+ <span data-ttu-id="4ad2b-110">から検索するアセンブリの名前。</span><span class="sxs-lookup"><span data-stu-id="4ad2b-110">[in] The name of the assembly to find.</span></span> <span data-ttu-id="4ad2b-111">この文字列の形式は、のクラス参照ページで定義されてい <xref:System.Reflection.AssemblyName> ます。</span><span class="sxs-lookup"><span data-stu-id="4ad2b-111">The format of this string is defined in the class reference page for <xref:System.Reflection.AssemblyName>.</span></span>  
   
  `ppIUnk`  
- <span data-ttu-id="1511a-112">からインターフェイスポインターを格納する[IUnknown](/cpp/atl/iunknown)型の配列 `IMetadataAssemblyImport` 。</span><span class="sxs-lookup"><span data-stu-id="1511a-112">[in] An array of type [IUnknown](/cpp/atl/iunknown) in which to put the `IMetadataAssemblyImport` interface pointers.</span></span>  
+ <span data-ttu-id="4ad2b-112">からインターフェイスポインターを格納する[IUnknown](/cpp/atl/iunknown)型の配列 `IMetadataAssemblyImport` 。</span><span class="sxs-lookup"><span data-stu-id="4ad2b-112">[in] An array of type [IUnknown](/cpp/atl/iunknown) in which to put the `IMetadataAssemblyImport` interface pointers.</span></span>  
   
  `cMax`  
- <span data-ttu-id="1511a-113">入出力に配置できるインターフェイスポインターの最大数 `ppIUnk` 。</span><span class="sxs-lookup"><span data-stu-id="1511a-113">[out] The maximum number of interface pointers that can be placed in `ppIUnk`.</span></span>  
+ <span data-ttu-id="4ad2b-113">入出力に配置できるインターフェイスポインターの最大数 `ppIUnk` 。</span><span class="sxs-lookup"><span data-stu-id="4ad2b-113">[out] The maximum number of interface pointers that can be placed in `ppIUnk`.</span></span>  
   
  `pcAssemblies`  
- <span data-ttu-id="1511a-114">入出力返されたインターフェイスポインターの数。</span><span class="sxs-lookup"><span data-stu-id="1511a-114">[out] The number of interface pointers returned.</span></span> <span data-ttu-id="1511a-115">つまり、実際に配置されたインターフェイスポインターの数 `ppIUnk` 。</span><span class="sxs-lookup"><span data-stu-id="1511a-115">That is, the number of interface pointers actually placed in `ppIUnk`.</span></span>  
+ <span data-ttu-id="4ad2b-114">入出力返されたインターフェイスポインターの数。</span><span class="sxs-lookup"><span data-stu-id="4ad2b-114">[out] The number of interface pointers returned.</span></span> <span data-ttu-id="4ad2b-115">つまり、実際に配置されたインターフェイスポインターの数 `ppIUnk` 。</span><span class="sxs-lookup"><span data-stu-id="4ad2b-115">That is, the number of interface pointers actually placed in `ppIUnk`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1511a-116">戻り値</span><span class="sxs-lookup"><span data-stu-id="1511a-116">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4ad2b-116">戻り値</span><span class="sxs-lookup"><span data-stu-id="4ad2b-116">Return Value</span></span>  
   
-|<span data-ttu-id="1511a-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="1511a-117">HRESULT</span></span>|<span data-ttu-id="1511a-118">説明</span><span class="sxs-lookup"><span data-stu-id="1511a-118">Description</span></span>|  
+|<span data-ttu-id="4ad2b-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="4ad2b-117">HRESULT</span></span>|<span data-ttu-id="4ad2b-118">説明</span><span class="sxs-lookup"><span data-stu-id="4ad2b-118">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="1511a-119">`FindAssembliesByName`正常に返されました。</span><span class="sxs-lookup"><span data-stu-id="1511a-119">`FindAssembliesByName` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="1511a-120">アセンブリがありません。</span><span class="sxs-lookup"><span data-stu-id="1511a-120">There are no assemblies.</span></span>|  
+|`S_OK`|<span data-ttu-id="4ad2b-119">`FindAssembliesByName`正常に返されました。</span><span class="sxs-lookup"><span data-stu-id="4ad2b-119">`FindAssembliesByName` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="4ad2b-120">アセンブリがありません。</span><span class="sxs-lookup"><span data-stu-id="4ad2b-120">There are no assemblies.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="1511a-121">コメント</span><span class="sxs-lookup"><span data-stu-id="1511a-121">Remarks</span></span>  
- <span data-ttu-id="1511a-122">アセンブリ名が指定されている場合、メソッドは、 `FindAssembliesByName` アセンブリ参照を解決するための標準の規則に従って、アセンブリを検索します。</span><span class="sxs-lookup"><span data-stu-id="1511a-122">Given an assembly name, the `FindAssembliesByName` method finds the assembly by following the standard rules for resolving assembly references.</span></span> <span data-ttu-id="1511a-123">(詳細については、「[ランタイムがアセンブリを検索する方法](../../deployment/how-the-runtime-locates-assemblies.md)」を参照してください)。`FindAssembliesByName`呼び出し元は、アプリケーションベースやプライベート検索パスなど、アセンブリリゾルバーコンテキストのさまざまな側面を構成できます。</span><span class="sxs-lookup"><span data-stu-id="1511a-123">(For more information, see [How the Runtime Locates Assemblies](../../deployment/how-the-runtime-locates-assemblies.md).) `FindAssembliesByName` allows the caller to configure various aspects of the assembly resolver context, such as application base and private search path.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4ad2b-121">解説</span><span class="sxs-lookup"><span data-stu-id="4ad2b-121">Remarks</span></span>  
+ <span data-ttu-id="4ad2b-122">アセンブリ名が指定されている場合、メソッドは、 `FindAssembliesByName` アセンブリ参照を解決するための標準の規則に従って、アセンブリを検索します。</span><span class="sxs-lookup"><span data-stu-id="4ad2b-122">Given an assembly name, the `FindAssembliesByName` method finds the assembly by following the standard rules for resolving assembly references.</span></span> <span data-ttu-id="4ad2b-123">(詳細については、「[ランタイムがアセンブリを検索する方法](../../deployment/how-the-runtime-locates-assemblies.md)」を参照してください)。`FindAssembliesByName`呼び出し元は、アプリケーションベースやプライベート検索パスなど、アセンブリリゾルバーコンテキストのさまざまな側面を構成できます。</span><span class="sxs-lookup"><span data-stu-id="4ad2b-123">(For more information, see [How the Runtime Locates Assemblies](../../deployment/how-the-runtime-locates-assemblies.md).) `FindAssembliesByName` allows the caller to configure various aspects of the assembly resolver context, such as application base and private search path.</span></span>  
   
- <span data-ttu-id="1511a-124">`FindAssembliesByName`メソッドでは、アセンブリ解決ロジックを呼び出すために、プロセスで CLR を初期化する必要があります。</span><span class="sxs-lookup"><span data-stu-id="1511a-124">The `FindAssembliesByName` method requires the CLR to be initialized in the process in order to invoke the assembly resolution logic.</span></span> <span data-ttu-id="1511a-125">したがって、を呼び出す前に[Coinitializeee](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (COINITEE_DEFAULT を渡す) を呼び出してから、CoUninitializeCor の呼び出しを実行する必要があり `FindAssembliesByName` [CoUninitializeCor](../hosting/couninitializecor-function.md)ます。</span><span class="sxs-lookup"><span data-stu-id="1511a-125">Therefore, you must call [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (passing COINITEE_DEFAULT) before calling `FindAssembliesByName`, and then follow with a call to [CoUninitializeCor](../hosting/couninitializecor-function.md).</span></span>  
+ <span data-ttu-id="4ad2b-124">`FindAssembliesByName`メソッドでは、アセンブリ解決ロジックを呼び出すために、プロセスで CLR を初期化する必要があります。</span><span class="sxs-lookup"><span data-stu-id="4ad2b-124">The `FindAssembliesByName` method requires the CLR to be initialized in the process in order to invoke the assembly resolution logic.</span></span> <span data-ttu-id="4ad2b-125">したがって、を呼び出す前に[Coinitializeee](../hosting/coinitializeee-function.md) (COINITEE_DEFAULT を渡す) を呼び出してから、CoUninitializeCor の呼び出しを実行する必要があり `FindAssembliesByName` [CoUninitializeCor](../hosting/couninitializecor-function.md)ます。</span><span class="sxs-lookup"><span data-stu-id="4ad2b-125">Therefore, you must call [CoInitializeEE](../hosting/coinitializeee-function.md) (passing COINITEE_DEFAULT) before calling `FindAssembliesByName`, and then follow with a call to [CoUninitializeCor](../hosting/couninitializecor-function.md).</span></span>  
   
- <span data-ttu-id="1511a-126">`FindAssembliesByName`渡されたアセンブリ名のアセンブリマニフェストを格納しているファイルへの[IMetaDataImport](imetadataimport-interface.md)ポインターを返します。</span><span class="sxs-lookup"><span data-stu-id="1511a-126">`FindAssembliesByName` returns an [IMetaDataImport](imetadataimport-interface.md) pointer to the file containing the assembly manifest for the assembly name that is passed in.</span></span> <span data-ttu-id="1511a-127">指定したアセンブリ名が完全に指定されていない場合 (たとえば、バージョンが含まれていない場合) は、複数のアセンブリが返されることがあります。</span><span class="sxs-lookup"><span data-stu-id="1511a-127">If the given assembly name is not fully specified (for example, if it does not include a version), multiple assemblies might be returned.</span></span>  
+ <span data-ttu-id="4ad2b-126">`FindAssembliesByName`渡されたアセンブリ名のアセンブリマニフェストを格納しているファイルへの[IMetaDataImport](imetadataimport-interface.md)ポインターを返します。</span><span class="sxs-lookup"><span data-stu-id="4ad2b-126">`FindAssembliesByName` returns an [IMetaDataImport](imetadataimport-interface.md) pointer to the file containing the assembly manifest for the assembly name that is passed in.</span></span> <span data-ttu-id="4ad2b-127">指定したアセンブリ名が完全に指定されていない場合 (たとえば、バージョンが含まれていない場合) は、複数のアセンブリが返されることがあります。</span><span class="sxs-lookup"><span data-stu-id="4ad2b-127">If the given assembly name is not fully specified (for example, if it does not include a version), multiple assemblies might be returned.</span></span>  
   
- <span data-ttu-id="1511a-128">`FindAssembliesByName`は、コンパイル時に参照アセンブリの検索を試行するコンパイラによって一般的に使用されます。</span><span class="sxs-lookup"><span data-stu-id="1511a-128">`FindAssembliesByName` is commonly used by a compiler that attempts to find a referenced assembly at compile time.</span></span>  
+ <span data-ttu-id="4ad2b-128">`FindAssembliesByName`は、コンパイル時に参照アセンブリの検索を試行するコンパイラによって一般的に使用されます。</span><span class="sxs-lookup"><span data-stu-id="4ad2b-128">`FindAssembliesByName` is commonly used by a compiler that attempts to find a referenced assembly at compile time.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1511a-129">必要条件</span><span class="sxs-lookup"><span data-stu-id="1511a-129">Requirements</span></span>  
- <span data-ttu-id="1511a-130">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1511a-130">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4ad2b-129">要件</span><span class="sxs-lookup"><span data-stu-id="4ad2b-129">Requirements</span></span>  
+ <span data-ttu-id="4ad2b-130">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4ad2b-130">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1511a-131">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="1511a-131">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="4ad2b-131">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="4ad2b-131">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="1511a-132">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="1511a-132">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="4ad2b-132">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="4ad2b-132">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="1511a-133">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1511a-133">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4ad2b-133">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4ad2b-133">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1511a-134">関連項目</span><span class="sxs-lookup"><span data-stu-id="1511a-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4ad2b-134">関連項目</span><span class="sxs-lookup"><span data-stu-id="4ad2b-134">See also</span></span>
 
-- [<span data-ttu-id="1511a-135">ランタイムがアセンブリを検索する方法</span><span class="sxs-lookup"><span data-stu-id="1511a-135">How the Runtime Locates Assemblies</span></span>](../../deployment/how-the-runtime-locates-assemblies.md)
-- [<span data-ttu-id="1511a-136">IMetaDataAssemblyImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="1511a-136">IMetaDataAssemblyImport Interface</span></span>](imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="4ad2b-135">ランタイムがアセンブリを検索する方法</span><span class="sxs-lookup"><span data-stu-id="4ad2b-135">How the Runtime Locates Assemblies</span></span>](../../deployment/how-the-runtime-locates-assemblies.md)
+- [<span data-ttu-id="4ad2b-136">IMetaDataAssemblyImport インターフェイス</span><span class="sxs-lookup"><span data-stu-id="4ad2b-136">IMetaDataAssemblyImport Interface</span></span>](imetadataassemblyimport-interface.md)

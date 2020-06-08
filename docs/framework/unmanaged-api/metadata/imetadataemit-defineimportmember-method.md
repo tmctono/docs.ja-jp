@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: c7dd94c6-335b-46ff-9dfe-505056db5673
 topic_type:
 - apiref
-ms.openlocfilehash: ec8a24251ac4f0701b1adab19829078270229ced
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2facc63023a20dd6aaac64d7d036324c31658bc8
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004596"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501314"
 ---
-# <a name="imetadataemitdefineimportmember-method"></a><span data-ttu-id="2264c-102">IMetaDataEmit::DefineImportMember メソッド</span><span class="sxs-lookup"><span data-stu-id="2264c-102">IMetaDataEmit::DefineImportMember Method</span></span>
-<span data-ttu-id="2264c-103">現在のスコープの外部で定義されている型またはモジュールの指定したメンバーへの参照を作成し、その参照のトークンを定義します。</span><span class="sxs-lookup"><span data-stu-id="2264c-103">Creates a reference to the specified member of a type or module that is defined outside the current scope, and defines a token for that reference.</span></span>  
+# <a name="imetadataemitdefineimportmember-method"></a><span data-ttu-id="fc279-102">IMetaDataEmit::DefineImportMember メソッド</span><span class="sxs-lookup"><span data-stu-id="fc279-102">IMetaDataEmit::DefineImportMember Method</span></span>
+<span data-ttu-id="fc279-103">現在のスコープの外部で定義されている型またはモジュールの指定したメンバーへの参照を作成し、その参照のトークンを定義します。</span><span class="sxs-lookup"><span data-stu-id="fc279-103">Creates a reference to the specified member of a type or module that is defined outside the current scope, and defines a token for that reference.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2264c-104">構文</span><span class="sxs-lookup"><span data-stu-id="2264c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fc279-104">構文</span><span class="sxs-lookup"><span data-stu-id="fc279-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineImportMember (
@@ -40,52 +40,52 @@ HRESULT DefineImportMember (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2264c-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="2264c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fc279-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="fc279-105">Parameters</span></span>  
  `pAssemImport`  
- <span data-ttu-id="2264c-106">からターゲットメンバーのインポート元のアセンブリを表す[IMetaDataAssemblyImport](imetadataassemblyimport-interface.md)インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="2264c-106">[in] An [IMetaDataAssemblyImport](imetadataassemblyimport-interface.md) interface that represents the assembly from which the target member is imported.</span></span>  
+ <span data-ttu-id="fc279-106">からターゲットメンバーのインポート元のアセンブリを表す[IMetaDataAssemblyImport](imetadataassemblyimport-interface.md)インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="fc279-106">[in] An [IMetaDataAssemblyImport](imetadataassemblyimport-interface.md) interface that represents the assembly from which the target member is imported.</span></span>  
   
  `pbHashValue`  
- <span data-ttu-id="2264c-107">からによって指定されたアセンブリのハッシュを格納している配列 `pAssemImport` 。</span><span class="sxs-lookup"><span data-stu-id="2264c-107">[in] An array that contains the hash for the assembly specified by `pAssemImport`.</span></span>  
+ <span data-ttu-id="fc279-107">からによって指定されたアセンブリのハッシュを格納している配列 `pAssemImport` 。</span><span class="sxs-lookup"><span data-stu-id="fc279-107">[in] An array that contains the hash for the assembly specified by `pAssemImport`.</span></span>  
   
  `cbHashValue`  
- <span data-ttu-id="2264c-108">[in] `pbHashValue` 配列のバイト数。</span><span class="sxs-lookup"><span data-stu-id="2264c-108">[in] The number of bytes in the `pbHashValue` array.</span></span>  
+ <span data-ttu-id="fc279-108">[in] `pbHashValue` 配列のバイト数。</span><span class="sxs-lookup"><span data-stu-id="fc279-108">[in] The number of bytes in the `pbHashValue` array.</span></span>  
   
  `pImport`  
- <span data-ttu-id="2264c-109">からターゲットメンバーのインポート元のメタデータスコープを表す[IMetaDataImport](imetadataimport-interface.md)インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="2264c-109">[in] An [IMetaDataImport](imetadataimport-interface.md) interface that represents the metadata scope from which the target member is imported.</span></span>  
+ <span data-ttu-id="fc279-109">からターゲットメンバーのインポート元のメタデータスコープを表す[IMetaDataImport](imetadataimport-interface.md)インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="fc279-109">[in] An [IMetaDataImport](imetadataimport-interface.md) interface that represents the metadata scope from which the target member is imported.</span></span>  
   
  `mbMember`  
- <span data-ttu-id="2264c-110">からターゲットメンバーを指定するメタデータトークン。</span><span class="sxs-lookup"><span data-stu-id="2264c-110">[in] The metadata token that specifies the target member.</span></span> <span data-ttu-id="2264c-111">トークンには、 `mdMethodDef` (メンバーメソッドの場合)、(メンバープロパティの場合)、 `mdProperty` または `mdFieldDef` (メンバーフィールドの場合) トークンを指定できます。</span><span class="sxs-lookup"><span data-stu-id="2264c-111">The token can be an `mdMethodDef` (for a member method), `mdProperty` (for a member property), or `mdFieldDef` (for a member field) token.</span></span>  
+ <span data-ttu-id="fc279-110">からターゲットメンバーを指定するメタデータトークン。</span><span class="sxs-lookup"><span data-stu-id="fc279-110">[in] The metadata token that specifies the target member.</span></span> <span data-ttu-id="fc279-111">トークンには、 `mdMethodDef` (メンバーメソッドの場合)、(メンバープロパティの場合)、 `mdProperty` または `mdFieldDef` (メンバーフィールドの場合) トークンを指定できます。</span><span class="sxs-lookup"><span data-stu-id="fc279-111">The token can be an `mdMethodDef` (for a member method), `mdProperty` (for a member property), or `mdFieldDef` (for a member field) token.</span></span>  
   
  `pAssemEmit`  
- <span data-ttu-id="2264c-112">からターゲットメンバーがインポートされるアセンブリを表す[IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md)インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="2264c-112">[in] An [IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md) interface that represents the assembly into which the target member is imported.</span></span>  
+ <span data-ttu-id="fc279-112">からターゲットメンバーがインポートされるアセンブリを表す[IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md)インターフェイス。</span><span class="sxs-lookup"><span data-stu-id="fc279-112">[in] An [IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md) interface that represents the assembly into which the target member is imported.</span></span>  
   
  `tkParent`  
- <span data-ttu-id="2264c-113">から`mdTypeRef` `mdModuleRef` ターゲットメンバーを所有する型またはモジュールのトークンまたはトークン。</span><span class="sxs-lookup"><span data-stu-id="2264c-113">[in] The `mdTypeRef` or `mdModuleRef` token for the type or module, respectively, that owns the target member.</span></span>  
+ <span data-ttu-id="fc279-113">から`mdTypeRef` `mdModuleRef` ターゲットメンバーを所有する型またはモジュールのトークンまたはトークン。</span><span class="sxs-lookup"><span data-stu-id="fc279-113">[in] The `mdTypeRef` or `mdModuleRef` token for the type or module, respectively, that owns the target member.</span></span>  
   
  `pmr`  
- <span data-ttu-id="2264c-114">入出力`mdMemberRef`メンバー参照の現在のスコープで定義されているトークン。</span><span class="sxs-lookup"><span data-stu-id="2264c-114">[out] The `mdMemberRef` token that is defined in the current scope for the member reference.</span></span>  
+ <span data-ttu-id="fc279-114">入出力`mdMemberRef`メンバー参照の現在のスコープで定義されているトークン。</span><span class="sxs-lookup"><span data-stu-id="fc279-114">[out] The `mdMemberRef` token that is defined in the current scope for the member reference.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2264c-115">コメント</span><span class="sxs-lookup"><span data-stu-id="2264c-115">Remarks</span></span>  
- <span data-ttu-id="2264c-116">メソッドは、で指定された `DefineImportMember` メンバーを検索し `mbMember` ます。このメンバーは、で指定した別のスコープで定義され、 `pImport` そのプロパティを取得します。</span><span class="sxs-lookup"><span data-stu-id="2264c-116">The `DefineImportMember` method looks up the member, specified by `mbMember`, that is defined in another scope, specified by `pImport`, and retrieves its properties.</span></span> <span data-ttu-id="2264c-117">この情報を使用して、現在のスコープで[IMetaDataEmit::D efinememberref](imetadataemit-definememberref-method.md)メソッドを呼び出し、メンバー参照を作成します。</span><span class="sxs-lookup"><span data-stu-id="2264c-117">It uses this information to call the [IMetaDataEmit::DefineMemberRef](imetadataemit-definememberref-method.md) method in the current scope to create the member reference.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fc279-115">解説</span><span class="sxs-lookup"><span data-stu-id="fc279-115">Remarks</span></span>  
+ <span data-ttu-id="fc279-116">メソッドは、で指定された `DefineImportMember` メンバーを検索し `mbMember` ます。このメンバーは、で指定した別のスコープで定義され、 `pImport` そのプロパティを取得します。</span><span class="sxs-lookup"><span data-stu-id="fc279-116">The `DefineImportMember` method looks up the member, specified by `mbMember`, that is defined in another scope, specified by `pImport`, and retrieves its properties.</span></span> <span data-ttu-id="fc279-117">この情報を使用して、現在のスコープで[IMetaDataEmit::D efinememberref](imetadataemit-definememberref-method.md)メソッドを呼び出し、メンバー参照を作成します。</span><span class="sxs-lookup"><span data-stu-id="fc279-117">It uses this information to call the [IMetaDataEmit::DefineMemberRef](imetadataemit-definememberref-method.md) method in the current scope to create the member reference.</span></span>  
   
- <span data-ttu-id="2264c-118">一般に、メソッドを使用する前に、 `DefineImportMember` ターゲットメンバーの親クラス、インターフェイス、またはモジュールの型参照またはモジュール参照を、現在のスコープで作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="2264c-118">Generally, before you use the `DefineImportMember` method, you must create, in the current scope, a type reference or module reference for the target member's parent class, interface, or module.</span></span> <span data-ttu-id="2264c-119">その後、この参照のメタデータトークンが引数として渡され `tkParent` ます。</span><span class="sxs-lookup"><span data-stu-id="2264c-119">The metadata token for this reference is then passed in the `tkParent` argument.</span></span> <span data-ttu-id="2264c-120">後でコンパイラまたはリンカーによって解決される場合は、ターゲットメンバーの親への参照を作成する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="2264c-120">You do not need to create a reference to the target member's parent if it will be resolved later by the compiler or linker.</span></span> <span data-ttu-id="2264c-121">まとめると次のようになります。</span><span class="sxs-lookup"><span data-stu-id="2264c-121">To summarize:</span></span>  
+ <span data-ttu-id="fc279-118">一般に、メソッドを使用する前に、 `DefineImportMember` ターゲットメンバーの親クラス、インターフェイス、またはモジュールの型参照またはモジュール参照を、現在のスコープで作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fc279-118">Generally, before you use the `DefineImportMember` method, you must create, in the current scope, a type reference or module reference for the target member's parent class, interface, or module.</span></span> <span data-ttu-id="fc279-119">その後、この参照のメタデータトークンが引数として渡され `tkParent` ます。</span><span class="sxs-lookup"><span data-stu-id="fc279-119">The metadata token for this reference is then passed in the `tkParent` argument.</span></span> <span data-ttu-id="fc279-120">後でコンパイラまたはリンカーによって解決される場合は、ターゲットメンバーの親への参照を作成する必要はありません。</span><span class="sxs-lookup"><span data-stu-id="fc279-120">You do not need to create a reference to the target member's parent if it will be resolved later by the compiler or linker.</span></span> <span data-ttu-id="fc279-121">まとめ</span><span class="sxs-lookup"><span data-stu-id="fc279-121">To summarize:</span></span>  
   
-- <span data-ttu-id="2264c-122">ターゲットメンバーがフィールドまたはメソッドの場合は、 [IMetaDataEmit::D efinetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md)または[IMetaDataEmit::D efineImportType](imetadataemit-defineimporttype-method.md)メソッドを使用して、メンバーの親クラスまたは親インターフェイスの型参照を現在のスコープ内に作成します。</span><span class="sxs-lookup"><span data-stu-id="2264c-122">If the target member is a field or method, use either the [IMetaDataEmit::DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) or the [IMetaDataEmit::DefineImportType](imetadataemit-defineimporttype-method.md) method to create a type reference, in the current scope, for the member's parent class or parent interface.</span></span>  
+- <span data-ttu-id="fc279-122">ターゲットメンバーがフィールドまたはメソッドの場合は、 [IMetaDataEmit::D efinetyperefbyname](imetadataemit-definetyperefbyname-method.md)または[IMetaDataEmit::D efineImportType](imetadataemit-defineimporttype-method.md)メソッドを使用して、メンバーの親クラスまたは親インターフェイスの型参照を現在のスコープ内に作成します。</span><span class="sxs-lookup"><span data-stu-id="fc279-122">If the target member is a field or method, use either the [IMetaDataEmit::DefineTypeRefByName](imetadataemit-definetyperefbyname-method.md) or the [IMetaDataEmit::DefineImportType](imetadataemit-defineimporttype-method.md) method to create a type reference, in the current scope, for the member's parent class or parent interface.</span></span>  
   
-- <span data-ttu-id="2264c-123">ターゲットメンバーがグローバル変数またはグローバル関数 (つまり、クラスまたはインターフェイスのメンバーではない) である場合は、 [IMetaDataEmit::D efinemoduleref](imetadataemit-definemoduleref-method.md)メソッドを使用して、メンバーの親モジュールに対して、現在のスコープでモジュール参照を作成します。</span><span class="sxs-lookup"><span data-stu-id="2264c-123">If the target member is a global variable or global function (that is, not a member of a class or interface), use the [IMetaDataEmit::DefineModuleRef](imetadataemit-definemoduleref-method.md) method to create a module reference, in the current scope, for the member's parent module.</span></span>  
+- <span data-ttu-id="fc279-123">ターゲットメンバーがグローバル変数またはグローバル関数 (つまり、クラスまたはインターフェイスのメンバーではない) である場合は、 [IMetaDataEmit::D efinemoduleref](imetadataemit-definemoduleref-method.md)メソッドを使用して、メンバーの親モジュールに対して、現在のスコープでモジュール参照を作成します。</span><span class="sxs-lookup"><span data-stu-id="fc279-123">If the target member is a global variable or global function (that is, not a member of a class or interface), use the [IMetaDataEmit::DefineModuleRef](imetadataemit-definemoduleref-method.md) method to create a module reference, in the current scope, for the member's parent module.</span></span>  
   
-- <span data-ttu-id="2264c-124">ターゲットメンバーの親が、後でコンパイラまたはリンカーによって解決される場合は、を渡し `mdTokenNil` `tkParent` ます。</span><span class="sxs-lookup"><span data-stu-id="2264c-124">If the target member's parent will be resolved later by the compiler or linker, then pass `mdTokenNil` in `tkParent`.</span></span> <span data-ttu-id="2264c-125">これが適用される唯一のシナリオは、グローバル関数またはグローバル変数が、最終的に現在のモジュールにリンクされ、メタデータがマージされる .obj ファイルからインポートされる場合です。</span><span class="sxs-lookup"><span data-stu-id="2264c-125">The only scenario in which this applies is when a global function or global variable is being imported from a .obj file that will ultimately be linked into the current module and the metadata merged.</span></span>  
+- <span data-ttu-id="fc279-124">ターゲットメンバーの親が、後でコンパイラまたはリンカーによって解決される場合は、を渡し `mdTokenNil` `tkParent` ます。</span><span class="sxs-lookup"><span data-stu-id="fc279-124">If the target member's parent will be resolved later by the compiler or linker, then pass `mdTokenNil` in `tkParent`.</span></span> <span data-ttu-id="fc279-125">これが適用される唯一のシナリオは、グローバル関数またはグローバル変数が、最終的に現在のモジュールにリンクされ、メタデータがマージされる .obj ファイルからインポートされる場合です。</span><span class="sxs-lookup"><span data-stu-id="fc279-125">The only scenario in which this applies is when a global function or global variable is being imported from a .obj file that will ultimately be linked into the current module and the metadata merged.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2264c-126">必要条件</span><span class="sxs-lookup"><span data-stu-id="2264c-126">Requirements</span></span>  
- <span data-ttu-id="2264c-127">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="2264c-127">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fc279-126">要件</span><span class="sxs-lookup"><span data-stu-id="fc279-126">Requirements</span></span>  
+ <span data-ttu-id="fc279-127">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="fc279-127">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2264c-128">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="2264c-128">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="fc279-128">**ヘッダー:** Cor</span><span class="sxs-lookup"><span data-stu-id="fc279-128">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="2264c-129">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="2264c-129">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="fc279-129">**ライブラリ:** Mscoree.dll のリソースとして使用されます。</span><span class="sxs-lookup"><span data-stu-id="fc279-129">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="2264c-130">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2264c-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="fc279-130">**.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fc279-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2264c-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="2264c-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fc279-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="fc279-131">See also</span></span>
 
-- [<span data-ttu-id="2264c-132">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2264c-132">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
-- [<span data-ttu-id="2264c-133">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="2264c-133">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)
+- [<span data-ttu-id="fc279-132">IMetaDataEmit インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fc279-132">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
+- [<span data-ttu-id="fc279-133">IMetaDataEmit2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="fc279-133">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)
