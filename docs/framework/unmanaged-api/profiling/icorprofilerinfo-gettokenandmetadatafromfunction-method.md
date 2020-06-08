@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: e525aa16-c923-4b16-833b-36f1f0dd70fc
 topic_type:
 - apiref
-ms.openlocfilehash: d924dbf21a0f0b046c8d8f8f294e91bc5ff6c015
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 1cc05f4c10f4a5b042ff14c05f3c85a7b5935184
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76869412"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84497895"
 ---
-# <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a><span data-ttu-id="77b1e-102">ICorProfilerInfo::GetTokenAndMetadataFromFunction メソッド</span><span class="sxs-lookup"><span data-stu-id="77b1e-102">ICorProfilerInfo::GetTokenAndMetadataFromFunction Method</span></span>
-<span data-ttu-id="77b1e-103">指定された関数のトークンに対して使用できるメタデータトークンとメタデータインターフェイスインスタンスを取得します。</span><span class="sxs-lookup"><span data-stu-id="77b1e-103">Gets the metadata token and a metadata interface instance that can be used against the token for the specified function.</span></span>  
+# <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a><span data-ttu-id="a70fe-102">ICorProfilerInfo::GetTokenAndMetadataFromFunction メソッド</span><span class="sxs-lookup"><span data-stu-id="a70fe-102">ICorProfilerInfo::GetTokenAndMetadataFromFunction Method</span></span>
+<span data-ttu-id="a70fe-103">指定された関数のトークンに対して使用できるメタデータトークンとメタデータインターフェイスインスタンスを取得します。</span><span class="sxs-lookup"><span data-stu-id="a70fe-103">Gets the metadata token and a metadata interface instance that can be used against the token for the specified function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="77b1e-104">構文</span><span class="sxs-lookup"><span data-stu-id="77b1e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a70fe-104">構文</span><span class="sxs-lookup"><span data-stu-id="a70fe-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetTokenAndMetaDataFromFunction(  
@@ -35,28 +35,28 @@ HRESULT GetTokenAndMetaDataFromFunction(
     [out] mdToken    *pToken);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="77b1e-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="77b1e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a70fe-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="a70fe-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="77b1e-106">からメタデータトークンとメタデータインターフェイスを取得する対象の関数の ID。</span><span class="sxs-lookup"><span data-stu-id="77b1e-106">[in] The ID of the function for which to get the metadata token and metadata interface.</span></span>  
+ <span data-ttu-id="a70fe-106">からメタデータトークンとメタデータインターフェイスを取得する対象の関数の ID。</span><span class="sxs-lookup"><span data-stu-id="a70fe-106">[in] The ID of the function for which to get the metadata token and metadata interface.</span></span>  
   
  `riid`  
- <span data-ttu-id="77b1e-107">からインスタンスを取得するメタデータインターフェイスの参照 ID。</span><span class="sxs-lookup"><span data-stu-id="77b1e-107">[in] The reference ID of the metadata interface to get the instance of.</span></span>  
+ <span data-ttu-id="a70fe-107">からインスタンスを取得するメタデータインターフェイスの参照 ID。</span><span class="sxs-lookup"><span data-stu-id="a70fe-107">[in] The reference ID of the metadata interface to get the instance of.</span></span>  
   
  `ppImport`  
- <span data-ttu-id="77b1e-108">入出力指定された関数のトークンに対して使用できるメタデータインターフェイスインスタンスのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="77b1e-108">[out] A pointer to the address of the metadata interface instance that can be used against the token for the specified function.</span></span>  
+ <span data-ttu-id="a70fe-108">入出力指定された関数のトークンに対して使用できるメタデータインターフェイスインスタンスのアドレスへのポインター。</span><span class="sxs-lookup"><span data-stu-id="a70fe-108">[out] A pointer to the address of the metadata interface instance that can be used against the token for the specified function.</span></span>  
   
  `pToken`  
- <span data-ttu-id="77b1e-109">入出力指定された関数のメタデータトークンへのポインター。</span><span class="sxs-lookup"><span data-stu-id="77b1e-109">[out] A pointer to the metadata token for the specified function.</span></span>  
+ <span data-ttu-id="a70fe-109">入出力指定された関数のメタデータトークンへのポインター。</span><span class="sxs-lookup"><span data-stu-id="a70fe-109">[out] A pointer to the metadata token for the specified function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="77b1e-110">要件</span><span class="sxs-lookup"><span data-stu-id="77b1e-110">Requirements</span></span>  
- <span data-ttu-id="77b1e-111">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="77b1e-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a70fe-110">要件</span><span class="sxs-lookup"><span data-stu-id="a70fe-110">Requirements</span></span>  
+ <span data-ttu-id="a70fe-111">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a70fe-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="77b1e-112">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="77b1e-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="a70fe-112">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a70fe-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="77b1e-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="77b1e-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a70fe-113">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a70fe-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="77b1e-114">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="77b1e-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a70fe-114">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a70fe-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="77b1e-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="77b1e-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a70fe-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="a70fe-115">See also</span></span>
 
-- [<span data-ttu-id="77b1e-116">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="77b1e-116">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)
+- [<span data-ttu-id="a70fe-116">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="a70fe-116">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)

@@ -15,37 +15,37 @@ helpviewer_keywords:
 ms.assetid: ab4f4bbd-40c7-4667-bfde-60cd73803110
 topic_type:
 - apiref
-ms.openlocfilehash: b2618da708a1c4351b56a15af9156a68392a0d59
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: d7a4f7d08e6d8698dbb58c4c2d111a47d0ccc8db
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865754"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499780"
 ---
-# <a name="icorprofilercallback2handledestroyed-method"></a><span data-ttu-id="9e259-102">ICorProfilerCallback2::HandleDestroyed メソッド</span><span class="sxs-lookup"><span data-stu-id="9e259-102">ICorProfilerCallback2::HandleDestroyed Method</span></span>
-<span data-ttu-id="9e259-103">ガベージコレクションハンドルが破棄されたことをコードプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="9e259-103">Notifies the code profiler that a garbage collection handle has been destroyed.</span></span>  
+# <a name="icorprofilercallback2handledestroyed-method"></a><span data-ttu-id="c81d6-102">ICorProfilerCallback2::HandleDestroyed メソッド</span><span class="sxs-lookup"><span data-stu-id="c81d6-102">ICorProfilerCallback2::HandleDestroyed Method</span></span>
+<span data-ttu-id="c81d6-103">ガベージコレクションハンドルが破棄されたことをコードプロファイラーに通知します。</span><span class="sxs-lookup"><span data-stu-id="c81d6-103">Notifies the code profiler that a garbage collection handle has been destroyed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9e259-104">構文</span><span class="sxs-lookup"><span data-stu-id="9e259-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c81d6-104">構文</span><span class="sxs-lookup"><span data-stu-id="c81d6-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT HandleDestroyed(  
     [in] GCHandleID handleId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9e259-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="9e259-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c81d6-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="c81d6-105">Parameters</span></span>  
  `handleId`  
- <span data-ttu-id="9e259-106">からガベージコレクションのハンドルの ID。</span><span class="sxs-lookup"><span data-stu-id="9e259-106">[in] The ID of the handle for the garbage collection.</span></span>  
+ <span data-ttu-id="c81d6-106">からガベージコレクションのハンドルの ID。</span><span class="sxs-lookup"><span data-stu-id="c81d6-106">[in] The ID of the handle for the garbage collection.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9e259-107">要件</span><span class="sxs-lookup"><span data-stu-id="9e259-107">Requirements</span></span>  
- <span data-ttu-id="9e259-108">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9e259-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c81d6-107">要件</span><span class="sxs-lookup"><span data-stu-id="c81d6-107">Requirements</span></span>  
+ <span data-ttu-id="c81d6-108">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c81d6-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9e259-109">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9e259-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="c81d6-109">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c81d6-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="9e259-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9e259-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c81d6-110">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c81d6-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9e259-111">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9e259-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c81d6-111">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c81d6-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9e259-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="9e259-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c81d6-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="c81d6-112">See also</span></span>
 
-- [<span data-ttu-id="9e259-113">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9e259-113">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
-- [<span data-ttu-id="9e259-114">ICorProfilerCallback2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="9e259-114">ICorProfilerCallback2 Interface</span></span>](icorprofilercallback2-interface.md)
+- [<span data-ttu-id="c81d6-113">ICorProfilerCallback インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c81d6-113">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)
+- [<span data-ttu-id="c81d6-114">ICorProfilerCallback2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="c81d6-114">ICorProfilerCallback2 Interface</span></span>](icorprofilercallback2-interface.md)
