@@ -2,24 +2,24 @@
 title: ジェネリック コレクションに対するインターフェイスでの分散の使用
 ms.date: 07/20/2015
 ms.assetid: c867fcea-7462-4995-b9c5-542feec74036
-ms.openlocfilehash: 6ee133dfd61d7d7a88243ca592642ff21e0c2223
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b762ce42215f9b24371313446637e95962677bfb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349019"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375642"
 ---
-# <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a><span data-ttu-id="aa2e5-102">ジェネリック コレクションに対するインターフェイスでの変性の使用 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="aa2e5-102">Using Variance in Interfaces for Generic Collections (Visual Basic)</span></span>
+# <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a><span data-ttu-id="f78c6-102">ジェネリック コレクションに対するインターフェイスでの変性の使用 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f78c6-102">Using Variance in Interfaces for Generic Collections (Visual Basic)</span></span>
 
-<span data-ttu-id="aa2e5-103">共変のインターフェイスのメソッドでは、そのインターフェイスで指定された型よりも強い派生型を返すことができます。</span><span class="sxs-lookup"><span data-stu-id="aa2e5-103">A covariant interface allows its methods to return more derived types than those specified in the interface.</span></span> <span data-ttu-id="aa2e5-104">反変のインターフェイスのメソッドでは、そのインターフェイスで指定された型よりも弱い派生型のパラメーターを受け取ることができます。</span><span class="sxs-lookup"><span data-stu-id="aa2e5-104">A contravariant interface allows its methods to accept parameters of less derived types than those specified in the interface.</span></span>
+<span data-ttu-id="f78c6-103">共変のインターフェイスのメソッドでは、そのインターフェイスで指定された型よりも強い派生型を返すことができます。</span><span class="sxs-lookup"><span data-stu-id="f78c6-103">A covariant interface allows its methods to return more derived types than those specified in the interface.</span></span> <span data-ttu-id="f78c6-104">反変のインターフェイスのメソッドでは、そのインターフェイスで指定された型よりも弱い派生型のパラメーターを受け取ることができます。</span><span class="sxs-lookup"><span data-stu-id="f78c6-104">A contravariant interface allows its methods to accept parameters of less derived types than those specified in the interface.</span></span>
 
-<span data-ttu-id="aa2e5-105">.NET Framework 4 では、既存のいくつかのインターフェイスが共変および反変になります。</span><span class="sxs-lookup"><span data-stu-id="aa2e5-105">In .NET Framework 4, several existing interfaces became covariant and contravariant.</span></span> <span data-ttu-id="aa2e5-106">その中には、<xref:System.Collections.Generic.IEnumerable%601> や <xref:System.IComparable%601> があります。</span><span class="sxs-lookup"><span data-stu-id="aa2e5-106">These include <xref:System.Collections.Generic.IEnumerable%601> and <xref:System.IComparable%601>.</span></span> <span data-ttu-id="aa2e5-107">これにより、派生型のコレクションに対して、基本型のジェネリック コレクションを操作するメソッドを再利用できます。</span><span class="sxs-lookup"><span data-stu-id="aa2e5-107">This enables you to reuse methods that operate with generic collections of base types for collections of derived types.</span></span>
+<span data-ttu-id="f78c6-105">.NET Framework 4 では、既存のいくつかのインターフェイスが共変および反変になります。</span><span class="sxs-lookup"><span data-stu-id="f78c6-105">In .NET Framework 4, several existing interfaces became covariant and contravariant.</span></span> <span data-ttu-id="f78c6-106">その中には、<xref:System.Collections.Generic.IEnumerable%601> や <xref:System.IComparable%601> があります。</span><span class="sxs-lookup"><span data-stu-id="f78c6-106">These include <xref:System.Collections.Generic.IEnumerable%601> and <xref:System.IComparable%601>.</span></span> <span data-ttu-id="f78c6-107">これにより、派生型のコレクションに対して、基本型のジェネリック コレクションを操作するメソッドを再利用できます。</span><span class="sxs-lookup"><span data-stu-id="f78c6-107">This enables you to reuse methods that operate with generic collections of base types for collections of derived types.</span></span>
 
-<span data-ttu-id="aa2e5-108">.NET Framework のバリアント インターフェイスの一覧については、「[ジェネリック インターフェイスの変性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="aa2e5-108">For a list of variant interfaces in the .NET Framework, see [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).</span></span>
+<span data-ttu-id="f78c6-108">.NET Framework のバリアント インターフェイスの一覧については、「[ジェネリック インターフェイスの変性 (Visual Basic)](variance-in-generic-interfaces.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f78c6-108">For a list of variant interfaces in the .NET Framework, see [Variance in Generic Interfaces (Visual Basic)](variance-in-generic-interfaces.md).</span></span>
 
-## <a name="converting-generic-collections"></a><span data-ttu-id="aa2e5-109">ジェネリック コレクションの変換</span><span class="sxs-lookup"><span data-stu-id="aa2e5-109">Converting Generic Collections</span></span>
+## <a name="converting-generic-collections"></a><span data-ttu-id="f78c6-109">ジェネリック コレクションの変換</span><span class="sxs-lookup"><span data-stu-id="f78c6-109">Converting Generic Collections</span></span>
 
-<span data-ttu-id="aa2e5-110">次の例は、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスにおける共変性のサポートの利点を示しています。</span><span class="sxs-lookup"><span data-stu-id="aa2e5-110">The following example illustrates the benefits of covariance support in the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span> <span data-ttu-id="aa2e5-111">`PrintFullName` メソッドは、パラメーターとして `IEnumerable(Of Person)` 型のコレクションを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="aa2e5-111">The `PrintFullName` method accepts a collection of the `IEnumerable(Of Person)` type as a parameter.</span></span> <span data-ttu-id="aa2e5-112">ただし、`Employee` は `Person` を継承しているため、`IEnumerable(Of Person)` 型のコレクションで再利用できます。</span><span class="sxs-lookup"><span data-stu-id="aa2e5-112">However, you can reuse it for a collection of the `IEnumerable(Of Person)` type because `Employee` inherits `Person`.</span></span>
+<span data-ttu-id="f78c6-110">次の例は、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスにおける共変性のサポートの利点を示しています。</span><span class="sxs-lookup"><span data-stu-id="f78c6-110">The following example illustrates the benefits of covariance support in the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span> <span data-ttu-id="f78c6-111">`PrintFullName` メソッドは、パラメーターとして `IEnumerable(Of Person)` 型のコレクションを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="f78c6-111">The `PrintFullName` method accepts a collection of the `IEnumerable(Of Person)` type as a parameter.</span></span> <span data-ttu-id="f78c6-112">ただし、`Employee` は `Person` を継承しているため、`IEnumerable(Of Person)` 型のコレクションで再利用できます。</span><span class="sxs-lookup"><span data-stu-id="f78c6-112">However, you can reuse it for a collection of the `IEnumerable(Of Person)` type because `Employee` inherits `Person`.</span></span>
 
 ```vb
 ' Simple hierarchy of classes.
@@ -51,9 +51,9 @@ Sub Main()
 End Sub
 ```
 
-## <a name="comparing-generic-collections"></a><span data-ttu-id="aa2e5-113">ジェネリック コレクションの比較</span><span class="sxs-lookup"><span data-stu-id="aa2e5-113">Comparing Generic Collections</span></span>
+## <a name="comparing-generic-collections"></a><span data-ttu-id="f78c6-113">ジェネリック コレクションの比較</span><span class="sxs-lookup"><span data-stu-id="f78c6-113">Comparing Generic Collections</span></span>
 
-<span data-ttu-id="aa2e5-114">次の例は、<xref:System.Collections.Generic.IComparer%601> インターフェイスにおける反変性のサポートの利点を示しています。</span><span class="sxs-lookup"><span data-stu-id="aa2e5-114">The following example illustrates the benefits of contravariance support in the <xref:System.Collections.Generic.IComparer%601> interface.</span></span> <span data-ttu-id="aa2e5-115">`PersonComparer` クラスは、`IComparer(Of Person)` インターフェイスを実装します。</span><span class="sxs-lookup"><span data-stu-id="aa2e5-115">The `PersonComparer` class implements the `IComparer(Of Person)` interface.</span></span> <span data-ttu-id="aa2e5-116">ただし、`Employee` は `Person` を継承しているため、`Employee` 型の一連のオブジェクトを比較するためにこのクラスを再利用できます。</span><span class="sxs-lookup"><span data-stu-id="aa2e5-116">However, you can reuse this class to compare a sequence of objects of the `Employee` type because `Employee` inherits `Person`.</span></span>
+<span data-ttu-id="f78c6-114">次の例は、<xref:System.Collections.Generic.IComparer%601> インターフェイスにおける反変性のサポートの利点を示しています。</span><span class="sxs-lookup"><span data-stu-id="f78c6-114">The following example illustrates the benefits of contravariance support in the <xref:System.Collections.Generic.IComparer%601> interface.</span></span> <span data-ttu-id="f78c6-115">`PersonComparer` クラスは、`IComparer(Of Person)` インターフェイスを実装します。</span><span class="sxs-lookup"><span data-stu-id="f78c6-115">The `PersonComparer` class implements the `IComparer(Of Person)` interface.</span></span> <span data-ttu-id="f78c6-116">ただし、`Employee` は `Person` を継承しているため、`Employee` 型の一連のオブジェクトを比較するためにこのクラスを再利用できます。</span><span class="sxs-lookup"><span data-stu-id="f78c6-116">However, you can reuse this class to compare a sequence of objects of the `Employee` type because `Employee` inherits `Person`.</span></span>
 
 ```vb
 ' Simple hierarchy of classes.
@@ -112,6 +112,6 @@ Sub Main()
 End Sub
 ```
 
-## <a name="see-also"></a><span data-ttu-id="aa2e5-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="aa2e5-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f78c6-117">参照</span><span class="sxs-lookup"><span data-stu-id="f78c6-117">See also</span></span>
 
-- [<span data-ttu-id="aa2e5-118">ジェネリック インターフェイスの分散 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="aa2e5-118">Variance in Generic Interfaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [<span data-ttu-id="f78c6-118">ジェネリック インターフェイスの分散 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f78c6-118">Variance in Generic Interfaces (Visual Basic)</span></span>](variance-in-generic-interfaces.md)

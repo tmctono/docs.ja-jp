@@ -2,22 +2,22 @@
 title: Func および Action 汎用デリゲートでの分散の使用
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-ms.openlocfilehash: 2678abd03f55224720d00509dc44f2db16551193
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f824d2422d67f1395d21a0863ca8c95d9f108989
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349042"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375759"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a><span data-ttu-id="9bbba-102">Func および Action 汎用デリゲートでの変性の使用 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9bbba-102">Using Variance for Func and Action Generic Delegates (Visual Basic)</span></span>
+# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a><span data-ttu-id="b00b7-102">Func および Action 汎用デリゲートでの変性の使用 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b00b7-102">Using Variance for Func and Action Generic Delegates (Visual Basic)</span></span>
 
-<span data-ttu-id="9bbba-103">以下の例では、`Func` 汎用デリゲートと `Action` 汎用デリゲートの共変性と反変性を使用して、メソッドの再利用を可能にし、コードの柔軟性を高める方法を示します。</span><span class="sxs-lookup"><span data-stu-id="9bbba-103">These examples demonstrate how to use covariance and contravariance in the `Func` and `Action` generic delegates to enable reuse of methods and provide more flexibility in your code.</span></span>
+<span data-ttu-id="b00b7-103">以下の例では、`Func` 汎用デリゲートと `Action` 汎用デリゲートの共変性と反変性を使用して、メソッドの再利用を可能にし、コードの柔軟性を高める方法を示します。</span><span class="sxs-lookup"><span data-stu-id="b00b7-103">These examples demonstrate how to use covariance and contravariance in the `Func` and `Action` generic delegates to enable reuse of methods and provide more flexibility in your code.</span></span>
 
-<span data-ttu-id="9bbba-104">共変性と反変性の詳細については、「[デリゲートの変性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9bbba-104">For more information about covariance and contravariance, see [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).</span></span>
+<span data-ttu-id="b00b7-104">共変性と反変性の詳細については、「[デリゲートの変性 (Visual Basic)](variance-in-delegates.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b00b7-104">For more information about covariance and contravariance, see [Variance in Delegates (Visual Basic)](variance-in-delegates.md).</span></span>
 
-## <a name="using-delegates-with-covariant-type-parameters"></a><span data-ttu-id="9bbba-105">デリゲートと共変の型パラメーターの使用</span><span class="sxs-lookup"><span data-stu-id="9bbba-105">Using Delegates with Covariant Type Parameters</span></span>
+## <a name="using-delegates-with-covariant-type-parameters"></a><span data-ttu-id="b00b7-105">デリゲートと共変の型パラメーターの使用</span><span class="sxs-lookup"><span data-stu-id="b00b7-105">Using Delegates with Covariant Type Parameters</span></span>
 
-<span data-ttu-id="9bbba-106">次の例は、`Func` 汎用デリゲートにおける共変性のサポートの利点を示しています。</span><span class="sxs-lookup"><span data-stu-id="9bbba-106">The following example illustrates the benefits of covariance support in the generic `Func` delegates.</span></span> <span data-ttu-id="9bbba-107">`FindByTitle` メソッドは、`String` 型のパラメーターを受け取り、`Employee` 型のオブジェクトを返します。</span><span class="sxs-lookup"><span data-stu-id="9bbba-107">The `FindByTitle` method takes a parameter of the `String` type and returns an object of the `Employee` type.</span></span> <span data-ttu-id="9bbba-108">ただし、このメソッドは `Func(Of String, Person)` デリゲートに割り当てることもできます。これは `Employee` が `Person` を継承するためです。</span><span class="sxs-lookup"><span data-stu-id="9bbba-108">However, you can assign this method to the `Func(Of String, Person)` delegate because `Employee` inherits `Person`.</span></span>
+<span data-ttu-id="b00b7-106">次の例は、`Func` 汎用デリゲートにおける共変性のサポートの利点を示しています。</span><span class="sxs-lookup"><span data-stu-id="b00b7-106">The following example illustrates the benefits of covariance support in the generic `Func` delegates.</span></span> <span data-ttu-id="b00b7-107">`FindByTitle` メソッドは、`String` 型のパラメーターを受け取り、`Employee` 型のオブジェクトを返します。</span><span class="sxs-lookup"><span data-stu-id="b00b7-107">The `FindByTitle` method takes a parameter of the `String` type and returns an object of the `Employee` type.</span></span> <span data-ttu-id="b00b7-108">ただし、このメソッドは `Func(Of String, Person)` デリゲートに割り当てることもできます。これは `Employee` が `Person` を継承するためです。</span><span class="sxs-lookup"><span data-stu-id="b00b7-108">However, you can assign this method to the `Func(Of String, Person)` delegate because `Employee` inherits `Person`.</span></span>
 
 ```vb
 ' Simple hierarchy of classes.
@@ -54,9 +54,9 @@ Class Finder
 End Class
 ```
 
-## <a name="using-delegates-with-contravariant-type-parameters"></a><span data-ttu-id="9bbba-109">デリゲートと反変の型パラメーターの使用</span><span class="sxs-lookup"><span data-stu-id="9bbba-109">Using Delegates with Contravariant Type Parameters</span></span>
+## <a name="using-delegates-with-contravariant-type-parameters"></a><span data-ttu-id="b00b7-109">デリゲートと反変の型パラメーターの使用</span><span class="sxs-lookup"><span data-stu-id="b00b7-109">Using Delegates with Contravariant Type Parameters</span></span>
 
-<span data-ttu-id="9bbba-110">次の例は、`Action` 汎用デリゲートにおける反変性のサポートの利点を示しています。</span><span class="sxs-lookup"><span data-stu-id="9bbba-110">The following example illustrates the benefits of contravariance support in the generic `Action` delegates.</span></span> <span data-ttu-id="9bbba-111">`AddToContacts` メソッドは、`Person` 型のパラメーターを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="9bbba-111">The `AddToContacts` method takes a parameter of the `Person` type.</span></span> <span data-ttu-id="9bbba-112">ただし、このメソッドは `Action(Of Employee)` デリゲートに割り当てることもできます。これは `Employee` が `Person` を継承するためです。</span><span class="sxs-lookup"><span data-stu-id="9bbba-112">However, you can assign this method to the `Action(Of Employee)` delegate because `Employee` inherits `Person`.</span></span>
+<span data-ttu-id="b00b7-110">次の例は、`Action` 汎用デリゲートにおける反変性のサポートの利点を示しています。</span><span class="sxs-lookup"><span data-stu-id="b00b7-110">The following example illustrates the benefits of contravariance support in the generic `Action` delegates.</span></span> <span data-ttu-id="b00b7-111">`AddToContacts` メソッドは、`Person` 型のパラメーターを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="b00b7-111">The `AddToContacts` method takes a parameter of the `Person` type.</span></span> <span data-ttu-id="b00b7-112">ただし、このメソッドは `Action(Of Employee)` デリゲートに割り当てることもできます。これは `Employee` が `Person` を継承するためです。</span><span class="sxs-lookup"><span data-stu-id="b00b7-112">However, you can assign this method to the `Action(Of Employee)` delegate because `Employee` inherits `Person`.</span></span>
 
 ```vb
 Public Class Person
@@ -92,7 +92,7 @@ Class AddressBook
 End Class
 ```
 
-## <a name="see-also"></a><span data-ttu-id="9bbba-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="9bbba-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b00b7-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="b00b7-113">See also</span></span>
 
-- [<span data-ttu-id="9bbba-114">共変性と反変性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9bbba-114">Covariance and Contravariance (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
-- [<span data-ttu-id="9bbba-115">ジェネリック</span><span class="sxs-lookup"><span data-stu-id="9bbba-115">Generics</span></span>](../../../../standard/generics/index.md)
+- [<span data-ttu-id="b00b7-114">共変性と反変性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b00b7-114">Covariance and Contravariance (Visual Basic)</span></span>](index.md)
+- [<span data-ttu-id="b00b7-115">ジェネリック</span><span class="sxs-lookup"><span data-stu-id="b00b7-115">Generics</span></span>](../../../../standard/generics/index.md)

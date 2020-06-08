@@ -2,18 +2,18 @@
 title: XSLT を使用した XML ツリーの変換
 ms.date: 07/20/2015
 ms.assetid: 3390ca68-c270-4e1d-b64b-6a063a77017c
-ms.openlocfilehash: f8d7de508fb954148b8b16ddf24966289f191bbb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5332eb0a4fa8a2bd855421d674fe9f0de2ccb5f3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350526"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364436"
 ---
-# <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a><span data-ttu-id="5045b-102">XSLT を使用した XML ツリーの変換 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5045b-102">Using XSLT to Transform an XML Tree (Visual Basic)</span></span>
+# <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a><span data-ttu-id="c3586-102">XSLT を使用した XML ツリーの変換 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c3586-102">Using XSLT to Transform an XML Tree (Visual Basic)</span></span>
 
-<span data-ttu-id="5045b-103">この例では、XML ツリーを作成し、この XML ツリーから <xref:System.Xml.XmlReader> を作成して、新しいドキュメントを作成します。次に、この新しいドキュメントに書き込むために <xref:System.Xml.XmlWriter> を作成します。</span><span class="sxs-lookup"><span data-stu-id="5045b-103">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and create an <xref:System.Xml.XmlWriter> that will write into the new document.</span></span> <span data-ttu-id="5045b-104">次に、XSLT 変換を呼び出し、変換処理に <xref:System.Xml.XmlReader> および <xref:System.Xml.XmlWriter> を渡すことができます。</span><span class="sxs-lookup"><span data-stu-id="5045b-104">Then, you can invoke the XSLT transformation, passing the <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter> to the transformation.</span></span> <span data-ttu-id="5045b-105">変換が正常に完了すると、新しい XML ツリーに変換結果が挿入されます。</span><span class="sxs-lookup"><span data-stu-id="5045b-105">After the transformation successfully completes, the new XML tree is populated with the results of the transform.</span></span>
+<span data-ttu-id="c3586-103">この例では、XML ツリーを作成し、この XML ツリーから <xref:System.Xml.XmlReader> を作成して、新しいドキュメントを作成します。次に、この新しいドキュメントに書き込むために <xref:System.Xml.XmlWriter> を作成します。</span><span class="sxs-lookup"><span data-stu-id="c3586-103">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and create an <xref:System.Xml.XmlWriter> that will write into the new document.</span></span> <span data-ttu-id="c3586-104">次に、XSLT 変換を呼び出し、変換処理に <xref:System.Xml.XmlReader> および <xref:System.Xml.XmlWriter> を渡すことができます。</span><span class="sxs-lookup"><span data-stu-id="c3586-104">Then, you can invoke the XSLT transformation, passing the <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter> to the transformation.</span></span> <span data-ttu-id="c3586-105">変換が正常に完了すると、新しい XML ツリーに変換結果が挿入されます。</span><span class="sxs-lookup"><span data-stu-id="c3586-105">After the transformation successfully completes, the new XML tree is populated with the results of the transform.</span></span>
 
-## <a name="example"></a><span data-ttu-id="5045b-106">例</span><span class="sxs-lookup"><span data-stu-id="5045b-106">Example</span></span>
+## <a name="example"></a><span data-ttu-id="c3586-106">例</span><span class="sxs-lookup"><span data-stu-id="c3586-106">Example</span></span>
 
 ```vb
 Dim xslMarkup As XDocument = _
@@ -52,7 +52,7 @@ End Using
 Console.WriteLine(newTree)
 ```
 
-<span data-ttu-id="5045b-107">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="5045b-107">This example produces the following output:</span></span>
+<span data-ttu-id="c3586-107">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="c3586-107">This example produces the following output:</span></span>
 
 ```xml
 <Root>
@@ -61,8 +61,8 @@ Console.WriteLine(newTree)
 </Root>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="5045b-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="5045b-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c3586-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="c3586-108">See also</span></span>
 
 - <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="5045b-109">高度な LINQ to XML プログラミング (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5045b-109">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [<span data-ttu-id="c3586-109">高度な LINQ to XML プログラミング (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c3586-109">Advanced LINQ to XML Programming (Visual Basic)</span></span>](advanced-linq-to-xml-programming.md)

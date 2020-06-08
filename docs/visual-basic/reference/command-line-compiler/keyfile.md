@@ -6,55 +6,55 @@ helpviewer_keywords:
 - keyfile compiler option [Visual Basic]
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
-ms.openlocfilehash: cffc3c5f0ff3dd48ca2c74bde346a967b209dc5f
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 3f476f6b6db1a788002a938eb5ae4bbbed7a5dae
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266743"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408576"
 ---
-# <a name="-keyfile"></a><span data-ttu-id="b0250-102">-keyfile</span><span class="sxs-lookup"><span data-stu-id="b0250-102">-keyfile</span></span>
-<span data-ttu-id="b0250-103">アセンブリに厳密な名前を付けるキーまたはキー ペアを含むファイルを指定します。</span><span class="sxs-lookup"><span data-stu-id="b0250-103">Specifies a file containing a key or key pair to give an assembly a strong name.</span></span>  
+# <a name="-keyfile"></a><span data-ttu-id="8eb08-102">-keyfile</span><span class="sxs-lookup"><span data-stu-id="8eb08-102">-keyfile</span></span>
+<span data-ttu-id="8eb08-103">アセンブリに厳密な名前を付けるキーまたはキー ペアを含むファイルを指定します。</span><span class="sxs-lookup"><span data-stu-id="8eb08-103">Specifies a file containing a key or key pair to give an assembly a strong name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b0250-104">構文</span><span class="sxs-lookup"><span data-stu-id="b0250-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8eb08-104">構文</span><span class="sxs-lookup"><span data-stu-id="8eb08-104">Syntax</span></span>  
   
 ```console
 -keyfile:file  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="b0250-105">引数</span><span class="sxs-lookup"><span data-stu-id="b0250-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="8eb08-105">引数</span><span class="sxs-lookup"><span data-stu-id="8eb08-105">Arguments</span></span>  
  `file`  
- <span data-ttu-id="b0250-106">必須です。</span><span class="sxs-lookup"><span data-stu-id="b0250-106">Required.</span></span> <span data-ttu-id="b0250-107">キーが含まれるファイル。</span><span class="sxs-lookup"><span data-stu-id="b0250-107">File that contains the key.</span></span> <span data-ttu-id="b0250-108">ファイル名に空白が含まれている場合は、名前を二重引用符 (" ") で囲みます。</span><span class="sxs-lookup"><span data-stu-id="b0250-108">If the file name contains a space, enclose the name in quotation marks (" ").</span></span>  
+ <span data-ttu-id="8eb08-106">必須です。</span><span class="sxs-lookup"><span data-stu-id="8eb08-106">Required.</span></span> <span data-ttu-id="8eb08-107">キーが含まれるファイル。</span><span class="sxs-lookup"><span data-stu-id="8eb08-107">File that contains the key.</span></span> <span data-ttu-id="8eb08-108">ファイル名に空白が含まれている場合は、名前を二重引用符 (" ") で囲みます。</span><span class="sxs-lookup"><span data-stu-id="8eb08-108">If the file name contains a space, enclose the name in quotation marks (" ").</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b0250-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="b0250-109">Remarks</span></span>  
- <span data-ttu-id="b0250-110">コンパイラでは、アセンブリ マニフェストに公開キーを挿入してから、秘密キーで最終的なアセンブリに署名します。</span><span class="sxs-lookup"><span data-stu-id="b0250-110">The compiler inserts the public key into the assembly manifest and then signs the final assembly with the private key.</span></span> <span data-ttu-id="b0250-111">キー ファイルを生成するには、コマンド ラインで「`sn -k file`」と入力します。</span><span class="sxs-lookup"><span data-stu-id="b0250-111">To generate a key file, type `sn -k file` at the command line.</span></span> <span data-ttu-id="b0250-112">詳細については、「[Sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b0250-112">For more information, see [Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8eb08-109">Remarks</span><span class="sxs-lookup"><span data-stu-id="8eb08-109">Remarks</span></span>  
+ <span data-ttu-id="8eb08-110">コンパイラでは、アセンブリ マニフェストに公開キーを挿入してから、秘密キーで最終的なアセンブリに署名します。</span><span class="sxs-lookup"><span data-stu-id="8eb08-110">The compiler inserts the public key into the assembly manifest and then signs the final assembly with the private key.</span></span> <span data-ttu-id="8eb08-111">キー ファイルを生成するには、コマンド ラインで「`sn -k file`」と入力します。</span><span class="sxs-lookup"><span data-stu-id="8eb08-111">To generate a key file, type `sn -k file` at the command line.</span></span> <span data-ttu-id="8eb08-112">詳細については、「[Sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8eb08-112">For more information, see [Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)).</span></span>  
   
- <span data-ttu-id="b0250-113">`-target:module` を指定してコンパイルした場合は、キー ファイルの名前がモジュールに保持され、[-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) でアセンブリをコンパイルすると作成されるアセンブリに組み込まれます。</span><span class="sxs-lookup"><span data-stu-id="b0250-113">If you compile with `-target:module`, the name of the key file is held in the module and incorporated into the assembly that is created when you compile an assembly with [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).</span></span>  
+ <span data-ttu-id="8eb08-113">`-target:module` を指定してコンパイルした場合は、キー ファイルの名前がモジュールに保持され、[-addmodule](addmodule.md) でアセンブリをコンパイルすると作成されるアセンブリに組み込まれます。</span><span class="sxs-lookup"><span data-stu-id="8eb08-113">If you compile with `-target:module`, the name of the key file is held in the module and incorporated into the assembly that is created when you compile an assembly with [-addmodule](addmodule.md).</span></span>  
   
- <span data-ttu-id="b0250-114">また、暗号化情報を [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) でコンパイラに渡すことができます。</span><span class="sxs-lookup"><span data-stu-id="b0250-114">You can also pass your encryption information to the compiler with [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).</span></span> <span data-ttu-id="b0250-115">部分的に署名されたアセンブリを作成する場合は、[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) を使います。</span><span class="sxs-lookup"><span data-stu-id="b0250-115">Use [-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) if you want a partially signed assembly.</span></span>  
+ <span data-ttu-id="8eb08-114">また、暗号化情報を [-keycontainer](keycontainer.md) でコンパイラに渡すことができます。</span><span class="sxs-lookup"><span data-stu-id="8eb08-114">You can also pass your encryption information to the compiler with [-keycontainer](keycontainer.md).</span></span> <span data-ttu-id="8eb08-115">部分的に署名されたアセンブリを作成する場合は、[-delaysign](delaysign.md) を使います。</span><span class="sxs-lookup"><span data-stu-id="8eb08-115">Use [-delaysign](delaysign.md) if you want a partially signed assembly.</span></span>  
   
- <span data-ttu-id="b0250-116">このオプションは、任意の Microsoft Intermediate Language モジュールのソース コードで、カスタム属性 (<xref:System.Reflection.AssemblyKeyFileAttribute>) として指定することもできます。</span><span class="sxs-lookup"><span data-stu-id="b0250-116">You can also specify this option as a custom attribute (<xref:System.Reflection.AssemblyKeyFileAttribute>) in the source code for any Microsoft intermediate language module.</span></span>  
+ <span data-ttu-id="8eb08-116">このオプションは、任意の Microsoft Intermediate Language モジュールのソース コードで、カスタム属性 (<xref:System.Reflection.AssemblyKeyFileAttribute>) として指定することもできます。</span><span class="sxs-lookup"><span data-stu-id="8eb08-116">You can also specify this option as a custom attribute (<xref:System.Reflection.AssemblyKeyFileAttribute>) in the source code for any Microsoft intermediate language module.</span></span>  
   
- <span data-ttu-id="b0250-117">同じコンパイルで (コマンドライン オプションまたはカスタム属性によって) `-keyfile` と [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) の両方が指定されている場合、コンパイラでは最初にキー コンテナーが試されます。</span><span class="sxs-lookup"><span data-stu-id="b0250-117">In case both `-keyfile` and [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) are specified (either by command-line option or by custom attribute) in the same compilation, the compiler first tries the key container.</span></span> <span data-ttu-id="b0250-118">それが成功すると、アセンブリはキー コンテナーの情報で署名されます。</span><span class="sxs-lookup"><span data-stu-id="b0250-118">If that succeeds, then the assembly is signed with the information in the key container.</span></span> <span data-ttu-id="b0250-119">コンパイラでは、キー コンテナーが見つからない場合、`-keyfile` で指定されたファイルが試されます。</span><span class="sxs-lookup"><span data-stu-id="b0250-119">If the compiler does not find the key container, it tries the file specified with `-keyfile`.</span></span> <span data-ttu-id="b0250-120">これが成功すると、アセンブリはキー ファイルの情報で署名され、キー情報はキー コンテナーにインストールされるため (`sn -i` と同様)、次のコンパイル時にはキー コンテナーが有効になります。</span><span class="sxs-lookup"><span data-stu-id="b0250-120">If this succeeds, the assembly is signed with the information in the key file, and the key information is installed in the key container (similar to `sn -i`) so that on the next compilation, the key container will be valid.</span></span>  
+ <span data-ttu-id="8eb08-117">同じコンパイルで (コマンドライン オプションまたはカスタム属性によって) `-keyfile` と [-keycontainer](keycontainer.md) の両方が指定されている場合、コンパイラでは最初にキー コンテナーが試されます。</span><span class="sxs-lookup"><span data-stu-id="8eb08-117">In case both `-keyfile` and [-keycontainer](keycontainer.md) are specified (either by command-line option or by custom attribute) in the same compilation, the compiler first tries the key container.</span></span> <span data-ttu-id="8eb08-118">それが成功すると、アセンブリはキー コンテナーの情報で署名されます。</span><span class="sxs-lookup"><span data-stu-id="8eb08-118">If that succeeds, then the assembly is signed with the information in the key container.</span></span> <span data-ttu-id="8eb08-119">コンパイラでは、キー コンテナーが見つからない場合、`-keyfile` で指定されたファイルが試されます。</span><span class="sxs-lookup"><span data-stu-id="8eb08-119">If the compiler does not find the key container, it tries the file specified with `-keyfile`.</span></span> <span data-ttu-id="8eb08-120">これが成功すると、アセンブリはキー ファイルの情報で署名され、キー情報はキー コンテナーにインストールされるため (`sn -i` と同様)、次のコンパイル時にはキー コンテナーが有効になります。</span><span class="sxs-lookup"><span data-stu-id="8eb08-120">If this succeeds, the assembly is signed with the information in the key file, and the key information is installed in the key container (similar to `sn -i`) so that on the next compilation, the key container will be valid.</span></span>  
   
- <span data-ttu-id="b0250-121">キー ファイルには公開キーだけが含まれる場合があることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="b0250-121">Note that a key file might contain only the public key.</span></span>  
+ <span data-ttu-id="8eb08-121">キー ファイルには公開キーだけが含まれる場合があることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="8eb08-121">Note that a key file might contain only the public key.</span></span>  
   
- <span data-ttu-id="b0250-122">アセンブリの署名の詳細については、「[厳密な名前付きアセンブリの作成と使用](../../../standard/assembly/create-use-strong-named.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b0250-122">See [Creating and Using Strong-Named Assemblies](../../../standard/assembly/create-use-strong-named.md) for more information on signing an assembly.</span></span>  
+ <span data-ttu-id="8eb08-122">アセンブリの署名の詳細については、「[厳密な名前付きアセンブリの作成と使用](../../../standard/assembly/create-use-strong-named.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8eb08-122">See [Creating and Using Strong-Named Assemblies](../../../standard/assembly/create-use-strong-named.md) for more information on signing an assembly.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="b0250-123">`-keyfile` オプションは、Visual Studio 開発環境内からは利用できません。これはコマンド ラインからコンパイルするときにのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="b0250-123">The `-keyfile` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>
+> <span data-ttu-id="8eb08-123">`-keyfile` オプションは、Visual Studio 開発環境内からは利用できません。これはコマンド ラインからコンパイルするときにのみ使用できます。</span><span class="sxs-lookup"><span data-stu-id="8eb08-123">The `-keyfile` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>
 
-## <a name="example"></a><span data-ttu-id="b0250-124">例</span><span class="sxs-lookup"><span data-stu-id="b0250-124">Example</span></span>
+## <a name="example"></a><span data-ttu-id="8eb08-124">例</span><span class="sxs-lookup"><span data-stu-id="8eb08-124">Example</span></span>
 
-<span data-ttu-id="b0250-125">次のコードでは、ソース ファイル `Input.vb` をコンパイルし、キー ファイルを指定します。</span><span class="sxs-lookup"><span data-stu-id="b0250-125">The following code compiles source file `Input.vb` and specifies a key file.</span></span>
+<span data-ttu-id="8eb08-125">次のコードでは、ソース ファイル `Input.vb` をコンパイルし、キー ファイルを指定します。</span><span class="sxs-lookup"><span data-stu-id="8eb08-125">The following code compiles source file `Input.vb` and specifies a key file.</span></span>
 
 ```console
 vbc -keyfile:myfile.sn input.vb
 ```
 
-## <a name="see-also"></a><span data-ttu-id="b0250-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="b0250-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8eb08-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="8eb08-126">See also</span></span>
 
-- [<span data-ttu-id="b0250-127">.NET のアセンブリ</span><span class="sxs-lookup"><span data-stu-id="b0250-127">Assemblies in .NET</span></span>](../../../standard/assembly/index.md)
-- [<span data-ttu-id="b0250-128">Visual Basic のコマンド ライン コンパイラ</span><span class="sxs-lookup"><span data-stu-id="b0250-128">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="b0250-129">-reference (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b0250-129">-reference (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/reference.md)
-- [<span data-ttu-id="b0250-130">コンパイル コマンド ラインのサンプル</span><span class="sxs-lookup"><span data-stu-id="b0250-130">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="8eb08-127">.NET のアセンブリ</span><span class="sxs-lookup"><span data-stu-id="8eb08-127">Assemblies in .NET</span></span>](../../../standard/assembly/index.md)
+- [<span data-ttu-id="8eb08-128">Visual Basic のコマンド ライン コンパイラ</span><span class="sxs-lookup"><span data-stu-id="8eb08-128">Visual Basic Command-Line Compiler</span></span>](index.md)
+- [<span data-ttu-id="8eb08-129">-reference (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8eb08-129">-reference (Visual Basic)</span></span>](reference.md)
+- [<span data-ttu-id="8eb08-130">コンパイル コマンド ラインのサンプル</span><span class="sxs-lookup"><span data-stu-id="8eb08-130">Sample Compilation Command Lines</span></span>](sample-compilation-command-lines.md)
