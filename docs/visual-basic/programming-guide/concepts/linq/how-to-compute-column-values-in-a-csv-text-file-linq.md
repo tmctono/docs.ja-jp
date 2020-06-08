@@ -2,20 +2,20 @@
 title: '方法: CSV テキスト ファイルの列値を計算する (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 230bb26d04a85decc401abaa6c7fd7fc8a6b4806
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 679d53787b1392181696c05e0327ca1b1b910015
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338501"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357505"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a><span data-ttu-id="bec12-102">方法: CSV テキスト ファイルの列値を計算する (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bec12-102">How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)</span></span>
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a><span data-ttu-id="2bd88-102">方法: CSV テキスト ファイルの列値を計算する (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2bd88-102">How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)</span></span>
 
-<span data-ttu-id="bec12-103">この例では、合計、平均、最小、最大などの集計計算を .csv ファイルの列に対して実行する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="bec12-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="bec12-104">ここで説明する例の原則は、他の種類の構造化テキストにも適用できます。</span><span class="sxs-lookup"><span data-stu-id="bec12-104">The example principles that are shown here can be applied to other types of structured text.</span></span>
+<span data-ttu-id="2bd88-103">この例では、合計、平均、最小、最大などの集計計算を .csv ファイルの列に対して実行する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="2bd88-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="2bd88-104">ここで説明する例の原則は、他の種類の構造化テキストにも適用できます。</span><span class="sxs-lookup"><span data-stu-id="2bd88-104">The example principles that are shown here can be applied to other types of structured text.</span></span>
 
-### <a name="to-create-the-source-file"></a><span data-ttu-id="bec12-105">ソース ファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="bec12-105">To create the source file</span></span>
+### <a name="to-create-the-source-file"></a><span data-ttu-id="2bd88-105">ソース ファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="2bd88-105">To create the source file</span></span>
 
-1. <span data-ttu-id="bec12-106">次の行を scores.csv という名前のファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="bec12-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="bec12-107">最初の列は学生 ID、それに続く列は 4 つの試験の点数を表していると仮定します。</span><span class="sxs-lookup"><span data-stu-id="bec12-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>
+1. <span data-ttu-id="2bd88-106">次の行を scores.csv という名前のファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="2bd88-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="2bd88-107">最初の列は学生 ID、それに続く列は 4 つの試験の点数を表していると仮定します。</span><span class="sxs-lookup"><span data-stu-id="2bd88-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>
 
     ```csv
     111, 97, 92, 81, 60
@@ -32,7 +32,7 @@ ms.locfileid: "75338501"
     122, 94, 92, 91, 91
     ```
 
-## <a name="example"></a><span data-ttu-id="bec12-108">例</span><span class="sxs-lookup"><span data-stu-id="bec12-108">Example</span></span>
+## <a name="example"></a><span data-ttu-id="2bd88-108">例</span><span class="sxs-lookup"><span data-stu-id="2bd88-108">Example</span></span>
 
 ```vb
 Class SumColumns
@@ -141,13 +141,13 @@ End Class
 ' Exam #4 Average: 76.92 High Score: 94 Low Score: 39
 ```
 
-<span data-ttu-id="bec12-109">このクエリでは、<xref:System.String.Split%2A> メソッドを使用してテキストの各行が配列に変換されます。</span><span class="sxs-lookup"><span data-stu-id="bec12-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="bec12-110">各配列要素が列を表します。</span><span class="sxs-lookup"><span data-stu-id="bec12-110">Each array element represents a column.</span></span> <span data-ttu-id="bec12-111">最終的に、各列のテキストが数値表記に変換されます。</span><span class="sxs-lookup"><span data-stu-id="bec12-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="bec12-112">ファイルがタブ区切りファイルの場合、`Split` メソッドの引数を `\t` に変更します。</span><span class="sxs-lookup"><span data-stu-id="bec12-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>
+<span data-ttu-id="2bd88-109">このクエリでは、<xref:System.String.Split%2A> メソッドを使用してテキストの各行が配列に変換されます。</span><span class="sxs-lookup"><span data-stu-id="2bd88-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="2bd88-110">各配列要素が列を表します。</span><span class="sxs-lookup"><span data-stu-id="2bd88-110">Each array element represents a column.</span></span> <span data-ttu-id="2bd88-111">最終的に、各列のテキストが数値表記に変換されます。</span><span class="sxs-lookup"><span data-stu-id="2bd88-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="2bd88-112">ファイルがタブ区切りファイルの場合、`Split` メソッドの引数を `\t` に変更します。</span><span class="sxs-lookup"><span data-stu-id="2bd88-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>
 
-## <a name="compile-the-code"></a><span data-ttu-id="bec12-113">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="bec12-113">Compile the code</span></span>
+## <a name="compile-the-code"></a><span data-ttu-id="2bd88-113">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="2bd88-113">Compile the code</span></span>
 
-<span data-ttu-id="bec12-114">System.Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="bec12-114">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+<span data-ttu-id="2bd88-114">System.Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="2bd88-114">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="bec12-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="bec12-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2bd88-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="2bd88-115">See also</span></span>
 
-- [<span data-ttu-id="bec12-116">LINQ と文字列 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bec12-116">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="bec12-117">LINQ とファイル ディレクトリ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bec12-117">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="2bd88-116">LINQ と文字列 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2bd88-116">LINQ and Strings (Visual Basic)</span></span>](linq-and-strings.md)
+- [<span data-ttu-id="2bd88-117">LINQ とファイル ディレクトリ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2bd88-117">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)

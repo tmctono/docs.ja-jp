@@ -4,30 +4,30 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
-ms.openlocfilehash: 8d5e4add2d92a575126fb934ac3874a2e37685f5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4a86460104b6c4d9d6791e60f6f377cec0030425
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350782"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363034"
 ---
-# <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a><span data-ttu-id="0a66b-102">この配列は固定か、または一時的にロックされています。(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0a66b-102">This array is fixed or temporarily locked (Visual Basic)</span></span>
-<span data-ttu-id="0a66b-103">このエラーには、次のような原因が考えられます。</span><span class="sxs-lookup"><span data-stu-id="0a66b-103">This error has the following possible causes:</span></span>  
+# <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a><span data-ttu-id="cf813-102">この配列は固定か、または一時的にロックされています。(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cf813-102">This array is fixed or temporarily locked (Visual Basic)</span></span>
+<span data-ttu-id="cf813-103">このエラーには、次のような原因が考えられます。</span><span class="sxs-lookup"><span data-stu-id="cf813-103">This error has the following possible causes:</span></span>  
   
-- <span data-ttu-id="0a66b-104">`ReDim` を使用して、固定サイズの配列の要素数を変更している。</span><span class="sxs-lookup"><span data-stu-id="0a66b-104">Using `ReDim` to change the number of elements of a fixed-size array.</span></span>  
+- <span data-ttu-id="cf813-104">`ReDim` を使用して、固定サイズの配列の要素数を変更している。</span><span class="sxs-lookup"><span data-stu-id="cf813-104">Using `ReDim` to change the number of elements of a fixed-size array.</span></span>  
   
-- <span data-ttu-id="0a66b-105">モジュールレベルの動的配列を再定義しており、その中の 1 つの要素がプロシージャへの引数として渡されている。</span><span class="sxs-lookup"><span data-stu-id="0a66b-105">Redimensioning a module-level dynamic array, in which one element has been passed as an argument to a procedure.</span></span> <span data-ttu-id="0a66b-106">要素が渡されると、プロシージャ内の参照パラメーターのメモリの割り当て解除を防ぐために、配列がロックされます。</span><span class="sxs-lookup"><span data-stu-id="0a66b-106">If an element is passed, the array is locked to prevent deallocating memory for the reference parameter within the procedure.</span></span>  
+- <span data-ttu-id="cf813-105">モジュールレベルの動的配列を再定義しており、その中の 1 つの要素がプロシージャへの引数として渡されている。</span><span class="sxs-lookup"><span data-stu-id="cf813-105">Redimensioning a module-level dynamic array, in which one element has been passed as an argument to a procedure.</span></span> <span data-ttu-id="cf813-106">要素が渡されると、プロシージャ内の参照パラメーターのメモリの割り当て解除を防ぐために、配列がロックされます。</span><span class="sxs-lookup"><span data-stu-id="cf813-106">If an element is passed, the array is locked to prevent deallocating memory for the reference parameter within the procedure.</span></span>  
   
-- <span data-ttu-id="0a66b-107">配列を格納する `Variant` 変数に値を代入しようとしたが、`Variant` が現在ロックされている。</span><span class="sxs-lookup"><span data-stu-id="0a66b-107">Attempting to assign a value to a `Variant` variable containing an array, but the `Variant` is currently locked.</span></span>  
+- <span data-ttu-id="cf813-107">配列を格納する `Variant` 変数に値を代入しようとしたが、`Variant` が現在ロックされている。</span><span class="sxs-lookup"><span data-stu-id="cf813-107">Attempting to assign a value to a `Variant` variable containing an array, but the `Variant` is currently locked.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="0a66b-108">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="0a66b-108">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="cf813-108">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="cf813-108">To correct this error</span></span>  
   
-1. <span data-ttu-id="0a66b-109">`ReDim` で宣言する (配列がプロシージャ内で宣言されている場合) か、要素数を指定せずに宣言する (配列がモジュール レベルで宣言されている場合) ことによって、元の配列を固定ではなく動的にします。</span><span class="sxs-lookup"><span data-stu-id="0a66b-109">Make the original array dynamic rather than fixed by declaring it with `ReDim` (if the array is declared within a procedure), or by declaring it without specifying the number of elements (if the array is declared at the module level.</span></span>  
+1. <span data-ttu-id="cf813-109">`ReDim` で宣言する (配列がプロシージャ内で宣言されている場合) か、要素数を指定せずに宣言する (配列がモジュール レベルで宣言されている場合) ことによって、元の配列を固定ではなく動的にします。</span><span class="sxs-lookup"><span data-stu-id="cf813-109">Make the original array dynamic rather than fixed by declaring it with `ReDim` (if the array is declared within a procedure), or by declaring it without specifying the number of elements (if the array is declared at the module level.</span></span>  
   
-2. <span data-ttu-id="0a66b-110">モジュールのすべてのプロシージャ内で要素が表示されるようになるため、本当に要素を渡す必要があるかどうかを判断してください。</span><span class="sxs-lookup"><span data-stu-id="0a66b-110">Determine whether you really need to pass the element, since it is visible within all procedures in the module.</span></span>  
+2. <span data-ttu-id="cf813-110">モジュールのすべてのプロシージャ内で要素が表示されるようになるため、本当に要素を渡す必要があるかどうかを判断してください。</span><span class="sxs-lookup"><span data-stu-id="cf813-110">Determine whether you really need to pass the element, since it is visible within all procedures in the module.</span></span>  
   
-3. <span data-ttu-id="0a66b-111">`Variant` をロックしているものを特定し、それを修復します。</span><span class="sxs-lookup"><span data-stu-id="0a66b-111">Determine what is locking the `Variant` and remedy it.</span></span>  
+3. <span data-ttu-id="cf813-111">`Variant` をロックしているものを特定し、それを修復します。</span><span class="sxs-lookup"><span data-stu-id="cf813-111">Determine what is locking the `Variant` and remedy it.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0a66b-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="0a66b-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cf813-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="cf813-112">See also</span></span>
 
-- [<span data-ttu-id="0a66b-113">配列</span><span class="sxs-lookup"><span data-stu-id="0a66b-113">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [<span data-ttu-id="cf813-113">配列</span><span class="sxs-lookup"><span data-stu-id="cf813-113">Arrays</span></span>](../../programming-guide/language-features/arrays/index.md)
