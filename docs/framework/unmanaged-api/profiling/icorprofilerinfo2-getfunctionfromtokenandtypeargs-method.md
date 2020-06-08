@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ce8f6aa6-4ebf-4a86-b429-4bbc8af41a8f
 topic_type:
 - apiref
-ms.openlocfilehash: 945cf84e6f6201879514e29a21f7f5462aa33fdb
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 7f1276e1adeece086ca7b6791eb6e870faf4d010
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868669"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502874"
 ---
-# <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a><span data-ttu-id="214d9-102">ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs メソッド</span><span class="sxs-lookup"><span data-stu-id="214d9-102">ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs Method</span></span>
-<span data-ttu-id="214d9-103">指定されたメタデータトークン、格納クラス、および任意の型引数の `ClassID` 値を使用して、関数の `FunctionID` を取得します。</span><span class="sxs-lookup"><span data-stu-id="214d9-103">Gets the `FunctionID` of a function by using the specified metadata token, containing class, and `ClassID` values of any type arguments.</span></span>  
+# <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a><span data-ttu-id="053c5-102">ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs メソッド</span><span class="sxs-lookup"><span data-stu-id="053c5-102">ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs Method</span></span>
+<span data-ttu-id="053c5-103">`FunctionID`指定されたメタデータトークン、クラス、および `ClassID` 任意の型引数の値を使用して、関数のを取得します。</span><span class="sxs-lookup"><span data-stu-id="053c5-103">Gets the `FunctionID` of a function by using the specified metadata token, containing class, and `ClassID` values of any type arguments.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="214d9-104">構文</span><span class="sxs-lookup"><span data-stu-id="214d9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="053c5-104">構文</span><span class="sxs-lookup"><span data-stu-id="053c5-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFunctionFromTokenAndTypeArgs(  
@@ -37,42 +37,42 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
     [out] FunctionID* pFunctionID);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="214d9-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="214d9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="053c5-105">パラメーター</span><span class="sxs-lookup"><span data-stu-id="053c5-105">Parameters</span></span>  
  `moduleID`  
- <span data-ttu-id="214d9-106">から関数が存在するモジュールの ID。</span><span class="sxs-lookup"><span data-stu-id="214d9-106">[in] The ID of the module in which the function resides.</span></span>  
+ <span data-ttu-id="053c5-106">から関数が存在するモジュールの ID。</span><span class="sxs-lookup"><span data-stu-id="053c5-106">[in] The ID of the module in which the function resides.</span></span>  
   
  `funcDef`  
- <span data-ttu-id="214d9-107">から関数を参照する `mdMethodDef` メタデータトークン。</span><span class="sxs-lookup"><span data-stu-id="214d9-107">[in] An `mdMethodDef` metadata token that references the function.</span></span>  
+ <span data-ttu-id="053c5-107">から`mdMethodDef`関数を参照するメタデータトークン。</span><span class="sxs-lookup"><span data-stu-id="053c5-107">[in] An `mdMethodDef` metadata token that references the function.</span></span>  
   
  `classId`  
- <span data-ttu-id="214d9-108">からクラスを含んでいる関数の ID。</span><span class="sxs-lookup"><span data-stu-id="214d9-108">[in] The ID of the function's containing class.</span></span>  
+ <span data-ttu-id="053c5-108">からクラスを含んでいる関数の ID。</span><span class="sxs-lookup"><span data-stu-id="053c5-108">[in] The ID of the function's containing class.</span></span>  
   
  `cTypeArgs`  
- <span data-ttu-id="214d9-109">から指定された関数の型パラメーターの数。</span><span class="sxs-lookup"><span data-stu-id="214d9-109">[in] The number of type parameters for the given function.</span></span> <span data-ttu-id="214d9-110">非ジェネリック関数の場合、この値は0である必要があります。</span><span class="sxs-lookup"><span data-stu-id="214d9-110">This value must be zero for non-generic functions.</span></span>  
+ <span data-ttu-id="053c5-109">から指定された関数の型パラメーターの数。</span><span class="sxs-lookup"><span data-stu-id="053c5-109">[in] The number of type parameters for the given function.</span></span> <span data-ttu-id="053c5-110">非ジェネリック関数の場合、この値は0である必要があります。</span><span class="sxs-lookup"><span data-stu-id="053c5-110">This value must be zero for non-generic functions.</span></span>  
   
  `typeArgs`  
- <span data-ttu-id="214d9-111">から`ClassID` 値の配列。それぞれが関数の引数です。</span><span class="sxs-lookup"><span data-stu-id="214d9-111">[in] An array of `ClassID` values, each of which is an argument of the function.</span></span> <span data-ttu-id="214d9-112">`cTypeArgs` が0に設定されている場合、`typeArgs` の値は NULL になります。</span><span class="sxs-lookup"><span data-stu-id="214d9-112">The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.</span></span>  
+ <span data-ttu-id="053c5-111">から値の配列 `ClassID` 。それぞれが関数の引数です。</span><span class="sxs-lookup"><span data-stu-id="053c5-111">[in] An array of `ClassID` values, each of which is an argument of the function.</span></span> <span data-ttu-id="053c5-112">が0に設定されている場合、の値は `typeArgs` NULL `cTypeArgs` になります。</span><span class="sxs-lookup"><span data-stu-id="053c5-112">The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.</span></span>  
   
  `pFunctionID`  
- <span data-ttu-id="214d9-113">入出力指定した関数の `FunctionID` へのポインター。</span><span class="sxs-lookup"><span data-stu-id="214d9-113">[out] A pointer to the `FunctionID` of the specified function.</span></span>  
+ <span data-ttu-id="053c5-113">入出力`FunctionID`指定した関数のへのポインター。</span><span class="sxs-lookup"><span data-stu-id="053c5-113">[out] A pointer to the `FunctionID` of the specified function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="214d9-114">コメント</span><span class="sxs-lookup"><span data-stu-id="214d9-114">Remarks</span></span>  
- <span data-ttu-id="214d9-115">`mdMethodDef` メタデータトークンではなく `mdMethodRef` メタデータを使用して `GetFunctionFromTokenAndTypeArgs` メソッドを呼び出すと、予期しない結果になる場合があります。</span><span class="sxs-lookup"><span data-stu-id="214d9-115">Calling the `GetFunctionFromTokenAndTypeArgs` method with an `mdMethodRef` metadata instead of an `mdMethodDef` metadata token can have unpredictable results.</span></span> <span data-ttu-id="214d9-116">呼び出し元は、`mdMethodRef` を渡すときに `mdMethodDef` に解決する必要があります。</span><span class="sxs-lookup"><span data-stu-id="214d9-116">Callers should resolve the `mdMethodRef` to an `mdMethodDef` when passing it.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="053c5-114">解説</span><span class="sxs-lookup"><span data-stu-id="053c5-114">Remarks</span></span>  
+ <span data-ttu-id="053c5-115">メタデータ `GetFunctionFromTokenAndTypeArgs` トークンではなくメタデータを使用してメソッドを呼び出すと、 `mdMethodRef` `mdMethodDef` 予期しない結果が発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="053c5-115">Calling the `GetFunctionFromTokenAndTypeArgs` method with an `mdMethodRef` metadata instead of an `mdMethodDef` metadata token can have unpredictable results.</span></span> <span data-ttu-id="053c5-116">呼び出し元は、 `mdMethodRef` を渡すときにをに解決する必要があり `mdMethodDef` ます。</span><span class="sxs-lookup"><span data-stu-id="053c5-116">Callers should resolve the `mdMethodRef` to an `mdMethodDef` when passing it.</span></span>  
   
- <span data-ttu-id="214d9-117">関数がまだ読み込まれていない場合は、`GetFunctionFromTokenAndTypeArgs` を呼び出すと読み込みが発生します。これは、多くのコンテキストでは危険な操作です。</span><span class="sxs-lookup"><span data-stu-id="214d9-117">If the function is not already loaded, calling `GetFunctionFromTokenAndTypeArgs` will cause loading to occur, which is a dangerous operation in many contexts.</span></span> <span data-ttu-id="214d9-118">たとえば、モジュールまたは型の読み込み中にこのメソッドを呼び出すと、ランタイムが循環読み込みを試みたときに無限ループが発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="214d9-118">For example, calling this method during loading of modules or types could lead to an infinite loop as the runtime attempts to circularly load things.</span></span>  
+ <span data-ttu-id="053c5-117">関数がまだ読み込まれていない場合、を呼び出すと `GetFunctionFromTokenAndTypeArgs` 読み込みが発生します。これは、多くのコンテキストでは危険な操作です。</span><span class="sxs-lookup"><span data-stu-id="053c5-117">If the function is not already loaded, calling `GetFunctionFromTokenAndTypeArgs` will cause loading to occur, which is a dangerous operation in many contexts.</span></span> <span data-ttu-id="053c5-118">たとえば、モジュールまたは型の読み込み中にこのメソッドを呼び出すと、ランタイムが循環読み込みを試みたときに無限ループが発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="053c5-118">For example, calling this method during loading of modules or types could lead to an infinite loop as the runtime attempts to circularly load things.</span></span>  
   
- <span data-ttu-id="214d9-119">一般に、`GetFunctionFromTokenAndTypeArgs` の使用は推奨されていません。</span><span class="sxs-lookup"><span data-stu-id="214d9-119">In general, use of `GetFunctionFromTokenAndTypeArgs` is discouraged.</span></span> <span data-ttu-id="214d9-120">プロファイラーが特定の関数のイベントに関心を持っている場合は、その関数の `ModuleID` と `mdMethodDef` を格納し、 [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)を使用して、特定の `FunctionID` が目的の関数のものであるかどうかを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="214d9-120">If profilers are interested in events for a particular function, they should store the `ModuleID` and `mdMethodDef` of that function, and use [ICorProfilerInfo2::GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) to check whether a given `FunctionID` is that of the desired function.</span></span>  
+ <span data-ttu-id="053c5-119">一般に、の使用 `GetFunctionFromTokenAndTypeArgs` は推奨されていません。</span><span class="sxs-lookup"><span data-stu-id="053c5-119">In general, use of `GetFunctionFromTokenAndTypeArgs` is discouraged.</span></span> <span data-ttu-id="053c5-120">プロファイラーが特定の関数のイベントに関心を持っている場合は、 `ModuleID` その関数のとを格納し、 `mdMethodDef` [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)を使用して、 `FunctionID` 目的の関数のが指定されているかどうかを確認します。</span><span class="sxs-lookup"><span data-stu-id="053c5-120">If profilers are interested in events for a particular function, they should store the `ModuleID` and `mdMethodDef` of that function, and use [ICorProfilerInfo2::GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) to check whether a given `FunctionID` is that of the desired function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="214d9-121">要件</span><span class="sxs-lookup"><span data-stu-id="214d9-121">Requirements</span></span>  
- <span data-ttu-id="214d9-122">**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="214d9-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="053c5-121">要件</span><span class="sxs-lookup"><span data-stu-id="053c5-121">Requirements</span></span>  
+ <span data-ttu-id="053c5-122">**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="053c5-122">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="214d9-123">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="214d9-123">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="053c5-123">**ヘッダー** : CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="053c5-123">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="214d9-124">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="214d9-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="053c5-124">**ライブラリ:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="053c5-124">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="214d9-125">**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="214d9-125">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="053c5-125">**.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="053c5-125">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="214d9-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="214d9-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="053c5-126">関連項目</span><span class="sxs-lookup"><span data-stu-id="053c5-126">See also</span></span>
 
-- [<span data-ttu-id="214d9-127">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="214d9-127">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)
-- [<span data-ttu-id="214d9-128">ICorProfilerInfo2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="214d9-128">ICorProfilerInfo2 Interface</span></span>](icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="053c5-127">ICorProfilerInfo インターフェイス</span><span class="sxs-lookup"><span data-stu-id="053c5-127">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)
+- [<span data-ttu-id="053c5-128">ICorProfilerInfo2 インターフェイス</span><span class="sxs-lookup"><span data-stu-id="053c5-128">ICorProfilerInfo2 Interface</span></span>](icorprofilerinfo2-interface.md)
