@@ -2,36 +2,36 @@
 title: '方法: 探索プロキシで登録される探索可能なサービスの実装する'
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: 053ace300610cd4129c4541f4e2658ac8d09da85
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bf878dff59a9a258567ff99098b0b3f8761194e2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626984"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599231"
 ---
-# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a><span data-ttu-id="dfc01-102">方法: 探索プロキシで登録される探索可能なサービスの実装する</span><span class="sxs-lookup"><span data-stu-id="dfc01-102">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>
-<span data-ttu-id="dfc01-103">これは、探索プロキシの実装方法に関する 4 つのトピックのうちの 2 番目のトピックです。</span><span class="sxs-lookup"><span data-stu-id="dfc01-103">This topic is the second of four topics that discusses how to implement a discovery proxy.</span></span> <span data-ttu-id="dfc01-104">前のトピックで[方法。探索プロキシの実装](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)、探索プロキシを実装します。</span><span class="sxs-lookup"><span data-stu-id="dfc01-104">In the previous topic, [How to: Implement a Discovery Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), you implemented a discovery proxy.</span></span> <span data-ttu-id="dfc01-105">このトピックでは、アナウンス メッセージを送信する WCF サービスを作成 (`Hello`と`Bye`) に、探索プロキシに登録または登録解除、探索プロキシの原因です。</span><span class="sxs-lookup"><span data-stu-id="dfc01-105">In this topic, you create a WCF service that sends announcement messages (`Hello` and `Bye`) to the discovery proxy, causing it to register and unregister itself with the discovery proxy.</span></span>
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a><span data-ttu-id="d8aca-102">方法: 探索プロキシで登録される探索可能なサービスの実装する</span><span class="sxs-lookup"><span data-stu-id="d8aca-102">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>
+<span data-ttu-id="d8aca-103">これは、探索プロキシの実装方法に関する 4 つのトピックのうちの 2 番目のトピックです。</span><span class="sxs-lookup"><span data-stu-id="d8aca-103">This topic is the second of four topics that discusses how to implement a discovery proxy.</span></span> <span data-ttu-id="d8aca-104">前のトピック「[方法: 探索プロキシを実装](how-to-implement-a-discovery-proxy.md)する」では、探索プロキシを実装しています。</span><span class="sxs-lookup"><span data-stu-id="d8aca-104">In the previous topic, [How to: Implement a Discovery Proxy](how-to-implement-a-discovery-proxy.md), you implemented a discovery proxy.</span></span> <span data-ttu-id="d8aca-105">このトピックでは、アナウンスメッセージ (および) を探索プロキシに送信する WCF サービスを作成し `Hello` `Bye` ます。これにより、探索プロキシに登録および登録解除が行われます。</span><span class="sxs-lookup"><span data-stu-id="d8aca-105">In this topic, you create a WCF service that sends announcement messages (`Hello` and `Bye`) to the discovery proxy, causing it to register and unregister itself with the discovery proxy.</span></span>
 
-### <a name="to-define-the-service-contract"></a><span data-ttu-id="dfc01-106">サービス コントラクトを定義するには</span><span class="sxs-lookup"><span data-stu-id="dfc01-106">To define the service contract</span></span>
+### <a name="to-define-the-service-contract"></a><span data-ttu-id="d8aca-106">サービス コントラクトを定義するには</span><span class="sxs-lookup"><span data-stu-id="d8aca-106">To define the service contract</span></span>
 
-1. <span data-ttu-id="dfc01-107">新しいコンソール アプリケーション プロジェクトを、`DiscoveryProxyExample` という `Service` ソリューションに追加します。</span><span class="sxs-lookup"><span data-stu-id="dfc01-107">Add a new console application project to the `DiscoveryProxyExample` solution called `Service`.</span></span>
+1. <span data-ttu-id="d8aca-107">新しいコンソール アプリケーション プロジェクトを、`DiscoveryProxyExample` という `Service` ソリューションに追加します。</span><span class="sxs-lookup"><span data-stu-id="d8aca-107">Add a new console application project to the `DiscoveryProxyExample` solution called `Service`.</span></span>
 
-2. <span data-ttu-id="dfc01-108">次のアセンブリへの参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="dfc01-108">Add references to the following assemblies:</span></span>
+2. <span data-ttu-id="d8aca-108">次のアセンブリへの参照を追加します。</span><span class="sxs-lookup"><span data-stu-id="d8aca-108">Add references to the following assemblies:</span></span>
 
-    1. <span data-ttu-id="dfc01-109">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="dfc01-109">System.ServiceModel</span></span>
+    1. <span data-ttu-id="d8aca-109">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="d8aca-109">System.ServiceModel</span></span>
 
-    2. <span data-ttu-id="dfc01-110">System.ServiceModel.Discovery</span><span class="sxs-lookup"><span data-stu-id="dfc01-110">System.ServiceModel.Discovery</span></span>
+    2. <span data-ttu-id="d8aca-110">System.ServiceModel.Discovery</span><span class="sxs-lookup"><span data-stu-id="d8aca-110">System.ServiceModel.Discovery</span></span>
 
-3. <span data-ttu-id="dfc01-111">新しいクラスを `CalculatorService` プロジェクトに追加します。</span><span class="sxs-lookup"><span data-stu-id="dfc01-111">Add a new class to the project called `CalculatorService`.</span></span>
+3. <span data-ttu-id="d8aca-111">新しいクラスを `CalculatorService` プロジェクトに追加します。</span><span class="sxs-lookup"><span data-stu-id="d8aca-111">Add a new class to the project called `CalculatorService`.</span></span>
 
-4. <span data-ttu-id="dfc01-112">次の using ステートメントを追加します。</span><span class="sxs-lookup"><span data-stu-id="dfc01-112">Add the following using statements.</span></span>
+4. <span data-ttu-id="d8aca-112">次の using ステートメントを追加します。</span><span class="sxs-lookup"><span data-stu-id="d8aca-112">Add the following using statements.</span></span>
 
     ```csharp
     using System;
     using System.ServiceModel;
     ```
 
-5. <span data-ttu-id="dfc01-113">CalculatorService.cs でサービス コントラクトを定義します。</span><span class="sxs-lookup"><span data-stu-id="dfc01-113">Within CalculatorService.cs, define the service contract.</span></span>
+5. <span data-ttu-id="d8aca-113">CalculatorService.cs でサービス コントラクトを定義します。</span><span class="sxs-lookup"><span data-stu-id="d8aca-113">Within CalculatorService.cs, define the service contract.</span></span>
 
     ```csharp
     // Define a service contract.
@@ -49,7 +49,7 @@ ms.locfileid: "64626984"
     }
     ```
 
-6. <span data-ttu-id="dfc01-114">また、CalculatorService.cs でサービス コントラクトを実装します。</span><span class="sxs-lookup"><span data-stu-id="dfc01-114">Also within CalculatorService.cs, implement the service contract.</span></span>
+6. <span data-ttu-id="d8aca-114">また、CalculatorService.cs でサービス コントラクトを実装します。</span><span class="sxs-lookup"><span data-stu-id="d8aca-114">Also within CalculatorService.cs, implement the service contract.</span></span>
 
     ```csharp
     // Service class which implements the service contract.
@@ -89,11 +89,11 @@ ms.locfileid: "64626984"
     }
     ```
 
-### <a name="to-host-the-service"></a><span data-ttu-id="dfc01-115">サービスをホストするには</span><span class="sxs-lookup"><span data-stu-id="dfc01-115">To host the service</span></span>
+### <a name="to-host-the-service"></a><span data-ttu-id="d8aca-115">サービスをホストするには</span><span class="sxs-lookup"><span data-stu-id="d8aca-115">To host the service</span></span>
 
-1. <span data-ttu-id="dfc01-116">プロジェクトの作成時に生成された Program.cs ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="dfc01-116">Open the Program.cs file that was generated when you created the project.</span></span>
+1. <span data-ttu-id="d8aca-116">プロジェクトの作成時に生成された Program.cs ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="d8aca-116">Open the Program.cs file that was generated when you created the project.</span></span>
 
-2. <span data-ttu-id="dfc01-117">次の using ステートメントを追加します。</span><span class="sxs-lookup"><span data-stu-id="dfc01-117">Add the following using statements.</span></span>
+2. <span data-ttu-id="d8aca-117">次の using ステートメントを追加します。</span><span class="sxs-lookup"><span data-stu-id="d8aca-117">Add the following using statements.</span></span>
 
     ```csharp
     using System;
@@ -102,7 +102,7 @@ ms.locfileid: "64626984"
     using System.ServiceModel.Discovery;
     ```
 
-3. <span data-ttu-id="dfc01-118">`Main()` メソッド内に次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="dfc01-118">Within the `Main()` method, add the following code:</span></span>
+3. <span data-ttu-id="d8aca-118">`Main()` メソッド内に次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="d8aca-118">Within the `Main()` method, add the following code:</span></span>
 
     ```csharp
     // Define the base address of the service
@@ -156,10 +156,10 @@ ms.locfileid: "64626984"
     }
     ```
 
-<span data-ttu-id="dfc01-119">これで、探索サービスの実装が完了しました。</span><span class="sxs-lookup"><span data-stu-id="dfc01-119">You have completed implementing a discoverable service.</span></span> <span data-ttu-id="dfc01-120">進んでください[方法。探索プロキシを使用して、サービスを検索するクライアント アプリケーションの実装](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)します。</span><span class="sxs-lookup"><span data-stu-id="dfc01-120">Continue on to [How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).</span></span>
+<span data-ttu-id="d8aca-119">これで、探索サービスの実装が完了しました。</span><span class="sxs-lookup"><span data-stu-id="d8aca-119">You have completed implementing a discoverable service.</span></span> <span data-ttu-id="d8aca-120">[「方法: 探索プロキシを使用してサービスを検索するクライアントアプリケーションを実装](client-app-discovery-proxy-to-find-a-service.md)する」に進みます。</span><span class="sxs-lookup"><span data-stu-id="d8aca-120">Continue on to [How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service](client-app-discovery-proxy-to-find-a-service.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="dfc01-121">例</span><span class="sxs-lookup"><span data-stu-id="dfc01-121">Example</span></span>
- <span data-ttu-id="dfc01-122">このトピックで使用するコード全体の一覧を次に示します。</span><span class="sxs-lookup"><span data-stu-id="dfc01-122">This is the full listing of the code used in this topic.</span></span>
+## <a name="example"></a><span data-ttu-id="d8aca-121">例</span><span class="sxs-lookup"><span data-stu-id="d8aca-121">Example</span></span>
+ <span data-ttu-id="d8aca-122">このトピックで使用するコード全体の一覧を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d8aca-122">This is the full listing of the code used in this topic.</span></span>
 
 ```csharp
 // CalculatorService.cs
@@ -289,8 +289,8 @@ namespace Microsoft.Samples.Discovery
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="dfc01-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="dfc01-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d8aca-123">関連項目</span><span class="sxs-lookup"><span data-stu-id="d8aca-123">See also</span></span>
 
-- [<span data-ttu-id="dfc01-124">WCF Discovery</span><span class="sxs-lookup"><span data-stu-id="dfc01-124">WCF Discovery</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
-- [<span data-ttu-id="dfc01-125">方法: 探索プロキシを実装します。</span><span class="sxs-lookup"><span data-stu-id="dfc01-125">How to: Implement a Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [<span data-ttu-id="dfc01-126">方法: 探索プロキシを使用して、サービスを検索するクライアント アプリケーションを実装します。</span><span class="sxs-lookup"><span data-stu-id="dfc01-126">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [<span data-ttu-id="d8aca-124">WCF Discovery</span><span class="sxs-lookup"><span data-stu-id="d8aca-124">WCF Discovery</span></span>](wcf-discovery.md)
+- [<span data-ttu-id="d8aca-125">方法: 探索プロキシを実装する</span><span class="sxs-lookup"><span data-stu-id="d8aca-125">How to: Implement a Discovery Proxy</span></span>](how-to-implement-a-discovery-proxy.md)
+- [<span data-ttu-id="d8aca-126">方法: 探索プロキシを使用してサービスを検索するクライアント アプリケーションを実装する</span><span class="sxs-lookup"><span data-stu-id="d8aca-126">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>](client-app-discovery-proxy-to-find-a-service.md)
