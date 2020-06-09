@@ -2,21 +2,21 @@
 title: System.ServiceModel.UnderstoodMessageHeader
 ms.date: 03/30/2017
 ms.assetid: 8a8560bf-d13b-452d-bfb5-a5221cb191bd
-ms.openlocfilehash: 68e9769d17e0eeca3063555bf2d7e856a74ec8ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a88677b1a511c824b78e2d82daf097e15baafa1f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61914265"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595610"
 ---
-# <a name="systemservicemodelunderstoodmessageheader"></a><span data-ttu-id="dc8dd-102">System.ServiceModel.UnderstoodMessageHeader</span><span class="sxs-lookup"><span data-stu-id="dc8dd-102">System.ServiceModel.UnderstoodMessageHeader</span></span>
-<span data-ttu-id="dc8dd-103">System.ServiceModel.UnderstoodMessageHeader</span><span class="sxs-lookup"><span data-stu-id="dc8dd-103">System.ServiceModel.UnderstoodMessageHeader</span></span>  
+# <a name="systemservicemodelunderstoodmessageheader"></a><span data-ttu-id="3cc62-102">System.ServiceModel.UnderstoodMessageHeader</span><span class="sxs-lookup"><span data-stu-id="3cc62-102">System.ServiceModel.UnderstoodMessageHeader</span></span>
+<span data-ttu-id="3cc62-103">System.ServiceModel.UnderstoodMessageHeader</span><span class="sxs-lookup"><span data-stu-id="3cc62-103">System.ServiceModel.UnderstoodMessageHeader</span></span>  
   
-## <a name="description"></a><span data-ttu-id="dc8dd-104">説明</span><span class="sxs-lookup"><span data-stu-id="dc8dd-104">Description</span></span>  
- <span data-ttu-id="dc8dd-105">認識されたメッセージ ヘッダー。</span><span class="sxs-lookup"><span data-stu-id="dc8dd-105">Understood message header.</span></span>  
+## <a name="description"></a><span data-ttu-id="3cc62-104">説明</span><span class="sxs-lookup"><span data-stu-id="3cc62-104">Description</span></span>  
+ <span data-ttu-id="3cc62-105">認識されたメッセージ ヘッダー。</span><span class="sxs-lookup"><span data-stu-id="3cc62-105">Understood message header.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dc8dd-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="dc8dd-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3cc62-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="3cc62-106">See also</span></span>
 
-- [<span data-ttu-id="dc8dd-107">トレース</span><span class="sxs-lookup"><span data-stu-id="dc8dd-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="dc8dd-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="dc8dd-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="dc8dd-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="dc8dd-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="3cc62-107">トレース</span><span class="sxs-lookup"><span data-stu-id="3cc62-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="3cc62-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="3cc62-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="3cc62-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="3cc62-109">Administration and Diagnostics</span></span>](../index.md)
