@@ -2,21 +2,21 @@
 title: System.ServiceModel.Activation.ServiceStartPipeError
 ms.date: 03/30/2017
 ms.assetid: 0d9e883d-181d-407f-ad79-c90035dcfc25
-ms.openlocfilehash: 52829a4adbf538ae5edfd3039724156be85b2b79
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3816c6d37963f3fd8a951cf0c5f842ff2b810088
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61752920"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594154"
 ---
-# <a name="systemservicemodelactivationservicestartpipeerror"></a><span data-ttu-id="aadbd-102">System.ServiceModel.Activation.ServiceStartPipeError</span><span class="sxs-lookup"><span data-stu-id="aadbd-102">System.ServiceModel.Activation.ServiceStartPipeError</span></span>
-<span data-ttu-id="aadbd-103">System.ServiceModel.Activation.ServiceStartPipeError</span><span class="sxs-lookup"><span data-stu-id="aadbd-103">System.ServiceModel.Activation.ServiceStartPipeError</span></span>  
+# <a name="systemservicemodelactivationservicestartpipeerror"></a><span data-ttu-id="54545-102">System.ServiceModel.Activation.ServiceStartPipeError</span><span class="sxs-lookup"><span data-stu-id="54545-102">System.ServiceModel.Activation.ServiceStartPipeError</span></span>
+<span data-ttu-id="54545-103">System.ServiceModel.Activation.ServiceStartPipeError</span><span class="sxs-lookup"><span data-stu-id="54545-103">System.ServiceModel.Activation.ServiceStartPipeError</span></span>  
   
-## <a name="description"></a><span data-ttu-id="aadbd-104">説明</span><span class="sxs-lookup"><span data-stu-id="aadbd-104">Description</span></span>  
- <span data-ttu-id="aadbd-105">NT サービスを開始しているときにハンドル エラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="aadbd-105">A handled error occurred while starting up the NT service.</span></span>  
+## <a name="description"></a><span data-ttu-id="54545-104">説明</span><span class="sxs-lookup"><span data-stu-id="54545-104">Description</span></span>  
+ <span data-ttu-id="54545-105">NT サービスを開始しているときにハンドル エラーが発生しました。</span><span class="sxs-lookup"><span data-stu-id="54545-105">A handled error occurred while starting up the NT service.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="aadbd-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="aadbd-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="54545-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="54545-106">See also</span></span>
 
-- [<span data-ttu-id="aadbd-107">トレース</span><span class="sxs-lookup"><span data-stu-id="aadbd-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="aadbd-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="aadbd-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="aadbd-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="aadbd-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="54545-107">トレース</span><span class="sxs-lookup"><span data-stu-id="54545-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="54545-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="54545-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="54545-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="54545-109">Administration and Diagnostics</span></span>](../index.md)
