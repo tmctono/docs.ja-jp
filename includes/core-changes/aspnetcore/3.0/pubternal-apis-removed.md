@@ -1,61 +1,61 @@
 ---
-ms.openlocfilehash: 52b9caf2d5b3d44c0c6349501dafc371541fdd70
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: b1fb9647091cecb80b9c2f04ec9b6bb156eb39ba
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396354"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84466841"
 ---
-### <a name="pubternal-apis-removed"></a><span data-ttu-id="66281-101">"Pubternal" API の削除</span><span class="sxs-lookup"><span data-stu-id="66281-101">"Pubternal" APIs removed</span></span>
+### <a name="pubternal-apis-removed"></a><span data-ttu-id="1a2f2-101">"Pubternal" API の削除</span><span class="sxs-lookup"><span data-stu-id="1a2f2-101">"Pubternal" APIs removed</span></span>
 
-<span data-ttu-id="66281-102">ASP.NET Core のパブリック API サーフェイスを管理しやすくするため、`*.Internal` 名前空間のほとんどの型 (:::no-loc text="\"pubternal\""::: API と呼んでいたもの) が本当に internal になりました。</span><span class="sxs-lookup"><span data-stu-id="66281-102">To better maintain the public API surface of ASP.NET Core, most of the types in `*.Internal` namespaces (referred to as :::no-loc text="\"pubternal\""::: APIs) have become truly internal.</span></span> <span data-ttu-id="66281-103">これらの名前空間のメンバーは、公開 API としてサポートされるべきものではありませんでした。</span><span class="sxs-lookup"><span data-stu-id="66281-103">Members in these namespaces were never meant to be supported as public-facing APIs.</span></span> <span data-ttu-id="66281-104">API の破壊的変更はマイナー リリースで発生する可能性があり、よく発生しています。</span><span class="sxs-lookup"><span data-stu-id="66281-104">The APIs could break in minor releases and often did.</span></span> <span data-ttu-id="66281-105">ASP.NET Core 3.0 に更新すると、これらの API に依存するコードは破壊的変更の影響を受けます。</span><span class="sxs-lookup"><span data-stu-id="66281-105">Code that depends on these APIs breaks when updating to ASP.NET Core 3.0.</span></span>
+<span data-ttu-id="1a2f2-102">ASP.NET Core のパブリック API サーフェイスを管理しやすくするため、`*.Internal` 名前空間のほとんどの型 (:::no-loc text="\"pubternal\""::: API と呼んでいたもの) が本当に internal になりました。</span><span class="sxs-lookup"><span data-stu-id="1a2f2-102">To better maintain the public API surface of ASP.NET Core, most of the types in `*.Internal` namespaces (referred to as :::no-loc text="\"pubternal\""::: APIs) have become truly internal.</span></span> <span data-ttu-id="1a2f2-103">これらの名前空間のメンバーは、公開 API としてサポートされるべきものではありませんでした。</span><span class="sxs-lookup"><span data-stu-id="1a2f2-103">Members in these namespaces were never meant to be supported as public-facing APIs.</span></span> <span data-ttu-id="1a2f2-104">API の破壊的変更はマイナー リリースで発生する可能性があり、よく発生しています。</span><span class="sxs-lookup"><span data-stu-id="1a2f2-104">The APIs could break in minor releases and often did.</span></span> <span data-ttu-id="1a2f2-105">ASP.NET Core 3.0 に更新すると、これらの API に依存するコードは破壊的変更の影響を受けます。</span><span class="sxs-lookup"><span data-stu-id="1a2f2-105">Code that depends on these APIs breaks when updating to ASP.NET Core 3.0.</span></span>
 
-<span data-ttu-id="66281-106">詳細については、[dotnet/aspnetcore#4932](https://github.com/dotnet/aspnetcore/issues/4932) および [dotnet/aspnetcore#11312](https://github.com/dotnet/aspnetcore/issues/11312) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="66281-106">For more information, see [dotnet/aspnetcore#4932](https://github.com/dotnet/aspnetcore/issues/4932) and [dotnet/aspnetcore#11312](https://github.com/dotnet/aspnetcore/issues/11312).</span></span>
+<span data-ttu-id="1a2f2-106">詳細については、[dotnet/aspnetcore#4932](https://github.com/dotnet/aspnetcore/issues/4932) および [dotnet/aspnetcore#11312](https://github.com/dotnet/aspnetcore/issues/11312) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1a2f2-106">For more information, see [dotnet/aspnetcore#4932](https://github.com/dotnet/aspnetcore/issues/4932) and [dotnet/aspnetcore#11312](https://github.com/dotnet/aspnetcore/issues/11312).</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="66281-107">導入されたバージョン</span><span class="sxs-lookup"><span data-stu-id="66281-107">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="1a2f2-107">導入されたバージョン</span><span class="sxs-lookup"><span data-stu-id="1a2f2-107">Version introduced</span></span>
 
-<span data-ttu-id="66281-108">3.0</span><span class="sxs-lookup"><span data-stu-id="66281-108">3.0</span></span>
+<span data-ttu-id="1a2f2-108">3.0</span><span class="sxs-lookup"><span data-stu-id="1a2f2-108">3.0</span></span>
 
-#### <a name="old-behavior"></a><span data-ttu-id="66281-109">以前の動作</span><span class="sxs-lookup"><span data-stu-id="66281-109">Old behavior</span></span>
+#### <a name="old-behavior"></a><span data-ttu-id="1a2f2-109">以前の動作</span><span class="sxs-lookup"><span data-stu-id="1a2f2-109">Old behavior</span></span>
 
-<span data-ttu-id="66281-110">影響を受ける API は `public` アクセス修飾子でマークされ、`*.Internal` 名前空間に存在します。</span><span class="sxs-lookup"><span data-stu-id="66281-110">The affected APIs are marked with the `public` access modifier and exist in `*.Internal` namespaces.</span></span>
+<span data-ttu-id="1a2f2-110">影響を受ける API は `public` アクセス修飾子でマークされ、`*.Internal` 名前空間に存在します。</span><span class="sxs-lookup"><span data-stu-id="1a2f2-110">The affected APIs are marked with the `public` access modifier and exist in `*.Internal` namespaces.</span></span>
 
-#### <a name="new-behavior"></a><span data-ttu-id="66281-111">新しい動作</span><span class="sxs-lookup"><span data-stu-id="66281-111">New behavior</span></span>
+#### <a name="new-behavior"></a><span data-ttu-id="1a2f2-111">新しい動作</span><span class="sxs-lookup"><span data-stu-id="1a2f2-111">New behavior</span></span>
 
-<span data-ttu-id="66281-112">影響を受ける API は、[internal(~/docs/csharp/language-reference/keywords/internal.md) アクセス修飾子でマークされ、アセンブリ外のコードによって使用できなくなります。</span><span class="sxs-lookup"><span data-stu-id="66281-112">The affected APIs are marked with the [internal(~/docs/csharp/language-reference/keywords/internal.md) access modifier and can no longer be used by code outside that assembly.</span></span>
+<span data-ttu-id="1a2f2-112">影響を受ける API は、[internal](/dotnet/csharp/language-reference/keywords/internal) アクセス修飾子でマークされ、そのアセンブリ外のコードでは使用できなくなります。</span><span class="sxs-lookup"><span data-stu-id="1a2f2-112">The affected APIs are marked with the [internal](/dotnet/csharp/language-reference/keywords/internal) access modifier and can no longer be used by code outside that assembly.</span></span>
 
-#### <a name="reason-for-change"></a><span data-ttu-id="66281-113">変更理由</span><span class="sxs-lookup"><span data-stu-id="66281-113">Reason for change</span></span>
+#### <a name="reason-for-change"></a><span data-ttu-id="1a2f2-113">変更理由</span><span class="sxs-lookup"><span data-stu-id="1a2f2-113">Reason for change</span></span>
 
-<span data-ttu-id="66281-114">これらの :::no-loc text="\"pubternal\""::: API のガイダンスでは以下が示されていました。</span><span class="sxs-lookup"><span data-stu-id="66281-114">The guidance for these :::no-loc text="\"pubternal\""::: APIs was that they:</span></span>
+<span data-ttu-id="1a2f2-114">これらの :::no-loc text="\"pubternal\""::: API のガイダンスでは以下が示されていました。</span><span class="sxs-lookup"><span data-stu-id="1a2f2-114">The guidance for these :::no-loc text="\"pubternal\""::: APIs was that they:</span></span>
 
-* <span data-ttu-id="66281-115">予告なしに変更されることがあります。</span><span class="sxs-lookup"><span data-stu-id="66281-115">Could change without notice.</span></span>
-* <span data-ttu-id="66281-116">破壊的変更を防ぐために、.NET ポリシーの対象ではありません。</span><span class="sxs-lookup"><span data-stu-id="66281-116">Weren't subject to .NET policies to prevent breaking changes.</span></span>
+* <span data-ttu-id="1a2f2-115">予告なしに変更されることがあります。</span><span class="sxs-lookup"><span data-stu-id="1a2f2-115">Could change without notice.</span></span>
+* <span data-ttu-id="1a2f2-116">破壊的変更を防ぐために、.NET ポリシーの対象ではありません。</span><span class="sxs-lookup"><span data-stu-id="1a2f2-116">Weren't subject to .NET policies to prevent breaking changes.</span></span>
 
-<span data-ttu-id="66281-117">API を `public` (`*.Internal` 名前空間でも) にしておくことは、ユーザーにとって混乱を招きます。</span><span class="sxs-lookup"><span data-stu-id="66281-117">Leaving the APIs `public` (even in the `*.Internal` namespaces) was confusing to customers.</span></span>
+<span data-ttu-id="1a2f2-117">API を `public` (`*.Internal` 名前空間でも) にしておくことは、ユーザーにとって混乱を招きます。</span><span class="sxs-lookup"><span data-stu-id="1a2f2-117">Leaving the APIs `public` (even in the `*.Internal` namespaces) was confusing to customers.</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="66281-118">推奨アクション</span><span class="sxs-lookup"><span data-stu-id="66281-118">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="1a2f2-118">推奨アクション</span><span class="sxs-lookup"><span data-stu-id="1a2f2-118">Recommended action</span></span>
 
-<span data-ttu-id="66281-119">これらの :::no-loc text="\"pubternal\""::: API の使用を停止します。</span><span class="sxs-lookup"><span data-stu-id="66281-119">Stop using these :::no-loc text="\"pubternal\""::: APIs.</span></span> <span data-ttu-id="66281-120">代わりの API について不明点がある場合は、[dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/issues) リポジトリで問題を提起します。</span><span class="sxs-lookup"><span data-stu-id="66281-120">If you have questions about alternate APIs, open an issue in the [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/issues) repository.</span></span>
+<span data-ttu-id="1a2f2-119">これらの :::no-loc text="\"pubternal\""::: API の使用を停止します。</span><span class="sxs-lookup"><span data-stu-id="1a2f2-119">Stop using these :::no-loc text="\"pubternal\""::: APIs.</span></span> <span data-ttu-id="1a2f2-120">代わりの API について不明点がある場合は、[dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/issues) リポジトリで問題を提起します。</span><span class="sxs-lookup"><span data-stu-id="1a2f2-120">If you have questions about alternate APIs, open an issue in the [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/issues) repository.</span></span>
 
-<span data-ttu-id="66281-121">たとえば、ASP.NET Core 2.2 プロジェクトの次の HTTP 要求バッファーリング コードを考えてみます。</span><span class="sxs-lookup"><span data-stu-id="66281-121">For example, consider the following HTTP request buffering code in an ASP.NET Core 2.2 project.</span></span> <span data-ttu-id="66281-122">`EnableRewind` 拡張メソッドは、`Microsoft.AspNetCore.Http.Internal` 名前空間に存在します。</span><span class="sxs-lookup"><span data-stu-id="66281-122">The `EnableRewind` extension method exists in the `Microsoft.AspNetCore.Http.Internal` namespace.</span></span>
+<span data-ttu-id="1a2f2-121">たとえば、ASP.NET Core 2.2 プロジェクトの次の HTTP 要求バッファーリング コードを考えてみます。</span><span class="sxs-lookup"><span data-stu-id="1a2f2-121">For example, consider the following HTTP request buffering code in an ASP.NET Core 2.2 project.</span></span> <span data-ttu-id="1a2f2-122">`EnableRewind` 拡張メソッドは、`Microsoft.AspNetCore.Http.Internal` 名前空間に存在します。</span><span class="sxs-lookup"><span data-stu-id="1a2f2-122">The `EnableRewind` extension method exists in the `Microsoft.AspNetCore.Http.Internal` namespace.</span></span>
 
 ```csharp
 HttpContext.Request.EnableRewind();
 ```
 
-<span data-ttu-id="66281-123">ASP.NET Core 3.0 プロジェクトで、`EnableRewind` 呼び出しを `EnableBuffering` 拡張メソッドへの呼び出しで置き換えます。</span><span class="sxs-lookup"><span data-stu-id="66281-123">In an ASP.NET Core 3.0 project, replace the `EnableRewind` call with a call to the `EnableBuffering` extension method.</span></span> <span data-ttu-id="66281-124">要求バッファーリング機能は、以前と同様に機能します。</span><span class="sxs-lookup"><span data-stu-id="66281-124">The request buffering feature works as it did in the past.</span></span> <span data-ttu-id="66281-125">`EnableBuffering` は `internal` API を呼び出すようになりました。</span><span class="sxs-lookup"><span data-stu-id="66281-125">`EnableBuffering` calls the now `internal` API.</span></span>
+<span data-ttu-id="1a2f2-123">ASP.NET Core 3.0 プロジェクトで、`EnableRewind` 呼び出しを `EnableBuffering` 拡張メソッドへの呼び出しで置き換えます。</span><span class="sxs-lookup"><span data-stu-id="1a2f2-123">In an ASP.NET Core 3.0 project, replace the `EnableRewind` call with a call to the `EnableBuffering` extension method.</span></span> <span data-ttu-id="1a2f2-124">要求バッファーリング機能は、以前と同様に機能します。</span><span class="sxs-lookup"><span data-stu-id="1a2f2-124">The request buffering feature works as it did in the past.</span></span> <span data-ttu-id="1a2f2-125">`EnableBuffering` は `internal` API を呼び出すようになりました。</span><span class="sxs-lookup"><span data-stu-id="1a2f2-125">`EnableBuffering` calls the now `internal` API.</span></span>
 
 ```csharp
 HttpContext.Request.EnableBuffering();
 ```
 
-#### <a name="category"></a><span data-ttu-id="66281-126">カテゴリ</span><span class="sxs-lookup"><span data-stu-id="66281-126">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="1a2f2-126">カテゴリ</span><span class="sxs-lookup"><span data-stu-id="1a2f2-126">Category</span></span>
 
-<span data-ttu-id="66281-127">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="66281-127">ASP.NET Core</span></span>
+<span data-ttu-id="1a2f2-127">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="1a2f2-127">ASP.NET Core</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="66281-128">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="66281-128">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="1a2f2-128">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="1a2f2-128">Affected APIs</span></span>
 
-<span data-ttu-id="66281-129">名前空間名に `Internal` セグメントが含まれる、`Microsoft.AspNetCore.*` 名前空間と `Microsoft.Extensions.*` 名前空間のすべての API。</span><span class="sxs-lookup"><span data-stu-id="66281-129">All APIs in the `Microsoft.AspNetCore.*` and `Microsoft.Extensions.*` namespaces that have an `Internal` segment in the namespace name.</span></span> <span data-ttu-id="66281-130">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="66281-130">For example:</span></span>
+<span data-ttu-id="1a2f2-129">名前空間名に `Internal` セグメントが含まれる、`Microsoft.AspNetCore.*` 名前空間と `Microsoft.Extensions.*` 名前空間のすべての API。</span><span class="sxs-lookup"><span data-stu-id="1a2f2-129">All APIs in the `Microsoft.AspNetCore.*` and `Microsoft.Extensions.*` namespaces that have an `Internal` segment in the namespace name.</span></span> <span data-ttu-id="1a2f2-130">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="1a2f2-130">For example:</span></span>
 
 - `Microsoft.AspNetCore.Authentication.Internal`
 - `Microsoft.AspNetCore.Builder.Internal`
