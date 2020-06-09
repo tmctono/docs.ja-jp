@@ -23,18 +23,18 @@ helpviewer_keywords:
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
 ms.openlocfilehash: a21dfeb12e8d99f5f8b8afede084846711c299ab
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "79401431"
 ---
-# <a name="me-my-mybase-and-myclass-in-visual-basic"></a><span data-ttu-id="5ad43-102">Visual Basic における Me、My、MyBase、MyClass</span><span class="sxs-lookup"><span data-stu-id="5ad43-102">Me, My, MyBase, and MyClass in Visual Basic</span></span>
-<span data-ttu-id="5ad43-103">`Me`、、、`My``MyBase`および`MyClass`、および Visual Basic では、似た名前が使用されますが、目的は異なります。</span><span class="sxs-lookup"><span data-stu-id="5ad43-103">`Me`, `My`, `MyBase`, and `MyClass` in Visual Basic have similar names, but different purposes.</span></span> <span data-ttu-id="5ad43-104">このトピックでは、これらのエンティティを区別するために、これらのエンティティについて説明します。</span><span class="sxs-lookup"><span data-stu-id="5ad43-104">This topic describes each of these entities in order to distinguish them.</span></span>  
+# <a name="me-my-mybase-and-myclass-in-visual-basic"></a><span data-ttu-id="03ee7-102">Visual Basic における Me、My、MyBase、MyClass</span><span class="sxs-lookup"><span data-stu-id="03ee7-102">Me, My, MyBase, and MyClass in Visual Basic</span></span>
+<span data-ttu-id="03ee7-103">Visual Basic の `Me`、`My`、`MyBase`、`MyClass` は、名前は似ていますが目的が異なります。</span><span class="sxs-lookup"><span data-stu-id="03ee7-103">`Me`, `My`, `MyBase`, and `MyClass` in Visual Basic have similar names, but different purposes.</span></span> <span data-ttu-id="03ee7-104">このトピックでは、これらのエンティティを区別するために、それぞれについて説明します。</span><span class="sxs-lookup"><span data-stu-id="03ee7-104">This topic describes each of these entities in order to distinguish them.</span></span>  
   
-## <a name="me"></a><span data-ttu-id="5ad43-105">自分</span><span class="sxs-lookup"><span data-stu-id="5ad43-105">Me</span></span>  
- <span data-ttu-id="5ad43-106">キーワード`Me`は、コードが現在実行されているクラスまたは構造体の特定のインスタンスを参照する方法を提供します。</span><span class="sxs-lookup"><span data-stu-id="5ad43-106">The `Me` keyword provides a way to refer to the specific instance of a class or structure in which the code is currently executing.</span></span> <span data-ttu-id="5ad43-107">`Me`オブジェクト変数または現在のインスタンスを参照する構造体変数と同じように動作します。</span><span class="sxs-lookup"><span data-stu-id="5ad43-107">`Me` behaves like either an object variable or a structure variable referring to the current instance.</span></span> <span data-ttu-id="5ad43-108">使用`Me`は、クラスまたは構造体の現在実行中のインスタンスに関する情報を別のクラス、構造体、またはモジュールのプロシージャに渡す場合に特に便利です。</span><span class="sxs-lookup"><span data-stu-id="5ad43-108">Using `Me` is particularly useful for passing information about the currently executing instance of a class or structure to a procedure in another class, structure, or module.</span></span>  
+## <a name="me"></a><span data-ttu-id="03ee7-105">Me</span><span class="sxs-lookup"><span data-stu-id="03ee7-105">Me</span></span>  
+ <span data-ttu-id="03ee7-106">`Me` キーワードを使用すると、コードが現在実行されている、クラスまたは構造体の特定のインスタンスを参照できます。</span><span class="sxs-lookup"><span data-stu-id="03ee7-106">The `Me` keyword provides a way to refer to the specific instance of a class or structure in which the code is currently executing.</span></span> <span data-ttu-id="03ee7-107">`Me` は、現在のインスタンスを参照するオブジェクト変数または構造体変数と同様に動作します。</span><span class="sxs-lookup"><span data-stu-id="03ee7-107">`Me` behaves like either an object variable or a structure variable referring to the current instance.</span></span> <span data-ttu-id="03ee7-108">`Me` の使用は、クラスまたは構造体の現在実行されているインスタンスに関する情報を、別のクラス、構造体、またはモジュールのプロシージャに渡す際に特に役立ちます。</span><span class="sxs-lookup"><span data-stu-id="03ee7-108">Using `Me` is particularly useful for passing information about the currently executing instance of a class or structure to a procedure in another class, structure, or module.</span></span>  
   
- <span data-ttu-id="5ad43-109">たとえば、モジュールに次のプロシージャがあるとします。</span><span class="sxs-lookup"><span data-stu-id="5ad43-109">For example, suppose you have the following procedure in a module.</span></span>  
+ <span data-ttu-id="03ee7-109">たとえば、モジュールに次のプロシージャがあるとします。</span><span class="sxs-lookup"><span data-stu-id="03ee7-109">For example, suppose you have the following procedure in a module.</span></span>  
   
 ```vb  
 Sub ChangeFormColor(FormName As Form)  
@@ -43,21 +43,21 @@ Sub ChangeFormColor(FormName As Form)
 End Sub  
 ```  
   
- <span data-ttu-id="5ad43-110">このプロシージャを呼び出し、次のステートメントを<xref:System.Windows.Forms.Form>使用して、クラスの現在のインスタンスを引数として渡すことができます。</span><span class="sxs-lookup"><span data-stu-id="5ad43-110">You can call this procedure and pass the current instance of the <xref:System.Windows.Forms.Form> class as an argument by using the following statement.</span></span>  
+ <span data-ttu-id="03ee7-110">このプロシージャを呼び出し、次のステートメントを使用して、<xref:System.Windows.Forms.Form> クラスの現在のインスタンスを引数として渡すことができます。</span><span class="sxs-lookup"><span data-stu-id="03ee7-110">You can call this procedure and pass the current instance of the <xref:System.Windows.Forms.Form> class as an argument by using the following statement.</span></span>  
   
 ```vb  
 ChangeFormColor(Me)  
 ```  
   
-## <a name="my"></a><span data-ttu-id="5ad43-111">My</span><span class="sxs-lookup"><span data-stu-id="5ad43-111">My</span></span>  
- <span data-ttu-id="5ad43-112">この`My`機能を使用すると、多数の .NET Framework クラスに簡単かつ直感的にアクセスでき、Visual Basic ユーザーはコンピュータ、アプリケーション、設定、リソースなどを操作できます。</span><span class="sxs-lookup"><span data-stu-id="5ad43-112">The `My` feature provides easy and intuitive access to a number of .NET Framework classes, enabling the Visual Basic user to interact with the computer, application, settings, resources, and so on.</span></span>  
+## <a name="my"></a><span data-ttu-id="03ee7-111">My</span><span class="sxs-lookup"><span data-stu-id="03ee7-111">My</span></span>  
+ <span data-ttu-id="03ee7-112">`My` 機能を使用すると、多数の .NET Framework クラスに簡単かつ直感的にアクセスできるので、Visual Basic ユーザーはコンピューター、アプリケーション、設定、リソースなどを操作できます。</span><span class="sxs-lookup"><span data-stu-id="03ee7-112">The `My` feature provides easy and intuitive access to a number of .NET Framework classes, enabling the Visual Basic user to interact with the computer, application, settings, resources, and so on.</span></span>  
   
-## <a name="mybase"></a><span data-ttu-id="5ad43-113">MyBase</span><span class="sxs-lookup"><span data-stu-id="5ad43-113">MyBase</span></span>  
- <span data-ttu-id="5ad43-114">キーワード`MyBase`は、クラスの現在のインスタンスの基本クラスを参照するオブジェクト変数のように動作します。</span><span class="sxs-lookup"><span data-stu-id="5ad43-114">The `MyBase` keyword behaves like an object variable referring to the base class of the current instance of a class.</span></span> <span data-ttu-id="5ad43-115">`MyBase`は、派生クラスでオーバーライドまたはシャドウされる基本クラスのメンバーにアクセスするためによく使用されます。</span><span class="sxs-lookup"><span data-stu-id="5ad43-115">`MyBase` is commonly used to access base class members that are overridden or shadowed in a derived class.</span></span> <span data-ttu-id="5ad43-116">`MyBase.New`は、派生クラスのコンストラクターから基本クラスコンストラクターを明示的に呼び出すために使用します。</span><span class="sxs-lookup"><span data-stu-id="5ad43-116">`MyBase.New` is used to explicitly call a base class constructor from a derived class constructor.</span></span>  
+## <a name="mybase"></a><span data-ttu-id="03ee7-113">MyBase</span><span class="sxs-lookup"><span data-stu-id="03ee7-113">MyBase</span></span>  
+ <span data-ttu-id="03ee7-114">`MyBase` キーワードは、クラスの現在のインスタンスの基底クラスを参照するオブジェクト変数と同様に動作します。</span><span class="sxs-lookup"><span data-stu-id="03ee7-114">The `MyBase` keyword behaves like an object variable referring to the base class of the current instance of a class.</span></span> <span data-ttu-id="03ee7-115">`MyBase` は、派生クラスでオーバーライドまたはシャドウされた基底クラスのメンバーにアクセスするためによく使用されます。</span><span class="sxs-lookup"><span data-stu-id="03ee7-115">`MyBase` is commonly used to access base class members that are overridden or shadowed in a derived class.</span></span> <span data-ttu-id="03ee7-116">`MyBase.New` は、派生クラスのコンストラクターから基底クラスのコンストラクターを明示的に呼び出すために使用されます。</span><span class="sxs-lookup"><span data-stu-id="03ee7-116">`MyBase.New` is used to explicitly call a base class constructor from a derived class constructor.</span></span>  
   
-## <a name="myclass"></a><span data-ttu-id="5ad43-117">MyClass</span><span class="sxs-lookup"><span data-stu-id="5ad43-117">MyClass</span></span>  
- <span data-ttu-id="5ad43-118">キーワード`MyClass`は、最初に実装されたクラスの現在のインスタンスを参照するオブジェクト変数のように動作します。</span><span class="sxs-lookup"><span data-stu-id="5ad43-118">The `MyClass` keyword behaves like an object variable referring to the current instance of a class as originally implemented.</span></span> <span data-ttu-id="5ad43-119">`MyClass`は に`Me`似ていますが、メソッドのすべての呼び出しは、 メソッド`NotOverridable`と同じように扱われます。</span><span class="sxs-lookup"><span data-stu-id="5ad43-119">`MyClass` is similar to `Me`, but all method calls on it are treated as if the method were `NotOverridable`.</span></span>  
+## <a name="myclass"></a><span data-ttu-id="03ee7-117">MyClass</span><span class="sxs-lookup"><span data-stu-id="03ee7-117">MyClass</span></span>  
+ <span data-ttu-id="03ee7-118">`MyClass` キーワードは、もともと実装されているクラスの現在のインスタンスを参照するオブジェクト変数と同様に動作します。</span><span class="sxs-lookup"><span data-stu-id="03ee7-118">The `MyClass` keyword behaves like an object variable referring to the current instance of a class as originally implemented.</span></span> <span data-ttu-id="03ee7-119">`MyClass` は `Me` に似ていますが、これに対するすべてのメソッド呼び出しは、メソッドが `NotOverridable` であるかのように扱われます。</span><span class="sxs-lookup"><span data-stu-id="03ee7-119">`MyClass` is similar to `Me`, but all method calls on it are treated as if the method were `NotOverridable`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5ad43-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="5ad43-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="03ee7-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="03ee7-120">See also</span></span>
 
-- [<span data-ttu-id="5ad43-121">継承の基本</span><span class="sxs-lookup"><span data-stu-id="5ad43-121">Inheritance Basics</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [<span data-ttu-id="03ee7-121">継承の基本</span><span class="sxs-lookup"><span data-stu-id="03ee7-121">Inheritance Basics</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
