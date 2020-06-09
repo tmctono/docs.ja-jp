@@ -2,21 +2,21 @@
 title: System.ServiceModel.Diagnostics.UnhandledException
 ms.date: 03/30/2017
 ms.assetid: 6807fdfc-1e7e-42ca-8efe-a05b51de2f8f
-ms.openlocfilehash: aa51d442071f37061f3698f5c1078bf0d2220cad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 29929540ad8449d9aa52b680641833c94cd3bdc6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934031"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598191"
 ---
-# <a name="systemservicemodeldiagnosticsunhandledexception"></a><span data-ttu-id="d2a83-102">System.ServiceModel.Diagnostics.UnhandledException</span><span class="sxs-lookup"><span data-stu-id="d2a83-102">System.ServiceModel.Diagnostics.UnhandledException</span></span>
-<span data-ttu-id="d2a83-103">System.ServiceModel.Diagnostics.UnhandledException</span><span class="sxs-lookup"><span data-stu-id="d2a83-103">System.ServiceModel.Diagnostics.UnhandledException</span></span>  
+# <a name="systemservicemodeldiagnosticsunhandledexception"></a><span data-ttu-id="20a00-102">System.ServiceModel.Diagnostics.UnhandledException</span><span class="sxs-lookup"><span data-stu-id="20a00-102">System.ServiceModel.Diagnostics.UnhandledException</span></span>
+<span data-ttu-id="20a00-103">System.ServiceModel.Diagnostics.UnhandledException</span><span class="sxs-lookup"><span data-stu-id="20a00-103">System.ServiceModel.Diagnostics.UnhandledException</span></span>  
   
-## <a name="description"></a><span data-ttu-id="d2a83-104">説明</span><span class="sxs-lookup"><span data-stu-id="d2a83-104">Description</span></span>  
- <span data-ttu-id="d2a83-105">ハンドルされていない例外です。</span><span class="sxs-lookup"><span data-stu-id="d2a83-105">Unhandled exception.</span></span>  
+## <a name="description"></a><span data-ttu-id="20a00-104">説明</span><span class="sxs-lookup"><span data-stu-id="20a00-104">Description</span></span>  
+ <span data-ttu-id="20a00-105">ハンドルされていない例外です。</span><span class="sxs-lookup"><span data-stu-id="20a00-105">Unhandled exception.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d2a83-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="d2a83-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="20a00-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="20a00-106">See also</span></span>
 
-- [<span data-ttu-id="d2a83-107">トレース</span><span class="sxs-lookup"><span data-stu-id="d2a83-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="d2a83-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="d2a83-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="d2a83-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="d2a83-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="20a00-107">トレース</span><span class="sxs-lookup"><span data-stu-id="20a00-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="20a00-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="20a00-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="20a00-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="20a00-109">Administration and Diagnostics</span></span>](../index.md)
