@@ -2,21 +2,21 @@
 title: System.IdentityModel.AuthorizationContextCreated
 ms.date: 03/30/2017
 ms.assetid: 392b5964-fb51-4e7c-883a-62c929623706
-ms.openlocfilehash: 7a67eb3f5ef71d8717b7aea87c55da234bdfd72a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 18bfeb35ed03411dbf8d2628ef9aea9f7203b445
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784831"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589064"
 ---
-# <a name="systemidentitymodelauthorizationcontextcreated"></a><span data-ttu-id="d6819-102">System.IdentityModel.AuthorizationContextCreated</span><span class="sxs-lookup"><span data-stu-id="d6819-102">System.IdentityModel.AuthorizationContextCreated</span></span>
-<span data-ttu-id="d6819-103">System.IdentityModel.AuthorizationContextCreated</span><span class="sxs-lookup"><span data-stu-id="d6819-103">System.IdentityModel.AuthorizationContextCreated</span></span>  
+# <a name="systemidentitymodelauthorizationcontextcreated"></a><span data-ttu-id="11fb3-102">System.IdentityModel.AuthorizationContextCreated</span><span class="sxs-lookup"><span data-stu-id="11fb3-102">System.IdentityModel.AuthorizationContextCreated</span></span>
+<span data-ttu-id="11fb3-103">System.IdentityModel.AuthorizationContextCreated</span><span class="sxs-lookup"><span data-stu-id="11fb3-103">System.IdentityModel.AuthorizationContextCreated</span></span>  
   
-## <a name="description"></a><span data-ttu-id="d6819-104">説明</span><span class="sxs-lookup"><span data-stu-id="d6819-104">Description</span></span>  
- <span data-ttu-id="d6819-105">指定した ID の承認コンテキストが作成されます。</span><span class="sxs-lookup"><span data-stu-id="d6819-105">Authorization context with the specified id is created.</span></span>  
+## <a name="description"></a><span data-ttu-id="11fb3-104">説明</span><span class="sxs-lookup"><span data-stu-id="11fb3-104">Description</span></span>  
+ <span data-ttu-id="11fb3-105">指定した ID の承認コンテキストが作成されます。</span><span class="sxs-lookup"><span data-stu-id="11fb3-105">Authorization context with the specified id is created.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d6819-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="d6819-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="11fb3-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="11fb3-106">See also</span></span>
 
-- [<span data-ttu-id="d6819-107">トレース</span><span class="sxs-lookup"><span data-stu-id="d6819-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="d6819-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="d6819-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="d6819-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="d6819-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="11fb3-107">トレース</span><span class="sxs-lookup"><span data-stu-id="11fb3-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="11fb3-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="11fb3-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="11fb3-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="11fb3-109">Administration and Diagnostics</span></span>](../index.md)
