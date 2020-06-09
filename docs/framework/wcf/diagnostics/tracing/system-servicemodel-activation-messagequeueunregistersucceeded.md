@@ -2,21 +2,21 @@
 title: System.ServiceModel.Activation.MessageQueueUnregisterSucceeded
 ms.date: 03/30/2017
 ms.assetid: c2e344a4-3b10-430b-bdf3-b065777861bb
-ms.openlocfilehash: 0334b223922c0bce95ca28151b6fde5e7d800ded
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2733c973b745fa62b3ce524f0b2a5577da8c3a8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792536"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84582778"
 ---
-# <a name="systemservicemodelactivationmessagequeueunregistersucceeded"></a><span data-ttu-id="16a81-102">System.ServiceModel.Activation.MessageQueueUnregisterSucceeded</span><span class="sxs-lookup"><span data-stu-id="16a81-102">System.ServiceModel.Activation.MessageQueueUnregisterSucceeded</span></span>
-<span data-ttu-id="16a81-103">System.ServiceModel.Activation.MessageQueueUnregisterSucceeded</span><span class="sxs-lookup"><span data-stu-id="16a81-103">System.ServiceModel.Activation.MessageQueueUnregisterSucceeded</span></span>  
+# <a name="systemservicemodelactivationmessagequeueunregistersucceeded"></a><span data-ttu-id="96eff-102">System.ServiceModel.Activation.MessageQueueUnregisterSucceeded</span><span class="sxs-lookup"><span data-stu-id="96eff-102">System.ServiceModel.Activation.MessageQueueUnregisterSucceeded</span></span>
+<span data-ttu-id="96eff-103">System.ServiceModel.Activation.MessageQueueUnregisterSucceeded</span><span class="sxs-lookup"><span data-stu-id="96eff-103">System.ServiceModel.Activation.MessageQueueUnregisterSucceeded</span></span>  
   
-## <a name="description"></a><span data-ttu-id="16a81-104">説明</span><span class="sxs-lookup"><span data-stu-id="16a81-104">Description</span></span>  
- <span data-ttu-id="16a81-105">メッセージ キューの登録解除が成功しました。</span><span class="sxs-lookup"><span data-stu-id="16a81-105">Message queue unregister succeeded.</span></span>  
+## <a name="description"></a><span data-ttu-id="96eff-104">説明</span><span class="sxs-lookup"><span data-stu-id="96eff-104">Description</span></span>  
+ <span data-ttu-id="96eff-105">メッセージ キューの登録解除が成功しました。</span><span class="sxs-lookup"><span data-stu-id="96eff-105">Message queue unregister succeeded.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="16a81-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="16a81-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="96eff-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="96eff-106">See also</span></span>
 
-- [<span data-ttu-id="16a81-107">トレース</span><span class="sxs-lookup"><span data-stu-id="16a81-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="16a81-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="16a81-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="16a81-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="16a81-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="96eff-107">トレース</span><span class="sxs-lookup"><span data-stu-id="96eff-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="96eff-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="96eff-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="96eff-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="96eff-109">Administration and Diagnostics</span></span>](../index.md)
