@@ -2,21 +2,21 @@
 title: System.ServiceModel.PortSharing.WasConnected
 ms.date: 03/30/2017
 ms.assetid: 8af0f73f-3718-4dc8-93f4-638e2465da21
-ms.openlocfilehash: 5388e6a32957a589e7a516a401b24cd4d9fb8a77
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c5ba5293060b3a659455bd5dff8c00fb8e47f41
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666613"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595935"
 ---
-# <a name="systemservicemodelportsharingwasconnected"></a><span data-ttu-id="bcb1f-102">System.ServiceModel.PortSharing.WasConnected</span><span class="sxs-lookup"><span data-stu-id="bcb1f-102">System.ServiceModel.PortSharing.WasConnected</span></span>
-<span data-ttu-id="bcb1f-103">System.ServiceModel.PortSharing.WasConnected</span><span class="sxs-lookup"><span data-stu-id="bcb1f-103">System.ServiceModel.PortSharing.WasConnected</span></span>  
+# <a name="systemservicemodelportsharingwasconnected"></a><span data-ttu-id="9f569-102">System.ServiceModel.PortSharing.WasConnected</span><span class="sxs-lookup"><span data-stu-id="9f569-102">System.ServiceModel.PortSharing.WasConnected</span></span>
+<span data-ttu-id="9f569-103">System.ServiceModel.PortSharing.WasConnected</span><span class="sxs-lookup"><span data-stu-id="9f569-103">System.ServiceModel.PortSharing.WasConnected</span></span>  
   
-## <a name="description"></a><span data-ttu-id="bcb1f-104">説明</span><span class="sxs-lookup"><span data-stu-id="bcb1f-104">Description</span></span>  
- <span data-ttu-id="bcb1f-105">Windows プロセス アクティブ化サービス (WAS) の接続が確立されました。</span><span class="sxs-lookup"><span data-stu-id="bcb1f-105">Windows Process Activation Service (WAS) has connected.</span></span>  
+## <a name="description"></a><span data-ttu-id="9f569-104">説明</span><span class="sxs-lookup"><span data-stu-id="9f569-104">Description</span></span>  
+ <span data-ttu-id="9f569-105">Windows プロセス アクティブ化サービス (WAS) の接続が確立されました。</span><span class="sxs-lookup"><span data-stu-id="9f569-105">Windows Process Activation Service (WAS) has connected.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bcb1f-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="bcb1f-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9f569-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="9f569-106">See also</span></span>
 
-- [<span data-ttu-id="bcb1f-107">トレース</span><span class="sxs-lookup"><span data-stu-id="bcb1f-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="bcb1f-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="bcb1f-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="bcb1f-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="bcb1f-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="9f569-107">トレース</span><span class="sxs-lookup"><span data-stu-id="9f569-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="9f569-108">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="9f569-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="9f569-109">管理と診断</span><span class="sxs-lookup"><span data-stu-id="9f569-109">Administration and Diagnostics</span></span>](../index.md)

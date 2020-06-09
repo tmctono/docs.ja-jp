@@ -2,43 +2,43 @@
 title: トレース
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-ms.openlocfilehash: 3520d2aca07f988c45d65d5d8113d05292a37638
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 569a97dc21a434cd711ad4c735f828df588f3af7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664946"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578982"
 ---
-# <a name="tracing"></a><span data-ttu-id="8b00d-102">トレース</span><span class="sxs-lookup"><span data-stu-id="8b00d-102">Tracing</span></span>
-<span data-ttu-id="8b00d-103">Windows Communication Foundation (WCF) は、エラーの監視と分析のアプリケーションのインストルメンテーション データと診断データを提供します。</span><span class="sxs-lookup"><span data-stu-id="8b00d-103">Windows Communication Foundation (WCF) provides application instrumentation and diagnostic data for fault monitoring and analysis.</span></span> <span data-ttu-id="8b00d-104">アプリケーションの動作やエラー原因を調べるために、デバッガーの代わりにトレースを使用できます。</span><span class="sxs-lookup"><span data-stu-id="8b00d-104">You can use tracing instead of a debugger to understand how an application is behaving, or why it faults.</span></span> <span data-ttu-id="8b00d-105">コンポーネント間でエラーと処理を関連付けて、エンドツーエンドの調査を行うこともできます。</span><span class="sxs-lookup"><span data-stu-id="8b00d-105">You can also correlate faults and processing across components to provide an end-to-end experience.</span></span>  
+# <a name="tracing"></a><span data-ttu-id="5ec75-102">トレース</span><span class="sxs-lookup"><span data-stu-id="5ec75-102">Tracing</span></span>
+<span data-ttu-id="5ec75-103">Windows Communication Foundation (WCF) では、アプリケーションのインストルメンテーションと診断データを使用して、障害の監視と分析を行うことができます。</span><span class="sxs-lookup"><span data-stu-id="5ec75-103">Windows Communication Foundation (WCF) provides application instrumentation and diagnostic data for fault monitoring and analysis.</span></span> <span data-ttu-id="5ec75-104">アプリケーションの動作やエラー原因を調べるために、デバッガーの代わりにトレースを使用できます。</span><span class="sxs-lookup"><span data-stu-id="5ec75-104">You can use tracing instead of a debugger to understand how an application is behaving, or why it faults.</span></span> <span data-ttu-id="5ec75-105">コンポーネント間でエラーと処理を関連付けて、エンドツーエンドの調査を行うこともできます。</span><span class="sxs-lookup"><span data-stu-id="5ec75-105">You can also correlate faults and processing across components to provide an end-to-end experience.</span></span>  
   
- <span data-ttu-id="8b00d-106">WCF では、次のデータの診断トレースを出力します。</span><span class="sxs-lookup"><span data-stu-id="8b00d-106">WCF outputs the following data for diagnostic tracing:</span></span>  
+ <span data-ttu-id="5ec75-106">WCF は、診断トレース用に次のデータを出力します。</span><span class="sxs-lookup"><span data-stu-id="5ec75-106">WCF outputs the following data for diagnostic tracing:</span></span>  
   
-- <span data-ttu-id="8b00d-107">操作呼び出し、コード例外、警告、その他の重要な処理イベントなど、アプリケーションのすべてのコンポーネントにおける処理マイルストーンのトレース。</span><span class="sxs-lookup"><span data-stu-id="8b00d-107">Traces for process milestones across all components of the applications, such as operation calls, code exceptions, warnings and other significant processing events."</span></span>  
+- <span data-ttu-id="5ec75-107">操作呼び出し、コード例外、警告、その他の重要な処理イベントなど、アプリケーションのすべてのコンポーネントにおける処理マイルストーンのトレース。</span><span class="sxs-lookup"><span data-stu-id="5ec75-107">Traces for process milestones across all components of the applications, such as operation calls, code exceptions, warnings and other significant processing events."</span></span>  
   
-- <span data-ttu-id="8b00d-108">トレース機能が正しく動作しないときの Windows エラー イベント。</span><span class="sxs-lookup"><span data-stu-id="8b00d-108">Windows error events when the tracing feature malfunctions.</span></span>  
+- <span data-ttu-id="5ec75-108">トレース機能が正しく動作しないときの Windows エラー イベント。</span><span class="sxs-lookup"><span data-stu-id="5ec75-108">Windows error events when the tracing feature malfunctions.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8b00d-109">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="8b00d-109">In This Section</span></span>  
- [<span data-ttu-id="8b00d-110">トレースの構成</span><span class="sxs-lookup"><span data-stu-id="8b00d-110">Configuring Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5ec75-109">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="5ec75-109">In This Section</span></span>  
+ [<span data-ttu-id="5ec75-110">トレースの構成</span><span class="sxs-lookup"><span data-stu-id="5ec75-110">Configuring Tracing</span></span>](configuring-tracing.md)  
   
- <span data-ttu-id="8b00d-111">ここでは、特定のニーズに合うよう、さまざまなレベルでトレースを構成する方法を説明します。</span><span class="sxs-lookup"><span data-stu-id="8b00d-111">This topic describes how you can configure tracing at different levels to suit your specific need.</span></span>  
+ <span data-ttu-id="5ec75-111">ここでは、特定のニーズに合うよう、さまざまなレベルでトレースを構成する方法を説明します。</span><span class="sxs-lookup"><span data-stu-id="5ec75-111">This topic describes how you can configure tracing at different levels to suit your specific need.</span></span>  
   
- [<span data-ttu-id="8b00d-112">エンドツーエンドのトレース</span><span class="sxs-lookup"><span data-stu-id="8b00d-112">End-to-End Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)  
+ [<span data-ttu-id="5ec75-112">エンドツーエンドのトレース</span><span class="sxs-lookup"><span data-stu-id="5ec75-112">End-to-End Tracing</span></span>](end-to-end-tracing.md)  
   
- <span data-ttu-id="8b00d-113">ここでは、エンドツーエンドのトレースの相関のためのアクティビティ トレースと伝達を使用して、デバッグを支援する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="8b00d-113">This section describes how you can use Activity Tracing and Propagation for end-to-end correlation to assist debugging.</span></span>  
+ <span data-ttu-id="5ec75-113">ここでは、エンドツーエンドのトレースの相関のためのアクティビティ トレースと伝達を使用して、デバッグを支援する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="5ec75-113">This section describes how you can use Activity Tracing and Propagation for end-to-end correlation to assist debugging.</span></span>  
   
- [<span data-ttu-id="8b00d-114">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="8b00d-114">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="5ec75-114">トレースを使用したアプリケーションのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="5ec75-114">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)  
   
- <span data-ttu-id="8b00d-115">ここでは、トレースを使用してアプリケーションをデバッグする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="8b00d-115">This section describes how you can use tracing to debug your application.</span></span>  
+ <span data-ttu-id="5ec75-115">ここでは、トレースを使用してアプリケーションをデバッグする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="5ec75-115">This section describes how you can use tracing to debug your application.</span></span>  
   
- [<span data-ttu-id="8b00d-116">トレースに関するセキュリティの考慮事項と役立つヒント</span><span class="sxs-lookup"><span data-stu-id="8b00d-116">Security Concerns and Useful Tips for Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)  
+ [<span data-ttu-id="5ec75-116">トレースに関するセキュリティの考慮事項と役立つヒント</span><span class="sxs-lookup"><span data-stu-id="5ec75-116">Security Concerns and Useful Tips for Tracing</span></span>](security-concerns-and-useful-tips-for-tracing.md)  
   
- <span data-ttu-id="8b00d-117">ここでは、機密情報を漏洩の危険から守る方法と共に、WebHost を使用する場合の便利なヒントについて説明します。</span><span class="sxs-lookup"><span data-stu-id="8b00d-117">This topic describes how you can protect sensitive information from being exposed, as well as useful tips when using WebHost.</span></span>  
+ <span data-ttu-id="5ec75-117">ここでは、機密情報を漏洩の危険から守る方法と共に、WebHost を使用する場合の便利なヒントについて説明します。</span><span class="sxs-lookup"><span data-stu-id="5ec75-117">This topic describes how you can protect sensitive information from being exposed, as well as useful tips when using WebHost.</span></span>  
   
- [<span data-ttu-id="8b00d-118">トレースの参照</span><span class="sxs-lookup"><span data-stu-id="8b00d-118">Traces Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
+ [<span data-ttu-id="5ec75-118">トレースの参照</span><span class="sxs-lookup"><span data-stu-id="5ec75-118">Traces Reference</span></span>](traces-reference.md)  
   
- <span data-ttu-id="8b00d-119">このトピックでは、WCF によって生成されたすべてのトレースを使用します。</span><span class="sxs-lookup"><span data-stu-id="8b00d-119">This topic lists all the traces generated by WCF.</span></span>  
+ <span data-ttu-id="5ec75-119">このトピックでは、WCF によって生成されるすべてのトレースを示します。</span><span class="sxs-lookup"><span data-stu-id="5ec75-119">This topic lists all the traces generated by WCF.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8b00d-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="8b00d-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5ec75-120">関連項目</span><span class="sxs-lookup"><span data-stu-id="5ec75-120">See also</span></span>
 
-- [<span data-ttu-id="8b00d-121">サービス トレース ビューアー ツール (SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="8b00d-121">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [<span data-ttu-id="5ec75-121">サービス トレース ビューアー ツール (SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="5ec75-121">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../service-trace-viewer-tool-svctraceviewer-exe.md)

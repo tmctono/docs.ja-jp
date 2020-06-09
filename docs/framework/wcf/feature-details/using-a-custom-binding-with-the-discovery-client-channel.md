@@ -2,18 +2,18 @@
 title: カスタム バインドを探索クライアント チャネルと共に使用する
 ms.date: 03/30/2017
 ms.assetid: 36f95e75-04f7-44f3-a995-a0d623624d7f
-ms.openlocfilehash: 5f3f5fe24d1f19ce503b793d9aad870d882c7971
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 49983c3ab303d3839350af72b1aa4821c071fe99
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184286"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595038"
 ---
-# <a name="using-a-custom-binding-with-the-discovery-client-channel"></a><span data-ttu-id="45cbb-102">カスタム バインドを探索クライアント チャネルと共に使用する</span><span class="sxs-lookup"><span data-stu-id="45cbb-102">Using a Custom Binding with the Discovery Client Channel</span></span>
-<span data-ttu-id="45cbb-103">カスタム バインドを <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> と共に使用する場合は、<xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> インスタンスを作成する <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> を定義する必要があります。</span><span class="sxs-lookup"><span data-stu-id="45cbb-103">When using a custom binding with the <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, you must define a <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> that creates <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> instances.</span></span>  
+# <a name="using-a-custom-binding-with-the-discovery-client-channel"></a><span data-ttu-id="9d984-102">カスタム バインドを探索クライアント チャネルと共に使用する</span><span class="sxs-lookup"><span data-stu-id="9d984-102">Using a Custom Binding with the Discovery Client Channel</span></span>
+<span data-ttu-id="9d984-103">カスタム バインドを <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> と共に使用する場合は、<xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> インスタンスを作成する <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> を定義する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9d984-103">When using a custom binding with the <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, you must define a <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> that creates <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> instances.</span></span>  
   
-## <a name="creating-a-discoveryendpointprovider"></a><span data-ttu-id="45cbb-104">DiscoveryEndpointProvider の作成</span><span class="sxs-lookup"><span data-stu-id="45cbb-104">Creating a DiscoveryEndpointProvider</span></span>  
- <span data-ttu-id="45cbb-105"><xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>は、オンデマンドでインスタンス<xref:System.ServiceModel.Discovery.DiscoveryEndpoint>を作成する役割を担います。</span><span class="sxs-lookup"><span data-stu-id="45cbb-105">The <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> is responsible for creating <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> instances on demand.</span></span> <span data-ttu-id="45cbb-106">探索エンドポイント プロバイダーを定義するには、<xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> からクラスを派生させ、<xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> メソッドをオーバーライドし、新しい探索エンドポイントを返します。</span><span class="sxs-lookup"><span data-stu-id="45cbb-106">To define a discovery endpoint provider, derive a class from <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> and override the <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> method and return a new discovery endpoint.</span></span> <span data-ttu-id="45cbb-107">次の例は、探索エンドポイント プロバイダーを作成する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="45cbb-107">The following example shows how to create a discovery endpoint provider.</span></span>  
+## <a name="creating-a-discoveryendpointprovider"></a><span data-ttu-id="9d984-104">DiscoveryEndpointProvider の作成</span><span class="sxs-lookup"><span data-stu-id="9d984-104">Creating a DiscoveryEndpointProvider</span></span>  
+ <span data-ttu-id="9d984-105"><xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>は、 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 必要に応じてインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="9d984-105">The <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> is responsible for creating <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> instances on demand.</span></span> <span data-ttu-id="9d984-106">探索エンドポイント プロバイダーを定義するには、<xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> からクラスを派生させ、<xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> メソッドをオーバーライドし、新しい探索エンドポイントを返します。</span><span class="sxs-lookup"><span data-stu-id="9d984-106">To define a discovery endpoint provider, derive a class from <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> and override the <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> method and return a new discovery endpoint.</span></span> <span data-ttu-id="9d984-107">次の例は、探索エンドポイント プロバイダーを作成する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="9d984-107">The following example shows how to create a discovery endpoint provider.</span></span>  
   
 ```csharp
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  
@@ -28,7 +28,7 @@ public class UdpDiscoveryEndpointProvider : DiscoveryEndpointProvider
 }  
 ```  
   
- <span data-ttu-id="45cbb-108">探索エンドポイント プロバイダーを定義したら、次の例に示すように、カスタム バインディングを作成し、その探索エンドポイント プロバイダーを参照する <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> を追加できます。</span><span class="sxs-lookup"><span data-stu-id="45cbb-108">Once you have defined the discovery endpoint provider you can create a custom binding and add the <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, which references the discovery endpoint provider as shown in the following example.</span></span>  
+ <span data-ttu-id="9d984-108">探索エンドポイント プロバイダーを定義したら、次の例に示すように、カスタム バインディングを作成し、その探索エンドポイント プロバイダーを参照する <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> を追加できます。</span><span class="sxs-lookup"><span data-stu-id="9d984-108">Once you have defined the discovery endpoint provider you can create a custom binding and add the <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, which references the discovery endpoint provider as shown in the following example.</span></span>  
   
 ```csharp
 DiscoveryClientBindingElement discoveryBindingElement = new DiscoveryClientBindingElement();  
@@ -43,9 +43,9 @@ CustomBinding customBinding = new CustomBinding(new NetTcpBinding());
 customBinding.Elements.Insert(0, discoveryBindingElement);  
 ```  
   
- <span data-ttu-id="45cbb-109">探索クライアント チャネルの使用の詳細については、「探索クライアント チャネル[の使用](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="45cbb-109">For more information about using the discovery client channel, see [Using the Discovery Client Channel](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md).</span></span>
+ <span data-ttu-id="9d984-109">探索クライアントチャネルの使用方法の詳細については、「[探索クライアントチャネルの使用](using-the-discovery-client-channel.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="9d984-109">For more information about using the discovery client channel, see [Using the Discovery Client Channel](using-the-discovery-client-channel.md).</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="45cbb-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="45cbb-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9d984-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="9d984-110">See also</span></span>
 
-- [<span data-ttu-id="45cbb-111">WCF Discovery の概要</span><span class="sxs-lookup"><span data-stu-id="45cbb-111">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [<span data-ttu-id="45cbb-112">探索クライアント チャネルの使用</span><span class="sxs-lookup"><span data-stu-id="45cbb-112">Using the Discovery Client Channel</span></span>](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)
+- [<span data-ttu-id="9d984-111">WCF Discovery の概要</span><span class="sxs-lookup"><span data-stu-id="9d984-111">WCF Discovery Overview</span></span>](wcf-discovery-overview.md)
+- [<span data-ttu-id="9d984-112">探索クライアント チャネルの使用</span><span class="sxs-lookup"><span data-stu-id="9d984-112">Using the Discovery Client Channel</span></span>](using-the-discovery-client-channel.md)
