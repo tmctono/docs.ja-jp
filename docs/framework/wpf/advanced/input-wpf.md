@@ -9,24 +9,24 @@ helpviewer_keywords:
 ms.assetid: 9a7ccd30-095b-4f34-b284-8fb7e8f95a9b
 ms.openlocfilehash: 9f9a386308480509b7f0cb99ff6b32e082861c52
 ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76727856"
 ---
-# <a name="input-wpf"></a><span data-ttu-id="d9e3c-102">入力 (WPF)</span><span class="sxs-lookup"><span data-stu-id="d9e3c-102">Input (WPF)</span></span>
-<span data-ttu-id="d9e3c-103">Windows Presentation Foundation (WPF) には、いくつかの種類の入力がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="d9e3c-103">Windows Presentation Foundation (WPF) includes support for several types of input.</span></span> <span data-ttu-id="d9e3c-104">この入力には、テキスト、タッチ、マウス、コマンド、フォーカス、タッチ、ドラッグアンドドロップ、およびデジタルインクが含まれます。</span><span class="sxs-lookup"><span data-stu-id="d9e3c-104">This input includes text, touch, mouse, commands, focus, touch, drag-and-drop, and digital ink.</span></span> <span data-ttu-id="d9e3c-105">ここでは、WPF での入力に関連するトピックについて説明します。</span><span class="sxs-lookup"><span data-stu-id="d9e3c-105">This section describes topics related to input in WPF.</span></span>  
+# <a name="input-wpf"></a><span data-ttu-id="c43ce-102">入力 (WPF)</span><span class="sxs-lookup"><span data-stu-id="c43ce-102">Input (WPF)</span></span>
+<span data-ttu-id="c43ce-103">Windows Presentation Foundation (WPF) では、いくつかの種類の入力がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="c43ce-103">Windows Presentation Foundation (WPF) includes support for several types of input.</span></span> <span data-ttu-id="c43ce-104">この入力には、テキスト、タッチ、マウス、コマンド、フォーカス、タッチ、ドラッグ アンド ドロップ、およびデジタル インクが含まれます。</span><span class="sxs-lookup"><span data-stu-id="c43ce-104">This input includes text, touch, mouse, commands, focus, touch, drag-and-drop, and digital ink.</span></span> <span data-ttu-id="c43ce-105">このセクションでは、WPF の入力に関連するトピックについて説明します。</span><span class="sxs-lookup"><span data-stu-id="c43ce-105">This section describes topics related to input in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d9e3c-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="d9e3c-106">In This Section</span></span>  
- [<span data-ttu-id="d9e3c-107">入力の概要</span><span class="sxs-lookup"><span data-stu-id="d9e3c-107">Input Overview</span></span>](input-overview.md)  
- [<span data-ttu-id="d9e3c-108">コマンド実行の概要</span><span class="sxs-lookup"><span data-stu-id="d9e3c-108">Commanding Overview</span></span>](commanding-overview.md)  
- [<span data-ttu-id="d9e3c-109">フォーカスの概要</span><span class="sxs-lookup"><span data-stu-id="d9e3c-109">Focus Overview</span></span>](focus-overview.md)  
- [<span data-ttu-id="d9e3c-110">コントロールのフォーカスのスタイルと FocusVisualStyle</span><span class="sxs-lookup"><span data-stu-id="d9e3c-110">Styling for Focus in Controls, and FocusVisualStyle</span></span>](styling-for-focus-in-controls-and-focusvisualstyle.md)  
- [<span data-ttu-id="d9e3c-111">チュートリアル: 初めてのタッチ アプリケーションの作成</span><span class="sxs-lookup"><span data-stu-id="d9e3c-111">Walkthrough: Creating Your First Touch Application</span></span>](walkthrough-creating-your-first-touch-application.md)  
- [<span data-ttu-id="d9e3c-112">データ バインドに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="d9e3c-112">How-to Topics</span></span>](input-and-commands-how-to-topics.md)  
- [<span data-ttu-id="d9e3c-113">デジタル インク</span><span class="sxs-lookup"><span data-stu-id="d9e3c-113">Digital Ink</span></span>](digital-ink.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c43ce-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="c43ce-106">In This Section</span></span>  
+ [<span data-ttu-id="c43ce-107">入力の概要</span><span class="sxs-lookup"><span data-stu-id="c43ce-107">Input Overview</span></span>](input-overview.md)  
+ [<span data-ttu-id="c43ce-108">コマンド実行の概要</span><span class="sxs-lookup"><span data-stu-id="c43ce-108">Commanding Overview</span></span>](commanding-overview.md)  
+ [<span data-ttu-id="c43ce-109">フォーカスの概要</span><span class="sxs-lookup"><span data-stu-id="c43ce-109">Focus Overview</span></span>](focus-overview.md)  
+ [<span data-ttu-id="c43ce-110">コントロールのフォーカスのスタイルと FocusVisualStyle</span><span class="sxs-lookup"><span data-stu-id="c43ce-110">Styling for Focus in Controls, and FocusVisualStyle</span></span>](styling-for-focus-in-controls-and-focusvisualstyle.md)  
+ [<span data-ttu-id="c43ce-111">チュートリアル: 初めてのタッチ アプリケーションの作成</span><span class="sxs-lookup"><span data-stu-id="c43ce-111">Walkthrough: Creating Your First Touch Application</span></span>](walkthrough-creating-your-first-touch-application.md)  
+ [<span data-ttu-id="c43ce-112">方法トピック</span><span class="sxs-lookup"><span data-stu-id="c43ce-112">How-to Topics</span></span>](input-and-commands-how-to-topics.md)  
+ [<span data-ttu-id="c43ce-113">デジタル インク</span><span class="sxs-lookup"><span data-stu-id="c43ce-113">Digital Ink</span></span>](digital-ink.md)  
   
-## <a name="reference"></a><span data-ttu-id="d9e3c-114">リファレンス</span><span class="sxs-lookup"><span data-stu-id="d9e3c-114">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c43ce-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="c43ce-114">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  
@@ -41,6 +41,6 @@ ms.locfileid: "76727856"
   
  <xref:System.Windows.Input.FocusManager>  
   
-## <a name="related-sections"></a><span data-ttu-id="d9e3c-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="d9e3c-115">Related Sections</span></span>  
- [<span data-ttu-id="d9e3c-116">コントロール</span><span class="sxs-lookup"><span data-stu-id="d9e3c-116">Controls</span></span>](../controls/index.md)  
-  [<span data-ttu-id="d9e3c-117">イベント</span><span class="sxs-lookup"><span data-stu-id="d9e3c-117">Events</span></span>](events-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="c43ce-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="c43ce-115">Related Sections</span></span>  
+ [<span data-ttu-id="c43ce-116">コントロール</span><span class="sxs-lookup"><span data-stu-id="c43ce-116">Controls</span></span>](../controls/index.md)  
+  [<span data-ttu-id="c43ce-117">イベント</span><span class="sxs-lookup"><span data-stu-id="c43ce-117">Events</span></span>](events-wpf.md)
