@@ -1,21 +1,22 @@
 ---
 title: DataTable へのデータの追加
+description: DataTable を作成し、列と制約を使用してその構造を定義した後、このコード例を参照して、ADO.NET のテーブルに新しいデータ行を追加します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: 02d7f94259cc56513be404c5539ca7015d5f3533
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 94ebc97d5f90b5bb92186ba6f33015633bd01127
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151534"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286935"
 ---
-# <a name="adding-data-to-a-datatable"></a><span data-ttu-id="623a1-102">DataTable へのデータの追加</span><span class="sxs-lookup"><span data-stu-id="623a1-102">Adding Data to a DataTable</span></span>
-<span data-ttu-id="623a1-103"><xref:System.Data.DataTable> を作成し、列と制約を使用してそのテーブルの構造を定義した後で、テーブルに新しいデータ行を追加できます。</span><span class="sxs-lookup"><span data-stu-id="623a1-103">After you create a <xref:System.Data.DataTable> and define its structure using columns and constraints, you can add new rows of data to the table.</span></span> <span data-ttu-id="623a1-104">新しい行を追加するには、新しい変数を <xref:System.Data.DataRow> 型として宣言します。</span><span class="sxs-lookup"><span data-stu-id="623a1-104">To add a new row, declare a new variable as type <xref:System.Data.DataRow>.</span></span> <span data-ttu-id="623a1-105"><xref:System.Data.DataTable.NewRow%2A> メソッドを呼び出すと、新しい **DataRow** オブジェクトが返されます。</span><span class="sxs-lookup"><span data-stu-id="623a1-105">A new **DataRow** object is returned when you call the <xref:System.Data.DataTable.NewRow%2A> method.</span></span> <span data-ttu-id="623a1-106">次に、**DataTable** は、<xref:System.Data.DataColumnCollection> での定義に従って、テーブルの構造に基づいて **DataRow** オブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="623a1-106">The **DataTable** then creates the **DataRow** object based on the structure of the table, as defined by the <xref:System.Data.DataColumnCollection>.</span></span>  
+# <a name="adding-data-to-a-datatable"></a><span data-ttu-id="22de8-103">DataTable へのデータの追加</span><span class="sxs-lookup"><span data-stu-id="22de8-103">Adding Data to a DataTable</span></span>
+<span data-ttu-id="22de8-104"><xref:System.Data.DataTable> を作成し、列と制約を使用してそのテーブルの構造を定義した後で、テーブルに新しいデータ行を追加できます。</span><span class="sxs-lookup"><span data-stu-id="22de8-104">After you create a <xref:System.Data.DataTable> and define its structure using columns and constraints, you can add new rows of data to the table.</span></span> <span data-ttu-id="22de8-105">新しい行を追加するには、新しい変数を <xref:System.Data.DataRow> 型として宣言します。</span><span class="sxs-lookup"><span data-stu-id="22de8-105">To add a new row, declare a new variable as type <xref:System.Data.DataRow>.</span></span> <span data-ttu-id="22de8-106"><xref:System.Data.DataTable.NewRow%2A> メソッドを呼び出すと、新しい **DataRow** オブジェクトが返されます。</span><span class="sxs-lookup"><span data-stu-id="22de8-106">A new **DataRow** object is returned when you call the <xref:System.Data.DataTable.NewRow%2A> method.</span></span> <span data-ttu-id="22de8-107">次に、**DataTable** は、<xref:System.Data.DataColumnCollection> での定義に従って、テーブルの構造に基づいて **DataRow** オブジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="22de8-107">The **DataTable** then creates the **DataRow** object based on the structure of the table, as defined by the <xref:System.Data.DataColumnCollection>.</span></span>  
   
- <span data-ttu-id="623a1-107">**NewRow** メソッドを呼び出して新しい行を作成する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="623a1-107">The following example demonstrates how to create a new row by calling the **NewRow** method.</span></span>  
+ <span data-ttu-id="22de8-108">**NewRow** メソッドを呼び出して新しい行を作成する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="22de8-108">The following example demonstrates how to create a new row by calling the **NewRow** method.</span></span>  
   
 ```vb  
 Dim workRow As DataRow = workTable.NewRow()  
@@ -25,7 +26,7 @@ Dim workRow As DataRow = workTable.NewRow()
 DataRow workRow = workTable.NewRow();  
 ```  
   
- <span data-ttu-id="623a1-108">その後でインデックスまたは列名を使用して、新しく追加した行を操作する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="623a1-108">You then can manipulate the newly added row using an index or the column name, as shown in the following example.</span></span>  
+ <span data-ttu-id="22de8-109">その後でインデックスまたは列名を使用して、新しく追加した行を操作する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="22de8-109">You then can manipulate the newly added row using an index or the column name, as shown in the following example.</span></span>  
   
 ```vb  
 workRow("CustLName") = "Smith"  
@@ -37,7 +38,7 @@ workRow["CustLName"] = "Smith";
 workRow[1] = "Smith";  
 ```  
   
- <span data-ttu-id="623a1-109">新しい行にデータを挿入した後で **Add** メソッドを使用して <xref:System.Data.DataRowCollection> に行を追加するコードを次に示します。</span><span class="sxs-lookup"><span data-stu-id="623a1-109">After data is inserted into the new row, the **Add** method is used to add the row to the <xref:System.Data.DataRowCollection>, shown in the following code.</span></span>  
+ <span data-ttu-id="22de8-110">新しい行にデータを挿入した後で **Add** メソッドを使用して <xref:System.Data.DataRowCollection> に行を追加するコードを次に示します。</span><span class="sxs-lookup"><span data-stu-id="22de8-110">After data is inserted into the new row, the **Add** method is used to add the row to the <xref:System.Data.DataRowCollection>, shown in the following code.</span></span>  
   
 ```vb  
 workTable.Rows.Add(workRow)  
@@ -47,7 +48,7 @@ workTable.Rows.Add(workRow)
 workTable.Rows.Add(workRow);  
 ```  
   
- <span data-ttu-id="623a1-110">**Add** メソッドを呼び出して <xref:System.Object> 型の値の配列を渡すことにより、新しい行を追加する別の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="623a1-110">You can also call the **Add** method to add a new row by passing in an array of values, typed as <xref:System.Object>, as shown in the following example.</span></span>  
+ <span data-ttu-id="22de8-111">**Add** メソッドを呼び出して <xref:System.Object> 型の値の配列を渡すことにより、新しい行を追加する別の例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="22de8-111">You can also call the **Add** method to add a new row by passing in an array of values, typed as <xref:System.Object>, as shown in the following example.</span></span>  
   
 ```vb  
 workTable.Rows.Add(new Object() {1, "Smith"})  
@@ -57,9 +58,9 @@ workTable.Rows.Add(new Object() {1, "Smith"})
 workTable.Rows.Add(new Object[] {1, "Smith"});  
 ```  
   
- <span data-ttu-id="623a1-111">**Object** 型の値の配列を **Add** メソッドに渡すと、テーブル内に新しい行が作成され、その行の列値がオブジェクト配列の値に設定されます。</span><span class="sxs-lookup"><span data-stu-id="623a1-111">Passing an array of values, typed as **Object**, to the **Add** method creates a new row inside the table and sets its column values to the values in the object array.</span></span> <span data-ttu-id="623a1-112">配列内の値は、テーブル内での列の順序に基づいて、列に順次的に割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="623a1-112">Note that values in the array are matched sequentially to the columns, based on the order in which they appear in the table.</span></span>  
+ <span data-ttu-id="22de8-112">**Object** 型の値の配列を **Add** メソッドに渡すと、テーブル内に新しい行が作成され、その行の列値がオブジェクト配列の値に設定されます。</span><span class="sxs-lookup"><span data-stu-id="22de8-112">Passing an array of values, typed as **Object**, to the **Add** method creates a new row inside the table and sets its column values to the values in the object array.</span></span> <span data-ttu-id="22de8-113">配列内の値は、テーブル内での列の順序に基づいて、列に順次的に割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="22de8-113">Note that values in the array are matched sequentially to the columns, based on the order in which they appear in the table.</span></span>  
   
- <span data-ttu-id="623a1-113">新しく作成した **Customers** テーブルに 10 行を追加する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="623a1-113">The following example adds 10 rows to the newly created **Customers** table.</span></span>  
+ <span data-ttu-id="22de8-114">新しく作成した **Customers** テーブルに 10 行を追加する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="22de8-114">The following example adds 10 rows to the newly created **Customers** table.</span></span>  
   
 ```vb  
 Dim workRow As DataRow  
@@ -85,11 +86,11 @@ for (int i = 0; i <= 9; i++)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="623a1-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="623a1-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="22de8-115">関連項目</span><span class="sxs-lookup"><span data-stu-id="22de8-115">See also</span></span>
 
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>
-- [<span data-ttu-id="623a1-115">DataTable 内のデータの操作</span><span class="sxs-lookup"><span data-stu-id="623a1-115">Manipulating Data in a DataTable</span></span>](manipulating-data-in-a-datatable.md)
-- [<span data-ttu-id="623a1-116">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="623a1-116">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="22de8-116">DataTable 内のデータの操作</span><span class="sxs-lookup"><span data-stu-id="22de8-116">Manipulating Data in a DataTable</span></span>](manipulating-data-in-a-datatable.md)
+- [<span data-ttu-id="22de8-117">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="22de8-117">ADO.NET Overview</span></span>](../ado-net-overview.md)
