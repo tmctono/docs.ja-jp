@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 4dbf0320-30c2-4015-b9bc-4f6502f78e32
 ms.openlocfilehash: c3f86230bd0193ea3525e88d41e8e48d2d90684a
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61770631"
 ---
-# <a name="passwordbox"></a><span data-ttu-id="f9cca-102">PasswordBox</span><span class="sxs-lookup"><span data-stu-id="f9cca-102">PasswordBox</span></span>
-<span data-ttu-id="f9cca-103"><xref:System.Windows.Controls.PasswordBox>コントロールを使用すると、機密情報や秘密情報を入力します。</span><span class="sxs-lookup"><span data-stu-id="f9cca-103">The <xref:System.Windows.Controls.PasswordBox> control is used to input sensitive or private information.</span></span>  
+# <a name="passwordbox"></a><span data-ttu-id="8acf9-102">PasswordBox</span><span class="sxs-lookup"><span data-stu-id="8acf9-102">PasswordBox</span></span>
+<span data-ttu-id="8acf9-103"><xref:System.Windows.Controls.PasswordBox> コントロールは、機密情報または個人情報を入力するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="8acf9-103">The <xref:System.Windows.Controls.PasswordBox> control is used to input sensitive or private information.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f9cca-104">関連項目</span><span class="sxs-lookup"><span data-stu-id="f9cca-104">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8acf9-104">関連項目</span><span class="sxs-lookup"><span data-stu-id="8acf9-104">See also</span></span>
 
 - <xref:System.Windows.Controls.TextBox>
 - <xref:System.Windows.Controls.RichTextBox>
-- [<span data-ttu-id="f9cca-105">コントロール ライブラリ</span><span class="sxs-lookup"><span data-stu-id="f9cca-105">Control Library</span></span>](control-library.md)
+- [<span data-ttu-id="8acf9-105">コントロール ライブラリ</span><span class="sxs-lookup"><span data-stu-id="8acf9-105">Control Library</span></span>](control-library.md)

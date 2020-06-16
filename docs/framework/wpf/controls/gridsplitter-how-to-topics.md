@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: db0da67a-954f-42e6-bbf7-4e16b8cbb210
 ms.openlocfilehash: 800898a4b6fc655785c7db0d9463c34e5eeaa0b7
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62054875"
 ---
-# <a name="gridsplitter-how-to-topics"></a><span data-ttu-id="2a802-102">GridSplitter に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="2a802-102">GridSplitter How-to Topics</span></span>
-<span data-ttu-id="2a802-103">このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.GridSplitter>コントロール。</span><span class="sxs-lookup"><span data-stu-id="2a802-103">The topics in this section describe how to use the <xref:System.Windows.Controls.GridSplitter> control.</span></span>  
+# <a name="gridsplitter-how-to-topics"></a><span data-ttu-id="aaf6a-102">GridSplitter に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="aaf6a-102">GridSplitter How-to Topics</span></span>
+<span data-ttu-id="aaf6a-103">このセクションのトピックでは、<xref:System.Windows.Controls.GridSplitter> コントロールの使用方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="aaf6a-103">The topics in this section describe how to use the <xref:System.Windows.Controls.GridSplitter> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2a802-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="2a802-104">In This Section</span></span>  
- [<span data-ttu-id="2a802-105">GridSplitter を使用して行のサイズを変更する</span><span class="sxs-lookup"><span data-stu-id="2a802-105">Resize Rows with a GridSplitter</span></span>](how-to-resize-rows-with-a-gridsplitter.md)  
- [<span data-ttu-id="2a802-106">GridSplitter を使用して列のサイズを変更する</span><span class="sxs-lookup"><span data-stu-id="2a802-106">Resize Columns with a GridSplitter</span></span>](how-to-resize-columns-with-a-gridsplitter.md)  
- [<span data-ttu-id="2a802-107">GridSplitter を表示されるようにする</span><span class="sxs-lookup"><span data-stu-id="2a802-107">Make Sure That a GridSplitter Is Visible</span></span>](how-to-make-sure-that-a-gridsplitter-is-visible.md)  
+## <a name="in-this-section"></a><span data-ttu-id="aaf6a-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="aaf6a-104">In This Section</span></span>  
+ [<span data-ttu-id="aaf6a-105">GridSplitter を使用して行のサイズを変更する</span><span class="sxs-lookup"><span data-stu-id="aaf6a-105">Resize Rows with a GridSplitter</span></span>](how-to-resize-rows-with-a-gridsplitter.md)  
+ [<span data-ttu-id="aaf6a-106">GridSplitter を使用して列のサイズを変更する</span><span class="sxs-lookup"><span data-stu-id="aaf6a-106">Resize Columns with a GridSplitter</span></span>](how-to-resize-columns-with-a-gridsplitter.md)  
+ [<span data-ttu-id="aaf6a-107">GridSplitter を表示されるようにする</span><span class="sxs-lookup"><span data-stu-id="aaf6a-107">Make Sure That a GridSplitter Is Visible</span></span>](how-to-make-sure-that-a-gridsplitter-is-visible.md)  
   
-## <a name="reference"></a><span data-ttu-id="2a802-108">参照</span><span class="sxs-lookup"><span data-stu-id="2a802-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="aaf6a-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="aaf6a-108">Reference</span></span>  
  <xref:System.Windows.Controls.GridSplitter>  
   
  <xref:System.Windows.Controls.Grid>  
   
-## <a name="related-sections"></a><span data-ttu-id="2a802-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="2a802-109">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="aaf6a-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="aaf6a-109">Related Sections</span></span>

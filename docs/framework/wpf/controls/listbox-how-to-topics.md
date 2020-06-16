@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 15d58f1d-3db6-4cb5-88c7-8c45f19301e2
 ms.openlocfilehash: 0895b80f230d2c67ab0723c7935ae20443327a41
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61766741"
 ---
-# <a name="listbox-how-to-topics"></a><span data-ttu-id="beb5e-102">ListBox に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="beb5e-102">ListBox How-to Topics</span></span>
-<span data-ttu-id="beb5e-103">このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.ListBox>項目の選択可能なリストを表示するコントロール。</span><span class="sxs-lookup"><span data-stu-id="beb5e-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListBox> control to display selectable lists of items.</span></span>  
+# <a name="listbox-how-to-topics"></a><span data-ttu-id="75f7d-102">ListBox に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="75f7d-102">ListBox How-to Topics</span></span>
+<span data-ttu-id="75f7d-103">このセクションのトピックでは、<xref:System.Windows.Controls.ListBox> コントロールを使用し、項目の選択可能一覧を表示する方法を説明します。</span><span class="sxs-lookup"><span data-stu-id="75f7d-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListBox> control to display selectable lists of items.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="beb5e-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="beb5e-104">In This Section</span></span>  
- [<span data-ttu-id="beb5e-105">ListBox にデータをバインドする</span><span class="sxs-lookup"><span data-stu-id="beb5e-105">Bind a ListBox to Data</span></span>](how-to-bind-a-listbox-to-data.md)  
- [<span data-ttu-id="beb5e-106">ListBoxItem を取得する</span><span class="sxs-lookup"><span data-stu-id="beb5e-106">Get a ListBoxItem</span></span>](how-to-get-a-listboxitem.md)  
- <span data-ttu-id="beb5e-107">[方法: ItemsControl にデータを追加します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743602(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="beb5e-107">[How to: Add Data to an ItemsControl](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743602(v=vs.90))</span></span>  
- [<span data-ttu-id="beb5e-108">ListBox のスクロール速度を向上させる</span><span class="sxs-lookup"><span data-stu-id="beb5e-108">Improve the Scrolling Performance of a ListBox</span></span>](how-to-improve-the-scrolling-performance-of-a-listbox.md)  
+## <a name="in-this-section"></a><span data-ttu-id="75f7d-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="75f7d-104">In This Section</span></span>  
+ [<span data-ttu-id="75f7d-105">ListBox にデータをバインドする</span><span class="sxs-lookup"><span data-stu-id="75f7d-105">Bind a ListBox to Data</span></span>](how-to-bind-a-listbox-to-data.md)  
+ [<span data-ttu-id="75f7d-106">ListBoxItem を取得する</span><span class="sxs-lookup"><span data-stu-id="75f7d-106">Get a ListBoxItem</span></span>](how-to-get-a-listboxitem.md)  
+ <span data-ttu-id="75f7d-107">[方法: ItemsControl にデータを追加する](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743602(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="75f7d-107">[How to: Add Data to an ItemsControl](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743602(v=vs.90))</span></span>  
+ [<span data-ttu-id="75f7d-108">ListBox のスクロール速度を向上させる</span><span class="sxs-lookup"><span data-stu-id="75f7d-108">Improve the Scrolling Performance of a ListBox</span></span>](how-to-improve-the-scrolling-performance-of-a-listbox.md)  
   
-## <a name="reference"></a><span data-ttu-id="beb5e-109">参照</span><span class="sxs-lookup"><span data-stu-id="beb5e-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="75f7d-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="75f7d-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListBox>  
   
  <xref:System.Windows.Controls.ListBoxItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="beb5e-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="beb5e-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="75f7d-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="75f7d-110">Related Sections</span></span>

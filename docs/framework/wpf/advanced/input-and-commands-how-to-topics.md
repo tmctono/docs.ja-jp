@@ -9,28 +9,28 @@ helpviewer_keywords:
 ms.assetid: a5c266b6-969c-4049-a471-ddca7b10fb89
 ms.openlocfilehash: a3cd3bd0861ef2e2896d33e52594b0712e984149
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61942780"
 ---
-# <a name="input-and-commands-how-to-topics"></a><span data-ttu-id="d4daf-102">入力およびコマンドに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="d4daf-102">Input and Commands How-to Topics</span></span>
-<span data-ttu-id="d4daf-103">このセクションのトピックでは、Windows Presentation Foundation (WPF) で、入力とコマンド実行のインフラストラクチャを使用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="d4daf-103">The topics in this section describe how to use the input and commanding infrastructure in Windows Presentation Foundation (WPF).</span></span>  
+# <a name="input-and-commands-how-to-topics"></a><span data-ttu-id="f63b3-102">入力およびコマンドに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="f63b3-102">Input and Commands How-to Topics</span></span>
+<span data-ttu-id="f63b3-103">このセクションのトピックでは、Windows Presentation Foundation (WPF) の入力およびコマンド インフラストラクチャの使用方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="f63b3-103">The topics in this section describe how to use the input and commanding infrastructure in Windows Presentation Foundation (WPF).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d4daf-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="d4daf-104">In This Section</span></span>  
- [<span data-ttu-id="d4daf-105">コマンドを有効にする</span><span class="sxs-lookup"><span data-stu-id="d4daf-105">Enable a Command</span></span>](how-to-enable-a-command.md)  
- [<span data-ttu-id="d4daf-106">カーソルの種類を変更する</span><span class="sxs-lookup"><span data-stu-id="d4daf-106">Change the Cursor Type</span></span>](how-to-change-the-cursor-type.md)  
- [<span data-ttu-id="d4daf-107">フォーカス イベントを使用して要素の色を変更する</span><span class="sxs-lookup"><span data-stu-id="d4daf-107">Change the Color of an Element Using Focus Events</span></span>](how-to-change-the-color-of-an-element-using-focus-events.md)  
- [<span data-ttu-id="d4daf-108">FocusVisualStyle をコントロールに適用する</span><span class="sxs-lookup"><span data-stu-id="d4daf-108">Apply a FocusVisualStyle to a Control</span></span>](how-to-apply-a-focusvisualstyle-to-a-control.md)  
- [<span data-ttu-id="d4daf-109">Enter キーが押されたことを検出する</span><span class="sxs-lookup"><span data-stu-id="d4daf-109">Detect When the Enter Key is Pressed</span></span>](how-to-detect-when-the-enter-key-pressed.md)  
- [<span data-ttu-id="d4daf-110">イベントを使用してロールオーバー効果を作成する</span><span class="sxs-lookup"><span data-stu-id="d4daf-110">Create a Rollover Effect Using Events</span></span>](how-to-create-a-rollover-effect-using-events.md)  
- [<span data-ttu-id="d4daf-111">オブジェクトをマウス ポインターに追従させる</span><span class="sxs-lookup"><span data-stu-id="d4daf-111">Make an Object Follow the Mouse Pointer</span></span>](how-to-make-an-object-follow-the-mouse-pointer.md)  
- [<span data-ttu-id="d4daf-112">RoutedCommand を作成する</span><span class="sxs-lookup"><span data-stu-id="d4daf-112">Create a RoutedCommand</span></span>](how-to-create-a-routedcommand.md)  
- [<span data-ttu-id="d4daf-113">ICommandSource を実装する</span><span class="sxs-lookup"><span data-stu-id="d4daf-113">Implement ICommandSource</span></span>](how-to-implement-icommandsource.md)  
- [<span data-ttu-id="d4daf-114">コマンドをサポートしないコントロールにコマンドをフックする</span><span class="sxs-lookup"><span data-stu-id="d4daf-114">Hook Up a Command to a Control with No Command Support</span></span>](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
- [<span data-ttu-id="d4daf-115">コマンドをサポートするコントロールにコマンドをフックする</span><span class="sxs-lookup"><span data-stu-id="d4daf-115">Hook Up a Command to a Control with Command Support</span></span>](how-to-hook-up-a-command-to-a-control-with-command-support.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f63b3-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="f63b3-104">In This Section</span></span>  
+ [<span data-ttu-id="f63b3-105">コマンドを有効にする</span><span class="sxs-lookup"><span data-stu-id="f63b3-105">Enable a Command</span></span>](how-to-enable-a-command.md)  
+ [<span data-ttu-id="f63b3-106">カーソルの種類を変更する</span><span class="sxs-lookup"><span data-stu-id="f63b3-106">Change the Cursor Type</span></span>](how-to-change-the-cursor-type.md)  
+ [<span data-ttu-id="f63b3-107">フォーカス イベントを使用して要素の色を変更する</span><span class="sxs-lookup"><span data-stu-id="f63b3-107">Change the Color of an Element Using Focus Events</span></span>](how-to-change-the-color-of-an-element-using-focus-events.md)  
+ [<span data-ttu-id="f63b3-108">FocusVisualStyle をコントロールに適用する</span><span class="sxs-lookup"><span data-stu-id="f63b3-108">Apply a FocusVisualStyle to a Control</span></span>](how-to-apply-a-focusvisualstyle-to-a-control.md)  
+ [<span data-ttu-id="f63b3-109">Enter キーが押されたことを検出する</span><span class="sxs-lookup"><span data-stu-id="f63b3-109">Detect When the Enter Key is Pressed</span></span>](how-to-detect-when-the-enter-key-pressed.md)  
+ [<span data-ttu-id="f63b3-110">イベントを使用してロールオーバー効果を作成する</span><span class="sxs-lookup"><span data-stu-id="f63b3-110">Create a Rollover Effect Using Events</span></span>](how-to-create-a-rollover-effect-using-events.md)  
+ [<span data-ttu-id="f63b3-111">オブジェクトをマウス ポインターに追従させる</span><span class="sxs-lookup"><span data-stu-id="f63b3-111">Make an Object Follow the Mouse Pointer</span></span>](how-to-make-an-object-follow-the-mouse-pointer.md)  
+ [<span data-ttu-id="f63b3-112">RoutedCommand を作成する</span><span class="sxs-lookup"><span data-stu-id="f63b3-112">Create a RoutedCommand</span></span>](how-to-create-a-routedcommand.md)  
+ [<span data-ttu-id="f63b3-113">ICommandSource を実装する</span><span class="sxs-lookup"><span data-stu-id="f63b3-113">Implement ICommandSource</span></span>](how-to-implement-icommandsource.md)  
+ [<span data-ttu-id="f63b3-114">コマンドをサポートしないコントロールにコマンドをフックする</span><span class="sxs-lookup"><span data-stu-id="f63b3-114">Hook Up a Command to a Control with No Command Support</span></span>](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
+ [<span data-ttu-id="f63b3-115">コマンドをサポートするコントロールにコマンドをフックする</span><span class="sxs-lookup"><span data-stu-id="f63b3-115">Hook Up a Command to a Control with Command Support</span></span>](how-to-hook-up-a-command-to-a-control-with-command-support.md)  
   
-## <a name="reference"></a><span data-ttu-id="d4daf-116">参照</span><span class="sxs-lookup"><span data-stu-id="d4daf-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f63b3-116">関連項目</span><span class="sxs-lookup"><span data-stu-id="f63b3-116">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  
@@ -45,4 +45,4 @@ ms.locfileid: "61942780"
   
  <xref:System.Windows.Input.FocusManager>  
   
-## <a name="related-sections"></a><span data-ttu-id="d4daf-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="d4daf-117">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="f63b3-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="f63b3-117">Related Sections</span></span>

@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: c687b2a5-b151-41e2-9ade-df2fc1a16b04
 ms.openlocfilehash: bb625c116b1c58071ec0f51729df07f43600f36f
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61970964"
 ---
-# <a name="clocks-how-to-topics"></a><span data-ttu-id="ec3d6-102">クロックに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="ec3d6-102">Clocks How-to Topics</span></span>
-<span data-ttu-id="ec3d6-103">次のトピックを使用する方法について説明する<xref:System.Windows.Media.Animation.Clock>のタイミング状態情報を保持するオブジェクト、<xref:System.Windows.Media.Animation.Timeline>します。</span><span class="sxs-lookup"><span data-stu-id="ec3d6-103">The following topics describe how to use a <xref:System.Windows.Media.Animation.Clock> object to maintain timing state information for a <xref:System.Windows.Media.Animation.Timeline>.</span></span>  
+# <a name="clocks-how-to-topics"></a><span data-ttu-id="7d884-102">クロックに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="7d884-102">Clocks How-to Topics</span></span>
+<span data-ttu-id="7d884-103">次のトピックでは、<xref:System.Windows.Media.Animation.Clock> オブジェクトを使用して <xref:System.Windows.Media.Animation.Timeline> のタイミング状態情報を保持する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="7d884-103">The following topics describe how to use a <xref:System.Windows.Media.Animation.Clock> object to maintain timing state information for a <xref:System.Windows.Media.Animation.Timeline>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ec3d6-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="ec3d6-104">In This Section</span></span>  
- [<span data-ttu-id="ec3d6-105">AnimationClock を使用してプロパティをアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="ec3d6-105">Animate a Property by Using an AnimationClock</span></span>](how-to-animate-a-property-by-using-an-animationclock.md)  
- [<span data-ttu-id="ec3d6-106">クロックを対話的に制御する</span><span class="sxs-lookup"><span data-stu-id="ec3d6-106">Interactively Control a Clock</span></span>](how-to-interactively-control-a-clock.md)  
- [<span data-ttu-id="ec3d6-107">クロックを同期的にシークする</span><span class="sxs-lookup"><span data-stu-id="ec3d6-107">Seek a Clock Synchronously</span></span>](how-to-seek-a-clock-synchronously.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7d884-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="7d884-104">In This Section</span></span>  
+ [<span data-ttu-id="7d884-105">AnimationClock を使用してプロパティをアニメーション化する</span><span class="sxs-lookup"><span data-stu-id="7d884-105">Animate a Property by Using an AnimationClock</span></span>](how-to-animate-a-property-by-using-an-animationclock.md)  
+ [<span data-ttu-id="7d884-106">クロックを対話的に制御する</span><span class="sxs-lookup"><span data-stu-id="7d884-106">Interactively Control a Clock</span></span>](how-to-interactively-control-a-clock.md)  
+ [<span data-ttu-id="7d884-107">クロックを同期的にシークする</span><span class="sxs-lookup"><span data-stu-id="7d884-107">Seek a Clock Synchronously</span></span>](how-to-seek-a-clock-synchronously.md)  
   
-## <a name="reference"></a><span data-ttu-id="ec3d6-108">参照</span><span class="sxs-lookup"><span data-stu-id="ec3d6-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="7d884-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="7d884-108">Reference</span></span>  
  <xref:System.Windows.Media.Animation.Clock>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
@@ -33,7 +33,7 @@ ms.locfileid: "61970964"
   
  <xref:System.Windows.Media.Animation.Timeline>  
   
-## <a name="related-sections"></a><span data-ttu-id="ec3d6-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="ec3d6-109">Related Sections</span></span>  
- [<span data-ttu-id="ec3d6-110">アニメーションの概要</span><span class="sxs-lookup"><span data-stu-id="ec3d6-110">Animation Overview</span></span>](animation-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="7d884-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="7d884-109">Related Sections</span></span>  
+ [<span data-ttu-id="7d884-110">アニメーションの概要</span><span class="sxs-lookup"><span data-stu-id="7d884-110">Animation Overview</span></span>](animation-overview.md)  
   
- [<span data-ttu-id="ec3d6-111">ストーリーボードの概要</span><span class="sxs-lookup"><span data-stu-id="ec3d6-111">Storyboards Overview</span></span>](storyboards-overview.md)
+ [<span data-ttu-id="7d884-111">ストーリーボードの概要</span><span class="sxs-lookup"><span data-stu-id="7d884-111">Storyboards Overview</span></span>](storyboards-overview.md)

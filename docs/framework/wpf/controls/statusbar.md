@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: aba45aed-7953-4b2c-bc29-315a9be6c440
 ms.openlocfilehash: 8998eba8a713cada62c8defc8d7500bf3bc036a3
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61791051"
 ---
-# <a name="statusbar"></a><span data-ttu-id="e3050-102">StatusBar</span><span class="sxs-lookup"><span data-stu-id="e3050-102">StatusBar</span></span>
-<span data-ttu-id="e3050-103">A<xref:System.Windows.Controls.Primitives.StatusBar>は、アプリケーションが状態情報を表示できるウィンドウの下部にある水平方向の領域です。</span><span class="sxs-lookup"><span data-stu-id="e3050-103">A <xref:System.Windows.Controls.Primitives.StatusBar> is a horizontal area at the bottom of a window where an application can display status information.</span></span>  
+# <a name="statusbar"></a><span data-ttu-id="f91b3-102">StatusBar</span><span class="sxs-lookup"><span data-stu-id="f91b3-102">StatusBar</span></span>
+<span data-ttu-id="f91b3-103"><xref:System.Windows.Controls.Primitives.StatusBar> は、アプリケーションがステータス情報を表示する、ウィンドウ下部の水平の領域です。</span><span class="sxs-lookup"><span data-stu-id="f91b3-103">A <xref:System.Windows.Controls.Primitives.StatusBar> is a horizontal area at the bottom of a window where an application can display status information.</span></span>  
   
- <span data-ttu-id="e3050-104">次の図の例を示します、<xref:System.Windows.Controls.Primitives.StatusBar>します。</span><span class="sxs-lookup"><span data-stu-id="e3050-104">The following illustration shows an example of a <xref:System.Windows.Controls.Primitives.StatusBar>.</span></span>  
+ <span data-ttu-id="f91b3-104">次の図に <xref:System.Windows.Controls.Primitives.StatusBar>の例を示します。</span><span class="sxs-lookup"><span data-stu-id="f91b3-104">The following illustration shows an example of a <xref:System.Windows.Controls.Primitives.StatusBar>.</span></span>  
   
- <span data-ttu-id="e3050-105">![ステータス バー](./media/ss-ctl-statusbar.GIF "SS_CTL_statusbar")</span><span class="sxs-lookup"><span data-stu-id="e3050-105">![Status bar](./media/ss-ctl-statusbar.GIF "SS_CTL_statusbar")</span></span>  
+ <span data-ttu-id="f91b3-105">![ステータス バー](./media/ss-ctl-statusbar.GIF "SS_CTL_statusbar")</span><span class="sxs-lookup"><span data-stu-id="f91b3-105">![Status bar](./media/ss-ctl-statusbar.GIF "SS_CTL_statusbar")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e3050-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="e3050-106">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="f91b3-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="f91b3-106">In This Section</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="e3050-107">参照</span><span class="sxs-lookup"><span data-stu-id="e3050-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f91b3-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="f91b3-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.StatusBar>  
   <xref:System.Windows.Controls.Primitives.StatusBarItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="e3050-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="e3050-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="f91b3-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="f91b3-108">Related Sections</span></span>

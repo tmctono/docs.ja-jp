@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: c9849df3-d000-4cdf-8345-5edcd053919d
 ms.openlocfilehash: b7456eeb4fc248998730a21f757699497c83f4e9
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61791067"
 ---
-# <a name="stackpanel-how-to-topics"></a><span data-ttu-id="b6d57-102">StackPanel に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="b6d57-102">StackPanel How-to Topics</span></span>
-<span data-ttu-id="b6d57-103">このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.StackPanel>要素コンテンツを水平方向または垂直方向にスタックにします。</span><span class="sxs-lookup"><span data-stu-id="b6d57-103">The topics in this section describe how to use the <xref:System.Windows.Controls.StackPanel> element to stack content horizontally or vertically.</span></span>  
+# <a name="stackpanel-how-to-topics"></a><span data-ttu-id="434e8-102">StackPanel に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="434e8-102">StackPanel How-to Topics</span></span>
+<span data-ttu-id="434e8-103">このセクションのトピックでは、<xref:System.Windows.Controls.StackPanel> 要素を使用して、コンテンツを水平方向または垂直方向に積み重ねる方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="434e8-103">The topics in this section describe how to use the <xref:System.Windows.Controls.StackPanel> element to stack content horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b6d57-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="b6d57-104">In This Section</span></span>  
- [<span data-ttu-id="b6d57-105">StackPanel または DockPanel を選択する</span><span class="sxs-lookup"><span data-stu-id="b6d57-105">Choose Between StackPanel and DockPanel</span></span>](how-to-choose-between-stackpanel-and-dockpanel.md)  
- [<span data-ttu-id="b6d57-106">StackPanel を作成する</span><span class="sxs-lookup"><span data-stu-id="b6d57-106">Create a StackPanel</span></span>](how-to-create-a-stackpanel.md)  
- [<span data-ttu-id="b6d57-107">StackPanel にコンテンツを水平方向または垂直方向に配置する</span><span class="sxs-lookup"><span data-stu-id="b6d57-107">Horizontally or Vertically Align Content in a StackPanel</span></span>](how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
+## <a name="in-this-section"></a><span data-ttu-id="434e8-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="434e8-104">In This Section</span></span>  
+ [<span data-ttu-id="434e8-105">StackPanel または DockPanel を選択する</span><span class="sxs-lookup"><span data-stu-id="434e8-105">Choose Between StackPanel and DockPanel</span></span>](how-to-choose-between-stackpanel-and-dockpanel.md)  
+ [<span data-ttu-id="434e8-106">StackPanel を作成する</span><span class="sxs-lookup"><span data-stu-id="434e8-106">Create a StackPanel</span></span>](how-to-create-a-stackpanel.md)  
+ [<span data-ttu-id="434e8-107">StackPanel にコンテンツを水平方向または垂直方向に配置する</span><span class="sxs-lookup"><span data-stu-id="434e8-107">Horizontally or Vertically Align Content in a StackPanel</span></span>](how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
   
-## <a name="reference"></a><span data-ttu-id="b6d57-108">参照</span><span class="sxs-lookup"><span data-stu-id="b6d57-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="434e8-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="434e8-108">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -37,9 +37,9 @@ ms.locfileid: "61791067"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="b6d57-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="b6d57-109">Related Sections</span></span>  
- [<span data-ttu-id="b6d57-110">レイアウト</span><span class="sxs-lookup"><span data-stu-id="b6d57-110">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="434e8-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="434e8-109">Related Sections</span></span>  
+ [<span data-ttu-id="434e8-110">レイアウト</span><span class="sxs-lookup"><span data-stu-id="434e8-110">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="b6d57-111">チュートリアル: 初めての WPF デスクトップ アプリケーション</span><span class="sxs-lookup"><span data-stu-id="b6d57-111">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="434e8-111">チュートリアル: 初めての WPF デスクトップ アプリケーション</span><span class="sxs-lookup"><span data-stu-id="434e8-111">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="b6d57-112">ScrollViewer の概要</span><span class="sxs-lookup"><span data-stu-id="b6d57-112">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="434e8-112">ScrollViewer の概要</span><span class="sxs-lookup"><span data-stu-id="434e8-112">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

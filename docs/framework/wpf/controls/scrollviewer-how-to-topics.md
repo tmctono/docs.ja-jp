@@ -9,25 +9,25 @@ helpviewer_keywords:
 ms.assetid: 1e20804b-1d80-4b54-af41-76b3e10a6f89
 ms.openlocfilehash: fcb7809c1025997a0e78647c32590e1abee865ce
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61971016"
 ---
-# <a name="scrollviewer-how-to-topics"></a><span data-ttu-id="78d5f-102">ScrollViewer に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="78d5f-102">ScrollViewer How-to Topics</span></span>
-<span data-ttu-id="78d5f-103">このセクションのトピックでは、使用する方法を示します、<xref:System.Windows.Controls.ScrollViewer>アプリケーションでのスクロール可能な領域を作成する要素。</span><span class="sxs-lookup"><span data-stu-id="78d5f-103">The topics in this section demonstrate how to use the <xref:System.Windows.Controls.ScrollViewer> element to create scrollable regions in your applications.</span></span>  
+# <a name="scrollviewer-how-to-topics"></a><span data-ttu-id="e14ac-102">ScrollViewer に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="e14ac-102">ScrollViewer How-to Topics</span></span>
+<span data-ttu-id="e14ac-103">このセクションのトピックでは、アプリケーションで <xref:System.Windows.Controls.ScrollViewer> 要素を使用して、スクロール可能な領域を作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="e14ac-103">The topics in this section demonstrate how to use the <xref:System.Windows.Controls.ScrollViewer> element to create scrollable regions in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="78d5f-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="78d5f-104">In This Section</span></span>  
- [<span data-ttu-id="78d5f-105">ScrollChanged イベントの処理</span><span class="sxs-lookup"><span data-stu-id="78d5f-105">Handle the ScrollChanged Event</span></span>](how-to-handle-the-scrollchanged-event.md)  
- [<span data-ttu-id="78d5f-106">IScrollInfo インターフェイスを使用してコンテンツをスクロールする</span><span class="sxs-lookup"><span data-stu-id="78d5f-106">Scroll Content by Using the IScrollInfo Interface</span></span>](how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
- [<span data-ttu-id="78d5f-107">ScrollViewer のコンテンツ スクロール メソッドを使用する</span><span class="sxs-lookup"><span data-stu-id="78d5f-107">Use the Content-Scrolling Methods of ScrollViewer</span></span>](how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e14ac-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="e14ac-104">In This Section</span></span>  
+ [<span data-ttu-id="e14ac-105">ScrollChanged イベントの処理</span><span class="sxs-lookup"><span data-stu-id="e14ac-105">Handle the ScrollChanged Event</span></span>](how-to-handle-the-scrollchanged-event.md)  
+ [<span data-ttu-id="e14ac-106">IScrollInfo インターフェイスを使用してコンテンツをスクロールする</span><span class="sxs-lookup"><span data-stu-id="e14ac-106">Scroll Content by Using the IScrollInfo Interface</span></span>](how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
+ [<span data-ttu-id="e14ac-107">ScrollViewer のコンテンツ スクロール メソッドを使用する</span><span class="sxs-lookup"><span data-stu-id="e14ac-107">Use the Content-Scrolling Methods of ScrollViewer</span></span>](how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
   
-## <a name="reference"></a><span data-ttu-id="78d5f-108">参照</span><span class="sxs-lookup"><span data-stu-id="78d5f-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e14ac-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="e14ac-108">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a><span data-ttu-id="78d5f-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="78d5f-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e14ac-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="e14ac-109">See also</span></span>
 
-- [<span data-ttu-id="78d5f-110">パネルの概要</span><span class="sxs-lookup"><span data-stu-id="78d5f-110">Panels Overview</span></span>](panels-overview.md)
-- [<span data-ttu-id="78d5f-111">レイアウト</span><span class="sxs-lookup"><span data-stu-id="78d5f-111">Layout</span></span>](../advanced/layout.md)
+- [<span data-ttu-id="e14ac-110">パネルの概要</span><span class="sxs-lookup"><span data-stu-id="e14ac-110">Panels Overview</span></span>](panels-overview.md)
+- [<span data-ttu-id="e14ac-111">レイアウト</span><span class="sxs-lookup"><span data-stu-id="e14ac-111">Layout</span></span>](../advanced/layout.md)

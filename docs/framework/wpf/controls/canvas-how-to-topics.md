@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: 5c8f5bca-7ba9-4526-a9bf-0852351dbe8a
 ms.openlocfilehash: 5c07039a66b40a6ecb54eda674bf2be396fc3e68
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61912523"
 ---
-# <a name="canvas-how-to-topics"></a><span data-ttu-id="2c3ef-102">キャンバスに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="2c3ef-102">Canvas How-to Topics</span></span>
-<span data-ttu-id="2c3ef-103">このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.Canvas>要素を子要素を絶対的に配置します。</span><span class="sxs-lookup"><span data-stu-id="2c3ef-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Canvas> element to absolutely position child elements.</span></span>  
+# <a name="canvas-how-to-topics"></a><span data-ttu-id="1f97c-102">キャンバスに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="1f97c-102">Canvas How-to Topics</span></span>
+<span data-ttu-id="1f97c-103">このセクションのトピックでは、<xref:System.Windows.Controls.Canvas> 要素を使用して、子要素を絶対位置に配置する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="1f97c-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Canvas> element to absolutely position child elements.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2c3ef-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="2c3ef-104">In This Section</span></span>  
- [<span data-ttu-id="2c3ef-105">Canvas のコンテンツを Border で囲む</span><span class="sxs-lookup"><span data-stu-id="2c3ef-105">Wrap a Border Around the Content of a Canvas</span></span>](how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
- [<span data-ttu-id="2c3ef-106">Canvas の配置プロパティを取得または設定する</span><span class="sxs-lookup"><span data-stu-id="2c3ef-106">Get or Set Canvas Positioning Properties</span></span>](how-to-get-or-set-canvas-positioning-properties.md)  
- [<span data-ttu-id="2c3ef-107">Canvas を作成および使用する</span><span class="sxs-lookup"><span data-stu-id="2c3ef-107">Create and Use a Canvas</span></span>](how-to-create-and-use-a-canvas.md)  
- [<span data-ttu-id="2c3ef-108">Canvas の添付プロパティを使用して子要素を配置する</span><span class="sxs-lookup"><span data-stu-id="2c3ef-108">Use the Attached Properties of Canvas to Position Child Elements</span></span>](how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
- [<span data-ttu-id="2c3ef-109">つまみを使用したキャンバスのサイズ変更</span><span class="sxs-lookup"><span data-stu-id="2c3ef-109">Resize a Canvas by Using a Thumb</span></span>](how-to-resize-a-canvas-by-using-a-thumb.md)  
+## <a name="in-this-section"></a><span data-ttu-id="1f97c-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="1f97c-104">In This Section</span></span>  
+ [<span data-ttu-id="1f97c-105">Canvas のコンテンツを Border で囲む</span><span class="sxs-lookup"><span data-stu-id="1f97c-105">Wrap a Border Around the Content of a Canvas</span></span>](how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
+ [<span data-ttu-id="1f97c-106">Canvas の配置プロパティを取得または設定する</span><span class="sxs-lookup"><span data-stu-id="1f97c-106">Get or Set Canvas Positioning Properties</span></span>](how-to-get-or-set-canvas-positioning-properties.md)  
+ [<span data-ttu-id="1f97c-107">Canvas を作成および使用する</span><span class="sxs-lookup"><span data-stu-id="1f97c-107">Create and Use a Canvas</span></span>](how-to-create-and-use-a-canvas.md)  
+ [<span data-ttu-id="1f97c-108">Canvas の添付プロパティを使用して子要素を配置する</span><span class="sxs-lookup"><span data-stu-id="1f97c-108">Use the Attached Properties of Canvas to Position Child Elements</span></span>](how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
+ [<span data-ttu-id="1f97c-109">つまみを使用したキャンバスのサイズ変更</span><span class="sxs-lookup"><span data-stu-id="1f97c-109">Resize a Canvas by Using a Thumb</span></span>](how-to-resize-a-canvas-by-using-a-thumb.md)  
   
-## <a name="reference"></a><span data-ttu-id="2c3ef-110">参照</span><span class="sxs-lookup"><span data-stu-id="2c3ef-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="1f97c-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="1f97c-110">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -39,9 +39,9 @@ ms.locfileid: "61912523"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="2c3ef-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="2c3ef-111">Related Sections</span></span>  
- [<span data-ttu-id="2c3ef-112">レイアウト</span><span class="sxs-lookup"><span data-stu-id="2c3ef-112">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="1f97c-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="1f97c-111">Related Sections</span></span>  
+ [<span data-ttu-id="1f97c-112">レイアウト</span><span class="sxs-lookup"><span data-stu-id="1f97c-112">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="2c3ef-113">チュートリアル: 初めての WPF デスクトップ アプリケーション</span><span class="sxs-lookup"><span data-stu-id="2c3ef-113">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="1f97c-113">チュートリアル: 初めての WPF デスクトップ アプリケーション</span><span class="sxs-lookup"><span data-stu-id="1f97c-113">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="2c3ef-114">ScrollViewer の概要</span><span class="sxs-lookup"><span data-stu-id="2c3ef-114">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="1f97c-114">ScrollViewer の概要</span><span class="sxs-lookup"><span data-stu-id="1f97c-114">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

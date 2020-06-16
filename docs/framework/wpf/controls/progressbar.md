@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: 4545b358-b93c-47df-88e4-9946d7db9e3f
 ms.openlocfilehash: 27a2f54edac2add67b938300dc342744475466cc
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61770550"
 ---
-# <a name="progressbar"></a><span data-ttu-id="4c245-102">ProgressBar</span><span class="sxs-lookup"><span data-stu-id="4c245-102">ProgressBar</span></span>
-<span data-ttu-id="4c245-103">A<xref:System.Windows.Controls.ProgressBar>操作の進行状況を示します。</span><span class="sxs-lookup"><span data-stu-id="4c245-103">A <xref:System.Windows.Controls.ProgressBar> indicates the progress of an operation.</span></span> <span data-ttu-id="4c245-104"><xref:System.Windows.Controls.ProgressBar>処理の進行状況として、システムの強調表示色で塗りつぶされているウィンドウのコントロールで構成されます。</span><span class="sxs-lookup"><span data-stu-id="4c245-104">The <xref:System.Windows.Controls.ProgressBar> control consists of a window that is filled with the system highlight color as an operation progresses.</span></span>  
+# <a name="progressbar"></a><span data-ttu-id="7122c-102">ProgressBar</span><span class="sxs-lookup"><span data-stu-id="7122c-102">ProgressBar</span></span>
+<span data-ttu-id="7122c-103"><xref:System.Windows.Controls.ProgressBar> には、操作の進行状況が示されます。</span><span class="sxs-lookup"><span data-stu-id="7122c-103">A <xref:System.Windows.Controls.ProgressBar> indicates the progress of an operation.</span></span> <span data-ttu-id="7122c-104"><xref:System.Windows.Controls.ProgressBar> コントロールは、処理の進行状況に合わせてシステムの強調表示色で塗りつぶされるウィンドウで構成されます。</span><span class="sxs-lookup"><span data-stu-id="7122c-104">The <xref:System.Windows.Controls.ProgressBar> control consists of a window that is filled with the system highlight color as an operation progresses.</span></span>  
   
- <span data-ttu-id="4c245-105">次の図は、一般的な<xref:System.Windows.Controls.ProgressBar>します。</span><span class="sxs-lookup"><span data-stu-id="4c245-105">The following illustration shows a typical <xref:System.Windows.Controls.ProgressBar>.</span></span>  
+ <span data-ttu-id="7122c-105">典型的な <xref:System.Windows.Controls.ProgressBar> を次の図に示します。</span><span class="sxs-lookup"><span data-stu-id="7122c-105">The following illustration shows a typical <xref:System.Windows.Controls.ProgressBar>.</span></span>  
   
- <span data-ttu-id="4c245-106">![進行状況バー](./media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")</span><span class="sxs-lookup"><span data-stu-id="4c245-106">![Progress bar](./media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")</span></span>  
+ <span data-ttu-id="7122c-106">![進行状況バー](./media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")</span><span class="sxs-lookup"><span data-stu-id="7122c-106">![Progress bar](./media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4c245-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="4c245-107">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="7122c-107">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="7122c-107">In This Section</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="4c245-108">参照</span><span class="sxs-lookup"><span data-stu-id="4c245-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="7122c-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="7122c-108">Reference</span></span>  
  <xref:System.Windows.Controls.ProgressBar>  
   <xref:System.Windows.Controls.Primitives.StatusBar>  
   
-## <a name="related-sections"></a><span data-ttu-id="4c245-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="4c245-109">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="7122c-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="7122c-109">Related Sections</span></span>

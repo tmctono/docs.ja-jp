@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: 3d26404b-431e-432d-a82b-ef026feb3fff
 ms.openlocfilehash: 33eb4943d2c867b7843952e5c961eb7e66072890
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61790934"
 ---
-# <a name="tabcontrol"></a><span data-ttu-id="51696-102">TabControl</span><span class="sxs-lookup"><span data-stu-id="51696-102">TabControl</span></span>
-<span data-ttu-id="51696-103"><xref:System.Windows.Controls.TabControl> 要素は、適切なタブを選択してアクセスされる個別のページのコンテンツを表示します。各タブには、<xref:System.Windows.Controls.TabItem>します。</span><span class="sxs-lookup"><span data-stu-id="51696-103"><xref:System.Windows.Controls.TabControl> elements display content on discrete pages accessed by selecting the appropriate tab. Each tab contains a <xref:System.Windows.Controls.TabItem>.</span></span>  
+# <a name="tabcontrol"></a><span data-ttu-id="0e6b2-102">TabControl</span><span class="sxs-lookup"><span data-stu-id="0e6b2-102">TabControl</span></span>
+<span data-ttu-id="0e6b2-103"><xref:System.Windows.Controls.TabControl> 要素では、然るべきタブを選択した場合にアクセスできる、個別のページのコンテンツが表示されます。各タブには <xref:System.Windows.Controls.TabItem> が含まれます。</span><span class="sxs-lookup"><span data-stu-id="0e6b2-103"><xref:System.Windows.Controls.TabControl> elements display content on discrete pages accessed by selecting the appropriate tab. Each tab contains a <xref:System.Windows.Controls.TabItem>.</span></span>  
   
- <span data-ttu-id="51696-104">次の図は、<xref:System.Windows.Controls.TabControl>します。</span><span class="sxs-lookup"><span data-stu-id="51696-104">The following illustration shows a <xref:System.Windows.Controls.TabControl>.</span></span>  
+ <span data-ttu-id="0e6b2-104"><xref:System.Windows.Controls.TabControl>は、次の図のとおりです。</span><span class="sxs-lookup"><span data-stu-id="0e6b2-104">The following illustration shows a <xref:System.Windows.Controls.TabControl>.</span></span>  
   
- <span data-ttu-id="51696-105">![タブ コントロール](./media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")</span><span class="sxs-lookup"><span data-stu-id="51696-105">![Tab control](./media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")</span></span>  
-<span data-ttu-id="51696-106">典型的なタブ コントロール</span><span class="sxs-lookup"><span data-stu-id="51696-106">Typical TabControl</span></span>  
+ <span data-ttu-id="0e6b2-105">![タブ コントロール](./media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")</span><span class="sxs-lookup"><span data-stu-id="0e6b2-105">![Tab control](./media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")</span></span>  
+<span data-ttu-id="0e6b2-106">典型的な TabControl</span><span class="sxs-lookup"><span data-stu-id="0e6b2-106">Typical TabControl</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="51696-107">参照</span><span class="sxs-lookup"><span data-stu-id="51696-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="0e6b2-107">関連項目</span><span class="sxs-lookup"><span data-stu-id="0e6b2-107">Reference</span></span>  
  <xref:System.Windows.Controls.TabControl>  
   <xref:System.Windows.Controls.TabItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="51696-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="51696-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="0e6b2-108">関連項目</span><span class="sxs-lookup"><span data-stu-id="0e6b2-108">Related Sections</span></span>
