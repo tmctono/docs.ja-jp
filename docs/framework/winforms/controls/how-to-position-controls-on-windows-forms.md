@@ -1,5 +1,6 @@
 ---
 title: コントロールを配置する
+description: Visual Studio の Windows フォームデザイナー、または Location プロパティを使用してコントロールを配置する方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,38 +19,38 @@ ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 144a0021c74f0fb5afec1d511315168fb28528e9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0aa3faade71e0f7e0a9d5e676327a80747524b8c
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735913"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904300"
 ---
-# <a name="how-to-position-controls-on-windows-forms"></a><span data-ttu-id="1a7a0-102">方法: Windows フォームにコントロールを配置する</span><span class="sxs-lookup"><span data-stu-id="1a7a0-102">How to: Position controls on Windows Forms</span></span>
+# <a name="how-to-position-controls-on-windows-forms"></a><span data-ttu-id="3f698-103">方法: Windows フォームにコントロールを配置する</span><span class="sxs-lookup"><span data-stu-id="3f698-103">How to: Position controls on Windows Forms</span></span>
 
-<span data-ttu-id="1a7a0-103">コントロールを配置するには、Visual Studio で Windows フォームデザイナーを使用するか、<xref:System.Windows.Forms.Control.Location%2A> プロパティを指定します。</span><span class="sxs-lookup"><span data-stu-id="1a7a0-103">To position controls, use the Windows Forms Designer in Visual Studio or specify the <xref:System.Windows.Forms.Control.Location%2A> property.</span></span>
+<span data-ttu-id="3f698-104">コントロールを配置するには、Visual Studio で Windows フォームデザイナーを使用するか、プロパティを指定し <xref:System.Windows.Forms.Control.Location%2A> ます。</span><span class="sxs-lookup"><span data-stu-id="3f698-104">To position controls, use the Windows Forms Designer in Visual Studio or specify the <xref:System.Windows.Forms.Control.Location%2A> property.</span></span>
 
-## <a name="position-a-control-on-the-design-surface-of-the-windows-forms-designer"></a><span data-ttu-id="1a7a0-104">Windows フォームデザイナーのデザインサーフェイスにコントロールを配置する</span><span class="sxs-lookup"><span data-stu-id="1a7a0-104">Position a control on the design surface of the Windows Forms Designer</span></span>
+## <a name="position-a-control-on-the-design-surface-of-the-windows-forms-designer"></a><span data-ttu-id="3f698-105">Windows フォームデザイナーのデザインサーフェイスにコントロールを配置する</span><span class="sxs-lookup"><span data-stu-id="3f698-105">Position a control on the design surface of the Windows Forms Designer</span></span>
 
-<span data-ttu-id="1a7a0-105">Visual Studio で、マウスを使用して適切な位置にコントロールをドラッグします。</span><span class="sxs-lookup"><span data-stu-id="1a7a0-105">In Visual Studio, drag the control to the appropriate location with the mouse.</span></span>
+<span data-ttu-id="3f698-106">Visual Studio で、マウスを使用して適切な位置にコントロールをドラッグします。</span><span class="sxs-lookup"><span data-stu-id="3f698-106">In Visual Studio, drag the control to the appropriate location with the mouse.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="1a7a0-106">コントロールを選択し、方向キーを使用して移動し、より正確に配置します。</span><span class="sxs-lookup"><span data-stu-id="1a7a0-106">Select the control and move it with the ARROW keys to position it more precisely.</span></span> <span data-ttu-id="1a7a0-107">また、*スナップ線*を使用すると、フォームにコントロールを正確に配置できます。</span><span class="sxs-lookup"><span data-stu-id="1a7a0-107">Also, *snaplines* assist you in placing controls precisely on your form.</span></span> <span data-ttu-id="1a7a0-108">詳細については、「[チュートリアル: スナップ線を使用した Windows フォームでのコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1a7a0-108">For more information, see [Walkthrough: Arranging Controls on Windows Forms Using Snaplines](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).</span></span>
+> <span data-ttu-id="3f698-107">コントロールを選択し、方向キーを使用して移動し、より正確に配置します。</span><span class="sxs-lookup"><span data-stu-id="3f698-107">Select the control and move it with the ARROW keys to position it more precisely.</span></span> <span data-ttu-id="3f698-108">また、*スナップ線*を使用すると、フォームにコントロールを正確に配置できます。</span><span class="sxs-lookup"><span data-stu-id="3f698-108">Also, *snaplines* assist you in placing controls precisely on your form.</span></span> <span data-ttu-id="3f698-109">詳細については、「[チュートリアル: スナップ線を使用した Windows フォームでのコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3f698-109">For more information, see [Walkthrough: Arranging Controls on Windows Forms Using Snaplines](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).</span></span>
 
-## <a name="position-a-control-using-the-properties-window"></a><span data-ttu-id="1a7a0-109">プロパティウィンドウを使用してコントロールを配置する</span><span class="sxs-lookup"><span data-stu-id="1a7a0-109">Position a control using the Properties window</span></span>
+## <a name="position-a-control-using-the-properties-window"></a><span data-ttu-id="3f698-110">プロパティウィンドウを使用してコントロールを配置する</span><span class="sxs-lookup"><span data-stu-id="3f698-110">Position a control using the Properties window</span></span>
 
-1. <span data-ttu-id="1a7a0-110">Visual Studio で、配置するコントロールを選択します。</span><span class="sxs-lookup"><span data-stu-id="1a7a0-110">In Visual Studio, select the control you want to position.</span></span>
+1. <span data-ttu-id="3f698-111">Visual Studio で、配置するコントロールを選択します。</span><span class="sxs-lookup"><span data-stu-id="3f698-111">In Visual Studio, select the control you want to position.</span></span>
 
-2. <span data-ttu-id="1a7a0-111">**[プロパティ]** ウィンドウで、<xref:System.Windows.Forms.Control.Location%2A> プロパティの値をコンマで区切って入力し、そのコンテナー内にコントロールを配置します。</span><span class="sxs-lookup"><span data-stu-id="1a7a0-111">In the **Properties** window, enter values for the <xref:System.Windows.Forms.Control.Location%2A> property, separated by a comma, to position the control within its container.</span></span>
+2. <span data-ttu-id="3f698-112">[**プロパティ**] ウィンドウで、プロパティの値をコンマで区切って入力し、 <xref:System.Windows.Forms.Control.Location%2A> コンテナー内にコントロールを配置します。</span><span class="sxs-lookup"><span data-stu-id="3f698-112">In the **Properties** window, enter values for the <xref:System.Windows.Forms.Control.Location%2A> property, separated by a comma, to position the control within its container.</span></span>
 
-   <span data-ttu-id="1a7a0-112">最初の数値 (X) は、コンテナーの左境界線からの距離です。2番目の数値 (Y) は、コンテナー領域の上境界からの距離をピクセル単位で表したものです。</span><span class="sxs-lookup"><span data-stu-id="1a7a0-112">The first number (X) is the distance from the left border of the container; the second number (Y) is the distance from the upper border of the container area, measured in pixels.</span></span>
+   <span data-ttu-id="3f698-113">最初の数値 (X) は、コンテナーの左境界線からの距離です。2番目の数値 (Y) は、コンテナー領域の上境界からの距離をピクセル単位で表したものです。</span><span class="sxs-lookup"><span data-stu-id="3f698-113">The first number (X) is the distance from the left border of the container; the second number (Y) is the distance from the upper border of the container area, measured in pixels.</span></span>
 
    > [!NOTE]
-   > <span data-ttu-id="1a7a0-113"><xref:System.Windows.Forms.Control.Location%2A> プロパティを展開して、 **X**と**Y**の値を個別に入力できます。</span><span class="sxs-lookup"><span data-stu-id="1a7a0-113">You can expand the <xref:System.Windows.Forms.Control.Location%2A> property to type the **X** and **Y** values individually.</span></span>
+   > <span data-ttu-id="3f698-114">プロパティを展開して、 <xref:System.Windows.Forms.Control.Location%2A> **X**値と**Y**値を個別に入力できます。</span><span class="sxs-lookup"><span data-stu-id="3f698-114">You can expand the <xref:System.Windows.Forms.Control.Location%2A> property to type the **X** and **Y** values individually.</span></span>
 
-## <a name="position-a-control-programmatically"></a><span data-ttu-id="1a7a0-114">プログラムによるコントロールの配置</span><span class="sxs-lookup"><span data-stu-id="1a7a0-114">Position a control programmatically</span></span>
+## <a name="position-a-control-programmatically"></a><span data-ttu-id="3f698-115">プログラムによるコントロールの配置</span><span class="sxs-lookup"><span data-stu-id="3f698-115">Position a control programmatically</span></span>
 
-1. <span data-ttu-id="1a7a0-115">コントロールの <xref:System.Windows.Forms.Control.Location%2A> プロパティを <xref:System.Drawing.Point>に設定します。</span><span class="sxs-lookup"><span data-stu-id="1a7a0-115">Set the <xref:System.Windows.Forms.Control.Location%2A> property of the control to a <xref:System.Drawing.Point>.</span></span>
+1. <span data-ttu-id="3f698-116"><xref:System.Windows.Forms.Control.Location%2A>コントロールのプロパティをに設定 <xref:System.Drawing.Point> します。</span><span class="sxs-lookup"><span data-stu-id="3f698-116">Set the <xref:System.Windows.Forms.Control.Location%2A> property of the control to a <xref:System.Drawing.Point>.</span></span>
 
     ```vb
     Button1.Location = New Point(100, 100)
@@ -63,7 +64,7 @@ ms.locfileid: "76735913"
     button1->Location = Point(100, 100);
     ```
 
-2. <span data-ttu-id="1a7a0-116"><xref:System.Windows.Forms.Control.Left%2A> サブプロパティを使用して、コントロールの位置の X 座標を変更します。</span><span class="sxs-lookup"><span data-stu-id="1a7a0-116">Change the X coordinate of the control's location using the <xref:System.Windows.Forms.Control.Left%2A> subproperty.</span></span>
+2. <span data-ttu-id="3f698-117">サブプロパティを使用して、コントロールの位置の X 座標を変更 <xref:System.Windows.Forms.Control.Left%2A> します。</span><span class="sxs-lookup"><span data-stu-id="3f698-117">Change the X coordinate of the control's location using the <xref:System.Windows.Forms.Control.Left%2A> subproperty.</span></span>
 
     ```vb
     Button1.Left = 300
@@ -77,9 +78,9 @@ ms.locfileid: "76735913"
     button1->Left = 300;
     ```
 
-## <a name="increment-a-controls-location-programmatically"></a><span data-ttu-id="1a7a0-117">プログラムによってコントロールの位置をインクリメントする</span><span class="sxs-lookup"><span data-stu-id="1a7a0-117">Increment a control's location programmatically</span></span>
+## <a name="increment-a-controls-location-programmatically"></a><span data-ttu-id="3f698-118">プログラムによってコントロールの位置をインクリメントする</span><span class="sxs-lookup"><span data-stu-id="3f698-118">Increment a control's location programmatically</span></span>
 
-<span data-ttu-id="1a7a0-118"><xref:System.Windows.Forms.Control.Left%2A> サブプロパティを設定して、コントロールの X 座標をインクリメントします。</span><span class="sxs-lookup"><span data-stu-id="1a7a0-118">Set the <xref:System.Windows.Forms.Control.Left%2A> subproperty to increment the X coordinate of the control.</span></span>
+<span data-ttu-id="3f698-119">サブプロパティを設定して、 <xref:System.Windows.Forms.Control.Left%2A> コントロールの X 座標をインクリメントします。</span><span class="sxs-lookup"><span data-stu-id="3f698-119">Set the <xref:System.Windows.Forms.Control.Left%2A> subproperty to increment the X coordinate of the control.</span></span>
 
 ```vb
 Button1.Left += 200
@@ -94,15 +95,15 @@ button1->Left += 200;
 ```
 
 > [!NOTE]
-> <span data-ttu-id="1a7a0-119">コントロールの X 位置と Y 位置を同時に設定するには、<xref:System.Windows.Forms.Control.Location%2A> プロパティを使用します。</span><span class="sxs-lookup"><span data-stu-id="1a7a0-119">Use the <xref:System.Windows.Forms.Control.Location%2A> property to set a control's X and Y positions simultaneously.</span></span> <span data-ttu-id="1a7a0-120">位置を個別に設定するには、コントロールの <xref:System.Windows.Forms.Control.Left%2A> (**X**) または <xref:System.Windows.Forms.Control.Top%2A> (**Y**) サブプロパティを使用します。</span><span class="sxs-lookup"><span data-stu-id="1a7a0-120">To set a position individually, use the control's <xref:System.Windows.Forms.Control.Left%2A> (**X**) or <xref:System.Windows.Forms.Control.Top%2A> (**Y**) subproperty.</span></span> <span data-ttu-id="1a7a0-121">この構造体にはボタンの座標のコピーが含まれているため、ボタンの位置を表す <xref:System.Drawing.Point> 構造体の X 座標と Y 座標を暗黙的に設定することは避けてください。</span><span class="sxs-lookup"><span data-stu-id="1a7a0-121">Do not try to implicitly set the X and Y coordinates of the <xref:System.Drawing.Point> structure that represents the button's location, because this structure contains a copy of the button's coordinates.</span></span>
+> <span data-ttu-id="3f698-120"><xref:System.Windows.Forms.Control.Location%2A>コントロールの X 位置と Y 位置を同時に設定するには、プロパティを使用します。</span><span class="sxs-lookup"><span data-stu-id="3f698-120">Use the <xref:System.Windows.Forms.Control.Location%2A> property to set a control's X and Y positions simultaneously.</span></span> <span data-ttu-id="3f698-121">位置を個別に設定するには、コントロールの <xref:System.Windows.Forms.Control.Left%2A> (**X**) サブプロパティまたは <xref:System.Windows.Forms.Control.Top%2A> (**Y**) サブプロパティを使用します。</span><span class="sxs-lookup"><span data-stu-id="3f698-121">To set a position individually, use the control's <xref:System.Windows.Forms.Control.Left%2A> (**X**) or <xref:System.Windows.Forms.Control.Top%2A> (**Y**) subproperty.</span></span> <span data-ttu-id="3f698-122"><xref:System.Drawing.Point>この構造体にはボタンの座標のコピーが含まれているため、ボタンの位置を表す構造体の X 座標と Y 座標は暗黙的に設定しないようにしてください。</span><span class="sxs-lookup"><span data-stu-id="3f698-122">Do not try to implicitly set the X and Y coordinates of the <xref:System.Drawing.Point> structure that represents the button's location, because this structure contains a copy of the button's coordinates.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="1a7a0-122">参照</span><span class="sxs-lookup"><span data-stu-id="1a7a0-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3f698-123">こちらもご覧ください</span><span class="sxs-lookup"><span data-stu-id="3f698-123">See also</span></span>
 
-- [<span data-ttu-id="1a7a0-123">Windows フォーム コントロール</span><span class="sxs-lookup"><span data-stu-id="1a7a0-123">Windows Forms Controls</span></span>](index.md)
-- [<span data-ttu-id="1a7a0-124">チュートリアル: スナップ線を使用した Windows フォーム上のコントロールの配置</span><span class="sxs-lookup"><span data-stu-id="1a7a0-124">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [<span data-ttu-id="1a7a0-125">チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置</span><span class="sxs-lookup"><span data-stu-id="1a7a0-125">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [<span data-ttu-id="1a7a0-126">チュートリアル: FlowLayoutPanel を使用した Windows フォーム上のコントロールの配置</span><span class="sxs-lookup"><span data-stu-id="1a7a0-126">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [<span data-ttu-id="1a7a0-127">各 Windows フォーム コントロールのラベル設定とショートカットの作成</span><span class="sxs-lookup"><span data-stu-id="1a7a0-127">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [<span data-ttu-id="1a7a0-128">Windows フォームで使用するコントロール</span><span class="sxs-lookup"><span data-stu-id="1a7a0-128">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
-- [<span data-ttu-id="1a7a0-129">Windows フォーム コントロールの機能別一覧</span><span class="sxs-lookup"><span data-stu-id="1a7a0-129">Windows Forms Controls by Function</span></span>](windows-forms-controls-by-function.md)
-- <span data-ttu-id="1a7a0-130">[方法: Windows フォームの画面位置を設定する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/52aha046(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="1a7a0-130">[How to: Set the Screen Location of Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/52aha046(v=vs.100))</span></span>
+- [<span data-ttu-id="3f698-124">Windows フォームコントロール</span><span class="sxs-lookup"><span data-stu-id="3f698-124">Windows Forms Controls</span></span>](index.md)
+- [<span data-ttu-id="3f698-125">チュートリアル : スナップ線を使用した Windows フォーム上のコントロールの配置</span><span class="sxs-lookup"><span data-stu-id="3f698-125">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [<span data-ttu-id="3f698-126">チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置</span><span class="sxs-lookup"><span data-stu-id="3f698-126">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [<span data-ttu-id="3f698-127">チュートリアル: FlowLayoutPanel を使用した Windows フォーム上のコントロールの配置</span><span class="sxs-lookup"><span data-stu-id="3f698-127">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [<span data-ttu-id="3f698-128">各 Windows フォーム コントロールのラベル設定とショートカットの作成</span><span class="sxs-lookup"><span data-stu-id="3f698-128">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [<span data-ttu-id="3f698-129">Windows フォームで使用するコントロール</span><span class="sxs-lookup"><span data-stu-id="3f698-129">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+- [<span data-ttu-id="3f698-130">Windows フォーム コントロールの機能別一覧</span><span class="sxs-lookup"><span data-stu-id="3f698-130">Windows Forms Controls by Function</span></span>](windows-forms-controls-by-function.md)
+- <span data-ttu-id="3f698-131">[方法: Windows フォームの画面位置を設定する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/52aha046(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="3f698-131">[How to: Set the Screen Location of Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/52aha046(v=vs.100))</span></span>

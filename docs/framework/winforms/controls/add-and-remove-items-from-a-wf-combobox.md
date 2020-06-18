@@ -1,6 +1,7 @@
 ---
 title: ComboBox、ListBox、または CheckedListBox コントロールの項目を追加および削除する
 ms.date: 03/30/2017
+description: Windows フォーム ComboBox、ListBox、CheckedListBox の各コントロールを、データバインディングなしで簡単に追加および削除する方法について説明します。
 dev_langs:
 - csharp
 - vb
@@ -14,19 +15,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-ms.openlocfilehash: 3a83d98af42386b566b4af7bc11ff383dea8fd6b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f3701257bbe410bf03c4c21700705e87b581bf2e
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746296"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904443"
 ---
-# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="4b980-102">方法 : Windows フォームの ComboBox、ListBox、または CheckedListBox コントロールに項目を追加または削除する</span><span class="sxs-lookup"><span data-stu-id="4b980-102">How to: Add and Remove Items from a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
-<span data-ttu-id="4b980-103">項目は、さまざまな方法で Windows フォームコンボボックス、リストボックス、またはチェックリストボックスに追加できます。これらのコントロールはさまざまなデータソースにバインドできるためです。</span><span class="sxs-lookup"><span data-stu-id="4b980-103">Items can be added to a Windows Forms combo box, list box, or checked list box in a variety of ways, because these controls can be bound to a variety of data sources.</span></span> <span data-ttu-id="4b980-104">ただし、このトピックでは、最も簡単な方法について説明し、データバインディングは不要です。</span><span class="sxs-lookup"><span data-stu-id="4b980-104">However, this topic demonstrates the simplest method and requires no data binding.</span></span> <span data-ttu-id="4b980-105">通常、表示される項目は文字列です。ただし、任意のオブジェクトを使用できます。</span><span class="sxs-lookup"><span data-stu-id="4b980-105">The items displayed are usually strings; however, any object can be used.</span></span> <span data-ttu-id="4b980-106">コントロールに表示されるテキストは、オブジェクトの `ToString` メソッドによって返される値です。</span><span class="sxs-lookup"><span data-stu-id="4b980-106">The text that is displayed in the control is the value returned by the object's `ToString` method.</span></span>  
+# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="2115b-103">方法: Windows フォームの ComboBox、ListBox、または CheckedListBox コントロールに項目を追加または削除する</span><span class="sxs-lookup"><span data-stu-id="2115b-103">How to: Add and Remove Items from a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
+<span data-ttu-id="2115b-104">項目は、さまざまな方法で Windows フォームコンボボックス、リストボックス、またはチェックリストボックスに追加できます。これらのコントロールはさまざまなデータソースにバインドできるためです。</span><span class="sxs-lookup"><span data-stu-id="2115b-104">Items can be added to a Windows Forms combo box, list box, or checked list box in a variety of ways, because these controls can be bound to a variety of data sources.</span></span> <span data-ttu-id="2115b-105">ただし、このトピックでは、最も簡単な方法について説明し、データバインディングは不要です。</span><span class="sxs-lookup"><span data-stu-id="2115b-105">However, this topic demonstrates the simplest method and requires no data binding.</span></span> <span data-ttu-id="2115b-106">通常、表示される項目は文字列です。ただし、任意のオブジェクトを使用できます。</span><span class="sxs-lookup"><span data-stu-id="2115b-106">The items displayed are usually strings; however, any object can be used.</span></span> <span data-ttu-id="2115b-107">コントロールに表示されるテキストは、オブジェクトのメソッドによって返される値です `ToString` 。</span><span class="sxs-lookup"><span data-stu-id="2115b-107">The text that is displayed in the control is the value returned by the object's `ToString` method.</span></span>  
   
-### <a name="to-add-items"></a><span data-ttu-id="4b980-107">項目を追加するには</span><span class="sxs-lookup"><span data-stu-id="4b980-107">To add items</span></span>  
+### <a name="to-add-items"></a><span data-ttu-id="2115b-108">項目を追加するには</span><span class="sxs-lookup"><span data-stu-id="2115b-108">To add items</span></span>  
   
-1. <span data-ttu-id="4b980-108">`ObjectCollection` クラスの `Add` メソッドを使用して、文字列またはオブジェクトをリストに追加します。</span><span class="sxs-lookup"><span data-stu-id="4b980-108">Add the string or object to the list by using the `Add` method of the `ObjectCollection` class.</span></span> <span data-ttu-id="4b980-109">コレクションは、`Items` プロパティを使用して参照されます。</span><span class="sxs-lookup"><span data-stu-id="4b980-109">The collection is referenced using the `Items` property:</span></span>  
+1. <span data-ttu-id="2115b-109">クラスのメソッドを使用して、文字列またはオブジェクトをリストに追加し `Add` `ObjectCollection` ます。</span><span class="sxs-lookup"><span data-stu-id="2115b-109">Add the string or object to the list by using the `Add` method of the `ObjectCollection` class.</span></span> <span data-ttu-id="2115b-110">コレクションは、次のプロパティを使用して参照され `Items` ます。</span><span class="sxs-lookup"><span data-stu-id="2115b-110">The collection is referenced using the `Items` property:</span></span>  
   
     ```vb  
     ComboBox1.Items.Add("Tokyo")  
@@ -40,9 +41,9 @@ ms.locfileid: "76746296"
     comboBox1->Items->Add("Tokyo");  
     ```  
   
-     - <span data-ttu-id="4b980-110">\- または -</span><span class="sxs-lookup"><span data-stu-id="4b980-110">or -</span></span>  
+     - <span data-ttu-id="2115b-111">または</span><span class="sxs-lookup"><span data-stu-id="2115b-111">or -</span></span>  
   
-2. <span data-ttu-id="4b980-111">`Insert` メソッドを使用して、リスト内の目的の位置に文字列またはオブジェクトを挿入します。</span><span class="sxs-lookup"><span data-stu-id="4b980-111">Insert the string or object at the desired point in the list with the `Insert` method:</span></span>  
+2. <span data-ttu-id="2115b-112">メソッドを使用して、リスト内の目的の位置に文字列またはオブジェクトを挿入し `Insert` ます。</span><span class="sxs-lookup"><span data-stu-id="2115b-112">Insert the string or object at the desired point in the list with the `Insert` method:</span></span>  
   
     ```vb  
     CheckedListBox1.Items.Insert(0, "Copenhagen")  
@@ -56,9 +57,9 @@ ms.locfileid: "76746296"
     checkedListBox1->Items->Insert(0, "Copenhagen");  
     ```  
   
-     - <span data-ttu-id="4b980-112">\- または -</span><span class="sxs-lookup"><span data-stu-id="4b980-112">or -</span></span>  
+     - <span data-ttu-id="2115b-113">または</span><span class="sxs-lookup"><span data-stu-id="2115b-113">or -</span></span>  
   
-3. <span data-ttu-id="4b980-113">配列全体を `Items` コレクションに割り当てます。</span><span class="sxs-lookup"><span data-stu-id="4b980-113">Assign an entire array to the `Items` collection:</span></span>  
+3. <span data-ttu-id="2115b-114">配列全体をコレクションに割り当て `Items` ます。</span><span class="sxs-lookup"><span data-stu-id="2115b-114">Assign an entire array to the `Items` collection:</span></span>  
   
     ```vb  
     Dim ItemObject(9) As System.Object  
@@ -87,11 +88,11 @@ ms.locfileid: "76746296"
     listBox1->Items->AddRange(ItemObject);  
     ```  
   
-### <a name="to-remove-an-item"></a><span data-ttu-id="4b980-114">アイテムを削除するには</span><span class="sxs-lookup"><span data-stu-id="4b980-114">To remove an item</span></span>  
+### <a name="to-remove-an-item"></a><span data-ttu-id="2115b-115">アイテムを削除するには</span><span class="sxs-lookup"><span data-stu-id="2115b-115">To remove an item</span></span>  
   
-1. <span data-ttu-id="4b980-115">`Remove` または `RemoveAt` メソッドを呼び出して、項目を削除します。</span><span class="sxs-lookup"><span data-stu-id="4b980-115">Call the `Remove` or `RemoveAt` method to delete items.</span></span>  
+1. <span data-ttu-id="2115b-116">`Remove` `RemoveAt` 項目を削除するには、メソッドまたはメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="2115b-116">Call the `Remove` or `RemoveAt` method to delete items.</span></span>  
   
-     <span data-ttu-id="4b980-116">`Remove` には、削除する項目を指定する引数が1つあります。`RemoveAt`</span><span class="sxs-lookup"><span data-stu-id="4b980-116">`Remove` has one argument that specifies the item to remove.`RemoveAt`</span></span> <span data-ttu-id="4b980-117">指定したインデックス番号の項目を削除します。</span><span class="sxs-lookup"><span data-stu-id="4b980-117">removes the item with the specified index number.</span></span>  
+     <span data-ttu-id="2115b-117">`Remove`には、削除する項目を指定する引数が1つあります。`RemoveAt`</span><span class="sxs-lookup"><span data-stu-id="2115b-117">`Remove` has one argument that specifies the item to remove.`RemoveAt`</span></span> <span data-ttu-id="2115b-118">指定したインデックス番号の項目を削除します。</span><span class="sxs-lookup"><span data-stu-id="2115b-118">removes the item with the specified index number.</span></span>  
   
     ```vb  
     ' To remove item with index 0:  
@@ -120,9 +121,9 @@ ms.locfileid: "76746296"
     comboBox1->Items->Remove("Tokyo");  
     ```  
   
-### <a name="to-remove-all-items"></a><span data-ttu-id="4b980-118">すべての項目を削除するには</span><span class="sxs-lookup"><span data-stu-id="4b980-118">To remove all items</span></span>  
+### <a name="to-remove-all-items"></a><span data-ttu-id="2115b-119">すべての項目を削除するには</span><span class="sxs-lookup"><span data-stu-id="2115b-119">To remove all items</span></span>  
   
-1. <span data-ttu-id="4b980-119">`Clear` メソッドを呼び出して、コレクションからすべての項目を削除します。</span><span class="sxs-lookup"><span data-stu-id="4b980-119">Call the `Clear` method to remove all items from the collection:</span></span>  
+1. <span data-ttu-id="2115b-120">メソッドを呼び出して `Clear` 、コレクションからすべての項目を削除します。</span><span class="sxs-lookup"><span data-stu-id="2115b-120">Call the `Clear` method to remove all items from the collection:</span></span>  
   
     ```vb  
     ListBox1.Items.Clear()  
@@ -136,11 +137,11 @@ ms.locfileid: "76746296"
     listBox1->Items->Clear();  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="4b980-120">参照</span><span class="sxs-lookup"><span data-stu-id="4b980-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2115b-121">こちらもご覧ください</span><span class="sxs-lookup"><span data-stu-id="2115b-121">See also</span></span>
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [<span data-ttu-id="4b980-121">方法: Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールを並べ替える</span><span class="sxs-lookup"><span data-stu-id="4b980-121">How to: Sort the Contents of a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [<span data-ttu-id="4b980-122">ListBox の代わりに Windows フォーム ComboBox を使用する場合</span><span class="sxs-lookup"><span data-stu-id="4b980-122">When to Use a Windows Forms ComboBox Instead of a ListBox</span></span>](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
-- [<span data-ttu-id="4b980-123">オプションのリストを表示するための Windows フォーム コントロール</span><span class="sxs-lookup"><span data-stu-id="4b980-123">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)
+- [<span data-ttu-id="2115b-122">方法: Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールを並べ替える</span><span class="sxs-lookup"><span data-stu-id="2115b-122">How to: Sort the Contents of a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [<span data-ttu-id="2115b-123">ListBox の代わりに Windows フォーム ComboBox を使用する場合</span><span class="sxs-lookup"><span data-stu-id="2115b-123">When to Use a Windows Forms ComboBox Instead of a ListBox</span></span>](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
+- [<span data-ttu-id="2115b-124">オプションのリストを表示するための Windows フォーム コントロール</span><span class="sxs-lookup"><span data-stu-id="2115b-124">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)

@@ -1,5 +1,6 @@
 ---
 title: フォームのサイズ変更
+description: '[サイズ] プロパティに新しい値を設定してフォームの高さと幅の両方を変更する方法、または [高さ] プロパティと [幅] プロパティを個別に調整する方法について説明します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,22 +10,22 @@ helpviewer_keywords:
 - resizing Windows Forms
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
-ms.openlocfilehash: 8d4ce46ada505f952fc3090d10c5d893338d19f2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0d6383e4d29d9407d3da97bf8b94761f06d99748
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739303"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903273"
 ---
-# <a name="how-to-resize-windows-forms"></a><span data-ttu-id="ada2b-102">方法 : Windows フォームのサイズを変更する</span><span class="sxs-lookup"><span data-stu-id="ada2b-102">How to: Resize Windows Forms</span></span>
+# <a name="how-to-resize-windows-forms"></a><span data-ttu-id="f7e49-103">方法: Windows フォームのサイズ変更</span><span class="sxs-lookup"><span data-stu-id="f7e49-103">How to: Resize Windows Forms</span></span>
 
-<span data-ttu-id="ada2b-103">Windows フォームのサイズは、いくつかの方法で指定できます。</span><span class="sxs-lookup"><span data-stu-id="ada2b-103">You can specify the size of your Windows Form in several ways.</span></span> <span data-ttu-id="ada2b-104"><xref:System.Windows.Forms.Form.Size%2A> プロパティに新しい値を設定したり、<xref:System.Windows.Forms.Control.Height%2A> プロパティまたは <xref:System.Windows.Forms.Control.Width%2A> プロパティを個別に調整したりすることで、フォームの高さと幅の両方をプログラムで変更できます。</span><span class="sxs-lookup"><span data-stu-id="ada2b-104">You can change both the height and the width of the form programmatically by setting a new value for the <xref:System.Windows.Forms.Form.Size%2A> property, or adjust the <xref:System.Windows.Forms.Control.Height%2A> or <xref:System.Windows.Forms.Control.Width%2A> properties individually.</span></span> <span data-ttu-id="ada2b-105">Visual Studio を使用している場合は、Windows フォームデザイナーを使用してサイズを変更できます。</span><span class="sxs-lookup"><span data-stu-id="ada2b-105">If you're using Visual Studio, you can change the size using the Windows Forms Designer.</span></span> <span data-ttu-id="ada2b-106">「[方法: デザイナーを使用して Windows フォームのサイズを変更する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))」も参照してください。</span><span class="sxs-lookup"><span data-stu-id="ada2b-106">Also see [How to: Resize Windows Forms Using the Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100)).</span></span>
+<span data-ttu-id="f7e49-104">Windows フォームのサイズは、いくつかの方法で指定できます。</span><span class="sxs-lookup"><span data-stu-id="f7e49-104">You can specify the size of your Windows Form in several ways.</span></span> <span data-ttu-id="f7e49-105"><xref:System.Windows.Forms.Form.Size%2A> プロパティに新しい値を設定したり、<xref:System.Windows.Forms.Control.Height%2A> プロパティまたは <xref:System.Windows.Forms.Control.Width%2A> プロパティを個別に調整したりすることで、フォームの高さと幅の両方をプログラムで変更できます。</span><span class="sxs-lookup"><span data-stu-id="f7e49-105">You can change both the height and the width of the form programmatically by setting a new value for the <xref:System.Windows.Forms.Form.Size%2A> property, or adjust the <xref:System.Windows.Forms.Control.Height%2A> or <xref:System.Windows.Forms.Control.Width%2A> properties individually.</span></span> <span data-ttu-id="f7e49-106">Visual Studio を使用している場合は、Windows フォームデザイナーを使用してサイズを変更できます。</span><span class="sxs-lookup"><span data-stu-id="f7e49-106">If you're using Visual Studio, you can change the size using the Windows Forms Designer.</span></span> <span data-ttu-id="f7e49-107">「[方法: デザイナーを使用して Windows フォームのサイズを変更する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))」も参照してください。</span><span class="sxs-lookup"><span data-stu-id="f7e49-107">Also see [How to: Resize Windows Forms Using the Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100)).</span></span>
 
-## <a name="resize-a-form-programmatically"></a><span data-ttu-id="ada2b-107">プログラムによるフォームのサイズ変更</span><span class="sxs-lookup"><span data-stu-id="ada2b-107">Resize a form programmatically</span></span>
+## <a name="resize-a-form-programmatically"></a><span data-ttu-id="f7e49-108">プログラムによるフォームのサイズ変更</span><span class="sxs-lookup"><span data-stu-id="f7e49-108">Resize a form programmatically</span></span>
 
-<span data-ttu-id="ada2b-108">フォームの <xref:System.Windows.Forms.Form.Size%2A> プロパティを設定して、実行時にフォームのサイズを定義します。</span><span class="sxs-lookup"><span data-stu-id="ada2b-108">Define the size of a form at run time by setting the <xref:System.Windows.Forms.Form.Size%2A> property of the form.</span></span>
+<span data-ttu-id="f7e49-109">フォームの <xref:System.Windows.Forms.Form.Size%2A> プロパティを設定して、実行時にフォームのサイズを定義します。</span><span class="sxs-lookup"><span data-stu-id="f7e49-109">Define the size of a form at run time by setting the <xref:System.Windows.Forms.Form.Size%2A> property of the form.</span></span>
 
-<span data-ttu-id="ada2b-109">次のコード例では、フォームのサイズを 100 × 100 ピクセルに設定します。</span><span class="sxs-lookup"><span data-stu-id="ada2b-109">The following code example shows the form size set to 100 × 100 pixels.</span></span>
+<span data-ttu-id="f7e49-110">次のコード例では、フォームのサイズを 100 × 100 ピクセルに設定します。</span><span class="sxs-lookup"><span data-stu-id="f7e49-110">The following code example shows the form size set to 100 × 100 pixels.</span></span>
 
 ```vb
 Form1.Size = New System.Drawing.Size(100, 100)
@@ -38,11 +39,11 @@ Form1.Size = new System.Drawing.Size(100, 100);
 Form1->Size = System::Drawing::Size(100, 100);
 ```
 
-## <a name="change-form-width-and-height-programmatically"></a><span data-ttu-id="ada2b-110">フォームの幅と高さをプログラムによって変更する</span><span class="sxs-lookup"><span data-stu-id="ada2b-110">Change form width and height programmatically</span></span>
+## <a name="change-form-width-and-height-programmatically"></a><span data-ttu-id="f7e49-111">フォームの幅と高さをプログラムによって変更する</span><span class="sxs-lookup"><span data-stu-id="f7e49-111">Change form width and height programmatically</span></span>
 
-<span data-ttu-id="ada2b-111"><xref:System.Windows.Forms.Form.Size%2A> を定義した後で、<xref:System.Windows.Forms.Control.Width%2A> プロパティまたは <xref:System.Windows.Forms.Control.Height%2A> プロパティを使用して、フォームの高さと幅のいずれかを変更します。</span><span class="sxs-lookup"><span data-stu-id="ada2b-111">After the <xref:System.Windows.Forms.Form.Size%2A> is defined, change either the form height or width by using the <xref:System.Windows.Forms.Control.Width%2A> or <xref:System.Windows.Forms.Control.Height%2A> properties.</span></span>
+<span data-ttu-id="f7e49-112"><xref:System.Windows.Forms.Form.Size%2A> を定義した後で、<xref:System.Windows.Forms.Control.Width%2A> プロパティまたは <xref:System.Windows.Forms.Control.Height%2A> プロパティを使用して、フォームの高さと幅のいずれかを変更します。</span><span class="sxs-lookup"><span data-stu-id="f7e49-112">After the <xref:System.Windows.Forms.Form.Size%2A> is defined, change either the form height or width by using the <xref:System.Windows.Forms.Control.Width%2A> or <xref:System.Windows.Forms.Control.Height%2A> properties.</span></span>
 
-<span data-ttu-id="ada2b-112">次のコード例は、フォームの幅を、フォームの左端から 300 ピクセルに設定し、高さは一定のままにする方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="ada2b-112">The following code example shows the width of the form set to 300 pixels from the left edge of the form, whereas the height stays constant.</span></span>
+<span data-ttu-id="f7e49-113">次のコード例は、フォームの幅を、フォームの左端から 300 ピクセルに設定し、高さは一定のままにする方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="f7e49-113">The following code example shows the width of the form set to 300 pixels from the left edge of the form, whereas the height stays constant.</span></span>
 
 ```vb
 Form1.Width = 300
@@ -56,11 +57,11 @@ Form1.Width = 300;
 Form1->Width = 300;
 ```
 
-<span data-ttu-id="ada2b-113">または</span><span class="sxs-lookup"><span data-stu-id="ada2b-113">-or-</span></span>
+<span data-ttu-id="f7e49-114">または</span><span class="sxs-lookup"><span data-stu-id="f7e49-114">-or-</span></span>
 
-<span data-ttu-id="ada2b-114"><xref:System.Drawing.Size.Width%2A> プロパティを設定して、<xref:System.Drawing.Size.Height%2A> または <xref:System.Windows.Forms.Form.Size%2A> を変更します。</span><span class="sxs-lookup"><span data-stu-id="ada2b-114">Change <xref:System.Drawing.Size.Width%2A> or <xref:System.Drawing.Size.Height%2A> by setting the <xref:System.Windows.Forms.Form.Size%2A> property.</span></span>
+<span data-ttu-id="f7e49-115"><xref:System.Windows.Forms.Form.Size%2A> プロパティを設定して、<xref:System.Drawing.Size.Width%2A> または <xref:System.Drawing.Size.Height%2A> を変更します。</span><span class="sxs-lookup"><span data-stu-id="f7e49-115">Change <xref:System.Drawing.Size.Width%2A> or <xref:System.Drawing.Size.Height%2A> by setting the <xref:System.Windows.Forms.Form.Size%2A> property.</span></span>
 
-<span data-ttu-id="ada2b-115">ただし、次のコード例が示すように、この方法は、<xref:System.Windows.Forms.Control.Width%2A> プロパティまたは <xref:System.Windows.Forms.Control.Height%2A> プロパティをただ設定する方法よりも煩雑になります。</span><span class="sxs-lookup"><span data-stu-id="ada2b-115">However, as the following code example shows, this approach is more cumbersome than just setting <xref:System.Windows.Forms.Control.Width%2A> or <xref:System.Windows.Forms.Control.Height%2A> properties.</span></span>
+<span data-ttu-id="f7e49-116">ただし、次のコード例が示すように、この方法は、<xref:System.Windows.Forms.Control.Width%2A> プロパティまたは <xref:System.Windows.Forms.Control.Height%2A> プロパティをただ設定する方法よりも煩雑になります。</span><span class="sxs-lookup"><span data-stu-id="f7e49-116">However, as the following code example shows, this approach is more cumbersome than just setting <xref:System.Windows.Forms.Control.Width%2A> or <xref:System.Windows.Forms.Control.Height%2A> properties.</span></span>
 
 ```vb
 Form1.Size = New Size(300, Form1.Size.Height)
@@ -74,11 +75,11 @@ Form1.Size = new Size(300, Form1.Size.Height);
 Form1->Size = System::Drawing::Size(300, Form1->Size.Height);
 ```
 
-## <a name="change-form-size-by-increments-programmatically"></a><span data-ttu-id="ada2b-116">プログラムによってフォームのサイズをインクリメントして変更する</span><span class="sxs-lookup"><span data-stu-id="ada2b-116">Change form size by increments programmatically</span></span>
+## <a name="change-form-size-by-increments-programmatically"></a><span data-ttu-id="f7e49-117">プログラムによってフォームのサイズをインクリメントして変更する</span><span class="sxs-lookup"><span data-stu-id="f7e49-117">Change form size by increments programmatically</span></span>
 
-<span data-ttu-id="ada2b-117">フォームのサイズを増分するには、<xref:System.Drawing.Size.Width%2A> プロパティと <xref:System.Drawing.Size.Height%2A> プロパティを設定します。</span><span class="sxs-lookup"><span data-stu-id="ada2b-117">To increment the size of the form, set the <xref:System.Drawing.Size.Width%2A> and <xref:System.Drawing.Size.Height%2A> properties.</span></span>
+<span data-ttu-id="f7e49-118">フォームのサイズを増分するには、<xref:System.Drawing.Size.Width%2A> プロパティと <xref:System.Drawing.Size.Height%2A> プロパティを設定します。</span><span class="sxs-lookup"><span data-stu-id="f7e49-118">To increment the size of the form, set the <xref:System.Drawing.Size.Width%2A> and <xref:System.Drawing.Size.Height%2A> properties.</span></span>
 
-<span data-ttu-id="ada2b-118">次のコード例は、フォームの幅を、現在の設定より 200 ピクセル広くする方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="ada2b-118">The following code example shows the width of the form set to 200 pixels wider than the current setting.</span></span>
+<span data-ttu-id="f7e49-119">次のコード例は、フォームの幅を、現在の設定より 200 ピクセル広くする方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="f7e49-119">The following code example shows the width of the form set to 200 pixels wider than the current setting.</span></span>
 
 ```vb
 Form1.Width += 200
@@ -93,7 +94,7 @@ Form1->Width += 200;
 ```
 
 > [!CAUTION]
-> <span data-ttu-id="ada2b-119"><xref:System.Drawing.Size.Height%2A> プロパティを新しい <xref:System.Drawing.Size.Width%2A> 構造に設定することにより高さと幅の両方のディメンションを同時に設定するというのでない限り、フォームのディメンションを変更するには、常に <xref:System.Windows.Forms.Form.Size%2A> プロパティまたは <xref:System.Drawing.Size> プロパティを使用します。</span><span class="sxs-lookup"><span data-stu-id="ada2b-119">Always use the <xref:System.Drawing.Size.Height%2A> or <xref:System.Drawing.Size.Width%2A> property to change a dimension of a form, unless you are setting both height and width dimensions at the same time by setting the <xref:System.Windows.Forms.Form.Size%2A> property to a new <xref:System.Drawing.Size> structure.</span></span> <span data-ttu-id="ada2b-120"><xref:System.Windows.Forms.Form.Size%2A> プロパティは、値型である <xref:System.Drawing.Size> 構造を返します。</span><span class="sxs-lookup"><span data-stu-id="ada2b-120">The <xref:System.Windows.Forms.Form.Size%2A> property returns a <xref:System.Drawing.Size> structure, which is a value type.</span></span> <span data-ttu-id="ada2b-121">値型のプロパティに新しい値を割り当てることはできません。</span><span class="sxs-lookup"><span data-stu-id="ada2b-121">You cannot assign a new value to the property of a value type.</span></span> <span data-ttu-id="ada2b-122">このため、次のコード例はコンパイルされません。</span><span class="sxs-lookup"><span data-stu-id="ada2b-122">Therefore, the following code example will not compile.</span></span>
+> <span data-ttu-id="f7e49-120"><xref:System.Windows.Forms.Form.Size%2A> プロパティを新しい <xref:System.Drawing.Size> 構造に設定することにより高さと幅の両方のディメンションを同時に設定するというのでない限り、フォームのディメンションを変更するには、常に <xref:System.Drawing.Size.Height%2A> プロパティまたは <xref:System.Drawing.Size.Width%2A> プロパティを使用します。</span><span class="sxs-lookup"><span data-stu-id="f7e49-120">Always use the <xref:System.Drawing.Size.Height%2A> or <xref:System.Drawing.Size.Width%2A> property to change a dimension of a form, unless you are setting both height and width dimensions at the same time by setting the <xref:System.Windows.Forms.Form.Size%2A> property to a new <xref:System.Drawing.Size> structure.</span></span> <span data-ttu-id="f7e49-121"><xref:System.Windows.Forms.Form.Size%2A> プロパティは、値型である <xref:System.Drawing.Size> 構造を返します。</span><span class="sxs-lookup"><span data-stu-id="f7e49-121">The <xref:System.Windows.Forms.Form.Size%2A> property returns a <xref:System.Drawing.Size> structure, which is a value type.</span></span> <span data-ttu-id="f7e49-122">値型のプロパティに新しい値を割り当てることはできません。</span><span class="sxs-lookup"><span data-stu-id="f7e49-122">You cannot assign a new value to the property of a value type.</span></span> <span data-ttu-id="f7e49-123">このため、次のコード例はコンパイルされません。</span><span class="sxs-lookup"><span data-stu-id="f7e49-123">Therefore, the following code example will not compile.</span></span>
 
 ```vb
 ' NOTE: CODE WILL NOT COMPILE
@@ -113,7 +114,7 @@ Form^ f = gcnew Form();
 f->Size->X += 100;
 ```
 
-## <a name="see-also"></a><span data-ttu-id="ada2b-123">参照</span><span class="sxs-lookup"><span data-stu-id="ada2b-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f7e49-124">こちらもご覧ください</span><span class="sxs-lookup"><span data-stu-id="f7e49-124">See also</span></span>
 
-- [<span data-ttu-id="ada2b-124">Windows フォームについて</span><span class="sxs-lookup"><span data-stu-id="ada2b-124">Getting Started with Windows Forms</span></span>](getting-started-with-windows-forms.md)
-- [<span data-ttu-id="ada2b-125">Windows フォーム アプリケーションの拡張</span><span class="sxs-lookup"><span data-stu-id="ada2b-125">Enhancing Windows Forms Applications</span></span>](./advanced/index.md)
+- [<span data-ttu-id="f7e49-125">Windows フォームでのはじめに</span><span class="sxs-lookup"><span data-stu-id="f7e49-125">Getting Started with Windows Forms</span></span>](getting-started-with-windows-forms.md)
+- [<span data-ttu-id="f7e49-126">Windows フォーム アプリケーションの拡張</span><span class="sxs-lookup"><span data-stu-id="f7e49-126">Enhancing Windows Forms Applications</span></span>](./advanced/index.md)
