@@ -9,30 +9,30 @@ helpviewer_keywords:
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
 ms.openlocfilehash: 82da07620135224b5f7353f2acce087d939c1855
 ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/11/2020
 ms.locfileid: "77124235"
 ---
-# <a name="textbox-how-to-topics"></a><span data-ttu-id="88924-102">TextBox に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="88924-102">TextBox How-to Topics</span></span>
-<span data-ttu-id="88924-103">このセクションでは、<xref:System.Windows.Controls.TextBox> コントロールを使用して一般的なタスクを実行する方法を示す例を紹介します。</span><span class="sxs-lookup"><span data-stu-id="88924-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.TextBox> control.</span></span>  
+# <a name="textbox-how-to-topics"></a><span data-ttu-id="0fb80-102">TextBox に関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="0fb80-102">TextBox How-to Topics</span></span>
+<span data-ttu-id="0fb80-103">このセクションでは、<xref:System.Windows.Controls.TextBox> コントロールを使用して一般的なタスクを実行する方法を示す例を紹介します。</span><span class="sxs-lookup"><span data-stu-id="0fb80-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.TextBox> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="88924-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="88924-104">In This Section</span></span>  
- [<span data-ttu-id="88924-105">複数行の TextBox コントロールを作成する</span><span class="sxs-lookup"><span data-stu-id="88924-105">Create a Multiline TextBox Control</span></span>](how-to-create-a-multiline-textbox-control.md)  
- [<span data-ttu-id="88924-106">TextBox のテキストがいつ変更されたかを検出する</span><span class="sxs-lookup"><span data-stu-id="88924-106">Detect When Text in a TextBox Has Changed</span></span>](how-to-detect-when-text-in-a-textbox-has-changed.md)  
- [<span data-ttu-id="88924-107">TextBox コントロールでタブ文字を有効にする</span><span class="sxs-lookup"><span data-stu-id="88924-107">Enable Tab Characters in a TextBox Control</span></span>](how-to-enable-tab-characters-in-a-textbox-control.md)  
- [<span data-ttu-id="88924-108">TextBox から行のコレクションを取得する</span><span class="sxs-lookup"><span data-stu-id="88924-108">Get a Collection of Lines from a TextBox</span></span>](how-to-get-a-collection-of-lines-from-a-textbox.md)  
- [<span data-ttu-id="88924-109">TextBox コントロールを読み取り専用にする</span><span class="sxs-lookup"><span data-stu-id="88924-109">Make a TextBox Control Read-Only</span></span>](how-to-make-a-textbox-control-read-only.md)  
- [<span data-ttu-id="88924-110">TextBox コントロールのテキストの先頭または末尾にカーソルを配置する</span><span class="sxs-lookup"><span data-stu-id="88924-110">Position the Cursor at the Beginning or End of Text in a TextBox Control</span></span>](position-the-cursor-at-the-beginning-or-end-of-text.md)  
- [<span data-ttu-id="88924-111">テキスト選択を取得する</span><span class="sxs-lookup"><span data-stu-id="88924-111">Retrieve a Text Selection</span></span>](how-to-retrieve-a-text-selection.md)  
- [<span data-ttu-id="88924-112">TextBox コントロールにフォーカスを設定する</span><span class="sxs-lookup"><span data-stu-id="88924-112">Set Focus in a TextBox Control</span></span>](how-to-set-focus-in-a-textbox-control.md)  
- [<span data-ttu-id="88924-113">TextBox コントロールのテキスト コンテンツを設定する</span><span class="sxs-lookup"><span data-stu-id="88924-113">Set the Text Content of a TextBox Control</span></span>](how-to-set-the-text-content-of-a-textbox-control.md)  
- [<span data-ttu-id="88924-114">テキスト編集コントロールでスペル チェックを有効にする</span><span class="sxs-lookup"><span data-stu-id="88924-114">Enable Spell Checking in a Text Editing Control</span></span>](how-to-enable-spell-checking-in-a-text-editing-control.md)  
- [<span data-ttu-id="88924-115">TextBox でカスタム コンテキスト メニューを使用する</span><span class="sxs-lookup"><span data-stu-id="88924-115">Use a Custom Context Menu with a TextBox</span></span>](how-to-use-a-custom-context-menu-with-a-textbox.md)  
- [<span data-ttu-id="88924-116">コンテキスト メニューでスペル チェックを使用する</span><span class="sxs-lookup"><span data-stu-id="88924-116">Use Spell Checking with a Context Menu</span></span>](how-to-use-spell-checking-with-a-context-menu.md)  
- [<span data-ttu-id="88924-117">TextBox へのウォーターマークの追加</span><span class="sxs-lookup"><span data-stu-id="88924-117">Add a Watermark to a TextBox</span></span>](how-to-add-a-watermark-to-a-textbox.md)  
+## <a name="in-this-section"></a><span data-ttu-id="0fb80-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="0fb80-104">In This Section</span></span>  
+ [<span data-ttu-id="0fb80-105">複数行の TextBox コントロールを作成する</span><span class="sxs-lookup"><span data-stu-id="0fb80-105">Create a Multiline TextBox Control</span></span>](how-to-create-a-multiline-textbox-control.md)  
+ [<span data-ttu-id="0fb80-106">TextBox のテキストがいつ変更されたかを検出する</span><span class="sxs-lookup"><span data-stu-id="0fb80-106">Detect When Text in a TextBox Has Changed</span></span>](how-to-detect-when-text-in-a-textbox-has-changed.md)  
+ [<span data-ttu-id="0fb80-107">TextBox コントロールでタブ文字を有効にする</span><span class="sxs-lookup"><span data-stu-id="0fb80-107">Enable Tab Characters in a TextBox Control</span></span>](how-to-enable-tab-characters-in-a-textbox-control.md)  
+ [<span data-ttu-id="0fb80-108">TextBox から行のコレクションを取得する</span><span class="sxs-lookup"><span data-stu-id="0fb80-108">Get a Collection of Lines from a TextBox</span></span>](how-to-get-a-collection-of-lines-from-a-textbox.md)  
+ [<span data-ttu-id="0fb80-109">TextBox コントロールを読み取り専用にする</span><span class="sxs-lookup"><span data-stu-id="0fb80-109">Make a TextBox Control Read-Only</span></span>](how-to-make-a-textbox-control-read-only.md)  
+ [<span data-ttu-id="0fb80-110">TextBox コントロールのテキストの先頭または末尾にカーソルを配置する</span><span class="sxs-lookup"><span data-stu-id="0fb80-110">Position the Cursor at the Beginning or End of Text in a TextBox Control</span></span>](position-the-cursor-at-the-beginning-or-end-of-text.md)  
+ [<span data-ttu-id="0fb80-111">テキスト選択を取得する</span><span class="sxs-lookup"><span data-stu-id="0fb80-111">Retrieve a Text Selection</span></span>](how-to-retrieve-a-text-selection.md)  
+ [<span data-ttu-id="0fb80-112">TextBox コントロールにフォーカスを設定する</span><span class="sxs-lookup"><span data-stu-id="0fb80-112">Set Focus in a TextBox Control</span></span>](how-to-set-focus-in-a-textbox-control.md)  
+ [<span data-ttu-id="0fb80-113">TextBox コントロールのテキスト コンテンツを設定する</span><span class="sxs-lookup"><span data-stu-id="0fb80-113">Set the Text Content of a TextBox Control</span></span>](how-to-set-the-text-content-of-a-textbox-control.md)  
+ [<span data-ttu-id="0fb80-114">テキスト編集コントロールでスペル チェックを有効にする</span><span class="sxs-lookup"><span data-stu-id="0fb80-114">Enable Spell Checking in a Text Editing Control</span></span>](how-to-enable-spell-checking-in-a-text-editing-control.md)  
+ [<span data-ttu-id="0fb80-115">TextBox でカスタム コンテキスト メニューを使用する</span><span class="sxs-lookup"><span data-stu-id="0fb80-115">Use a Custom Context Menu with a TextBox</span></span>](how-to-use-a-custom-context-menu-with-a-textbox.md)  
+ [<span data-ttu-id="0fb80-116">コンテキスト メニューでスペル チェックを使用する</span><span class="sxs-lookup"><span data-stu-id="0fb80-116">Use Spell Checking with a Context Menu</span></span>](how-to-use-spell-checking-with-a-context-menu.md)  
+ [<span data-ttu-id="0fb80-117">TextBox へのウォーターマークの追加</span><span class="sxs-lookup"><span data-stu-id="0fb80-117">Add a Watermark to a TextBox</span></span>](how-to-add-a-watermark-to-a-textbox.md)  
   
-## <a name="reference"></a><span data-ttu-id="88924-118">リファレンス</span><span class="sxs-lookup"><span data-stu-id="88924-118">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="0fb80-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="0fb80-118">Reference</span></span>  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -41,7 +41,7 @@ ms.locfileid: "77124235"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a><span data-ttu-id="88924-119">参照</span><span class="sxs-lookup"><span data-stu-id="88924-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0fb80-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="0fb80-119">See also</span></span>
 
-- [<span data-ttu-id="88924-120">WPF Controls Gallery Sample</span><span class="sxs-lookup"><span data-stu-id="88924-120">WPF Controls Gallery Sample</span></span>](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
-- [<span data-ttu-id="88924-121">TextBox のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="88924-121">TextBox Styles and Templates</span></span>](textbox-styles-and-templates.md)
+- [<span data-ttu-id="0fb80-120">WPF Controls Gallery Sample</span><span class="sxs-lookup"><span data-stu-id="0fb80-120">WPF Controls Gallery Sample</span></span>](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
+- [<span data-ttu-id="0fb80-121">TextBox のスタイルとテンプレート</span><span class="sxs-lookup"><span data-stu-id="0fb80-121">TextBox Styles and Templates</span></span>](textbox-styles-and-templates.md)

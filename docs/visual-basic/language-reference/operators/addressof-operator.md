@@ -10,42 +10,42 @@ helpviewer_keywords:
 ms.assetid: 8105a59d-60d8-4ab5-b221-5899cdfacbf4
 ms.openlocfilehash: e88520bd7e731a35b98c1d40c5210dc5d1314911
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350283"
 ---
-# <a name="addressof-operator-visual-basic"></a><span data-ttu-id="3c066-102">AddressOf 演算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3c066-102">AddressOf Operator (Visual Basic)</span></span>
-<span data-ttu-id="3c066-103">特定のプロシージャを参照するデリゲートインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="3c066-103">Creates a delegate instance that references the specific procedure.</span></span>  
+# <a name="addressof-operator-visual-basic"></a><span data-ttu-id="9543c-102">AddressOf 演算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9543c-102">AddressOf Operator (Visual Basic)</span></span>
+<span data-ttu-id="9543c-103">特定のプロシージャを参照するデリゲート インスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="9543c-103">Creates a delegate instance that references the specific procedure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3c066-104">構文</span><span class="sxs-lookup"><span data-stu-id="3c066-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9543c-104">構文</span><span class="sxs-lookup"><span data-stu-id="9543c-104">Syntax</span></span>  
   
 ```vb  
 AddressOf procedurename  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="3c066-105">指定項目</span><span class="sxs-lookup"><span data-stu-id="3c066-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="9543c-105">指定項目</span><span class="sxs-lookup"><span data-stu-id="9543c-105">Parts</span></span>  
  `procedurename`  
- <span data-ttu-id="3c066-106">必須。</span><span class="sxs-lookup"><span data-stu-id="3c066-106">Required.</span></span> <span data-ttu-id="3c066-107">新しく作成されたデリゲートによって参照されるプロシージャを指定します。</span><span class="sxs-lookup"><span data-stu-id="3c066-107">Specifies the procedure to be referenced by the newly created delegate.</span></span>  
+ <span data-ttu-id="9543c-106">必須です。</span><span class="sxs-lookup"><span data-stu-id="9543c-106">Required.</span></span> <span data-ttu-id="9543c-107">新しく作成されたデリゲートによって参照されるプロシージャを指定します。</span><span class="sxs-lookup"><span data-stu-id="9543c-107">Specifies the procedure to be referenced by the newly created delegate.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3c066-108">コメント</span><span class="sxs-lookup"><span data-stu-id="3c066-108">Remarks</span></span>  
- <span data-ttu-id="3c066-109">`AddressOf` 演算子は、`procedurename`によって指定されたサブまたは関数を指すデリゲートを作成します。</span><span class="sxs-lookup"><span data-stu-id="3c066-109">The `AddressOf` operator creates a delegate that points to the sub or function specified by `procedurename`.</span></span> <span data-ttu-id="3c066-110">指定されたプロシージャがインスタンスメソッドの場合、デリゲートはインスタンスとメソッドの両方を参照します。</span><span class="sxs-lookup"><span data-stu-id="3c066-110">When the specified procedure is an instance method then the delegate refers to both the instance and the method.</span></span> <span data-ttu-id="3c066-111">次に、デリゲートが呼び出されると、指定したインスタンスの指定したメソッドが呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="3c066-111">Then, when the  delegate is invoked the specified method of the specified instance is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9543c-108">Remarks</span><span class="sxs-lookup"><span data-stu-id="9543c-108">Remarks</span></span>  
+ <span data-ttu-id="9543c-109">`AddressOf` 演算子では、`procedurename` によって指定されたサブまたは関数を指すデリゲートを作成します。</span><span class="sxs-lookup"><span data-stu-id="9543c-109">The `AddressOf` operator creates a delegate that points to the sub or function specified by `procedurename`.</span></span> <span data-ttu-id="9543c-110">指定されたプロシージャがインスタンス メソッドの場合、デリゲートはインスタンスとメソッドの両方を参照します。</span><span class="sxs-lookup"><span data-stu-id="9543c-110">When the specified procedure is an instance method then the delegate refers to both the instance and the method.</span></span> <span data-ttu-id="9543c-111">次に、デリゲートが呼び出されると、指定したインスタンスの指定したメソッドが呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="9543c-111">Then, when the  delegate is invoked the specified method of the specified instance is called.</span></span>  
   
- <span data-ttu-id="3c066-112">`AddressOf` 演算子は、デリゲートコンストラクターのオペランドとして使用することも、コンパイラによってデリゲートの型を決定できるコンテキストで使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="3c066-112">The `AddressOf` operator can be used as the operand of a delegate constructor or it can be used in a context in which the type of the delegate can be determined by the compiler.</span></span>  
+ <span data-ttu-id="9543c-112">`AddressOf` 演算子は、デリゲート コンストラクターのオペランドとして使用することも、コンパイラによってデリゲートの型を決定できるコンテキストで使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="9543c-112">The `AddressOf` operator can be used as the operand of a delegate constructor or it can be used in a context in which the type of the delegate can be determined by the compiler.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3c066-113">例</span><span class="sxs-lookup"><span data-stu-id="3c066-113">Example</span></span>  
- <span data-ttu-id="3c066-114">この例では、`AddressOf` 演算子を使用して、ボタンの `Click` イベントを処理するデリゲートを指定します。</span><span class="sxs-lookup"><span data-stu-id="3c066-114">This example uses the `AddressOf` operator to designate a delegate to handle the `Click` event of a button.</span></span>  
+## <a name="example"></a><span data-ttu-id="9543c-113">例</span><span class="sxs-lookup"><span data-stu-id="9543c-113">Example</span></span>  
+ <span data-ttu-id="9543c-114">この例では、`AddressOf` 演算子を使用して、ボタンの `Click` イベントを処理するデリゲートを指定します。</span><span class="sxs-lookup"><span data-stu-id="9543c-114">This example uses the `AddressOf` operator to designate a delegate to handle the `Click` event of a button.</span></span>  
   
  [!code-vb[VbVbalrDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#8)]  
   
-## <a name="example"></a><span data-ttu-id="3c066-115">例</span><span class="sxs-lookup"><span data-stu-id="3c066-115">Example</span></span>  
- <span data-ttu-id="3c066-116">次の例では、`AddressOf` 演算子を使用して、スレッドのスタートアップ関数を指定します。</span><span class="sxs-lookup"><span data-stu-id="3c066-116">The following example uses the `AddressOf` operator to designate the startup function for a thread.</span></span>  
+## <a name="example"></a><span data-ttu-id="9543c-115">例</span><span class="sxs-lookup"><span data-stu-id="9543c-115">Example</span></span>  
+ <span data-ttu-id="9543c-116">次の例では、`AddressOf` 演算子を使用して、スレッドのスタートアップ関数を指定します。</span><span class="sxs-lookup"><span data-stu-id="9543c-116">The following example uses the `AddressOf` operator to designate the startup function for a thread.</span></span>  
   
  [!code-vb[VbVbalrDelegates#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#9)]  
   
-## <a name="see-also"></a><span data-ttu-id="3c066-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="3c066-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9543c-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="9543c-117">See also</span></span>
 
-- [<span data-ttu-id="3c066-118">Declare ステートメント</span><span class="sxs-lookup"><span data-stu-id="3c066-118">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
-- [<span data-ttu-id="3c066-119">Function ステートメント</span><span class="sxs-lookup"><span data-stu-id="3c066-119">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
-- [<span data-ttu-id="3c066-120">Sub ステートメント</span><span class="sxs-lookup"><span data-stu-id="3c066-120">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [<span data-ttu-id="3c066-121">デリゲート</span><span class="sxs-lookup"><span data-stu-id="3c066-121">Delegates</span></span>](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [<span data-ttu-id="9543c-118">Declare ステートメント</span><span class="sxs-lookup"><span data-stu-id="9543c-118">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [<span data-ttu-id="9543c-119">Function ステートメント</span><span class="sxs-lookup"><span data-stu-id="9543c-119">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
+- [<span data-ttu-id="9543c-120">Sub ステートメント</span><span class="sxs-lookup"><span data-stu-id="9543c-120">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [<span data-ttu-id="9543c-121">デリゲート</span><span class="sxs-lookup"><span data-stu-id="9543c-121">Delegates</span></span>](../../../visual-basic/programming-guide/language-features/delegates/index.md)

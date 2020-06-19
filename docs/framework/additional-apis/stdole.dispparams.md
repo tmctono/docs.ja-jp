@@ -1,5 +1,6 @@
 ---
-title: DISPPARAMS 構造体 (最)
+title: DISPPARAMS 構造体 (stdole)
+description: .NET の DISPPARAMS 構造に関する参照情報を取得します。 構造体は、stdole 名前空間と stdole アセンブリにあります。
 ms.date: 03/16/2019
 topic_type:
 - apiref
@@ -9,21 +10,21 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 3f424dffae8c8f40bd87ab3d46a6645a31aa7fcb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b07d400649fda2af2035fa6a23d2a45d9b0a095
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706105"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989558"
 ---
-# <a name="dispparams-structure"></a><span data-ttu-id="b2013-102">DISPPARAMS 構造体</span><span class="sxs-lookup"><span data-stu-id="b2013-102">DISPPARAMS Structure</span></span>
+# <a name="dispparams-structure"></a><span data-ttu-id="8ccb9-104">DISPPARAMS 構造体</span><span class="sxs-lookup"><span data-stu-id="8ccb9-104">DISPPARAMS Structure</span></span>
 
 ```csharp
 public struct DISPPARAMS
 ```
 
-## <a name="requirements"></a><span data-ttu-id="b2013-103">必要条件</span><span class="sxs-lookup"><span data-stu-id="b2013-103">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="8ccb9-105">必要条件</span><span class="sxs-lookup"><span data-stu-id="8ccb9-105">Requirements</span></span>
 
-<span data-ttu-id="b2013-104">**名前空間:** `stdole`</span><span class="sxs-lookup"><span data-stu-id="b2013-104">**Namespace:** `stdole`</span></span>
+<span data-ttu-id="8ccb9-106">**名前空間:** `stdole`</span><span class="sxs-lookup"><span data-stu-id="8ccb9-106">**Namespace:** `stdole`</span></span>
 
-<span data-ttu-id="b2013-105">**アセンブリ:** stdole.dll) の「最</span><span class="sxs-lookup"><span data-stu-id="b2013-105">**Assembly:** stdole (in stdole.dll)</span></span>
+<span data-ttu-id="8ccb9-107">**アセンブリ:** stdole (stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="8ccb9-107">**Assembly:** stdole (in stdole.dll)</span></span>
