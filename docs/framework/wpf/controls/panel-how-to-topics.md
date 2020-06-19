@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: 28d8faf2-490c-4e17-a447-df25a66f6679
 ms.openlocfilehash: 45a5b67edeea46a29e5c2fc3aea86d34fa4f5e7a
 ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/12/2019
 ms.locfileid: "67860069"
 ---
-# <a name="panel-how-to-topics"></a><span data-ttu-id="a0600-102">パネルに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="a0600-102">Panel How-to Topics</span></span>
-<span data-ttu-id="a0600-103">このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.Panel>要素および関連する Api。</span><span class="sxs-lookup"><span data-stu-id="a0600-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Panel> element and related APIs.</span></span>  
+# <a name="panel-how-to-topics"></a><span data-ttu-id="a26b5-102">パネルに関する「方法」トピック</span><span class="sxs-lookup"><span data-stu-id="a26b5-102">Panel How-to Topics</span></span>
+<span data-ttu-id="a26b5-103">このセクションのトピックでは、<xref:System.Windows.Controls.Panel> 要素と関連する API の使用方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="a26b5-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Panel> element and related APIs.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a0600-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="a0600-104">In This Section</span></span>  
- [<span data-ttu-id="a0600-105">カスタム パネル要素を作成する</span><span class="sxs-lookup"><span data-stu-id="a0600-105">Create a Custom Panel Element</span></span>](how-to-create-a-custom-panel-element.md)  
- [<span data-ttu-id="a0600-106">パネルの OnRender メソッドをオーバーライドする</span><span class="sxs-lookup"><span data-stu-id="a0600-106">Override the Panel OnRender Method</span></span>](how-to-override-the-panel-onrender-method.md)  
- [<span data-ttu-id="a0600-107">要素の Height プロパティを設定する</span><span class="sxs-lookup"><span data-stu-id="a0600-107">Set the Height Properties of an Element</span></span>](how-to-set-the-height-properties-of-an-element.md)  
- [<span data-ttu-id="a0600-108">要素の Width プロパティを設定する</span><span class="sxs-lookup"><span data-stu-id="a0600-108">Set the Width Properties of an Element</span></span>](how-to-set-the-width-properties-of-an-element.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a26b5-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="a26b5-104">In This Section</span></span>  
+ [<span data-ttu-id="a26b5-105">カスタム パネル要素を作成する</span><span class="sxs-lookup"><span data-stu-id="a26b5-105">Create a Custom Panel Element</span></span>](how-to-create-a-custom-panel-element.md)  
+ [<span data-ttu-id="a26b5-106">パネルの OnRender メソッドをオーバーライドする</span><span class="sxs-lookup"><span data-stu-id="a26b5-106">Override the Panel OnRender Method</span></span>](how-to-override-the-panel-onrender-method.md)  
+ [<span data-ttu-id="a26b5-107">要素の Height プロパティを設定する</span><span class="sxs-lookup"><span data-stu-id="a26b5-107">Set the Height Properties of an Element</span></span>](how-to-set-the-height-properties-of-an-element.md)  
+ [<span data-ttu-id="a26b5-108">要素の Width プロパティを設定する</span><span class="sxs-lookup"><span data-stu-id="a26b5-108">Set the Width Properties of an Element</span></span>](how-to-set-the-width-properties-of-an-element.md)  
   
-## <a name="reference"></a><span data-ttu-id="a0600-109">参照</span><span class="sxs-lookup"><span data-stu-id="a0600-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a26b5-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="a26b5-109">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -38,9 +38,9 @@ ms.locfileid: "67860069"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="a0600-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="a0600-110">Related Sections</span></span>  
- [<span data-ttu-id="a0600-111">レイアウト</span><span class="sxs-lookup"><span data-stu-id="a0600-111">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="a26b5-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="a26b5-110">Related Sections</span></span>  
+ [<span data-ttu-id="a26b5-111">レイアウト</span><span class="sxs-lookup"><span data-stu-id="a26b5-111">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="a0600-112">チュートリアル: 初めての WPF デスクトップ アプリケーション</span><span class="sxs-lookup"><span data-stu-id="a0600-112">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="a26b5-112">チュートリアル: 初めての WPF デスクトップ アプリケーション</span><span class="sxs-lookup"><span data-stu-id="a26b5-112">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="a0600-113">ScrollViewer の概要</span><span class="sxs-lookup"><span data-stu-id="a0600-113">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="a26b5-113">ScrollViewer の概要</span><span class="sxs-lookup"><span data-stu-id="a26b5-113">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

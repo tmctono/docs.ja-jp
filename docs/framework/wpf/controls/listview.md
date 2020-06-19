@@ -9,27 +9,27 @@ helpviewer_keywords:
 ms.assetid: fc3784a7-c9e8-4e2b-909a-7af37cef9b43
 ms.openlocfilehash: 45f5b054b946e746e490c64b2b051bec80fc6b17
 ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/03/2019
 ms.locfileid: "73459334"
 ---
-# <a name="listview"></a><span data-ttu-id="fbff8-102">ListView</span><span class="sxs-lookup"><span data-stu-id="fbff8-102">ListView</span></span>
-<span data-ttu-id="fbff8-103"><xref:System.Windows.Controls.ListView> コントロールには、さまざまなレイアウトまたはビューにデータ項目のセットを表示するためのインフラストラクチャが用意されています。</span><span class="sxs-lookup"><span data-stu-id="fbff8-103">The <xref:System.Windows.Controls.ListView> control provides the infrastructure to display a set of data items in different layouts or views.</span></span>  
+# <a name="listview"></a><span data-ttu-id="cbaa6-102">ListView</span><span class="sxs-lookup"><span data-stu-id="cbaa6-102">ListView</span></span>
+<span data-ttu-id="cbaa6-103"><xref:System.Windows.Controls.ListView> コントロールには、さまざまなレイアウトまたはビューにデータ項目のセットを表示するためのインフラストラクチャが用意されています。</span><span class="sxs-lookup"><span data-stu-id="cbaa6-103">The <xref:System.Windows.Controls.ListView> control provides the infrastructure to display a set of data items in different layouts or views.</span></span>  
   
- <span data-ttu-id="fbff8-104">次の図は、<xref:System.Windows.Controls.ListView>を示しています。</span><span class="sxs-lookup"><span data-stu-id="fbff8-104">The following illustration shows a <xref:System.Windows.Controls.ListView>.</span></span>  
+ <span data-ttu-id="cbaa6-104">次の図は、<xref:System.Windows.Controls.ListView> を示しています。</span><span class="sxs-lookup"><span data-stu-id="cbaa6-104">The following illustration shows a <xref:System.Windows.Controls.ListView>.</span></span>  
   
- ![GridView の出力を含む ListView を示すスクリーンショット。](./media/gridview-overview/listview-gridview-output.jpg)  
+ ![GridView の出力が表示された ListView のスクリーンショット。](./media/gridview-overview/listview-gridview-output.jpg)  
   
-## <a name="in-this-section"></a><span data-ttu-id="fbff8-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="fbff8-106">In This Section</span></span>  
- [<span data-ttu-id="fbff8-107">概要</span><span class="sxs-lookup"><span data-stu-id="fbff8-107">Overviews</span></span>](listview-overviews.md)  
- [<span data-ttu-id="fbff8-108">方法トピック</span><span class="sxs-lookup"><span data-stu-id="fbff8-108">How-to Topics</span></span>](listview-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="cbaa6-106">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="cbaa6-106">In This Section</span></span>  
+ [<span data-ttu-id="cbaa6-107">概要</span><span class="sxs-lookup"><span data-stu-id="cbaa6-107">Overviews</span></span>](listview-overviews.md)  
+ [<span data-ttu-id="cbaa6-108">方法トピック</span><span class="sxs-lookup"><span data-stu-id="cbaa6-108">How-to Topics</span></span>](listview-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="fbff8-109">辞書／辞典／その他</span><span class="sxs-lookup"><span data-stu-id="fbff8-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="cbaa6-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="cbaa6-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListView>  
   <xref:System.Windows.Controls.ListViewItem>  
   <xref:System.Windows.Controls.GridView>  
   
-## <a name="related-sections"></a><span data-ttu-id="fbff8-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="fbff8-110">Related Sections</span></span>  
- [<span data-ttu-id="fbff8-111">データ バインディングの概要</span><span class="sxs-lookup"><span data-stu-id="fbff8-111">Data Binding Overview</span></span>](../../../desktop-wpf/data/data-binding-overview.md)  
-  [<span data-ttu-id="fbff8-112">データ テンプレートの概要</span><span class="sxs-lookup"><span data-stu-id="fbff8-112">Data Templating Overview</span></span>](../data/data-templating-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="cbaa6-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="cbaa6-110">Related Sections</span></span>  
+ [<span data-ttu-id="cbaa6-111">データ バインディングの概要</span><span class="sxs-lookup"><span data-stu-id="cbaa6-111">Data Binding Overview</span></span>](../../../desktop-wpf/data/data-binding-overview.md)  
+  [<span data-ttu-id="cbaa6-112">データ テンプレートの概要</span><span class="sxs-lookup"><span data-stu-id="cbaa6-112">Data Templating Overview</span></span>](../data/data-templating-overview.md)

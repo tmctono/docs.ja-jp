@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: 582a314e-e23d-4144-b45b-acbbd5579252
 ms.openlocfilehash: fc911d5d33820ba382446d15f8c7fac8f2cebf06
 ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/21/2020
 ms.locfileid: "80112337"
 ---
-# <a name="introduction-to-wpf-in-visual-studio"></a><span data-ttu-id="80a63-102">Visual Studio での WPF の概要</span><span class="sxs-lookup"><span data-stu-id="80a63-102">Introduction to WPF in Visual Studio</span></span>
-<span data-ttu-id="80a63-103">Visual Studio の Windows プレゼンテーション ファウンデーション (WPF) は、Windows 上で基幹業務のデスクトップ アプリケーションを構築するための統一されたプログラミング モデルを開発者に提供します。</span><span class="sxs-lookup"><span data-stu-id="80a63-103">Windows Presentation Foundation (WPF) in Visual Studio provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>  
+# <a name="introduction-to-wpf-in-visual-studio"></a><span data-ttu-id="7c7cd-102">Visual Studio での WPF の概要</span><span class="sxs-lookup"><span data-stu-id="7c7cd-102">Introduction to WPF in Visual Studio</span></span>
+<span data-ttu-id="7c7cd-103">Visual Studio の Windows Presentation Foundation (WPF) では、Windows 上の基幹業務デスクトップ アプリケーションを構築するための統一されたプログラミング モデルが開発者に提供されます。</span><span class="sxs-lookup"><span data-stu-id="7c7cd-103">Windows Presentation Foundation (WPF) in Visual Studio provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>  
   
- [<span data-ttu-id="80a63-104">Windows プレゼンテーション基盤を使用したデスクトップ アプリケーションの作成</span><span class="sxs-lookup"><span data-stu-id="80a63-104">Create Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+ [<span data-ttu-id="7c7cd-104">Windows Presentation Foundation でのデスクトップ アプリケーションの作成</span><span class="sxs-lookup"><span data-stu-id="7c7cd-104">Create Desktop Applications with Windows Presentation Foundation</span></span>](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
 
- [<span data-ttu-id="80a63-105">Visual Studio および Blend for Visual Studio での XAML の設計</span><span class="sxs-lookup"><span data-stu-id="80a63-105">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
+ [<span data-ttu-id="7c7cd-105">Visual Studio および Blend for Visual Studio での XAML の設計</span><span class="sxs-lookup"><span data-stu-id="7c7cd-105">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
- [<span data-ttu-id="80a63-106">WPF の概要</span><span class="sxs-lookup"><span data-stu-id="80a63-106">Introduction to WPF</span></span>](../introduction-to-wpf.md)  
+ [<span data-ttu-id="7c7cd-106">WPF の概要</span><span class="sxs-lookup"><span data-stu-id="7c7cd-106">Introduction to WPF</span></span>](../introduction-to-wpf.md)  
   
- [<span data-ttu-id="80a63-107">.NET Framework での WPF</span><span class="sxs-lookup"><span data-stu-id="80a63-107">WPF in the .NET Framework</span></span>](../index.md)  
+ [<span data-ttu-id="7c7cd-107">.NET Framework での WPF</span><span class="sxs-lookup"><span data-stu-id="7c7cd-107">WPF in the .NET Framework</span></span>](../index.md)  
   
- [<span data-ttu-id="80a63-108">Visual Studio の入手</span><span class="sxs-lookup"><span data-stu-id="80a63-108">Get Visual Studio</span></span>](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+ [<span data-ttu-id="7c7cd-108">Visual Studio の入手</span><span class="sxs-lookup"><span data-stu-id="7c7cd-108">Get Visual Studio</span></span>](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)

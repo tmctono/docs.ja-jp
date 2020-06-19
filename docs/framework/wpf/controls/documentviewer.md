@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: c21eb322-d6b3-474b-ab05-94527bd1b0fa
 ms.openlocfilehash: 6f27b07b77fc05c548b724aaf2c905c6a9f5d420
 ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/30/2019
 ms.locfileid: "66378267"
 ---
-# <a name="documentviewer"></a><span data-ttu-id="02fbf-102">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="02fbf-102">DocumentViewer</span></span>
-<span data-ttu-id="02fbf-103"><xref:System.Windows.Controls.DocumentViewer>コントロールを使用する表示<xref:System.Windows.Documents.FixedDocument>改ページ調整された形式 (XML Paper Specification (XPS) ドキュメント) などのコンテンツ。</span><span class="sxs-lookup"><span data-stu-id="02fbf-103">The <xref:System.Windows.Controls.DocumentViewer> control is used to view <xref:System.Windows.Documents.FixedDocument> content (such as XML Paper Specification (XPS) documents) in a paginated format.</span></span>  
+# <a name="documentviewer"></a><span data-ttu-id="75e4d-102">DocumentViewer</span><span class="sxs-lookup"><span data-stu-id="75e4d-102">DocumentViewer</span></span>
+<span data-ttu-id="75e4d-103"><xref:System.Windows.Controls.DocumentViewer> コントロールは、<xref:System.Windows.Documents.FixedDocument> コンテンツ (XML Paper Specification (XPS) ドキュメントなど) をページ分割された形式で表示するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="75e4d-103">The <xref:System.Windows.Controls.DocumentViewer> control is used to view <xref:System.Windows.Documents.FixedDocument> content (such as XML Paper Specification (XPS) documents) in a paginated format.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="02fbf-104">参照</span><span class="sxs-lookup"><span data-stu-id="02fbf-104">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="75e4d-104">関連項目</span><span class="sxs-lookup"><span data-stu-id="75e4d-104">Reference</span></span>  
  <xref:System.Windows.Controls.DocumentViewer>  
   
  <xref:System.Windows.Documents.FixedDocument>  
   
-## <a name="see-also"></a><span data-ttu-id="02fbf-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="02fbf-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="75e4d-105">関連項目</span><span class="sxs-lookup"><span data-stu-id="75e4d-105">See also</span></span>
 
-- [<span data-ttu-id="02fbf-106">ドキュメント</span><span class="sxs-lookup"><span data-stu-id="02fbf-106">Documents</span></span>](../advanced/documents.md)
-- [<span data-ttu-id="02fbf-107">ドキュメントのシリアル化および保存</span><span class="sxs-lookup"><span data-stu-id="02fbf-107">Document Serialization and Storage</span></span>](../advanced/document-serialization-and-storage.md)
-- [<span data-ttu-id="02fbf-108">印刷の概要</span><span class="sxs-lookup"><span data-stu-id="02fbf-108">Printing Overview</span></span>](../advanced/printing-overview.md)
+- [<span data-ttu-id="75e4d-106">ドキュメント</span><span class="sxs-lookup"><span data-stu-id="75e4d-106">Documents</span></span>](../advanced/documents.md)
+- [<span data-ttu-id="75e4d-107">ドキュメントのシリアル化および保存</span><span class="sxs-lookup"><span data-stu-id="75e4d-107">Document Serialization and Storage</span></span>](../advanced/document-serialization-and-storage.md)
+- [<span data-ttu-id="75e4d-108">印刷の概要</span><span class="sxs-lookup"><span data-stu-id="75e4d-108">Printing Overview</span></span>](../advanced/printing-overview.md)

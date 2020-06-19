@@ -10,21 +10,21 @@ helpviewer_keywords:
 ms.assetid: 77c48920-8c8b-41eb-8fe8-b411962c8623
 ms.openlocfilehash: a610d41d9db7f205d868713a6e1cd59c311ea916
 ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/22/2019
 ms.locfileid: "69964824"
 ---
-# <a name="drag-and-drop"></a><span data-ttu-id="33de3-102">ドラッグ アンド ドロップ</span><span class="sxs-lookup"><span data-stu-id="33de3-102">Drag and Drop</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="33de3-103">は、柔軟性の高いドラッグアンドドロップインフラストラクチャを提供します。このインフラストラクチャは[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 、両方のアプリケーションおよび他の Windows アプリケーション内のデータのドラッグアンドドロップをサポートします。</span><span class="sxs-lookup"><span data-stu-id="33de3-103">provides a highly flexible drag and drop infrastructure which supports dragging and dropping of data within both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications as well as other Windows applications.</span></span>  
+# <a name="drag-and-drop"></a><span data-ttu-id="12deb-102">ドラッグ アンド ドロップ</span><span class="sxs-lookup"><span data-stu-id="12deb-102">Drag and Drop</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="12deb-103">では、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションとその他の Windows アプリケーションの両方でのデータのドラッグ アンド ドロップをサポートする、柔軟性の高いドラッグ アンド ドロップ インフラストラクチャを利用できます。</span><span class="sxs-lookup"><span data-stu-id="12deb-103">provides a highly flexible drag and drop infrastructure which supports dragging and dropping of data within both [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications as well as other Windows applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="33de3-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="33de3-104">In This Section</span></span>  
- [<span data-ttu-id="33de3-105">ドラッグ アンド ドロップの概要</span><span class="sxs-lookup"><span data-stu-id="33de3-105">Drag and Drop Overview</span></span>](drag-and-drop-overview.md)  
- [<span data-ttu-id="33de3-106">データとデータ オブジェクト</span><span class="sxs-lookup"><span data-stu-id="33de3-106">Data and Data Objects</span></span>](data-and-data-objects.md)  
- [<span data-ttu-id="33de3-107">チュートリアル: ユーザーコントロールでのドラッグアンドドロップの有効化</span><span class="sxs-lookup"><span data-stu-id="33de3-107">Walkthrough: Enabling Drag and Drop on a User Control</span></span>](walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
- [<span data-ttu-id="33de3-108">方法トピック</span><span class="sxs-lookup"><span data-stu-id="33de3-108">How-to Topics</span></span>](drag-and-drop-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="12deb-104">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="12deb-104">In This Section</span></span>  
+ [<span data-ttu-id="12deb-105">ドラッグ アンド ドロップの概要</span><span class="sxs-lookup"><span data-stu-id="12deb-105">Drag and Drop Overview</span></span>](drag-and-drop-overview.md)  
+ [<span data-ttu-id="12deb-106">データとデータ オブジェクト</span><span class="sxs-lookup"><span data-stu-id="12deb-106">Data and Data Objects</span></span>](data-and-data-objects.md)  
+ [<span data-ttu-id="12deb-107">チュートリアル: ユーザー コントロールでのドラッグ アンド ドロップの有効化</span><span class="sxs-lookup"><span data-stu-id="12deb-107">Walkthrough: Enabling Drag and Drop on a User Control</span></span>](walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
+ [<span data-ttu-id="12deb-108">方法トピック</span><span class="sxs-lookup"><span data-stu-id="12deb-108">How-to Topics</span></span>](drag-and-drop-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="33de3-109">参照</span><span class="sxs-lookup"><span data-stu-id="33de3-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="12deb-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="12deb-109">Reference</span></span>  
  <xref:System.Windows.DataFormat>  
   <xref:System.Windows.DataObject>  
   <xref:System.Windows.DragDrop>  
@@ -32,4 +32,4 @@ ms.locfileid: "69964824"
   <xref:System.Windows.DragEventHandler>  
   <xref:System.Windows.TextDataFormat>  
   
-## <a name="related-sections"></a><span data-ttu-id="33de3-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="33de3-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="12deb-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="12deb-110">Related Sections</span></span>
