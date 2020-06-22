@@ -6,28 +6,28 @@ helpviewer_keywords:
 - XML literals [Visual Basic]
 - XML literals [Visual Basic], modifying
 ms.assetid: 4e864522-a37a-43a2-8236-af80277c5482
-ms.openlocfilehash: 99ec35addcb9fc8d886c9151cde87227b5113eb9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a2ac2e9802d4c8ab522bb430d15cce5616430437
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330857"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374900"
 ---
-# <a name="how-to-modify-xml-literals-visual-basic"></a><span data-ttu-id="4cd27-102">方法: XML リテラルの変更 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4cd27-102">How to: Modify XML Literals (Visual Basic)</span></span>
+# <a name="how-to-modify-xml-literals-visual-basic"></a><span data-ttu-id="1afd4-102">方法: XML リテラルの変更 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1afd4-102">How to: Modify XML Literals (Visual Basic)</span></span>
 
-<span data-ttu-id="4cd27-103">Visual Basic には、XML リテラルを変更する便利な方法が用意されています。</span><span class="sxs-lookup"><span data-stu-id="4cd27-103">Visual Basic provides convenient ways to modify XML literals.</span></span> <span data-ttu-id="4cd27-104">要素と属性を追加したり削除したりでき、既存の要素を新しい XML 要素に置き換えることもできます。</span><span class="sxs-lookup"><span data-stu-id="4cd27-104">You can add or delete elements and attributes, and you can also replace an existing element with a new XML element.</span></span> <span data-ttu-id="4cd27-105">このトピックでは、既存の XML リテラルを変更する方法の例をいくつか紹介します。</span><span class="sxs-lookup"><span data-stu-id="4cd27-105">This topic provides several examples of how to modify an existing XML literal.</span></span>
+<span data-ttu-id="1afd4-103">Visual Basic には、XML リテラルを変更する便利な方法が用意されています。</span><span class="sxs-lookup"><span data-stu-id="1afd4-103">Visual Basic provides convenient ways to modify XML literals.</span></span> <span data-ttu-id="1afd4-104">要素と属性を追加したり削除したりでき、既存の要素を新しい XML 要素に置き換えることもできます。</span><span class="sxs-lookup"><span data-stu-id="1afd4-104">You can add or delete elements and attributes, and you can also replace an existing element with a new XML element.</span></span> <span data-ttu-id="1afd4-105">このトピックでは、既存の XML リテラルを変更する方法の例をいくつか紹介します。</span><span class="sxs-lookup"><span data-stu-id="1afd4-105">This topic provides several examples of how to modify an existing XML literal.</span></span>
 
-### <a name="to-modify-the-value-of-an-xml-literal"></a><span data-ttu-id="4cd27-106">XML リテラルの値を変更するには</span><span class="sxs-lookup"><span data-stu-id="4cd27-106">To modify the value of an XML literal</span></span>
+### <a name="to-modify-the-value-of-an-xml-literal"></a><span data-ttu-id="1afd4-106">XML リテラルの値を変更するには</span><span class="sxs-lookup"><span data-stu-id="1afd4-106">To modify the value of an XML literal</span></span>
 
-1. <span data-ttu-id="4cd27-107">XML リテラルの値を変更するには、XML リテラルへの参照を取得し、`Value` プロパティを目的の値に設定します。</span><span class="sxs-lookup"><span data-stu-id="4cd27-107">To modify the value of an XML literal, obtain a reference to the XML literal and set the `Value` property to the desired value.</span></span>
+1. <span data-ttu-id="1afd4-107">XML リテラルの値を変更するには、XML リテラルへの参照を取得し、`Value` プロパティを目的の値に設定します。</span><span class="sxs-lookup"><span data-stu-id="1afd4-107">To modify the value of an XML literal, obtain a reference to the XML literal and set the `Value` property to the desired value.</span></span>
 
-    <span data-ttu-id="4cd27-108">次のコード例では、XML ドキュメント内のすべての \<Price> 要素の値が更新されます。</span><span class="sxs-lookup"><span data-stu-id="4cd27-108">The following code example updates the value of all the \<Price> elements in an XML document.</span></span>
+    <span data-ttu-id="1afd4-108">次のコード例では、XML ドキュメント内のすべての \<Price> 要素の値が更新されます。</span><span class="sxs-lookup"><span data-stu-id="1afd4-108">The following code example updates the value of all the \<Price> elements in an XML document.</span></span>
 
     [!code-vb[VbXmlSamples2#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#4)]
 
-    <span data-ttu-id="4cd27-109">次に、このコード例のソースの XML と変更後の XML の例を示します。</span><span class="sxs-lookup"><span data-stu-id="4cd27-109">The following shows sample source XML and modified XML from this code example.</span></span>
+    <span data-ttu-id="1afd4-109">次に、このコード例のソースの XML と変更後の XML の例を示します。</span><span class="sxs-lookup"><span data-stu-id="1afd4-109">The following shows sample source XML and modified XML from this code example.</span></span>
 
-    <span data-ttu-id="4cd27-110">ソースの XML:</span><span class="sxs-lookup"><span data-stu-id="4cd27-110">Source XML:</span></span>
+    <span data-ttu-id="1afd4-110">ソースの XML:</span><span class="sxs-lookup"><span data-stu-id="1afd4-110">Source XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -45,7 +45,7 @@ ms.locfileid: "74330857"
     </Catalog>
     ```
 
-    <span data-ttu-id="4cd27-111">変更後の XML:</span><span class="sxs-lookup"><span data-stu-id="4cd27-111">Modified XML:</span></span>
+    <span data-ttu-id="1afd4-111">変更後の XML:</span><span class="sxs-lookup"><span data-stu-id="1afd4-111">Modified XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -64,17 +64,17 @@ ms.locfileid: "74330857"
     ```
 
     > [!NOTE]
-    > <span data-ttu-id="4cd27-112">`Value` プロパティを使用して、コレクション内の最初の XML 要素を参照します。</span><span class="sxs-lookup"><span data-stu-id="4cd27-112">The `Value` property refers to the first XML element in a collection.</span></span> <span data-ttu-id="4cd27-113">コレクション内に同じ名前の要素が複数ある場合、`Value` プロパティの設定は、コレクション内の最初の要素にのみ影響します。</span><span class="sxs-lookup"><span data-stu-id="4cd27-113">If there is more than one element that has the same name in a collection, setting the `Value` property affects only the first element in the collection.</span></span>
+    > <span data-ttu-id="1afd4-112">`Value` プロパティを使用して、コレクション内の最初の XML 要素を参照します。</span><span class="sxs-lookup"><span data-stu-id="1afd4-112">The `Value` property refers to the first XML element in a collection.</span></span> <span data-ttu-id="1afd4-113">コレクション内に同じ名前の要素が複数ある場合、`Value` プロパティの設定は、コレクション内の最初の要素にのみ影響します。</span><span class="sxs-lookup"><span data-stu-id="1afd4-113">If there is more than one element that has the same name in a collection, setting the `Value` property affects only the first element in the collection.</span></span>
 
-### <a name="to-add-an-attribute-to-an-xml-literal"></a><span data-ttu-id="4cd27-114">XML リテラルに属性を追加するには</span><span class="sxs-lookup"><span data-stu-id="4cd27-114">To add an attribute to an XML literal</span></span>
+### <a name="to-add-an-attribute-to-an-xml-literal"></a><span data-ttu-id="1afd4-114">XML リテラルに属性を追加するには</span><span class="sxs-lookup"><span data-stu-id="1afd4-114">To add an attribute to an XML literal</span></span>
 
-1. <span data-ttu-id="4cd27-115">XML リテラルに属性を追加するには、最初に XML リテラルへの参照を取得します。</span><span class="sxs-lookup"><span data-stu-id="4cd27-115">To add an attribute to an XML literal, first obtain a reference to the XML literal.</span></span> <span data-ttu-id="4cd27-116">次に、新しい XML 属性軸プロパティを追加して、属性を追加できます。</span><span class="sxs-lookup"><span data-stu-id="4cd27-116">You can then add an attribute by adding a new XML attribute axis property.</span></span> <span data-ttu-id="4cd27-117">また、<xref:System.Xml.Linq.XContainer.Add%2A> メソッドを使用して、新しい <xref:System.Xml.Linq.XAttribute> オブジェクトを XML リテラルに追加することもできます。</span><span class="sxs-lookup"><span data-stu-id="4cd27-117">You can also add a new <xref:System.Xml.Linq.XAttribute> object to the XML literal by using the <xref:System.Xml.Linq.XContainer.Add%2A> method.</span></span> <span data-ttu-id="4cd27-118">次の例は、両方のオプションを示しています。</span><span class="sxs-lookup"><span data-stu-id="4cd27-118">The following example shows both options.</span></span>
+1. <span data-ttu-id="1afd4-115">XML リテラルに属性を追加するには、最初に XML リテラルへの参照を取得します。</span><span class="sxs-lookup"><span data-stu-id="1afd4-115">To add an attribute to an XML literal, first obtain a reference to the XML literal.</span></span> <span data-ttu-id="1afd4-116">次に、新しい XML 属性軸プロパティを追加して、属性を追加できます。</span><span class="sxs-lookup"><span data-stu-id="1afd4-116">You can then add an attribute by adding a new XML attribute axis property.</span></span> <span data-ttu-id="1afd4-117">また、<xref:System.Xml.Linq.XContainer.Add%2A> メソッドを使用して、新しい <xref:System.Xml.Linq.XAttribute> オブジェクトを XML リテラルに追加することもできます。</span><span class="sxs-lookup"><span data-stu-id="1afd4-117">You can also add a new <xref:System.Xml.Linq.XAttribute> object to the XML literal by using the <xref:System.Xml.Linq.XContainer.Add%2A> method.</span></span> <span data-ttu-id="1afd4-118">次の例は、両方のオプションを示しています。</span><span class="sxs-lookup"><span data-stu-id="1afd4-118">The following example shows both options.</span></span>
 
     [!code-vb[VbXmlSamples2#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#5)]
 
-    <span data-ttu-id="4cd27-119">次に、このコード例のソースの XML と変更後の XML の例を示します。</span><span class="sxs-lookup"><span data-stu-id="4cd27-119">The following shows sample source XML and modified XML from this code example.</span></span>
+    <span data-ttu-id="1afd4-119">次に、このコード例のソースの XML と変更後の XML の例を示します。</span><span class="sxs-lookup"><span data-stu-id="1afd4-119">The following shows sample source XML and modified XML from this code example.</span></span>
 
-    <span data-ttu-id="4cd27-120">ソースの XML:</span><span class="sxs-lookup"><span data-stu-id="4cd27-120">Source XML:</span></span>
+    <span data-ttu-id="1afd4-120">ソースの XML:</span><span class="sxs-lookup"><span data-stu-id="1afd4-120">Source XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -92,7 +92,7 @@ ms.locfileid: "74330857"
     </Catalog>
     ```
 
-    <span data-ttu-id="4cd27-121">変更後の XML:</span><span class="sxs-lookup"><span data-stu-id="4cd27-121">Modified XML:</span></span>
+    <span data-ttu-id="1afd4-121">変更後の XML:</span><span class="sxs-lookup"><span data-stu-id="1afd4-121">Modified XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -110,21 +110,21 @@ ms.locfileid: "74330857"
     </Catalog>
     ```
 
-    <span data-ttu-id="4cd27-122">XML 属性軸プロパティの詳細については、[XML 属性軸プロパティ](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)に関する記事をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="4cd27-122">For more information about XML attribute axis properties, see [XML Attribute Axis Property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md).</span></span>
+    <span data-ttu-id="1afd4-122">XML 属性軸プロパティの詳細については、[XML 属性軸プロパティ](../../../language-reference/xml-axis/xml-attribute-axis-property.md)に関する記事をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="1afd4-122">For more information about XML attribute axis properties, see [XML Attribute Axis Property](../../../language-reference/xml-axis/xml-attribute-axis-property.md).</span></span>
 
-### <a name="to-add-an-element-to-an-xml-literal"></a><span data-ttu-id="4cd27-123">XML リテラルに要素を追加するには</span><span class="sxs-lookup"><span data-stu-id="4cd27-123">To add an element to an XML literal</span></span>
+### <a name="to-add-an-element-to-an-xml-literal"></a><span data-ttu-id="1afd4-123">XML リテラルに要素を追加するには</span><span class="sxs-lookup"><span data-stu-id="1afd4-123">To add an element to an XML literal</span></span>
 
-1. <span data-ttu-id="4cd27-124">XML リテラルに要素を追加するには、最初に XML リテラルへの参照を取得します。</span><span class="sxs-lookup"><span data-stu-id="4cd27-124">To add an element to an XML literal, first obtain a reference to the XML literal.</span></span> <span data-ttu-id="4cd27-125">次に、<xref:System.Xml.Linq.XContainer.Add%2A> メソッドを使用すると、新しい <xref:System.Xml.Linq.XElement> オブジェクトを要素の最後のサブ要素として追加できます。</span><span class="sxs-lookup"><span data-stu-id="4cd27-125">You can then add a new <xref:System.Xml.Linq.XElement> object as the last sub-element of the element by using the <xref:System.Xml.Linq.XContainer.Add%2A> method.</span></span> <span data-ttu-id="4cd27-126"><xref:System.Xml.Linq.XContainer.AddFirst%2A> メソッドを使用すると、新しい <xref:System.Xml.Linq.XElement> オブジェクトを最初のサブ要素として追加できます。</span><span class="sxs-lookup"><span data-stu-id="4cd27-126">You can add a new <xref:System.Xml.Linq.XElement> object as the first sub-element by using the <xref:System.Xml.Linq.XContainer.AddFirst%2A> method.</span></span>
+1. <span data-ttu-id="1afd4-124">XML リテラルに要素を追加するには、最初に XML リテラルへの参照を取得します。</span><span class="sxs-lookup"><span data-stu-id="1afd4-124">To add an element to an XML literal, first obtain a reference to the XML literal.</span></span> <span data-ttu-id="1afd4-125">次に、<xref:System.Xml.Linq.XContainer.Add%2A> メソッドを使用すると、新しい <xref:System.Xml.Linq.XElement> オブジェクトを要素の最後のサブ要素として追加できます。</span><span class="sxs-lookup"><span data-stu-id="1afd4-125">You can then add a new <xref:System.Xml.Linq.XElement> object as the last sub-element of the element by using the <xref:System.Xml.Linq.XContainer.Add%2A> method.</span></span> <span data-ttu-id="1afd4-126"><xref:System.Xml.Linq.XContainer.AddFirst%2A> メソッドを使用すると、新しい <xref:System.Xml.Linq.XElement> オブジェクトを最初のサブ要素として追加できます。</span><span class="sxs-lookup"><span data-stu-id="1afd4-126">You can add a new <xref:System.Xml.Linq.XElement> object as the first sub-element by using the <xref:System.Xml.Linq.XContainer.AddFirst%2A> method.</span></span>
 
-    <span data-ttu-id="4cd27-127">他のサブ要素を基準として特定の位置に新しい要素を追加するには、最初に隣接するサブ要素への参照を取得します。</span><span class="sxs-lookup"><span data-stu-id="4cd27-127">To add a new element in a specific location relative to other sub-elements, first obtain a reference to an adjacent sub-element.</span></span> <span data-ttu-id="4cd27-128">次に、<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A> メソッドを使用して、隣接するサブ要素の前に新しい <xref:System.Xml.Linq.XElement> オブジェクトを追加できます。</span><span class="sxs-lookup"><span data-stu-id="4cd27-128">You can then add the new <xref:System.Xml.Linq.XElement> object before the adjacent sub-element by using the <xref:System.Xml.Linq.XNode.AddBeforeSelf%2A> method.</span></span> <span data-ttu-id="4cd27-129">また、<xref:System.Xml.Linq.XNode.AddAfterSelf%2A> メソッドを使用して、隣接するサブ要素の後に新しい <xref:System.Xml.Linq.XElement> オブジェクトを追加することもできます。</span><span class="sxs-lookup"><span data-stu-id="4cd27-129">You can also add the new <xref:System.Xml.Linq.XElement> object after the adjacent sub-element by using the <xref:System.Xml.Linq.XNode.AddAfterSelf%2A> method.</span></span>
+    <span data-ttu-id="1afd4-127">他のサブ要素を基準として特定の位置に新しい要素を追加するには、最初に隣接するサブ要素への参照を取得します。</span><span class="sxs-lookup"><span data-stu-id="1afd4-127">To add a new element in a specific location relative to other sub-elements, first obtain a reference to an adjacent sub-element.</span></span> <span data-ttu-id="1afd4-128">次に、<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A> メソッドを使用して、隣接するサブ要素の前に新しい <xref:System.Xml.Linq.XElement> オブジェクトを追加できます。</span><span class="sxs-lookup"><span data-stu-id="1afd4-128">You can then add the new <xref:System.Xml.Linq.XElement> object before the adjacent sub-element by using the <xref:System.Xml.Linq.XNode.AddBeforeSelf%2A> method.</span></span> <span data-ttu-id="1afd4-129">また、<xref:System.Xml.Linq.XNode.AddAfterSelf%2A> メソッドを使用して、隣接するサブ要素の後に新しい <xref:System.Xml.Linq.XElement> オブジェクトを追加することもできます。</span><span class="sxs-lookup"><span data-stu-id="1afd4-129">You can also add the new <xref:System.Xml.Linq.XElement> object after the adjacent sub-element by using the <xref:System.Xml.Linq.XNode.AddAfterSelf%2A> method.</span></span>
 
-    <span data-ttu-id="4cd27-130">次の例は、これらの各手法の例を示しています。</span><span class="sxs-lookup"><span data-stu-id="4cd27-130">The following example shows examples of each of these techniques.</span></span>
+    <span data-ttu-id="1afd4-130">次の例は、これらの各手法の例を示しています。</span><span class="sxs-lookup"><span data-stu-id="1afd4-130">The following example shows examples of each of these techniques.</span></span>
 
     [!code-vb[VbXmlSamples2#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#6)]
 
-    <span data-ttu-id="4cd27-131">次に、このコード例のソースの XML と変更後の XML の例を示します。</span><span class="sxs-lookup"><span data-stu-id="4cd27-131">The following shows sample source XML and modified XML from this code example.</span></span>
+    <span data-ttu-id="1afd4-131">次に、このコード例のソースの XML と変更後の XML の例を示します。</span><span class="sxs-lookup"><span data-stu-id="1afd4-131">The following shows sample source XML and modified XML from this code example.</span></span>
 
-    <span data-ttu-id="4cd27-132">ソースの XML:</span><span class="sxs-lookup"><span data-stu-id="4cd27-132">Source XML:</span></span>
+    <span data-ttu-id="1afd4-132">ソースの XML:</span><span class="sxs-lookup"><span data-stu-id="1afd4-132">Source XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -142,7 +142,7 @@ ms.locfileid: "74330857"
     </Catalog>
     ```
 
-    <span data-ttu-id="4cd27-133">変更後の XML:</span><span class="sxs-lookup"><span data-stu-id="4cd27-133">Modified XML:</span></span>
+    <span data-ttu-id="1afd4-133">変更後の XML:</span><span class="sxs-lookup"><span data-stu-id="1afd4-133">Modified XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -164,15 +164,15 @@ ms.locfileid: "74330857"
     </Catalog>
     ```
 
-### <a name="to-remove-an-element-or-attribute-from-an-xml-literal"></a><span data-ttu-id="4cd27-134">XML リテラルから要素または属性を削除するには</span><span class="sxs-lookup"><span data-stu-id="4cd27-134">To remove an element or attribute from an XML literal</span></span>
+### <a name="to-remove-an-element-or-attribute-from-an-xml-literal"></a><span data-ttu-id="1afd4-134">XML リテラルから要素または属性を削除するには</span><span class="sxs-lookup"><span data-stu-id="1afd4-134">To remove an element or attribute from an XML literal</span></span>
 
-1. <span data-ttu-id="4cd27-135">XML リテラルから要素または属性を削除するには、次の例に示すように、要素または属性への参照を取得し、`Remove` メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="4cd27-135">To remove an element or an attribute from an XML literal, obtain a reference to the element or attribute and call the `Remove` method, as shown in the following example.</span></span>
+1. <span data-ttu-id="1afd4-135">XML リテラルから要素または属性を削除するには、次の例に示すように、要素または属性への参照を取得し、`Remove` メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="1afd4-135">To remove an element or an attribute from an XML literal, obtain a reference to the element or attribute and call the `Remove` method, as shown in the following example.</span></span>
 
     [!code-vb[VbXmlSamples2#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#7)]
 
-    <span data-ttu-id="4cd27-136">次に、このコード例のソースの XML と変更後の XML の例を示します。</span><span class="sxs-lookup"><span data-stu-id="4cd27-136">The following shows sample source XML and modified XML from this code example.</span></span>
+    <span data-ttu-id="1afd4-136">次に、このコード例のソースの XML と変更後の XML の例を示します。</span><span class="sxs-lookup"><span data-stu-id="1afd4-136">The following shows sample source XML and modified XML from this code example.</span></span>
 
-    <span data-ttu-id="4cd27-137">ソースの XML:</span><span class="sxs-lookup"><span data-stu-id="4cd27-137">Source XML:</span></span>
+    <span data-ttu-id="1afd4-137">ソースの XML:</span><span class="sxs-lookup"><span data-stu-id="1afd4-137">Source XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -192,7 +192,7 @@ ms.locfileid: "74330857"
     </Catalog>
     ```
 
-    <span data-ttu-id="4cd27-138">変更後の XML:</span><span class="sxs-lookup"><span data-stu-id="4cd27-138">Modified XML:</span></span>
+    <span data-ttu-id="1afd4-138">変更後の XML:</span><span class="sxs-lookup"><span data-stu-id="1afd4-138">Modified XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -210,21 +210,21 @@ ms.locfileid: "74330857"
       </Book></Catalog>
     ```
 
-    <span data-ttu-id="4cd27-139">XML リテラルからすべての要素または属性を削除するには、XML リテラルへの参照を取得し、<xref:System.Xml.Linq.XElement.RemoveAll%2A> メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="4cd27-139">To remove all elements or attributes from an XML literal, obtain a reference to the XML literal and call the <xref:System.Xml.Linq.XElement.RemoveAll%2A> method.</span></span>
+    <span data-ttu-id="1afd4-139">XML リテラルからすべての要素または属性を削除するには、XML リテラルへの参照を取得し、<xref:System.Xml.Linq.XElement.RemoveAll%2A> メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="1afd4-139">To remove all elements or attributes from an XML literal, obtain a reference to the XML literal and call the <xref:System.Xml.Linq.XElement.RemoveAll%2A> method.</span></span>
 
-### <a name="to-modify-an-xml-literal"></a><span data-ttu-id="4cd27-140">XML リテラルを変更するには</span><span class="sxs-lookup"><span data-stu-id="4cd27-140">To modify an XML literal</span></span>
+### <a name="to-modify-an-xml-literal"></a><span data-ttu-id="1afd4-140">XML リテラルを変更するには</span><span class="sxs-lookup"><span data-stu-id="1afd4-140">To modify an XML literal</span></span>
 
-1. <span data-ttu-id="4cd27-141">XML 要素の名前を変更するには、最初に要素への参照を取得します。</span><span class="sxs-lookup"><span data-stu-id="4cd27-141">To change the name of an XML element, first obtain a reference to the element.</span></span> <span data-ttu-id="4cd27-142">次に、新しい名前を持つ新しい <xref:System.Xml.Linq.XElement> オブジェクトを作成し、この新しい <xref:System.Xml.Linq.XElement> オブジェクトを既存の <xref:System.Xml.Linq.XElement> オブジェクトの <xref:System.Xml.Linq.XNode.ReplaceWith%2A> メソッドに渡すことができます。</span><span class="sxs-lookup"><span data-stu-id="4cd27-142">You can then create a new <xref:System.Xml.Linq.XElement> object that has a new name and pass the new <xref:System.Xml.Linq.XElement> object to the <xref:System.Xml.Linq.XNode.ReplaceWith%2A> method of the existing <xref:System.Xml.Linq.XElement> object.</span></span>
+1. <span data-ttu-id="1afd4-141">XML 要素の名前を変更するには、最初に要素への参照を取得します。</span><span class="sxs-lookup"><span data-stu-id="1afd4-141">To change the name of an XML element, first obtain a reference to the element.</span></span> <span data-ttu-id="1afd4-142">次に、新しい名前を持つ新しい <xref:System.Xml.Linq.XElement> オブジェクトを作成し、この新しい <xref:System.Xml.Linq.XElement> オブジェクトを既存の <xref:System.Xml.Linq.XElement> オブジェクトの <xref:System.Xml.Linq.XNode.ReplaceWith%2A> メソッドに渡すことができます。</span><span class="sxs-lookup"><span data-stu-id="1afd4-142">You can then create a new <xref:System.Xml.Linq.XElement> object that has a new name and pass the new <xref:System.Xml.Linq.XElement> object to the <xref:System.Xml.Linq.XNode.ReplaceWith%2A> method of the existing <xref:System.Xml.Linq.XElement> object.</span></span>
 
-    <span data-ttu-id="4cd27-143">置換する要素に、保持が必要なサブ要素がある場合は、新しい <xref:System.Xml.Linq.XElement> オブジェクトの値を既存の要素の <xref:System.Xml.Linq.XContainer.Nodes%2A> プロパティに設定します。</span><span class="sxs-lookup"><span data-stu-id="4cd27-143">If the element that you are replacing has sub-elements that must be preserved, set the value of the new <xref:System.Xml.Linq.XElement> object to the <xref:System.Xml.Linq.XContainer.Nodes%2A> property of the existing element.</span></span> <span data-ttu-id="4cd27-144">これにより、新しい要素の値が既存の要素の内部 XML に設定されます。</span><span class="sxs-lookup"><span data-stu-id="4cd27-144">This will set the value of the new element to the inner XML of the existing element.</span></span> <span data-ttu-id="4cd27-145">それ以外の場合は、新しい要素の値を、既存の要素の `Value` プロパティに設定できます。</span><span class="sxs-lookup"><span data-stu-id="4cd27-145">Otherwise, you can set the value of the new element to the `Value` property of the existing element.</span></span>
+    <span data-ttu-id="1afd4-143">置換する要素に、保持が必要なサブ要素がある場合は、新しい <xref:System.Xml.Linq.XElement> オブジェクトの値を既存の要素の <xref:System.Xml.Linq.XContainer.Nodes%2A> プロパティに設定します。</span><span class="sxs-lookup"><span data-stu-id="1afd4-143">If the element that you are replacing has sub-elements that must be preserved, set the value of the new <xref:System.Xml.Linq.XElement> object to the <xref:System.Xml.Linq.XContainer.Nodes%2A> property of the existing element.</span></span> <span data-ttu-id="1afd4-144">これにより、新しい要素の値が既存の要素の内部 XML に設定されます。</span><span class="sxs-lookup"><span data-stu-id="1afd4-144">This will set the value of the new element to the inner XML of the existing element.</span></span> <span data-ttu-id="1afd4-145">それ以外の場合は、新しい要素の値を、既存の要素の `Value` プロパティに設定できます。</span><span class="sxs-lookup"><span data-stu-id="1afd4-145">Otherwise, you can set the value of the new element to the `Value` property of the existing element.</span></span>
 
-    <span data-ttu-id="4cd27-146">次のコード例では、すべての \<Description> 要素が \<Abstract> 要素に置き換えられます。</span><span class="sxs-lookup"><span data-stu-id="4cd27-146">The following code example replaces all \<Description> elements with an \<Abstract> element.</span></span> <span data-ttu-id="4cd27-147">\<Description> 要素の内容は、\<Description> <xref:System.Xml.Linq.XElement> オブジェクトの <xref:System.Xml.Linq.XContainer.Nodes%2A> プロパティを使用して、新しい \<Abstract> 要素に保持されます。</span><span class="sxs-lookup"><span data-stu-id="4cd27-147">The content of the \<Description> element is preserved in the new \<Abstract> element by using the <xref:System.Xml.Linq.XContainer.Nodes%2A> property of the \<Description> <xref:System.Xml.Linq.XElement> object.</span></span>
+    <span data-ttu-id="1afd4-146">次のコード例では、すべての \<Description> 要素が \<Abstract> 要素に置き換えられます。</span><span class="sxs-lookup"><span data-stu-id="1afd4-146">The following code example replaces all \<Description> elements with an \<Abstract> element.</span></span> <span data-ttu-id="1afd4-147">\<Description> 要素の内容は、\<Description> <xref:System.Xml.Linq.XElement> オブジェクトの <xref:System.Xml.Linq.XContainer.Nodes%2A> プロパティを使用して、新しい \<Abstract> 要素に保持されます。</span><span class="sxs-lookup"><span data-stu-id="1afd4-147">The content of the \<Description> element is preserved in the new \<Abstract> element by using the <xref:System.Xml.Linq.XContainer.Nodes%2A> property of the \<Description> <xref:System.Xml.Linq.XElement> object.</span></span>
 
     [!code-vb[VbXmlSamples2#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#8)]
 
-    <span data-ttu-id="4cd27-148">次に、このコード例のソースの XML と変更後の XML の例を示します。</span><span class="sxs-lookup"><span data-stu-id="4cd27-148">The following shows sample source XML and modified XML from this code example.</span></span>
+    <span data-ttu-id="1afd4-148">次に、このコード例のソースの XML と変更後の XML の例を示します。</span><span class="sxs-lookup"><span data-stu-id="1afd4-148">The following shows sample source XML and modified XML from this code example.</span></span>
 
-    <span data-ttu-id="4cd27-149">ソースの XML:</span><span class="sxs-lookup"><span data-stu-id="4cd27-149">Source XML:</span></span>
+    <span data-ttu-id="1afd4-149">ソースの XML:</span><span class="sxs-lookup"><span data-stu-id="1afd4-149">Source XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -256,7 +256,7 @@ ms.locfileid: "74330857"
     </Catalog>
     ```
 
-    <span data-ttu-id="4cd27-150">変更後の XML:</span><span class="sxs-lookup"><span data-stu-id="4cd27-150">Modified XML:</span></span>
+    <span data-ttu-id="1afd4-150">変更後の XML:</span><span class="sxs-lookup"><span data-stu-id="1afd4-150">Modified XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -286,10 +286,10 @@ ms.locfileid: "74330857"
     </Catalog>
     ```
 
-## <a name="see-also"></a><span data-ttu-id="4cd27-151">関連項目</span><span class="sxs-lookup"><span data-stu-id="4cd27-151">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1afd4-151">関連項目</span><span class="sxs-lookup"><span data-stu-id="1afd4-151">See also</span></span>
 
-- [<span data-ttu-id="4cd27-152">Visual Basic での XML の操作</span><span class="sxs-lookup"><span data-stu-id="4cd27-152">Manipulating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
-- [<span data-ttu-id="4cd27-153">XML</span><span class="sxs-lookup"><span data-stu-id="4cd27-153">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [<span data-ttu-id="4cd27-154">方法: ファイル、文字列、またはストリームからの XML の読み込み</span><span class="sxs-lookup"><span data-stu-id="4cd27-154">How to: Load XML from a File, String, or Stream</span></span>](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
-- [<span data-ttu-id="4cd27-155">LINQ</span><span class="sxs-lookup"><span data-stu-id="4cd27-155">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [<span data-ttu-id="4cd27-156">Visual Basic における LINQ の概要</span><span class="sxs-lookup"><span data-stu-id="4cd27-156">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [<span data-ttu-id="1afd4-152">Visual Basic での XML の操作</span><span class="sxs-lookup"><span data-stu-id="1afd4-152">Manipulating XML in Visual Basic</span></span>](manipulating-xml.md)
+- [<span data-ttu-id="1afd4-153">XML</span><span class="sxs-lookup"><span data-stu-id="1afd4-153">XML</span></span>](index.md)
+- [<span data-ttu-id="1afd4-154">方法: ファイル、文字列、またはストリームからの XML の読み込み</span><span class="sxs-lookup"><span data-stu-id="1afd4-154">How to: Load XML from a File, String, or Stream</span></span>](how-to-load-xml-from-a-file-string-or-stream.md)
+- [<span data-ttu-id="1afd4-155">LINQ</span><span class="sxs-lookup"><span data-stu-id="1afd4-155">LINQ</span></span>](../linq/index.md)
+- [<span data-ttu-id="1afd4-156">Visual Basic における LINQ の概要</span><span class="sxs-lookup"><span data-stu-id="1afd4-156">Introduction to LINQ in Visual Basic</span></span>](../linq/introduction-to-linq.md)
