@@ -5,76 +5,76 @@ ms.date: 10/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, mlnet-tooling
-ms.openlocfilehash: 23de2d06090f4c1eaa2c79178ba4c346698d45e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64e366b3c66427ccd2810324abeb880f6cb9ebc1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78849160"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602207"
 ---
-# <a name="load-training-data-into-model-builder"></a><span data-ttu-id="f1929-103">モデル ビルダーにトレーニング データを読み込む</span><span class="sxs-lookup"><span data-stu-id="f1929-103">Load training data into Model Builder</span></span>
+# <a name="load-training-data-into-model-builder"></a><span data-ttu-id="3c8fc-103">モデル ビルダーにトレーニング データを読み込む</span><span class="sxs-lookup"><span data-stu-id="3c8fc-103">Load training data into Model Builder</span></span>
 
-<span data-ttu-id="f1929-104">ML.NET 用のモデル ビルダー シナリオのいずれかで使用するために、ファイルまたは SQL Server データベースからご利用のトレーニング データセットを読み込む方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="f1929-104">Learn how to load your training datasets from a file or a SQL Server database for use in one of the Model Builder scenarios for ML.NET.</span></span> <span data-ttu-id="f1929-105">モデル ビルダーのシナリオでは、SQL Server データベース、イメージ ファイル、CSV または TSV ファイル形式をトレーニング データとして使用できます。</span><span class="sxs-lookup"><span data-stu-id="f1929-105">Model Builder scenarios can use SQL Server databases, image files, and CSV or TSV file formats as training data.</span></span>
+<span data-ttu-id="3c8fc-104">ML.NET 用のモデル ビルダー シナリオのいずれかで使用するために、ファイルまたは SQL Server データベースからご利用のトレーニング データセットを読み込む方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-104">Learn how to load your training datasets from a file or a SQL Server database for use in one of the Model Builder scenarios for ML.NET.</span></span> <span data-ttu-id="3c8fc-105">モデル ビルダーのシナリオでは、SQL Server データベース、イメージ ファイル、CSV または TSV ファイル形式をトレーニング データとして使用できます。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-105">Model Builder scenarios can use SQL Server databases, image files, and CSV or TSV file formats as training data.</span></span>
 
-## <a name="training-dataset-limitations-in-model-builder"></a><span data-ttu-id="f1929-106">モデル ビルダーでのデータセットの制限のトレーニング</span><span class="sxs-lookup"><span data-stu-id="f1929-106">Training dataset limitations in Model Builder</span></span>
+## <a name="training-dataset-limitations-in-model-builder"></a><span data-ttu-id="3c8fc-106">モデル ビルダーでのデータセットの制限のトレーニング</span><span class="sxs-lookup"><span data-stu-id="3c8fc-106">Training dataset limitations in Model Builder</span></span>
 
-<span data-ttu-id="f1929-107">モデル ビルダーでは、モデルのトレーニングに使用できるデータの量と種類が制限されます。</span><span class="sxs-lookup"><span data-stu-id="f1929-107">Model Builder limits the amount and type of data you can use for training models:</span></span>
+<span data-ttu-id="3c8fc-107">モデル ビルダーでは、モデルのトレーニングに使用できるデータの量と種類が制限されます。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-107">Model Builder limits the amount and type of data you can use for training models:</span></span>
 
-- <span data-ttu-id="f1929-108">SQL Server データ: 100,000 行</span><span class="sxs-lookup"><span data-stu-id="f1929-108">SQL Server data: 100,000 rows</span></span>
-- <span data-ttu-id="f1929-109">CSV ファイルと TSV ファイル: サイズ制限なし</span><span class="sxs-lookup"><span data-stu-id="f1929-109">CSV and TSV files: No size limit</span></span>
-- <span data-ttu-id="f1929-110">イメージ:PNG および JPG のみ。</span><span class="sxs-lookup"><span data-stu-id="f1929-110">Images: PNG and JPG only.</span></span>
+- <span data-ttu-id="3c8fc-108">SQL Server データ: 100,000 行</span><span class="sxs-lookup"><span data-stu-id="3c8fc-108">SQL Server data: 100,000 rows</span></span>
+- <span data-ttu-id="3c8fc-109">CSV ファイルと TSV ファイル: サイズ制限なし</span><span class="sxs-lookup"><span data-stu-id="3c8fc-109">CSV and TSV files: No size limit</span></span>
+- <span data-ttu-id="3c8fc-110">イメージ:PNG および JPG のみ。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-110">Images: PNG and JPG only.</span></span>
 
-## <a name="model-builder-scenarios"></a><span data-ttu-id="f1929-111">モデル ビルダーのシナリオ</span><span class="sxs-lookup"><span data-stu-id="f1929-111">Model Builder scenarios</span></span>
+## <a name="model-builder-scenarios"></a><span data-ttu-id="3c8fc-111">モデル ビルダーのシナリオ</span><span class="sxs-lookup"><span data-stu-id="3c8fc-111">Model Builder scenarios</span></span>
 
-<span data-ttu-id="f1929-112">モデル ビルダーは、次の機械学習シナリオ用のモデルを作成するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="f1929-112">Model Builder helps you create models for the following machine learning scenarios:</span></span>
+<span data-ttu-id="3c8fc-112">モデル ビルダーは、次の機械学習シナリオ用のモデルを作成するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-112">Model Builder helps you create models for the following machine learning scenarios:</span></span>
 
-- <span data-ttu-id="f1929-113">センチメント分析 (二項分類)テキスト データを 2 つのカテゴリに分類します。</span><span class="sxs-lookup"><span data-stu-id="f1929-113">Sentiment analysis (binary classification): Classify textual data into two categories.</span></span>
-- <span data-ttu-id="f1929-114">問題の分類 (多クラス分類)テキスト データを 3 つ以上のカテゴリに分類します。</span><span class="sxs-lookup"><span data-stu-id="f1929-114">Issue classification (multiclass classification): Classify textual data into 3 or more categories.</span></span>
-- <span data-ttu-id="f1929-115">料金の予測 (回帰): 数値を予測します。</span><span class="sxs-lookup"><span data-stu-id="f1929-115">Price prediction (regression): Predict a numeric value.</span></span>
-- <span data-ttu-id="f1929-116">イメージ分類 (ディープ ラーニング): 特性に基づいてイメージを分類します。</span><span class="sxs-lookup"><span data-stu-id="f1929-116">Image classification (deep learning): Categorize images based on characteristics.</span></span>
-- <span data-ttu-id="f1929-117">カスタム シナリオ: 回帰、分類、およびその他のタスクを使用して、ご利用のデータからカスタム シナリオを作成します。</span><span class="sxs-lookup"><span data-stu-id="f1929-117">Custom scenario: Build custom scenarios from your data using regression, classification, and other tasks.</span></span>
+- <span data-ttu-id="3c8fc-113">センチメント分析 (二項分類)テキスト データを 2 つのカテゴリに分類します。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-113">Sentiment analysis (binary classification): Classify textual data into two categories.</span></span>
+- <span data-ttu-id="3c8fc-114">問題の分類 (多クラス分類)テキスト データを 3 つ以上のカテゴリに分類します。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-114">Issue classification (multiclass classification): Classify textual data into 3 or more categories.</span></span>
+- <span data-ttu-id="3c8fc-115">料金の予測 (回帰): 数値を予測します。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-115">Price prediction (regression): Predict a numeric value.</span></span>
+- <span data-ttu-id="3c8fc-116">イメージ分類 (ディープ ラーニング): 特性に基づいてイメージを分類します。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-116">Image classification (deep learning): Categorize images based on characteristics.</span></span>
+- <span data-ttu-id="3c8fc-117">カスタム シナリオ: 回帰、分類、およびその他のタスクを使用して、ご利用のデータからカスタム シナリオを作成します。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-117">Custom scenario: Build custom scenarios from your data using regression, classification, and other tasks.</span></span>
 
-<span data-ttu-id="f1929-118">この記事では、テキスト データまたは数値データを含む分類と回帰のシナリオと、イメージ分類シナリオについて説明します。</span><span class="sxs-lookup"><span data-stu-id="f1929-118">This article covers classification and regression scenarios with textual or numerical data, and image classification scenarios.</span></span>
+<span data-ttu-id="3c8fc-118">この記事では、テキスト データまたは数値データを含む分類と回帰のシナリオと、イメージ分類シナリオについて説明します。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-118">This article covers classification and regression scenarios with textual or numerical data, and image classification scenarios.</span></span>
 
-## <a name="load-text-or-numeric-data-from-a-file"></a><span data-ttu-id="f1929-119">ファイルからのテキスト データまたは数値データの読み込み</span><span class="sxs-lookup"><span data-stu-id="f1929-119">Load text or numeric data from a file</span></span>
+## <a name="load-text-or-numeric-data-from-a-file"></a><span data-ttu-id="3c8fc-119">ファイルからのテキスト データまたは数値データの読み込み</span><span class="sxs-lookup"><span data-stu-id="3c8fc-119">Load text or numeric data from a file</span></span>
 
-<span data-ttu-id="f1929-120">ファイルからモデル ビルダーにテキスト データまたは数値データを読み込むことができます。</span><span class="sxs-lookup"><span data-stu-id="f1929-120">You can load text or numeric data from a file into Model Builder.</span></span> <span data-ttu-id="f1929-121">コンマ区切り (CSV) またはタブ区切り (TSV) のファイル形式が受け入れられます。</span><span class="sxs-lookup"><span data-stu-id="f1929-121">It accepts comma-delimited (CSV) or tab-delimited (TSV) file formats.</span></span>
+<span data-ttu-id="3c8fc-120">ファイルからモデル ビルダーにテキスト データまたは数値データを読み込むことができます。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-120">You can load text or numeric data from a file into Model Builder.</span></span> <span data-ttu-id="3c8fc-121">コンマ区切り (CSV) またはタブ区切り (TSV) のファイル形式が受け入れられます。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-121">It accepts comma-delimited (CSV) or tab-delimited (TSV) file formats.</span></span>
 
-1. <span data-ttu-id="f1929-122">モデル ビルダーのデータの手順で、データ ソースのドロップダウンから **[ファイル]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="f1929-122">In the data step of Model Builder, select **File** from the data source dropdown.</span></span>
-2. <span data-ttu-id="f1929-123">**[ファイルの選択]** テキスト ボックスの横にあるボタンを選択し、エクスプローラーを使用してデータ ファイルを参照します。</span><span class="sxs-lookup"><span data-stu-id="f1929-123">Select the button next to the **Select a file** text box, and use File Explorer to browse and select the data file.</span></span>
-3. <span data-ttu-id="f1929-124">**[予測する列 (ラベル)]** ドロップダウンで [センチメント] を選択します。</span><span class="sxs-lookup"><span data-stu-id="f1929-124">Choose a category in the **Column to Predict (Label)** dropdown.</span></span>
-4. <span data-ttu-id="f1929-125">**[入力列 (機能)]** ドロップダウンから、含めるデータ列がチェックされていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="f1929-125">From the **Input Columns (Features)** dropdown, confirm the data columns you want to include are checked.</span></span>
+1. <span data-ttu-id="3c8fc-122">モデル ビルダーのデータの手順で、データ ソースのドロップダウンから **[ファイル]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-122">In the data step of Model Builder, select **File** from the data source dropdown.</span></span>
+2. <span data-ttu-id="3c8fc-123">**[ファイルの選択]** テキスト ボックスの横にあるボタンを選択し、エクスプローラーを使用してデータ ファイルを参照します。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-123">Select the button next to the **Select a file** text box, and use File Explorer to browse and select the data file.</span></span>
+3. <span data-ttu-id="3c8fc-124">**[予測する列 (ラベル)]** ドロップダウンで [センチメント] を選択します。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-124">Choose a category in the **Column to Predict (Label)** dropdown.</span></span>
+4. <span data-ttu-id="3c8fc-125">**[入力列 (機能)]** ドロップダウンから、含めるデータ列がチェックされていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-125">From the **Input Columns (Features)** dropdown, confirm the data columns you want to include are checked.</span></span>
 
-<span data-ttu-id="f1929-126">モデル ビルダーで使用するデータ ソース ファイルの設定が完了しました。</span><span class="sxs-lookup"><span data-stu-id="f1929-126">You're done setting up your data source file for Model Builder.</span></span> <span data-ttu-id="f1929-127">**[トレーニング]** リンクを選択して、モデル ビルダーの次の手順に進みます。</span><span class="sxs-lookup"><span data-stu-id="f1929-127">Select the **Train** link to move to the next step in Model Builder.</span></span>
+<span data-ttu-id="3c8fc-126">モデル ビルダーで使用するデータ ソース ファイルの設定が完了しました。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-126">You're done setting up your data source file for Model Builder.</span></span> <span data-ttu-id="3c8fc-127">**[トレーニング]** リンクを選択して、モデル ビルダーの次の手順に進みます。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-127">Select the **Train** link to move to the next step in Model Builder.</span></span>
 
-## <a name="load-data-from-a-sql-server-database"></a><span data-ttu-id="f1929-128">SQL Server データベースからデータを読み込む</span><span class="sxs-lookup"><span data-stu-id="f1929-128">Load data from a SQL Server database</span></span>
+## <a name="load-data-from-a-sql-server-database"></a><span data-ttu-id="3c8fc-128">SQL Server データベースからデータを読み込む</span><span class="sxs-lookup"><span data-stu-id="3c8fc-128">Load data from a SQL Server database</span></span>
 
-<span data-ttu-id="f1929-129">モデル ビルダーでは、ローカルおよびリモートの SQL Server データベースからのデータの読み込みがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="f1929-129">Model Builder supports loading data from local and remote SQL Server databases.</span></span>
+<span data-ttu-id="3c8fc-129">モデル ビルダーでは、ローカルおよびリモートの SQL Server データベースからのデータの読み込みがサポートされています。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-129">Model Builder supports loading data from local and remote SQL Server databases.</span></span>
 
-<span data-ttu-id="f1929-130">SQL Server データベースからモジュール ビルダーにデータを読み込むには、次のようにします。</span><span class="sxs-lookup"><span data-stu-id="f1929-130">To load data from a SQL Server database into Module Builder:</span></span>
+<span data-ttu-id="3c8fc-130">SQL Server データベースからモジュール ビルダーにデータを読み込むには、次のようにします。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-130">To load data from a SQL Server database into Module Builder:</span></span>
 
-1. <span data-ttu-id="f1929-131">モデル ビルダーのデータの手順で、データ ソースのドロップダウンから **[SQL Server]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="f1929-131">In the data step of Model Builder, select **SQL Server** from the data source dropdown.</span></span>
-1. <span data-ttu-id="f1929-132">**[SQL Server データベースに接続]** テキスト ボックスの横にあるボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="f1929-132">Select the button next to the **Connect to SQL Server database** text box.</span></span>
-    1. <span data-ttu-id="f1929-133">**[データの選択]** ダイアログで、 **[Microsoft SQL Server データベース ファイル]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="f1929-133">In the **Choose Data** dialog, select **Microsoft SQL Server Database File**.</span></span>
-    1. <span data-ttu-id="f1929-134">**[常にこれを選択する]** チェックボックスをオフにして、 **[続行]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="f1929-134">Uncheck the **Always use this selection** checkbox and select **Continue**</span></span>
-    1. <span data-ttu-id="f1929-135">**[接続プロパティ]** ダイアログで、 **[参照]** を選択し、ダウンロードした .MDF ファイルを選択します。</span><span class="sxs-lookup"><span data-stu-id="f1929-135">In the **Connection Properties** dialog, select **Browse** and select the downloaded .MDF file.</span></span>
-    1. <span data-ttu-id="f1929-136">**[OK]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="f1929-136">Select **OK**</span></span>
-1. <span data-ttu-id="f1929-137">**[テーブル名]** ドロップダウンからデータセット名を選択します。</span><span class="sxs-lookup"><span data-stu-id="f1929-137">Choose the dataset name from the **Table Name** dropdown.</span></span>
-1. <span data-ttu-id="f1929-138">**[予測する列 (ラベル)]** ドロップダウンで、予測を作成するデータ カテゴリを選択します。</span><span class="sxs-lookup"><span data-stu-id="f1929-138">From the **Column to Predict (Label)** dropdown, choose the data category on which you want to make a prediction.</span></span>
-1. <span data-ttu-id="f1929-139">**[入力列 (機能)]** ドロップダウンから、含める列がチェックされていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="f1929-139">From the **Input Columns (Features)** dropdown, confirm the columns you want to include are checked.</span></span>
+1. <span data-ttu-id="3c8fc-131">モデル ビルダーのデータの手順で、データ ソースのドロップダウンから **[SQL Server]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-131">In the data step of Model Builder, select **SQL Server** from the data source dropdown.</span></span>
+1. <span data-ttu-id="3c8fc-132">**[SQL Server データベースに接続]** テキスト ボックスの横にあるボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-132">Select the button next to the **Connect to SQL Server database** text box.</span></span>
+    1. <span data-ttu-id="3c8fc-133">**[データの選択]** ダイアログで、 **[Microsoft SQL Server データベース ファイル]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-133">In the **Choose Data** dialog, select **Microsoft SQL Server Database File**.</span></span>
+    1. <span data-ttu-id="3c8fc-134">**[常にこれを選択する]** チェックボックスをオフにして、 **[続行]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-134">Uncheck the **Always use this selection** checkbox and select **Continue**</span></span>
+    1. <span data-ttu-id="3c8fc-135">**[接続プロパティ]** ダイアログで、 **[参照]** を選択し、ダウンロードした .MDF ファイルを選択します。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-135">In the **Connection Properties** dialog, select **Browse** and select the downloaded .MDF file.</span></span>
+    1. <span data-ttu-id="3c8fc-136">**[OK]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-136">Select **OK**</span></span>
+1. <span data-ttu-id="3c8fc-137">**[テーブル名]** ドロップダウンからデータセット名を選択します。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-137">Choose the dataset name from the **Table Name** dropdown.</span></span>
+1. <span data-ttu-id="3c8fc-138">**[予測する列 (ラベル)]** ドロップダウンで、予測を作成するデータ カテゴリを選択します。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-138">From the **Column to Predict (Label)** dropdown, choose the data category on which you want to make a prediction.</span></span>
+1. <span data-ttu-id="3c8fc-139">**[入力列 (機能)]** ドロップダウンから、含める列がチェックされていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-139">From the **Input Columns (Features)** dropdown, confirm the columns you want to include are checked.</span></span>
 
-<span data-ttu-id="f1929-140">モデル ビルダーで使用するデータ ソース ファイルの設定が完了しました。</span><span class="sxs-lookup"><span data-stu-id="f1929-140">You're done setting up your data source file for Model Builder.</span></span> <span data-ttu-id="f1929-141">**[トレーニング]** リンクを選択して、モデル ビルダーの次の手順に進みます。</span><span class="sxs-lookup"><span data-stu-id="f1929-141">Select the **Train** link to move to the next step in Model Builder.</span></span>
+<span data-ttu-id="3c8fc-140">モデル ビルダーで使用するデータ ソース ファイルの設定が完了しました。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-140">You're done setting up your data source file for Model Builder.</span></span> <span data-ttu-id="3c8fc-141">**[トレーニング]** リンクを選択して、モデル ビルダーの次の手順に進みます。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-141">Select the **Train** link to move to the next step in Model Builder.</span></span>
 
-## <a name="set-up-image-data-files"></a><span data-ttu-id="f1929-142">イメージ データ ファイルを設定する</span><span class="sxs-lookup"><span data-stu-id="f1929-142">Set up image data files</span></span>
+## <a name="set-up-image-data-files"></a><span data-ttu-id="3c8fc-142">イメージ データ ファイルを設定する</span><span class="sxs-lookup"><span data-stu-id="3c8fc-142">Set up image data files</span></span>
 
-<span data-ttu-id="f1929-143">モデル ビルダーでは、イメージ データが、分類のカテゴリに対応するフォルダーに整理された JPG または PNG ファイルである必要があります。</span><span class="sxs-lookup"><span data-stu-id="f1929-143">Model Builder expects image data to be JPG or PNG files organized in folders that correspond to the categories of the classification.</span></span>
+<span data-ttu-id="3c8fc-143">モデル ビルダーでは、イメージ データが、分類のカテゴリに対応するフォルダーに整理された JPG または PNG ファイルである必要があります。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-143">Model Builder expects image data to be JPG or PNG files organized in folders that correspond to the categories of the classification.</span></span>
 
-<span data-ttu-id="f1929-144">モデル ビルダーにイメージを読み込むには、単一の最上位ディレクトリへのパスを指定します。</span><span class="sxs-lookup"><span data-stu-id="f1929-144">To load images into Model Builder, provide the path to a single top-level directory:</span></span>
+<span data-ttu-id="3c8fc-144">モデル ビルダーにイメージを読み込むには、単一の最上位ディレクトリへのパスを指定します。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-144">To load images into Model Builder, provide the path to a single top-level directory:</span></span>
 
-- <span data-ttu-id="f1929-145">この最上位ディレクトリには、予測するカテゴリごとにサブフォルダーが 1 つ含まれています。</span><span class="sxs-lookup"><span data-stu-id="f1929-145">This top-level directory contains one subfolder for each of the categories to predict.</span></span>
-- <span data-ttu-id="f1929-146">各サブフォルダーには、そのカテゴリに属するイメージ ファイルが含まれています。</span><span class="sxs-lookup"><span data-stu-id="f1929-146">Each subfolder contains the image files belonging to its category.</span></span>
+- <span data-ttu-id="3c8fc-145">この最上位ディレクトリには、予測するカテゴリごとにサブフォルダーが 1 つ含まれています。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-145">This top-level directory contains one subfolder for each of the categories to predict.</span></span>
+- <span data-ttu-id="3c8fc-146">各サブフォルダーには、そのカテゴリに属するイメージ ファイルが含まれています。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-146">Each subfolder contains the image files belonging to its category.</span></span>
 
-<span data-ttu-id="f1929-147">次に示すフォルダー構造で、最上位ディレクトリは *flower_photos* です。</span><span class="sxs-lookup"><span data-stu-id="f1929-147">In the folder structure illustrated below, the top-level directory is *flower_photos*.</span></span> <span data-ttu-id="f1929-148">予測するカテゴリに対応したサブディレクトリとして、daisy、dandelion、roses、sunflowers、および tulips の 5 つがあります。</span><span class="sxs-lookup"><span data-stu-id="f1929-148">There are five subdirectories corresponding to the categories you want to predict: daisy, dandelion, roses, sunflowers, and tulips.</span></span> <span data-ttu-id="f1929-149">これらの各サブディレクトリには、それぞれのカテゴリに属するイメージが含まれています。</span><span class="sxs-lookup"><span data-stu-id="f1929-149">Each of these subdirectories contains images belonging to its respective category.</span></span>
+<span data-ttu-id="3c8fc-147">次に示すフォルダー構造で、最上位ディレクトリは *flower_photos* です。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-147">In the folder structure illustrated below, the top-level directory is *flower_photos*.</span></span> <span data-ttu-id="3c8fc-148">予測するカテゴリに対応したサブディレクトリとして、daisy、dandelion、roses、sunflowers、および tulips の 5 つがあります。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-148">There are five subdirectories corresponding to the categories you want to predict: daisy, dandelion, roses, sunflowers, and tulips.</span></span> <span data-ttu-id="3c8fc-149">これらの各サブディレクトリには、それぞれのカテゴリに属するイメージが含まれています。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-149">Each of these subdirectories contains images belonging to its respective category.</span></span>
 
 ```text
 \---flower_photos
@@ -104,11 +104,11 @@ ms.locfileid: "78849160"
             10791227_7168491604.jpg
 ```
 
-## <a name="next-steps"></a><span data-ttu-id="f1929-150">次の手順</span><span class="sxs-lookup"><span data-stu-id="f1929-150">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="3c8fc-150">次の手順</span><span class="sxs-lookup"><span data-stu-id="3c8fc-150">Next steps</span></span>
 
-<span data-ttu-id="f1929-151">次のチュートリアルに従って、モデル ビルダーを使用した機械学習アプリの作成を行います。</span><span class="sxs-lookup"><span data-stu-id="f1929-151">Follow these tutorials to build machine learning apps with Model Builder:</span></span>
+<span data-ttu-id="3c8fc-151">次のチュートリアルに従って、モデル ビルダーを使用した機械学習アプリの作成を行います。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-151">Follow these tutorials to build machine learning apps with Model Builder:</span></span>
 
-- [<span data-ttu-id="f1929-152">回帰を使用して価格を予測する</span><span class="sxs-lookup"><span data-stu-id="f1929-152">Predict prices using regression</span></span>](../tutorials/predict-prices-with-model-builder.md)
-- [<span data-ttu-id="f1929-153">バイナリ分類を使用して Web アプリケーションのセンチメントを分析する</span><span class="sxs-lookup"><span data-stu-id="f1929-153">Analyze sentiment in a web application using binary classification</span></span>](../tutorials/sentiment-analysis-model-builder.md )
+- [<span data-ttu-id="3c8fc-152">回帰を使用して価格を予測する</span><span class="sxs-lookup"><span data-stu-id="3c8fc-152">Predict prices using regression</span></span>](../tutorials/predict-prices-with-model-builder.md)
+- [<span data-ttu-id="3c8fc-153">バイナリ分類を使用して Web アプリケーションのセンチメントを分析する</span><span class="sxs-lookup"><span data-stu-id="3c8fc-153">Analyze sentiment in a web application using binary classification</span></span>](../tutorials/sentiment-analysis-model-builder.md)
 
-<span data-ttu-id="f1929-154">コードを使用してモデルをトレーニングする場合は、[ML.NET API を使用したデータ読み込みの方法](load-data-ml-net.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="f1929-154">If you're training a model using code, [learn how to load data using the ML.NET API](load-data-ml-net.md).</span></span>
+<span data-ttu-id="3c8fc-154">コードを使用してモデルをトレーニングする場合は、[ML.NET API を使用したデータ読み込みの方法](load-data-ml-net.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c8fc-154">If you're training a model using code, [learn how to load data using the ML.NET API](load-data-ml-net.md).</span></span>
