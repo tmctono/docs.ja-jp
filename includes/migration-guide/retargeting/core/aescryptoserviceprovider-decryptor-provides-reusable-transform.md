@@ -1,18 +1,41 @@
 ---
-ms.openlocfilehash: c008809606372c84b05a2facd1cac1293382aed4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 36a9db601f7637185bf48dfcbe2233b4489fcdcf
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67859324"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614660"
 ---
-### <a name="aescryptoserviceprovider-decryptor-provides-a-reusable-transform"></a><span data-ttu-id="d4614-101">AesCryptoServiceProvider の復号で変換が再利用可能に</span><span class="sxs-lookup"><span data-stu-id="d4614-101">AesCryptoServiceProvider decryptor provides a reusable transform</span></span>
+### <a name="aescryptoserviceprovider-decryptor-provides-a-reusable-transform"></a><span data-ttu-id="863d7-101">AesCryptoServiceProvider の復号で変換が再利用可能に</span><span class="sxs-lookup"><span data-stu-id="863d7-101">AesCryptoServiceProvider decryptor provides a reusable transform</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="d4614-102">説明</span><span class="sxs-lookup"><span data-stu-id="d4614-102">Details</span></span>|<span data-ttu-id="d4614-103">.NET Framework 4.6.2 以降を対象とするアプリでは、<xref:System.Security.Cryptography.AesCryptoServiceProvider> の復号で変換を再利用できます。</span><span class="sxs-lookup"><span data-stu-id="d4614-103">Starting with apps that target the .NET Framework 4.6.2, the <xref:System.Security.Cryptography.AesCryptoServiceProvider> decryptor provides a reusable transform.</span></span> <span data-ttu-id="d4614-104"><xref:System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(System.Byte[],System.Int32,System.Int32)?displayProperty=name> の呼び出しの後、変換は初期化し直され、再利用することができます。</span><span class="sxs-lookup"><span data-stu-id="d4614-104">After a call to <xref:System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(System.Byte[],System.Int32,System.Int32)?displayProperty=name>, the transform is reinitialized and can be reused.</span></span> <span data-ttu-id="d4614-105">以前のバージョンの .NET Framework を対象とするアプリでは、<xref:System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(System.Byte[],System.Int32,System.Int32)?displayProperty=name> の呼び出しの後に、<xref:System.Security.Cryptography.CryptoAPITransform.TransformBlock(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32)?displayProperty=name> を呼び出して、復号を再利用しようとすると、<xref:System.Security.Cryptography.CryptographicException> をスローするか、破損しているデータが生成されます。</span><span class="sxs-lookup"><span data-stu-id="d4614-105">For apps that target earlier versions of the .NET Framework, attempting to reuse the decryptor by calling <xref:System.Security.Cryptography.CryptoAPITransform.TransformBlock(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32)?displayProperty=name> after a call to <xref:System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(System.Byte[],System.Int32,System.Int32)?displayProperty=name> throws a <xref:System.Security.Cryptography.CryptographicException> or produces corrupted data.</span></span>|
-|<span data-ttu-id="d4614-106">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="d4614-106">Suggestion</span></span>|<span data-ttu-id="d4614-107">この動作は想定済みであり、この変更の影響は最小限に抑えられているはずです。この変更の影響は前の動作に依存するアプリケーションは、そのアプリケーションの構成ファイルの <code>&lt;runtime&gt;</code> セクションに次の構成設定を追加して、この動作の使用を無効にすることができます。</span><span class="sxs-lookup"><span data-stu-id="d4614-107">The impact of this change should be minimal, since this is the expected behavior.Applications that depend on the previous behavior can opt out of it using it by adding the following configuration setting to the <code>&lt;runtime&gt;</code> section of the application's configuration file:</span></span><pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Security.Cryptography.AesCryptoServiceProvider.DontCorrectlyResetDecryptor=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre><span data-ttu-id="d4614-108">また、以前のバージョンの .NET Framework を対象とするものの、.NET Framework 4.6.2 以降のバージョンの .NET Framework で実行されているアプリでは、そのアプリケーションの構成ファイルの <code>&lt;runtime&gt;</code> セクションに次の構成設定を追加して、この動作を有効にできます。</span><span class="sxs-lookup"><span data-stu-id="d4614-108">In addition, applications that target a previous version of the .NET Framework but are running under a version of the .NET Framework starting with .NET Framework 4.6.2 can opt in to it by adding the following configuration setting to the <code>&lt;runtime&gt;</code> section of the application's configuration file:</span></span><pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Security.Cryptography.AesCryptoServiceProvider.DontCorrectlyResetDecryptor=false&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|<span data-ttu-id="d4614-109">スコープ</span><span class="sxs-lookup"><span data-stu-id="d4614-109">Scope</span></span>|<span data-ttu-id="d4614-110">マイナー</span><span class="sxs-lookup"><span data-stu-id="d4614-110">Minor</span></span>|
-|<span data-ttu-id="d4614-111">バージョン</span><span class="sxs-lookup"><span data-stu-id="d4614-111">Version</span></span>|<span data-ttu-id="d4614-112">4.6.2</span><span class="sxs-lookup"><span data-stu-id="d4614-112">4.6.2</span></span>|
-|<span data-ttu-id="d4614-113">種類</span><span class="sxs-lookup"><span data-stu-id="d4614-113">Type</span></span>|<span data-ttu-id="d4614-114">再ターゲット中</span><span class="sxs-lookup"><span data-stu-id="d4614-114">Retargeting</span></span>|
-|<span data-ttu-id="d4614-115">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="d4614-115">Affected APIs</span></span>|<ul><li><xref:System.Security.Cryptography.AesCryptoServiceProvider.CreateDecryptor?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="863d7-102">説明</span><span class="sxs-lookup"><span data-stu-id="863d7-102">Details</span></span>
+
+<span data-ttu-id="863d7-103">.NET Framework 4.6.2 以降を対象とするアプリでは、<xref:System.Security.Cryptography.AesCryptoServiceProvider> の復号で変換を再利用できます。</span><span class="sxs-lookup"><span data-stu-id="863d7-103">Starting with apps that target the .NET Framework 4.6.2, the <xref:System.Security.Cryptography.AesCryptoServiceProvider> decryptor provides a reusable transform.</span></span> <span data-ttu-id="863d7-104"><xref:System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(System.Byte[],System.Int32,System.Int32)?displayProperty=fullName> の呼び出しの後、変換は初期化し直され、再利用することができます。</span><span class="sxs-lookup"><span data-stu-id="863d7-104">After a call to <xref:System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(System.Byte[],System.Int32,System.Int32)?displayProperty=fullName>, the transform is reinitialized and can be reused.</span></span> <span data-ttu-id="863d7-105">以前のバージョンの .NET Framework を対象とするアプリでは、<xref:System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(System.Byte[],System.Int32,System.Int32)?displayProperty=fullName> の呼び出しの後に、<xref:System.Security.Cryptography.CryptoAPITransform.TransformBlock(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32)?displayProperty=fullName> を呼び出して、復号を再利用しようとすると、<xref:System.Security.Cryptography.CryptographicException> をスローするか、破損しているデータが生成されます。</span><span class="sxs-lookup"><span data-stu-id="863d7-105">For apps that target earlier versions of the .NET Framework, attempting to reuse the decryptor by calling <xref:System.Security.Cryptography.CryptoAPITransform.TransformBlock(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32)?displayProperty=fullName> after a call to <xref:System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(System.Byte[],System.Int32,System.Int32)?displayProperty=fullName> throws a <xref:System.Security.Cryptography.CryptographicException> or produces corrupted data.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="863d7-106">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="863d7-106">Suggestion</span></span>
+
+<span data-ttu-id="863d7-107">この動作は想定済みであり、この変更の影響は最小限に抑えられているはずです。この変更の影響は前の動作に依存するアプリケーションは、そのアプリケーションの構成ファイルの `<runtime>` セクションに次の構成設定を追加して、この動作の使用を無効にすることができます。</span><span class="sxs-lookup"><span data-stu-id="863d7-107">The impact of this change should be minimal, since this is the expected behavior.Applications that depend on the previous behavior can opt out of it using it by adding the following configuration setting to the `<runtime>` section of the application's configuration file:</span></span>
+
+```xml
+<runtime>
+<AppContextSwitchOverrides value="Switch.System.Security.Cryptography.AesCryptoServiceProvider.DontCorrectlyResetDecryptor=true"/>
+</runtime>
+```
+
+<span data-ttu-id="863d7-108">また、以前のバージョンの .NET Framework を対象とするものの、.NET Framework 4.6.2 以降のバージョンの .NET Framework で実行されているアプリでは、そのアプリケーションの構成ファイルの `<runtime>` セクションに次の構成設定を追加して、この動作を有効にできます。</span><span class="sxs-lookup"><span data-stu-id="863d7-108">In addition, applications that target a previous version of the .NET Framework but are running under a version of the .NET Framework starting with .NET Framework 4.6.2 can opt in to it by adding the following configuration setting to the `<runtime>` section of the application's configuration file:</span></span>
+
+```xml
+<runtime>
+<AppContextSwitchOverrides value="Switch.System.Security.Cryptography.AesCryptoServiceProvider.DontCorrectlyResetDecryptor=false"/>
+</runtime>
+```
+
+| <span data-ttu-id="863d7-109">名前</span><span class="sxs-lookup"><span data-stu-id="863d7-109">Name</span></span>    | <span data-ttu-id="863d7-110">値</span><span class="sxs-lookup"><span data-stu-id="863d7-110">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="863d7-111">スコープ</span><span class="sxs-lookup"><span data-stu-id="863d7-111">Scope</span></span>   | <span data-ttu-id="863d7-112">マイナー</span><span class="sxs-lookup"><span data-stu-id="863d7-112">Minor</span></span>       |
+| <span data-ttu-id="863d7-113">バージョン</span><span class="sxs-lookup"><span data-stu-id="863d7-113">Version</span></span> | <span data-ttu-id="863d7-114">4.6.2</span><span class="sxs-lookup"><span data-stu-id="863d7-114">4.6.2</span></span>       |
+| <span data-ttu-id="863d7-115">種類</span><span class="sxs-lookup"><span data-stu-id="863d7-115">Type</span></span>    | <span data-ttu-id="863d7-116">再ターゲット中</span><span class="sxs-lookup"><span data-stu-id="863d7-116">Retargeting</span></span> |
+
+#### <a name="affected-apis"></a><span data-ttu-id="863d7-117">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="863d7-117">Affected APIs</span></span>
+
+- <xref:System.Security.Cryptography.AesCryptoServiceProvider.CreateDecryptor?displayProperty=nameWithType>

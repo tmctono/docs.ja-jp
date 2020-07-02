@@ -1,17 +1,41 @@
 ---
-ms.openlocfilehash: 506218195417548880a9d8d10508a570a7769682
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 67e3ff5000ebd38064ed8a57e4fe561afa31f8d8
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67859366"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614709"
 ---
-### <a name="long-path-support"></a><span data-ttu-id="ee394-101">長いパスのサポート</span><span class="sxs-lookup"><span data-stu-id="ee394-101">Long path support</span></span>
+### <a name="long-path-support"></a><span data-ttu-id="28bcc-101">長いパスのサポート</span><span class="sxs-lookup"><span data-stu-id="28bcc-101">Long path support</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="ee394-102">説明</span><span class="sxs-lookup"><span data-stu-id="ee394-102">Details</span></span>|<span data-ttu-id="ee394-103">以降とするアプリをターゲットとする .NET Framework 4.6.2、長いパス (最大 32 K の文字) がサポートされている、および 260 文字 (または<code>MAX_PATH</code>) パスの長さの制限がなくなりました。 .NET Framework 4.6.2 を対象として再コンパイルされたアプリの場合は、コードをスローした以前のパス、 <xref:System.IO.PathTooLongException?displayProperty=name> 260 文字をスローがパスを超えたため、<xref:System.IO.PathTooLongException?displayProperty=name>次の条件下でのみ。</span><span class="sxs-lookup"><span data-stu-id="ee394-103">Starting with apps that target the .NET Framework 4.6.2, long paths (of up to 32K characters) are supported, and the 260-character (or <code>MAX_PATH</code>) limitation on path lengths has been removed.For apps that are recompiled to target the .NET Framework 4.6.2, code paths that previously threw a <xref:System.IO.PathTooLongException?displayProperty=name> because a path exceeded 260 characters will now throw a <xref:System.IO.PathTooLongException?displayProperty=name> only under the following conditions:</span></span><ul><li><span data-ttu-id="ee394-104">パスの長さが <xref:System.Int16.MaxValue> (32,767) 文字を超えている。</span><span class="sxs-lookup"><span data-stu-id="ee394-104">The length of the path is greater than <xref:System.Int16.MaxValue> (32,767) characters.</span></span></li><li><span data-ttu-id="ee394-105">オペレーティング システムが <code>COR_E_PATHTOOLONG</code> またはそれと同等のものを返す。</span><span class="sxs-lookup"><span data-stu-id="ee394-105">The operating system returns <code>COR_E_PATHTOOLONG</code> or its equivalent.</span></span></li></ul><span data-ttu-id="ee394-106">.NET Framework 4.6.1 以前を対象とするアプリの場合、パスが 260 文字を超えるたびにランタイムで自動的に <xref:System.IO.PathTooLongException?displayProperty=name> がスローされます。</span><span class="sxs-lookup"><span data-stu-id="ee394-106">For apps that target the .NET Framework 4.6.1 and earlier versions, the runtime automatically throws a <xref:System.IO.PathTooLongException?displayProperty=name> whenever a path exceeds 260 characters.</span></span>|
-|<span data-ttu-id="ee394-107">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="ee394-107">Suggestion</span></span>|<span data-ttu-id="ee394-108">.NET Framework 4.6.2 を対象とするアプリケーションの場合、長いパスが望ましくないときは、<code>app.config</code> ファイルの <code>&lt;runtime&gt;</code> セクションに次を追加することで長いパスのサポートを無効にできます。</span><span class="sxs-lookup"><span data-stu-id="ee394-108">For apps that target the .NET Framework 4.6.2, you can opt out of long path support if it is not desirable by adding the following to the <code>&lt;runtime&gt;</code> section of your <code>app.config</code> file:</span></span><pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.IO.BlockLongPaths=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre><span data-ttu-id="ee394-109">以前のバージョンの .NET Framework を対象とするが、.NET Framework 4.6.2 以降で実行するアプリの場合、<code>app.config</code> ファイルの <code>&lt;runtime&gt;</code> セクションに次を追加することで長いパスのサポートを選択できます。</span><span class="sxs-lookup"><span data-stu-id="ee394-109">For apps that target earlier versions of the .NET Framework but run on the .NET Framework 4.6.2 or later, you can opt in to long path support by adding the following to the <code>&lt;runtime&gt;</code> section of your <code>app.config</code> file:</span></span><pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.IO.BlockLongPaths=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|<span data-ttu-id="ee394-110">スコープ</span><span class="sxs-lookup"><span data-stu-id="ee394-110">Scope</span></span>|<span data-ttu-id="ee394-111">マイナー</span><span class="sxs-lookup"><span data-stu-id="ee394-111">Minor</span></span>|
-|<span data-ttu-id="ee394-112">バージョン</span><span class="sxs-lookup"><span data-stu-id="ee394-112">Version</span></span>|<span data-ttu-id="ee394-113">4.6.2</span><span class="sxs-lookup"><span data-stu-id="ee394-113">4.6.2</span></span>|
-|<span data-ttu-id="ee394-114">種類</span><span class="sxs-lookup"><span data-stu-id="ee394-114">Type</span></span>|<span data-ttu-id="ee394-115">再ターゲット中</span><span class="sxs-lookup"><span data-stu-id="ee394-115">Retargeting</span></span>|
+#### <a name="details"></a><span data-ttu-id="28bcc-102">説明</span><span class="sxs-lookup"><span data-stu-id="28bcc-102">Details</span></span>
+
+<span data-ttu-id="28bcc-103">以降とするアプリをターゲットとする .NET Framework 4.6.2、長いパス (最大 32 K の文字) がサポートされている、および 260 文字 (または`MAX_PATH`) パスの長さの制限がなくなりました。 .NET Framework 4.6.2 を対象として再コンパイルされたアプリの場合は、コードをスローした以前のパス、 <xref:System.IO.PathTooLongException?displayProperty=fullName> 260 文字をスローがパスを超えたため、<xref:System.IO.PathTooLongException?displayProperty=fullName>次の条件下でのみ。</span><span class="sxs-lookup"><span data-stu-id="28bcc-103">Starting with apps that target the .NET Framework 4.6.2, long paths (of up to 32K characters) are supported, and the 260-character (or `MAX_PATH`) limitation on path lengths has been removed.For apps that are recompiled to target the .NET Framework 4.6.2, code paths that previously threw a <xref:System.IO.PathTooLongException?displayProperty=fullName> because a path exceeded 260 characters will now throw a <xref:System.IO.PathTooLongException?displayProperty=fullName> only under the following conditions:</span></span>
+
+- <span data-ttu-id="28bcc-104">パスの長さが <xref:System.Int16.MaxValue> (32,767) 文字を超えている。</span><span class="sxs-lookup"><span data-stu-id="28bcc-104">The length of the path is greater than <xref:System.Int16.MaxValue> (32,767) characters.</span></span>
+- <span data-ttu-id="28bcc-105">オペレーティング システムが `COR_E_PATHTOOLONG` またはそれと同等のものを返す。</span><span class="sxs-lookup"><span data-stu-id="28bcc-105">The operating system returns `COR_E_PATHTOOLONG` or its equivalent.</span></span>
+<span data-ttu-id="28bcc-106">.NET Framework 4.6.1 以前を対象とするアプリの場合、パスが 260 文字を超えるたびにランタイムで自動的に <xref:System.IO.PathTooLongException?displayProperty=fullName> がスローされます。</span><span class="sxs-lookup"><span data-stu-id="28bcc-106">For apps that target the .NET Framework 4.6.1 and earlier versions, the runtime automatically throws a <xref:System.IO.PathTooLongException?displayProperty=fullName> whenever a path exceeds 260 characters.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="28bcc-107">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="28bcc-107">Suggestion</span></span>
+
+<span data-ttu-id="28bcc-108">.NET Framework 4.6.2 を対象とするアプリケーションの場合、長いパスが望ましくないときは、`app.config` ファイルの `<runtime>` セクションに次を追加することで長いパスのサポートを無効にできます。</span><span class="sxs-lookup"><span data-stu-id="28bcc-108">For apps that target the .NET Framework 4.6.2, you can opt out of long path support if it is not desirable by adding the following to the `<runtime>` section of your `app.config` file:</span></span>
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.IO.BlockLongPaths=true" />
+</runtime>
+```
+
+<span data-ttu-id="28bcc-109">以前のバージョンの .NET Framework を対象とするが、.NET Framework 4.6.2 以降で実行するアプリの場合、`app.config` ファイルの `<runtime>` セクションに次を追加することで長いパスのサポートを選択できます。</span><span class="sxs-lookup"><span data-stu-id="28bcc-109">For apps that target earlier versions of the .NET Framework but run on the .NET Framework 4.6.2 or later, you can opt in to long path support by adding the following to the `<runtime>` section of your `app.config` file:</span></span>
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.IO.BlockLongPaths=false" />
+</runtime>
+```
+
+| <span data-ttu-id="28bcc-110">名前</span><span class="sxs-lookup"><span data-stu-id="28bcc-110">Name</span></span>    | <span data-ttu-id="28bcc-111">値</span><span class="sxs-lookup"><span data-stu-id="28bcc-111">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="28bcc-112">スコープ</span><span class="sxs-lookup"><span data-stu-id="28bcc-112">Scope</span></span>   | <span data-ttu-id="28bcc-113">マイナー</span><span class="sxs-lookup"><span data-stu-id="28bcc-113">Minor</span></span>       |
+| <span data-ttu-id="28bcc-114">バージョン</span><span class="sxs-lookup"><span data-stu-id="28bcc-114">Version</span></span> | <span data-ttu-id="28bcc-115">4.6.2</span><span class="sxs-lookup"><span data-stu-id="28bcc-115">4.6.2</span></span>       |
+| <span data-ttu-id="28bcc-116">種類</span><span class="sxs-lookup"><span data-stu-id="28bcc-116">Type</span></span>    | <span data-ttu-id="28bcc-117">再ターゲット中</span><span class="sxs-lookup"><span data-stu-id="28bcc-117">Retargeting</span></span> |

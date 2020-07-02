@@ -1,18 +1,41 @@
 ---
-ms.openlocfilehash: 3e9a1009167d8a765bc401d64a574bd123736ccd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 53d74db1a77e62cc64250658281fd3e4706fe494
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774059"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614636"
 ---
-### <a name="allow-unicode-bidirectional-control-characters-in-uris"></a><span data-ttu-id="c2879-101">URI での Unicode の双方向制御文字の許可</span><span class="sxs-lookup"><span data-stu-id="c2879-101">Allow Unicode Bidirectional Control Characters in URIs</span></span>
+### <a name="allow-unicode-bidirectional-control-characters-in-uris"></a><span data-ttu-id="60478-101">URI での Unicode の双方向制御文字の許可</span><span class="sxs-lookup"><span data-stu-id="60478-101">Allow Unicode Bidirectional Control Characters in URIs</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="c2879-102">説明</span><span class="sxs-lookup"><span data-stu-id="c2879-102">Details</span></span>|<span data-ttu-id="c2879-103">Unicode では、テキストの方向を指定するために使用される特殊な制御文字をいくつか指定します。</span><span class="sxs-lookup"><span data-stu-id="c2879-103">Unicode specifies several special control characters used to specify the orientation of text.</span></span> <span data-ttu-id="c2879-104">以前のバージョンの .NET Framework では、これらの文字は、パーセントでエンコードされたフォームに存在する場合でも、すべての URI から正しく削除されませんでした。</span><span class="sxs-lookup"><span data-stu-id="c2879-104">In previous versions of the .NET Framework, these characters were incorrectly stripped from all URIs even if they were present in their percent-encoded form.</span></span> <span data-ttu-id="c2879-105">[RFC 3987](https://tools.ietf.org/html/rfc3987) により適切に従うために、これらの文字を URI で使用できるようにしました。</span><span class="sxs-lookup"><span data-stu-id="c2879-105">In order to better follow [RFC 3987](https://tools.ietf.org/html/rfc3987), we now allow these characters in URIs.</span></span> <span data-ttu-id="c2879-106">これらの文字は、URI でエンコードされていないことがわかった場合、パーセントでエンコードされます。</span><span class="sxs-lookup"><span data-stu-id="c2879-106">When found unencoded in a URI, they are percent-encoded.</span></span> <span data-ttu-id="c2879-107">パーセントでエンコードされていることがわかった場合は、そのままです。</span><span class="sxs-lookup"><span data-stu-id="c2879-107">When found percent-encoded they are left as-is.</span></span>|
-|<span data-ttu-id="c2879-108">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="c2879-108">Suggestion</span></span>|<span data-ttu-id="c2879-109">4.7.2 以降のバージョンの .NET Framework を対象とするアプリケーションの場合は、Unicode の双方向文字のサポートが既定で有効になります。</span><span class="sxs-lookup"><span data-stu-id="c2879-109">For applications that target versions of .NET Framework starting with 4.7.2, support for Unicode bidirectional characters is enabled by default.</span></span> <span data-ttu-id="c2879-110">この変更が望ましくない場合、アプリケーションの構成ファイルの <code>&lt;runtime&gt;</code> セクションに次の [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) スイッチを追加することで無効にできます。</span><span class="sxs-lookup"><span data-stu-id="c2879-110">If this change is undesirable, you can disable it by adding the following [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) switch to the <code>&lt;runtime&gt;</code> section of the application configuration file:</span></span><pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Uri.DontKeepUnicodeBidiFormattingCharacters=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre><span data-ttu-id="c2879-111">以前のバージョンの .NET Framework を対象とするが、.NET Framework 4.7.2 以降のバージョンで実行するアプリケーションの場合、Unicode の双方向文字のサポートが既定で無効になります。</span><span class="sxs-lookup"><span data-stu-id="c2879-111">For applications that target earlier versions of the .NET Framework but are running under versions starting with .NET Framework 4.7.2, support for Unicode bidirectional characters is disabled by default.</span></span> <span data-ttu-id="c2879-112">アプリケーションの構成ファイルの <code>&lt;runtime&gt;</code> セクションに次の [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) スイッチを追加することで有効にできます。</span><span class="sxs-lookup"><span data-stu-id="c2879-112">You can enable it by adding the following [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) switch to the <code>&lt;runtime&gt;</code> section of the application configuration file::</span></span><pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Uri.DontKeepUnicodeBidiFormattingCharacters=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|<span data-ttu-id="c2879-113">スコープ</span><span class="sxs-lookup"><span data-stu-id="c2879-113">Scope</span></span>|<span data-ttu-id="c2879-114">マイナー</span><span class="sxs-lookup"><span data-stu-id="c2879-114">Minor</span></span>|
-|<span data-ttu-id="c2879-115">Version</span><span class="sxs-lookup"><span data-stu-id="c2879-115">Version</span></span>|<span data-ttu-id="c2879-116">4.7.2</span><span class="sxs-lookup"><span data-stu-id="c2879-116">4.7.2</span></span>|
-|<span data-ttu-id="c2879-117">型</span><span class="sxs-lookup"><span data-stu-id="c2879-117">Type</span></span>|<span data-ttu-id="c2879-118">再ターゲット中</span><span class="sxs-lookup"><span data-stu-id="c2879-118">Retargeting</span></span>|
-|<span data-ttu-id="c2879-119">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="c2879-119">Affected APIs</span></span>|<ul><li><xref:System.Uri?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="60478-102">説明</span><span class="sxs-lookup"><span data-stu-id="60478-102">Details</span></span>
+
+<span data-ttu-id="60478-103">Unicode では、テキストの方向を指定するために使用される特殊な制御文字をいくつか指定します。</span><span class="sxs-lookup"><span data-stu-id="60478-103">Unicode specifies several special control characters used to specify the orientation of text.</span></span> <span data-ttu-id="60478-104">以前のバージョンの .NET Framework では、これらの文字は、パーセントでエンコードされたフォームに存在する場合でも、すべての URI から正しく削除されませんでした。</span><span class="sxs-lookup"><span data-stu-id="60478-104">In previous versions of the .NET Framework, these characters were incorrectly stripped from all URIs even if they were present in their percent-encoded form.</span></span> <span data-ttu-id="60478-105">[RFC 3987](https://tools.ietf.org/html/rfc3987) により適切に従うために、これらの文字を URI で使用できるようにしました。</span><span class="sxs-lookup"><span data-stu-id="60478-105">In order to better follow [RFC 3987](https://tools.ietf.org/html/rfc3987), we now allow these characters in URIs.</span></span> <span data-ttu-id="60478-106">これらの文字は、URI でエンコードされていないことがわかった場合、パーセントでエンコードされます。</span><span class="sxs-lookup"><span data-stu-id="60478-106">When found unencoded in a URI, they are percent-encoded.</span></span> <span data-ttu-id="60478-107">パーセントでエンコードされていることがわかった場合は、そのままです。</span><span class="sxs-lookup"><span data-stu-id="60478-107">When found percent-encoded they are left as-is.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="60478-108">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="60478-108">Suggestion</span></span>
+
+<span data-ttu-id="60478-109">4\.7.2 以降のバージョンの .NET Framework を対象とするアプリケーションの場合は、Unicode の双方向文字のサポートが既定で有効になります。</span><span class="sxs-lookup"><span data-stu-id="60478-109">For applications that target versions of .NET Framework starting with 4.7.2, support for Unicode bidirectional characters is enabled by default.</span></span> <span data-ttu-id="60478-110">この変更が望ましくない場合、アプリケーションの構成ファイルの `<runtime>` セクションに次の [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) スイッチを追加することで無効にできます。</span><span class="sxs-lookup"><span data-stu-id="60478-110">If this change is undesirable, you can disable it by adding the following [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) switch to the `<runtime>` section of the application configuration file:</span></span>
+
+```xml
+<runtime>
+<AppContextSwitchOverrides value="Switch.System.Uri.DontKeepUnicodeBidiFormattingCharacters=true" />
+</runtime>
+```
+
+<span data-ttu-id="60478-111">以前のバージョンの .NET Framework を対象とするが、.NET Framework 4.7.2 以降のバージョンで実行するアプリケーションの場合、Unicode の双方向文字のサポートが既定で無効になります。</span><span class="sxs-lookup"><span data-stu-id="60478-111">For applications that target earlier versions of the .NET Framework but are running under versions starting with .NET Framework 4.7.2, support for Unicode bidirectional characters is disabled by default.</span></span> <span data-ttu-id="60478-112">アプリケーションの構成ファイルの `<runtime>` セクションに次の [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) スイッチを追加することで有効にできます。</span><span class="sxs-lookup"><span data-stu-id="60478-112">You can enable it by adding the following [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) switch to the `<runtime>` section of the application configuration file::</span></span>
+
+```xml
+<runtime>
+<AppContextSwitchOverrides value="Switch.System.Uri.DontKeepUnicodeBidiFormattingCharacters=false" />
+</runtime>
+```
+
+| <span data-ttu-id="60478-113">名前</span><span class="sxs-lookup"><span data-stu-id="60478-113">Name</span></span>    | <span data-ttu-id="60478-114">[値]</span><span class="sxs-lookup"><span data-stu-id="60478-114">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="60478-115">スコープ</span><span class="sxs-lookup"><span data-stu-id="60478-115">Scope</span></span>   | <span data-ttu-id="60478-116">マイナー</span><span class="sxs-lookup"><span data-stu-id="60478-116">Minor</span></span>       |
+| <span data-ttu-id="60478-117">バージョン</span><span class="sxs-lookup"><span data-stu-id="60478-117">Version</span></span> | <span data-ttu-id="60478-118">4.7.2</span><span class="sxs-lookup"><span data-stu-id="60478-118">4.7.2</span></span>       |
+| <span data-ttu-id="60478-119">種類</span><span class="sxs-lookup"><span data-stu-id="60478-119">Type</span></span>    | <span data-ttu-id="60478-120">再ターゲット中</span><span class="sxs-lookup"><span data-stu-id="60478-120">Retargeting</span></span> |
+
+#### <a name="affected-apis"></a><span data-ttu-id="60478-121">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="60478-121">Affected APIs</span></span>
+
+- <xref:System.Uri?displayProperty=nameWithType>

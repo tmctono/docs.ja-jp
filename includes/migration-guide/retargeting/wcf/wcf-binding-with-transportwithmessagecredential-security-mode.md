@@ -1,18 +1,36 @@
 ---
-ms.openlocfilehash: 2359dafb9042c13ae75e644d4ea655f53c14e95e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0e949cbdeda99dd7b94e919b903a21171a57f527
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67804309"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614732"
 ---
-### <a name="wcf-binding-with-the-transportwithmessagecredential-security-mode"></a><span data-ttu-id="57cee-101">TransportWithMessageCredential セキュリティ モードを使用する WCF バインド</span><span class="sxs-lookup"><span data-stu-id="57cee-101">WCF binding with the TransportWithMessageCredential security mode</span></span>
+### <a name="wcf-binding-with-the-transportwithmessagecredential-security-mode"></a><span data-ttu-id="2a2f9-101">TransportWithMessageCredential セキュリティ モードを使用する WCF バインド</span><span class="sxs-lookup"><span data-stu-id="2a2f9-101">WCF binding with the TransportWithMessageCredential security mode</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="57cee-102">説明</span><span class="sxs-lookup"><span data-stu-id="57cee-102">Details</span></span>|<span data-ttu-id="57cee-103">.NET Framework 4.6.1 より、TransportWithMessageCredential セキュリティ モードを使用する WCF バインドで署名のない非対称セキュリティ キーの &quot;to&quot; ヘッダーを含むメッセージを取得するように設定できるようになりました。既定では、署名のない &quot;to&quot; ヘッダーは .NET Framework 4.6.1 でも引き続き拒否されます。</span><span class="sxs-lookup"><span data-stu-id="57cee-103">Beginning in the .NET Framework 4.6.1, WCF binding that uses the TransportWithMessageCredential security mode can be set up to receive messages with unsigned &quot;to&quot; headers for asymmetric security keys.By default, unsigned &quot;to&quot; headers will continue to be rejected in .NET Framework 4.6.1.</span></span> <span data-ttu-id="57cee-104">これは、アプリケーションが Switch.System.ServiceModel.AllowUnsignedToHeader 構成スイッチを使用するこの新しい動作モードをオプトインした場合にのみ許可されます。</span><span class="sxs-lookup"><span data-stu-id="57cee-104">They will only be accepted if an application opts into this new mode of operation using the Switch.System.ServiceModel.AllowUnsignedToHeader configuration switch.</span></span>|
-|<span data-ttu-id="57cee-105">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="57cee-105">Suggestion</span></span>|<span data-ttu-id="57cee-106">これはオプトイン機能であるため、既存のアプリの動作に影響はないはずです。</span><span class="sxs-lookup"><span data-stu-id="57cee-106">Because this is an opt-in feature, it should not affect the behavior of existing apps.</span></span><br/><span data-ttu-id="57cee-107">新しい動作を使用するかどうかを制御するには、次の構成設定を使用します。</span><span class="sxs-lookup"><span data-stu-id="57cee-107">To control whether the new behavior is used or not, use the following configuration setting:</span></span><pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.ServiceModel.AllowUnsignedToHeader=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|<span data-ttu-id="57cee-108">スコープ</span><span class="sxs-lookup"><span data-stu-id="57cee-108">Scope</span></span>|<span data-ttu-id="57cee-109">透過的</span><span class="sxs-lookup"><span data-stu-id="57cee-109">Transparent</span></span>|
-|<span data-ttu-id="57cee-110">バージョン</span><span class="sxs-lookup"><span data-stu-id="57cee-110">Version</span></span>|<span data-ttu-id="57cee-111">4.6.1</span><span class="sxs-lookup"><span data-stu-id="57cee-111">4.6.1</span></span>|
-|<span data-ttu-id="57cee-112">[種類]</span><span class="sxs-lookup"><span data-stu-id="57cee-112">Type</span></span>|<span data-ttu-id="57cee-113">再ターゲット中</span><span class="sxs-lookup"><span data-stu-id="57cee-113">Retargeting</span></span>|
-|<span data-ttu-id="57cee-114">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="57cee-114">Affected APIs</span></span>|<ul><li><xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential?displayProperty=nameWithType></li><li><xref:System.ServiceModel.BasicHttpsSecurityMode.TransportWithMessageCredential?displayProperty=nameWithType></li><li><xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential?displayProperty=nameWithType></li><li><xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="2a2f9-102">説明</span><span class="sxs-lookup"><span data-stu-id="2a2f9-102">Details</span></span>
+
+<span data-ttu-id="2a2f9-103">.NET Framework 4.6.1 より、TransportWithMessageCredential セキュリティ モードを使用する WCF バインドで署名のない非対称セキュリティ キーの &quot;to&quot; ヘッダーを含むメッセージを取得するように設定できるようになりました。既定では、署名のない &quot;to&quot; ヘッダーは .NET Framework 4.6.1 でも引き続き拒否されます。</span><span class="sxs-lookup"><span data-stu-id="2a2f9-103">Beginning in the .NET Framework 4.6.1, WCF binding that uses the TransportWithMessageCredential security mode can be set up to receive messages with unsigned &quot;to&quot; headers for asymmetric security keys.By default, unsigned &quot;to&quot; headers will continue to be rejected in .NET Framework 4.6.1.</span></span> <span data-ttu-id="2a2f9-104">これは、アプリケーションが Switch.System.ServiceModel.AllowUnsignedToHeader 構成スイッチを使用するこの新しい動作モードをオプトインした場合にのみ許可されます。</span><span class="sxs-lookup"><span data-stu-id="2a2f9-104">They will only be accepted if an application opts into this new mode of operation using the Switch.System.ServiceModel.AllowUnsignedToHeader configuration switch.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="2a2f9-105">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="2a2f9-105">Suggestion</span></span>
+
+<span data-ttu-id="2a2f9-106">これはオプトイン機能であるため、既存のアプリの動作に影響はないはずです。</span><span class="sxs-lookup"><span data-stu-id="2a2f9-106">Because this is an opt-in feature, it should not affect the behavior of existing apps.</span></span><br/><span data-ttu-id="2a2f9-107">新しい動作を使用するかどうかを制御するには、次の構成設定を使用します。</span><span class="sxs-lookup"><span data-stu-id="2a2f9-107">To control whether the new behavior is used or not, use the following configuration setting:</span></span>
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.ServiceModel.AllowUnsignedToHeader=true" />
+</runtime>
+```
+
+| <span data-ttu-id="2a2f9-108">名前</span><span class="sxs-lookup"><span data-stu-id="2a2f9-108">Name</span></span>    | <span data-ttu-id="2a2f9-109">[値]</span><span class="sxs-lookup"><span data-stu-id="2a2f9-109">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="2a2f9-110">スコープ</span><span class="sxs-lookup"><span data-stu-id="2a2f9-110">Scope</span></span>   | <span data-ttu-id="2a2f9-111">透明</span><span class="sxs-lookup"><span data-stu-id="2a2f9-111">Transparent</span></span> |
+| <span data-ttu-id="2a2f9-112">バージョン</span><span class="sxs-lookup"><span data-stu-id="2a2f9-112">Version</span></span> | <span data-ttu-id="2a2f9-113">4.6.1</span><span class="sxs-lookup"><span data-stu-id="2a2f9-113">4.6.1</span></span>       |
+| <span data-ttu-id="2a2f9-114">種類</span><span class="sxs-lookup"><span data-stu-id="2a2f9-114">Type</span></span>    | <span data-ttu-id="2a2f9-115">再ターゲット中</span><span class="sxs-lookup"><span data-stu-id="2a2f9-115">Retargeting</span></span> |
+
+#### <a name="affected-apis"></a><span data-ttu-id="2a2f9-116">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="2a2f9-116">Affected APIs</span></span>
+
+- <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential?displayProperty=nameWithType>
+- <xref:System.ServiceModel.BasicHttpsSecurityMode.TransportWithMessageCredential?displayProperty=nameWithType>
+- <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential?displayProperty=nameWithType>
+- <xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential?displayProperty=nameWithType>

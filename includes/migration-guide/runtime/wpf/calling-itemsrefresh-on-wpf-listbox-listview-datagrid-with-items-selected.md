@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: a14395895c6be586c862d1b49aa6bf6669e4203a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 710d1517397f423fa40cc0c4a26c3499aac6179e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "68238033"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620421"
 ---
-### <a name="calling-itemsrefresh-on-a-wpf-listbox-listview-or-datagrid-with-items-selected-can-cause-duplicate-items-to-appear-in-the-element"></a><span data-ttu-id="10103-101">項目が選択されている WPF ListBox、ListView、または DataGrid に対して Items.Refresh を呼び出すと、重複した項目が要素に表示されることがある</span><span class="sxs-lookup"><span data-stu-id="10103-101">Calling Items.Refresh on a WPF ListBox, ListView, or DataGrid with items selected can cause duplicate items to appear in the element</span></span>
+### <a name="calling-itemsrefresh-on-a-wpf-listbox-listview-or-datagrid-with-items-selected-can-cause-duplicate-items-to-appear-in-the-element"></a><span data-ttu-id="27267-101">項目が選択されている WPF ListBox、ListView、または DataGrid に対して Items.Refresh を呼び出すと、重複した項目が要素に表示されることがある</span><span class="sxs-lookup"><span data-stu-id="27267-101">Calling Items.Refresh on a WPF ListBox, ListView, or DataGrid with items selected can cause duplicate items to appear in the element</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="10103-102">説明</span><span class="sxs-lookup"><span data-stu-id="10103-102">Details</span></span>|<span data-ttu-id="10103-103">.NET Framework 4.5 では、<xref:System.Windows.Controls.ListBox?displayProperty=name> で項目が選択されているときにコードから ListBox.Items.Refresh を呼び出すと、選択された項目がリストに複製されることがあります。</span><span class="sxs-lookup"><span data-stu-id="10103-103">In the .NET Framework 4.5, calling ListBox.Items.Refresh from code while items are selected in a <xref:System.Windows.Controls.ListBox?displayProperty=name> can cause the selected items to be duplicated in the list.</span></span> <span data-ttu-id="10103-104">同様の問題が <xref:System.Windows.Controls.ListView?displayProperty=name> と <xref:System.Windows.Controls.DataGrid?displayProperty=name> で発生します。</span><span class="sxs-lookup"><span data-stu-id="10103-104">A similar issue occurs with <xref:System.Windows.Controls.ListView?displayProperty=name> and <xref:System.Windows.Controls.DataGrid?displayProperty=name>.</span></span> <span data-ttu-id="10103-105">これは、.NET Framework 4.6 で修正されます。</span><span class="sxs-lookup"><span data-stu-id="10103-105">This is fixed in the .NET Framework 4.6.</span></span>|
-|<span data-ttu-id="10103-106">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="10103-106">Suggestion</span></span>|<span data-ttu-id="10103-107">この問題は、<xref:System.Windows.Data.CollectionView.Refresh?displayProperty=name> が呼び出される前に、プログラムで項目を選択解除して、呼び出しの完了後に再び選択することによって回避できます。</span><span class="sxs-lookup"><span data-stu-id="10103-107">This issue may be worked around by programatically unselecting items before <xref:System.Windows.Data.CollectionView.Refresh?displayProperty=name> is called and then re-selecting them after the call is completed.</span></span> <span data-ttu-id="10103-108">または、この問題は .NET Framework 4.6 で修正されたため、このバージョンの .NET Framework にアップグレードすることによって対処できます。</span><span class="sxs-lookup"><span data-stu-id="10103-108">Alternatively, this issue has been fixed in the .NET Framework 4.6 and may be addressed by upgrading to that version of the .NET Framework.</span></span>|
-|<span data-ttu-id="10103-109">スコープ</span><span class="sxs-lookup"><span data-stu-id="10103-109">Scope</span></span>|<span data-ttu-id="10103-110">Minor</span><span class="sxs-lookup"><span data-stu-id="10103-110">Minor</span></span>|
-|<span data-ttu-id="10103-111">バージョン</span><span class="sxs-lookup"><span data-stu-id="10103-111">Version</span></span>|<span data-ttu-id="10103-112">4.5</span><span class="sxs-lookup"><span data-stu-id="10103-112">4.5</span></span>|
-|<span data-ttu-id="10103-113">[種類]</span><span class="sxs-lookup"><span data-stu-id="10103-113">Type</span></span>|<span data-ttu-id="10103-114">ランタイム</span><span class="sxs-lookup"><span data-stu-id="10103-114">Runtime</span></span>|
-|<span data-ttu-id="10103-115">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="10103-115">Affected APIs</span></span>|<ul><li><xref:System.Windows.Data.CollectionView.Refresh?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="27267-102">説明</span><span class="sxs-lookup"><span data-stu-id="27267-102">Details</span></span>
+
+<span data-ttu-id="27267-103">.NET Framework 4.5 では、<xref:System.Windows.Controls.ListBox?displayProperty=fullName> で項目が選択されているときにコードから ListBox.Items.Refresh を呼び出すと、選択された項目がリストに複製されることがあります。</span><span class="sxs-lookup"><span data-stu-id="27267-103">In the .NET Framework 4.5, calling ListBox.Items.Refresh from code while items are selected in a <xref:System.Windows.Controls.ListBox?displayProperty=fullName> can cause the selected items to be duplicated in the list.</span></span> <span data-ttu-id="27267-104">同様の問題が <xref:System.Windows.Controls.ListView?displayProperty=fullName> と <xref:System.Windows.Controls.DataGrid?displayProperty=fullName> で発生します。</span><span class="sxs-lookup"><span data-stu-id="27267-104">A similar issue occurs with <xref:System.Windows.Controls.ListView?displayProperty=fullName> and <xref:System.Windows.Controls.DataGrid?displayProperty=fullName>.</span></span> <span data-ttu-id="27267-105">これは、.NET Framework 4.6 で修正されます。</span><span class="sxs-lookup"><span data-stu-id="27267-105">This is fixed in the .NET Framework 4.6.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="27267-106">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="27267-106">Suggestion</span></span>
+
+<span data-ttu-id="27267-107">この問題は、<xref:System.Windows.Data.CollectionView.Refresh?displayProperty=fullName> が呼び出される前に、プログラムで項目を選択解除して、呼び出しの完了後に再び選択することによって回避できます。</span><span class="sxs-lookup"><span data-stu-id="27267-107">This issue may be worked around by programmatically unselecting items before <xref:System.Windows.Data.CollectionView.Refresh?displayProperty=fullName> is called and then re-selecting them after the call is completed.</span></span> <span data-ttu-id="27267-108">または、この問題は .NET Framework 4.6 で修正されたため、このバージョンの .NET Framework にアップグレードすることによって対処できます。</span><span class="sxs-lookup"><span data-stu-id="27267-108">Alternatively, this issue has been fixed in the .NET Framework 4.6 and may be addressed by upgrading to that version of the .NET Framework.</span></span>
+
+| <span data-ttu-id="27267-109">名前</span><span class="sxs-lookup"><span data-stu-id="27267-109">Name</span></span>    | <span data-ttu-id="27267-110">[値]</span><span class="sxs-lookup"><span data-stu-id="27267-110">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="27267-111">スコープ</span><span class="sxs-lookup"><span data-stu-id="27267-111">Scope</span></span>   |<span data-ttu-id="27267-112">マイナー</span><span class="sxs-lookup"><span data-stu-id="27267-112">Minor</span></span>|
+|<span data-ttu-id="27267-113">バージョン</span><span class="sxs-lookup"><span data-stu-id="27267-113">Version</span></span>|<span data-ttu-id="27267-114">4.5</span><span class="sxs-lookup"><span data-stu-id="27267-114">4.5</span></span>|
+|<span data-ttu-id="27267-115">種類</span><span class="sxs-lookup"><span data-stu-id="27267-115">Type</span></span>|<span data-ttu-id="27267-116">ランタイム</span><span class="sxs-lookup"><span data-stu-id="27267-116">Runtime</span></span>
+
+#### <a name="affected-apis"></a><span data-ttu-id="27267-117">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="27267-117">Affected APIs</span></span>
+
+-<xref:System.Windows.Data.CollectionView.Refresh?displayProperty=nameWithType></li></ul>|
