@@ -1,5 +1,6 @@
 ---
 title: TabControl を使用してタブを追加および削除する
+description: 2つの TabPage コントロールを含む Windows フォーム TabControl コントロールを使用して、タブを追加および削除する方法について説明します。 これらのタブには、TabPages プロパティを使用してアクセスします。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +13,19 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 66d4dfca-41e8-44e3-9c80-fb7ac4cb1619
-ms.openlocfilehash: 8292d8441f9b47334b98736cf3282c846673dbb4
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7e67d0bbc13bd7d9c8835dc6fb9b9c5c9333b8bf
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732719"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618078"
 ---
-# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a><span data-ttu-id="aeb08-102">方法 : Windows フォーム TabControl のタブを追加および削除する</span><span class="sxs-lookup"><span data-stu-id="aeb08-102">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>
-<span data-ttu-id="aeb08-103">既定では、<xref:System.Windows.Forms.TabControl> コントロールには、2つの <xref:System.Windows.Forms.TabPage> コントロールが含まれています。</span><span class="sxs-lookup"><span data-stu-id="aeb08-103">By default, a <xref:System.Windows.Forms.TabControl> control contains two <xref:System.Windows.Forms.TabPage> controls.</span></span> <span data-ttu-id="aeb08-104">これらのタブには、<xref:System.Windows.Forms.TabControl.TabPages%2A> プロパティを使用してアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="aeb08-104">You can access these tabs through the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a><span data-ttu-id="ccf89-104">方法: Windows フォーム TabControl のタブを追加および削除する</span><span class="sxs-lookup"><span data-stu-id="ccf89-104">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>
+<span data-ttu-id="ccf89-105">既定では、 <xref:System.Windows.Forms.TabControl> コントロールには2つのコントロールが含まれてい <xref:System.Windows.Forms.TabPage> ます。</span><span class="sxs-lookup"><span data-stu-id="ccf89-105">By default, a <xref:System.Windows.Forms.TabControl> control contains two <xref:System.Windows.Forms.TabPage> controls.</span></span> <span data-ttu-id="ccf89-106">これらのタブには、プロパティを使用してアクセスでき <xref:System.Windows.Forms.TabControl.TabPages%2A> ます。</span><span class="sxs-lookup"><span data-stu-id="ccf89-106">You can access these tabs through the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
-### <a name="to-add-a-tab-programmatically"></a><span data-ttu-id="aeb08-105">プログラムによってタブを追加するには</span><span class="sxs-lookup"><span data-stu-id="aeb08-105">To add a tab programmatically</span></span>  
+### <a name="to-add-a-tab-programmatically"></a><span data-ttu-id="ccf89-107">プログラムによってタブを追加するには</span><span class="sxs-lookup"><span data-stu-id="ccf89-107">To add a tab programmatically</span></span>  
   
-- <span data-ttu-id="aeb08-106"><xref:System.Windows.Forms.TabControl.TabPages%2A> プロパティの <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="aeb08-106">Use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+- <span data-ttu-id="ccf89-108"><xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A>プロパティのメソッドを使用し <xref:System.Windows.Forms.TabControl.TabPages%2A> ます。</span><span class="sxs-lookup"><span data-stu-id="ccf89-108">Use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
     ```vb  
     Dim myTabPage As New TabPage()  
@@ -45,13 +46,13 @@ ms.locfileid: "76732719"
     tabControl1->TabPages->Add(myTabPage);  
     ```  
   
-### <a name="to-remove-a-tab-programmatically"></a><span data-ttu-id="aeb08-107">プログラムによってタブを削除するには</span><span class="sxs-lookup"><span data-stu-id="aeb08-107">To remove a tab programmatically</span></span>  
+### <a name="to-remove-a-tab-programmatically"></a><span data-ttu-id="ccf89-109">プログラムによってタブを削除するには</span><span class="sxs-lookup"><span data-stu-id="ccf89-109">To remove a tab programmatically</span></span>  
   
-- <span data-ttu-id="aeb08-108">選択したタブを削除するには、<xref:System.Windows.Forms.TabControl.TabPages%2A> プロパティの <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="aeb08-108">To remove selected tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+- <span data-ttu-id="ccf89-110">選択したタブを削除するには、 <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> プロパティのメソッドを使用し <xref:System.Windows.Forms.TabControl.TabPages%2A> ます。</span><span class="sxs-lookup"><span data-stu-id="ccf89-110">To remove selected tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
-     <span data-ttu-id="aeb08-109">または</span><span class="sxs-lookup"><span data-stu-id="aeb08-109">-or-</span></span>  
+     <span data-ttu-id="ccf89-111">\- または -</span><span class="sxs-lookup"><span data-stu-id="ccf89-111">-or-</span></span>  
   
-- <span data-ttu-id="aeb08-110">すべてのタブを削除するには、<xref:System.Windows.Forms.TabControl.TabPages%2A> プロパティの <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="aeb08-110">To remove all tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+- <span data-ttu-id="ccf89-112">すべてのタブを削除するには、 <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> プロパティのメソッドを使用し <xref:System.Windows.Forms.TabControl.TabPages%2A> ます。</span><span class="sxs-lookup"><span data-stu-id="ccf89-112">To remove all tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
     ```vb  
     ' Removes the selected tab:  
@@ -74,9 +75,9 @@ ms.locfileid: "76732719"
     tabControl1->TabPages->Clear();  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="aeb08-111">参照</span><span class="sxs-lookup"><span data-stu-id="aeb08-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ccf89-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="ccf89-113">See also</span></span>
 
-- [<span data-ttu-id="aeb08-112">TabControl コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="aeb08-112">TabControl Control Overview</span></span>](tabcontrol-control-overview-windows-forms.md)
-- [<span data-ttu-id="aeb08-113">方法: タブ ページにコントロールを追加する</span><span class="sxs-lookup"><span data-stu-id="aeb08-113">How to: Add a Control to a Tab Page</span></span>](how-to-add-a-control-to-a-tab-page.md)
-- [<span data-ttu-id="aeb08-114">方法: タブ ページを無効化する</span><span class="sxs-lookup"><span data-stu-id="aeb08-114">How to: Disable Tab Pages</span></span>](how-to-disable-tab-pages.md)
-- [<span data-ttu-id="aeb08-115">方法: Windows フォーム TabControl の表示形式を変更する</span><span class="sxs-lookup"><span data-stu-id="aeb08-115">How to: Change the Appearance of the Windows Forms TabControl</span></span>](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [<span data-ttu-id="ccf89-114">TabControl コントロールの概要</span><span class="sxs-lookup"><span data-stu-id="ccf89-114">TabControl Control Overview</span></span>](tabcontrol-control-overview-windows-forms.md)
+- [<span data-ttu-id="ccf89-115">方法: タブ ページにコントロールを追加する</span><span class="sxs-lookup"><span data-stu-id="ccf89-115">How to: Add a Control to a Tab Page</span></span>](how-to-add-a-control-to-a-tab-page.md)
+- [<span data-ttu-id="ccf89-116">方法: タブ ページを無効化する</span><span class="sxs-lookup"><span data-stu-id="ccf89-116">How to: Disable Tab Pages</span></span>](how-to-disable-tab-pages.md)
+- [<span data-ttu-id="ccf89-117">方法: Windows フォーム TabControl の表示形式を変更する</span><span class="sxs-lookup"><span data-stu-id="ccf89-117">How to: Change the Appearance of the Windows Forms TabControl</span></span>](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

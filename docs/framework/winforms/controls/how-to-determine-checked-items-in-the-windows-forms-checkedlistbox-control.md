@@ -1,5 +1,6 @@
 ---
-title: CheckedListBox コントロールでチェックされた項目を確認する
+title: CheckedListBox コントロールでチェックされている項目を確認する
+description: CheckedItems プロパティに格納されているコレクションを反復処理して、Windows フォーム CheckedListBox コントロールでチェックされている項目を確認する方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +10,19 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: 5d93a63e9c1c6aae91ecfe83590c59450a565afe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fd8845ef83da7406ff4f1468506a23e3f4d386a0
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182192"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618351"
 ---
-# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a><span data-ttu-id="b445c-102">方法 : Windows フォーム CheckedListBox コントロールでオンになっている項目を判断する</span><span class="sxs-lookup"><span data-stu-id="b445c-102">How to: Determine Checked Items in the Windows Forms CheckedListBox Control</span></span>
-<span data-ttu-id="b445c-103">Windows フォーム<xref:System.Windows.Forms.CheckedListBox>コントロールにデータを表示する場合は、<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>プロパティに格納されているコレクションを反復処理するか、<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>メソッドを使用してリストをステップ実行して、チェックされる項目を決定できます。</span><span class="sxs-lookup"><span data-stu-id="b445c-103">When presenting data in a Windows Forms <xref:System.Windows.Forms.CheckedListBox> control, you can either iterate through the collection stored in the <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> property, or step through the list using the <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method to determine which items are checked.</span></span> <span data-ttu-id="b445c-104">この<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>メソッドは、項目のインデックス番号を引数として受`true`け`false`取り、または を返します。</span><span class="sxs-lookup"><span data-stu-id="b445c-104">The <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method takes an item index number as its argument and returns `true` or `false`.</span></span> <span data-ttu-id="b445c-105">期待する内容とは対照的に<xref:System.Windows.Forms.ListBox.SelectedItems%2A>、<xref:System.Windows.Forms.ListBox.SelectedIndices%2A>および プロパティはどの項目がチェックされるのかを決定しません。ハイライト表示される項目を決定します。</span><span class="sxs-lookup"><span data-stu-id="b445c-105">Contrary to what you might expect, the <xref:System.Windows.Forms.ListBox.SelectedItems%2A> and <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> properties do not determine which items are checked; they determine which items are highlighted.</span></span>  
+# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a><span data-ttu-id="d0176-103">方法: Windows フォーム CheckedListBox コントロールでオンになっている項目を判断する</span><span class="sxs-lookup"><span data-stu-id="d0176-103">How to: Determine Checked Items in the Windows Forms CheckedListBox Control</span></span>
+<span data-ttu-id="d0176-104">Windows フォームコントロールにデータを表示する場合は、 <xref:System.Windows.Forms.CheckedListBox> プロパティに格納されているコレクションを反復処理するか、 <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> メソッドを使用してリストをステップ実行し、 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> どの項目がチェックされるかを決定できます。</span><span class="sxs-lookup"><span data-stu-id="d0176-104">When presenting data in a Windows Forms <xref:System.Windows.Forms.CheckedListBox> control, you can either iterate through the collection stored in the <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> property, or step through the list using the <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method to determine which items are checked.</span></span> <span data-ttu-id="d0176-105">メソッドは、 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> 引数として項目のインデックス番号を取得し、 `true` またはを返し `false` ます。</span><span class="sxs-lookup"><span data-stu-id="d0176-105">The <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method takes an item index number as its argument and returns `true` or `false`.</span></span> <span data-ttu-id="d0176-106">期待しているものとは異なり、 <xref:System.Windows.Forms.ListBox.SelectedItems%2A> プロパティとプロパティではどの <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> 項目がチェックされるかが決定されないため、どの項目が強調表示されるかが決まります。</span><span class="sxs-lookup"><span data-stu-id="d0176-106">Contrary to what you might expect, the <xref:System.Windows.Forms.ListBox.SelectedItems%2A> and <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> properties do not determine which items are checked; they determine which items are highlighted.</span></span>  
   
-### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a><span data-ttu-id="b445c-106">CheckedListBox コントロール内のチェックされた項目を確認するには</span><span class="sxs-lookup"><span data-stu-id="b445c-106">To determine checked items in a CheckedListBox control</span></span>  
+### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a><span data-ttu-id="d0176-107">CheckedListBox コントロールでチェックされている項目を確認するには</span><span class="sxs-lookup"><span data-stu-id="d0176-107">To determine checked items in a CheckedListBox control</span></span>  
   
-1. <span data-ttu-id="b445c-107">コレクションが<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>0 から始まるので、0 から順に反復します。</span><span class="sxs-lookup"><span data-stu-id="b445c-107">Iterate through the <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> collection, starting at 0 since the collection is zero-based.</span></span> <span data-ttu-id="b445c-108">このメソッドは、全体のリストではなく、チェックされた項目のリスト内の項目番号を示します。</span><span class="sxs-lookup"><span data-stu-id="b445c-108">Note that this method will give you the item number in the list of checked items, not the overall list.</span></span> <span data-ttu-id="b445c-109">リストの最初の項目がチェックされておらず、2 番目の項目がチェックされている場合、以下のコードは"チェックされた項目 1 = MyListItem2" のようなテキストを表示します。</span><span class="sxs-lookup"><span data-stu-id="b445c-109">So if the first item in the list is not checked and the second item is checked, the code below will display text like "Checked Item 1 = MyListItem2".</span></span>  
+1. <span data-ttu-id="d0176-108">コレクションが0から始まる <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> ため、コレクションを反復処理して0から開始します。</span><span class="sxs-lookup"><span data-stu-id="d0176-108">Iterate through the <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> collection, starting at 0 since the collection is zero-based.</span></span> <span data-ttu-id="d0176-109">このメソッドは、リスト全体ではなく、チェックされた項目の一覧に項目番号を提供します。</span><span class="sxs-lookup"><span data-stu-id="d0176-109">Note that this method will give you the item number in the list of checked items, not the overall list.</span></span> <span data-ttu-id="d0176-110">このため、リストの最初の項目がチェックされず、2番目の項目がオンになっている場合は、次のコードに "Checked Item 1 = MyListItem2" のようなテキストが表示されます。</span><span class="sxs-lookup"><span data-stu-id="d0176-110">So if the first item in the list is not checked and the second item is checked, the code below will display text like "Checked Item 1 = MyListItem2".</span></span>  
   
     ```vb  
     ' Determine if there are any items checked.  
@@ -66,9 +67,9 @@ ms.locfileid: "79182192"
     }  
     ```  
   
-     - <span data-ttu-id="b445c-110">- または -</span><span class="sxs-lookup"><span data-stu-id="b445c-110">or -</span></span>  
+     - <span data-ttu-id="d0176-111">または</span><span class="sxs-lookup"><span data-stu-id="d0176-111">or -</span></span>  
   
-2. <span data-ttu-id="b445c-111">コレクションが<xref:System.Windows.Forms.CheckedListBox.Items%2A>0 から始まるコレクションをステップ実行し、各項目のメソッドを<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>呼び出します。</span><span class="sxs-lookup"><span data-stu-id="b445c-111">Step through the <xref:System.Windows.Forms.CheckedListBox.Items%2A> collection, starting at 0 since the collection is zero-based, and call the <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method for each item.</span></span> <span data-ttu-id="b445c-112">このメソッドは、リスト全体の項目番号を示すため、リストの最初の項目がチェックされず、2 番目の項目がチェックされている場合は、"Item 2 = MyListItem2" のような項目が表示されます。</span><span class="sxs-lookup"><span data-stu-id="b445c-112">Note that this method will give you the item number in the overall list, so if the first item in the list is not checked and the second item is checked, it will display something like "Item 2 = MyListItem2".</span></span>  
+2. <span data-ttu-id="d0176-112">コレクションをステップ実行します。コレクションは0から始まり、 <xref:System.Windows.Forms.CheckedListBox.Items%2A> <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> 各項目に対してメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="d0176-112">Step through the <xref:System.Windows.Forms.CheckedListBox.Items%2A> collection, starting at 0 since the collection is zero-based, and call the <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method for each item.</span></span> <span data-ttu-id="d0176-113">この方法では、一覧の項目番号が表示されるので、リスト内の最初の項目がチェックされず、2番目の項目がオンになっている場合は、"Item 2 = MyListItem2" のような内容が表示されます。</span><span class="sxs-lookup"><span data-stu-id="d0176-113">Note that this method will give you the item number in the overall list, so if the first item in the list is not checked and the second item is checked, it will display something like "Item 2 = MyListItem2".</span></span>  
   
     ```vb  
     Dim i As Integer  
@@ -111,6 +112,6 @@ ms.locfileid: "79182192"
     MessageBox::Show(s);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="b445c-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="b445c-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d0176-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="d0176-114">See also</span></span>
 
-- [<span data-ttu-id="b445c-114">オプションのリストを表示するための Windows フォーム コントロール</span><span class="sxs-lookup"><span data-stu-id="b445c-114">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)
+- [<span data-ttu-id="d0176-115">オプションのリストを表示するための Windows フォーム コントロール</span><span class="sxs-lookup"><span data-stu-id="d0176-115">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)
