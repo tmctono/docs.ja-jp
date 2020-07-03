@@ -1,5 +1,6 @@
 ---
 title: '方法: Try ブロックと Catch ブロックを使用して例外をキャッチする'
+description: Try ブロックを使用して、例外を発生させたりスローしたりする可能性のあるステートメントを含めます。 例外を処理するステートメントを 1 つまたは複数の Catch ブロックに配置します。
 ms.date: 02/06/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,32 +12,32 @@ helpviewer_keywords:
 - try/catch blocks
 - catch blocks
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
-ms.openlocfilehash: 5a9218d394b76e897f4263708a10f1bc895ad4e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 60ed213ea777fe35873fd1e67555b7506e3ca587
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708467"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768912"
 ---
-# <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a><span data-ttu-id="4b6c3-102">Try ブロックと Catch ブロックを使用して例外をキャッチする方法</span><span class="sxs-lookup"><span data-stu-id="4b6c3-102">How to use the try/catch block to catch exceptions</span></span>
+# <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a><span data-ttu-id="0e8d9-104">Try ブロックと Catch ブロックを使用して例外をキャッチする方法</span><span class="sxs-lookup"><span data-stu-id="0e8d9-104">How to use the try/catch block to catch exceptions</span></span>
 
-<span data-ttu-id="4b6c3-103">例外を発生またはスローする可能性のあるコード ステートメントはいずれも `try` ブロックに配置し、1 つまたは複数の例外を処理するのに使用されるステートメントは `try` ブロックの下にある 1 つまたは複数の `catch` ブロックに配置します。</span><span class="sxs-lookup"><span data-stu-id="4b6c3-103">Place any code statements that might raise or throw an exception in a `try` block, and place statements used to handle the exception or exceptions in one or more `catch` blocks below the `try` block.</span></span> <span data-ttu-id="4b6c3-104">各 `catch` ブロックには例外の種類が含まれており、その例外の種類を処理するのに必要なステートメントを追加で含めることができます。</span><span class="sxs-lookup"><span data-stu-id="4b6c3-104">Each `catch` block includes the exception type and can contain additional statements needed to handle that exception type.</span></span>
+<span data-ttu-id="0e8d9-105">例外を発生またはスローする可能性のあるコード ステートメントはいずれも `try` ブロックに配置し、1 つまたは複数の例外を処理するのに使用されるステートメントは `try` ブロックの下にある 1 つまたは複数の `catch` ブロックに配置します。</span><span class="sxs-lookup"><span data-stu-id="0e8d9-105">Place any code statements that might raise or throw an exception in a `try` block, and place statements used to handle the exception or exceptions in one or more `catch` blocks below the `try` block.</span></span> <span data-ttu-id="0e8d9-106">各 `catch` ブロックには例外の種類が含まれており、その例外の種類を処理するのに必要なステートメントを追加で含めることができます。</span><span class="sxs-lookup"><span data-stu-id="0e8d9-106">Each `catch` block includes the exception type and can contain additional statements needed to handle that exception type.</span></span>
 
-<span data-ttu-id="4b6c3-105">次の例では、<xref:System.IO.StreamReader> を使用して、*data.txt* と呼ばれるファイルを開き、そのファイルから行を取得します。</span><span class="sxs-lookup"><span data-stu-id="4b6c3-105">In the following example, a <xref:System.IO.StreamReader> opens a file called *data.txt* and retrieves a line from the file.</span></span> <span data-ttu-id="4b6c3-106">コードからは 3 つの例外のいずれかがスローされる可能性があります。そのため、コードは `try` ブロックに配置します。</span><span class="sxs-lookup"><span data-stu-id="4b6c3-106">Since the code might throw any of three exceptions, it's placed in a `try` block.</span></span> <span data-ttu-id="4b6c3-107">3 つの `catch` ブロックでは例外がキャッチされます。さらに結果をコンソールに表示してそれらの例外が処理されます。</span><span class="sxs-lookup"><span data-stu-id="4b6c3-107">Three `catch` blocks catch the exceptions and handle them by displaying the results to the console.</span></span>
+<span data-ttu-id="0e8d9-107">次の例では、<xref:System.IO.StreamReader> を使用して、*data.txt* と呼ばれるファイルを開き、そのファイルから行を取得します。</span><span class="sxs-lookup"><span data-stu-id="0e8d9-107">In the following example, a <xref:System.IO.StreamReader> opens a file called *data.txt* and retrieves a line from the file.</span></span> <span data-ttu-id="0e8d9-108">コードからは 3 つの例外のいずれかがスローされる可能性があります。そのため、コードは `try` ブロックに配置します。</span><span class="sxs-lookup"><span data-stu-id="0e8d9-108">Since the code might throw any of three exceptions, it's placed in a `try` block.</span></span> <span data-ttu-id="0e8d9-109">3 つの `catch` ブロックでは例外がキャッチされます。さらに結果をコンソールに表示してそれらの例外が処理されます。</span><span class="sxs-lookup"><span data-stu-id="0e8d9-109">Three `catch` blocks catch the exceptions and handle them by displaying the results to the console.</span></span>
 
 [!code-csharp[CatchException#3](~/samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception2.cs#3)]
 [!code-vb[CatchException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]
 
-<span data-ttu-id="4b6c3-108">共通言語ランタイム (CLR) では、`catch` ブロックで処理されない例外がキャッチされます。</span><span class="sxs-lookup"><span data-stu-id="4b6c3-108">The Common Language Runtime (CLR) catches exceptions not handled by `catch` blocks.</span></span> <span data-ttu-id="4b6c3-109">CLR によって例外がキャッチされると、ご利用の CLR 構成に応じて次の結果のいずれかが発生する場合があります。</span><span class="sxs-lookup"><span data-stu-id="4b6c3-109">If an exception is caught by the CLR, one of the following results may occur depending on your CLR configuration:</span></span>
+<span data-ttu-id="0e8d9-110">共通言語ランタイム (CLR) では、`catch` ブロックで処理されない例外がキャッチされます。</span><span class="sxs-lookup"><span data-stu-id="0e8d9-110">The Common Language Runtime (CLR) catches exceptions not handled by `catch` blocks.</span></span> <span data-ttu-id="0e8d9-111">CLR によって例外がキャッチされると、ご利用の CLR 構成に応じて次の結果のいずれかが発生する場合があります。</span><span class="sxs-lookup"><span data-stu-id="0e8d9-111">If an exception is caught by the CLR, one of the following results may occur depending on your CLR configuration:</span></span>
 
-- <span data-ttu-id="4b6c3-110">**[デバッグ]** ダイアログ ボックスが表示されます。</span><span class="sxs-lookup"><span data-stu-id="4b6c3-110">A **Debug** dialog box appears.</span></span>
-- <span data-ttu-id="4b6c3-111">プログラムの実行が停止され、例外情報を含むダイアログ ボックスが表示されます。</span><span class="sxs-lookup"><span data-stu-id="4b6c3-111">The program stops execution and a dialog box with exception information appears.</span></span>
-- <span data-ttu-id="4b6c3-112">[標準エラー出力ストリーム](xref:System.Console.Error)にエラーが出力されます。</span><span class="sxs-lookup"><span data-stu-id="4b6c3-112">An error prints out to the [standard error output stream](xref:System.Console.Error).</span></span>
+- <span data-ttu-id="0e8d9-112">**[デバッグ]** ダイアログ ボックスが表示されます。</span><span class="sxs-lookup"><span data-stu-id="0e8d9-112">A **Debug** dialog box appears.</span></span>
+- <span data-ttu-id="0e8d9-113">プログラムの実行が停止され、例外情報を含むダイアログ ボックスが表示されます。</span><span class="sxs-lookup"><span data-stu-id="0e8d9-113">The program stops execution and a dialog box with exception information appears.</span></span>
+- <span data-ttu-id="0e8d9-114">[標準エラー出力ストリーム](xref:System.Console.Error)にエラーが出力されます。</span><span class="sxs-lookup"><span data-stu-id="0e8d9-114">An error prints out to the [standard error output stream](xref:System.Console.Error).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="4b6c3-113">ほとんどのコードで例外がスローされる可能性があります。また、<xref:System.OutOfMemoryException> のように、CLR 自体によっていつでもスローされる可能性のある例外もあります。</span><span class="sxs-lookup"><span data-stu-id="4b6c3-113">Most code can throw an exception, and some exceptions, like <xref:System.OutOfMemoryException>, can be thrown by the CLR itself at any time.</span></span> <span data-ttu-id="4b6c3-114">アプリケーションではこのようの例外を処理する必要はありませんが、他のユーザーが使用するライブラリを記述する際には、必要となる可能性があるので注意してください。</span><span class="sxs-lookup"><span data-stu-id="4b6c3-114">While applications aren't required to deal with these exceptions, be aware of the possibility when writing libraries to be used by others.</span></span> <span data-ttu-id="4b6c3-115">`try` ブロック内でコードを設定するタイミングに関しては、「[例外の推奨事項](best-practices-for-exceptions.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4b6c3-115">For suggestions on when to set code in a `try` block, see [Best Practices for Exceptions](best-practices-for-exceptions.md).</span></span>
+> <span data-ttu-id="0e8d9-115">ほとんどのコードで例外がスローされる可能性があります。また、<xref:System.OutOfMemoryException> のように、CLR 自体によっていつでもスローされる可能性のある例外もあります。</span><span class="sxs-lookup"><span data-stu-id="0e8d9-115">Most code can throw an exception, and some exceptions, like <xref:System.OutOfMemoryException>, can be thrown by the CLR itself at any time.</span></span> <span data-ttu-id="0e8d9-116">アプリケーションではこのようの例外を処理する必要はありませんが、他のユーザーが使用するライブラリを記述する際には、必要となる可能性があるので注意してください。</span><span class="sxs-lookup"><span data-stu-id="0e8d9-116">While applications aren't required to deal with these exceptions, be aware of the possibility when writing libraries to be used by others.</span></span> <span data-ttu-id="0e8d9-117">`try` ブロック内でコードを設定するタイミングに関しては、「[例外の推奨事項](best-practices-for-exceptions.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0e8d9-117">For suggestions on when to set code in a `try` block, see [Best Practices for Exceptions](best-practices-for-exceptions.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="4b6c3-116">参照</span><span class="sxs-lookup"><span data-stu-id="4b6c3-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0e8d9-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="0e8d9-118">See also</span></span>
 
-- [<span data-ttu-id="4b6c3-117">例外</span><span class="sxs-lookup"><span data-stu-id="4b6c3-117">Exceptions</span></span>](index.md)
-- [<span data-ttu-id="4b6c3-118">.NET での I/O エラーの処理</span><span class="sxs-lookup"><span data-stu-id="4b6c3-118">Handling I/O errors in .NET</span></span>](../io/handling-io-errors.md)
+- [<span data-ttu-id="0e8d9-119">例外</span><span class="sxs-lookup"><span data-stu-id="0e8d9-119">Exceptions</span></span>](index.md)
+- [<span data-ttu-id="0e8d9-120">.NET での I/O エラーの処理</span><span class="sxs-lookup"><span data-stu-id="0e8d9-120">Handling I/O errors in .NET</span></span>](../io/handling-io-errors.md)

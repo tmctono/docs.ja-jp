@@ -1,5 +1,6 @@
 ---
 title: アプリケーション プロトコルの使用
+description: .NET Framework でサポートされる一般的に使用されるインターネット アプリケーション プロトコル (HTTP、TCP、UDP など) と、カスタム プロトコルの実装について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application protocols, types
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - receiving data, application protocols
 - requesting data from Internet, application protocols
 ms.assetid: 3aab4bcc-8397-4e1a-a1b6-bbd837a21430
-ms.openlocfilehash: f9af668a30920daa4634e402ab1922946b014051
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 07c4a813d4e2c838fb236d2a7798f54a9ead3a6d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71046989"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502016"
 ---
-# <a name="using-application-protocols"></a><span data-ttu-id="46517-102">アプリケーション プロトコルの使用</span><span class="sxs-lookup"><span data-stu-id="46517-102">Using Application Protocols</span></span>
-<span data-ttu-id="46517-103">.NET Framework は、一般的に使用されているインターネット アプリケーション プロトコルをサポートしています。</span><span class="sxs-lookup"><span data-stu-id="46517-103">The .NET Framework supports commonly used Internet application protocols.</span></span> <span data-ttu-id="46517-104">ここでは、[HTTP](http.md)、"TCP"、"UDP" プロトコルの使用方法と、[Windows ソケット](sockets.md) インターフェイスを使用してカスタム ソケットを実装する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="46517-104">This section includes information on using the [HTTP](http.md), "TCP", and "UDP" protocols, as well as information on using the [Windows Sockets](sockets.md) interface to implement custom protocols.</span></span>  
+# <a name="using-application-protocols"></a><span data-ttu-id="715f9-103">アプリケーション プロトコルの使用</span><span class="sxs-lookup"><span data-stu-id="715f9-103">Using Application Protocols</span></span>
+<span data-ttu-id="715f9-104">.NET Framework は、一般的に使用されているインターネット アプリケーション プロトコルをサポートしています。</span><span class="sxs-lookup"><span data-stu-id="715f9-104">The .NET Framework supports commonly used Internet application protocols.</span></span> <span data-ttu-id="715f9-105">ここでは、[HTTP](http.md)、"TCP"、"UDP" プロトコルの使用方法と、[Windows ソケット](sockets.md) インターフェイスを使用してカスタム ソケットを実装する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="715f9-105">This section includes information on using the [HTTP](http.md), "TCP", and "UDP" protocols, as well as information on using the [Windows Sockets](sockets.md) interface to implement custom protocols.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="46517-105">参照</span><span class="sxs-lookup"><span data-stu-id="46517-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="715f9-106">関連項目</span><span class="sxs-lookup"><span data-stu-id="715f9-106">See also</span></span>
 
-- [<span data-ttu-id="46517-106">.NET Framework のネットワーク プログラミング</span><span class="sxs-lookup"><span data-stu-id="46517-106">Network Programming in the .NET Framework</span></span>](index.md)
-- [<span data-ttu-id="46517-107">ネットワーク プログラミングのサンプル</span><span class="sxs-lookup"><span data-stu-id="46517-107">Network Programming Samples</span></span>](network-programming-samples.md)
+- [<span data-ttu-id="715f9-107">.NET Framework のネットワーク プログラミング</span><span class="sxs-lookup"><span data-stu-id="715f9-107">Network Programming in the .NET Framework</span></span>](index.md)
+- [<span data-ttu-id="715f9-108">ネットワーク プログラミングのサンプル</span><span class="sxs-lookup"><span data-stu-id="715f9-108">Network Programming Samples</span></span>](network-programming-samples.md)

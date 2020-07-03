@@ -1,5 +1,6 @@
 ---
 title: 同期クライアント ソケットの使用
+description: この例では、ネットワーク操作が完了するまで、.NET Framework の同期クライアント ソケットによってアプリケーション プログラムが一時停止することが示されています。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,17 +18,17 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
-ms.openlocfilehash: fdecd18dc5975cd469e49de0eb0b55081e738cd8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ef682af33c10cf06ffc398c22e4a7dc1adf8290e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047070"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502068"
 ---
-# <a name="using-a-synchronous-client-socket"></a><span data-ttu-id="bb048-102">同期クライアント ソケットの使用</span><span class="sxs-lookup"><span data-stu-id="bb048-102">Using a Synchronous Client Socket</span></span>
-<span data-ttu-id="bb048-103">ネットワーク操作が完了するまで、同期クライアント ソケットはアプリケーション プログラムを一時停止させます。</span><span class="sxs-lookup"><span data-stu-id="bb048-103">A synchronous client socket suspends the application program while the network operation completes.</span></span> <span data-ttu-id="bb048-104">同期ソケットは動作のためにネットワークを多用するアプリケーションには適しませんが、それ以外のアプリケーションの場合、ネットワーク サービスへの簡単アクセスを可能にします。</span><span class="sxs-lookup"><span data-stu-id="bb048-104">Synchronous sockets are not suitable for applications that make heavy use of the network for their operation, but they can enable simple access to network services for other applications.</span></span>  
+# <a name="using-a-synchronous-client-socket"></a><span data-ttu-id="ae897-103">同期クライアント ソケットの使用</span><span class="sxs-lookup"><span data-stu-id="ae897-103">Using a Synchronous Client Socket</span></span>
+<span data-ttu-id="ae897-104">ネットワーク操作が完了するまで、同期クライアント ソケットはアプリケーション プログラムを一時停止させます。</span><span class="sxs-lookup"><span data-stu-id="ae897-104">A synchronous client socket suspends the application program while the network operation completes.</span></span> <span data-ttu-id="ae897-105">同期ソケットは動作のためにネットワークを多用するアプリケーションには適しませんが、それ以外のアプリケーションの場合、ネットワーク サービスへの簡単アクセスを可能にします。</span><span class="sxs-lookup"><span data-stu-id="ae897-105">Synchronous sockets are not suitable for applications that make heavy use of the network for their operation, but they can enable simple access to network services for other applications.</span></span>  
   
- <span data-ttu-id="bb048-105">データを送信するには、<xref:System.Net.Sockets.Socket> クラスのデータ送信メソッド (<xref:System.Net.Sockets.Socket.Send%2A> と <xref:System.Net.Sockets.Socket.SendTo%2A>) のいずれかにバイト配列を渡します。</span><span class="sxs-lookup"><span data-stu-id="bb048-105">To send data, pass a byte array to one of the <xref:System.Net.Sockets.Socket> class's send-data methods (<xref:System.Net.Sockets.Socket.Send%2A> and <xref:System.Net.Sockets.Socket.SendTo%2A>).</span></span> <span data-ttu-id="bb048-106">次の例では、<xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> プロパティを利用してバイト配列バッファーに文字列をエンコードし、**Send** メソッドを利用してネットワーク デバイスにバッファーを送信しています。</span><span class="sxs-lookup"><span data-stu-id="bb048-106">The following example encodes a string into a byte array buffer using the <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> property and then transmits the buffer to the network device using the **Send** method.</span></span> <span data-ttu-id="bb048-107">**Send** メソッドは、ネットワーク デバイスに送信されたバイトの数を返します。</span><span class="sxs-lookup"><span data-stu-id="bb048-107">The **Send** method returns the number of bytes sent to the network device.</span></span>  
+ <span data-ttu-id="ae897-106">データを送信するには、<xref:System.Net.Sockets.Socket> クラスのデータ送信メソッド (<xref:System.Net.Sockets.Socket.Send%2A> と <xref:System.Net.Sockets.Socket.SendTo%2A>) のいずれかにバイト配列を渡します。</span><span class="sxs-lookup"><span data-stu-id="ae897-106">To send data, pass a byte array to one of the <xref:System.Net.Sockets.Socket> class's send-data methods (<xref:System.Net.Sockets.Socket.Send%2A> and <xref:System.Net.Sockets.Socket.SendTo%2A>).</span></span> <span data-ttu-id="ae897-107">次の例では、<xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> プロパティを利用してバイト配列バッファーに文字列をエンコードし、**Send** メソッドを利用してネットワーク デバイスにバッファーを送信しています。</span><span class="sxs-lookup"><span data-stu-id="ae897-107">The following example encodes a string into a byte array buffer using the <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> property and then transmits the buffer to the network device using the **Send** method.</span></span> <span data-ttu-id="ae897-108">**Send** メソッドは、ネットワーク デバイスに送信されたバイトの数を返します。</span><span class="sxs-lookup"><span data-stu-id="ae897-108">The **Send** method returns the number of bytes sent to the network device.</span></span>  
   
 ```vb  
 Dim msg As Byte() = _  
@@ -40,9 +41,9 @@ byte[] msg = System.Text.Encoding.ASCII.GetBytes("This is a test");
 int bytesSent = s.Send(msg);  
 ```  
   
- <span data-ttu-id="bb048-108">**Send** メソッドは、バッファーからバイトを取り除き、ネットワーク インターフェイスで、ネットワーク デバイスに送信するための待ち行列に入れます。</span><span class="sxs-lookup"><span data-stu-id="bb048-108">The **Send** method removes the bytes from the buffer and queues them with the network interface to be sent to the network device.</span></span> <span data-ttu-id="bb048-109">ネットワーク インターフェイスはデータをすぐには送信しないかもしれませんが、<xref:System.Net.Sockets.Socket.Shutdown%2A> メソッドで接続が通常どおり閉じられる限り、いずれは送信します。</span><span class="sxs-lookup"><span data-stu-id="bb048-109">The network interface might not send the data immediately, but it will send it eventually, as long as the connection is closed normally with the <xref:System.Net.Sockets.Socket.Shutdown%2A> method.</span></span>  
+ <span data-ttu-id="ae897-109">**Send** メソッドは、バッファーからバイトを取り除き、ネットワーク インターフェイスで、ネットワーク デバイスに送信するための待ち行列に入れます。</span><span class="sxs-lookup"><span data-stu-id="ae897-109">The **Send** method removes the bytes from the buffer and queues them with the network interface to be sent to the network device.</span></span> <span data-ttu-id="ae897-110">ネットワーク インターフェイスはデータをすぐには送信しないかもしれませんが、<xref:System.Net.Sockets.Socket.Shutdown%2A> メソッドで接続が通常どおり閉じられる限り、いずれは送信します。</span><span class="sxs-lookup"><span data-stu-id="ae897-110">The network interface might not send the data immediately, but it will send it eventually, as long as the connection is closed normally with the <xref:System.Net.Sockets.Socket.Shutdown%2A> method.</span></span>  
   
- <span data-ttu-id="bb048-110">ネットワーク デバイスからデータを受け取るには、**Socket** クラスのデータ受信メソッド (<xref:System.Net.Sockets.Socket.Receive%2A> と <xref:System.Net.Sockets.Socket.ReceiveFrom%2A>) のいずれかにバッファーを渡します。</span><span class="sxs-lookup"><span data-stu-id="bb048-110">To receive data from a network device, pass a buffer to one of the **Socket** class's receive-data methods (<xref:System.Net.Sockets.Socket.Receive%2A> and <xref:System.Net.Sockets.Socket.ReceiveFrom%2A>).</span></span> <span data-ttu-id="bb048-111">同期ソケットは、ネットワークからバイトが届くまで、あるいは、ソケットが閉じられるまで、アプリケーションを一時停止させます。</span><span class="sxs-lookup"><span data-stu-id="bb048-111">Synchronous sockets will suspend the application until bytes are received from the network or until the socket is closed.</span></span> <span data-ttu-id="bb048-112">次の例では、ネットワークからデータを受信し、コンソールに表示しています。</span><span class="sxs-lookup"><span data-stu-id="bb048-112">The following example receives data from the network and then displays it on the console.</span></span> <span data-ttu-id="bb048-113">この例では、ネットワークから届くデータが ASCII エンコード テキストであると想定しています。</span><span class="sxs-lookup"><span data-stu-id="bb048-113">The example assumes that the data coming from the network is ASCII-encoded text.</span></span> <span data-ttu-id="bb048-114">**Receive** メソッドは、ネットワークから受信したバイト数を返します。</span><span class="sxs-lookup"><span data-stu-id="bb048-114">The **Receive** method returns the number of bytes received from the network.</span></span>  
+ <span data-ttu-id="ae897-111">ネットワーク デバイスからデータを受け取るには、**Socket** クラスのデータ受信メソッド (<xref:System.Net.Sockets.Socket.Receive%2A> と <xref:System.Net.Sockets.Socket.ReceiveFrom%2A>) のいずれかにバッファーを渡します。</span><span class="sxs-lookup"><span data-stu-id="ae897-111">To receive data from a network device, pass a buffer to one of the **Socket** class's receive-data methods (<xref:System.Net.Sockets.Socket.Receive%2A> and <xref:System.Net.Sockets.Socket.ReceiveFrom%2A>).</span></span> <span data-ttu-id="ae897-112">同期ソケットは、ネットワークからバイトが届くまで、あるいは、ソケットが閉じられるまで、アプリケーションを一時停止させます。</span><span class="sxs-lookup"><span data-stu-id="ae897-112">Synchronous sockets will suspend the application until bytes are received from the network or until the socket is closed.</span></span> <span data-ttu-id="ae897-113">次の例では、ネットワークからデータを受信し、コンソールに表示しています。</span><span class="sxs-lookup"><span data-stu-id="ae897-113">The following example receives data from the network and then displays it on the console.</span></span> <span data-ttu-id="ae897-114">この例では、ネットワークから届くデータが ASCII エンコード テキストであると想定しています。</span><span class="sxs-lookup"><span data-stu-id="ae897-114">The example assumes that the data coming from the network is ASCII-encoded text.</span></span> <span data-ttu-id="ae897-115">**Receive** メソッドは、ネットワークから受信したバイト数を返します。</span><span class="sxs-lookup"><span data-stu-id="ae897-115">The **Receive** method returns the number of bytes received from the network.</span></span>  
   
 ```vb  
 Dim bytes(1024) As Byte  
@@ -58,7 +59,7 @@ Console.WriteLine("Echoed text = {0}",
     System.Text.Encoding.ASCII.GetString(bytes, 0, bytesRec));  
 ```  
   
- <span data-ttu-id="bb048-115">ソケットが不要になったら、解放する必要があります。<xref:System.Net.Sockets.Socket.Shutdown%2A> メソッドを呼び出し、**Close** メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="bb048-115">When the socket is no longer needed, you need to release it by calling the <xref:System.Net.Sockets.Socket.Shutdown%2A> method and then calling the **Close** method.</span></span> <span data-ttu-id="bb048-116">次の例では、**Socket** を解放しています。</span><span class="sxs-lookup"><span data-stu-id="bb048-116">The following example releases a **Socket**.</span></span> <span data-ttu-id="bb048-117"><xref:System.Net.Sockets.SocketShutdown> 列挙は、送信、受信、あるいは両方のためにソケットを閉じるかどうかを示す定数を定義します。</span><span class="sxs-lookup"><span data-stu-id="bb048-117">The <xref:System.Net.Sockets.SocketShutdown> enumeration defines constants that indicate whether the socket should be closed for sending, for receiving, or for both.</span></span>  
+ <span data-ttu-id="ae897-116">ソケットが不要になったら、解放する必要があります。<xref:System.Net.Sockets.Socket.Shutdown%2A> メソッドを呼び出し、**Close** メソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="ae897-116">When the socket is no longer needed, you need to release it by calling the <xref:System.Net.Sockets.Socket.Shutdown%2A> method and then calling the **Close** method.</span></span> <span data-ttu-id="ae897-117">次の例では、**Socket** を解放しています。</span><span class="sxs-lookup"><span data-stu-id="ae897-117">The following example releases a **Socket**.</span></span> <span data-ttu-id="ae897-118"><xref:System.Net.Sockets.SocketShutdown> 列挙は、送信、受信、あるいは両方のためにソケットを閉じるかどうかを示す定数を定義します。</span><span class="sxs-lookup"><span data-stu-id="ae897-118">The <xref:System.Net.Sockets.SocketShutdown> enumeration defines constants that indicate whether the socket should be closed for sending, for receiving, or for both.</span></span>  
   
 ```vb  
 s.Shutdown(SocketShutdown.Both)  
@@ -70,8 +71,8 @@ s.Shutdown(SocketShutdown.Both);
 s.Close();  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bb048-118">参照</span><span class="sxs-lookup"><span data-stu-id="bb048-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ae897-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="ae897-119">See also</span></span>
 
-- [<span data-ttu-id="bb048-119">非同期クライアント ソケットの使用</span><span class="sxs-lookup"><span data-stu-id="bb048-119">Using an Asynchronous Client Socket</span></span>](using-an-asynchronous-client-socket.md)
-- [<span data-ttu-id="bb048-120">リッスン (ソケットで)</span><span class="sxs-lookup"><span data-stu-id="bb048-120">Listening with Sockets</span></span>](listening-with-sockets.md)
-- [<span data-ttu-id="bb048-121">同期クライアント ソケットの例</span><span class="sxs-lookup"><span data-stu-id="bb048-121">Synchronous Client Socket Example</span></span>](synchronous-client-socket-example.md)
+- [<span data-ttu-id="ae897-120">非同期クライアント ソケットの使用</span><span class="sxs-lookup"><span data-stu-id="ae897-120">Using an Asynchronous Client Socket</span></span>](using-an-asynchronous-client-socket.md)
+- [<span data-ttu-id="ae897-121">リッスン (ソケットで)</span><span class="sxs-lookup"><span data-stu-id="ae897-121">Listening with Sockets</span></span>](listening-with-sockets.md)
+- [<span data-ttu-id="ae897-122">同期クライアント ソケットの例</span><span class="sxs-lookup"><span data-stu-id="ae897-122">Synchronous Client Socket Example</span></span>](synchronous-client-socket-example.md)

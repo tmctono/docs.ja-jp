@@ -1,5 +1,6 @@
 ---
 title: Winmdexp.exe のエラー メッセージ
+description: .NET コンパイルに成功した場合にのみ、ビルド プロセス中に表示される Winmdexp.exe (Windows ランタイム メタデータ エクスポート ツール) エラー メッセージを理解します。
 ms.date: 03/30/2017
 f1_keywords:
 - WME1095
@@ -157,21 +158,22 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool, error messages
 - error messages, Winmdexp.exe
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
-ms.openlocfilehash: e99bdd106c845964f63915c87617e30eb51488f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1b44273bd5a8868ba426d9ac0eabbefcb725e70f
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74447300"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325605"
 ---
-# <a name="winmdexpexe-error-messages"></a><span data-ttu-id="2084a-102">Winmdexp.exe のエラー メッセージ</span><span class="sxs-lookup"><span data-stu-id="2084a-102">Winmdexp.exe Error Messages</span></span>
-<span data-ttu-id="2084a-103">Visual Studio 2012 で **Windows ランタイム コンポーネント** テンプレートを使用すると、ビルド プロセスで [Winmdexp.exe (Windows ランタイム メタデータ エクスポート ツール)](winmdexp-exe-windows-runtime-metadata-export-tool.md) が呼び出されるため、Winmdexp.exe のエラー メッセージが **[エラー一覧]** に表示されます。</span><span class="sxs-lookup"><span data-stu-id="2084a-103">The build process calls [Winmdexp.exe (Windows Runtime Metadata Export Tool)](winmdexp-exe-windows-runtime-metadata-export-tool.md) when you use the **Windows Runtime Component** template in Visual Studio 2012, so Winmdexp.exe error messages appear in the **Error List**.</span></span> <span data-ttu-id="2084a-104">Winmdexp.exe は `/target:winmdobj` オプションでコンパイルされるモジュールで動作します。</span><span class="sxs-lookup"><span data-stu-id="2084a-104">Winmdexp.exe operates on a module that is compiled with the `/target:winmdobj` option.</span></span> <span data-ttu-id="2084a-105">コンパイルされたモジュールが入力として必要となるため、コンパイルが成功した場合を除き、そのエラー メッセージは表示されません。</span><span class="sxs-lookup"><span data-stu-id="2084a-105">Because it requires a compiled module as input, its error messages don't appear unless compilation succeeds.</span></span>  
-  
- <span data-ttu-id="2084a-106">エラー メッセージは、報告されるエラー条件への対処に必要なすべての情報が含まれるように設計されています。</span><span class="sxs-lookup"><span data-stu-id="2084a-106">The error messages are designed to contain all the information you need to address the error conditions they report.</span></span> <span data-ttu-id="2084a-107">ただし、一部の問題ではメッセージに収まりきらない、より多くの情報が必要となります。</span><span class="sxs-lookup"><span data-stu-id="2084a-107">However, some problems require more information than will fit in the message.</span></span> <span data-ttu-id="2084a-108">追加の情報は、「[Windows ランタイム コンポーネントのエラー条件の診断](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))」で確認できます。</span><span class="sxs-lookup"><span data-stu-id="2084a-108">You can find additional information in [Diagnosing Windows Runtime component error conditions](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110)).</span></span>  
-  
- <span data-ttu-id="2084a-109">エラーがこの記事では取り上げられていない場合や、問題に対処するために十分な情報がメッセージに含まれていないと感じる場合は、該当する記事のフィードバック リンクを使用してエラー メッセージをお送りください。</span><span class="sxs-lookup"><span data-stu-id="2084a-109">If your error is not discussed in that article, and you feel that the message doesn't contain sufficient information to address the issue, please use the feedback link in that article and include the error message.</span></span> <span data-ttu-id="2084a-110">また、[開発者コミュニティ Web サイト](https://developercommunity.visualstudio.com/)でバグを報告できます。</span><span class="sxs-lookup"><span data-stu-id="2084a-110">Alternatively, you can file a bug at the [Developer Community website](https://developercommunity.visualstudio.com/).</span></span> <span data-ttu-id="2084a-111">[MSDN フォーラム](https://social.msdn.microsoft.com/Forums/)で詳細な情報を参照することもできます。</span><span class="sxs-lookup"><span data-stu-id="2084a-111">You can also look for more information on the [Microsoft Forums](https://social.msdn.microsoft.com/Forums/).</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="2084a-112">参照</span><span class="sxs-lookup"><span data-stu-id="2084a-112">See also</span></span>
+# <a name="winmdexpexe-error-messages"></a><span data-ttu-id="9cfd6-103">Winmdexp.exe のエラー メッセージ</span><span class="sxs-lookup"><span data-stu-id="9cfd6-103">Winmdexp.exe error messages</span></span>
 
-- [<span data-ttu-id="2084a-113">Winmdexp.exe (Windows ランタイム メタデータのエクスポート ツール)</span><span class="sxs-lookup"><span data-stu-id="2084a-113">Winmdexp.exe (Windows Runtime Metadata Export Tool)</span></span>](winmdexp-exe-windows-runtime-metadata-export-tool.md)
-- <span data-ttu-id="2084a-114">[Windows ランタイム コンポーネントのエラー条件の診断](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))</span><span class="sxs-lookup"><span data-stu-id="2084a-114">[Diagnosing Windows Runtime component error conditions](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))</span></span>
+<span data-ttu-id="9cfd6-104">Visual Studio 2012 で **Windows ランタイム コンポーネント** テンプレートを使用すると、ビルド プロセスで [Winmdexp.exe (Windows ランタイム メタデータ エクスポート ツール)](winmdexp-exe-windows-runtime-metadata-export-tool.md) が呼び出されるため、Winmdexp.exe のエラー メッセージが **[エラー一覧]** に表示されます。</span><span class="sxs-lookup"><span data-stu-id="9cfd6-104">The build process calls [Winmdexp.exe (Windows Runtime Metadata Export Tool)](winmdexp-exe-windows-runtime-metadata-export-tool.md) when you use the **Windows Runtime Component** template in Visual Studio 2012, so Winmdexp.exe error messages appear in the **Error List**.</span></span> <span data-ttu-id="9cfd6-105">Winmdexp.exe は `/target:winmdobj` オプションでコンパイルされるモジュールで動作します。</span><span class="sxs-lookup"><span data-stu-id="9cfd6-105">Winmdexp.exe operates on a module that is compiled with the `/target:winmdobj` option.</span></span> <span data-ttu-id="9cfd6-106">コンパイルされたモジュールが入力として必要となるため、コンパイルが成功した場合を除き、そのエラー メッセージは表示されません。</span><span class="sxs-lookup"><span data-stu-id="9cfd6-106">Because it requires a compiled module as input, its error messages don't appear unless compilation succeeds.</span></span>  
+  
+ <span data-ttu-id="9cfd6-107">エラー メッセージは、報告されるエラー条件への対処に必要なすべての情報が含まれるように設計されています。</span><span class="sxs-lookup"><span data-stu-id="9cfd6-107">The error messages are designed to contain all the information you need to address the error conditions they report.</span></span> <span data-ttu-id="9cfd6-108">ただし、一部の問題ではメッセージに収まりきらない、より多くの情報が必要となります。</span><span class="sxs-lookup"><span data-stu-id="9cfd6-108">However, some problems require more information than will fit in the message.</span></span> <span data-ttu-id="9cfd6-109">追加の情報は、「[Windows ランタイム コンポーネントのエラー条件の診断](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))」で確認できます。</span><span class="sxs-lookup"><span data-stu-id="9cfd6-109">You can find additional information in [Diagnosing Windows Runtime component error conditions](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110)).</span></span>  
+  
+ <span data-ttu-id="9cfd6-110">エラーがその記事で取り上げられていない場合や、問題に対処するために十分な情報がメッセージに含まれていないと思われる場合は、その記事のフィードバック リンクを使用し、エラー メッセージを追加します。</span><span class="sxs-lookup"><span data-stu-id="9cfd6-110">If your error is not discussed in that article, and you feel that the message doesn't contain sufficient information to address the issue, use the feedback link in that article and include the error message.</span></span> <span data-ttu-id="9cfd6-111">また、[開発者コミュニティ Web サイト](https://developercommunity.visualstudio.com/)でバグを報告できます。</span><span class="sxs-lookup"><span data-stu-id="9cfd6-111">Alternatively, you can file a bug at the [Developer Community website](https://developercommunity.visualstudio.com/).</span></span> <span data-ttu-id="9cfd6-112">[MSDN フォーラム](https://social.msdn.microsoft.com/Forums/)で詳細な情報を参照することもできます。</span><span class="sxs-lookup"><span data-stu-id="9cfd6-112">You can also look for more information on the [Microsoft Forums](https://social.msdn.microsoft.com/Forums/).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="9cfd6-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="9cfd6-113">See also</span></span>
+
+- [<span data-ttu-id="9cfd6-114">Winmdexp.exe (Windows ランタイム メタデータのエクスポート ツール)</span><span class="sxs-lookup"><span data-stu-id="9cfd6-114">Winmdexp.exe (Windows Runtime Metadata Export Tool)</span></span>](winmdexp-exe-windows-runtime-metadata-export-tool.md)
+- <span data-ttu-id="9cfd6-115">[Windows ランタイム コンポーネントのエラー条件の診断](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))</span><span class="sxs-lookup"><span data-stu-id="9cfd6-115">[Diagnosing Windows Runtime component error conditions](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))</span></span>

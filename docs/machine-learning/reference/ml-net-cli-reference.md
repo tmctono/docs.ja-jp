@@ -1,268 +1,341 @@
 ---
 title: ML.NET CLI コマンド リファレンス
 description: ML.NET CLI ツールの auto-train コマンドの概要、サンプル、およびリファレンス。
-ms.date: 12/18/2019
+ms.date: 06/03/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: bb161c596a76134876ee2bf0a6229bc551e0dad2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 397f6fda8554024624b3ef630856dc8eca9696b2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78848926"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594544"
 ---
-# <a name="the-mlnet-cli-command-reference"></a><span data-ttu-id="05bfe-103">ML.NET CLI コマンド リファレンス</span><span class="sxs-lookup"><span data-stu-id="05bfe-103">The ML.NET CLI command reference</span></span>
+# <a name="the-mlnet-cli-command-reference"></a><span data-ttu-id="d9d27-103">ML.NET CLI コマンド リファレンス</span><span class="sxs-lookup"><span data-stu-id="d9d27-103">The ML.NET CLI command reference</span></span>
 
-<span data-ttu-id="05bfe-104">`auto-train` コマンドは、ML.NET CLI ツールが提供するメイン コマンドです。</span><span class="sxs-lookup"><span data-stu-id="05bfe-104">The `auto-train` command is the main command provided by the ML.NET CLI tool.</span></span> <span data-ttu-id="05bfe-105">このコマンドを使用すると、自動機械学習 (AutoML) を使用する高品質の ML.NET モデルと、そのモデルを実行/スコア付けするサンプル C# コードを生成できます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-105">The command allows you to generate a good quality ML.NET model using automated machine learning (AutoML) as well as the example C# code to run/score that model.</span></span> <span data-ttu-id="05bfe-106">さらに、そのモデルをトレーニングするための C# コードも生成され、そのモデルのアルゴリズムと設定を調べることができます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-106">In addition, the C# code to train the model is generated for you to research the algorithm and settings of the model.</span></span>
+<span data-ttu-id="d9d27-104">`classification`、`regression`、`recommendation` コマンドは、ML.NET CLI ツールによって提供されるメイン コマンドです。</span><span class="sxs-lookup"><span data-stu-id="d9d27-104">The `classification`, `regression`, and `recommendation` commands are the main commands provided by the ML.NET CLI tool.</span></span> <span data-ttu-id="d9d27-105">このコマンドを使用すると、自動機械学習 (AutoML) を使用する分類、回帰、推奨モデル用の高品質の ML.NET モデルと、そのモデルを実行またはスコア付けする C# のコード例を生成できます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-105">These commands allow you to generate good quality ML.NET models for classification, regression, and recommendation models using automated machine learning (AutoML) as well as the example C# code to run/score that model.</span></span> <span data-ttu-id="d9d27-106">さらに、そのモデルをトレーニングするための C# コードも生成され、そのモデルのアルゴリズムと設定を調べることができます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-106">In addition, the C# code to train the model is generated for you to research the algorithm and settings of the model.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="05bfe-107">このトピックは、現在プレビュー段階の ML.NET CLI と ML.NET AutoML について述べており、内容が変更される場合があります。</span><span class="sxs-lookup"><span data-stu-id="05bfe-107">This topic refers to ML.NET CLI and ML.NET AutoML, which are currently in Preview, and material may be subject to change.</span></span>
+> <span data-ttu-id="d9d27-107">このトピックは、現在プレビュー段階の ML.NET CLI と ML.NET AutoML について述べており、内容が変更される場合があります。</span><span class="sxs-lookup"><span data-stu-id="d9d27-107">This topic refers to ML.NET CLI and ML.NET AutoML, which are currently in Preview, and material may be subject to change.</span></span>
 
-## <a name="overview"></a><span data-ttu-id="05bfe-108">概要</span><span class="sxs-lookup"><span data-stu-id="05bfe-108">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="d9d27-108">概要</span><span class="sxs-lookup"><span data-stu-id="d9d27-108">Overview</span></span>
 
-<span data-ttu-id="05bfe-109">使用例:</span><span class="sxs-lookup"><span data-stu-id="05bfe-109">Example usage:</span></span>
-
-```console
-mlnet auto-train --task regression --dataset "cars.csv" --label-column-name price
-```
-
-<span data-ttu-id="05bfe-110">`mlnet auto-train` コマンドで、以下の資産が生成されます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-110">The `mlnet auto-train` command generates the following assets:</span></span>
-
-- <span data-ttu-id="05bfe-111">すぐに使用できるシリアル化されたモデル .zip ("最適なモデル")。</span><span class="sxs-lookup"><span data-stu-id="05bfe-111">A serialized model .zip ("best model") ready to use.</span></span>
-- <span data-ttu-id="05bfe-112">その生成されたモデルを実行/スコア付けする C# コード。</span><span class="sxs-lookup"><span data-stu-id="05bfe-112">C# code to run/score that generated model.</span></span>
-- <span data-ttu-id="05bfe-113">そのモデルの生成に使用されるトレーニング コードを含む C# コード。</span><span class="sxs-lookup"><span data-stu-id="05bfe-113">C# code with the training code used to generate that model.</span></span>
-
-<span data-ttu-id="05bfe-114">最初の 2 つの資産は、モデルを使用して予測を行うために、エンド ユーザー アプリ (ASP.NET Core Web アプリ、サービス、デスクトップ アプリなど) で直接使用できます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-114">The first two assets can directly be used in your end-user apps (ASP.NET Core web app, services, desktop app and more) to make predictions with the model.</span></span>
-
-<span data-ttu-id="05bfe-115">3 つ目の資産のトレーニング コードは、生成されたモデルをトレーニングするために CLI によって使用された ML.NET API コードを示しています。このため、そのモデルの特定のアルゴリズムと設定を調べることができます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-115">The third asset, the training code, shows you what ML.NET API code was used by the CLI to train the generated model, so you can investigate the specific algorithm and settings of the model.</span></span>
-
-## <a name="examples"></a><span data-ttu-id="05bfe-116">使用例</span><span class="sxs-lookup"><span data-stu-id="05bfe-116">Examples</span></span>
-
-<span data-ttu-id="05bfe-117">二項分類問題に適した最も簡単な CLI コマンド (AutoML では、指定されたデータからほとんどの構成を推測します):</span><span class="sxs-lookup"><span data-stu-id="05bfe-117">The simplest CLI command for a binary classification problem (AutoML infers most of the configuration from the provided data):</span></span>
+<span data-ttu-id="d9d27-109">使用例:</span><span class="sxs-lookup"><span data-stu-id="d9d27-109">Example usage:</span></span>
 
 ```console
-mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
+mlnet regression --dataset "cars.csv" --label-col price
 ```
 
-<span data-ttu-id="05bfe-118">回帰問題に適したもう 1 つの簡単な CLI コマンド:</span><span class="sxs-lookup"><span data-stu-id="05bfe-118">Another simple CLI command for a regression problem:</span></span>
+<span data-ttu-id="d9d27-110">`mlnet` ML タスク コマンド (`classification`、`regression`、`recommendation`) では、次の資産が生成されます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-110">The `mlnet` ML task commands (`classification`, `regression`, and `recommendation`) generate the following assets:</span></span>
+
+- <span data-ttu-id="d9d27-111">すぐに使用できるシリアル化されたモデル .zip ("最適なモデル")。</span><span class="sxs-lookup"><span data-stu-id="d9d27-111">A serialized model .zip ("best model") ready to use.</span></span>
+- <span data-ttu-id="d9d27-112">その生成されたモデルを実行/スコア付けする C# コード。</span><span class="sxs-lookup"><span data-stu-id="d9d27-112">C# code to run/score that generated model.</span></span>
+- <span data-ttu-id="d9d27-113">そのモデルの生成に使用されるトレーニング コードを含む C# コード。</span><span class="sxs-lookup"><span data-stu-id="d9d27-113">C# code with the training code used to generate that model.</span></span>
+
+<span data-ttu-id="d9d27-114">最初の 2 つの資産は、モデルを使用して予測を行うために、エンド ユーザー アプリ (ASP.NET Core Web アプリ、サービス、デスクトップ アプリなど) で直接使用できます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-114">The first two assets can directly be used in your end-user apps (ASP.NET Core web app, services, desktop app and more) to make predictions with the model.</span></span>
+
+<span data-ttu-id="d9d27-115">3 つ目の資産のトレーニング コードは、生成されたモデルをトレーニングするために CLI によって使用された ML.NET API コードを示しています。このため、そのモデルの特定のアルゴリズムと設定を調べることができます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-115">The third asset, the training code, shows you what ML.NET API code was used by the CLI to train the generated model, so you can investigate the specific algorithm and settings of the model.</span></span>
+
+## <a name="examples"></a><span data-ttu-id="d9d27-116">使用例</span><span class="sxs-lookup"><span data-stu-id="d9d27-116">Examples</span></span>
+
+<span data-ttu-id="d9d27-117">分類問題に適した最も簡単な CLI コマンド (AutoML では、指定されたデータからほとんどの構成が推測されます):</span><span class="sxs-lookup"><span data-stu-id="d9d27-117">The simplest CLI command for a classification problem (AutoML infers most of the configuration from the provided data):</span></span>
+
+```console
+mlnet classification --dataset "customer-feedback.tsv" --label-col Sentiment
+```
+
+<span data-ttu-id="d9d27-118">回帰問題に適したもう 1 つの簡単な CLI コマンド:</span><span class="sxs-lookup"><span data-stu-id="d9d27-118">Another simple CLI command for a regression problem:</span></span>
 
 ``` console
-mlnet auto-train --task regression --dataset "cars.csv" --label-column-name Price
+mlnet regression --dataset "cars.csv" --label-col Price
 ```
 
-<span data-ttu-id="05bfe-119">トレーニング データセット、テスト データセット、およびその他のカスタマイズの明示的な引数を使用して、二項分類モデルを作成し、トレーニングします。</span><span class="sxs-lookup"><span data-stu-id="05bfe-119">Create and train a binary-classification model with a train dataset, a test dataset, and further customization explicit arguments:</span></span>
+<span data-ttu-id="d9d27-119">トレーニング データセット、テスト データセット、その他のカスタマイズの明示的な引数を使用して、分類モデルを作成し、トレーニングします。</span><span class="sxs-lookup"><span data-stu-id="d9d27-119">Create and train a classification model with a train dataset, a test dataset, and further customization explicit arguments:</span></span>
 
 ```console
-mlnet auto-train --task binary-classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-column-name "InsuranceRisk" --cache on --max-exploration-time 600
+mlnet classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-col "InsuranceRisk" --cache on --train-time 600
 ```
 
-## <a name="command-options"></a><span data-ttu-id="05bfe-120">コマンド オプション</span><span class="sxs-lookup"><span data-stu-id="05bfe-120">Command options</span></span>
+## <a name="command-options"></a><span data-ttu-id="d9d27-120">コマンド オプション</span><span class="sxs-lookup"><span data-stu-id="d9d27-120">Command options</span></span>
 
-<span data-ttu-id="05bfe-121">`mlnet auto-train` は、指定されたデータセットに基づいて複数のモデルをトレーニングし、最後に最適なモデルを選択し、シリアル化された .zip ファイルとして保存します。さらに、スコア付けとトレーニングに関連する C# コードを生成します。</span><span class="sxs-lookup"><span data-stu-id="05bfe-121">`mlnet auto-train` trains multiple models based on the provided dataset and finally selects the best model, saves it as a serialized .zip file plus generates related C# code for scoring and training.</span></span>
+<span data-ttu-id="d9d27-121">`mlnet` ML タスク コマンド (`classification`、`regression`、`recommendation`) によって、指定されたデータセットと ML.NET CLI オプションに基づいて複数のモデルがトレーニングされます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-121">The `mlnet` ML task commands (`classification`, `regression`, and `recommendation`) train multiple models based on the provided dataset and ML.NET CLI options.</span></span> <span data-ttu-id="d9d27-122">これらのコマンドから、最適なモデルの選択、シリアル化された .zip ファイルとしてのモデルの保存、スコア付けとトレーニングを行うための C# の関連コードの生成を行うこともできます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-122">These commands also select the best model, save the model as a serialized .zip file, and generate related C# code for scoring and training.</span></span>
+
+### <a name="classification-options"></a><span data-ttu-id="d9d27-123">分類オプション</span><span class="sxs-lookup"><span data-stu-id="d9d27-123">Classification options</span></span>
+
+<span data-ttu-id="d9d27-124">`mlnet classification` を実行すると、分類モデルがトレーニングされます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-124">Running `mlnet classification` will train a classification model.</span></span> <span data-ttu-id="d9d27-125">ML モデルでデータを 2 つ以上のクラスに分類する場合 (例: 感情分析) は、このコマンドを選択します。</span><span class="sxs-lookup"><span data-stu-id="d9d27-125">Choose this command if you want an ML Model to categorize data into 2 or more classes (e.g. sentiment analysis).</span></span>
 
 ```console
-mlnet auto-train
+mlnet classification
 
---task | --mltask | -T <value>
+--dataset <path> (REQUIRED)
 
---dataset | -d <value>
+--label-col <col> (REQUIRED)
 
-[
- [--validation-dataset | -v <value>]
-  --test-dataset | -t <value>
-]
+--cache <option>
 
---label-column-name | -n <value>
-|
---label-column-index | -i <value>
+--has-header (Default: true)
 
-[--ignore-columns | -I <value>]
+--ignore-cols <cols>
 
-[--has-header | -h <value>]
+--log-file-path <path>
 
-[--max-exploration-time | -x <value>]
+--name <name>
 
-[--verbosity | -V <value>]
+-o, --output <path>
 
-[--cache | -c <value>]
+--test-dataset <path>
 
-[--name | -N <value>]
+--train-time <time> (Default: 30 minutes, in seconds)
 
-[--output-path | -o <value>]
+--validation-dataset <path>
 
-[--help | -h]
+-v, --verbosity <v>
+
+-?, -h, --help
 
 ```
 
-<span data-ttu-id="05bfe-122">無効な入力オプションを指定すると、CLI ツールによって、有効な入力の一覧とエラー メッセージが生成されます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-122">Invalid input options cause the CLI tool to emit a list of valid inputs and an error message.</span></span>
+### <a name="regression-options"></a><span data-ttu-id="d9d27-126">回帰オプション</span><span class="sxs-lookup"><span data-stu-id="d9d27-126">Regression options</span></span>
 
-## <a name="task"></a><span data-ttu-id="05bfe-123">タスク</span><span class="sxs-lookup"><span data-stu-id="05bfe-123">Task</span></span>
+<span data-ttu-id="d9d27-127">`mlnet regression` を実行すると、回帰モデルがトレーニングされます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-127">Running `mlnet regression` will train a regression model.</span></span> <span data-ttu-id="d9d27-128">ML モデルで数値を予測する場合 (例: 価格予測) は、このコマンドを選択します。</span><span class="sxs-lookup"><span data-stu-id="d9d27-128">Choose this command if you want an ML Model to predict a numeric value (e.g. price prediction).</span></span>
 
-<span data-ttu-id="05bfe-124">`--task | --mltask | -T` (文字列)</span><span class="sxs-lookup"><span data-stu-id="05bfe-124">`--task | --mltask | -T` (string)</span></span>
+```console
+mlnet classification
 
-<span data-ttu-id="05bfe-125">解決する ML の問題を示す 1 つの文字列。</span><span class="sxs-lookup"><span data-stu-id="05bfe-125">A single string providing the ML problem to solve.</span></span> <span data-ttu-id="05bfe-126">たとえば、次のいずれかのタスクです (CLI は、最終的には AutoML でサポートされているすべてのタスクをサポートする予定です)。</span><span class="sxs-lookup"><span data-stu-id="05bfe-126">For instance, any of the following tasks (The CLI will eventually support all tasks supported in AutoML):</span></span>
+--dataset <path> (REQUIRED)
 
-- <span data-ttu-id="05bfe-127">`regression` - 数値の予測に ML モデルを使用するかどうかを選択します</span><span class="sxs-lookup"><span data-stu-id="05bfe-127">`regression` - Choose if the ML Model will be used to predict a numeric value</span></span>
-- <span data-ttu-id="05bfe-128">`binary-classification` - ML モデルの結果に、2 つの可能なカテゴリ別のブール値 (0 または 1) があるかどうかを選択します。</span><span class="sxs-lookup"><span data-stu-id="05bfe-128">`binary-classification` - Choose if the ML Model result has two possible categorical boolean values (0 or 1).</span></span>
-- <span data-ttu-id="05bfe-129">`multiclass-classification` - ML モデルの結果に、複数の可能なカテゴリ別の値があるかどうかを選択します。</span><span class="sxs-lookup"><span data-stu-id="05bfe-129">`multiclass-classification` - Choose if the ML Model result has multiple categorical possible values.</span></span>
+--label-col <col> (REQUIRED)
 
-<span data-ttu-id="05bfe-130">この引数には、ML タスクを 1 つのみ指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="05bfe-130">Only one ML task should be provided in this argument.</span></span>
+--cache <option>
 
-## <a name="dataset"></a><span data-ttu-id="05bfe-131">データセット</span><span class="sxs-lookup"><span data-stu-id="05bfe-131">Dataset</span></span>
+--has-header (Default: true)
 
-<span data-ttu-id="05bfe-132">`--dataset | -d` (文字列)</span><span class="sxs-lookup"><span data-stu-id="05bfe-132">`--dataset | -d` (string)</span></span>
+--ignore-cols <cols>
 
-<span data-ttu-id="05bfe-133">この引数には、次のオプションのいずれかのファイルパスを指定します。</span><span class="sxs-lookup"><span data-stu-id="05bfe-133">This argument provides the filepath to either one of the following options:</span></span>
+--log-file-path <path>
 
-- <span data-ttu-id="05bfe-134">*A:データセット ファイル全体:* このオプションを使用し、ユーザーが `--test-dataset` と `--validation-dataset` を指定していない場合は、モデルの検証にクロス検証 (k 分割など) または自動データ分割アプローチが内部的に使用されます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-134">*A: The whole dataset file:* If using this option and the user is not providing `--test-dataset` and `--validation-dataset`, then cross-validation (k-fold, etc.) or automated data split approaches will be used internally for validating the model.</span></span> <span data-ttu-id="05bfe-135">その場合、ユーザーはデータセットのファイルパスを入力するだけで済みます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-135">In that case, the user will just need to provide the dataset filepath.</span></span>
+--name <name>
 
-- <span data-ttu-id="05bfe-136">*B:トレーニング データセット ファイル:* ユーザーがモデル検証用のデータセットも指定している場合 (`--test-dataset` と、必要に応じて `--validation-dataset` を使用)、`--dataset` 引数は "トレーニング データセット" のみがあることを意味します。</span><span class="sxs-lookup"><span data-stu-id="05bfe-136">*B: The training dataset file:* If the user is also providing datasets for model validation (using `--test-dataset` and optionally `--validation-dataset`), then the `--dataset` argument means to only have the "training dataset".</span></span> <span data-ttu-id="05bfe-137">たとえば、80% - 20% のアプローチを使用してモデルの品質を検証し、正確度のメトリックを取得する場合、"トレーニング データセット" には 80% のデータが含まれ、"テスト データセット" には 20% のデータが含まれます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-137">For example, when using an 80% - 20% approach to validate the quality of the model and to obtain accuracy metrics, the "training dataset" will have 80% of the data and the "test dataset" would have 20% of the data.</span></span>
+-o, --output <path>
 
-## <a name="test-dataset"></a><span data-ttu-id="05bfe-138">テスト データセット</span><span class="sxs-lookup"><span data-stu-id="05bfe-138">Test dataset</span></span>
+--test-dataset <path>
 
-<span data-ttu-id="05bfe-139">`--test-dataset | -t` (文字列)</span><span class="sxs-lookup"><span data-stu-id="05bfe-139">`--test-dataset | -t` (string)</span></span>
+--train-time <time> (Default: 30 minutes, in seconds)
 
-<span data-ttu-id="05bfe-140">テスト データセット ファイルを指すファイル パス。たとえば、正確度のメトリックを取得するために定期的な検証を行うときに 80% - 20% のアプローチを使用する場合です。</span><span class="sxs-lookup"><span data-stu-id="05bfe-140">File path pointing to the test dataset file, for example when using an 80% - 20% approach when making regular validations to obtain accuracy metrics.</span></span>
+--validation-dataset <path>
 
-<span data-ttu-id="05bfe-141">`--test-dataset` を使用する場合は `--dataset` も必要です。</span><span class="sxs-lookup"><span data-stu-id="05bfe-141">If using `--test-dataset`, then `--dataset` is also required.</span></span>
+-v, --verbosity <v>
 
-<span data-ttu-id="05bfe-142">--validation-dataset が使用されていない限り、`--test-dataset` 引数は省略可能です。</span><span class="sxs-lookup"><span data-stu-id="05bfe-142">The `--test-dataset` argument is optional unless the --validation-dataset is used.</span></span> <span data-ttu-id="05bfe-143">その場合、ユーザーは 3 つの引数を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="05bfe-143">In that case, the user must use the three arguments.</span></span>
+-?, -h, --help
 
-## <a name="validation-dataset"></a><span data-ttu-id="05bfe-144">検証データセット</span><span class="sxs-lookup"><span data-stu-id="05bfe-144">Validation dataset</span></span>
+```
 
-<span data-ttu-id="05bfe-145">`--validation-dataset | -v` (文字列)</span><span class="sxs-lookup"><span data-stu-id="05bfe-145">`--validation-dataset | -v` (string)</span></span>
+### <a name="recommendation-options"></a><span data-ttu-id="d9d27-129">推奨オプション</span><span class="sxs-lookup"><span data-stu-id="d9d27-129">Recommendation options</span></span>
 
-<span data-ttu-id="05bfe-146">検証データセット ファイルを指すファイル パス。</span><span class="sxs-lookup"><span data-stu-id="05bfe-146">File path pointing to the validation dataset file.</span></span> <span data-ttu-id="05bfe-147">どのような場合でも、検証データセットは省略可能です。</span><span class="sxs-lookup"><span data-stu-id="05bfe-147">The validation dataset is optional, in any case.</span></span>
+<span data-ttu-id="d9d27-130">`mlnet recommendation` を実行すると、推奨モデルがトレーニングされます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-130">Running `mlnet recommendation` will train a recommendation model.</span></span>  <span data-ttu-id="d9d27-131">ML モデルで評価に基づいてユーザーに項目を推奨する場合 (例: 製品推奨) は、このコマンドを選択します。</span><span class="sxs-lookup"><span data-stu-id="d9d27-131">Choose this command if you want an ML Model to recommend items to users based on ratings (e.g. product recommendation).</span></span>
 
-<span data-ttu-id="05bfe-148">`validation dataset` を使用している場合、動作は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="05bfe-148">If using a `validation dataset`, the behavior should be:</span></span>
+```console
+mlnet classification
 
-- <span data-ttu-id="05bfe-149">`test-dataset` と `--dataset` の引数も必須です。</span><span class="sxs-lookup"><span data-stu-id="05bfe-149">The `test-dataset` and `--dataset` arguments are also required.</span></span>
+--dataset <path> (REQUIRED)
 
-- <span data-ttu-id="05bfe-150">`validation-dataset` データセットは、モデル選択の予測誤差を推定するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-150">The `validation-dataset` dataset is used to estimate prediction error for model selection.</span></span>
+--item-col <col> (REQUIRED)
 
-- <span data-ttu-id="05bfe-151">`test-dataset` は、最終的に選択されたモデルの一般化誤差の評価に使用されます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-151">The `test-dataset` is used for assessment of the generalization error of the final chosen model.</span></span> <span data-ttu-id="05bfe-152">テスト セットを "コンテナー" に保管し、データ分析の最後にのみ取り出すのが理想的です。</span><span class="sxs-lookup"><span data-stu-id="05bfe-152">Ideally, the test set should be kept in a “vault,” and be brought out only at the end of the data analysis.</span></span>
+--rating-col <col> (REQUIRED)
 
-<span data-ttu-id="05bfe-153">基本的に、`validation dataset` と `test dataset` を使用する場合、検証フェーズは 2 つの部分に分けられます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-153">Basically, when using a `validation dataset` plus the `test dataset`, the validation phase is split into two parts:</span></span>
+--user-col <col> (REQUIRED)
 
-1. <span data-ttu-id="05bfe-154">1 つ目の部分では、モデルを見て、検証データを使用して最適なパフォーマンスのアプローチを選択します (= 検証)。</span><span class="sxs-lookup"><span data-stu-id="05bfe-154">In the first part, you just look at your models and select the best performing approach using the validation data (=validation)</span></span>
-2. <span data-ttu-id="05bfe-155">次に、選択したアプローチの正確度を見積もります (= テスト)。</span><span class="sxs-lookup"><span data-stu-id="05bfe-155">Then you estimate the accuracy of the selected approach (=test).</span></span>
+--cache <option>
 
-<span data-ttu-id="05bfe-156">そのため、データの分離は 80/10/10 または 75/15/10 になります。</span><span class="sxs-lookup"><span data-stu-id="05bfe-156">Hence, the separation of data could be 80/10/10 or 75/15/10.</span></span> <span data-ttu-id="05bfe-157">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="05bfe-157">For example:</span></span>
+--has-header (Default: true)
 
-- <span data-ttu-id="05bfe-158">`training-dataset` ファイルには 75% のデータがあります。</span><span class="sxs-lookup"><span data-stu-id="05bfe-158">`training-dataset` file should have 75% of the data.</span></span>
-- <span data-ttu-id="05bfe-159">`validation-dataset` ファイルには 15% のデータがあります。</span><span class="sxs-lookup"><span data-stu-id="05bfe-159">`validation-dataset` file should have 15% of the data.</span></span>
-- <span data-ttu-id="05bfe-160">`test-dataset` ファイルには 10% のデータがあります。</span><span class="sxs-lookup"><span data-stu-id="05bfe-160">`test-dataset` file should have 10% of the data.</span></span>
+--log-file-path <path>
 
-<span data-ttu-id="05bfe-161">いずれの場合でも、これらのパーセンテージは、既に分割されているファイルを指定する CLI の使用ユーザーが決定します。</span><span class="sxs-lookup"><span data-stu-id="05bfe-161">In any case, those percentages will be decided by the user using the CLI who will provide the files already split.</span></span>
+--name <name>
 
-## <a name="label-column-name"></a><span data-ttu-id="05bfe-162">ラベル列の名前</span><span class="sxs-lookup"><span data-stu-id="05bfe-162">Label column name</span></span>
+-o, --output <path>
 
-<span data-ttu-id="05bfe-163">`--label-column-name | -n` (文字列)</span><span class="sxs-lookup"><span data-stu-id="05bfe-163">`--label-column-name | -n` (string)</span></span>
+--test-dataset <path>
 
-<span data-ttu-id="05bfe-164">この引数を使用すると、データセットのヘッダーに設定されている列の名前を使って、特定の目的/ターゲット列 (予測する変数) を指定できます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-164">With this argument, a specific objective/target column (the variable that you want to predict) can be specified by using the column's name set in the dataset's header.</span></span>
+--train-time <time> (Default: 30 minutes, in seconds)
 
-<span data-ttu-id="05bfe-165">この引数は、*分類問題*など、教師ありの ML タスクにのみ使用されます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-165">This argument is used only for supervised ML tasks such as a *classification problem*.</span></span> <span data-ttu-id="05bfe-166">*クラスタリング*など、教師なしの ML タスクには使用できません。</span><span class="sxs-lookup"><span data-stu-id="05bfe-166">It cannot be used for unsupervised ML Tasks such as *clustering*.</span></span>
+--validation-dataset <path>
 
-## <a name="label-column-index"></a><span data-ttu-id="05bfe-167">ラベル列のインデックス</span><span class="sxs-lookup"><span data-stu-id="05bfe-167">Label column index</span></span>
+-v, --verbosity <v>
 
-<span data-ttu-id="05bfe-168">`--label-column-index | -i` (int)</span><span class="sxs-lookup"><span data-stu-id="05bfe-168">`--label-column-index | -i` (int)</span></span>
+-?, -h, --help
 
-<span data-ttu-id="05bfe-169">この引数を使用すると、データセットのファイル内の列の数値インデックスを使用して、特定の目的/ターゲット列 (予測する変数) を指定できます (列インデックス値は 1 から始まります)。</span><span class="sxs-lookup"><span data-stu-id="05bfe-169">With this argument, a specific objective/target column (the variable that you want to predict) can be specified by using the column's numeric index in the dataset's file (The column index values start at 1).</span></span>
+```
 
-<span data-ttu-id="05bfe-170">*注:* ユーザーが `--label-column-name` も使用している場合は、`--label-column-name` が使用されます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-170">*Note:* If the user is also using the `--label-column-name`, the `--label-column-name` is the one being used.</span></span>
+<span data-ttu-id="d9d27-132">無効な入力オプションを指定すると、CLI ツールによって、有効な入力の一覧とエラー メッセージが生成されます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-132">Invalid input options cause the CLI tool to emit a list of valid inputs and an error message.</span></span>
 
-<span data-ttu-id="05bfe-171">この引数は、*分類問題*など、教師ありの ML タスクにのみ使用されます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-171">This argument is used only for supervised ML task such as a *classification problem*.</span></span> <span data-ttu-id="05bfe-172">*クラスタリング*など、教師なしの ML タスクには使用できません。</span><span class="sxs-lookup"><span data-stu-id="05bfe-172">It cannot be used for unsupervised ML Tasks such as *clustering*.</span></span>
+## <a name="dataset"></a><span data-ttu-id="d9d27-133">データセット</span><span class="sxs-lookup"><span data-stu-id="d9d27-133">Dataset</span></span>
 
-## <a name="ignore-columns"></a><span data-ttu-id="05bfe-173">列を無視</span><span class="sxs-lookup"><span data-stu-id="05bfe-173">Ignore columns</span></span>
+<span data-ttu-id="d9d27-134">`--dataset | -d` (文字列)</span><span class="sxs-lookup"><span data-stu-id="d9d27-134">`--dataset | -d` (string)</span></span>
 
-<span data-ttu-id="05bfe-174">`--ignore-columns | -I` (文字列)</span><span class="sxs-lookup"><span data-stu-id="05bfe-174">`--ignore-columns | -I` (string)</span></span>
+<span data-ttu-id="d9d27-135">この引数には、次のオプションのいずれかのファイルパスを指定します。</span><span class="sxs-lookup"><span data-stu-id="d9d27-135">This argument provides the filepath to either one of the following options:</span></span>
 
-<span data-ttu-id="05bfe-175">この引数を使用すると、トレーニング プロセスで読み込まれたり使用されたりしないように、データセット ファイル内の既存の列を無視することができます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-175">With this argument, you can ignore existing columns in the dataset file so they are not loaded and used by the training processes.</span></span>
+- <span data-ttu-id="d9d27-136">*A:データセット ファイル全体:* このオプションを使用し、ユーザーが `--test-dataset` と `--validation-dataset` を指定していない場合は、モデルの検証にクロス検証 (k 分割など) または自動データ分割アプローチが内部的に使用されます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-136">*A: The whole dataset file:* If using this option and the user is not providing `--test-dataset` and `--validation-dataset`, then cross-validation (k-fold, etc.) or automated data split approaches will be used internally for validating the model.</span></span> <span data-ttu-id="d9d27-137">その場合、ユーザーはデータセットのファイルパスを入力するだけで済みます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-137">In that case, the user will just need to provide the dataset filepath.</span></span>
 
-<span data-ttu-id="05bfe-176">無視する列名を指定します。</span><span class="sxs-lookup"><span data-stu-id="05bfe-176">Specify the columns names that you want to ignore.</span></span> <span data-ttu-id="05bfe-177">複数の列名を区切るには、", " (コンマとスペース) または " " (スペース) を使用します。</span><span class="sxs-lookup"><span data-stu-id="05bfe-177">Use ', ' (comma with space) or ' ' (space) to separate multiple column names.</span></span> <span data-ttu-id="05bfe-178">空白を含む列名には引用符を使用することができます (例: "logged in")。</span><span class="sxs-lookup"><span data-stu-id="05bfe-178">You can use quotes for column names containing whitespace (e.g. "logged in").</span></span>
+- <span data-ttu-id="d9d27-138">*B:トレーニング データセット ファイル:* ユーザーがモデル検証用のデータセットも指定している場合 (`--test-dataset` と、必要に応じて `--validation-dataset` を使用)、`--dataset` 引数は "トレーニング データセット" のみがあることを意味します。</span><span class="sxs-lookup"><span data-stu-id="d9d27-138">*B: The training dataset file:* If the user is also providing datasets for model validation (using `--test-dataset` and optionally `--validation-dataset`), then the `--dataset` argument means to only have the "training dataset".</span></span> <span data-ttu-id="d9d27-139">たとえば、80% - 20% のアプローチを使用してモデルの品質を検証し、正確度のメトリックを取得する場合、"トレーニング データセット" には 80% のデータが含まれ、"テスト データセット" には 20% のデータが含まれます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-139">For example, when using an 80% - 20% approach to validate the quality of the model and to obtain accuracy metrics, the "training dataset" will have 80% of the data and the "test dataset" would have 20% of the data.</span></span>
 
-<span data-ttu-id="05bfe-179">例:</span><span class="sxs-lookup"><span data-stu-id="05bfe-179">Example:</span></span>
+## <a name="test-dataset"></a><span data-ttu-id="d9d27-140">テスト データセット</span><span class="sxs-lookup"><span data-stu-id="d9d27-140">Test dataset</span></span>
+
+<span data-ttu-id="d9d27-141">`--test-dataset | -t` (文字列)</span><span class="sxs-lookup"><span data-stu-id="d9d27-141">`--test-dataset | -t` (string)</span></span>
+
+<span data-ttu-id="d9d27-142">テスト データセット ファイルを指すファイル パス。たとえば、正確度のメトリックを取得するために定期的な検証を行うときに 80% - 20% のアプローチを使用する場合です。</span><span class="sxs-lookup"><span data-stu-id="d9d27-142">File path pointing to the test dataset file, for example when using an 80% - 20% approach when making regular validations to obtain accuracy metrics.</span></span>
+
+<span data-ttu-id="d9d27-143">`--test-dataset` を使用する場合は `--dataset` も必要です。</span><span class="sxs-lookup"><span data-stu-id="d9d27-143">If using `--test-dataset`, then `--dataset` is also required.</span></span>
+
+<span data-ttu-id="d9d27-144">--validation-dataset が使用されていない限り、`--test-dataset` 引数は省略可能です。</span><span class="sxs-lookup"><span data-stu-id="d9d27-144">The `--test-dataset` argument is optional unless the --validation-dataset is used.</span></span> <span data-ttu-id="d9d27-145">その場合、ユーザーは 3 つの引数を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d9d27-145">In that case, the user must use the three arguments.</span></span>
+
+## <a name="validation-dataset"></a><span data-ttu-id="d9d27-146">検証データセット</span><span class="sxs-lookup"><span data-stu-id="d9d27-146">Validation dataset</span></span>
+
+<span data-ttu-id="d9d27-147">`--validation-dataset | -v` (文字列)</span><span class="sxs-lookup"><span data-stu-id="d9d27-147">`--validation-dataset | -v` (string)</span></span>
+
+<span data-ttu-id="d9d27-148">検証データセット ファイルを指すファイル パス。</span><span class="sxs-lookup"><span data-stu-id="d9d27-148">File path pointing to the validation dataset file.</span></span> <span data-ttu-id="d9d27-149">どのような場合でも、検証データセットは省略可能です。</span><span class="sxs-lookup"><span data-stu-id="d9d27-149">The validation dataset is optional, in any case.</span></span>
+
+<span data-ttu-id="d9d27-150">`validation dataset` を使用している場合、動作は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="d9d27-150">If using a `validation dataset`, the behavior should be:</span></span>
+
+- <span data-ttu-id="d9d27-151">`test-dataset` と `--dataset` の引数も必須です。</span><span class="sxs-lookup"><span data-stu-id="d9d27-151">The `test-dataset` and `--dataset` arguments are also required.</span></span>
+
+- <span data-ttu-id="d9d27-152">`validation-dataset` データセットは、モデル選択の予測誤差を推定するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-152">The `validation-dataset` dataset is used to estimate prediction error for model selection.</span></span>
+
+- <span data-ttu-id="d9d27-153">`test-dataset` は、最終的に選択されたモデルの一般化誤差の評価に使用されます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-153">The `test-dataset` is used for assessment of the generalization error of the final chosen model.</span></span> <span data-ttu-id="d9d27-154">テスト セットを "コンテナー" に保管し、データ分析の最後にのみ取り出すのが理想的です。</span><span class="sxs-lookup"><span data-stu-id="d9d27-154">Ideally, the test set should be kept in a “vault,” and be brought out only at the end of the data analysis.</span></span>
+
+<span data-ttu-id="d9d27-155">基本的に、`validation dataset` と `test dataset` を使用する場合、検証フェーズは 2 つの部分に分けられます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-155">Basically, when using a `validation dataset` plus the `test dataset`, the validation phase is split into two parts:</span></span>
+
+1. <span data-ttu-id="d9d27-156">1 つ目の部分では、モデルを見て、検証データを使用して最適なパフォーマンスのアプローチを選択します (= 検証)。</span><span class="sxs-lookup"><span data-stu-id="d9d27-156">In the first part, you just look at your models and select the best performing approach using the validation data (=validation)</span></span>
+2. <span data-ttu-id="d9d27-157">次に、選択したアプローチの正確度を見積もります (= テスト)。</span><span class="sxs-lookup"><span data-stu-id="d9d27-157">Then you estimate the accuracy of the selected approach (=test).</span></span>
+
+<span data-ttu-id="d9d27-158">そのため、データの分離は 80/10/10 または 75/15/10 になります。</span><span class="sxs-lookup"><span data-stu-id="d9d27-158">Hence, the separation of data could be 80/10/10 or 75/15/10.</span></span> <span data-ttu-id="d9d27-159">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="d9d27-159">For example:</span></span>
+
+- <span data-ttu-id="d9d27-160">`training-dataset` ファイルには 75% のデータがあります。</span><span class="sxs-lookup"><span data-stu-id="d9d27-160">`training-dataset` file should have 75% of the data.</span></span>
+- <span data-ttu-id="d9d27-161">`validation-dataset` ファイルには 15% のデータがあります。</span><span class="sxs-lookup"><span data-stu-id="d9d27-161">`validation-dataset` file should have 15% of the data.</span></span>
+- <span data-ttu-id="d9d27-162">`test-dataset` ファイルには 10% のデータがあります。</span><span class="sxs-lookup"><span data-stu-id="d9d27-162">`test-dataset` file should have 10% of the data.</span></span>
+
+<span data-ttu-id="d9d27-163">いずれの場合でも、これらのパーセンテージは、既に分割されているファイルを指定する CLI の使用ユーザーが決定します。</span><span class="sxs-lookup"><span data-stu-id="d9d27-163">In any case, those percentages will be decided by the user using the CLI who will provide the files already split.</span></span>
+
+## <a name="label-column"></a><span data-ttu-id="d9d27-164">ラベル列</span><span class="sxs-lookup"><span data-stu-id="d9d27-164">Label column</span></span>
+
+<span data-ttu-id="d9d27-165">`--label-col` (整数または文字列)</span><span class="sxs-lookup"><span data-stu-id="d9d27-165">`--label-col` (int or string)</span></span>
+
+<span data-ttu-id="d9d27-166">この引数を使用すると、データセットのヘッダーに設定されている列の名前またはデータセットのファイル内の列の数値インデックスを使用して、特定の目的またはターゲット列 (予測する変数) を指定できます (列インデックス値は 0 から始まります)。</span><span class="sxs-lookup"><span data-stu-id="d9d27-166">With this argument, a specific objective/target column (the variable that you want to predict) can be specified by using the column's name set in the dataset's header or the column's numeric index in the dataset's file (the column index values start at 0).</span></span>
+
+<span data-ttu-id="d9d27-167">この引数は、"*分類*" および "*回帰*" の問題に使用されます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-167">This argument is used for *classification* and *regression* problems.</span></span>
+
+## <a name="item-column"></a><span data-ttu-id="d9d27-168">アイテム列</span><span class="sxs-lookup"><span data-stu-id="d9d27-168">Item column</span></span>
+
+<span data-ttu-id="d9d27-169">`--item-col` (整数または文字列)</span><span class="sxs-lookup"><span data-stu-id="d9d27-169">`--item-col` (int or string)</span></span>
+
+<span data-ttu-id="d9d27-170">アイテム列には、ユーザーによって評価されるアイテムの一覧が含まれます (ユーザーにはアイテムをお勧めします)。</span><span class="sxs-lookup"><span data-stu-id="d9d27-170">The item column has the list of items that users rate (items are recommended to users).</span></span> <span data-ttu-id="d9d27-171">データセットのヘッダーに設定されている列の名前またはデータセットのファイル内の列の数値インデックスを使用して、この列を指定できます (列インデックス値は 0 から始まります)。</span><span class="sxs-lookup"><span data-stu-id="d9d27-171">This column can be specified by using the column's name set in the dataset's header or the column's numeric index in the dataset's file (the column index values start at 0).</span></span>
+
+<span data-ttu-id="d9d27-172">この引数は、"*推奨*" タスクにのみ使用されます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-172">This argument is used only for the *recommendation* task.</span></span>
+
+## <a name="rating-column"></a><span data-ttu-id="d9d27-173">評価列</span><span class="sxs-lookup"><span data-stu-id="d9d27-173">Rating column</span></span>
+
+<span data-ttu-id="d9d27-174">`--rating-col` (整数または文字列)</span><span class="sxs-lookup"><span data-stu-id="d9d27-174">`--rating-col` (int or string)</span></span>
+
+<span data-ttu-id="d9d27-175">評価列には、ユーザーによってアイテムに指定された評価の一覧が含まれます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-175">The rating column has the list of ratings that are given to items by users.</span></span> <span data-ttu-id="d9d27-176">データセットのヘッダーに設定されている列の名前またはデータセットのファイル内の列の数値インデックスを使用して、この列を指定できます (列インデックス値は 0 から始まります)。</span><span class="sxs-lookup"><span data-stu-id="d9d27-176">This column can be specified by using the column's name set in the dataset's header or the column's numeric index in the dataset's file (the column index values start at 0).</span></span>
+
+<span data-ttu-id="d9d27-177">この引数は、"*推奨*" タスクにのみ使用されます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-177">This argument is used only for the *recommendation* task.</span></span>
+
+## <a name="user-column"></a><span data-ttu-id="d9d27-178">ユーザー列</span><span class="sxs-lookup"><span data-stu-id="d9d27-178">User column</span></span>
+
+<span data-ttu-id="d9d27-179">`--user-col` (整数または文字列)</span><span class="sxs-lookup"><span data-stu-id="d9d27-179">`--user-col` (int or string)</span></span>
+
+<span data-ttu-id="d9d27-180">ユーザー列には、アイテムに評価を指定するユーザーの一覧が含まれます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-180">The user column has the list of users that give ratings to items.</span></span> <span data-ttu-id="d9d27-181">データセットのヘッダーに設定されている列の名前またはデータセットのファイル内の列の数値インデックスを使用して、この列を指定できます (列インデックス値は 0 から始まります)。</span><span class="sxs-lookup"><span data-stu-id="d9d27-181">This column can be specified by using the column's name set in the dataset's header or the column's numeric index in the dataset's file (the column index values start at 0).</span></span>
+
+<span data-ttu-id="d9d27-182">この引数は、"*推奨*" タスクにのみ使用されます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-182">This argument is used only for the *recommendation* task.</span></span>
+
+## <a name="ignore-columns"></a><span data-ttu-id="d9d27-183">列を無視</span><span class="sxs-lookup"><span data-stu-id="d9d27-183">Ignore columns</span></span>
+
+<span data-ttu-id="d9d27-184">`--ignore-columns` (文字列)</span><span class="sxs-lookup"><span data-stu-id="d9d27-184">`--ignore-columns` (string)</span></span>
+
+<span data-ttu-id="d9d27-185">この引数を使用すると、トレーニング プロセスで読み込まれたり使用されたりしないように、データセット ファイル内の既存の列を無視することができます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-185">With this argument, you can ignore existing columns in the dataset file so they are not loaded and used by the training processes.</span></span>
+
+<span data-ttu-id="d9d27-186">無視する列名を指定します。</span><span class="sxs-lookup"><span data-stu-id="d9d27-186">Specify the columns names that you want to ignore.</span></span> <span data-ttu-id="d9d27-187">複数の列名を区切るには、", " (コンマとスペース) または " " (スペース) を使用します。</span><span class="sxs-lookup"><span data-stu-id="d9d27-187">Use ', ' (comma with space) or ' ' (space) to separate multiple column names.</span></span> <span data-ttu-id="d9d27-188">空白を含む列名には引用符を使用することができます (例: "logged in")。</span><span class="sxs-lookup"><span data-stu-id="d9d27-188">You can use quotes for column names containing whitespace (e.g. "logged in").</span></span>
+
+<span data-ttu-id="d9d27-189">例:</span><span class="sxs-lookup"><span data-stu-id="d9d27-189">Example:</span></span>
 
 `--ignore-columns email, address, id, logged_in`
 
-## <a name="has-header"></a><span data-ttu-id="05bfe-180">ヘッダーの有無</span><span class="sxs-lookup"><span data-stu-id="05bfe-180">Has header</span></span>
+## <a name="has-header"></a><span data-ttu-id="d9d27-190">ヘッダーの有無</span><span class="sxs-lookup"><span data-stu-id="d9d27-190">Has header</span></span>
 
-<span data-ttu-id="05bfe-181">`--has-header | -h` (ブール値)</span><span class="sxs-lookup"><span data-stu-id="05bfe-181">`--has-header | -h` (bool)</span></span>
+<span data-ttu-id="d9d27-191">`--has-header` (ブール値)</span><span class="sxs-lookup"><span data-stu-id="d9d27-191">`--has-header` (bool)</span></span>
 
-<span data-ttu-id="05bfe-182">データセット ファイルにヘッダー行があるかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="05bfe-182">Specify if the dataset file(s) have a header row.</span></span>
-<span data-ttu-id="05bfe-183">指定できる値は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="05bfe-183">Possible values are:</span></span>
+<span data-ttu-id="d9d27-192">データセット ファイルにヘッダー行があるかどうかを指定します。</span><span class="sxs-lookup"><span data-stu-id="d9d27-192">Specify if the dataset file(s) have a header row.</span></span>
+<span data-ttu-id="d9d27-193">指定できる値は次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="d9d27-193">Possible values are:</span></span>
 
 - `true`
 - `false`
 
-<span data-ttu-id="05bfe-184">この引数がユーザーによって指定されていない場合、既定で値は `true` です。</span><span class="sxs-lookup"><span data-stu-id="05bfe-184">The by default value is `true` if this argument is not specified by the user.</span></span>
+<span data-ttu-id="d9d27-194">この引数がユーザーによって指定されていない場合、ML.NET CLI ではこのプロパティの検出が試行されます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-194">The ML.NET CLI will try to detect this property if this argument is not specified by the user.</span></span>
 
-<span data-ttu-id="05bfe-185">`--label-column-name` 引数を使用するには、データセット ファイルにヘッダーを含め、`--has-header` を `true` に設定する必要があります (これが既定値です)。</span><span class="sxs-lookup"><span data-stu-id="05bfe-185">In order to use the `--label-column-name` argument, you need to have a header in the dataset file and `--has-header` set to `true` (which is by default).</span></span>
+## <a name="train-time"></a><span data-ttu-id="d9d27-195">トレーニング時間</span><span class="sxs-lookup"><span data-stu-id="d9d27-195">Train time</span></span>
 
-## <a name="max-exploration-time"></a><span data-ttu-id="05bfe-186">最大探索時間</span><span class="sxs-lookup"><span data-stu-id="05bfe-186">Max exploration time</span></span>
+<span data-ttu-id="d9d27-196">`--train-time` (文字列)</span><span class="sxs-lookup"><span data-stu-id="d9d27-196">`--train-time` (string)</span></span>
 
-<span data-ttu-id="05bfe-187">`--max-exploration-time | -x` (文字列)</span><span class="sxs-lookup"><span data-stu-id="05bfe-187">`--max-exploration-time | -x` (string)</span></span>
+<span data-ttu-id="d9d27-197">既定では、探索またはトレーニングの最長時間は 30 分です。</span><span class="sxs-lookup"><span data-stu-id="d9d27-197">By default, the maximum exploration / train time is 30 minutes.</span></span>
 
-<span data-ttu-id="05bfe-188">既定では、最大探索時間は 30 分です。</span><span class="sxs-lookup"><span data-stu-id="05bfe-188">By default, the maximum exploration time is 30 minutes.</span></span>
+<span data-ttu-id="d9d27-198">この引数では、プロセスで複数のトレーナーと構成を探索できる最長時間 (秒単位) を設定します。</span><span class="sxs-lookup"><span data-stu-id="d9d27-198">This argument sets the maximum time (in seconds) for the process to explore multiple trainers and configurations.</span></span> <span data-ttu-id="d9d27-199">指定した時間が 1 回の反復処理に対して短すぎる (たとえば 2 秒) 場合、構成された時間を超えることがあります。</span><span class="sxs-lookup"><span data-stu-id="d9d27-199">The configured time may be exceeded if the provided time is too short (say 2 seconds) for a single iteration.</span></span> <span data-ttu-id="d9d27-200">この場合、実際の時間は、1 回の反復処理で 1 つのモデル構成を作成するために必要な時間です。</span><span class="sxs-lookup"><span data-stu-id="d9d27-200">In this case, the actual time is the required time to produce one model configuration in a single iteration.</span></span>
 
-<span data-ttu-id="05bfe-189">この引数では、プロセスで複数のトレーナーと構成を探索できる最長時間 (秒単位) を設定します。</span><span class="sxs-lookup"><span data-stu-id="05bfe-189">This argument sets the maximum time (in seconds) for the process to explore multiple trainers and configurations.</span></span> <span data-ttu-id="05bfe-190">指定した時間が 1 回の反復処理に対して短すぎる (たとえば 2 秒) 場合、構成された時間を超えることがあります。</span><span class="sxs-lookup"><span data-stu-id="05bfe-190">The configured time may be exceeded if the provided time is too short (say 2 seconds) for a single iteration.</span></span> <span data-ttu-id="05bfe-191">この場合、実際の時間は、1 回の反復処理で 1 つのモデル構成を作成するために必要な時間です。</span><span class="sxs-lookup"><span data-stu-id="05bfe-191">In this case, the actual time is the required time to produce one model configuration in a single iteration.</span></span>
+<span data-ttu-id="d9d27-201">反復処理に必要な時間は、データセットのサイズによって変わります。</span><span class="sxs-lookup"><span data-stu-id="d9d27-201">The needed time for iterations can vary depending on the size of the dataset.</span></span>
 
-<span data-ttu-id="05bfe-192">反復処理に必要な時間は、データセットのサイズによって変わります。</span><span class="sxs-lookup"><span data-stu-id="05bfe-192">The needed time for iterations can vary depending on the size of the dataset.</span></span>
+## <a name="cache"></a><span data-ttu-id="d9d27-202">キャッシュ</span><span class="sxs-lookup"><span data-stu-id="d9d27-202">Cache</span></span>
 
-## <a name="cache"></a><span data-ttu-id="05bfe-193">キャッシュ</span><span class="sxs-lookup"><span data-stu-id="05bfe-193">Cache</span></span>
+<span data-ttu-id="d9d27-203">`--cache` (文字列)</span><span class="sxs-lookup"><span data-stu-id="d9d27-203">`--cache` (string)</span></span>
 
-<span data-ttu-id="05bfe-194">`--cache | -c` (文字列)</span><span class="sxs-lookup"><span data-stu-id="05bfe-194">`--cache | -c` (string)</span></span>
+<span data-ttu-id="d9d27-204">キャッシングを使用すると、トレーニング データセット全体がメモリ内に読み込まれます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-204">If you use caching, the whole training dataset will be loaded in-memory.</span></span>
 
-<span data-ttu-id="05bfe-195">キャッシングを使用すると、トレーニング データセット全体がメモリ内に読み込まれます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-195">If you use caching, the whole training dataset will be loaded in-memory.</span></span>
+<span data-ttu-id="d9d27-205">中小規模のデータセットでは、キャッシュを使用するとトレーニングのパフォーマンスが大幅に向上します。つまり、キャッシュを使用しない場合よりもトレーニング時間が短くなる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="d9d27-205">For small and medium datasets, using cache can drastically improve the training performance, meaning the training time can be shorter than when you don't use cache.</span></span>
 
-<span data-ttu-id="05bfe-196">中小規模のデータセットでは、キャッシュを使用するとトレーニングのパフォーマンスが大幅に向上します。つまり、キャッシュを使用しない場合よりもトレーニング時間が短くなる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="05bfe-196">For small and medium datasets, using cache can drastically improve the training performance, meaning the training time can be shorter than when you don't use cache.</span></span>
+<span data-ttu-id="d9d27-206">ただし、大規模なデータセットの場合、メモリ内のすべてのデータを読み込むと、メモリ不足になる可能性があるので、悪影響が出る可能性があります。</span><span class="sxs-lookup"><span data-stu-id="d9d27-206">However, for large datasets, loading all the data in memory can impact negatively since you might get out of memory.</span></span> <span data-ttu-id="d9d27-207">大規模なデータセット ファイルを使用してトレーニングし、キャッシュを使用しない場合、ML.NET では、トレーニング中により多くのデータを読み込む必要があるときに、ドライブから大量のデータがストリーミングされます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-207">When training with large dataset files and not using cache, ML.NET will be streaming chunks of data from the drive when it needs to load more data while training.</span></span>
 
-<span data-ttu-id="05bfe-197">ただし、大規模なデータセットの場合、メモリ内のすべてのデータを読み込むと、メモリ不足になる可能性があるので、悪影響が出る可能性があります。</span><span class="sxs-lookup"><span data-stu-id="05bfe-197">However, for large datasets, loading all the data in memory can impact negatively since you might get out of memory.</span></span> <span data-ttu-id="05bfe-198">大規模なデータセット ファイルを使用してトレーニングし、キャッシュを使用しない場合、ML.NET では、トレーニング中により多くのデータを読み込む必要があるときに、ドライブから大量のデータがストリーミングされます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-198">When training with large dataset files and not using cache, ML.NET will be streaming chunks of data from the drive when it needs to load more data while training.</span></span>
+<span data-ttu-id="d9d27-208">次の値を指定できます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-208">You can specify the following values:</span></span>
 
-<span data-ttu-id="05bfe-199">次の値を指定できます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-199">You can specify the following values:</span></span>
+<span data-ttu-id="d9d27-209">`on`:トレーニング時にキャッシュを強制的に使用します。</span><span class="sxs-lookup"><span data-stu-id="d9d27-209">`on`: Forces cache to be used when training.</span></span>
+<span data-ttu-id="d9d27-210">`off`:トレーニング時にキャッシュを使用しないように強制します。</span><span class="sxs-lookup"><span data-stu-id="d9d27-210">`off`: Forces cache not to be used when training.</span></span>
+<span data-ttu-id="d9d27-211">`auto`:AutoML のヒューリスティックに応じて、キャッシュを使用するかどうかが決まります。</span><span class="sxs-lookup"><span data-stu-id="d9d27-211">`auto`: Depending on AutoML heuristics, the cache will be used or not.</span></span> <span data-ttu-id="d9d27-212">通常、`auto` を選択した場合、中小規模のデータセットではキャッシュが使用され、大規模なデータセットではキャッシュが使用されません。</span><span class="sxs-lookup"><span data-stu-id="d9d27-212">Usually, small/medium datasets will use cache and large datasets won't use cache if you use the `auto` choice.</span></span>
 
-<span data-ttu-id="05bfe-200">`on`:トレーニング時にキャッシュを強制的に使用します。</span><span class="sxs-lookup"><span data-stu-id="05bfe-200">`on`: Forces cache to be used when training.</span></span>
-<span data-ttu-id="05bfe-201">`off`:トレーニング時にキャッシュを使用しないように強制します。</span><span class="sxs-lookup"><span data-stu-id="05bfe-201">`off`: Forces cache not to be used when training.</span></span>
-<span data-ttu-id="05bfe-202">`auto`:AutoML のヒューリスティックに応じて、キャッシュを使用するかどうかが決まります。</span><span class="sxs-lookup"><span data-stu-id="05bfe-202">`auto`: Depending on AutoML heuristics, the cache will be used or not.</span></span> <span data-ttu-id="05bfe-203">通常、`auto` を選択した場合、中小規模のデータセットではキャッシュが使用され、大規模なデータセットではキャッシュが使用されません。</span><span class="sxs-lookup"><span data-stu-id="05bfe-203">Usually, small/medium datasets will use cache and large datasets won't use cache if you use the `auto` choice.</span></span>
+<span data-ttu-id="d9d27-213">`--cache` パラメーターを指定しない場合、既定でキャッシュの `auto` 構成が使用されます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-213">If you don't specify the `--cache` parameter, then the cache `auto` configuration will be used by default.</span></span>
 
-<span data-ttu-id="05bfe-204">`--cache` パラメーターを指定しない場合、既定でキャッシュの `auto` 構成が使用されます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-204">If you don't specify the `--cache` parameter, then the cache `auto` configuration will be used by default.</span></span>
+## <a name="name"></a><span data-ttu-id="d9d27-214">名前</span><span class="sxs-lookup"><span data-stu-id="d9d27-214">Name</span></span>
 
-## <a name="name"></a><span data-ttu-id="05bfe-205">名前</span><span class="sxs-lookup"><span data-stu-id="05bfe-205">Name</span></span>
+<span data-ttu-id="d9d27-215">`--name` (文字列)</span><span class="sxs-lookup"><span data-stu-id="d9d27-215">`--name` (string)</span></span>
 
-<span data-ttu-id="05bfe-206">`--name | -N` (文字列)</span><span class="sxs-lookup"><span data-stu-id="05bfe-206">`--name | -N` (string)</span></span>
+<span data-ttu-id="d9d27-216">作成される出力プロジェクトまたはソリューションの名前。</span><span class="sxs-lookup"><span data-stu-id="d9d27-216">The name for the created output project or solution.</span></span> <span data-ttu-id="d9d27-217">名前が指定されていない場合は、名前 `sample-{mltask}` が使用されます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-217">If no name is specified, the name `sample-{mltask}` is used.</span></span>
 
-<span data-ttu-id="05bfe-207">作成される出力プロジェクトまたはソリューションの名前。</span><span class="sxs-lookup"><span data-stu-id="05bfe-207">The name for the created output project or solution.</span></span> <span data-ttu-id="05bfe-208">名前が指定されていない場合は、名前 `sample-{mltask}` が使用されます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-208">If no name is specified, the name `sample-{mltask}` is used.</span></span>
+<span data-ttu-id="d9d27-218">ML.NET モデル ファイル (.ZIP ファイル) も同じ名前になります。</span><span class="sxs-lookup"><span data-stu-id="d9d27-218">The ML.NET model file (.ZIP file) will get the same name, as well.</span></span>
 
-<span data-ttu-id="05bfe-209">ML.NET モデル ファイル (.ZIP ファイル) も同じ名前になります。</span><span class="sxs-lookup"><span data-stu-id="05bfe-209">The ML.NET model file (.ZIP file) will get the same name, as well.</span></span>
+## <a name="output-path"></a><span data-ttu-id="d9d27-219">出力パス</span><span class="sxs-lookup"><span data-stu-id="d9d27-219">Output path</span></span>
 
-## <a name="output-path"></a><span data-ttu-id="05bfe-210">出力パス</span><span class="sxs-lookup"><span data-stu-id="05bfe-210">Output path</span></span>
+<span data-ttu-id="d9d27-220">`--output-path | -o` (文字列)</span><span class="sxs-lookup"><span data-stu-id="d9d27-220">`--output-path | -o` (string)</span></span>
 
-<span data-ttu-id="05bfe-211">`--output-path | -o` (文字列)</span><span class="sxs-lookup"><span data-stu-id="05bfe-211">`--output-path | -o` (string)</span></span>
+<span data-ttu-id="d9d27-221">生成された出力を配置するルートの場所/フォルダー。</span><span class="sxs-lookup"><span data-stu-id="d9d27-221">Root location/folder to place the generated output.</span></span> <span data-ttu-id="d9d27-222">既定値は、現在のディレクトリです。</span><span class="sxs-lookup"><span data-stu-id="d9d27-222">The default is the current directory.</span></span>
 
-<span data-ttu-id="05bfe-212">生成された出力を配置するルートの場所/フォルダー。</span><span class="sxs-lookup"><span data-stu-id="05bfe-212">Root location/folder to place the generated output.</span></span> <span data-ttu-id="05bfe-213">既定値は、現在のディレクトリです。</span><span class="sxs-lookup"><span data-stu-id="05bfe-213">The default is the current directory.</span></span>
+## <a name="verbosity"></a><span data-ttu-id="d9d27-223">詳細度</span><span class="sxs-lookup"><span data-stu-id="d9d27-223">Verbosity</span></span>
 
-## <a name="verbosity"></a><span data-ttu-id="05bfe-214">詳細度</span><span class="sxs-lookup"><span data-stu-id="05bfe-214">Verbosity</span></span>
+<span data-ttu-id="d9d27-224">`--verbosity | -v` (文字列)</span><span class="sxs-lookup"><span data-stu-id="d9d27-224">`--verbosity | -v` (string)</span></span>
 
-<span data-ttu-id="05bfe-215">`--verbosity | -V` (文字列)</span><span class="sxs-lookup"><span data-stu-id="05bfe-215">`--verbosity | -V` (string)</span></span>
+<span data-ttu-id="d9d27-225">標準出力の詳細レベルを設定します。</span><span class="sxs-lookup"><span data-stu-id="d9d27-225">Sets the verbosity level of the standard output.</span></span>
 
-<span data-ttu-id="05bfe-216">標準出力の詳細レベルを設定します。</span><span class="sxs-lookup"><span data-stu-id="05bfe-216">Sets the verbosity level of the standard output.</span></span>
-
-<span data-ttu-id="05bfe-217">次の値を指定できます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-217">Allowed values are:</span></span>
+<span data-ttu-id="d9d27-226">次の値を指定できます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-226">Allowed values are:</span></span>
 
 - `q[uiet]`
-- <span data-ttu-id="05bfe-218">`m[inimal]` (既定値)</span><span class="sxs-lookup"><span data-stu-id="05bfe-218">`m[inimal]`  (by default)</span></span>
-- <span data-ttu-id="05bfe-219">`diag[nostic]` (ログ情報レベル)</span><span class="sxs-lookup"><span data-stu-id="05bfe-219">`diag[nostic]` (logging information level)</span></span>
+- <span data-ttu-id="d9d27-227">`m[inimal]` (既定値)</span><span class="sxs-lookup"><span data-stu-id="d9d27-227">`m[inimal]`  (by default)</span></span>
+- <span data-ttu-id="d9d27-228">`diag[nostic]` (ログ情報レベル)</span><span class="sxs-lookup"><span data-stu-id="d9d27-228">`diag[nostic]` (logging information level)</span></span>
 
-<span data-ttu-id="05bfe-220">既定で CLI ツールには、作業時に最小限のフィードバック (最小) が表示されます。たとえば、作業中かどうか、可能であれば残り時間、または完了した時間の割合などが示されます。</span><span class="sxs-lookup"><span data-stu-id="05bfe-220">By default, the CLI tool should show some minimum feedback (minimal) when working, such as mentioning that it is working and if possible how much time is left or what % of the time is completed.</span></span>
+<span data-ttu-id="d9d27-229">既定で CLI ツールには、作業時に最小限のフィードバック (`minimal`) が表示されます。たとえば、作業中かどうか、可能であれば残り時間、または完了した時間の割合などが示されます。</span><span class="sxs-lookup"><span data-stu-id="d9d27-229">By default, the CLI tool should show some minimum feedback (`minimal`) when working, such as mentioning that it is working and if possible how much time is left or what % of the time is completed.</span></span>
 
-## <a name="help"></a><span data-ttu-id="05bfe-221">ヘルプ</span><span class="sxs-lookup"><span data-stu-id="05bfe-221">Help</span></span>
+## <a name="help"></a><span data-ttu-id="d9d27-230">ヘルプ</span><span class="sxs-lookup"><span data-stu-id="d9d27-230">Help</span></span>
 
-`-h|--help`
+`-h |--help`
 
-<span data-ttu-id="05bfe-222">各コマンドのパラメーターの説明と共に、コマンドのヘルプを出力します。</span><span class="sxs-lookup"><span data-stu-id="05bfe-222">Prints out help for the command with a description for each command's parameter.</span></span>
+<span data-ttu-id="d9d27-231">各コマンドのパラメーターの説明と共に、コマンドのヘルプを出力します。</span><span class="sxs-lookup"><span data-stu-id="d9d27-231">Prints out help for the command with a description for each command's parameter.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="05bfe-223">関連項目</span><span class="sxs-lookup"><span data-stu-id="05bfe-223">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d9d27-232">関連項目</span><span class="sxs-lookup"><span data-stu-id="d9d27-232">See also</span></span>
 
-- [<span data-ttu-id="05bfe-224">ML.NET CLI ツールのインストール方法</span><span class="sxs-lookup"><span data-stu-id="05bfe-224">How to install the ML.NET CLI tool</span></span>](../how-to-guides/install-ml-net-cli.md)
-- [<span data-ttu-id="05bfe-225">ML.NET CLI の概要</span><span class="sxs-lookup"><span data-stu-id="05bfe-225">Overview of the ML.NET CLI</span></span>](../automate-training-with-cli.md)
-- [<span data-ttu-id="05bfe-226">チュートリアル: ML.NET CLI を使用してセンチメントを分析する</span><span class="sxs-lookup"><span data-stu-id="05bfe-226">Tutorial: Analyze sentiment using the ML.NET CLI</span></span>](../tutorials/sentiment-analysis-cli.md)
-- [<span data-ttu-id="05bfe-227">ML.NET CLI のテレメトリ</span><span class="sxs-lookup"><span data-stu-id="05bfe-227">Telemetry in ML.NET CLI</span></span>](../resources/ml-net-cli-telemetry.md)
+- [<span data-ttu-id="d9d27-233">ML.NET CLI ツールのインストール方法</span><span class="sxs-lookup"><span data-stu-id="d9d27-233">How to install the ML.NET CLI tool</span></span>](../how-to-guides/install-ml-net-cli.md)
+- [<span data-ttu-id="d9d27-234">ML.NET CLI の概要</span><span class="sxs-lookup"><span data-stu-id="d9d27-234">Overview of the ML.NET CLI</span></span>](../automate-training-with-cli.md)
+- [<span data-ttu-id="d9d27-235">チュートリアル: ML.NET CLI を使用してセンチメントを分析する</span><span class="sxs-lookup"><span data-stu-id="d9d27-235">Tutorial: Analyze sentiment using the ML.NET CLI</span></span>](../tutorials/sentiment-analysis-cli.md)
+- [<span data-ttu-id="d9d27-236">ML.NET CLI のテレメトリ</span><span class="sxs-lookup"><span data-stu-id="d9d27-236">Telemetry in ML.NET CLI</span></span>](../resources/ml-net-cli-telemetry.md)

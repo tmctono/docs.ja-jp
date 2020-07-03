@@ -1,5 +1,6 @@
 ---
 title: '方法: ソケットを作成する'
+description: ソケットを初期化してリモート デバイスと通信する方法について学習します。 Socket クラスを使用して、アドレス ファミリ、ソケットの種類、プロトコルの種類を指定します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,18 +18,18 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: e71e7e235048361580c65bdb551919fe3038130b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1d56ddea721b54192a7dd47d144b6c41bbb9a5d7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180833"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502549"
 ---
-# <a name="how-to-create-a-socket"></a><span data-ttu-id="8c621-102">方法: ソケットを作成する</span><span class="sxs-lookup"><span data-stu-id="8c621-102">How to: Create a Socket</span></span>
-<span data-ttu-id="8c621-103">ソケットを使用してリモート デバイスと通信するには、ソケットをプロトコルとネットワーク アドレスの情報を使用して事前に初期化する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8c621-103">Before you can use a socket to communicate with remote devices, the socket must be initialized with protocol and network address information.</span></span> <span data-ttu-id="8c621-104"><xref:System.Net.Sockets.Socket> クラスのコンストラクターには、アドレス ファミリ、ソケットの種類、およびソケットが接続を行うために使用するプロトコルの種類を指定するパラメーターがあります。</span><span class="sxs-lookup"><span data-stu-id="8c621-104">The constructor for the <xref:System.Net.Sockets.Socket> class has parameters that specify the address family, socket type, and protocol type that the socket uses to make connections.</span></span>  
+# <a name="how-to-create-a-socket"></a><span data-ttu-id="b4abc-104">方法: ソケットを作成する</span><span class="sxs-lookup"><span data-stu-id="b4abc-104">How to: Create a Socket</span></span>
+<span data-ttu-id="b4abc-105">ソケットを使用してリモート デバイスと通信するには、ソケットをプロトコルとネットワーク アドレスの情報を使用して事前に初期化する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b4abc-105">Before you can use a socket to communicate with remote devices, the socket must be initialized with protocol and network address information.</span></span> <span data-ttu-id="b4abc-106"><xref:System.Net.Sockets.Socket> クラスのコンストラクターには、アドレス ファミリ、ソケットの種類、およびソケットが接続を行うために使用するプロトコルの種類を指定するパラメーターがあります。</span><span class="sxs-lookup"><span data-stu-id="b4abc-106">The constructor for the <xref:System.Net.Sockets.Socket> class has parameters that specify the address family, socket type, and protocol type that the socket uses to make connections.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8c621-105">例</span><span class="sxs-lookup"><span data-stu-id="8c621-105">Example</span></span>  
- <span data-ttu-id="8c621-106">次の例では、インターネットなどの TCP/IP ベースのネットワーク上で通信するために使用できるソケットを作成します。</span><span class="sxs-lookup"><span data-stu-id="8c621-106">The following example creates a Socket that can be used to communicate on a TCP/IP-based network, such as the Internet.</span></span>  
+## <a name="example"></a><span data-ttu-id="b4abc-107">例</span><span class="sxs-lookup"><span data-stu-id="b4abc-107">Example</span></span>  
+ <span data-ttu-id="b4abc-108">次の例では、インターネットなどの TCP/IP ベースのネットワーク上で通信するために使用できるソケットを作成します。</span><span class="sxs-lookup"><span data-stu-id="b4abc-108">The following example creates a Socket that can be used to communicate on a TCP/IP-based network, such as the Internet.</span></span>  
   
 ```csharp  
 Socket s = new Socket(AddressFamily.InterNetwork,
@@ -40,7 +41,7 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
    SocketType.Stream, ProtocolType.Tcp)  
 ```  
   
- <span data-ttu-id="8c621-107">TCP ではなく UDP を使用するには、次の例のように、プロトコルの種類を変更します。</span><span class="sxs-lookup"><span data-stu-id="8c621-107">To use UDP instead of TCP, change the protocol type, as in the following example:</span></span>  
+ <span data-ttu-id="b4abc-109">TCP ではなく UDP を使用するには、次の例のように、プロトコルの種類を変更します。</span><span class="sxs-lookup"><span data-stu-id="b4abc-109">To use UDP instead of TCP, change the protocol type, as in the following example:</span></span>  
   
 ```csharp  
 Socket s = new Socket(AddressFamily.InterNetwork,
@@ -52,15 +53,15 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
    SocketType.Dgram, ProtocolType.Udp)  
 ```  
   
- <span data-ttu-id="8c621-108"><xref:System.Net.Sockets.AddressFamily> 列挙体では、ネットワーク アドレスを解決するために **Socket** クラスで使用される標準のアドレス ファミリを指定します (たとえば、**AddressFamily.InterNetwork** メンバーは IPv4 アドレス ファミリを指定します)。</span><span class="sxs-lookup"><span data-stu-id="8c621-108">The <xref:System.Net.Sockets.AddressFamily> enumeration specifies the standard address families used by the **Socket** class to resolve network addresses (for example, the **AddressFamily.InterNetwork** member specifies the IP version 4 address family).</span></span>  
+ <span data-ttu-id="b4abc-110"><xref:System.Net.Sockets.AddressFamily> 列挙体では、ネットワーク アドレスを解決するために **Socket** クラスで使用される標準のアドレス ファミリを指定します (たとえば、**AddressFamily.InterNetwork** メンバーは IPv4 アドレス ファミリを指定します)。</span><span class="sxs-lookup"><span data-stu-id="b4abc-110">The <xref:System.Net.Sockets.AddressFamily> enumeration specifies the standard address families used by the **Socket** class to resolve network addresses (for example, the **AddressFamily.InterNetwork** member specifies the IP version 4 address family).</span></span>  
   
- <span data-ttu-id="8c621-109"><xref:System.Net.Sockets.SocketType> 列挙体ではソケットの種類を指定します (たとえば、**SocketType.Stream** メンバーは、フロー制御付きでデータを送受信するための標準のソケットを示します)。</span><span class="sxs-lookup"><span data-stu-id="8c621-109">The <xref:System.Net.Sockets.SocketType> enumeration specifies the type of socket (for example, the **SocketType.Stream** member indicates a standard socket for sending and receiving data with flow control).</span></span>  
+ <span data-ttu-id="b4abc-111"><xref:System.Net.Sockets.SocketType> 列挙体ではソケットの種類を指定します (たとえば、**SocketType.Stream** メンバーは、フロー制御付きでデータを送受信するための標準のソケットを示します)。</span><span class="sxs-lookup"><span data-stu-id="b4abc-111">The <xref:System.Net.Sockets.SocketType> enumeration specifies the type of socket (for example, the **SocketType.Stream** member indicates a standard socket for sending and receiving data with flow control).</span></span>  
   
- <span data-ttu-id="8c621-110"><xref:System.Net.Sockets.ProtocolType> 列挙体では、**Socket** での通信時に使用するネットワーク プロトコルを指定します (たとえば、**ProtocolType.Tcp** はソケットが TCP を使用することを示し、**ProtocolType.Udp** はソケットが UDP を使用することを示します)。</span><span class="sxs-lookup"><span data-stu-id="8c621-110">The <xref:System.Net.Sockets.ProtocolType> enumeration specifies the network protocol to use when communicating on the **Socket** (for example, **ProtocolType.Tcp** indicates that the socket uses TCP; **ProtocolType.Udp** indicates that the socket uses UDP).</span></span>  
+ <span data-ttu-id="b4abc-112"><xref:System.Net.Sockets.ProtocolType> 列挙体では、**Socket** での通信時に使用するネットワーク プロトコルを指定します (たとえば、**ProtocolType.Tcp** はソケットが TCP を使用することを示し、**ProtocolType.Udp** はソケットが UDP を使用することを示します)。</span><span class="sxs-lookup"><span data-stu-id="b4abc-112">The <xref:System.Net.Sockets.ProtocolType> enumeration specifies the network protocol to use when communicating on the **Socket** (for example, **ProtocolType.Tcp** indicates that the socket uses TCP; **ProtocolType.Udp** indicates that the socket uses UDP).</span></span>  
   
- <span data-ttu-id="8c621-111">**Socket** が作成されたら、リモート エンドポイントへの接続を開始したり、リモート デバイスから接続を受信したりすることができます。</span><span class="sxs-lookup"><span data-stu-id="8c621-111">After a **Socket** is created, it can either initiate a connection to a remote endpoint or receive connections from remote devices.</span></span>  
+ <span data-ttu-id="b4abc-113">**Socket** が作成されたら、リモート エンドポイントへの接続を開始したり、リモート デバイスから接続を受信したりすることができます。</span><span class="sxs-lookup"><span data-stu-id="b4abc-113">After a **Socket** is created, it can either initiate a connection to a remote endpoint or receive connections from remote devices.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8c621-112">参照</span><span class="sxs-lookup"><span data-stu-id="8c621-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b4abc-114">関連項目</span><span class="sxs-lookup"><span data-stu-id="b4abc-114">See also</span></span>
 
-- [<span data-ttu-id="8c621-113">クライアント ソケットの使用</span><span class="sxs-lookup"><span data-stu-id="8c621-113">Using Client Sockets</span></span>](using-client-sockets.md)
-- [<span data-ttu-id="8c621-114">リッスン (ソケットで)</span><span class="sxs-lookup"><span data-stu-id="8c621-114">Listening with Sockets</span></span>](listening-with-sockets.md)
+- [<span data-ttu-id="b4abc-115">クライアント ソケットの使用</span><span class="sxs-lookup"><span data-stu-id="b4abc-115">Using Client Sockets</span></span>](using-client-sockets.md)
+- [<span data-ttu-id="b4abc-116">リッスン (ソケットで)</span><span class="sxs-lookup"><span data-stu-id="b4abc-116">Listening with Sockets</span></span>](listening-with-sockets.md)
