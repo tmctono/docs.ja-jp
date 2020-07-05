@@ -1,5 +1,6 @@
 ---
 title: Windows Presentation Foundation
+description: Windows で基幹業務デスクトップ アプリケーションを構築するための Windows Presentation Foundation (WPF) の統合プログラミング モデルについて説明します。
 ms.date: 01/25/2018
 applies_to:
 - Windows 10
@@ -14,24 +15,24 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF]
 - WPF [WPF]
 ms.assetid: f667bd15-2134-41e9-b4af-5ced6fafab5d
-ms.openlocfilehash: 69cdae86a295793c8da6b7f663b22846ae2c32b2
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 078e747ab9237324aba8168b543b2347e845de81
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919365"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853404"
 ---
-# <a name="windows-presentation-foundation"></a><span data-ttu-id="20ed4-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="20ed4-102">Windows Presentation Foundation</span></span>
+# <a name="windows-presentation-foundation"></a><span data-ttu-id="34e2e-103">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="34e2e-103">Windows Presentation Foundation</span></span>
 
-<span data-ttu-id="20ed4-103">Windows Presentation Foundation (WPF) とは、開発者が Windows 上で基幹業務デスクトップ アプリケーションを構築するための統一されたプログラミング モデルです。</span><span class="sxs-lookup"><span data-stu-id="20ed4-103">Windows Presentation Foundation (WPF) provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>
+<span data-ttu-id="34e2e-104">Windows Presentation Foundation (WPF) とは、開発者が Windows 上で基幹業務デスクトップ アプリケーションを構築するための統一されたプログラミング モデルです。</span><span class="sxs-lookup"><span data-stu-id="34e2e-104">Windows Presentation Foundation (WPF) provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>
 
-- [<span data-ttu-id="20ed4-104">WPF の概要</span><span class="sxs-lookup"><span data-stu-id="20ed4-104">Introduction to WPF</span></span>](introduction-to-wpf.md)
-- [<span data-ttu-id="20ed4-105">はじめに</span><span class="sxs-lookup"><span data-stu-id="20ed4-105">Getting Started</span></span>](getting-started/index.md)
-- [<span data-ttu-id="20ed4-106">アプリケーションの開発</span><span class="sxs-lookup"><span data-stu-id="20ed4-106">Application Development</span></span>](app-development/index.md)
-- [<span data-ttu-id="20ed4-107">詳細設定</span><span class="sxs-lookup"><span data-stu-id="20ed4-107">Advanced</span></span>](advanced/index.md)
-- [<span data-ttu-id="20ed4-108">コントロール</span><span class="sxs-lookup"><span data-stu-id="20ed4-108">Controls</span></span>](controls/index.md)
-- [<span data-ttu-id="20ed4-109">データ</span><span class="sxs-lookup"><span data-stu-id="20ed4-109">Data</span></span>](data/index.md)
-- [<span data-ttu-id="20ed4-110">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="20ed4-110">Graphics and Multimedia</span></span>](graphics-multimedia/index.md)
-- [<span data-ttu-id="20ed4-111">セキュリティ</span><span class="sxs-lookup"><span data-stu-id="20ed4-111">Security</span></span>](security-wpf.md)
-- [<span data-ttu-id="20ed4-112">WPF のサンプル</span><span class="sxs-lookup"><span data-stu-id="20ed4-112">WPF Samples</span></span>](wpf-samples.md)
-- [<span data-ttu-id="20ed4-113">クラス ライブラリ</span><span class="sxs-lookup"><span data-stu-id="20ed4-113">Class Library</span></span>](class-library-wpf.md)
+- [<span data-ttu-id="34e2e-105">WPF の概要</span><span class="sxs-lookup"><span data-stu-id="34e2e-105">Introduction to WPF</span></span>](introduction-to-wpf.md)
+- [<span data-ttu-id="34e2e-106">はじめに</span><span class="sxs-lookup"><span data-stu-id="34e2e-106">Getting Started</span></span>](getting-started/index.md)
+- [<span data-ttu-id="34e2e-107">アプリケーションの開発</span><span class="sxs-lookup"><span data-stu-id="34e2e-107">Application Development</span></span>](app-development/index.md)
+- [<span data-ttu-id="34e2e-108">詳細設定</span><span class="sxs-lookup"><span data-stu-id="34e2e-108">Advanced</span></span>](advanced/index.md)
+- [<span data-ttu-id="34e2e-109">コントロール</span><span class="sxs-lookup"><span data-stu-id="34e2e-109">Controls</span></span>](controls/index.md)
+- [<span data-ttu-id="34e2e-110">データ</span><span class="sxs-lookup"><span data-stu-id="34e2e-110">Data</span></span>](data/index.md)
+- [<span data-ttu-id="34e2e-111">グラフィックスとマルチメディア</span><span class="sxs-lookup"><span data-stu-id="34e2e-111">Graphics and Multimedia</span></span>](graphics-multimedia/index.md)
+- [<span data-ttu-id="34e2e-112">セキュリティ</span><span class="sxs-lookup"><span data-stu-id="34e2e-112">Security</span></span>](security-wpf.md)
+- [<span data-ttu-id="34e2e-113">WPF のサンプル</span><span class="sxs-lookup"><span data-stu-id="34e2e-113">WPF Samples</span></span>](wpf-samples.md)
+- [<span data-ttu-id="34e2e-114">クラス ライブラリ</span><span class="sxs-lookup"><span data-stu-id="34e2e-114">Class Library</span></span>](class-library-wpf.md)
