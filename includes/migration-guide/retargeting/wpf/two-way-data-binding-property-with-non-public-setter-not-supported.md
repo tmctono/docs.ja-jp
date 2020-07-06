@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: a70aca33d0830f3b23ff985f17c469cb7c4ff35c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5f1a8af37a305ab0904801002dd99e17e8eca62e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774500"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85616123"
 ---
-### <a name="two-way-data-binding-to-a-property-with-a-non-public-setter-is-not-supported"></a><span data-ttu-id="d5144-101">非パブリック セッターを持つプロパティへの双方向データ バインドはサポートされません</span><span class="sxs-lookup"><span data-stu-id="d5144-101">Two-way data-binding to a property with a non-public setter is not supported</span></span>
+### <a name="two-way-data-binding-to-a-property-with-a-non-public-setter-is-not-supported"></a><span data-ttu-id="bf220-101">非パブリック セッターを持つプロパティへの双方向データ バインドはサポートされません</span><span class="sxs-lookup"><span data-stu-id="bf220-101">Two-way data-binding to a property with a non-public setter is not supported</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="d5144-102">説明</span><span class="sxs-lookup"><span data-stu-id="d5144-102">Details</span></span>|<span data-ttu-id="d5144-103">パブリック セッターを持たないプロパティへのデータ バインドを試みることは、サポートされるシナリオではありません。</span><span class="sxs-lookup"><span data-stu-id="d5144-103">Attempting to data bind to a property without a public setter has never been a supported scenario.</span></span> <span data-ttu-id="d5144-104">.NET framework 4.5.1 以降では、このシナリオでは <xref:System.InvalidOperationException?displayProperty=name> がスローされます。</span><span class="sxs-lookup"><span data-stu-id="d5144-104">Beginning in the .NET Framework 4.5.1, this scenario will throw an <xref:System.InvalidOperationException?displayProperty=name>.</span></span> <span data-ttu-id="d5144-105">この新しい例外は、具体的に .NET Framework 4.5.1 を対象とするアプリでのみスローされることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="d5144-105">Note that this new exception will only be thrown for apps that specifically target the .NET Framework 4.5.1.</span></span> <span data-ttu-id="d5144-106">アプリが .NET Framework 4.5 をターゲットとしている場合、この呼び出しは許されます。</span><span class="sxs-lookup"><span data-stu-id="d5144-106">If an app targets the .NET Framework 4.5, the call will be allowed.</span></span> <span data-ttu-id="d5144-107">アプリが特定のバージョンの .NET Framework をターゲットにしていない場合、バインドは一方向として扱われます。</span><span class="sxs-lookup"><span data-stu-id="d5144-107">If the app does not target a particular .NET Framework version, the binding will be treated as one-way.</span></span>|
-|<span data-ttu-id="d5144-108">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="d5144-108">Suggestion</span></span>|<span data-ttu-id="d5144-109">一方向のバインドを使用するか、プロパティのセッターを公開するように、アプリを更新する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d5144-109">The app should be updated to either use one-way binding, or expose the property's setter publicly.</span></span> <span data-ttu-id="d5144-110">または、.NET Framework 4.5 をターゲットにすると、アプリは以前の動作を示すようになります。</span><span class="sxs-lookup"><span data-stu-id="d5144-110">Alternatively, targeting the .NET Framework 4.5 will cause the app to exhibit the old behavior.</span></span>|
-|<span data-ttu-id="d5144-111">スコープ</span><span class="sxs-lookup"><span data-stu-id="d5144-111">Scope</span></span>|<span data-ttu-id="d5144-112">マイナー</span><span class="sxs-lookup"><span data-stu-id="d5144-112">Minor</span></span>|
-|<span data-ttu-id="d5144-113">Version</span><span class="sxs-lookup"><span data-stu-id="d5144-113">Version</span></span>|<span data-ttu-id="d5144-114">4.5.1</span><span class="sxs-lookup"><span data-stu-id="d5144-114">4.5.1</span></span>|
-|<span data-ttu-id="d5144-115">型</span><span class="sxs-lookup"><span data-stu-id="d5144-115">Type</span></span>|<span data-ttu-id="d5144-116">再ターゲット中</span><span class="sxs-lookup"><span data-stu-id="d5144-116">Retargeting</span></span>|
-|<span data-ttu-id="d5144-117">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="d5144-117">Affected APIs</span></span>|<ul><li><xref:System.Windows.Data.BindingMode.TwoWay?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="bf220-102">説明</span><span class="sxs-lookup"><span data-stu-id="bf220-102">Details</span></span>
+
+<span data-ttu-id="bf220-103">パブリック セッターを持たないプロパティへのデータ バインドを試みることは、サポートされるシナリオではありません。</span><span class="sxs-lookup"><span data-stu-id="bf220-103">Attempting to data bind to a property without a public setter has never been a supported scenario.</span></span> <span data-ttu-id="bf220-104">.NET framework 4.5.1 以降では、このシナリオでは <xref:System.InvalidOperationException?displayProperty=fullName> がスローされます。</span><span class="sxs-lookup"><span data-stu-id="bf220-104">Beginning in the .NET Framework 4.5.1, this scenario will throw an <xref:System.InvalidOperationException?displayProperty=fullName>.</span></span> <span data-ttu-id="bf220-105">この新しい例外は、具体的に .NET Framework 4.5.1 を対象とするアプリでのみスローされることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="bf220-105">Note that this new exception will only be thrown for apps that specifically target the .NET Framework 4.5.1.</span></span> <span data-ttu-id="bf220-106">アプリが .NET Framework 4.5 をターゲットとしている場合、この呼び出しは許されます。</span><span class="sxs-lookup"><span data-stu-id="bf220-106">If an app targets the .NET Framework 4.5, the call will be allowed.</span></span> <span data-ttu-id="bf220-107">アプリが特定のバージョンの .NET Framework をターゲットにしていない場合、バインドは一方向として扱われます。</span><span class="sxs-lookup"><span data-stu-id="bf220-107">If the app does not target a particular .NET Framework version, the binding will be treated as one-way.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="bf220-108">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="bf220-108">Suggestion</span></span>
+
+<span data-ttu-id="bf220-109">一方向のバインドを使用するか、プロパティのセッターを公開するように、アプリを更新する必要があります。</span><span class="sxs-lookup"><span data-stu-id="bf220-109">The app should be updated to either use one-way binding, or expose the property's setter publicly.</span></span> <span data-ttu-id="bf220-110">または、.NET Framework 4.5 をターゲットにすると、アプリは以前の動作を示すようになります。</span><span class="sxs-lookup"><span data-stu-id="bf220-110">Alternatively, targeting the .NET Framework 4.5 will cause the app to exhibit the old behavior.</span></span>
+
+| <span data-ttu-id="bf220-111">名前</span><span class="sxs-lookup"><span data-stu-id="bf220-111">Name</span></span>    | <span data-ttu-id="bf220-112">[値]</span><span class="sxs-lookup"><span data-stu-id="bf220-112">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="bf220-113">スコープ</span><span class="sxs-lookup"><span data-stu-id="bf220-113">Scope</span></span>   | <span data-ttu-id="bf220-114">マイナー</span><span class="sxs-lookup"><span data-stu-id="bf220-114">Minor</span></span>       |
+| <span data-ttu-id="bf220-115">バージョン</span><span class="sxs-lookup"><span data-stu-id="bf220-115">Version</span></span> | <span data-ttu-id="bf220-116">4.5.1</span><span class="sxs-lookup"><span data-stu-id="bf220-116">4.5.1</span></span>       |
+| <span data-ttu-id="bf220-117">種類</span><span class="sxs-lookup"><span data-stu-id="bf220-117">Type</span></span>    | <span data-ttu-id="bf220-118">再ターゲット中</span><span class="sxs-lookup"><span data-stu-id="bf220-118">Retargeting</span></span> |
+
+#### <a name="affected-apis"></a><span data-ttu-id="bf220-119">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="bf220-119">Affected APIs</span></span>
+
+- <xref:System.Windows.Data.BindingMode.TwoWay?displayProperty=nameWithType>
