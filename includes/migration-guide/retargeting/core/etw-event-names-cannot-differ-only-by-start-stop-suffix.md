@@ -1,17 +1,22 @@
 ---
-ms.openlocfilehash: 71c81cf188fa4c2300661f10eb87e7ae00e031f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: HT
+ms.openlocfilehash: 0e25d5d9b545e5cb400cbf701fb13da572fadf10
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67804417"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614673"
 ---
-### <a name="etw-event-names-cannot-differ-only-by-a-start-or-stop-suffix"></a><span data-ttu-id="192b1-101">サフィックスの "Start" または "Stop" のみで ETW イベント名を使い分けることができない</span><span class="sxs-lookup"><span data-stu-id="192b1-101">ETW event names cannot differ only by a "Start" or "Stop" suffix</span></span>
+### <a name="etw-event-names-cannot-differ-only-by-a-start-or-stop-suffix"></a><span data-ttu-id="5163b-101">サフィックスの "Start" または "Stop" のみで ETW イベント名を使い分けることができない</span><span class="sxs-lookup"><span data-stu-id="5163b-101">ETW event names cannot differ only by a "Start" or "Stop" suffix</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="192b1-102">説明</span><span class="sxs-lookup"><span data-stu-id="192b1-102">Details</span></span>|<span data-ttu-id="192b1-103">.NET Framework 4.6 と 4.6.1 では、2 つの ETW (Windows イベント トレーシング) イベント名の違いがサフィックスの &quot;Start&quot; または &quot;Stop&quot; のみのとき (たとえば、あるイベントの名前が <code>LogUser</code> で、別のイベントの名前が <code>LogUserStart</code> のとき)、ランタイムによって <xref:System.ArgumentException> がスローされます。</span><span class="sxs-lookup"><span data-stu-id="192b1-103">In the .NET Framework 4.6 and 4.6.1, the runtime throws an <xref:System.ArgumentException> when two Event Tracing for Windows (ETW) event names differ only by a &quot;Start&quot; or &quot;Stop&quot; suffix (as when one event is named <code>LogUser</code> and another is named <code>LogUserStart</code>).</span></span> <span data-ttu-id="192b1-104">この場合、ランタイムはイベント ソースを作成できないため、ログ記録は生成できません。</span><span class="sxs-lookup"><span data-stu-id="192b1-104">In this case, the runtime cannot construct the event source, which cannot emit any logging.</span></span>|
-|<span data-ttu-id="192b1-105">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="192b1-105">Suggestion</span></span>|<span data-ttu-id="192b1-106">この例外を回避するには、サフィックスの &quot;Start&quot; または &quot;Stop&quot; でしか違いのないイベント名が存在しないようにします。この要件は .NET Framework 4.6.2 以降で削除されています。サフィックスの &quot;Start&quot; と &quot;Stop&quot; のみが異なるイベント名がランタイムによって区別されます。</span><span class="sxs-lookup"><span data-stu-id="192b1-106">To prevent the exception, ensure that no two event names differ only by a &quot;Start&quot; or &quot;Stop&quot; suffix.This requirement is removed starting with the .NET Framework 4.6.2; the runtime can disambiguate event names that differ only by the &quot;Start&quot; and &quot;Stop&quot; suffix.</span></span>|
-|<span data-ttu-id="192b1-107">スコープ</span><span class="sxs-lookup"><span data-stu-id="192b1-107">Scope</span></span>|<span data-ttu-id="192b1-108">エッジ</span><span class="sxs-lookup"><span data-stu-id="192b1-108">Edge</span></span>|
-|<span data-ttu-id="192b1-109">バージョン</span><span class="sxs-lookup"><span data-stu-id="192b1-109">Version</span></span>|<span data-ttu-id="192b1-110">4.6</span><span class="sxs-lookup"><span data-stu-id="192b1-110">4.6</span></span>|
-|<span data-ttu-id="192b1-111">種類</span><span class="sxs-lookup"><span data-stu-id="192b1-111">Type</span></span>|<span data-ttu-id="192b1-112">再ターゲット中</span><span class="sxs-lookup"><span data-stu-id="192b1-112">Retargeting</span></span>|
+#### <a name="details"></a><span data-ttu-id="5163b-102">説明</span><span class="sxs-lookup"><span data-stu-id="5163b-102">Details</span></span>
+
+<span data-ttu-id="5163b-103">.NET Framework 4.6 と4.6.1 では、2 つの Windows イベント トレーシング (ETW) のイベント名の違いが、"Start" または "Stop" のサフィックスのみである場合 (あるイベントの名前が `LogUser` で、別のイベントの名前が `LogUserStart` の場合など)、ランタイムにより <xref:System.ArgumentException> がスローされます。</span><span class="sxs-lookup"><span data-stu-id="5163b-103">In the .NET Framework 4.6 and 4.6.1, the runtime throws an <xref:System.ArgumentException> when two Event Tracing for Windows (ETW) event names differ only by a "Start" or "Stop" suffix (as when one event is named `LogUser` and another is named `LogUserStart`).</span></span> <span data-ttu-id="5163b-104">この場合、ランタイムはイベント ソースを作成できないため、ログ記録は生成できません。</span><span class="sxs-lookup"><span data-stu-id="5163b-104">In this case, the runtime cannot construct the event source, which cannot emit any logging.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="5163b-105">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="5163b-105">Suggestion</span></span>
+
+<span data-ttu-id="5163b-106">この例外を回避するには、"Start" または "Stop" のサフィックスだけが異なる 2 つのイベント名が存在しないようにします。この要件は、.NET Framework 4.6.2 以降では削除されています。ランタイムは、"Start" と "Stop" のサフィックスだけが異なるイベント名を明確に区別できます。</span><span class="sxs-lookup"><span data-stu-id="5163b-106">To prevent the exception, ensure that no two event names differ only by a "Start" or "Stop" suffix.This requirement is removed starting with the .NET Framework 4.6.2; the runtime can disambiguate event names that differ only by the "Start" and "Stop" suffix.</span></span>
+
+| <span data-ttu-id="5163b-107">名前</span><span class="sxs-lookup"><span data-stu-id="5163b-107">Name</span></span>    | <span data-ttu-id="5163b-108">[値]</span><span class="sxs-lookup"><span data-stu-id="5163b-108">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="5163b-109">スコープ</span><span class="sxs-lookup"><span data-stu-id="5163b-109">Scope</span></span>   | <span data-ttu-id="5163b-110">エッジ</span><span class="sxs-lookup"><span data-stu-id="5163b-110">Edge</span></span>        |
+| <span data-ttu-id="5163b-111">バージョン</span><span class="sxs-lookup"><span data-stu-id="5163b-111">Version</span></span> | <span data-ttu-id="5163b-112">4.6</span><span class="sxs-lookup"><span data-stu-id="5163b-112">4.6</span></span>         |
+| <span data-ttu-id="5163b-113">種類</span><span class="sxs-lookup"><span data-stu-id="5163b-113">Type</span></span>    | <span data-ttu-id="5163b-114">再ターゲット中</span><span class="sxs-lookup"><span data-stu-id="5163b-114">Retargeting</span></span> |
