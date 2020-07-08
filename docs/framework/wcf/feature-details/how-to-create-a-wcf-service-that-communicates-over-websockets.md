@@ -2,19 +2,18 @@
 title: '方法: WebSockets 上で通信する WCF サービスを作成する'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 5aade8e3fb2049521ed06f5f1a148be2e4636e36
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
-ms.translationtype: MT
+ms.openlocfilehash: 80c62ddc6630d26c6c178d1eeff8c6df05bf1d00
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597112"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051936"
 ---
-# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a><span data-ttu-id="ca492-102">方法: WebSockets 上で通信する WCF サービスを作成する</span><span class="sxs-lookup"><span data-stu-id="ca492-102">How to: Create a WCF Service that Communicates over WebSockets</span></span>
-<span data-ttu-id="ca492-103">WCF サービスと WCF クライアントは、<xref:System.ServiceModel.NetHttpBinding> バインディングを使用することにより、WebSocket 経由で通信できます。</span><span class="sxs-lookup"><span data-stu-id="ca492-103">WCF services and clients can use the <xref:System.ServiceModel.NetHttpBinding> binding to communicate over WebSockets.</span></span>  <span data-ttu-id="ca492-104">WebSocket が使用されるのは、サービス コントラクトによってコールバック コントラクトが定義されていると <xref:System.ServiceModel.NetHttpBinding> によって判断された場合です。</span><span class="sxs-lookup"><span data-stu-id="ca492-104">WebSockets will be used when the <xref:System.ServiceModel.NetHttpBinding> determines the service contract defines a callback contract.</span></span> <span data-ttu-id="ca492-105">ここでは、<xref:System.ServiceModel.NetHttpBinding> を使用して WebSocket 経由で通信する WCF サービスと WCF クライアントの実装方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="ca492-105">This topic describes how to implement a WCF service and client that uses the <xref:System.ServiceModel.NetHttpBinding> to communicate over WebSockets.</span></span>  
+# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a><span data-ttu-id="67d41-102">方法: WebSockets 上で通信する WCF サービスを作成する</span><span class="sxs-lookup"><span data-stu-id="67d41-102">How to: Create a WCF Service that Communicates over WebSockets</span></span>
+<span data-ttu-id="67d41-103">WCF サービスと WCF クライアントは、<xref:System.ServiceModel.NetHttpBinding> バインディングを使用することにより、WebSocket 経由で通信できます。</span><span class="sxs-lookup"><span data-stu-id="67d41-103">WCF services and clients can use the <xref:System.ServiceModel.NetHttpBinding> binding to communicate over WebSockets.</span></span>  <span data-ttu-id="67d41-104">WebSocket が使用されるのは、サービス コントラクトによってコールバック コントラクトが定義されていると <xref:System.ServiceModel.NetHttpBinding> によって判断された場合です。</span><span class="sxs-lookup"><span data-stu-id="67d41-104">WebSockets will be used when the <xref:System.ServiceModel.NetHttpBinding> determines the service contract defines a callback contract.</span></span> <span data-ttu-id="67d41-105">ここでは、<xref:System.ServiceModel.NetHttpBinding> を使用して WebSocket 経由で通信する WCF サービスと WCF クライアントの実装方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="67d41-105">This topic describes how to implement a WCF service and client that uses the <xref:System.ServiceModel.NetHttpBinding> to communicate over WebSockets.</span></span>  
   
-### <a name="define-the-service"></a><span data-ttu-id="ca492-106">サービスの定義</span><span class="sxs-lookup"><span data-stu-id="ca492-106">Define the Service</span></span>  
+### <a name="define-the-service"></a><span data-ttu-id="67d41-106">サービスの定義</span><span class="sxs-lookup"><span data-stu-id="67d41-106">Define the Service</span></span>  
   
-1. <span data-ttu-id="ca492-107">コールバック コントラクトを定義します。</span><span class="sxs-lookup"><span data-stu-id="ca492-107">Define a callback contract</span></span>  
+1. <span data-ttu-id="67d41-107">コールバック コントラクトを定義します。</span><span class="sxs-lookup"><span data-stu-id="67d41-107">Define a callback contract</span></span>  
   
     ```csharp  
     [ServiceContract]  
@@ -25,9 +24,9 @@ ms.locfileid: "84597112"
         }  
     ```  
   
-     <span data-ttu-id="ca492-108">このコントラクトは、サービス側からクライアントにメッセージを返すことができるようにクライアント アプリケーションで実装されます。</span><span class="sxs-lookup"><span data-stu-id="ca492-108">This contract will be implemented by the client application to allow the service to send messages back to the client.</span></span>  
+     <span data-ttu-id="67d41-108">このコントラクトは、サービス側からクライアントにメッセージを返すことができるようにクライアント アプリケーションで実装されます。</span><span class="sxs-lookup"><span data-stu-id="67d41-108">This contract will be implemented by the client application to allow the service to send messages back to the client.</span></span>  
   
-2. <span data-ttu-id="ca492-109">サービス コントラクトを定義し、コールバック コントラクトとして `IStockQuoteCallback` インターフェイスを指定します。</span><span class="sxs-lookup"><span data-stu-id="ca492-109">Define the service contract and specify the `IStockQuoteCallback` interface as the callback contract.</span></span>  
+2. <span data-ttu-id="67d41-109">サービス コントラクトを定義し、コールバック コントラクトとして `IStockQuoteCallback` インターフェイスを指定します。</span><span class="sxs-lookup"><span data-stu-id="67d41-109">Define the service contract and specify the `IStockQuoteCallback` interface as the callback contract.</span></span>  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -38,7 +37,7 @@ ms.locfileid: "84597112"
         }  
     ```  
   
-3. <span data-ttu-id="ca492-110">サービス コントラクトを実装します。</span><span class="sxs-lookup"><span data-stu-id="ca492-110">Implement the service contract.</span></span>  
+3. <span data-ttu-id="67d41-110">サービス コントラクトを実装します。</span><span class="sxs-lookup"><span data-stu-id="67d41-110">Implement the service contract.</span></span>  
   
     ```csharp
     public class StockQuoteService : IStockQuoteService  
@@ -59,9 +58,9 @@ ms.locfileid: "84597112"
     }  
     ```  
   
-     <span data-ttu-id="ca492-111">サービス操作 `StartSendingQuotes` は、非同期呼び出しとして実装されます。</span><span class="sxs-lookup"><span data-stu-id="ca492-111">The service operation `StartSendingQuotes` is implemented as an asynchronous call.</span></span> <span data-ttu-id="ca492-112">`OperationContext` を使ってコールバック チャネルを取得します。チャネルが開いている場合は、コールバック チャネルで非同期呼び出しを行います。</span><span class="sxs-lookup"><span data-stu-id="ca492-112">We retrieve the callback channel using the `OperationContext` and if the channel is open, we make an async call on the callback channel.</span></span>  
+     <span data-ttu-id="67d41-111">サービス操作 `StartSendingQuotes` は、非同期呼び出しとして実装されます。</span><span class="sxs-lookup"><span data-stu-id="67d41-111">The service operation `StartSendingQuotes` is implemented as an asynchronous call.</span></span> <span data-ttu-id="67d41-112">`OperationContext` を使ってコールバック チャネルを取得します。チャネルが開いている場合は、コールバック チャネルで非同期呼び出しを行います。</span><span class="sxs-lookup"><span data-stu-id="67d41-112">We retrieve the callback channel using the `OperationContext` and if the channel is open, we make an async call on the callback channel.</span></span>  
   
-4. <span data-ttu-id="ca492-113">サービスの構成</span><span class="sxs-lookup"><span data-stu-id="ca492-113">Configure the service</span></span>  
+4. <span data-ttu-id="67d41-113">サービスの構成</span><span class="sxs-lookup"><span data-stu-id="67d41-113">Configure the service</span></span>  
   
     ```xml  
     <configuration>  
@@ -90,11 +89,11 @@ ms.locfileid: "84597112"
     </configuration>  
     ```  
   
-     <span data-ttu-id="ca492-114">サービスの構成ファイルは WCF の既定のエンドポイントに依存しています。</span><span class="sxs-lookup"><span data-stu-id="ca492-114">The service’s configuration file relies on WCF’s default endpoints.</span></span> <span data-ttu-id="ca492-115">作成された既定のエンドポイントに `<protocolMapping>` を使用するように、`NetHttpBinding` セクションを使用して指定しています。</span><span class="sxs-lookup"><span data-stu-id="ca492-115">The `<protocolMapping>` section is used to specify that the `NetHttpBinding` should be used for the default endpoints created.</span></span>  
+     <span data-ttu-id="67d41-114">サービスの構成ファイルは WCF の既定のエンドポイントに依存しています。</span><span class="sxs-lookup"><span data-stu-id="67d41-114">The service’s configuration file relies on WCF’s default endpoints.</span></span> <span data-ttu-id="67d41-115">作成された既定のエンドポイントに `<protocolMapping>` を使用するように、`NetHttpBinding` セクションを使用して指定しています。</span><span class="sxs-lookup"><span data-stu-id="67d41-115">The `<protocolMapping>` section is used to specify that the `NetHttpBinding` should be used for the default endpoints created.</span></span>  
   
-### <a name="define-the-client"></a><span data-ttu-id="ca492-116">クライアントの定義</span><span class="sxs-lookup"><span data-stu-id="ca492-116">Define the Client</span></span>  
+### <a name="define-the-client"></a><span data-ttu-id="67d41-116">クライアントの定義</span><span class="sxs-lookup"><span data-stu-id="67d41-116">Define the Client</span></span>  
   
-1. <span data-ttu-id="ca492-117">コールバック コントラクトを実装します。</span><span class="sxs-lookup"><span data-stu-id="ca492-117">Implement the callback contract.</span></span>  
+1. <span data-ttu-id="67d41-117">コールバック コントラクトを実装します。</span><span class="sxs-lookup"><span data-stu-id="67d41-117">Implement the callback contract.</span></span>  
   
     ```csharp  
     private class CallbackHandler : StockQuoteServiceReference.IStockQuoteServiceCallback  
@@ -106,9 +105,9 @@ ms.locfileid: "84597112"
             }  
     ```  
   
-     <span data-ttu-id="ca492-118">コールバック コントラクト操作は、非同期メソッドとして実装されます。</span><span class="sxs-lookup"><span data-stu-id="ca492-118">The callback contract operation is implemented as an asynchronous method.</span></span>  
+     <span data-ttu-id="67d41-118">コールバック コントラクト操作は、非同期メソッドとして実装されます。</span><span class="sxs-lookup"><span data-stu-id="67d41-118">The callback contract operation is implemented as an asynchronous method.</span></span>  
   
-    1. <span data-ttu-id="ca492-119">クライアント コードを実装します。</span><span class="sxs-lookup"><span data-stu-id="ca492-119">Implement the client code.</span></span>  
+    1. <span data-ttu-id="67d41-119">クライアント コードを実装します。</span><span class="sxs-lookup"><span data-stu-id="67d41-119">Implement the client code.</span></span>  
   
         ```csharp  
         class Program  
@@ -131,9 +130,9 @@ ms.locfileid: "84597112"
         }  
         ```  
   
-         <span data-ttu-id="ca492-120">ここでは、わかりやすいように CallbackHandler を繰り返しています。</span><span class="sxs-lookup"><span data-stu-id="ca492-120">The CallbackHandler is repeated here for clarity.</span></span> <span data-ttu-id="ca492-121">クライアント アプリケーションは、新しい InstanceContext を作成し、コールバック インターフェイスの実装を指定します。</span><span class="sxs-lookup"><span data-stu-id="ca492-121">The client application creates a new InstanceContext and specifies the implementation of the callback interface.</span></span> <span data-ttu-id="ca492-122">次に、新しく作成された InstanceContext への参照を送信するプロキシ クラスのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="ca492-122">Next it creates an instance of the proxy class sending a reference to the newly created InstanceContext.</span></span> <span data-ttu-id="ca492-123">クライアントがサービスを呼び出すと、サービスは、指定されたコールバック コントラクトを使用してクライアントを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="ca492-123">When the client calls the service, the service will call the client using the callback contract specified.</span></span>  
+         <span data-ttu-id="67d41-120">ここでは、わかりやすいように CallbackHandler を繰り返しています。</span><span class="sxs-lookup"><span data-stu-id="67d41-120">The CallbackHandler is repeated here for clarity.</span></span> <span data-ttu-id="67d41-121">クライアント アプリケーションは、新しい InstanceContext を作成し、コールバック インターフェイスの実装を指定します。</span><span class="sxs-lookup"><span data-stu-id="67d41-121">The client application creates a new InstanceContext and specifies the implementation of the callback interface.</span></span> <span data-ttu-id="67d41-122">次に、新しく作成された InstanceContext への参照を送信するプロキシ クラスのインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="67d41-122">Next it creates an instance of the proxy class sending a reference to the newly created InstanceContext.</span></span> <span data-ttu-id="67d41-123">クライアントがサービスを呼び出すと、サービスは、指定されたコールバック コントラクトを使用してクライアントを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="67d41-123">When the client calls the service, the service will call the client using the callback contract specified.</span></span>  
   
-    2. <span data-ttu-id="ca492-124">クライアントの構成</span><span class="sxs-lookup"><span data-stu-id="ca492-124">Configure the client</span></span>  
+    2. <span data-ttu-id="67d41-124">クライアントの構成</span><span class="sxs-lookup"><span data-stu-id="67d41-124">Configure the client</span></span>  
   
         ```xml  
         <?xml version="1.0" encoding="utf-8" ?>  
@@ -158,10 +157,10 @@ ms.locfileid: "84597112"
         </configuration>  
         ```  
   
-         <span data-ttu-id="ca492-125">クライアント構成では特別な操作を実行する必要はありません。`NetHttpBinding` を使用して、クライアント側のエンドポイントを指定するだけです。</span><span class="sxs-lookup"><span data-stu-id="ca492-125">There is nothing special you need to do in the client configuration, just specify the client side endpoint using the `NetHttpBinding`.</span></span>  
+         <span data-ttu-id="67d41-125">クライアント構成では特別な操作を実行する必要はありません。`NetHttpBinding` を使用して、クライアント側のエンドポイントを指定するだけです。</span><span class="sxs-lookup"><span data-stu-id="67d41-125">There is nothing special you need to do in the client configuration, just specify the client side endpoint using the `NetHttpBinding`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ca492-126">例</span><span class="sxs-lookup"><span data-stu-id="ca492-126">Example</span></span>  
- <span data-ttu-id="ca492-127">このトピックで使用されているコード全体を次に示します。</span><span class="sxs-lookup"><span data-stu-id="ca492-127">The following is the complete code used in this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="67d41-126">例</span><span class="sxs-lookup"><span data-stu-id="67d41-126">Example</span></span>  
+ <span data-ttu-id="67d41-127">このトピックで使用されているコード全体を次に示します。</span><span class="sxs-lookup"><span data-stu-id="67d41-127">The following is the complete code used in this topic.</span></span>  
   
 ```csharp  
 // IStockQuoteService.cs  
@@ -257,7 +256,7 @@ namespace Server
 </configuration>  
 ```  
   
-```
+```aspx-csharp
 <!-- StockQuoteService.svc -->  
 <%@ ServiceHost Language="C#" Debug="true" Service="Server.StockQuoteService" CodeBehind="StockQuoteService.svc.cs" %>  
 ```  
@@ -318,7 +317,7 @@ namespace Client
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ca492-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="ca492-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="67d41-128">関連項目</span><span class="sxs-lookup"><span data-stu-id="67d41-128">See also</span></span>
 
-- [<span data-ttu-id="ca492-129">同期操作と非同期操作</span><span class="sxs-lookup"><span data-stu-id="ca492-129">Synchronous and Asynchronous Operations</span></span>](../synchronous-and-asynchronous-operations.md)
-- [<span data-ttu-id="ca492-130">NetHttpBinding の使用</span><span class="sxs-lookup"><span data-stu-id="ca492-130">Using the NetHttpBinding</span></span>](using-the-nethttpbinding.md)
+- [<span data-ttu-id="67d41-129">同期操作と非同期操作</span><span class="sxs-lookup"><span data-stu-id="67d41-129">Synchronous and Asynchronous Operations</span></span>](../synchronous-and-asynchronous-operations.md)
+- [<span data-ttu-id="67d41-130">NetHttpBinding の使用</span><span class="sxs-lookup"><span data-stu-id="67d41-130">Using the NetHttpBinding</span></span>](using-the-nethttpbinding.md)
