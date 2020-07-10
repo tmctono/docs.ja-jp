@@ -1,21 +1,23 @@
 ---
 title: 状態管理
-description: ASP.NET Web Forms と Blazor で状態を管理するためのさまざまなアプローチについて説明します。
+description: ASP.NET Web フォームおよびで状態を管理するためのさまざまな方法について説明し Blazor ます。
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
 ms.date: 09/11/2019
-ms.openlocfilehash: 7d2ac0e0f08723896b3b9b325ae545813d191400
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 390822ff93a928c84540505687472a361a0c5f4b
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "73840785"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173095"
 ---
-# <a name="state-management"></a><span data-ttu-id="b6da7-103">状態管理</span><span class="sxs-lookup"><span data-stu-id="b6da7-103">State management</span></span>
+# <a name="state-management"></a><span data-ttu-id="0ef0e-103">状態管理</span><span class="sxs-lookup"><span data-stu-id="0ef0e-103">State management</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="b6da7-104">*このコンテンツは近日公開予定です。*</span><span class="sxs-lookup"><span data-stu-id="b6da7-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="0ef0e-104">*このコンテンツは近日公開予定です。*</span><span class="sxs-lookup"><span data-stu-id="0ef0e-104">*This content is coming soon.*</span></span>
 
 <!--
 - View state
@@ -25,6 +27,6 @@ ms.locfileid: "73840785"
 -->
 
 >[!div class="step-by-step"]
-><span data-ttu-id="b6da7-105">[前へ](pages-routing-layouts.md)
->[次へ](forms-validation.md)</span><span class="sxs-lookup"><span data-stu-id="b6da7-105">[Previous](pages-routing-layouts.md)
+><span data-ttu-id="0ef0e-105">[前へ](pages-routing-layouts.md)
+>[次へ](forms-validation.md)</span><span class="sxs-lookup"><span data-stu-id="0ef0e-105">[Previous](pages-routing-layouts.md)
 [Next](forms-validation.md)</span></span>
