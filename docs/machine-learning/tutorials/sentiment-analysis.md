@@ -4,117 +4,117 @@ description: このチュートリアルでは、Web サイトのコメントか
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b193752437c3e84476858bb3b70ba642d8562769
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: de8ea511b3d421e391b182a6de079b854d3f2390
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803249"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281758"
 ---
-# <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a><span data-ttu-id="79e40-104">チュートリアル: ML.NET の二項分類を使用して Web サイトのコメントのセンチメントを分析する</span><span class="sxs-lookup"><span data-stu-id="79e40-104">Tutorial: Analyze sentiment of website comments with binary classification in ML.NET</span></span>
+# <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a><span data-ttu-id="52b93-104">チュートリアル: ML.NET の二項分類を使用して Web サイトのコメントのセンチメントを分析する</span><span class="sxs-lookup"><span data-stu-id="52b93-104">Tutorial: Analyze sentiment of website comments with binary classification in ML.NET</span></span>
 
-<span data-ttu-id="79e40-105">このチュートリアルでは、Web サイトのコメントからセンチメントを分類して適切なアクションを実行する .NET Core コンソール アプリケーションの作成方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="79e40-105">This tutorial shows you how to create a .NET Core console application that classifies sentiment from website comments and takes the appropriate action.</span></span> <span data-ttu-id="79e40-106">この二項センチメント分類子には、Visual Studio 2017 で C# を使用します。</span><span class="sxs-lookup"><span data-stu-id="79e40-106">The binary sentiment classifier uses C# in Visual Studio 2017.</span></span>
+<span data-ttu-id="52b93-105">このチュートリアルでは、Web サイトのコメントからセンチメントを分類して適切なアクションを実行する .NET Core コンソール アプリケーションの作成方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="52b93-105">This tutorial shows you how to create a .NET Core console application that classifies sentiment from website comments and takes the appropriate action.</span></span> <span data-ttu-id="52b93-106">この二項センチメント分類子には、Visual Studio 2017 で C# を使用します。</span><span class="sxs-lookup"><span data-stu-id="52b93-106">The binary sentiment classifier uses C# in Visual Studio 2017.</span></span>
 
-<span data-ttu-id="79e40-107">このチュートリアルでは、次の作業を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="79e40-107">In this tutorial, you learn how to:</span></span>
+<span data-ttu-id="52b93-107">このチュートリアルでは、次の作業を行う方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="52b93-107">In this tutorial, you learn how to:</span></span>
 > [!div class="checklist"]
 >
-> - <span data-ttu-id="79e40-108">コンソール アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="79e40-108">Create a console application</span></span>
-> - <span data-ttu-id="79e40-109">データの準備</span><span class="sxs-lookup"><span data-stu-id="79e40-109">Prepare data</span></span>
-> - <span data-ttu-id="79e40-110">データを読み込む</span><span class="sxs-lookup"><span data-stu-id="79e40-110">Load the data</span></span>
-> - <span data-ttu-id="79e40-111">モデルを構築してトレーニングする</span><span class="sxs-lookup"><span data-stu-id="79e40-111">Build and train the model</span></span>
-> - <span data-ttu-id="79e40-112">モデルを評価する</span><span class="sxs-lookup"><span data-stu-id="79e40-112">Evaluate the model</span></span>
-> - <span data-ttu-id="79e40-113">モデルを使用して予測する</span><span class="sxs-lookup"><span data-stu-id="79e40-113">Use the model to make a prediction</span></span>
-> - <span data-ttu-id="79e40-114">結果を見る</span><span class="sxs-lookup"><span data-stu-id="79e40-114">See the results</span></span>
+> - <span data-ttu-id="52b93-108">コンソール アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="52b93-108">Create a console application</span></span>
+> - <span data-ttu-id="52b93-109">データの準備</span><span class="sxs-lookup"><span data-stu-id="52b93-109">Prepare data</span></span>
+> - <span data-ttu-id="52b93-110">データを読み込む</span><span class="sxs-lookup"><span data-stu-id="52b93-110">Load the data</span></span>
+> - <span data-ttu-id="52b93-111">モデルを構築してトレーニングする</span><span class="sxs-lookup"><span data-stu-id="52b93-111">Build and train the model</span></span>
+> - <span data-ttu-id="52b93-112">モデルを評価する</span><span class="sxs-lookup"><span data-stu-id="52b93-112">Evaluate the model</span></span>
+> - <span data-ttu-id="52b93-113">モデルを使用して予測する</span><span class="sxs-lookup"><span data-stu-id="52b93-113">Use the model to make a prediction</span></span>
+> - <span data-ttu-id="52b93-114">結果を見る</span><span class="sxs-lookup"><span data-stu-id="52b93-114">See the results</span></span>
 
-<span data-ttu-id="79e40-115">このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) リポジトリで確認できます。</span><span class="sxs-lookup"><span data-stu-id="79e40-115">You can find the source code for this tutorial at the [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) repository.</span></span>
+<span data-ttu-id="52b93-115">このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) リポジトリで確認できます。</span><span class="sxs-lookup"><span data-stu-id="52b93-115">You can find the source code for this tutorial at the [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) repository.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="79e40-116">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="79e40-116">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="52b93-116">必須コンポーネント</span><span class="sxs-lookup"><span data-stu-id="52b93-116">Prerequisites</span></span>
 
-- <span data-ttu-id="79e40-117">[Visual Studio 2017 バージョン 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)が ".NET Core クロスプラット フォーム開発" ワークロードと共にインストールされている</span><span class="sxs-lookup"><span data-stu-id="79e40-117">[Visual Studio 2017 version 15.6 or later](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) with the ".NET Core cross-platform development" workload installed</span></span>
+- <span data-ttu-id="52b93-117">[Visual Studio 2017 バージョン 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)が ".NET Core クロスプラット フォーム開発" ワークロードと共にインストールされている</span><span class="sxs-lookup"><span data-stu-id="52b93-117">[Visual Studio 2017 version 15.6 or later](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) with the ".NET Core cross-platform development" workload installed</span></span>
 
-- <span data-ttu-id="79e40-118">[UCI Sentiment Labeled Sentences データセット](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (ZIP ファイル)</span><span class="sxs-lookup"><span data-stu-id="79e40-118">[UCI Sentiment Labeled Sentences dataset](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (ZIP file)</span></span>
+- <span data-ttu-id="52b93-118">[UCI Sentiment Labeled Sentences データセット](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (ZIP ファイル)</span><span class="sxs-lookup"><span data-stu-id="52b93-118">[UCI Sentiment Labeled Sentences dataset](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (ZIP file)</span></span>
 
-## <a name="create-a-console-application"></a><span data-ttu-id="79e40-119">コンソール アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="79e40-119">Create a console application</span></span>
+## <a name="create-a-console-application"></a><span data-ttu-id="52b93-119">コンソール アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="52b93-119">Create a console application</span></span>
 
-1. <span data-ttu-id="79e40-120">"SentimentAnalysis" という名前の **.NET Core コンソール アプリケーション**を作成します。</span><span class="sxs-lookup"><span data-stu-id="79e40-120">Create a **.NET Core Console Application** called "SentimentAnalysis".</span></span>
+1. <span data-ttu-id="52b93-120">"SentimentAnalysis" という名前の **.NET Core コンソール アプリケーション**を作成します。</span><span class="sxs-lookup"><span data-stu-id="52b93-120">Create a **.NET Core Console Application** called "SentimentAnalysis".</span></span>
 
-2. <span data-ttu-id="79e40-121">データ セット ファイルを保存するために、プロジェクトに *Data* という名前のディレクトリを作成します。</span><span class="sxs-lookup"><span data-stu-id="79e40-121">Create a directory named *Data* in your project to save your data set files.</span></span>
+2. <span data-ttu-id="52b93-121">データ セット ファイルを保存するために、プロジェクトに *Data* という名前のディレクトリを作成します。</span><span class="sxs-lookup"><span data-stu-id="52b93-121">Create a directory named *Data* in your project to save your data set files.</span></span>
 
-3. <span data-ttu-id="79e40-122">**Microsoft.ML NuGet パッケージ**をインストールします。</span><span class="sxs-lookup"><span data-stu-id="79e40-122">Install the **Microsoft.ML NuGet Package**:</span></span>
+3. <span data-ttu-id="52b93-122">**Microsoft.ML NuGet パッケージ**をインストールします。</span><span class="sxs-lookup"><span data-stu-id="52b93-122">Install the **Microsoft.ML NuGet Package**:</span></span>
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
-    <span data-ttu-id="79e40-123">ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="79e40-123">In Solution Explorer, right-click on your project and select **Manage NuGet Packages**.</span></span> <span data-ttu-id="79e40-124">パッケージ ソースとして "nuget.org" を選択してから、 **[参照]** タブを選択します。**Microsoft.ML** を検索し、目的のパッケージを選択して、 **[インストール]** ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="79e40-124">Choose "nuget.org" as the package source, and then select the **Browse** tab. Search for **Microsoft.ML**, select the package you want, and then select the **Install** button.</span></span> <span data-ttu-id="79e40-125">選択したパッケージのライセンス条項に同意してインストールを続行します。</span><span class="sxs-lookup"><span data-stu-id="79e40-125">Proceed with the installation by agreeing to the license terms for the package you choose.</span></span>
+    <span data-ttu-id="52b93-123">ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="52b93-123">In Solution Explorer, right-click on your project and select **Manage NuGet Packages**.</span></span> <span data-ttu-id="52b93-124">パッケージ ソースとして "nuget.org" を選択してから、 **[参照]** タブを選択します。**Microsoft.ML** を検索し、目的のパッケージを選択して、 **[インストール]** ボタンを選択します。</span><span class="sxs-lookup"><span data-stu-id="52b93-124">Choose "nuget.org" as the package source, and then select the **Browse** tab. Search for **Microsoft.ML**, select the package you want, and then select the **Install** button.</span></span> <span data-ttu-id="52b93-125">選択したパッケージのライセンス条項に同意してインストールを続行します。</span><span class="sxs-lookup"><span data-stu-id="52b93-125">Proceed with the installation by agreeing to the license terms for the package you choose.</span></span>
 
-## <a name="prepare-your-data"></a><span data-ttu-id="79e40-126">データを準備する</span><span class="sxs-lookup"><span data-stu-id="79e40-126">Prepare your data</span></span>
+## <a name="prepare-your-data"></a><span data-ttu-id="52b93-126">データを準備する</span><span class="sxs-lookup"><span data-stu-id="52b93-126">Prepare your data</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="79e40-127">このチュートリアルのデータセットは、「From Group to Individual Labels using Deep Features」 (Kotzias 他</span><span class="sxs-lookup"><span data-stu-id="79e40-127">The datasets for this tutorial are from the 'From Group to Individual Labels using Deep Features', Kotzias et.</span></span> <span data-ttu-id="79e40-128">著、</span><span class="sxs-lookup"><span data-stu-id="79e40-128">al,.</span></span> <span data-ttu-id="79e40-129">KDD 2015) のものであり、UCI 機械学習リポジトリ (Dua, D. and Karra Taniskidou, E.(2017)) でホストされています。</span><span class="sxs-lookup"><span data-stu-id="79e40-129">KDD 2015, and hosted at the UCI Machine Learning Repository - Dua, D. and Karra Taniskidou, E. (2017).</span></span> <span data-ttu-id="79e40-130">UCI 機械学習リポジトリ [http://archive.ics.uci.edu/ml ]。</span><span class="sxs-lookup"><span data-stu-id="79e40-130">UCI Machine Learning Repository [http://archive.ics.uci.edu/ml].</span></span> <span data-ttu-id="79e40-131">カリフォルニア州アーバイン: カリフォルニア大学情報コンピュータサイエンス学部。</span><span class="sxs-lookup"><span data-stu-id="79e40-131">Irvine, CA: University of California, School of Information and Computer Science.</span></span>
+> <span data-ttu-id="52b93-127">このチュートリアルのデータセットは、「From Group to Individual Labels using Deep Features」 (Kotzias 他</span><span class="sxs-lookup"><span data-stu-id="52b93-127">The datasets for this tutorial are from the 'From Group to Individual Labels using Deep Features', Kotzias et.</span></span> <span data-ttu-id="52b93-128">著、</span><span class="sxs-lookup"><span data-stu-id="52b93-128">al,.</span></span> <span data-ttu-id="52b93-129">KDD 2015) のものであり、UCI 機械学習リポジトリ (Dua, D. and Karra Taniskidou, E.(2017)) でホストされています。</span><span class="sxs-lookup"><span data-stu-id="52b93-129">KDD 2015, and hosted at the UCI Machine Learning Repository - Dua, D. and Karra Taniskidou, E. (2017).</span></span> <span data-ttu-id="52b93-130">UCI 機械学習リポジトリ [http://archive.ics.uci.edu/ml ]。</span><span class="sxs-lookup"><span data-stu-id="52b93-130">UCI Machine Learning Repository [http://archive.ics.uci.edu/ml].</span></span> <span data-ttu-id="52b93-131">カリフォルニア州アーバイン: カリフォルニア大学情報コンピュータサイエンス学部。</span><span class="sxs-lookup"><span data-stu-id="52b93-131">Irvine, CA: University of California, School of Information and Computer Science.</span></span>
 
-1. <span data-ttu-id="79e40-132">[UCI Sentiment Labeled Sentences データセットの ZIP ファイル](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)をダウンロードし、展開します。</span><span class="sxs-lookup"><span data-stu-id="79e40-132">Download [UCI Sentiment Labeled Sentences dataset ZIP file](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip), and unzip.</span></span>
+1. <span data-ttu-id="52b93-132">[UCI Sentiment Labeled Sentences データセットの ZIP ファイル](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)をダウンロードし、展開します。</span><span class="sxs-lookup"><span data-stu-id="52b93-132">Download [UCI Sentiment Labeled Sentences dataset ZIP file](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip), and unzip.</span></span>
 
-2. <span data-ttu-id="79e40-133">`yelp_labelled.txt` ファイルを、作成した *Data* ディレクトリにコピーします。</span><span class="sxs-lookup"><span data-stu-id="79e40-133">Copy the `yelp_labelled.txt` file into the *Data* directory you created.</span></span>
+2. <span data-ttu-id="52b93-133">`yelp_labelled.txt` ファイルを、作成した *Data* ディレクトリにコピーします。</span><span class="sxs-lookup"><span data-stu-id="52b93-133">Copy the `yelp_labelled.txt` file into the *Data* directory you created.</span></span>
 
-3. <span data-ttu-id="79e40-134">ソリューション エクスプローラーで、`yelp_labeled.txt` ファイルを右クリックし、 **[プロパティ]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="79e40-134">In Solution Explorer, right-click the `yelp_labeled.txt` file and select **Properties**.</span></span> <span data-ttu-id="79e40-135">**[詳細設定]** で、 **[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。</span><span class="sxs-lookup"><span data-stu-id="79e40-135">Under **Advanced**, change the value of **Copy to Output Directory** to **Copy if newer**.</span></span>
+3. <span data-ttu-id="52b93-134">ソリューション エクスプローラーで、`yelp_labeled.txt` ファイルを右クリックし、 **[プロパティ]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="52b93-134">In Solution Explorer, right-click the `yelp_labeled.txt` file and select **Properties**.</span></span> <span data-ttu-id="52b93-135">**[詳細設定]** で、 **[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。</span><span class="sxs-lookup"><span data-stu-id="52b93-135">Under **Advanced**, change the value of **Copy to Output Directory** to **Copy if newer**.</span></span>
 
-### <a name="create-classes-and-define-paths"></a><span data-ttu-id="79e40-136">クラスを作成してパスを定義する</span><span class="sxs-lookup"><span data-stu-id="79e40-136">Create classes and define paths</span></span>
+### <a name="create-classes-and-define-paths"></a><span data-ttu-id="52b93-136">クラスを作成してパスを定義する</span><span class="sxs-lookup"><span data-stu-id="52b93-136">Create classes and define paths</span></span>
 
-1. <span data-ttu-id="79e40-137">次に示す追加の `using` ステートメントを *Program.cs* ファイルの先頭に追加します。</span><span class="sxs-lookup"><span data-stu-id="79e40-137">Add the following additional `using` statements to the top of the *Program.cs* file:</span></span>
+1. <span data-ttu-id="52b93-137">次に示す追加の `using` ステートメントを *Program.cs* ファイルの先頭に追加します。</span><span class="sxs-lookup"><span data-stu-id="52b93-137">Add the following additional `using` statements to the top of the *Program.cs* file:</span></span>
 
-    [!code-csharp[AddUsings](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#AddUsings "Add necessary usings")]
+    [!code-csharp[AddUsings](./snippets/sentiment-analysis/csharp/Program.cs#AddUsings "Add necessary usings")]
 
-1. <span data-ttu-id="79e40-138">`Main` メソッドの直前の行に次のコードを追加して、最近ダウンロードしたデータセット ファイルのパスを保持するフィールドを作成します。</span><span class="sxs-lookup"><span data-stu-id="79e40-138">Add the following code to the line right above the `Main` method, to create a field to hold the recently downloaded dataset file path:</span></span>
+1. <span data-ttu-id="52b93-138">`Main` メソッドの直前の行に次のコードを追加して、最近ダウンロードしたデータセット ファイルのパスを保持するフィールドを作成します。</span><span class="sxs-lookup"><span data-stu-id="52b93-138">Add the following code to the line right above the `Main` method, to create a field to hold the recently downloaded dataset file path:</span></span>
 
-    [!code-csharp[Declare global variables](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#DeclareGlobalVariables "Declare global variables")]
+    [!code-csharp[Declare global variables](./snippets/sentiment-analysis/csharp/Program.cs#DeclareGlobalVariables "Declare global variables")]
 
-1. <span data-ttu-id="79e40-139">次に、入力データと予測のためにクラスを作成します。</span><span class="sxs-lookup"><span data-stu-id="79e40-139">Next, create classes for your input data and predictions.</span></span> <span data-ttu-id="79e40-140">プロジェクトに新しいクラスを追加します。</span><span class="sxs-lookup"><span data-stu-id="79e40-140">Add a new class to your project:</span></span>
+1. <span data-ttu-id="52b93-139">次に、入力データと予測のためにクラスを作成します。</span><span class="sxs-lookup"><span data-stu-id="52b93-139">Next, create classes for your input data and predictions.</span></span> <span data-ttu-id="52b93-140">プロジェクトに新しいクラスを追加します。</span><span class="sxs-lookup"><span data-stu-id="52b93-140">Add a new class to your project:</span></span>
 
-    - <span data-ttu-id="79e40-141">**ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="79e40-141">In **Solution Explorer**, right-click the project, and then select **Add** > **New Item**.</span></span>
+    - <span data-ttu-id="52b93-141">**ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="52b93-141">In **Solution Explorer**, right-click the project, and then select **Add** > **New Item**.</span></span>
 
-    - <span data-ttu-id="79e40-142">**[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを *SentimentData.cs* に変更します。</span><span class="sxs-lookup"><span data-stu-id="79e40-142">In the **Add New Item** dialog box, select **Class** and change the **Name** field to *SentimentData.cs*.</span></span> <span data-ttu-id="79e40-143">次に **[追加]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="79e40-143">Then, select the **Add** button.</span></span>
+    - <span data-ttu-id="52b93-142">**[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを *SentimentData.cs* に変更します。</span><span class="sxs-lookup"><span data-stu-id="52b93-142">In the **Add New Item** dialog box, select **Class** and change the **Name** field to *SentimentData.cs*.</span></span> <span data-ttu-id="52b93-143">次に **[追加]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="52b93-143">Then, select the **Add** button.</span></span>
 
-1. <span data-ttu-id="79e40-144">コード エディターで *SentimentData.cs* ファイルが開きます。</span><span class="sxs-lookup"><span data-stu-id="79e40-144">The *SentimentData.cs* file opens in the code editor.</span></span> <span data-ttu-id="79e40-145">*SentimentData.cs* の先頭に次の `using` ステートメントを 追加します。</span><span class="sxs-lookup"><span data-stu-id="79e40-145">Add the following `using` statement to the top of *SentimentData.cs*:</span></span>
+1. <span data-ttu-id="52b93-144">コード エディターで *SentimentData.cs* ファイルが開きます。</span><span class="sxs-lookup"><span data-stu-id="52b93-144">The *SentimentData.cs* file opens in the code editor.</span></span> <span data-ttu-id="52b93-145">*SentimentData.cs* の先頭に次の `using` ステートメントを 追加します。</span><span class="sxs-lookup"><span data-stu-id="52b93-145">Add the following `using` statement to the top of *SentimentData.cs*:</span></span>
 
-    [!code-csharp[AddUsings](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/SentimentData.cs#AddUsings "Add necessary usings")]
+    [!code-csharp[AddUsings](./snippets/sentiment-analysis/csharp/SentimentData.cs#AddUsings "Add necessary usings")]
 
-1. <span data-ttu-id="79e40-146">既存のクラス定義を削除し、`SentimentData` と `SentimentPrediction` の 2 つのクラスを含む次のコードを *SentimentData.cs* ファイルに追加します。</span><span class="sxs-lookup"><span data-stu-id="79e40-146">Remove the existing class definition and add the following code, which has two classes `SentimentData` and `SentimentPrediction`, to the *SentimentData.cs* file:</span></span>
+1. <span data-ttu-id="52b93-146">既存のクラス定義を削除し、`SentimentData` と `SentimentPrediction` の 2 つのクラスを含む次のコードを *SentimentData.cs* ファイルに追加します。</span><span class="sxs-lookup"><span data-stu-id="52b93-146">Remove the existing class definition and add the following code, which has two classes `SentimentData` and `SentimentPrediction`, to the *SentimentData.cs* file:</span></span>
 
-    [!code-csharp[DeclareTypes](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/SentimentData.cs#DeclareTypes "Declare data record types")]
+    [!code-csharp[DeclareTypes](./snippets/sentiment-analysis/csharp/SentimentData.cs#DeclareTypes "Declare data record types")]
 
-### <a name="how-the-data-was-prepared"></a><span data-ttu-id="79e40-147">データの準備方法</span><span class="sxs-lookup"><span data-stu-id="79e40-147">How the data was prepared</span></span>
+### <a name="how-the-data-was-prepared"></a><span data-ttu-id="52b93-147">データの準備方法</span><span class="sxs-lookup"><span data-stu-id="52b93-147">How the data was prepared</span></span>
 
-<span data-ttu-id="79e40-148">入力データセット クラスの `SentimentData` には、ユーザー コメント用の `string` (`SentimentText`) と、センチメント用の 1 (肯定的) または 0 (否定的) のいずれかの `bool` (`Sentiment`) 値があります。</span><span class="sxs-lookup"><span data-stu-id="79e40-148">The input dataset class, `SentimentData`, has a `string` for user comments (`SentimentText`) and a `bool` (`Sentiment`) value of either 1 (positive) or 0 (negative) for sentiment.</span></span> <span data-ttu-id="79e40-149">どちらのフィールドにも [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) 属性が添付され、各フィールドのデータ ファイルの順序が記述されています。</span><span class="sxs-lookup"><span data-stu-id="79e40-149">Both fields have [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) attributes attached to them, which describes the data file order of each field.</span></span>  <span data-ttu-id="79e40-150">さらに、`Sentiment` プロパティには、それを `Label` フィールドとして指定する [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute.%23ctor%2A) 属性があります。</span><span class="sxs-lookup"><span data-stu-id="79e40-150">In addition, the `Sentiment` property has a [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute.%23ctor%2A) attribute to designate it as the `Label` field.</span></span> <span data-ttu-id="79e40-151">次のファイル例にはヘッダー行がなく、次のような内容です。</span><span class="sxs-lookup"><span data-stu-id="79e40-151">The following example file doesn't have a header row, and looks like this:</span></span>
+<span data-ttu-id="52b93-148">入力データセット クラスの `SentimentData` には、ユーザー コメント用の `string` (`SentimentText`) と、センチメント用の 1 (肯定的) または 0 (否定的) のいずれかの `bool` (`Sentiment`) 値があります。</span><span class="sxs-lookup"><span data-stu-id="52b93-148">The input dataset class, `SentimentData`, has a `string` for user comments (`SentimentText`) and a `bool` (`Sentiment`) value of either 1 (positive) or 0 (negative) for sentiment.</span></span> <span data-ttu-id="52b93-149">どちらのフィールドにも [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) 属性が添付され、各フィールドのデータ ファイルの順序が記述されています。</span><span class="sxs-lookup"><span data-stu-id="52b93-149">Both fields have [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) attributes attached to them, which describes the data file order of each field.</span></span>  <span data-ttu-id="52b93-150">さらに、`Sentiment` プロパティには、それを `Label` フィールドとして指定する [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute.%23ctor%2A) 属性があります。</span><span class="sxs-lookup"><span data-stu-id="52b93-150">In addition, the `Sentiment` property has a [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute.%23ctor%2A) attribute to designate it as the `Label` field.</span></span> <span data-ttu-id="52b93-151">次のファイル例にはヘッダー行がなく、次のような内容です。</span><span class="sxs-lookup"><span data-stu-id="52b93-151">The following example file doesn't have a header row, and looks like this:</span></span>
 
-|<span data-ttu-id="79e40-152">SentimentText</span><span class="sxs-lookup"><span data-stu-id="79e40-152">SentimentText</span></span>                         |<span data-ttu-id="79e40-153">Sentiment (ラベル)</span><span class="sxs-lookup"><span data-stu-id="79e40-153">Sentiment (Label)</span></span> |
+|<span data-ttu-id="52b93-152">SentimentText</span><span class="sxs-lookup"><span data-stu-id="52b93-152">SentimentText</span></span>                         |<span data-ttu-id="52b93-153">Sentiment (ラベル)</span><span class="sxs-lookup"><span data-stu-id="52b93-153">Sentiment (Label)</span></span> |
 |--------------------------------------|----------|
-|<span data-ttu-id="79e40-154">Waitress was a little slow in service.</span><span class="sxs-lookup"><span data-stu-id="79e40-154">Waitress was a little slow in service.</span></span>|    <span data-ttu-id="79e40-155">0</span><span class="sxs-lookup"><span data-stu-id="79e40-155">0</span></span>     |
-|<span data-ttu-id="79e40-156">Crust is not good.</span><span class="sxs-lookup"><span data-stu-id="79e40-156">Crust is not good.</span></span>                    |    <span data-ttu-id="79e40-157">0</span><span class="sxs-lookup"><span data-stu-id="79e40-157">0</span></span>     |
-|<span data-ttu-id="79e40-158">Wow...Loved this place.</span><span class="sxs-lookup"><span data-stu-id="79e40-158">Wow... Loved this place.</span></span>              |    <span data-ttu-id="79e40-159">1</span><span class="sxs-lookup"><span data-stu-id="79e40-159">1</span></span>     |
-|<span data-ttu-id="79e40-160">Service was very prompt.</span><span class="sxs-lookup"><span data-stu-id="79e40-160">Service was very prompt.</span></span>              |    <span data-ttu-id="79e40-161">1</span><span class="sxs-lookup"><span data-stu-id="79e40-161">1</span></span>     |
+|<span data-ttu-id="52b93-154">Waitress was a little slow in service.</span><span class="sxs-lookup"><span data-stu-id="52b93-154">Waitress was a little slow in service.</span></span>|    <span data-ttu-id="52b93-155">0</span><span class="sxs-lookup"><span data-stu-id="52b93-155">0</span></span>     |
+|<span data-ttu-id="52b93-156">Crust is not good.</span><span class="sxs-lookup"><span data-stu-id="52b93-156">Crust is not good.</span></span>                    |    <span data-ttu-id="52b93-157">0</span><span class="sxs-lookup"><span data-stu-id="52b93-157">0</span></span>     |
+|<span data-ttu-id="52b93-158">Wow...Loved this place.</span><span class="sxs-lookup"><span data-stu-id="52b93-158">Wow... Loved this place.</span></span>              |    <span data-ttu-id="52b93-159">1</span><span class="sxs-lookup"><span data-stu-id="52b93-159">1</span></span>     |
+|<span data-ttu-id="52b93-160">Service was very prompt.</span><span class="sxs-lookup"><span data-stu-id="52b93-160">Service was very prompt.</span></span>              |    <span data-ttu-id="52b93-161">1</span><span class="sxs-lookup"><span data-stu-id="52b93-161">1</span></span>     |
 
-<span data-ttu-id="79e40-162">`SentimentPrediction` はモデルのトレーニング後に使用される予測クラスです。</span><span class="sxs-lookup"><span data-stu-id="79e40-162">`SentimentPrediction` is the prediction class used after model training.</span></span> <span data-ttu-id="79e40-163">`SentimentData` から継承されるため、入力 `SentimentText` を出力予測と共に表示することができます。</span><span class="sxs-lookup"><span data-stu-id="79e40-163">It inherits from `SentimentData` so that the input `SentimentText` can be displayed along with the output prediction.</span></span> <span data-ttu-id="79e40-164">`Prediction` ブール値は、新しい入力 `SentimentText` が指定されたときにモデルで予測される値です。</span><span class="sxs-lookup"><span data-stu-id="79e40-164">The `Prediction` boolean is the value that the model predicts when supplied with new input `SentimentText`.</span></span>
+<span data-ttu-id="52b93-162">`SentimentPrediction` はモデルのトレーニング後に使用される予測クラスです。</span><span class="sxs-lookup"><span data-stu-id="52b93-162">`SentimentPrediction` is the prediction class used after model training.</span></span> <span data-ttu-id="52b93-163">`SentimentData` から継承されるため、入力 `SentimentText` を出力予測と共に表示することができます。</span><span class="sxs-lookup"><span data-stu-id="52b93-163">It inherits from `SentimentData` so that the input `SentimentText` can be displayed along with the output prediction.</span></span> <span data-ttu-id="52b93-164">`Prediction` ブール値は、新しい入力 `SentimentText` が指定されたときにモデルで予測される値です。</span><span class="sxs-lookup"><span data-stu-id="52b93-164">The `Prediction` boolean is the value that the model predicts when supplied with new input `SentimentText`.</span></span>
 
-<span data-ttu-id="79e40-165">出力クラス `SentimentPrediction` にはモデルによって計算されたその他の 2 つのプロパティが含まれています。1 つはモデルによって計算された生のスコアの `Score`、もう 1 つは肯定的センチメントを持つテキストの尤度に調整されたスコアの `Probability` です。</span><span class="sxs-lookup"><span data-stu-id="79e40-165">The output class `SentimentPrediction` contains two other properties calculated by the model: `Score` - the raw score calculated by the model, and `Probability` - the score calibrated to the likelihood of the text having positive sentiment.</span></span>
+<span data-ttu-id="52b93-165">出力クラス `SentimentPrediction` にはモデルによって計算されたその他の 2 つのプロパティが含まれています。1 つはモデルによって計算された生のスコアの `Score`、もう 1 つは肯定的センチメントを持つテキストの尤度に調整されたスコアの `Probability` です。</span><span class="sxs-lookup"><span data-stu-id="52b93-165">The output class `SentimentPrediction` contains two other properties calculated by the model: `Score` - the raw score calculated by the model, and `Probability` - the score calibrated to the likelihood of the text having positive sentiment.</span></span>
 
-<span data-ttu-id="79e40-166">このチュートリアルで最も重要なプロパティは `Prediction` です。</span><span class="sxs-lookup"><span data-stu-id="79e40-166">For this tutorial, the most important property is `Prediction`.</span></span>
+<span data-ttu-id="52b93-166">このチュートリアルで最も重要なプロパティは `Prediction` です。</span><span class="sxs-lookup"><span data-stu-id="52b93-166">For this tutorial, the most important property is `Prediction`.</span></span>
 
-## <a name="load-the-data"></a><span data-ttu-id="79e40-167">データを読み込む</span><span class="sxs-lookup"><span data-stu-id="79e40-167">Load the data</span></span>
+## <a name="load-the-data"></a><span data-ttu-id="52b93-167">データを読み込む</span><span class="sxs-lookup"><span data-stu-id="52b93-167">Load the data</span></span>
 
-<span data-ttu-id="79e40-168">ML.NET 内のデータは、[IDataView クラス](xref:Microsoft.ML.IDataView)として表されます。</span><span class="sxs-lookup"><span data-stu-id="79e40-168">Data in ML.NET is represented as an [IDataView class](xref:Microsoft.ML.IDataView).</span></span> <span data-ttu-id="79e40-169">`IDataView` は、表形式のデータ (数値とテキスト) を表すための柔軟で効率的な方法です。</span><span class="sxs-lookup"><span data-stu-id="79e40-169">`IDataView` is a flexible, efficient way of describing tabular data (numeric and text).</span></span> <span data-ttu-id="79e40-170">データはテキスト ファイルから、またはリアルタイムで (SQL データベースやログ ファイルなど) `IDataView` オブジェクトに読み込むことができます。</span><span class="sxs-lookup"><span data-stu-id="79e40-170">Data can be loaded from a text file or in real time (for example, SQL database or log files) to an `IDataView` object.</span></span>
+<span data-ttu-id="52b93-168">ML.NET 内のデータは、[IDataView クラス](xref:Microsoft.ML.IDataView)として表されます。</span><span class="sxs-lookup"><span data-stu-id="52b93-168">Data in ML.NET is represented as an [IDataView class](xref:Microsoft.ML.IDataView).</span></span> <span data-ttu-id="52b93-169">`IDataView` は、表形式のデータ (数値とテキスト) を表すための柔軟で効率的な方法です。</span><span class="sxs-lookup"><span data-stu-id="52b93-169">`IDataView` is a flexible, efficient way of describing tabular data (numeric and text).</span></span> <span data-ttu-id="52b93-170">データはテキスト ファイルから、またはリアルタイムで (SQL データベースやログ ファイルなど) `IDataView` オブジェクトに読み込むことができます。</span><span class="sxs-lookup"><span data-stu-id="52b93-170">Data can be loaded from a text file or in real time (for example, SQL database or log files) to an `IDataView` object.</span></span>
 
-<span data-ttu-id="79e40-171">[MLContext クラス](xref:Microsoft.ML.MLContext)は、すべての ML.NET 操作の始点です。</span><span class="sxs-lookup"><span data-stu-id="79e40-171">The [MLContext class](xref:Microsoft.ML.MLContext) is a starting point for all ML.NET operations.</span></span> <span data-ttu-id="79e40-172">`mlContext` を初期化することで、モデル作成ワークフローのオブジェクト間で共有できる新しい ML.NET 環境が作成されます。</span><span class="sxs-lookup"><span data-stu-id="79e40-172">Initializing `mlContext` creates a new ML.NET environment that can be shared across the model creation workflow objects.</span></span> <span data-ttu-id="79e40-173">これは Entity Framework における `DBContext` と概念的には同じです。</span><span class="sxs-lookup"><span data-stu-id="79e40-173">It's similar, conceptually, to `DBContext` in Entity Framework.</span></span>
+<span data-ttu-id="52b93-171">[MLContext クラス](xref:Microsoft.ML.MLContext)は、すべての ML.NET 操作の始点です。</span><span class="sxs-lookup"><span data-stu-id="52b93-171">The [MLContext class](xref:Microsoft.ML.MLContext) is a starting point for all ML.NET operations.</span></span> <span data-ttu-id="52b93-172">`mlContext` を初期化することで、モデル作成ワークフローのオブジェクト間で共有できる新しい ML.NET 環境が作成されます。</span><span class="sxs-lookup"><span data-stu-id="52b93-172">Initializing `mlContext` creates a new ML.NET environment that can be shared across the model creation workflow objects.</span></span> <span data-ttu-id="52b93-173">これは Entity Framework における `DBContext` と概念的には同じです。</span><span class="sxs-lookup"><span data-stu-id="52b93-173">It's similar, conceptually, to `DBContext` in Entity Framework.</span></span>
 
-<span data-ttu-id="79e40-174">アプリを準備してからデータを読み込みます。</span><span class="sxs-lookup"><span data-stu-id="79e40-174">You prepare the app, and then load data:</span></span>
+<span data-ttu-id="52b93-174">アプリを準備してからデータを読み込みます。</span><span class="sxs-lookup"><span data-stu-id="52b93-174">You prepare the app, and then load data:</span></span>
 
-1. <span data-ttu-id="79e40-175">`Main` メソッドの `Console.WriteLine("Hello World!")` の行は、mlContext 変数を宣言して初期化する次のコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="79e40-175">Replace the `Console.WriteLine("Hello World!")` line in the `Main` method with the following code to declare and initialize the mlContext variable:</span></span>
+1. <span data-ttu-id="52b93-175">`Main` メソッドの `Console.WriteLine("Hello World!")` の行は、mlContext 変数を宣言して初期化する次のコードに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="52b93-175">Replace the `Console.WriteLine("Hello World!")` line in the `Main` method with the following code to declare and initialize the mlContext variable:</span></span>
 
-    [!code-csharp[CreateMLContext](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#CreateMLContext "Create the ML Context")]
+    [!code-csharp[CreateMLContext](./snippets/sentiment-analysis/csharp/Program.cs#CreateMLContext "Create the ML Context")]
 
-2. <span data-ttu-id="79e40-176">`Main()` メソッドに次のコード行を追加します。</span><span class="sxs-lookup"><span data-stu-id="79e40-176">Add the following as the next line of code in the `Main()` method:</span></span>
+2. <span data-ttu-id="52b93-176">`Main()` メソッドに次のコード行を追加します。</span><span class="sxs-lookup"><span data-stu-id="52b93-176">Add the following as the next line of code in the `Main()` method:</span></span>
 
-    [!code-csharp[CallLoadData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#CallLoadData)]
+    [!code-csharp[CallLoadData](./snippets/sentiment-analysis/csharp/Program.cs#CallLoadData)]
 
-3. <span data-ttu-id="79e40-177">`Main()` メソッドの直後に、次のコードを使用して `LoadData()` メソッドを作成します。</span><span class="sxs-lookup"><span data-stu-id="79e40-177">Create the `LoadData()` method, just after the `Main()` method, using the following code:</span></span>
+3. <span data-ttu-id="52b93-177">`Main()` メソッドの直後に、次のコードを使用して `LoadData()` メソッドを作成します。</span><span class="sxs-lookup"><span data-stu-id="52b93-177">Create the `LoadData()` method, just after the `Main()` method, using the following code:</span></span>
 
     ```csharp
     public static TrainTestData LoadData(MLContext mlContext)
@@ -123,46 +123,46 @@ ms.locfileid: "85803249"
     }
     ```
 
-    <span data-ttu-id="79e40-178">`LoadData()` メソッドは次のタスクを実行します。</span><span class="sxs-lookup"><span data-stu-id="79e40-178">The `LoadData()` method executes the following tasks:</span></span>
+    <span data-ttu-id="52b93-178">`LoadData()` メソッドは次のタスクを実行します。</span><span class="sxs-lookup"><span data-stu-id="52b93-178">The `LoadData()` method executes the following tasks:</span></span>
 
-    - <span data-ttu-id="79e40-179">データを読み込みます。</span><span class="sxs-lookup"><span data-stu-id="79e40-179">Loads the data.</span></span>
-    - <span data-ttu-id="79e40-180">読み込んだデータセットを、トレーニングデータセットとテスト データセットに分割します。</span><span class="sxs-lookup"><span data-stu-id="79e40-180">Splits the loaded dataset into train and test datasets.</span></span>
-    - <span data-ttu-id="79e40-181">分割されたトレーニングデータセットとテスト データセットを返します。</span><span class="sxs-lookup"><span data-stu-id="79e40-181">Returns the split train and test datasets.</span></span>
+    - <span data-ttu-id="52b93-179">データを読み込みます。</span><span class="sxs-lookup"><span data-stu-id="52b93-179">Loads the data.</span></span>
+    - <span data-ttu-id="52b93-180">読み込んだデータセットを、トレーニングデータセットとテスト データセットに分割します。</span><span class="sxs-lookup"><span data-stu-id="52b93-180">Splits the loaded dataset into train and test datasets.</span></span>
+    - <span data-ttu-id="52b93-181">分割されたトレーニングデータセットとテスト データセットを返します。</span><span class="sxs-lookup"><span data-stu-id="52b93-181">Returns the split train and test datasets.</span></span>
 
-4. <span data-ttu-id="79e40-182">`LoadData()` メソッドの最初の行として、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="79e40-182">Add the following code as the first line of the `LoadData()` method:</span></span>
+4. <span data-ttu-id="52b93-182">`LoadData()` メソッドの最初の行として、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="52b93-182">Add the following code as the first line of the `LoadData()` method:</span></span>
 
-    [!code-csharp[LoadData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#LoadData "loading dataset")]
+    [!code-csharp[LoadData](./snippets/sentiment-analysis/csharp/Program.cs#LoadData "loading dataset")]
 
-    <span data-ttu-id="79e40-183">[LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) メソッドを使用してデータ スキーマを定義し、ファイルを読み取ります。</span><span class="sxs-lookup"><span data-stu-id="79e40-183">The [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) method defines the data schema and reads in the file.</span></span> <span data-ttu-id="79e40-184">データ パス変数を取得して、`IDataView` を返します。</span><span class="sxs-lookup"><span data-stu-id="79e40-184">It takes in the data path variables and returns an `IDataView`.</span></span>
+    <span data-ttu-id="52b93-183">[LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) メソッドを使用してデータ スキーマを定義し、ファイルを読み取ります。</span><span class="sxs-lookup"><span data-stu-id="52b93-183">The [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) method defines the data schema and reads in the file.</span></span> <span data-ttu-id="52b93-184">データ パス変数を取得して、`IDataView` を返します。</span><span class="sxs-lookup"><span data-stu-id="52b93-184">It takes in the data path variables and returns an `IDataView`.</span></span>
 
-### <a name="split-the-dataset-for-model-training-and-testing"></a><span data-ttu-id="79e40-185">モデルのトレーニング用とテスト用にデータセットを分割する</span><span class="sxs-lookup"><span data-stu-id="79e40-185">Split the dataset for model training and testing</span></span>
+### <a name="split-the-dataset-for-model-training-and-testing"></a><span data-ttu-id="52b93-185">モデルのトレーニング用とテスト用にデータセットを分割する</span><span class="sxs-lookup"><span data-stu-id="52b93-185">Split the dataset for model training and testing</span></span>
 
-<span data-ttu-id="79e40-186">モデルを準備するときは、データセットの一部を使用してモデルをトレーニングし、データセットの一部を使用してモデルの正確度をテストします。</span><span class="sxs-lookup"><span data-stu-id="79e40-186">When preparing a model, you use part of the dataset to train it and part of the dataset to test the model's accuracy.</span></span>
+<span data-ttu-id="52b93-186">モデルを準備するときは、データセットの一部を使用してモデルをトレーニングし、データセットの一部を使用してモデルの正確度をテストします。</span><span class="sxs-lookup"><span data-stu-id="52b93-186">When preparing a model, you use part of the dataset to train it and part of the dataset to test the model's accuracy.</span></span>
 
-1. <span data-ttu-id="79e40-187">読み込まれたデータを必要なデータセットに分割するには、`LoadData()` メソッドの次の行として、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="79e40-187">To split the loaded data into the needed datasets, add the following code as the next line in the `LoadData()` method:</span></span>
+1. <span data-ttu-id="52b93-187">読み込まれたデータを必要なデータセットに分割するには、`LoadData()` メソッドの次の行として、次のコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="52b93-187">To split the loaded data into the needed datasets, add the following code as the next line in the `LoadData()` method:</span></span>
 
-    [!code-csharp[SplitData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#SplitData "Split the Data")]
+    [!code-csharp[SplitData](./snippets/sentiment-analysis/csharp/Program.cs#SplitData "Split the Data")]
 
-    <span data-ttu-id="79e40-188">前のコードでは、[TrainTestSplit()](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) メソッドを使用して、読み込まれたデータセットをトレーニング データセットとテスト データセットに分割し、それらを <xref:Microsoft.ML.DataOperationsCatalog.TrainTestData> クラスで返します。</span><span class="sxs-lookup"><span data-stu-id="79e40-188">The previous code uses the [TrainTestSplit()](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) method to split the loaded dataset into train and test datasets and return them in the <xref:Microsoft.ML.DataOperationsCatalog.TrainTestData> class.</span></span> <span data-ttu-id="79e40-189">`testFraction` パラメーターを使用して、データに占めるテスト セットの割合を指定します。</span><span class="sxs-lookup"><span data-stu-id="79e40-189">Specify the test set percentage of data with the `testFraction`parameter.</span></span> <span data-ttu-id="79e40-190">既定値は 10% です。この場合、より多くのデータを評価するために 20% を使用します。</span><span class="sxs-lookup"><span data-stu-id="79e40-190">The default is 10%, in this case you use 20% to evaluate more data.</span></span>
+    <span data-ttu-id="52b93-188">前のコードでは、[TrainTestSplit()](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) メソッドを使用して、読み込まれたデータセットをトレーニング データセットとテスト データセットに分割し、それらを <xref:Microsoft.ML.DataOperationsCatalog.TrainTestData> クラスで返します。</span><span class="sxs-lookup"><span data-stu-id="52b93-188">The previous code uses the [TrainTestSplit()](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) method to split the loaded dataset into train and test datasets and return them in the <xref:Microsoft.ML.DataOperationsCatalog.TrainTestData> class.</span></span> <span data-ttu-id="52b93-189">`testFraction` パラメーターを使用して、データに占めるテスト セットの割合を指定します。</span><span class="sxs-lookup"><span data-stu-id="52b93-189">Specify the test set percentage of data with the `testFraction`parameter.</span></span> <span data-ttu-id="52b93-190">既定値は 10% です。この場合、より多くのデータを評価するために 20% を使用します。</span><span class="sxs-lookup"><span data-stu-id="52b93-190">The default is 10%, in this case you use 20% to evaluate more data.</span></span>
 
-2. <span data-ttu-id="79e40-191">`LoadData()` メソッドの最後に、`splitDataView` が返されます。</span><span class="sxs-lookup"><span data-stu-id="79e40-191">Return the `splitDataView` at the end of the `LoadData()` method:</span></span>
+2. <span data-ttu-id="52b93-191">`LoadData()` メソッドの最後に、`splitDataView` が返されます。</span><span class="sxs-lookup"><span data-stu-id="52b93-191">Return the `splitDataView` at the end of the `LoadData()` method:</span></span>
 
-    [!code-csharp[ReturnSplitData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#ReturnSplitData)]
+    [!code-csharp[ReturnSplitData](./snippets/sentiment-analysis/csharp/Program.cs#ReturnSplitData)]
 
-## <a name="build-and-train-the-model"></a><span data-ttu-id="79e40-192">モデルを構築してトレーニングする</span><span class="sxs-lookup"><span data-stu-id="79e40-192">Build and train the model</span></span>
+## <a name="build-and-train-the-model"></a><span data-ttu-id="52b93-192">モデルを構築してトレーニングする</span><span class="sxs-lookup"><span data-stu-id="52b93-192">Build and train the model</span></span>
 
-1. <span data-ttu-id="79e40-193">`Main()` メソッドの次のコード行として、`BuildAndTrainModel` メソッドに次の呼び出しを追加します。</span><span class="sxs-lookup"><span data-stu-id="79e40-193">Add the following call to the `BuildAndTrainModel`method as the next line of code in the `Main()` method:</span></span>
+1. <span data-ttu-id="52b93-193">`Main()` メソッドの次のコード行として、`BuildAndTrainModel` メソッドに次の呼び出しを追加します。</span><span class="sxs-lookup"><span data-stu-id="52b93-193">Add the following call to the `BuildAndTrainModel`method as the next line of code in the `Main()` method:</span></span>
 
-    [!code-csharp[CallBuildAndTrainModel](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#CallBuildAndTrainModel)]
+    [!code-csharp[CallBuildAndTrainModel](./snippets/sentiment-analysis/csharp/Program.cs#CallBuildAndTrainModel)]
 
-    <span data-ttu-id="79e40-194">`BuildAndTrainModel()` メソッドは次のタスクを実行します。</span><span class="sxs-lookup"><span data-stu-id="79e40-194">The `BuildAndTrainModel()` method executes the following tasks:</span></span>
+    <span data-ttu-id="52b93-194">`BuildAndTrainModel()` メソッドは次のタスクを実行します。</span><span class="sxs-lookup"><span data-stu-id="52b93-194">The `BuildAndTrainModel()` method executes the following tasks:</span></span>
 
-    - <span data-ttu-id="79e40-195">データを抽出して変換します。</span><span class="sxs-lookup"><span data-stu-id="79e40-195">Extracts and transforms the data.</span></span>
-    - <span data-ttu-id="79e40-196">モデルをトレーニングする。</span><span class="sxs-lookup"><span data-stu-id="79e40-196">Trains the model.</span></span>
-    - <span data-ttu-id="79e40-197">テスト データに基づいてセンチメントを予測する。</span><span class="sxs-lookup"><span data-stu-id="79e40-197">Predicts sentiment based on test data.</span></span>
-    - <span data-ttu-id="79e40-198">モデルを返します。</span><span class="sxs-lookup"><span data-stu-id="79e40-198">Returns the model.</span></span>
+    - <span data-ttu-id="52b93-195">データを抽出して変換します。</span><span class="sxs-lookup"><span data-stu-id="52b93-195">Extracts and transforms the data.</span></span>
+    - <span data-ttu-id="52b93-196">モデルをトレーニングする。</span><span class="sxs-lookup"><span data-stu-id="52b93-196">Trains the model.</span></span>
+    - <span data-ttu-id="52b93-197">テスト データに基づいてセンチメントを予測する。</span><span class="sxs-lookup"><span data-stu-id="52b93-197">Predicts sentiment based on test data.</span></span>
+    - <span data-ttu-id="52b93-198">モデルを返します。</span><span class="sxs-lookup"><span data-stu-id="52b93-198">Returns the model.</span></span>
 
-2. <span data-ttu-id="79e40-199">`Main()` メソッドの直後に、次のコードを使用して `BuildAndTrainModel()` メソッドを作成します。</span><span class="sxs-lookup"><span data-stu-id="79e40-199">Create the `BuildAndTrainModel()` method, just after the `Main()` method, using the following code:</span></span>
+2. <span data-ttu-id="52b93-199">`Main()` メソッドの直後に、次のコードを使用して `BuildAndTrainModel()` メソッドを作成します。</span><span class="sxs-lookup"><span data-stu-id="52b93-199">Create the `BuildAndTrainModel()` method, just after the `Main()` method, using the following code:</span></span>
 
     ```csharp
     public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView splitTrainSet)
@@ -171,50 +171,50 @@ ms.locfileid: "85803249"
     }
     ```
 
-### <a name="extract-and-transform-the-data"></a><span data-ttu-id="79e40-200">データを抽出して変換する</span><span class="sxs-lookup"><span data-stu-id="79e40-200">Extract and transform the data</span></span>
+### <a name="extract-and-transform-the-data"></a><span data-ttu-id="52b93-200">データを抽出して変換する</span><span class="sxs-lookup"><span data-stu-id="52b93-200">Extract and transform the data</span></span>
 
-1. <span data-ttu-id="79e40-201">次のコード行として `FeaturizeText` を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="79e40-201">Call `FeaturizeText` as the next line of code:</span></span>
+1. <span data-ttu-id="52b93-201">次のコード行として `FeaturizeText` を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="52b93-201">Call `FeaturizeText` as the next line of code:</span></span>
 
-    [!code-csharp[FeaturizeText](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#FeaturizeText "Featurize the text")]
+    [!code-csharp[FeaturizeText](./snippets/sentiment-analysis/csharp/Program.cs#FeaturizeText "Featurize the text")]
 
-    <span data-ttu-id="79e40-202">前のコードの `FeaturizeText()` メソッドでは、テキスト列 (`SentimentText`) を機械学習アルゴリズムから使用される数値キー型の `Features` 列に変換し、それを新しいデータセット列として追加します。</span><span class="sxs-lookup"><span data-stu-id="79e40-202">The `FeaturizeText()` method in the previous code converts the text column (`SentimentText`) into a numeric key type `Features` column used by the machine learning algorithm and adds it as a new dataset column:</span></span>
+    <span data-ttu-id="52b93-202">前のコードの `FeaturizeText()` メソッドでは、テキスト列 (`SentimentText`) を機械学習アルゴリズムから使用される数値キー型の `Features` 列に変換し、それを新しいデータセット列として追加します。</span><span class="sxs-lookup"><span data-stu-id="52b93-202">The `FeaturizeText()` method in the previous code converts the text column (`SentimentText`) into a numeric key type `Features` column used by the machine learning algorithm and adds it as a new dataset column:</span></span>
 
-    |<span data-ttu-id="79e40-203">SentimentText</span><span class="sxs-lookup"><span data-stu-id="79e40-203">SentimentText</span></span>                         |<span data-ttu-id="79e40-204">Sentiment</span><span class="sxs-lookup"><span data-stu-id="79e40-204">Sentiment</span></span> |<span data-ttu-id="79e40-205">フィーチャー</span><span class="sxs-lookup"><span data-stu-id="79e40-205">Features</span></span>              |
+    |<span data-ttu-id="52b93-203">SentimentText</span><span class="sxs-lookup"><span data-stu-id="52b93-203">SentimentText</span></span>                         |<span data-ttu-id="52b93-204">Sentiment</span><span class="sxs-lookup"><span data-stu-id="52b93-204">Sentiment</span></span> |<span data-ttu-id="52b93-205">フィーチャー</span><span class="sxs-lookup"><span data-stu-id="52b93-205">Features</span></span>              |
     |--------------------------------------|----------|----------------------|
-    |<span data-ttu-id="79e40-206">Waitress was a little slow in service.</span><span class="sxs-lookup"><span data-stu-id="79e40-206">Waitress was a little slow in service.</span></span>|    <span data-ttu-id="79e40-207">0</span><span class="sxs-lookup"><span data-stu-id="79e40-207">0</span></span>     |<span data-ttu-id="79e40-208">[0.76, 0.65, 0.44, …]</span><span class="sxs-lookup"><span data-stu-id="79e40-208">[0.76, 0.65, 0.44, …]</span></span> |
-    |<span data-ttu-id="79e40-209">Crust is not good.</span><span class="sxs-lookup"><span data-stu-id="79e40-209">Crust is not good.</span></span>                    |    <span data-ttu-id="79e40-210">0</span><span class="sxs-lookup"><span data-stu-id="79e40-210">0</span></span>     |<span data-ttu-id="79e40-211">[0.98, 0.43, 0.54, …]</span><span class="sxs-lookup"><span data-stu-id="79e40-211">[0.98, 0.43, 0.54, …]</span></span> |
-    |<span data-ttu-id="79e40-212">Wow...Loved this place.</span><span class="sxs-lookup"><span data-stu-id="79e40-212">Wow... Loved this place.</span></span>              |    <span data-ttu-id="79e40-213">1</span><span class="sxs-lookup"><span data-stu-id="79e40-213">1</span></span>     |<span data-ttu-id="79e40-214">[0.35, 0.73, 0.46, …]</span><span class="sxs-lookup"><span data-stu-id="79e40-214">[0.35, 0.73, 0.46, …]</span></span> |
-    |<span data-ttu-id="79e40-215">Service was very prompt.</span><span class="sxs-lookup"><span data-stu-id="79e40-215">Service was very prompt.</span></span>              |    <span data-ttu-id="79e40-216">1</span><span class="sxs-lookup"><span data-stu-id="79e40-216">1</span></span>     |<span data-ttu-id="79e40-217">[0.39, 0, 0.75, …]</span><span class="sxs-lookup"><span data-stu-id="79e40-217">[0.39, 0, 0.75, …]</span></span>    |
+    |<span data-ttu-id="52b93-206">Waitress was a little slow in service.</span><span class="sxs-lookup"><span data-stu-id="52b93-206">Waitress was a little slow in service.</span></span>|    <span data-ttu-id="52b93-207">0</span><span class="sxs-lookup"><span data-stu-id="52b93-207">0</span></span>     |<span data-ttu-id="52b93-208">[0.76, 0.65, 0.44, …]</span><span class="sxs-lookup"><span data-stu-id="52b93-208">[0.76, 0.65, 0.44, …]</span></span> |
+    |<span data-ttu-id="52b93-209">Crust is not good.</span><span class="sxs-lookup"><span data-stu-id="52b93-209">Crust is not good.</span></span>                    |    <span data-ttu-id="52b93-210">0</span><span class="sxs-lookup"><span data-stu-id="52b93-210">0</span></span>     |<span data-ttu-id="52b93-211">[0.98, 0.43, 0.54, …]</span><span class="sxs-lookup"><span data-stu-id="52b93-211">[0.98, 0.43, 0.54, …]</span></span> |
+    |<span data-ttu-id="52b93-212">Wow...Loved this place.</span><span class="sxs-lookup"><span data-stu-id="52b93-212">Wow... Loved this place.</span></span>              |    <span data-ttu-id="52b93-213">1</span><span class="sxs-lookup"><span data-stu-id="52b93-213">1</span></span>     |<span data-ttu-id="52b93-214">[0.35, 0.73, 0.46, …]</span><span class="sxs-lookup"><span data-stu-id="52b93-214">[0.35, 0.73, 0.46, …]</span></span> |
+    |<span data-ttu-id="52b93-215">Service was very prompt.</span><span class="sxs-lookup"><span data-stu-id="52b93-215">Service was very prompt.</span></span>              |    <span data-ttu-id="52b93-216">1</span><span class="sxs-lookup"><span data-stu-id="52b93-216">1</span></span>     |<span data-ttu-id="52b93-217">[0.39, 0, 0.75, …]</span><span class="sxs-lookup"><span data-stu-id="52b93-217">[0.39, 0, 0.75, …]</span></span>    |
 
-### <a name="add-a-learning-algorithm"></a><span data-ttu-id="79e40-218">学習アルゴリズムを追加する</span><span class="sxs-lookup"><span data-stu-id="79e40-218">Add a learning algorithm</span></span>
+### <a name="add-a-learning-algorithm"></a><span data-ttu-id="52b93-218">学習アルゴリズムを追加する</span><span class="sxs-lookup"><span data-stu-id="52b93-218">Add a learning algorithm</span></span>
 
-<span data-ttu-id="79e40-219">このアプリでは、データの項目または行を分類する分類アルゴリズムを使用しています。</span><span class="sxs-lookup"><span data-stu-id="79e40-219">This app uses a classification algorithm that categorizes items or rows of data.</span></span> <span data-ttu-id="79e40-220">このアプリでは、Web サイトのコメントが肯定的または否定的に分類されるので、二項分類タスクが使用されます。</span><span class="sxs-lookup"><span data-stu-id="79e40-220">The app categorizes website comments as either positive or negative, so use the binary classification task.</span></span>
+<span data-ttu-id="52b93-219">このアプリでは、データの項目または行を分類する分類アルゴリズムを使用しています。</span><span class="sxs-lookup"><span data-stu-id="52b93-219">This app uses a classification algorithm that categorizes items or rows of data.</span></span> <span data-ttu-id="52b93-220">このアプリでは、Web サイトのコメントが肯定的または否定的に分類されるので、二項分類タスクが使用されます。</span><span class="sxs-lookup"><span data-stu-id="52b93-220">The app categorizes website comments as either positive or negative, so use the binary classification task.</span></span>
 
-<span data-ttu-id="79e40-221">データ変換定義に機械学習タスクを追加するには、`BuildAndTrainModel()` の次のコード行に以下を追加します。</span><span class="sxs-lookup"><span data-stu-id="79e40-221">Append the machine learning task to the data transformation definitions by adding the following as the next line of code in `BuildAndTrainModel()`:</span></span>
+<span data-ttu-id="52b93-221">データ変換定義に機械学習タスクを追加するには、`BuildAndTrainModel()` の次のコード行に以下を追加します。</span><span class="sxs-lookup"><span data-stu-id="52b93-221">Append the machine learning task to the data transformation definitions by adding the following as the next line of code in `BuildAndTrainModel()`:</span></span>
 
-[!code-csharp[SdcaLogisticRegressionBinaryTrainer](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#AddTrainer "Add a SdcaLogisticRegressionBinaryTrainer")]
+[!code-csharp[SdcaLogisticRegressionBinaryTrainer](./snippets/sentiment-analysis/csharp/Program.cs#AddTrainer "Add a SdcaLogisticRegressionBinaryTrainer")]
 
-<span data-ttu-id="79e40-222">[SdcaLogisticRegressionBinaryTrainer](xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer) が分類トレーニング アルゴリズムです。</span><span class="sxs-lookup"><span data-stu-id="79e40-222">The [SdcaLogisticRegressionBinaryTrainer](xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer) is your classification training algorithm.</span></span> <span data-ttu-id="79e40-223">これは `estimator` に追加されます。また、特徴付けされた `SentimentText` (`Features`) と `Label` 入力パラメーターを受け取って履歴データから学習します。</span><span class="sxs-lookup"><span data-stu-id="79e40-223">This is appended to the `estimator` and accepts the featurized `SentimentText` (`Features`) and the `Label` input parameters to learn from the historic data.</span></span>
+<span data-ttu-id="52b93-222">[SdcaLogisticRegressionBinaryTrainer](xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer) が分類トレーニング アルゴリズムです。</span><span class="sxs-lookup"><span data-stu-id="52b93-222">The [SdcaLogisticRegressionBinaryTrainer](xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer) is your classification training algorithm.</span></span> <span data-ttu-id="52b93-223">これは `estimator` に追加されます。また、特徴付けされた `SentimentText` (`Features`) と `Label` 入力パラメーターを受け取って履歴データから学習します。</span><span class="sxs-lookup"><span data-stu-id="52b93-223">This is appended to the `estimator` and accepts the featurized `SentimentText` (`Features`) and the `Label` input parameters to learn from the historic data.</span></span>
 
-### <a name="train-the-model"></a><span data-ttu-id="79e40-224">モデルをトレーニングする</span><span class="sxs-lookup"><span data-stu-id="79e40-224">Train the model</span></span>
+### <a name="train-the-model"></a><span data-ttu-id="52b93-224">モデルをトレーニングする</span><span class="sxs-lookup"><span data-stu-id="52b93-224">Train the model</span></span>
 
-<span data-ttu-id="79e40-225">`BuildAndTrainModel()` メソッドの次のコード行として以下を追加して、モデルを `splitTrainSet` データに適合させ、トレーニング済みモデルを返します。</span><span class="sxs-lookup"><span data-stu-id="79e40-225">Fit the model to the `splitTrainSet` data and return the trained model by adding the following as the next line of code in the `BuildAndTrainModel()` method:</span></span>
+<span data-ttu-id="52b93-225">`BuildAndTrainModel()` メソッドの次のコード行として以下を追加して、モデルを `splitTrainSet` データに適合させ、トレーニング済みモデルを返します。</span><span class="sxs-lookup"><span data-stu-id="52b93-225">Fit the model to the `splitTrainSet` data and return the trained model by adding the following as the next line of code in the `BuildAndTrainModel()` method:</span></span>
 
-[!code-csharp[TrainModel](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#TrainModel "Train the model")]
+[!code-csharp[TrainModel](./snippets/sentiment-analysis/csharp/Program.cs#TrainModel "Train the model")]
 
-<span data-ttu-id="79e40-226">[Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) メソッドでは、データセットを変換して、トレーニングを適用することにより、モデルがトレーニングされます。</span><span class="sxs-lookup"><span data-stu-id="79e40-226">The [Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) method trains your model by transforming the dataset and applying the training.</span></span>
+<span data-ttu-id="52b93-226">[Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) メソッドでは、データセットを変換して、トレーニングを適用することにより、モデルがトレーニングされます。</span><span class="sxs-lookup"><span data-stu-id="52b93-226">The [Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) method trains your model by transforming the dataset and applying the training.</span></span>
 
-### <a name="return-the-model-trained-to-use-for-evaluation"></a><span data-ttu-id="79e40-227">評価に使用する、トレーニング済みのモデルを返す</span><span class="sxs-lookup"><span data-stu-id="79e40-227">Return the model trained to use for evaluation</span></span>
+### <a name="return-the-model-trained-to-use-for-evaluation"></a><span data-ttu-id="52b93-227">評価に使用する、トレーニング済みのモデルを返す</span><span class="sxs-lookup"><span data-stu-id="52b93-227">Return the model trained to use for evaluation</span></span>
 
- <span data-ttu-id="79e40-228">`BuildAndTrainModel()` メソッドの終了時にモデルを返します。</span><span class="sxs-lookup"><span data-stu-id="79e40-228">Return the model at the end of the `BuildAndTrainModel()` method:</span></span>
+ <span data-ttu-id="52b93-228">`BuildAndTrainModel()` メソッドの終了時にモデルを返します。</span><span class="sxs-lookup"><span data-stu-id="52b93-228">Return the model at the end of the `BuildAndTrainModel()` method:</span></span>
 
-[!code-csharp[ReturnModel](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#ReturnModel "Return the model")]
+[!code-csharp[ReturnModel](./snippets/sentiment-analysis/csharp/Program.cs#ReturnModel "Return the model")]
 
-## <a name="evaluate-the-model"></a><span data-ttu-id="79e40-229">モデルを評価する</span><span class="sxs-lookup"><span data-stu-id="79e40-229">Evaluate the model</span></span>
+## <a name="evaluate-the-model"></a><span data-ttu-id="52b93-229">モデルを評価する</span><span class="sxs-lookup"><span data-stu-id="52b93-229">Evaluate the model</span></span>
 
-<span data-ttu-id="79e40-230">モデルのトレーニングが終わったら、テスト データを使用してモデルのパフォーマンスを検証します。</span><span class="sxs-lookup"><span data-stu-id="79e40-230">After your model is trained, use your test data validate the model's performance.</span></span>
+<span data-ttu-id="52b93-230">モデルのトレーニングが終わったら、テスト データを使用してモデルのパフォーマンスを検証します。</span><span class="sxs-lookup"><span data-stu-id="52b93-230">After your model is trained, use your test data validate the model's performance.</span></span>
 
-1. <span data-ttu-id="79e40-231">`BuildAndTrainModel()` の直後に、次のコードを使用して `Evaluate()` メソッドを作成します。</span><span class="sxs-lookup"><span data-stu-id="79e40-231">Create the `Evaluate()` method, just after `BuildAndTrainModel()`, with the following code:</span></span>
+1. <span data-ttu-id="52b93-231">`BuildAndTrainModel()` の直後に、次のコードを使用して `Evaluate()` メソッドを作成します。</span><span class="sxs-lookup"><span data-stu-id="52b93-231">Create the `Evaluate()` method, just after `BuildAndTrainModel()`, with the following code:</span></span>
 
     ```csharp
     public static void Evaluate(MLContext mlContext, ITransformer model, IDataView splitTestSet)
@@ -223,44 +223,44 @@ ms.locfileid: "85803249"
     }
     ```
 
-    <span data-ttu-id="79e40-232">`Evaluate()` メソッドは次のタスクを実行します。</span><span class="sxs-lookup"><span data-stu-id="79e40-232">The `Evaluate()` method executes the following tasks:</span></span>
+    <span data-ttu-id="52b93-232">`Evaluate()` メソッドは次のタスクを実行します。</span><span class="sxs-lookup"><span data-stu-id="52b93-232">The `Evaluate()` method executes the following tasks:</span></span>
 
-    - <span data-ttu-id="79e40-233">テスト データ セットを読み込む。</span><span class="sxs-lookup"><span data-stu-id="79e40-233">Loads the test dataset.</span></span>
-    - <span data-ttu-id="79e40-234">BinaryClassification エバリュエーターを作成します。</span><span class="sxs-lookup"><span data-stu-id="79e40-234">Creates the BinaryClassification evaluator.</span></span>
-    - <span data-ttu-id="79e40-235">モデルを評価し、メトリックを作成する。</span><span class="sxs-lookup"><span data-stu-id="79e40-235">Evaluates the model and creates metrics.</span></span>
-    - <span data-ttu-id="79e40-236">メトリックを表示する。</span><span class="sxs-lookup"><span data-stu-id="79e40-236">Displays the metrics.</span></span>
+    - <span data-ttu-id="52b93-233">テスト データ セットを読み込む。</span><span class="sxs-lookup"><span data-stu-id="52b93-233">Loads the test dataset.</span></span>
+    - <span data-ttu-id="52b93-234">BinaryClassification エバリュエーターを作成します。</span><span class="sxs-lookup"><span data-stu-id="52b93-234">Creates the BinaryClassification evaluator.</span></span>
+    - <span data-ttu-id="52b93-235">モデルを評価し、メトリックを作成する。</span><span class="sxs-lookup"><span data-stu-id="52b93-235">Evaluates the model and creates metrics.</span></span>
+    - <span data-ttu-id="52b93-236">メトリックを表示する。</span><span class="sxs-lookup"><span data-stu-id="52b93-236">Displays the metrics.</span></span>
 
-2. <span data-ttu-id="79e40-237">`BuildAndTrainModel()` メソッドの呼び出しのすぐ下に、次のコードを使用して、`Main()` メソッドからの新しいメソッドの呼び出しを追加します。</span><span class="sxs-lookup"><span data-stu-id="79e40-237">Add a call to the new method from the `Main()` method, right under the `BuildAndTrainModel()` method call, using the following code:</span></span>
+2. <span data-ttu-id="52b93-237">`BuildAndTrainModel()` メソッドの呼び出しのすぐ下に、次のコードを使用して、`Main()` メソッドからの新しいメソッドの呼び出しを追加します。</span><span class="sxs-lookup"><span data-stu-id="52b93-237">Add a call to the new method from the `Main()` method, right under the `BuildAndTrainModel()` method call, using the following code:</span></span>
 
-    [!code-csharp[CallEvaluate](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#CallEvaluate "Call the Evaluate method")]
+    [!code-csharp[CallEvaluate](./snippets/sentiment-analysis/csharp/Program.cs#CallEvaluate "Call the Evaluate method")]
 
-3. <span data-ttu-id="79e40-238">次のコードを `Evaluate()` に追加して、`splitTestSet` データを変換します。</span><span class="sxs-lookup"><span data-stu-id="79e40-238">Transform the `splitTestSet` data by adding the following code to `Evaluate()`:</span></span>
+3. <span data-ttu-id="52b93-238">次のコードを `Evaluate()` に追加して、`splitTestSet` データを変換します。</span><span class="sxs-lookup"><span data-stu-id="52b93-238">Transform the `splitTestSet` data by adding the following code to `Evaluate()`:</span></span>
 
-    [!code-csharp[PredictWithTransformer](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#TransformData "Predict using the Transformer")]
+    [!code-csharp[PredictWithTransformer](./snippets/sentiment-analysis/csharp/Program.cs#TransformData "Predict using the Transformer")]
 
-    <span data-ttu-id="79e40-239">前のコードでは、[Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) メソッドを使用して、テスト データセットの指定した複数の入力行に対して予測しています。</span><span class="sxs-lookup"><span data-stu-id="79e40-239">The previous code uses the [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) method to make predictions for multiple provided input rows of a test dataset.</span></span>
+    <span data-ttu-id="52b93-239">前のコードでは、[Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) メソッドを使用して、テスト データセットの指定した複数の入力行に対して予測しています。</span><span class="sxs-lookup"><span data-stu-id="52b93-239">The previous code uses the [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) method to make predictions for multiple provided input rows of a test dataset.</span></span>
 
-4. <span data-ttu-id="79e40-240">`Evaluate()` メソッドの次のコード行として以下を追加して、モデルを評価します。</span><span class="sxs-lookup"><span data-stu-id="79e40-240">Evaluate the model by adding the following as the next line of code in the `Evaluate()` method:</span></span>
+4. <span data-ttu-id="52b93-240">`Evaluate()` メソッドの次のコード行として以下を追加して、モデルを評価します。</span><span class="sxs-lookup"><span data-stu-id="52b93-240">Evaluate the model by adding the following as the next line of code in the `Evaluate()` method:</span></span>
 
-    [!code-csharp[ComputeMetrics](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#Evaluate "Compute Metrics")]
+    [!code-csharp[ComputeMetrics](./snippets/sentiment-analysis/csharp/Program.cs#Evaluate "Compute Metrics")]
 
-<span data-ttu-id="79e40-241">予測セット (`predictions`) ができると、[Evaluate()](xref:Microsoft.ML.BinaryClassificationCatalog.Evaluate%2A)メソッドによってモデルが評価され、予測値とテスト データセット内の実際の `Labels` が比較され、モデルのパフォーマンスに関する [CalibratedBinaryClassificationMetrics](xref:Microsoft.ML.Data.CalibratedBinaryClassificationMetrics) オブジェクトが返されます。</span><span class="sxs-lookup"><span data-stu-id="79e40-241">Once you have the prediction set (`predictions`), the [Evaluate()](xref:Microsoft.ML.BinaryClassificationCatalog.Evaluate%2A) method assesses the model, which compares the predicted values with the actual `Labels` in the test dataset and returns a [CalibratedBinaryClassificationMetrics](xref:Microsoft.ML.Data.CalibratedBinaryClassificationMetrics) object on how the model is performing.</span></span>
+<span data-ttu-id="52b93-241">予測セット (`predictions`) ができると、[Evaluate()](xref:Microsoft.ML.BinaryClassificationCatalog.Evaluate%2A)メソッドによってモデルが評価され、予測値とテスト データセット内の実際の `Labels` が比較され、モデルのパフォーマンスに関する [CalibratedBinaryClassificationMetrics](xref:Microsoft.ML.Data.CalibratedBinaryClassificationMetrics) オブジェクトが返されます。</span><span class="sxs-lookup"><span data-stu-id="52b93-241">Once you have the prediction set (`predictions`), the [Evaluate()](xref:Microsoft.ML.BinaryClassificationCatalog.Evaluate%2A) method assesses the model, which compares the predicted values with the actual `Labels` in the test dataset and returns a [CalibratedBinaryClassificationMetrics](xref:Microsoft.ML.Data.CalibratedBinaryClassificationMetrics) object on how the model is performing.</span></span>
 
-### <a name="displaying-the-metrics-for-model-validation"></a><span data-ttu-id="79e40-242">モデル検証のためのメトリックを表示する</span><span class="sxs-lookup"><span data-stu-id="79e40-242">Displaying the metrics for model validation</span></span>
+### <a name="displaying-the-metrics-for-model-validation"></a><span data-ttu-id="52b93-242">モデル検証のためのメトリックを表示する</span><span class="sxs-lookup"><span data-stu-id="52b93-242">Displaying the metrics for model validation</span></span>
 
-<span data-ttu-id="79e40-243">次のコードを使用してメトリックを表示します。</span><span class="sxs-lookup"><span data-stu-id="79e40-243">Use the following code to display the metrics:</span></span>
+<span data-ttu-id="52b93-243">次のコードを使用してメトリックを表示します。</span><span class="sxs-lookup"><span data-stu-id="52b93-243">Use the following code to display the metrics:</span></span>
 
-[!code-csharp[DisplayMetrics](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#DisplayMetrics "Display selected metrics")]
+[!code-csharp[DisplayMetrics](./snippets/sentiment-analysis/csharp/Program.cs#DisplayMetrics "Display selected metrics")]
 
-- <span data-ttu-id="79e40-244">`Accuracy` メトリックでは、モデルの正確度が取得されます。これは、テスト セットに含まれる正しい予測の割合です。</span><span class="sxs-lookup"><span data-stu-id="79e40-244">The `Accuracy` metric gets the accuracy of a model, which is the proportion of correct predictions in the test set.</span></span>
+- <span data-ttu-id="52b93-244">`Accuracy` メトリックでは、モデルの正確度が取得されます。これは、テスト セットに含まれる正しい予測の割合です。</span><span class="sxs-lookup"><span data-stu-id="52b93-244">The `Accuracy` metric gets the accuracy of a model, which is the proportion of correct predictions in the test set.</span></span>
 
-- <span data-ttu-id="79e40-245">`AreaUnderRocCurve` メトリックは、そのモデルで肯定的クラスと否定的クラスが正しく分類されている信用度を示します。</span><span class="sxs-lookup"><span data-stu-id="79e40-245">The `AreaUnderRocCurve` metric indicates how confident the model is correctly classifying the positive and negative classes.</span></span> <span data-ttu-id="79e40-246">`AreaUnderRocCurve` を可能な限り 1 に近づけることが目標です。</span><span class="sxs-lookup"><span data-stu-id="79e40-246">You want the `AreaUnderRocCurve` to be as close to one as possible.</span></span>
+- <span data-ttu-id="52b93-245">`AreaUnderRocCurve` メトリックは、そのモデルで肯定的クラスと否定的クラスが正しく分類されている信用度を示します。</span><span class="sxs-lookup"><span data-stu-id="52b93-245">The `AreaUnderRocCurve` metric indicates how confident the model is correctly classifying the positive and negative classes.</span></span> <span data-ttu-id="52b93-246">`AreaUnderRocCurve` を可能な限り 1 に近づけることが目標です。</span><span class="sxs-lookup"><span data-stu-id="52b93-246">You want the `AreaUnderRocCurve` to be as close to one as possible.</span></span>
 
-- <span data-ttu-id="79e40-247">`F1Score` メトリックでは、モデルの F1 スコアが取得されます。これは[精度](../resources/glossary.md#precision)と[再現率](../resources/glossary.md#recall)間のバランスのメジャーです。</span><span class="sxs-lookup"><span data-stu-id="79e40-247">The `F1Score` metric gets the model's F1 score, which is a measure of balance between [precision](../resources/glossary.md#precision) and [recall](../resources/glossary.md#recall).</span></span>  <span data-ttu-id="79e40-248">`F1Score` を可能な限り 1 に近づけることが目標です。</span><span class="sxs-lookup"><span data-stu-id="79e40-248">You want the `F1Score` to be as close to one as possible.</span></span>
+- <span data-ttu-id="52b93-247">`F1Score` メトリックでは、モデルの F1 スコアが取得されます。これは[精度](../resources/glossary.md#precision)と[再現率](../resources/glossary.md#recall)間のバランスのメジャーです。</span><span class="sxs-lookup"><span data-stu-id="52b93-247">The `F1Score` metric gets the model's F1 score, which is a measure of balance between [precision](../resources/glossary.md#precision) and [recall](../resources/glossary.md#recall).</span></span>  <span data-ttu-id="52b93-248">`F1Score` を可能な限り 1 に近づけることが目標です。</span><span class="sxs-lookup"><span data-stu-id="52b93-248">You want the `F1Score` to be as close to one as possible.</span></span>
 
-### <a name="predict-the-test-data-outcome"></a><span data-ttu-id="79e40-249">テスト データの結果を予測する</span><span class="sxs-lookup"><span data-stu-id="79e40-249">Predict the test data outcome</span></span>
+### <a name="predict-the-test-data-outcome"></a><span data-ttu-id="52b93-249">テスト データの結果を予測する</span><span class="sxs-lookup"><span data-stu-id="52b93-249">Predict the test data outcome</span></span>
 
-1. <span data-ttu-id="79e40-250">`Evaluate()` メソッドの直後に、次のコードを使用して `UseModelWithSingleItem()` メソッドを作成します。</span><span class="sxs-lookup"><span data-stu-id="79e40-250">Create the `UseModelWithSingleItem()` method, just after the `Evaluate()` method, using the following code:</span></span>
+1. <span data-ttu-id="52b93-250">`Evaluate()` メソッドの直後に、次のコードを使用して `UseModelWithSingleItem()` メソッドを作成します。</span><span class="sxs-lookup"><span data-stu-id="52b93-250">Create the `UseModelWithSingleItem()` method, just after the `Evaluate()` method, using the following code:</span></span>
 
     ```csharp
     private static void UseModelWithSingleItem(MLContext mlContext, ITransformer model)
@@ -269,45 +269,45 @@ ms.locfileid: "85803249"
     }
     ```
 
-    <span data-ttu-id="79e40-251">`UseModelWithSingleItem()` メソッドは次のタスクを実行します。</span><span class="sxs-lookup"><span data-stu-id="79e40-251">The `UseModelWithSingleItem()` method executes the following tasks:</span></span>
+    <span data-ttu-id="52b93-251">`UseModelWithSingleItem()` メソッドは次のタスクを実行します。</span><span class="sxs-lookup"><span data-stu-id="52b93-251">The `UseModelWithSingleItem()` method executes the following tasks:</span></span>
 
-    - <span data-ttu-id="79e40-252">テスト データの 1 つのコメントを作成する。</span><span class="sxs-lookup"><span data-stu-id="79e40-252">Creates a single comment of test data.</span></span>
-    - <span data-ttu-id="79e40-253">テスト データに基づいてセンチメントを予測する。</span><span class="sxs-lookup"><span data-stu-id="79e40-253">Predicts sentiment based on test data.</span></span>
-    - <span data-ttu-id="79e40-254">テスト データと予測をレポート用に結合する。</span><span class="sxs-lookup"><span data-stu-id="79e40-254">Combines test data and predictions for reporting.</span></span>
-    - <span data-ttu-id="79e40-255">予測された結果を表示する。</span><span class="sxs-lookup"><span data-stu-id="79e40-255">Displays the predicted results.</span></span>
+    - <span data-ttu-id="52b93-252">テスト データの 1 つのコメントを作成する。</span><span class="sxs-lookup"><span data-stu-id="52b93-252">Creates a single comment of test data.</span></span>
+    - <span data-ttu-id="52b93-253">テスト データに基づいてセンチメントを予測する。</span><span class="sxs-lookup"><span data-stu-id="52b93-253">Predicts sentiment based on test data.</span></span>
+    - <span data-ttu-id="52b93-254">テスト データと予測をレポート用に結合する。</span><span class="sxs-lookup"><span data-stu-id="52b93-254">Combines test data and predictions for reporting.</span></span>
+    - <span data-ttu-id="52b93-255">予測された結果を表示する。</span><span class="sxs-lookup"><span data-stu-id="52b93-255">Displays the predicted results.</span></span>
 
-2. <span data-ttu-id="79e40-256">`Evaluate()` メソッドの呼び出しのすぐ下に、次のコードを使用して、`Main()` メソッドからの新しいメソッドの呼び出しを追加します。</span><span class="sxs-lookup"><span data-stu-id="79e40-256">Add a call to the new method from the `Main()` method, right under the `Evaluate()` method call, using the following code:</span></span>
+2. <span data-ttu-id="52b93-256">`Evaluate()` メソッドの呼び出しのすぐ下に、次のコードを使用して、`Main()` メソッドからの新しいメソッドの呼び出しを追加します。</span><span class="sxs-lookup"><span data-stu-id="52b93-256">Add a call to the new method from the `Main()` method, right under the `Evaluate()` method call, using the following code:</span></span>
 
-    [!code-csharp[CallUseModelWithSingleItem](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#CallUseModelWithSingleItem "Call the UseModelWithSingleItem method")]
+    [!code-csharp[CallUseModelWithSingleItem](./snippets/sentiment-analysis/csharp/Program.cs#CallUseModelWithSingleItem "Call the UseModelWithSingleItem method")]
 
-3. <span data-ttu-id="79e40-257">次のコードを追加して、`UseModelWithSingleItem()` メソッドの 1 行目として作成します。</span><span class="sxs-lookup"><span data-stu-id="79e40-257">Add the following code to create as the first line in the `UseModelWithSingleItem()` Method:</span></span>
+3. <span data-ttu-id="52b93-257">次のコードを追加して、`UseModelWithSingleItem()` メソッドの 1 行目として作成します。</span><span class="sxs-lookup"><span data-stu-id="52b93-257">Add the following code to create as the first line in the `UseModelWithSingleItem()` Method:</span></span>
 
-    [!code-csharp[CreatePredictionEngine](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
+    [!code-csharp[CreatePredictionEngine](./snippets/sentiment-analysis/csharp/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
 
-    <span data-ttu-id="79e40-258">[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) は、データの 1 つのインスタンスに対して予測を実行できる便利な API です。</span><span class="sxs-lookup"><span data-stu-id="79e40-258">The [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) is a convenience API, which allows you to perform a prediction on a single instance of data.</span></span> <span data-ttu-id="79e40-259">[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) はスレッド セーフではありません。</span><span class="sxs-lookup"><span data-stu-id="79e40-259">[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) is not thread-safe.</span></span> <span data-ttu-id="79e40-260">シングル スレッド環境またはプロトタイプ環境で使用できます。</span><span class="sxs-lookup"><span data-stu-id="79e40-260">It's acceptable to use in single-threaded or prototype environments.</span></span> <span data-ttu-id="79e40-261">運用環境でパフォーマンスとスレッド セーフを向上させるには、`PredictionEnginePool` サービスを使用します。これにより、アプリケーション全体で使用するできる [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) オブジェクトの [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) が作成されます。</span><span class="sxs-lookup"><span data-stu-id="79e40-261">For improved performance and thread safety in production environments, use the `PredictionEnginePool` service, which creates an [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) of [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) objects for use throughout your application.</span></span> <span data-ttu-id="79e40-262">[ASP.NET Core Web API で `PredictionEnginePool` を使用する](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)方法については、こちらのガイドを参照してください。</span><span class="sxs-lookup"><span data-stu-id="79e40-262">See this guide on how to [use `PredictionEnginePool` in an ASP.NET Core Web API](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).</span></span>
+    <span data-ttu-id="52b93-258">[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) は、データの 1 つのインスタンスに対して予測を実行できる便利な API です。</span><span class="sxs-lookup"><span data-stu-id="52b93-258">The [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) is a convenience API, which allows you to perform a prediction on a single instance of data.</span></span> <span data-ttu-id="52b93-259">[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) はスレッド セーフではありません。</span><span class="sxs-lookup"><span data-stu-id="52b93-259">[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) is not thread-safe.</span></span> <span data-ttu-id="52b93-260">シングル スレッド環境またはプロトタイプ環境で使用できます。</span><span class="sxs-lookup"><span data-stu-id="52b93-260">It's acceptable to use in single-threaded or prototype environments.</span></span> <span data-ttu-id="52b93-261">運用環境でパフォーマンスとスレッド セーフを向上させるには、`PredictionEnginePool` サービスを使用します。これにより、アプリケーション全体で使用するできる [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) オブジェクトの [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) が作成されます。</span><span class="sxs-lookup"><span data-stu-id="52b93-261">For improved performance and thread safety in production environments, use the `PredictionEnginePool` service, which creates an [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) of [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) objects for use throughout your application.</span></span> <span data-ttu-id="52b93-262">[ASP.NET Core Web API で `PredictionEnginePool` を使用する](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)方法については、こちらのガイドを参照してください。</span><span class="sxs-lookup"><span data-stu-id="52b93-262">See this guide on how to [use `PredictionEnginePool` in an ASP.NET Core Web API](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="79e40-263">`PredictionEnginePool` サービスの拡張機能は、現在プレビュー段階です。</span><span class="sxs-lookup"><span data-stu-id="79e40-263">`PredictionEnginePool` service extension is currently in preview.</span></span>
+    > <span data-ttu-id="52b93-263">`PredictionEnginePool` サービスの拡張機能は、現在プレビュー段階です。</span><span class="sxs-lookup"><span data-stu-id="52b93-263">`PredictionEnginePool` service extension is currently in preview.</span></span>
 
-4. <span data-ttu-id="79e40-264">コメントを追加して、`UseModelWithSingleItem()` メソッドでトレーニングされたモデルの予測をテストします。これには `SentimentData` のインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="79e40-264">Add a comment to test the trained model's prediction in the `UseModelWithSingleItem()` method by creating an instance of `SentimentData`:</span></span>
+4. <span data-ttu-id="52b93-264">コメントを追加して、`UseModelWithSingleItem()` メソッドでトレーニングされたモデルの予測をテストします。これには `SentimentData` のインスタンスを作成します。</span><span class="sxs-lookup"><span data-stu-id="52b93-264">Add a comment to test the trained model's prediction in the `UseModelWithSingleItem()` method by creating an instance of `SentimentData`:</span></span>
 
-    [!code-csharp[PredictionData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
+    [!code-csharp[PredictionData](./snippets/sentiment-analysis/csharp/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
 
-5. <span data-ttu-id="79e40-265">`UseModelWithSingleItem()` メソッドの次のコード行として以下を追加して、テスト コメント データを [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) に渡します。</span><span class="sxs-lookup"><span data-stu-id="79e40-265">Pass the test comment data to the [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) by adding the following as the next lines of code in the `UseModelWithSingleItem()` method:</span></span>
+5. <span data-ttu-id="52b93-265">`UseModelWithSingleItem()` メソッドの次のコード行として以下を追加して、テスト コメント データを [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) に渡します。</span><span class="sxs-lookup"><span data-stu-id="52b93-265">Pass the test comment data to the [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) by adding the following as the next lines of code in the `UseModelWithSingleItem()` method:</span></span>
 
-    [!code-csharp[Predict](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#Predict "Create a prediction of sentiment")]
+    [!code-csharp[Predict](./snippets/sentiment-analysis/csharp/Program.cs#Predict "Create a prediction of sentiment")]
 
-    <span data-ttu-id="79e40-266">[Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) 関数では、データの 1 つの行に対して予測を行います。</span><span class="sxs-lookup"><span data-stu-id="79e40-266">The [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) function makes a prediction on a single row of data.</span></span>
+    <span data-ttu-id="52b93-266">[Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) 関数では、データの 1 つの行に対して予測を行います。</span><span class="sxs-lookup"><span data-stu-id="52b93-266">The [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) function makes a prediction on a single row of data.</span></span>
 
-6. <span data-ttu-id="79e40-267">次のコードを使用して、`SentimentText` とそれに対応するセンチメント予測を表示します。</span><span class="sxs-lookup"><span data-stu-id="79e40-267">Display `SentimentText` and corresponding sentiment prediction using the following code:</span></span>
+6. <span data-ttu-id="52b93-267">次のコードを使用して、`SentimentText` とそれに対応するセンチメント予測を表示します。</span><span class="sxs-lookup"><span data-stu-id="52b93-267">Display `SentimentText` and corresponding sentiment prediction using the following code:</span></span>
 
-    [!code-csharp[OutputPrediction](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#OutputPrediction "Display prediction output")]
+    [!code-csharp[OutputPrediction](./snippets/sentiment-analysis/csharp/Program.cs#OutputPrediction "Display prediction output")]
 
-## <a name="use-the-model-for-prediction"></a><span data-ttu-id="79e40-268">予測にモデルを使用する</span><span class="sxs-lookup"><span data-stu-id="79e40-268">Use the model for prediction</span></span>
+## <a name="use-the-model-for-prediction"></a><span data-ttu-id="52b93-268">予測にモデルを使用する</span><span class="sxs-lookup"><span data-stu-id="52b93-268">Use the model for prediction</span></span>
 
-### <a name="deploy-and-predict-batch-items"></a><span data-ttu-id="79e40-269">バッチ項目の展開と予測</span><span class="sxs-lookup"><span data-stu-id="79e40-269">Deploy and predict batch items</span></span>
+### <a name="deploy-and-predict-batch-items"></a><span data-ttu-id="52b93-269">バッチ項目の展開と予測</span><span class="sxs-lookup"><span data-stu-id="52b93-269">Deploy and predict batch items</span></span>
 
-1. <span data-ttu-id="79e40-270">`UseModelWithSingleItem()` メソッドの直後に、次のコードを使用して `UseModelWithBatchItems()` メソッドを作成します。</span><span class="sxs-lookup"><span data-stu-id="79e40-270">Create the `UseModelWithBatchItems()` method, just after the `UseModelWithSingleItem()` method, using the following code:</span></span>
+1. <span data-ttu-id="52b93-270">`UseModelWithSingleItem()` メソッドの直後に、次のコードを使用して `UseModelWithBatchItems()` メソッドを作成します。</span><span class="sxs-lookup"><span data-stu-id="52b93-270">Create the `UseModelWithBatchItems()` method, just after the `UseModelWithSingleItem()` method, using the following code:</span></span>
 
     ```csharp
     public static void UseModelWithBatchItems(MLContext mlContext, ITransformer model)
@@ -316,40 +316,40 @@ ms.locfileid: "85803249"
     }
     ```
 
-    <span data-ttu-id="79e40-271">`UseModelWithBatchItems()` メソッドは次のタスクを実行します。</span><span class="sxs-lookup"><span data-stu-id="79e40-271">The `UseModelWithBatchItems()` method executes the following tasks:</span></span>
+    <span data-ttu-id="52b93-271">`UseModelWithBatchItems()` メソッドは次のタスクを実行します。</span><span class="sxs-lookup"><span data-stu-id="52b93-271">The `UseModelWithBatchItems()` method executes the following tasks:</span></span>
 
-    - <span data-ttu-id="79e40-272">バッチ テスト データを作成します。</span><span class="sxs-lookup"><span data-stu-id="79e40-272">Creates batch test data.</span></span>
-    - <span data-ttu-id="79e40-273">テスト データに基づいてセンチメントを予測する。</span><span class="sxs-lookup"><span data-stu-id="79e40-273">Predicts sentiment based on test data.</span></span>
-    - <span data-ttu-id="79e40-274">テスト データと予測をレポート用に結合する。</span><span class="sxs-lookup"><span data-stu-id="79e40-274">Combines test data and predictions for reporting.</span></span>
-    - <span data-ttu-id="79e40-275">予測された結果を表示する。</span><span class="sxs-lookup"><span data-stu-id="79e40-275">Displays the predicted results.</span></span>
+    - <span data-ttu-id="52b93-272">バッチ テスト データを作成します。</span><span class="sxs-lookup"><span data-stu-id="52b93-272">Creates batch test data.</span></span>
+    - <span data-ttu-id="52b93-273">テスト データに基づいてセンチメントを予測する。</span><span class="sxs-lookup"><span data-stu-id="52b93-273">Predicts sentiment based on test data.</span></span>
+    - <span data-ttu-id="52b93-274">テスト データと予測をレポート用に結合する。</span><span class="sxs-lookup"><span data-stu-id="52b93-274">Combines test data and predictions for reporting.</span></span>
+    - <span data-ttu-id="52b93-275">予測された結果を表示する。</span><span class="sxs-lookup"><span data-stu-id="52b93-275">Displays the predicted results.</span></span>
 
-2. <span data-ttu-id="79e40-276">`UseModelWithSingleItem()` メソッドの呼び出しのすぐ下に、次のコードを使用して、`Main` メソッドからの新しいメソッドの呼び出しを追加します。</span><span class="sxs-lookup"><span data-stu-id="79e40-276">Add a call to the new method from the `Main` method, right under the `UseModelWithSingleItem()` method call, using the following code:</span></span>
+2. <span data-ttu-id="52b93-276">`UseModelWithSingleItem()` メソッドの呼び出しのすぐ下に、次のコードを使用して、`Main` メソッドからの新しいメソッドの呼び出しを追加します。</span><span class="sxs-lookup"><span data-stu-id="52b93-276">Add a call to the new method from the `Main` method, right under the `UseModelWithSingleItem()` method call, using the following code:</span></span>
 
-    [!code-csharp[CallPredictModelBatchItems](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#CallUseModelWithBatchItems "Call the CallUseModelWithBatchItems method")]
+    [!code-csharp[CallPredictModelBatchItems](./snippets/sentiment-analysis/csharp/Program.cs#CallUseModelWithBatchItems "Call the CallUseModelWithBatchItems method")]
 
-3. <span data-ttu-id="79e40-277">`UseModelWithBatchItems()` メソッドでトレーニングされるモデルの予測をテストするために、いくつかのコメントを追加します。</span><span class="sxs-lookup"><span data-stu-id="79e40-277">Add some comments to test the trained model's predictions in the `UseModelWithBatchItems()` method:</span></span>
+3. <span data-ttu-id="52b93-277">`UseModelWithBatchItems()` メソッドでトレーニングされるモデルの予測をテストするために、いくつかのコメントを追加します。</span><span class="sxs-lookup"><span data-stu-id="52b93-277">Add some comments to test the trained model's predictions in the `UseModelWithBatchItems()` method:</span></span>
 
-    [!code-csharp[PredictionData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#CreateTestIssues "Create test data for predictions")]
+    [!code-csharp[PredictionData](./snippets/sentiment-analysis/csharp/Program.cs#CreateTestIssues "Create test data for predictions")]
 
-### <a name="predict-comment-sentiment"></a><span data-ttu-id="79e40-278">コメントのセンチメントを予測する</span><span class="sxs-lookup"><span data-stu-id="79e40-278">Predict comment sentiment</span></span>
+### <a name="predict-comment-sentiment"></a><span data-ttu-id="52b93-278">コメントのセンチメントを予測する</span><span class="sxs-lookup"><span data-stu-id="52b93-278">Predict comment sentiment</span></span>
 
-<span data-ttu-id="79e40-279">モデルを使用し、[Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) メソッドを使用してコメント データのセンチメントを予測します。</span><span class="sxs-lookup"><span data-stu-id="79e40-279">Use the model to predict the comment data sentiment using the [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) method:</span></span>
+<span data-ttu-id="52b93-279">モデルを使用し、[Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) メソッドを使用してコメント データのセンチメントを予測します。</span><span class="sxs-lookup"><span data-stu-id="52b93-279">Use the model to predict the comment data sentiment using the [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) method:</span></span>
 
-[!code-csharp[Predict](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#Prediction "Create predictions of sentiments")]
+[!code-csharp[Predict](./snippets/sentiment-analysis/csharp/Program.cs#Prediction "Create predictions of sentiments")]
 
-### <a name="combine-and-display-the-predictions"></a><span data-ttu-id="79e40-280">予測を組み合わせて表示する</span><span class="sxs-lookup"><span data-stu-id="79e40-280">Combine and display the predictions</span></span>
+### <a name="combine-and-display-the-predictions"></a><span data-ttu-id="52b93-280">予測を組み合わせて表示する</span><span class="sxs-lookup"><span data-stu-id="52b93-280">Combine and display the predictions</span></span>
 
-<span data-ttu-id="79e40-281">次のコードを使用して、予測のヘッダーを作成します。</span><span class="sxs-lookup"><span data-stu-id="79e40-281">Create a header for the predictions using the following code:</span></span>
+<span data-ttu-id="52b93-281">次のコードを使用して、予測のヘッダーを作成します。</span><span class="sxs-lookup"><span data-stu-id="52b93-281">Create a header for the predictions using the following code:</span></span>
 
-[!code-csharp[OutputHeaders](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#AddInfoMessage "Display prediction outputs")]
+[!code-csharp[OutputHeaders](./snippets/sentiment-analysis/csharp/Program.cs#AddInfoMessage "Display prediction outputs")]
 
-<span data-ttu-id="79e40-282">`SentimentPrediction` は `SentimentData` から継承されているため、`Transform()` メソッドによって `SentimentText` に予測されたフィールドが設定されました。</span><span class="sxs-lookup"><span data-stu-id="79e40-282">Because `SentimentPrediction` is inherited from `SentimentData`, the `Transform()` method populated `SentimentText` with the predicted fields.</span></span> <span data-ttu-id="79e40-283">ML.NET プロセスが進むにつれて、各コンポーネントに列が追加されます。これで、結果が簡単に表示されるようになります。</span><span class="sxs-lookup"><span data-stu-id="79e40-283">As the ML.NET process processes, each component adds columns, and this makes it easy to display the results:</span></span>
+<span data-ttu-id="52b93-282">`SentimentPrediction` は `SentimentData` から継承されているため、`Transform()` メソッドによって `SentimentText` に予測されたフィールドが設定されました。</span><span class="sxs-lookup"><span data-stu-id="52b93-282">Because `SentimentPrediction` is inherited from `SentimentData`, the `Transform()` method populated `SentimentText` with the predicted fields.</span></span> <span data-ttu-id="52b93-283">ML.NET プロセスが進むにつれて、各コンポーネントに列が追加されます。これで、結果が簡単に表示されるようになります。</span><span class="sxs-lookup"><span data-stu-id="52b93-283">As the ML.NET process processes, each component adds columns, and this makes it easy to display the results:</span></span>
 
-[!code-csharp[DisplayPredictions](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#DisplayResults "Display the predictions")]
+[!code-csharp[DisplayPredictions](./snippets/sentiment-analysis/csharp/Program.cs#DisplayResults "Display the predictions")]
 
-## <a name="results"></a><span data-ttu-id="79e40-284">結果</span><span class="sxs-lookup"><span data-stu-id="79e40-284">Results</span></span>
+## <a name="results"></a><span data-ttu-id="52b93-284">結果</span><span class="sxs-lookup"><span data-stu-id="52b93-284">Results</span></span>
 
-<span data-ttu-id="79e40-285">結果は以下のようになるはずです。</span><span class="sxs-lookup"><span data-stu-id="79e40-285">Your results should be similar to the following.</span></span> <span data-ttu-id="79e40-286">処理中にメッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="79e40-286">During processing, messages are displayed.</span></span> <span data-ttu-id="79e40-287">警告または処理メッセージが表示されることがありますが、</span><span class="sxs-lookup"><span data-stu-id="79e40-287">You may see warnings, or processing messages.</span></span> <span data-ttu-id="79e40-288">わかりやすくするために、それらは次の結果から削除してあります。</span><span class="sxs-lookup"><span data-stu-id="79e40-288">These have been removed from the following results for clarity.</span></span>
+<span data-ttu-id="52b93-285">結果は以下のようになるはずです。</span><span class="sxs-lookup"><span data-stu-id="52b93-285">Your results should be similar to the following.</span></span> <span data-ttu-id="52b93-286">処理中にメッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="52b93-286">During processing, messages are displayed.</span></span> <span data-ttu-id="52b93-287">警告または処理メッセージが表示されることがありますが、</span><span class="sxs-lookup"><span data-stu-id="52b93-287">You may see warnings, or processing messages.</span></span> <span data-ttu-id="52b93-288">わかりやすくするために、それらは次の結果から削除してあります。</span><span class="sxs-lookup"><span data-stu-id="52b93-288">These have been removed from the following results for clarity.</span></span>
 
 ```console
 Model quality metrics evaluation
@@ -376,25 +376,25 @@ Press any key to continue . . .
 
 ```
 
-<span data-ttu-id="79e40-289">おめでとうございます!</span><span class="sxs-lookup"><span data-stu-id="79e40-289">Congratulations!</span></span> <span data-ttu-id="79e40-290">これで、メッセージのセンチメントを分類および予測するための機械学習モデルをビルドできました。</span><span class="sxs-lookup"><span data-stu-id="79e40-290">You've now successfully built a machine learning model for classifying and predicting messages sentiment.</span></span>
+<span data-ttu-id="52b93-289">おめでとうございます!</span><span class="sxs-lookup"><span data-stu-id="52b93-289">Congratulations!</span></span> <span data-ttu-id="52b93-290">これで、メッセージのセンチメントを分類および予測するための機械学習モデルをビルドできました。</span><span class="sxs-lookup"><span data-stu-id="52b93-290">You've now successfully built a machine learning model for classifying and predicting messages sentiment.</span></span>
 
-<span data-ttu-id="79e40-291">優れたモデルの構築は、反復的なプロセスです。</span><span class="sxs-lookup"><span data-stu-id="79e40-291">Building successful models is an iterative process.</span></span> <span data-ttu-id="79e40-292">このチュートリアルでは、モデルのトレーニングを短時間で実行するために小さなデータセットを使用しているため、このモデルの品質は最初は低くなっています。</span><span class="sxs-lookup"><span data-stu-id="79e40-292">This model has initial lower quality as the tutorial uses small datasets to provide quick model training.</span></span> <span data-ttu-id="79e40-293">このモデルの品質に満足できなければ、大規模なトレーニング データセットを使用するか、別のトレーニング アルゴリズムとアルゴリズムごとに異なる[ハイパーパラメーター](../resources/glossary.md#hyperparameter)を選択してモデルの改良を試すことができます。</span><span class="sxs-lookup"><span data-stu-id="79e40-293">If you aren't satisfied with the model quality, you can try to improve it by providing larger training datasets or by choosing different training algorithms with different [hyper-parameters](../resources/glossary.md#hyperparameter) for each algorithm.</span></span>
+<span data-ttu-id="52b93-291">優れたモデルの構築は、反復的なプロセスです。</span><span class="sxs-lookup"><span data-stu-id="52b93-291">Building successful models is an iterative process.</span></span> <span data-ttu-id="52b93-292">このチュートリアルでは、モデルのトレーニングを短時間で実行するために小さなデータセットを使用しているため、このモデルの品質は最初は低くなっています。</span><span class="sxs-lookup"><span data-stu-id="52b93-292">This model has initial lower quality as the tutorial uses small datasets to provide quick model training.</span></span> <span data-ttu-id="52b93-293">このモデルの品質に満足できなければ、大規模なトレーニング データセットを使用するか、別のトレーニング アルゴリズムとアルゴリズムごとに異なる[ハイパーパラメーター](../resources/glossary.md#hyperparameter)を選択してモデルの改良を試すことができます。</span><span class="sxs-lookup"><span data-stu-id="52b93-293">If you aren't satisfied with the model quality, you can try to improve it by providing larger training datasets or by choosing different training algorithms with different [hyper-parameters](../resources/glossary.md#hyperparameter) for each algorithm.</span></span>
 
-<span data-ttu-id="79e40-294">このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) リポジトリで確認できます。</span><span class="sxs-lookup"><span data-stu-id="79e40-294">You can find the source code for this tutorial at the [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) repository.</span></span>
+<span data-ttu-id="52b93-294">このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) リポジトリで確認できます。</span><span class="sxs-lookup"><span data-stu-id="52b93-294">You can find the source code for this tutorial at the [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) repository.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="79e40-295">次の手順</span><span class="sxs-lookup"><span data-stu-id="79e40-295">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="52b93-295">次の手順</span><span class="sxs-lookup"><span data-stu-id="52b93-295">Next steps</span></span>
 
-<span data-ttu-id="79e40-296">このチュートリアルでは、次の作業を行う方法を学びました。</span><span class="sxs-lookup"><span data-stu-id="79e40-296">In this tutorial, you learned how to:</span></span>
+<span data-ttu-id="52b93-296">このチュートリアルでは、次の作業を行う方法を学びました。</span><span class="sxs-lookup"><span data-stu-id="52b93-296">In this tutorial, you learned how to:</span></span>
 > [!div class="checklist"]
 >
-> - <span data-ttu-id="79e40-297">コンソール アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="79e40-297">Create a console application</span></span>
-> - <span data-ttu-id="79e40-298">データの準備</span><span class="sxs-lookup"><span data-stu-id="79e40-298">Prepare data</span></span>
-> - <span data-ttu-id="79e40-299">データを読み込む</span><span class="sxs-lookup"><span data-stu-id="79e40-299">Load the data</span></span>
-> - <span data-ttu-id="79e40-300">モデルを構築してトレーニングする</span><span class="sxs-lookup"><span data-stu-id="79e40-300">Build and train the model</span></span>
-> - <span data-ttu-id="79e40-301">モデルを評価する</span><span class="sxs-lookup"><span data-stu-id="79e40-301">Evaluate the model</span></span>
-> - <span data-ttu-id="79e40-302">モデルを使用して予測する</span><span class="sxs-lookup"><span data-stu-id="79e40-302">Use the model to make a prediction</span></span>
-> - <span data-ttu-id="79e40-303">結果を見る</span><span class="sxs-lookup"><span data-stu-id="79e40-303">See the results</span></span>
+> - <span data-ttu-id="52b93-297">コンソール アプリケーションを作成する</span><span class="sxs-lookup"><span data-stu-id="52b93-297">Create a console application</span></span>
+> - <span data-ttu-id="52b93-298">データの準備</span><span class="sxs-lookup"><span data-stu-id="52b93-298">Prepare data</span></span>
+> - <span data-ttu-id="52b93-299">データを読み込む</span><span class="sxs-lookup"><span data-stu-id="52b93-299">Load the data</span></span>
+> - <span data-ttu-id="52b93-300">モデルを構築してトレーニングする</span><span class="sxs-lookup"><span data-stu-id="52b93-300">Build and train the model</span></span>
+> - <span data-ttu-id="52b93-301">モデルを評価する</span><span class="sxs-lookup"><span data-stu-id="52b93-301">Evaluate the model</span></span>
+> - <span data-ttu-id="52b93-302">モデルを使用して予測する</span><span class="sxs-lookup"><span data-stu-id="52b93-302">Use the model to make a prediction</span></span>
+> - <span data-ttu-id="52b93-303">結果を見る</span><span class="sxs-lookup"><span data-stu-id="52b93-303">See the results</span></span>
 
-<span data-ttu-id="79e40-304">さらに詳しく学習するには、次のチュートリアルに進んでください。</span><span class="sxs-lookup"><span data-stu-id="79e40-304">Advance to the next tutorial to learn more</span></span>
+<span data-ttu-id="52b93-304">さらに詳しく学習するには、次のチュートリアルに進んでください。</span><span class="sxs-lookup"><span data-stu-id="52b93-304">Advance to the next tutorial to learn more</span></span>
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="79e40-305">問題の分類</span><span class="sxs-lookup"><span data-stu-id="79e40-305">Issue Classification</span></span>](github-issue-classification.md)
+> [<span data-ttu-id="52b93-305">問題の分類</span><span class="sxs-lookup"><span data-stu-id="52b93-305">Issue Classification</span></span>](github-issue-classification.md)
