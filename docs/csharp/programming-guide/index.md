@@ -1,5 +1,6 @@
 ---
 title: C# プログラミング ガイド
+description: これらのリソースを使用して、C# 言語の重要な機能と、.NET 経由でアクセスできる C# の機能に関する詳細を確認してください。
 ms.date: 05/02/2017
 f1_keywords:
 - cs.langref
@@ -9,81 +10,81 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: df69d895dee51f1bad1fb6164fcb18996ee3eef4
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: e2127b91efb5a77497ce22e0f2934fab98f015af
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241657"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473878"
 ---
-# <a name="c-programming-guide"></a><span data-ttu-id="81bb4-102">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="81bb4-102">C# programming guide</span></span>
+# <a name="c-programming-guide"></a><span data-ttu-id="386dd-103">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="386dd-103">C# programming guide</span></span>
 
-<span data-ttu-id="81bb4-103">このセクションでは、C# 言語の重要な機能に関する詳細と、.NET 経由でアクセスできる C# の機能について説明します。</span><span class="sxs-lookup"><span data-stu-id="81bb4-103">This section provides detailed information on key C# language features and features accessible to C# through .NET.</span></span>  
+<span data-ttu-id="386dd-104">このセクションでは、C# 言語の重要な機能と、.NET 経由でアクセスできる C# の機能の詳細について説明します。</span><span class="sxs-lookup"><span data-stu-id="386dd-104">This section provides detailed information on key C# language features and features accessible to C# through .NET.</span></span>  
   
- <span data-ttu-id="81bb4-104">このセクションの大部分は、C# と一般的なプログラミングの概念について、ある程度の知識を持っていることを前提として説明されています。</span><span class="sxs-lookup"><span data-stu-id="81bb4-104">Most of this section assumes that you already know something about C# and general programming concepts.</span></span> <span data-ttu-id="81bb4-105">プログラミングや C# のまったくの初心者の方は、[C# チュートリアルの概要](../tutorials/intro-to-csharp/index.md) に関するページや [.NET In-Browser Tutorial](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)(ブラウザーでの .NET のチュートリアル) を参照してください。プログラミングの予備知識は必要ありません。</span><span class="sxs-lookup"><span data-stu-id="81bb4-105">If you are a complete beginner with programming or with C#, you might want to visit the [Introduction to C# Tutorials](../tutorials/intro-to-csharp/index.md) or [.NET In-Browser Tutorial](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1), where no prior programming knowledge is required.</span></span>  
+ <span data-ttu-id="386dd-105">このセクションの大部分では、お客様が C# と一般的なプログラミングの概念について、ある程度の知識を持っていることを前提としています。</span><span class="sxs-lookup"><span data-stu-id="386dd-105">Most of this section assumes that you already know something about C# and general programming concepts.</span></span> <span data-ttu-id="386dd-106">プログラミングや C# についてまったくの初心者の方は、プログラミングの予備知識が必要ない [C# の概要に関するチュートリアル](../tutorials/intro-to-csharp/index.md)や「[ブラウザーでの .NET のチュートリアル](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)」を参照することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="386dd-106">If you are a complete beginner with programming or with C#, you might want to visit the [Introduction to C# Tutorials](../tutorials/intro-to-csharp/index.md) or [.NET In-Browser Tutorial](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1), where no prior programming knowledge is required.</span></span>  
   
- <span data-ttu-id="81bb4-106">特定のキーワード、演算子、およびプリプロセッサ ディレクティブについては、「[C# リファレンス](../language-reference/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="81bb4-106">For information about specific keywords, operators, and preprocessor directives, see [C# Reference](../language-reference/index.md).</span></span> <span data-ttu-id="81bb4-107">C# 言語の仕様については、「[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="81bb4-107">For information about the C# Language Specification, see [C# Language Specification](/dotnet/csharp/language-reference/language-specification/introduction).</span></span>  
+ <span data-ttu-id="386dd-107">特定のキーワード、演算子、およびプリプロセッサ ディレクティブについては、「[C# リファレンス](../language-reference/index.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="386dd-107">For information about specific keywords, operators, and preprocessor directives, see [C# Reference](../language-reference/index.md).</span></span> <span data-ttu-id="386dd-108">C# 言語の仕様については、[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)に関する記事をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="386dd-108">For information about the C# Language Specification, see [C# Language Specification](/dotnet/csharp/language-reference/language-specification/introduction).</span></span>  
   
-## <a name="program-sections"></a><span data-ttu-id="81bb4-108">プログラムのセクション</span><span class="sxs-lookup"><span data-stu-id="81bb4-108">Program sections</span></span>
+## <a name="program-sections"></a><span data-ttu-id="386dd-109">プログラム セクション</span><span class="sxs-lookup"><span data-stu-id="386dd-109">Program sections</span></span>
 
-[<span data-ttu-id="81bb4-109">インサイド C# プログラム</span><span class="sxs-lookup"><span data-stu-id="81bb4-109">Inside a C# Program</span></span>](./inside-a-program/index.md)  
+[<span data-ttu-id="386dd-110">インサイド C# プログラム</span><span class="sxs-lookup"><span data-stu-id="386dd-110">Inside a C# Program</span></span>](./inside-a-program/index.md)  
   
-[<span data-ttu-id="81bb4-110">Main() とコマンドライン引数</span><span class="sxs-lookup"><span data-stu-id="81bb4-110">Main() and Command-Line Arguments</span></span>](./main-and-command-args/index.md)  
+[<span data-ttu-id="386dd-111">Main() とコマンドライン引数</span><span class="sxs-lookup"><span data-stu-id="386dd-111">Main() and Command-Line Arguments</span></span>](./main-and-command-args/index.md)  
 
-## <a name="language-sections"></a><span data-ttu-id="81bb4-111">言語セクション</span><span class="sxs-lookup"><span data-stu-id="81bb4-111">Language Sections</span></span>
+## <a name="language-sections"></a><span data-ttu-id="386dd-112">言語セクション</span><span class="sxs-lookup"><span data-stu-id="386dd-112">Language Sections</span></span>
 
-[<span data-ttu-id="81bb4-112">ステートメント、式、および演算子</span><span class="sxs-lookup"><span data-stu-id="81bb4-112">Statements, Expressions, and Operators</span></span>](./statements-expressions-operators/index.md)  
+[<span data-ttu-id="386dd-113">ステートメント、式、および演算子</span><span class="sxs-lookup"><span data-stu-id="386dd-113">Statements, Expressions, and Operators</span></span>](./statements-expressions-operators/index.md)  
 
- [<span data-ttu-id="81bb4-113">型</span><span class="sxs-lookup"><span data-stu-id="81bb4-113">Types</span></span>](./types/index.md)  
+ [<span data-ttu-id="386dd-114">型</span><span class="sxs-lookup"><span data-stu-id="386dd-114">Types</span></span>](./types/index.md)  
 
- [<span data-ttu-id="81bb4-114">クラスと構造体</span><span class="sxs-lookup"><span data-stu-id="81bb4-114">Classes and Structs</span></span>](./classes-and-structs/index.md)  
+ [<span data-ttu-id="386dd-115">クラスと構造体</span><span class="sxs-lookup"><span data-stu-id="386dd-115">Classes and Structs</span></span>](./classes-and-structs/index.md)  
   
- [<span data-ttu-id="81bb4-115">インターフェイス</span><span class="sxs-lookup"><span data-stu-id="81bb4-115">Interfaces</span></span>](./interfaces/index.md)  
+ [<span data-ttu-id="386dd-116">インターフェイス</span><span class="sxs-lookup"><span data-stu-id="386dd-116">Interfaces</span></span>](./interfaces/index.md)  
 
- [<span data-ttu-id="81bb4-116">デリゲート</span><span class="sxs-lookup"><span data-stu-id="81bb4-116">Delegates</span></span>](./delegates/index.md)  
+ [<span data-ttu-id="386dd-117">デリゲート</span><span class="sxs-lookup"><span data-stu-id="386dd-117">Delegates</span></span>](./delegates/index.md)  
 
- [<span data-ttu-id="81bb4-117">配列</span><span class="sxs-lookup"><span data-stu-id="81bb4-117">Arrays</span></span>](./arrays/index.md)  
+ [<span data-ttu-id="386dd-118">配列</span><span class="sxs-lookup"><span data-stu-id="386dd-118">Arrays</span></span>](./arrays/index.md)  
   
- [<span data-ttu-id="81bb4-118">文字列</span><span class="sxs-lookup"><span data-stu-id="81bb4-118">Strings</span></span>](./strings/index.md)  
+ [<span data-ttu-id="386dd-119">文字列</span><span class="sxs-lookup"><span data-stu-id="386dd-119">Strings</span></span>](./strings/index.md)  
   
- [<span data-ttu-id="81bb4-119">プロパティ</span><span class="sxs-lookup"><span data-stu-id="81bb4-119">Properties</span></span>](./classes-and-structs/properties.md)  
+ [<span data-ttu-id="386dd-120">プロパティ</span><span class="sxs-lookup"><span data-stu-id="386dd-120">Properties</span></span>](./classes-and-structs/properties.md)  
   
- [<span data-ttu-id="81bb4-120">インデクサー</span><span class="sxs-lookup"><span data-stu-id="81bb4-120">Indexers</span></span>](./indexers/index.md)  
+ [<span data-ttu-id="386dd-121">インデクサー</span><span class="sxs-lookup"><span data-stu-id="386dd-121">Indexers</span></span>](./indexers/index.md)  
   
- [<span data-ttu-id="81bb4-121">イベント</span><span class="sxs-lookup"><span data-stu-id="81bb4-121">Events</span></span>](./events/index.md)  
+ [<span data-ttu-id="386dd-122">イベント</span><span class="sxs-lookup"><span data-stu-id="386dd-122">Events</span></span>](./events/index.md)  
   
- [<span data-ttu-id="81bb4-122">ジェネリック</span><span class="sxs-lookup"><span data-stu-id="81bb4-122">Generics</span></span>](./generics/index.md)  
+ [<span data-ttu-id="386dd-123">ジェネリック</span><span class="sxs-lookup"><span data-stu-id="386dd-123">Generics</span></span>](./generics/index.md)  
   
- [<span data-ttu-id="81bb4-123">反復子</span><span class="sxs-lookup"><span data-stu-id="81bb4-123">Iterators</span></span>](./concepts/iterators.md)
+ [<span data-ttu-id="386dd-124">反復子</span><span class="sxs-lookup"><span data-stu-id="386dd-124">Iterators</span></span>](./concepts/iterators.md)
   
- [<span data-ttu-id="81bb4-124">LINQ クエリ式</span><span class="sxs-lookup"><span data-stu-id="81bb4-124">LINQ Query Expressions</span></span>](../linq/index.md)  
+ [<span data-ttu-id="386dd-125">LINQ クエリ式</span><span class="sxs-lookup"><span data-stu-id="386dd-125">LINQ Query Expressions</span></span>](../linq/index.md)  
   
- [<span data-ttu-id="81bb4-125">ラムダ式</span><span class="sxs-lookup"><span data-stu-id="81bb4-125">Lambda Expressions</span></span>](./statements-expressions-operators/lambda-expressions.md)  
+ [<span data-ttu-id="386dd-126">ラムダ式</span><span class="sxs-lookup"><span data-stu-id="386dd-126">Lambda Expressions</span></span>](./statements-expressions-operators/lambda-expressions.md)  
   
- [<span data-ttu-id="81bb4-126">名前空間</span><span class="sxs-lookup"><span data-stu-id="81bb4-126">Namespaces</span></span>](./namespaces/index.md)  
+ [<span data-ttu-id="386dd-127">名前空間</span><span class="sxs-lookup"><span data-stu-id="386dd-127">Namespaces</span></span>](./namespaces/index.md)  
   
- [<span data-ttu-id="81bb4-127">アンセーフ コードとポインター</span><span class="sxs-lookup"><span data-stu-id="81bb4-127">Unsafe Code and Pointers</span></span>](./unsafe-code-pointers/index.md)  
+ [<span data-ttu-id="386dd-128">アンセーフ コードとポインター</span><span class="sxs-lookup"><span data-stu-id="386dd-128">Unsafe Code and Pointers</span></span>](./unsafe-code-pointers/index.md)  
   
- [<span data-ttu-id="81bb4-128">XML ドキュメント コメント</span><span class="sxs-lookup"><span data-stu-id="81bb4-128">XML Documentation Comments</span></span>](./xmldoc/index.md)  
+ [<span data-ttu-id="386dd-129">XML ドキュメント コメント</span><span class="sxs-lookup"><span data-stu-id="386dd-129">XML Documentation Comments</span></span>](./xmldoc/index.md)  
   
-## <a name="platform-sections"></a><span data-ttu-id="81bb4-129">プラットフォーム セクション</span><span class="sxs-lookup"><span data-stu-id="81bb4-129">Platform Sections</span></span>
+## <a name="platform-sections"></a><span data-ttu-id="386dd-130">プラットフォーム セクション</span><span class="sxs-lookup"><span data-stu-id="386dd-130">Platform Sections</span></span>
 
- [<span data-ttu-id="81bb4-130">アプリケーション ドメイン</span><span class="sxs-lookup"><span data-stu-id="81bb4-130">Application Domains</span></span>](../../framework/app-domains/application-domains.md)  
+ [<span data-ttu-id="386dd-131">アプリケーション ドメイン</span><span class="sxs-lookup"><span data-stu-id="386dd-131">Application Domains</span></span>](../../framework/app-domains/application-domains.md)  
   
- [<span data-ttu-id="81bb4-131">.NET のアセンブリ</span><span class="sxs-lookup"><span data-stu-id="81bb4-131">Assemblies in .NET</span></span>](../../standard/assembly/index.md)  
+ [<span data-ttu-id="386dd-132">.NET のアセンブリ</span><span class="sxs-lookup"><span data-stu-id="386dd-132">Assemblies in .NET</span></span>](../../standard/assembly/index.md)  
   
- [<span data-ttu-id="81bb4-132">属性</span><span class="sxs-lookup"><span data-stu-id="81bb4-132">Attributes</span></span>](./concepts/attributes/index.md)  
+ [<span data-ttu-id="386dd-133">属性</span><span class="sxs-lookup"><span data-stu-id="386dd-133">Attributes</span></span>](./concepts/attributes/index.md)  
   
- [<span data-ttu-id="81bb4-133">コレクション</span><span class="sxs-lookup"><span data-stu-id="81bb4-133">Collections</span></span>](./concepts/collections.md)  
+ [<span data-ttu-id="386dd-134">コレクション</span><span class="sxs-lookup"><span data-stu-id="386dd-134">Collections</span></span>](./concepts/collections.md)  
   
- [<span data-ttu-id="81bb4-134">例外と例外処理</span><span class="sxs-lookup"><span data-stu-id="81bb4-134">Exceptions and Exception Handling</span></span>](./exceptions/index.md)  
+ [<span data-ttu-id="386dd-135">例外と例外処理</span><span class="sxs-lookup"><span data-stu-id="386dd-135">Exceptions and Exception Handling</span></span>](./exceptions/index.md)  
   
- [<span data-ttu-id="81bb4-135">ファイル システムとレジストリ (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="81bb4-135">File System and the Registry (C# Programming Guide)</span></span>](./file-system/index.md)  
+ [<span data-ttu-id="386dd-136">ファイル システムとレジストリ (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="386dd-136">File System and the Registry (C# Programming Guide)</span></span>](./file-system/index.md)  
   
- [<span data-ttu-id="81bb4-136">相互運用性</span><span class="sxs-lookup"><span data-stu-id="81bb4-136">Interoperability</span></span>](./interop/index.md)  
+ [<span data-ttu-id="386dd-137">相互運用性</span><span class="sxs-lookup"><span data-stu-id="386dd-137">Interoperability</span></span>](./interop/index.md)  
   
- [<span data-ttu-id="81bb4-137">リフレクション</span><span class="sxs-lookup"><span data-stu-id="81bb4-137">Reflection</span></span>](./concepts/reflection.md)  
+ [<span data-ttu-id="386dd-138">リフレクション</span><span class="sxs-lookup"><span data-stu-id="386dd-138">Reflection</span></span>](./concepts/reflection.md)  
   
-## <a name="see-also"></a><span data-ttu-id="81bb4-138">関連項目</span><span class="sxs-lookup"><span data-stu-id="81bb4-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="386dd-139">関連項目</span><span class="sxs-lookup"><span data-stu-id="386dd-139">See also</span></span>
 
-- [<span data-ttu-id="81bb4-139">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="81bb4-139">C# Reference</span></span>](../language-reference/index.md)
+- [<span data-ttu-id="386dd-140">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="386dd-140">C# Reference</span></span>](../language-reference/index.md)
