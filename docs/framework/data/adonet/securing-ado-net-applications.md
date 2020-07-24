@@ -2,56 +2,62 @@
 title: アプリケーションの保護
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: c1bdf4329665e4d29a47c26fb7dba8eb41c1cc3a
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 1e08bb2386dff5d824d46aba652609ec5a373008
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980029"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374521"
 ---
-# <a name="securing-adonet-applications"></a><span data-ttu-id="ecbb8-102">ADO.NET アプリケーションのセキュリティ保護</span><span class="sxs-lookup"><span data-stu-id="ecbb8-102">Securing ADO.NET Applications</span></span>
-<span data-ttu-id="ecbb8-103">ユーザー入力の検証を怠るなど、コーディング時に陥りやすい基本的なミスを防ぐだけでは、安全な ADO.NET アプリケーションを作成することはできません。</span><span class="sxs-lookup"><span data-stu-id="ecbb8-103">Writing a secure ADO.NET application involves more than avoiding common coding pitfalls such as not validating user input.</span></span> <span data-ttu-id="ecbb8-104">データにアクセスするアプリケーションには、機密データの取得、操作、破壊など、攻撃者に攻略される可能性がある障害点が多数あります。</span><span class="sxs-lookup"><span data-stu-id="ecbb8-104">An application that accesses data has many potential points of failure that an attacker can exploit to retrieve, manipulate, or destroy sensitive data.</span></span> <span data-ttu-id="ecbb8-105">そのため、アプリケーションの設計フェーズで行う脅威のモデリングのプロセスから、アプリケーションの最終的な配置と継続的な保守に至るまで、セキュリティのすべての側面を理解することが重要です。</span><span class="sxs-lookup"><span data-stu-id="ecbb8-105">It is therefore important to understand all aspects of security, from the process of threat modeling during the design phase of your application, to its eventual deployment and ongoing maintenance.</span></span>  
-  
- <span data-ttu-id="ecbb8-106">.NET Framework には、データベース アプリケーションのセキュリティを確保し、管理するのに有用なクラス、サービス、およびツールが多数用意されています。</span><span class="sxs-lookup"><span data-stu-id="ecbb8-106">The .NET Framework provides many useful classes, services, and tools for securing and administering database applications.</span></span> <span data-ttu-id="ecbb8-107">共通言語ランタイム (CLR) によって、コードを実行するためのタイプ セーフな環境が実現され、それと同時に、コード アクセス セキュリティ (CAS) によって、マネージド コードのアクセス許可はより制限されています。</span><span class="sxs-lookup"><span data-stu-id="ecbb8-107">The common language runtime (CLR) provides a type-safe environment for code to run in, with code access security (CAS) to restrict further the permissions of managed code.</span></span> <span data-ttu-id="ecbb8-108">攻撃者によってもたらされる可能性のある損害は、安全なデータ アクセスのためのコーディング方法に従うことによって最小限に抑えることができます。</span><span class="sxs-lookup"><span data-stu-id="ecbb8-108">Following secure data access coding practices limits the damage that can be inflicted by a potential attacker.</span></span>  
-  
- <span data-ttu-id="ecbb8-109">データベースなどのアンマネージ リソースを扱う場合、安全なコードを作成したとしても、自ら招いたセキュリティ ホールを防ぐことはできません。</span><span class="sxs-lookup"><span data-stu-id="ecbb8-109">Writing secure code does not guard against self-inflicted security holes when working with unmanaged resources such as databases.</span></span> <span data-ttu-id="ecbb8-110">SQL Server を含め、ほとんどのサーバー データベースには、正しく実装することによってセキュリティを強化できる独自のセキュリティ システムがあります。</span><span class="sxs-lookup"><span data-stu-id="ecbb8-110">Most server databases, such as SQL Server, have their own security systems, which enhance security when implemented correctly.</span></span> <span data-ttu-id="ecbb8-111">しかし、データ ソースがいかに堅牢なセキュリティ システムを備えていたとしても、それが適切に構成されていなければ攻撃を防ぐことはできません。</span><span class="sxs-lookup"><span data-stu-id="ecbb8-111">However, even a data source with a robust security system can be victimized in an attack if it is not configured appropriately.</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="ecbb8-112">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="ecbb8-112">In This Section</span></span>  
- [<span data-ttu-id="ecbb8-113">セキュリティの概要</span><span class="sxs-lookup"><span data-stu-id="ecbb8-113">Security Overview</span></span>](security-overview.md)  
- <span data-ttu-id="ecbb8-114">安全な ADO.NET アプリケーションを設計するための推奨事項について説明します。</span><span class="sxs-lookup"><span data-stu-id="ecbb8-114">Provides recommendations for designing secure ADO.NET applications.</span></span>  
-  
- [<span data-ttu-id="ecbb8-115">安全なデータ アクセス</span><span class="sxs-lookup"><span data-stu-id="ecbb8-115">Secure Data Access</span></span>](secure-data-access.md)  
- <span data-ttu-id="ecbb8-116">セキュリティで保護されたデータ ソースのデータを使用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="ecbb8-116">Describes how to work with data from a secured data source.</span></span>  
-  
- [<span data-ttu-id="ecbb8-117">安全なクライアント アプリケーション</span><span class="sxs-lookup"><span data-stu-id="ecbb8-117">Secure Client Applications</span></span>](secure-client-applications.md)  
- <span data-ttu-id="ecbb8-118">クライアント アプリケーションのセキュリティに関する考慮事項について説明します。</span><span class="sxs-lookup"><span data-stu-id="ecbb8-118">Describes security considerations for client applications.</span></span>  
-  
- [<span data-ttu-id="ecbb8-119">コード アクセス セキュリティと ADO.NET</span><span class="sxs-lookup"><span data-stu-id="ecbb8-119">Code Access Security and ADO.NET</span></span>](code-access-security.md)  
- <span data-ttu-id="ecbb8-120">CAS を使用して ADO.NET コードを保護する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="ecbb8-120">Describes how CAS can help protect ADO.NET code.</span></span> <span data-ttu-id="ecbb8-121">部分信頼の使用方法についても説明します。</span><span class="sxs-lookup"><span data-stu-id="ecbb8-121">Also discusses how to work with partial trust.</span></span>  
-  
- [<span data-ttu-id="ecbb8-122">プライバシーとデータ セキュリティ</span><span class="sxs-lookup"><span data-stu-id="ecbb8-122">Privacy and Data Security</span></span>](privacy-and-data-security.md)  
- <span data-ttu-id="ecbb8-123">ADO.NET アプリケーションの暗号化オプションについて説明します。</span><span class="sxs-lookup"><span data-stu-id="ecbb8-123">Describes encryption options for ADO.NET applications.</span></span>  
-  
-## <a name="related-sections"></a><span data-ttu-id="ecbb8-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="ecbb8-124">Related Sections</span></span>  
- [<span data-ttu-id="ecbb8-125">SQL Server のセキュリティ</span><span class="sxs-lookup"><span data-stu-id="ecbb8-125">SQL Server Security</span></span>](./sql/sql-server-security.md)  
- <span data-ttu-id="ecbb8-126">開発者の観点から SQL Server のセキュリティ機能について説明します。</span><span class="sxs-lookup"><span data-stu-id="ecbb8-126">Describes SQL Server security features from a developer's perspective.</span></span>  
-  
- [<span data-ttu-id="ecbb8-127">セキュリティの考慮事項</span><span class="sxs-lookup"><span data-stu-id="ecbb8-127">Security Considerations</span></span>](./ef/security-considerations.md)  
- <span data-ttu-id="ecbb8-128">Entity Framework アプリケーションのセキュリティについて説明します。</span><span class="sxs-lookup"><span data-stu-id="ecbb8-128">Describes security for Entity Framework applications.</span></span>  
-  
- [<span data-ttu-id="ecbb8-129">セキュリティ</span><span class="sxs-lookup"><span data-stu-id="ecbb8-129">Security</span></span>](../../../standard/security/index.md)  
- <span data-ttu-id="ecbb8-130">.NET のセキュリティをあらゆる観点から説明したトピックへのリンクが含まれています。</span><span class="sxs-lookup"><span data-stu-id="ecbb8-130">Contains links to topics describing all aspects of security in .NET.</span></span>  
-  
- <span data-ttu-id="ecbb8-131">[セキュリティ ツール](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="ecbb8-131">[Security Tools](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))</span></span>  
- <span data-ttu-id="ecbb8-132">セキュリティ保護およびセキュリティ ポリシーの管理に使用する .NET Framework ツールについて説明します。</span><span class="sxs-lookup"><span data-stu-id="ecbb8-132">.NET Framework tools for securing and administering security policy.</span></span>  
-  
- <span data-ttu-id="ecbb8-133">[セキュリティで保護されたアプリケーションを作成するためのリソース](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="ecbb8-133">[Resources for Creating Secure Applications](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))</span></span>  
- <span data-ttu-id="ecbb8-134">安全なアプリケーションを作成するためのトピックへのリンク集です。</span><span class="sxs-lookup"><span data-stu-id="ecbb8-134">Provides links to topics for creating secure applications.</span></span>  
-  
- [<span data-ttu-id="ecbb8-135">セキュリティ参考文献</span><span class="sxs-lookup"><span data-stu-id="ecbb8-135">Security Bibliography</span></span>](/visualstudio/ide/securing-applications)  
- <span data-ttu-id="ecbb8-136">オンラインまたは出版物として提供されている外部リソースへのリンク集です。</span><span class="sxs-lookup"><span data-stu-id="ecbb8-136">Provides links to external resources available online and in print.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="ecbb8-137">関連項目</span><span class="sxs-lookup"><span data-stu-id="ecbb8-137">See also</span></span>
+# <a name="securing-adonet-applications"></a><span data-ttu-id="d2cf9-102">ADO.NET アプリケーションのセキュリティ保護</span><span class="sxs-lookup"><span data-stu-id="d2cf9-102">Securing ADO.NET applications</span></span>
 
-- [<span data-ttu-id="ecbb8-138">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="ecbb8-138">ADO.NET</span></span>](index.md)
-- [<span data-ttu-id="ecbb8-139">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="ecbb8-139">ADO.NET Overview</span></span>](ado-net-overview.md)
+<span data-ttu-id="d2cf9-103">ユーザー入力の検証を怠るなど、コーディング時に陥りやすい基本的なミスを防ぐだけでは、安全な ADO.NET アプリケーションを作成することはできません。</span><span class="sxs-lookup"><span data-stu-id="d2cf9-103">Writing a secure ADO.NET application involves more than avoiding common coding pitfalls such as not validating user input.</span></span> <span data-ttu-id="d2cf9-104">データにアクセスするアプリケーションには、機密データの取得、操作、破壊など、攻撃者に攻略される可能性がある障害点が多数あります。</span><span class="sxs-lookup"><span data-stu-id="d2cf9-104">An application that accesses data has many potential points of failure that an attacker can exploit to retrieve, manipulate, or destroy sensitive data.</span></span> <span data-ttu-id="d2cf9-105">そのため、アプリケーションの設計フェーズで行う脅威のモデリングのプロセスから、アプリケーションの最終的な配置と継続的な保守に至るまで、セキュリティのすべての側面を理解することが重要です。</span><span class="sxs-lookup"><span data-stu-id="d2cf9-105">It is therefore important to understand all aspects of security, from the process of threat modeling during the design phase of your application, to its eventual deployment and ongoing maintenance.</span></span>  
+  
+<span data-ttu-id="d2cf9-106">.NET Framework には、データベース アプリケーションのセキュリティを確保し、管理するのに有用なクラス、サービス、およびツールが多数用意されています。</span><span class="sxs-lookup"><span data-stu-id="d2cf9-106">The .NET Framework provides many useful classes, services, and tools for securing and administering database applications.</span></span> <span data-ttu-id="d2cf9-107">共通言語ランタイム (CLR) によって、コードを実行するためのタイプ セーフな環境が実現され、それと同時に、コード アクセス セキュリティ (CAS) によって、マネージド コードのアクセス許可はより制限されています。</span><span class="sxs-lookup"><span data-stu-id="d2cf9-107">The common language runtime (CLR) provides a type-safe environment for code to run in, with code access security (CAS) to restrict further the permissions of managed code.</span></span> <span data-ttu-id="d2cf9-108">攻撃者によってもたらされる可能性のある損害は、安全なデータ アクセスのためのコーディング方法に従うことによって最小限に抑えることができます。</span><span class="sxs-lookup"><span data-stu-id="d2cf9-108">Following secure data access coding practices limits the damage that can be inflicted by a potential attacker.</span></span>  
+  
+<span data-ttu-id="d2cf9-109">データベースなどのアンマネージ リソースを扱う場合、安全なコードを作成したとしても、自ら招いたセキュリティ ホールを防ぐことはできません。</span><span class="sxs-lookup"><span data-stu-id="d2cf9-109">Writing secure code does not guard against self-inflicted security holes when working with unmanaged resources such as databases.</span></span> <span data-ttu-id="d2cf9-110">SQL Server を含め、ほとんどのサーバー データベースには、正しく実装することによってセキュリティを強化できる独自のセキュリティ システムがあります。</span><span class="sxs-lookup"><span data-stu-id="d2cf9-110">Most server databases, such as SQL Server, have their own security systems, which enhance security when implemented correctly.</span></span> <span data-ttu-id="d2cf9-111">しかし、データ ソースがいかに堅牢なセキュリティ システムを備えていたとしても、それが適切に構成されていなければ攻撃を防ぐことはできません。</span><span class="sxs-lookup"><span data-stu-id="d2cf9-111">However, even a data source with a robust security system can be victimized in an attack if it is not configured appropriately.</span></span>  
+  
+## <a name="in-this-section"></a><span data-ttu-id="d2cf9-112">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="d2cf9-112">In this section</span></span>
+
+ [<span data-ttu-id="d2cf9-113">セキュリティの概要</span><span class="sxs-lookup"><span data-stu-id="d2cf9-113">Security Overview</span></span>](security-overview.md)  
+ <span data-ttu-id="d2cf9-114">安全な ADO.NET アプリケーションを設計するための推奨事項について説明します。</span><span class="sxs-lookup"><span data-stu-id="d2cf9-114">Provides recommendations for designing secure ADO.NET applications.</span></span>  
+  
+ [<span data-ttu-id="d2cf9-115">安全なデータ アクセス</span><span class="sxs-lookup"><span data-stu-id="d2cf9-115">Secure Data Access</span></span>](secure-data-access.md)  
+ <span data-ttu-id="d2cf9-116">セキュリティで保護されたデータ ソースのデータを使用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="d2cf9-116">Describes how to work with data from a secured data source.</span></span>  
+  
+ [<span data-ttu-id="d2cf9-117">安全なクライアント アプリケーション</span><span class="sxs-lookup"><span data-stu-id="d2cf9-117">Secure Client Applications</span></span>](secure-client-applications.md)  
+ <span data-ttu-id="d2cf9-118">クライアント アプリケーションのセキュリティに関する考慮事項について説明します。</span><span class="sxs-lookup"><span data-stu-id="d2cf9-118">Describes security considerations for client applications.</span></span>  
+  
+ [<span data-ttu-id="d2cf9-119">コード アクセス セキュリティと ADO.NET</span><span class="sxs-lookup"><span data-stu-id="d2cf9-119">Code Access Security and ADO.NET</span></span>](code-access-security.md)  
+ <span data-ttu-id="d2cf9-120">CAS を使用して ADO.NET コードを保護する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="d2cf9-120">Describes how CAS can help protect ADO.NET code.</span></span> <span data-ttu-id="d2cf9-121">部分信頼の使用方法についても説明します。</span><span class="sxs-lookup"><span data-stu-id="d2cf9-121">Also discusses how to work with partial trust.</span></span>  
+  
+ [<span data-ttu-id="d2cf9-122">プライバシーとデータ セキュリティ</span><span class="sxs-lookup"><span data-stu-id="d2cf9-122">Privacy and Data Security</span></span>](privacy-and-data-security.md)  
+ <span data-ttu-id="d2cf9-123">ADO.NET アプリケーションの暗号化オプションについて説明します。</span><span class="sxs-lookup"><span data-stu-id="d2cf9-123">Describes encryption options for ADO.NET applications.</span></span>  
+  
+## <a name="related-sections"></a><span data-ttu-id="d2cf9-124">関連項目</span><span class="sxs-lookup"><span data-stu-id="d2cf9-124">Related sections</span></span>
+
+ [<span data-ttu-id="d2cf9-125">DataSet と DataTable のセキュリティ ガイダンス</span><span class="sxs-lookup"><span data-stu-id="d2cf9-125">DataSet and DataTable security guidance</span></span>](dataset-datatable-dataview/security-guidance.md)  
+ <span data-ttu-id="d2cf9-126"><xref:System.Data.DataSet> と <xref:System.Data.DataTable> に関するセキュリティ ガイダンスを提供します。</span><span class="sxs-lookup"><span data-stu-id="d2cf9-126">Provides security guidance for <xref:System.Data.DataSet> and <xref:System.Data.DataTable>.</span></span>
+
+ [<span data-ttu-id="d2cf9-127">SQL Server のセキュリティ</span><span class="sxs-lookup"><span data-stu-id="d2cf9-127">SQL Server Security</span></span>](./sql/sql-server-security.md)  
+ <span data-ttu-id="d2cf9-128">開発者の観点から SQL Server のセキュリティ機能について説明します。</span><span class="sxs-lookup"><span data-stu-id="d2cf9-128">Describes SQL Server security features from a developer's perspective.</span></span>  
+  
+ [<span data-ttu-id="d2cf9-129">セキュリティの考慮事項</span><span class="sxs-lookup"><span data-stu-id="d2cf9-129">Security Considerations</span></span>](./ef/security-considerations.md)  
+ <span data-ttu-id="d2cf9-130">Entity Framework アプリケーションのセキュリティについて説明します。</span><span class="sxs-lookup"><span data-stu-id="d2cf9-130">Describes security for Entity Framework applications.</span></span>  
+  
+ [<span data-ttu-id="d2cf9-131">セキュリティ</span><span class="sxs-lookup"><span data-stu-id="d2cf9-131">Security</span></span>](../../../standard/security/index.md)  
+ <span data-ttu-id="d2cf9-132">.NET のセキュリティをあらゆる観点から説明した記事へのリンクが含まれています。</span><span class="sxs-lookup"><span data-stu-id="d2cf9-132">Contains links to articles describing all aspects of security in .NET.</span></span>  
+  
+ <span data-ttu-id="d2cf9-133">[セキュリティ ツール](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="d2cf9-133">[Security Tools](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))</span></span>  
+ <span data-ttu-id="d2cf9-134">セキュリティ保護およびセキュリティ ポリシーの管理に使用する .NET Framework ツールについて説明します。</span><span class="sxs-lookup"><span data-stu-id="d2cf9-134">.NET Framework tools for securing and administering security policy.</span></span>  
+  
+ <span data-ttu-id="d2cf9-135">[セキュリティで保護されたアプリケーションを作成するためのリソース](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="d2cf9-135">[Resources for Creating Secure Applications](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))</span></span>  
+ <span data-ttu-id="d2cf9-136">安全なアプリケーションを作成するための記事へのリンク集です。</span><span class="sxs-lookup"><span data-stu-id="d2cf9-136">Provides links to articles for creating secure applications.</span></span>  
+  
+ [<span data-ttu-id="d2cf9-137">セキュリティ参考文献</span><span class="sxs-lookup"><span data-stu-id="d2cf9-137">Security Bibliography</span></span>](/visualstudio/ide/securing-applications)  
+ <span data-ttu-id="d2cf9-138">オンラインまたは出版物として提供されている外部リソースへのリンク集です。</span><span class="sxs-lookup"><span data-stu-id="d2cf9-138">Provides links to external resources available online and in print.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="d2cf9-139">関連項目</span><span class="sxs-lookup"><span data-stu-id="d2cf9-139">See also</span></span>
+
+- [<span data-ttu-id="d2cf9-140">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="d2cf9-140">ADO.NET</span></span>](index.md)
+- [<span data-ttu-id="d2cf9-141">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="d2cf9-141">ADO.NET Overview</span></span>](ado-net-overview.md)
