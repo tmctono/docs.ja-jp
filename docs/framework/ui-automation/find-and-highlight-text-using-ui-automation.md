@@ -1,5 +1,6 @@
 ---
 title: UI オートメーションを使用した、テキストの検索と強調表示
+description: UI オートメーションを使用してテキストを検索し、強調表示します。 例では、テキストコントロールのコンテンツ内で文字列の出現箇所を順番に検索し、強調表示します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +13,21 @@ helpviewer_keywords:
 - UI automation, finding text
 - highlighting text
 ms.assetid: b77693f5-87bb-4b29-a297-05ff882e2044
-ms.openlocfilehash: 0e5f856c69fab45a4c92e12746f357320d2e323c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e4aca4b5ccdbc429a3d6267afc09b9f8b99cd7e9
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435754"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164201"
 ---
-# <a name="find-and-highlight-text-using-ui-automation"></a><span data-ttu-id="f4c70-102">UI オートメーションを使用した、テキストの検索と強調表示</span><span class="sxs-lookup"><span data-stu-id="f4c70-102">Find and Highlight Text Using UI Automation</span></span>
+# <a name="find-and-highlight-text-using-ui-automation"></a><span data-ttu-id="42a3f-104">UI オートメーションを使用した、テキストの検索と強調表示</span><span class="sxs-lookup"><span data-stu-id="42a3f-104">Find and Highlight Text Using UI Automation</span></span>
 > [!NOTE]
-> <span data-ttu-id="f4c70-103">このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。</span><span class="sxs-lookup"><span data-stu-id="f4c70-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="f4c70-104">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f4c70-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
+> <span data-ttu-id="42a3f-105">このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。</span><span class="sxs-lookup"><span data-stu-id="42a3f-105">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="42a3f-106">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="42a3f-106">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
   
- <span data-ttu-id="f4c70-105">このトピックでは、[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]を使用して、テキストコントロールのコンテンツ内の文字列の出現箇所を順番に検索し、強調表示する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="f4c70-105">This topic demonstrates how to sequentially search for and highlight each occurrence of a string within the content of a text control using [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].</span></span>  
+ <span data-ttu-id="42a3f-107">このトピックでは、を使用して、テキストコントロールのコンテンツ内の文字列の出現箇所を順番に検索し、強調表示する方法を示し [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] ます。</span><span class="sxs-lookup"><span data-stu-id="42a3f-107">This topic demonstrates how to sequentially search for and highlight each occurrence of a string within the content of a text control using [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f4c70-106">例</span><span class="sxs-lookup"><span data-stu-id="f4c70-106">Example</span></span>  
- <span data-ttu-id="f4c70-107">次の例では、テキストコントロールから <xref:System.Windows.Automation.TextPattern> オブジェクトを取得します。</span><span class="sxs-lookup"><span data-stu-id="f4c70-107">The following example obtains a <xref:System.Windows.Automation.TextPattern> object from a text control.</span></span> <span data-ttu-id="f4c70-108">ドキュメント全体のテキストコンテンツを表す <xref:System.Windows.Automation.Text.TextPatternRange> オブジェクトは、この <xref:System.Windows.Automation.TextPattern>の <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> プロパティを使用して作成されます。</span><span class="sxs-lookup"><span data-stu-id="f4c70-108">A <xref:System.Windows.Automation.Text.TextPatternRange> object, representing the textual content of the entire document, is then created using the <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> property of this <xref:System.Windows.Automation.TextPattern>.</span></span> <span data-ttu-id="f4c70-109">その後、順次検索と強調表示の機能に対して、2つの <xref:System.Windows.Automation.Text.TextPatternRange> オブジェクトが作成されます。</span><span class="sxs-lookup"><span data-stu-id="f4c70-109">Two additional <xref:System.Windows.Automation.Text.TextPatternRange> objects are then created for the sequential search and highlight functionality.</span></span>  
+## <a name="example"></a><span data-ttu-id="42a3f-108">例</span><span class="sxs-lookup"><span data-stu-id="42a3f-108">Example</span></span>  
+ <span data-ttu-id="42a3f-109">次の例では、 <xref:System.Windows.Automation.TextPattern> テキストコントロールからオブジェクトを取得します。</span><span class="sxs-lookup"><span data-stu-id="42a3f-109">The following example obtains a <xref:System.Windows.Automation.TextPattern> object from a text control.</span></span> <span data-ttu-id="42a3f-110"><xref:System.Windows.Automation.Text.TextPatternRange>その後、ドキュメント全体のテキストコンテンツを表すオブジェクトが、こののプロパティを使用して作成され <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> <xref:System.Windows.Automation.TextPattern> ます。</span><span class="sxs-lookup"><span data-stu-id="42a3f-110">A <xref:System.Windows.Automation.Text.TextPatternRange> object, representing the textual content of the entire document, is then created using the <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> property of this <xref:System.Windows.Automation.TextPattern>.</span></span> <span data-ttu-id="42a3f-111">その <xref:System.Windows.Automation.Text.TextPatternRange> 後、順次検索と強調表示の機能に対して、2つのオブジェクトが作成されます。</span><span class="sxs-lookup"><span data-stu-id="42a3f-111">Two additional <xref:System.Windows.Automation.Text.TextPatternRange> objects are then created for the sequential search and highlight functionality.</span></span>  
   
 [!code-csharp[FindText#StartApp](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#startapp)]
 [!code-vb[FindText#StartApp](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#startapp)]  
@@ -35,6 +36,6 @@ ms.locfileid: "74435754"
 [!code-csharp[FindText#SearchTarget](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#searchtarget)]
 [!code-vb[FindText#SearchTarget](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#searchtarget)]  
   
-## <a name="see-also"></a><span data-ttu-id="f4c70-110">参照</span><span class="sxs-lookup"><span data-stu-id="f4c70-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="42a3f-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="42a3f-112">See also</span></span>
 
-- [<span data-ttu-id="f4c70-111">UI オートメーションを使用した、テキストの検索と強調表示</span><span class="sxs-lookup"><span data-stu-id="f4c70-111">Find and Highlight Text Using UI Automation</span></span>](find-and-highlight-text-using-ui-automation.md)
+- [<span data-ttu-id="42a3f-113">UI オートメーションを使用した、テキストの検索と強調表示</span><span class="sxs-lookup"><span data-stu-id="42a3f-113">Find and Highlight Text Using UI Automation</span></span>](find-and-highlight-text-using-ui-automation.md)
