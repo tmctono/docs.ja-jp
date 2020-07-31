@@ -1,5 +1,6 @@
 ---
 title: フロー ドキュメントの概要
+description: Windows Presentation Foundation でのフロー ドキュメントについて説明します。ウィンドウのサイズ、デバイスの解像度、およびユーザー設定に基づいて、コンテンツを動的に調整します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 1dcba034dd934cb0e103cd131fcaa2088e2f93d3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: dac0cb91175a1398a0124020c048e14d7bcd1f76
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856151"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165233"
 ---
 # <a name="flow-document-overview"></a>フロー ドキュメントの概要
 
@@ -39,7 +40,7 @@ ms.locfileid: "70856151"
 
 次の図は、このコード スニペットの結果を示したものです。
 
-![スクリーンショット: レンダリングされた FlowDocument の例](./media/flow-ovw-first-example.png "Flow_Ovw_First_Example")
+![スクリーンショット: 表示される FlowDocument の例](./media/flow-ovw-first-example.png "Flow_Ovw_First_Example")
 
 この例では、フロー コンテンツをホストするために <xref:System.Windows.Controls.FlowDocumentReader> コントロールが使用されています。 コントロールをホストするフロー コンテンツの詳細については、「[フロー ドキュメントの種類](#flow_document_types)」を参照してください。 <xref:System.Windows.Documents.Paragraph>、<xref:System.Windows.Documents.List>、<xref:System.Windows.Documents.ListItem>、<xref:System.Windows.Documents.Bold> 要素は、マークアップの順序に基づいて、コンテンツの書式設定を制御するために使用されます。 たとえば、<xref:System.Windows.Documents.Bold> 要素は、段落内のテキストの部分のみにまたがっています。結果として、テキストのその部分のみが太字となります。 HTML を使用したことがある場合、これは慣れ親しまれているでしょう。
 
@@ -124,7 +125,7 @@ ms.locfileid: "70856151"
 
 **セクション**
 
-<xref:System.Windows.Documents.Section> は、他の <xref:System.Windows.Documents.Block> 派生要素を含めるためにのみ使用されます。 格納している要素に対して、既定の書式設定を適用することはありません。 しかし、<xref:System.Windows.Documents.Section> に設定されたプロパティ値はすべて、その子要素に適用されます。 セクションでは、プログラムで子コレクションを反復処理することもできます。 <xref:System.Windows.Documents.Section> は、HTML の \<DIV> タグと同様の方法で使用されます。
+<xref:System.Windows.Documents.Section> は、他の <xref:System.Windows.Documents.Block> 派生要素を含めるためにのみ使用されます。 格納している要素に対して、既定の書式設定を適用することはありません。 しかし、<xref:System.Windows.Documents.Section> に設定されたプロパティ値はすべて、その子要素に適用されます。 セクションでは、プログラムで子コレクションを反復処理することもできます。 <xref:System.Windows.Documents.Section> は、HTML での \<DIV> タグと同様の方法で使用されます。
 
 以下の例では、3 つの段落が 1 つの <xref:System.Windows.Documents.Section> で定義されます。 このセクションには、<xref:System.Windows.Documents.TextElement.Background%2A> プロパティ値である Red があるため、段落の背景色も赤になります。
 
@@ -182,7 +183,7 @@ ms.locfileid: "70856151"
 
 次のスクリーンショットは、この例がどのように表示されるかを示しています。
 
-![スクリーンショット: レンダリングされた Span の例](./media/flow-spanexample.gif "Flow_SpanExample")
+![スクリーンショット: 表示される Span の例](./media/flow-spanexample.gif "Flow_SpanExample")
 
 **InlineUIContainer**
 
@@ -299,7 +300,7 @@ Some Text
 
 **2.** 図によると、<xref:System.Windows.Documents.Paragraph>、<xref:System.Windows.Documents.Section>、<xref:System.Windows.Documents.Table>、<xref:System.Windows.Documents.List>、<xref:System.Windows.Documents.BlockUIContainer> など、選択できる <xref:System.Windows.Documents.Block> 要素がいくつかあります (上記の Block の派生クラスを参照)。 たとえば、<xref:System.Windows.Documents.Table> が必要だとします。 上の図によると、<xref:System.Windows.Documents.Table> には <xref:System.Windows.Documents.TableRowGroup> が含まれており、それには <xref:System.Windows.Documents.TableRow> 要素が含まれています。さらにこれには <xref:System.Windows.Documents.TableCell> 要素が含まれており、それには <xref:System.Windows.Documents.Block> の派生オブジェクトが含まれています。 上の図で <xref:System.Windows.Documents.Table> に対応するセグメントを、以下に示します。
 
-![図:Table の親/子のスキーマ](./media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")
+![図:テーブルの親&#47;子スキーマ](./media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")
 
 以下は、これに対応するマークアップです。
 
@@ -307,9 +308,9 @@ Some Text
 
 **3.** ここでも、<xref:System.Windows.Documents.TableCell> の下に 1 つまたは複数の <xref:System.Windows.Documents.Block> 要素が必要です。 簡単にするために、セル内にいくつかのテキストを配置することにします。 これは、<xref:System.Windows.Documents.Paragraph> を <xref:System.Windows.Documents.Run> 要素と共に使用することで行うことができます。 <xref:System.Windows.Documents.Paragraph> で <xref:System.Windows.Documents.Inline> 要素を受け取ることができ、<xref:System.Windows.Documents.Run> (<xref:System.Windows.Documents.Inline> 要素) でプレーンテキストのみを受け取れることを示す図の対応するセグメントを以下に示します。
 
-![図:Paragraph の親/子スキーマ](./media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")
+![図:段落の親&#47;子スキーマ](./media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")
 
-![図:Run の親/子スキーマ](./media/flow-ovw-schemawalkthrough4.png "Flow_Ovw_SchemaWalkThrough4")
+![図:実行の親&#47;子スキーマ](./media/flow-ovw-schemawalkthrough4.png "Flow_Ovw_SchemaWalkThrough4")
 
 以下は、マークアップでの例の全体です。
 
@@ -334,7 +335,7 @@ Some Text
 
 この例の表示結果を次の図に示します。
 
-![スクリーンショット: 既定の取り消し線効果が適用されたテキスト](./media/inline-textdec-strike.png "Inline_TextDec_Strike")
+![スクリーンショット: 既定の取り消し線の効果が適用されたテキスト](./media/inline-textdec-strike.png "Inline_TextDec_Strike")
 
 次の図には、それぞれ**上線**、**ベースライン**、**下線**の各装飾がどのようにレンダリングされるかが示されています。
 
@@ -342,7 +343,7 @@ Some Text
 
 ![スクリーンショット: テキストに対する既定のベースライン効果](./media/inline-textdec-base.png "Inline_TextDec_Base")
 
-![スクリーンショット: 既定の下線効果が適用されたテキスト](./media/inline-textdec-under.png "Inline_TextDec_Under")
+![スクリーンショット: 既定の下線の効果が適用されたテキスト](./media/inline-textdec-under.png "Inline_TextDec_Under")
 
 ### <a name="typography"></a>タイポグラフィ
 
@@ -354,11 +355,11 @@ Some Text
 
 この例の表示結果を次の図に示します。
 
-![スクリーンショット: 文字体裁に変更があるテキスト](./media/textelement-typog.png "TextElement_Typog")
+![スクリーンショット: 変更されたタイポグラフィを含むテキスト](./media/textelement-typog.png "TextElement_Typog")
 
 これに対し、既定の文字体裁プロパティを設定した同様の例がどのように表示されるかを次の図に示します。
 
-![スクリーンショット: 文字体裁に変更があるテキスト](./media/textelement-typog-default.png "TextElement_Typog_Default")
+![スクリーンショット: 変更されたタイポグラフィを含むテキスト](./media/textelement-typog-default.png "TextElement_Typog_Default")
 
 次の例では、<xref:System.Windows.Controls.TextBox.Typography%2A> プロパティをプログラムで設定する方法が示されています。
 

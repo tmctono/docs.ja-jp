@@ -1,13 +1,14 @@
 ---
 title: 宣言型コードと命令型コードの混在のバグ (LINQ to XML) (C#)
+description: LINQ to XML メソッドによって、XML ツリーを直接変更できます。 XML ツリーの変更中にいずれかの軸を反復処理すると、異常なバグが発生する可能性があります。
 ms.date: 07/20/2015
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
-ms.openlocfilehash: 76a9bb5abf6ce2700a2a0698ebc109f65e2b7eb1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4eaed10f0a2e64abeb7725dcd70816d75d8a0423
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168350"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165294"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>宣言型コードと命令型コードの混在のバグ (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] には、XML ツリーを直接変更できるさまざまなメソッドが含まれています。 たとえば、要素の追加、要素の削除、要素の内容の変更、属性の追加などの操作を行うことができます。 このプログラミング インターフェイスについては、「[XML ツリーの変更 (LINQ to XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)」を参照してください。 いずれかの軸 (<xref:System.Xml.Linq.XContainer.Elements%2A> など) を反復処理する場合に、その過程で XML ツリーを変更すると、見慣れないバグが発生することがあります。  
@@ -17,7 +18,7 @@ ms.locfileid: "79168350"
 ## <a name="definition-of-the-problem"></a>問題の定義  
  コレクションを反復処理するコードを LINQ を使用して記述する場合は、宣言型スタイルでコードを記述することになります。 この場合、*どのように*処理するかではなく、*何が*必要かを記述します。 たとえば、1) 最初の要素を取得する、2) この要素を何らかの条件に対してテストする、3) この要素を変更する、4) この要素をリストに戻す、というコードを記述した場合、それは命令型のコードです。 必要な処理を*どのように*行うかをコンピューターに指示しています。  
   
- この 2 つのスタイルのコードが同じ操作に混在していると、問題の原因になります。 次の点を考慮します。  
+ この 2 つのスタイルのコードが同じ操作に混在していると、問題の原因になります。 次に例を示します。  
   
  3 つの項目 (a、b、および c) を含むリンク リストがあるとします。  
   

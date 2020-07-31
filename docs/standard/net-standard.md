@@ -5,12 +5,12 @@ ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 34074b420547cff802f1835656540be7b8eb58b4
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: b52d69756d85e3e422b798c3ac7d53de3b538b8d
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607481"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167406"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -76,11 +76,11 @@ ms.locfileid: "81607481"
 便利に読めるようにし、特定の開発者シナリオ (コンパイラを使用するなど) を可能にするために、派生成果物が提供されています。
 
 - [マークダウン形式の API 一覧](https://github.com/dotnet/standard/tree/master/docs/versions)
-- [NuGet パッケージ](../core/packages.md)として配布され、[NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/) メタパッケージによって参照される参照アセンブリ。
+- NuGet パッケージとして配布され、[NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/) メタパッケージによって参照される参照アセンブリ。
 
 ### <a name="package-representation"></a>パッケージ表現
 
-.NET Standard 参照アセンブリの主要な配布手段は [NuGet パッケージ](../core/packages.md)です。 実装は、各 .NET 実装に適切なさまざまな方法で配布されます。
+.NET Standard 参照アセンブリの主要な配布手段は NuGet パッケージです。 実装は、各 .NET 実装に適切なさまざまな方法で配布されます。
 
 NuGet パッケージは 1 つまたは複数の[フレームワーク](frameworks.md)を対象にしています。 .NET Standard パッケージは、".NET Standard" フレームワークを対象にしています。 `netstandard` [コンパクト TFM](frameworks.md) (`netstandard1.4` など) を使用して、.NET Standard フレームワークを対象にすることができます。 複数のランタイムでの実行を意図したライブラリは、このフレームワークを対象とする必要があります。 広範なセットの API の場合、.NET Standard 1.6 から 2.0 の間に使用できる API の数は 2 倍以上になったため、`netstandard2.0` を対象としてください。
 
@@ -102,7 +102,7 @@ NuGet パッケージは 1 つまたは複数の[フレームワーク](framewor
 
 ## <a name="target-net-standard"></a>ターゲットの .NET Standard
 
-`netstandard` フレームワークと NETStandard.Library メタパッケージの組み合わせを使用して、[.NET Standard Library をビルド](../core/tutorials/libraries.md)できます。 [.NET Core ツールでターゲットとする .NET Standard](../core/packages.md) の例を参照できます。
+`netstandard` フレームワークと NETStandard.Library メタパッケージの組み合わせを使用して、[.NET Standard Library をビルド](../core/tutorials/libraries.md)できます。
 
 ## <a name="net-framework-compatibility-mode"></a>.NET Framework 互換モード
 

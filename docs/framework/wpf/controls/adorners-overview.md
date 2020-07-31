@@ -1,5 +1,6 @@
 ---
 title: 装飾の概要
+description: Windows Presentation Foundation Adorners について学習します。これは、要素の機能ハンドルなど、ユーザーに手掛かりを提供する特別な種類の FrameworkElement です。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: b41c1f10f7e1b7c1799fd27270a3eeb9899ceeb6
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 43d4af9f86c6ae72a61f86d1ca19405c2dcc6cc8
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111180"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167729"
 ---
 # <a name="adorners-overview"></a>装飾の概要
 

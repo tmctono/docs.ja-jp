@@ -2,12 +2,12 @@
 title: dotnet publish コマンド
 description: dotnet publish コマンドを実行すると、.NET Core プロジェクトまたはソリューションをディレクトリに発行できます。
 ms.date: 02/24/2020
-ms.openlocfilehash: 61cfcf06586f3ac66526de69a17b8aef3cf0c795
-ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
+ms.openlocfilehash: 59fdbfa875dad13963ae198acc6a31b537279dfe
+ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85365584"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87251180"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -54,8 +54,10 @@ dotnet publish -h|--help
 `dotnet publish` コマンドは、プロパティを設定する `-p` やロガーを定義する `-l` などの MSBuild オプションも受け入れます。 たとえば、`-p:<NAME>=<VALUE>` という形式を使用して、MSBuild プロパティを設定できます。 また、 *.pubxml* ファイルを参照することで、公開関連のプロパティを設定することもできます。次に例を示します。
 
 ```dotnetcli
-dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
+dotnet publish -p:PublishProfile=FolderProfile
 ```
+
+前記の例では、 *\<project_folder>/Properties/PublishProfiles* フォルダー内に見つかった *FolderProfile.pubxml* ファイルが使用されています。 `PublishProfile` プロパティの設定時にパスとファイル拡張子を指定した場合、それらは無視されます。 既定では、MSBuild によって *Properties/PublishProfiles* フォルダー内が調べられ、*pubxml* ファイル拡張子が前提とされます。 パスと拡張子を含むファイル名を指定するには、`PublishProfile` プロパティではなく `PublishProfileFullPath` プロパティを設定します。
 
 詳細については、次のリソースを参照してください。
 

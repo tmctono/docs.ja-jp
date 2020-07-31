@@ -1,13 +1,14 @@
 ---
 title: LINQ to XML およびその他の XML テクノロジ3
+description: この記事では、LINQ to XML を XmlReader、XSLT、MSXML、および XmlLite などのいくつかの XML テクノロジと比較しており、使用するテクノロジを決定するうえで役立ちます。
 ms.date: 07/20/2015
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-ms.openlocfilehash: 4cade6ecbee95ee288db34246986858609697731
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0abe6021dae83df0db0d4116eb3c2919d024a62d
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635679"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165334"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML およびその他の XML テクノロジ
 ここでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を他の XML テクノロジ (<xref:System.Xml.XmlReader>、XSLT、MSXML、および XmlLite) と比較します。 使用するテクノロジを決定するときに、ここで説明する情報を参照してください。  

@@ -1,5 +1,6 @@
 ---
 title: Ildasm.exe (IL 逆アセンブラー)
+description: Ildasm.exe (IL Disassembler) を使用します。中間言語 (IL) コードを含む移植可能な実行可能 (PE) ファイルを利用して、Ilasm.exe に対するテキスト ファイルが作成されます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - PE files, MSIL Disassembler
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - text files produced by MSIL Disassembler
 - disassembling file for MSIL Assembler input
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
-ms.openlocfilehash: f23f8c48a31dffa7d350c872aed7505da7a36861
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6f2611488e7f653783cab833ad47131978bf74aa
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73105055"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166833"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL 逆アセンブラー)
 

@@ -1,17 +1,18 @@
 ---
 title: 弱いイベント パターン
+description: Windows Presentation Foundation の弱いイベント パターンについて説明します。破棄されていないハンドラーの問題に対処して、メモリ リークを回避します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - weak event pattern implementation [WPF]
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 9f61a5a60b2ba1305158d1ab570079fe6aac19ac
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 75c6888c8ac20c41d13e3787005377c75248c5d9
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76870741"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168266"
 ---
 # <a name="weak-event-patterns"></a>弱いイベント パターン
 アプリケーションでは、イベント ソースにアタッチされているハンドラーが、ハンドラーをソースにアタッチしたリスナー オブジェクトと連携して破棄されない可能性があります。 このような状況では、メモリ リークが発生する可能性があります。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] では、この問題の解決に使用できる設計パターンを導入しており、特定のイベントには専用のマネージャー クラスを用意し、そのイベントのリスナーにインターフェイスを実装しています。 この設計パターンは、"*弱いイベント パターン*" 呼ばれます。  

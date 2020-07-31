@@ -1,5 +1,6 @@
 ---
 title: Gacutil.exe (グローバル アセンブリ キャッシュ ツール)
+description: グローバル アセンブリ キャッシュ ツール Gacutil.exe に関する詳細を確認します。 このツールを使用して、グローバル アセンブリ キャッシュおよびダウンロード キャッシュを表示および操作できます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - global assembly cache, Gacutil.exe
 - Global Assembly Cache tool
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
-ms.openlocfilehash: 87f3cb799ba4e406906759e1facd19d00c8bdace
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1fe79a09aa99c9d91d8223e7642408a56da20dfe
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73107501"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166935"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (グローバル アセンブリ キャッシュ ツール)
 
@@ -108,7 +109,7 @@ myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 > - AssemblyInfo - 次から構成される 31 文字から 48 文字以上。
 >   - Framework - 5 文字 (例: `v4.0_`)
 >   - AssemblyVersion - 8 文字 24 文字 (例: `9.0.1000.0_`)
->   - AssemblyLanguage - 1 文字から 8 文字 (例: `de_`、`sr-Cyrl_`)
+>   - AssemblyLanguage - 1 文字から 8 文字 (例: `de_`, `sr-Cyrl_`)
 >   - PublicKey - 17 文字 (例: `31bf3856ad364e35\`)
 > - DllFileName - 最大 91 文字 + 4 文字 (つまり `<AssemblyName>.dll`)
 

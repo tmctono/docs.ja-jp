@@ -1,15 +1,16 @@
 ---
 title: 'チュートリアル: XAML を使用したボタンの作成'
+description: このチュートリアルを使用し、XAML を使って Windows Presentation Foundation アプリケーションで利用するアニメーション化されたボタンを作成する方法について学習します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: a8cc227703e81e5de9dea7e44e10dfecca2cd05c
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 136d1ad5d6fefd70f0d977e5287ae75f06c52d36
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646474"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164853"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>チュートリアル: XAML を使用したボタンの作成
 

@@ -1,5 +1,6 @@
 ---
 title: '方法: TextBox のテキストがいつ変更されたかを検出する'
+description: Windows Presentation Foundation アプリケーションで、TextBox コントロール内のテキストが変更されるたびに、TextChanged イベントを使用してメソッドを実行する方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - text change [WPF], detecting
 - detecting text change [WPF]
 ms.assetid: 1c39ee14-e37f-49fb-a0d1-a9824ca13584
-ms.openlocfilehash: 8c7744e9e61b8ba796802e54435c0bf9fdbee50e
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 1e054380a8c77d32e6bb4adbbcb032e531bbefd0
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855622"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166223"
 ---
 # <a name="how-to-detect-when-text-in-a-textbox-has-changed"></a>方法: TextBox のテキストがいつ変更されたかを検出する
 

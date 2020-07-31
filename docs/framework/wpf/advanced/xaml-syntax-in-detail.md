@@ -1,5 +1,6 @@
 ---
 title: XAML 構文の詳細
+description: XAML を利用する Windows Presentation Foundation およびその他のフレームワークでの XAML 構文の要素を表すために使用されている用語について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML [WPF], namespaces
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 5f8bb862ce443fd7397036b10f69cda65a6960bc
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 6ef217a646b14f02c0b812f6316ec84f26d4b660
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646142"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168347"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 構文の詳細
 このトピックでは、XAML 構文の要素について説明するために使用される用語を定義します。 これらの用語は、このドキュメントの他の部分で頻繁に使用されます。WPF のドキュメントと、System.Xaml レベルでの XAML 言語サポートによって有効にされる XAML および XAML の基本的な概念を使用する他のフレームワークの両方で使用されます。 このトピックは、[XAML の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md) に関するトピックで説明されている基本的な用語を拡充したものです。  
@@ -138,7 +139,7 @@ ms.locfileid: "81646142"
 ## <a name="property-element-syntax"></a>プロパティ要素の構文  
  "*プロパティ要素の構文*" は、要素の基本的な XML 構文規則とは少し異なる構文です。 XML では、属性の値は事実上は文字列であり、唯一可能なバリエーションは、使用される文字列エンコード形式です。 XAML では、プロパティの値として他のオブジェクト要素を割り当てることができます。 この機能は、プロパティ要素の構文によって有効になります。 プロパティは、要素タグ内の属性として指定されるのではなく、<*要素型名*>.<*プロパティ名*> という形式の開始要素タグを使用して指定され、プロパティの値がその中で指定されて、プロパティ要素が閉じられます。  
   
- 具体的には、構文は左山かっこ (\<) で始まり、その直後に、プロパティ要素の構文が含まれているクラスまたは構造体の型名が続きます。 それ以降は、1 つのドット (.)、プロパティの名前、右山かっこ (>) の順になります。 属性構文と同様に、そのプロパティは、指定された型の宣言されたパブリック メンバー内に存在する必要があります。 プロパティに割り当てられる値は、プロパティ要素内に格納されています。 プロパティ要素の構文では値として指定されたオブジェクトを処理することが想定されているため、通常、値は 1 つ以上のオブジェクト要素として指定します。 最後に、同じ <*要素型名*>.<*プロパティ名*> の組み合わせを指定する同等の終了タグを指定し、適切な入れ子および他の要素タグとのバランスにする必要があります。  
+ 具体的には、構文は左山かっこ (\<), followed immediately by the type name of the class or structure that the property element syntax is contained within. This is followed immediately by a single dot (.), then by the name of a property, then by a right angle bracket (>) で始まります。 属性構文と同様に、そのプロパティは、指定された型の宣言されたパブリック メンバー内に存在する必要があります。 プロパティに割り当てられる値は、プロパティ要素内に格納されています。 プロパティ要素の構文では値として指定されたオブジェクトを処理することが想定されているため、通常、値は 1 つ以上のオブジェクト要素として指定します。 最後に、同じ <*要素型名*>.<*プロパティ名*> の組み合わせを指定する同等の終了タグを指定し、適切な入れ子および他の要素タグとのバランスにする必要があります。  
   
  たとえば、次に示すのは、<xref:System.Windows.Controls.Button> の <xref:System.Windows.FrameworkElement.ContextMenu%2A> プロパティに対するプロパティ要素の構文です。  
   

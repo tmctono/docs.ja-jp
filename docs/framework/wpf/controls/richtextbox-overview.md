@@ -1,5 +1,6 @@
 ---
 title: RichTextBox の概要
+description: Windows Presentation Foundation RichTextBox コントロールを使用して、ユーザーがテキスト、画像、テーブルなどのコンテンツをどのように表示または編集できるかを説明します。 XAML と C# の例を参照してください。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], about RichTextBox control
 ms.assetid: c94548b2-c1e9-4b62-b10c-dd8740eb23d8
-ms.openlocfilehash: bfed42bcf3693ef744b3ed2b54ebe070931513a9
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 525e27f9602136c68f160c738fd1c92ea761536c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855735"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166232"
 ---
 # <a name="richtextbox-overview"></a>RichTextBox の概要
 
@@ -27,8 +28,8 @@ ms.locfileid: "70855735"
 
 |Control|リアルタイム スペル チェック|コンテキスト メニュー|<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (Ctr + B) のような書式設定コマンド|イメージ、段落、テーブルのような <xref:System.Windows.Documents.FlowDocument> コンテンツ|
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|<xref:System.Windows.Controls.TextBox>|はい|はい|いいえ|いいえ。|
-|<xref:System.Windows.Controls.RichTextBox>|はい|はい|はい|はい|
+|<xref:System.Windows.Controls.TextBox>|はい|[はい]|いいえ|いいえ。|
+|<xref:System.Windows.Controls.RichTextBox>|はい|はい|○|はい|
 
 > [!NOTE]
 > <xref:System.Windows.Controls.TextBox> では <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (Ctr + B) のような書式設定関連のコマンドはサポートされませんが、<xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A> などの多くの基本的なコマンドは両方のコントロールでサポートされます。
@@ -52,7 +53,7 @@ ms.locfileid: "70855735"
 
 次の図は、このサンプルがレンダリングする方法を示しています。
 
-![RichTextBox with content](./media/editing-richtextbox-with-content.png "Editing_RichTextBox_with_Content")
+![コンテンツを含む RichTextBox](./media/editing-richtextbox-with-content.png "Editing_RichTextBox_with_Content")
 
 <xref:System.Windows.Documents.Paragraph> や <xref:System.Windows.Documents.Bold> などの要素で、<xref:System.Windows.Controls.RichTextBox> 内のコンテンツがどのように表示されるかが決まります。 ユーザーが <xref:System.Windows.Controls.RichTextBox> コンテンツを編集すると、このフロー コンテンツが変更されます。 フロー コンテンツの機能およびその操作方法の詳細については、[フロー ドキュメントの概要](../advanced/flow-document-overview.md)を参照してください。
 
@@ -65,7 +66,7 @@ ms.locfileid: "70855735"
 
 <xref:System.Windows.Controls.TextBox> または <xref:System.Windows.Controls.RichTextBox> で、リアルタイム スペル チェックを有効にすることができます。 スペル チェックをオンにすると、スペル ミスの語句の下に赤色の線が表示されます (下図を参照)。
 
-![スペル チェックを含む Textbox](./media/editing-textbox-with-spellchecking.png "Editing_TextBox_with_Spellchecking")
+![スペル チェックを含む TextBox](./media/editing-textbox-with-spellchecking.png "Editing_TextBox_with_Spellchecking")
 
 スペル チェックを有効にする方法については、「[テキスト編集コントロールでスペル チェックを有効にする](how-to-enable-spell-checking-in-a-text-editing-control.md)」を参照してください。
 
@@ -89,7 +90,7 @@ ms.locfileid: "70855735"
 
 次の図は、このサンプルの表示方法を示しています。
 
-![ツールバーを含む RichTextBox](./media/editing-richtextbox-with-toobar.gif "Editing_RichTextBox_with_TooBar")
+![ツール バーを含む RichTextBox](./media/editing-richtextbox-with-toobar.gif "Editing_RichTextBox_with_TooBar")
 
 <a name="editing_commands"></a>
 

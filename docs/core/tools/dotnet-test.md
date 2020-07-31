@@ -2,12 +2,12 @@
 title: dotnet test コマンド
 description: dotnet test コマンドは、指定されたプロジェクトで単体テストを実行する場合に使用されます。
 ms.date: 04/29/2020
-ms.openlocfilehash: 911d10917c2262c0bd32ef30d48da0f85ac39a39
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: 9b1e190579902dda71547b01f31dd5adcc22fe9c
+ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84803154"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87251193"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -21,14 +21,17 @@ ms.locfileid: "84803154"
 
 ```dotnetcli
 dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
-    [-a|--test-adapter-path <PATH_TO_ADAPTER>] [--blame]
+    [-a|--test-adapter-path <ADAPTER_PATH>] [--blame] [--blame-crash]
+    [--blame-crash-dump-type <DUMP_TYPE>] [--blame-crash-collect-always]
+    [--blame-hang] [--blame-hang-dump-type <DUMP_TYPE>]
+    [--blame-hang-timeout <TIMESPAN>]
     [-c|--configuration <CONFIGURATION>]
-    [--collect <DATA_COLLECTOR_FRIENDLY_NAME>]
-    [-d|--diag <PATH_TO_DIAGNOSTICS_FILE>] [-f|--framework <FRAMEWORK>]
+    [--collect <DATA_COLLECTOR_NAME>]
+    [-d|--diag <LOG_FILE>] [-f|--framework <FRAMEWORK>]
     [--filter <EXPRESSION>] [--interactive]
-    [-l|--logger <LOGGER_URI/FRIENDLY_NAME>] [--no-build]
+    [-l|--logger <LOGGER>] [--no-build]
     [--nologo] [--no-restore] [-o|--output <OUTPUT_DIRECTORY>]
-    [-r|--results-directory <PATH>] [--runtime <RUNTIME_IDENTIFIER>]
+    [-r|--results-directory <RESULTS_DIR>] [--runtime <RUNTIME_IDENTIFIER>]
     [-s|--settings <SETTINGS_FILE>] [-t|--list-tests]
     [-v|--verbosity <LEVEL>] [[--] <RunSettings arguments>]
 
@@ -64,7 +67,7 @@ dotnet test -h|--help
 
 ## <a name="options"></a>オプション
 
-- **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
+- **`-a|--test-adapter-path <ADAPTER_PATH>`**
 
   追加のテスト アダプターを検索するディレクトリへのパス。 サフィックス `.TestAdapter.dll` を持つ " *.dll*" ファイルのみが検査されます。 指定しない場合、テスト " *.dll*" のディレクトリが検索されます。
 
@@ -72,11 +75,42 @@ dotnet test -h|--help
 
   変更履歴モードでテストを実行します。 このオプションは、テスト ホストがクラッシュする原因となる問題のあるテストを分離するために役立ちます。 クラッシュが検出されると、クラッシュ前に実行されたテストの順序をキャプチャするシーケンス ファイルが `TestResults/<Guid>/<Guid>_Sequence.xml` に作成されます。
 
+- **`--blame-crash`** (.NET 5.0 プレビュー SDK 以降で利用可能)
+
+  テスト ホストが予期せずに終了した場合に、変更履歴モードでテストを実行して、クラッシュ ダンプを収集します。 このオプションは、Windows 上でのみサポートされます。 *procdump.exe* および *procdump64.exe* を含むディレクトリが、PATH または PROCDUMP_PATH 環境変数に指定されている必要があります。 [ツールをダウンロード](https://docs.microsoft.com/sysinternals/downloads/procdump)します。 `--blame` を意味します。
+
+- **`--blame-crash-dump-type <DUMP_TYPE>`** (.NET 5.0 プレビュー SDK 以降で利用可能)
+
+  収集されるクラッシュ ダンプの種類。 `--blame-crash` を意味します。
+
+- **`--blame-crash-collect-always`** (.NET 5.0 プレビュー SDK 以降で利用可能)
+
+  予期しないテスト ホストの終了だけでなく、予期されていたものに対しても、クラッシュ ダンプを収集します。
+
+- **`--blame-hang`** (.NET 5.0 プレビュー SDK 以降で利用可能)
+
+  変更履歴モードでテストを実行し、テストが指定のタイムアウトを超えたときにハング ダンプを収集します。
+
+- **`--blame-hang-dump-type <DUMP_TYPE>`** (.NET 5.0 プレビュー SDK 以降で利用可能)
+
+  収集されるクラッシュ ダンプの種類。 必ず、`full`、`mini`、または `none` になります。 `none` が指定されている場合、タイムアウト時にテスト ホストが終了されますが、ダンプは収集されません。 `--blame-hang` を意味します。
+
+- **`--blame-hang-timeout <TIMESPAN>`** (.NET 5.0 プレビュー SDK 以降で利用可能)
+
+  テストごとのタイムアウト。その後、ハング ダンプがトリガーされ、テスト ホスト プロセスが終了されます。 タイムアウト値は、次のいずれかの形式で指定されます。
+  
+  - 1.5h (時間)
+  - 90m (分)
+  - 5400s (秒)
+  - 5400000ms (ミリ秒)
+
+  単位が使用されていない場合 (例: 5400000)、値はミリ秒単位であると見なされます。 データ ドリブン テストと共に使用すると、タイムアウトの動作は、利用するテスト アダプターに応じて異なります。 xUnit および NUnit の場合、タイムアウトはテスト ケースの後に毎回更新されます。 MSTest の場合、タイムアウトはすべてのテスト ケースに使用されます。 このオプションは、netcoreapp 2.1 以降がインストールされている Windows と、netcoreapp 3.1 以降がインストールされている Linux でサポートされています。 macOS はサポートされていません。
+
 - **`-c|--configuration <CONFIGURATION>`**
 
   ビルド構成を定義します。 既定値は `Debug` ですが、プロジェクトの構成がこの既定の SDK 設定をオーバーライドする可能性があります。
 
-- **`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
+- **`--collect <DATA_COLLECTOR_NAME>`**
 
   テストの実行のためのデータ コレクターを有効にします。 詳細については、[「Monitor and analyze test run」](https://aka.ms/vstest-collect) (テストの実行のモニターと分析) を参照してください。
   
@@ -84,7 +118,7 @@ dotnet test -h|--help
 
   Windows では、`--collect "Code Coverage"` オプションを使用してコード カバレッジを収集できます。 このオプションを選択すると、 *.coverage* ファイルが生成されます。このファイルは、Visual Studio 2019 Enterprise で開くことができます。 詳細については、[コード カバレッジの使用](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested)に関するページと「[コード カバレッジ分析のカスタマイズ](/visualstudio/test/customizing-code-coverage-analysis)」を参照してください。
 
-- **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
+- **`-d|--diag <LOG_FILE>`**
 
   テスト プラットフォームの診断モードを有効にし、指定したファイルとそれ以降のファイルに診断メッセージを出力します。 メッセージをログに記録するプロセスによって、テスト ホスト ログの `*.host_<date>.txt` やデータ コレクター ログの `*.datacollector_<date>.txt` などの、作成されるファイルが決まります。
 
@@ -104,7 +138,7 @@ dotnet test -h|--help
 
   コマンドを停止して、ユーザーの入力または操作のために待機させることができます。 たとえば、認証を完了する場合があります。 .NET Core 3.0 SDK 以降で使用できます。
 
-- **`-l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
+- **`-l|--logger <LOGGER>`**
 
   テスト結果のロガーを指定します。 MSBuild とは異なり、dotnet テストでは省略形は受け入れられません。`-l "console;v=d"` ではなく `-l "console;verbosity=detailed"` を使用してください。
 
@@ -124,7 +158,7 @@ dotnet test -h|--help
 
   実行するバイナリを検索するディレクトリです。 指定しない場合、既定のパスは `./bin/<configuration>/<framework>/` になります。  (`TargetFrameworks` プロパティを使用した) ターゲット フレームワークが複数あるプロジェクトの場合は、このオプションを指定するときに `--framework` も定義する必要があります。 `dotnet test` では常に、出力ディレクトリからテストが実行されます。 <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType> を使用して、出力ディレクトリ内のテスト資産を使用できます。
 
-- **`-r|--results-directory <PATH>`**
+- **`-r|--results-directory <RESULTS_DIR>`**
 
   テスト結果が配置されるディレクトリです。 指定されたディレクトリが存在しない場合は、作成されます。 既定値は、プロジェクト ファイルが含まれるディレクトリの `TestResults` です。
 
@@ -141,7 +175,7 @@ dotnet test -h|--help
 
 - **`-t|--list-tests`**
 
-  現在のプロジェクトで検出されたすべてのテストを一覧表示します。
+  テストを実行する代わりに、検出されたテストを一覧表示します。
 
 - **`-v|--verbosity <LEVEL>`**
 

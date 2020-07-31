@@ -1,16 +1,17 @@
 ---
 title: グローバリゼーションおよびローカリゼーションの概要
+description: 自動レイアウト、サテライト アセンブリ、およびローカライズされた属性など、Windows Presentation Foundation のローカリゼーションとグローバリゼーションについて説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: ba49b3ec0f6edebff6278f4e90ae22baba9f1edf
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 9a54ce2c265b989f99383ff9cdec961c80dd655c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452670"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168296"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF のグローバリゼーションおよびローカリゼーションの概要
 

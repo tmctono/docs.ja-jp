@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: 5587b8b20da8a6801d77b722e9c3326f6e695574
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 547654e77812481daffc9a03ccd28d3d2f6b5f09
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73416711"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164434"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Core Web アプリ用の Azure ホスティングの推奨事項
 
@@ -44,7 +44,7 @@ App Service Web Apps は、Web アプリケーションのホスティングに�
 
 - Visual Studio の統合
 
-Azure App Service は、ほとんどの Web アプリに適しています。 デプロイと管理機能がそのプラットフォームに統合され、トラフィックの負荷に応じてサイトのスケールを機敏に調整できるほか、組み込みの負荷分散機能と Traffic Manager によって高い可用性が得られます。 オンライン移行ツールを使用して既存のサイトを簡単に Azure App Service に移動したり、Web アプリケーション ギャラリーからオープンソース アプリを使用したり、選択したフレームワークとツールを使用して新しいサイトを作成したりできます。 WebJobs 機能により、バックグラウンド ジョブ処理を App Service Web アプリに簡単に追加できます。 ローカル データベースを使用して既に ASP.NET アプリケーションがオンプレミスでホストされている場合、Azure SQL Database でアプリを App Service Web アプリに移行するため (または、希望する場合、オンプレミスのデータベース サーバーに安全にアクセスするため) の明確なパスがあります。
+Azure App Service は、ほとんどの Web アプリに適しています。 デプロイと管理機能がそのプラットフォームに統合され、トラフィックの負荷に応じてサイトのスケールを機敏に調整できるほか、組み込みの負荷分散機能と Traffic Manager によって高い可用性が得られます。 オンライン移行ツールを使用して既存のサイトを簡単に Azure App Service に移動したり、Web アプリケーション ギャラリーからオープンソース アプリを使用したり、選択したフレームワークとツールを使用して新しいサイトを作成したりできます。 Web ジョブ機能により、バックグラウンド ジョブ処理を App Service Web アプリに簡単に追加できます。 ローカル データベースを使用して既に ASP.NET アプリケーションがオンプレミスでホストされている場合、Azure SQL Database でアプリを App Service Web アプリに移行するため (または、希望する場合、オンプレミスのデータベース サーバーに安全にアクセスするため) の明確なパスがあります。
 
 ![推奨されるオンプレミスの .NET アプリの Azure App Service への移行戦略](./media/image1-6.png)
 
@@ -118,7 +118,7 @@ Azure はさまざまなデータ記憶域のオプションを提供してい�
 
 構造化されていない JSON データは、SQL Database 列から Azure Storage の Blob またはテーブル、Azure Cosmos DB まで、さまざまな方法で格納できます。 このうち、Azure Cosmos DB がクエリ機能では最も優れており、クエリのサポートを必要とする JSON ベースのドキュメントが多数ある場合は、このオプションが推奨されます。
 
-アプリケーションの動作を調整するために使用する一時的なコマンドベースの、またはイベントベースのデータでは、Azure Service Bus または Azure Storage キューを使用できます。 Azure Storage Bus はより柔軟性に優れているため、アプリケーション内、およびアプリケーション間で重要なメッセージをやり取りする場合に推奨されるサービスです。
+アプリケーションの動作を調整するために使用する一時的なコマンドベースの、またはイベントベースのデータでは、Azure Service Bus または Azure Storage キューを使用できます。 Azure Service Bus は柔軟性が高く、アプリケーション内およびアプリケーション間で重要なメッセージをやり取りする場合に推奨されるサービスです。
 
 ## <a name="architecture-recommendations"></a>アーキテクチャに関する推奨事項
 

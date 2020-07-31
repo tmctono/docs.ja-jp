@@ -1,5 +1,6 @@
 ---
 title: ScrollViewer の概要
+description: ScrollViewer コントロールについて学習します。これを利用すると、Windows Presentation Foundation アプリケーションのコンテンツをスクロールできます。 使用例を参照してください。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-ms.openlocfilehash: 2ff0f134ea3174f7f034d47446aab782e2141916
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1ef680bb004315a2b523814714d5533535d044e5
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186985"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164641"
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer の概要
 ユーザー インターフェイス内のコンテンツは、多くの場合、コンピューター画面の表示領域よりも大きいです。 <xref:System.Windows.Controls.ScrollViewer> コントロールでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーション内のコンテンツのスクロールを有効にする便利な手段が提供されます。 このトピックでは、<xref:System.Windows.Controls.ScrollViewer> 要素について説明し、いくつかの使用例を示します。  

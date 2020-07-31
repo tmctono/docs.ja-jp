@@ -1,5 +1,6 @@
 ---
 title: '方法: DataGrid コントロールを使用して検証を実装する'
+description: Windows Presentation Foundation の DataGrid コントロールによって、セルおよび行の両方のレベルで検証が実行され、検証エラーに関するフィードバックが提供されるしくみについて説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: 38b4c9cd7679f0d8da9b18fb5bd6bb729d33ed54
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: a6fe3693f94c3f554e96bc167b572cf854a1a34a
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646100"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167597"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>方法: DataGrid コントロールを使用して検証を実装する
 <xref:System.Windows.Controls.DataGrid> コントロールを使用すると、セル レベルと行レベルの両方で検証を実行できます。 セル レベルの検証では、ユーザーが値を更新するときに、バインドされたデータ オブジェクトの個々のプロパティが検証されます。 行レベルの検証では、ユーザーが変更を行にコミットするときに、データ オブジェクト全体が検証されます。 また、検証エラーに対してカスタマイズした視覚的フィードバックを提供したり、<xref:System.Windows.Controls.DataGrid> コントロールで提供される既定の視覚的フィードバックを使用したりすることもできます。  

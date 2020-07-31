@@ -1,5 +1,6 @@
 ---
 title: '方法: コードでバインディングを作成する'
+description: SetBinding メソッドを直接呼び出して、Windows Presentation Foundation アプリケーションのコードでバインディングを作成する方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - binding data [WPF], creating
 - data binding [WPF], creating
 ms.assetid: 1a606db9-cf5f-42ed-a1c5-9e4722ec77a0
-ms.openlocfilehash: 616487a16ebbe6e23fe067fb7ce72644aa3f919f
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: aa2a29f4c1262d8ac54641b856c297b284b23a38
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458850"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165815"
 ---
 # <a name="how-to-create-a-binding-in-code"></a>方法: コードでバインディングを作成する
 この例では、コードで <xref:System.Windows.Data.Binding> を作成して設定する方法を示します。  
