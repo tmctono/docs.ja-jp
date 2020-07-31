@@ -7,13 +7,13 @@ metadata:
   description: Azure 上の .NET に関するサンプル、チュートリアル、および教育
   ms.topic: hub-page
   ms.prod: azure-dotnet
-  ms.date: 03/04/2020
-  ms.openlocfilehash: c92263407ab15bd78ec323bb417d2d9f37dd77bc
-  ms.sourcegitcommit: d4f7ba08f2a45a9dbef53be597eed6d4a9410f29
+  ms.date: 07/31/2020
+  ms.openlocfilehash: c5326128836f83b7153336619061f5943f8c6aa4
+  ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 07/15/2020
-  ms.locfileid: "86401955"
+  ms.lasthandoff: 07/30/2020
+  ms.locfileid: "87426985"
 highlightedContent:
   items:
   - itemType: overview
@@ -41,6 +41,8 @@ highlightedContent:
     title: Azure 基礎
     url: https://docs.microsoft.com/learn/paths/azure-fundamentals/
 conceptualContent:
+  title: おすすめコンテンツ
+  summary: 各種の Azure サービスを活用して .NET アプリを開発する方法について説明します。
   items:
   - title: Web アプリを作成する
     links:
@@ -255,7 +257,7 @@ additionalContent:
         url: https://channel9.msdn.com/Shows/The-Cloud-Native-Show
       - text: オン .NET
         url: https://channel9.msdn.com/Shows/On-NET
-      - text: ASP.NET コミュニティ スタンドアップ
+      - text: .NET コミュニティ スタンドアップ
         url: https://dotnet.microsoft.com/platform/community/standup
       - text: .NET ドキュメントの表示
         url: https://dotnetdocs.dev
@@ -267,4 +269,4 @@ additionalContent:
         url: https://github.com/AzureAD/microsoft-identity-web
       - text: .NET プラットフォーム
         url: https://github.com/dotnet/
-  footer: Contribute to .NET docs. Read our [contributor guide](/contribute/dotnet/dotnet-contribute).
+  footer: .NET ドキュメントに投稿してください。[共同作成者ガイド](/contribute/dotnet/dotnet-contribute)をお読みください。
