@@ -2,12 +2,12 @@
 title: '再帰関数: rec キーワード'
 description: "再帰関数を定義するために、' let ' キーワードと共に F # ' rec ' キーワードを使用する方法について説明します。"
 ms.date: 05/16/2016
-ms.openlocfilehash: c9a3b7dc27f4ed86948a08b7783d7e8e8b60e57f
-ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
+ms.openlocfilehash: c2374f90b4585327c6f5208a3d6bca75a23d0cbb
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87426977"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455657"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>再帰関数: rec キーワード
 
@@ -28,7 +28,7 @@ function2-body
 ...
 ```
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 再帰関数は、それ自体を呼び出す関数で、F # 言語で明示的に識別されます。 これにより、定義されている識別子が関数のスコープで使用できるようになります。
 
@@ -43,7 +43,7 @@ function2-body
 
 ## <a name="tail-recursion"></a>Tail 再帰
 
-再帰関数によっては、より "純粋な" 定義を[末尾の再帰](https://cs.stackexchange.com/questions/6230/what-is-tail-recursion)型にリファクタリングする必要があります。 これにより、不要なの再計算が行われなくなります。 たとえば、前のフィボナッチ数ジェネレーターは次のように書き換えることができます。
+再帰関数によっては、より "純粋な" 定義を[末尾の再帰](https://cs.stackexchange.com/questions/6230/what-is-tail-recursion)型にリファクタリングする必要があります。 これにより、不要な再計算が防止されます。 たとえば、前のフィボナッチ数ジェネレーターは次のように書き換えることができます。
 
 ```fsharp
 let fib n =
