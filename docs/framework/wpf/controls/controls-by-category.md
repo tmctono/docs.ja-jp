@@ -1,21 +1,22 @@
 ---
 title: カテゴリ別のコントロール
+description: カテゴリにグループ化された Windows Presentation Foundation コントロールを確認します。これは、類似したコントロールを比較することによって適切なコントロールを選択するのに役立ちます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 5958793015d409678b67cdc7eedcb4289f5e885c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 226e037dc26f817b96a5aa869565f08ee6ff6574
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636212"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166287"
 ---
-# <a name="controls-by-category"></a><span data-ttu-id="bf777-102">カテゴリ別のコントロール</span><span class="sxs-lookup"><span data-stu-id="bf777-102">Controls by Category</span></span>
-<span data-ttu-id="bf777-103">Windows Presentation Foundation (WPF) コントロールは、論理的にいくつかのカテゴリにグループ化できます。</span><span class="sxs-lookup"><span data-stu-id="bf777-103">Windows Presentation Foundation (WPF) controls can be logically grouped into several categories.</span></span> <span data-ttu-id="bf777-104">これらのカテゴリを使用すると、類似の使用パターンや機能を持つコントロールを見つけやすくなり、シナリオに適したコントロールを選択できます。</span><span class="sxs-lookup"><span data-stu-id="bf777-104">These categories can be used to select the appropriate control for your scenario by helping you see which controls have similar usage patterns or functionality.</span></span>  
+# <a name="controls-by-category"></a><span data-ttu-id="ab652-103">カテゴリ別のコントロール</span><span class="sxs-lookup"><span data-stu-id="ab652-103">Controls by Category</span></span>
+<span data-ttu-id="ab652-104">Windows Presentation Foundation (WPF) コントロールは、論理的にいくつかのカテゴリにグループ化できます。</span><span class="sxs-lookup"><span data-stu-id="ab652-104">Windows Presentation Foundation (WPF) controls can be logically grouped into several categories.</span></span> <span data-ttu-id="ab652-105">これらのカテゴリを使用すると、類似の使用パターンや機能を持つコントロールを見つけやすくなり、シナリオに適したコントロールを選択できます。</span><span class="sxs-lookup"><span data-stu-id="ab652-105">These categories can be used to select the appropriate control for your scenario by helping you see which controls have similar usage patterns or functionality.</span></span>  
   
-## <a name="layout"></a><span data-ttu-id="bf777-105">レイアウト</span><span class="sxs-lookup"><span data-stu-id="bf777-105">Layout</span></span>  
- <span data-ttu-id="bf777-106">レイアウト コントロールを使用して、子要素のサイズ、ディメンション、位置、および配置を制御します。</span><span class="sxs-lookup"><span data-stu-id="bf777-106">Layout controls are used to manage the size, dimensions, position, and arrangement of child elements.</span></span>  
+## <a name="layout"></a><span data-ttu-id="ab652-106">レイアウト</span><span class="sxs-lookup"><span data-stu-id="ab652-106">Layout</span></span>  
+ <span data-ttu-id="ab652-107">レイアウト コントロールを使用して、子要素のサイズ、ディメンション、位置、および配置を制御します。</span><span class="sxs-lookup"><span data-stu-id="ab652-107">Layout controls are used to manage the size, dimensions, position, and arrangement of child elements.</span></span>  
   
 - <xref:System.Windows.Controls.Border>  
   
@@ -55,15 +56,15 @@ ms.locfileid: "75636212"
   
 - <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="buttons"></a><span data-ttu-id="bf777-107">ボタン</span><span class="sxs-lookup"><span data-stu-id="bf777-107">Buttons</span></span>  
- <span data-ttu-id="bf777-108">ボタンは、最も基本的なユーザー インターフェイス コントロールの 1 つです。</span><span class="sxs-lookup"><span data-stu-id="bf777-108">Buttons are one of the most basic user interface controls.</span></span> <span data-ttu-id="bf777-109">通常、アプリケーションによって <xref:System.Windows.Controls.Primitives.ButtonBase.Click> イベントの何らかのタスクが実行されるのは、ユーザーがそれらをクリックしたときです。</span><span class="sxs-lookup"><span data-stu-id="bf777-109">Applications typically perform some task in the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event when a user clicks on them.</span></span>  
+## <a name="buttons"></a><span data-ttu-id="ab652-108">ボタン</span><span class="sxs-lookup"><span data-stu-id="ab652-108">Buttons</span></span>  
+ <span data-ttu-id="ab652-109">ボタンは、最も基本的なユーザー インターフェイス コントロールの 1 つです。</span><span class="sxs-lookup"><span data-stu-id="ab652-109">Buttons are one of the most basic user interface controls.</span></span> <span data-ttu-id="ab652-110">通常、アプリケーションによって <xref:System.Windows.Controls.Primitives.ButtonBase.Click> イベントの何らかのタスクが実行されるのは、ユーザーがそれらをクリックしたときです。</span><span class="sxs-lookup"><span data-stu-id="ab652-110">Applications typically perform some task in the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event when a user clicks on them.</span></span>  
   
 - <xref:System.Windows.Controls.Button>  
   
 - <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
-## <a name="data-display"></a><span data-ttu-id="bf777-110">データ表示</span><span class="sxs-lookup"><span data-stu-id="bf777-110">Data Display</span></span>  
- <span data-ttu-id="bf777-111">データ表示コントロールを使用して、データ ソースの情報を表示します。</span><span class="sxs-lookup"><span data-stu-id="bf777-111">Data display controls are used to show information from a data source.</span></span>  
+## <a name="data-display"></a><span data-ttu-id="ab652-111">データ表示</span><span class="sxs-lookup"><span data-stu-id="ab652-111">Data Display</span></span>  
+ <span data-ttu-id="ab652-112">データ表示コントロールを使用して、データ ソースの情報を表示します。</span><span class="sxs-lookup"><span data-stu-id="ab652-112">Data display controls are used to show information from a data source.</span></span>  
   
 - <xref:System.Windows.Controls.DataGrid>  
   
@@ -71,15 +72,15 @@ ms.locfileid: "75636212"
   
 - <xref:System.Windows.Controls.TreeView>  
   
-## <a name="date-display-and-selection"></a><span data-ttu-id="bf777-112">日付表示および選択</span><span class="sxs-lookup"><span data-stu-id="bf777-112">Date Display and Selection</span></span>  
- <span data-ttu-id="bf777-113">日付コントロールを使用して、カレンダー情報を表示したり、選択したりします。</span><span class="sxs-lookup"><span data-stu-id="bf777-113">Date controls are used to display and select calendar information.</span></span>  
+## <a name="date-display-and-selection"></a><span data-ttu-id="ab652-113">日付表示および選択</span><span class="sxs-lookup"><span data-stu-id="ab652-113">Date Display and Selection</span></span>  
+ <span data-ttu-id="ab652-114">日付コントロールを使用して、カレンダー情報を表示したり、選択したりします。</span><span class="sxs-lookup"><span data-stu-id="ab652-114">Date controls are used to display and select calendar information.</span></span>  
   
 - <xref:System.Windows.Controls.Calendar>  
   
 - <xref:System.Windows.Controls.DatePicker>  
   
-## <a name="menus"></a><span data-ttu-id="bf777-114">メニュー</span><span class="sxs-lookup"><span data-stu-id="bf777-114">Menus</span></span>  
- <span data-ttu-id="bf777-115">メニューを使用して、関連する操作をグループ化したり、コンテキスト支援を提供したりします。</span><span class="sxs-lookup"><span data-stu-id="bf777-115">Menus are used to group related actions or to provide contextual assistance.</span></span>  
+## <a name="menus"></a><span data-ttu-id="ab652-115">メニュー</span><span class="sxs-lookup"><span data-stu-id="ab652-115">Menus</span></span>  
+ <span data-ttu-id="ab652-116">メニューを使用して、関連する操作をグループ化したり、コンテキスト支援を提供したりします。</span><span class="sxs-lookup"><span data-stu-id="ab652-116">Menus are used to group related actions or to provide contextual assistance.</span></span>  
   
 - <xref:System.Windows.Controls.ContextMenu>  
   
@@ -87,8 +88,8 @@ ms.locfileid: "75636212"
   
 - <xref:System.Windows.Controls.ToolBar>  
   
-## <a name="selection"></a><span data-ttu-id="bf777-116">選択ツール</span><span class="sxs-lookup"><span data-stu-id="bf777-116">Selection</span></span>  
- <span data-ttu-id="bf777-117">選択コントロールを使用すると、ユーザーは 1 つ以上のオプションを選択できます。</span><span class="sxs-lookup"><span data-stu-id="bf777-117">Selection controls are used to enable a user to select one or more options.</span></span>  
+## <a name="selection"></a><span data-ttu-id="ab652-117">選択ツール</span><span class="sxs-lookup"><span data-stu-id="ab652-117">Selection</span></span>  
+ <span data-ttu-id="ab652-118">選択コントロールを使用すると、ユーザーは 1 つ以上のオプションを選択できます。</span><span class="sxs-lookup"><span data-stu-id="ab652-118">Selection controls are used to enable a user to select one or more options.</span></span>  
   
 - <xref:System.Windows.Controls.CheckBox>  
   
@@ -100,8 +101,8 @@ ms.locfileid: "75636212"
   
 - <xref:System.Windows.Controls.Slider>  
   
-## <a name="navigation"></a><span data-ttu-id="bf777-118">ナビゲーション</span><span class="sxs-lookup"><span data-stu-id="bf777-118">Navigation</span></span>  
- <span data-ttu-id="bf777-119">ナビゲーション コントロールは、対象のフレームやタブ付きのアプリケーションの外観を作成して、アプリケーションのナビゲーション操作を向上または拡張します。</span><span class="sxs-lookup"><span data-stu-id="bf777-119">Navigation controls enhance or extend the application navigation experience by creating targeting frames or tabbed application appearance.</span></span>  
+## <a name="navigation"></a><span data-ttu-id="ab652-119">ナビゲーション</span><span class="sxs-lookup"><span data-stu-id="ab652-119">Navigation</span></span>  
+ <span data-ttu-id="ab652-120">ナビゲーション コントロールは、対象のフレームやタブ付きのアプリケーションの外観を作成して、アプリケーションのナビゲーション操作を向上または拡張します。</span><span class="sxs-lookup"><span data-stu-id="ab652-120">Navigation controls enhance or extend the application navigation experience by creating targeting frames or tabbed application appearance.</span></span>  
   
 - <xref:System.Windows.Controls.Frame>  
   
@@ -113,8 +114,8 @@ ms.locfileid: "75636212"
   
 - <xref:System.Windows.Controls.TabControl>  
   
-## <a name="dialog-boxes"></a><span data-ttu-id="bf777-120">ダイアログ ボックス</span><span class="sxs-lookup"><span data-stu-id="bf777-120">Dialog Boxes</span></span>  
- <span data-ttu-id="bf777-121">ダイアログ ボックスは、印刷などの一般的なユーザー操作シナリオで、対象となるサポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="bf777-121">Dialog boxes provide targeted support for common user-interaction scenarios such as printing.</span></span>  
+## <a name="dialog-boxes"></a><span data-ttu-id="ab652-121">ダイアログ ボックス</span><span class="sxs-lookup"><span data-stu-id="ab652-121">Dialog Boxes</span></span>  
+ <span data-ttu-id="ab652-122">ダイアログ ボックスは、印刷などの一般的なユーザー操作シナリオで、対象となるサポートを提供します。</span><span class="sxs-lookup"><span data-stu-id="ab652-122">Dialog boxes provide targeted support for common user-interaction scenarios such as printing.</span></span>  
   
 - <xref:Microsoft.Win32.OpenFileDialog>  
   
@@ -122,8 +123,8 @@ ms.locfileid: "75636212"
   
 - <xref:Microsoft.Win32.SaveFileDialog>  
   
-## <a name="user-information"></a><span data-ttu-id="bf777-122">ユーザー情報</span><span class="sxs-lookup"><span data-stu-id="bf777-122">User Information</span></span>  
- <span data-ttu-id="bf777-123">ユーザー情報コントロールは、コンテキスト フィードバックを提供したり、アプリケーションのユーザー インターフェイスを明確にしたりします。</span><span class="sxs-lookup"><span data-stu-id="bf777-123">User information controls provide contextual feedback or clarify an application's user interface.</span></span> <span data-ttu-id="bf777-124">ユーザーは通常、これらのコントロールを操作できません。</span><span class="sxs-lookup"><span data-stu-id="bf777-124">The user typically cannot interact with these controls.</span></span>  
+## <a name="user-information"></a><span data-ttu-id="ab652-123">ユーザー情報</span><span class="sxs-lookup"><span data-stu-id="ab652-123">User Information</span></span>  
+ <span data-ttu-id="ab652-124">ユーザー情報コントロールは、コンテキスト フィードバックを提供したり、アプリケーションのユーザー インターフェイスを明確にしたりします。</span><span class="sxs-lookup"><span data-stu-id="ab652-124">User information controls provide contextual feedback or clarify an application's user interface.</span></span> <span data-ttu-id="ab652-125">ユーザーは通常、これらのコントロールを操作できません。</span><span class="sxs-lookup"><span data-stu-id="ab652-125">The user typically cannot interact with these controls.</span></span>  
   
 - <xref:System.Windows.Controls.AccessText>  
   
@@ -139,8 +140,8 @@ ms.locfileid: "75636212"
   
 - <xref:System.Windows.Controls.ToolTip>  
   
-## <a name="documents"></a><span data-ttu-id="bf777-125">ドキュメント</span><span class="sxs-lookup"><span data-stu-id="bf777-125">Documents</span></span>  
- <span data-ttu-id="bf777-126">WPF には、ドキュメントの表示に特化したコントロールがいくつかあります。</span><span class="sxs-lookup"><span data-stu-id="bf777-126">WPF includes several specialized controls for viewing documents.</span></span> <span data-ttu-id="bf777-127">これらのコントロールは、対象となるユーザーのシナリオに応じて、読みやすさを最適化します。</span><span class="sxs-lookup"><span data-stu-id="bf777-127">These controls optimize the reading experience, based on the targeted user scenario.</span></span>  
+## <a name="documents"></a><span data-ttu-id="ab652-126">ドキュメント</span><span class="sxs-lookup"><span data-stu-id="ab652-126">Documents</span></span>  
+ <span data-ttu-id="ab652-127">WPF には、ドキュメントの表示に特化したコントロールがいくつかあります。</span><span class="sxs-lookup"><span data-stu-id="ab652-127">WPF includes several specialized controls for viewing documents.</span></span> <span data-ttu-id="ab652-128">これらのコントロールは、対象となるユーザーのシナリオに応じて、読みやすさを最適化します。</span><span class="sxs-lookup"><span data-stu-id="ab652-128">These controls optimize the reading experience, based on the targeted user scenario.</span></span>  
   
 - <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -152,8 +153,8 @@ ms.locfileid: "75636212"
   
 - <xref:System.Windows.Controls.StickyNoteControl>  
   
-## <a name="input"></a><span data-ttu-id="bf777-128">入力</span><span class="sxs-lookup"><span data-stu-id="bf777-128">Input</span></span>  
- <span data-ttu-id="bf777-129">入力コントロールを使用すると、ユーザーはテキストや他のコンテンツを入力できます。</span><span class="sxs-lookup"><span data-stu-id="bf777-129">Input controls enable the user to input text and other content.</span></span>  
+## <a name="input"></a><span data-ttu-id="ab652-129">入力</span><span class="sxs-lookup"><span data-stu-id="ab652-129">Input</span></span>  
+ <span data-ttu-id="ab652-130">入力コントロールを使用すると、ユーザーはテキストや他のコンテンツを入力できます。</span><span class="sxs-lookup"><span data-stu-id="ab652-130">Input controls enable the user to input text and other content.</span></span>  
   
 - <xref:System.Windows.Controls.TextBox>  
   
@@ -161,8 +162,8 @@ ms.locfileid: "75636212"
   
 - <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="media"></a><span data-ttu-id="bf777-130">Media</span><span class="sxs-lookup"><span data-stu-id="bf777-130">Media</span></span>  
- <span data-ttu-id="bf777-131">WPF は、最も一般的なイメージ形式の [コーデック] と共に、オーディオ コンテンツとビデオ コンテンツのホストを統合的にサポートします。</span><span class="sxs-lookup"><span data-stu-id="bf777-131">WPF includes integrated support for hosting both audio and video content, as well as [codecs] for most popular image formats.</span></span>  
+## <a name="media"></a><span data-ttu-id="ab652-131">Media</span><span class="sxs-lookup"><span data-stu-id="ab652-131">Media</span></span>  
+ <span data-ttu-id="ab652-132">WPF は、最も一般的なイメージ形式の [コーデック] と共に、オーディオ コンテンツとビデオ コンテンツのホストを統合的にサポートします。</span><span class="sxs-lookup"><span data-stu-id="ab652-132">WPF includes integrated support for hosting both audio and video content, as well as [codecs] for most popular image formats.</span></span>  
   
 - <xref:System.Windows.Controls.Image>  
   
@@ -170,13 +171,13 @@ ms.locfileid: "75636212"
   
 - <xref:System.Windows.Controls.SoundPlayerAction>  
   
-## <a name="digital-ink"></a><span data-ttu-id="bf777-132">デジタル インク</span><span class="sxs-lookup"><span data-stu-id="bf777-132">Digital Ink</span></span>  
- <span data-ttu-id="bf777-133">デジタル インク コントロールは、インク表示やインク入力などのタブレット PC 機能を統合的にサポートします。</span><span class="sxs-lookup"><span data-stu-id="bf777-133">Digital ink controls provide integrated support for Tablet PC features, such as ink viewing and ink input.</span></span>  
+## <a name="digital-ink"></a><span data-ttu-id="ab652-133">デジタル インク</span><span class="sxs-lookup"><span data-stu-id="ab652-133">Digital Ink</span></span>  
+ <span data-ttu-id="ab652-134">デジタル インク コントロールは、インク表示やインク入力などのタブレット PC 機能を統合的にサポートします。</span><span class="sxs-lookup"><span data-stu-id="ab652-134">Digital ink controls provide integrated support for Tablet PC features, such as ink viewing and ink input.</span></span>  
   
 - <xref:System.Windows.Controls.InkCanvas>  
   
 - <xref:System.Windows.Controls.InkPresenter>  
   
-## <a name="see-also"></a><span data-ttu-id="bf777-134">関連項目</span><span class="sxs-lookup"><span data-stu-id="bf777-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ab652-135">関連項目</span><span class="sxs-lookup"><span data-stu-id="ab652-135">See also</span></span>
 
-- [<span data-ttu-id="bf777-135">コントロール ライブラリ</span><span class="sxs-lookup"><span data-stu-id="bf777-135">Control Library</span></span>](control-library.md)
+- [<span data-ttu-id="ab652-136">コントロール ライブラリ</span><span class="sxs-lookup"><span data-stu-id="ab652-136">Control Library</span></span>](control-library.md)

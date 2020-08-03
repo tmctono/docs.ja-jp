@@ -1,25 +1,26 @@
 ---
 title: 等値演算 (C#)
+description: C# の LINQ での等価演算子について説明します。ここでは、2 つのシーケンスの要素が等しく、要素数も同じである場合、これらのシーケンスは等しくなります。
 ms.date: 07/20/2015
 ms.assetid: 9d9a5bf2-f211-4865-bd19-c59ffa004615
-ms.openlocfilehash: 306129c1fe0c3f0003f8be579d987edcaeb63709
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 605b161250ce63746ca1b1ff350dc2ebf1736e21
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141497"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105436"
 ---
-# <a name="equality-operations-c"></a><span data-ttu-id="c78e8-102">等値演算 (C#)</span><span class="sxs-lookup"><span data-stu-id="c78e8-102">Equality Operations (C#)</span></span>
-<span data-ttu-id="c78e8-103">2 つのシーケンスの対応する要素が等しく、要素数も同じである場合、これらのシーケンスは等しいと見なされます。</span><span class="sxs-lookup"><span data-stu-id="c78e8-103">Two sequences whose corresponding elements are equal and which have the same number of elements are considered equal.</span></span>  
+# <a name="equality-operations-c"></a><span data-ttu-id="9de90-103">等値演算 (C#)</span><span class="sxs-lookup"><span data-stu-id="9de90-103">Equality Operations (C#)</span></span>
+<span data-ttu-id="9de90-104">2 つのシーケンスの対応する要素が等しく、要素数も同じである場合、これらのシーケンスは等しいと見なされます。</span><span class="sxs-lookup"><span data-stu-id="9de90-104">Two sequences whose corresponding elements are equal and which have the same number of elements are considered equal.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="c78e8-104">メソッド</span><span class="sxs-lookup"><span data-stu-id="c78e8-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="9de90-105">メソッド</span><span class="sxs-lookup"><span data-stu-id="9de90-105">Methods</span></span>  
   
-|<span data-ttu-id="c78e8-105">メソッド名</span><span class="sxs-lookup"><span data-stu-id="c78e8-105">Method Name</span></span>|<span data-ttu-id="c78e8-106">[説明]</span><span class="sxs-lookup"><span data-stu-id="c78e8-106">Description</span></span>|<span data-ttu-id="c78e8-107">C# のクエリ式の構文</span><span class="sxs-lookup"><span data-stu-id="c78e8-107">C# Query Expression Syntax</span></span>|<span data-ttu-id="c78e8-108">説明</span><span class="sxs-lookup"><span data-stu-id="c78e8-108">More Information</span></span>|  
+|<span data-ttu-id="9de90-106">メソッド名</span><span class="sxs-lookup"><span data-stu-id="9de90-106">Method Name</span></span>|<span data-ttu-id="9de90-107">説明</span><span class="sxs-lookup"><span data-stu-id="9de90-107">Description</span></span>|<span data-ttu-id="9de90-108">C# のクエリ式の構文</span><span class="sxs-lookup"><span data-stu-id="9de90-108">C# Query Expression Syntax</span></span>|<span data-ttu-id="9de90-109">説明</span><span class="sxs-lookup"><span data-stu-id="9de90-109">More Information</span></span>|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|<span data-ttu-id="c78e8-109">SequenceEqual</span><span class="sxs-lookup"><span data-stu-id="c78e8-109">SequenceEqual</span></span>|<span data-ttu-id="c78e8-110">要素をペアにして比較することで、2 つのシーケンスが等しいかどうかを判断します。</span><span class="sxs-lookup"><span data-stu-id="c78e8-110">Determines whether two sequences are equal by comparing elements in a pair-wise manner.</span></span>|<span data-ttu-id="c78e8-111">該当しない。</span><span class="sxs-lookup"><span data-stu-id="c78e8-111">Not applicable.</span></span>|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="9de90-110">SequenceEqual</span><span class="sxs-lookup"><span data-stu-id="9de90-110">SequenceEqual</span></span>|<span data-ttu-id="9de90-111">要素をペアにして比較することで、2 つのシーケンスが等しいかどうかを判断します。</span><span class="sxs-lookup"><span data-stu-id="9de90-111">Determines whether two sequences are equal by comparing elements in a pair-wise manner.</span></span>|<span data-ttu-id="9de90-112">該当なし。</span><span class="sxs-lookup"><span data-stu-id="9de90-112">Not applicable.</span></span>|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a><span data-ttu-id="c78e8-112">参照</span><span class="sxs-lookup"><span data-stu-id="c78e8-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9de90-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="9de90-113">See also</span></span>
 
 - <xref:System.Linq>
-- [<span data-ttu-id="c78e8-113">標準クエリ演算子の概要 (C#)</span><span class="sxs-lookup"><span data-stu-id="c78e8-113">Standard Query Operators Overview (C#)</span></span>](./standard-query-operators-overview.md)
-- [<span data-ttu-id="c78e8-114">2 つのフォルダーの内容を比較する方法 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c78e8-114">How to compare the contents of two folders (LINQ) (C#)</span></span>](./how-to-compare-the-contents-of-two-folders-linq.md)
+- [<span data-ttu-id="9de90-114">標準クエリ演算子の概要 (C#)</span><span class="sxs-lookup"><span data-stu-id="9de90-114">Standard Query Operators Overview (C#)</span></span>](./standard-query-operators-overview.md)
+- [<span data-ttu-id="9de90-115">2 つのフォルダーの内容を比較する方法 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="9de90-115">How to compare the contents of two folders (LINQ) (C#)</span></span>](./how-to-compare-the-contents-of-two-folders-linq.md)
