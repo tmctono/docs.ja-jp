@@ -1,5 +1,6 @@
 ---
 title: 配置、余白、パディングの概要
+description: HorizontalAlignment、Margin、Padding、VerticalAlignment について学習します。これにより、Windows Presentation Foundation アプリケーションの子要素の位置を制御します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-ms.openlocfilehash: bec2d9cd224febb650e2de67bb7406365d075963
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 832325086c85a7b044876e825d93e0b680a0b99c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79145476"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165883"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>配置、余白、パディングの概要
 <xref:System.Windows.FrameworkElement> クラスは、子要素の正確な配置に使用されるいくつかのプロパティを公開します。 このトピックでは、<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>、<xref:System.Windows.FrameworkElement.Margin%2A>、<xref:System.Windows.Controls.Border.Padding%2A>、<xref:System.Windows.FrameworkElement.VerticalAlignment%2A> という 4 つの最も重要なプロパティについて説明します。 これらのプロパティの効果を理解することが重要です。[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションの要素の位置を制御するための基本となるためです。  

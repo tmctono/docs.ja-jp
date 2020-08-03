@@ -1,13 +1,14 @@
 ---
-title: LINQ to XML の注釈3
+title: LINQ to XML の注釈
+description: LINQ to XML で注釈を使用して、任意の型の任意のオブジェクトを XML ツリー内の任意の XML コンポーネントに関連付ける方法について学習します。
 ms.date: 07/20/2015
 ms.assetid: 54e7b9d0-07f5-488f-9065-b6e6b870f810
-ms.openlocfilehash: 5f1940be2fc126ff9e9c7a4cb37e5cc7fc95d3c3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e7da666139c10b26de37816693202d96498f52d8
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66689946"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165578"
 ---
 # <a name="linq-to-xml-annotations"></a>LINQ to XML の注釈
 
@@ -21,7 +22,7 @@ ms.locfileid: "66689946"
 
 注釈を操作する場合は、次のメソッドを使用できます。
 
-|方法|[説明]|
+|メソッド|説明|
 |------------|-----------------|
 |<xref:System.Xml.Linq.XObject.AddAnnotation%2A>|オブジェクトを <xref:System.Xml.Linq.XObject> の注釈の一覧に追加します。|
 |<xref:System.Xml.Linq.XObject.Annotation%2A>|指定された型の最初の注釈オブジェクトを <xref:System.Xml.Linq.XObject> から取得します。|

@@ -1,5 +1,6 @@
 ---
 title: '方法: TextBox コントロールのテキスト コンテンツを設定する'
+description: Text プロパティを使用して、Windows Presentation Foundation の TextBox コントロールの初期テキスト コンテンツを設定する方法について学習します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - text content [WPF], setting
 - TextBox control [WPF], setting text content
 ms.assetid: bcd25fc7-a52f-4453-b802-2c8d2b335ab8
-ms.openlocfilehash: 9b16f2d99295a28725255361b0be3ef7f4245fd2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 41efb69e297b3c6fdb1203c358dcc72d7a9f806f
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459302"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168044"
 ---
 # <a name="how-to-set-the-text-content-of-a-textbox-control"></a>方法: TextBox コントロールのテキスト コンテンツを設定する
 

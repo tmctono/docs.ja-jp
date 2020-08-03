@@ -1,13 +1,14 @@
 ---
 title: async と await を使用して複数の Web 要求を並列実行する方法 (C#)
+description: C# でタスクの作成と、タスク作成時の適用ではなく、await 演算子の使用を分ける方法について説明します。
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: 0cfc1d6d1d59dc74fcf5990abb0a9d980a83d7b0
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 899dfd9165d199a67a5178bb351081ee544b231f
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241800"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925164"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>async と await を使用して複数の Web 要求を並列実行する方法 (C#)
 非同期メソッドでは、タスクは作成されると開始されます。 [Await](../../../language-reference/operators/await.md) 演算子は、メソッド内でタスクが終了するまで処理が続行できなくなった時点で、タスクに適用されます。 次の例に示すように、タスクは多くの場合、作成されるとすぐに待機します。  

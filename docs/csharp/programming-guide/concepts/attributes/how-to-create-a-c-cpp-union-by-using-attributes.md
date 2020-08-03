@@ -1,13 +1,14 @@
 ---
 title: 属性を使用して C/C++ の共用体を作成する方法 (C#)
+description: 属性を使用して、C# での構造体のメモリ内での配置をカスタマイズする方法について説明します。 この例では、C/C++ の共用体に相当するものを実装します。
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: ff8ce560444581a28b257820573224f89a274cd9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 766a070105441630dfd8fecf7b9f68fa6818fe50
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141573"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925073"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>属性を使用して C/C++ の共用体を作成する方法 (C#)
 
@@ -69,11 +70,11 @@ struct TestExplicit
 
 2 つの整数フィールド、`i1` および `i2` は、`lg` と同じメモリ位置を共有します。 このような構造体配置の制御は、プラットフォームを呼び出すときに便利です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [C# プログラミングガイド](../../index.md)
+- [C# プログラミング ガイド](../../index.md)
 - [属性](../../../../standard/attributes/index.md)
 - [リフレクション (C#)](../reflection.md)
 - [属性 (C#)](index.md)

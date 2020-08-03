@@ -1,5 +1,6 @@
 ---
 title: '方法: カーソルの種類を変更する'
+description: Windows Presentation Foundation の要素とアプリケーション用のマウス ポインター カーソルを変更します。 この例は、XAML と分離コード ファイルで構成されています。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - mouse pointer [WPF], cursor type
 - cursor (mouse pointer)
 ms.assetid: 08c945a7-8ab0-4320-acf3-0b4955a344c2
-ms.openlocfilehash: 5c9e6931f6addb62a51e44b06a159d4e7b1e5f8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce0bc290948a0e52e85f76ceb62a330b49fd87ea
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776676"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165965"
 ---
 # <a name="how-to-change-the-cursor-type"></a>方法: カーソルの種類を変更する
 この例では、特定の要素とアプリケーションでマウスポインターの <xref:System.Windows.Input.Cursor> を変更する方法を示しています。  

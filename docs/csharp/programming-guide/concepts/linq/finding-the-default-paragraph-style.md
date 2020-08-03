@@ -1,20 +1,21 @@
 ---
 title: 既定の段落スタイルの検索 (C#)
+description: C# で LINQ を使用して WordprocessingML ドキュメントを処理する方法について学習します。 この例では、ドキュメント内の段落の既定のスタイルを検索します。
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: 8cc1f1b9df208b0b180e5fe4a50922b5ee46b480
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e18bbbdbd5b2627c9ff4c3c3eedd84d7cb166a62
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169533"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103829"
 ---
 # <a name="finding-the-default-paragraph-style-c"></a>既定の段落スタイルの検索 (C#)
 「WordprocessingML ドキュメント内の情報の操作」チュートリアルでの最初のタスクは、ドキュメント内にある段落の既定のスタイルを検索することです。  
   
 ## <a name="example"></a>例  
   
-### <a name="description"></a>[説明]  
+### <a name="description"></a>説明  
  次の例では、Office Open XML WordprocessingML ドキュメントを開き、パッケージのドキュメント パーツとスタイル パーツを検索した後、既定のスタイル名を検索するクエリを実行します。 Office Open XML ドキュメント パッケージおよびその構成パーツについて詳しくは、「[Office Open XML WordprocessingML ドキュメントの詳細 (C#)](./wordprocessingml-document-with-styles.md)」をご覧ください。  
   
  このクエリは、値が "paragraph" である `w:style` という名前の属性と、値が "1" である `w:type` という名前の属性を持つ `w:default` という名前のノードを検索します。 これらの属性を持つ XML ノードは 1 つしかないため、このクエリは、<xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> 演算子を使用してコレクションをシングルトンに変換します。 次に、`w:styleId` という名前の属性の値を取得します。  

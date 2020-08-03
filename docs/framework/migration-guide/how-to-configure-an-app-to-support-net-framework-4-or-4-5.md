@@ -1,16 +1,17 @@
 ---
 title: '方法: .NET Framework 4 以降のバージョンをサポートするアプリを構成する'
+description: 含まれる例を使用し、.NET Framework 4 以降をサポートするようにデスクトップ アプリを構成する方法について学習します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring apps to support .NET Framework
 - .NET Framework, configuring apps
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
-ms.openlocfilehash: 30fb1da8d758b0e8996b4fcdebbb7fbf545a46c1
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: 58d71cb7fac7a3c2bef975c99cfab1ca730fb6eb
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80228755"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475464"
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>方法: .NET Framework 4 以降のバージョンをサポートするアプリを構成する
 
@@ -20,7 +21,7 @@ ms.locfileid: "80228755"
 
 - 構成ファイル。
 
-     アプリケーション構成ファイルに 1 つ以上の .NET Framework のバージョンを指定する [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) エントリがあり、これらのバージョンの 1 つがユーザーのコンピューターにある場合、アプリはそのバージョンで実行されます。 構成ファイルは、一覧表示された順序で [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) エントリを読み込み、ユーザーのコンピューターにある、最初に表示される .NET Framework バージョンを使用します (Version 1.0 では [\<requiredRuntime>](../configure-apps/file-schema/startup/requiredruntime-element.md) 要素を使用します)。
+     アプリケーション構成ファイルに 1 つ以上の .NET Framework のバージョンを指定する [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) エントリがあり、これらのバージョンの 1 つがユーザーのコンピューターにある場合、アプリはそのバージョンで実行されます。 構成ファイルは、一覧表示された順序で [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) エントリを読み込み、ユーザーのコンピューターにある、最初に表示される .NET Framework バージョンを使用します。 (バージョン 1.0 には [\<requiredRuntime> 要素](../configure-apps/file-schema/startup/requiredruntime-element.md)を使用します。)
 
 - コンパイル後のバージョン。
 
@@ -28,7 +29,7 @@ ms.locfileid: "80228755"
 
 - インストールされた最新バージョン。
 
-     アプリがビルドされた .NET Framework のバージョンがなく、構成ファイルの [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 要素でバージョンが指定されていない場合、アプリはユーザーのコンピューターにある .NET Framework の最新バージョンで実行が試みられます。
+     アプリがビルドされた .NET Framework のバージョンがなく、構成ファイルの [\<supportedRuntime> 要素](../configure-apps/file-schema/startup/supportedruntime-element.md)でバージョンが指定されていない場合、アプリはユーザーのコンピューターにある .NET Framework の最新バージョンで実行が試みられます。
 
      ただし、.NET Framework 1.0、1.1、2.0、3.0、および 3.5 のアプリは、.NET Framework 4 以降では自動的に実行されず、場合によっては、エラーが発生し、.NET Framework 3.5 をインストールするように求めるメッセージが表示されることがあります。 また、Windows システムの異なるバージョンには .NET Framework の異なるバージョンが含まれるので、アクティベーション動作はユーザーのオペレーティング システムに応じて異なる場合があります。 アプリが .NET Framework 3.5 と 4、またはそれ以降をサポートしている場合は、構成ファイルの複数のエントリでこれを示して .NET Framework 初期化エラーを回避することをお勧めします。 詳細については、「[.NET Framework のバージョンおよび依存関係](versions-and-dependencies.md)」を参照してください。
 

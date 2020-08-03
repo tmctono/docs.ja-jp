@@ -1,5 +1,6 @@
 ---
 title: 型情報の表示
+description: .NET でリフレクションの中心となる System.Type を使用した型情報について確認します。 ConstructorInfo、MemberInfo、MethodInfo、FieldInfo、PropertyInfo について確認します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - viewing type information
 - reflection, viewing type information
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
-ms.openlocfilehash: bf119ff547df59cd369d688fd81ab058893614f2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cd74021e1f1a79626e171db13def98e546cd51df
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130017"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865204"
 ---
 # <a name="viewing-type-information"></a>型情報の表示
 <xref:System.Type?displayProperty=nameWithType> クラスは、リフレクションの中心です。 共通言語ランタイムは、リフレクションの要求時に読み込まれる型の**型**を作成します。 **型**オブジェクトのメソッド、フィールド、プロパティ、および入れ子になったクラスから、その型に関することがすべてわかります。  

@@ -1,17 +1,18 @@
 ---
 title: コントロールのパフォーマンスを最適化する
+description: Windows Presentation Foundation には、ほとんどの Windows アプリケーションで使用される一般的なコンポーネントの多くが含まれています。 ユーザー インターフェイスのパフォーマンスを向上させる方法について学習します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], improving performance
 - container recycling [WPF]
 - user interface virtualization [WPF]
 ms.assetid: 45a31c43-ea8a-4546-96c8-0631b9934179
-ms.openlocfilehash: d02fde7076cd6a24fdfb171ed54161b20f3d465e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: de348dd93e5710b5b81af035ec7aa56e01dc4981
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746730"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168305"
 ---
 # <a name="optimizing-performance-controls"></a>パフォーマンスの最適化:コントロール
 
@@ -65,11 +66,11 @@ UI の仮想化は、リスト コントロールにとって重要な処理で�
 |-------------|--------------------|-------------------------|------------------------|
 |<xref:System.Windows.Controls.ComboBox>|有効にできます|有効にできます|有効にできます|
 |<xref:System.Windows.Controls.ContextMenu>|有効にできます|有効にできます|有効にできます|
-|<xref:System.Windows.Controls.DocumentViewer>|使用できません|使用できません|有効にできます|
+|<xref:System.Windows.Controls.DocumentViewer>|使用不可|使用できません|有効にできます|
 |<xref:System.Windows.Controls.ListBox>|Default|有効にできます|有効にできます|
 |<xref:System.Windows.Controls.ListView>|Default|有効にできます|有効にできます|
 |<xref:System.Windows.Controls.TreeView>|有効にできます|有効にできます|有効にできます|
-|<xref:System.Windows.Controls.ToolBar>|使用できません|使用できません|有効にできます|
+|<xref:System.Windows.Controls.ToolBar>|使用不可|使用できません|有効にできます|
 
 > [!NOTE]
 > <xref:System.Windows.Controls.TreeView> で仮想化とコンテナーのリサイクルを有効にする方法の例については、「[TreeView のパフォーマンスを改善する](../controls/how-to-improve-the-performance-of-a-treeview.md)」を参照してください。

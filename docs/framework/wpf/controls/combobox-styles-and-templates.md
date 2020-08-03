@@ -1,5 +1,6 @@
 ---
 title: ComboBox のスタイルとテンプレート
+description: Windows Presentation Foundation の ComboBox コントロールのスタイルとテンプレートについて学習します。 ControlTemplate を変更して、コントロールに固有の外観を指定します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ComboBox [WPF], styles and templates
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: 887698bdaebf7bc5ddac8997167589d9fbd3dd4d
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 5e929bafeaf849b4b5682a17ca51cb0aab963613
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960378"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165913"
 ---
 # <a name="combobox-styles-and-templates"></a>ComboBox のスタイルとテンプレート
 このトピックでは、<xref:System.Windows.Controls.ComboBox> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、[コントロールのためのテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)に関する記事をご覧ください。  

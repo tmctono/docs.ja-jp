@@ -1,17 +1,18 @@
 ---
 title: '方法: Windows サービスを作成する'
+description: Windows サービス プロジェクト テンプレートを使用してサービスを作成します。 ServiceName プロパティを設定し、インストーラを作成して、OnStart と OnStop メソッドをオーバーライドします。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, creating
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-ms.openlocfilehash: 514675b3c3ce1f6701dff571361df672fb520c6a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6918225e39c15a52710fd0d56342aae869b42325
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053667"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925775"
 ---
 # <a name="how-to-create-windows-services"></a>方法: Windows サービスを作成する
 サービスを作成するときには、**Windows サービス**と呼ばれる、Visual Studio プロジェクトのテンプレートを使用できます。 このテンプレートを使用すると、作業の多くを自動化できます。この自動化は、適切なクラスと名前空間を参照し、サービスの基底クラスからの継承を設定し、メソッドのいくつかをオーバーライドすることで実現されます。  
@@ -36,7 +37,7 @@ ms.locfileid: "71053667"
   
 2. **[プロパティ]** ウィンドウで、サービスの <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> プロパティを設定します。  
   
-     ![ServiceName プロパティを設定する。](./media/windowsservice-servicename.PNG "WindowsService_ServiceName")  
+     ![ServiceName プロパティを設定します。](./media/windowsservice-servicename.PNG "WindowsService_ServiceName")  
   
     > [!NOTE]
     > <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> プロパティの値は、各インストーラー クラスに記録されている名前と一致する必要があります。 このプロパティを変更した場合は、インストーラー クラスの <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> プロパティも変更する必要があります。  

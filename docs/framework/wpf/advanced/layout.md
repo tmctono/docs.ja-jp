@@ -1,5 +1,6 @@
 ---
 title: レイアウト
+description: Windows Presentation Foundation レイアウト システムでレイアウトを計算する方法とタイミングについて理解します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: d4ea8d105b2d956323566a42108c7db3bfc4936d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 0db3f2a6cbabc610362435d64de3fc970f01a73c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046337"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164774"
 ---
 # <a name="layout"></a>レイアウト
 

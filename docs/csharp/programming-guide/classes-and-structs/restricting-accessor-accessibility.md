@@ -1,5 +1,6 @@
 ---
 title: アクセサーのアクセシビリティの制限 - C# プログラミング ガイド
+description: C# でのプロパティの get アクセサーと set アクセサーは、それらが属するプロパティと同等の可視性とアクセス レベルを既定で備えています。 アクセスは制限することができます。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - read-only properties [C#]
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - asymmetric accessor accessibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: a332fef814f0c81914eb7b8c308de68f719fbaac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 18fd1d58dc6125b5180118b2e0d3edc885a4b971
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714692"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863969"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>アクセサーのアクセシビリティの制限 (C# プログラミング ガイド)
 プロパティまたはインデクサーの [get](../../language-reference/keywords/get.md) および [set](../../language-reference/keywords/set.md) 部分は、*アクセサー*と呼ばれます。 既定では、これらのアクセサーは、それらが属するプロパティまたはインデクサーと同じ可視性またはアクセス レベルを持っています。 詳細については、「[アクセシビリティ レベル](../../language-reference/keywords/accessibility-levels.md)」を参照してください。 ただし、これらのアクセサーのいずれかにアクセスを制限すると便利な場合があります。 通常、これには、`set` アクセサーのアクセシビリティを制限しながら、`get` アクセサーのパブリック アクセスを維持する操作が含まれます。 次に例を示します。  
@@ -63,9 +64,9 @@ ms.locfileid: "75714692"
   
  `Name and ID in the derived class: John, John123`  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
-- [Properties](./properties.md)
+- [C# プログラミング ガイド](../index.md)
+- [プロパティ](./properties.md)
 - [インデクサー](../indexers/index.md)
 - [アクセス修飾子](./access-modifiers.md)

@@ -1,15 +1,16 @@
 ---
 title: フィールド - C# プログラミング ガイド
+description: C# のフィールドは、クラスまたは構造体で直接宣言される型の変数です。 フィールドは、それを含んでいる型のメンバーです。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 46d4f77a4a490b2acdb5da20b9a477f27c38d410
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9bd2e198cd623788a21d4da73e89851a6d77e3bb
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77628242"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474788"
 ---
 # <a name="fields-c-programming-guide"></a>フィールド (C# プログラミング ガイド)
 
@@ -48,9 +49,9 @@ ms.locfileid: "77628242"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [クラスと構造体](./index.md)
 - [コンストラクターの使用](./using-constructors.md)
 - [継承](./inheritance.md)

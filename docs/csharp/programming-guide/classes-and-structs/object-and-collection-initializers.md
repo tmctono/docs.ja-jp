@@ -1,16 +1,17 @@
 ---
 title: オブジェクト初期化子とコレクション初期化子 - C# プログラミング ガイド
+description: C# のオブジェクト初期化子は、コンストラクターを呼び出した後の作成時に、オブジェクトのアクセス可能なフィールドまたはプロパティに値を割り当てます。
 ms.date: 12/19/2018
 helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: ae8741e2f29db0a470ad8d3b121375fbdeaff0d9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 81deed8a21bff10364524c3e0784c562d4e727e6
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170196"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864775"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>オブジェクト初期化子とコレクション初期化子 (C# プログラミング ガイド)
 
@@ -108,7 +109,7 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
 
 この初期化子の例では、<xref:System.Collections.Generic.Dictionary%602.Add(%600,%601)> を呼び出し、3 つの項目をディクショナリに追加しています。 連想コレクションを初期化するこれら 2 つの異なる方法には、コンパイラによって生成されるメソッド呼び出しにより、動作にわずかな違いがあります。 いずれの場合も `Dictionary` クラスが使用されます。 他の型の場合、パブリック API に基づいて、いずれかのみサポートされることがあります。
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
 次の例では、オブジェクトの概念とコレクション初期化子の概念が組み合わさっています。
 
@@ -122,8 +123,8 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
 
 [!code-csharp[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullDictionaryInitializer)]  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [C# での LINQ](../../linq/index.md)
 - [匿名型](anonymous-types.md)

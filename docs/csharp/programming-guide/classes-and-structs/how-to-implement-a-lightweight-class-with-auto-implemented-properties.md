@@ -1,16 +1,17 @@
 ---
 title: 自動実装するプロパティを使用して簡易クラスを実装する方法 - C# プログラミング ガイド
+description: 自動実装プロパティのカプセル化を行う、変更できない簡易クラスを C# で作成する方法について説明します。 実装方法は 2 つあります。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 6d121f6be768d41d22ea01d871662913b2daae2b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de9034772bad1f28e27abe01595309dd84ddc3e7
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170274"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864567"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>自動実装するプロパティを使用して簡易クラスを実装する方法 (C# プログラミング ガイド)
 
@@ -145,8 +146,8 @@ public class Program
 
 コンパイラによって、各自動実装プロパティにバッキング フィールドが作成されます。 このフィールドは、ソース コードから直接アクセスできません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [Properties](./properties.md)
+- [プロパティ](./properties.md)
 - [struct](../../language-reference/builtin-types/struct.md)
 - [オブジェクト初期化子とコレクション初期化子](./object-and-collection-initializers.md)

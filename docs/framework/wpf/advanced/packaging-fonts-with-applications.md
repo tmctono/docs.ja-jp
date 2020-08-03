@@ -1,5 +1,6 @@
 ---
 title: アプリケーションでのフォントのパッケージング
+description: Windows Presentation Foundation アプリケーションでフォントをパッケージ化する方法について学習します。これには、コンテンツやリソース項目としてのフォントの追加や、フォントの使用に関する制限が含まれます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: 7bdf3b11557d94ab39c93a21ac53b917e3a1767d
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 725f05c22eda199d86e5ec5dbb6bdd899ee66a5d
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141116"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166349"
 ---
 # <a name="packaging-fonts-with-applications"></a>アプリケーションでのフォントのパッケージング
 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションを使用してフォントをパッケージングする方法の概要について説明します。  

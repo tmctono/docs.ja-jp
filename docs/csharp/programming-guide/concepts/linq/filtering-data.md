@@ -1,13 +1,14 @@
 ---
 title: データのフィルター処理 (C#)
+description: フィルター処理は、選択とも呼ばれ、条件に基づいて結果が限定されます。 フィルター処理を実行する C# での LINQ の標準クエリ演算子メソッドについて学習します。
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: 74399244990f8ff2deaa1d10576ea94a57c16bee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f9f6d691da73b566e5135f6692c87ba3a8978005
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75346991"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103932"
 ---
 # <a name="filtering-data-c"></a>データのフィルター処理 (C#)
 フィルター処理とは、特定の条件を満たす要素のみが含まれるように結果セットを限定する操作のことです。 選択とも呼ばれます。  
@@ -20,9 +21,9 @@ ms.locfileid: "75346991"
   
 ## <a name="methods"></a>メソッド  
   
-|メソッド名|[説明]|C# のクエリ式の構文|説明|  
+|メソッド名|説明|C# のクエリ式の構文|説明|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|OfType|指定した型にキャストできるかどうかにより、値を選択します。|該当しない。|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
+|OfType|指定した型にキャストできるかどうかにより、値を選択します。|該当なし。|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
 |Where|述語関数に基づいて値を選択します。|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>クエリ式の構文例  
@@ -45,7 +46,7 @@ foreach (string str in query)
 */  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq>
 - [標準クエリ演算子の概要 (C#)](./standard-query-operators-overview.md)

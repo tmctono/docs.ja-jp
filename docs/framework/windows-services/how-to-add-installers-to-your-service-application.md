@@ -1,5 +1,6 @@
 ---
 title: '方法: サービス アプリケーションにインストーラーを追加する'
+description: サービス アプリケーションにインストーラを追加する方法について確認します。 Visual Studio には、サービス アプリに関連付けられているリソースをインストールできるインストール コンポーネントが付属しています。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, deploying
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: 99e2376c50f0b47cc21002b2926818707188805e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f82dd6635555ccb8fcbcdf63cba2495084194731
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053649"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925645"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>方法: サービス アプリケーションにインストーラーを追加する
 Visual Studio には、サービス アプリケーションに関連付けられているリソースをインストールできるインストール コンポーネントが付属しています。 インストール コンポーネントは、個々のサービスをインストール先のシステムに登録し、サービス コントロール マネージャーにサービスが存在することを認識させます。 サービス アプリケーションを操作するときは、[プロパティ] ウィンドウでリンクを選択して、適切なインストーラーをプロジェクトに自動的に追加することができます。  

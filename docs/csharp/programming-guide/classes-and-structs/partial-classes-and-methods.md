@@ -1,17 +1,18 @@
 ---
 title: 部分クラスと部分メソッド - C# プログラミング ガイド
+description: C# の部分クラスと部分メソッドでは、クラス、構造体、インターフェイス、またはメソッドの定義を、2 つ以上のソース ファイルに分割できます。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 50b192d5a7416a982f41d0c3ac13e9c1bfe3397c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 792159786131654d6ee0363f7ab7b87ac50d32bb
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398425"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864749"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>部分クラスと部分メソッド (C# プログラミング ガイド)
 

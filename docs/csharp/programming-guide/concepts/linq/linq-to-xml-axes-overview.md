@@ -1,13 +1,14 @@
 ---
 title: LINQ to XML 軸の概要 (C#)
+description: C# での軸メソッド (軸とも呼ばれます) について学習します。 LINQ の XML ツリーに対してクエリを実行し、要素と属性を検索したり、軸を介してその値を取得したりすることができます。
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
-ms.openlocfilehash: c8b64731925f37d54bded62fae4ccae9933ffbe9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bbda844e8cb2e3b1ff116fd834c6ab1fdd20c1f8
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635523"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165451"
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>LINQ to XML 軸の概要 (C#)
 XML ツリーを作成した後、または XML ドキュメントを XML ツリーに読み込んだ後は、クエリを実行して要素や属性を調べたり、その値を取得したりできます。 コレクションの取得には、*軸メソッド* (*軸*とも呼ぶ) を使用します。 一部の軸は、<xref:System.Xml.Linq.XElement> コレクションを返す、<xref:System.Xml.Linq.XDocument> クラスおよび <xref:System.Collections.Generic.IEnumerable%601> クラスのメソッドです。 一部の軸は、<xref:System.Xml.Linq.Extensions> クラスの拡張メソッドです。 拡張メソッドとして実装されている軸は、コレクションに対して機能し、コレクションを返します。  
@@ -23,7 +24,7 @@ XML ツリーを作成した後、または XML ドキュメントを XML ツリ
 ## <a name="methods-for-retrieving-a-collection-of-elements"></a>要素のコレクションを取得するメソッド  
  <xref:System.Xml.Linq.XElement> で呼び出して要素のコレクションを返す <xref:System.Xml.Linq.XElement> クラス (またはその基本クラス) のメソッドを、次にまとめて示します。  
   
-|方法|[説明]|  
+|メソッド|説明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=nameWithType>|この要素の祖先の <xref:System.Collections.Generic.IEnumerable%601> の <xref:System.Xml.Linq.XElement> を返します。 オーバーロードでは、指定された <xref:System.Collections.Generic.IEnumerable%601> を持つ祖先の <xref:System.Xml.Linq.XElement> の <xref:System.Xml.Linq.XName> を返します。|  
 |<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>|この要素の子孫の <xref:System.Collections.Generic.IEnumerable%601> の <xref:System.Xml.Linq.XElement> を返します。 オーバーロードでは、指定された <xref:System.Collections.Generic.IEnumerable%601> を持つ子孫の <xref:System.Xml.Linq.XElement> の <xref:System.Xml.Linq.XName> を返します。|  
@@ -36,24 +37,24 @@ XML ツリーを作成した後、または XML ドキュメントを XML ツリ
 ## <a name="method-for-retrieving-a-single-element"></a>1 つの要素を取得するメソッド  
  次のメソッドは、<xref:System.Xml.Linq.XElement> オブジェクトから 1 つの子を取得します。  
   
-|方法|[説明]|  
+|メソッド|説明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=nameWithType>|指定された <xref:System.Xml.Linq.XElement> を持つ最初の子 <xref:System.Xml.Linq.XName> オブジェクトを返します。|  
   
 ## <a name="method-for-retrieving-a-collection-of-attributes"></a>属性のコレクションを取得するメソッド  
  次のメソッドは、<xref:System.Xml.Linq.XElement> オブジェクトから属性を取得します。  
   
-|方法|[説明]|  
+|メソッド|説明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>|すべての属性の <xref:System.Collections.Generic.IEnumerable%601> の <xref:System.Xml.Linq.XAttribute> を返します。|  
   
 ## <a name="method-for-retrieving-a-single-attribute"></a>1 つの属性を取得するメソッド  
  次のメソッドは、<xref:System.Xml.Linq.XElement> オブジェクトから 1 つの属性を取得します。  
   
-|方法|[説明]|  
+|メソッド|説明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|指定された <xref:System.Xml.Linq.XAttribute> を持つ <xref:System.Xml.Linq.XName> を返します。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [LINQ to XML 軸 (C#)](linq-to-xml-axes-overview.md)

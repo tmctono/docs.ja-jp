@@ -1,16 +1,17 @@
 ---
 title: 静的コンストラクター - C# プログラミング ガイド
+description: C# の静的コンストラクターは、静的データを初期化するか、最初のインスタンスが作成される前、または静的メンバーが参照される前に 1 回だけ実行されるアクションを実行します。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 744bcacbc38299c0ef7d16e814c415ec5caf95dd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e324b2aa968ff5fdf9c268fa3891f67e8530ff87
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170118"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863983"
 ---
 # <a name="static-constructors-c-programming-guide"></a>静的コンストラクター (C# プログラミング ガイド)
 静的コンストラクターは、任意の [static](../../language-reference/keywords/static.md) データを初期化するため、または 1 回だけ実行する必要がある特定のアクションを実行するために使います。 最初のインスタンスが作成され前、または静的メンバーが参照される前に、自動的に呼び出されます。  

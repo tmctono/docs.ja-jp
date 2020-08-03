@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strong-named assemblies, about strong-named assemblies
 - assemblies [.NET Framework], strong-named
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
-ms.openlocfilehash: a2db0efcb57226a757796c311309ce8f749a398b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 069e42af6f8d49363d0264c0f6167b4afa3acd61
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378609"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925658"
 ---
 # <a name="strong-named-assemblies"></a>厳密な名前付きアセンブリ
 
@@ -30,9 +30,7 @@ Visual Studio またはコマンド ライン ツールを使用して、アセ�
 
 ## <a name="why-strong-name-your-assemblies"></a>アセンブリに厳格な名前を付ける理由
 
-厳密な名前付きのアセンブリを参照すると、バージョン管理や名前の一意性を保護できるなどの利点を期待できます。 .NET Framework では、厳密な名前付きのアセンブリは、一部のシナリオを有効にするために必要な、グローバル アセンブリ キャッシュにインストールできます。
-
-厳格な名前付きのアセンブリは次のシナリオで役立ちます。
+.NET Framework では、厳格な名前付きのアセンブリは次のシナリオで役立ちます。
 
 - 独自のアセンブリを厳密な名前付きのアセンブリが参照できるようにする場合、または他の厳密な名前付きのアセンブリから独自のアセンブリへの `friend` アクセスを可能にする場合。
 
@@ -42,7 +40,9 @@ Visual Studio またはコマンド ライン ツールを使用して、アセ�
 
 - 発行者ポリシーを提供することにより、アプリへのサービスを集中管理する場合。これは、グローバル アセンブリ キャッシュにアセンブリがインストールされている必要があることを意味します。
 
-オープン ソースの開発者が厳密な名前付きのアセンブリによる ID の利点を必要とする場合、アセンブリに関連付けられた秘密キーをソース コントロール システムにチェックインすることを検討してください。
+.NET Core では、厳密な名前付きのアセンブリに素材の利点はありません。
+
+.NET Framework との互換性の向上のためにオープン ソースの開発者が厳密な名前付きのアセンブリによる ID の利点を必要とする場合、アセンブリに関連付けられた秘密キーをソース コントロール システムにチェックインすることを検討してください。
 
 ## <a name="see-also"></a>関連項目
 

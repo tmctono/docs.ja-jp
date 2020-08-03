@@ -1,16 +1,17 @@
 ---
 title: 参照型パラメーターの引き渡し - C# プログラミング ガイド
+description: C# で参照型パラメーターを値で渡す場合、参照先オブジェクトのデータを変更することはできますが、参照自体の値を変更することはできません。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: 6fa0e60fafabaa9fb04cdc5d5bf3f9e29490e84f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64a4735eded7a468549862b3221b4fbd0966e64d
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714713"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864710"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>参照型パラメーターの引き渡し (C# プログラミング ガイド)
 [型参照](../../language-reference/keywords/reference-types.md)の変数には、そのデータは直接含まれず、そのデータへの参照が含まれます。 値で参照型パラメーターを渡す場合、クラス メンバーの値など、参照先オブジェクトに属するデータを変更することができます。 ただし、参照自体の値を変更することはできません。たとえば、同じ参照を使用して、新しいオブジェクトのメモリを割り当て、ブロックの外側で永続化させることはできません。 これを行うには、[ref](../../language-reference/keywords/ref.md) または [out](../../language-reference/keywords/out-parameter-modifier.md) キーワードを使用してパラメーターを渡します。 わかりやすくするために、次の例では `ref` を使用しています。  
@@ -38,9 +39,9 @@ ms.locfileid: "75714713"
   
  文字列の詳細については、「[文字列](../../language-reference/builtin-types/reference-types.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [パラメーターの引き渡し](./passing-parameters.md)
 - [ref](../../language-reference/keywords/ref.md)
 - [in](../../language-reference/keywords/in-parameter-modifier.md)

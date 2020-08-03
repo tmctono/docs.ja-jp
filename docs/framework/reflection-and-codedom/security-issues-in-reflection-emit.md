@@ -1,5 +1,6 @@
 ---
 title: リフレクション出力のセキュリティ関連事項
+description: 動的アセンブリを使用して、または既存のアセンブリで接続されるか匿名でホストされる動的メソッドを使用して実行されるリフレクション出力のセキュリティの問題について把握します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: d1b6994f7ee9efa9f6472deffb2f3d869606e182
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: d0ca26a1d0964c935137b0a30a5d7c78f93c597b
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644198"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865243"
 ---
 # <a name="security-issues-in-reflection-emit"></a>リフレクション出力のセキュリティ関連事項
 .NET Framework には、Microsoft Intermediate Language (MSIL) を出力する方法が 3 種類ありますが、それぞれに固有のセキュリティ問題があります。  

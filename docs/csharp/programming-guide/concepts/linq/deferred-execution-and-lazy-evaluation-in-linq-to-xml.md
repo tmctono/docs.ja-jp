@@ -1,13 +1,14 @@
 ---
 title: LINQ to XML における遅延実行とレイジー評価 (C#)
+description: クエリと軸の操作では、C# で遅延実行が使用することができます。 遅延実行の要件と利点、および実装に関する注意点について説明します。
 ms.date: 07/20/2015
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
-ms.openlocfilehash: 9cf28afb5b7b8b3047c8b1b21915ffe7409eb25e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8559505572404f895d75e0d9895f9ae2c07b795e
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69594565"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105459"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>LINQ to XML における遅延実行とレイジー評価 (C#)
 クエリと軸の操作は、多くの場合、遅延実行を使用するように実装されています。 このトピックでは、遅延実行の要件と利点、および実装に関する注意点について説明します。  
@@ -33,7 +34,7 @@ ms.locfileid: "69594565"
   
 - [遅延実行の例 (C#)](./deferred-execution-example.md)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [チュートリアル: クエリの連結 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
 - [概念と用語 (関数型変換) (C#)](./concepts-and-terminology-functional-transformation.md)

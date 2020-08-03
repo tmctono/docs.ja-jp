@@ -1,13 +1,14 @@
 ---
 title: 非同期の戻り値の型 (C#)
+description: 各型およびその他のリソースのコード例と共に非同期メソッドが C# で持つことのできる戻り値の型について説明します。
 ms.date: 04/14/2020
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: c2584f1e285a7ab76eb43f9a211a8d2a51c2c55e
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 954e449356819595a3a974a6dece5349e53ec88a
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761877"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925385"
 ---
 # <a name="async-return-types-c"></a>非同期の戻り値の型 (C#)
 
@@ -64,7 +65,7 @@ void を返す非同期メソッドの呼び出し元は、メソッドからス
 
 :::code language="csharp" source="./snippets/async-return-types/async-returns3.cs":::
 
-## <a name="generalized-async-return-types-and-valuetasktresult"></a>一般化された非同期の戻り値の型と ValueTask\<TResult\>
+## <a name="generalized-async-return-types-and-valuetasktresult"></a>一般化された async の戻り値の型と ValueTask\<TResult\>
 
 C# 7.0 以降、非同期メソッドで、アクセス可能な `GetAwaiter` メソッドを持つ任意の型を返すことができます。
 

@@ -1,13 +1,14 @@
 ---
 title: 特定の属性を持つ要素を検索する方法 (XPath-LINQ to XML) (C#)
+description: この C# の例では、特定の属性を持つ要素を検索する方法で XPath と LINQ to XML を比較します。
 ms.date: 07/20/2015
 ms.assetid: daed00dd-923a-43be-8a90-eee406f6f574
-ms.openlocfilehash: e79cad3ad6fb0bf88e388b552f8e39327acfb4ad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb0b5c27fb3993b487c5e8d70c6562c1d0562860
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141044"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105267"
 ---
 # <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>特定の属性を持つ要素を検索する方法 (XPath-LINQ to XML) (C#)
 特定の属性を持つすべての要素を検索しなければならない場合があります。 属性の内容は問わず、 属性の存在に基づいて選択を行うような場合です。  

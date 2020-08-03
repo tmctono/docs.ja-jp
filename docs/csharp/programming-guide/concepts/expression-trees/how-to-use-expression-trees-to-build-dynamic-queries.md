@@ -1,13 +1,14 @@
 ---
 title: 式ツリーを使用して動的クエリをビルドする方法 (C#)
+description: 式ツリーを使って動的な LINQ クエリを作成する方法について説明します。 これらのクエリは、コンパイル時にクエリの詳細がわからない場合に便利です。
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: 6114ec13dd43a7df146b87dda00fba06d6eb870c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: edcef4068c19ba8e789683cf6ba4d5ef2477e0d8
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635900"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105598"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>式ツリーを使用して動的クエリをビルドする方法 (C#)
 LINQ では、<xref:System.Linq.IQueryable%601> を実装するデータ ソースをターゲットとする構造化されたクエリを表すために、式ツリーが使われます。 たとえば、LINQ プロバイダーは、リレーショナル データ ストアのクエリを行うために、<xref:System.Linq.IQueryable%601> インターフェイスを実装します。 C# コンパイラは、このようなデータ ソースをターゲットとするクエリをコンパイルして、実行時に式ツリーを作成するコードを生成します。 クエリ プロバイダーは式ツリー データ構造を走査して、データ ソースに適したクエリ言語に変換できます。  
@@ -105,7 +106,7 @@ foreach (string company in results)
   
 - System.Linq.Expressions 名前空間をインクルードします。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [式ツリー (C#)](./index.md)
 - [式ツリーを実行する方法 (C#)](./how-to-execute-expression-trees.md)

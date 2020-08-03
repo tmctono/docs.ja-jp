@@ -1,13 +1,14 @@
 ---
 title: CSV ファイルから XML を生成する方法 (C#)
+description: C# で LINQ および LINQ to XML を使用して .csv ファイルから XML を生成する方法について説明します。 クエリでは、let 句を使用して、文字列をフィールドの配列に分割します。
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
-ms.openlocfilehash: 643c05cb440165c4461c3e9c80e69701241ab8d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2fc9954a51fc1f2979c6cce13805ed15cdb88741
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635809"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105175"
 ---
 # <a name="how-to-generate-xml-from-csv-files-c"></a>CSV ファイルから XML を生成する方法 (C#)
 この例では、統合言語クエリ (LINQ) および [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用して、コンマ区切り (CSV) ファイルから XML ファイルを生成する方法について説明します。  

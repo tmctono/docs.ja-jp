@@ -1,16 +1,17 @@
 ---
 title: リフレクションを使用した属性へのアクセス (C#)
+description: GetCustomAttributes メソッドを使用して、C# でカスタム属性を使用して定義された情報を取得するには、リフレクションを使用します。
 ms.date: 07/20/2015
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
-ms.openlocfilehash: 990b6487e50bfb2d123c3871e5f85da063711d9e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9425141d64fd061d0c1f628228693cce02f7bfa0
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69595497"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925099"
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>リフレクションを使用した属性へのアクセス (C#)
-カスタム属性を定義し、それらをソース コード内に配置することができても、その情報を取得して操作する手段がなければ、ほとんど価値はありません。 リフレクションを使用すれば、カスタム属性を使用して定義された情報を取得することができます。 鍵となるメソッドは `GetCustomAttributes` です。このメソッドは、ソース コード属性の実行時の等価オブジェクトを配列で返します。 このメソッドには、いくつかのオーバー ロード バージョンがあります。 詳細については、<xref:System.Attribute> を参照してください。  
+カスタム属性を定義し、それらをソース コード内に配置することができても、その情報を取得して操作する手段がなければ、ほとんど価値はありません。 リフレクションを使用すれば、カスタム属性を使用して定義された情報を取得することができます。 鍵となるメソッドは `GetCustomAttributes` です。このメソッドは、ソース コード属性の実行時の等価オブジェクトを配列で返します。 このメソッドには、いくつかのオーバー ロード バージョンがあります。 詳細については、「<xref:System.Attribute>」を参照してください。  
   
  次のような属性指定は、  
   
@@ -113,11 +114,11 @@ class TestAuthorAttribute
 */  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [C# プログラミングガイド](../../index.md)
+- [C# プログラミング ガイド](../../index.md)
 - [属性に格納されている情報の取得](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
 - [リフレクション (C#)](../reflection.md)
 - [属性 (C#)](./index.md)

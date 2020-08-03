@@ -1,5 +1,6 @@
 ---
 title: 軽減策:ZipArchiveEntry.FullName パスの区切り文字
+description: .NET Framework 4.6.1 を対象とするアプリ以降、ZipArchiveEntry.FullName プロパティのパス区切り文字がどのように変更されたかについて説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application compatibility
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - .NET Framework 4.6.1 retargeting changes
 - retargeting changes
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
-ms.openlocfilehash: 3f6c7f258fd5dbf01db4d79b73b88ddd7484f9b2
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 8cd6362038ce0548681f3d3b44724f3ef9ff62cb
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102620"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475295"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>軽減策:ZipArchiveEntry.FullName パスの区切り文字
 

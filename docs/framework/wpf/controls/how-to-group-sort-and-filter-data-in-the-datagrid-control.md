@@ -1,5 +1,6 @@
 ---
 title: '方法: DataGrid コントロールでデータをグループ化、並べ替え、およびフィルター処理する'
+description: ビューでのデータのグループ化、並べ替え、フィルター処理をサポートする CollectionView に、Windows Presentation Foundation の DataGrid コントロールをバインドする方法について学習します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - DataGrid [WPF], group
 - DataGrid [WPF], filter
 ms.assetid: 03345e85-89e3-4aec-9ed0-3b80759df770
-ms.openlocfilehash: 622b64fd7738b02cd72131e7e9fe91c04314b1d0
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 072e5a104a91faa40bb54f2a3fc4ed6188e1112e
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559475"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167671"
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>方法: DataGrid コントロールでデータをグループ化、並べ替え、およびフィルター処理する
 

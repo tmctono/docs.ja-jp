@@ -1,19 +1,20 @@
 ---
 title: '軽減策: 新しい 64 ビット JIT コンパイラ'
+description: .NET Framework 4.6 に付属する新しい 64 ビット JIT コンパイラと、コンパイル中に発生することがある想定外の動作または例外について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT compiler, 64-bit
 - JIT compilation, 64-bit
 - RyuJIT compiler
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
-ms.openlocfilehash: 883aaf032bde632b08f965d3450cfbea4feb8e65
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f059cbdd3b2a66ac8a668b7b8a80d9ad1551fa64
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181252"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475230"
 ---
-# <a name="mitigation-new-64-bit-jit-compiler"></a>軽減策: 新しい 64 ビット JIT コンパイラ
+# <a name="mitigation-new-64-bit-jit-compiler"></a>軽減策:新しい 64 ビット JIT コンパイラ
 .NET Framework 4.6 以降では、ランタイムに Just-In-Time コンパイル用の新しい 64 ビット JIT コンパイラが含まれています。 この変更は、32 ビット JIT コンパイラでのコンパイルには影響しません。  
   
 ## <a name="unexpected-behavior-or-exceptions"></a>予期しない動作または例外  
@@ -67,7 +68,7 @@ ms.locfileid: "79181252"
   
  [Microsoft Connect](https://connect.microsoft.com/VisualStudio) でバグを報告し、問題を弊社に知らせることもできます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [アプリケーションの互換性](application-compatibility.md)
 - [\<useLegacyJit> 要素](../configure-apps/file-schema/runtime/uselegacyjit-element.md)

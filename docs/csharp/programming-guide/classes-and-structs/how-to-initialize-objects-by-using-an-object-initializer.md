@@ -1,16 +1,17 @@
 ---
 title: オブジェクト初期化子を使用してオブジェクトを初期化する方法 - C# プログラミング ガイド
+description: コンストラクターを呼び出さずに、C# でオブジェクト初期化子を使用して、型オブジェクトを初期化する方法について説明します。 オブジェクト初期化子を使用して、匿名型を定義します。
 ms.date: 12/20/2018
 helpviewer_keywords:
 - object initializers [C#], how to use
 - objects [C#], initializing
 ms.assetid: 4b75ebb2-2e29-43de-929c-d736a8f27ce6
-ms.openlocfilehash: a2ecc9df211d0082bd4b413653e374758c877abc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0781b168b0ae8b8383affe19d2721da67f662045
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705588"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865035"
 ---
 # <a name="how-to-initialize-objects-by-using-an-object-initializer-c-programming-guide"></a>オブジェクト初期化子を使用してオブジェクトを初期化する方法 (C# プログラミング ガイド)
 
@@ -30,7 +31,7 @@ ms.locfileid: "75705588"
 
 [!code-csharp[InitializerIndexerExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/HowToIndexInitializer.cs#HowToIndexInitializer)]  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [オブジェクト初期化子とコレクション初期化子](object-and-collection-initializers.md)

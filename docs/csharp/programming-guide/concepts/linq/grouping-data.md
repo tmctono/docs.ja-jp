@@ -1,13 +1,14 @@
 ---
 title: データのグループ化 (C#)
+description: グループ化によって、属性を共有する要素のグループにデータが格納されます。 データ要素をグループ化する C# での LINQ の標準クエリ演算子メソッドについて学習します。
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: 7ef3d3c9097d7a9478605565518ac8975feb9fe2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e1bca1d360b0f44a081cf2770118a0551629b5b
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635744"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103687"
 ---
 # <a name="grouping-data-c"></a>データのグループ化 (C#)
 グループ化とは、各グループの要素が共通の属性を持つようにデータをグループに分ける操作を指します。  
@@ -20,10 +21,10 @@ ms.locfileid: "75635744"
   
 ## <a name="methods"></a>メソッド  
   
-|メソッド名|[説明]|C# のクエリ式の構文|説明|  
+|メソッド名|説明|C# のクエリ式の構文|説明|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|GroupBy|共通の属性を共有する要素をグループ化します。 各グループは <xref:System.Linq.IGrouping%602> オブジェクトによって表されます。|`group … by`<br /><br /> または<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
-|ToLookup|キー セレクター関数に基づいて、<xref:System.Linq.Lookup%602> (一対多の辞書) に要素を挿入します。|該当しない。|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
+|GroupBy|共通の属性を共有する要素をグループ化します。 各グループは <xref:System.Linq.IGrouping%602> オブジェクトによって表されます。|`group … by`<br /><br /> \- または -<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
+|ToLookup|キー セレクター関数に基づいて、<xref:System.Linq.Lookup%602> (一対多の辞書) に要素を挿入します。|該当なし。|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>クエリ式の構文例  
  次のコード例では、`group by` 句を使用して、偶数か奇数かによってリスト内の整数をグループ化します。  
@@ -59,7 +60,7 @@ foreach (var group in query)
 */  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq>
 - [標準クエリ演算子の概要 (C#)](./standard-query-operators-overview.md)

@@ -1,5 +1,6 @@
 ---
 title: 'チュートリアル: ユーザー コントロールでのドラッグ アンド ドロップの有効化'
+description: Windows Presentation Foundation でドラッグ アンド ドロップのデータ転送 (受信) に参加できるカスタム ユーザー コントロールを作成する方法について学習します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: 172e49c2c255db4d24d2180f919b1305326b5e82
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 12ad47035a09995094014841b083062743fc2574
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991809"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168279"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>チュートリアル: ユーザー コントロールでのドラッグ アンド ドロップの有効化
 
@@ -128,7 +129,7 @@ ms.locfileid: "70991809"
 
 6. 円を <xref:System.Windows.Controls.TextBox> にドラッグ アンド ドロップします。 円の塗りつぶし色の文字列表現が <xref:System.Windows.Controls.TextBox> に追加されます。
 
-     ![円の塗りつぶし色の文字列表現](./media/dragdrop-colorstring.png "DragDrop_ColorString")
+     ![円の塗りつぶしの色の文字列表現](./media/dragdrop-colorstring.png "DragDrop_ColorString")
 
 既定では、カーソルは、ドラッグ アンド ドロップ操作中に変化して、データのドロップによる効果を示します。 <xref:System.Windows.UIElement.GiveFeedback> イベントを処理して、別のカーソルを設定することによって、ユーザーに表示するフィードバックをカスタマイズできます。
 
@@ -197,7 +198,7 @@ ms.locfileid: "70991809"
 
 5. そのテキストを円コントロールにドラッグしてドロップします。 円が青色から緑色に変化します。
 
-     ![文字列をブラシに変換する](./media/dragdrop-dropgreentext.png "DragDrop_DropGreenText")
+     ![ブラシへの文字列の変換](./media/dragdrop-dropgreentext.png "DragDrop_DropGreenText")
 
 6. <xref:System.Windows.Controls.TextBox> にテキスト `green` を入力します。
 
@@ -273,7 +274,7 @@ ms.locfileid: "70991809"
 
 7. テキストを円コントロールにドラッグします。ドロップはしません。 円が青色から緑色に変化します。
 
-     ![ドラッグの効果をプレビューする&#45;and&#45;drop operation](./media/dragdrop-previeweffects.png "DragDrop_PreviewEffects")
+     ![ドラッグ アンド ドロップ操作の効果のプレビュー](./media/dragdrop-previeweffects.png "DragDrop_PreviewEffects")
 
 8. テキストを円コントロールからドラッグします。 円が緑色から青色に戻ります。
 
@@ -329,7 +330,7 @@ ms.locfileid: "70991809"
 
 10. **Ctrl** キーを押したまま、円コントロールを、現在表示されているパネルからもう一方のパネルにドラッグしてドロップします。 円がコピーされ、そのコピーが、受け取り側のパネルの <xref:System.Windows.Controls.Panel.Children%2A> コレクションに追加されます。
 
-     ![CTRL キーを押したまま円をドラッグする](./media/dragdrop-paneldrop.png "DragDrop_PanelDrop")
+     ![Ctrl キーを押しながら円をドラッグする](./media/dragdrop-paneldrop.png "DragDrop_PanelDrop")
 
 ## <a name="see-also"></a>関連項目
 

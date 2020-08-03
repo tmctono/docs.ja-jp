@@ -1,13 +1,14 @@
 ---
 title: 大きな XML ドキュメントのストリーミング変換を実行する方法 (C#)
+description: いくつかのファイルでメモリが過剰に使用されることを回避するために C# でテキストの XML へのストリーミング変換を実行する方法について説明します。
 ms.date: 07/20/2015
 ms.assetid: 5f16d1f8-5370-4b55-b0c8-e497df163037
-ms.openlocfilehash: 9eb2e832f798e550ef3b534b0c9a0e3416378b43
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e1ab2866079b2244dc764271d7ba63173349e2f3
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169105"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104863"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>大きな XML ドキュメントのストリーミング変換を実行する方法 (C#)
 大きな XML ファイルを変換して、アプリケーションのメモリ使用量を予想できるようにアプリケーションを作成しなければならない場合があります。 非常に大きな XML ファイルを XML ツリーに設定しようとすると、ファイルのサイズに比例してメモリが過剰に使用されます。 したがって、代わりにストリーミングの手法を使用する必要があります。  

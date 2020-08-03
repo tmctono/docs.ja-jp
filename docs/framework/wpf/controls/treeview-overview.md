@@ -1,17 +1,18 @@
 ---
 title: TreeView の概要
+description: Windows Presentation Foundation TreeView コントロールでノードを使用して階層構造に情報を表示する方法について、簡単な例を含めて説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - expanding node [WPF]
 - TreeView control [WPF], about TreeView control
 - Control class [WPF], TreeView
 ms.assetid: 62212512-5a5c-4864-949e-b6a6a3a52c02
-ms.openlocfilehash: 267e870e13d26439e4fbcbba3c5741ff84cabe3c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6ef77febdd3facb7c7e1af566841c2a1aeaff810
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187380"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164539"
 ---
 # <a name="treeview-overview"></a>TreeView の概要
 <xref:System.Windows.Controls.TreeView> コントロールには、折りたたみ可能なノードを使用して、階層構造で情報を表示する方法が用意されています。 このトピックでは、<xref:System.Windows.Controls.TreeView> コントロールと <xref:System.Windows.Controls.TreeViewItem> コントロールについて説明し、その使用法の簡単な例を示します。  

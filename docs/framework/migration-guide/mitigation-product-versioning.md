@@ -1,15 +1,16 @@
 ---
 title: '軽減策: 製品のバージョン管理'
+description: この記事では、.NET Framework 4.6 以降の製品バージョン管理がどのように前のリリースから変更されたかについて説明します。
 ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
-ms.openlocfilehash: 64a68d2b79a0a3ccdd806949ffd6cb3760974390
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 442c06446e763758d3a150ee9ff884a616541c07
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457812"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475399"
 ---
-# <a name="mitigation-product-versioning"></a>軽減策: 製品のバージョン管理
+# <a name="mitigation-product-versioning"></a>軽減策:製品のバージョン管理
 
 .NET Framework 4.6 以降のバージョンでは、製品のバージョン管理が .NET Framework の以前のリリース (.NET Framework 4、4.5、4.5.1、4.5.2) から変更されました。
 
@@ -29,7 +30,7 @@ ms.locfileid: "73457812"
 
 一般に、.NET Framework のランタイムのバージョンやインストール ディレクトリを検出する際、アプリケーションは推奨される技法に従う必要があります。
 
-- .NET Framework のランタイムのバージョンを検出するには、「[方法 : インストールされている .NET Framework バージョンを確認する](how-to-determine-which-versions-are-installed.md)」を参照してください。
+- .NET Framework のランタイム バージョンを検出するには、「[方法:インストールされている .NET Framework バージョンを確認する](how-to-determine-which-versions-are-installed.md)」を参照してください。
 
 - .NET Framework のインストール パスを確認するには、`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` キーの `InstallPath` エントリの値を使用します。
 
@@ -40,6 +41,6 @@ ms.locfileid: "73457812"
 
 - CLR のバージョンを取得するには、<xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion%2A?displayProperty=nameWithType> メソッドを呼び出します。   .NET Framework 4 とそのポイント リリース (.NET Framework 4.5、4.5.1、4.5.2、および .NET Framework 4.6、4.6.1、4.6.2、4.7) の場合、それによって文字列 `v4.0.30319` が返されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [アプリケーションの互換性](application-compatibility.md)

@@ -1,5 +1,6 @@
 ---
 title: LINQ クエリの基本操作 (C#)
+description: LINQ クエリ式とクエリで実行するいくつかの操作について説明します。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - orderby clause [LINQ in C#]
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 91c038303c1ad7c2530964d3102aae49090c4c2a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d9653be8b67ef4d971c157b8dd8d82b2ae3c2287
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635939"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105526"
 ---
 # <a name="basic-linq-query-operations-c"></a>LINQ クエリの基本操作 (C#)
 このトピックでは、LINQ クエリ式とクエリで実行する一般的な操作について、簡単に説明します。 詳細については、以下のトピックを参照してください。  
@@ -41,12 +42,12 @@ ms.locfileid: "75635939"
   
  [!code-csharp[csLINQGettingStarted#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#23)]  
   
- 範囲変数は、`foreach`ループの反復変数と似ていますが、クエリ式では実際の反復は発生しません。 クエリが実行されると、範囲変数は `customers` の連続する各要素への参照として機能します。 `cust` の型はコンパイラで推論できるため、明示的に指定する必要はありません。 追加の範囲変数は、`let` 句で導入できます。 詳細については、「[let 句](../../../language-reference/keywords/let-clause.md)」を参照してください。  
+ 範囲変数は、`foreach`ループの反復変数と似ていますが、クエリ式では実際の反復は発生しません。 クエリが実行されると、範囲変数は `customers` の連続する各要素への参照として機能します。 `cust` の型はコンパイラで推論できるため、明示的に指定する必要はありません。 追加の範囲変数は、`let` 句で導入できます。 詳しくは、「[let 句](../../../language-reference/keywords/let-clause.md)」をご覧ください。  
   
 > [!NOTE]
 > <xref:System.Collections.ArrayList> などの非ジェネリック データ ソースの場合は、範囲変数を明示的に型指定する必要があります。 詳細については、「[LINQ を使用して ArrayList にクエリを実行する方法 (C#)](./how-to-query-an-arraylist-with-linq.md)」および「[from 句](../../../language-reference/keywords/from-clause.md)」を参照してください。  
   
-## <a name="filtering"></a>Filtering  
+## <a name="filtering"></a>フィルター処理  
  最も一般的なクエリ操作は、ブール式の形式でフィルターを適用することです。 クエリにフィルターを使用すると、式の条件に該当する要素だけがクエリから返されます。 結果は、`where` 句を使って生成されます。 フィルターは、実質的にはソース シーケンスから除外する要素を指定します。 次の例では、住所がロンドンにある `customers` だけが返されます。  
   
  [!code-csharp[csLINQGettingStarted#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#24)]  
@@ -59,9 +60,9 @@ ms.locfileid: "75635939"
   
  [!code-csharp[csLINQGettingStarted#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#26)]  
   
- 詳細については、「[where 句](../../../language-reference/keywords/where-clause.md)」を参照してください。  
+ 詳しくは、「[where 句](../../../language-reference/keywords/where-clause.md)」をご覧ください。  
   
-## <a name="ordering"></a>並べ替え  
+## <a name="ordering"></a>順序  
  返されたデータを並べ替えると便利なことがよくあります。 `orderby` 句を使用すると、並べ替える型の既定の比較子に従って、返されたシーケンスの要素が並べ替えられます。 たとえば、次のクエリは `Name` プロパティに基づいて結果を並び替えるように拡張できます。 `Name` は文字列であるため、既定の比較子によって、アルファベット順 (A から Z) で並べ替えられます。  
   
  [!code-csharp[csLINQGettingStarted#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#27)]  
@@ -81,9 +82,9 @@ ms.locfileid: "75635939"
   
  [!code-csharp[csLINQGettingStarted#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#29)]  
   
- 詳細については、「[group 句](../../../language-reference/keywords/group-clause.md)」を参照してください。  
+ 詳しくは、「[group 句](../../../language-reference/keywords/group-clause.md)」をご覧ください。  
   
-## <a name="joining"></a>参加  
+## <a name="joining"></a>結合  
  結合操作は、データ ソースで明示的にモデル化されていないシーケンス間に関連付けを作成します。 たとえば、結合を実行して、住所地が同じすべての顧客と販売業者を検索することができます。 LINQ では、`join` 句はデータベース テーブルを直接の対象とするのではなく、オブジェクトのコレクションを対象として機能します。  
   
  [!code-csharp[csLINQGettingStarted#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#36)]  
@@ -94,12 +95,12 @@ ms.locfileid: "75635939"
 from order in Customer.Orders...  
 ```  
   
- 詳しくは、「[join 句](../../../language-reference/keywords/join-clause.md)」をご覧ください。  
+ 詳細については、「[join 句](../../../language-reference/keywords/join-clause.md)」を参照してください。  
   
 ## <a name="selecting-projections"></a>選択 (投影)  
  `select` 句はクエリの結果を生成し、返される各要素の "シェイプ" つまり型を指定します。 たとえば、完全な `Customer` オブジェクト、１ つのメンバーのみ、メンバーのサブセット、または計算や新しいオブジェクトの作成に基づいた、まったく異なる種類の結果のいずれで結果が構成されるかを指定できます。 `select` 句でソース要素のコピー以外のものを生成する場合、その操作は*投影*と呼ばれます。 投影を使用したデータの変換は、LINQ クエリ式の強力な機能です。 詳細については、「[LINQ によるデータ変換 (C#)](./data-transformations-with-linq.md)」と「[select 句](../../../language-reference/keywords/select-clause.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [LINQ クエリ式](../../../linq/index.md)
 - [チュートリアル: C# でのクエリの作成](./walkthrough-writing-queries-linq.md)

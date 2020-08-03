@@ -1,16 +1,17 @@
 ---
 title: インスタンス コンストラクター - C# プログラミング ガイド
+description: C# のインスタンス コンストラクターは、new 式を使ってクラスのオブジェクトを作成するときに、インスタンス メンバー変数を作成および初期化します。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: 621b8ca7510b0b9916c9c46f201ff77402c3c655
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d70e786446fb198afb4e0311757cacb65b706f47
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75964724"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864203"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>インスタンス コンストラクター (C# プログラミング ガイド)
 
@@ -58,9 +59,9 @@ ms.locfileid: "75964724"
   
  基底クラスのコンストラクターの呼び出しに関する他の例については、「[virtual](../../language-reference/keywords/virtual.md)」、「[override](../../language-reference/keywords/override.md)」、「[base](../../language-reference/keywords/base.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [クラスと構造体](./index.md)
 - [コンストラクター](./constructors.md)
 - [ファイナライザー](./destructors.md)

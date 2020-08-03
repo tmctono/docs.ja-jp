@@ -1,13 +1,14 @@
 ---
 title: 単一の属性を取得する方法 (LINQ to XML) (C#)
+description: LINQ to XML を使用し、C# で属性名を指定して要素の単一の属性を取得する方法について学習します。
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
-ms.openlocfilehash: 830a7be24702b6037ac62471060fbe49d8ded598
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4efcae5324ad5a2e4664e68e35e15ec2053daece
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168714"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103431"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>単一の属性を取得する方法 (LINQ to XML) (C#)
 このトピックでは、属性名を指定して要素の単一の属性を取得する方法について説明します。 これは、特定の属性を持つ要素を検索するクエリ式を記述する場合に便利です。  
@@ -43,7 +44,7 @@ work
 ```  
   
 ## <a name="example"></a>例  
- 属性の値を取得する場合は、<xref:System.Xml.Linq.XElement> オブジェクトを使用して行う場合と同じように、その属性をキャストできます。 例を次に示します。  
+ 属性の値を取得する場合は、<xref:System.Xml.Linq.XElement> オブジェクトを使用して行う場合と同じように、その属性をキャストできます。 次に例を示します。  
   
 ```csharp  
 XElement cust = new XElement("PhoneNumbers",  
@@ -97,6 +98,6 @@ home
 work  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [LINQ to XML 軸 (C#)](./linq-to-xml-axes-overview.md)

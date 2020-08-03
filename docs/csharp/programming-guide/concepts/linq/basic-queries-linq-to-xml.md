@@ -1,13 +1,14 @@
 ---
 title: 基本的なクエリ (LINQ to XML) (C#)
+description: 特定の属性を持つ要素を検索する方法など、LINQ to XML の基本的なクエリの例を示します。
 ms.date: 07/20/2015
 ms.assetid: d333bb7d-20c1-448a-95b7-e5ba07915744
-ms.openlocfilehash: 4cfc29041ab9758bdef04bd7afe3fb2af3d886ff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c032d8df23731b9c306a7de004678f40d4bdecde
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75346601"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104165"
 ---
 # <a name="basic-queries-linq-to-xml-c"></a>基本的なクエリ (LINQ to XML) (C#)
 ここでは、基本的な [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリの例について説明します。  

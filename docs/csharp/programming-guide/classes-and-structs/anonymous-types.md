@@ -1,16 +1,17 @@
 ---
 title: 匿名型 - C# プログラミング ガイド
+description: C# の匿名の型によって、型を明示的に定義することなく、オブジェクトの一連の読み取り専用プロパティがカプセル化されます。 コンパイラによって名前が生成されます。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 63bc5560ba19ff36764465a6b89b81c13beec97a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ccdee1a86ab0c292721e69346cb7cedb03d4c28b
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170339"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474502"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>匿名型 (C# プログラミング ガイド)
 
@@ -46,7 +47,7 @@ Console.WriteLine(v.Amount + v.Message);
 var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", diam = 1 }};  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  匿名型は [object](../../language-reference/builtin-types/reference-types.md) から直接派生した [class](../../language-reference/keywords/class.md) 型であり、[object](../../language-reference/builtin-types/reference-types.md) 以外の型にキャストできません。 コンパイラは各匿名型に名前を付けますが、この名前にアプリケーションはアクセスできません。 共通言語ランタイムから見た場合、匿名型と他の参照型に違いはありません。  
   
  アセンブリ内の複数の匿名オブジェクト初期化子が、同じ順序で同じ名前や型を持つプロパティのシーケンスを指定する場合、コンパイラはそれらのオブジェクトを同じ型のインスタンスとして処理します。 これらのオブジェクトは、コンパイラで生成された同一の型情報を共有します。  
@@ -55,9 +56,9 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
   
  匿名型の <xref:System.Object.Equals%2A> メソッドと <xref:System.Object.GetHashCode%2A> メソッドは、プロパティの `Equals` メソッドと `GetHashCode` メソッドとして定義されています。このため、同じ匿名型の 2 つのインスタンスは、すべてのプロパティが等しい場合のみ等しいとみなされます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [オブジェクト初期化子とコレクション初期化子](./object-and-collection-initializers.md)
 - [C# の LINQ の概要](../concepts/linq/index.md)
 - [C# での LINQ](../../linq/index.md)

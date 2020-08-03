@@ -1,5 +1,6 @@
 ---
 title: '方法: リフレクションのみのコンテキストにアセンブリを読み込む'
+description: .NET でリフレクションのみのコンテキストにアセンブリを読み込む方法の例について確認します。 他のプラットフォームまたは .NET バージョン用にコンパイルされたアセンブリを確認します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], reflection-only loader context
 - reflection-only loader context
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
-ms.openlocfilehash: cac6b3b3adf070ad6070e5c5941653f20dedd907
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 92f847f6c61ba39bf8621af6080baccfdabe514a
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130111"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865074"
 ---
 # <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>方法: リフレクションのみのコンテキストにアセンブリを読み込む
 

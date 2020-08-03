@@ -1,13 +1,14 @@
 ---
 title: エンコードされたドキュメントを読み書きする方法 (C#)
+description: XDeclaration を XML ツリーに追加し、エンコードを目的のコード ページ名に設定することで、エンコードされた XML ドキュメントを C# で作成する方法について説明します。
 ms.date: 07/20/2015
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-ms.openlocfilehash: fa28c26845a0c6019943e0532ea0692a6dffd5a9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed02b7467f4de71455da516a6c894070337684e7
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347663"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104321"
 ---
 # <a name="how-to-read-and-write-an-encoded-document-c"></a>エンコードされたドキュメントを読み書きする方法 (C#)
 エンコードされた XML ドキュメントを作成するには、<xref:System.Xml.Linq.XDeclaration> を XML ツリーに追加し、エンコーディングを目的のコード ページ名に設定します。  
@@ -76,6 +77,6 @@ Encoded document:
 Encoding of loaded document is:utf-16  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>

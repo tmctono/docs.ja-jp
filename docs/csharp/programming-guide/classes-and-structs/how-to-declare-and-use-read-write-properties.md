@@ -1,5 +1,6 @@
 ---
 title: 読み取り/書き込みプロパティを宣言および使用する方法 - C# プログラミング ガイド
+description: C# で読み取り/書き込みプロパティを使用する方法について説明します。 このサンプルには、読み取り/書き込みプロパティとなるように、get アクセサーと set アクセサーを持つ 2 つのプロパティが含まれています。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - get accessor [C#], declaring properties
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 4b9db5f15746ab9a1f42239150c6783154723371
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 08bdaa9446491d473cfb16e3b82bac41d7af5b79
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170287"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864450"
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>読み取り/書き込みプロパティを宣言および使用する方法 (C# プログラミング ガイド)
 プロパティは、オブジェクトのデータへの保護されていない、制御されず未確認のアクセスに伴うリスクなしにパブリック データ メンバーの利便性を提供します。 これは*アクセサー*を通じて行われます。アクセサーは、基になるデータ メンバーの値を割り当てたり、取得したりする特殊なメソッドです。 [set](../../language-reference/keywords/set.md) アクセサーはデータ メンバーの割り当てを可能にし、[get](../../language-reference/keywords/get.md) アクセサーはデータ メンバーの値を取得します。  
@@ -54,8 +55,8 @@ person.SetAge(person.GetAge() + 1);
   
  プログラムでは `ToString` が明示的に使用されないことに注意してください。 既定では、`WriteLine` 呼び出しによって呼び出されます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
-- [Properties](./properties.md)
+- [C# プログラミング ガイド](../index.md)
+- [プロパティ](./properties.md)
 - [クラスと構造体](./index.md)

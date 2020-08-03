@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fe370b34d311816a815f3b2d419751ac7871f013
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 78a47b01cc8fba4cb45a686adad901784552c1c1
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "83703582"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865334"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Newtonsoft.Json から System.Text.Json に移行する方法
 
@@ -318,11 +318,27 @@ JSON に `Date` プロパティがない場合に逆シリアル化が失敗す�
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRequiredPropertyConverter.cs)]
 
-このカスタム コンバーターを登録するには、[POCO クラスで属性を使用](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type)するか、<xref:System.Text.Json.JsonSerializerOptions.Converters> コレクションに[コンバーター を追加](system-text-json-converters-how-to.md#registration-sample---converters-collection)します。
+このカスタム コンバーターを登録するには、<xref:System.Text.Json.JsonSerializerOptions.Converters?displayProperty=nameWithType> コレクションに[コンバーターを追加](system-text-json-converters-how-to.md#registration-sample---converters-collection)します。
 
-このパターンに従う場合は、<xref:System.Text.Json.JsonSerializer.Serialize%2A> または <xref:System.Text.Json.JsonSerializer.Deserialize%2A> を再帰的に呼び出すときにオプション オブジェクトを渡さないでください。 オプション オブジェクトには、<xref:System.Text.Json.JsonSerializerOptions.Converters%2A> コレクションが含まれています。 それを `Serialize` または `Deserialize` に渡すと、カスタム コンバーターはそれ自体を呼び出し、無限ループが形成され、結果的にスタック オーバーフロー例外が発生します。 既定のオプションを使用できない場合は、必要な設定を使用してオプションの新しいインスタンスを作成します。 この方法では、新しい各インスタンスが個別にキャッシュされるため、速度が遅くなります。
+コンバーターを再帰的に呼び出すこのパターンでは、属性を使用するのではなく、<xref:System.Text.Json.JsonSerializerOptions> を使用してコンバーターを登録する必要があります。 属性を使用してこのコンバーターを登録する場合、カスタム コンバーターによってそれ自体が再帰的に呼び出されます。 その結果、スタック オーバーフロー例外で終了する無限ループが発生します。
 
-上記のコンバーター コードは、簡略化された例です。 属性 ([[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) など) または別のオプション (カスタム エンコーダーなど) を処理する必要がある場合は、追加のロジックが必要になります。 また、例のコードでは、既定値がコンストラクター内で設定されているプロパティは処理されません。 さらに、この方法では次のシナリオの違いは識別されません。
+オプション オブジェクトを使用してコンバーターを登録する場合は、<xref:System.Text.Json.JsonSerializer.Serialize%2A> または <xref:System.Text.Json.JsonSerializer.Deserialize%2A> を再帰的に呼び出すときにオプション オブジェクトで渡さないようにして、無限ループを回避します。 オプション オブジェクトには、<xref:System.Text.Json.JsonSerializerOptions.Converters%2A> コレクションが含まれています。 それを `Serialize` または `Deserialize` に渡すと、カスタム コンバーターはそれ自体を呼び出し、無限ループが形成され、結果的にスタック オーバーフロー例外が発生します。 既定のオプションを使用できない場合は、必要な設定を使用してオプションの新しいインスタンスを作成します。 この方法では、新しい各インスタンスが個別にキャッシュされるため、速度が遅くなります。
+
+変換されるクラスで `JsonConverterAttribute` の登録を使用できる代替パターンがあります。 この方法では、変換されるクラスから派生したクラスで、コンバーター コードによって `Serialize` または `Deserialize` が呼び出されます。 この派生クラスには、`JsonConverterAttribute` が適用されていません。 この代替の例を次に示します。
+
+* `WeatherForecastWithRequiredPropertyConverterAttribute` は、逆シリアル化されるクラスであり、`JsonConverterAttribute` が適用されています。
+* `WeatherForecastWithoutRequiredPropertyConverterAttribute` は、コンバーター属性を持たない派生クラスです。
+* 無限ループを回避するために、コンバーターのコードによって、`WeatherForecastWithoutRequiredPropertyConverterAttribute` で `Serialize` と `Deserialize` が呼び出されます。 追加のオブジェクトのインスタンス化とプロパティ値のコピーによって、このシリアル化の方法にはパフォーマンス コストが発生します。
+
+次に `WeatherForecast*` の種類を示します。
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithReqPptyConverterAttr)]
+
+コンバーターを次に示します。
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRequiredPropertyConverterForAttributeRegistration.cs)]
+
+属性 ([[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) など) または別のオプション (カスタム エンコーダーなど) を処理する必要がある場合、必須プロパティのコンバーターには追加のロジックが必要です。 また、例のコードでは、既定値がコンストラクター内で設定されているプロパティは処理されません。 さらに、この方法では次のシナリオの違いは識別されません。
 
 * プロパティが JSON から欠落している。
 * null 非許容型のプロパティが JSON に存在するが、値がその型の既定である (たとえば、`int` ではゼロ)。
@@ -391,7 +407,7 @@ JSON に `Date` プロパティがない場合に逆シリアル化が失敗す�
 上記のサンプルに従ったカスタム コンバーターを使用すると、次のようになります。
 
 * `OnDeserializing` コードでは、新しい POCO インスタンスにアクセスできません。 逆シリアル化の開始時に新しい POCO インスタンスを操作するには、そのコードを POCO コンストラクターに挿入します。
-* `Serialize` または `Deserialize` を再帰的に呼び出すときにオプション オブジェクトを渡さないでください。 オプション オブジェクトには、`Converters` コレクションが含まれています。 `Serialize` または `Deserialize` に渡すと、コンバーターが使用されることになり、無限ループが形成され、結果的にスタック オーバーフロー例外が発生します。
+* オプション オブジェクトでコンバーターを登録し、`Serialize` または `Deserialize` を再帰的に呼び出すときにオプション オブジェクトで渡さないようにして、無限ループを回避します。 詳細については、この記事の前半に記載されている「[必須プロパティ](#required-properties)」セクションを参照してください。
 
 ### <a name="public-and-non-public-fields"></a>パブリックおよび非パブリック フィールド
 

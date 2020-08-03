@@ -1,13 +1,14 @@
 ---
 title: 指定した時間の経過後の非同期タスクのキャンセル (C#)
+description: C# で CancellationTokenSource.CancelAfter メソッドを使用して、この例の時間内に完了しない、関連付けられたタスクの取り消しをスケジュールします。
 ms.date: 07/20/2015
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
-ms.openlocfilehash: 110c4700d0d2afc87f9144bf258cdd4991f107f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f32af1d893c60ac17648f60fa3aa90adaa0383e8
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70204336"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925293"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-c"></a>指定した時間の経過後の非同期タスクのキャンセル (C#)
 
@@ -16,11 +17,11 @@ ms.locfileid: "70204336"
 この例では、「[タスクまたはタスクの一覧のキャンセル (C#)](./cancel-an-async-task-or-a-list-of-tasks.md)」で開発したコードに追加して、Web サイトの一覧をダウンロードして各サイトのコンテンツの長さを表示します。
 
 > [!NOTE]
-> この例を実行するには、Visual Studio 2012 以降および .NET Framework 4.5 以降が、コンピューターにインストールされている必要があります。
+> この例を実行するには、コンピューターに Visual Studio 2012 以降および .NET Framework 4.5 以降がインストールされている必要があります。
 
-## <a name="download-the-example"></a>例のダウンロード
+## <a name="download-the-example"></a>サンプルをダウンロードする
 
-完全な Windows Presentation Foundation (WPF) プロジェクトは「[Async Sample: Fine Tuning Your Application (非同期のサンプル: アプリケーションの微調整)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」からダウンロードできます。ダウンロード後、次の手順に従います。
+完全な Windows Presentation Foundation (WPF) プロジェクトは、「[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」(非同期のサンプル: アプリケーションの微調整) からダウンロードできます。その後、次の手順に従います。
 
 1. ダウンロードしたファイルを圧縮解除し、Visual Studio を起動します。
 
@@ -30,7 +31,7 @@ ms.locfileid: "70204336"
 
 4. **ソリューション エクスプローラー**で、**CancelAfterTime** プロジェクトのショートカット メニューを開き、 **[スタートアップ プロジェクトに設定]** をクリックします。
 
-5. **F5** キーを押してプロジェクトを実行します (デバッグを実行せずにプロジェクトを実行するには、**Ctrl**+**F5** キーを押します)。
+5. **F5** キーを押してプロジェクトを実行します。 (デバッグを実行せずにプロジェクトを実行するには、**Ctrl**+**F5** キーを押します)。
 
 6. プログラムを複数回実行して、出力がすべての Web サイトの出力を示したり、どの Web サイトの出力も示さなかったり、一部の Web サイトの出力を示したりすることを確認します。
 
@@ -92,7 +93,7 @@ Downloads canceled.
 
 <xref:System.Net.Http> の参照を追加する必要があることに注意してください。
 
-このプロジェクトは「[Async Sample: Fine Tuning Your Application (非同期のサンプル: アプリケーションの微調整)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」からダウンロードできます。
+プロジェクトは、「[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」(非同期のサンプル: アプリケーションの微調整) からダウンロードできます。
 
 ```csharp
 using System;
@@ -215,10 +216,10 @@ namespace CancelAfterTime
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Async および Await を使用した非同期プログラミング (C#)](./index.md)
-- [チュートリアル: async と await を使用した Web へのアクセス (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [チュートリアル: Async と Await を使用した Web へのアクセス (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [非同期タスクまたはタスクの一覧のキャンセル (C#)](./cancel-an-async-task-or-a-list-of-tasks.md)
 - [非同期アプリケーションの微調整 (C#)](./fine-tuning-your-async-application.md)
-- [非同期のサンプル: アプリケーションの微調整](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async Sample:Fine Tuning Your Application (非同期のサンプル: アプリケーションの微調整)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

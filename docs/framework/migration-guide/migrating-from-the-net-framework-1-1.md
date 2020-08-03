@@ -1,16 +1,17 @@
 ---
 title: .NET Framework 1.1 からの移行
+description: Windows 7 以降で .NET Framework 1.1 を使用してコンパイルされたアプリケーションを実行するために必要な手順について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-ms.openlocfilehash: 11fe9ba36d32a4c9fe363b48f76a8bb2b24f073b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f2b0e21ff5dbeab3395335f52799629859fb2d90
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73974969"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475269"
 ---
 # <a name="migrate-from-the-net-framework-11"></a>.NET Framework 1.1 からの移行
 

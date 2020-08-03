@@ -1,17 +1,18 @@
 ---
 title: プロパティの使用 - C# プログラミング ガイド
+description: これらの例では、C# でのプロパティの使用を示します。 get アクセサーと set アクセサーによる読み取りおよび書き込みアクセスの実装方法について確認し、プロパティへの使用について説明します。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: d873f626b660bb6bd94710add4543e21e11823d6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 51ca0a37022c99bfbd9d61f2cc47f529d535e72a
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77452020"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864658"
 ---
 # <a name="using-properties-c-programming-guide"></a>プロパティの使用 (C# プログラミング ガイド)
 
@@ -63,7 +64,7 @@ ms.locfileid: "77452020"
 
 `set` アクセサーでローカル変数の宣言に暗黙のパラメーター名 `value` を使用すると、エラーになります。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 プロパティは `public`、`private`、`protected`、`internal`、`protected internal`、`private protected` のいずれかでマークできます。 これらのアクセス修飾子により、クラスのユーザーがプロパティにアクセスできる方法が定義されます。 同じプロパティの `get` と `set` アクセサーは、異なるアクセス修飾子を持つことができます。 たとえば、`get` を `public` にして、型の外部からの読み取り専用アクセスを許可して、`set` を `private` または `protected` にすることができます。 詳細については、「[アクセス修飾子](./access-modifiers.md)」を参照してください。
 
@@ -106,9 +107,9 @@ ms.locfileid: "77452020"
 
 [!code-csharp[csProgGuideProperties#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#6)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
-- [Properties](properties.md)
+- [C# プログラミング ガイド](../index.md)
+- [プロパティ](properties.md)
 - [インターフェイスのプロパティ](interface-properties.md)
 - [自動実装プロパティ](auto-implemented-properties.md)

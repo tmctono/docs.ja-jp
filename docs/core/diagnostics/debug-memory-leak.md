@@ -3,16 +3,16 @@ title: メモリ リークのデバッグ チュートリアル
 description: .NET Core でメモリ リークをデバッグする方法について説明します。
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: d47992bab9dab64cf7f88ff679eef407dd891b5a
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: ff684f9b9402cb8b7b648e792a1d37ddcc96b399
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021361"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924891"
 ---
-# <a name="tutorial-debug-a-memory-leak-in-net-core"></a>チュートリアル: .NET Core でメモリ リークをデバッグする
+# <a name="debug-a-memory-leak-in-net-core"></a>.NET Core でメモリ リークをデバッグする
 
-**この記事の対象:** ✔️ .NET Core 3.0 SDK 以降のバージョン
+**この記事の対象:** ✔️ .NET Core 3.1 SDK 以降のバージョン
 
 このチュートリアルでは、.NET Core のメモリ リークを分析するためのツールについて説明します。
 
@@ -30,7 +30,7 @@ ms.locfileid: "82021361"
 
 このチュートリアルでは次のものを使用します。
 
-- [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) 以降のバージョン。
+- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) 以降のバージョン。
 - プロセスを一覧表示するための [dotnet-trace](dotnet-trace.md)。
 - マネージド メモリ使用量を確認するための [dotnet-counters](dotnet-counters.md)。
 - ダンプ ファイルを収集して分析するための [dotnet-dump](dotnet-dump.md)。
@@ -102,7 +102,7 @@ Press p to pause, r to resume, q to quit.
 
 スタートアップの直後、マネージド ヒープ メモリは 4 MB であることがわかります。
 
-次に、URL `http://localhost:5000/api/diagscenario/memleak/20000` を指定します。
+次に、URL `https://localhost:5001/api/diagscenario/memleak/20000` を指定します。
 
 メモリ使用量が 30 MB に増加していることに注意してください。
 
@@ -133,7 +133,7 @@ Complete
 
 ダンプが収集されると、失敗したプロセスを診断するのに十分な情報が得られます。 失敗したプロセスが運用サーバーで実行されている場合は、今が、そのプロセスを再起動して短期的な修復を行うのに最適なタイミングです。
 
-このチュートリアルでは、[サンプル デバッグ ターゲット](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/)を終了したので、閉じることができます。 サーバーを起動したターミナルに移動して、`Control-C` を押します。
+このチュートリアルでは、[サンプル デバッグ ターゲット](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/)を終了したので、閉じることができます。 サーバーを起動したターミナルに移動して、<kbd>Ctrl + C</kbd> を押します。
 
 ### <a name="analyze-the-core-dump"></a>コア ダンプを分析する
 
@@ -232,14 +232,14 @@ Found 2 roots.
 
 また、作成されたダンプ ファイルを削除することもできます。
 
+## <a name="see-also"></a>関連項目
+
+- [dotnet-trace](dotnet-trace.md) を使ってプロセスを一覧表示する
+- [dotnet-counters](dotnet-counters.md) を使ってマネージド メモリ使用量を確認する
+- [dotnet-dump](dotnet-dump.md) を使ってダンプ ファイルを収集して分析する
+- [dotnet/診断](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
+
 ## <a name="next-steps"></a>次の手順
 
-これでこのチュートリアルは完了です。
-
-引き続き診断チュートリアルを公開します。 ドラフト バージョンは、[dotnet/diagnostics](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial) リポジトリで読むことができます。
-
-このチュートリアルでは、主要な .NET 診断ツールの基本について説明しました。 高度な使用方法については、次の参照ドキュメントをご覧ください。
-
-* プロセスを一覧表示するための [dotnet-trace](dotnet-trace.md)。
-* マネージド メモリ使用量を確認するための [dotnet-counters](dotnet-counters.md)。
-* ダンプ ファイルを収集して分析するための [dotnet-dump](dotnet-dump.md)。
+> [!div class="nextstepaction"]
+> [.NET Core で高 CPU 使用率をデバッグする](debug-highcpu.md)

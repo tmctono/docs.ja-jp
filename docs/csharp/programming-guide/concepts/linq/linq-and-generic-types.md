@@ -1,17 +1,18 @@
 ---
 title: LINQ とジェネリック型 (C#)
+description: クエリをサポートする C# でのジェネリック型の基本的な概念について学習します。  LINQ クエリは、ジェネリック型に基づいています。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], generic types
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: 2cbff0b31cac091a57ea35cbd01535b7d0c4b78a
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 98054a4a21704293faa1194dac342bc48aef138d
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241761"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165639"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ とジェネリック型 (C#)
 LINQ クエリは、.NET Framework のバージョン 2.0 で導入されたジェネリック型に基づいています。 クエリを記述するために、ジェネリックについて詳しく知っておく必要ありません。 ただし、次の 2 つの基本的な概念を理解しておくと役立ちます。  

@@ -2,15 +2,15 @@
 title: ASP.NET Core の破壊的変更
 titleSuffix: ''
 description: ASP.NET Core における破壊的変更をリストアップします。
-ms.date: 07/15/2020
+ms.date: 07/17/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: cea6771afdc05edc525e7d35f530f42e7b3bc1fa
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: 7a07df5194d5dc220b61d55a4457d90881ac9ddf
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86441948"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474827"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core の破壊的変更
 
@@ -60,6 +60,7 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 - [Kestrel:既定でサポートされている TLS プロトコル バージョンの変更](#kestrel-default-supported-tls-protocol-versions-changed)
 - [Kestrel:空の HTTPS アセンブリを削除](#kestrel-empty-https-assembly-removed)
 - [Kestrel:互換性のない Windows バージョンでの TLS 経由の HTTP/2 の無効化](#kestrel-http2-disabled-over-tls-on-incompatible-windows-versions)
+- [Kestrel:非推奨としてマークされている Libuv トランスポート](#kestrel-libuv-transport-marked-as-obsolete)
 - [Kestrel:要求トレーラー ヘッダーを新しいコレクションに移動](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Kestrel:トランスポート抽象化レイヤーの変更](#kestrel-transport-abstractions-removed-and-made-public)
 - [ローカリゼーション:API を古いとしてマーク](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
@@ -137,6 +138,10 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 ***
 
 [!INCLUDE[Kestrel: HTTP/2 disabled over TLS on incompatible Windows versions](~/includes/core-changes/aspnetcore/5.0/kestrel-disables-http2-over-tls.md)]
+
+***
+
+[!INCLUDE[Kestrel: Libuv transport marked as obsolete](~/includes/core-changes/aspnetcore/5.0/kestrel-libuv-transport-obsolete.md)]
 
 ***
 

@@ -1,16 +1,17 @@
 ---
 title: ジャグ配列 - C# プログラミング ガイド
+description: C# のジャグ配列は、その要素がさまざまな次元とサイズからなる配列です。 ジャグ配列の宣言、初期化、アクセスの方法について説明します。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: 56013f0143d5efcb31a476909cb6e92504ff0dbc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 40da9fbda34aef4e69ebf2ae20485e883b79f871
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705705"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474684"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>ジャグ配列 (C# プログラミング ガイド)
 
@@ -64,10 +65,10 @@ ms.locfileid: "75705705"
   
  [!code-csharp[csProgGuideArrays#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#18)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Array>
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [配列](./index.md)
 - [1 次元配列](./single-dimensional-arrays.md)
 - [多次元配列](./multidimensional-arrays.md)

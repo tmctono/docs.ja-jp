@@ -1,13 +1,14 @@
 ---
 title: Office Open XML ドキュメントを変更する方法 (C#)
+description: Office Open XML ドキュメントを開いて変更および保存を行う方法について説明します。 この C# の例では、WindowsBase アセンブリに含まれるクラスを使用します。
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-ms.openlocfilehash: 620530b14513356dc9bb5d942e8db7691a03880d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1155851696a0a6ed651c5f84290a3879e73276db
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345847"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104826"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a>Office Open XML ドキュメントを変更する方法 (C#)
 このトピックでは、Office Open XML ドキュメントを開き、それを変更して保存する例について説明します。  

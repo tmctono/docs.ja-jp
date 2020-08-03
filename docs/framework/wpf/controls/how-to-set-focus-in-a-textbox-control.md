@@ -1,5 +1,6 @@
 ---
 title: '方法: TextBox コントロールにフォーカスを設定する'
+description: Focus メソッドを使用して、Windows Presentation Foundation の TextBox コントロールにフォーカスを設定する方法について学習します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - focus [WPF], setting
 - TextBox control [WPF], setting focus
 ms.assetid: 24b61b45-dc2d-425e-9839-b017af7ab86f
-ms.openlocfilehash: f4ba367ea9bdfcd6dbab7a5015472ec33adfe46f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e107c22a3c5b701e02cbc8506d10fa35ee15c79d
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024353"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168052"
 ---
 # <a name="how-to-set-focus-in-a-textbox-control"></a>方法: TextBox コントロールにフォーカスを設定する
 この例では、<xref:System.Windows.UIElement.Focus%2A> メソッドを使用して <xref:System.Windows.Controls.TextBox> コントロールにフォーカスを設定する方法を示します。  

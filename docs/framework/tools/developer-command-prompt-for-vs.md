@@ -1,5 +1,6 @@
 ---
 title: Visual Studio 用開発者コマンド プロンプト
+description: .NET ツールをより簡単に使用できる、Visual Studio 用開発者コマンド プロンプトの使用方法について学習します。 これにより、特定の環境変数が自動的に設定されます。
 ms.date: 01/05/2020
 helpviewer_keywords:
 - command prompt, Windows SDK
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - environment variables, setting for tools
 - developer command prompt
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
-ms.openlocfilehash: f028281d477284acf3ac4dac63f5ddbbd79f5259
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 92416820f47cb778dfcc916b8626df4aa328814c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715843"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167174"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio 用開発者コマンド プロンプト
 
 Visual Studio 用開発者コマンド プロンプトでは、.NET Framework ツールをもっと簡単に使用できます。 それは、特定の環境変数を自動的に設定するコマンド プロンプトです。 開発者コマンド プロンプトを開いた後、`ildasm` や `clrver` などの [.NET Framework ツール](index.md)のコマンドを入力できます。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 

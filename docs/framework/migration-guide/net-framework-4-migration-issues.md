@@ -1,16 +1,17 @@
 ---
 title: .NET Framework 4 への移行に関する問題
+description: 標準コンプライアンスとセキュリティの修正プログラムと変更など、.NET Framework 3.5 Service Pack 1 と .NET Framework 4 の間の移行問題について説明します。
 ms.date: 05/02/2017
 helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
-ms.openlocfilehash: 8e83859733f021afbe074a7b4818b155d74efdff
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: bbb9a3803986c922fd1ef04a87cd1e230fc3d623
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420462"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475282"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 への移行に関する問題
 
@@ -126,7 +127,7 @@ ms.locfileid: "83420462"
 | ------- | ------------------------ | ------------------- |
 | **バッファーの長さ** (アンマネージ API) | メモリを節約するために、[ICorProfilerInfo2::GetStringLayout](../unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) メソッドの `pBufferLengthOffset` パラメーターの機能は、`pStringLengthOffset` パラメーターと一致するように変更されました。 両方のパラメーターが文字列の長さのオフセット位置を指すようになりました。 バッファーの長さは、文字列クラスの表現から削除されました。 | バッファーの長さへの依存を除去します。 |
 | **JIT デバッグ** | Just-In-Time (JIT) デバッグの登録を簡略化するために、.NET Framework デバッガーは、ネイティブ コードの JIT デバッグの動作を制御する AeDebug レジストリ キーのみを使用するようになりました。 この変更の結果は次のとおりです。<br><br>\* マネージド コードとネイティブ コードに 2 つの異なるデバッガーを登録することはできなくなりました。<br>\* 非対話形式のプロセスに対してデバッガーを自動的に開始することはできなくなりましたが、対話形式のプロセスについてはユーザーにプロンプトを表示できます。<br>\* デバッガーの起動に失敗した場合、または起動する必要のある登録済みデバッガーがない場合は、通知が行われなくなりました。<br>\* アプリケーションの対話機能に依存する自動起動ポリシーは、サポートされなくなりました。 | 必要に応じてデバッグ操作を調整します。 |
-| **プラットフォーム呼び出し** | アンマネージ コードとの相互運用性のパフォーマンスを向上させるために、プラットフォーム呼び出しに不適切な呼び出し規約があると、アプリケーションが失敗するようになりました。 以前のバージョンでは、マーシャリング レイヤーがスタック上でこれらのエラーを解決しました。 | Microsoft Visual Studio でアプリケーションをデバッグすると、これらのエラーが警告されるため、エラーを修正できます。<br><br>更新できないバイナリがある場合は、アプリケーションの構成ファイルに [\<NetFx40_PInvokeStackResilience](../configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md) 要素を含めて、以前のバージョンのように呼び出しエラーを 1 つずつ解決できるようにすることができます。 ただし、この処理はアプリケーションのパフォーマンスに影響することがあります。 |
+| **プラットフォーム呼び出し** | アンマネージ コードとの相互運用性のパフォーマンスを向上させるために、プラットフォーム呼び出しに不適切な呼び出し規約があると、アプリケーションが失敗するようになりました。 以前のバージョンでは、マーシャリング レイヤーがスタック上でこれらのエラーを解決しました。 | Microsoft Visual Studio でアプリケーションをデバッグすると、これらのエラーが警告されるため、エラーを修正できます。<br><br>更新できないバイナリがある場合は、アプリケーションの構成ファイルに [\<NetFx40_PInvokeStackResilience>](../configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md) 要素を含めて、以前のバージョンのように呼び出しエラーを 1 つずつ解決できるようにすることができます。 ただし、この処理はアプリケーションのパフォーマンスに影響することがあります。 |
 | **削除されたインターフェイス** (アンマネージ API) | 開発者の混乱を避けるために、次のインターフェイスが削除されました。これらのインターフェイスで有用な実行時シナリオが提供されることはなく、CLR でも実装の提供または受け入れを行っていなかったためです。<br><br>\* **INativeImageINativeImageDependency**<br>\* **INativeImageInstallInfo**<br>\* **INativeImageEvaluate**<br>\* **INativeImageConverter**<br>\* **ICorModule**<br>\* **IMetaDataConverter** | なし。 |
 
 ## <a name="data"></a>データ

@@ -1,13 +1,14 @@
 ---
 title: 軽減策:X509CertificateClaimSet.FindClaims メソッド
+description: .NET Framework 4.6.1 を対象とするアプリで X509CertificateClaimSet.FindClaims メソッドがどのように変更されたかについて説明します。
 ms.date: 03/30/2017
 ms.assetid: ee356e3b-f932-48f5-875a-5e42340bee63
-ms.openlocfilehash: 0b306960c4f11bb6f54aecaeb13297e7725e16a8
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 304d8fb5adc27b33f2410faaaf8662e0ff9be66d
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102646"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475321"
 ---
 # <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>軽減策:X509CertificateClaimSet.FindClaims メソッド
 

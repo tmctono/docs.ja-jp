@@ -1,5 +1,6 @@
 ---
 title: CodeDOM の使用方法
+description: オブジェクト グラフをアセンブルするために多くの一般的な種類のソース コード要素を表す型を提供する Code Document Object Model (CodeDOM) を使用します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - code generators
 - CodeDOM, graphs
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
-ms.openlocfilehash: c4cab79976acae236de5a8eaad5a42cdba7d04f9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 476d8c18f386f889855c664147b1ee20995dc6f9
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130006"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865217"
 ---
 # <a name="using-the-codedom"></a>CodeDOM の使用方法
 CodeDOM には一般的なさまざま種類のソース コード要素を表す型が用意されています。 オブジェクト グラフをアセンブルする CodeDOM 要素を使用すると、ソース コード モデルを構築するプログラムをデザインできます。 このオブジェクト グラフは、サポートされているプログラミング言語用の CodeDOM コード ジェネレーターを使用して、ソース コードとしてレンダリングできます。 また、CodeDOM を使用して、ソース コードをバイナリ アセンブリにコンパイルすることもできます。  

@@ -1,13 +1,14 @@
 ---
 title: データ ソースの LINQ クエリの有効化
+description: C# で LINQ を拡張して、LINQ パターンで任意のデータ ソースに対してクエリを実行できるようにする方法について学習します。これにより、クライアントがデータ ソースのクエリを簡単に実行できるようになります。
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: 9a143f0da74d4e91ef697f468d7fda225e75245b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3a03aa3c67ef80507de4607e21eee4d247d622d
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635770"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103947"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>データ ソースの LINQ クエリの有効化
 LINQ を拡張して、データ ソースを LINQ パターンでクエリできるようにする方法はいくつかあります。 データ ソースは、いくつか例を挙げると、データ構造体、Web サービス、ファイル システム、またはデータベースの場合があります。 クエリの構文とパターンは変わらないため、LINQ パターンを使用すると、クライアントは LINQ クエリが有効になっているデータ ソースを簡単にクエリできます。 LINQ は、次の方法によってこれらのデータ ソースに拡張することができます。  
@@ -39,7 +40,7 @@ LINQ を拡張して、データ ソースを LINQ パターンでクエリで�
   
  [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] プロバイダーなどの複雑な `IQueryable` プロバイダーは LINQ クエリ一式を、SQL などの表現力が豊かなクエリ言語に変換する場合があります。 複雑なプロバイダーは、それほど複雑でないプロバイダーより一般的です。これは、より多様な質問をクエリで処理できるためです。 さらに、オープンな型システムを持つため、ユーザー定義型をマップするために広範なインフラストラクチャを含める必要があります。 複雑なプロバイダーの開発には、多大な労力を要します。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq.IQueryable%601>
 - <xref:System.Collections.Generic.IEnumerable%601>

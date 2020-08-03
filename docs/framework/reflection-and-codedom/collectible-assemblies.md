@@ -1,17 +1,17 @@
 ---
 title: 動的な型生成のための収集可能なアセンブリ
-description: ''
+description: .NET で動的に型を生成するための回収可能なアセンブリの概要。 回収可能なアセンブリの有効期間と制限について説明します。
 ms.date: 08/29/2017
 helpviewer_keywords:
 - reflection, dynamic assembly
 - assemblies, collectible
 - collectible assemblies, retrieving
-ms.openlocfilehash: 02c7048e0321282463aa3558287d1d13c5e4f8d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4981b93dbd49a6da96740bebed0f2ed7b89036c8
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180545"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475126"
 ---
 # <a name="collectible-assemblies-for-dynamic-type-generation"></a>動的な型生成のための収集可能なアセンブリ
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - invoking print dialogs [WPF]
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
-ms.openlocfilehash: f7ef3312d876324b44b055d70fd22e3fba075ec6
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 75a4160366766efbd19d6e8ae26fbec102e7f95b
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77095178"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924501"
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>方法: 印刷ダイアログ ボックスを呼び出す
 アプリケーションから印刷する機能を提供するには、<xref:System.Windows.Controls.PrintDialog> オブジェクトを作成して開くだけで済みます。  
@@ -29,7 +29,7 @@ ms.locfileid: "77095178"
 > [!NOTE]
 > このトピックで説明されている WPF の <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> コントロールは、Windows フォームの <xref:System.Windows.Forms.PrintDialog?displayProperty=nameWithType> コンポーネントと混同しないでください。  
   
- 厳密に言うと、ダイアログを開かなくても <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> メソッドを使用できます。 その意味で、コントロールは目に見えない印刷コンポーネントとして使用できます。 ただし、パフォーマンス上の理由から、<xref:System.Printing.PrintQueue.AddJob%2A> メソッド、または <xref:System.Windows.Xps.XpsDocumentWriter> の多くの <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> および <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> メソッドのいずれかを使用することをお勧めします。 この詳細については、[プログラムで XPS ファイルを印刷する](how-to-programmatically-print-xps-files.md)方法に関するページを参照してください。  
+ 厳密に言うと、ダイアログを開かなくても <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> メソッドを使用できます。 その意味で、コントロールは目に見えない印刷コンポーネントとして使用できます。 ただし、パフォーマンス上の理由から、<xref:System.Printing.PrintQueue.AddJob%2A> メソッド、または <xref:System.Windows.Xps.XpsDocumentWriter> の多くの <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> および <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> メソッドのいずれかを使用することをお勧めします。 この詳細については、[プログラムによる XPS ファイルの印刷](how-to-programmatically-print-xps-files.md)に関するページを参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

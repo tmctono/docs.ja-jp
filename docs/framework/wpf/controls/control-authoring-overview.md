@@ -1,5 +1,6 @@
 ---
 title: コントロールの作成の概要
+description: Windows Presentation Foundation コントロールの機能拡張により、カスタム コントロールを作成する必要性が最小限に抑えられます。 必要に応じて、新しいコントロールを作成する方法について学習します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: a6ab5463cc28aa590454ae1304714d3d12ee7c6b
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 600eb193613846d7eeeb626a6dfd317d2592f809
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646136"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166348"
 ---
 # <a name="control-authoring-overview"></a>コントロールの作成の概要
 

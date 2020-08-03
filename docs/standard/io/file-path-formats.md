@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 2d3ede97b372dd8922a10a377f69155a12f88bda
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5eb9d5127dffd2e80349352ad7a4b57f8848d56b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447135"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165798"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows システムのファイル パス形式
 
@@ -124,7 +124,7 @@ Windows API に渡されるパスはほとんどすべて正規化されます�
 
 この正規化は暗黙的に行われますが、<xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> メソッドを呼び出すことで明示的に行うことができます。このメソッドは [GetFullPathName() 関数](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)の呼び出しをラップします。 Windows [GetFullPathName() 関数](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) を P/Invoke で直接呼び出すこともできます。
 
-### <a name="identifying-the-path"></a>パスの識別
+### <a name="identify-the-path"></a>パスの特定
 
 パス正規化の最初の手順は、パスの種類の識別です。 パスはいくつかあるカテゴリの 1 つに分類されます。
 
@@ -138,13 +138,13 @@ Windows API に渡されるパスはほとんどすべて正規化されます�
 
 パスの種類によって、現在のディレクトリが何らかの方法で適用されるかどうかが決まります。 パスの "ルート" も決定されます。
 
-### <a name="handling-legacy-devices"></a>レガシ デバイスの取り扱い
+### <a name="handle-legacy-devices"></a>レガシ デバイスの処理
 
 パスが `CON`、`COM1`、`LPT1` など、レガシ DOS デバイスの場合、`\\.\` を先頭に付けることでデバイス パスに変換した上で返されます。
 
 <xref:System.IO.Path.GetFullPath(System.String)?displayProperty=nameWithType> メソッドは、レガシ デバイス名で始まるパスを常にレガシ デバイスとして解釈します。 たとえば、`CON.TXT` の DOS デバイス パスは `\\.\CON` であり、`COM1.TXT\file1.txt` の DOS デバイス パスは `\\.\COM1` です。
 
-### <a name="applying-the-current-directory"></a>現在のディレクトリを適用する
+### <a name="apply-the-current-directory"></a>現在のディレクトリの適用
 
 パスが完全修飾ではない場合、Windows はそのパスに現在のディレクトリを適用します。 UNC とデバイス パスの場合、現在のディレクトリは適用されません。 区切り記号 (C:\\) を使用するフル ドライブの場合も適用されません。
 
@@ -157,11 +157,11 @@ Windows API に渡されるパスはほとんどすべて正規化されます�
 > [!IMPORTANT]
 > マルチスレッド アプリケーションの場合 (つまり、ほとんどのアプリケーションでは)、現在のディレクトリはプロセスごとの設定となるため、相対パスは危険です。 スレッドによって現在のディレクトリが変更されることは、いつでも起こりえることです。 .NET Core 2.1 以降、<xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> メソッドを呼び出し、絶対パスに対して解決する場合、相対パスと基本パス (現在のディレクトリ) から絶対パスを取得できます。
 
-### <a name="canonicalizing-separators"></a>区切り記号の正規化
+### <a name="canonicalize-separators"></a>区切り記号の正規化
 
 フォワード スラッシュ (`/`) はすべて標準の Windows 区切り記号であるバック スラッシュ (`\`) に変換されます。 フォワード スラッシュがあるとき、最初の 2 つのスラッシュに続くスラッシュはすべて 1 つのスラッシュにまとめられます。
 
-### <a name="evaluating-relative-components"></a>相対コンポーネントを評価する
+### <a name="evaluate-relative-components"></a>相対コンポーネントの評価
 
 パスが処理されるとき、1 つか 2 つのピリオド (`.` や `..`) で構成されているコンポーネントやセグメントがあればそれは評価されます。
 
@@ -171,7 +171,7 @@ Windows API に渡されるパスはほとんどすべて正規化されます�
 
    親ディレクトリは、それがパスのルートを通らない場合にのみ削除されます。 パスのルートは、パスの種類によって異なります。 DOS パスの場合はドライブ (`C:\`)、UNC の場合はサーバー/共有 (`\\Server\Share`)、デバイス パスの場合はデバイス パス プレフィックス (`\\?\` または `\\.\`) となります。
 
-### <a name="trimming-characters"></a>文字のトリミング
+### <a name="trim-characters"></a>文字のトリミング
 
 一連の区切り記号や相対セグメントが削除されることを確認しましたが、それに加え、正規化の間、一部の追加文字が削除されます。
 
@@ -184,7 +184,7 @@ Windows API に渡されるパスはほとんどすべて正規化されます�
    > [!IMPORTANT]
    > スペースが後ろに続くディレクトリやファイル名は**決して**作成しないでください。 後続スペースはディレクトリへのアクセスを困難または不可能にします。一般的に、名前に後続スペースが含まれるディレクトリやファイルを処理しようとすると、アプリケーションは失敗します。
 
-## <a name="skipping-normalization"></a>正規化の省略
+## <a name="skip-normalization"></a>正規化の省略
 
 通常、Windows API に渡されるパスはすべて、[GetFullPathName 関数](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)に (効果的に) 渡され、正規化されます。 重要な例外が 1 つあります。ピリオドではなく疑問符から始まるデバイス パスです。 厳密に `\\?\` で始まらない限り (正規のバックスラッシュが使われていることに注目してください)、パスは正規化されます。
 
@@ -222,4 +222,4 @@ TeStDiReCtOrY という名前のディレクトリが作成されます。 デ�
 [!code-csharp[case-and-renaming](~/samples/snippets/standard/io/file-names/cs/rename.cs)]
 [!code-vb[case-and-renaming](~/samples/snippets/standard/io/file-names/vb/rename.vb)]
 
-しかしながら、ディレクトリ名とファイル名の比較では、大文字と小文字が区別されません。 "test.txt" という名前のファイルを検索すると、.NET ファイル システム API は比較で大文字/小文字の使い方を無視します。 Test.txt、TEST.TXT、test.TXT、大文字と小文字のその他すべての組み合わせが "test.txt" に一致します。
+しかしながら、ディレクトリ名とファイル名の比較では、大文字と小文字が区別されません。 "test.txt" という名前のファイルを検索すると、.NET ファイル システム API は比較で大文字/小文字の使い方を無視します。 "Test.txt"、"TEST.TXT"、"test.TXT"、大文字と小文字のその他すべての組み合わせが "test.txt" に一致します。

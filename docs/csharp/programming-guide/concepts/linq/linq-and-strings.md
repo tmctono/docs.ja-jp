@@ -1,13 +1,14 @@
 ---
 title: LINQ と文字列 (C#)
+description: LINQ によって、文字列やそのコレクションのクエリを実行したり、変換したりすることができます。 LINQ クエリは、C# の文字列関数や正規表現と組み合わせることができます。
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: b805bc7318b8c5fe70ab1c060d1058a6bbc4f177
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c515a0c56ad6473f93c6339540e4ed0245bb5bd2
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635536"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165609"
 ---
 # <a name="linq-and-strings-c"></a>LINQ と文字列 (C#)
 
@@ -72,7 +73,7 @@ ms.locfileid: "75635536"
   
   .csv ファイルでテキスト データに対して数学的計算を実行する方法が紹介されています。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [統合言語クエリ (LINQ) (C#)](index.md)
 - [CSV ファイルから XML を生成する方法](how-to-generate-xml-from-csv-files.md)

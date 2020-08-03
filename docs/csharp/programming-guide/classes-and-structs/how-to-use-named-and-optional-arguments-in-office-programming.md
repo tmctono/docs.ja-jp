@@ -1,17 +1,18 @@
 ---
 title: Office プログラミングで名前付き引数と省略可能な引数を使用する方法 - C# プログラミング ガイド
+description: 名前付き引数と省略可能な引数を使用して、Microsoft Office オートメーション API などの COM インターフェイスへのアクセスを支援する方法について説明します。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - named and optional arguments [C#], Office programming
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: 36b5c8b49404606c8240d24953c3677d5612d30e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e24331d37e8fdbe2bc66a2d9f73a5f6a7242af9
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714871"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864346"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Office プログラミングで名前付き引数と省略可能な引数を使用する方法 (C# プログラミング ガイド)
 
@@ -31,9 +32,9 @@ C# 4 で導入された名前付き引数と省略可能な引数を使うと、
 
 3. **[Templates Categories (テンプレート カテゴリ)]** ウィンドウで、 **[Visual C#]** を展開し、 **[Windows]** をクリックします。
 
-4. **[テンプレート]** ウィンドウの上部で、**[ターゲット フレームワーク]** ボックスに **[.NET Framework 4]** が表示されていることを確認します。
+4. **[テンプレート]** ウィンドウの上部で、 **[ターゲット フレームワーク]** ボックスに **[.NET Framework 4]** が表示されていることを確認します。
 
-5. **[テンプレート]** ペインの **[コンソール アプリケーション]** をクリックします。
+5. **[テンプレート]** ウィンドウで **[コンソール アプリケーション]** をクリックします。
 
 6. **[名前]** フィールドに、プロジェクトの名前を入力します。
 
@@ -107,6 +108,6 @@ C# 4 で導入された名前付き引数と省略可能な引数を使うと、
 
  [!code-csharp[csProgGuideNamedAndOptional#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#12)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [名前付き引数と省略可能な引数](./named-and-optional-arguments.md)

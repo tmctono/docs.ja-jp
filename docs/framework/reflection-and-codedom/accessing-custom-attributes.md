@@ -1,5 +1,6 @@
 ---
 title: カスタム属性へのアクセス
+description: .NET のカスタム属性にアクセスします。 属性がプログラム要素に関連付けられると、リフレクションを使用して、その存在と値をクエリすることができます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - attributes [.NET Framework], accessing
 - reflection, custom attributes
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
-ms.openlocfilehash: a5651e9dc8cf40e737dd523ec5d29e876a9c0765
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1197fc5149e144d293deda1173e82ca2dadeda7d
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130298"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475139"
 ---
 # <a name="accessing-custom-attributes"></a>カスタム属性へのアクセス
 属性がプログラム要素に関連付けられると、リフレクションを使用して、その存在と値をクエリすることができます。 .NET Framework バージョン 1.0 および 1.1 では、カスタム属性は実行コンテキストで検証されます。 .NET Framework バージョン 2.0 では、新しい読み込みコンテキスト (リフレクションのみのコンテキスト) が提供されます。これを使用して、実行のために読み込むことができないコードを検証できます。  

@@ -1,20 +1,21 @@
 ---
 title: デリゲートの変性の使用 (C#)
+description: 含まれている共変性と反変性のコード例を使用してデリゲートの変性を使用する方法について説明します。
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 83e86e760edb17f6d9ae61864c154062d41416e4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 62b0555ee29c5e7d2ba0954a8949d61596122cc7
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169767"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105687"
 ---
 # <a name="using-variance-in-delegates-c"></a>デリゲートの変性の使用 (C#)
 メソッドをデリゲートに割り当てると、"*共変性*" と "*反変性*" により、デリゲート型をメソッドのシグネチャに柔軟に一致させることができます。 共変性により、メソッドの戻り値の型の派生を、デリゲートに定義されている型よりも強くできます。 また、反変性により、メソッドのパラメーター型の派生をデリゲート型よりも弱くできます。  
   
-## <a name="example-1-covariance"></a>例 1: 共変性  
+## <a name="example-1-covariance"></a>例 1:共変性  
   
-### <a name="description"></a>[説明]  
+### <a name="description"></a>説明  
  この例は、デリゲート シグネチャ内の戻り値の型から派生した戻り値の型を持つメソッドで、デリゲートをどのように使用できるかを示しています。 `DogsHandler` が返すデータ型は `Dogs` です。これは、デリゲートに定義された `Mammals` 型の派生型です。  
   
 ### <a name="code"></a>コード  
@@ -48,9 +49,9 @@ class Program
 }  
 ```  
   
-## <a name="example-2-contravariance"></a>例 2: 反変性  
+## <a name="example-2-contravariance"></a>例 2:反変性  
   
-### <a name="description"></a>[説明]
+### <a name="description"></a>説明
 
 この例は、型がデリゲート シグネチャ パラメーター型の基本データ型であるパラメーターを持つメソッドでデリゲートを使用する方法を示しています。 反変性により、複数のハンドラーの代わりに単一のイベント ハンドラーを使用できます。 次の例では、2 つのデリゲートを使用します。
 
@@ -92,7 +93,7 @@ public Form1()
 }  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [デリゲートの変性 (C#)](./variance-in-delegates.md)
-- [Func および Action 汎用デリゲートでの分散の使用 (C#)](./using-variance-for-func-and-action-generic-delegates.md)
+- [Func および Action 汎用デリゲートでの変性の使用 (C#)](./using-variance-for-func-and-action-generic-delegates.md)

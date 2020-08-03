@@ -1,17 +1,18 @@
 ---
 title: GridView の概要
+description: Windows Presentation Foundation の ListView コントロールのスタイルとテンプレートについて学習します。 ControlTemplate を変更して、コントロールに固有の外観を指定します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - GridView view mode [WPF]
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: 98bc7985172cabeab19469af4b4c21e13a6bce73
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 02a2182ef1fc893107e434f431b9fbe0b3fbcd08
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181901"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165932"
 ---
 # <a name="gridview-overview"></a>GridView の概要
 <xref:System.Windows.Controls.GridView> ビュー モードは、<xref:System.Windows.Controls.ListView> コントロールのビュー モードの 1 つです。 <xref:System.Windows.Controls.GridView> クラスおよびそのサポート クラスでは、通常、ボタンを対話型の列ヘッダーとして使用するテーブルに項目のコレクションを表示できます。 このトピックでは、<xref:System.Windows.Controls.GridView> クラスをご紹介し、その用途の概要をご説明します。  

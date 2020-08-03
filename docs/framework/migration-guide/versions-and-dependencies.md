@@ -1,16 +1,17 @@
 ---
 title: .NET Framework および Windows OS バージョン
+description: 基になっている CLR のバージョン、および Windows オペレーティング システムでインストールされるバージョンなど、.NET Framework の各バージョンの主要な機能について説明します。
 ms.custom: updateeachrelease
 ms.date: 01/17/2020
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: 486b320ca30323684d301630ad29f8f4615764ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: df44786dfd0a384ae2498a94d14b029612450fee
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77504047"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475477"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework のバージョンおよび依存関係
 
@@ -300,7 +301,7 @@ CLR は独自のバージョン番号で識別されます。 .NET Framework の
 
 - 新しいバージョンの .NET Framework にアプリを移行する方法の詳細については、[移行ガイド](index.md)に関する記事を参照してください。
 
-- コンピューターにどのバージョンまたは更新プログラムがインストールされているかを判別する方法については、「[方法:インストールされている .NET Framework バージョンを確認する](how-to-determine-which-versions-are-installed.md)」と「[方法:インストールされている .NET Framework の更新プログラムを確認する](how-to-determine-which-net-framework-updates-are-installed.md)」を参照してください。
+- コンピューターにどのバージョンまたは更新プログラムがインストールされているかを判別する方法については、「[方法: インストールされている .NET Framework バージョンを確認する](how-to-determine-which-versions-are-installed.md)」と「[方法: インストールされている .NET Framework の更新プログラムを確認する](how-to-determine-which-net-framework-updates-are-installed.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

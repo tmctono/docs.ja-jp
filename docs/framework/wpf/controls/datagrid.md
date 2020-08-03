@@ -1,5 +1,6 @@
 ---
 title: DataGrid
+description: DataGrid コントロールを使用して、データベース、LINQ クエリ、その他のバインド可能なデータ ソースなど、さまざまなソースのデータを表示および編集できるようにする方法について学習します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGrid column types [WPF]
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - DataGrid [WPF], customizing the appearance of
 - DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
-ms.openlocfilehash: cdf4bfff8182b62d55f56b823c7ff129de4f9f1c
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 3db49c12fcb363ef7f99e5c69beae09ab05addcf
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646116"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168314"
 ---
 # <a name="datagrid"></a>DataGrid
 <xref:System.Windows.Controls.DataGrid> コントロールを使用すると、SQL データベース、LINQ クエリ、その他のバインド可能なデータ ソースなど、さまざまなソースのデータを表示および編集できます。 詳しくは、「[バインディング ソースの概要](../data/binding-sources-overview.md)」をご覧ください。  

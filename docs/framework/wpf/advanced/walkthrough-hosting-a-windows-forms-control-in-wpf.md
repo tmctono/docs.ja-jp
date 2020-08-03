@@ -1,5 +1,6 @@
 ---
 title: WPF で Windows フォーム コントロールをホストする
+description: 豊富な機能セットを備えた多くのコントロールが既に用意されている Windows Presentation Foundation で Windows フォーム コントロールをホストする方法について説明します。
 titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 9cb88415-39b0-4c46-80c4-ff325b674286
-ms.openlocfilehash: 2ed4e153a2513dc99d22a1538399156c138eb9e5
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: ec67cf9fabaa5b7aadbb2a3c21ebf8dd828ee20f
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77123832"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164973"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-control-in-wpf"></a>チュートリアル: WPF での Windows フォーム コントロールのホスト
 

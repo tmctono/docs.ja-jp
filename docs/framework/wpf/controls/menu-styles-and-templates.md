@@ -1,5 +1,6 @@
 ---
 title: メニューのスタイルとテンプレート
+description: Windows Presentation Foundation の Menu コントロールのスタイルとテンプレートについて説明します。 ControlTemplate を変更して、コントロールに固有の外観を指定します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - styles [WPF], Menu
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], Menu
 - parts [WPF], Menu
 ms.assetid: b89da183-9b87-42c6-ac53-731a42c7b09e
-ms.openlocfilehash: 3ce0be1fdeeee1465c2facb414cc7a081b268eb5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5187e4a479609686e39e043808931141ca52078c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283473"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164542"
 ---
 # <a name="menu-styles-and-templates"></a>メニューのスタイルとテンプレート
 このトピックでは、<xref:System.Windows.Controls.Menu> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[コントロールのためにテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)」をご覧ください。  

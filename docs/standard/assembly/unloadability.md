@@ -4,12 +4,12 @@ description: マネージド アセンブリのロードとアンロードに収
 author: janvorli
 ms.author: janvorli
 ms.date: 02/05/2019
-ms.openlocfilehash: 267c2209556b66ab3541c9c79c99d7eceb2024da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9d1f604816dcbd7a84a3692b3cfd24481532789a
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159742"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865347"
 ---
 # <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>.NET Core でアセンブリのアンローダビリティを使用およびデバッグする方法
 
@@ -30,7 +30,7 @@ ms.locfileid: "78159742"
 
 ### <a name="create-a-collectible-assemblyloadcontext"></a>収集可能な AssemblyLoadContext を作成する
 
-<xref:System.Runtime.Loader.AssemblyLoadContext> からクラスを派生させ、その <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType> メソッドをオーバーロードする必要があります。 このメソッドは、その `AssemblyLoadContext` に読み込まれたアセンブリと依存関係にあるすべてのアセンブリへの参照を解決します。
+<xref:System.Runtime.Loader.AssemblyLoadContext> からクラスを派生させ、その <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType> メソッドをオーバーライドする必要があります。 このメソッドは、その `AssemblyLoadContext` に読み込まれたアセンブリと依存関係にあるすべてのアセンブリへの参照を解決します。
 
 次のコードは、最も簡単なカスタム `AssemblyLoadContext` の例を示します。
 

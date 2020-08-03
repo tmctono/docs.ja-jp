@@ -1,13 +1,14 @@
 ---
 title: ジェネリック コレクションに対するインターフェイスでの変性の使用 (C#)
+description: ジェネリック コレクションに対して共変および反変のインターフェイスを使用する方法について説明します。 ジェネリック コレクションの変換と比較の例について確認します。
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
-ms.openlocfilehash: 5f5531e17a530ed840108df2cf9bf829b2beb656
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: c2ce849e32520cb91422ff36173e418a010476bd
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241358"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105669"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>ジェネリック コレクションに対するインターフェイスでの変性の使用 (C#)
 共変のインターフェイスのメソッドでは、そのインターフェイスで指定された型よりも強い派生型を返すことができます。 反変のインターフェイスのメソッドでは、そのインターフェイスで指定された型よりも弱い派生型のパラメーターを受け取ることができます。  

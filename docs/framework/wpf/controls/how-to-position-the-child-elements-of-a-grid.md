@@ -1,5 +1,6 @@
 ---
 title: '方法: グリッドの子要素を配置する'
+description: Windows Presentation Foundation の Grid で定義されている get と set メソッドを使用して、子要素を配置する方法について学習します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], positioning child elements
 ms.assetid: 27b3ba9b-ad32-44e2-bcab-a79d573a463c
-ms.openlocfilehash: 44268c32732a9409ea30f028adaa8a2631a06c5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 926d223097dd21dd0292c9523903b4be8aba8ba9
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186717"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167397"
 ---
 # <a name="how-to-position-the-child-elements-of-a-grid"></a>方法: グリッドの子要素を配置する
 この例では、<xref:System.Windows.Controls.Grid> で定義されている get メソッドと set メソッドを使用して、子要素を配置する方法を示します。  

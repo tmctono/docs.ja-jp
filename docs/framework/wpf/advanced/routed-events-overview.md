@@ -1,5 +1,6 @@
 ---
 title: ルーティング イベントの概要
+description: 要素ツリーを通じてルーティングを行う方法やカスタム ルーティング イベントを作成する方法を含め、Windows Presentation Foundation のルーティング イベントについて説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: f47eccac4e960bd6869da0da139803cd4e433393
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d18b511a4886c68922cccac14942eb54e5735a71
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794301"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164808"
 ---
 # <a name="routed-events-overview"></a>ルーティング イベントの概要
 

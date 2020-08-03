@@ -1,5 +1,6 @@
 ---
 title: 添付プロパティの概要
+description: 任意のオブジェクトに対して設定可能なグローバル プロパティである、Windows Presentation Foundation の添付プロパティについて学習します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: b207db459776c9f8fa7ea247d01071eeb8c995cf
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 993f65024fcfc4f39a408c81af43b798360e6cf6
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739293"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168383"
 ---
 # <a name="attached-properties-overview"></a>添付プロパティの概要
 

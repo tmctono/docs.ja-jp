@@ -1,17 +1,18 @@
 ---
 title: DataGrid コントロールのサイズ変更方法
+description: Windows Presentation Foundation の DataGrid コントロール内の個々の行と列を、その内容に合わせてサイズ変更したり、特定の値に設定したりする方法について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGrid control [WPF], sizing
 - size [WPF], DataGrid
 - automatically size DataGrid [WPF]
 ms.assetid: 96a0e47e-b010-4302-98ef-2daac446d8db
-ms.openlocfilehash: 6d100fb17b1ee3e652985a637d333d9f65e20d36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f10e385cbf18a26989614363ca6cd9f92bc83ec
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970990"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164739"
 ---
 # <a name="sizing-options-in-the-datagrid-control"></a>DataGrid コントロールのサイズ変更方法
 <xref:System.Windows.Controls.DataGrid> 自体でサイズをどのように変更するかを制御するために、さまざまなオプションを使用できます。 <xref:System.Windows.Controls.DataGrid>、および <xref:System.Windows.Controls.DataGrid> 内の個々の行と列は、その内容に合わせて自動的にサイズ変更するように設定することも、特定の値に設定することもできます。 既定では、<xref:System.Windows.Controls.DataGrid> はその内容のサイズに合わせて拡大縮小します。  
@@ -32,7 +33,7 @@ ms.locfileid: "61970990"
 ### <a name="setting-the-datagrid-size"></a>DataGrid サイズの設定  
  <xref:System.Windows.Controls.DataGrid> を指定された境界内で自動的にサイズ変更するように設定することも、<xref:System.Windows.Controls.DataGrid> を特定のサイズに設定することもできます。 次の表には、<xref:System.Windows.Controls.DataGrid> サイズを制御するために設定できるプロパティが示されています。  
   
-|プロパティ|説明|  
+|プロパティ|Description|  
 |--------------|-----------------|  
 |<xref:System.Windows.FrameworkElement.Height%2A>|<xref:System.Windows.Controls.DataGrid> の特定の高さを設定します。|  
 |<xref:System.Windows.FrameworkElement.MaxHeight%2A>|<xref:System.Windows.Controls.DataGrid> の高さの上限を設定します。 <xref:System.Windows.Controls.DataGrid> は、この高さに達するまで垂直方向に拡大します。|  

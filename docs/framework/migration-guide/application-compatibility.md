@@ -1,17 +1,18 @@
 ---
 title: ランタイムの変更と再ターゲットの変更 - .NET Framework
+description: .NET Framework のアプリケーションの互換性、および別のバージョンに移行する場合のランタイムや再ターゲットの変更による影響について説明します。
 ms.date: 10/29/2019
 helpviewer_keywords:
 - application compatibility
 - .NET Framework application compatibility
 - .NET Framework changes
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
-ms.openlocfilehash: c46f781d495b87a4f24e77935df7c4814c8567ae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 26f36dd34c6c5ecae8fc5ab373ff60d9e56f8245
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73196701"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475490"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework のアプリケーションの互換性
 
@@ -62,7 +63,7 @@ ms.locfileid: "73196701"
 **透明**\
 アプリの開発者やユーザーには大きな影響を及ぼさない変更。 アプリはこの変更のために変更を加える必要はありません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [バージョンおよび依存関係](versions-and-dependencies.md)
 - [新機能](../whats-new/index.md)

@@ -1,13 +1,14 @@
 ---
 title: 指定された属性または名前のファイルを照会する方法 (C#)
+description: C# で LINQ を使用して、ディレクトリ ツリー内で指定されたファイル名拡張子を持つファイルを検索する方法、および最も新しいまたは最も古いファイルのいずれかを返す方法について説明します。
 ms.date: 07/20/2015
 ms.assetid: 560e3879-b0b3-4549-ad02-0a53aff2f83c
-ms.openlocfilehash: fc6456f159887b7ad109e8ad48f0f79999d53e09
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9820b96e19d805b792e18ff242e64dfb6cf4a606
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168870"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104500"
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>指定された属性または名前のファイルを照会する方法 (C#)
 この例では、指定されたディレクトリ ツリーで、指定されたファイル名拡張子 (".txt" など) を持つすべてのファイルを検索する方法を示します。 また、ファイルの作成日時に基づいて、ツリー内の最も新しいファイルまたは最も古いファイルを返す方法も示します。  
@@ -66,7 +67,7 @@ class FindFileByExtension
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)
 - [LINQ とファイル ディレクトリ (C#)](./linq-and-file-directories.md)

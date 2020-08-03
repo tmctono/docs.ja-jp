@@ -1,5 +1,6 @@
 ---
 title: '方法: リフレクションを使用して型とメンバーの情報を取得する'
+description: リフレクションを使用して型とメンバーの情報を取得する方法について説明します。ここでは、System.Reflection 名前空間を使用します。
 ms.date: 09/03/2019
 helpviewer_keywords:
 - reflection, obtaining member information
@@ -9,12 +10,12 @@ dev_langs:
 - cpp
 - csharp
 - vb
-ms.openlocfilehash: 9ffc173bbd0ed12eedea0c191f6d39baf181793a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fa7af39c0addb328944a03236c26982301caf722
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130216"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865321"
 ---
 # <a name="how-to-get-type-and-member-information-by-using-reflection"></a>方法: リフレクションを使用して型とメンバーの情報を取得する
 <xref:System.Reflection> 名前空間には、型とそのメンバーに関する情報を取得するための多くのメソッドがあります。 この記事では、これらのメソッドの 1 つである <xref:System.Type.GetMembers%2A?displayProperty=nameWithType> を例として示します。 詳細については、「[リフレクションの概要](reflection.md)」を参照してください。

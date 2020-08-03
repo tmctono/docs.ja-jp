@@ -1,13 +1,14 @@
 ---
 title: C# での XML ツリーの作成 (LINQ to XML)
+description: 要素の構築や XElement コンストラクターの使用を含め、C# での XML ツリーの作成について説明します。
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 4794e4fe019b30d8f2acb3eb255bb77ba2f7f290
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3991f461c4c870a64320853ccd1d45026a8a6bf6
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169546"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105475"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>C# での XML ツリーの作成 (LINQ to XML)
 ここでは、C# での XML ツリーの作成について説明します。  
@@ -42,7 +43,7 @@ XElement contacts =
 ## <a name="xelement-constructors"></a>XElement コンストラクター  
  <xref:System.Xml.Linq.XElement> クラスは、関数型構築で次のコンストラクターを使用します。 <xref:System.Xml.Linq.XElement> のコンストラクターはこれ以外にも存在しますが、関数型構築に使用されないものはこの一覧に示していません。  
   
-|Constructor|[説明]|  
+|コンストラクター|説明|  
 |-----------------|-----------------|  
 |`XElement(XName name, object content)`|<xref:System.Xml.Linq.XElement> を作成します。 `name` パラメーターには要素の名前を指定し、`content` には要素のコンテンツを指定します。|  
 |`XElement(XName name)`|指定した名前で <xref:System.Xml.Linq.XElement> を初期化して、<xref:System.Xml.Linq.XName> を作成します。|  
@@ -234,6 +235,6 @@ Console.WriteLine("Child2 was {0}",
 //    Child2 was attached  
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XML ツリーの作成 (C#)](./linq-to-xml-overview.md)

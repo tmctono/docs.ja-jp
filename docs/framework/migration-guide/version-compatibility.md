@@ -1,5 +1,6 @@
 ---
 title: .NET Framework のバージョンの互換性
+description: 下位互換性、side-by-side 実行など、.NET Framework のバージョン間の互換性について説明します。
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
@@ -7,22 +8,22 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: c3bc92b89a46fc947b4d7e67644930374eeab2e4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: dfdc5a977b69af8aa3a0d33ed8b833745cf6bf11
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796003"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475503"
 ---
 # <a name="version-compatibility"></a>バージョンの互換性
 
-下位互換とは、プラットフォームの特定のバージョンで開発されたアプリが、そのプラットフォームの新しいバージョンでも実行できることを意味します。  .NET Framework では、下位互換性が最大限に高められています。.NET Framework のあるバージョンで記述されたソース コードは、.NET Framework の新しいバージョンでコンパイルでき、.NET Framework のあるバージョンで実行されるバイナリは、新しいバージョンの .NET Framework でも同じように動作します。
+下位互換とは、プラットフォームの特定のバージョンで開発されたアプリが、そのプラットフォームの新しいバージョンでも実行できることを意味します。 .NET Framework では、下位互換性が最大限に高められています。.NET Framework のあるバージョンで記述されたソース コードは、.NET Framework の新しいバージョンでコンパイルでき、.NET Framework のあるバージョンで実行されるバイナリは、新しいバージョンの .NET Framework でも同じように動作します。
 
 ## <a name="version-compatibility-for-apps"></a><a name="Apps"></a> アプリのバージョンの互換性
 
 既定では、アプリは、ビルド対象の .NET Framework のバージョンで実行されます。 そのバージョンが存在せず、アプリの構成ファイルにサポートされるバージョンが定義されていない場合は、.NET Framework 初期化エラーが発生することがあります。 この場合、アプリは実行できません。
 
-アプリを実行する特定のバージョンを定義するには、1 つ以上の [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 要素をアプリの構成ファイルに追加します。 各 `<supportedRuntime>` 要素は、サポートされるランタイムのバージョンを示します。最初の要素で最も優先度の高いバージョンを、最後の要素で最も優先度の低いバージョンを指定します。
+アプリが実行される特定のバージョンを定義するには、1 つ以上の [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 要素をアプリの構成ファイルに追加します。 各 `<supportedRuntime>` 要素は、サポートされるランタイムのバージョンを示します。最初の要素で最も優先度の高いバージョンを、最後の要素で最も優先度の低いバージョンを指定します。
 
 ```xml
 <configuration>
@@ -59,7 +60,7 @@ ms.locfileid: "82796003"
 
 - .NET Framework 4.5 またはそのポイント リリース上で実行するために既存のソース コードを再コンパイルする場合、あるいは、.NET Framework 4.5 またはそのポイント リリースをターゲットとするアプリまたはコンポーネントの新しいバージョンを既存のソース コード ベースから開発する場合は、「[クラス ライブラリの互換性のために残されている機能](../whats-new/whats-obsolete.md)」で、古い型とメンバーを確認し、説明されている回避策を適用してください。 (コンパイル済みのコードは、互換性のために残されている旧式の型とメンバーに対して引き続き実行されます)。
 
-- アプリが正常に動作しない原因が .NET Framework 4.5 での変更によるものとわかった場合は、「[ランタイム設定スキーマ](../configure-apps/file-schema/runtime/index.md)」の特に[\<AppContextSwitchOverrides> の要素](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)を確認して、アプリの構成ファイル内のランタイム設定を使用して以前の動作を復元できるかどうかを見極めてください。
+- アプリが正常に動作しない原因が .NET Framework 4.5 での変更によるものとわかった場合は、「[ランタイム設定スキーマ](../configure-apps/file-schema/runtime/index.md)」の特に [\<AppContextSwitchOverrides> 要素](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)を確認して、アプリの構成ファイル内のランタイム設定を使用して以前の動作を復元できるかどうかを判断してください。
 
 - 説明されていない問題が発生した場合は、[.NET の開発者コミュニティ サイト](https://developercommunity.visualstudio.com/spaces/61/index.html)上で問題を提起するか、[Microsoft/dotnet GitHub リポジトリ](https://github.com/microsoft/dotnet/issues)で問題を作成してください。
 

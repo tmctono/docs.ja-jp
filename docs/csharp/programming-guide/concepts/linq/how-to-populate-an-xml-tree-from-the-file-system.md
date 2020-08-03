@@ -1,13 +1,14 @@
 ---
 title: ファイル システムから XML ツリーを設定する方法 (C#)
+description: C# でファイル システムから XML ツリーを設定する方法について説明します。 この例では、XML を設定し、ツリーに対してクエリを実行して、すべてのファイルの合計サイズを計算します。
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-ms.openlocfilehash: beb44be1a787fa09b091aa48022dbb5b10c4632b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 676261656be7d306294c9912b75edcb51a31cccc
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345782"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104766"
 ---
 # <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>ファイル システムから XML ツリーを設定する方法 (C#)
 XML ツリーの一般的で便利な用途の 1 つに、名前と値の階層データ ストアとしての用途があります。 階層データを XML ツリーに設定し、そのツリーをクエリや変換の対象としたり、必要に応じてシリアル化したりすることができます。 この使用シナリオでは、名前空間や空白の扱いなど XML 固有のセマンティクスの多くは重要ではありません。 この場合は、XML ツリーをメモリ内の小さなシングル ユーザー階層データベースとして使用します。  

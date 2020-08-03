@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: 0f10feb0931c6d38c817fdecb925f68d439abb59
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 731e42a6d4d354b043a56dbe150bb03a693a9454
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287247"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863787"
 ---
 # <a name="see-c-programming-guide"></a>\<see> (C# プログラミング ガイド)
 
@@ -33,7 +33,7 @@ ms.locfileid: "84287247"
 
 ## <a name="remarks"></a>Remarks
 
-`<see>` タグを使用すると、テキスト内からリンクを指定できます。 テキストが「関連項目」セクションに配置されていることを示すには、[\<seealso>](./seealso.md) を使用します。 コード要素のドキュメント ページへの内部ハイパーリンクを作成するには、[cref 属性](./cref-attribute.md)を使用します。
+`<see>` タグを使用すると、テキスト内からリンクを指定できます。 テキストが「関連項目」セクションに配置されていることを示すには、[\<seealso>](./seealso.md) を使用します。 コード要素のドキュメント ページへの内部ハイパーリンクを作成するには、[cref 属性](./cref-attribute.md)を使用します。 また、``href`` はハイパーリンクとして機能する有効な属性です。
 
 コンパイル時に [-doc](../../language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。
 

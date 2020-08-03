@@ -1,13 +1,14 @@
 ---
 title: 関数型プログラミングと命令型プログラミング (C#)
+description: この記事では、C# での関数型プログラミングと手続き型の方法を比較します。 関数型プログラミングでは、純粋関数による不変性が適用されます。
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: a163a62912ed2a44d6ea8cad5bc536f03343f15c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bc421d654e532293b522dab9d43920d0fffd7b92
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69594317"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103740"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>関数型プログラミングと命令型プログラミング (C#)
 このトピックでは、関数型プログラミングを従来の命令型 (手続き型) プログラミングと比較対照します。  

@@ -1,13 +1,14 @@
 ---
 title: 2 つのリストの差集合を見つける方法 (LINQ) (C#)
+description: C# で LINQ を使用して 2 つの文字列リストを比較し、1 つのリストにはあるものの他のリストにはないそれらの行を出力する方法を示します。
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: 03fae5451ee395487e73ed7c38d465c3f891e0f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 24509488d91f9861ee9bf84277238bea7031e5f6
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169182"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105091"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>2 つのリストの差集合を見つける方法 (LINQ) (C#)
 この例では、LINQ を使用して、2 つの文字列リストを比較し、names2.txt ではなく names1.txt でそれらの行を出力する方法を示します。  
@@ -57,6 +58,6 @@ class CompareLists
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [LINQ と文字列 (C#)](./linq-and-strings.md)

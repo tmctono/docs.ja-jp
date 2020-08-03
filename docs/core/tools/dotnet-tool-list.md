@@ -2,12 +2,12 @@
 title: dotnet tool list コマンド
 description: dotnet tool list コマンドでは、お使いのコンピューターにインストールされている .NET Core ツールの一覧を表示します。
 ms.date: 02/14/2020
-ms.openlocfilehash: 7ca894ab0f5daf0118ff92fb39e0118b952b3d83
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 4035c5be233232e53c6d7150485f737108c1e18d
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768275"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925463"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -37,7 +37,7 @@ dotnet tool list -h|--help
 
 * 既定の場所にインストールされているグローバル ツールを一覧表示するには、`--global` オプションを使用します。
 * ユーザー指定の場所にインストールされているグローバル ツールを一覧表示するには、`--tool-path` オプションを使用します。
-* A ローカル ツールというローカル ツールを一覧表示するには、 `--local` オプションを使用するか、`--global`、`--tool-path`、および `--local` オプションを省略します。
+* ローカル ツールを一覧表示するには、`--local` オプションを使用するか、`--global` オプション、`--tool-path` オプション、および `--local` オプションを省略します。
 
 **ローカル ツールは .NET Core SDK 3.0 以降で使用できます。**
 

@@ -1,5 +1,6 @@
 ---
 title: アプリのパフォーマンスを最適化する
+description: これらのリソースを使用して、パフォーマンスの計画やハードウェアの活用など、Windows Presentation Foundation アプリケーションのパフォーマンスを向上させます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application rendering [WPF], performance
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-ms.openlocfilehash: 54d69e87ef2a9c5318e394422e3bcfcabcc76210
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 165caaf102a66988db0254839a947b8e262a386d
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646249"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166329"
 ---
 # <a name="optimizing-wpf-application-performance"></a>WPF アプリケーションのパフォーマンスの最適化
 このセクションは、アプリケーションのパフォーマンスを向上させる方法を探している [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーション開発者を対象としています。 Microsoft .NET Framework および [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] を初めて使用する開発者は、まず、両方のプラットフォームについて理解しておく必要があります。 このセクションは、両方の実用的な知識を持つことを前提として、アプリケーションを稼働させるために十分に理解しているプログラマ向けに書かれています。  

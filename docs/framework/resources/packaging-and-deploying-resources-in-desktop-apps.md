@@ -1,5 +1,6 @@
 ---
 title: .NET アプリでのリソースのパッケージ化と配置
+description: メイン アセンブリ (ハブ) とサテライト アセンブリ (スポーク) を使用して、.NET アプリでリソースのパッケージ化と配置を行います。 スポークにはローカライズされたリソースが含まれますが、コードはありません。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-ms.openlocfilehash: d64e3b5201e34541fdafa5724b0c7e8c3f6c0c0d
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 7b06ca4444b75f0a7002323b32732dd4f855f692
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243051"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166184"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>.NET アプリでのリソースのパッケージ化と配置
 
@@ -126,7 +127,7 @@ ms.locfileid: "81243051"
 </configuration>
 ```
 
-サテライト アセンブリの最適化されたプローブは、オプトイン機能です。 つまり、アプリケーションの構成ファイルに `enabled` 属性が `true` に設定されている [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 要素が存在しない限り、ランタイムは「[リソース フォールバック プロセス](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1)」で説明されている手順に従います。 その場合、サテライト アセンブリをプローブするプロセスは次のように変更されます。
+サテライト アセンブリの最適化されたプローブは、オプトイン機能です。 つまり、アプリケーションの構成ファイルにその `enabled` 属性が `true` に設定されている [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 要素が存在しない限り、ランタイムは「[リソース フォールバック プロセス](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1)」で説明されている手順に従います。 その場合、サテライト アセンブリをプローブするプロセスは次のように変更されます。
 
 - ランタイムは、親コード アセンブリの場所を使って、サテライト アセンブリをプローブします。 親アセンブリがグローバル アセンブリ キャッシュにインストールされている場合、ランタイムはアプリケーションのディレクトリではなくキャッシュ内をプローブします。 親アセンブリがアプリケーション ディレクトリにインストールされている場合、ランタイムはグローバル アセンブリ キャッシュではなくアプリケーション ディレクトリをプローブします。
 

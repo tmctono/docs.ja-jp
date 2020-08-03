@@ -1,13 +1,14 @@
 ---
 title: 関数型プログラミングと手続き型プログラミング (LINQ to XML) (C#)
+description: XML を処理するために、LINQ to XML では、手続き型のメモリ内の XML ツリーの変更と、宣言型の方法を使用する関数型の構築の両方をサポートしています。
 ms.date: 07/20/2015
 ms.assetid: fc64e39c-a487-4882-9169-da4de97917d9
-ms.openlocfilehash: e87114d2edcda4b2df14eb2d84f62ebe9638b5eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e19f9311c56f4fe2c5e7e5f228aca6c03c6fe04d
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69594252"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103653"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-c"></a>関数型プログラミングと手続き型プログラミング (LINQ to XML) (C#)
 XML アプリケーションには、次のようにさまざまな種類があります。  

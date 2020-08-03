@@ -1,5 +1,6 @@
 ---
 title: DataGrid のスタイルとテンプレート
+description: Windows Presentation Foundation の DataGrid コントロールのスタイルとテンプレートについて学習します。 ControlTemplate を変更して、コントロールに固有の外観を指定します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - states [WPF], DataGrid
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - styles [WPF], DataGrid
 - parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-ms.openlocfilehash: 066e8c9ce1112399be8128d0821498f0d56a3dc3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: dd526ec64d5077dad58f31c004f47e63c57ec9de
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283804"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168331"
 ---
 # <a name="datagrid-styles-and-templates"></a>DataGrid のスタイルとテンプレート
 このトピックでは、<xref:System.Windows.Controls.DataGrid> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[コントロールのためのテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)」を参照してください。  
@@ -26,7 +27,7 @@ ms.locfileid: "74283804"
 |-|-|-|  
 |PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|列ヘッダーを含む行。|  
   
- <xref:System.Windows.Controls.DataGrid> の <xref:System.Windows.Controls.ControlTemplate> を作成する場合、テンプレートで、<xref:System.Windows.Controls.ScrollViewer> 内に <xref:System.Windows.Controls.ItemsPresenter> が含まれる可能性があります (<xref:System.Windows.Controls.ItemsPresenter> は、<xref:System.Windows.Controls.DataGrid> 内の各項目を表示します。<xref:System.Windows.Controls.ScrollViewer> は、コントロール内でのスクロールを有効にします)。  <xref:System.Windows.Controls.ItemsPresenter> が <xref:System.Windows.Controls.ScrollViewer> の直接的な子ではない場合、<xref:System.Windows.Controls.ItemsPresenter> に名前 `ItemsPresenter` を指定する必要があります。  
+ <xref:System.Windows.Controls.DataGrid> の <xref:System.Windows.Controls.ControlTemplate> を作成する場合、テンプレートで、<xref:System.Windows.Controls.ScrollViewer> 内に <xref:System.Windows.Controls.ItemsPresenter> が含まれる可能性があります (<xref:System.Windows.Controls.ItemsPresenter> により、<xref:System.Windows.Controls.DataGrid> の各項目が表示されます。<xref:System.Windows.Controls.ScrollViewer> で、コントロール内のスクロールを有効にします)。  <xref:System.Windows.Controls.ItemsPresenter> が <xref:System.Windows.Controls.ScrollViewer> の直接的な子ではない場合、<xref:System.Windows.Controls.ItemsPresenter> に名前 `ItemsPresenter` を指定する必要があります。  
   
  <xref:System.Windows.Controls.DataGrid> の既定のテンプレートには、<xref:System.Windows.Controls.ScrollViewer> コントロールが含まれます。 <xref:System.Windows.Controls.ScrollViewer> で定義されるパーツの詳細については、「[ScrollViewer のスタイルとテンプレート](scrollviewer-styles-and-templates.md)」を参照してください。  
   

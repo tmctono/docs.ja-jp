@@ -1,5 +1,6 @@
 ---
 title: プロパティ - C# プログラミング ガイド
+description: C# のプロパティは、プライベート フィールドの値の読み取り、書き込み、または計算を行うアクセサー メソッドを使用した、パブリック データのメンバーとしてのメンバーです。
 ms.date: 03/10/2017
 f1_keywords:
 - cs.properties
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: ee530e981e0c85302b2b11cc739d6c51d6650ddd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 231e8e6a11f2655ccdea5489f054910a1ecf2586
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170105"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863943"
 ---
 # <a name="properties-c-programming-guide"></a>プロパティ (C# プログラミング ガイド)
 
@@ -73,9 +74,9 @@ ms.locfileid: "79170105"
 
 詳細については、「[C# 言語の仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の[プロパティ](~/_csharplang/spec/classes.md#properties)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [プロパティの使用](./using-properties.md)
 - [インデクサー](../indexers/index.md)
 - [get キーワード](../../language-reference/keywords/get.md)

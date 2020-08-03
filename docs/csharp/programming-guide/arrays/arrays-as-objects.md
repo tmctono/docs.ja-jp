@@ -1,15 +1,16 @@
 ---
 title: オブジェクトとしての配列 - C# プログラミング ガイド
+description: C# の配列は、抽出基本データ型 Array のオブジェクトです。 Length プロパティなど、Array のプロパティとその他のクラス メンバーを使用できます。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#], as objects
 ms.assetid: f76d4403-bd0a-42a0-9bc8-694c55b2c926
-ms.openlocfilehash: d8b929eccf9be259874d03dd93f49a49798bb349
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 984def3ef74b07d7099fae6cae6d6f8ce7e03e12
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715092"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474723"
 ---
 # <a name="arrays-as-objects-c-programming-guide"></a>オブジェクトとしての配列 (C# プログラミング ガイド)
 
@@ -25,9 +26,9 @@ C# の配列は、実際はオブジェクトです。C や C++ の場合のよ�
 
 [!code-csharp[csProgGuideArrays#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#2)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [配列](./index.md)
 - [1 次元配列](./single-dimensional-arrays.md)
 - [多次元配列](./multidimensional-arrays.md)

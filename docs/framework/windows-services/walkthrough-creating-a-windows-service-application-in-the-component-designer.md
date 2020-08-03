@@ -1,5 +1,6 @@
 ---
 title: 'チュートリアル: Windows サービス アプリを作成する'
+description: このチュートリアルでは、イベント ログにメッセージを書き込む Windows サービス アプリを Visual Studio で作成します。 機能の追加、状態の設定、インストーラの追加などを行います。
 ms.date: 03/27/2019
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: e5ff40d8413acf64e7a8a129a7b268f58780d591
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 487a974af2280a02b83fe685324c9464df705585
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053480"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925632"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>チュートリアル: Windows サービス アプリを作成する
 
@@ -340,7 +341,7 @@ Windows サービスを実行するには、まず、サービスをインスト
 
      このテキストは **[サービス]** ウィンドウの **[説明]** 列に表示され、サービスに関する説明をユーザーに示します。
 
-    ![サービス ウィンドウのサービスの説明](./media/windows-service-description.png "サービスの説明")
+    ![[サービス] ウィンドウのサービスの説明](./media/windows-service-description.png "サービスの説明")
 
 6. <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> プロパティにテキストを追加します。 たとえば、*MyNewService Display Name* です。
 
@@ -350,7 +351,7 @@ Windows サービスを実行するには、まず、サービスをインスト
 
 8. 完了すると、 **[プロパティ]** ウィンドウは次の図のようになります。
 
-     ![Windows サービスのインストーラー プロパティ](./media/windows-service-installer-properties.png "Windows サービスのインストーラー プロパティ")
+     ![Windows サービスのインストーラ プロパティ](./media/windows-service-installer-properties.png "Windows サービスのインストーラ プロパティ")
 
 9. **[ProjectInstaller]** の **[デザイン]** ビューで、 **[serviceProcessInstaller1]** (Visual C# プロジェクトの場合) または **[ServiceProcessInstaller1]** (Visual Basic プロジェクトの場合) を選択してから、ショートカット メニューから **[プロパティ]** を選択します。 ドロップダウン リストから <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> プロパティを <xref:System.ServiceProcess.ServiceAccount.LocalSystem> に設定します。
 
@@ -489,7 +490,7 @@ Windows サービスを構築済みであるため、サービスをインスト
     - 属性が `true` に設定されていない。
     - `ProjectInstaller` クラスが `public` として定義されていない。
 
-詳細については、[サービスをインストールおよびアンインストールする](how-to-install-and-uninstall-services.md)」を参照してください。
+詳細については、「[方法:サービスをインストールおよびアンインストールする](how-to-install-and-uninstall-services.md)」を参照してください。
 
 ## <a name="start-and-run-the-service"></a>サービスを開始して実行する
 

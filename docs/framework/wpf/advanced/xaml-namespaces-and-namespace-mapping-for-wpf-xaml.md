@@ -1,5 +1,6 @@
 ---
 title: XAML 名前空間と名前空間マッピング
+description: Windows Presentation Foundation XAML ファイルのルート タグでよく目にする 2 つの XAML 名前空間マッピングの存在と目的について詳しく学習します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 9b01643e8f8d77073595253580ebea60fabfd23b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 42808df8e7483f60b1420fda890fe374493538f1
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186234"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168368"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>XAML 名前空間および WPF XAML の名前空間の割り当て
 このトピックでは、WPF XAML ファイルのルート タグでよく目にする 2 つの XAML 名前空間マッピングの存在と目的について詳しく説明します。 また、独自のコードや別のアセンブリ内で定義されている要素を使用するために、同様のマッピングを生成する方法についても説明します。  

@@ -1,5 +1,6 @@
 ---
 title: ボタンのスタイルとテンプレート
+description: Windows Presentation Foundation の Button コントロールのスタイルとテンプレートについて学習します。 ControlTemplate を変更して、コントロールに固有の外観を指定します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - states [WPF], Button
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], Button
 - ControlTemplate [WPF], Button
 ms.assetid: e223c759-f8c4-4717-acfb-b1e40bdf5f3b
-ms.openlocfilehash: ef9f85848ebdda9dc4ae15d0f54847eacd46e24d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 11509adeef397f26eb040e6e98d0edb333b2515f
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283578"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166267"
 ---
 # <a name="button-styles-and-templates"></a>ボタンのスタイルとテンプレート
 このトピックでは、<xref:System.Windows.Controls.Button> コントロールのスタイルとテンプレートについて説明します。 <xref:System.Windows.Controls.ControlTemplate>の既定値を変更して外観を制御します。 詳細については、「[コントロールのためにテンプレートを作成する](../../../desktop-wpf/themes/how-to-create-apply-template.md)」をご覧ください。  

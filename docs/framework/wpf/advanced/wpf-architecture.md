@@ -1,5 +1,6 @@
 ---
 title: アーキテクチャ
+description: 主要なサブシステムの大部分とやりとりする方法を含む、Windows Presentation Foundation クラス階層について学習します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - properties [WPF], attached
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: b16be8470a47f3e8e362feb0b13e10aa901baacb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a67709283b4b664e7b9ca0dced9154a43fcae8a5
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187133"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166320"
 ---
 # <a name="wpf-architecture"></a>WPF アーキテクチャ
 このトピックは、Windows Presentation Foundation (WPF) のクラス階層のガイド ツアーです。 WPF の主要なサブシステムの大部分と、それらの相互作用について説明します。 また、WPF のアーキテクトが行ういくつかの選択についても詳しく説明します。  

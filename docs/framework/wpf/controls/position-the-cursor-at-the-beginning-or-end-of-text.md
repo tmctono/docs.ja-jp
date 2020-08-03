@@ -1,5 +1,6 @@
 ---
 title: '方法: TextBox コントロールのテキストの先頭または末尾にカーソルを配置する'
+description: Windows Presentation Foundation の TextBox コントロールのテキスト コンテンツの先頭または末尾にカーソルを配置する方法について学習します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - TextBox control [WPF], positioning cursor
 - cursor [WPF], positioning
 ms.assetid: c771a0b8-c6b4-4240-aecd-a21d0ba51a2e
-ms.openlocfilehash: 3d7da5daf09e06938b8366e0f5f98a599cae4571
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afe8b11d032b5d61fa91cbf324f02cd8415d2ea8
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770618"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167509"
 ---
 # <a name="how-to-position-the-cursor-at-the-beginning-or-end-of-text-in-a-textbox-control"></a>方法: TextBox コントロールのテキストの先頭または末尾にカーソルを配置する
 この例からは、<xref:System.Windows.Controls.TextBox> コントロールのテキスト コンテンツの先頭または末尾にカーソルを置く方法がわかります。  

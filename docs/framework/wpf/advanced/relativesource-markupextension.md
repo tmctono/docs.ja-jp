@@ -1,5 +1,6 @@
 ---
 title: RelativeSource のマークアップ拡張機能
+description: Binding マークアップ拡張内か、または XAML で Binding の RelativeSource プロパティを設定するときに、RelativeSource バインディング ソースのプロパティを指定します。
 ms.date: 03/30/2017
 f1_keywords:
 - RelativeSource
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - RelativeSource markup extensions [WPF]
 - XAML [WPF], RelativeSource markup extension
 ms.assetid: 26be4721-49b5-4717-a92e-7d54ad0d3a81
-ms.openlocfilehash: 47117d684a981f31e22cf513fc78e1e2dda73f8a
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 2da702d23413651a85b45404e088f6708546cc25
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141262"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165939"
 ---
 # <a name="relativesource-markupextension"></a>RelativeSource のマークアップ拡張機能
 

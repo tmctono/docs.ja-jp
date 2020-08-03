@@ -1,5 +1,6 @@
 ---
 title: '方法: 依存関係プロパティを実装する'
+description: 共通言語ランタイム プロパティを DependencyProperty フィールドで補足して、Windows Presentation Foundation の依存関係プロパティを定義します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - dependency properties [WPF], backing properties with
 - properties [WPF], backing with dependency properties
 ms.assetid: 855fd6d7-19ac-493c-bf5e-2f40b57cdc92
-ms.openlocfilehash: 6f2fb9b0824feb6253527de063f58da2427d0c06
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 673f653a9b02627efcccdfe08c4812ca0834217c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400355"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165090"
 ---
 # <a name="how-to-implement-a-dependency-property"></a>方法: 依存関係プロパティを実装する
 この例では、共通言語ランタイム (CLR) プロパティを <xref:System.Windows.DependencyProperty> フィールドで補足し、依存関係プロパティを定義する方法を示します。 独自に定義したプロパティが [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のさまざまな機能、たとえばスタイル、データ バインディング、継承、アニメーション、既定値をサポートできるようにするには、そのプロパティを依存関係プロパティとして実装します。  

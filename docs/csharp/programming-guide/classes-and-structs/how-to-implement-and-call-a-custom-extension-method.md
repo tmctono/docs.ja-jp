@@ -1,15 +1,16 @@
 ---
 title: カスタム拡張メソッドを実装して呼び出す方法 - C# プログラミング ガイド
+description: あらゆる .NET 型を対象に拡張メソッドを実装する方法について説明します。 クライアント コードでは、DLL に参照を追加し、ディレクティブの使用を追加することで、自分のメソッドを使用することができます。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: f9937c4b7c6e66af0ee3bc6f6d9ef3b3b1edd530
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 7856e78713648a42d1c961f50f7e83f2f7ef05b7
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241826"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865061"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>カスタム拡張メソッドを実装して呼び出す方法 (C# プログラミング ガイド)
 このトピックでは、あらゆる .NET 型を対象に独自の拡張メソッドを実装する方法について説明します。 クライアント コードで拡張メソッドを使用するには、拡張メソッドが格納されている DLL への参照を追加し、拡張メソッドが定義されている名前空間を指定する [using](../../language-reference/keywords/using-directive.md) ディレクティブを追加します。  

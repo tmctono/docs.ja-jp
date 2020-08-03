@@ -1,5 +1,6 @@
 ---
 title: スレッド モデル
+description: Windows Presentation Foundation アプリケーションで複数のスレッドが必要になる可能性がある状況について学習します。 シングル スレッド ソリューションをお勧めします。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 87dcfa22bcce730c5a9b61721c3a846a08146475
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 9b67b6ea2896e9e6fec57dee8d1013d54fab03fc
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094502"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166385"
 ---
 # <a name="threading-model"></a>スレッド モデル
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、スレッド処理の難しさから開発者を救うように設計されています。 その結果、大部分の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 開発者は、複数のスレッドを使用するインターフェイスを作成する必要がなくなります。 マルチスレッド プログラムは複雑でデバッグが困難なため、シングルスレッド ソリューションが存在する場合は回避することが推奨されます。

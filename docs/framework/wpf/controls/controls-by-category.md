@@ -1,15 +1,16 @@
 ---
 title: カテゴリ別のコントロール
+description: カテゴリにグループ化された Windows Presentation Foundation コントロールを確認します。これは、類似したコントロールを比較することによって適切なコントロールを選択するのに役立ちます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 5958793015d409678b67cdc7eedcb4289f5e885c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 226e037dc26f817b96a5aa869565f08ee6ff6574
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636212"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166287"
 ---
 # <a name="controls-by-category"></a>カテゴリ別のコントロール
 Windows Presentation Foundation (WPF) コントロールは、論理的にいくつかのカテゴリにグループ化できます。 これらのカテゴリを使用すると、類似の使用パターンや機能を持つコントロールを見つけやすくなり、シナリオに適したコントロールを選択できます。  

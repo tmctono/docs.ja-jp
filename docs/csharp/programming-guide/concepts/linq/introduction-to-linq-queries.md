@@ -1,5 +1,6 @@
 ---
 title: LINQ クエリの概要 (C#)
+description: LINQ によって、さまざまな種類のデータ ソースや形式にわたるデータのクエリに対して、一貫したモデルが提供されます。 LINQ クエリでは、操作の対象は常にオブジェクトになります。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - deferred execution [LINQ]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 5a9d97ff14f087ddfc55986bf77f18492cbf8a04
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: ce878dc255d2502f0594626b294393c399c932e5
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389579"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165831"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ クエリの概要 (C#)
 "*クエリ*" は、データ ソースからデータを取得する式です。 クエリは通常、専用のクエリ言語で表されます。 これまでに、リレーショナル データベース用の SQL や XML 用の XQuery など、データ ソースの種類に合わせてさまざまな言語が開発されてきました。 このため、開発者は、サポートする必要のあるデータ ソースの種類やデータ形式ごとに、新しいクエリ言語を習得する必要がありました。 LINQ は、さまざまな種類のデータ ソースやデータ形式のデータを操作するための一貫したモデルを提供することにより、この負担を軽減します。 LINQ クエリでは、操作の対象は常にオブジェクトになります。 共通の基本的なコーディング パターンを使用することで、LINQ プロバイダーを利用できる XML ドキュメント、SQL データベース、ADO.NET データセット、.NET コレクション、その他の任意の形式のデータを照会したり変換したりできます。  

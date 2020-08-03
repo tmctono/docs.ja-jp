@@ -1,5 +1,6 @@
 ---
 title: パネルの概要
+description: Windows Presentation Foundation では、要素のレンダリングを制御する定義済みの Panel 要素が提供されています。 カスタム Panel 要素を作成する方法について学習します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 7810bfbf4f5bedf51e0797a4b9017f589e0b0a8a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7f3f6948de28f50dc6470a7dfc1a5bad67e57c79
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187580"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167778"
 ---
 # <a name="panels-overview"></a>パネルの概要
 <xref:System.Windows.Controls.Panel> 要素は、要素のレンダリング (サイズ、次元、位置、子コンテンツの配置) を制御するコンポーネントです。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] では、定義済みの多数の <xref:System.Windows.Controls.Panel> 要素と共に、カスタム <xref:System.Windows.Controls.Panel> 要素の作成機能が提供されています。  

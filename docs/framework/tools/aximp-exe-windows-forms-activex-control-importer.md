@@ -1,5 +1,6 @@
 ---
 title: Aximp.exe (Windows フォーム ActiveX コントロール インポーター)
+description: Aximp.exe (Windows フォーム ActiveX コントロール インポーター) を理解します。 このツールによって、ActiveX 用の COM タイプ ライブラリに属する型定義が Windows フォームに変換されます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ActiveX controls, hosting in Windows Forms
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-ms.openlocfilehash: 6d58d1df81780c3033eab7c1ac3e860adeb374b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d4fd6762195078963b43392178996a61f90feb94
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180424"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167348"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows フォーム ActiveX コントロール インポーター)
 ActiveX コントロール インポーターは、ActiveX コントロール用の COM タイプ ライブラリに属する型定義を Windows フォーム コントロールに変換します。  
@@ -22,7 +23,7 @@ ActiveX コントロール インポーターは、ActiveX コントロール用
   
  ActiveX コントロールをホストするには、<xref:System.Windows.Forms.AxHost> から派生するラッパー コントロールを生成する必要があります。 ラッパー コントロールには、基になる ActiveX コントロールのインスタンスが 1 つ含まれます。 このインスタンスは、ActiveX コントロールとの通信方法を認識しますが、Windows フォーム コントロールとして表示されます。 生成されたコントロールは、ActiveX コントロールをホストし、そのプロパティ、メソッド、およびイベントを、生成されたコントロールのプロパティ、メソッド、およびイベントとして公開します。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
   
  コマンド プロンプトに次のように入力します。  
   
@@ -32,13 +33,13 @@ ActiveX コントロール インポーターは、ActiveX コントロール用
 aximp [options]{file.dll | file.ocx}  
 ```  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
-|引数|[説明]|  
+|引数|説明|  
 |--------------|-----------------|  
 |*file*|変換する ActiveX コントロールを含むソース ファイルの名前。 引数 file の拡張子は .dll または .ocx であることが必要です。|  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |`/delaysign`|Aximp.exe が遅延署名を使用して、生成されたコントロールに名前を割り当てるように指定します。 `/keycontainer:`、`/keyfile:`、または `/publickey:` オプションのいずれかで、このオプションを指定する必要があります。 遅延署名プロセスの詳細については、「[アセンブリへの遅延署名](../../standard/assembly/delay-sign.md)」を参照してください。|  
 |`/help`|このツールのコマンド構文とオプションを表示します。|  
@@ -77,7 +78,7 @@ aximp [options]{file.dll | file.ocx}
 aximp c:\systemroot\system32\msdxm.ocx  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ツール](index.md)
 - [Ildasm.exe (IL 逆アセンブラー)](ildasm-exe-il-disassembler.md)

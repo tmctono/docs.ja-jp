@@ -1,5 +1,6 @@
 ---
 title: ListView の概要
+description: さまざまなレイアウトやビューにデータ項目を表示するためのインフラストラクチャを備えた Windows Presentation Foundation の ListView コントロールについて説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 2f336d1eb8dcdfec3c3c8059ba865147c6b6c825
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 419c6216f0af696ec71e7607c79c2db637caa785
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187513"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164560"
 ---
 # <a name="listview-overview"></a>ListView の概要
 <xref:System.Windows.Controls.ListView> コントロールには、さまざまなレイアウトまたはビューにデータ項目のセットを表示するためのインフラストラクチャが用意されています。 たとえば、ユーザーは、テーブルにデータ項目を表示し、その列を並べ替えできます。  

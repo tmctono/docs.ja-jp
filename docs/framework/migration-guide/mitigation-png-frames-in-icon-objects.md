@@ -1,13 +1,14 @@
 ---
 title: 軽減策:Icon オブジェクトの PNG フレーム
+description: .NET Framework 4.6 以降の新しい動作が望ましくない場合、アイコン オブジェクトの PNG フレームの動作を構成する方法について説明します。
 ms.date: 03/30/2017
 ms.assetid: ca87fefb-7144-4b4e-8832-5a939adbb4b2
-ms.openlocfilehash: 713e6a0fa615ac748134fac501e5142a65e434f1
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: b7ba2951a38ee2d1c7a9b1fc45c5a81d24986a85
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248896"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475438"
 ---
 # <a name="mitigation-png-frames-in-icon-objects"></a>軽減策:Icon オブジェクトの PNG フレーム
 .NET Framework 4.6 以降では、 <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> メソッドで、PNG フレームを含んだアイコンを正常に <xref:System.Drawing.Bitmap> オブジェクトに変換できます。  

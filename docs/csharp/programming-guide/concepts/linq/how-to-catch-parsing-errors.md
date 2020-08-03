@@ -1,13 +1,14 @@
 ---
 title: 解析エラーをキャッチする方法 (C#)
+description: この C# の LINQ to XML の例では、形式が正しくないか無効な XML を検出します。 LINQ to XML では、XmlReader を使用します。これにより、形式が正しくないか無効な XML に対して例外がスローされます。
 ms.date: 07/20/2015
 ms.assetid: bfb612d4-5605-48ef-8c93-915cf9d5dcfb
-ms.openlocfilehash: 1a05037892061dec85e7837472e8ec13e076724b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0a891097322ef6acce062ea927692b01cc425e6c
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141486"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105413"
 ---
 # <a name="how-to-catch-parsing-errors-c"></a>解析エラーをキャッチする方法 (C#)
 このトピックでは、形式が正しくないか無効な XML を検出する方法について説明します。  

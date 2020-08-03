@@ -1,13 +1,14 @@
 ---
 title: 異種ファイルのコンテンツを結合する方法 (LINQ) (C#)
+description: C# で LINQ を使用して 2 つのコンマ区切りファイルのデータを結合する方法について説明します。 このデータでは、一致するキーとして使用される共通の値が共有されています。
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: efe11c31873f21841c28bd393b295eea117d1e46
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 136d10ff5c0bf5f4f18998b50eb7bbee218b00a9
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169091"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104974"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>異種ファイルのコンテンツを結合する方法 (LINQ) (C#)
 
@@ -124,7 +125,7 @@ Tucker, 94, 92, 91, 91
  */  
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [LINQ と文字列 (C#)](./linq-and-strings.md)
 - [LINQ とファイル ディレクトリ (C#)](./linq-and-file-directories.md)

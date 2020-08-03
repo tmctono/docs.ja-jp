@@ -1,5 +1,6 @@
 ---
 title: カスタム依存関係プロパティ
+description: Windows Presentation Foundation でプロパティを実装する手順と、プロパティのパフォーマンス、使いやすさ、または多用性を向上させるためのオプションについて学習します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: e4117d7add2a34d6d989d9222e7688361cf6b379
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: b082340afb8b1a814fc5923126aa58183d43bc01
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646348"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168154"
 ---
 # <a name="custom-dependency-properties"></a>カスタム依存関係プロパティ
 

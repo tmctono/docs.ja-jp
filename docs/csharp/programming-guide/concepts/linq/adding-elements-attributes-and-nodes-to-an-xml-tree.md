@@ -1,13 +1,14 @@
 ---
 title: XML ツリーへの要素、属性、およびノードの追加
+description: 要素、属性、コメント、処理命令、テキストなどのコンテンツを既存の XML ツリーに追加するメソッドについて説明します。
 ms.date: 07/20/2015
 ms.assetid: db911e4f-40aa-499a-9500-a9763bb6df56
-ms.openlocfilehash: 20d8d9d9c592f5f570d7c94298dcee41763c1f1f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78a84401494e2d4280799632fa42dc95574e3e10
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169576"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105557"
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>XML ツリーへの要素、属性、およびノードの追加
 コンテンツ (要素、属性、コメント、処理命令、テキスト、および CDATA) を既存の XML ツリーに追加できます。  
@@ -15,21 +16,21 @@ ms.locfileid: "79169576"
 ## <a name="methods-for-adding-content"></a>コンテンツを追加するためのメソッド  
  次のメソッドを使用すると、<xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XDocument> に子コンテンツを追加できます。  
   
-|方法|[説明]|  
+|メソッド|説明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XContainer.Add%2A>|<xref:System.Xml.Linq.XContainer> の子コンテンツの末尾にコンテンツを追加します。|  
 |<xref:System.Xml.Linq.XContainer.AddFirst%2A>|<xref:System.Xml.Linq.XContainer> の子コンテンツの冒頭にコンテンツを追加します。|  
   
  次のメソッドは、<xref:System.Xml.Linq.XNode> の兄弟ノードとしてコンテンツを追加します。 兄弟コンテンツの追加先となる最も一般的なノードは <xref:System.Xml.Linq.XElement> ですが、<xref:System.Xml.Linq.XText> や <xref:System.Xml.Linq.XComment> など別の種類のノードに、有効な兄弟コンテンツを追加することもできます。  
   
-|方法|[説明]|  
+|メソッド|説明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|<xref:System.Xml.Linq.XNode> の後にコンテンツを追加します。|  
 |<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|<xref:System.Xml.Linq.XNode> の前にコンテンツを追加します。|  
   
 ## <a name="example"></a>例  
   
-### <a name="description"></a>[説明]  
+### <a name="description"></a>説明  
  次の例では、2 つの XML ツリーを作成し、その 1 つを変更します。  
   
 ### <a name="code"></a>コード  

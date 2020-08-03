@@ -1,13 +1,14 @@
 ---
 title: Word 文書内のテキストの検索 (C#)
+description: C# で LINQ を使用して WordprocessingML ドキュメントを処理する方法について学習します。 この例では、ドキュメント内で文字列の出現箇所をすべて検索します。
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 173472b9dbd669476c3e5529655d111b88b0dba2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1efcbef6185b718287f1222ecc086f4c675f02ab
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70205390"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105397"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Word 文書内のテキストの検索 (C#)
 このトピックでは、以前のクエリを拡張して、ドキュメント内で特定の文字列の出現箇所をすべて検索します。  
@@ -327,7 +328,7 @@ StyleName:Code ><
   
 - [Office Open XML WordprocessingML ドキュメントの詳細 (C#)](./wordprocessingml-document-with-styles.md)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)](./shape-of-wordprocessingml-documents.md)
 - [純粋関数によるリファクタリング (C#)](./refactoring-using-a-pure-function.md)

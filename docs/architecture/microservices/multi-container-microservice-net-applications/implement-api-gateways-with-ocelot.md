@@ -2,12 +2,12 @@
 title: Ocelot を使った API ゲートウェイの実装
 description: Ocelot を使用して API ゲートウェイを実装する方法と、コンテナー ベースの環境で Ocelot を使用する方法について説明します。
 ms.date: 03/02/2020
-ms.openlocfilehash: 28b9ca22d232baf3545d71b876cecf72fea05c92
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f103c1e394a3f829489b61fd17af749798b02f70
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846947"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864099"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Ocelot を使った API ゲートウェイの実装
 

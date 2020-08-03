@@ -1,5 +1,6 @@
 ---
 title: 完全修飾型名の指定
+description: リフレクション操作に対して有効な入力については、アセンブリ名の指定、名前空間の指定、および型名を持つ完全修飾型名を使用します。
 ms.date: 02/21/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-ms.openlocfilehash: 707c71482196d789ed9a88db34af048ec57734fb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ff33b6abd31a82c6b80aa794564c5c48648cde63
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130028"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865230"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>完全修飾型名の指定
 
@@ -120,13 +121,13 @@ IDENTIFIER の一部として使用する場合、次のトークンを区切る
 
 |トークン|説明|
 |-----------|-------------|
-|\\、|アセンブリの区切り文字。|
+|\\,|アセンブリの区切り文字。|
 |\\+|入れ子にされた型の区切り文字。|
 |\\&|参照型。|
 |\\*|ポインター型。|
 |\\[|配列次元の区切り文字。|
 |\\]|配列次元の区切り文字。|
-|\\。|配列の指定内にピリオドを使用する場合にのみ、ピリオドの前にバックスラッシュを使用します。 NamespaceSpec 内のピリオドにはバックスラッシュを使用できません。|
+|\\.|配列の指定内にピリオドを使用する場合にのみ、ピリオドの前にバックスラッシュを使用します。 NamespaceSpec 内のピリオドにはバックスラッシュを使用できません。|
 |\\\|文字列リテラルとして必要な場合のバックスラッシュ。|
 
 AssemblyNameSpec を除くすべての TypeSpec コンポーネントで、スペースは関係があります。 AssemblyNameSpec の場合、',' 区切り文字の前にあるスペースは関係がありますが、',' の後のスペースは無視されます。

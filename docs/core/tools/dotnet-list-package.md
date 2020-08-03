@@ -2,12 +2,12 @@
 title: dotnet list package コマンド
 description: "\"dotnet list package\" コマンドでは、プロジェクトまたはソリューションのパッケージ参照を列挙する便利なオプションが提供されています。"
 ms.date: 02/14/2020
-ms.openlocfilehash: 12d64600d178ea8cf490a0d6917e67bd3d8c6d21
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 7157e56860936d10aa322854a589ae89e2bc0826
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463659"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164752"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -21,6 +21,7 @@ ms.locfileid: "81463659"
 
 ```dotnetcli
 dotnet list [<PROJECT>|<SOLUTION>] package [--config <SOURCE>]
+    [--deprecated]
     [--framework <FRAMEWORK>] [--highest-minor] [--highest-patch]
     [--include-prerelease] [--include-transitive] [--interactive]
     [--outdated] [--source <SOURCE>]
@@ -78,6 +79,10 @@ Project 'HelloPlugin' has the following package references
 
   より新しいパッケージを検索するときに使用する NuGet ソース。 `--outdated` オプションが必要です。
 
+- **`--deprecated`**
+
+  非推奨となったパッケージを表示します。
+
 - **`--framework <FRAMEWORK>`**
 
   指定した[ターゲット フレームワーク](../../standard/frameworks.md)に該当するパッケージのみを表示します。 複数のフレームワークを指定するには、オプションを複数回繰り返します。 たとえば、`--framework netcoreapp2.2 --framework netstandard2.0` のように指定します。
@@ -88,15 +93,15 @@ Project 'HelloPlugin' has the following package references
 
 - **`--highest-minor`**
 
-  新しいパッケージを検索するときに、メジャー バージョン番号が一致するパッケージのみを考慮します。 `--outdated` オプションが必要です。
+  新しいパッケージを検索するときに、メジャー バージョン番号が一致するパッケージのみを考慮します。 `--outdated` オプション、または `--deprecated` オプションが必要です。
 
 - **`--highest-patch`**
 
-  新しいパッケージを検索するときに、メジャー バージョン番号とマイナー バージョン番号が一致するパッケージのみを考慮します。 `--outdated` オプションが必要です。
+  新しいパッケージを検索するときに、メジャー バージョン番号とマイナー バージョン番号が一致するパッケージのみを考慮します。 `--outdated` オプション、または `--deprecated` オプションが必要です。
 
 - **`--include-prerelease`**
 
-  新しいパッケージを検索するときに、プレリリース バージョンのパッケージを考慮します。 `--outdated` オプションが必要です。
+  新しいパッケージを検索するときに、プレリリース バージョンのパッケージを考慮します。 `--outdated` オプション、または `--deprecated` オプションが必要です。
 
 - **`--include-transitive`**
 
@@ -112,7 +117,7 @@ Project 'HelloPlugin' has the following package references
 
 - **`-s|--source <SOURCE>`**
 
-  より新しいパッケージを検索するときに使用する NuGet ソース。 `--outdated` オプションが必要です。
+  より新しいパッケージを検索するときに使用する NuGet ソース。 `--outdated` オプション、または `--deprecated` オプションが必要です。
 
 ## <a name="examples"></a>使用例
 

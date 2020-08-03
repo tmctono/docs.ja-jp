@@ -1,5 +1,6 @@
 ---
 title: .NET Framework のアクセシビリティの新機能
+description: .NET Framework 4.7.1 以降の .NET アクセシビリティの新機能について確認します。 ユーザー補助機能を使用すると、アプリで支援機能の利用者に適切なエクスペリエンスを提供できます。
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 8a85614e441ba6e5782cbbbf5fe12432c053a101
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 593591ca340cc130a3a6d1daa015a849b8eca0f8
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244154"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925840"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework のアクセシビリティの新機能
 
@@ -448,7 +449,7 @@ Windows 10 では 2 つの新しい UIAutomation プロパティである `SizeO
   - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>。 ライブ領域の内容が変更された場合でも、要素が通知を送信することはありません。
   - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>。 ライブ領域の内容が変更された場合、要素は非割り込み型の通知を送信します。
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>。 ライブ領域の内容が変更された場合、要素により割り込み通知が送信されます。
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. ライブ領域の内容が変更された場合、要素により割り込み通知が送信されます。
 
 関心のある要素で **AutomationProperties.LiveSetting** プロパティを作成できます。次の例をご覧ください。
 

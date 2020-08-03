@@ -1,5 +1,6 @@
 ---
 title: Installutil.exe (インストーラー ツール)
+description: Installutil.exe (インストーラー ツール) を使用します。 このツールを使用すると、指定したアセンブリのインストーラ コンポーネントを実行することによって、サーバー リソースのインストールとアンインストールを実行できます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - uninstalling server resources
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - progress information for installation
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
-ms.openlocfilehash: caca946617c681ce6516b7184a9ea506cc67158d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 042e5f64a7a863173db9c4e601d3152b0df46d97
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73105074"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164450"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (インストーラー ツール)
 
@@ -42,7 +43,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 
 <a name="options"></a>
 
-## <a name="options"></a>オプション
+## <a name="options"></a>Options
 
 |オプション|説明|
 |------------|-----------------|

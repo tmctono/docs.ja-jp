@@ -1,15 +1,16 @@
 ---
 title: '方法: 複数行の TextBox コントロールを作成する'
+description: XAML を使用して、Windows Presentation Foundation アプリケーション内の複数行のテキストに合わせて拡張する TextBox コントロールを定義する方法について学習します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TextBox control [WPF], multiple lines of text
 ms.assetid: 05914a93-d0ea-4a9a-b693-09df7d4e2ac2
-ms.openlocfilehash: 29fb4c9498fe163c36e71680242d3ef8cf98c089
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a88d4d768884df135afddb491431650b9ba2d24
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62001274"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166257"
 ---
 # <a name="how-to-create-a-multiline-textbox-control"></a>方法: 複数行の TextBox コントロールを作成する
 次の例では、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] を使用して、複数行のテキストに合わせて自動的に拡張する <xref:System.Windows.Controls.TextBox> コントロールを定義する方法を示します。  

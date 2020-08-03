@@ -1,5 +1,6 @@
 ---
 title: 抽象クラスとシール クラス、およびクラス メンバー - C# プログラミング ガイド
+description: C# の抽象キーワードによって、不完全なクラスとクラス メンバーが作成されます。 シール キーワードによって、以前の仮想クラスまたはクラス メンバーの継承が防止されます。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - abstract classes [C#]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: 07738031f1dec05424f7c3756f49a8f1f9a2c44b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 391a8ccbb1fbe6626d1cd5a4b6fcfd9ace3506e6
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715009"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474489"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>抽象クラスとシール クラス、およびクラス メンバー (C# プログラミング ガイド)
 [abstract](../../language-reference/keywords/abstract.md) キーワードを使用すると、派生クラスで実装する必要のある不完全な[クラス](../../language-reference/keywords/class.md) メンバーを作成できます。  
@@ -47,9 +48,9 @@ ms.locfileid: "75715009"
   
  [!code-csharp[csProgGuideInheritance#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#17)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [クラスと構造体](./index.md)
 - [継承](./inheritance.md)
 - [メソッド](./methods.md)

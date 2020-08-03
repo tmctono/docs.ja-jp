@@ -1,5 +1,6 @@
 ---
 title: StaticResource のマークアップ拡張機能
+description: 既に定義されているリソースへの参照を検索することによって、任意の XAML プロパティ属性の値を提供します。
 ms.date: 03/30/2017
 f1_keywords:
 - StaticResource
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], StaticResource markup extension
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
-ms.openlocfilehash: c160322fb3834fcd705c0482f5e55c8da32d143b
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 77396c1867dcbe279d7ba158ed9e6f5f833f17b5
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141252"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164674"
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource のマークアップ拡張機能
 既に定義されているリソースへの参照を検索することによって、任意の [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] プロパティ属性の値を提供します。 そのリソースに対する検索動作は、読み込み時の検索に似ています。これにより、現在の [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページおよび他のアプリケーション ソースのマークアップから以前に読み込まれたリソースが検索され、実行時オブジェクトのプロパティ値としてそのリソース値が生成されます。  
