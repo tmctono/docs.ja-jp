@@ -2,12 +2,12 @@
 title: dotnet tool restore コマンド
 description: dotnet tool restore コマンドでは、現在のディレクトリのスコープ内にある .NET Core ローカル ツールをお使いのコンピューター上にインストールします。
 ms.date: 02/14/2020
-ms.openlocfilehash: a518c2d45bbe9522bddfed4bbef61b30f1ad634b
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: ceef3274ec9d337f8c51009d5a8c27e808b14035
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463341"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302673"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
@@ -20,7 +20,7 @@ ms.locfileid: "81463341"
 ## <a name="synopsis"></a>構文
 
 ```dotnetcli
-dotnet tool restore <PACKAGE_NAME>
+dotnet tool restore
     [--configfile <FILE>] [--add-source <SOURCE>]
     [tool-manifest <PATH_TO_MANIFEST_FILE>] [--disable-parallel]
     [--ignore-failed-sources] [--no-cache] [--interactive]
@@ -32,12 +32,6 @@ dotnet tool restore -h|--help
 ## <a name="description"></a>説明
 
 `dotnet tool restore` コマンドでは、現在のディレクトリのスコープ内にあるツール マニフェスト ファイルを検索し、そこに一覧表示されたツールをインストールします。 マニフェスト ファイルの詳細については、「[ローカル ツールのインストール](global-tools.md#install-a-local-tool)」および「[ローカル ツールの起動](global-tools.md#invoke-a-local-tool)」を参照してください。
-
-## <a name="arguments"></a>引数
-
-- **`PACKAGE_NAME`**
-
-インストールする .NET Core ツールが格納されている NuGet パッケージの名前または ID。
 
 ## <a name="options"></a>オプション
 

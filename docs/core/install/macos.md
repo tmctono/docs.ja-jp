@@ -4,12 +4,12 @@ description: .NET Core をインストールできる macOS のバージョン�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/25/2020
-ms.openlocfilehash: 2900d98dbd30c51f689cdce37ea273ccc4f598b5
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 951e9b6a64d55274729e233b4a2d7728c75d05d4
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308924"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302933"
 ---
 # <a name="install-net-core-on-macos"></a>macOS に .NET Core をインストールする
 
@@ -200,7 +200,7 @@ Docker コンテナー内で .NET Core を使用する方法の詳細につい�
 
 - [.NET Core が既にインストールされているかどうかを確認する方法](how-to-detect-installed-versions.md?pivots=os-macos)。
 - [macOS Catalina の公証に対応する](macos-notarization-issues.md)。
-- [チュートリアル: macOS での作業を始める](../tutorials/using-on-mac-vs.md).
+- [チュートリアル: macOS での作業を始める](../tutorials/with-visual-studio-mac.md).
 - [チュートリアル: Visual Studio Code を使用して新しいアプリを作成する](../tutorials/with-visual-studio-code.md)。
 - [チュートリアル: NET Core アプリをコンテナー化する](../docker/build-container.md)。
 
