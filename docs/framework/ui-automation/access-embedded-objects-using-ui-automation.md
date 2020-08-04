@@ -1,5 +1,6 @@
 ---
 title: UI オートメーションを使って埋め込みオブジェクトにアクセスする
+description: 「テキストコントロールのコンテンツ内で UI オートメーションを使用して埋め込みオブジェクトにアクセスする方法」を参照してください。 埋め込みオブジェクトは、UI オートメーションテキストプロバイダーの子と見なされます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - accessing embedded objects
 - UI Automation, accessing embedded objects
 ms.assetid: a5b513ec-7fa6-4460-869f-c18ff04f7cf2
-ms.openlocfilehash: 75c63360eab2cde95698bdaded5c5249a3ca89fd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 031d9c90318eec59ad2b77d611e0ed0d5a3ae719
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447271"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87516971"
 ---
 # <a name="access-embedded-objects-using-ui-automation"></a>UI オートメーションを使って埋め込みオブジェクトにアクセスする
 > [!NOTE]
-> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」をご覧ください。  
   
  このトピックでは、どのように [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] を使用して、テキスト コントロールのコンテンツ内に埋め込みオブジェクトを公開できるのかを示しています。  
   
@@ -27,7 +28,7 @@ ms.locfileid: "74447271"
   
  埋め込みオブジェクトは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] テキスト プロバイダーの子と見なされます。 これにより、他のすべての [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 要素と同じ UI オートメーション ツリーの構造を介して公開することができます。 次に、機能は、埋め込みオブジェクトのコントロール型で通常必要とされるコントロール パターンを通じて公開されます (たとえば、ハイパーリンクはテキスト ベースであるため、 <xref:System.Windows.Automation.TextPattern>をサポートします)。  
   
- ![テキストコンテナー内の埋め込みオブジェクト。](./media/uia-textpattern-embeddedobjects.PNG "UIA_TextPattern_EmbeddedObjects")  
+ ![テキスト コンテナー内の埋め込みオブジェクト。](./media/uia-textpattern-embeddedobjects.PNG "UIA_TextPattern_EmbeddedObjects")  
 テキストコンテンツが含まれているサンプルドキュメント ("ご存知でしたか?"...)また、コード例のターゲットとして使用される2つの埋め込みオブジェクト (クジラとテキストハイパーリンクの画像) があります。  
   
 ## <a name="example"></a>例  
@@ -55,7 +56,7 @@ ms.locfileid: "74447271"
 ## <a name="see-also"></a>関連項目
 
 - [UI オートメーション TextPattern の概要](ui-automation-textpattern-overview.md)
-- [UI Automation コントロール パターンの概要](ui-automation-control-patterns-overview.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
+- [UI オートメーション コントロール パターンの概要](ui-automation-control-patterns-overview.md)
+- [クライアントの UI オートメーション コントロール パターン](ui-automation-control-patterns-for-clients.md)
 - [UI オートメーションを使用した、テキスト ボックスへのコンテンツの追加](add-content-to-a-text-box-using-ui-automation.md)
 - [UI オートメーションを使用した、テキストの検索と強調表示](find-and-highlight-text-using-ui-automation.md)
