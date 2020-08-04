@@ -1,5 +1,6 @@
 ---
 title: インデクサー - C# プログラミング ガイド
+description: C# のインデクサーにより、クラスまたは構造体のインスタンスを配列のようにインデックス付けできます。 インデックス付きの値は、型またはインスタンスのメンバーを指定せずに、設定または取得できます。
 ms.date: 03/10/2017
 f1_keywords:
 - cs.indexers
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 539b2861e975c0c758c43c8a5d4cca86e3d2bb2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 07e0ae4294373817e10bb79920c73ec1e275d169
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79167543"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303115"
 ---
 # <a name="indexers-c-programming-guide"></a>インデクサー (C# プログラミング ガイド)
 
@@ -53,7 +54,7 @@ C# 7.0 以降、get アクセサーと set アクセサーのどちらも、式�
   
 - インデクサーには、2 次元配列にアクセスする場合など、複数の仮パラメーターを指定できます。  
   
-## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a> 関連項目  
+## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a> 関連セクション  
   
 - [インデクサーの使用](./using-indexers.md)  
   
@@ -67,7 +68,7 @@ C# 7.0 以降、get アクセサーと set アクセサーのどちらも、式�
 
 詳細については、「[C# 言語の仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の「[インデクサー](~/_csharplang/spec/classes.md#indexers)」を参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# プログラミングガイド](../index.md)
-- [Properties](../classes-and-structs/properties.md)
+- [プロパティ](../classes-and-structs/properties.md)

@@ -1,5 +1,6 @@
 ---
 title: ステートメント、式、および演算子 - C# プログラミング ガイド
+description: C# でのプログラミングにおけるステートメント、式、および演算子の基本要素について説明します。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - expressions [C#]
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: b339158848dac30f8c87a372b44574f6114a6aed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 08692cbe583feb534315b637492adedb1254bc38
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75698639"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381620"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>ステートメント、式、および演算子 (C# プログラミング ガイド)
 
@@ -36,7 +37,7 @@ ms.locfileid: "75698639"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# プログラミングガイド](../index.md)
 - [キャストと型変換](../types/casting-and-type-conversions.md)

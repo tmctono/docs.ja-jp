@@ -1,5 +1,6 @@
 ---
 title: XML ドキュメント コメント - C# プログラミング ガイド
+description: XML ドキュメントのコメントについて説明します。 特別なコメント フィールドに XML 要素を含め、ご自分のコードのドキュメントを作成できます。
 ms.date: 07/20/2015
 f1_keywords:
 - cs.xml
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-ms.openlocfilehash: f5a507bc35b0cc0a679fd055bfc255bb3cb9a090
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fbdeb53331d9fc63d24a3322ea13863d7c0a3630
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76789793"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381880"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>XML ドキュメント コメント (C# プログラミング ガイド)
 
@@ -56,6 +57,6 @@ XML 要素を参照するには (たとえば、XML ドキュメント コメン
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)

@@ -1,12 +1,13 @@
 ---
 title: シリアル化 (C#)
+description: シリアル化では、オブジェクトを格納するか、メモリ、データベース、またはファイルに転送するために、それをバイト ストリームに変換します。
 ms.date: 01/02/2020
-ms.openlocfilehash: b2532ccf281fdfaa951d56675066f1e239f9f480
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 29625648b19c97556c107997ef9ecd3f0f971cbf
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241982"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455747"
 ---
 # <a name="serialization-c"></a>シリアル化 (C#)
 
@@ -44,6 +45,8 @@ JSON シリアル化では、オブジェクトのパブリック プロパテ�
 <xref:System.Runtime.Serialization> 名前空間には、バイナリおよび XML シリアル化および逆シリアル化のためのクラスが含まれています。
 
 バイナリ シリアル化では、バイナリ エンコードを使用して、ストレージやソケット ベースのネットワーク ストリームなどのためのコンパクトなシリアル化を生成します。 バイナリ シリアル化では、読み取り専用メンバーも含め、すべてのメンバーがシリアル化され、パフォーマンスが向上します。
+
+[!INCLUDE [binary-serialization-warning](~/includes/binary-serialization-warning.md)]
 
 XML シリアル化では、オブジェクトのパブリック フィールドやパブリック プロパティ、またはメソッドのパラメーターや戻り値を、特定の XML スキーマ定義言語 (XSD) ドキュメントに準拠する XML ストリームにシリアル化します。 XML シリアル化では、XML に変換されるパブリック プロパティとパブリック フィールドによって厳密に型指定されたクラスが生成されます。 <xref:System.Xml.Serialization> には、XML のシリアル化および逆シリアル化のためのクラスが含まれています。 属性をクラスおよびクラス メンバーに適用すると、<xref:System.Xml.Serialization.XmlSerializer> がそのクラスのインスタンスをシリアル化または逆シリアル化する方法を制御できます。
 
