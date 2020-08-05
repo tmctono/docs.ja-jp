@@ -1,43 +1,43 @@
 ---
 title: 暗号署名
-ms.date: 03/30/2017
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - digital signatures
-- cryptography [.NET Framework], signatures
+- cryptography [.NET], signatures
 - digital signatures, XML signing
 - signatures, cryptographic
 - digital signatures, generating
 - verifying signatures
 - generating signatures
 - digital signatures, about
-- encryption [.NET Framework], signatures
-- security [.NET Framework], signatures
+- encryption [.NET], signatures
+- security [.NET], signatures
 - XML signing
 - digital signatures, verifying
 - signing XML
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
-ms.openlocfilehash: 9e69578ceffeeacb73cf059f5b577fe7c137b599
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ce2be1d509da4e399bf87e1c8df7ba061fc2707c
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288395"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557009"
 ---
-# <a name="cryptographic-signatures"></a><span data-ttu-id="330a2-102">暗号署名</span><span class="sxs-lookup"><span data-stu-id="330a2-102">Cryptographic Signatures</span></span>
+# <a name="cryptographic-signatures"></a><span data-ttu-id="c57cc-102">暗号署名</span><span class="sxs-lookup"><span data-stu-id="c57cc-102">Cryptographic Signatures</span></span>
 
-<span data-ttu-id="330a2-103">暗号デジタル署名は、公開キー アルゴリズムを使用してデータの整合性を提供します。</span><span class="sxs-lookup"><span data-stu-id="330a2-103">Cryptographic digital signatures use public key algorithms to provide data integrity.</span></span> <span data-ttu-id="330a2-104">デジタル署名を使用してデータに署名すると、第三者が署名を検証し、データが署名者から発信され、署名後に変更されていないことを証明できます。</span><span class="sxs-lookup"><span data-stu-id="330a2-104">When you sign data with a digital signature, someone else can verify the signature, and can prove that the data originated from you and was not altered after you signed it.</span></span> <span data-ttu-id="330a2-105">デジタル署名の詳細については、「 [Cryptographic Services](cryptographic-services.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="330a2-105">For more information about digital signatures, see [Cryptographic Services](cryptographic-services.md).</span></span>
+<span data-ttu-id="c57cc-103">暗号デジタル署名は、公開キー アルゴリズムを使用してデータの整合性を提供します。</span><span class="sxs-lookup"><span data-stu-id="c57cc-103">Cryptographic digital signatures use public key algorithms to provide data integrity.</span></span> <span data-ttu-id="c57cc-104">デジタル署名を使用してデータに署名すると、第三者が署名を検証し、データが署名者から発信され、署名後に変更されていないことを証明できます。</span><span class="sxs-lookup"><span data-stu-id="c57cc-104">When you sign data with a digital signature, someone else can verify the signature, and can prove that the data originated from you and was not altered after you signed it.</span></span> <span data-ttu-id="c57cc-105">デジタル署名の詳細については、「 [Cryptographic Services](cryptographic-services.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c57cc-105">For more information about digital signatures, see [Cryptographic Services](cryptographic-services.md).</span></span>
 
-<span data-ttu-id="330a2-106">ここでは、 <xref:System.Security.Cryptography?displayProperty=nameWithType> 名前空間のクラスを使用してデジタル署名を生成して検証する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="330a2-106">This topic explains how to generate and verify digital signatures using classes in the <xref:System.Security.Cryptography?displayProperty=nameWithType> namespace.</span></span>
+<span data-ttu-id="c57cc-106">ここでは、 <xref:System.Security.Cryptography> 名前空間のクラスを使用してデジタル署名を生成して検証する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="c57cc-106">This topic explains how to generate and verify digital signatures using classes in the <xref:System.Security.Cryptography> namespace.</span></span>
 
-## <a name="generating-signatures"></a><span data-ttu-id="330a2-107">署名の生成</span><span class="sxs-lookup"><span data-stu-id="330a2-107">Generating Signatures</span></span>
+## <a name="generating-signatures"></a><span data-ttu-id="c57cc-107">署名の生成</span><span class="sxs-lookup"><span data-stu-id="c57cc-107">Generating Signatures</span></span>
 
-<span data-ttu-id="330a2-108">デジタル署名は、通常、大きなデータを表現するハッシュ値に適用されます。</span><span class="sxs-lookup"><span data-stu-id="330a2-108">Digital signatures are usually applied to hash values that represent larger data.</span></span> <span data-ttu-id="330a2-109">ハッシュ値にデジタル署名を適用する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="330a2-109">The following example applies a digital signature to a hash value.</span></span> <span data-ttu-id="330a2-110">まず、 <xref:System.Security.Cryptography.RSACryptoServiceProvider> クラスの新しいインスタンスを作成して、公開キー/秘密キーのペアを生成します。</span><span class="sxs-lookup"><span data-stu-id="330a2-110">First, a new instance of the <xref:System.Security.Cryptography.RSACryptoServiceProvider> class is created to generate a public/private key pair.</span></span> <span data-ttu-id="330a2-111">次に、 <xref:System.Security.Cryptography.RSACryptoServiceProvider> を <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> クラスの新しいインスタンスに渡します。</span><span class="sxs-lookup"><span data-stu-id="330a2-111">Next, the <xref:System.Security.Cryptography.RSACryptoServiceProvider> is passed to a new instance of the <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> class.</span></span> <span data-ttu-id="330a2-112">これにより、デジタル署名を実際に実行する <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>に秘密キーが渡されます。</span><span class="sxs-lookup"><span data-stu-id="330a2-112">This transfers the private key to the <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>, which actually performs the digital signing.</span></span> <span data-ttu-id="330a2-113">ハッシュ コードに署名するためには、使用するハッシュ アルゴリズムを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="330a2-113">Before you can sign the hash code, you must specify a hash algorithm to use.</span></span> <span data-ttu-id="330a2-114">この例では、SHA1 アルゴリズムを使用します。</span><span class="sxs-lookup"><span data-stu-id="330a2-114">This example uses the SHA1 algorithm.</span></span> <span data-ttu-id="330a2-115">最後に、 <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> メソッドを呼び出して署名を実行します。</span><span class="sxs-lookup"><span data-stu-id="330a2-115">Finally, the <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> method is called to perform the signing.</span></span>
+<span data-ttu-id="c57cc-108">デジタル署名は、通常、大きなデータを表現するハッシュ値に適用されます。</span><span class="sxs-lookup"><span data-stu-id="c57cc-108">Digital signatures are usually applied to hash values that represent larger data.</span></span> <span data-ttu-id="c57cc-109">ハッシュ値にデジタル署名を適用する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="c57cc-109">The following example applies a digital signature to a hash value.</span></span> <span data-ttu-id="c57cc-110">まず、 <xref:System.Security.Cryptography.RSA> クラスの新しいインスタンスを作成して、公開キー/秘密キーのペアを生成します。</span><span class="sxs-lookup"><span data-stu-id="c57cc-110">First, a new instance of the <xref:System.Security.Cryptography.RSA> class is created to generate a public/private key pair.</span></span> <span data-ttu-id="c57cc-111">次に、 <xref:System.Security.Cryptography.RSA> を <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> クラスの新しいインスタンスに渡します。</span><span class="sxs-lookup"><span data-stu-id="c57cc-111">Next, the <xref:System.Security.Cryptography.RSA> is passed to a new instance of the <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> class.</span></span> <span data-ttu-id="c57cc-112">これにより、デジタル署名を実際に実行する <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>に秘密キーが渡されます。</span><span class="sxs-lookup"><span data-stu-id="c57cc-112">This transfers the private key to the <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>, which actually performs the digital signing.</span></span> <span data-ttu-id="c57cc-113">ハッシュ コードに署名するためには、使用するハッシュ アルゴリズムを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c57cc-113">Before you can sign the hash code, you must specify a hash algorithm to use.</span></span> <span data-ttu-id="c57cc-114">この例では、SHA1 アルゴリズムを使用します。</span><span class="sxs-lookup"><span data-stu-id="c57cc-114">This example uses the SHA1 algorithm.</span></span> <span data-ttu-id="c57cc-115">最後に、 <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> メソッドを呼び出して署名を実行します。</span><span class="sxs-lookup"><span data-stu-id="c57cc-115">Finally, the <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> method is called to perform the signing.</span></span>
 
-<span data-ttu-id="330a2-116">SHA1 には競合の問題があるため、Microsoft では SHA256 以上を推奨しています。</span><span class="sxs-lookup"><span data-stu-id="330a2-116">Due to collision problems with SHA1, Microsoft recommends SHA256 or better.</span></span>
+<span data-ttu-id="c57cc-116">SHA1 との衝突の問題により、SHA256 以上をお勧めします。</span><span class="sxs-lookup"><span data-stu-id="c57cc-116">Due to collision problems with SHA1, we recommend SHA256 or better.</span></span>
 
 ```vb
 Imports System.Security.Cryptography
@@ -51,10 +51,10 @@ Module Module1
         Dim signedHashValue() As Byte
 
         'Generate a public/private key pair.
-        Dim rsa As New RSACryptoServiceProvider()
+        Dim rsa As RSA = RSA.Create()
 
         'Create an RSAPKCS1SignatureFormatter object and pass it
-        'the RSACryptoServiceProvider to transfer the private key.
+        'the RSA instance to transfer the private key.
         Dim rsaFormatter As New RSAPKCS1SignatureFormatter(rsa)
 
         'Set the hash algorithm to SHA1.
@@ -82,10 +82,10 @@ class Class1
       byte[] signedHashValue;
 
       //Generate a public/private key pair.
-      RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
+      RSA rsa = RSA.Create();
 
       //Create an RSAPKCS1SignatureFormatter object and pass it the
-      //RSACryptoServiceProvider to transfer the private key.
+      //RSA instance to transfer the private key.
       RSAPKCS1SignatureFormatter rsaFormatter = new RSAPKCS1SignatureFormatter(rsa);
 
       //Set the hash algorithm to SHA1.
@@ -98,27 +98,21 @@ class Class1
 }
 ```
 
-### <a name="signing-xml-files"></a><span data-ttu-id="330a2-117">XML ファイルへの署名</span><span class="sxs-lookup"><span data-stu-id="330a2-117">Signing XML Files</span></span>
+## <a name="verifying-signatures"></a><span data-ttu-id="c57cc-117">署名の検証</span><span class="sxs-lookup"><span data-stu-id="c57cc-117">Verifying Signatures</span></span>
 
-<span data-ttu-id="330a2-118">.NET Framework に用意されている <xref:System.Security.Cryptography.Xml> 名前空間を使用すると、XML に署名できます。</span><span class="sxs-lookup"><span data-stu-id="330a2-118">The .NET Framework provides the <xref:System.Security.Cryptography.Xml> namespace, which enables you sign XML.</span></span> <span data-ttu-id="330a2-119">XML が特定のソースから送信されたことを検証する場合は、XML への署名が重要です。</span><span class="sxs-lookup"><span data-stu-id="330a2-119">Signing XML is important when you want to verify that the XML originates from a certain source.</span></span> <span data-ttu-id="330a2-120">たとえば、XML を使用する株価情報サービスを使用している場合であれば、署名されているかどうかによって XML のソースを検証できます。</span><span class="sxs-lookup"><span data-stu-id="330a2-120">For example, if you are using a stock quote service that uses XML, you can verify the source of the XML if it is signed.</span></span>
+<span data-ttu-id="c57cc-118">データが特定の関係者によって署名されたことを検証するには、次の情報が必要です。</span><span class="sxs-lookup"><span data-stu-id="c57cc-118">To verify that data was signed by a particular party, you must have the following information:</span></span>
 
-<span data-ttu-id="330a2-121">この名前空間のクラスは、World Wide Web コンソーシアムの「 [XML 署名の構文と処理に関する勧告](https://www.w3.org/TR/xmldsig-core/) 」に従っています。</span><span class="sxs-lookup"><span data-stu-id="330a2-121">The classes in this namespace follow the [XML-Signature Syntax and Processing recommendation](https://www.w3.org/TR/xmldsig-core/) from the World Wide Web Consortium.</span></span>
+- <span data-ttu-id="c57cc-119">データに署名した関係者の公開キー。</span><span class="sxs-lookup"><span data-stu-id="c57cc-119">The public key of the party that signed the data.</span></span>
 
-## <a name="verifying-signatures"></a><span data-ttu-id="330a2-122">署名の検証</span><span class="sxs-lookup"><span data-stu-id="330a2-122">Verifying Signatures</span></span>
+- <span data-ttu-id="c57cc-120">デジタル署名。</span><span class="sxs-lookup"><span data-stu-id="c57cc-120">The digital signature.</span></span>
 
-<span data-ttu-id="330a2-123">データが特定の関係者によって署名されたことを検証するには、次の情報が必要です。</span><span class="sxs-lookup"><span data-stu-id="330a2-123">To verify that data was signed by a particular party, you must have the following information:</span></span>
+- <span data-ttu-id="c57cc-121">署名されたデータ。</span><span class="sxs-lookup"><span data-stu-id="c57cc-121">The data that was signed.</span></span>
 
-- <span data-ttu-id="330a2-124">データに署名した関係者の公開キー。</span><span class="sxs-lookup"><span data-stu-id="330a2-124">The public key of the party that signed the data.</span></span>
+- <span data-ttu-id="c57cc-122">署名者が使用したハッシュ アルゴリズム。</span><span class="sxs-lookup"><span data-stu-id="c57cc-122">The hash algorithm used by the signer.</span></span>
 
-- <span data-ttu-id="330a2-125">デジタル署名。</span><span class="sxs-lookup"><span data-stu-id="330a2-125">The digital signature.</span></span>
+<span data-ttu-id="c57cc-123"><xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> クラスによって署名された署名を検証するには、 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> クラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="c57cc-123">To verify a signature signed by the <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> class, use the <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> class.</span></span> <span data-ttu-id="c57cc-124"><xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> クラスに対しては、署名者の公開キーを提供する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c57cc-124">The <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> class must be supplied the public key of the signer.</span></span> <span data-ttu-id="c57cc-125">RSA の場合、公開キーを指定するには、剰余と指数部の値が必要です。</span><span class="sxs-lookup"><span data-stu-id="c57cc-125">For RSA, you will need the values of the modulus and the exponent to specify the public key.</span></span> <span data-ttu-id="c57cc-126">(公開キーと秘密キーのペアを生成したパーティは、これらの値を提供する必要があります)。まず、 <xref:System.Security.Cryptography.RSA> 署名を検証する公開キーを保持するオブジェクトを作成し、次に、 <xref:System.Security.Cryptography.RSAParameters> 公開キーを指定する剰余と指数の値に構造体を初期化します。</span><span class="sxs-lookup"><span data-stu-id="c57cc-126">(The party that generated the public/private key pair should provide these values.) First create an <xref:System.Security.Cryptography.RSA> object to hold the public key that will verify the signature, and then initialize an <xref:System.Security.Cryptography.RSAParameters> structure to the modulus and exponent values that specify the public key.</span></span>
 
-- <span data-ttu-id="330a2-126">署名されたデータ。</span><span class="sxs-lookup"><span data-stu-id="330a2-126">The data that was signed.</span></span>
-
-- <span data-ttu-id="330a2-127">署名者が使用したハッシュ アルゴリズム。</span><span class="sxs-lookup"><span data-stu-id="330a2-127">The hash algorithm used by the signer.</span></span>
-
-<span data-ttu-id="330a2-128"><xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> クラスによって署名された署名を検証するには、 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> クラスを使用します。</span><span class="sxs-lookup"><span data-stu-id="330a2-128">To verify a signature signed by the <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> class, use the <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> class.</span></span> <span data-ttu-id="330a2-129"><xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> クラスに対しては、署名者の公開キーを提供する必要があります。</span><span class="sxs-lookup"><span data-stu-id="330a2-129">The <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> class must be supplied the public key of the signer.</span></span> <span data-ttu-id="330a2-130">公開キーを指定するには、剰余値と指数部の値が必要になります</span><span class="sxs-lookup"><span data-stu-id="330a2-130">You will need the values of the modulus and the exponent to specify the public key.</span></span> <span data-ttu-id="330a2-131">(公開キーと秘密キーのペアを生成したパーティは、これらの値を提供する必要があります)。まず、 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 署名を検証する公開キーを保持するオブジェクトを作成し、次に、 <xref:System.Security.Cryptography.RSAParameters> 公開キーを指定する剰余と指数の値に構造体を初期化します。</span><span class="sxs-lookup"><span data-stu-id="330a2-131">(The party that generated the public/private key pair should provide these values.) First create an <xref:System.Security.Cryptography.RSACryptoServiceProvider> object to hold the public key that will verify the signature, and then initialize an <xref:System.Security.Cryptography.RSAParameters> structure to the modulus and exponent values that specify the public key.</span></span>
-
-<span data-ttu-id="330a2-132">次のコードは、 <xref:System.Security.Cryptography.RSAParameters> 構造体の作成を示しています。</span><span class="sxs-lookup"><span data-stu-id="330a2-132">The following code shows the creation of an <xref:System.Security.Cryptography.RSAParameters> structure.</span></span> <span data-ttu-id="330a2-133">`Modulus` プロパティは `modulusData` というバイト配列の値に設定し、 `Exponent` プロパティは `exponentData`というバイト配列の値に設定します。</span><span class="sxs-lookup"><span data-stu-id="330a2-133">The `Modulus` property is set to the value of a byte array called `modulusData` and the `Exponent` property is set to the value of a byte array called `exponentData`.</span></span>
+<span data-ttu-id="c57cc-127">次のコードは、 <xref:System.Security.Cryptography.RSAParameters> 構造体の作成を示しています。</span><span class="sxs-lookup"><span data-stu-id="c57cc-127">The following code shows the creation of an <xref:System.Security.Cryptography.RSAParameters> structure.</span></span> <span data-ttu-id="c57cc-128">`Modulus` プロパティは `modulusData` というバイト配列の値に設定し、 `Exponent` プロパティは `exponentData`というバイト配列の値に設定します。</span><span class="sxs-lookup"><span data-stu-id="c57cc-128">The `Modulus` property is set to the value of a byte array called `modulusData` and the `Exponent` property is set to the value of a byte array called `exponentData`.</span></span>
 
 ```vb
 Dim rsaKeyInfo As RSAParameters
@@ -132,12 +126,14 @@ rsaKeyInfo.Modulus = modulusData;
 rsaKeyInfo.Exponent = exponentData;
 ```
 
-<span data-ttu-id="330a2-134"><xref:System.Security.Cryptography.RSAParameters> オブジェクトを作成した後、 <xref:System.Security.Cryptography.RSACryptoServiceProvider> クラスの新しいインスタンスを <xref:System.Security.Cryptography.RSAParameters>で指定した値に初期設定できます。</span><span class="sxs-lookup"><span data-stu-id="330a2-134">After you have created the <xref:System.Security.Cryptography.RSAParameters> object, you can initialize a new instance of the <xref:System.Security.Cryptography.RSACryptoServiceProvider> class to the values specified in <xref:System.Security.Cryptography.RSAParameters>.</span></span> <span data-ttu-id="330a2-135">次に、 <xref:System.Security.Cryptography.RSACryptoServiceProvider> を <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> のコンストラクターに渡してキーを転送します。</span><span class="sxs-lookup"><span data-stu-id="330a2-135">The <xref:System.Security.Cryptography.RSACryptoServiceProvider> is, in turn, passed to the constructor of an <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> to transfer the key.</span></span>
+<span data-ttu-id="c57cc-129">オブジェクトを作成したら <xref:System.Security.Cryptography.RSAParameters> 、実装クラスの新しいインスタンスを、 <xref:System.Security.Cryptography.RSA> で指定した値に初期化でき <xref:System.Security.Cryptography.RSAParameters> ます。</span><span class="sxs-lookup"><span data-stu-id="c57cc-129">After you have created the <xref:System.Security.Cryptography.RSAParameters> object, you can initialize a new instance of the <xref:System.Security.Cryptography.RSA> implementation class to the values specified in <xref:System.Security.Cryptography.RSAParameters>.</span></span> <span data-ttu-id="c57cc-130">さらに、 <xref:System.Security.Cryptography.RSA> インスタンスは、キーを転送するためにのコンストラクターに渡され <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> ます。</span><span class="sxs-lookup"><span data-stu-id="c57cc-130">The <xref:System.Security.Cryptography.RSA> instance is, in turn, passed to the constructor of an <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> to transfer the key.</span></span>
 
-<span data-ttu-id="330a2-136">このプロセスを説明する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="330a2-136">The following example illustrates this process.</span></span> <span data-ttu-id="330a2-137">この例で、 `hashValue` と `signedHashValue` は、リモートにいる関係者から提供されるバイト配列です。</span><span class="sxs-lookup"><span data-stu-id="330a2-137">In this example, `hashValue` and `signedHashValue` are arrays of bytes provided by a remote party.</span></span> <span data-ttu-id="330a2-138">リモートにいる関係者は、SHA1 アルゴリズムを使用して `hashValue` に署名し、デジタル署名 `signedHashValue`を生成します。</span><span class="sxs-lookup"><span data-stu-id="330a2-138">The remote party has signed the `hashValue` using the SHA1 algorithm, producing the digital signature `signedHashValue`.</span></span> <span data-ttu-id="330a2-139">メソッドは、 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> デジタル署名が有効であり、に署名するために使用されたことを確認し `hashValue` ます。</span><span class="sxs-lookup"><span data-stu-id="330a2-139">The <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> method verifies that the digital signature is valid and was used to sign the `hashValue`.</span></span>
+<span data-ttu-id="c57cc-131">このプロセスを説明する例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="c57cc-131">The following example illustrates this process.</span></span> <span data-ttu-id="c57cc-132">この例で、 `hashValue` と `signedHashValue` は、リモートにいる関係者から提供されるバイト配列です。</span><span class="sxs-lookup"><span data-stu-id="c57cc-132">In this example, `hashValue` and `signedHashValue` are arrays of bytes provided by a remote party.</span></span> <span data-ttu-id="c57cc-133">リモートにいる関係者は、SHA1 アルゴリズムを使用して `hashValue` に署名し、デジタル署名 `signedHashValue`を生成します。</span><span class="sxs-lookup"><span data-stu-id="c57cc-133">The remote party has signed the `hashValue` using the SHA1 algorithm, producing the digital signature `signedHashValue`.</span></span> <span data-ttu-id="c57cc-134">メソッドは、 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> デジタル署名が有効であり、に署名するために使用されたことを確認し `hashValue` ます。</span><span class="sxs-lookup"><span data-stu-id="c57cc-134">The <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> method verifies that the digital signature is valid and was used to sign the `hashValue`.</span></span>
+
+<span data-ttu-id="c57cc-135">SHA1 との衝突の問題により、SHA256 以上をお勧めします。</span><span class="sxs-lookup"><span data-stu-id="c57cc-135">Due to collision problems with SHA1, we recommend SHA256 or better.</span></span>  <span data-ttu-id="c57cc-136">ただし、署名の作成に SHA1 を使用した場合は、SHA1 を使用して署名を検証する必要があります。</span><span class="sxs-lookup"><span data-stu-id="c57cc-136">However, if SHA1 was used to create the signature, you have to use SHA1 to verify the signature.</span></span>
 
 ```vb
-Dim rsa As New RSACryptoServiceProvider()
+Dim rsa As RSA = RSA.Create()
 rsa.ImportParameters(rsaKeyInfo)
 Dim rsaDeformatter As New RSAPKCS1SignatureDeformatter(rsa)
 rsaDeformatter.SetHashAlgorithm("SHA1")
@@ -149,7 +145,7 @@ End If
 ```
 
 ```csharp
-RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
+RSA rsa = RSA.Create();
 rsa.ImportParameters(rsaKeyInfo);
 RSAPKCS1SignatureDeformatter rsaDeformatter = new RSAPKCS1SignatureDeformatter(rsa);
 rsaDeformatter.SetHashAlgorithm("SHA1");
@@ -163,8 +159,11 @@ else
 }
 ```
 
-<span data-ttu-id="330a2-140">上記のコードでは、署名が有効であれば "`The signature is valid`" を表示し、署名が無効であれば "`The signature is not valid`" を表示します。</span><span class="sxs-lookup"><span data-stu-id="330a2-140">This code fragment will display "`The signature is valid`" if the signature is valid and "`The signature is not valid`" if it is not.</span></span>
+<span data-ttu-id="c57cc-137">上記のコードでは、署名が有効であれば "`The signature is valid`" を表示し、署名が無効であれば "`The signature is not valid`" を表示します。</span><span class="sxs-lookup"><span data-stu-id="c57cc-137">This code fragment will display "`The signature is valid`" if the signature is valid and "`The signature is not valid`" if it is not.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="330a2-141">関連項目</span><span class="sxs-lookup"><span data-stu-id="330a2-141">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c57cc-138">関連項目</span><span class="sxs-lookup"><span data-stu-id="c57cc-138">See also</span></span>
 
-- [<span data-ttu-id="330a2-142">暗号化サービス</span><span class="sxs-lookup"><span data-stu-id="330a2-142">Cryptographic Services</span></span>](cryptographic-services.md)
+- [<span data-ttu-id="c57cc-139">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="c57cc-139">Cryptographic Services</span></span>](cryptographic-services.md)
+- [<span data-ttu-id="c57cc-140">暗号モデル</span><span class="sxs-lookup"><span data-stu-id="c57cc-140">Cryptography Model</span></span>](cryptography-model.md)
+- [<span data-ttu-id="c57cc-141">クロスプラットフォーム暗号化</span><span class="sxs-lookup"><span data-stu-id="c57cc-141">Cross-Platform Cryptography</span></span>](cross-platform-cryptography.md)
+- [<span data-ttu-id="c57cc-142">データ保護の ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="c57cc-142">ASP.NET Core Data Protection</span></span>](/aspnet/core/security/data-protection/introduction)
