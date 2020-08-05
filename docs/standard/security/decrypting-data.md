@@ -1,22 +1,23 @@
 ---
 title: データの復号化
-ms.date: 03/30/2017
+description: 対称アルゴリズムまたは非対称アルゴリズムを使用して、.NET でデータを復号化する方法について説明します。
+ms.date: 07/16/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- data [.NET Framework], decryption
+- data [.NET], decryption
 - symmetric decryption
 - asymmetric decryption
 - decryption
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
-ms.openlocfilehash: 844561c0d207106a183243f5f2b3e0cea3e70422
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2ba4c3ba43d688aeb66c67ec3f94f4a503d47892
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288369"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556983"
 ---
 # <a name="decrypting-data"></a>データの復号化
 
@@ -24,28 +25,26 @@ ms.locfileid: "84288369"
 
 ## <a name="symmetric-decryption"></a>対称復号化
 
-対称アルゴリズムで暗号化されたデータの復号化は、対称アルゴリズムでデータを暗号化する際に使用するプロセスと似ています。 <xref:System.Security.Cryptography.CryptoStream> クラスは、任意のマネージド ストリーム オブジェクトから読み取られたデータを復号化するために、.NET Framework が提供する対称暗号化クラスと共に使用されます。
+対称アルゴリズムで暗号化されたデータの復号化は、対称アルゴリズムでデータを暗号化する際に使用するプロセスと似ています。 クラスは、 <xref:System.Security.Cryptography.CryptoStream> 任意のマネージストリームオブジェクトから読み取られたデータの暗号化を解除するために .net によって提供される対称暗号化クラスと共に使用されます。
 
-次の例は、 <xref:System.Security.Cryptography.RijndaelManaged> クラスのインスタンスを新規作成して、これを <xref:System.Security.Cryptography.CryptoStream> オブジェクトの復号化に使用する方法を示しています。 この例では、まず **RijndaelManaged** クラスのインスタンスを新規作成します。 次に、 **CryptoStream** オブジェクトを作成して、 `myStream`というマネージド ストリームの値に初期化します。 次に、 **RijndaelManaged** クラスの **CreateDecryptor** メソッドに、暗号化で使用されたキーおよび IV と同じキーと IV が渡されます。これが **CryptoStream** コンストラクターに渡されます。 最後に、ストリームに対する読み取りのアクセスを指定するために、 **CryptoStreamMode.Read** 列挙体が **CryptoStream** コンストラクターに渡されます。
+次の例は、アルゴリズムの既定の実装クラスの新しいインスタンスを作成する方法を示してい <xref:System.Security.Cryptography.Aes> ます。 インスタンスは、オブジェクトの復号化を実行するために使用され <xref:System.Security.Cryptography.CryptoStream> ます。 この例では、最初に**Aes**実装クラスの新しいインスタンスを作成します。 次に、 **CryptoStream** オブジェクトを作成して、 `myStream`というマネージド ストリームの値に初期化します。 次に、 **Aes**クラスの**createdecryptor**化メソッドに、暗号化に使用されたキーと IV が渡され、 **CryptoStream**コンストラクターに渡されます。
 
 ```vb
-Dim rmCrypto As New RijndaelManaged()
-Dim cryptStream As New CryptoStream(myStream, rmCrypto.CreateDecryptor(rmCrypto.Key, rmCrypto.IV), CryptoStreamMode.Read)
+Dim aes As Aes = Aes.Create()
+Dim cryptStream As New CryptoStream(myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read)
 ```
 
 ```csharp
-RijndaelManaged rmCrypto = new RijndaelManaged();
-CryptoStream cryptStream = new CryptoStream(myStream, rmCrypto.CreateDecryptor(Key, IV), CryptoStreamMode.Read);
+Aes aes = Aes.Create();
+CryptoStream cryptStream = new CryptoStream(myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read);
 ```
 
-次の例は、ストリームの作成、ストリームの復号化、ストリームからの読み取り、およびストリームを閉じるプロセス全体を示しています。 リッスンしているオブジェクトに接続する際にネットワーク ストリームを初期化する <xref:System.Net.Sockets.TcpListener> オブジェクトが作成されます。 ネットワーク ストリームは、 **CryptoStream** クラスと **RijndaelManaged** クラスを使用して復号化されます。 この例は、キーの値と IV の値が正常に転送されたか、以前に一致していたことを前提としています。 これらの値の暗号化および転送に必要なコードは示されていません。
+次の例は、ストリームの作成、ストリームの復号化、ストリームからの読み取り、およびストリームを閉じるプロセス全体を示しています。 *TestData.txt*という名前のファイルを読み取るファイルストリームオブジェクトが作成されます。 ファイルストリームは、 **CryptoStream**クラスと**Aes**クラスを使用して復号化されます。 この例では、[データの暗号化](encrypting-data.md)に対称暗号化の例で使用されるキーと IV の値を指定します。 これらの値の暗号化および転送に必要なコードは示されていません。
 
 ```vb
+Imports System
 Imports System.IO
-Imports System.Net
-Imports System.Net.Sockets
 Imports System.Security.Cryptography
-Imports System.Threading
 
 Module Module1
     Sub Main()
@@ -54,33 +53,16 @@ Module Module1
             Dim key As Byte() = {&H1, &H2, &H3, &H4, &H5, &H6, &H7, &H8, &H9, &H10, &H11, &H12, &H13, &H14, &H15, &H16}
             Dim iv As Byte() = {&H1, &H2, &H3, &H4, &H5, &H6, &H7, &H8, &H9, &H10, &H11, &H12, &H13, &H14, &H15, &H16}
         Try
-            'Initialize a TCPListener on port 11000
-            'using the current IP address.
-            Dim tcpListen As New TcpListener(IPAddress.Any, 11000)
+            'Create a file stream.
+            Dim myStream As FileStream = new FileStream("TestData.txt", FileMode.Open)
 
-            'Start the listener.
-            tcpListen.Start()
-
-            'Check for a connection every five seconds.
-            While Not tcpListen.Pending()
-                Console.WriteLine("Still listening. Will try in 5 seconds.")
-
-                Thread.Sleep(5000)
-            End While
-
-            'Accept the client if one is found.
-            Dim tcp As TcpClient = tcpListen.AcceptTcpClient()
-
-            'Create a network stream from the connection.
-            Dim netStream As NetworkStream = tcp.GetStream()
-
-            'Create a new instance of the RijndaelManaged class
+            'Create a new instance of the default Aes implementation class
             'and decrypt the stream.
-            Dim rmCrypto As New RijndaelManaged()
+            Dim aes As Aes = Aes.Create()
 
-            'Create an instance of the CryptoStream class, pass it the NetworkStream, and decrypt
+            'Create an instance of the CryptoStream class, pass it the file stream, and decrypt
             'it with the Rijndael class using the key and IV.
-            Dim cryptStream As New CryptoStream(netStream, rmCrypto.CreateDecryptor(key, iv), CryptoStreamMode.Read)
+            Dim cryptStream As New CryptoStream(myStream, aes.CreateDecryptor(key, iv), CryptoStreamMode.Read)
 
             'Read the stream.
             Dim sReader As New StreamReader(cryptStream)
@@ -90,11 +72,11 @@ Module Module1
 
             'Close the streams.
             sReader.Close()
-            netStream.Close()
-            tcp.Close()
+            myStream.Close()
             'Catch any exceptions.
         Catch
-            Console.WriteLine("The Listener Failed.")
+            Console.WriteLine("The decryption Failed.")
+            Throw
         End Try
     End Sub
 End Module
@@ -103,72 +85,52 @@ End Module
 ```csharp
 using System;
 using System.IO;
-using System.Net;
-using System.Net.Sockets;
 using System.Security.Cryptography;
-using System.Threading;
 
 class Class1
 {
-   static void Main(string[] args)
-   {
-      //The key and IV must be the same values that were used
-      //to encrypt the stream.
-      byte[] key = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16};
-      byte[] iv = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16};
-      try
-      {
-         //Initialize a TCPListener on port 11000
-         //using the current IP address.
-         TcpListener tcpListen = new TcpListener(IPAddress.Any, 11000);
+    static void Main(string[] args)
+    {
+        //The key and IV must be the same values that were used
+        //to encrypt the stream.
+        byte[] key = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
+        byte[] iv = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16 };
+        try
+        {
+            //Create a file stream.
+            FileStream myStream = new FileStream("TestData.txt", FileMode.Open);
 
-         //Start the listener.
-         tcpListen.Start();
+            //Create a new instance of the default Aes implementation class
+            Aes aes = Aes.Create();
 
-         //Check for a connection every five seconds.
-         while(!tcpListen.Pending())
-         {
-            Console.WriteLine("Still listening. Will try in 5 seconds.");
-            Thread.Sleep(5000);
-         }
+            //Create a CryptoStream, pass it the file stream, and decrypt
+            //it with the Aes class using the key and IV.
+            CryptoStream cryptStream = new CryptoStream(
+               myStream,
+               aes.CreateDecryptor(key, iv),
+               CryptoStreamMode.Read);
 
-         //Accept the client if one is found.
-         TcpClient tcp = tcpListen.AcceptTcpClient();
+            //Read the stream.
+            StreamReader sReader = new StreamReader(cryptStream);
 
-         //Create a network stream from the connection.
-         NetworkStream netStream = tcp.GetStream();
+            //Display the message.
+            Console.WriteLine("The decrypted original message: {0}", sReader.ReadToEnd());
 
-         //Create a new instance of the RijndaelManaged class
-         // and decrypt the stream.
-         RijndaelManaged rmCrypto = new RijndaelManaged();
-
-         //Create a CryptoStream, pass it the NetworkStream, and decrypt
-         //it with the Rijndael class using the key and IV.
-         CryptoStream cryptStream = new CryptoStream(netStream,
-            rmCrypto.CreateDecryptor(key, iv),
-            CryptoStreamMode.Read);
-
-         //Read the stream.
-         StreamReader sReader = new StreamReader(cryptStream);
-
-         //Display the message.
-         Console.WriteLine("The decrypted original message: {0}", sReader.ReadToEnd());
-
-         //Close the streams.
-         sReader.Close();
-         netStream.Close();
-         tcp.Close();
-      }
-      //Catch any exceptions.
-      catch
-      {
-         Console.WriteLine("The Listener Failed.");
-      }
-   }
+            //Close the streams.
+            sReader.Close();
+            myStream.Close();
+        }
+        //Catch any exceptions.
+        catch
+        {
+            Console.WriteLine("The decryption failed.");
+            throw;
+        }
+    }
 }
 ```
 
-前のサンプルを機能させるには、リスナーに対して暗号化された接続を行う必要があります。 接続では、リスナーで使用するキー、IV、およびアルゴリズムと同じものを使用する必要があります。 このような接続が行われた場合、メッセージが復号化され、コンソールに表示されます。
+前の例では、対称暗号化の例で使用したのと同じキー、IV、およびアルゴリズムを使用して[データを暗号化](encrypting-data.md)しています。 この例で作成された*TestData.txt*ファイルの暗号化を解除し、元のテキストをコンソールに表示します。
 
 ## <a name="asymmetric-decryption"></a>非対称復号化
 
@@ -176,34 +138,38 @@ class Class1
 
 セキュリティで保護された暗号化キー コンテナーに非対称キーを格納する方法と、その後非対称キーを取得する方法については、「 [How to: Store Asymmetric Keys in a Key Container](how-to-store-asymmetric-keys-in-a-key-container.md)」を参照してください。
 
-次の例は、対称キーと IV を表す 2 つのバイト配列の復号化を示しています。 第三者に簡単に送信できる形式で <xref:System.Security.Cryptography.RSACryptoServiceProvider> オブジェクトから非対称の公開キーを抽出する方法については、「 [Encrypting Data](encrypting-data.md)というマネージ ストリームの値に初期化します。
+次の例は、対称キーと IV を表す 2 つのバイト配列の復号化を示しています。 第三者に簡単に送信できる形式で <xref:System.Security.Cryptography.RSA> オブジェクトから非対称の公開キーを抽出する方法については、「 [Encrypting Data](encrypting-data.md)というマネージ ストリームの値に初期化します。
 
 ```vb
-'Create a new instance of the RSACryptoServiceProvider class.
-Dim rsa As New RSACryptoServiceProvider()
+'Create a new instance of the RSA class.
+Dim rsa As RSA = RSA.Create()
 
 ' Export the public key information and send it to a third party.
 ' Wait for the third party to encrypt some data and send it back.
 
 'Decrypt the symmetric key and IV.
-symmetricKey = rsa.Decrypt(encryptedSymmetricKey, False)
-symmetricIV = rsa.Decrypt(encryptedSymmetricIV, False)
+symmetricKey = rsa.Decrypt(encryptedSymmetricKey, RSAEncryptionPadding.Pkcs1)
+symmetricIV = rsa.Decrypt(encryptedSymmetricIV, RSAEncryptionPadding.Pkcs1)
 ```
 
 ```csharp
-//Create a new instance of the RSACryptoServiceProvider class.
-RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
+//Create a new instance of the RSA class.
+RSA rsa = RSA.Create();
 
 // Export the public key information and send it to a third party.
 // Wait for the third party to encrypt some data and send it back.
 
 //Decrypt the symmetric key and IV.
-symmetricKey = rsa.Decrypt(encryptedSymmetricKey, false);
-symmetricIV = rsa.Decrypt(encryptedSymmetricIV , false);
+symmetricKey = rsa.Decrypt(encryptedSymmetricKey, RSAEncryptionPadding.Pkcs1);
+symmetricIV = rsa.Decrypt(encryptedSymmetricIV , RSAEncryptionPadding.Pkcs1);
 ```
 
 ## <a name="see-also"></a>関連項目
 
 - [暗号化と復号化のためのキーの生成](generating-keys-for-encryption-and-decryption.md)
 - [データの暗号化](encrypting-data.md)
-- [暗号化サービス](cryptographic-services.md)
+- [Cryptographic Services](cryptographic-services.md)
+- [暗号モデル](cryptography-model.md)
+- [クロスプラットフォーム暗号化](cross-platform-cryptography.md)
+- [パディングを使用した CBC モードの対称復号化に関するタイミングの脆弱性](vulnerabilities-cbc-mode.md)
+- [データ保護の ASP.NET Core](/aspnet/core/security/data-protection/introduction)

@@ -6,12 +6,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - cryptography, cross-platform
 - encryption, cross-platform
-ms.openlocfilehash: 793a9bc55e5bd660374abd2ae81899e63ce3f36a
-ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
+ms.openlocfilehash: 61fd49e53761deac278b770003eb97241b6c2be9
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85854025"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557152"
 ---
 # <a name="cross-platform-cryptography-in-net-core-and-net-5"></a>.NET Core と .NET 5 でのクロスプラットフォーム暗号化
 
@@ -254,7 +254,7 @@ DSA (デジタル署名アルゴリズム) キーの生成はシステムライ�
 
 | シナリオ                                     | Windows | Linux | macOS |
 |----------------------------------------------|---------|-------|-------|
-| 空                                        | ✔️     | ✔️    | ✔️   |
+| Empty                                        | ✔️     | ✔️    | ✔️   |
 | 1つの証明書、秘密キーなし              | ✔️     | ✔️    | ✔️   |
 | 1つの証明書 (秘密キーを含む)            | ✔️     | ✔️    | ✔️   |
 | 複数の証明書、秘密キーなし       | ✔️     | ✔️    | ✔️   |
@@ -267,7 +267,7 @@ DSA (デジタル署名アルゴリズム) キーの生成はシステムライ�
 
 | シナリオ                                     | Windows | Linux | macOS |
 |----------------------------------------------|---------|-------|-------|
-| 空                                        | ✔️     | ✔️    | ⚠️\* |
+| Empty                                        | ✔️     | ✔️    | ⚠️\* |
 | 1つの証明書、秘密キーなし              | ✔️     | ✔️    | ⚠️\* |
 | 1つの証明書 (秘密キーを含む)            | ✔️     | ✔️    | ✔️   |
 | 複数の証明書、秘密キーなし       | ✔️     | ✔️    | ⚠️\* |
@@ -365,7 +365,9 @@ macOS はオフライン CRL の使用をサポートしていないため、 `X
 
 macOS では、CRL (証明書失効リスト)/OCSP (オンライン証明書の状態プロトコル)/AIA (機関情報アクセス) のダウンロードでユーザーが開始したタイムアウトをサポートしていないため、 `X509ChainPolicy.UrlRetrievalTimeout` は無視されます。
 
-## <a name="additional-resources"></a>その他の技術情報
+## <a name="additional-resources"></a>その他のリソース
 
 * [.NET 暗号化モデル](cryptography-model.md)
 * [.NET 暗号化サービス](cryptographic-services.md)
+* [パディングを使用した CBC モードの対称復号化に関するタイミングの脆弱性](vulnerabilities-cbc-mode.md)
+* [データ保護の ASP.NET Core](/aspnet/core/security/data-protection/introduction)

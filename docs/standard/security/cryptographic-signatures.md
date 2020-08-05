@@ -1,43 +1,43 @@
 ---
 title: 暗号署名
-ms.date: 03/30/2017
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - digital signatures
-- cryptography [.NET Framework], signatures
+- cryptography [.NET], signatures
 - digital signatures, XML signing
 - signatures, cryptographic
 - digital signatures, generating
 - verifying signatures
 - generating signatures
 - digital signatures, about
-- encryption [.NET Framework], signatures
-- security [.NET Framework], signatures
+- encryption [.NET], signatures
+- security [.NET], signatures
 - XML signing
 - digital signatures, verifying
 - signing XML
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
-ms.openlocfilehash: 9e69578ceffeeacb73cf059f5b577fe7c137b599
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ce2be1d509da4e399bf87e1c8df7ba061fc2707c
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288395"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557009"
 ---
 # <a name="cryptographic-signatures"></a>暗号署名
 
 暗号デジタル署名は、公開キー アルゴリズムを使用してデータの整合性を提供します。 デジタル署名を使用してデータに署名すると、第三者が署名を検証し、データが署名者から発信され、署名後に変更されていないことを証明できます。 デジタル署名の詳細については、「 [Cryptographic Services](cryptographic-services.md)」を参照してください。
 
-ここでは、 <xref:System.Security.Cryptography?displayProperty=nameWithType> 名前空間のクラスを使用してデジタル署名を生成して検証する方法について説明します。
+ここでは、 <xref:System.Security.Cryptography> 名前空間のクラスを使用してデジタル署名を生成して検証する方法について説明します。
 
 ## <a name="generating-signatures"></a>署名の生成
 
-デジタル署名は、通常、大きなデータを表現するハッシュ値に適用されます。 ハッシュ値にデジタル署名を適用する例を次に示します。 まず、 <xref:System.Security.Cryptography.RSACryptoServiceProvider> クラスの新しいインスタンスを作成して、公開キー/秘密キーのペアを生成します。 次に、 <xref:System.Security.Cryptography.RSACryptoServiceProvider> を <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> クラスの新しいインスタンスに渡します。 これにより、デジタル署名を実際に実行する <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>に秘密キーが渡されます。 ハッシュ コードに署名するためには、使用するハッシュ アルゴリズムを指定する必要があります。 この例では、SHA1 アルゴリズムを使用します。 最後に、 <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> メソッドを呼び出して署名を実行します。
+デジタル署名は、通常、大きなデータを表現するハッシュ値に適用されます。 ハッシュ値にデジタル署名を適用する例を次に示します。 まず、 <xref:System.Security.Cryptography.RSA> クラスの新しいインスタンスを作成して、公開キー/秘密キーのペアを生成します。 次に、 <xref:System.Security.Cryptography.RSA> を <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> クラスの新しいインスタンスに渡します。 これにより、デジタル署名を実際に実行する <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>に秘密キーが渡されます。 ハッシュ コードに署名するためには、使用するハッシュ アルゴリズムを指定する必要があります。 この例では、SHA1 アルゴリズムを使用します。 最後に、 <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> メソッドを呼び出して署名を実行します。
 
-SHA1 には競合の問題があるため、Microsoft では SHA256 以上を推奨しています。
+SHA1 との衝突の問題により、SHA256 以上をお勧めします。
 
 ```vb
 Imports System.Security.Cryptography
@@ -51,10 +51,10 @@ Module Module1
         Dim signedHashValue() As Byte
 
         'Generate a public/private key pair.
-        Dim rsa As New RSACryptoServiceProvider()
+        Dim rsa As RSA = RSA.Create()
 
         'Create an RSAPKCS1SignatureFormatter object and pass it
-        'the RSACryptoServiceProvider to transfer the private key.
+        'the RSA instance to transfer the private key.
         Dim rsaFormatter As New RSAPKCS1SignatureFormatter(rsa)
 
         'Set the hash algorithm to SHA1.
@@ -82,10 +82,10 @@ class Class1
       byte[] signedHashValue;
 
       //Generate a public/private key pair.
-      RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
+      RSA rsa = RSA.Create();
 
       //Create an RSAPKCS1SignatureFormatter object and pass it the
-      //RSACryptoServiceProvider to transfer the private key.
+      //RSA instance to transfer the private key.
       RSAPKCS1SignatureFormatter rsaFormatter = new RSAPKCS1SignatureFormatter(rsa);
 
       //Set the hash algorithm to SHA1.
@@ -97,12 +97,6 @@ class Class1
    }
 }
 ```
-
-### <a name="signing-xml-files"></a>XML ファイルへの署名
-
-.NET Framework に用意されている <xref:System.Security.Cryptography.Xml> 名前空間を使用すると、XML に署名できます。 XML が特定のソースから送信されたことを検証する場合は、XML への署名が重要です。 たとえば、XML を使用する株価情報サービスを使用している場合であれば、署名されているかどうかによって XML のソースを検証できます。
-
-この名前空間のクラスは、World Wide Web コンソーシアムの「 [XML 署名の構文と処理に関する勧告](https://www.w3.org/TR/xmldsig-core/) 」に従っています。
 
 ## <a name="verifying-signatures"></a>署名の検証
 
@@ -116,7 +110,7 @@ class Class1
 
 - 署名者が使用したハッシュ アルゴリズム。
 
-<xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> クラスによって署名された署名を検証するには、 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> クラスを使用します。 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> クラスに対しては、署名者の公開キーを提供する必要があります。 公開キーを指定するには、剰余値と指数部の値が必要になります (公開キーと秘密キーのペアを生成したパーティは、これらの値を提供する必要があります)。まず、 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 署名を検証する公開キーを保持するオブジェクトを作成し、次に、 <xref:System.Security.Cryptography.RSAParameters> 公開キーを指定する剰余と指数の値に構造体を初期化します。
+<xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> クラスによって署名された署名を検証するには、 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> クラスを使用します。 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> クラスに対しては、署名者の公開キーを提供する必要があります。 RSA の場合、公開キーを指定するには、剰余と指数部の値が必要です。 (公開キーと秘密キーのペアを生成したパーティは、これらの値を提供する必要があります)。まず、 <xref:System.Security.Cryptography.RSA> 署名を検証する公開キーを保持するオブジェクトを作成し、次に、 <xref:System.Security.Cryptography.RSAParameters> 公開キーを指定する剰余と指数の値に構造体を初期化します。
 
 次のコードは、 <xref:System.Security.Cryptography.RSAParameters> 構造体の作成を示しています。 `Modulus` プロパティは `modulusData` というバイト配列の値に設定し、 `Exponent` プロパティは `exponentData`というバイト配列の値に設定します。
 
@@ -132,12 +126,14 @@ rsaKeyInfo.Modulus = modulusData;
 rsaKeyInfo.Exponent = exponentData;
 ```
 
-<xref:System.Security.Cryptography.RSAParameters> オブジェクトを作成した後、 <xref:System.Security.Cryptography.RSACryptoServiceProvider> クラスの新しいインスタンスを <xref:System.Security.Cryptography.RSAParameters>で指定した値に初期設定できます。 次に、 <xref:System.Security.Cryptography.RSACryptoServiceProvider> を <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> のコンストラクターに渡してキーを転送します。
+オブジェクトを作成したら <xref:System.Security.Cryptography.RSAParameters> 、実装クラスの新しいインスタンスを、 <xref:System.Security.Cryptography.RSA> で指定した値に初期化でき <xref:System.Security.Cryptography.RSAParameters> ます。 さらに、 <xref:System.Security.Cryptography.RSA> インスタンスは、キーを転送するためにのコンストラクターに渡され <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> ます。
 
 このプロセスを説明する例を次に示します。 この例で、 `hashValue` と `signedHashValue` は、リモートにいる関係者から提供されるバイト配列です。 リモートにいる関係者は、SHA1 アルゴリズムを使用して `hashValue` に署名し、デジタル署名 `signedHashValue`を生成します。 メソッドは、 <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> デジタル署名が有効であり、に署名するために使用されたことを確認し `hashValue` ます。
 
+SHA1 との衝突の問題により、SHA256 以上をお勧めします。  ただし、署名の作成に SHA1 を使用した場合は、SHA1 を使用して署名を検証する必要があります。
+
 ```vb
-Dim rsa As New RSACryptoServiceProvider()
+Dim rsa As RSA = RSA.Create()
 rsa.ImportParameters(rsaKeyInfo)
 Dim rsaDeformatter As New RSAPKCS1SignatureDeformatter(rsa)
 rsaDeformatter.SetHashAlgorithm("SHA1")
@@ -149,7 +145,7 @@ End If
 ```
 
 ```csharp
-RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
+RSA rsa = RSA.Create();
 rsa.ImportParameters(rsaKeyInfo);
 RSAPKCS1SignatureDeformatter rsaDeformatter = new RSAPKCS1SignatureDeformatter(rsa);
 rsaDeformatter.SetHashAlgorithm("SHA1");
@@ -167,4 +163,7 @@ else
 
 ## <a name="see-also"></a>関連項目
 
-- [暗号化サービス](cryptographic-services.md)
+- [Cryptographic Services](cryptographic-services.md)
+- [暗号モデル](cryptography-model.md)
+- [クロスプラットフォーム暗号化](cross-platform-cryptography.md)
+- [データ保護の ASP.NET Core](/aspnet/core/security/data-protection/introduction)

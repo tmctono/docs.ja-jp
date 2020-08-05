@@ -1,20 +1,20 @@
 ---
 title: セキュリティとユーザー入力
 description: コードでは、ユーザーが入力したデータをパラメーターとして他のコードに渡すことがあり、これはセキュリティに影響を与える可能性があります。 範囲チェックを実行して、問題のある入力を拒否することができます。
-ms.date: 03/30/2017
+ms.date: 07/15/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- security [.NET Framework], user input
+- security [.NET], user input
 - user input, security
 - secure coding, user input
 - code security, user input
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
-ms.openlocfilehash: 995af30385790a88718193e7abad1db7bc4b56c3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e46bf8e653567637b4e6236849981fdb32df447c
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84275946"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555943"
 ---
 # <a name="security-and-user-input"></a>セキュリティとユーザー入力
 
@@ -61,3 +61,4 @@ ms.locfileid: "84275946"
 ## <a name="see-also"></a>関連項目
 
 - [安全なコーディングのガイドライン](secure-coding-guidelines.md)
+- [ASP.NET Core のセキュリティ](/aspnet/core/security/)

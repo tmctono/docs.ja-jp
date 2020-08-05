@@ -1,46 +1,44 @@
 ---
 title: 暗号化サービス
-description: ClickOnce マニフェスト、Suite B、& Cryptography Next Generation (CNG) のサポートなど、.NET でサポートされる暗号化の方法と手法の概要について説明します。
-ms.date: 03/30/2017
+description: .NET でサポートされる暗号化の方法と手法の概要です。
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- cryptography [.NET Framework]
+- cryptography [.NET]
 - pattern of derived class inheritance
 - digital signatures
 - asymmetric cryptographic algorithms
 - digital signatures, public-key systems
 - public keys
-- decryption [.NET Framework]
+- decryption [.NET]
 - private keys
 - MAC algorithms
 - cryptographic algorithms
 - private keys, overview
-- encryption [.NET Framework]
-- security [.NET Framework], encryption
+- encryption [.NET]
+- security [.NET], encryption
 - cryptographic services
 - symmetric cryptographic algorithms
 - hash
 - message authentication codes
 - derived class inheritance
-- cryptography [.NET Framework], about
+- cryptography [.NET], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: 701dce82669395743c884a613512bfadc06c91b3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4cd4e493e0e7d159b2749dac78b9a560e20fd75c
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596333"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557022"
 ---
 # <a name="cryptographic-services"></a>暗号化サービス
 
 インターネットなどの公衆ネットワークには、エンティティ間の通信を保護する手段が用意されていません。 公衆ネットワークを経由した通信は、不当な第三者によって読み取られたり、さらには変更されたりするおそれがあります。 暗号化を使用すると、データが表示されないように保護し、データが変更されたかどうかを検出する方法を提供し、通常は安全でないチャネル上に安全な通信手段を確立できます。 たとえば、暗号化アルゴリズムを使用してデータを暗号化し、暗号化された状態で送信できます。送信先の相手は、後でこのデータを復号化できます。 暗号化されたデータを第三者が傍受したとしても、復号化するのは困難です。
 
-.NET Framework では、 <xref:System.Security.Cryptography?displayProperty=nameWithType> 名前空間のクラスが暗号化のさまざまな詳細事項を自動的に管理します。 アンマネージド Microsoft Cryptography API (CryptoAPI) 用のラッパーもあれば、純粋なマネージド実装もあります。 これらのクラスを使用するにあたって、暗号の専門家になる必要はありません。 いずれかの暗号化アルゴリズム クラスのインスタンスを新しく作成すると、使いやすいようにキーが自動生成されます。また、既定のプロパティは可能な限り安全に保たれます。
+.NET では、名前空間のクラスによって、 <xref:System.Security.Cryptography> 暗号化の多くの詳細が管理されます。 オペレーティングシステム実装用のラッパーもあれば、純粋なマネージ実装もあります。 これらのクラスを使用するにあたって、暗号の専門家になる必要はありません。 いずれかの暗号化アルゴリズム クラスのインスタンスを新しく作成すると、使いやすいようにキーが自動生成されます。また、既定のプロパティは可能な限り安全に保たれます。
 
-この概要では、.NET Framework 3.5 で導入された ClickOnce マニフェスト、Suite B、Cryptography Next Generation (CNG) のサポートなど、.NET Framework によってサポートされる暗号化の方法と手法の概要を説明します。
-
-暗号化の詳細と、暗号によるセキュリティをアプリケーションに追加できる Microsoft のサービス、コンポーネント、およびツールの詳細については、このドキュメントの「セキュリティ」セクションで、Win32 および COM 開発に関するトピックを参照してください。
+この概要では、ClickOnce マニフェストなど、.NET でサポートされる暗号化の方法と手法の概要を示します。
 
 ## <a name="cryptographic-primitives"></a>暗号プリミティブ
 
@@ -58,7 +56,7 @@ ms.locfileid: "84596333"
 
 これらの目標を達成するために、暗号プリミティブと呼ばれるアルゴリズムと手法の組み合わせを使用して暗号スキームを作成します。 暗号プリミティブとその用途の一覧を次の表に示します。
 
-|暗号プリミティブ|使用|
+|暗号プリミティブ|vmmblue_2|
 |-----------------------------|---------|
 |共有キー暗号方式 (対称暗号化方式)|データに対して変換処理を実行し、データが第三者に読み取られるのを防ぎます。 このタイプの暗号方式では、単一の共有キーを使用してデータの暗号化と復号化が行われます。|
 |公開キー暗号方式 (非対称暗号化方式)|データに対して変換処理を実行し、データが第三者に読み取られるのを防ぎます。 このタイプの暗号方式では、公開キーと秘密キーのペアを使用してデータの暗号化と復号化が行われます。|
@@ -85,19 +83,11 @@ CBC 暗号によって暗号化されたデータを解読する 1 つの方法�
 
 安全でないチャネルを経由して Alice と Bob が通信しようとしている場合は、次のように共有キー暗号方式を使用することが考えられます。Alice と Bob は、特定の 1 つのアルゴリズム (たとえば AES) と、特定のキーおよび IV を使用することに合意します。 Alice はメッセージを作成し、メッセージの送信先となるネットワークストリーム (名前付きパイプやネットワーク電子メールなど) を作成します。 次に、キーと IV を使用してテキストを暗号化し、暗号化されたメッセージと IV をインターネット経由で Bob に送信します。 暗号化されたテキストを受信した Bob は、IV とあらかじめ決めてあるキーを使用して復号化を行います。 送信が傍受された場合、インターセプターはキーを認識しないため、元のメッセージを回復できません。 このシナリオでは、秘密にしておく必要があるのはキーだけです。 実際のシナリオでは、Alice または Bob のどちらかが共有キーを生成し、公開キー (非対称) 暗号方式を使用して相手に共有 (対称) キーを転送することになります。 公開キー暗号方式の詳細については、次のセクションを参照してください。
 
-.NET Framework には、共有キー暗号化アルゴリズムを実装する次のクラスが用意されています。
+.NET には、共有キー暗号化アルゴリズムを実装する次のクラスが用意されています。
 
-- <xref:System.Security.Cryptography.AesManaged>(.NET Framework 3.5 で導入されました)。
+- <xref:System.Security.Cryptography.Aes>
 
-- <xref:System.Security.Cryptography.DESCryptoServiceProvider>.
-
-- <xref:System.Security.Cryptography.HMACSHA1> 。これは、暗号ハッシュ関数を共有キーと組み合わせて使用することで計算されるメッセージ認証コードを表すため、技術的には共有キー アルゴリズムです。 後で説明する「 [ハッシュ値](#hash-values)」を参照してください。
-
-- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.
-
-- <xref:System.Security.Cryptography.RijndaelManaged>.
-
-- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>.
+- <xref:System.Security.Cryptography.HMACSHA256>、<xref:System.Security.Cryptography.HMACSHA384> および <xref:System.Security.Cryptography.HMACSHA512>。 (これらは、秘密キーと組み合わせた暗号ハッシュ関数を使用して計算されるメッセージ認証コードを表すため、技術的には共有キーアルゴリズムです。 この記事で後述する「[ハッシュ値](#hash-values)」を参照してください)。
 
 ## <a name="public-key-encryption"></a>公開キー暗号方式
 
@@ -123,23 +113,17 @@ Alice の公開キーの転送中に、承認されていないエージェン�
 
 - 公開キー アルゴリズムは秘密キー アルゴリズムと比較してきわめて低速であり、大量のデータを暗号化するようには設計されていません。 公開キー アルゴリズムが便利なのは、少量のデータを転送する場合に限られます。 一般に、公開キー暗号方式は、共有キー アルゴリズムで使われるキーと IV を暗号化するために使用されます。 キーと IV を転送した後の残りのセッションでは、共有キー暗号方式が使用されます。
 
-.NET Framework には、公開キー暗号化アルゴリズムを実装する次のクラスが用意されています。
+.NET には、公開キーアルゴリズムを実装する次のクラスが用意されています。
 
-- <xref:System.Security.Cryptography.DSACryptoServiceProvider>
+- <xref:System.Security.Cryptography.RSA>
 
-- <xref:System.Security.Cryptography.RSACryptoServiceProvider>
+- <xref:System.Security.Cryptography.ECDsa>
 
-- <xref:System.Security.Cryptography.ECDiffieHellman> (基底クラス)
+- <xref:System.Security.Cryptography.ECDiffieHellman>
 
-- <xref:System.Security.Cryptography.ECDiffieHellmanCng>
+- <xref:System.Security.Cryptography.DSA>
 
-- <xref:System.Security.Cryptography.ECDiffieHellmanCngPublicKey> (基底クラス)
-
-- <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction> (基底クラス)
-
-- <xref:System.Security.Cryptography.ECDsaCng>
-
-RSA は暗号化と署名の両方に使用できますが、DSA は署名にのみ使用可能で、Diffie-Hellman はキー生成にのみ使用可能です。 一般に、秘密キー アルゴリズムに比べて、公開キー アルゴリズムの使用には多くの制限があります。
+RSA では暗号化と署名の両方が許可されますが、DSA は署名にのみ使用できます。 DSA は RSA ほど安全ではないため、RSA をお勧めします。 Diffie-hellman は、キーの生成にのみ使用できます。 一般に、秘密キー アルゴリズムに比べて、公開キー アルゴリズムの使用には多くの制限があります。
 
 ## <a name="digital-signatures"></a>デジタル署名
 
@@ -150,15 +134,13 @@ Alice は、公開キー暗号方式を使用してメッセージにデジタ�
 > [!NOTE]
 > 送信者の公開キーは公開された情報であり、通常はデジタル署名の書式に含まれるため、だれでも署名を検査できます。 この方法では、メッセージの秘密性は保持されません。メッセージを秘密にしておくためには、メッセージ自体も暗号化する必要があります。
 
-.NET Framework には、デジタル署名アルゴリズムを実装する次のクラスが用意されています。
+.NET には、デジタル署名アルゴリズムを実装する次のクラスが用意されています。
 
-- <xref:System.Security.Cryptography.DSACryptoServiceProvider>
+- <xref:System.Security.Cryptography.RSA>
 
-- <xref:System.Security.Cryptography.RSACryptoServiceProvider>
+- <xref:System.Security.Cryptography.ECDsa>
 
-- <xref:System.Security.Cryptography.ECDsa> (基底クラス)
-
-- <xref:System.Security.Cryptography.ECDsaCng>
+- <xref:System.Security.Cryptography.DSA>
 
 ## <a name="hash-values"></a>ハッシュ値
 
@@ -184,38 +166,21 @@ Alice は、公開キー暗号方式を使用してメッセージにデジタ�
 
 Alice のメッセージはプレーンテキストで送信されるため、前に説明した方法では、Alice のメッセージがだれかから読み取られないように防ぐことはできません。 セキュリティを完全にするには、一般に、デジタル署名 (メッセージ署名) と暗号化が必要です。
 
-.NET Framework には、ハッシュアルゴリズムを実装する次のクラスが用意されています。
+.NET には、ハッシュアルゴリズムを実装する次のクラスが用意されています。
 
-- <xref:System.Security.Cryptography.HMACSHA1>.
+- <xref:System.Security.Cryptography.SHA256>.
 
-- <xref:System.Security.Cryptography.MACTripleDES>.
+- <xref:System.Security.Cryptography.SHA384>.
 
-- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>.
+- <xref:System.Security.Cryptography.SHA512>.
 
-- <xref:System.Security.Cryptography.RIPEMD160>.
-
-- <xref:System.Security.Cryptography.SHA1Managed>.
-
-- <xref:System.Security.Cryptography.SHA256Managed>.
-
-- <xref:System.Security.Cryptography.SHA384Managed>.
-
-- <xref:System.Security.Cryptography.SHA512Managed>.
-
-- SHA (Secure Hash Algorithm)、MD5 (Message Digest 5)、および RIPEMD-160 の各アルゴリズムすべての HMAC バリアント。
-
-- すべての SHA アルゴリズムの CryptoServiceProvider 実装 (マネージド コード ラッパー)。
-
-- すべての MD5 アルゴリズムおよび SHA アルゴリズムの CNG (Cryptography Next Generation) 実装。
-
-> [!NOTE]
-> 1996 年に MD5 に設計上の欠陥が発見され、代わりに SHA-1 が推奨されました。 2004 年には、新しい欠陥が発見され、MD5 は安全なアルゴリズムと見なされなくなりました。 SHA-1 アルゴリズムも安全でないことがわかり、現在は SHA-2 が推奨されています。
+.NET には、およびも用意され <xref:System.Security.Cryptography.MD5> て <xref:System.Security.Cryptography.SHA1> います。 しかし、MD5 アルゴリズムと SHA-1 アルゴリズムは安全ではないことがわかり、代わりに SHA-1 が推奨されるようになりました。 SHA-1 には SHA256、SHA384、および SHA512 が含まれます。
 
 ## <a name="random-number-generation"></a>乱数生成
 
 乱数生成は、多くの暗号化操作に欠かせない部分です。 たとえば、暗号キーはできるだけランダムにして、再現できないようにする必要があります。 暗号乱数ジェネレーターは、予測される確率が 50% よりも低い、計算上は不可能な出力を生成しなければなりません。 したがって、当て推量をされた場合でも予測できないような手段を使用する必要があります。 .NET Framework のクラスは、乱数ジェネレーターを使用して暗号化キーを生成します。
 
-乱数ジェネレーター アルゴリズムは、 <xref:System.Security.Cryptography.RNGCryptoServiceProvider> クラスに実装されています。
+乱数ジェネレーター アルゴリズムは、 <xref:System.Security.Cryptography.RandomNumberGenerator> クラスに実装されています。
 
 ## <a name="clickonce-manifests"></a>ClickOnce マニフェスト
 
@@ -237,25 +202,9 @@ Alice のメッセージはプレーンテキストで送信されるため、�
 
 - <xref:System.Security.Cryptography.X509Certificates.TrustStatus> は、Authenticode 署名が信頼済みかどうかを簡単な方法でチェックできます。
 
-## <a name="suite-b-support"></a>Suite B のサポート
-
-.NET Framework 3.5 は、国家安全機関 (NSA) によって発行された暗号化アルゴリズムの Suite B セットをサポートしています。 Suite B の詳細については、「 [NSA の Suite B 暗号化に関するファクト シート](https://www.nsa.gov/what-we-do/information-assurance/)」を参照してください。
-
-次のアルゴリズムが含まれています。
-
-- キー サイズが 128 ビット、192 ビット、および 256 ビットの AES (Advanced Encryption Standard) アルゴリズム。暗号化に使用されます。
-
-- Secure Hash Algorithm (SHA-1、SHA-256、SHA-384、および SHA-512)。ハッシュ化に使用されます (通常、最後の 3 つはまとめて SHA-2 と呼ばれます)。
-
-- 256 ビット、384 ビット、および 521 ビットの素数の曲線を使用した ECDSA (Elliptic Curve Digital Signature Algorithm)。署名に使用されます。 NSA のドキュメントでは、これらの曲線が具体的に定義され、P-256、P-384、および P-521 と呼ばれています。 このアルゴリズムは、 <xref:System.Security.Cryptography.ECDsaCng> クラスによって提供されます。 秘密キーを使用して署名したり、公開キーを使用した署名を検証したりできます。
-
-- 256 ビット、384 ビット、および 521 ビットの素数の曲線を使用した ECDH (Elliptic Curve Diffie-Hellman) アルゴリズム。キーの交換と秘密協定に使用されます。 このアルゴリズムは、 <xref:System.Security.Cryptography.ECDiffieHellmanCng> クラスによって提供されます。
-
-新たに追加された <xref:System.Security.Cryptography.AesCryptoServiceProvider>、 <xref:System.Security.Cryptography.SHA256CryptoServiceProvider>、 <xref:System.Security.Cryptography.SHA384CryptoServiceProvider>、 <xref:System.Security.Cryptography.SHA512CryptoServiceProvider> の各クラスでは、連邦情報処理規格 (FIPS: Federal Information Processing Standard) によって認定された AES、SHA-256、SHA-384、および SHA-512 実装のマネージド コード ラッパーを使用できます。
-
 ## <a name="cryptography-next-generation-cng-classes"></a>CNG (Cryptography Next Generation) クラス
 
-CNG のクラスには、ネイティブ CNG 関数を扱うマネージド ラッパーが用意されています (CNG は CryptoAPI に代わるものです)。これらのクラスは、名前の一部として "Cng" を持ちます。 CNG ラッパー クラスの中心は、CNG キーのストレージと使用を抽象化する <xref:System.Security.Cryptography.CngKey> キー コンテナー クラスです。 このクラスにより、キー ペアまたは公開キーを安全に格納したり、単純な文字列名を使って参照したりすることが可能になります。 楕円曲線ベースの <xref:System.Security.Cryptography.ECDsaCng> 署名クラスおよび <xref:System.Security.Cryptography.ECDiffieHellmanCng> 暗号化クラスは、 <xref:System.Security.Cryptography.CngKey> オブジェクトを使用できます。
+.NET Framework 3.5 以降のバージョンでは、Cryptography Next Generation (CNG) クラスは、ネイティブ CNG 関数をラップするマネージラッパーを提供します。 (CNG は CryptoAPI に代わるものです)。これらのクラスは、名前の一部として "Cng" を持ちます。 CNG ラッパー クラスの中心は、CNG キーのストレージと使用を抽象化する <xref:System.Security.Cryptography.CngKey> キー コンテナー クラスです。 このクラスにより、キー ペアまたは公開キーを安全に格納したり、単純な文字列名を使って参照したりすることが可能になります。 楕円曲線ベースの <xref:System.Security.Cryptography.ECDsaCng> 署名クラスおよび <xref:System.Security.Cryptography.ECDiffieHellmanCng> 暗号化クラスは、 <xref:System.Security.Cryptography.CngKey> オブジェクトを使用できます。
 
 <xref:System.Security.Cryptography.CngKey> クラスは、キーを開く、作成する、削除する、エクスポートするなど、さまざまな補足的な操作に使用されます。 また、ネイティブ関数を直接呼び出すときに使用する、基になるキー ハンドルへのアクセスも提供します。
 
@@ -267,10 +216,9 @@ CNG のクラスには、ネイティブ CNG 関数を扱うマネージド ラ�
 
 - <xref:System.Security.Cryptography.CngProperty> は、よく使用される主要なプロパティを管理します。
 
-## <a name="related-topics"></a>関連トピック
+## <a name="see-also"></a>関連項目
 
-|Title|説明|
-|-----------|-----------------|
-|[暗号モデル](cryptography-model.md)|基底クラス ライブラリに暗号化がどのように実装されているかについて説明します。|
-|[チュートリアル: 暗号化アプリケーションの作成](walkthrough-creating-a-cryptographic-application.md)|基本的な暗号化タスクと復号化タスクについて説明します。|
-|[暗号化クラスの設定](../../framework/configure-apps/configure-cryptography-classes.md)|アルゴリズム名を暗号クラスに割り当てる方法と、オブジェクト ID を暗号化アルゴリズムに割り当てる方法について説明します。|
+- [暗号化モデル](cryptography-model.md)-基本クラスライブラリにおける暗号化の実装方法について説明します。
+- [クロスプラットフォーム暗号化](cross-platform-cryptography.md)
+- [パディングを使用した CBC モードの対称復号化に関するタイミングの脆弱性](vulnerabilities-cbc-mode.md)
+- [データ保護の ASP.NET Core](/aspnet/core/security/data-protection/introduction)

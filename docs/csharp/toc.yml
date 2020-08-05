@@ -876,8 +876,6 @@
           href: programming-guide/statements-expressions-operators/index.md
         - name: ステートメント
           href: programming-guide/statements-expressions-operators/statements.md
-        - name: 式
-          href: programming-guide/statements-expressions-operators/expressions.md
         - name: 式形式のメンバー
           href: programming-guide/statements-expressions-operators/expression-bodied-members.md
         - name: 匿名関数
@@ -1561,7 +1559,7 @@
       items:
         - name: 概要
           href: language-reference/operators/index.md
-          displayName: 'operator precedence, operator associativity'
+          displayName: 'operator precedence, operator associativity, expressions'
         - name: 算術演算子
           href: language-reference/operators/arithmetic-operators.md
           displayName: '++, --, +, -, *, /, %, +=, -=, *=, /=, %=, checked, unchecked'

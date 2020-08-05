@@ -4,19 +4,20 @@ description: 状態データをプライベート変数または内部変数と�
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- security [.NET Framework], state data
+- security [.NET], state data
 - code security, state data
 - secure coding, state data
 - state data security
 ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
-ms.openlocfilehash: b7fcb520fe6fa28cc098c4e1cbb56ce7da759c11
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 73bd0ace28e5b9661cc86d6749ceef9aa4c9ac92
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291046"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557126"
 ---
 # <a name="securing-state-data"></a>状態データの保護
+
 機密データの処理または任意の種類のセキュリティ決定を行うアプリケーションは、そのデータを自らの制御下に置き、潜在的に悪意がある他のコードがそのデータに直接アクセスできないようにします。 メモリ内でデータを保護する最善の方法は、そのデータをプライベート変数または内部変数 (同じアセンブリにスコープが限定されている) として宣言することです。 ただし、このようなデータでさえも、次のように注意が必要なアクセスの対象となります。  
   
 - リフレクション メカニズムを使用すると、オブジェクトを参照できる信頼性の高いコードはプライベート メンバーを取得および設定できます。  
@@ -30,3 +31,4 @@ ms.locfileid: "84291046"
 ## <a name="see-also"></a>関連項目
 
 - [安全なコーディングのガイドライン](secure-coding-guidelines.md)
+- [ASP.NET Core のセキュリティ](/aspnet/core/security/)

@@ -1,56 +1,60 @@
 ---
-title: .NET Framework の暗号モデル
+title: .NET 暗号化モデル
 description: .NET での通常の暗号化アルゴリズムの実装を確認します。 オブジェクトの継承、ストリームのデザイン、& 構成の拡張可能な暗号化モデルについて説明します。
-ms.date: 03/30/2017
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
-- cryptography [.NET Framework], model
-- encryption [.NET Framework], model
+- cryptography [.NET], model
+- encryption [.NET], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: 11af4c15c8b291df898a3c2416faa15875eab70b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0b3e07238bf0932572c222f7b947cfa7ae0221a9
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596320"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556996"
 ---
-# <a name="net-framework-cryptography-model"></a>.NET Framework の暗号モデル
+# <a name="net-cryptography-model"></a>.NET 暗号化モデル
 
-.NET Framework は、多くの標準的な暗号化アルゴリズムの実装を提供します。 これらのアルゴリズムは簡単に使用でき、またできるだけ安全な既定のプロパティを提供しています。 さらに、オブジェクトの継承、ストリームの設計、および構成の .NET Framework の暗号モデルは非常に拡張性に優れています。
+.NET には、多くの標準的な暗号化アルゴリズムの実装が用意されており、.NET 暗号化モデルは拡張可能です。
 
 ## <a name="object-inheritance"></a>オブジェクトの継承
 
-.NET Framework のセキュリティ システムは、拡張可能な派生クラス継承のパターンを実装しています。 階層は次のとおりです。
+.NET 暗号化システムは、派生クラスの継承の拡張可能なパターンを実装します。 階層は次のとおりです。
 
-- <xref:System.Security.Cryptography.SymmetricAlgorithm>、<xref:System.Security.Cryptography.AsymmetricAlgorithm> または <xref:System.Security.Cryptography.HashAlgorithm> などのアルゴリズム型クラス。 このレベルは抽象レベルです。
+- アルゴリズムの種類クラス (、、など) <xref:System.Security.Cryptography.SymmetricAlgorithm> <xref:System.Security.Cryptography.AsymmetricAlgorithm> <xref:System.Security.Cryptography.HashAlgorithm> 。 このレベルは抽象レベルです。
 
-- <xref:System.Security.Cryptography.Aes>、<xref:System.Security.Cryptography.RC2>、または <xref:System.Security.Cryptography.ECDiffieHellman> など、アルゴリズム型クラスから継承されるアルゴリズム クラス。 このレベルは抽象レベルです。
+- <xref:System.Security.Cryptography.Aes>、<xref:System.Security.Cryptography.RSA>、または <xref:System.Security.Cryptography.ECDiffieHellman> など、アルゴリズム型クラスから継承されるアルゴリズム クラス。 このレベルは抽象レベルです。
 
 - <xref:System.Security.Cryptography.AesManaged>、<xref:System.Security.Cryptography.RC2CryptoServiceProvider>、または <xref:System.Security.Cryptography.ECDiffieHellmanCng> など、アルゴリズム クラスから継承されるアルゴリズム クラスの実装。 このレベルは完全に実装されます。
 
-派生クラスのこのパターンを使用すると、新しいアルゴリズムの追加、または既存アルゴリズムの新規実装の追加を簡単に行えます。 たとえば、新しい公開キー アルゴリズムを作成するには、<xref:System.Security.Cryptography.AsymmetricAlgorithm> クラスから継承します。 特定のアルゴリズムの実装を新しく作成するには、そのアルゴリズムの非抽象派生クラスを作成します。
+この派生クラスのパターンを使用すると、新しいアルゴリズムを追加したり、既存のアルゴリズムの新しい実装を追加したりできます。 たとえば、新しい公開キー アルゴリズムを作成するには、<xref:System.Security.Cryptography.AsymmetricAlgorithm> クラスから継承します。 特定のアルゴリズムの実装を新しく作成するには、そのアルゴリズムの非抽象派生クラスを作成します。
 
-## <a name="how-algorithms-are-implemented-in-the-net-framework"></a>.NET Framework でアルゴリズムを実装する方法
+## <a name="how-algorithms-are-implemented-in-net"></a>.NET でのアルゴリズムの実装方法
 
-アルゴリズムに使用できるさまざまな実装例として、対称アルゴリズムを検討します。 すべての対称アルゴリズムのベースは <xref:System.Security.Cryptography.SymmetricAlgorithm> であり、次のアルゴリズムによって継承されます。
+アルゴリズムに使用できるさまざまな実装例として、対称アルゴリズムを検討します。 すべての対称アルゴリズムの基本は、、 <xref:System.Security.Cryptography.SymmetricAlgorithm> <xref:System.Security.Cryptography.Aes> <xref:System.Security.Cryptography.TripleDES> 、および推奨されなくなった他のすべての対称アルゴリズムによって継承されます。
 
-* <xref:System.Security.Cryptography.Aes>
-* <xref:System.Security.Cryptography.DES>
-* <xref:System.Security.Cryptography.RC2>
-* <xref:System.Security.Cryptography.Rijndael>
-* <xref:System.Security.Cryptography.TripleDES>
+<xref:System.Security.Cryptography.Aes>は、、、およびによって継承され <xref:System.Security.Cryptography.AesCryptoServiceProvider> <xref:System.Security.Cryptography.AesCng> <xref:System.Security.Cryptography.AesManaged> ます。
 
-<xref:System.Security.Cryptography.Aes> は、<xref:System.Security.Cryptography.AesCryptoServiceProvider> と <xref:System.Security.Cryptography.AesManaged> の 2 つのクラスによって継承されます。 <xref:System.Security.Cryptography.AesCryptoServiceProvider> クラスは Aes の Windows 暗号化 API (CAPI) 実装のラッパーですが、<xref:System.Security.Cryptography.AesManaged> クラスは全体がマネージド コードで書かれています。 さらに、マネージド実装と CAPI 実装に加え、3 つ目の実装、Cryptography Next Generation (CNG) もあります。 CNG アルゴリズムの例が <xref:System.Security.Cryptography.ECDiffieHellmanCng> です。 CNG アルゴリズムは、Windows Vista 以降のバージョンで利用可能です。
+Windows の .NET Framework:
 
-ご自身にとって最適な実装を選択できます。 マネージ実装は、.NET Framework をサポートするすべてのプラットフォームで使用できます。 CAPI 実装は、以前のオペレーティングシステムで使用でき、開発されなくなりました。 CNG は、新しい開発が行われる最新の実装です。 ただし、マネージド実装は連邦情報処理規格 (FIPS: Federal Information Processing Standard) に認定されておらず、ラッパー クラスよりも低速である場合があります。
+* `*CryptoServiceProvider`アルゴリズムクラス (など) <xref:System.Security.Cryptography.AesCryptoServiceProvider> は、アルゴリズムの Windows CRYPTOGRAPHY API (CAPI) 実装のラッパーです。
+* `*Cng`などのアルゴリズムクラス <xref:System.Security.Cryptography.ECDiffieHellmanCng> は、Windows Cryptography Next Generation (CNG) 実装のラッパーです。
+* `*Managed`などのクラス <xref:System.Security.Cryptography.AesManaged> は、完全にマネージコードで記述されます。 `*Managed`実装は、連邦情報処理規格 (FIPS) によって認定されていないため、およびラッパークラスよりも低速になる可能性があり `*CryptoServiceProvider` `*Cng` ます。
 
-## <a name="stream-design"></a>ストリーム デザイン
+.NET Core と .NET 5 以降のバージョンでは、すべての実装クラス ( `*CryptoServiceProvider` 、 `*Managed` 、および `*Cng` ) は、オペレーティングシステム (os) アルゴリズムのラッパーです。 OS アルゴリズムが FIPS 認定の場合、.NET は FIPS 認定アルゴリズムを使用します。 詳細については、「[クロスプラットフォーム暗号化](cross-platform-cryptography.md)」を参照してください。
 
-共通言語ランタイムは、対称アルゴリズムおよびハッシュ アルゴリズムを実装するためのストリーム指向デザインを使用しています。 この設計の中心となるは、<xref:System.IO.Stream> クラスから派生する <xref:System.Security.Cryptography.CryptoStream> クラスです。 ストリーム ベースの暗号化オブジェクトは、単一の標準インターフェイス (`CryptoStream`) をサポートし、オブジェクトのデータ転送部分を処理します。 すべてのオブジェクトは標準のインターフェイス上に構築されるため、複数のオブジェクト (ハッシュ オブジェクトに続く暗号化オブジェクトなど) を連結したり、データ用の中間ストレージなしでデータ上で複数の操作を実行したりできます。 また、ストリーミング モデルを使用して、より小さなオブジェクトからオブジェクトを構築することもできます。 たとえば、複合暗号化とハッシュ アルゴリズムは 1 つのストリーム オブジェクトと見ることができますが、このオブジェクトは一連の複数のストリーム オブジェクトから作成されているかもしれません。
+ほとんどの場合、などのアルゴリズム実装クラスを直接参照する必要はありません `AesCryptoServiceProvider` 。 通常必要なメソッドとプロパティは、のような基本アルゴリズムクラスにあり `Aes` ます。 基本アルゴリズムクラスのファクトリメソッドを使用して、既定の実装クラスのインスタンスを作成し、基本アルゴリズムクラスを参照します。 たとえば、次の例で強調表示されているコード行を確認します。
+
+:::code language="csharp" source="snippets/encrypting-data/csharp/aes-encrypt.cs" highlight="16":::
+:::code language="vb" source="snippets/encrypting-data/vb/aes-encrypt.vb" highlight="12":::
 
 ## <a name="cryptographic-configuration"></a>暗号化の構成
 
-暗号化の構成によって、アルゴリズムの特定の実装のアルゴリズム名への解決が可能になり、.NET Framework の暗号化クラスの機能を拡張できます。 アルゴリズムの独自のハードウェアまたはソフトウェア実装を追加して、実装を任意のアルゴリズム名にマップすることができます。 構成ファイルでアルゴリズムを指定しない場合は、既定の設定が使用されます。 暗号化の構成の詳細については、「[暗号化クラスの構成](../../framework/configure-apps/configure-cryptography-classes.md)」を参照してください。
+暗号化の構成を使用すると、アルゴリズムの特定の実装をアルゴリズム名に解決して、.NET 暗号化クラスの機能拡張を可能にすることができます。 アルゴリズムの独自のハードウェアまたはソフトウェア実装を追加して、実装を任意のアルゴリズム名にマップすることができます。 構成ファイルでアルゴリズムを指定しない場合は、既定の設定が使用されます。
 
 ## <a name="choosing-an-algorithm"></a>アルゴリズムの選択
 
@@ -70,11 +74,12 @@ ms.locfileid: "84596320"
   - <xref:System.Security.Cryptography.ECDiffieHellman>
   - <xref:System.Security.Cryptography.RSA>
 - 乱数生成 : 
-  - <xref:System.Security.Cryptography.RNGCryptoServiceProvider>
+  - <xref:System.Security.Cryptography.RandomNumberGenerator.Create%2A?displayProperty=nameWithType>
 - パスワードからのキー生成 :  
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
 ## <a name="see-also"></a>関連項目
 
-- [暗号化サービス](cryptographic-services.md)
-- [C での暗号化プロトコル、アルゴリズム、およびソースコードの適用 (Schneier)](https://www.schneier.com/books/applied_cryptography/)
+- [Cryptographic Services](cryptographic-services.md)
+- [クロスプラットフォーム暗号化](cross-platform-cryptography.md)
+- [データ保護の ASP.NET Core](/aspnet/core/security/data-protection/introduction)

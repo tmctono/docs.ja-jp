@@ -1,43 +1,39 @@
 ---
 title: '方法: データ保護の使用'
 description: .NET でデータ保護 API (DPAPI) にアクセスしてデータ保護を使用する方法について説明します。
-ms.date: 03/30/2017
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - DPAPI
-- encryption [.NET Framework], data protection API
-- data [.NET Framework], decryption
+- encryption [.NET], data protection API
+- data [.NET], decryption
 - ProtectedMemory class, about ProtectedMemory class
 - ProtectedData class, about ProtectedData class
-- cryptography [.NET Framework], data protection API
-- data protection API [.NET Framework]
+- cryptography [.NET], data protection API
+- data protection API [.NET]
 - decryption
-- data [.NET Framework], encryption
+- data [.NET], encryption
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
-ms.openlocfilehash: c7f88105727dfd33c87a815054aa317ac2052e83
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 263a07ddf357734e819fffdd41cdff60657adf15
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598594"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557061"
 ---
 # <a name="how-to-use-data-protection"></a>方法: データ保護の使用
-.NET Framework では、データ保護 API (DPAPI) へのアクセスを提供しています。DPAPI を使用すると、現在のユーザー アカウントまたはコンピューターからの情報を使用してデータを暗号化できます。  DPAPI を使用すると、暗号化キーを明示的に生成および格納するという困難な問題を軽減できます。  
+
+> [!NOTE]
+> この記事は、Windows に適用されます。
+>
+> ASP.NET Core の詳細については、「[データ保護の ASP.NET Core](/aspnet/core/security/data-protection/introduction)」を参照してください。
+
+.NET では、データ保護 API (DPAPI) にアクセスできます。これにより、現在のユーザーアカウントまたはコンピューターの情報を使用してデータを暗号化することができます。  DPAPI を使用すると、暗号化キーを明示的に生成および格納するという困難な問題を軽減できます。  
   
- <xref:System.Security.Cryptography.ProtectedMemory> クラスを使用すると、メモリ内のバイト配列を暗号化できます。  この機能は、Microsoft Windows XP 以降のオペレーティング システムで使用できます。  現在のプロセスによって暗号化されるメモリは、現在のプロセスのみ、すべてのプロセス、または同じユーザーのコンテキストによって復号化されることを指定できます。  <xref:System.Security.Cryptography.ProtectedMemory> オプションの詳しい説明については、「<xref:System.Security.Cryptography.MemoryProtectionScope> 列挙型」を参照してください。  
-  
- バイト配列のコピーを暗号化するには、<xref:System.Security.Cryptography.ProtectedData> クラスを使用します。 この機能は、Microsoft Windows 2000 以降のオペレーティング システムで使用できます。  現在のユーザー アカウントによって暗号化されたデータは、同じユーザー アカウントによってのみ復号化できることを指定できます。あるいは、現在のユーザー アカウントによって暗号化されたデータは、コンピューター上の任意のアカウントによって復号化できることを指定できます。  <xref:System.Security.Cryptography.ProtectedData> オプションの詳しい説明については、「<xref:System.Security.Cryptography.DataProtectionScope> 列挙型」を参照してください。  
-  
-### <a name="to-encrypt-in-memory-data-using-data-protection"></a>データの保護を使用してメモリ内のデータを暗号化するには  
-  
-1. 暗号化するバイト配列、エントロピ、およびメモリ保護スコープを渡す際に、静的な <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> メソッドを呼び出します。  
-  
-### <a name="to-decrypt-in-memory-data-using-data-protection"></a>データ保護を使用してメモリ内のデータを復号化するには  
-  
-1. 復号化するバイト配列およびメモリ保護スコープを渡す際に、静的な <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> メソッドを呼び出します。  
+バイト配列のコピーを暗号化するには、<xref:System.Security.Cryptography.ProtectedData> クラスを使用します。 この機能は、.NET Framework、.NET Core、.NET 5 で使用できます。  現在のユーザー アカウントによって暗号化されたデータは、同じユーザー アカウントによってのみ復号化できることを指定できます。あるいは、現在のユーザー アカウントによって暗号化されたデータは、コンピューター上の任意のアカウントによって復号化できることを指定できます。  <xref:System.Security.Cryptography.ProtectedData> オプションの詳しい説明については、「<xref:System.Security.Cryptography.DataProtectionScope> 列挙型」を参照してください。  
   
 ### <a name="to-encrypt-data-to-a-file-or-stream-using-data-protection"></a>データ保護を使用してファイルやストリームのデータを暗号化するには  
   
@@ -53,19 +49,26 @@ ms.locfileid: "84598594"
   
 2. 復号化するバイト配列およびデータ保護スコープを渡す際に、静的な <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> メソッドを呼び出します。  
   
-## <a name="example"></a>例  
- 次のコード例は、暗号化と復号化の 2 つの形式を示しています。  最初に、コード例では、メモリ内のバイト配列を暗号化してから復号化します。  次に、コード例では、バイト配列のコピーを暗号化し、ファイルに保存して、そのファイルからデータを読み込み、その後データを復号化しています。  例では、元のデータ、暗号化されたデータ、および復号化されたデータが表示されます。  
-  
- [!code-csharp[DPAPI-HowTO#1](../../../samples/snippets/csharp/VS_Snippets_CLR/DPAPI-HowTO/cs/sample.cs#1)]
- [!code-vb[DPAPI-HowTO#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DPAPI-HowTO/vb/sample.vb#1)]  
+## <a name="example"></a>例
+
+次のコード例は、暗号化と復号化の 2 つの形式を示しています。  最初に、コード例では、メモリ内のバイト配列を暗号化してから復号化します。  次に、コード例では、バイト配列のコピーを暗号化し、ファイルに保存して、そのファイルからデータを読み込み、その後データを復号化しています。  例では、元のデータ、暗号化されたデータ、および復号化されたデータが表示されます。
+
+[!code-csharp[DPAPI-HowTO#1](../../../samples/snippets/csharp/VS_Snippets_CLR/DPAPI-HowTO/cs/sample.cs#1)]
+[!code-vb[DPAPI-HowTO#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DPAPI-HowTO/vb/sample.vb#1)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
-  
+
+この例は、.NET Framework を対象とし、Windows で実行している場合にのみ、コンパイルして実行します。
+
 - `System.Security.dll` への参照を含めます。  
   
 - <xref:System>、<xref:System.IO>、<xref:System.Security.Cryptography>、および <xref:System.Text> 名前空間を含めます。  
   
 ## <a name="see-also"></a>関連項目
 
+- [暗号モデル](cryptography-model.md)
+- [Cryptographic Services](cryptographic-services.md)
+- [クロスプラットフォーム暗号化](cross-platform-cryptography.md)
 - <xref:System.Security.Cryptography.ProtectedMemory>
 - <xref:System.Security.Cryptography.ProtectedData>
+- [データ保護の ASP.NET Core](/aspnet/core/security/data-protection/introduction)

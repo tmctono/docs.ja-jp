@@ -1,39 +1,38 @@
 ---
 title: .NET でのセキュリティ
 description: .NET でのセキュリティについて説明します。 主要なセキュリティの概念、ロールベースのセキュリティ、暗号化モデル、および安全なコーディングのガイドラインについて説明するリンクに従ってください。
-ms.date: 06/04/2018
+ms.date: 07/15/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - .NET, security
 - security [.NET], about security
 - application development [.NET], security
-- security [.NET Framework]
 - security [.NET]
 ms.assetid: 9a9621d7-8883-4a4f-a874-65e8e09e20a6
-ms.openlocfilehash: 21511b580a4f922d2aef04cc79f5d551f0406b45
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 783cb8274d1fafe85d58758a36fae5d671f656f8
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767820"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557113"
 ---
 # <a name="security-in-net"></a>.NET でのセキュリティ
 
-共通言語ランタイムと .NET には、開発者が安全なコードを簡単に記述し、保護されたリソースにアクセスできるように、システム管理者がコードに付与されたアクセス許可をカスタマイズできるようにする、便利なクラスとサービスが多数用意されています。 さらに、ランタイムと .NET には、暗号化とロールベースのセキュリティの使用を容易にする便利なクラスとサービスが用意されています。
+共通言語ランタイムと .NET には、開発者がセキュリティで保護されたコードを記述し、暗号化を使用して、ロールベースのセキュリティを実装できるようにするための便利なクラスとサービスが多数用意されています。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
 - [セキュリティの基本概念](key-security-concepts.md)  
-共通言語ランタイムのセキュリティ機能の概要を説明します。 このセクションは開発者およびシステム管理者を対象としています。
+共通言語ランタイムのセキュリティ機能の概要を説明します。
 
 - [ロール ベースのセキュリティ](role-based-security.md)  
-コード内でロール ベースのセキュリティと対話する方法について説明します。 このセクションは開発者を対象としています。
+コード内でロール ベースのセキュリティと対話する方法について説明します。
 
 - [暗号モデル](cryptography-model.md)  
-.NET で提供される暗号化サービスの概要について説明します。 このセクションは開発者を対象としています。
+.NET で提供される暗号化サービスの概要について説明します。
 
 - [安全なコーディングのガイドライン](secure-coding-guidelines.md)  
-Reliable .NET アプリケーションを作成するためのベストプラクティスについて説明します。 このセクションは開発者を対象としています。
+Reliable .NET アプリケーションを作成するためのベストプラクティスについて説明します。
 
 ## <a name="related-sections"></a>関連項目
 

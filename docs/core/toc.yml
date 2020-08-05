@@ -479,7 +479,5 @@ items:
     href: native-interop/expose-components-to-com.md
   - name: ネイティブ コードからの .NET Core のホスト
     href: tutorials/netcore-hosting.md
-  - name: パッケージ、メタパッケージ、フレームワーク
-    href: packages.md
   - name: 継続的インテグレーション
     href: tools/using-ci-with-cli.md

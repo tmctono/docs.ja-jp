@@ -1,39 +1,39 @@
 ---
 title: '方法: 共通キーで XML 要素を暗号化する'
-ms.date: 03/30/2017
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- cryptography [.NET Framework], asymmetric keys
+- cryptography [.NET], asymmetric keys
 - AES algorithm
-- System.Security.Cryptography.RSACryptoServiceProvider class
-- asymmetric keys [.NET Framework]
+- System.Security.Cryptography.RSA class
+- asymmetric keys [.NET]
 - System.Security.Cryptography.EncryptedXml class
 - XML encryption
 - key containers
 - Advanced Encryption Standard algorithm
-- Rijndael
-- encryption [.NET Framework], asymmetric keys
+- encryption [.NET], asymmetric keys
 ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
-ms.openlocfilehash: 475446f6206676e93ea72d16e01bcf1067c24e86
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1c824b00a1df920108cfcd8c4590b680020cdf3e
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277376"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555788"
 ---
 # <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>方法: 共通キーで XML 要素を暗号化する
+
 <xref:System.Security.Cryptography.Xml> 名前空間のクラスを使用して、XML ドキュメント内の要素を暗号化することができます。  XML 暗号化は、データが簡単に読み取られる心配なく、暗号化された XML データを交換または保存する標準的な方法です。  XML 暗号化標準の詳細については、「」にある XML 暗号化の World Wide Web コンソーシアム (W3C) の仕様を参照してください <https://www.w3.org/TR/xmldsig-core/> 。  
   
  XML の暗号化を使用すると、任意の XML 要素またはドキュメントを、暗号化された XML データを含む <`EncryptedData`> 要素があるドキュメントに置き換えることができます。  <> 要素には、 `EncryptedData` 暗号化時に使用されるキーとプロセスに関する情報を含むサブ要素を含めることもできます。  XML の暗号化を使用すると、ドキュメントに複数の暗号化された要素を含められるだけでなく、要素を複数回暗号化することができます。  この手順のコード例では、<`EncryptedData`> 要素と、復号化時に後で使用できるいくつかの他のサブ要素を作成する方法を示します。  
   
- この例では、2 つのキーを使用して XML 要素を暗号化します。  RSA の公開キーと秘密キーのペアを生成し、キーのペアをセキュリティで保護されたキー コンテナーに保存します。  この例では、Rijndael アルゴリズムとも呼ばれる Advanced Encryption Standard (AES) アルゴリズムを使用して、別のセッション キーを作成します。  この例では、XML ドキュメントの暗号化に AES セッション キーを使用してから、AES セッション キーを暗号化するために RSA 公開キーを使用しています。  最後に、暗号化された AES セッションキーと暗号化された XML データを、新しい <> 要素内の XML ドキュメントに保存し `EncryptedData` ます。  
+ この例では、2 つのキーを使用して XML 要素を暗号化します。  RSA の公開キーと秘密キーのペアを生成し、キーのペアをセキュリティで保護されたキー コンテナーに保存します。  この例では、Advanced Encryption Standard (AES) アルゴリズムを使用して別のセッションキーを作成します。  この例では、XML ドキュメントの暗号化に AES セッション キーを使用してから、AES セッション キーを暗号化するために RSA 公開キーを使用しています。  最後に、暗号化された AES セッションキーと暗号化された XML データを、新しい <> 要素内の XML ドキュメントに保存し `EncryptedData` ます。  
   
  XML 要素を復号化するには、キー コンテナーから RSA 秘密キーを取得し、これを使用してセッション キーを復号化してから、セッション キーを使用してドキュメントを復号化します。  この手順で暗号化された XML 要素を復号化する方法の詳細については、「[方法: 非対称キーを使用して Xml 要素を復号化](how-to-decrypt-xml-elements-with-asymmetric-keys.md)する」を参照してください。  
   
- この例は、複数のアプリケーションが暗号化されたデータを共有する必要がある状況や、1 つのアプリケーションが、実行する時間の間に暗号化されたデータを保存する必要がある状況に適しています。  
+ この例は、複数のアプリケーションが暗号化されたデータを共有する必要がある状況や、1 つのアプリケーションが、実行する時間の間に暗号化されたデータを保存する必要がある状況に適しています。
   
 ### <a name="to-encrypt-an-xml-element-with-an-asymmetric-key"></a>非対称キーで XML 要素を暗号化するには  
   
@@ -57,7 +57,7 @@ ms.locfileid: "84277376"
      [!code-csharp[HowToEncryptXMLElementAsymmetric#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#5)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#5)]  
   
-5. <xref:System.Security.Cryptography.RijndaelManaged> クラスを使用してセッション キーを新規作成します。  このキーは、XML 要素を暗号化してから、このキー自体が暗号化されて XML ドキュメントに配置されます。  
+5. <xref:System.Security.Cryptography.Aes> クラスを使用してセッション キーを新規作成します。  このキーは、XML 要素を暗号化してから、このキー自体が暗号化されて XML ドキュメントに配置されます。  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#6)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#6)]  
@@ -129,18 +129,24 @@ ms.locfileid: "84277376"
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
-- この例をコンパイルするには、`System.Security.dll` への参照を含める必要があります。  
+- .NET Framework を対象とするプロジェクトでは、への参照を含め `System.Security.dll` ます。
+
+- .NET Core または .NET 5 を対象とするプロジェクトでは、NuGet パッケージ[System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)をインストールします。
   
 - 名前空間 <xref:System.Xml>、<xref:System.Security.Cryptography>、および <xref:System.Security.Cryptography.Xml> を含めます。  
   
-## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
- 対称暗号化キーをプレーンテキストで保存したり、対称キーをコンピューター間でプレーンテキストで転送したりしないでください。  加えて、非対称キー ペアの秘密キーをプレーンテキストで保存または転送しないでください。  対称暗号化キーと非対称暗号化キーの詳細については、「[暗号化と復号化のためのキーの生成](generating-keys-for-encryption-and-decryption.md)」を参照してください。  
+## <a name="net-security"></a>.NET セキュリティ
+
+対称暗号化キーをプレーンテキストで保存したり、対称キーをコンピューター間でプレーンテキストで転送したりしないでください。  加えて、非対称キー ペアの秘密キーをプレーンテキストで保存または転送しないでください。  対称暗号化キーと非対称暗号化キーの詳細については、「[暗号化と復号化のためのキーの生成](generating-keys-for-encryption-and-decryption.md)」を参照してください。  
   
- キーをソース コードに直接埋め込まないでください。  埋め込みキーは、 [ildasm.exe (IL 逆アセンブラー)](../../framework/tools/ildasm-exe-il-disassembler.md)を使用するか、メモ帳などのテキストエディターでアセンブリを開くことで、簡単にアセンブリから読み取ることができます。  
+キーをソース コードに直接埋め込まないでください。  埋め込みキーは、 [Ildasm.exe (IL 逆アセンブラー)](../../framework/tools/ildasm-exe-il-disassembler.md)を使用するか、メモ帳などのテキストエディターでアセンブリを開くことで、アセンブリから簡単に読み取ることができます。  
   
- 暗号化キーを使用して完了したら、各バイトをゼロ (0) にするか、マネージド暗号化クラスの <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> メソッドを呼び出してメモリから消去します。  暗号化キーは、デバッガーによってメモリから読み取られるか、メモリの位置がディスクにページングされている場合はハード ドライブから読み取られることがあります。  
+暗号化キーを使用して完了したら、各バイトをゼロ (0) にするか、マネージド暗号化クラスの <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> メソッドを呼び出してメモリから消去します。  暗号化キーは、デバッガーによってメモリから読み取られるか、メモリの位置がディスクにページングされている場合はハード ドライブから読み取られることがあります。  
   
 ## <a name="see-also"></a>関連項目
 
-- <xref:System.Security.Cryptography.Xml>
+- [暗号モデル](cryptography-model.md)
+- [Cryptographic Services](cryptographic-services.md)
+- [クロスプラットフォーム暗号化](cross-platform-cryptography.md)- <xref:System.Security.Cryptography.Xml>
 - [方法: 非対称キーで XML 要素を復号化する](how-to-decrypt-xml-elements-with-asymmetric-keys.md)
+- [データ保護の ASP.NET Core](/aspnet/core/security/data-protection/introduction)

@@ -1,34 +1,40 @@
 ---
 title: 'チュートリアル: 暗号化アプリケーションの作成'
 description: 暗号化アプリケーションの作成について説明します。 Windows フォームアプリケーションでコンテンツを暗号化および復号化する方法について説明します。
-ms.date: 03/30/2017
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- cryptography [NET Framework], example
-- cryptography [NET Framework], cryptographic application example
-- cryptography [NET Framework], application example
+- cryptography [NET], example
+- cryptography [NET], cryptographic application example
+- cryptography [NET], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-ms.openlocfilehash: 72116227fbec2435d428ad2bbdb4cc74e5c3663f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 16a887f23c584daa83106ae61c497bcae8dc4dd2
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602181"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557191"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>チュートリアル: 暗号化アプリケーションの作成
+
+> [!NOTE]
+> この記事は、Windows に適用されます。
+>
+> ASP.NET Core の詳細については、「[データ保護の ASP.NET Core](/aspnet/core/security/data-protection/introduction)」を参照してください。
+
 このチュートリアルでは、コンテンツの暗号化および復号化の方法を示します。 コード例は、Windows フォーム アプリケーション向けに設計されています。 このアプリケーションは、スマート カードを使用するなどの実際のシナリオは示していません。 代わりに、暗号化と復号化の基礎を示しています。  
   
- このチュートリアルでは、次の暗号化のガイドラインを使用します。  
+このチュートリアルでは、次の暗号化のガイドラインを使用します。  
   
-- 自動生成される <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> と <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A> を使用すると、対称アルゴリズムである <xref:System.Security.Cryptography.RijndaelManaged> クラスでデータの暗号化と復号化を行えます。  
+- 自動生成される <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> と <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A> を使用すると、対称アルゴリズムである <xref:System.Security.Cryptography.Aes> クラスでデータの暗号化と復号化を行えます。  
   
-- 非対称アルゴリズムである <xref:System.Security.Cryptography.RSACryptoServiceProvider> を使用すると、<xref:System.Security.Cryptography.RijndaelManaged> で暗号化されたデータのキーの暗号化と復号化を行えます。 非対称アルゴリズムは、キーなどの少量のデータに最適です。  
+- 非対称アルゴリズムを使用し <xref:System.Security.Cryptography.RSA> て、によって暗号化されたデータに対してキーを暗号化および暗号化解除し <xref:System.Security.Cryptography.Aes> ます。 非対称アルゴリズムは、キーなどの少量のデータに最適です。  
   
     > [!NOTE]
-    > 暗号化されたコンテンツを他のユーザーと交換するのではなく、コンピューター上のデータを保護する場合は、<xref:System.Security.Cryptography.ProtectedData> クラスまたは <xref:System.Security.Cryptography.ProtectedMemory> クラスの使用を検討してください。  
+    > 暗号化されたコンテンツを他のユーザーと交換するのではなく、コンピューター上のデータを保護する場合は、クラスの使用を検討してください <xref:System.Security.Cryptography.ProtectedData> 。  
   
  次の表は、このトピックの暗号化のタスクをまとめたものです。  
   
@@ -45,14 +51,16 @@ ms.locfileid: "84602181"
 |アプリケーションのテスト|このアプリケーションをテストするための手順を一覧に示します。|  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
+
+このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 - <xref:System.IO> 名前空間と <xref:System.Security.Cryptography> 名前空間への参照。  
   
 ## <a name="creating-a-windows-forms-application"></a>Windows フォーム アプリケーションの作成  
- このチュートリアルにあるほとんどのコード例は、ボタン コントロールのイベント ハンドラーとして設計されています。 次の表は、サンプル アプリケーションに必要なコントロールと、コード例に一致する必要な名前を示しています。  
+
+このチュートリアルにあるほとんどのコード例は、ボタン コントロールのイベント ハンドラーとして設計されています。 次の表は、サンプル アプリケーションに必要なコントロールと、コード例に一致する必要な名前を示しています。  
   
-|コントロール|名前|テキストのプロパティ (必要に応じて)|  
+|Control|名前|テキストのプロパティ (必要に応じて)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|ファイルの暗号化|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|ファイルの復号化|  
@@ -64,16 +72,18 @@ ms.locfileid: "84602181"
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog1`||  
 |<xref:System.Windows.Forms.OpenFileDialog>|`openFileDialog2`||  
   
- ボタンのイベント ハンドラーを作成するには、Visual Studio デザイナーでボタンをダブルクリックします。  
+ イベントハンドラーを作成するには、Visual Studio デザイナーのボタンをダブルクリックします。
   
 ## <a name="declaring-global-objects"></a>グローバル オブジェクトの宣言  
- 次のコードをフォームのコンストラクターに追加します。 環境とユーザー設定のための文字列変数を編集します。  
+
+次のコードをフォームのコンストラクターに追加します。 環境とユーザー設定のための文字列変数を編集します。  
   
- [!code-csharp[CryptoWalkThru#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#1)]
- [!code-vb[CryptoWalkThru#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#1)]  
+[!code-csharp[CryptoWalkThru#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#1)]
+[!code-vb[CryptoWalkThru#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#1)]  
   
 ## <a name="creating-an-asymmetric-key"></a>非対称キーの作成  
- この作業では、<xref:System.Security.Cryptography.RijndaelManaged> キーの暗号化と復号化を行う非対称キーを作成します。 このキーは、コンテンツの暗号化に使用されたもので、ラベル コントロールにキー コンテナー名を表示します。  
+
+この作業では、<xref:System.Security.Cryptography.Aes> キーの暗号化と復号化を行う非対称キーを作成します。 このキーは、コンテンツの暗号化に使用されたもので、ラベル コントロールにキー コンテナー名を表示します。  
   
  次のコードを [`Create Keys`] ボタン (`buttonCreateAsmKeys_Click`) の `Click` イベント ハンドラーとして追加します。  
   
@@ -81,15 +91,16 @@ ms.locfileid: "84602181"
  [!code-vb[CryptoWalkThru#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#2)]  
   
 ## <a name="encrypting-a-file"></a>ファイルの暗号化  
- このタスクには、ボタン () のイベントハンドラーメソッド `Encrypt File` とメソッドの2つのメソッドが含ま `buttonEncryptFile_Click` れます。 `EncryptFile` 最初のメソッドは、ファイルを選択するためのダイアログ ボックスを表示し、暗号化を実行する 2 番目のメソッドにファイル名を渡します。  
+
+このタスクには、ボタン () のイベントハンドラーメソッド `Encrypt File` とメソッドの2つのメソッドが含ま `buttonEncryptFile_Click` れます。 `EncryptFile` 最初のメソッドは、ファイルを選択するためのダイアログ ボックスを表示し、暗号化を実行する 2 番目のメソッドにファイル名を渡します。  
   
- 暗号化されたコンテンツ、キー、および IV は、すべて 1 つの <xref:System.IO.FileStream> に保存されます。これを暗号化パッケージといいます。  
+暗号化されたコンテンツ、キー、および IV は、すべて 1 つの <xref:System.IO.FileStream> に保存されます。これを暗号化パッケージといいます。  
   
- `EncryptFile` メソッドは以下を実行します。  
+`EncryptFile` メソッドは以下を実行します。  
   
-1. コンテンツを暗号化する <xref:System.Security.Cryptography.RijndaelManaged> 対称アルゴリズムを作成します。  
+1. コンテンツを暗号化する <xref:System.Security.Cryptography.Aes> 対称アルゴリズムを作成します。  
   
-2. <xref:System.Security.Cryptography.RijndaelManaged> キーを暗号化する <xref:System.Security.Cryptography.RSACryptoServiceProvider> オブジェクトを作成します。  
+2. <xref:System.Security.Cryptography.Aes> キーを暗号化する <xref:System.Security.Cryptography.RSACryptoServiceProvider> オブジェクトを作成します。  
   
 3. ソース ファイルの <xref:System.IO.FileStream> の読み取りと暗号化を行う <xref:System.Security.Cryptography.CryptoStream> オブジェクト (バイトのブロック) を使用して、暗号化ファイルの対象の <xref:System.IO.FileStream> オブジェクトにします。  
   
@@ -122,17 +133,18 @@ ms.locfileid: "84602181"
  [!code-vb[CryptoWalkThru#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#5)]  
   
 ## <a name="decrypting-a-file"></a>ファイルの復号化  
- このタスクには、[`Decrypt File`] ボタン (`buttonDecryptFile_Click`) のイベント ハンドラー メソッドと `DecryptFile` メソッドという 2 つのメソッドが含まれています。 最初のメソッドは、ファイルを選択するためのダイアログ ボックスを表示し、復号化を実行する 2 番目のメソッドにファイル名を渡します。  
+
+このタスクには、[`Decrypt File`] ボタン (`buttonDecryptFile_Click`) のイベント ハンドラー メソッドと `DecryptFile` メソッドという 2 つのメソッドが含まれています。 最初のメソッドは、ファイルを選択するためのダイアログ ボックスを表示し、復号化を実行する 2 番目のメソッドにファイル名を渡します。  
   
- `Decrypt` メソッドは以下を実行します。  
+`Decrypt` メソッドは以下を実行します。  
   
-1. コンテンツを復号化する <xref:System.Security.Cryptography.RijndaelManaged> の対称アルゴリズムを作成します。  
+1. <xref:System.Security.Cryptography.Aes>コンテンツの暗号化を解除するための対称アルゴリズムを作成します。  
   
 2. 暗号化されたキーと IV の長さを取得するには、暗号化パッケージの <xref:System.IO.FileStream> の最初の 8 バイトを読み取ってバイト配列にします。  
   
 3. キーと IV を暗号化パッケージから抽出してバイト配列にします。  
   
-4. <xref:System.Security.Cryptography.RijndaelManaged> キーを復号化する <xref:System.Security.Cryptography.RSACryptoServiceProvider> オブジェクトを作成します。  
+4. <xref:System.Security.Cryptography.Aes> キーを復号化する <xref:System.Security.Cryptography.RSACryptoServiceProvider> オブジェクトを作成します。  
   
 5. <xref:System.Security.Cryptography.CryptoStream> オブジェクトを使用して、<xref:System.IO.FileStream> の暗号化パッケージの暗号テキスト セクションをバイトのブロックで読み取って復号化し、復号化されたファイルの <xref:System.IO.FileStream> オブジェクトにします。 これが終了すると、復号化は完了です。  
   
@@ -146,38 +158,42 @@ ms.locfileid: "84602181"
  [!code-csharp[CryptoWalkThru#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#6)]
  [!code-vb[CryptoWalkThru#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#6)]  
   
-## <a name="exporting-a-public-key"></a>公開キーのエクスポート  
- この作業では、[`Create Keys`] ボタンによって作成されたキーをファイルに保存します。 パブリック パラメーターのみがエクスポートされます。  
+## <a name="exporting-a-public-key"></a>公開キーのエクスポート
+
+この作業では、[`Create Keys`] ボタンによって作成されたキーをファイルに保存します。 パブリック パラメーターのみがエクスポートされます。  
   
- このタスクでは、アリスがボブに公開キーを与えるシナリオをシミュレーションします。そうすることで、ボブはアリスのファイルを暗号化できるようになります。 ボブとその公開キーを持つ他のユーザーはファイルを復号化できなくなります。彼らはプライベート パラメーターを持つ完全なキーのペアを持っていないためです。  
+このタスクでは、アリスがボブに公開キーを与えるシナリオをシミュレーションします。そうすることで、ボブはアリスのファイルを暗号化できるようになります。 ボブとその公開キーを持つ他のユーザーはファイルを復号化できなくなります。彼らはプライベート パラメーターを持つ完全なキーのペアを持っていないためです。  
   
- 次のコードを [`Export Public Key`] ボタン (`buttonExportPublicKey_Click`) の `Click` イベント ハンドラーとして追加します。  
+次のコードを [`Export Public Key`] ボタン (`buttonExportPublicKey_Click`) の `Click` イベント ハンドラーとして追加します。  
   
- [!code-csharp[CryptoWalkThru#8](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#8)]
- [!code-vb[CryptoWalkThru#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#8)]  
+[!code-csharp[CryptoWalkThru#8](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#8)]
+[!code-vb[CryptoWalkThru#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#8)]  
   
-## <a name="importing-a-public-key"></a>公開キーのインポート  
- このタスクでは、[`Export Public Key`] ボタンによって作成されたパブリック パラメーターのみを持つキーを読み込み、キー コンテナー名として設定します。  
+## <a name="importing-a-public-key"></a>公開キーのインポート
+
+このタスクでは、[`Export Public Key`] ボタンによって作成されたパブリック パラメーターのみを持つキーを読み込み、キー コンテナー名として設定します。  
   
- この作業では、ボブがアリスのファイルを暗号化できるように、ボブがパブリック パラメーターのみを持つアリスのキーを読み込むシナリオをシミュレーションします。  
+この作業では、ボブがアリスのファイルを暗号化できるように、ボブがパブリック パラメーターのみを持つアリスのキーを読み込むシナリオをシミュレーションします。  
   
- 次のコードを [`Import Public Key`] ボタン (`buttonImportPublicKey_Click`) の `Click` イベント ハンドラーとして追加します。  
+次のコードを [`Import Public Key`] ボタン (`buttonImportPublicKey_Click`) の `Click` イベント ハンドラーとして追加します。  
   
- [!code-csharp[CryptoWalkThru#9](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#9)]
- [!code-vb[CryptoWalkThru#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#9)]  
+[!code-csharp[CryptoWalkThru#9](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#9)]
+[!code-vb[CryptoWalkThru#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#9)]  
   
 ## <a name="getting-a-private-key"></a>秘密キーの取得  
- この作業では、[`Create Keys`] ボタンを使用して作成されたキーの名前にキー コンテナー名を設定します。 キー コンテナーには、プライベート パラメーターを持つ完全なキーのペアが格納されます。  
+
+この作業では、[`Create Keys`] ボタンを使用して作成されたキーの名前にキー コンテナー名を設定します。 キー コンテナーには、プライベート パラメーターを持つ完全なキーのペアが格納されます。  
   
- この作業では、アリスが自分の秘密キーを使用してボブが暗号化したファイルを復号化するシナリオをシミュレーションします。  
+この作業では、アリスが自分の秘密キーを使用してボブが暗号化したファイルを復号化するシナリオをシミュレーションします。  
   
- 次のコードを [`Get Private Key`] ボタン (`buttonGetPrivateKey_Click`) の `Click` イベント ハンドラーとして追加します。  
+次のコードを [`Get Private Key`] ボタン (`buttonGetPrivateKey_Click`) の `Click` イベント ハンドラーとして追加します。  
   
- [!code-csharp[CryptoWalkThru#7](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#7)]
- [!code-vb[CryptoWalkThru#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#7)]  
+[!code-csharp[CryptoWalkThru#7](../../../samples/snippets/csharp/VS_Snippets_CLR/CryptoWalkThru/cs/Form1.cs#7)]
+[!code-vb[CryptoWalkThru#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#7)]  
   
-## <a name="testing-the-application"></a>アプリケーションのテスト  
- アプリケーションをビルドしたら、次のテスト シナリオを実行します。  
+## <a name="testing-the-application"></a>アプリケーションのテスト
+
+アプリケーションをビルドしたら、次のテスト シナリオを実行します。  
   
 #### <a name="to-create-keys-encrypt-and-decrypt"></a>キーの作成、暗号化、および復号化を行うには  
   
@@ -211,4 +227,7 @@ ms.locfileid: "84602181"
   
 ## <a name="see-also"></a>関連項目
 
-- [暗号化サービス](cryptographic-services.md)
+- [暗号化モデル](cryptography-model.md)-基本クラスライブラリにおける暗号化の実装方法について説明します。
+- [Cryptographic Services](cryptographic-services.md)
+- [クロスプラットフォーム暗号化](cross-platform-cryptography.md)
+- [データ保護の ASP.NET Core](/aspnet/core/security/data-protection/introduction)
