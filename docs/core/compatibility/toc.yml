@@ -44,6 +44,8 @@
       href: msbuild.md
     - name: ネットワーキング
       href: networking.md
+    - name: シリアル化
+      href: serialization.md
     - name: Visual Basic
       href: visualbasic.md
     - name: Windows フォーム
