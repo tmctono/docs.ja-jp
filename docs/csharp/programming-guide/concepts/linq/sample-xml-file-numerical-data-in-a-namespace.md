@@ -1,18 +1,19 @@
 ---
-title: 'サンプル XML ファイル: 名前空間内の数値データ 3'
+title: サンプル XML ファイル:名前空間内の数値データ 3
+description: この XML ファイルは、LINQ to XML ドキュメントのさまざまな例で使用されます。 集計、平均、およびグループ化用のデータが含まれています。 XML は名前空間に含まれています。
 ms.date: 07/20/2015
 ms.assetid: 51750cab-3c66-4511-90fb-b9d211308d31
-ms.openlocfilehash: 02788b73a7af9922b5a50237f2d2e401cba8abe2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fe467604840851c2af2533a620f9b7e32367fbb3
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66483706"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302504"
 ---
-# <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="2e7c6-102">サンプル XML ファイル : 名前空間内の数値データ</span><span class="sxs-lookup"><span data-stu-id="2e7c6-102">Sample XML File: Numerical Data in a Namespace</span></span>
-<span data-ttu-id="2e7c6-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="2e7c6-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="2e7c6-104">このファイルには、集計、平均、およびグループ化用の数値データが含まれています。</span><span class="sxs-lookup"><span data-stu-id="2e7c6-104">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="2e7c6-105">XML は名前空間に含まれています。</span><span class="sxs-lookup"><span data-stu-id="2e7c6-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="41d13-105">サンプル XML ファイル:名前空間内の数値データ</span><span class="sxs-lookup"><span data-stu-id="41d13-105">Sample XML File: Numerical Data in a Namespace</span></span>
+<span data-ttu-id="41d13-106">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="41d13-106">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="41d13-107">このファイルには、集計、平均、およびグループ化用の数値データが含まれています。</span><span class="sxs-lookup"><span data-stu-id="41d13-107">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="41d13-108">XML は名前空間に含まれています。</span><span class="sxs-lookup"><span data-stu-id="41d13-108">The XML is in a namespace.</span></span>  
   
-## <a name="data"></a><span data-ttu-id="2e7c6-106">Data</span><span class="sxs-lookup"><span data-stu-id="2e7c6-106">Data</span></span>  
+## <a name="data"></a><span data-ttu-id="41d13-109">データ</span><span class="sxs-lookup"><span data-stu-id="41d13-109">Data</span></span>  
   
 ```xml  
 <Root xmlns='http://www.adatum.com'>  

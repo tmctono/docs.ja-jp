@@ -1,18 +1,19 @@
 ---
-title: 'サンプル XML ファイル: 統合購買発注書 2'
+title: サンプル XML ファイル:統合購買発注書 2
+description: この XML ファイルは、LINQ to XML ドキュメントのさまざまな例で使用されます。 このファイルには、複数の企業からの、形式が異なる購買発注書が含まれています。
 ms.date: 07/20/2015
 ms.assetid: 9d9698a5-95f2-4564-813b-ba536cdf3bfb
-ms.openlocfilehash: abd9a8f49cbd1308dfb1c043f310601decf64336
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 99cb9e09f9ea14420908aa7cd28f70ff6329baeb
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66483795"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302569"
 ---
-# <a name="sample-xml-file-consolidated-purchase-orders"></a><span data-ttu-id="66fef-102">サンプル XML ファイル : 統合購買発注書</span><span class="sxs-lookup"><span data-stu-id="66fef-102">Sample XML File: Consolidated Purchase Orders</span></span>
-<span data-ttu-id="66fef-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="66fef-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="66fef-104">このファイルは、形式の異なる複数企業の購買発注書をまとめたものです。</span><span class="sxs-lookup"><span data-stu-id="66fef-104">This file is a set of purchase orders with different shapes from multiple companies.</span></span> <span data-ttu-id="66fef-105">各企業の購買発注書は、別々の名前空間に含まれています。</span><span class="sxs-lookup"><span data-stu-id="66fef-105">Purchase orders from each company are in separate namespaces.</span></span>  
+# <a name="sample-xml-file-consolidated-purchase-orders"></a><span data-ttu-id="8b90b-104">サンプル XML ファイル:統合購買発注書</span><span class="sxs-lookup"><span data-stu-id="8b90b-104">Sample XML File: Consolidated Purchase Orders</span></span>
+<span data-ttu-id="8b90b-105">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="8b90b-105">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="8b90b-106">このファイルは、形式の異なる複数企業の購買発注書をまとめたものです。</span><span class="sxs-lookup"><span data-stu-id="8b90b-106">This file is a set of purchase orders with different shapes from multiple companies.</span></span> <span data-ttu-id="8b90b-107">各企業の購買発注書は、別々の名前空間に含まれています。</span><span class="sxs-lookup"><span data-stu-id="8b90b-107">Purchase orders from each company are in separate namespaces.</span></span>  
   
-## <a name="consolidatedpurchaseordersxml"></a><span data-ttu-id="66fef-106">ConsolidatedPurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="66fef-106">ConsolidatedPurchaseOrders.xml</span></span>  
+## <a name="consolidatedpurchaseordersxml"></a><span data-ttu-id="8b90b-108">ConsolidatedPurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="8b90b-108">ConsolidatedPurchaseOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  

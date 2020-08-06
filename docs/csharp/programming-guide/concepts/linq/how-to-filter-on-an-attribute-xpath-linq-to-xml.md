@@ -1,25 +1,26 @@
 ---
 title: 属性をフィルター処理する方法 (XPath-LINQ to XML) (C#)
+description: XPath-LINQ to XML で、指定した名前と属性の値を持つ子孫要素をフィルター処理する方法について説明します。
 ms.date: 07/20/2015
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
-ms.openlocfilehash: ab2cd439f4dd1454de4fa565658ef5dac14b8c22
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 80c43b8485314c6a711b574b5d6c23b56533833d
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141277"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302894"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="568fd-102">属性をフィルター処理する方法 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="568fd-102">How to filter on an attribute (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="568fd-103">このトピックでは、指定した名前を持ち、かつ指定した値の属性を持つ子孫要素を取得する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="568fd-103">This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="1a5be-103">属性をフィルター処理する方法 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="1a5be-103">How to filter on an attribute (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="1a5be-104">このトピックでは、指定した名前を持ち、かつ指定した値の属性を持つ子孫要素を取得する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="1a5be-104">This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  
   
- <span data-ttu-id="568fd-104">XPath 式を次に示します。</span><span class="sxs-lookup"><span data-stu-id="568fd-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="1a5be-105">XPath 式を次に示します。</span><span class="sxs-lookup"><span data-stu-id="1a5be-105">The XPath expression is:</span></span>  
   
  `.//Address[@Type='Shipping']`  
   
-## <a name="example"></a><span data-ttu-id="568fd-105">例</span><span class="sxs-lookup"><span data-stu-id="568fd-105">Example</span></span>  
- <span data-ttu-id="568fd-106">この例では、`Address` という名前を持ち、かつ "Shipping" という値の `Type` 属性を持つ子孫要素をすべて検索します。</span><span class="sxs-lookup"><span data-stu-id="568fd-106">This example finds all descendants elements with the name of `Address`, and with a `Type` attribute with a value of "Shipping".</span></span>  
+## <a name="example"></a><span data-ttu-id="1a5be-106">例</span><span class="sxs-lookup"><span data-stu-id="1a5be-106">Example</span></span>  
+ <span data-ttu-id="1a5be-107">この例では、`Address` という名前を持ち、かつ "Shipping" という値の `Type` 属性を持つ子孫要素をすべて検索します。</span><span class="sxs-lookup"><span data-stu-id="1a5be-107">This example finds all descendants elements with the name of `Address`, and with a `Type` attribute with a value of "Shipping".</span></span>  
   
- <span data-ttu-id="568fd-107">この例では、「[サンプル XML ファイル: 複数の購買発注書 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)」の XML ドキュメントを使用します。</span><span class="sxs-lookup"><span data-stu-id="568fd-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="1a5be-108">この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:複数の購買発注書 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="1a5be-108">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -42,7 +43,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="568fd-108">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="568fd-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="1a5be-109">この例を実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="1a5be-109">This example produces the following output:</span></span>  
   
 ```output  
 Results are identical  

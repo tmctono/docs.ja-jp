@@ -1,18 +1,19 @@
 ---
-title: 'サンプル XML ファイル : 複数の購買発注書 (LINQ to XML)'
+title: サンプル XML ファイル:複数の購買発注書 (LINQ to XML)
+description: この XML ファイルは、LINQ to XML ドキュメントのさまざまな例で使用されます。 このファイルには、複数の購買発注書が含まれています。
 ms.date: 07/20/2015
 ms.assetid: 2d29fcaa-60df-43d4-8ccc-6cdba7c013e9
-ms.openlocfilehash: d73887308c07b161887716ccf2194eeb3918ff51
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8902b262e838c385581fc221d210f2b7ec11cd47
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168142"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302517"
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a><span data-ttu-id="0e2df-102">サンプル XML ファイル : 複数の購買発注書 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="0e2df-102">Sample XML File: Multiple Purchase Orders (LINQ to XML)</span></span>
-<span data-ttu-id="0e2df-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="0e2df-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="0e2df-104">このファイルには、複数の購買発注書が含まれています。</span><span class="sxs-lookup"><span data-stu-id="0e2df-104">This file contains several purchase orders.</span></span>  
+# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a><span data-ttu-id="b022f-104">サンプル XML ファイル:複数の購買発注書 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="b022f-104">Sample XML File: Multiple Purchase Orders (LINQ to XML)</span></span>
+<span data-ttu-id="b022f-105">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="b022f-105">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="b022f-106">このファイルには、複数の購買発注書が含まれています。</span><span class="sxs-lookup"><span data-stu-id="b022f-106">This file contains several purchase orders.</span></span>  
   
-## <a name="purchaseordersxml"></a><span data-ttu-id="0e2df-105">PurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="0e2df-105">PurchaseOrders.xml</span></span>  
+## <a name="purchaseordersxml"></a><span data-ttu-id="b022f-107">PurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="b022f-107">PurchaseOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  

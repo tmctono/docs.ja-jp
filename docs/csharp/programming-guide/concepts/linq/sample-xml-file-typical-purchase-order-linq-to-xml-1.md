@@ -1,18 +1,19 @@
 ---
 title: 'サンプル XML ファイル : 一般的な購買発注書 (LINQ to XML)'
+description: この XML ファイルは、LINQ to XML ドキュメントのさまざまな例で使用されます。 このファイルは、一般的な購買発注書です。
 ms.date: 07/20/2015
 ms.assetid: dcbfb859-24fc-4758-b01c-51d1b6f644e6
-ms.openlocfilehash: c647bb61daed50cda8ae38af03357ec6f91268f9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 41a43bb74f152584f65ed28f467691032654689a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66487171"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302439"
 ---
-# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a><span data-ttu-id="15b01-102">サンプル XML ファイル : 一般的な購買発注書 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="15b01-102">Sample XML File: Typical Purchase Order (LINQ to XML)</span></span>
-<span data-ttu-id="15b01-103">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="15b01-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="15b01-104">このファイルは、一般的な購買発注書です。</span><span class="sxs-lookup"><span data-stu-id="15b01-104">This file is a typical purchase order.</span></span>  
+# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a><span data-ttu-id="b2189-104">サンプル XML ファイル:一般的な購買発注書 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="b2189-104">Sample XML File: Typical Purchase Order (LINQ to XML)</span></span>
+<span data-ttu-id="b2189-105">次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。</span><span class="sxs-lookup"><span data-stu-id="b2189-105">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="b2189-106">このファイルは、一般的な購買発注書です。</span><span class="sxs-lookup"><span data-stu-id="b2189-106">This file is a typical purchase order.</span></span>  
   
-## <a name="purchaseorderxml"></a><span data-ttu-id="15b01-105">PurchaseOrder.xml</span><span class="sxs-lookup"><span data-stu-id="15b01-105">PurchaseOrder.xml</span></span>  
+## <a name="purchaseorderxml"></a><span data-ttu-id="b2189-107">PurchaseOrder.xml</span><span class="sxs-lookup"><span data-stu-id="b2189-107">PurchaseOrder.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  

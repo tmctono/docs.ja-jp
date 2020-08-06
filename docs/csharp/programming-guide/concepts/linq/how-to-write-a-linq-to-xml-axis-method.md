@@ -1,22 +1,23 @@
 ---
 title: LINQ to XML 軸メソッドを記述する方法 (C#)
+description: LINQ to XML 軸メソッドを記述する方法について説明します。 XML 軸メソッドを使用して、XML ツリーからコレクションを取得できます。
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: bf1542471f44115bd787e7be6c8ffb836a842a4f
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 76469e767a6a54813770498488460e3e92897770
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662447"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303206"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a><span data-ttu-id="36396-102">LINQ to XML 軸メソッドを記述する方法 (C#)</span><span class="sxs-lookup"><span data-stu-id="36396-102">How to write a LINQ to XML axis method (C#)</span></span>
+# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a><span data-ttu-id="0743c-104">LINQ to XML 軸メソッドを記述する方法 (C#)</span><span class="sxs-lookup"><span data-stu-id="0743c-104">How to write a LINQ to XML axis method (C#)</span></span>
 
-<span data-ttu-id="36396-103">XML [軸メソッド](linq-to-xml-axes-overview.md)によって、XML ドキュメントまたは先祖要素から XML 要素のコレクションが取得されます。</span><span class="sxs-lookup"><span data-stu-id="36396-103">An XML [axis method](linq-to-xml-axes-overview.md) retrieves a collection of XML elements from an XML document or ancestor element.</span></span> <span data-ttu-id="36396-104">XML ツリーからコレクションを取得する独自の軸メソッドを記述できます。</span><span class="sxs-lookup"><span data-stu-id="36396-104">You can write your own axis methods to retrieve collections from an XML tree.</span></span> <span data-ttu-id="36396-105">これを行うための最適な方法の 1 つは、要素または属性のコレクションを返す拡張メソッドを記述することです。</span><span class="sxs-lookup"><span data-stu-id="36396-105">One of the best ways to do this is to write an extension method that returns a collection of elements or attributes.</span></span> <span data-ttu-id="36396-106">アプリケーションの要件に基づいて、要素または属性の特定のサブセットを返す拡張メソッドを記述できます。</span><span class="sxs-lookup"><span data-stu-id="36396-106">You can write your extension method to return specific subsets of elements or attributes, based on the requirements of your application.</span></span>  
+<span data-ttu-id="0743c-105">XML [軸メソッド](linq-to-xml-axes-overview.md)によって、XML ドキュメントまたは先祖要素から XML 要素のコレクションが取得されます。</span><span class="sxs-lookup"><span data-stu-id="0743c-105">An XML [axis method](linq-to-xml-axes-overview.md) retrieves a collection of XML elements from an XML document or ancestor element.</span></span> <span data-ttu-id="0743c-106">XML ツリーからコレクションを取得する独自の軸メソッドを記述できます。</span><span class="sxs-lookup"><span data-stu-id="0743c-106">You can write your own axis methods to retrieve collections from an XML tree.</span></span> <span data-ttu-id="0743c-107">これを行うための最適な方法の 1 つは、要素または属性のコレクションを返す拡張メソッドを記述することです。</span><span class="sxs-lookup"><span data-stu-id="0743c-107">One of the best ways to do this is to write an extension method that returns a collection of elements or attributes.</span></span> <span data-ttu-id="0743c-108">アプリケーションの要件に基づいて、要素または属性の特定のサブセットを返す拡張メソッドを記述できます。</span><span class="sxs-lookup"><span data-stu-id="0743c-108">You can write your extension method to return specific subsets of elements or attributes, based on the requirements of your application.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="36396-107">例</span><span class="sxs-lookup"><span data-stu-id="36396-107">Example</span></span>  
- <span data-ttu-id="36396-108">次の例では、2 つの拡張メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="36396-108">The following example uses two extension methods.</span></span> <span data-ttu-id="36396-109">最初の拡張メソッドである `GetXPath` は、<xref:System.Xml.Linq.XObject> を処理して、評価時にノードまたは属性を返す XPath 式を返します。</span><span class="sxs-lookup"><span data-stu-id="36396-109">The first extension method, `GetXPath`, operates on <xref:System.Xml.Linq.XObject>, and returns an XPath expression that when evaluated will return the node or attribute.</span></span> <span data-ttu-id="36396-110">2 番目の拡張メソッドである `Find` は、<xref:System.Xml.Linq.XElement> を処理して、</span><span class="sxs-lookup"><span data-stu-id="36396-110">The second extension method, `Find`, operates on <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="36396-111">指定されたテキストを含む <xref:System.Xml.Linq.XAttribute> オブジェクトと <xref:System.Xml.Linq.XElement> オブジェクトのコレクションを返します。</span><span class="sxs-lookup"><span data-stu-id="36396-111">It returns a collection of <xref:System.Xml.Linq.XAttribute> objects and <xref:System.Xml.Linq.XElement> objects that contain some specified text.</span></span>  
+## <a name="example"></a><span data-ttu-id="0743c-109">例</span><span class="sxs-lookup"><span data-stu-id="0743c-109">Example</span></span>  
+ <span data-ttu-id="0743c-110">次の例では、2 つの拡張メソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="0743c-110">The following example uses two extension methods.</span></span> <span data-ttu-id="0743c-111">最初の拡張メソッドである `GetXPath` は、<xref:System.Xml.Linq.XObject> を処理して、評価時にノードまたは属性を返す XPath 式を返します。</span><span class="sxs-lookup"><span data-stu-id="0743c-111">The first extension method, `GetXPath`, operates on <xref:System.Xml.Linq.XObject>, and returns an XPath expression that when evaluated will return the node or attribute.</span></span> <span data-ttu-id="0743c-112">2 番目の拡張メソッドである `Find` は、<xref:System.Xml.Linq.XElement> を処理して、</span><span class="sxs-lookup"><span data-stu-id="0743c-112">The second extension method, `Find`, operates on <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="0743c-113">指定されたテキストを含む <xref:System.Xml.Linq.XAttribute> オブジェクトと <xref:System.Xml.Linq.XElement> オブジェクトのコレクションを返します。</span><span class="sxs-lookup"><span data-stu-id="0743c-113">It returns a collection of <xref:System.Xml.Linq.XAttribute> objects and <xref:System.Xml.Linq.XElement> objects that contain some specified text.</span></span>  
   
- <span data-ttu-id="36396-112">この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:複数の購買発注書 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="36396-112">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="0743c-114">この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:複数の購買発注書 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="0743c-114">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 public static class MyExtensions  
@@ -279,7 +280,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="36396-113">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="36396-113">This code produces the following output:</span></span>  
+ <span data-ttu-id="0743c-115">このコードを実行すると、次の出力が生成されます。</span><span class="sxs-lookup"><span data-stu-id="0743c-115">This code produces the following output:</span></span>  
   
 ```output  
 /PurchaseOrders/PurchaseOrder[1]/@OrderDate  
