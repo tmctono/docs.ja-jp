@@ -1,13 +1,14 @@
 ---
 title: 複数のキーに基づいて要素を並べ替える方法 (C#)
+description: 複数のキーに基づいて要素を並べ替える方法について説明します。 サンプル XML ドキュメントを使用する要素の並べ替えの例を確認します。
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: ddfeab4bf9b67231296ca90df1244a3b8a441440
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 486aac38a27cf064553894a548722a54c58c21b6
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347381"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301503"
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-c"></a>複数のキーに基づいて要素を並べ替える方法 (C#)
 
@@ -17,7 +18,7 @@ ms.locfileid: "75347381"
 
 この例の結果は、まず出荷先の郵便番号順に並べ替えられ、次に発注日順に並べ替えられます。
 
-この例では、「[サンプル XML ファイル: 顧客と注文 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)」の XML ドキュメントを使用します。
+この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:顧客と注文 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)」。
 
 ```csharp
 XElement co = XElement.Load("CustomersOrders.xml");
@@ -67,7 +68,7 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 
 次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。 詳細については、「[名前空間の概要 (LINQ to XML)](namespaces-overview-linq-to-xml.md)」を参照してください。
 
-この例では、「[サンプル XML ファイル: 名前空間内の顧客と注文](./sample-xml-file-customers-and-orders-in-a-namespace.md)」の XML ドキュメントを使用します。
+この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:名前空間内の顧客と注文](./sample-xml-file-customers-and-orders-in-a-namespace.md)」。
 
 ```csharp
 XElement co = XElement.Load("CustomersOrdersInNamespace.xml");

@@ -1,13 +1,14 @@
 ---
 title: 射影操作 (C#)
+description: 射影操作について説明します。 これらの操作では、オブジェクトが新しい形式に変換されます。多くの場合、それは後ほど使用するプロパティのみで構成されます。
 ms.date: 07/20/2015
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-ms.openlocfilehash: f76eeeb779ab08a575e758a9d974573b700ae652
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 289100ac9afcfc0d5b93b5f963adc0a123e0a5af
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168337"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299163"
 ---
 # <a name="projection-operations-c"></a>射影操作 (C#)
 射影とは、オブジェクトを、必要なプロパティだけで構成された別の形式に変換する操作のことをいいます。 射影を使用することにより、個々のオブジェクトから構築された新しい型を作成できます。 プロパティを投影し、それに対して数値演算関数を実行できます。 また、元のオブジェクトを変更せずに射影することもできます。  
@@ -16,7 +17,7 @@ ms.locfileid: "79168337"
   
 ## <a name="methods"></a>メソッド  
   
-|メソッド名|[説明]|C# のクエリ式の構文|説明|  
+|メソッド名|説明|C# のクエリ式の構文|説明|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |選択|変換関数に基づいて値を射影します。|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
 |SelectMany|変換関数に基づいて値のシーケンスを射影し、それを 1 つのシーケンスに平坦化します。|複数の `from` 句を使用|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|  
@@ -159,7 +160,7 @@ static void SelectVsSelectMany()
 }  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq>
 - [標準クエリ演算子の概要 (C#)](./standard-query-operators-overview.md)

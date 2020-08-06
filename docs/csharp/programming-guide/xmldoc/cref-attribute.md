@@ -1,15 +1,16 @@
 ---
 title: cref 属性 - C# プログラミング ガイド
+description: cref 属性について説明します。 cref 属性は "コード参照" を意味し、タグの内部テキストがコード要素であることを指定できます。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: b06d0c9d447124dec7d8cf3c0cbbfd0daca78fe3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 31fa1a3f182d7b72a1dfbe1ce47386f87fbbff75
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157014"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381997"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref 属性 (C# プログラミング ガイド)
 
@@ -17,7 +18,7 @@ XML ドキュメント タグの `cref` 属性は "コード参照" を意味し
 
 ## <a name="example"></a>例
 
-次の例は、[\<see>](./see.md) タグで使用される `cref` 属性のものです。
+次の例は、[\<see>](./see.md) タグで使用される `cref` 属性を示しています。
 
 [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]
 
@@ -82,7 +83,7 @@ XML ドキュメント タグの `cref` 属性は "コード参照" を意味し
 </doc>
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XML ドキュメント コメント](./index.md)
 - [ドキュメント コメント用の推奨タグ](./recommended-tags-for-documentation-comments.md)

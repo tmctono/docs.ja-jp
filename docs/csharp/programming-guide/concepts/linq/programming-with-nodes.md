@@ -1,13 +1,14 @@
 ---
 title: ノードでのプログラミング (C#)
+description: ノードでのプログラミングについて説明します。 開発者はこれによって、要素や属性よりも詳細なレベルで動作するプログラムを作成できます。
 ms.date: 07/20/2015
 ms.assetid: c38df0f2-c805-431a-93ff-9103a4284c2f
-ms.openlocfilehash: 05c2e95fe97effda7b537a7ac2d8f5780f4e212b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a31d6459ab644a682d480239cabc3d88fd7dc14
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168315"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301685"
 ---
 # <a name="programming-with-nodes-c"></a>ノードでのプログラミング (C#)
 XML エディター、変換システム、レポート作成プログラムなどのプログラムを作成する [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の開発者は、要素や属性よりも細かい粒度レベルで動作するプログラムを作成しなければならないことがよくあります。 また場合によっては、ノード レベルで、テキスト ノード、処理命令、およびコメントを操作する必要があります。 このトピックでは、ノード レベルでのプログラミングについて詳しく説明します。  

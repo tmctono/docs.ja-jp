@@ -1,13 +1,14 @@
 ---
 title: 子要素の子孫を検索する方法 (XPath-LINQ to XML) (C#)
+description: XPath 式を使用して、特定の名前を持つ子要素の子孫要素を検索する方法について説明します。
 ms.date: 07/20/2015
 ms.assetid: 505b7512-bb8b-4f85-abbf-491f039c961e
-ms.openlocfilehash: fb3e20ce21c1f6d2a71f2f71b8acec7cecf0f3ed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b8e110abc2e0df99c3fdf6d2846c7cbbc4736c1a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141094"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303258"
 ---
 # <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>子要素の子孫を検索する方法 (XPath-LINQ to XML) (C#)
 このトピックでは、特定の名前を持つ子要素の子孫要素を取得する方法について説明します。  

@@ -1,13 +1,14 @@
 ---
 title: 異なる構造の XML の射影 (C#)
+description: ソース XML とは異なる構造の XML を射影する方法について説明します。 WindowsBase アセンブリのクラスを使用するコード例を確認します。
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-ms.openlocfilehash: 1377df1ce7f54bc9a0f58836d7df5e5b7b54a69a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 492c0671b6a81f7e6b8d5f93698f84b88b14bd23
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69591538"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299098"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>異なる構造の XML の射影 (C#)
 このトピックでは、ソース XML とは異なる構造の XML を射影する例について説明します。  

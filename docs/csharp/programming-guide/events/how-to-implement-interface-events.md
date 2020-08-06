@@ -1,16 +1,17 @@
 ---
 title: インターフェイス イベントを実装する方法 - C# プログラミング ガイド
+description: クラス内でインターフェイス イベントを実装する方法について説明します。 コード例を参照し、使用可能なその他のリソースを確認してください。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 8c0d221ef1272a43e2682ef2af3fa37d2d12d35e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bd86aed4f8d8ac6e291c11fe441f87ac97593b03
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167481"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302127"
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>インターフェイス イベントを実装する方法 (C# プログラミング ガイド)
 [インターフェイス](../../language-reference/keywords/interface.md)では[イベント](../../language-reference/keywords/event.md)を宣言できます。 次の例では、クラス内にインターフェイス イベントを実装する方法について説明します。 基本的な原則は、インターフェイスのメソッドやプロパティを実装する場合と同じです。  
@@ -57,9 +58,9 @@ namespace ImplementInterfaceEvents
   
  [!code-csharp[csProgGuideEvents#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#10)]
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [イベント](./index.md)
 - [デリゲート](../delegates/index.md)
 - [明示的なインターフェイスの実装](../interfaces/explicit-interface-implementation.md)

@@ -1,13 +1,14 @@
 ---
 title: 要素の浅い値を取得する方法 (C#)
+description: 要素の浅い値を取得する方法について説明します。 浅い値は、特定の要素のみを対象としています。
 ms.date: 07/20/2015
 ms.assetid: 924a2699-72f6-4be1-aaa6-de62f8ec73b9
-ms.openlocfilehash: b9b69b5a18106f82d13cb54208c2362f8239711e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 597859e5b66606aa0cff9c1a475e79e6b66c39fc
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347445"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301581"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>要素の浅い値を取得する方法 (C#)
 このトピックでは、要素の浅い値を取得する方法について説明します。 浅い値は、特定の要素のみの値のことです。これに対し、深い値とは、すべての子孫要素の値が単一の文字列として連結された値をいいます。  
@@ -79,6 +80,6 @@ Column  Name="CustomerId"   =Customer.CustomerId
 Column  Name="Name"         =Customer.Name  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [LINQ to XML 軸 (C#)](./linq-to-xml-axes-overview.md)

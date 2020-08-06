@@ -1,5 +1,6 @@
 ---
 title: Tlbexp.exe (タイプ ライブラリ エクスポーター)
+description: Tlbexp.exe (タイプ ライブラリ エクスポーター) を確認します。 このツールによって、共通言語ランタイム (CLR) アセンブリで定義されている型を記述するタイプ ライブラリを生成できます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exporting type library [.NET Framework]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-ms.openlocfilehash: 1d2380ff607836b5dc15e7194b90dd3a53d1d2c0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3cfaa83590fefe31c437d2ff607fb579aec1da61
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180271"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517036"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (タイプ ライブラリ エクスポーター)
 タイプ ライブラリ エクスポーターは、共通言語ランタイム アセンブリで定義されている型を記述するタイプ ライブラリを生成します。  

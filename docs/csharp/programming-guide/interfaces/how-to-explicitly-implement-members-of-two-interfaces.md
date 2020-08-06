@@ -1,16 +1,17 @@
 ---
 title: 2 つのインターフェイスのメンバーを明示的に実装する方法 - C# プログラミング ガイド
+description: この C# の例では、メンバー名が同じ 2 つのインターフェイスを明示的に実装し、各インターフェイス メンバーに個別の実装を与える方法について説明します。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inheritance [C#], explicitly implementing interface members
 - interfaces [C#], explicitly implementing with inheritance
 ms.assetid: 8b402ddc-dff9-4869-89cb-d718c764e68e
-ms.openlocfilehash: c7adc08f62a7f8a14b8e10f8b5ecdd6e37db811d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d60ec43f734d5e8bfa7f467874440bd3514877fe
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75701239"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303063"
 ---
 # <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a>2 つのインターフェイスのメンバーを明示的に実装する方法 (C# プログラミング ガイド)
 明示的な[インターフェイス](../../language-reference/keywords/interface.md)実装では、プログラマは、メンバー名が同じ 2 つのインターフェイスを実装し、各インターフェイス メンバーに別の実装を与えることもできます。 この例では、メートル法とヤード ポンド法の両方の単位で、ボックスのサイズを表示します。 Box [クラス](../../language-reference/keywords/class.md)では、異なる測定システムを表す IEnglishDimensions および IMetricDimensions という 2 つのインターフェイスを実装します。 両方のインターフェイスは Length および Width という同じメンバー名を持ちます。  
@@ -27,9 +28,9 @@ ms.locfileid: "75701239"
   
  [!code-csharp[csProgGuideInheritance#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#11)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [クラスと構造体](../classes-and-structs/index.md)
 - [インターフェイス](./index.md)
 - [インターフェイス メンバーを明示的に実装する方法](./how-to-explicitly-implement-interface-members.md)

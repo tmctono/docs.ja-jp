@@ -1,17 +1,18 @@
 ---
 title: C# のコーディング規則 - C# プログラミング ガイド
+description: C# のコーディング規則について説明します。 コーディング規則によってコードの外観に一貫性がもたらされ、コードのコピー、変更、保守が容易になります。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - coding conventions, C#
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 77b173a420f26834855e0bdca3c8d04406ac65d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 772aebff0b8c7aebe7c7d5c7634cd2931f4570b1
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398377"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301854"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# のコーディング規則 (C# プログラミング ガイド)
 
@@ -39,13 +40,13 @@ ms.locfileid: "79398377"
 
 コードの構造を強調する書式が使用され、コードが読みやすくなっているのが、優れたレイアウトです。 マイクロソフトの例とサンプルは、次の規則に準拠しています。  
   
-- コード エディターの既定の設定 (スマートインデント、4 文字インデント、タブを空白として保存) を使用します。 詳細については、「[[オプション]、[テキスト エディター]、[C#]、[書式設定]](/visualstudio/ide/reference/options-text-editor-csharp-formatting)」を参照してください。  
+- コード エディターの既定の設定 (スマート インデント、4 文字インデント、タブを空白として保存) を使用します。 詳細については、「[[オプション]、[テキスト エディター]、[C#]、[書式設定]](/visualstudio/ide/reference/options-text-editor-csharp-formatting)」を参照してください。  
   
 - 1 つの行には 1 つのステートメントのみを記述します。  
   
 - 1 つの行には 1 つの宣言のみを記述します。  
   
-- 継続行にインデントが自動的に設定されない場合は、1 タブストップ (4 つの空白) 分のインデントを設定します。  
+- 継続行にインデントが自動的に設定されない場合は、1 タブ ストップ (4 つの空白) 分のインデントを設定します。  
   
 - メソッド定義とプロパティ定義の間に少なくとも 1 行の空白行を追加します。  
   
@@ -170,7 +171,7 @@ ms.locfileid: "79398377"
   
 ### <a name="static-members"></a>静的メンバー  
   
-[静的](../../language-reference/keywords/static.md)メンバーは、クラス名 (*ClassName.StaticMember*) を使用して呼び出します。 こうすることで、静的アクセスが明確になり、コードがよりわかりやすくなります。  派生クラスの名前を持つ基本クラスに定義された静的メンバーを指定しないでください。  このコードをコンパイルすると、コードが読みやすくなくなり、派生クラスに同じ名前の静的メンバーを追加すると、将来的にコードが中断する場合があります。  
+[静的](../../language-reference/keywords/static.md)メンバーは、クラス名 *ClassName.StaticMember* を使用して呼び出します。 こうすることで、静的アクセスが明確になり、コードがよりわかりやすくなります。  派生クラスの名前を持つ基本クラスに定義された静的メンバーを指定しないでください。  このコードをコンパイルすると、コードが読みやすくなくなり、派生クラスに同じ名前の静的メンバーを追加すると、将来的にコードが中断する場合があります。  
   
 ### <a name="linq-queries"></a>LINQ クエリ  
   
@@ -200,11 +201,11 @@ ms.locfileid: "79398377"
   
      [!code-csharp[csProgGuideCodingConventions#30](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#30)]  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>セキュリティ  
 
 「[安全なコーディングのガイドライン](../../../standard/security/secure-coding-guidelines.md)」のガイドラインに従ってください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Visual Basic のコーディング規則](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)
 - [安全なコーディングのガイドライン](../../../standard/security/secure-coding-guidelines.md)

@@ -1,17 +1,18 @@
 ---
 title: 文字列が数値を表しているかどうかを確認する方法 - C# プログラミング ガイド
+description: 文字列が指定された数値型の有効な表現であるかどうかを確認する方法について説明します。 コード例を参照し、追加リソースを確認してください。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - numeric strings [C#]
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: 37437460ea4c6ca216f2844d63af3688ccc984c6
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: c248c6c54de493ab06a833fc525252fa812d60da
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241722"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381750"
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>文字列が数値を表しているかどうかを確認する方法 (C# プログラミング ガイド)
 文字列が指定された数値型の有効な表現であるかどうかを確認するには、静的 `TryParse` メソッドを使用します。このメソッドには、すべてのプリミティブ数値型が実装されており、また <xref:System.DateTime>、<xref:System.Net.IPAddress> などの型も実装されています。 次の例では、"108" が有効な [int](../../language-reference/builtin-types/integral-numeric-types.md) かどうかを確認する方法を示します。  

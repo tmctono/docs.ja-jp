@@ -1,17 +1,18 @@
 ---
 title: 型パラメーターの制約 - C# プログラミング ガイド
+description: 型パラメーターの制約について説明します。 制約によって、型引数に必要な機能をコンパイラに指示できます。
 ms.date: 04/12/2018
 helpviewer_keywords:
 - generics [C#], type constraints
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 4c4554c808ab15776f3217c257e0a60119ea2338
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 91807fa05ce49b8507ee6913ff2620452fcbfab5
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84368362"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301945"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型パラメーターの制約 (C# プログラミング ガイド)
 

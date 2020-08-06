@@ -1,5 +1,6 @@
 ---
 title: 型の値の等価性を定義する方法 - C# プログラミング ガイド
+description: 型の値の等価性を定義する方法について説明します。 コード例を参照し、使用可能なその他のリソースを確認してください。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 140be18698a40be8f394b31fcd42b97d6685cb98
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cf4449618c2b57f21855354f2250d41a403b4d57
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157092"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381646"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>型の値の等価性を定義する方法 (C# プログラミング ガイド)
 
@@ -35,15 +36,15 @@ ms.locfileid: "79157092"
   
  値の等価性に関する実装の詳細は、クラスと構造体で異なりますが、 等価性を実装するための基本的な手順については、両方とも同じです。  
   
-1. [仮想](../../language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> メソッドをオーバーライドします。 ほとんどの場合、`bool Equals( object obj )` の実装には、<xref:System.IEquatable%601?displayProperty=nameWithType> インターフェイスの実装である型固有の `Equals` メソッドを呼び出すだけで済みます  (手順 2 を参照)。  
+1. [仮想](../../language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> メソッドをオーバーライドします。 ほとんどの場合、`bool Equals( object obj )` の実装には、<xref:System.IEquatable%601?displayProperty=nameWithType> インターフェイスの実装である型固有の `Equals` メソッドを呼び出すだけで済みます (手順 2 を参照)。  
   
-2. 型固有の `Equals` メソッドを指定して、<xref:System.IEquatable%601?displayProperty=nameWithType> インターフェイスを実装します。 ここで実際の等価性の比較を実行します。 たとえば、型のフィールドを 1 ～ 2 個だけ比較することで等価性を定義できます。 `Equals`から例外をスローしないでください。 クラスの場合に限り、このメソッドはクラスで宣言されているフィールドのみを調べます。 基底クラスに含まれるフィールドを調べるには、`base.Equals` を呼び出す必要があります (<xref:System.Object> から型が直接継承された場合は、この呼び出しを行わないでください。<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> の <xref:System.Object> 実装では参照の等価性チェックが実行されるためです)。  
+2. 型固有の `Equals` メソッドを指定して、<xref:System.IEquatable%601?displayProperty=nameWithType> インターフェイスを実装します。 ここで実際の等価性の比較を実行します。 たとえば、型のフィールドを 1 ～ 2 個だけ比較することで等価性を定義できます。 `Equals` から例外をスローしないでください。 クラスの場合のみ:このメソッドはクラスで宣言されているフィールドのみを調べます。 基底クラスに含まれるフィールドを調べるには、`base.Equals` を呼び出す必要があります (<xref:System.Object> から型が直接継承された場合は、この呼び出しを行わないでください。<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> の <xref:System.Object> 実装では参照の等価性チェックが実行されるためです)。  
   
-3. 推奨、ただし省略可能: [==](../../language-reference/operators/equality-operators.md#equality-operator-) 演算子および [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) 演算子をオーバーロードします。  
+3. 推奨、ただし省略可能: [==](../../language-reference/operators/equality-operators.md#equality-operator-) および [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) 演算子をオーバーロードします。  
   
 4. 値の等価性を持つ 2 つのオブジェクトによって同じハッシュ コードが生成されるように、<xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> をオーバーライドします。  
   
-5. 省略可能: "大なり" または "小なり" の定義をサポートするには、型に対して <xref:System.IComparable%601> インターフェイスを実装したうえで、[<=](../../language-reference/operators/comparison-operators.md#less-than-or-equal-operator-) 演算子および [>=](../../language-reference/operators/comparison-operators.md#greater-than-or-equal-operator-) 演算子をオーバーロードします。  
+5. 省略可能:"大なり" または "小なり" の定義をサポートするには、型に対して <xref:System.IComparable%601> インターフェイスを実装したうえで、[<=](../../language-reference/operators/comparison-operators.md#less-than-or-equal-operator-) および [>=](../../language-reference/operators/comparison-operators.md#greater-than-or-equal-operator-) 演算子をオーバーロードします。  
   
  次に示す最初の例は、クラスの実装です。 2 番目の例は、構造体の実装を示しています。  
 
@@ -67,7 +68,7 @@ ms.locfileid: "79157092"
   
  [==](../../language-reference/operators/equality-operators.md#equality-operator-) 演算子および [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) 演算子は、構造体が明示的にその演算子をオーバーロードしない限り、その構造体を操作できません。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [等価比較](equality-comparisons.md)
 - [C# プログラミング ガイド](../index.md)

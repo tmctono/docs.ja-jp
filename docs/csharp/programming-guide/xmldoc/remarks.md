@@ -1,5 +1,6 @@
 ---
 title: <remarks> - C# プログラミング ガイド
+description: XML タグについて説明 <remarks> します。 このタグを使用して型の情報を追加し、指定された情報を補足します <summary>.
 ms.date: 07/20/2015
 f1_keywords:
 - remarks
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - remarks C# XML tag
 - <remarks> C# XML tag
 ms.assetid: f8641391-31f3-4735-af7a-c502a5b6a251
-ms.openlocfilehash: 739027786e02e559d86f990bf614e261b497c76f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d38905d100e24158e7a1412f6be9f01a7ced2382
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287286"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381503"
 ---
 # <a name="remarks-c-programming-guide"></a>\<remarks> (C# プログラミング ガイド)
 

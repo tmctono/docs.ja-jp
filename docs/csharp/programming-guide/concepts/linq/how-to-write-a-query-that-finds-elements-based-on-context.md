@@ -1,13 +1,14 @@
 ---
 title: コンテキストに基づいて要素を検索するクエリを記述する方法 (C#)
+description: コンテキストに基づいて要素を検索するクエリを記述する方法について説明します。 コード例を参照し、追加リソースを確認してください。
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: 3fc131fdeb8dbf8871bfa455bc54eab0eeca7022
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64f09a41c2c1d01b0be8f776461f9be9df9ecb5f
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75348366"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303193"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>コンテキストに基づいて要素を検索するクエリを記述する方法 (C#)
 コンテキストに基づいて要素を選択するクエリの記述が必要になる場合があります。 つまり、前の兄弟要素や次の兄弟要素に基づいてフィルターしたり、 子要素や祖先要素に基づいてフィルターすることが必要になる場合が考えられます。  
@@ -98,7 +99,7 @@ id = 3
 id = 6  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Xml.Linq.XElement.Parse%2A>
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>

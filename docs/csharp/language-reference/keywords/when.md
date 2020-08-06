@@ -7,19 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: 6a61c42ba2d01e84ffae376bf95c99877437be85
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b041ca3a821f45dd63ce3f6bee7a920eb495651
+ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712833"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87426996"
 ---
 # <a name="when-c-reference"></a>when (C# リファレンス)
 
-コンテキスト キーワード `when` は、次の 2 つのコンテキストでフィルター条件を指定するために使用できます。
+コンテキスト キーワード `when` は、次のコンテキストでフィルター条件を指定するために使用できます。
 
 - [try/catch](try-catch.md) または [try/catch/finally](try-catch-finally.md) ブロックの `catch` ステートメント。
 - [switch](switch.md) ステートメントの `case` ラベル。
+- [`switch` 式](../operators/switch-expression.md)。
 
 ## <a name="when-in-a-catch-statement"></a>`catch` ステートメントでの `when`
 
@@ -49,7 +50,7 @@ case (expr) when (when-condition):
 
 [!code-csharp[when-with-case#1](~/samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [switch ステートメント](switch.md)
 - [try/catch ステートメント](try-catch.md)

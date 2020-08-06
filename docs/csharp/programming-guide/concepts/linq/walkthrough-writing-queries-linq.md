@@ -1,5 +1,6 @@
 ---
 title: 'チュートリアル: C# でのクエリの作成 (LINQ)'
+description: このチュートリアルでは、LINQ クエリ式で C# 言語機能を使用する方法について説明します。 この記事では、開発環境として Visual Studio を使います。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], walkthroughs
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: f2135c6c3649ba2fc87e3b49770439688a58269b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d49cb725c9ce9a417f78f638795e98a75a086893
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73418051"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302218"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>チュートリアル: C# でのクエリの作成 (LINQ)
 このチュートリアルでは、LINQ クエリ式の記述に使用される C# 言語機能について説明します。  
@@ -26,7 +27,7 @@ ms.locfileid: "73418051"
   
 1. Visual Studio を起動します。  
   
-2. メニュー バーで、 **[ファイル]** 、 **[新規作成]** 、 **[プロジェクト]** の順に選択します。  
+2. メニュー バーで、 **[ファイル]** 、 **[新規作成]** 、 **[プロジェクト]** の順にクリックします。  
   
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
@@ -91,7 +92,7 @@ ms.locfileid: "73418051"
     where student.Scores[0] > 90 && student.Scores[3] < 80  
     ```  
   
-     詳細については、「[where 句](../../../language-reference/keywords/where-clause.md)」を参照してください。  
+     詳しくは、「[where 句](../../../language-reference/keywords/where-clause.md)」をご覧ください。  
   
 ## <a name="modify-the-query"></a>クエリの変更  
   
@@ -115,7 +116,7 @@ ms.locfileid: "73418051"
     Console.WriteLine("{0}, {1} {2}", student.Last, student.First, student.Scores[0]);  
     ```  
   
-     詳細については、「[orderby 句](../../../language-reference/keywords/orderby-clause.md)」を参照してください。  
+     詳しくは、「[orderby 句](../../../language-reference/keywords/orderby-clause.md)」をご覧ください。  
   
 #### <a name="to-group-the-results"></a>結果をグループ化するには  
   
@@ -129,7 +130,7 @@ ms.locfileid: "73418051"
   
 3. アプリケーションを実行し、 **[コンソール]** ウィンドウで結果を表示します。  
   
-     詳細については、「[group 句](../../../language-reference/keywords/group-clause.md)」を参照してください。  
+     詳しくは、「[group 句](../../../language-reference/keywords/group-clause.md)」をご覧ください。  
   
 #### <a name="to-make-the-variables-implicitly-typed"></a>変数を暗黙的に型指定するには  
   
@@ -153,7 +154,7 @@ ms.locfileid: "73418051"
   
      [!code-csharp[csLINQGettingStarted#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#18)]  
   
-     詳細については、「[let 句](../../../language-reference/keywords/let-clause.md)」を参照してください。  
+     詳しくは、「[let 句](../../../language-reference/keywords/let-clause.md)」をご覧ください。  
   
 #### <a name="to-use-method-syntax-in-a-query-expression"></a>クエリ式でメソッド構文を使用するには  
   
@@ -182,7 +183,7 @@ ms.locfileid: "73418051"
   
  [LINQ to Objects (C#)](./linq-to-objects.md)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [統合言語クエリ (LINQ) (C#)](./index.md)
 - [LINQ クエリ式](../../../linq/index.md)

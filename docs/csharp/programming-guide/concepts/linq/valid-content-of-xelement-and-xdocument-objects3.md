@@ -1,13 +1,14 @@
 ---
 title: XElement オブジェクトと XDocument オブジェクトの有効なコンテンツ
+description: コンストラクターやメソッドに渡すことができる有効な引数について説明します。これを使って、要素やドキュメントにコンテンツを追加できます。
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
-ms.openlocfilehash: 1ad5b18e3bbc2143a56f9c8e7b34354761b4e42f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dfafbe76b078db6c22b475770ebadaff38c75ba8
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69590939"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302257"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement オブジェクトと XDocument オブジェクトの有効なコンテンツ
 ここでは、コンストラクターやメソッドに渡すことができる有効な引数について説明します。これらのコンストラクターやメソッドは、コンテンツを要素やドキュメントに追加するためのものです。  
@@ -45,7 +46,7 @@ ms.locfileid: "69590939"
   
 - <xref:System.Xml.Linq.XAttribute>  
   
-- <xref:System.Collections.Generic.IEnumerable%601> を実装するすべての型  
+- <xref:System.Collections.Generic.IEnumerable%601> を実装する任意の型  
   
  オブジェクトが <xref:System.Collections.Generic.IEnumerable%601> を実装している場合、オブジェクト内のコレクションが列挙され、コレクション内のすべての項目が追加されます。 コレクションに <xref:System.Xml.Linq.XNode> オブジェクトまたは <xref:System.Xml.Linq.XAttribute> オブジェクトが含まれている場合、コレクション内の各項目が個別に追加されます。 コレクションにテキスト (またはテキストに変換されるオブジェクト) が含まれている場合、コレクション内のテキストが連結され、1 つのテキスト ノードとして追加されます。  
   
@@ -75,7 +76,7 @@ ms.locfileid: "69590939"
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>コンテンツの追加が可能なコンストラクターと関数  
  次のメソッドを使用すると、<xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XDocument> に子コンテンツを追加できます。  
   
-|方法|[説明]|  
+|メソッド|説明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.%23ctor%2A>|<xref:System.Xml.Linq.XElement> を構築します。|  
 |<xref:System.Xml.Linq.XDocument.%23ctor%2A>|<xref:System.Xml.Linq.XDocument> を構築します。|  
@@ -88,6 +89,6 @@ ms.locfileid: "69590939"
 |<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A>|子ノードを新しいコンテンツに置き換えます。|  
 |<xref:System.Xml.Linq.XNode.ReplaceWith%2A>|ノードを新しいコンテンツに置き換えます。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XML ツリーの作成 (C#)](./linq-to-xml-overview.md)

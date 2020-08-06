@@ -3,12 +3,12 @@ title: .NET 用 Azure ライブラリの認証を理解する
 description: Azure SDK for .NET を利用したさまざまな認証について説明します。
 ms.date: 06/19/2020
 ms.custom: azure-sdk-dotnet
-ms.openlocfilehash: 5ed29d5485dc7f59bcc757c8903116edf6bd5d7d
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 727842b34faa37558220a3035ac5228fae196201
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174874"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301620"
 ---
 # <a name="authenticate-with-the-azure-sdk-for-net"></a>Azure SDK for .NET を使用した認証
 
@@ -63,6 +63,15 @@ var azure = Microsoft.Azure.Management.Fluent.Azure
     .Configure()
     .Authenticate(credentials)
     .WithDefaultSubscription();
+```
+
+JSON 出力からの *subscriptionId* を、明示的に `Azure` オブジェクトに指定することをお勧めします。
+
+```csharp
+var azure = Microsoft.Azure.Management.Fluent.Azure
+    .Configure()
+    .Authenticate(credentials)
+    .WithSubscription(subscriptionId);
 ```
 
 ### <a name="file-based-authentication"></a><a name="mgmt-file"></a>ファイルベースの認証

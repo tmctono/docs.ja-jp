@@ -1,13 +1,14 @@
 ---
 title: XSD を使用して検証する方法 (LINQ to XML) (C#)
+description: XML スキーマ定義言語 (XSD) ファイルを基準として XML ツリーを検証する方法について説明します。 コード例を参照し、追加リソースを確認してください。
 ms.date: 07/20/2015
 ms.assetid: 6a7f83a9-2d74-4c2b-8417-0a8595879516
-ms.openlocfilehash: 29830457b63f36dd401a412364060339344f35cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b4d2137d511efbe20e4d31ad27e4975d5444ec9
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347252"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302634"
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>XSD を使用して検証する方法 (LINQ to XML) (C#)
 <xref:System.Xml.Schema> 名前空間には、XML スキーマ定義言語 (XSD) ファイルに対して XML ツリーを簡単に検証できる拡張メソッドが含まれています。 詳細については、<xref:System.Xml.Schema.Extensions.Validate%2A> メソッドのドキュメントを参照してください。  
@@ -76,11 +77,11 @@ doc2 did not validate
 ```  
   
 ## <a name="example"></a>例  
- 次の例では、「[サンプル XML ファイル: 顧客と注文 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)」の XML ドキュメントが「[サンプル XSD ファイル : 顧客と注文](./sample-xsd-file-customers-and-orders1.md)」のスキーマに従った有効なものであるかどうかを検証します。 次に、ソース XML ドキュメントを変更します。 変更するのは最初の顧客の `CustomerID` 属性です。 変更が完了すると、存在しない顧客を注文が参照するようになります。したがって、この XML ドキュメントは有効ではなくなります。  
+ 次の例では、「[サンプル XML ファイル: 顧客と注文 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)」の XML ドキュメントが「[サンプル XSD ファイル: 顧客と注文](./sample-xsd-file-customers-and-orders1.md)」のスキーマに従った有効なものであるかどうかを検証します。 次に、ソース XML ドキュメントを変更します。 変更するのは最初の顧客の `CustomerID` 属性です。 変更が完了すると、存在しない顧客を注文が参照するようになります。したがって、この XML ドキュメントは有効ではなくなります。  
   
- この例では、「[サンプル XML ファイル: 顧客と注文 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)」の XML ドキュメントを使用します。  
+ この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:顧客と注文 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)」。  
   
- この例では、「[サンプル XSD ファイル: 顧客と注文](./sample-xsd-file-customers-and-orders1.md)」の XSD スキーマを使用します。  
+ この例では、XSD スキーマ、[サンプル XSD ファイル: 顧客と注文](./sample-xsd-file-customers-and-orders1.md)を使用します。  
   
 ```csharp  
 XmlSchemaSet schemas = new XmlSchemaSet();  
@@ -120,7 +121,7 @@ The key sequence 'AAAAA' in Keyref fails to refer to some key.
 custOrdDoc did not validate  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Xml.Schema.Extensions.Validate%2A>
 - [XML ツリーの作成 (C#)](creating-xml-trees-linq-to-xml-2.md)

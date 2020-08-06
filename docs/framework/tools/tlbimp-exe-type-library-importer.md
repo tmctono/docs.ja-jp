@@ -1,5 +1,6 @@
 ---
 title: Tlbimp.exe (タイプ ライブラリ インポーター)
+description: Tlbimp.exe (タイプ ライブラリ インポーター) を使用します。 このツールによって、COM タイプ ライブラリ内の型定義を、CLR アセンブリで等価な定義に変換できます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - type libraries [.NET Framework], importing
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - type libraries
 - converting type definitions
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
-ms.openlocfilehash: d942378888b06049022188c75456f438d4b187e3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1e50336e6c159ae56b393098868e4b8f5310b49
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180243"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87516997"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (タイプ ライブラリ インポーター)
 タイプ ライブラリ インポーターは、COM タイプ ライブラリにある型定義を共通言語ランタイム アセンブリで等価な定義に変換します。 Tlbimp.exe の出力は、元のタイプ ライブラリで定義された型のランタイム メタデータを格納するバイナリ ファイル (アセンブリ) です。 このファイルは [ildasm.exe](ildasm-exe-il-disassembler.md) などのツールでチェックできます。  

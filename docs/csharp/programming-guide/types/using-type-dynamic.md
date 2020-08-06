@@ -1,16 +1,17 @@
 ---
 title: dynamic 型の使用 - C# プログラミング ガイド
+description: dynamic 型の使用方法について説明します。 dynamic 型は静的な型ですが、動的オブジェクトでは静的な型チェックがバイパスされます。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: 24d48605e560038d70f1818611f339a94ecc2bba
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 9904f0452feca388704067b1fd5432f74d0df86b
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241969"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381581"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>dynamic 型の使用 (C# プログラミング ガイド)
 

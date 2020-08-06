@@ -1,13 +1,14 @@
 ---
 title: 段落とそのスタイルの取得 (C#)
+description: 段落を取得した後、各段落のスタイルを識別するクエリを記述する方法について説明します。
 ms.date: 07/20/2015
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
-ms.openlocfilehash: 47127b6f1d6bfaa0d8d93333882a0d0b59f1bae6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 94d01a13485f70bc9d9cef55b5f390c3b30d7f14
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168298"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303401"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>段落とそのスタイルの取得 (C#)
 この例では、WordprocessingML ドキュメントから段落ノードを取得するクエリを記述します。 それぞれの段落のスタイルも特定します。  
@@ -132,6 +133,6 @@ StyleName:Code
 ## <a name="next-steps"></a>次の手順  
  次のトピック (「[段落のテキストの取得 (C#)](./retrieving-the-text-of-the-paragraphs.md)」) では、段落のテキストを取得するクエリを記述します。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)](./shape-of-wordprocessingml-documents.md)

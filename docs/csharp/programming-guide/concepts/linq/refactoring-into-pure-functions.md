@@ -1,13 +1,14 @@
 ---
 title: 純粋関数へのリファクタリング (C#)
+description: 純粋関数を使用してコードをリファクターする方法について説明します。 コード例を参照し、使用可能なその他のリソースを確認してください。
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 4cf91ff078bd1c4582daa05475a91c4a4ecaba3e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cc5dd26923e2edaed34c8f1b742b3dfa1e935e68
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253107"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300229"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>純粋関数へのリファクタリング (C#)
 
@@ -24,7 +25,7 @@ ms.locfileid: "70253107"
   
  関数型プログラミングに移行するには、既存のコードをリファクターして不要な副作用や外部依存関係を排除するのが 1 つの方法です。 この方法で、既存のコードの純粋関数バージョンを作成できます。  
   
- このトピックでは、純粋関数の特徴とそれ以外の関数の特徴について説明します。 「[チュートリアル:WordprocessingML ドキュメント内のコンテンツの操作 (C#)](./shape-of-wordprocessingml-documents.md)」チュートリアルでは、WordprocessingML ドキュメントの操作方法を説明し、純粋関数を使用してリファクターする方法を示す 2 つの例を紹介しています。  
+ このトピックでは、純粋関数の特徴とそれ以外の関数の特徴について説明します。 「[チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)](./shape-of-wordprocessingml-documents.md)」チュートリアルでは、WordprocessingML ドキュメントの操作方法を説明し、純粋関数を使用してリファクターする方法を示す 2 つの例を紹介しています。  
   
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>副作用と外部依存関係の排除  
  次の例に示す 2 つの非純粋関数と 1 つの純粋関数を参照して、その違いを確認してください。  

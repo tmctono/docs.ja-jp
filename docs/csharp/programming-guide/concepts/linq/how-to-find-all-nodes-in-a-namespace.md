@@ -1,13 +1,14 @@
 ---
 title: 名前空間内のすべてのノードを検索する方法 (C#)
+description: 各要素または各属性の名前空間をフィルター処理して、その名前空間内にあるすべてのノードを検索する方法について説明します。
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: 408f4207798720428d0dd3821d33fd3edf2f897e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf739480c6b4e2c53d5c430d47ff833e8995f6a4
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141189"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303310"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>名前空間内のすべてのノードを検索する方法 (C#)
 各要素または各属性の名前空間をフィルター処理することで、特定の名前空間内にあるすべてのノードを検索できます。  
@@ -46,7 +47,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>例  
  次のクエリでアクセスする XML ファイルには、2 つの異なる名前空間内にある購買発注書が含まれています。 このクエリは、いずれかの名前空間内にある要素だけを含む新しいツリーを作成します。  
   
- この例では、「[サンプル XML ファイル : 統合購買発注書](./sample-xml-file-consolidated-purchase-orders.md)」の XML ドキュメントを使用します。  
+ この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:統合購買発注書](./sample-xml-file-consolidated-purchase-orders.md)」。  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  

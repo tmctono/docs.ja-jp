@@ -1,16 +1,17 @@
 ---
 title: 汎用デリゲート - C# プログラミング ガイド
+description: C# で汎用デリゲートを使用する方法について説明します。 コード例を参照し、使用可能なその他のリソースを確認してください。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], delegates
 - delegates [C#], generic
 ms.assetid: bdea509c-44c1-4309-aaa9-15c7aee009df
-ms.openlocfilehash: 4e57256328fc81a485670b47fcf8fd1c38e26fac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d99271ca9f12e95743d633caac16aaa4151e9c41
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712222"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301906"
 ---
 # <a name="generic-delegates-c-programming-guide"></a>汎用デリゲート (C# プログラミング ガイド)
 [デリゲート](../../language-reference/builtin-types/reference-types.md)はその独自の型パラメーターを定義できます。 ジェネリック デリゲートを参照するコードは、次の例に示すように、ジェネリック クラスをインスタンス化したり、ジェネリック メソッドを呼び出したりするときのように、型引数を指定し、構築されたクローズ型を作成できます。  
@@ -33,10 +34,10 @@ ms.locfileid: "75712222"
   
  [!code-csharp[csProgGuideGenerics#40](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#40)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Collections.Generic>
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [ジェネリックの概要](./index.md)
 - [ジェネリック メソッド](./generic-methods.md)
 - [ジェネリック クラス](./generic-classes.md)

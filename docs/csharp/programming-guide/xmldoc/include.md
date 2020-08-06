@@ -1,5 +1,6 @@
 ---
 title: <include> - C# プログラミング ガイド
+description: XML タグについて説明 <include> します。 このタグを使用すると、ソース コード内の型とメンバーを記述する別のファイル内のコメントを参照することができます。
 ms.date: 07/20/2015
 f1_keywords:
 - include
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: bf41019c775fed25afe4bdb9453a8e52f44856b5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 15a99444d464594cc91a7c8805c564c703c3b608
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287351"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381906"
 ---
 # <a name="include-c-programming-guide"></a>\<include> (C# プログラミング ガイド)
 
@@ -75,7 +76,7 @@ The summary for this other type.
 
 ## <a name="program-output"></a>プログラムの出力
 
-Test および Test2 クラスをコンパイルするときにコマンド ライン `-doc:DocFileName.xml.` を使うと、以下の出力が生成されます。Visual Studio では、プロジェクト デザイナーの [ビルド] ウィンドウで、XML ドキュメント コメントのオプションを指定します。 C# コンパイラが `<include>` タグを認識すると、現在のソース ファイルではなく *xml_include_tag.doc* でドキュメントのコメントを検索します。 コンパイラは次に、*DocFileName.xml* を生成します。これは、最終的なドキュメントを生成するために、[DocFX](https://dotnet.github.io/docfx/) や [Sandcastle](https://github.com/EWSoftware/SHFB) などのドキュメント ツールによって利用されるファイルです。  
+Test および Test2 クラスをコンパイルするときにコマンド ライン `-doc:DocFileName.xml.` を使うと、以下の出力が生成されます。Visual Studio では、プロジェクト デザイナーの [ビルド] ウィンドウで、XML ドキュメント コメントのオプションを指定します。 C# コンパイラが `<include>` タグを認識すると、現在のソース ファイルではなく *xml_include_tag.doc* でドキュメントのコメントを検索します。 次に、コンパイラによって *DocFileName.xml* が生成されます。これは、最終的なドキュメントを生成するために、[Sandcastle](https://github.com/EWSoftware/SHFB) などのドキュメント ツールによって使用されるファイルです。  
   
 ```xml
 <?xml version="1.0"?>

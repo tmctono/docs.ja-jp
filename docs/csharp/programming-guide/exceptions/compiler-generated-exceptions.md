@@ -1,15 +1,16 @@
 ---
 title: コンパイラにより生成された例外 - C# プログラミング ガイド
+description: コンパイラにより生成された例外について説明します。 自動的にスローされる例外とそのエラー条件の一覧を確認します。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], compiler-generated
 ms.assetid: 53b52f97-b366-4ed7-b05b-9eb78096b7f9
-ms.openlocfilehash: 1d2d561df3e496893657b050fa93b44c56542d97
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 1def83f72e83976ac672ec35169b4950a20ef54e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240734"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302062"
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a>コンパイラにより生成された例外 (C# プログラミング ガイド)
 

@@ -1,5 +1,6 @@
 ---
 title: Resgen.exe (リソース ファイル ジェネレーター)
+description: Resgen.exe (リソース ファイル ジェネレーター) を使用します。 テキスト (.txt、.restext) および XML リソース形式 (.resx) ファイルを、埋め込み可能な CLR ランタイム バイナリ (.resources) に変換します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - resource files, .resources files
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - binary resources files
 - embedding files in runtime binary executable
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
-ms.openlocfilehash: b9be030689ecf78b3482743e486e32012e9ca5d4
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: f51ee6c8537abafc82017f3cc29d734e939a254f
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201112"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517231"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (リソース ファイル ジェネレーター)
 リソース ファイル ジェネレーター (Resgen.exe) は、テキスト (.txt または .restext) ファイルおよび XML ベースのリソース形式 (.resx) ファイルを共通言語ランタイムのバイナリ (.resources) ファイルに変換します。この .resources ファイルは、ランタイム バイナリ実行可能ファイルまたはサテライト アセンブリに埋め込むことができます。 「[リソース ファイルの作成](../resources/creating-resource-files-for-desktop-apps.md)」をご覧ください。  
@@ -109,7 +110,7 @@ resgen filename.extension [outputDirectory]
 |テキスト (.txt または .restext) ファイル|--|問題なし|サポートなし|問題なし|  
 |.resx ファイル|変換は、ファイルに文字列以外のリソース (ファイル リンクを含む) が含まれている場合は失敗します|--|サポートなし|問題なし|  
 |.resources ファイル|変換は、ファイルに文字列以外のリソース (ファイル リンクを含む) が含まれている場合は失敗します|問題なし|サポートなし|--|  
-|.exe または .dll アセンブリ|サポートなし|サポートなし|文字列リソース (パス名を含む) だけがリソースとして認識されます。|サポートなし|  
+|.exe または .dll アセンブリ|サポートされていません|サポートなし|文字列リソース (パス名を含む) だけがリソースとして認識されます。|サポートなし|  
   
 ## <a name="performing-specific-resgenexe-tasks"></a>特定の Resgen.exe タスクの実行  
  さまざまな方法で Resgen.exe を使用できます。テキストベースまたは XML ベースのリソース ファイルをバイナリ ファイルにコンパイルすることや、リソース ファイル形式を別のリソース ファイル形式に変換することや、<xref:System.Resources.ResourceManager> 機能をラップしてリソースへのアクセスを提供するクラスを生成することができます。 このセクションには、各タスクに関する詳細な情報があります。  

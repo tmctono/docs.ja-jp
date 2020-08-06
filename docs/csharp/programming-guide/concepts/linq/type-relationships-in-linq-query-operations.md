@@ -1,5 +1,6 @@
 ---
 title: LINQ クエリ操作での型の関係 (C#)
+description: LINQ クエリの変数の型が相互に関連するしくみについて説明します。 LINQ クエリ操作は、データ ソース、クエリ、および実行において厳密に型指定されます。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inferring type information [LINQ in C#]
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: 41853e6858fae9e8d449aeed95a6a84f343d5874
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 20f0b37a156e3b3f9c63f14cb83d678d26f685ee
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635614"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302283"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>LINQ クエリ操作での型の関係 (C#)
 クエリを効果的に記述するには、クエリ操作全体における変数の型の相互関係を理解する必要があります。 これらの関係を理解しておくと、このドキュメント内の LINQ のサンプルやコード例を理解しやすくなります。 また、`var` を使用して変数を暗黙的に型指定した場合に、背後でどのような処理が行われるかを理解することもできます。  

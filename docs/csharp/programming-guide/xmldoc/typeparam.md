@@ -1,5 +1,6 @@
 ---
 title: <typeparam> - C# プログラミング ガイド
+description: XML タグについて説明 <typeparam> します。 このタグは、型パラメーターを説明するために、ジェネリック型またはメソッドの宣言のコメントで使用します。
 ms.date: 07/20/2015
 f1_keywords:
 - typeparam
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: 867ecacf58f95533395ded203a8f17bc92558ccf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e5333e384e8c77b500f74ab7c6038146df6e2c0
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76793364"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380788"
 ---
 # <a name="typeparam-c-programming-guide"></a>\<typeparam> (C# プログラミング ガイド)
 
@@ -32,7 +33,7 @@ ms.locfileid: "76793364"
 
   型パラメーターの説明。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 `<typeparam>` タグは、型パラメーターを説明するためにジェネリック型またはメソッドの宣言のコメントで使用する必要があります。 ジェネリック型またはメソッドの型パラメーターごとにタグを追加します。
 
@@ -46,7 +47,7 @@ ms.locfileid: "76793364"
 
 [!code-csharp[csProgGuideDocComments#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#13)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../../language-reference/index.md)
 - [C# プログラミング ガイド](../index.md)

@@ -3,12 +3,12 @@ title: 'チュートリアル: 最初のアナライザーとコード修正を�
 description: このチュートリアルでは、.NET Compiler SDK (Roslyn API) を使用してアナライザーとコード修正を作成する手順を詳しく説明します。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: c70fcacc6cb30969e5c69ffd0954ac52e637a915
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: e79907f364939462b7d0d5814c4752be23bcfdf3
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100939"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381594"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>チュートリアル: 最初のアナライザーとコード修正を作成する
 
@@ -504,7 +504,7 @@ else if (variableType.IsReferenceType && constantValue.Value != null)
 }
 ```
 
-var' キーワードを正しい型名に置き換えるには、コード修正プロバイダーに少しコードを追加する必要があります。 **CodeFixProvider.cs** に戻ります。 追加するコードで、次の手順が実行されます。
+`var` キーワードを正しい型名に置き換えるには、コード修正プロバイダーに少しコードを追加する必要があります。 **CodeFixProvider.cs** に戻ります。 追加するコードで、次の手順が実行されます。
 
 - 宣言が `var` 宣言かどうかを検査し、その場合は次の処理を実行します。
 - 推定型の新しい型を作成します。
@@ -522,12 +522,12 @@ var' キーワードを正しい型名に置き換えるには、コード修正
 using Microsoft.CodeAnalysis.Simplification;
 ```
 
-テストを実行します。テストはすべて合格するはずです。 完成したアナライザーを実行してみてください。 <kbd>Ctrl + F5</kbd> キーを押して Roslyn Preview 拡張機能が読み込まれた Visual Studio の 2 つ目のインスタンスでアナライザー プロジェクトを実行します。
+テストを実行します。テストはすべて合格するはずです。 完成したアナライザーを実行してみてください。 <kbd>Ctrl</kbd> + <kbd>F5</kbd> キーを押して、Roslyn Preview 拡張機能が読み込まれた Visual Studio の 2 つ目のインスタンスでアナライザー プロジェクトを実行します。
 
 - 2 つ目の Visual Studio インスタンスで、新しい C# コンソール アプリケーション プロジェクトを作成し、`int x = "abc";` を Main メソッドに追加します。 最初のバグ修正のおかげで、このローカル変数宣言について警告は報告されません (ただし、想定どおりコンパイラ エラーが発生します)。
 - 次に、Main メソッドに `object s = "abc";` を追加します。 2 つ目のバグ修正のおかげで、警告は報告されません。
 - 最後に、`var` キーワードを使用する別のローカル変数を追加します。 警告が報告され、左側の下部に推奨が表示されます。
-- 波線にエディターのカレットを移動し、<kbd>Ctrl +</kbd> キーを押します。 推奨されたコード修正が表示されます。 コード修正を選択して、var' キーワードが正しく処理されていることを確認します。
+- 波線にエディターのカレットを移動し、<kbd>Ctrl</kbd> + <kbd>.</kbd> キーを押します。 推奨されたコード修正が表示されます。 コード修正を選択して、`var` キーワードが正しく処理されていることを確認します。
 
 最後に、次のコードを追加します。
 

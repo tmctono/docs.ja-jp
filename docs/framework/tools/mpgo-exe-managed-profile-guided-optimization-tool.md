@@ -1,5 +1,6 @@
 ---
 title: Mpgo.exe (マネージド プロファイル ガイド付き最適化ツール)
+description: Mpgo.exe (マネージド プロファイル ガイド付き最適化ツール) を使用します。 このツールを使用して、ネイティブ イメージ ジェネレーター (Ngen.exe) によって作成されたネイティブ イメージ アセンブリを最適化できます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Mpgo.exe
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-ms.openlocfilehash: 0052475697dae2c3ad891db18d300b5ec08a7e62
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 18a379447e1d5ba97090eca299c59cc161c7be71
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180349"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517283"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (マネージド プロファイル ガイド付き最適化ツール)
 
@@ -49,8 +50,8 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 |------------------------|-----------------|
 |`-Scenario` \<*command*><br /><br /> または<br /><br /> `-Scenario` \<*packageName*><br /><br /> \- または -<br /><br /> `-Import` \<*directory*>|デスクトップ アプリでは、コマンド ライン引数も含めて、最適化するアプリケーションを実行するためのコマンド指定のために `–Scenario` を使用します。 スペースを含むパスを指定する場合は、*command* を 3 組の二重引用符で囲みます (例: `mpgo.exe -scenario """C:\My App\myapp.exe""" -assemblylist """C:\My App\myapp.exe""" -outdir "C:\optimized files"`)。 二重引用符は使用しません。*command* にスペースが含まれる場合に、正しく機能しません。<br /><br /> \- または -<br /><br /> Windows 8.x Store アプリでは、プロファイル情報を生成するパッケージを指定するために `–Scenario` を使用します。 完全なパッケージ名ではなく、パッケージの表示名またはファミリ名を指定した場合、Mpgo.exe では単一の一致のみが存在するときに指定の名前に一致するパッケージが選択されます。 指定の名前に複数のパッケージが一致する場合、Mpgo.exe ではパッケージを選択するように求めるプロンプトが表示されます。<br /><br /> または<br /><br /> `-Import` でアセンブリを最適化するために、以前に最適化されたアセンブリからの最適化データを使用する旨を指定するには `-AssemblyList` を使用します。 *directory* では、以前に最適化されたファイルを含めるディレクトリを指定します。 `–AssemblyList` または `–AssemblyListFile` で指定するアセンブリは、インポートされたファイルのデータを使用して最適化されるアセンブリの新しいバージョンです。 古いバージョンのアセンブリからの最適化データを使用することによって、シナリオを再実行しなくてもアセンブリの新しいバージョンを最適化できます。  ただし、インポートしたターゲット アセンブリのコードが大きく異なる場合は、最適化データは非効率的になります。 `–AssemblyList` または `–AssemblyListFile` で指定するアセンブリ名は、`–Import`*directory* によって指定するディレクトリに存在する必要があります。 スペースを含むパスを指定する場合は、*directory* を 3 組の二重引用符で囲みます。<br /><br /> `–Scenario` または `–Import` のいずれかを指定する必要がありますが、両方のパラメーターを指定する必要はありません。|
 |`-OutDir` \<*directory*>|最適化されたアセンブリを配置するディレクトリ。 出力ディレクトリ フォルダーにアセンブリが既に存在する場合、新しいコピーが作成され、その名前にインデックス番号が付加されます (例: *assemblyname*-1.exe)。 スペースを含むパスを指定する場合は、*directory* を二重引用符で囲みます。|
-|`-AssemblyList` \<*assembly1 assembly2 ...* ><br /><br /> または<br /><br /> `-AssemblyListFile` \<*file*>|プロファイル情報を収集するスペースで区切った (.exe ファイルおよび .dll ファイルを含む) アセンブリのリスト。 `C:\Dir\*.dll` または `*.dll` を指定して、指定した作業ディレクトリまたは現在の作業ディレクトリのアセンブリをすべて選択できます。 詳細については、次の「解説」を参照してください。<br /><br /> または<br /><br /> 行ごとに 1 つのアセンブリを記述した、プロファイル情報を収集するアセンブリのリストを含むテキスト ファイル。 アセンブリ名の先頭がハイフン (-) である場合は、アセンブリ ファイル リストを使用するか、またはアセンブリ名を変更します。|
-|`-AppID` \<*appId*>|指定したパッケージのアプリケーション ID。 ワイルドカード (\*) を使用した場合、Mpgo.exe はパッケージ内の AppID の列挙を試み、失敗した場合は \<*package_family_name*>!App にフォール バックします。 感嘆符 (!) のプレフィックスを付けた文字列を指定した場合、Mpgo.exe ではパッケージ ファミリ名と指定した引数が連結されます。|
+|`-AssemblyList` \<*assembly1 assembly2 ...*><br /><br /> または<br /><br /> `-AssemblyListFile` \<*file*>|プロファイル情報を収集するスペースで区切った (.exe ファイルおよび .dll ファイルを含む) アセンブリのリスト。 `C:\Dir\*.dll` または `*.dll` を指定して、指定した作業ディレクトリまたは現在の作業ディレクトリのアセンブリをすべて選択できます。 詳細については、次の「解説」を参照してください。<br /><br /> または<br /><br /> 行ごとに 1 つのアセンブリを記述した、プロファイル情報を収集するアセンブリのリストを含むテキスト ファイル。 アセンブリ名の先頭がハイフン (-) である場合は、アセンブリ ファイル リストを使用するか、またはアセンブリ名を変更します。|
+|`-AppID` \<*appId*>|指定したパッケージのアプリケーション ID。 ワイルドカード (\*) を使用する場合、Mpgo.exe によってパッケージ内の AppID の列挙が試行され、失敗した場合は \<*package_family_name*>!App にフォール バックされます。 感嘆符 (!) のプレフィックスを付けた文字列を指定した場合、Mpgo.exe ではパッケージ ファミリ名と指定した引数が連結されます。|
 |`-Timeout` \<*seconds*>|Windows 8.x Store アプリが終了するまでに実行を許可される時間。|
 
 |省略可能なパラメーター|説明|

@@ -1,13 +1,14 @@
 ---
 title: XML ファイルからオブジェクト データを読み取る方法 (C#)
+description: この C# の例では、XmlSerializer クラスを使用して、以前に XML ファイルに書き込まれたオブジェクト データを読み込みます。
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: e2365d1260d3f6e239f294b2af3399c2fb659575
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 525a93812279756b3802d43d85bb5e61d8f7415e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241878"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302790"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>XML ファイルからオブジェクト データを読み取る方法 (C#)
 次の例では、<xref:System.Xml.Serialization.XmlSerializer> クラスを使用して、XML ファイルに以前に書き込まれたオブジェクト データを読み込みます。  

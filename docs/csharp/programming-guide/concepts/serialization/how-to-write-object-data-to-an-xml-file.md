@@ -1,13 +1,14 @@
 ---
 title: XML ファイルにオブジェクト データを書き込む方法 (C#)
+description: この C# の例では、XmlSerializer クラスを使用して、クラスから XML ファイルにオブジェクトを書き込みます。 コードをコンパイルする方法について説明します。
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: 6f18ae194d2ed70f633665a29772622319ea9493
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: c88a85f8bc65a195f404dab6aa39675bac7e4f84
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241995"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303128"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>XML ファイルにオブジェクト データを書き込む方法 (C#)
 <xref:System.Xml.Serialization.XmlSerializer> クラスを使用して、クラスから XML ファイルにオブジェクトを書き込む例を次に示します。  

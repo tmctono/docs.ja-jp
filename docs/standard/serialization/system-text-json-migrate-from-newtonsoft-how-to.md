@@ -11,14 +11,14 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 78a47b01cc8fba4cb45a686adad901784552c1c1
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: fbd3c8062892f106ec17d0fef86d5ad7f1207d20
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865334"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303479"
 ---
-# <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Newtonsoft.Json から System.Text.Json に移行する方法
+# <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>Newtonsoft.Json から System.Text.Json に移行する方法
 
 この記事では、[Newtonsoft.Json](https://www.newtonsoft.com/json) から <xref:System.Text.Json> に移行する方法を示します。
 
@@ -34,7 +34,7 @@ ms.locfileid: "86865334"
 
 この記事のほとんどの内容は、<xref:System.Text.Json.JsonSerializer> API の使用方法に関するものですが、<xref:System.Text.Json.JsonDocument> (ドキュメント オブジェクト モデル: DOM を表します)、<xref:System.Text.Json.Utf8JsonReader>、<xref:System.Text.Json.Utf8JsonWriter> の型の使用方法に関するガイダンスも含まれています。
 
-## <a name="table-of-differences-between-newtonsoftjson-and-systemtextjson"></a>Newtonsoft.Json と System.Text.Json の相違点の表
+## <a name="table-of-differences-between-no-locnewtonsoftjson-and-no-locsystemtextjson"></a>Newtonsoft.Json と System.Text.Json の相違点の表
 
 次の表は、`Newtonsoft.Json` の機能と、それと同等の `System.Text.Json` の機能を一覧にしたものです。 同等機能は次のカテゴリに分けられます。
 
@@ -83,7 +83,7 @@ ms.locfileid: "86865334"
 
 これは `Newtonsoft.Json` 機能の包括的なリストではありません。 この一覧には、[GitHub の問題](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)または [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) の投稿でリクエストされたシナリオの多くが含まれています。 ここに一覧表示されたシナリオのうち、現在サンプル コードがないシナリオの 1 つに回避策を実装する場合、およびご自分の解決策を共有する場合は、このページの下部にある **[フィードバック]** セクションで **[このページ]** を選択してください。 これにより、問題がこのドキュメントの GitHub リポジトリに作成され、このページの **[フィードバック]** セクションにも記載されます。
 
-## <a name="differences-in-default-jsonserializer-behavior-compared-to-newtonsoftjson"></a>Newtonsoft.Json と比較した既定の JsonSerializer の動作の相違点
+## <a name="differences-in-default-jsonserializer-behavior-compared-to-no-locnewtonsoftjson"></a>Newtonsoft.Json と比較した既定の JsonSerializer の動作の相違点
 
 既定では <xref:System.Text.Json> は厳格であり、確定的な動作を重視して、呼び出し元のために推測や解釈は行われません。 このライブラリは、パフォーマンスとセキュリティを確保するために意図的にこのように設計されています。 `Newtonsoft.Json` は既定で柔軟性を持っています。 設計上のこの基本的な違いが、既定の動作における次のような固有の相違点の多くで、その背景にあります。
 
@@ -402,12 +402,14 @@ JSON に `Date` プロパティがない場合に逆シリアル化が失敗す�
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastCallbacksConverter.cs)]
 
-このカスタム コンバーターを登録するには、[クラスで属性を使用](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type)するか、<xref:System.Text.Json.JsonSerializerOptions.Converters> コレクションに[コンバーター を追加](system-text-json-converters-how-to.md#registration-sample---converters-collection)します。
+このカスタム コンバーターを登録するには、<xref:System.Text.Json.JsonSerializerOptions.Converters> コレクションに[コンバーターを追加](system-text-json-converters-how-to.md#registration-sample---converters-collection)します。
 
 上記のサンプルに従ったカスタム コンバーターを使用すると、次のようになります。
 
 * `OnDeserializing` コードでは、新しい POCO インスタンスにアクセスできません。 逆シリアル化の開始時に新しい POCO インスタンスを操作するには、そのコードを POCO コンストラクターに挿入します。
-* オプション オブジェクトでコンバーターを登録し、`Serialize` または `Deserialize` を再帰的に呼び出すときにオプション オブジェクトで渡さないようにして、無限ループを回避します。 詳細については、この記事の前半に記載されている「[必須プロパティ](#required-properties)」セクションを参照してください。
+* オプション オブジェクトでコンバーターを登録し、`Serialize` または `Deserialize` を再帰的に呼び出すときにオプション オブジェクトで渡さないようにして、無限ループを回避します。
+
+`Serialize` または `Deserialize` を再帰的に呼び出すカスタム コンバーターの詳細については、この記事の前半にある「[必須プロパティ](#required-properties)」セクションをご覧ください。
 
 ### <a name="public-and-non-public-fields"></a>パブリックおよび非パブリック フィールド
 

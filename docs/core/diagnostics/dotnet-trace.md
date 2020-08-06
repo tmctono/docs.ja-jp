@@ -2,12 +2,12 @@
 title: dotnet-trace ツール - .NET Core
 description: dotnet-trace コマンドライン ツールのインストールおよび使用。
 ms.date: 11/21/2019
-ms.openlocfilehash: 6dd968dc49522229dca02c0dc6f3de898026dd82
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 25178a0e59ce9edb69d15ee761c1b9e56aa5eb3a
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924852"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517309"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace パフォーマンス分析ユーティリティ
 
@@ -38,13 +38,13 @@ dotnet-trace [-h, --help] [--version] <command>
 
 ## <a name="options"></a>オプション
 
-- **`--version`**
-
-  dotnet-trace ユーティリティのバージョンを表示します。
-
 - **`-h|--help`**
 
   コマンド ライン ヘルプを表示します。
+
+- **`--version`**
+
+  dotnet-trace ユーティリティのバージョンを表示します。
 
 ## <a name="commands"></a>コマンド
 
@@ -62,23 +62,45 @@ dotnet-trace [-h, --help] [--version] <command>
 ### <a name="synopsis"></a>構文
 
 ```console
-dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--output]
-    [--providers] [--profile <profile-name>] [--format]
+dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--clrevents <clrevents>]
+    [--format <Chromium|NetTrace|Speedscope>] [-h|--help]
+    [-n, --name <name>]  [-o|--output <trace-file-path>] [-p|--process-id <pid>]
+    [--profile <profile-name>] [--providers <list-of-comma-separated-providers>]
 ```
 
 ### <a name="options"></a>オプション
-
-- **`-p|--process-id <PID>`**
-
-  トレースを収集するプロセス。
 
 - **`--buffersize <size>`**
 
   メモリ内の循環バッファーのサイズをメガバイトに設定します。 既定は 256 MB です。
 
+- **`--clreventlevel <clreventlevel>`**
+
+  生成される CLR イベントの詳細度。
+
+- **`--clrevents <clrevents>`**
+
+  生成する CLR ランタイム イベントの一覧。
+
+- **`--format {Chromium|NetTrace|Speedscope}`**
+
+  トレース ファイルの出力の変換形式を設定します。 既定値は、`NetTrace` です。
+
+- **`-n, --name <name>`**
+
+  トレースを収集するプロセスの名前。
+
 - **`-o|--output <trace-file-path>`**
 
-  収集されたトレース データの出力パス。 指定しない場合の既定は、`trace.nettrace` です。
+  収集されたトレース データの出力パス。 指定しない場合の既定値は `trace.nettrace` です。
+
+- **`-p|--process-id <PID>`**
+
+  トレースを収集するプロセス ID。
+
+- **`--profile <profile-name>`**
+
+  共通のトレース シナリオを簡潔に指定できるようにする、事前定義されたプロバイダーの名前付き構成のセット。
 
 - **`--providers <list-of-comma-separated-providers>`**
 
@@ -90,14 +112,6 @@ dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--o
   - `Provider` は、`KnownProviderName[:Flags[:Level][:KeyValueArgs]]` という形式です。
   - `KeyValueArgs` は、`[key1=value1][;key2=value2]` という形式です。
 
-- **`--profile <profile-name>`**
-
-  共通のトレース シナリオを簡潔に指定できるようにする、事前定義されたプロバイダーの名前付き構成のセット。
-
-- **`--format {NetTrace|Speedscope}`**
-
-  トレース ファイルの出力の変換形式を設定します。 既定値は、`NetTrace` です。
-
 ## <a name="dotnet-trace-convert"></a>dotnet-trace convert
 
 `nettrace` トレースを、別のトレース分析ツールで使用するために、別の形式に変換します。
@@ -105,7 +119,7 @@ dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--o
 ### <a name="synopsis"></a>構文
 
 ```console
-dotnet-trace convert [<input-filename>] [-h|--help] [--format] [-o|--output]
+dotnet-trace convert [<input-filename>] [--format <Chromium|NetTrace|Speedscope>] [-h|--help] [-o|--output <output-filename>]
 ```
 
 ### <a name="arguments"></a>引数
@@ -116,7 +130,7 @@ dotnet-trace convert [<input-filename>] [-h|--help] [--format] [-o|--output]
 
 ### <a name="options"></a>オプション
 
-- **`--format <NetTrace|Speedscope>`**
+- **`--format <Chromium|NetTrace|Speedscope>`**
 
   トレース ファイルの出力の変換形式を設定します。
 
@@ -126,7 +140,7 @@ dotnet-trace convert [<input-filename>] [-h|--help] [--format] [-o|--output]
 
 ## <a name="dotnet-trace-ps"></a>dotnet-trace ps
 
-接続できる dotnet プロセスの一覧を示します。
+ トレースを収集できる dotnet プロセスを一覧表示します。
 
 ### <a name="synopsis"></a>構文
 

@@ -1,5 +1,6 @@
 ---
 title: テキスト ファイルに書き込む方法 - C# プログラミング ガイド
+description: C# でテキスト ファイルを記述する方法について説明します。 いくつかのコード例を参照し、使用可能なその他のリソースを確認してください。
 ms.date: 07/20/2015
 f1_keywords:
 - TextWriter.WriteLine
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - files [C#], text files
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
-ms.openlocfilehash: ac16fb971eae5654a55e2f1753d78a6458f03315
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4108163121d56268b810121ca3ae2b2c1338aeab
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712248"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301646"
 ---
 # <a name="how-to-write-to-a-text-file-c-programming-guide"></a>テキスト ファイルに書き込む方法 (C# プログラミング ガイド)
 テキストをファイルに書き込むさまざまな方法を次の例に示します。 最初の 2 つの例では、<xref:System.IO.File?displayProperty=nameWithType> クラスの便利な静的メソッドを使用して、すべての `IEnumerable<string>` の各要素と文字列をテキスト ファイルに記述しています。 例 3 は、ファイルに書き込むときに各行を個別に処理する必要がある場合にテキストをファイルに追加する方法を示します。 例 1 ～ 3 ではすべての既存の内容が上書きされます。例 4 に、既存のファイルにテキストを追加する方法を示します。  
@@ -32,8 +33,8 @@ ms.locfileid: "75712248"
   
 - ディスクがいっぱいになっている。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [ファイル システムとレジストリ (C# プログラミング ガイド)](./index.md)
 - [サンプル: コレクションをアプリケーション ストレージに保存する](https://code.msdn.microsoft.com/CSWinStoreAppSaveCollection-bed5d6e6)

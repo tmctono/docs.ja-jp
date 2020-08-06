@@ -1,16 +1,17 @@
 ---
 title: XML ドキュメント機能を使用する方法 - C# プログラミング ガイド
+description: XML ドキュメント機能を使用する方法について説明します。 コード例を参照し、使用可能なその他のリソースを確認してください。
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: b7c5a8a895271f067505496c0d13f98b66a393d9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9ad2cfe62c70174eec9020ad4c8ce11608aca36d
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287364"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380671"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>XML ドキュメント機能を使用する方法
 

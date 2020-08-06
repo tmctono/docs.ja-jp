@@ -1,16 +1,17 @@
 ---
 title: COM クラスの例 - C# プログラミング ガイド
+description: C# でクラスを COM オブジェクトとして公開する方法について説明します。 この例では、.cs ファイル内のコードをプロジェクトに追加し、[COM の相互運用機能に登録] プロパティを設定します。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-ms.openlocfilehash: 6051ff91d13a3cb3ca6229d813db34dd6a9f3af6
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 4ea66ba26595c5bae2e579d1cc85c4b0d58616df
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241852"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303037"
 ---
 # <a name="example-com-class-c-programming-guide"></a>COM クラスの例 (C# プログラミング ガイド)
 ここでは、COM オブジェクトとして公開されるクラスの例を紹介します。 このコードを .cs ファイルに保存して、プロジェクトに追加したあと、 **[COM の相互運用機能に登録]** プロパティを **[True]** に設定します。 詳細については、[コンポーネントを COM 相互運用機能に登録する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100))」をご覧ください。

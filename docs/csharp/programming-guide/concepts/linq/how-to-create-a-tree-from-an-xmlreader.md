@@ -1,19 +1,20 @@
 ---
 title: XmlReader からツリーを作成する方法 (C#)
+description: XmlReader から直接 XML ツリーを作成する方法について説明します。 T:System.Xml.XmlReader オブジェクトを作成する方法を示す例をご覧ください。
 ms.date: 07/20/2015
 ms.assetid: 60951c9c-7087-406c-b5bb-c60e58609b21
-ms.openlocfilehash: 9ead6352112d9e1b56bd70699c90133e432f96b3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3801177e664d142652d38748d44eaf3f274239dd
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169273"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302660"
 ---
 # <a name="how-to-create-a-tree-from-an-xmlreader-c"></a>XmlReader からツリーを作成する方法 (C#)
 このトピックでは、<xref:System.Xml.XmlReader> から直接 XML ツリーを作成する方法について説明します。 <xref:System.Xml.Linq.XElement> から <xref:System.Xml.XmlReader> を作成するには、<xref:System.Xml.XmlReader> を要素ノードに配置する必要があります。 <xref:System.Xml.XmlReader> はコメントや処理命令をスキップしますが、<xref:System.Xml.XmlReader> がテキスト ノードに配置されている場合はエラーがスローされます。 このようなエラーを回避するため、<xref:System.Xml.XmlReader> から XML ツリーを作成する前に、必ず <xref:System.Xml.XmlReader> を要素に配置してください。  
   
 ## <a name="example"></a>例  
- この例では、「[サンプル XML ファイル: 書籍 (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md)」の XML ドキュメントを使用します。  
+ この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:書籍 (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md)」。  
   
  次のコードでは、`T:System.Xml.XmlReader` オブジェクトを作成し、最初の要素ノードが見つかるまでノードを読み取ります。 次に <xref:System.Xml.Linq.XElement> オブジェクトを読み込みます。  
   
@@ -51,6 +52,6 @@ Console.WriteLine(e);
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XML の解析 (C#)](how-to-parse-a-string.md)

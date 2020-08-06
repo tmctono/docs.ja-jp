@@ -1,13 +1,13 @@
 ---
 title: 基本クラス ライブラリの破壊的変更
 description: Core .NET ライブラリにおける破壊的変更の一覧を示します。
-ms.date: 09/20/2019
-ms.openlocfilehash: 64510809a1cf69ea0e4c4816eb2df54233e8eceb
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.date: 07/27/2020
+ms.openlocfilehash: 558aa1d76831cd15e2028c17d2b0b2e82f64ef9a
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281307"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517329"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Core .NET ライブラリの破壊的変更
 
@@ -17,6 +17,9 @@ Core .NET ライブラリでは、.NET Core で使用されるプリミティブ
 
 | 互換性に影響する変更点 | 導入されたバージョン |
 | - | :-: |
+| [BinaryFormatter シリアル化メソッドが古い形式になり、ASP.NET アプリでは使用不可に](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps) | 5.0 |
+| [UTF-7 コード パスが古い形式に](#utf-7-code-paths-are-obsolete) | 5.0 |
+| [Vector\<T> で、サポートされない型に対して常に NotSupportedException がスローされる](#vectort-always-throws-notsupportedexception-for-unsupported-types) | 5.0 |
 | [既定の ActivityIdFormat は W3C](#default-activityidformat-is-w3c) | 5.0 |
 | [Vector2.Lerp と Vector4.Lerp の動作の変更](#behavior-change-for-vector2lerp-and-vector4lerp) | 5.0 |
 | [SSE および SSE2 の CompareGreaterThan メソッドで NaN 入力が正しく処理されるようになった](#sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs) | 5.0 |
@@ -30,7 +33,6 @@ Core .NET ライブラリでは、.NET Core で使用されるプリミティブ
 | [Unicode のガイドラインに従って不適切な形式の UTF-8 バイト シーケンスを置き換える](#replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines) | 3.0 |
 | [TypeDescriptionProviderAttribute を別のアセンブリに移動](#typedescriptionproviderattribute-moved-to-another-assembly) | 3.0 |
 | [ZipArchiveEntry による、エントリ サイズに一貫性のないアーカイブ処理の中止](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | 3.0 |
-| [JSON シリアライザーの例外の種類を JsonException から NotSupportedException に変更](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception) | 3.0 |
 | [Utf8JsonWriter での (string)null のセマンティクスの変更](#change-in-semantics-of-stringnull-in-utf8jsonwriter) | 3.0 |
 | [JsonEncodedText.Encode メソッドに JavaScriptEncoder 引数を追加](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument) | 3.0 |
 | [JsonFactoryConverter.CreateConverter 署名の変更](#jsonfactoryconvertercreateconverter-signature-changed) | 3.0 |
@@ -45,6 +47,18 @@ Core .NET ライブラリでは、.NET Core で使用されるプリミティブ
 | [開始されなかったプロセスについて Process.StartInfo が InvalidOperationException をスローする](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [binaryformatter-serialization-obsolete](../../../includes/core-changes/corefx/5.0/binaryformatter-serialization-obsolete.md)]
+
+***
+
+[!INCLUDE [utf-7-code-paths-obsolete](../../../includes/core-changes/corefx/5.0/utf-7-code-paths-obsolete.md)]
+
+***
+
+[!INCLUDE [vectort-throws-notsupportedexception](../../../includes/core-changes/corefx/5.0/vectort-throws-notsupportedexception.md)]
+
+***
 
 [!INCLUDE [default-activityidformat-changed](../../../includes/core-changes/corefx/5.0/default-activityidformat-changed.md)]
 
@@ -97,10 +111,6 @@ Core .NET ライブラリでは、.NET Core で使用されるプリミティブ
 ***
 
 [!INCLUDE[ZipArchiveEntry no longer handles archives with inconsistent entry sizes](~/includes/core-changes/corefx/3.0/ziparchiveentry-and-inconsistent-entry-sizes.md)]
-
-***
-
-[!INCLUDE[JSON serializer exception type changed from JsonException to NotSupportedException](~/includes/core-changes/corefx/3.0/serializer-throws-notsupportedexception.md)]
 
 ***
 

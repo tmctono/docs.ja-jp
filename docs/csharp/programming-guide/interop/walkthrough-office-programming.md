@@ -1,5 +1,6 @@
 ---
 title: 'チュートリアル: Office のプログラミング (C# および Visual Basic)'
+description: Microsoft Office のプログラミングを改善する、Visual Studio に用意された C# および Visual Basic の機能について説明します。
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -9,22 +10,22 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 6c27442cb5c0c4172f503c945849e47560c2b33d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf4725f3f636bb208450cb9b5c58766d84947f86
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635354"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302946"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>チュートリアル: Office のプログラミング (C# および Visual Basic)
 
 Visual Studio には、Microsoft Office のプログラミングを改善する C# および Visual Basic の新機能が導入されています。 便利な C# の機能には、名前付き引数、省略可能な引数、型 `dynamic` の戻り値があります。 COM プログラミングでは、`ref` キーワードを省略し、インデックス付きプロパティにアクセスできます。 Visual Basic の機能には、自動実装プロパティ、ラムダ式内のステートメント、コレクション初期化子などがあります。
 
-両方の言語で、ユーザーのコンピューターにプライマリ相互運用機能アセンブリ (PIA) を配置せずに COM コンポーネントとやり取りするアセンブリを配置できる型情報を埋め込むことができます。 詳細については、「[チュートリアル: マネージド アセンブリからの型の埋め込み](../../../standard/assembly/embed-types-visual-studio.md)」を参照してください。
+両方の言語で、ユーザーのコンピューターにプライマリ相互運用機能アセンブリ (PIA) を配置せずに COM コンポーネントとやり取りするアセンブリを配置できる型情報を埋め込むことができます。 詳細については、「[チュートリアル:マネージド アセンブリからの型の埋め込み](../../../standard/assembly/embed-types-visual-studio.md)」をご覧ください。
 
 このチュートリアルでは、Office プログラミングのコンテキストで機能を示しますが、これらの機能の多くは一般的なプログラミングにも便利です。 このチュートリアルでは、Excel ブックを作成する Excel アドイン アプリケーションを使用します。 次に、ブックへのリンクを含む Word 文書を作成します。 最後に、PIA 依存関係の有効/無効を切り替える方法を確認します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 このチュートリアルを実行するには、Microsoft Office Excel と Microsoft Office Word をコンピューターにインストールしておく必要があります。
 
@@ -38,7 +39,7 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
 
 3. **[インストールされたテンプレート]** ペインで、 **[Visual Basic]** または **[Visual C#]** を展開し、 **[Office]** を展開して、Office 製品のバージョン年度をクリックします。
 
-4. **[テンプレート]** ペインで、 **[Excel]\< バージョン、[アドイン]** の順にクリックします。
+4. **[テンプレート]** ペインで、 **[Excel \<version> アドイン]** をクリックします。
 
 5. **[テンプレート]** ペインの上部で、 **[ターゲット フレームワーク]** ボックスに **[.NET Framework 4]** またはそれ以降のバージョンが表示されていることを確認します。
 
@@ -124,7 +125,7 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
 
 ### <a name="to-invoke-displayinexcel"></a>DisplayInExcel を起動するには
 
-1. `ThisAddIn_StartUp` メソッドの末尾に、次のコードを追加します。 `DisplayInExcel` に対する呼び出しには、2 つの引数が含まれています。 最初の引数は、処理する口座の一覧の名前です。 2 番目の引数は、データの処理方法を定義する複数行のラムダ式です。 各口座の `ID` 値と `balance` 値が隣接するセルに表示され、残高が 0 より少ない場合、行が赤で表示されます。 詳しくは、「[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)」をご覧ください。
+1. `ThisAddIn_StartUp` メソッドの末尾に、次のコードを追加します。 `DisplayInExcel` に対する呼び出しには、2 つの引数が含まれています。 最初の引数は、処理する口座の一覧の名前です。 2 番目の引数は、データの処理方法を定義する複数行のラムダ式です。 各口座の `ID` 値と `balance` 値が隣接するセルに表示され、残高が 0 より少ない場合、行が赤で表示されます。 詳細については、「[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)」を参照してください。
 
      [!code-csharp[csOfficeWalkthrough#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#9)]
 
@@ -154,13 +155,13 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
 
 1. もう一度アプリケーションを実行しますが、 **[ソリューションのクリーン]** はクリックしません。
 
-2. **[開始]** を選択します。 **Microsoft Visual Studio \<バージョン>** を見つけ、開発者コマンド プロンプトを開きます。
+2. **[開始]** を選択します。 **Microsoft Visual Studio \<version>** を見つけ、開発者コマンド プロンプトを開きます。
 
 3. [Developer Command Prompt for Visual Studio]\(Visual Studio 用開発者コマンド プロンプト\) ウィンドウに「`ildasm`」と入力し、Enter キーを押します。 [IL DASM] ウィンドウが表示されます。
 
-4. [IL DASM] ウィンドウの **[ファイル]** メニューで **[ファイル]**  >  **[開く]** をクリックします。 **[Visual Studio \<バージョン>]** をダブルクリックし、 **[プロジェクト]** をダブルクリックします。 プロジェクトのフォルダーを開き、bin/Debug フォルダーで*プロジェクト名*.dll を見つけます。 *プロジェクト名*.dll をダブルクリックします。 新しいウィンドウに、他のモジュールおよびアセンブリへの参照に加えて、プロジェクトの属性が表示されます。 名前空間 `Microsoft.Office.Interop.Excel` と `Microsoft.Office.Interop.Word` はアセンブリに含まれています。 Visual Studio の既定では、コンパイラは、参照 PIA からアセンブリに必要な型をインポートします。
+4. [IL DASM] ウィンドウの **[ファイル]** メニューで **[ファイル]**  >  **[開く]** をクリックします。 **Visual Studio \<version>** をダブルクリックしてから、 **[プロジェクト]** をダブルクリックします。 プロジェクトのフォルダーを開き、bin/Debug フォルダーで*プロジェクト名*.dll を見つけます。 *プロジェクト名*.dll をダブルクリックします。 新しいウィンドウに、他のモジュールおよびアセンブリへの参照に加えて、プロジェクトの属性が表示されます。 名前空間 `Microsoft.Office.Interop.Excel` と `Microsoft.Office.Interop.Word` はアセンブリに含まれています。 Visual Studio の既定では、コンパイラは、参照 PIA からアセンブリに必要な型をインポートします。
 
-     詳細については、「[方法 : アセンブリの内容を表示する](../../../standard/assembly/view-contents.md)」を参照してください。
+     詳細については、「[方法:アセンブリの内容を表示する](../../../standard/assembly/view-contents.md)」を参照してください。
 
 5. **MANIFEST** アイコンをダブルクリックします。 プロジェクトによって参照される項目を含んでいるアセンブリの一覧を含むウィンドウが表示されます。 `Microsoft.Office.Interop.Excel` および `Microsoft.Office.Interop.Word` は一覧に含まれていません。 プロジェクトに必要な型がアセンブリにインポートされているため、PIA への参照は必要ありません。 これにより、配置が容易になります。 PIA がユーザーのコンピューター上に存在している必要がなく、アプリケーションに特定のバージョンの PIA を配置する必要がないので、すべてのバージョンに必要な API が存在している場合は、複数のバージョンの Office を使用するようにアプリケーションを設計できます。
 
@@ -189,7 +190,7 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
 
 8. Visual Studio で、 **[ビルド]** メニューの **[ソリューションのクリーン]** をクリックして、完成したプロジェクトをクリーンアップします。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [自動実装プロパティ (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
 - [自動実装するプロパティ (C#)](../classes-and-structs/auto-implemented-properties.md)
@@ -204,7 +205,7 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
 - [ラムダ式 (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [ラムダ式 (C#)](../statements-expressions-operators/lambda-expressions.md)
 - [COM 相互運用機能を使用したプログラミングでインデックス付きプロパティを使用する方法](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
-- [チュートリアル: Microsoft Office アセンブリからの型情報の埋め込み (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
+- [チュートリアル: Visual Studio で Microsoft Office アセンブリからの型情報を埋め込む ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
 - [チュートリアル: マネージド アセンブリからの型の埋め込み](../../../standard/assembly/embed-types-visual-studio.md)
 - [チュートリアル: 初めての Excel 用 VSTO アドインの作成](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)

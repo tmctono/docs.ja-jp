@@ -1,15 +1,16 @@
 ---
 title: CLS 準拠でない例外をキャッチする方法
+description: CLS に準拠していない例外をキャッチする方法について説明します。 コード例を参照し、使用可能なその他のリソースを確認します。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], non-CLS
 ms.assetid: db4630b3-5240-471a-b3a7-c7ff6ab31e8d
-ms.openlocfilehash: 635cf0a9142f56dea4b2722fbf3f3eda505d85ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 255de4cab9a72491eb3b9624d968539d432e0442
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75346276"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302010"
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>CLS 準拠でない例外をキャッチする方法
 C++/CLI をはじめとする一部の .NET 言語では、<xref:System.Exception> から派生していない例外をオブジェクトでスローすることができます。 このような例外は "*CLS 準拠でない例外*" や "*非例外*" と呼ばれています。 C# では、CLS 準拠でない例外をスローすることはできませんが、それらをキャッチすることはできます。次の 2 とおりの方法があります。  
@@ -49,7 +50,7 @@ catch (RuntimeWrappedException e)
 }
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.CompilerServices.RuntimeWrappedException>
 - [例外と例外処理](./index.md)

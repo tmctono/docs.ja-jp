@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 49041ce906ab0bb8b9482b79c44302465c4ca788
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 74c3d3247912dcd638a9379d54e682967c5e400b
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702316"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302714"
 ---
 ### <a name="globalization-apis-use-icu-libraries-on-windows"></a>グローバリゼーション API では Windows 上の ICU ライブラリが使用される
 
@@ -27,7 +27,7 @@ ms.locfileid: "83702316"
 
 #### <a name="recommended-action"></a>推奨アクション
 
-開発者側では、何も行う必要はありません。 ただし、NLS グローバリゼーション API を引き続き使いたい場合は、[ランタイム スイッチ](../../../../docs/core/run-time-config/globalization.md#nls)を設定して、その動作に戻すことができます。
+開発者側では、何も行う必要はありません。 ただし、NLS グローバリゼーション API を引き続き使いたい場合は、[ランタイム スイッチ](../../../../docs/core/run-time-config/globalization.md#nls)を設定して、その動作に戻すことができます。 使用可能なスイッチの詳細については、「[.NET グローバリゼーションと ICU](/dotnet/standard/globalization-localization/globalization-icu)」の記事をご覧ください。
 
 #### <a name="category"></a>カテゴリ
 
@@ -43,7 +43,7 @@ ms.locfileid: "83702316"
 
 #### Affected APIs
 
-- `T:System.Span%601`
+- ``T:System.Span`1``
 - `T:System.String`
 - `N:System.Globalization`
 

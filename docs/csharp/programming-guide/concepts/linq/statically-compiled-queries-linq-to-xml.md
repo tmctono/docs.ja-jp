@@ -1,13 +1,14 @@
 ---
 title: 静的にコンパイルされたクエリ (LINQ to XML) (C#)
+description: C# での LINQ to XML の静的にコンパイルされたクエリについて、また実行時に解釈する必要がある XPath クエリとの違いについて説明します。
 ms.date: 07/20/2015
 ms.assetid: 3bf558fe-0705-479d-86d4-00188f5fcf9c
-ms.openlocfilehash: 98725cece1006ba13afb64bb8ae17ae6e62c53cf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd2e6a6507311d5fc17215a22c70bd0449292b6f
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253031"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302309"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-c"></a>静的にコンパイルされたクエリ (LINQ to XML) (C#)
 <xref:System.Xml.XmlDocument> に対し、LINQ to XML で最も重要なパフォーマンスの利点の 1 つは、XPath のクエリは実行時に解釈する必要がある一方で LINQ to XML のクエリは静的にコンパイルされるという点です。 この機能は LINQ to XML に組み込まれているので、追加の手順を実行することなく利用できますが、その違いを理解しておくと、この 2 つの技術のどちらかを選ぶときに役立ちます。 このトピックでは、相違点について説明します。  

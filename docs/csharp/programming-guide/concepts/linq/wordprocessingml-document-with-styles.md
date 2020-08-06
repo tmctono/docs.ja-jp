@@ -1,13 +1,14 @@
 ---
-title: スタイルを含む WordprocessingML ドキュメント3
+title: スタイルを含む WordprocessingML ドキュメント
+description: この WordprocessingML ドキュメントの例には、スタイルを使用して書式設定された段落が含まれています。 スタイルに関連するドキュメント パーツについて説明します。
 ms.date: 07/20/2015
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
-ms.openlocfilehash: 10697744680276a40fb7a175e4c04920c9e3c243
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b799c1bee95d7d638e6a3210b4876ff036e088eb
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167869"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302205"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>スタイルを含む WordprocessingML ドキュメント
 複雑な WordprocessingML ドキュメントには、スタイルを使用して書式設定された段落が含まれています。  
@@ -17,11 +18,11 @@ ms.locfileid: "79167869"
  パッケージにアクセスする場合、任意のパスを使用してではなく、パーツ間のリレーションシップを通じてアクセスすることが重要です。 この問題は「WordprocessingML ドキュメント内のコンテンツの操作」のチュートリアルでは扱いませんが、このチュートリアルに用意されているプログラム例では正しい方法を示しています。  
   
 ## <a name="a-document-that-uses-styles"></a>スタイルを使用するドキュメント  
- 「[WordprocessingML ドキュメントの構造 (C#)](./shape-of-wordprocessingml-documents.md)」のトピックに示されている WordML の例は、とても簡単な例です。 次のドキュメントはより複雑で、スタイルを使用して書式設定された段落を含んでいます。 Office Open XML ドキュメントを構成する XML を確認するには、「[Office Open XML ドキュメント パーツを出力する例 (C#)](./example-that-outputs-office-open-xml-document-parts.md)」を実行するのが最も簡単です。  
+ 「[WordprocessingML ドキュメントの構造 (C#)](./shape-of-wordprocessingml-documents.md)」のトピックに示されている WordML の例は、とても簡単な例です。 次のドキュメントはもっと複雑になっています。段落がスタイルで書式設定されています。 Office Open XML ドキュメントを構成する XML を確認するには、「[Office Open XML ドキュメント パーツを出力する例 (C#)](./example-that-outputs-office-open-xml-document-parts.md)」を実行するのが最も簡単です。  
   
  次のドキュメントでは、最初の段落にスタイル `Heading1` が設定されています。 既定のスタイルが設定されている段落が多数あります。 スタイル `Code` が設定されている段落も多数あります。 このドキュメントは比較的複雑であるため、LINQ to XML を使用した解析を行うのに適したドキュメントといえます。  
   
- 既定以外のスタイルが設定されている段落では、段落要素に `w:pPr` という名前の子要素があり、この子要素には `w:pStyle` という子要素があります。 `w:val` 要素には、スタイル名を格納する {2} という属性があります。 段落に既定のスタイルが設定されている場合は、段落要素に `w:p.Pr` 子要素はありません。  
+ 既定以外のスタイルが設定されている段落では、段落要素に `w:pPr` という名前の子要素があり、この子要素には `w:pStyle` という子要素があります。 `w:val` 要素には、スタイル名を格納する  という属性があります。 段落に既定のスタイルが設定されている場合は、段落要素に `w:p.Pr` 子要素はありません。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

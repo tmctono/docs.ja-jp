@@ -1,5 +1,6 @@
 ---
 title: Regasm.exe (アセンブリ登録ツール)
+description: Regasm.exe (アセンブリ登録ツール) を使用します。 アセンブリ メタデータを読み取り、必要なエントリをレジストリに追加します。これにより、COM クライアントによる .NET クラスの作成が許可されます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Assembly Registration tool
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-ms.openlocfilehash: 5eeed43f3d60bd5e443226a16963557546d81e7c
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: a3af6a0fbc7c9c695e18448da285977f04fd72ef
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635414"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517257"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (アセンブリ登録ツール)
 
@@ -30,7 +31,7 @@ regasm assemblyFile [options]
 
 ## <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |---------------|-----------------|
 |*assemblyFile*|COM に登録するアセンブリ。|
 

@@ -1,13 +1,14 @@
 ---
 title: 2 つのロケーション パスの和集合を検索する方法 (XPath-LINQ to XML) (C#)
+description: XPath 式を使用して、2 つの XPath ロケーション パスの和集合を検索する方法について説明します。 サンプル XML ファイルを使用するコード例を確認します。
 ms.date: 07/20/2015
 ms.assetid: 069622d3-2b58-4919-8903-710a564c0788
-ms.openlocfilehash: 17a3310f367cb68b3b80b1a3f30af40428f6d2c7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 65b20fe25a0990fd82ce3bd08c3433499e728512
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141212"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303323"
 ---
 # <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>2 つのロケーション パスの和集合を検索する方法 (XPath-LINQ to XML) (C#)
 XPath を使用すると、2 つの XPath ロケーション パスの結果の和集合を検索できます。  
@@ -21,7 +22,7 @@ XPath を使用すると、2 つの XPath ロケーション パスの結果の�
 ## <a name="example"></a>例  
  この例では、`Category` 要素と `Price` 要素をすべて検索し、それらを 1 つのコレクションに連結します。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリで <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> を呼び出して、結果を並べ替えていることに注意してください。 XPath 式の評価結果もドキュメント順になります。  
   
- この例では、「[サンプル XML ファイル: 数値データ (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md)」の XML ドキュメントを使用します。  
+ この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:数値データ (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md)」。  
   
 ```csharp  
 XDocument data = XDocument.Load("Data.xml");  

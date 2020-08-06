@@ -1,13 +1,14 @@
 ---
 title: XML の読み込み時または解析時の空白の維持
+description: XML の読み込み時または解析時の空白の動作を制御する方法について説明します。具体的には、XML ツリーを設定するメソッドの動作です。
 ms.date: 07/20/2015
 ms.assetid: f3ff58c4-55aa-4fcd-b933-e3a2ee6e706c
-ms.openlocfilehash: d015c21813df2224356bb49212fe282fa5372d03
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3c044937d38f9f89ebc114af3eddbf5116c392ad
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69591543"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302842"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>XML の読み込み時または解析時の空白の維持
 このトピックでは、空白に対する [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の動作を制御する方法について説明します。  

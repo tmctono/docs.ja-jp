@@ -1,5 +1,6 @@
 ---
 title: Regsvcs.exe (.NET サービス インストール ツール)
+description: Regsvcs.exe (.NET サービス インストール ツール) を使用します。 アセンブリの読み込みと登録、プログラムによってクラスに追加したサービスの構成などを行います。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Regsvcs.exe
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - type libraries
 - registering assemblies
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
-ms.openlocfilehash: aecd2f6894558b45898c7f22dd333617d9e2e327
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6d0090eda764113407e35a3bcec139f1c7cfb050
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180361"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517244"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET サービス インストール ツール)
 .NET サービス インストール ツールは、次のアクションを実行します。  

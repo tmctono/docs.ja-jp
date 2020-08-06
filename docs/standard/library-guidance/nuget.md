@@ -2,12 +2,12 @@
 title: NuGet および .NET ライブラリ
 description: .NET ライブラリ対応の NuGet によるパッケージ化のベスト プラクティスの推奨事項
 ms.date: 01/15/2019
-ms.openlocfilehash: f1e8d39fe2988f11ce7fd351a4d6bee6d322f2b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d9f8d7cc4402a87e1429791b57a0306b318dfbe4
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398533"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87382114"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -44,7 +44,7 @@ NuGet パッケージの依存関係については、「[Dependencies](./depend
 
 NuGet パッケージは、多数の[メタデータ プロパティ](/nuget/reference/nuspec)をサポートしています。 次の表に、NuGet.org 上のすべてのパッケージで指定する必要があるコア メタデータを示します。
 
-| MSBuild プロパティの名前              | Nuspec の名前              | [説明]  |
+| MSBuild プロパティの名前              | Nuspec の名前              | 説明  |
 | ---------------------------------- | ------------------------ | ------------ |
 | `PackageId`                        | `id`                       | パッケージ ID。 [条件](/nuget/reference/id-prefix-reservation)を満たしている場合、ID のプレフィックスは予約できます。 |
 | `PackageVersion`                   | `version`                  | NuGet パッケージ バージョン。 詳細については、「[NuGet package version](./versioning.md#nuget-package-version)」(NuGet package version パッケージ バージョン) をご覧ください。             |
@@ -52,7 +52,7 @@ NuGet パッケージは、多数の[メタデータ プロパティ](/nuget/ref
 | `Description`                      | `description`              | UI に表示されるパッケージの長い説明。             |
 | `Authors`                          | `authors`                  | パッケージ作成者のコンマで区切りの一覧。nuget.org のプロファイル名と一致します。             |
 | `PackageTags`                      | `tags`                     | パッケージを説明するタグとキーワードのスペース区切りの一覧。 タグは、パッケージを検索するときに使用されます。             |
-| `PackageIconUrl`                   | `iconUrl`                  | パッケージのアイコンとして使用するイメージの URL。 URL は HTTPS にする必要があり、イメージは 64 x 64 で透明な背景になっている必要があります。             |
+| `PackageIcon`                   | `icon`                  | パッケージ アイコンとして使用するパッケージ内の画像へのパス。 `icon` メタデータの詳細については、[こちら](/nuget/reference/nuspec#icon)をご覧ください。 |
 | `PackageProjectUrl`                | `projectUrl`               | プロジェクトのホーム ページまたはソース リポジトリの URL。             |
 | `PackageLicenseExpression`         | `license`                  | プロジェクト ライセンスの [SPDX 識別子](https://spdx.org/licenses/)。 OSI と FSF によって承認されたライセンスのみが識別子を使用できます。 その他のライセンスでは、`PackageLicenseFile` を使用する必要があります。 `license` メタデータの詳細については、[こちら](/nuget/reference/nuspec#license)をご覧ください。 |
 

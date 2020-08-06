@@ -1,5 +1,6 @@
 ---
 title: Office 相互運用オブジェクトにアクセスする方法 - C# プログラミング ガイド
+description: Office API オブジェクトへのアクセスを簡略化する C# 機能について説明します。 新機能を使用して、Excel ワークシートを作成および表示するコードを記述します。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - optional parameters [C#], Office programming
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: b5d2da011ec6318c8b07f1eb4d383a4d56488239
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bc4b5755bf56a013a0deb4efdb821df18db5a18e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75700836"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303024"
 ---
 # <a name="how-to-access-office-interop-objects-c-programming-guide"></a>Office 相互運用オブジェクトにアクセスする方法 (C# プログラミング ガイド)
 
@@ -36,7 +37,7 @@ C# には、Office API オブジェクトへのアクセスを容易にする機
 
 4. **[新しいプロジェクト]** ダイアログ ボックスの上部で、 **.NET Framework 4** (またはそれ以降のバージョン) がターゲット フレームワークとして選択されていることを確認します。
 
-5. **[テンプレート]** ペインの **[コンソール アプリケーション]** をクリックします。
+5. **[テンプレート]** ウィンドウで **[コンソール アプリケーション]** をクリックします。
 
 6. **[名前]** フィールドに、プロジェクトの名前を入力します。
 

@@ -1,16 +1,17 @@
 ---
 title: 純粋関数によるリファクタリング (C#)
+description: 純粋関数を使用してコードをリファクターする方法について説明します。 コード例を参照し、使用可能なその他のリソースを確認してください。
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: f264a0028ed265a5a4fbe1dc32f430c648724c20
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3f0084d9de27f3f215cc3ba527ada93f7a3d61a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253078"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300112"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>純粋関数によるリファクタリング (C#)
-次の例では、前の例 (「[拡張メソッドを使用したリファクタリング (C#)](./refactoring-using-an-extension-method.md)」) をリファクタリングして、純粋関数を使用するようにします。この例では、段落のテキストを検索するコードが純粋静的メソッド `ParagraphText` に移動されています。  
+次の例では、前の例 ([拡張メソッドを使用したリファクタリング (C#)](./refactoring-using-an-extension-method.md)) を、純粋関数を使用するようにリファクターします。 この例では、段落のテキストを検索するコードが、純粋な静的メソッド `ParagraphText` に移動されます。  
   
 ## <a name="example"></a>例  
  この例では、WordprocessingML ドキュメントを処理して、WordprocessingML ドキュメントから段落ノードを取得します。 それぞれの段落のスタイルも特定します。 この例は、このチュートリアルのこれまでの例に基づいています。 リファクタリングされたコードについては、以下のコード内にあるコメントで説明が示されています。  
@@ -179,7 +180,7 @@ StyleName:Code >Hello World<
   
 - [異なる構造の XML の射影 (C#)](./projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)](./shape-of-wordprocessingml-documents.md)
 - [拡張メソッドを使用したリファクタリング (C#)](./refactoring-using-an-extension-method.md)

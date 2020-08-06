@@ -2,12 +2,12 @@
 title: .NET Core の csproj 形式に追加されたもの
 description: 既存の csproj ファイルと .NET Core の csproj ファイルの違いについて説明します
 ms.date: 04/08/2019
-ms.openlocfilehash: ea57b66d9a2e5cb69fe82e9a4bcf68625af546fd
-ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
+ms.openlocfilehash: a0cbead27e52af3114d9c44fd19c966e665a2850
+ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87251206"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87427009"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core の csproj 形式に追加されたもの
 
@@ -342,9 +342,9 @@ SPDX 識別子が割り当てられていないライセンス、またはカス
 
 パッケージに適用されるライセンスの URL。 ("_Visual Studio 15.9.4、.NET SDK 2.1.502 および 2.2.101 以降では非推奨_")
 
-### <a name="packageiconurl"></a>PackageIconUrl
+### <a name="packageicon"></a>PackageIcon
 
-UI 画面のパッケージのアイコンとして使用する背景が透明な 64x64 の画像の URL。
+パッケージ アイコンとして使用するパッケージ内の画像へのパス。 `icon` メタデータの詳細については、[こちら](/nuget/reference/nuspec#icon)をご覧ください。 PackageIcon が優先され、[PackageIconUrl は非推奨とされます](/nuget/reference/msbuild-targets#packageiconurl)。
 
 ### <a name="packagereleasenotes"></a>PackageReleaseNotes
 

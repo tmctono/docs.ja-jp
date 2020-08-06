@@ -1,15 +1,16 @@
 ---
 title: 派生クラスから基底クラス イベントを発生させる方法 - C# プログラミング ガイド
+description: 派生クラスから基底クラスのイベントを発生させる方法について説明します。 コード例を参照し、使用可能なその他のリソースを確認します。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], in derived classes
 ms.assetid: 2d20556a-0aad-46fc-845e-f85d86ea617a
-ms.openlocfilehash: e2d2dfc2809a4de1756bfc362880eebc79076b94
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: b0b0a16a1fd165e437fc79ccacb20d406f5cff63
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240635"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302101"
 ---
 # <a name="how-to-raise-base-class-events-in-derived-classes-c-programming-guide"></a>派生クラスから基底クラス イベントを発生させる方法 (C# プログラミング ガイド)
 ここでは単純な例を使用し、派生クラスからも発生させることができるように基底クラスでイベントを宣言する標準的な方法について説明します。 このパターンは、.NET クラス ライブラリの Windows フォーム クラスで広く使用されています。  

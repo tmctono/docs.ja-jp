@@ -1,5 +1,6 @@
 ---
 title: Mgmtclassgen.exe (厳密型クラス ジェネレーター)
+description: Mgmtclassgen.exe (厳密型クラス ジェネレーター) について理解します。 このツールを使用すると、WMI クラスに対して、事前バインディングされたマネージド クラスをすばやく生成できます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-ms.openlocfilehash: d6de28694a1fdcd22cc2baa8cff66387c601414c
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 89facd4369dad6168e46febd3e34d7f7c235faf0
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201862"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517296"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (厳密型クラス ジェネレーター)
 厳密型クラス ジェネレーター (Mgmtclassgen.exe) ツールを使用すると、指定した WMI (Windows Management Instrumentation) クラスに対して、事前バインディングされたマネージド クラスをすばやく生成できます。 生成されたクラスを使用すると、WMI クラスのインスタンスにアクセスするために書く必要のあるコードを簡略化できます。  

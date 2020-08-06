@@ -3,12 +3,12 @@ title: .NET Core ツール
 description: .NET Core ツールをインストール、使用、更新、および削除する方法。 グローバル ツール、tool-path ツール、およびローカル ツールについて説明します。
 author: KathleenDollard
 ms.date: 02/12/2020
-ms.openlocfilehash: 583dbb461543d1efb7328d55f6ecce4a99afcaca
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: 75bdedcbc3ebe9c23477795415076d160ab9a642
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226609"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455716"
 ---
 # <a name="how-to-manage-net-core-tools"></a>.NET Core ツールの管理方法
 
@@ -37,11 +37,11 @@ ms.locfileid: "86226609"
 
 現在、.NET Core にはツールの検索機能がありません。 ツールを見つける方法をいくつか紹介します。
 
+* ".NET ツール" パッケージの種類のフィルターを使用して [NuGet](https://www.nuget.org) の Web サイトを検索します。 詳細については、「[パッケージの検索と選択](/nuget/consume-packages/finding-and-choosing-packages)」を参照してください。
 * ツールの一覧については、[natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub リポジトリを参照してください。
 * [ToolGet](https://www.toolget.net/) を使用して .NET ツールを検索します。
 * ASP.NET Core チームが作成したツールのソース コードについては、[dotnet/aspnetcore GitHub リポジトリの Tools ディレクトリ](https://github.com/dotnet/aspnetcore/tree/master/src/Tools)を参照してください。
 * 診断ツールについては、[.NET Core dotnet 診断ツール](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools)に関する記事を参照してください。
-* [NuGet](https://www.nuget.org) Web サイトを検索します。 ただし、NuGet サイトには、ツール パッケージのみを検索できる機能はまだありません。
 
 ## <a name="check-the-author-and-statistics"></a>作成者と統計情報の確認
 

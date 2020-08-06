@@ -1,13 +1,14 @@
 ---
 title: 拡張メソッドを使用したリファクタリング (C#)
+description: 拡張メソッドを使用してコードをリファクターする方法について説明します。 コード例を参照し、使用可能なその他のリソースを確認してください。
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-ms.openlocfilehash: 8546c2cb834107cf2e099af40f9a7df4d5858b4b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e786f0e1514156535fd6a6033e37ed8879e99709
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253092"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381945"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>拡張メソッドを使用したリファクタリング (C#)
 ここに示す例は、前の例「[段落のテキストの取得 (C#)](./retrieving-the-text-of-the-paragraphs.md)」に基づいており、拡張メソッドとして実装される純粋関数を使って文字列の連結をリファクターしています。  
@@ -244,9 +245,9 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>次の手順  
  次の例は、純粋関数を使用してこのコードをリファクターする方法を示しています。  
   
-- [純粋関数によるリファクタリング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [純粋関数によるリファクタリング (C#)](./refactoring-using-a-pure-function.md)
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)](./shape-of-wordprocessingml-documents.md)
 - [純粋関数へのリファクタリング (C#)](./refactoring-into-pure-functions.md)

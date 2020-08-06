@@ -1,5 +1,6 @@
 ---
 title: 文字列を数値に変換する方法 - C# プログラミング ガイド
+description: C# で Parse、TryParse、または Convert クラスのメソッドを呼び出すことによって、文字列を数値に変換する方法について説明します。
 ms.date: 02/11/2019
 helpviewer_keywords:
 - conversions [C#]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: f1d4a0f36292acafad409bf666f861b7637cd644
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 8c46117579a5b787e5d9f3f317296d33bdd1cce1
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442203"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381971"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>文字列を数値に変換する方法 (C# プログラミング ガイド)
 

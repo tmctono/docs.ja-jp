@@ -1,13 +1,14 @@
 ---
 title: XSLT を使用した XML ツリーの変換 (C#)
+description: C# で XSLT を使用して XML ツリーを変換する方法について説明します。それには、XmlReader と XmlWriter のインスタンスで XSLT 変換を呼び出します。
 ms.date: 07/20/2015
 ms.assetid: 373a2699-d4c5-471b-9bda-c1f0ab73b477
-ms.openlocfilehash: 7ebcfbd6be86fdd5e12bfc48a0fe80a084c6f9b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bce92136850aeef52e5b17cd7bc658b85fe70604
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74140914"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302270"
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-c"></a>XSLT を使用した XML ツリーの変換 (C#)
 この例では、XML ツリーを作成し、この XML ツリーから <xref:System.Xml.XmlReader> を作成して、新しいドキュメントを作成します。次に、この新しいドキュメントに書き込むために <xref:System.Xml.XmlWriter> を作成します。 次に、XSLT 変換を呼び出し、変換処理に <xref:System.Xml.XmlReader> および <xref:System.Xml.XmlWriter> を渡すことができます。 変換が正常に完了すると、新しい XML ツリーに変換結果が挿入されます。  
@@ -67,7 +68,7 @@ Console.WriteLine(result);
 </Root>  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>

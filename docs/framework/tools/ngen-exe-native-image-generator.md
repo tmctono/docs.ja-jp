@@ -1,5 +1,6 @@
 ---
 title: Ngen.exe (ネイティブ イメージ ジェネレーター)
+description: Ngen.exe (ネイティブ イメージ ジェネレーター) を確認します。 ネイティブ イメージを作成してローカルのネイティブ イメージ キャッシュにインストールすることで、マネージド アプリケーションのパフォーマンスを向上させます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-ms.openlocfilehash: 297bc3f9182e76523eda4d4be3112f4d1d7e3fee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ae86aed773a9a13f102b1ad111cac5a3ee563508
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75741792"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517270"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (ネイティブ イメージ ジェネレーター)
 
@@ -126,12 +127,12 @@ ngen /? | /help
 
 ## <a name="options"></a>オプション
 
-|オプション|説明|
+|オプション|[説明]|
 |------------|-----------------|
 |`/nologo`|Microsoft 著作権情報を表示しません。|
 |`/silent`|成功メッセージを表示しません。|
 |`/verbose`|デバッグの詳細情報を表示します。 **注:** オペレーティング システムの制限により、Windows 98 と Windows Millennium Edition では追加情報は表示されません。|
-|`/help`、`/?`|現在のリリースのコマンド構文とオプションを表示します。|
+|`/help`, `/?`|現在のリリースのコマンド構文とオプションを表示します。|
 
 ## <a name="remarks"></a>Remarks
 

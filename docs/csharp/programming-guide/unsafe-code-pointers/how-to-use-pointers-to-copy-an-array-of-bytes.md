@@ -1,16 +1,17 @@
 ---
 title: ポインターを使用してバイトの配列をコピーする方法 - C# プログラミング ガイド
+description: ポインターを使用してバイトの配列をコピーする方法について説明します。 コード例と、使用可能なその他のリソースを確認します。
 ms.date: 04/20/2018
 helpviewer_keywords:
 - byte arrays [C#]
 - arrays [C#], byte
 - pointers [C#], to copy bytes
-ms.openlocfilehash: 8c1afc06fb567a923d604ad53dc26f94178a8d60
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 70ab1441d25ea69afb2244bd94bd404a3e32838d
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397416"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381789"
 ---
 # <a name="how-to-use-pointers-to-copy-an-array-of-bytes-c-programming-guide"></a>ポインターを使用してバイトの配列をコピーする方法 (C# プログラミング ガイド)
 
@@ -24,9 +25,9 @@ ms.locfileid: "84397416"
 
 [!code-csharp[Struct with embedded inline array](snippets/FixedKeywordExamples.cs#8)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [アンセーフ コードとポインター](index.md)
 - [-unsafe (C# コンパイラ オプション)](../../language-reference/compiler-options/unsafe-compiler-option.md)
 - [ガベージ コレクション](../../../standard/garbage-collection/index.md)

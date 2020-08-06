@@ -1,13 +1,14 @@
 ---
 title: XDocument のクエリと XElement のクエリ (C#)
+description: XDocument のクエリと XElement のクエリの違いについて説明します。 これらの違いを示すコード例を確認します。
 ms.date: 07/20/2015
 ms.assetid: 46221ff5-62ee-4de8-93ba-66465facb5c1
-ms.openlocfilehash: 475c77934ad535bad9ef79ff58bbddf991dc8f5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0c81768f06148308a639f96f4041e464b24edd33
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253140"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300320"
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>XDocument のクエリと XElement のクエリ (C#)
 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> によってドキュメントを読み込む場合、<xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> によって読み込む場合とは少し異なるクエリを記述する必要があることがわかります。  

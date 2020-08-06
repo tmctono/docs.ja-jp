@@ -1,17 +1,18 @@
 ---
 title: 名前空間内の要素を検索する方法 (XPath-LINQ to XML) (C#)
+description: XPath 式を使用して名前空間内の要素を検索する方法について説明します。 2 つの名前空間を含む XML ツリーを読み取る例をご覧ください。
 ms.date: 07/20/2015
 ms.assetid: cae1c4ac-6cd5-46cf-9b1c-bd85bc9b7ea9
-ms.openlocfilehash: da9d819be5234a2429b6eab276f89bd0d877d4a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3bf15c4183e3ca339fa7090c21baff83526e37d3
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141071"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303232"
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a>名前空間内の要素を検索する方法 (XPath-LINQ to XML) (C#)
 
-XPath 式を使用すると、特定の名前空間内のノードを検索できます。 XPath 式では、名前空間を指定する名前空間プレフィックスを使用します。 名前空間プレフィックスを含む XPath 式を解析するには、<xref:System.Xml.IXmlNamespaceResolver> を実装する XPath メソッドにオブジェクトを渡す必要があります。 この例では、<xref:System.Xml.XmlNamespaceManager> を使用します。
+XPath 式を使用すると、特定の名前空間内のノードを検索できます。 XPath 式では、名前空間を指定する名前空間プレフィックスを使用します。 名前空間プレフィックスを含む XPath 式を解析するには、<xref:System.Xml.IXmlNamespaceResolver> を実装する XPath メソッドにオブジェクトを渡す必要があります。 この例では <xref:System.Xml.XmlNamespaceManager> を使用します。
 
 XPath 式を次に示します。
 

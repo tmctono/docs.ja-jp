@@ -1,16 +1,17 @@
 ---
 title: XML ファイルの処理 - C# プログラミング ガイド
+description: C# プログラミングにおける XML ファイルの処理方法について説明します。 コード例を参照し、使用可能なその他のリソースを確認してください。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 1e3d96f9398f2c08ed715111f01987e2d1948439
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6f8a278ed842cd9c4176f3efff423ee048f7e9b9
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287260"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381542"
 ---
 # <a name="process-the-xml-file-c-programming-guide"></a>XML ファイルの処理 (C# プログラミング ガイド)
 

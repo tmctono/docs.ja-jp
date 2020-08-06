@@ -1,13 +1,14 @@
 ---
 title: XML 宣言付きのシリアル化 (C#)
+description: C# でのシリアル化によって、ファイル、TextWriter、XmlWriter へのシリアル化などの XML 宣言が生成される構成について説明します。
 ms.date: 07/20/2015
 ms.assetid: c237fa4a-a042-40fd-886f-17b54c66bb75
-ms.openlocfilehash: 4533d69f2b0bee68b4adee6e18fe28dde18078ae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e91b61f037d28149f7c2355f4233dc319b54627
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66483482"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302361"
 ---
 # <a name="serializing-with-an-xml-declaration-c"></a>XML 宣言付きのシリアル化 (C#)
 このトピックでは、シリアル化を実行する際に XML 宣言を生成するかどうかを制御する方法について説明します。  
@@ -61,6 +62,6 @@ Console.WriteLine(sb.ToString());
 <Root><Child>child content</Child></Root>  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XML ツリーのシリアル化 (C#)](serializing-to-files-textwriters-and-xmlwriters.md)

@@ -1,5 +1,6 @@
 ---
 title: ボックス化とボックス化解除 - C# プログラミング ガイド
+description: C# プログラミングにおけるボックス化とボックス化解除について説明します。 コード例を参照し、使用可能なその他のリソースを確認してください。
 ms.date: 07/20/2015
 f1_keywords:
 - cs.boxing
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: 62df08bf4ae3580e9b8d5b3aab0697d396674ca1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a5bfcc79de8ba3ff66ca8aab9d86d69d89f9221
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76745411"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380697"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>ボックス化とボックス化解除 (C# プログラミング ガイド)
 
@@ -56,7 +57,7 @@ ms.locfileid: "76745411"
 
 [!code-csharp[csProgGuideTypes#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#19)]
 
-## <a name="description"></a>[説明]
+## <a name="description"></a>説明
 
 ここでは、ボックス化を使用して整数の変数 `i` をオブジェクト `o` に変換する例を示します。 変換後に、変数 `i` の値を `123` から `456` に変更します。 この例は、元の値型とボックス化されたオブジェクトが別個のメモリ位置を使用するため、それぞれ別々の値を格納できることを示しています。
 
@@ -112,7 +113,7 @@ int j = (int) o;
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../index.md)
 - [参照型](../../language-reference/keywords/reference-types.md)

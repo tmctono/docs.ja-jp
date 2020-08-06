@@ -1,5 +1,6 @@
 ---
 title: 名前空間の使用 - C# プログラミング ガイド
+description: C# プログラミングで名前空間を使用する方法について説明します。たとえば、名前空間へのアクセス、名前空間エイリアス、名前空間を使用したスコープの制御などです。
 ms.date: 07/20/2015
 f1_keywords:
 - cs.names
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 71d97f7c1c0c3ece0cdce3de4318d8a9d65baed3
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 86892f50e059c16ee9c133d7ba9f2716e11a8e56
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241930"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381698"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>名前空間の使用 (C# プログラミング ガイド)
 

@@ -1,13 +1,14 @@
 ---
 title: ヘッダー情報にアクセスして XML フラグメントをストリーム出力する方法 (C#)
+description: ヘッダー情報にアクセスして XML フラグメントをストリーム出力する方法について説明します。 ストリーミング手法は、メモリの過剰使用を回避するのに役立ちます。
 ms.date: 07/20/2015
 ms.assetid: 7f242770-b0c7-418d-894b-643215e1f8aa
-ms.openlocfilehash: 5bc10bcadae0e33ee63f953608ca841d44dd6527
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8bfded96ea1fa6b096d56ae0736002b9062d58b6
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712391"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303219"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>ヘッダー情報にアクセスして XML フラグメントをストリーム出力する方法 (C#)
 大きな XML ファイルを任意に読み取り、アプリケーションのメモリ使用量を予想できるようにアプリケーションを作成しなければならない場合があります。 大きな XML ファイルを XML ツリーに設定しようとすると、ファイルのサイズに比例してメモリが過剰に使用されます。 したがって、代わりにストリーミングの手法を使用する必要があります。  

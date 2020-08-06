@@ -1,5 +1,6 @@
 ---
 title: <exception> - C# プログラミング ガイド
+description: XML <exception> タグについて説明します。 このタグによって、スローできる例外を指定できます。これはメソッド、プロパティ、イベント、およびインデクサーに適用できます。
 ms.date: 07/20/2015
 f1_keywords:
 - exception
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-ms.openlocfilehash: fb193c586456497ee60aad941d56241ad7c6b63a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 22a28f3fe6de5a0db9aea0f1fd7963d4e6fcee05
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287390"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381737"
 ---
 # <a name="exception-c-programming-guide"></a>\<exception> (C# プログラミング ガイド)
 

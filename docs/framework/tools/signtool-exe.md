@@ -1,16 +1,17 @@
 ---
 title: SignTool.exe (署名ツール)
+description: SignTool.exe (署名ツール) について説明します。 このコマンド ライン ツールによって、ファイルにデジタル署名を添付し、ファイルの署名を検証し、ファイルにタイムスタンプを適用することができます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: 8ce31b1399700906d6d6e2a369dcfc4b61fe9646
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1254f345a8b3bb796217442cbad36d2e942b403
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180321"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517205"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (署名ツール)
 署名ツールはコマンド ライン ツールで、ファイルにデジタル署名を添付し、ファイルの署名を検証し、ファイルにタイム スタンプを付けます。  

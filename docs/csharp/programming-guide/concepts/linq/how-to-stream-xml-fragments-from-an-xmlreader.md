@@ -1,13 +1,14 @@
 ---
 title: XmlReader から XML フラグメントをストリーム出力する方法 (C#)
+description: XmlReader から XML フラグメントをストリーム出力する方法について説明します。 この方法は、大きな XML ファイルを処理するために使用されます。
 ms.date: 07/20/2015
 ms.assetid: 4a8f0e45-768a-42e2-bc5f-68bdf0e0a726
-ms.openlocfilehash: f7914d33622518f983a685dd2e844a25fd3ca15f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e35322724712816180d48c1957719cf87079aedd
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714654"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301022"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>XmlReader から XML フラグメントをストリーム出力する方法 (C#)
 

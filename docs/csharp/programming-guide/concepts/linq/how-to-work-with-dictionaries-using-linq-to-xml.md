@@ -1,13 +1,14 @@
 ---
 title: LINQ to XML を使用してディクショナリを操作する方法 (C#)
+description: LINQ to XML を使用してディクショナリを操作する方法について説明します。 ディクショナリを XML に変換する例と、XML を他のデータ構造に変換する例をご覧ください。
 ms.date: 07/20/2015
 ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
-ms.openlocfilehash: 1a98293f208e80e969362fca27014ecd2e5c4183
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bdba7a2b3dfc16fab1e239ac804c317dfefb7d9e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347221"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302621"
 ---
 # <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>LINQ to XML を使用してディクショナリを操作する方法 (C#)
 さまざまなデータ構造と XML を相互に変換すると便利な場合がよくあります。 このトピックでは、<xref:System.Collections.Generic.Dictionary%602> と XML を相互に変換することによる、一般的な相互変換の実装について説明します。  

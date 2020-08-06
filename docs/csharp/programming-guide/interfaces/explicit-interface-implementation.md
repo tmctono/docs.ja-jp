@@ -1,16 +1,17 @@
 ---
 title: 明示的なインターフェイスの実装 - C# プログラミング ガイド
+description: C# では、クラスによって、シグネチャが同じメンバーを含むインターフェイスを実装できます。 明示的な実装では、1 つのインターフェイスに固有のクラス メンバーが作成されます。
 ms.date: 01/24/2020
 helpviewer_keywords:
 - explicit interfaces [C#]
 - interfaces [C#], explicit
 ms.assetid: 181c901f-0d4c-4f29-97fc-895079617bf2
-ms.openlocfilehash: ea32a279b7c464174a7fada5ef93ccf62ef39884
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6ec328c08d1da84a11431d9400a094df8c72223
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167674"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303088"
 ---
 # <a name="explicit-interface-implementation-c-programming-guide"></a>明示的なインターフェイスの実装 (C# プログラミング ガイド)
 

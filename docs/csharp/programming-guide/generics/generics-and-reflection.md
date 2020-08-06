@@ -1,16 +1,17 @@
 ---
 title: ジェネリックとリフレクション - C# プログラミング ガイド
+description: リフレクションを使用してジェネリック型に関する情報を取得する方法について説明します。 ジェネリックのリフレクションに関する用語と条件の一覧を確認します。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 672a0bebdc60eff00acf9b1bdbecc25052f7bc16
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 6e4387fe7e78cd0e970531ae42f323efa8f181db
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241683"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299306"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>ジェネリックとリフレクション (C# プログラミング ガイド)
 共通言語ランタイム (CLR) は実行時にジェネリック型の情報にアクセスできるため、非ジェネリック型の場合と同じように、リフレクションを使用してジェネリック型の情報を取得できます。 詳細については、「[ランタイムのジェネリック](./generics-in-the-run-time.md)」を参照してください。  

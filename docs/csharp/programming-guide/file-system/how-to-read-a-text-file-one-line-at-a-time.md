@@ -1,17 +1,18 @@
 ---
 title: テキスト ファイルを 1 行ずつ読み取る方法 - C# プログラミング ガイド
+description: テキスト ファイルを一度に 1 行読み取る方法について説明します。 コード例を参照し、使用可能なその他のリソースを確認します。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ReadLine method [C#]
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: b54d072ce9837f9b15694f2d7100817de62e9762
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 1e29013b1008e1000c23804dc3056014cc7c104b
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241774"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301958"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-c-programming-guide"></a>テキスト ファイルを 1 行ずつ読み取る方法 (C# プログラミング ガイド)
 次の例では、`StreamReader` クラスの `ReadLine` メソッドを使用して、テキスト ファイルの内容を一度に 1 行ずつ文字列に読み込みます。 各テキスト行は文字列 `line` に格納され、画面に表示されます。  

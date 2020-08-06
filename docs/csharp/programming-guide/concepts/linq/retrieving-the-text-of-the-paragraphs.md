@@ -1,13 +1,14 @@
 ---
 title: 段落のテキストの取得 (C#)
+description: C# で LINQ クエリを使用して、WordprocessingML ドキュメントの各段落のテキストを文字列として取得する方法について説明します。 この例では、連結クエリが使用されます。
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-ms.openlocfilehash: 7c47420045def3fe973169e01143646c0f60a8eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 58a07ab848307c886927815e4e49e90806f61346
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168246"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302595"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>段落のテキストの取得 (C#)
 この例は、前の例の「[段落とそのスタイルの取得 (C#)](./retrieving-the-paragraphs-and-their-styles.md)」を基にしています。 この新しい例では、各段落のテキストを文字列として取得します。  
@@ -18,7 +19,7 @@ ms.locfileid: "79168246"
   
  もちろん、段落、各段落のスタイル、および各段落のテキストを取得する機能を持つ 1 つのクエリを記述することも可能です。 しかし、多くの場合、比較的複雑なクエリは複数のクエリに分割した方が便利です。コードのモジュール性が高まり、保守が簡単になるためです。 また、クエリの一部を再利用する必要がある場合、クエリを分割して記述すると、リファクタリングが容易になります。  
   
- 連結されたこれらのクエリでは、「[チュートリアル: クエリの連結 (C#)](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)」で詳しく説明されている処理モデルを使用します。  
+ 連結されたこれらのクエリでは、「[チュートリアル:クエリの連結 (C#)](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)」で詳しく説明されている処理モデルを使用します。  
   
 ## <a name="example"></a>例  
  この例では、WordprocessingML ドキュメントを処理して、要素ノード、スタイル名、および各段落のテキストを特定します。 この例は、このチュートリアルのこれまでの例に基づいています。 新しいクエリについては、以下のコード内にあるコメントで説明が示されています。  
@@ -142,7 +143,7 @@ StyleName:Code >Hello World<
   
 - [拡張メソッドを使用したリファクタリング (C#)](./refactoring-using-an-extension-method.md)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)](shape-of-wordprocessingml-documents.md)
 - [LINQ to XML における遅延実行とレイジー評価 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

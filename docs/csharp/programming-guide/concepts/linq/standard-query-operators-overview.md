@@ -1,13 +1,14 @@
 ---
 title: 標準クエリ演算子の概要 (C#)
+description: LINQ 標準クエリ演算子には、フィルター処理、プロジェクション、集計、C# の並べ替えなどのクエリ機能が用意されています。
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 095a0b7a7a8265f235d28a4634ea82cdcd7a60c0
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 8a399f52881e10f8d94263843b5992101f96a5ea
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990011"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302322"
 ---
 # <a name="standard-query-operators-overview-c"></a>標準クエリ演算子の概要 (C#)
 "*標準クエリ演算子*" は、LINQ パターンを形成するメソッドです。 これらのメソッドの大部分はシーケンスに対して機能します。ここでシーケンスとは、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスまたは <xref:System.Linq.IQueryable%601> インターフェイスを実装している型のオブジェクトのことです。 標準クエリ演算子には、フィルター処理、プロジェクション、集計、並べ替えなどのクエリ機能が用意されています。  

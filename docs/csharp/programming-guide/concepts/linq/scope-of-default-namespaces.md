@@ -1,13 +1,14 @@
 ---
 title: C# での既定の名前空間のスコープ
+description: C# の LINQ to XML で、既定の XML 名前空間でクエリを実行する方法について説明します。 XNamespace 変数とローカル名を使用してクエリの修飾名を作成します。
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: 7615351f6e5f8b18bd6466a83d54aa65a6c99b50
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 912e47099f89daa9b80ac58b422d39d598509ac9
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253046"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302400"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a>C\# での既定の名前空間のスコープ
 XML ツリーで表される既定の名前空間は、クエリのスコープ内にありません。 既定の名前空間に含まれる XML が存在する場合は、<xref:System.Xml.Linq.XNamespace> 変数を宣言し、この変数をローカル名と組み合わせて作成した修飾名をクエリで使用する必要があります。  
@@ -88,6 +89,6 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [名前空間の概要 (LINQ to XML)](namespaces-overview-linq-to-xml.md)

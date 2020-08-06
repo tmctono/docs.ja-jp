@@ -1,13 +1,14 @@
 ---
 title: 任意のワードまたはフィールドを基準にテキスト データの並べ替えまたはフィルター処理を実行する方法 (LINQ) (C#)
+description: 任意の単語またはフィールドを基準に、テキスト データの並べ替えまたはフィルター処理を実行する方法について説明します。 行内の任意のフィールドで、構造化されたテキストの各行を並べ替える例を参照してください。
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-ms.openlocfilehash: e869d57c413d175c092cdc15a6fe54cab94e04b8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f27ce44f4b0b05bc9094b7e108af8f65170bb58a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347361"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301321"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>任意のワードまたはフィールドを基準にテキスト データの並べ替えまたはフィルター処理を実行する方法 (LINQ) (C#)
 次の例では、コンマ区切り値などの構造化されたテキストの行を、行の任意のフィールドで並べ替える方法を示します。 フィールドは、実行時に動的に指定できます。 scores.csv 内のフィールドは、学生の ID 番号と、それに続く 4 つのテストの点を表しているものとします。  
@@ -78,6 +79,6 @@ public class SortLines
 
 System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [LINQ と文字列 (C#)](./linq-and-strings.md)

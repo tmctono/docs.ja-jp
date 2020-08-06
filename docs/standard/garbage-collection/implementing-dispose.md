@@ -10,16 +10,16 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: c8b4b9a79577776bc049ef77e222d63374178708
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4f0cc9b88947d60638057ca83adb7f2e141c5d14
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447174"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455732"
 ---
 # <a name="implement-a-dispose-method"></a>Dispose メソッドの実装
 
-<xref:System.IDisposable.Dispose%2A> メソッドを実装するのは、主に、コードによって使用されるアンマネージ リソースをリリースするためです。 <xref:System.IDisposable> の実装であるインスタンス メンバーを使用する場合は、<xref:System.IDisposable.Dispose%2A> 呼び出しをカスケードするのが一般的です。 また、以前行った処理を元に戻すなど、<xref:System.IDisposable.Dispose%2A> を実装するその他の理由もあります。 たとえば、割り当てられたメモリを解放したり、コレクションに追加された項目を削除したり、取得されていたロックのリリースを通知したりします。
+<xref:System.IDisposable.Dispose%2A> メソッドを実装するのは、主にアンマネージ リソースをリリースするためです。 <xref:System.IDisposable> の実装であるインスタンス メンバーを使用する場合は、<xref:System.IDisposable.Dispose%2A> 呼び出しをカスケードするのが一般的です。 <xref:System.IDisposable.Dispose%2A> を実装するのは他にも理由があります。たとえば、割り当てられたメモリを解放したり、コレクションに追加された項目を削除したり、取得されていたロックのリリースを通知したりするためです。
 
 [.NET のガベージ コレクター](index.md)は、アンマネージド メモリの割り当てや解放を行いません。 破棄パターンと呼ばれる、オブジェクトを破棄するパターンによって、オブジェクトの有効期間に順番が付けられます。 破棄パターンは、<xref:System.IDisposable> インターフェイスを実装するオブジェクトでのみ使用され、ファイルおよびパイプ ハンドル、レジストリ ハンドル、待機ハンドル、またはアンマネージド メモリ ブロックのポインターを操作する際に一般的です。 これは、ガベージ コレクターは、アンマネージド オブジェクトを再利用できないためです。
 

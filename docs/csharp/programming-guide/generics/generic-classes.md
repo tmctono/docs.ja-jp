@@ -1,16 +1,17 @@
 ---
 title: ジェネリック クラス - C# プログラミング ガイド
+description: リンク リスト、ハッシュ テーブル、スタック、キュー、ツリーなどのコレクションで使用されるジェネリック クラスについて説明します。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 1fdfaa833ad32428d341b6f3a61cc7f638036183
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 308f4328540e1001018942738d931be3d8be53ed
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937506"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301919"
 ---
 # <a name="generic-classes-c-programming-guide"></a>ジェネリック クラス (C# プログラミング ガイド)
 ジェネリック クラスは、特定のデータ型に固有ではない操作をカプセル化します。 ジェネリック クラスは最も一般的に、リンク リスト、ハッシュ テーブル、スタック、キュー、ツリーなどのコレクションと共に使用されます。 コレクションの項目を追加または削除するなどの操作は、保存されているデータの型に関係なく、基本的に同じように実行されます。  
@@ -65,10 +66,10 @@ ms.locfileid: "75937506"
   
  ジェネリック クラスは変化しません。 言い換えると、入力パラメーターが `List<BaseClass>` を指定するとき、`List<DerivedClass>` を指定するとコンパイル時エラーが表示されます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Collections.Generic>
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [ジェネリック](./index.md)
 - [列挙子の状態を保存する](https://docs.microsoft.com/archive/blogs/wesdyer/saving-the-state-of-enumerators)
 - [継承パズル、パート 1](https://docs.microsoft.com/archive/blogs/ericlippert/an-inheritance-puzzle-part-one)

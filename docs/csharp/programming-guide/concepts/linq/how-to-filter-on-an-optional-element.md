@@ -1,13 +1,14 @@
 ---
 title: 省略可能な要素をフィルター処理する方法 (C#)
+description: 省略可能な要素を、それが XML ドキュメント内に存在しているかどうか明確でない場合でもフィルター処理する方法について説明します。
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: c9f844619cbb3d7a66ca66989baa900e0fd7bc2f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a1cd93b70ea2c077437b58bd341f51f15f014871
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141252"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302868"
 ---
 # <a name="how-to-filter-on-an-optional-element-c"></a>省略可能な要素をフィルター処理する方法 (C#)
 要素に対するフィルター処理が、その要素が XML ドキュメント内に存在しているかどうか明確でない場合でも必要になることがあります。 特定の要素が子要素を持たない場合、その要素に対するフィルター処理によって null 参照例外が発生しないように検索を実行する必要があります。 次の例では、`Child5` 要素には `Type` 子要素はありませんが、クエリは正常に実行されます。  
@@ -95,7 +96,7 @@ Child Two Text
 Child Four Text  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>

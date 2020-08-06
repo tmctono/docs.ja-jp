@@ -1,13 +1,14 @@
 ---
 title: LINQ to XML 軸メソッドを記述する方法 (C#)
+description: LINQ to XML 軸メソッドを記述する方法について説明します。 XML 軸メソッドを使用して、XML ツリーからコレクションを取得できます。
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: bf1542471f44115bd787e7be6c8ffb836a842a4f
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 76469e767a6a54813770498488460e3e92897770
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662447"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303206"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>LINQ to XML 軸メソッドを記述する方法 (C#)
 
