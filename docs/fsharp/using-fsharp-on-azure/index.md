@@ -3,12 +3,12 @@ title: Azure での F# の使用
 description: F# での Azure サービスの使用に関するガイド
 author: sylvanc
 ms.date: 07/29/2020
-ms.openlocfilehash: ebf94d724db2c503f27581bf1352bf4fa90f5e2a
-ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
+ms.openlocfilehash: 24ef3fd14a4d0173935fac3e67aadf86110fa6d8
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87455708"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517374"
 ---
 # <a name="using-f-on-azure"></a>Azure での F# の使用
 
@@ -113,7 +113,7 @@ Azure Notification Hubs は、2 つの方法で F# で使用できます。
 
 Azure VM はプログラムで展開し、Microsoft.Azure.Management パッケージと API を使用して、F# スクリプトから管理します。 例については、「[.NET の管理ライブラリの概要](https://msdn.microsoft.com/library/dn722415.aspx)」と[Azure Resource Manager の使用](/azure/azure-resource-manager/resource-manager-deployment-model)に関するページを参照してください。
 
-同様に、他の Azure リソースも同じコンポーネントを使用して、F# スクリプトから展開および管理できます。 たとえば、F# スクリプトからプログラム的に、ストレージ アカウントの作成、Azure Cloud Services のデプロイ、Azure Cosmos DB インスタンスの作成、Azure Notifcation Hubs の管理を行うことができます。
+同様に、他の Azure リソースも同じコンポーネントを使用して、F# スクリプトから展開および管理できます。 たとえば、F# スクリプトからプログラム的に、ストレージ アカウントの作成、Azure Cloud Services のデプロイ、Azure Cosmos DB インスタンスの作成、Azure Notification Hubs の管理を行うことができます。
 
 F# スクリプトを使用したリソースの展開および管理は、通常必要はありません。 たとえば、Azure リソースは JSON テンプレートの説明から直接デプロイすることもでき、これをパラメーター化できます。 [Azure クイック スタート テンプレート](https://azure.microsoft.com/resources/templates/)などの例を含む[Azure Resource Manager テンプレート](/azure/azure-resource-manager/resource-manager-template-best-practices)を参照してください。
 

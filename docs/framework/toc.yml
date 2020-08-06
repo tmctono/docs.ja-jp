@@ -678,3 +678,39 @@
           href: whats-new/obsolete-types.md
         - name: 互換性のために残されているメンバー
           href: whats-new/obsolete-members.md
+- name: コード アクセス セキュリティ
+  items:
+    - name: 概要
+      href: misc/code-access-security.md
+    - name: コード アクセス セキュリティの基礎
+      href: misc/code-access-security-basics.md
+    - name: コード アクセス セキュリティ ポリシーの互換性と移行
+      href: misc/code-access-security-policy-compatibility-and-migration.md
+    - name: 危険なアクセス許可とポリシー管理
+      href: misc/dangerous-permissions-and-policy-administration.md
+    - name: サンドボックスで部分的に信頼されたコードを実行する方法
+      href: misc/how-to-run-partially-trusted-code-in-a-sandbox.md
+    - name: リンク確認要求
+      href: misc/link-demands.md
+    - name: 例外処理の保護
+      href: misc/securing-exception-handling.md
+    - name: メソッド アクセスの保護
+      href: misc/securing-method-access.md
+    - name: ラッパー コードの保護
+      href: misc/securing-wrapper-code.md
+    - name: セキュリティとパブリックの読み取り専用配列フィールド
+      href: misc/security-and-public-read-only-array-fields.md
+    - name: セキュリティとリモート処理の考慮事項
+      href: misc/security-and-remoting-considerations.md
+    - name: セキュリティとシリアル化
+      href: misc/security-and-serialization.md
+    - name: 透過的セキュリティ コード、レベル 1
+      href: misc/security-transparent-code-level-1.md
+    - name: 透過的セキュリティ コード、レベル 2
+      href: misc/security-transparent-code-level-2.md
+    - name: 透過的セキュリティ コード
+      href: misc/security-transparent-code.md
+    - name: 部分信頼コードからのライブラリの使用
+      href: misc/using-libraries-from-partially-trusted-code.md
+    - name: Assert メソッドの使用
+      href: misc/using-the-assert-method.md
