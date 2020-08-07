@@ -15,14 +15,15 @@ helpviewer_keywords:
 - caller security checks
 - link demands
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
-ms.openlocfilehash: eaf9ee1bb5cd10c724240bacac014503685a0c8c
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 7f5475d5bfff8cc3c500f95b05d54daacc9b253e
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309106"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855791"
 ---
 # <a name="link-demands"></a>リンク確認要求
+
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  リンク確認要求では、Just-In-Time コンパイル時にセキュリティ チェックが実行され、コードの直前の呼び出し元アセンブリだけがチェックされます。 リンクは、コードを関数ポインターの参照やメソッドの呼び出しなどの型の参照にバインドするときに発生します。 呼び出し元のアセンブリが、コードにリンクするための十分な権限を持たない場合は、リンクは許可されず、コードが読み込まれて実行されると、ランタイム例外がスローされます。 リンク確認要求は、コードから継承するクラスでオーバーライドできます。  

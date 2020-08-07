@@ -2,19 +2,18 @@
 title: クエリ式
 description: 'F # プログラミング言語における LINQ のクエリ式のサポートについて説明します。'
 ms.date: 05/16/2016
-ms.openlocfilehash: bbd15352aa89bd1891b409177921a675784a0227
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: c6f33a58bc959745a5f83bdcfe378a4dbbe577c5
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419188"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855037"
 ---
 # <a name="query-expressions"></a>クエリ式
 
-> [!NOTE]
-> この記事の API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
-
 クエリ式を使用すると、データソースに対してクエリを実行し、データを必要な形式で格納できます。 クエリ式は、F # での LINQ のサポートを提供します。
+> [!NOTE]
+> F # の docs.microsoft.com API リファレンスが完全ではありません。 壊れたリンクが見つかった場合は、代わりに[F # コアライブラリのドキュメント](https://fsharp.github.io/fsharp-core-docs/)を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -22,7 +21,7 @@ ms.locfileid: "83419188"
 query { expression }
 ```
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 クエリ式は、シーケンス式に似た計算式の一種です。 シーケンス式にコードを提供することでシーケンスを指定するのと同じように、クエリ式にコードを提供することによってデータのセットを指定します。 シーケンス式では、キーワードは、 `yield` 結果のシーケンスの一部として返されるデータを識別します。 クエリ式では、 `select` キーワードは同じ関数を実行します。 キーワードに加え `select` て、F # では、SQL SELECT ステートメントの部分とよく似た多数のクエリ演算子もサポートされています。 Northwind OData ソースに接続するコードと共に、単純なクエリ式の例を次に示します。
 
@@ -706,7 +705,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code> と <code>TOP</code>。<br/>
+<code>LIKE</code> および <code>TOP</code>。<br/>
 
 <pre><code class="lang-sql">-- '_e%' matches strings where the second character is 'e'
 SELECT TOP 2 * FROM Student
@@ -2439,6 +2438,6 @@ end
 
 ## <a name="see-also"></a>関連項目
 
-- [F # 言語リファレンス](index.md)
+- [F# 言語リファレンス](index.md)
 - [ビルダークラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
 - [コンピュテーション式](Computation-Expressions.md)

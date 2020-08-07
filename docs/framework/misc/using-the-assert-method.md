@@ -17,14 +17,15 @@ helpviewer_keywords:
 - permissions [.NET Framework], overriding security checks
 - permissions [.NET Framework], assertions
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
-ms.openlocfilehash: 096e0375a94c92a835cccb4d1b3297783b4120e9
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 573b84f991e795c2513f213ddb52999fef51c454
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309808"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855669"
 ---
 # <a name="using-the-assert-method"></a>Assert メソッドの使用
+
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  <xref:System.Security.CodeAccessPermission.Assert%2A> は、コードのアクセス許可のクラスおよび <xref:System.Security.PermissionSet>クラスで呼び出すことができるメソッドです。 **Assert**を使用すると、コード (および下流の呼び出し元) が、コードが実行するアクセス許可を持っているものの、その呼び出し元が実行するアクセス許可を持っていないアクションを実行できるようになります。 セキュリティ アサーションは、セキュリティ チェック時にランタイムが実行する正常なプロセスを変更します。 アクセス許可をアサートすると、アサートされたアクセス許可のためにコードの呼び出し元をチェックしないようセキュリティ システムに指示します。  

@@ -10,14 +10,17 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-ms.openlocfilehash: 73597f83d7236cd48a18a891c987b4f5d7e1723d
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: c7643bb34da0cbcbd267fc90e6294bc0b565985e
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309041"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855778"
 ---
 # <a name="securing-exception-handling"></a>例外処理の保護
+
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
+
 Visual C++ と Visual Basic では、スタックの上位にあるフィルター式は、ステートメントの前に実行さ `finally` れます。 そのフィルターに関連付けられている**catch**ブロックは、ステートメントの後に実行され `finally` ます。 詳細については、「[ユーザーフィルター例外の使用](../../standard/exceptions/using-user-filtered-exception-handlers.md)」を参照してください。 このセクションでは、この順序のセキュリティへの影響について説明します。 フィルターステートメントとステートメントの実行順序を示す、次の擬似コード例を考えてみましょう `finally` 。  
   
 ```cpp  

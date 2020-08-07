@@ -1,20 +1,20 @@
 ---
 title: イベント
-description: イベントをF#使用して関数呼び出しをユーザーアクションに関連付ける方法について説明します。これは GUI プログラミングで重要です。
+description: 'F # イベントを使用して関数呼び出しをユーザーアクションに関連付ける方法について説明します。これは GUI プログラミングで重要です。'
 ms.date: 05/16/2016
-ms.openlocfilehash: ad60aff318832ab3ba5e9f7c43928898e171cea8
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 682686ba58d0f7a56e7da2585e6507ccd0156a44
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543626"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87854933"
 ---
 # <a name="events"></a>イベント
 
-> [!NOTE]
-> この記事の API リファレンスのリンクをクリックすると MSDN に移動します。  docs.microsoft.com API リファレンスは完全ではありません。
-
 イベントを使用すると、関数呼び出しをユーザーによる操作に関連付けることができます。イベントは、GUI プログラミングの重要な要素です。 イベントは、アプリケーションまたはオペレーティング システムによってトリガーすることもできます。
+
+> [!NOTE]
+> F # の docs.microsoft.com API リファレンスが完全ではありません。 壊れたリンクが見つかった場合は、代わりに[F # コアライブラリのドキュメント](https://fsharp.github.io/fsharp-core-docs/)を参照してください。
 
 ## <a name="handling-events"></a>イベントの処理
 
@@ -28,7 +28,7 @@ Windows フォームや WPF (Windows Presentation Foundation) などの GUI ラ�
 
 ## <a name="creating-custom-events"></a>カスタム イベントの作成
 
-F#イベントは、 F# [ievent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862)インターフェイスを実装する[イベント](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9)クラスによって表されます。 `IEvent` 自体は、`System.IObservable<'T>` と[IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a)という2つのインターフェイスの機能を組み合わせたインターフェイスです。 したがって、`Event` は、他の言語のデリゲートに相当する機能と、`IObservable` からの追加機能を備えていることになります。つまり、F# のイベントでは、イベントのフィルター処理がサポートされるほか、F# のファースト クラスの関数とラムダ式をイベント ハンドラーとして使用できます。 この機能は、[イベントモジュール](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7)に用意されています。
+F # イベントは、 [ievent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862)インターフェイスを実装する f #[イベント](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9)クラスによって表されます。 `IEvent`は、他の2つのインターフェイスの機能と IDelegateEvent を組み合わせたインターフェイスです `System.IObservable<'T>` 。 [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a) したがって、`Event` は、他の言語のデリゲートに相当する機能と、`IObservable` からの追加機能を備えていることになります。つまり、F# のイベントでは、イベントのフィルター処理がサポートされるほか、F# のファースト クラスの関数とラムダ式をイベント ハンドラーとして使用できます。 この機能は、[イベントモジュール](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7)に用意されています。
 
 他の任意の .NET Framework イベントと同様に動作するイベントをクラスに作成するには、クラスのフィールドとして `let` を定義する `Event` 束縛をクラスに追加します。 目的のイベント引数の型を型引数として指定することも、指定せずにコンパイラによって適切な型を推論することもできます。 CLI イベントとしてイベントを公開するイベント メンバーも定義する必要があります。 このメンバーには[Clievent](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333)属性が必要です。 これはプロパティのように宣言され、その実装はイベントの[Publish](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e)プロパティの呼び出しにすぎません。 クラスのユーザーは、公開されたイベントの `Add` メソッドを使用してハンドラーを追加できます。 `Add` メソッドの引数はラムダ式にすることができます。 イベントの `Trigger` プロパティを使用すると、イベントを発生させて、引数をハンドラー関数に渡すことができます。 これを次のコード例に示します。 この例では、イベントの型引数はタプルとして推論され、ラムダ式の引数を表します。
 
@@ -53,7 +53,7 @@ Given a value: Event occurred.
 
 ## <a name="processing-event-streams"></a>イベント ストリームの処理
 
-イベントのイベントハンドラーを追加するだけ[ではなく](https://msdn.microsoft.com/library/10670d3b-8d47-4f6e-b8df-ebc6f64ef4fd)、イベントのストリームを、高度にカスタマイズされた方法で処理するために、`Event` モジュールの関数を使用できます。 これを行うには、一連の関数呼び出しの最初の値として、イベントと共に前方パイプ (`|>`) を使用します。`Event` モジュールは、以降の関数呼び出しとして機能します。
+イベントのイベントハンドラーを追加するだけではなく、イベント[Event.add](https://msdn.microsoft.com/library/10670d3b-8d47-4f6e-b8df-ebc6f64ef4fd) `Event` のストリームを高度にカスタマイズされた方法で処理することができます。 これを行うには、一連の関数呼び出しの最初の値として、イベントと共に前方パイプ (`|>`) を使用します。`Event` モジュールは、以降の関数呼び出しとして機能します。
 
 特定の条件でのみ呼び出されるハンドラーを持つイベントを設定する方法を次のコード例に示します。
 
@@ -174,11 +174,11 @@ let appForm = new AppForm()
 Application.Run(appForm)
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [[メンバー]](index.md)
+- [メンバー](index.md)
 - [イベントの処理と発生](../../../standard/events/index.md)
 - [ラムダ式: `fun` キーワード](../functions/lambda-expressions-the-fun-keyword.md)
 - [コントロール. イベントモジュール](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
-- [Control. イベント&#60;t&#62;クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
-- [Control. イベント&#60;' Delegate, ' Args&#62;クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)
+- [Control. Event&#60; t&#62; クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
+- [Control. イベント&#60; ' Delegate, ' Args&#62; クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)
