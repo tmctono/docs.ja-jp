@@ -9,14 +9,15 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-ms.openlocfilehash: e02b5d679fb1f5947373399ac1226732623ef96d
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 415a42f7c4f4866bb72f19bdd6f02bfdb5158bf8
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309236"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855804"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>方法 : サンドボックスで部分信頼コードを実行する
+
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  サンドボックス化は、制限されたセキュリティ環境でコードを実行する方法です。この方法を採用すると、コードに付与されるアクセス許可が制限されます。 たとえば、完全に信頼していない発行元のマネージド ライブラリは、完全信頼として実行しないようにする必要があります。 代わりに、必要なアクセス許可 (<xref:System.Security.Permissions.SecurityPermissionFlag.Execution> アクセス許可など) のみを与えるサンドボックスにコードを配置します。  

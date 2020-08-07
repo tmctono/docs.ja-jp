@@ -11,14 +11,15 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-ms.openlocfilehash: a7ef419cf3959cf7a3ffde874353dacd3815c81a
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 88868ab29fc37854959a044b9c0fed5bd8c82d77
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309392"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855765"
 ---
 # <a name="securing-method-access"></a>メソッド アクセスの保護
+
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  信頼関係のない任意のコードに呼び出しを許可することが不適切なメソッドがあります。 このようなメソッドは、制限された情報を提供する、渡された任意の情報を信頼する、パラメーターのエラー チェックを行わない、誤ったパラメーターを受け取って正しく機能しないかなんらかの被害をもたらすなどの、いくつかの危険性をもたらします。 これらのケースを認識し、メソッドを保護するために役立つ措置を講じる必要があります。  

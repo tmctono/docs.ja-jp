@@ -8,21 +8,22 @@ helpviewer_keywords:
 - secure coding, wrapper code
 - code security, wrapper code
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
-ms.openlocfilehash: 4338b3d0ab306501ea252407f386bdf89d191d6d
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: f448cbf55f3ad992ba9dcc53d5be70b364038744
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309379"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855752"
 ---
 # <a name="securing-wrapper-code"></a>ラッパー コードの保護
+
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  ラッパー コードで、使用しているコードよりもラッパーの信頼が高い場合には特に、特有のセキュリティ脆弱性が生じる恐れがあります。 呼び出し元の制限されたアクセス許可が適切なセキュリティ チェックに含まれないと、呼び出し元のために実行されるすべての処理が、悪用される可能性のある潜在的な脆弱性となります。  
   
  呼び出し元自体で実行できない処理をラッパーによって行うことがないようにしてください。 完全なスタック ウォーク要求とは対照的に、限定的なセキュリティ チェックしか行われずに何らかの処理が行われる場合に、この状況は特に危険です。 単一レベルのチェックが行われる場合、実際の呼び出し元と対象の API 要素との間にラッパー コードを挿入することによって、本来は成功すべきではないセキュリティ チェックが簡単に成功してしまう原因となる可能性があり、セキュリティが弱体化します。  
   
-## <a name="delegates"></a>代理人  
+## <a name="delegates"></a>デリゲート  
  デリゲートのセキュリティは、.NET Framework のバージョンによって異なります。  このセクションでは、各種デリゲートの動作と、関連するセキュリティ上の考慮事項について説明します。  
   
 ### <a name="in-version-10-and-11-of-the-net-framework"></a>.NET Framework バージョン 1.0 および 1.1 の場合  

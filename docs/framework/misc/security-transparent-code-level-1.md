@@ -1,5 +1,5 @@
 ---
-title: 透過的セキュリティコード、レベル1
+title: 透過的セキュリティ コード、レベル 1
 description: レベル1の透過性コードモデル、透過性属性、およびセキュリティ透過性の例を確認します。
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -10,14 +10,15 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-ms.openlocfilehash: c44fe3339f3bf24d266fa97487868ce090d51bb1
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 75cf38412f3ba21832c5e63898b10bcf681f5904
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309095"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855700"
 ---
-# <a name="security-transparent-code-level-1"></a>透過的セキュリティコード、レベル1
+# <a name="security-transparent-code-level-1"></a>透過的セキュリティ コード、レベル 1
+
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  透過性を使用すると、開発者は、部分的に信頼されるコードに機能を公開する .NET Framework ライブラリのセキュリティを強化できます。 レベル 1 の透過性は、.NET Framework Version 2.0 で導入され、主に Microsoft 内でのみ使用されていました。 .NET Framework 4 以降では、[レベル2の透過性](security-transparent-code-level-2.md)を使用できます。 ただし、以前のセキュリティ規則で実行する必要があるレガシ コードを識別できるように、レベル 1 の透過性も残されています。  
