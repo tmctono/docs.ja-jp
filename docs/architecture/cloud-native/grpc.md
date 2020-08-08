@@ -6,12 +6,12 @@ no-loc:
 - Blazor
 - Blazor WebAssembly
 ms.date: 05/13/2020
-ms.openlocfilehash: 6b41363008405032f4233448f134a8a602dbd26a
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 4a0c88472d2b19efb2ff0f58395003b1b6409131
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173160"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87914891"
 ---
 # <a name="grpc"></a>gRPC
 
@@ -31,10 +31,11 @@ gRPC は、Java、JavaScript、C#、ゴー、Swift、NodeJS など、最も人�
 
 gRPC は、トランスポートプロトコルとして HTTP/2 を使用します。 Http/2 は HTTP 1.1 と互換性がありますが、多くの高度な機能を備えています。
 
-- データトランスポート用のバイナリプロトコル-データをクリアテキストとして送信する HTTP 1.1 とは異なります。
+- データトランスポート用のバイナリフレーミングプロトコル-テキストベースの HTTP 1.1 とは異なります。
 - 同一の接続で複数の並列要求を送信するための多重化サポート-HTTP 1.1 は、一度に1つの要求/応答メッセージに処理を制限します。
 - クライアント要求とサーバー応答の両方を同時に送信するための双方向の全二重通信。
 - 要求と応答を有効にして、大きなデータセットを非同期的にストリーム配信できる組み込みのストリーミング。
+- ネットワークの使用量を減らすヘッダー圧縮。
 
 gRPC は軽量で高いパフォーマンスを備えています。 メッセージ数が60-80% 小さい JSON シリアル化よりも最大8x 倍の速度で実現できます。 Microsoft [Windows Communication Foundation (WCF)](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf)用語では、grpc のパフォーマンスは、高度に最適化された[nettcp バインド](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8)の速度と効率を超えています。 Microsoft stack を優先する NetTCP とは異なり、gRPC はクロスプラットフォームです。
 
@@ -84,7 +85,7 @@ SDK には、エンドポイントルーティング、組み込み IoC、およ
 - ポイントツーポイントのリアルタイム通信-gRPC は、ポーリングせずにリアルタイムでメッセージをプッシュでき、双方向ストリーミングが優れたサポートを備えています。
 - ネットワークの制約付き環境–バイナリ gRPC のメッセージは、常に同等のテキストベースの JSON メッセージよりも小さくなります。
 
-このドキュメントの執筆時点では、gRPC は主にバックエンドサービスで使用されています。 ほとんどの最新のブラウザーでは、フロントエンドの gRPC クライアントをサポートするために必要な HTTP/2 コントロールのレベルを提供できません。 ただし、JavaScript またはテクノロジで構築されたブラウザーベースのアプリから gRPC 通信を可能にする[初期のイニシアチブ](https://devblogs.microsoft.com/aspnet/grpc-web-experiment/)があり Blazor WebAssembly ます。 [Grpc-Web for .net](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md)を使用すると、ASP.NET Core grpc アプリで、ブラウザーアプリで grpc 機能をサポートできます。
+このドキュメントの執筆時点では、gRPC は主にバックエンドサービスで使用されています。 最新のブラウザーでは、フロントエンドの gRPC クライアントをサポートするために必要な HTTP/2 コントロールのレベルを提供できません。 ただし、JavaScript またはテクノロジで構築されたブラウザーベースのアプリからの gRPC 通信を可能にする[grpc-Web と .net](https://devblogs.microsoft.com/aspnet/grpc-web-for-net-now-available/)のサポートがあり Blazor WebAssembly ます。 [grpc-Web](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md)では、ASP.NET Core grpc アプリがブラウザーアプリで grpc 機能をサポートできるようにします。
 
 - 厳密に型指定された、コード生成クライアント
 - Compact Protobuf メッセージ

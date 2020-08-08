@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 19b5683a7cd334e1203c57fa90d275b659eac873
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 9ada39a2144e5565a76a25df0f83424710ad939f
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556554"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916815"
 ---
 # <a name="c-operators-and-expressions-c-reference"></a>C# 演算子と式 (C# リファレンス)
 
@@ -33,7 +33,7 @@ C# には多数の演算子が用意されています。 これらの多くは[
 
 次のコードでは、式の例が代入の右側にあります。
 
-[!code-csharp[expression examples](snippets/Overview.cs#Expressions)]
+[!code-csharp[expression examples](snippets/shared/Overview.cs#Expressions)]
 
 通常、式によって結果が生成され、別の式に含めることができます。 [`void`](../builtin-types/void.md) メソッド呼び出しは、結果を生成しない式の例です。 次の例に示すように、これは[ステートメント](../../programming-guide/statements-expressions-operators/statements.md)としてのみ使用できます。
 
@@ -45,15 +45,15 @@ C# に用意されている他の種類の式を次に示します。
 
 - [補間された文字列式](../tokens/interpolated.md)では、書式設定された文字列を作成するための便利な構文が提供されます。
 
-  [!code-csharp-interactive[interpolated string](snippets/Overview.cs#InterpolatedString)]
+  [!code-csharp-interactive[interpolated string](snippets/shared/Overview.cs#InterpolatedString)]
 
 - [ラムダ式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)を使用すると、匿名関数を作成できます。
 
-  [!code-csharp-interactive[lambda expression](snippets/Overview.cs#Lambda)]
+  [!code-csharp-interactive[lambda expression](snippets/shared/Overview.cs#Lambda)]
 
 - [クエリ式](../keywords/query-keywords.md)を使用すると、C# でクエリ機能を直接使用できるようになります。
 
-  [!code-csharp-interactive[query expression](snippets/Overview.cs#Query)]
+  [!code-csharp-interactive[query expression](snippets/shared/Overview.cs#Query)]
 
 [式本体の定義](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)を使用すると、メソッド、コンストラクター、プロパティ、インデクサー、またはファイナライザーの簡潔な定義を提供できます。
 

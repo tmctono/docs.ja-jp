@@ -1270,75 +1270,75 @@
           href: programming-guide/interop/walkthrough-office-programming.md
         - name: COM クラスの例
           href: programming-guide/interop/example-com-class.md
-- name: 言語リファレンス
+- name: 言語のリファレンス
   items:
     - name: 概要
       displayName: language reference
       href: language-reference/index.md
     - name: 言語バージョンの構成
       href: language-reference/configure-language-version.md
-    - name: C# のキーワード
+    - name: 型
+      items:
+        - name: 値型
+          items:
+            - name: 概要
+              href: language-reference/builtin-types/value-types.md
+              displayName: 'value types, simple types'
+            - name: 整数数値型
+              href: language-reference/builtin-types/integral-numeric-types.md
+              displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
+            - name: 浮動小数点数値型
+              href: language-reference/builtin-types/floating-point-numeric-types.md
+              displayName: 'float, decimal, double, rational, real, literal'
+            - name: 組み込みの数値変換
+              href: language-reference/builtin-types/numeric-conversions.md
+            - name: bool
+              href: language-reference/builtin-types/bool.md
+              displayName: 'Boolean, true, false'
+            - name: char
+              href: language-reference/builtin-types/char.md
+              displayName: 'Unicode, character, UTF-16'
+            - name: 列挙型
+              href: language-reference/builtin-types/enum.md
+              displayName: 'enum, bit flags, bit field'
+            - name: 構造体型
+              href: language-reference/builtin-types/struct.md
+              displayName: 'struct type, readonly struct, ref struct, readonly ref struct'
+            - name: タプル型
+              href: language-reference/builtin-types/value-tuples.md
+              displayName: 'value tuples, ValueTuple'
+            - name: null 許容値型
+              href: language-reference/builtin-types/nullable-value-types.md
+              displayName: '? token, ? symbol'
+        - name: 参照型
+          items:
+            - name: 参照型の機能
+              href: language-reference/keywords/reference-types.md
+            - name: 組み込みの参照型
+              displayName: 'object, delegate, dynamic, string'
+              href: language-reference/builtin-types/reference-types.md
+            - name: class
+              href: language-reference/keywords/class.md
+            - name: interface
+              href: language-reference/keywords/interface.md
+            - name: null 許容参照型
+              href: language-reference/builtin-types/nullable-reference-types.md
+              displayName: '? token, ? symbol'
+        - name: void
+          href: language-reference/builtin-types/void.md
+        - name: var
+          href: language-reference/keywords/var.md
+        - name: 組み込み型
+          href: language-reference/builtin-types/built-in-types.md
+        - name: アンマネージ型
+          href: language-reference/builtin-types/unmanaged-types.md
+        - name: 既定の値
+          href: language-reference/builtin-types/default-values.md
+    - name: Keywords
       items:
         - name: 概要
           displayName: keywords
           href: language-reference/keywords/index.md
-        - name: 型
-          items:
-            - name: 値型
-              items:
-                - name: 概要
-                  href: language-reference/builtin-types/value-types.md
-                  displayName: 'value types, simple types'
-                - name: 整数数値型
-                  href: language-reference/builtin-types/integral-numeric-types.md
-                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
-                - name: 浮動小数点数値型
-                  href: language-reference/builtin-types/floating-point-numeric-types.md
-                  displayName: 'float, decimal, double, rational, real, literal'
-                - name: 組み込みの数値変換
-                  href: language-reference/builtin-types/numeric-conversions.md
-                - name: bool
-                  href: language-reference/builtin-types/bool.md
-                  displayName: 'Boolean, true, false'
-                - name: char
-                  href: language-reference/builtin-types/char.md
-                  displayName: 'Unicode, character, UTF-16'
-                - name: 列挙型
-                  href: language-reference/builtin-types/enum.md
-                  displayName: 'enum, bit flags, bit field'
-                - name: 構造体型
-                  href: language-reference/builtin-types/struct.md
-                  displayName: 'struct type, readonly struct, ref struct, readonly ref struct'
-                - name: タプル型
-                  href: language-reference/builtin-types/value-tuples.md
-                  displayName: 'value tuples, ValueTuple'
-                - name: null 許容値型
-                  href: language-reference/builtin-types/nullable-value-types.md
-                  displayName: '? token, ? symbol'
-            - name: 参照型
-              items:
-                - name: 参照型の機能
-                  href: language-reference/keywords/reference-types.md
-                - name: 組み込みの参照型
-                  displayName: 'object, delegate, dynamic, string'
-                  href: language-reference/builtin-types/reference-types.md
-                - name: class
-                  href: language-reference/keywords/class.md
-                - name: interface
-                  href: language-reference/keywords/interface.md
-                - name: null 許容参照型
-                  href: language-reference/builtin-types/nullable-reference-types.md
-                  displayName: '? token, ? symbol'
-            - name: void
-              href: language-reference/builtin-types/void.md
-            - name: var
-              href: language-reference/keywords/var.md
-            - name: 組み込み型
-              href: language-reference/builtin-types/built-in-types.md
-            - name: アンマネージ型
-              href: language-reference/builtin-types/unmanaged-types.md
-            - name: 既定の値
-              href: language-reference/builtin-types/default-values.md
         - name: 修飾子
           items:
             - name: アクセス修飾子
@@ -1555,7 +1555,7 @@
               href: language-reference/keywords/by.md
             - name: in
               href: language-reference/keywords/in.md
-    - name: C# の演算子と式
+    - name: 演算子および式
       items:
         - name: 概要
           href: language-reference/operators/index.md
@@ -1638,7 +1638,7 @@
           href: language-reference/operators/true-false-operators.md
         - name: 演算子のオーバーロード
           href: language-reference/operators/operator-overloading.md
-    - name: C# 特殊文字
+    - name: 特殊文字
       items:
         - name: 概要
           displayName: special characters
@@ -1661,7 +1661,7 @@
         - name: Null 許容のスタティック分析
           displayName: 'AllowNull, DisallowNull, MaybeNull, NotNull, MaybeNullWhen, NotNullWhen, NotNullIfNotNull, DoesNotReturn, DoesNotReturnIf'
           href: language-reference/attributes/nullable-analysis.md
-    - name: C# プリプロセッサ ディレクティブ
+    - name: プリプロセッサ ディレクティブ
       items:
         - name: 概要
           displayName: preprocessor directives
@@ -1694,7 +1694,7 @@
           href: language-reference/preprocessor-directives/preprocessor-pragma-warning.md
         - name: '#pragma checksum'
           href: language-reference/preprocessor-directives/preprocessor-pragma-checksum.md
-    - name: C# コンパイラ オプション
+    - name: コンパイラ オプション
       items:
         - name: 概要
           displayName: compiler options
@@ -1825,7 +1825,7 @@
               href: language-reference/compiler-options/win32manifest-compiler-option.md
             - name: '-win32res'
               href: language-reference/compiler-options/win32res-compiler-option.md
-    - name: C# コンパイラ エラー
+    - name: コンパイラ エラー
       href: language-reference/compiler-messages/index.md
     - name: C# 6.0 のドラフト仕様
       href: language-reference/specification/
