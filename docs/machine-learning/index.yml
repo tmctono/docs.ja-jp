@@ -10,12 +10,12 @@ metadata:
   author: natke
   ms.author: nakersha
   ms.date: 10/30/2019
-  ms.openlocfilehash: 05d357af2088321524841bfc05f94f816f1bc306
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: da93d48dc36123f8821be37c8c0546b84ab29712
+  ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/15/2020
-  ms.locfileid: "73423940"
+  ms.lasthandoff: 08/05/2020
+  ms.locfileid: "87795490"
 landingContent:
 - title: ML.NET の基礎
   linkLists:
@@ -37,11 +37,11 @@ landingContent:
   linkLists:
   - linkListType: quickstart
     links:
-    - text: Visual Studio でモデル ビルダーを設定する
-      url: how-to-guides/install-model-builder.md
-    - text: ML.NET API の概要
+    - text: ML.NET API を使ってみる (コード優先)
       url: https://dotnet.microsoft.com/learn/ml-dotnet/get-started-tutorial/intro
-    - text: Mac OS、Windows、または Linux に CLI をインストールする
+    - text: Visual Studio で Model Builder を設定する (少量のコード)
+      url: how-to-guides/install-model-builder.md
+    - text: macOS、Windows、または Linux に CLI をインストールする (少量のコード)
       url: how-to-guides/install-ml-net-cli.md
 - title: チュートリアル
   linkLists:
