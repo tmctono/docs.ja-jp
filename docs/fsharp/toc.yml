@@ -1,21 +1,21 @@
-- name: 'F# ドキュメント'
+- name: F# ドキュメント
   href: index.yml
-- name: 'F# とは'
+- name: F# とは
   href: what-is-fsharp.md
 - name: 作業開始
   href: get-started/index.md
   items:
-    - name: 'F# をインストールする'
+    - name: F# をインストールする
       href: get-started/install-fsharp.md
-    - name: 'Visual Studio における F#'
+    - name: Visual Studio における F#
       href: get-started/get-started-visual-studio.md
-    - name: 'Visual Studio Code における F#'
+    - name: Visual Studio Code における F#
       href: get-started/get-started-vscode.md
-    - name: '.NET Core CLI での F#'
+    - name: .NET Core CLI での F#
       href: get-started/get-started-command-line.md
-    - name: 'Visual Studio for Mac における F#'
+    - name: Visual Studio for Mac における F#
       href: get-started/get-started-with-visual-studio-for-mac.md
-- name: 'F# のツアー'
+- name: F# のツアー
   href: tour.md
 - name: チュートリアル
   items:
@@ -37,17 +37,17 @@
           href: tutorials/type-providers/type-provider-security.md
         - name: 型プロバイダーのトラブルシューティング
           href: tutorials/type-providers/troubleshooting-type-providers.md
-    - name: 'F# Interactive'
+    - name: F# Interactive
       href: tutorials/fsharp-interactive/index.md
-- name: 'F# の新機能'
+- name: F# の新機能
   items:
-    - name: 'F# 4.7'
+    - name: F# 4.7
       href: whats-new/fsharp-47.md
-    - name: 'F# 4.6'
+    - name: F# 4.6
       href: whats-new/fsharp-46.md
-    - name: 'F# 4.5'
+    - name: F# 4.5
       href: whats-new/fsharp-45.md
-- name: 'F# 言語リファレンス'
+- name: F# 言語リファレンス
   href: language-reference/index.md
   items:
     - name: キーワード リファレンス
@@ -87,7 +87,7 @@
           href: language-reference/values/null-values.md
     - name: リテラル
       href: language-reference/literals.md
-    - name: 'F# の型'
+    - name: F# の型
       href: language-reference/fsharp-types.md
     - name: 型推論
       href: language-reference/type-inference.md
@@ -99,7 +99,7 @@
       href: language-reference/strings.md
     - name: タプル
       href: language-reference/tuples.md
-    - name: 'F# コレクション型'
+    - name: F# コレクション型
       href: language-reference/fsharp-collection-types.md
     - name: 表示内容
       href: language-reference/lists.md
@@ -226,6 +226,8 @@
       href: language-reference/signature-files.md
     - name: 測定単位
       href: language-reference/units-of-measure.md
+    - name: プレーン テキスト形式
+      href: language-reference/plaintext-formatting.md
     - name: XML に関するドキュメント
       href: language-reference/xml-documentation.md
     - name: 遅延式
@@ -248,7 +250,7 @@
       href: language-reference/compiler-directives.md
     - name: コンパイラ オプション
       href: language-reference/compiler-options.md
-    - name: 'F# Interactive オプション'
+    - name: F# Interactive オプション
       href: language-reference/fsharp-interactive-options.md
     - name: ソース行、ファイル、およびパスの識別子
       href: language-reference/source-line-file-path-identifiers.md
@@ -258,25 +260,25 @@
       href: language-reference/verbose-syntax.md
     - name: コンパイラのエラーと警告
       href: language-reference/compiler-messages/index.md
-- name: 'F# スタイル ガイド'
+- name: F# スタイル ガイド
   href: style-guide/index.md
   items:
-    - name: 'F# コードのフォーマットに関するガイドライン'
+    - name: F# コードのフォーマットに関するガイドライン
       href: style-guide/formatting.md
-    - name: 'F# のコーディング規則'
+    - name: F# のコーディング規則
       href: style-guide/conventions.md
-    - name: 'F# コンポーネント デザインのガイドライン'
+    - name: F# コンポーネント デザインのガイドライン
       href: style-guide/component-design-guidelines.md
-- name: 'Azure で F# を使用する'
+- name: Azure で F# を使用する
   href: using-fsharp-on-azure/index.md
   items:
-    - name: 'F# を使用した Azure Blob Storage の概要'
+    - name: F# を使用した Azure Blob Storage の概要
       href: using-fsharp-on-azure/blob-storage.md
-    - name: 'F# を使用した Azure File Storage の概要'
+    - name: F# を使用した Azure File Storage の概要
       href: using-fsharp-on-azure/file-storage.md
-    - name: 'F# を使用した Azure Queue Storage の概要'
+    - name: F# を使用した Azure Queue Storage の概要
       href: using-fsharp-on-azure/queue-storage.md
-    - name: 'F# を使用した Azure Table Storage の概要'
+    - name: F# を使用した Azure Table Storage の概要
       href: using-fsharp-on-azure/table-storage.md
-    - name: 'F# の Azure の依存関係のためのパッケージ管理'
+    - name: F# の Azure の依存関係のためのパッケージ管理
       href: using-fsharp-on-azure/package-management.md
