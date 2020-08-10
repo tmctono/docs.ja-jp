@@ -1,5 +1,6 @@
 ---
 title: ポップアップの配置動作
+description: プロパティを使用して、コントロール、マウス、または画面を基準とした Windows Presentation Foundation ポップアップの位置を指定する方法について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - popups [WPF]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - placing popups [WPF]
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
-ms.openlocfilehash: 1c377e62ffd334638031baee4d4831ac5a31acf3
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 8184805518bc56693ead4c7d1f0e9a1bff9bff8f
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243259"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167749"
 ---
 # <a name="popup-placement-behavior"></a>ポップアップの配置動作
 <xref:System.Windows.Controls.Primitives.Popup> コントロールでは、アプリケーション上をフローティングする別のウィンドウにコンテンツが表示されます。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>、<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>、<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>、<xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>、<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> の各プロパティを使用することにより、コントロール、マウス、または画面を基準にして <xref:System.Windows.Controls.Primitives.Popup> の位置を指定できます。  これらのプロパティが連携することで、<xref:System.Windows.Controls.Primitives.Popup> の位置を柔軟に指定できます。  
