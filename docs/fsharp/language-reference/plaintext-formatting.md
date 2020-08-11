@@ -1,13 +1,13 @@
 ---
-title: プレーンテキストの書式設定
+title: プレーン テキスト形式
 description: 'F # のアプリケーションとスクリプトで、printf とその他のプレーンテキスト形式を使用する方法について説明します。'
 ms.date: 07/22/2020
-ms.openlocfilehash: 6b14633e074961757d0f0cd258d1b1667f5fd8ee
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 90a861736dae69dfbc199a19e24f587c42404737
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854920"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063784"
 ---
 # <a name="plain-text-formatting"></a>プレーンテキストの書式設定
 
@@ -68,7 +68,7 @@ stdin(3,25): error FS0001: The type 'string' does not match the type 'int'
 
 形式の書式指定 `printf` は、形式を示すマーカーを含む文字列です `%` 。 書式のプレースホルダー `%[flags][width][.precision][type]` は、型が次のように解釈される場所で構成されます。
 
-| 書式指定子   | 型 (s)        | Remarks                      |
+| 書式指定子   | 型 (s)        | 解説                      |
 |:-------------------|:---------------|:-----------------------------|
 | `%b`               | [bool]      | またはとして書式設定されます。 `true``false`                |
 | `%s`               | string    | エスケープ解除されたコンテンツとして書式設定         |
@@ -85,6 +85,7 @@ stdin(3,25): error FS0001: The type 'string' does not match the type 'int'
 | `%A` | 任意の値  |   既定のレイアウト設定で構造化された[プレーンテキストの書式](plaintext-formatting.md)設定を使用して書式設定 |
 | `%a` | 任意の値  |   2つの引数が必要です。コンテキストパラメーターと値を受け入れる書式設定関数と、出力する特定の値です。 |
 | `%t` | 任意の値  |   1つの引数が必要です。適切なテキストを出力または返すコンテキストパラメーターを受け入れる書式設定関数 |
+| `%%` | (なし)  |   引数を必要とせず、普通のパーセント記号を出力します。`%` |
 
 基本整数型は、 `byte` ( `System.Byte` )、 `sbyte` ()、 `System.SByte` `int16` ( `System.Int16` )、 `uint16` ( `System.UInt16` )、 `int32` ( `System.Int32` )、( `uint32` `System.UInt32` )、( `int64` `System.Int64` )、( `uint64` `System.UInt64` )、 `nativeint` ()、 `System.IntPtr` および `unativeint` ( `System.UIntPtr` ) です。
 基本浮動小数点型 `float` は `System.Double` 、() および `float32` ( `System.Single` ) です。
@@ -93,7 +94,7 @@ stdin(3,25): error FS0001: The type 'string' does not match the type 'int'
 
 有効なフラグは次のとおりです。
 
-| フラグ   | 結果        | Remarks                      |
+| フラグ   | 効果        | 解説                      |
 |:-------------------|:---------------|:-----------------------------|
 | `0`  | 必要な幅を構成するために、スペースではなくゼロを追加します。 |    |
 | `-` |  指定された幅の範囲内で結果を左揃えにします |   |
@@ -324,7 +325,7 @@ F # 関数の値は、内部で生成されたクロージャ名として出力�
 
 ### <a name="customize-plain-text-formatting-with-structuredformatdisplay"></a>プレーンテキストの書式設定をでカスタマイズする`StructuredFormatDisplay`
 
-指定子を使用する場合 `%A` 、 `StructuredFormatDisplay` 型宣言に属性が存在することが尊重されます。  これを使用すると、サロゲートテキストおよびプロパティを指定して値を表示できます。 次に例を示します。
+指定子を使用する場合 `%A` 、 `StructuredFormatDisplay` 型宣言に属性が存在することが尊重されます。  これを使用すると、サロゲートテキストおよびプロパティを指定して値を表示できます。 以下に例を示します。
 
 ```fsharp
 [<StructuredFormatDisplay("Counts({Clicks})")>]
@@ -419,4 +420,4 @@ F # プレーンテキストの書式設定では、これらの属性は無視�
 - [文字列](strings.md)
 - [レコード](records.md)
 - [判別共用体](discriminated-unions.md)
-- [F# インタラクティブ](fsharp-interactive-options.md)
+- [F# Interactive](fsharp-interactive-options.md)
