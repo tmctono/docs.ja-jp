@@ -1,7 +1,7 @@
 ---
 title: 追加のクラス ライブラリと API
 description: 帯域外 (OOB) プロジェクト、プラットフォーム固有のライブラリ、プライベート Api など、.NET で追加のクラスライブラリと Api を探索します。
-ms.date: 06/12/2020
+ms.date: 08/11/2020
 helpviewer_keywords:
 - Additional class libraries
 - Additional managed libraries
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - out-of-band releases
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 ms.topic: conceptual
-ms.openlocfilehash: 0b888d2f0e80685ba993682b2f3067cf8aee15bc
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: c6404df5d4f0be381bc0a9c1924fcf82cf078306
+ms.sourcegitcommit: 70d6a7e4f7187cbfa332f0f8be76566f7828cfcd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84989738"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88075476"
 ---
 # <a name="additional-class-libraries-and-apis"></a>追加のクラス ライブラリと API
 
@@ -24,7 +24,7 @@ ms.locfileid: "84989738"
 
 クロスプラットフォームの開発を改善し、新しい機能を早期に導入するために、一部の .NET Framework 機能がアウトオブバンド (OOB) でリリースされました。
 
-| Project | 説明 |  
+| プロジェクト | 説明 |  
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | スレッド セーフであり、内容が変更されないことが保証されているコレクションを提供します。 |
 | <xref:System.Net.Http.WinHttpHandler> | Windows の WinHTTP インターフェイスに基づいた <xref:System.Net.Http.HttpClient> のメッセージ ハンドラーを提供します。 |
@@ -35,7 +35,7 @@ ms.locfileid: "84989738"
 
 一部のライブラリは特定のプラットフォームを対象としています。 たとえば、クラスを <xref:System.Text.CodePagesEncodingProvider> 使用すると、.NET Framework を使用して開発された UWP アプリでコードページエンコーディングを使用できるようになります。
   
-| Project | 説明 |  
+| プロジェクト | 説明 |  
 | ------- | ----------- |  
 | <xref:System.Text.CodePagesEncodingProvider> | クラスを拡張して <xref:System.Text.EncodingProvider> 、ユニバーサル Windows プラットフォームを対象とするアプリでコードページエンコーディングを使用できるようにします。 |  
   
@@ -87,6 +87,7 @@ ms.locfileid: "84989738"
 * [System .Net. WebHeaderCollection. AddInternal メソッド](system.net.webheadercollection.addinternal.md)
 * [System.servicemodel. Channels. Message. BodyToString メソッド](system.servicemodel.channels.message.bodytostring.md)
 * [WriteStartHeaders メソッド (System.servicemodel.)](system.servicemodel.channels.message.writestartheaders.md)
+* [System.web. ControlBuilderInterceptor クラス](controlbuilderinterceptor-class.md)
 * [IsDebuggerCheckDisabledForTestPurposes (システムの診断の \_ フィールド)](s-isdebuggercheckdisabledfortestpurposes-field.md)
 * [System.string クラス (DataMemberFieldEditor クラス)](datamemberfieldeditor-class.md)
 * [System.string クラス (DataMemberListEditor クラス)](datamemberlisteditor-class.md)
