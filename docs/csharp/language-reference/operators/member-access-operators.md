@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 59e01b17d78032714803629d503a92ba86a20fdc
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 688a1fcff84a6e8f2fa31533a2bc459bf8c8717a
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394638"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916790"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>メンバー アクセス演算子と式 (C# リファレンス)
 
@@ -56,17 +56,17 @@ ms.locfileid: "83394638"
 
 - 次の [`using` ディレクティブ](../keywords/using-directive.md)の例に示すように、`.` を使って、名前空間内の入れ子になった名前空間にアクセスします。
 
-  [!code-csharp[nested namespaces](snippets/MemberAccessOperators.cs#NestedNamespace)]
+  [!code-csharp[nested namespaces](snippets/shared/MemberAccessOperators.cs#NestedNamespace)]
 
 - 次のコードに示すように、`.` を使って "*修飾名*" を作成して名前空間内の型にアクセスします。
 
-  [!code-csharp[qualified name](snippets/MemberAccessOperators.cs#QualifiedName)]
+  [!code-csharp[qualified name](snippets/shared/MemberAccessOperators.cs#QualifiedName)]
 
   [`using` ディレクティブ](../keywords/using-directive.md)を使い、必要に応じて修飾名を利用します。
 
 - 次のコードに示すように、`.` を使って、[型のメンバー](../../programming-guide/classes-and-structs/index.md#members) (静的および非静的) にアクセスします。
 
-  [!code-csharp-interactive[type members](snippets/MemberAccessOperators.cs#TypeMemberAccess)]
+  [!code-csharp-interactive[type members](snippets/shared/MemberAccessOperators.cs#TypeMemberAccess)]
 
 また、`.` を使って[拡張メソッド](../../programming-guide/classes-and-structs/extension-methods.md)にアクセスすることもできます。
 
@@ -78,7 +78,7 @@ ms.locfileid: "83394638"
 
 次の例は、配列要素へのアクセス方法を示しています。
 
-[!code-csharp-interactive[array access](snippets/MemberAccessOperators.cs#Arrays)]
+[!code-csharp-interactive[array access](snippets/shared/MemberAccessOperators.cs#Arrays)]
 
 配列インデックスが配列の対応するディメンションの範囲に含まれない場合、<xref:System.IndexOutOfRangeException> がスローされます。
 
@@ -90,7 +90,7 @@ ms.locfileid: "83394638"
 
 次の例では、インデクサーへのアクセスを示すために .NET <xref:System.Collections.Generic.Dictionary%602> 型を使用します。
 
-[!code-csharp-interactive[indexer access](snippets/MemberAccessOperators.cs#Indexers)]
+[!code-csharp-interactive[indexer access](snippets/shared/MemberAccessOperators.cs#Indexers)]
 
 インデクサーを使用すると、配列のインデックス作成と同様の方法でユーザー定義型のインスタンスのインデックスを作成することができます。 整数である必要がある配列インデックスとは異なり、任意の型を持つインデクサー パラメーターを宣言できます。
 
@@ -126,13 +126,13 @@ A?.B?[C];
 
 `?.` および `?[]` 演算子の使用例を次に示します。
 
-[!code-csharp-interactive[null-conditional operators](snippets/MemberAccessOperators.cs#NullConditional)]
+[!code-csharp-interactive[null-conditional operators](snippets/shared/MemberAccessOperators.cs#NullConditional)]
 
 前の例では、null 条件演算の結果が `null` の場合に評価する代替の式を指定するために、[null 合体演算子 `??`](null-coalescing-operator.md) も使用しています。
 
 `a.x` または `a[x]` が null 非許容値型の `T` の場合は、`a?.x` または `a?[x]` は対応する [null 許容値型](../builtin-types/nullable-value-types.md)の `T?` になります。 `T` 型の式が必要な場合は、次の例に示すように、null 合体演算子 `??` を null 条件式に適用します。
 
-[!code-csharp-interactive[null-conditional with null-coalescing](snippets/MemberAccessOperators.cs#NullConditionalWithNullCoalescing)]
+[!code-csharp-interactive[null-conditional with null-coalescing](snippets/shared/MemberAccessOperators.cs#NullConditionalWithNullCoalescing)]
 
 前の例では、`??` 演算子を使用しなければ、`numbers` が `null` の場合、`numbers?.Length < 2` は `false` と評価されます。
 
@@ -167,7 +167,7 @@ if (handler != null)
 
 メソッドを呼び出す方法 (引数を指定した場合と指定しない場合) とデリゲートを呼び出す方法の例を次に示します。
 
-[!code-csharp-interactive[invocation with ()](snippets/MemberAccessOperators.cs#Invocation)]
+[!code-csharp-interactive[invocation with ()](snippets/shared/MemberAccessOperators.cs#Invocation)]
 
 かっこは、[`new`](new-operator.md) 演算子を使用して[コンストラクター](../../programming-guide/classes-and-structs/constructors.md)を呼び出すときにも使用します。
 
@@ -181,7 +181,7 @@ if (handler != null)
 
 `^` 演算子は C# 8.0 以降で使用することができ、要素の位置がシーケンスの末尾からであることを示します。 長さが `length` のシーケンスの場合、`^n` は、シーケンスの先頭からのオフセットが `length - n` である要素を指します。 たとえば、`^1` は、シーケンスの最後の要素を指し、`^length` は、シーケンスの最初の要素を指します。
 
-[!code-csharp[index from end](snippets/MemberAccessOperators.cs#IndexFromEnd)]
+[!code-csharp[index from end](snippets/shared/MemberAccessOperators.cs#IndexFromEnd)]
 
 前の例で示すように、式 `^e` は <xref:System.Index?displayProperty=nameWithType> 型です。 式 `^e`で、`e` の結果は `int` に暗黙に変換される必要があります。
 
@@ -191,7 +191,7 @@ if (handler != null)
 
 `..` 演算子は C# 8.0 以降で使用することができ、インデックスの範囲の先頭と末尾をオペランドとして指定します。 左側のオペランドは "*包含的*" で、範囲の先頭を含みます。 右側のオペランドは "*排他的*" で、範囲の末尾を含みません。 次の例で示すように、どちらのオペランドであっても、シーケンスの先頭または末尾からのインデックスとすることができます。
 
-[!code-csharp[range examples](snippets/MemberAccessOperators.cs#Ranges)]
+[!code-csharp[range examples](snippets/shared/MemberAccessOperators.cs#Ranges)]
 
 前の例で示すように、式 `a..b` は <xref:System.Range?displayProperty=nameWithType> 型です。 式 `a..b` で、`a` および `b` の結果は暗黙に `int` または <xref:System.Index> に変換される必要があります。
 
@@ -201,7 +201,7 @@ if (handler != null)
 - `..b` は `0..b` と同じです。
 - `..` は `0..^0` と同じです。
 
-[!code-csharp[ranges with omitted operands](snippets/MemberAccessOperators.cs#RangesOptional)]
+[!code-csharp[ranges with omitted operands](snippets/shared/MemberAccessOperators.cs#RangesOptional)]
 
 詳細については、「[インデックスと範囲](../../tutorials/ranges-indexes.md)」を参照してください。
 
@@ -223,6 +223,6 @@ if (handler != null)
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# 演算子](index.md)
+- [C# の演算子と式](index.md)
 - [?? (Null 合体演算子)](null-coalescing-operator.md)
 - [:: 演算子](namespace-alias-qualifier.md)

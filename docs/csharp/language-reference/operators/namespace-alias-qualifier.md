@@ -4,18 +4,19 @@ ms.date: 08/09/2019
 f1_keywords:
 - ::_CSharpKeyword
 - global_CSharpKeyword
+- global
 helpviewer_keywords:
 - ':: operator [C#]'
 - namespace alias qualifier [C#]
 - namespace [C#]
 - global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 84c418627462f83630fe5072a0b0e2089f6588f6
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: f91287ed281a2c6b10bed93cff10b08972a8445e
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507127"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855128"
 ---
 # <a name="-operator-c-reference"></a>:: 演算子 (C# リファレンス)
 
@@ -65,5 +66,5 @@ ms.locfileid: "79507127"
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# 演算子](index.md)
+- [C# の演算子と式](index.md)
 - [名前空間の使用](../../programming-guide/namespaces/using-namespaces.md)

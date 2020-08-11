@@ -1,13 +1,13 @@
 ---
 title: コンテナーに基づく最新のアプリケーションへの道
 description: Docker、コンテナー、マイクロサービス アーキテクチャが汎用のソリューションではないことを理解します。 判断する場合に役立つ参照資料を紹介します。
-ms.date: 11/23/2018
-ms.openlocfilehash: 0bc1adcd89c19b512032ee8fdf1a6e28cea96ee8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: 7c18bc2ce1face4a5419305a48a16f23fcdc2735
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72770704"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87914983"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>コンテナーに基づく最新のアプリケーションへの道
 

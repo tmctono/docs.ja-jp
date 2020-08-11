@@ -7,12 +7,12 @@ f1_keywords:
 - default
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 2adfd8d24066e9dad50c3c18407d3ade71b4b68e
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: f03971efa87bf03967c79512e44d22134dd80c17
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507179"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916873"
 ---
 # <a name="default-value-expressions-c-reference"></a>既定値式 (C# リファレンス)
 
@@ -24,7 +24,7 @@ ms.locfileid: "79507179"
 
 `default` 演算子への引数では、次の例で示すように、型または型パラメーターの名前を指定する必要があります。
 
-[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
+[!code-csharp-interactive[default of T](snippets/shared/DefaultOperator.cs#WithOperand)]
 
 ## <a name="default-literal"></a>default リテラル
 
@@ -37,7 +37,7 @@ C# 7.1 以降では、`default` リテラルを使って、コンパイラが式
 
 `default` リテラルの使い方の例を次に示します。
 
-[!code-csharp-interactive[default literal](snippets/DefaultOperator.cs#DefaultLiteral)]
+[!code-csharp-interactive[default literal](snippets/shared/DefaultOperator.cs#DefaultLiteral)]
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
@@ -48,6 +48,6 @@ C# 7.1 以降では、`default` リテラルを使って、コンパイラが式
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# 演算子](index.md)
+- [C# の演算子と式](index.md)
 - [C# 型の既定値](../builtin-types/default-values.md)
 - [.NET のジェネリック](../../../standard/generics/index.md)

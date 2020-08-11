@@ -4,15 +4,16 @@ description: C# 演算子をオーバーロードする方法と、どの C# 演
 ms.date: 07/05/2019
 f1_keywords:
 - operator_CSharpKeyword
+- operator
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 1324a4a3610b96f7258a856609dc4090b9751e52
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 4fde25cac21b2cb32efc9282578f32102a0f607f
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301763"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916725"
 ---
 # <a name="operator-overloading-c-reference"></a>演算子のオーバーロード (C# リファレンス)
 
@@ -25,7 +26,7 @@ ms.locfileid: "87301763"
 
 次の例は、有理数を表す簡略化された構造を定義しています。 構造体がいくつかの[算術演算子](arithmetic-operators.md)をオーバーロードします。
 
-[!code-csharp[fraction example](snippets/OperatorOverloading.cs)]
+[!code-csharp[fraction example](snippets/shared/OperatorOverloading.cs)]
 
 `int` から `Fraction` への[暗黙的な変換を定義する](user-defined-conversion-operators.md)ことで、前の例を拡張できます。 その場合、オーバーロードされた演算子はこれら 2 つの型の引数をサポートします。 つまり、整数を分数に足し、結果として分数を取得できるようになります。
 
@@ -62,7 +63,7 @@ ms.locfileid: "87301763"
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# 演算子](index.md)
+- [C# の演算子と式](index.md)
 - [ユーザー定義の変換演算子](user-defined-conversion-operators.md)
 - [設計ガイドライン - 演算子のオーバーロード](../../../standard/design-guidelines/operator-overloads.md)
 - [設計ガイドライン - 等値演算子](../../../standard/design-guidelines/equality-operators.md)

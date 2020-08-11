@@ -7,12 +7,12 @@ helpviewer_keywords:
 - garbage collection, server
 - workstation garbage collection
 - server garbage collection
-ms.openlocfilehash: 5ff2b1fe2f997913e071f35ec5abb167ed757608
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 640b5f42c1f841c2537284e4721e827248e3d300
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306696"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917010"
 ---
 # <a name="workstation-and-server-garbage-collection"></a>ワークステーションとサーバーのガベージ コレクション
 
@@ -40,7 +40,7 @@ ms.locfileid: "84306696"
 
 - コレクションは、ガベージ コレクションをトリガーしたユーザー スレッドで、それと同じ優先順位で実行されます。 ユーザー スレッドは一般に通常の優先順位で実行されるため、その場合 (通常の優先順位のスレッドで実行された場合)、ガベージ コレクターの CPU 時間が他のスレッドと競合します。 (ネイティブ コードを実行するスレッドは、サーバーまたはワークステーションのガベージ コレクションでは中断されません)
 
-- プロセッサが 1 つしかないコンピューターでは、[構成設定](../../core/run-time-config/garbage-collector.md#systemgcservercomplus_gcserver)に関係なく、常にワークステーションのガベージ コレクションが使用されます。
+- プロセッサが 1 つしかないコンピューターでは、[構成設定](../../core/run-time-config/garbage-collector.md#workstation-vs-server)に関係なく、常にワークステーションのガベージ コレクションが使用されます。
 
 ### <a name="server-gc"></a>サーバーの GC
 

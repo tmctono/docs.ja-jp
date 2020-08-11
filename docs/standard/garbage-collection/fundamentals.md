@@ -11,12 +11,12 @@ helpviewer_keywords:
 - garbage collection, workstation
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-ms.openlocfilehash: 438188b6d694bdeab772c43ef92e5621c68facff
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 322e079a1be556efb536b24e216e480c1950bd8c
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990220"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917018"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>ガベージ コレクションの基礎
 
@@ -186,7 +186,7 @@ GC アルゴリズムは、次のよういないくつかの考慮事項に基�
   通常、大きなオブジェクト ヒープ (LOH) は圧縮されません。これは、大きなオブジェクトをコピーするとパフォーマンスが低下するためです。 ただし、.NET Core と .NET Framework 4.5.1 以降では、<xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> プロパティを使用して、大きなオブジェクト ヒープを必要に応じて圧縮できます。 また、LOH は、次のいずれかを指定することでハード上限が設定されるとき、自動的に圧縮されます。
 
   - コンテナーのメモリ上限。
-  - [GCHeapHardLimit](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitcomplus_gcheaphardlimit) または [GCHeapHardLimitPercent](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent) ランタイム構成オプション。
+  - [GCHeapHardLimit](../../core/run-time-config/garbage-collector.md#heap-limit) または [GCHeapHardLimitPercent](../../core/run-time-config/garbage-collector.md#heap-limit-percent) ランタイム構成オプション。
 
 ガベージ コレクターは、次の情報に基づいてオブジェクトが有効かどうかを判断します。
 

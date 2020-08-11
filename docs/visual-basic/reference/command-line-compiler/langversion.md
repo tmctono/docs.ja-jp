@@ -6,12 +6,12 @@ helpviewer_keywords:
 - langversion compiler option [Visual Basic]
 - -langversion compiler option [Visual Basic]
 ms.assetid: 59b7b0c8-2dde-4e9b-94e7-0237f7e0bafb
-ms.openlocfilehash: 271606ac021e6afcb28fdac3e1bc86e1aaba7d2b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 286dd8bd9949b584cec38642f44ba9ac5e924732
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408539"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557178"
 ---
 # <a name="-langversion-visual-basic"></a>-langversion (Visual Basic)
 コンパイラで、指定した Visual Basic 言語バージョンに含まれている構文のみが受け入れられるようにします。  
@@ -48,4 +48,3 @@ vbc -langversion:9.0 sample.vb
 
 - [Visual Basic のコマンド ライン コンパイラ](index.md)
 - [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)
-- [対象となる特定の .NET Framework バージョンの指定](/visualstudio/ide/visual-studio-multi-targeting-overview)

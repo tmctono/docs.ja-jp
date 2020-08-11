@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: 53457f7f99d96c288b002f58c9db36f431ba863a
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 132518b9d8d22efecfcf3ed14e8b5969aa768cd4
+ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381308"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88024590"
 ---
 # <a name="chaining-tasks-using-continuation-tasks"></a>継続タスクを使用したタスクの連結
 
@@ -145,7 +145,7 @@ ms.locfileid: "87381308"
 次の例では、タスクを返す追加の関数をラップする継続を使用する方法を示します。 各継続をラップ解除し、ラップされていた内部タスクを取り出すことができます。
 
 :::code language="csharp" source="snippets/cs/unwrap.cs":::
-:::code language="csharp" source="snippets/vb/unwrap.vb":::
+:::code language="vb" source="snippets/vb/unwrap.vb":::
 
 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> の使用に関する詳細については、「[方法: 入れ子のタスクのラップを解除する](how-to-unwrap-a-nested-task.md)」をご覧ください。
 

@@ -5,17 +5,19 @@ ms.date: 07/09/2019
 f1_keywords:
 - explicit_CSharpKeyword
 - implicit_CSharpKeyword
+- explicit
+- implicit
 helpviewer_keywords:
 - explicit keyword [C#]
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: b59fc27be31f1a38e2a6c3cabd82598933b5ed53
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: a0eb11d55ad9e9cccde1704ba4c5ae8acb609989
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121403"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916636"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>ユーザー定義の変換演算子 (C# リファレンス)
 
@@ -29,7 +31,7 @@ ms.locfileid: "81121403"
 
 次の例は、暗黙的な変換と明示的な変換を定義する方法を示しています。
 
-[!code-csharp[implicit an explicit conversions](snippets/UserDefinedConversions.cs)]
+[!code-csharp[implicit an explicit conversions](snippets/shared/UserDefinedConversions.cs)]
 
 また、事前に定義された C# 演算子をオーバーロードするには `operator` キーワードも使用します。 詳細については、「[演算子のオーバーロード](operator-overloading.md)」を参照してください。
 
@@ -45,7 +47,7 @@ ms.locfileid: "81121403"
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# 演算子](index.md)
+- [C# の演算子と式](index.md)
 - [演算子のオーバーロード](operator-overloading.md)
 - [型テストとキャスト演算子](type-testing-and-cast.md)
 - [キャストと型変換](../../programming-guide/types/casting-and-type-conversions.md)

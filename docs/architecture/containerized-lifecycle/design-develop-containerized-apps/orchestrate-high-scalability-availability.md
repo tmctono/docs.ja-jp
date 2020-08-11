@@ -1,13 +1,13 @@
 ---
 title: 高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 description: 実際の運用アプリケーションは、すべてのコンテナーの正常性、ワークロードおよびライフ サイクルを管理するオーケストレーターと共に展開して管理する必要があります。
-ms.date: 02/15/2019
-ms.openlocfilehash: 459a445258a8d66834814f7b084fd969d005ff45
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.date: 08/06/2020
+ms.openlocfilehash: 61c66e1f3835df543cbc9ba23d9c098ad52c90cd
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374482"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915467"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 
@@ -62,7 +62,7 @@ Azure Kubernetes Service によって、一般的な Docker クラスタリン�
 
 ## <a name="development-environment-for-kubernetes"></a>Kubernetes 用の開発環境
 
-開発環境に単純に [Docker Desktop](https://www.docker.com/community-edition) をインストールすることで、1 台の開発マシン (Windows 10 または macOS) でも Kubernetes を実行できることが [2018 年 7 月に Docker から発表](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)されました。 図 4-8 に示すように、さらなる統合テストを行うために、後でクラウド (AKS) にデプロイすることができます。
+開発環境に単純に [Docker Desktop](https://www.docker.com/products/docker-desktop) をインストールすることで、1 台の開発マシン (Windows 10 または macOS) でも Kubernetes を実行できることが [2018 年 7 月に Docker から発表](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)されました。 図 4-8 に示すように、さらなる統合テストを行うために、後でクラウド (AKS) にデプロイすることができます。
 
 ![開発マシン上にあり、AKS にデプロイされる Kubernetes を示す図。](./media/orchestrate-high-scalability-availability/kubernetes-development-environment.png)
 

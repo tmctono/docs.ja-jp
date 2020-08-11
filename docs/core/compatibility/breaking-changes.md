@@ -2,12 +2,12 @@
 title: 互換性に影響する変更
 description: .NET Core の各バージョンの破壊的変更について説明します。
 ms.date: 11/27/2019
-ms.openlocfilehash: bc7faae3b00d412aa8d50fe181a26873232a0939
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: 550553ef14cd0635fbe4a5346c457a41264a4b82
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415733"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916267"
 ---
 # <a name="breaking-change-selectors"></a>破壊的変更のセレクター
 
@@ -17,13 +17,31 @@ ms.locfileid: "85415733"
 
 現在ターゲットにしている .NET のバージョンを選択してから、移行先の .NET Core のバージョンを選択します。
 
-[!INCLUDE[versionselector](~/includes/core-changes/versionselector.md)]
+> [!div class="op_multi_selector" title1="ターゲット バージョンから" title2="移行されたバージョンへ"]
+>
+> - [(3.1 | 5.0)](3.1-5.0.md)
+> - [(3.0 | 3.1)](3.0-3.1.md)
+> - [(2.2 | 3.1)](2.2-3.1.md)
+> - [(2.2 | 3.0)](2.2-3.0.md)
+> - [(2.0 | 2.1)](2.0-2.1.md)
+> - [(.NET Framework | .NET Core)](fx-core.md)
 
 ## <a name="by-technology-area"></a>テクノロジ領域別
 
 関心のある .NET Core テクノロジ領域を選択してください。 個々の変更は .NET Core のバージョン順になっています。
 
-[!INCLUDE[categoryselector](~/includes/core-changes/categoryselector.md)]
+> [!div class="op_single_selector"]
+>
+> - [ASP.NET Core](aspnetcore.md)
+> - [Core .NET ライブラリ](corefx.md)
+> - [暗号](cryptography.md)
+> - [EF Core](/ef/core/what-is-new/ef-core-3.0/breaking-changes)
+> - [グローバリゼーション](globalization.md)
+> - [Interop](interop.md)
+> - [ネットワーク](networking.md)
+> - [シリアル化](serialization.md)
+> - [Visual Basic](visualbasic.md)
+> - [Windows フォーム](winforms.md)
 
 ## <a name="github-issues-and-announcements"></a>GitHub のイシューとお知らせ
 

@@ -1,13 +1,13 @@
 ---
 title: Docker コンテナー、イメージ、レジストリ
 description: Docker のアプリケーションのデプロイ方法において、レジストリが全体的に果たす主な役割について説明します。
-ms.date: 02/15/2019
-ms.openlocfilehash: bfef21cab7be89abaf33b89366d7cff2115a7cc6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: 2ff6cf76b35777546b6e653d477a029296f8e496
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72770930"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915238"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker コンテナー、イメージ、レジストリ
 

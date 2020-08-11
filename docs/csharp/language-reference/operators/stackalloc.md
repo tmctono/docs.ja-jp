@@ -5,12 +5,12 @@ f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc expression [C#]
-ms.openlocfilehash: 2e99ce8b1e44dfa040c1acac799a3a55b375bd91
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 4f20f3262b77cc2fe16480e53d13960e68d230b5
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546602"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916676"
 ---
 # <a name="stackalloc-expression-c-reference"></a>stackalloc 式 (C# リファレンス)
 
@@ -20,24 +20,24 @@ ms.locfileid: "79546602"
 
 - C# 7.2 以降では <xref:System.Span%601?displayProperty=nameWithType> または <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>。次に例を示します。
 
-  [!code-csharp[stackalloc span](snippets/StackallocOperator.cs#AssignToSpan)]
+  [!code-csharp[stackalloc span](snippets/shared/StackallocOperator.cs#AssignToSpan)]
 
   スタックに割り当てられたメモリ ブロックを <xref:System.Span%601> 変数または <xref:System.ReadOnlySpan%601> 変数に割り当てるときに、[unsafe](../keywords/unsafe.md) コンテキストを使用する必要はありません。
 
   これらの型を操作するときに、次の例に示すように、[条件](conditional-operator.md)式または代入式の中で `stackalloc` 式を使用できます。
 
-  [!code-csharp[stackalloc expression](snippets/StackallocOperator.cs#AsExpression)]
+  [!code-csharp[stackalloc expression](snippets/shared/StackallocOperator.cs#AsExpression)]
 
   C# 8.0 以降では、次の例のように、<xref:System.Span%601> または <xref:System.ReadOnlySpan%601> の変数が許可されるところでは、他の式の中で `stackalloc` 式を使用できます。
 
-  [!code-csharp[stackalloc in nested expressions](snippets/StackallocOperator.cs#Nested)]
+  [!code-csharp[stackalloc in nested expressions](snippets/shared/StackallocOperator.cs#Nested)]
 
   > [!NOTE]
   > スタックに割り当てられたメモリを操作するときは、できるだけ <xref:System.Span%601> 型または <xref:System.ReadOnlySpan%601> 型を使用することをお勧めします。
 
 - [ポインター型](../../programming-guide/unsafe-code-pointers/pointer-types.md)。次に例を示します。
 
-  [!code-csharp[stackalloc pointer](snippets/StackallocOperator.cs#AssignToPointer)]
+  [!code-csharp[stackalloc pointer](snippets/shared/StackallocOperator.cs#AssignToPointer)]
 
   前の例に示したように、ポインター型を操作するときは、`unsafe` コンテキストを使用する必要があります。
 
@@ -47,7 +47,7 @@ ms.locfileid: "79546602"
 
 - `stackalloc` を使って割り当てるメモリ容量を制限する:
 
-  [!code-csharp[limit stackalloc](snippets/StackallocOperator.cs#LimitStackalloc)]
+  [!code-csharp[limit stackalloc](snippets/shared/StackallocOperator.cs#LimitStackalloc)]
 
   スタックで使用可能なメモリ容量はコードが実行される環境によって異なるため、実際の制限値は控えめに定義する必要があります。
 
@@ -57,7 +57,7 @@ ms.locfileid: "79546602"
 
 C# 7.3 以降、配列初期化子構文を使用して、新しく割り当てられたメモリの内容を定義できます。 これを実行するさまざまな方法を次の例に示します。
 
-[!code-csharp[stackalloc initialization](snippets/StackallocOperator.cs#StackallocInit)]
+[!code-csharp[stackalloc initialization](snippets/shared/StackallocOperator.cs#StackallocInit)]
 
 式 `stackalloc T[E]` では、`T` は[アンマネージド型](../builtin-types/unmanaged-types.md)である必要があり、`E` は負でない [int](../builtin-types/integral-numeric-types.md) 値に評価される必要があります。
 
@@ -72,7 +72,7 @@ C# 7.3 以降、配列初期化子構文を使用して、新しく割り当て�
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# 演算子](index.md)
+- [C# の演算子と式](index.md)
 - [ポインターに関連する演算子](pointer-related-operators.md)
 - [ポインター型](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [メモリおよびスパンに関連する型](../../../standard/memory-and-spans/index.md)

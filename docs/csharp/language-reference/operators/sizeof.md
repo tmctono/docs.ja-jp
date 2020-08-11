@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: a9e80ecb3288479a2ca81b43c9d088809ed5f2f0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 327183ccdf79cb8e15cd15aa3cffb044120808f8
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847288"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916701"
 ---
 # <a name="sizeof-operator-c-reference"></a>sizeof 演算子 (C# リファレンス)
 
@@ -40,7 +40,7 @@ ms.locfileid: "78847288"
 
 `sizeof` 演算子の使用例を次に示します。
 
-[!code-csharp[sizeof examples](snippets/SizeOfOperator.cs)]
+[!code-csharp[sizeof examples](snippets/shared/SizeOfOperator.cs)]
 
 `sizeof` 演算子は、マネージド メモリ内の共通言語ランタイムによって割り当てられるバイト数を返します。 [構造体](../builtin-types/struct.md)型の場合、前の例のように、その値に埋め込みが含まれます。 `sizeof` 演算子の結果は、*アンマネージド* メモリの型のサイズを返す <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> メソッドの結果とは異なる場合があります。
 
@@ -51,7 +51,7 @@ ms.locfileid: "78847288"
 ## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
-- [C# 演算子](index.md)
+- [C# の演算子と式](index.md)
 - [ポインターに関連する演算子](pointer-related-operators.md)
 - [ポインター型](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [メモリおよびスパンに関連する型](../../../standard/memory-and-spans/index.md)

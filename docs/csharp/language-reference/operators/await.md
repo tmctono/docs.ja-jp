@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 76c6b24c1cd061585c7a6964d30bc81cc5fc5975
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 20fc492e45b2d248602de59682e752026d421e06
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308846"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916917"
 ---
 # <a name="await-operator-c-reference"></a>await 演算子 (C# リファレンス)
 
@@ -20,7 +20,7 @@ ms.locfileid: "86308846"
 
 次の例では、完了時にバイト配列を生成する非同期操作を表わす `Task<byte[]>` インスタンスが、<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> メソッドから返されます。 操作が完了するまで、`await` 演算子によって `DownloadDocsMainPageAsync` メソッドが保留になります。 `DownloadDocsMainPageAsync` が保留になると、`DownloadDocsMainPageAsync` の呼び出し元である `Main` メソッドにコントロールが返されます。 `DownloadDocsMainPageAsync` メソッドで実行される非同期操作の結果が必要になるまで `Main` メソッドが実行されます。 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> ですべてのバイトが得られると、`DownloadDocsMainPageAsync` メソッドの残りが評価されます。 その後、`Main` メソッドの残りが評価されます。
 
-[!code-csharp[await example](snippets/AwaitOperator.cs)]
+[!code-csharp[await example](snippets/shared/AwaitOperator.cs)]
 
 前の例では、[async `Main` メソッド](../../programming-guide/main-and-command-args/index.md)が使用されています。これは C# 7.1 以降で可能です。 詳細は、「[await operator in the Main method](#await-operator-in-the-main-method)」 (Main メソッドの await 演算子) セクションを参照してください。
 
@@ -54,7 +54,7 @@ C# 7.1 以降、アプリケーション エントリ ポイントである [`Ma
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# 演算子](index.md)
+- [C# の演算子と式](index.md)
 - [async](../keywords/async.md)
 - [タスクの非同期プログラミング モデル](../../programming-guide/concepts/async/task-asynchronous-programming-model.md)
 - [非同期プログラミング](../../async.md)
