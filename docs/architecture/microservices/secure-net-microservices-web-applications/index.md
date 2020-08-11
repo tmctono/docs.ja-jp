@@ -2,13 +2,13 @@
 title: NET マイクロサービスおよび Web アプリケーションをセキュリティで保護する
 description: .NET マイクロサービスおよび Web アプリケーションのセキュリティ - ASP.NET Core Web アプリケーションの認証オプションをご確認ください。
 author: mjrousos
-ms.date: 01/30/2020
-ms.openlocfilehash: 2b503b326d1869ae095f9b177c04389bda9fe46c
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.date: 08/07/2020
+ms.openlocfilehash: 9ce62039374f2256cd9adbddbb850aa4135af9f4
+ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100783"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88024616"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>NET マイクロサービスおよび Web アプリケーションをセキュリティで保護する
 
@@ -174,7 +174,7 @@ public void ConfigureServices(IServiceCollection services)
 {
     var identityUrl = Configuration.GetValue<string>("IdentityUrl");
     var callBackUrl = Configuration.GetValue<string>("CallBackUrl");
-    var sessionCookieLifetime = configuration.GetValue("SessionCookieLifetimeMinutes", 60);
+    var sessionCookieLifetime = Configuration.GetValue("SessionCookieLifetimeMinutes", 60);
 
     // Add Authentication services
 

@@ -1,13 +1,13 @@
 ---
 title: Microsoft ツールを使用した Docker アプリケーション DevOps ワークフロー
 description: Microsoft プラットフォームでのコンテナー化された Docker アプリケーションのライフサイクルと Microsoft ツールでの Tools DevOps ワークフロー
-ms.date: 02/15/2019
-ms.openlocfilehash: 6b138301a7e6794ce0a7b15957684b3b73e9f89f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: 30c5066fa90d8792d8eef8f760dc63c00ce32130
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70295073"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915206"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft ツールを使用した Docker アプリケーション DevOps ワークフロー
 
@@ -23,7 +23,7 @@ Microsoft ツールは、Docker、.NET Core、または他のプラットフォ�
 
 - (Git または Team Foundation バージョン管理に基づく) Azure DevOps Services と Team Foundation Server のソース コード管理、(アジャイル、スクラム、CMMI がサポートされている) アジャイル計画、CI、リリース管理、アジャイル チーム用の他のツール。
 
-- Azure DevOps Services と Team Foundation Server にはファースト パーティおよびサード パーティの高性能な拡張機能からなるエコシステムが含まれ、そのエコシステムは増加を続けています。このような拡張機能を使用すると、マイクロサービス用に、CI、ビルド、テスト、配信、リリース管理パイプラインを容易に構成できます。
+- Azure DevOps Services と Team Foundation Server にはファースト パーティおよびサード パーティの高性能な拡張機能からなるエコシステムが含まれ、そのエコシステムは増加を続けています。このような拡張機能を使用すると、マイクロサービス用に、CI、ビルド、テスト、出荷、リリース管理パイプラインを容易に構成できます。
 
 - Azure DevOps Services でビルド パイプラインの一部として、自動テストを実行します。
 
