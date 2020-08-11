@@ -290,6 +290,8 @@ items:
         href: diagnostics/index.md
       - name: マネージド デバッガー
         href: diagnostics/managed-debuggers.md
+      - name: EventCounters
+        href: diagnostics/event-counters.md
       - name: ログとトレース
         href: diagnostics/logging-tracing.md
       - name: .NET Core CLI グローバル ツール
@@ -302,6 +304,8 @@ items:
             href: diagnostics/dotnet-trace.md
       - name: .NET Core 診断チュートリアル
         items:
+          - name: EventCounters を使用してパフォーマンス メトリックを取得する
+            href: diagnostics/event-counter-perf.md
           - name: メモリ リークをデバッグする
             href: diagnostics/debug-memory-leak.md
           - name: 高い CPU 使用率をデバッグする

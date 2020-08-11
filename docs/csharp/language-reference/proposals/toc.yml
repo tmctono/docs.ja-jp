@@ -82,3 +82,35 @@
           href: ../../../../_csharplang/proposals/csharp-8.0/readonly-instance-members.md
         - name: 入れ子になった stackalloc
           href: ../../../../_csharplang/proposals/csharp-8.0/nested-stackalloc.md
+    - name: C# 9.0 仕様の提案
+      items:
+        - name: レコード
+          href: ../../../../_csharplang/proposals/csharp-9.0/records.md
+        - name: 最上位レベルのステートメント
+          href: ../../../../_csharplang/proposals/csharp-9.0/top-level-statements.md
+        - name: パターン マッチングの拡張機能
+          href: ../../../../_csharplang/proposals/csharp-9.0/patterns3.md
+        - name: init 専用セッター
+          href: ../../../../_csharplang/proposals/csharp-9.0/init.md
+        - name: ターゲット型の新しい式
+          href: ../../../../_csharplang/proposals/csharp-9.0/target-typed-new.md
+        - name: モジュールの初期化子
+          href: ../../../../_csharplang/proposals/csharp-9.0/module-initializers.md
+        - name: 部分メソッドの拡張
+          href: ../../../../_csharplang/proposals/csharp-9.0/extending-partial-methods.md
+        - name: 静的な匿名関数
+          href: ../../../../_csharplang/proposals/csharp-9.0/static-anonymous-functions.md
+        - name: ターゲット型の条件式
+          href: ../../../../_csharplang/proposals/csharp-9.0/target-typed-conditional-expression.md
+        - name: 共変の戻り値の型
+          href: ../../../../_csharplang/proposals/csharp-9.0/covariant-returns.md
+        - name: ラムダ ディスカード パラメーター
+          href: ../../../../_csharplang/proposals/csharp-9.0/lambda-discard-parameters.md
+        - name: ローカル関数の属性
+          href: ../../../../_csharplang/proposals/csharp-9.0/local-function-attributes.md
+        - name: ネイティブ サイズの整数
+          href: ../../../../_csharplang/proposals/csharp-9.0/native-integers.md
+        - name: 関数ポインター
+          href: ../../../../_csharplang/proposals/csharp-9.0/function-pointers.md
+        - name: localsinit フラグの出力を抑制する
+          href: ../../../../_csharplang/proposals/csharp-9.0/skip-localsinit.md
