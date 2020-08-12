@@ -3,12 +3,12 @@ title: 式ツリー (C#)
 description: 式ツリーについて説明します。 各ノードが式である、これらのデータ構造体によって表されるコードをコンパイルして実行する方法をご覧ください。
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: 2fa8577dd945650edebf84459de10c0c3bd04225
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: a5c84673f0b45b92be18b955a6d1e7268bb73c26
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105585"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063316"
 ---
 # <a name="expression-trees-c"></a>式ツリー (C#)
 式ツリーでは、コードがツリー状のデータ構造で表示されます。各ノードは 1 つの式に対応しています。たとえば、メソッドの呼び出しや `x < y` のような二項演算などです。  
@@ -22,7 +22,7 @@ ms.locfileid: "87105585"
 ## <a name="creating-expression-trees-from-lambda-expressions"></a>ラムダ式からの式ツリーの作成  
  ラムダ式が <xref:System.Linq.Expressions.Expression%601> 型の変数に割り当てられている場合、コンパイラはラムダ式を表す式ツリーを構築するコードを出力します。  
   
- C# コンパイラは、式形式のラムダ (つまり単一行のラムダ) からのみ式ツリーを生成できます。 ステートメント形式のラムダ (つまり複数行のラムダ) は解析できません。 C# のラムダ式の詳細については、「[ラムダ式](../../statements-expressions-operators/lambda-expressions.md)」を参照してください。  
+ C# コンパイラは、式形式のラムダ (つまり単一行のラムダ) からのみ式ツリーを生成できます。 ステートメント形式のラムダ (つまり複数行のラムダ) は解析できません。 C# のラムダ式の詳細については、「[ラムダ式](../../../language-reference/operators/lambda-expressions.md)」を参照してください。  
   
  次のコード例は、ラムダ式 `num => num < 5` を表す式ツリーを C# コンパイラで作成する方法を示しています。  
   
@@ -153,6 +153,6 @@ Console.WriteLine(expr.Compile()(4));
 - <xref:System.Linq.Expressions>
 - [式ツリーを実行する方法 (C#)](./how-to-execute-expression-trees.md)
 - [式ツリーを変更する方法 (C#)](./how-to-modify-expression-trees.md)
-- [ラムダ式](../../statements-expressions-operators/lambda-expressions.md)
+- [ラムダ式](../../../language-reference/operators/lambda-expressions.md)
 - [動的言語ランタイムの概要](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
 - [プログラミングの概念 (C#)](../index.md)

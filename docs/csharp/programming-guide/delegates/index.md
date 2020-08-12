@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 94e7c130bd5d8e136d03ccdbaed643bc1a47d112
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 2c1be56b67528c17a6cf1d8d8517817ff93b2aa5
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302166"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063639"
 ---
 # <a name="delegates-c-programming-guide"></a>デリゲート (C# プログラミング ガイド)
 [デリゲート](../../language-reference/builtin-types/reference-types.md)は、特定のパラメーター リストおよび戻り値の型を使用して、メソッドへの参照を表す型です。 デリゲートをインスタンス化するときは、互換性のあるシグネチャと戻り値の型を持つ任意のメソッドにそのインスタンスを関連付けることができます。 メソッドは、デリゲート インスタンスを使用して起動する (呼び出す) ことができます。  
@@ -40,7 +40,7 @@ ms.locfileid: "87302166"
   
 - メソッドは、デリゲート型に正確に一致する必要がありません。 詳細については、「[デリゲートの分散の使用](../concepts/covariance-contravariance/using-variance-in-delegates.md)」を参照してください。  
   
-- C# バージョン 2.0 では[匿名メソッド](../../language-reference/operators/delegate-operator.md)の概念が導入されました。これを使用すると、別個に定義されたメソッドの代わりに、コード ブロックをパラメーターとして渡すことができます。 C# 3.0 ではラムダ式が導入され、インライン コード ブロックをより簡潔に記述できるようになりました。 匿名メソッドと (特定のコンテキストにおける) ラムダ式はどちらも、デリゲート型にコンパイルされます。 これらの機能は総称して、匿名関数と呼ばれるようになりました。 ラムダ式について詳しくは、「[ラムダ式](../statements-expressions-operators/lambda-expressions.md)」をご覧ください。
+- C# バージョン 2.0 では[匿名メソッド](../../language-reference/operators/delegate-operator.md)の概念が導入されました。これを使用すると、別個に定義されたメソッドの代わりに、コード ブロックをパラメーターとして渡すことができます。 C# 3.0 ではラムダ式が導入され、インライン コード ブロックをより簡潔に記述できるようになりました。 匿名メソッドと (特定のコンテキストにおける) ラムダ式はどちらも、デリゲート型にコンパイルされます。 これらの機能は総称して、匿名関数と呼ばれるようになりました。 ラムダ式について詳しくは、「[ラムダ式](../../language-reference/operators/lambda-expressions.md)」をご覧ください。
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
