@@ -7,21 +7,21 @@ metadata:
   description: Azure 上の .NET に関するサンプル、チュートリアル、および教育
   ms.topic: hub-page
   ms.prod: azure-dotnet
-  ms.date: 07/31/2020
-  ms.openlocfilehash: 114f12dd33a565ec8332f24c965a74b083bd32c7
-  ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+  ms.date: 08/12/2020
+  ms.openlocfilehash: 041b2124dde5ea5a1d6c04947fe14b1f72f6dacc
+  ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 08/07/2020
-  ms.locfileid: "87916273"
+  ms.lasthandoff: 08/13/2020
+  ms.locfileid: "88187941"
 highlightedContent:
   items:
   - itemType: overview
     title: Azure と .NET の概要
     url: intro.md
   - itemType: quickstart
-    title: ASP.NET Web アプリをデプロイする
-    url: https://docs.microsoft.com/azure/app-service/app-service-web-get-started-dotnet
+    title: Azure に ASP.NET Core Web アプリを作成する
+    url: /azure/app-service/quickstart-dotnetcore
   - itemType: quickstart
     title: サーバーレス関数を構築する
     url: /azure/azure-functions/functions-create-your-first-function-visual-studio
@@ -30,16 +30,16 @@ highlightedContent:
     url: /visualstudio/containers/container-tools?view=vs-2019
   - itemType: deploy
     title: Azure DevOps を使用して .NET アプリをデプロイする
-    url: https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/dotnet-core?view=azure-devops
+    url: /azure/devops/pipelines/ecosystems/dotnet-core?view=azure-devops
   - itemType: tutorial
     title: App Service でのエンドツーエンドの認証
-    url: https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-auth-aad
+    url: /azure/app-service/app-service-web-tutorial-auth-aad
   - itemType: learn
     title: Microsoft Identity を使用してカスタム API をセキュリティで保護する
-    url: https://docs.microsoft.com/learn/modules/identity-secure-custom-api/
+    url: /learn/modules/identity-secure-custom-api/
   - itemType: learn
     title: Azure 基礎
-    url: https://docs.microsoft.com/learn/paths/azure-fundamentals/
+    url: /learn/paths/azure-fundamentals/
 conceptualContent:
   title: おすすめコンテンツ
   summary: 各種の Azure サービスを活用して .NET アプリを開発する方法について説明します。
