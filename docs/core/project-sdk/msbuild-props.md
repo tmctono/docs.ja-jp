@@ -3,12 +3,12 @@ title: Microsoft.NET.Sdk の MSBuild プロパティ
 description: .NET Core SDK によって認識される MSBuild のプロパティと項目のリファレンスです。
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: 115c4f32e856dee64abe0c607b8ee595a65692e6
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 7980369b87d606d3876fe043e929a65da1d0d92b
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164378"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916247"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>.NET Core SDK プロジェクトの MSBuild リファレンス
 
@@ -182,7 +182,7 @@ ms.locfileid: "87164378"
 
 ### <a name="concurrentgarbagecollection"></a>ConcurrentGarbageCollection
 
-`ConcurrentGarbageCollection` プロパティでは、[バックグラウンド (同時実行) ガベージ コレクション](../../standard/garbage-collection/background-gc.md)の有効または無効が設定されます。 この値を `false` に設定すると、バックグラウンド ガベージ コレクションが無効になります。 詳細については、「[System.GC.Concurrent/COMPlus_gcConcurrent](../run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent)」を参照してください。
+`ConcurrentGarbageCollection` プロパティでは、[バックグラウンド (同時実行) ガベージ コレクション](../../standard/garbage-collection/background-gc.md)の有効または無効が設定されます。 この値を `false` に設定すると、バックグラウンド ガベージ コレクションが無効になります。 詳細については、「[バックグラウンド GC](../run-time-config/garbage-collector.md#background-gc)」を参照してください。
 
 ```xml
 <PropertyGroup>
@@ -202,7 +202,7 @@ ms.locfileid: "87164378"
 
 ### <a name="retainvmgarbagecollection"></a>RetainVMGarbageCollection
 
-`RetainVMGarbageCollection` プロパティでは、将来利用する目的で削除済みメモリ セグメントを待機一覧に載せるように、あるいは削除済みメモリ セグメントを解放するようにガベージ コレクターを設定します。 この値を `true` に設定すると、セグメントを待機一覧に載せるよう、ガベージ コレクターが命令されます。 詳細については、「[System.GC.RetainVM/COMPlus_GCRetainVM](../run-time-config/garbage-collector.md#systemgcretainvmcomplus_gcretainvm)」を参照してください。
+`RetainVMGarbageCollection` プロパティでは、将来利用する目的で削除済みメモリ セグメントを待機一覧に載せるように、あるいは削除済みメモリ セグメントを解放するようにガベージ コレクターを設定します。 この値を `true` に設定すると、セグメントを待機一覧に載せるよう、ガベージ コレクターが命令されます。 詳細については、「[VM の保持](../run-time-config/garbage-collector.md#retain-vm)」を参照してください。
 
 ```xml
 <PropertyGroup>
@@ -212,7 +212,7 @@ ms.locfileid: "87164378"
 
 ### <a name="servergarbagecollection"></a>ServerGarbageCollection
 
-`ServerGarbageCollection` プロパティでは、アプリケーションで使用するガベージ コレクションとして[ワークステーション ガベージ コレクションまたはサーバー ガベージ コレクション](../../standard/garbage-collection/workstation-server-gc.md)を設定します。 この値を `true` に設定すると、サーバー ガベージ コレクションが使用されます。 詳細については、「[System.GC.Server/COMPlus_gcServer](../run-time-config/garbage-collector.md#systemgcservercomplus_gcserver)」を参照してください。
+`ServerGarbageCollection` プロパティでは、アプリケーションで使用するガベージ コレクションとして[ワークステーション ガベージ コレクションまたはサーバー ガベージ コレクション](../../standard/garbage-collection/workstation-server-gc.md)を設定します。 この値を `true` に設定すると、サーバー ガベージ コレクションが使用されます。 詳細については、「[ワークステーションとサーバー](../run-time-config/garbage-collector.md#workstation-vs-server)」を参照してください。
 
 ```xml
 <PropertyGroup>

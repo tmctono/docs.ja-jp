@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 3c8fc7c4702b786c05e14397dc36d994c77e114d
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: fbe0b3491260e787c08b98b320b19408f2c897eb
+ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84811655"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87795386"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio"></a>チュートリアル: Visual Studio を使用して .NET Core コンソール アプリケーションを作成する
 
@@ -79,7 +79,7 @@ End Module
 
 ## <a name="run-the-app"></a>アプリを実行する
 
-1. <kbd>Shift</kbd> + <kbd>F5</kbd> キーを押して、デバッグなしでプログラムを実行します。
+1. <kbd>Ctrl</kbd> + <kbd>F5</kbd> キーを押して、デバッグなしでプログラムを実行します。
 
    コンソール ウィンドウが開き、"Hello World!" というテキストが 画面に出力され、Visual Studio のデバッグ情報が表示されます。
 
@@ -102,7 +102,7 @@ End Module
 
    文字列の前にドル記号 (`$`) を付けると、変数名などの式を文字列で中かっこで囲むことができます。 式の値が、式の代わりに文字列に挿入されます。 この構文は、[補間された文字列](../../csharp/language-reference/tokens/interpolated.md)と呼ばれます。
 
-1. <kbd>Shift</kbd> + <kbd>F5</kbd> キーを押して、デバッグなしでプログラムを実行します。
+1. <kbd>Ctrl</kbd> + <kbd>F5</kbd> キーを押して、デバッグなしでプログラムを実行します。
 
 1. プロンプトに対し、名前を入力し、<kbd>Enter</kbd> キーを押します。
 

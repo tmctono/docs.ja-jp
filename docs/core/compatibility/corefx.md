@@ -2,12 +2,12 @@
 title: 基本クラス ライブラリの破壊的変更
 description: Core .NET ライブラリにおける破壊的変更の一覧を示します。
 ms.date: 07/27/2020
-ms.openlocfilehash: 558aa1d76831cd15e2028c17d2b0b2e82f64ef9a
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 0667d975ce5bba5692fe5d179341235bd3c61790
+ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517329"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88024702"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Core .NET ライブラリの破壊的変更
 
@@ -17,6 +17,8 @@ Core .NET ライブラリでは、.NET Core で使用されるプリミティブ
 
 | 互換性に影響する変更点 | 導入されたバージョン |
 | - | :-: |
+| [IntPtr と UIntPtr の IFormattable 実装](#intptr-and-uintptr-implement-iformattable) | 5.0 |
+| [PrincipalPermissionAttribute は現在使用されていないエラーです](#principalpermissionattribute-is-obsolete-as-error) | 5.0 |
 | [BinaryFormatter シリアル化メソッドが古い形式になり、ASP.NET アプリでは使用不可に](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps) | 5.0 |
 | [UTF-7 コード パスが古い形式に](#utf-7-code-paths-are-obsolete) | 5.0 |
 | [Vector\<T> で、サポートされない型に対して常に NotSupportedException がスローされる](#vectort-always-throws-notsupportedexception-for-unsupported-types) | 5.0 |
@@ -33,20 +35,24 @@ Core .NET ライブラリでは、.NET Core で使用されるプリミティブ
 | [Unicode のガイドラインに従って不適切な形式の UTF-8 バイト シーケンスを置き換える](#replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines) | 3.0 |
 | [TypeDescriptionProviderAttribute を別のアセンブリに移動](#typedescriptionproviderattribute-moved-to-another-assembly) | 3.0 |
 | [ZipArchiveEntry による、エントリ サイズに一貫性のないアーカイブ処理の中止](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | 3.0 |
-| [Utf8JsonWriter での (string)null のセマンティクスの変更](#change-in-semantics-of-stringnull-in-utf8jsonwriter) | 3.0 |
-| [JsonEncodedText.Encode メソッドに JavaScriptEncoder 引数を追加](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument) | 3.0 |
-| [JsonFactoryConverter.CreateConverter 署名の変更](#jsonfactoryconvertercreateconverter-signature-changed) | 3.0 |
-| [JsonElement API の変更](#jsonelement-api-changes) | 3.0 |
 | [FieldInfo.SetValue で、静的な初期化専用フィールドに対する例外がスローされる](#fieldinfosetvalue-throws-exception-for-static-init-only-fields) | 3.0 |
 | [組み込みの構造体型に追加されたプライベート フィールド](#private-fields-added-to-built-in-struct-types) | 2.1 |
 | [UseShellExecute の既定値の変更](#change-in-default-value-of-useshellexecute) | 2.1 |
 | [macOS 上の OpenSSL バージョン](#openssl-versions-on-macos) | 2.1 |
-| [FileSystemInfo.Attributes によってスローされる UnauthorizedAccessException](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1 |
-| [プロセス破損状態例外の処理がサポートされない](#handling-corrupted-state-exceptions-is-not-supported) | 1 |
+| [FileSystemInfo.Attributes によってスローされる UnauthorizedAccessException](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1.0 |
+| [プロセス破損状態例外の処理がサポートされない](#handling-corrupted-state-exceptions-is-not-supported) | 1.0 |
 | [UriBuilder のプロパティでは今後、先頭に文字が付加されない](#uribuilder-properties-no-longer-prepend-leading-characters) | 1 |
 | [開始されなかったプロセスについて Process.StartInfo が InvalidOperationException をスローする](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [intptr-uintptr-implement-iformattable](../../../includes/core-changes/corefx/5.0/intptr-uintptr-implement-iformattable.md)]
+
+***
+
+[!INCLUDE [principalpermissionattribute-obsolete](../../../includes/core-changes/corefx/5.0/principalpermissionattribute-obsolete.md)]
+
+***
 
 [!INCLUDE [binaryformatter-serialization-obsolete](../../../includes/core-changes/corefx/5.0/binaryformatter-serialization-obsolete.md)]
 
@@ -111,22 +117,6 @@ Core .NET ライブラリでは、.NET Core で使用されるプリミティブ
 ***
 
 [!INCLUDE[ZipArchiveEntry no longer handles archives with inconsistent entry sizes](~/includes/core-changes/corefx/3.0/ziparchiveentry-and-inconsistent-entry-sizes.md)]
-
-***
-
-[!INCLUDE[Change in semantics of (string)null in Utf8JsonWriter](~/includes/core-changes/corefx/3.0/change-in-null-in-utf8jsonwriter.md)]
-
-***
-
-[!INCLUDE[JsonEncodedText.Encode methods have an additional JavaScriptEncoder argument](~/includes/core-changes/corefx/3.0/jsonencodedtext-encode-has-additional-argument.md)]
-
-***
-
-[!INCLUDE[JsonFactoryConverter.CreateConverter signature changed](~/includes/core-changes/corefx/3.0/jsonfactoryconverter-createconverter.md)]
-
-***
-
-[!INCLUDE[JsonElement API changes](~/includes/core-changes/corefx/3.0/jsonelement-api-changes.md)]
 
 ***
 

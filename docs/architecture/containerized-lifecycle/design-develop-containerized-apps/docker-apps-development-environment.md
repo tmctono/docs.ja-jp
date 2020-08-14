@@ -1,13 +1,13 @@
 ---
 title: Docker アプリの開発環境
 description: Docker 開発ライフサイクルをサポートする最も重要な開発ツールのオプションについて説明します。
-ms.date: 04/16/2020
-ms.openlocfilehash: b1df16db88fa85f794407c989f5428030c4cddf7
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 08/06/2020
+ms.openlocfilehash: 07b42b2bd05ab16ba0fbf61863b050ee2c9e242b
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394897"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916032"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker アプリの開発環境
 

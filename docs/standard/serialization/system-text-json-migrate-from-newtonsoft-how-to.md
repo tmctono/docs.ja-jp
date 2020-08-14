@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fbd3c8062892f106ec17d0fef86d5ad7f1207d20
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 4390f46492ada4b15d187be4c43a4f7865f64a80
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303479"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916976"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>Newtonsoft.Json から System.Text.Json に移行する方法
 
@@ -91,7 +91,7 @@ ms.locfileid: "87303479"
 
 逆シリアル化中、`Newtonsoft.Json` では、大文字と小文字の区別のないプロパティ名の照合が既定で行われます。 <xref:System.Text.Json> の既定では大文字と小文字が区別されます。完全一致が行われるため、これによってパフォーマンスが向上します。 大文字と小文字の区別のない照合の実行方法については、「[大文字と小文字を区別しないプロパティ照合](system-text-json-how-to.md#case-insensitive-property-matching)」を参照してください。
 
-ASP.NET Core を使用して `System.Text.Json` を間接的に使用している場合、`Newtonsoft.Json` のような動作を得るために何かをする必要はありません。 ASP.NET Core では、`System.Text.Json` を使用するときに、[Camel 形式のプロパティ名](system-text-json-how-to.md#use-camel-case-for-all-json-property-names)および大文字と小文字を区別しない照合のための設定が指定されます。
+ASP.NET Core を使用して `System.Text.Json` を間接的に使用している場合、`Newtonsoft.Json` のような動作を得るために何かをする必要はありません。 ASP.NET Core では、`System.Text.Json` を使用するときに、[Camel 形式のプロパティ名](system-text-json-how-to.md#use-camel-case-for-all-json-property-names)および大文字と小文字を区別しない照合のための設定が指定されます。 既定値は [JsonOptions クラス](https://github.com/dotnet/aspnetcore/blob/1f56888ea03f6a113587a6c4ac4d8b2ded326ffa/src/Mvc/Mvc.Core/src/JsonOptions.cs#L22-L28)で設定されます。
 
 ### <a name="minimal-character-escaping"></a>最小限の文字のエスケープ
 
@@ -128,6 +128,8 @@ ASP.NET Core を使用して `System.Text.Json` を間接的に使用してい�
 ### <a name="maximum-depth"></a>最大の深さ
 
 `Newtonsoft.Json` の場合、既定では最大の深さの制限はありません。 <xref:System.Text.Json> の場合、64 という既定の制限があり、<xref:System.Text.Json.JsonSerializerOptions.MaxDepth?displayProperty=nameWithType> を設定して構成できます。
+
+ASP.NET Core を使用し、`System.Text.Json` を間接的に使用している場合、深さ上限の既定値は 32 です。 この既定値はモデル バインドの場合と同じであり、[JsonOptions クラス](https://github.com/dotnet/aspnetcore/blob/1f56888ea03f6a113587a6c4ac4d8b2ded326ffa/src/Mvc/Mvc.Core/src/JsonOptions.cs#L17-L20)で設定されます。
 
 ### <a name="json-strings-property-names-and-string-values"></a>JSON 文字列 (プロパティ名と文字列値)
 

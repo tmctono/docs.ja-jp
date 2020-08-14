@@ -3,12 +3,12 @@ title: dotnet nuget push コマンド
 description: dotnet nuget push コマンドでは、パッケージをサーバーにプッシュして発行します。
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 608cd05d94dd6b5cdc53d582cfaa0407f011ff37
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 50a4a542c2d192bfbd927845489d04fd1b6c6cf3
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925515"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555124"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -133,23 +133,26 @@ dotnet nuget push -h|--help
 - 既定のプッシュ ソースに現在のディレクトリ内のすべての *.nupkg* ファイルをプッシュします。
 
   ```dotnetcli
-  dotnet nuget push *.nupkg
+  dotnet nuget push "*.nupkg"
   ```
 
   > [!NOTE]
   > このコマンドがうまくいかない場合は、古いバージョンの SDK (.NET Core 2.1 SDK 以前のバージョン) に存在したバグが原因である可能性があります。
-  > これを解決するには、SDK のバージョンをアップグレードするか、代わりに次のコマンドを実行します: `dotnet nuget push **/*.nupkg`
+  > これを解決するには、SDK のバージョンをアップグレードするか、代わりに次のコマンドを実行します: `dotnet nuget push "**/*.nupkg"`
+  
+  > [!NOTE]
+  > ファイル グロビングを実行する bash など、シェルには引用符が必須です。 詳細については、[NuGet/Home#4393](https://github.com/NuGet/Home/issues/4393#issuecomment-667618120) を参照してください。
 
 - HTTP(S) サーバーによって 409 競合応答が返された場合でも、すべての *.nupkg* ファイルをプッシュします。
 
   ```dotnetcli
-  dotnet nuget push *.nupkg --skip-duplicate
+  dotnet nuget push "*.nupkg" --skip-duplicate
   ```
 
 - ローカル フィード ディレクトリに現在のディレクトリ内のすべての *.nupkg* ファイルをプッシュします。
 
   ```dotnetcli
-  dotnet nuget push *.nupkg -s c:\mydir
+  dotnet nuget push "*.nupkg" -s c:\mydir
   ```
 
   このコマンドでは、パッケージが階層フォルダー構造に格納されないため、パフォーマンスを最適化することをお勧めします。 詳細については、[ローカル フィード](/nuget/hosting-packages/local-feeds)に関するページをご覧ください。  

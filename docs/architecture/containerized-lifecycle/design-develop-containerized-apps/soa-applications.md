@@ -1,13 +1,13 @@
 ---
 title: SOA アプリケーション
 description: コンテナーも SOA アプリケーションの便利なデプロイ オプションになる可能性があることを留意してください。
-ms.date: 02/15/2019
-ms.openlocfilehash: f8619cb50a7d90b911db9ff2c8ef37c3c5fde210
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.date: 08/06/2020
+ms.openlocfilehash: 5cc616eaf3be31ae704320df6ec54deed9529989
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738386"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915262"
 ---
 # <a name="service-oriented-applications"></a>サービス指向アプリケーション
 

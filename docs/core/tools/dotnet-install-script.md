@@ -2,12 +2,12 @@
 title: dotnet-install スクリプト
 description: .NET Core SDK と共有ランタイムをインストールするための dotnet-install スクリプトについて学習します。
 ms.date: 04/30/2020
-ms.openlocfilehash: cecfbb86c4a2863161d3df7c78201fa8057abfe5
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: c3aa6549a0b521db7fc19c6ff44665e3c4ba0c5f
+ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86415922"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88024655"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install スクリプト リファレンス
 
@@ -23,7 +23,7 @@ Windows の場合:
 dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
     [-Channel <CHANNEL>] [-DryRun] [-FeedCredential]
     [-InstallDir <DIRECTORY>] [-JSonFile <JSONFILE>]
-    [-NoCdn] [-NoPath] [-ProxyAddress]
+    [-NoCdn] [-NoPath] [-ProxyAddress] [-ProxyBypassList <LIST_OF_URLS>]
     [-ProxyUseDefaultCredentials] [-Runtime <RUNTIME>]
     [-SkipNonVersionedFiles] [-UncachedFeed] [-Verbose]
     [-Version <VERSION>]
@@ -140,6 +140,10 @@ bash スクリプトは PowerShell のスイッチも読み取るので、Linux/
 - **`-ProxyAddress`**
 
   設定すると、インストーラーで Web 要求を行うときにプロキシが使われます。 (Windows でのみ有効)。
+
+- **`-ProxyBypassList <LIST_OF_URLS>`**
+
+  `ProxyAddress` で設定されている場合、プロキシをバイパスする URL をコンマ区切りの一覧で提供します。 (Windows でのみ有効)。
 
 - **`ProxyUseDefaultCredentials`**
 

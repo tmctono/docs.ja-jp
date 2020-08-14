@@ -3,18 +3,18 @@ title: .NET 用 Azure ライブラリの認証を理解する
 description: Azure SDK for .NET を利用したさまざまな認証について説明します。
 ms.date: 06/19/2020
 ms.custom: azure-sdk-dotnet
-ms.openlocfilehash: 727842b34faa37558220a3035ac5228fae196201
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: e588499a789fc5e7da7eb51009f97090ca75e562
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301620"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916609"
 ---
 # <a name="authenticate-with-the-azure-sdk-for-net"></a>Azure SDK for .NET を使用した認証
 
 ## <a name="recommended-azureidentity"></a>推奨:Azure.Identity
 
-Azure SDK for .NET の最新パッケージでは、共通の認証パッケージを使用して認証します。`Azure.Identity` です。 `Azure.Identity` の使用は、このドキュメントの後半で説明する他の認証メカニズムよりも推奨されています。 `Azure.Identity` から提供される資格情報をサポートするパッケージには、*Azure* で始まるパッケージ識別子が与えられています。 [詳細については、Azure SDK for .NET の最新リリースをご覧ください](https://azure.github.io/azure-sdk/releases/latest/index.html#net)。
+Azure SDK for .NET の最新パッケージでは、共通の認証パッケージを使用して認証します。`Azure.Identity` です。 `Azure.Identity` の使用は、このドキュメントの後半で説明する他の認証メカニズムよりも推奨されています。 `Azure.Identity` から提供される資格情報をサポートするパッケージは `Azure.Core` を基盤として構築され、*Azure* で始まるパッケージ識別子が与えられます。 `Azure.Core` が使用されるパッケージのインベントリについては、[パッケージの一覧を参照してください](packages.md)。
 
 プロジェクトで `Azure.Identity` を使用する方法の詳細については、[.NET 用 Azure Identity クライアント](/dotnet/api/overview/azure/identity-readme)に関するドキュメントを参照してください。
 

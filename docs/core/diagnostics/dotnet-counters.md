@@ -2,12 +2,12 @@
 title: dotnet-counters - .NET Core
 description: dotnet-counter コマンドライン ツールをインストールして使用する方法について説明します。
 ms.date: 02/26/2020
-ms.openlocfilehash: dc95297478784ca06fe442a939f8489a40b29da7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 71e3c4f0a60960c4e672b95000bc0d67bd427514
+ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147179"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88024629"
 ---
 # <a name="dotnet-counters"></a>dotnet-カウンター
 
@@ -44,11 +44,11 @@ dotnet-counters [-h|--help] [--version] <command>
 ## <a name="commands"></a>コマンド
 
 | コマンド                                             |
-| --------------------------------------------------- |
+|-----------------------------------------------------|
 | [dotnet-counters collect](#dotnet-counters-collect) |
 | [dotnet-counters list](#dotnet-counters-list)       |
 | [dotnet-counters monitor](#dotnet-counters-monitor) |
-| [dotnet-counters ps](#dotnet-counters-ps) |
+| [dotnet-counters ps](#dotnet-counters-ps)           |
 
 ## <a name="dotnet-counters-collect"></a>dotnet-counters collect
 
@@ -107,17 +107,38 @@ dotnet-counters list [-h|--help]
 
 ```console
 > dotnet-counters list
+Showing well-known counters only. Specific processes may support additional counters.
 
-    Showing well-known counters only. Specific processes may support additional counters.
-    System.Runtime
-        cpu-usage                    Amount of time the process has utilized the CPU (ms)
-        working-set                  Amount of working set used by the process (MB)
-        gc-heap-size                 Total heap size reported by the GC (MB)
-        gen-0-gc-count               Number of Gen 0 GCs / sec
-        gen-1-gc-count               Number of Gen 1 GCs / sec
-        gen-2-gc-count               Number of Gen 2 GCs / sec
-        exception-count              Number of Exceptions / sec
+System.Runtime
+    cpu-usage                                    Amount of time the process has utilized the CPU (ms)
+    working-set                                  Amount of working set used by the process (MB)
+    gc-heap-size                                 Total heap size reported by the GC (MB)
+    gen-0-gc-count                               Number of Gen 0 GCs / min
+    gen-1-gc-count                               Number of Gen 1 GCs / min
+    gen-2-gc-count                               Number of Gen 2 GCs / min
+    time-in-gc                                   % time in GC since the last GC
+    gen-0-size                                   Gen 0 Heap Size
+    gen-1-size                                   Gen 1 Heap Size
+    gen-2-size                                   Gen 2 Heap Size
+    loh-size                                     LOH Heap Size
+    alloc-rate                                   Allocation Rate
+    assembly-count                               Number of Assemblies Loaded
+    exception-count                              Number of Exceptions / sec
+    threadpool-thread-count                      Number of ThreadPool Threads
+    monitor-lock-contention-count                Monitor Lock Contention Count
+    threadpool-queue-length                      ThreadPool Work Items Queue Length
+    threadpool-completed-items-count             ThreadPool Completed Work Items Count
+    active-timer-count                           Active Timers Count
+
+Microsoft.AspNetCore.Hosting
+    requests-per-second                  Request rate
+    total-requests                       Total number of requests
+    current-requests                     Current number of requests
+    failed-requests                      Failed number of requests
 ```
+
+> [!NOTE]
+> `Microsoft.AspNetCore.Hosting` カウンターは、そのようなカウンターをサポートするプロセスが特定されたときに表示されます。たとえば、ホスト マシンで ASP.NET Core アプリケーションが実行されているときです。
 
 ## <a name="dotnet-counters-monitor"></a>dotnet-counters monitor
 
@@ -143,7 +164,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
   カウンターのスペース区切りリスト。 カウンターは `provider_name[:counter_name]` で指定できます。 `counter_name` を修飾せずに `provider_name` を使用すると、すべてのカウンターが表示されます。 プロバイダーとカウンターの名前を検出するには、[dotnet-counters list](#dotnet-counters-list) コマンドを使用します。
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 - 3 秒の更新間隔で `System.Runtime` のすべてのカウンターを監視します。
 
@@ -172,7 +193,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       GC Heap Size (MB)                            811
   ```
 
-- ユーザー定義の `EventSource` の `EventCounter` 値を監視します。 詳しくは、「[チュートリアル: How to measure performance for very frequent events using EventCounters](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md)」を参照してください。
+- ユーザー定義の `EventSource` の `EventCounter` 値を監視します。 詳しくは、「[チュートリアル: .NET Core で EventCounters を使用してパフォーマンスを測定する](event-counter-perf.md)」を参照してください。
 
   ```console
   > dotnet-counters monitor --process-id 1902 Samples-EventCounterDemos-Minimal
@@ -185,7 +206,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
 監視できる dotnet プロセスの一覧を表示します。
 
-### <a name="synopsis"></a>構文
+### <a name="synopsis"></a>概要
 
 ```console
 dotnet-counters ps [-h|--help]

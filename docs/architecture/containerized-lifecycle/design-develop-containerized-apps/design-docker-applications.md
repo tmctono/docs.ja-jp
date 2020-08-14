@@ -1,13 +1,13 @@
 ---
 title: Docker アプリケーションの設計
 description: このガイドではマイクロサービスについて詳しく説明していないため、ここでそのトピックについての詳しいガイドへの参照を確認してください。
-ms.date: 02/15/2019
-ms.openlocfilehash: b8a08658ec6c3df3e1aed596a0240223768dd647
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.date: 08/06/2020
+ms.openlocfilehash: b63d4344abb358a393587bdacf91f6091b531af0
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738462"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915977"
 ---
 # <a name="design-docker-applications"></a>Docker アプリケーションの設計
 
@@ -15,7 +15,7 @@ ms.locfileid: "81738462"
 
 **詳細** エンタープライズ アプリケーションとマイクロサービス アーキテクチャの詳細については、「[.NET マイクロサービス:コンテナー化された .NET アプリケーションのアーキテクチャ](../../microservices/index.md)」ガイドを参照してください。これも <https://aka.ms/MicroservicesEbook> からダウンロードできます。
 
-しかし、アプリケーション ライフサイクルと DevOps に進む前に、アプリケーションを設計して構築する方法と、設計の選択肢について理解することが重要です。
+ただし、アプリケーションのライフサイクルと DevOps に進む前に、アプリケーションを設計および構築する方法と、設計の選択肢について理解することが重要です。
 
 >[!div class="step-by-step"]
 >[前へ](index.md)

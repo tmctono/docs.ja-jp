@@ -5,18 +5,18 @@ ms.date: 04/21/2020
 helpviewer_keywords:
 - garbage collection, background
 - background garbage collection
-ms.openlocfilehash: 780503288d3474cd99a595bdbd52c3a5abba5308
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: bf88c14b2aeed94a548b6116749fa8669576afe1
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990236"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916998"
 ---
 # <a name="background-garbage-collection"></a>バックグラウンド ガベージ コレクション
 
 バックグラウンド ガベージ コレクション (GC) では、ジェネレーション 2 のコレクションの実行中に、必要に応じて短期ジェネレーション (0 および 1) のコレクションが行われます。 バックグラウンド ガベージ コレクションは、バックグラウンド GC かサーバー GC かによって 1 つまたは複数の専用スレッドで実行され、ジェネレーション 2 のコレクションにのみ適用されます。
 
-バックグラウンド ガベージ コレクションは既定で有効になっています。 これは、.NET Framework アプリの [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 構成設定または .NET Core アプリの [System.GC.Concurrent](../../core/run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent) 設定で有効または無効にすることができます。
+バックグラウンド ガベージ コレクションは既定で有効になっています。 これは、.NET Framework アプリの [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 構成設定または .NET Core と .NET 5 以降のアプリの [System.GC.Concurrent](../../core/run-time-config/garbage-collector.md#background-gc) 設定で有効または無効にすることができます。
 
 > [!NOTE]
 > [バックグラウンド ガベージ コレクション](#concurrent-garbage-collection)は同時実行ガベージ コレクションに取って代わり、.NET Framework 4 以降で利用できます。 .NET Framework 4 では、"*ワークステーション*" ガベージ コレクションのみでサポートされます。 .NET Framework 4.5 以降では、バックグラウンド ガベージ コレクションは、"*ワークステーション*" と "*サーバー*" の両方のガベージ コレクションで使用できます。

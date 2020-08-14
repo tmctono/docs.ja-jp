@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 00c32c10f77995284264e795d386f699082dcb84
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 54ef49755dc0b9d1b821ae7999ab218626d455e1
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721648"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556335"
 ---
 ### <a name="custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively"></a>カスタム EncoderFallbackBuffer インスタンスが再帰的にフォールバックしない
 
@@ -16,7 +16,7 @@ ms.locfileid: "83721648"
 
 それからランタイムはこれらの置換文字を、ターゲットのエンコードに変換しようとします。 この操作が成功する場合、ランタイムによって、元の入力文字列の中断した箇所からコード変換が継続されます。
 
-.NET Core Preview 7 以前では、<xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> をカスタム実装することにより、変換先のエンコードに変換できなかった文字シーケンスが返されました。 置換文字がターゲットのエンコードにコード変換できない場合、<xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> メソッドによって新しい置換のシーケンスが返されることを期待し、ランタイムによって置換文字列が使用されて <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> メソッドが再度呼び出されます。 この処理は、結果的に、ランタイムによって正しい形式の、変換可能な代替が確認されるまで、または最大再帰数に到達するまで、継続します。
+以前は、<xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> をカスタム実装することにより、変換先のエンコードに変換できなかった文字シーケンスが返されました。 置換文字がターゲットのエンコードにコード変換できない場合、<xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> メソッドによって新しい置換のシーケンスが返されることを期待し、ランタイムによって置換文字列が使用されて <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> メソッドが再度呼び出されます。 この処理は、結果的に、ランタイムによって正しい形式の、変換可能な代替が確認されるまで、または最大再帰数に到達するまで、継続します。
 
 .NET Core 3.0 以降では、<xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> をカスタム実装した場合、変換先のエンコードに変換できる文字シーケンスが返される必要があります。 置換文字がターゲットのエンコードにコード変換できない場合、<xref:System.ArgumentException> がスローされます。 ランタイムは、それ以上 <xref:System.Text.EncoderFallbackBuffer> インスタンスに対し、再帰呼び出しを実行しなくなります。
 

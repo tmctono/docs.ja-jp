@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: c9720f51e40ada4cd2cf6997ba7006a232893553
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: d3bfeda8309af83d8e4199999ed91263a17caeea
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702485"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556205"
 ---
 ### <a name="removed-status-bar-controls"></a>削除されたステータス バー コントロール
 
-.NET 5.0 Preview 1 以降では、一部の Windows フォーム コントロールが利用できなくなります。
+.NET 5.0 より、一部の Windows フォーム コントロールが利用できません。
 
 #### <a name="change-description"></a>変更の説明
 
-.NET 5.0 Preview 1 以降では、Windows フォームのステータス バー関連のコントロールの一部が利用できなくなります。 デザインとサポートが改善された代替コントロールは .NET Framework 2.0 で導入されました。 非推奨コントロールは前にデザイナー ツールボックスから削除されましたが、引き続き利用できました。 現在は、完全に削除されています。
+.NET 5.0 以降では、Windows フォームのステータス バー関連のコントロールの一部が利用できなくなります。 デザインとサポートが改善された代替コントロールは .NET Framework 2.0 で導入されました。 非推奨コントロールは前にデザイナー ツールボックスから削除されましたが、引き続き利用できました。 現在は、完全に削除されています。
 
 次の型は現在なくなっています。
 

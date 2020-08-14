@@ -1,13 +1,13 @@
 ---
 title: Docker に関する用語
 description: Docker の使用時に日常的に使われる基本的な用語の一部について説明します。
-ms.date: 04/16/2020
-ms.openlocfilehash: 34e50596eca21ec5b5505493414056814455d745
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 08/06/2020
+ms.openlocfilehash: b47639a2995c3a0a30ea7111c16bbea21f1048ba
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507326"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915187"
 ---
 # <a name="docker-terminology"></a>Docker に関する用語
 
@@ -29,7 +29,7 @@ docker build
 
 **タグ**:各種イメージまたは同じイメージの各種バージョン (バージョン番号または対象となる環境に応じて異なる) を識別できるように、イメージに適用できるマークまたはラベルです。
 
-**マルチステージ ビルド**:Docker 17.05 以降の機能です。最終イメージのサイズを縮小するために役立ちます。 簡単に説明すると、複数ステージ ビルドを使用すると、たとえば、アプリケーションをコンパイルして発行してから、小さなランタイムのみの基本イメージを含む発行フォルダーを使用するために、SDK を含む大きな基本イメージを使用して、はるかに小さい最終イメージを生成することができます。
+**マルチステージ ビルド**:Docker 17.05 以降の機能です。最終イメージのサイズを縮小するために役立ちます。 たとえば、SDK が含まれる大きな基本イメージをコンパイルとパブリッシュに使用し、その後、小さなランタイム専用基本イメージを使用してアプリケーションをホストできます。
 
 **リポジトリ**:関連する Docker イメージのコレクションであり、イメージのバージョンを示すタグでラベル付けされています。 一部のリポジトリには、特定のイメージのバリアントが複数含まれています。たとえば、SDK を含むイメージ (重い) やランタイムのみを含むイメージ (軽い) などが該当します。そのようなバリアントは、タグでマーク付けすることができます。 単一のリポジトリには、Linux イメージや Windows イメージなどのプラットフォーム バリアントを含めることができます。
 
@@ -41,7 +41,7 @@ docker build
 
 **Azure コンテナー レジストリ**:Azure 内で Docker イメージとそのコンポーネントを操作するためのパブリック リソースです。 これは、Azure で利用しているデプロイに近く、アクセスに対する制御権を付与するレジストリです。これにより、Azure Active Directory のグループとアクセス許可が使用できるようになります。
 
-**Docker Trusted Registry (DTR)** :組織のデータ センターやネットワーク内で有効になるようにオンプレミスにインストール可能な Docker レジストリ サービス (Docker からの) です。 企業内で管理する必要があるプライベート イメージにおいて便利です。 Docker Trusted Registry は Docker Datacenter 製品の一部として含められています。 詳細については、[Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/) に関するページを参照してください。
+**Docker Trusted Registry (DTR)** :組織のデータ センターやネットワーク内で有効になるようにオンプレミスにインストール可能な Docker レジストリ サービス (Docker からの) です。 企業内で管理する必要があるプライベート イメージにおいて便利です。 Docker Trusted Registry は Docker Datacenter 製品の一部として含められています。 詳細については、[Docker Trusted Registry (DTR)](https://www.docker.com/sites/default/files/Docker%20Trusted%20Registry.pdf) に関するページを参照してください。
 
 **Docker Community Edition (CE)** :コンテナーをローカルにビルド、実行、テストのための Windows および macOS 用の開発ツールです。 Docker for Windows CE は、Linux コンテナーと Windows コンテナーの両方に開発環境を提供します。 Windows 上の Linux Docker ホストは、[Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization) 仮想マシンをベースにしています。 Windows コンテナーのホストは、Windows に直接基づいています。 Docker CE for Mac は、Apple Hypervisor フレームワークと [xhyve ハイパーバイザー](https://github.com/mist64/xhyve) (Mac OS X 上で Linux Docker ホスト仮想マシンを提供する) に基づいています。Docker CE for Windows と Docker CE for Mac は、Oracle VirtualBox に基づく Docker Toolbox に取って代わります。
 

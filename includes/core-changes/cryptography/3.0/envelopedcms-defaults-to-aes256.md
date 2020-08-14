@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d23c6cc9f8ee9c912ce5c9509d157692d1a18f90
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: e0cdcce9b8c7d591925b08635e3354dadaf22b7b
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721020"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556029"
 ---
 ### <a name="envelopedcms-defaults-to-aes-256-encryption"></a>EnvelopedCms が AES-256 暗号化を既定で使用
 
@@ -12,11 +12,11 @@ ms.locfileid: "83721020"
 
 #### <a name="change-description"></a>変更の説明
 
-.NET Core Preview 7 以前のバージョンでは、コンストラクターのオーバーロードを使って対称暗号化アルゴリズムを指定せずに <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> を使用してデータを暗号化する場合、データは TripleDES/3DES/3DEA/DES3-EDE アルゴリズムで暗号化されていました。
+以前のバージョンでは、コンストラクターのオーバーロードを使って対称暗号化アルゴリズムを指定せずに <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> を使用してデータを暗号化する場合、データは TripleDES/3DES/3DEA/DES3-EDE アルゴリズムで暗号化されます。
 
-.NET Core 3.0 Preview 8 以降では ([System.Security.Cryptography.Pkcs](https://www.nuget.org/packages/System.Security.Cryptography.Pkcs/) NuGet パッケージのバージョン 4.6.0 を介して)、アルゴリズムを最新化し、既定のオプションのセキュリティを向上するために、既定のアルゴリズムが AES-256 に変更されました。 メッセージ受信者の証明書に Diffie-Hellman (非 EC) 公開キーが含まれている場合、基になるプラットフォームの制限のために、暗号化操作は、<xref:System.Security.Cryptography.CryptographicException> で失敗する可能性があります。
+.NET Core 3.0 以降では ([System.Security.Cryptography.Pkcs](https://www.nuget.org/packages/System.Security.Cryptography.Pkcs/) NuGet パッケージのバージョン 4.6.0 を介して)、アルゴリズムを最新化し、既定のオプションのセキュリティを向上するために、既定のアルゴリズムが AES-256 に変更されました。 メッセージ受信者の証明書に Diffie-Hellman (非 EC) 公開キーが含まれている場合、基になるプラットフォームの制限のために、暗号化操作は、<xref:System.Security.Cryptography.CryptographicException> で失敗する可能性があります。
 
-次のサンプル コードでは、.NET Core 3.0 Preview 7 以前で実行されている場合、データは TripleDES で暗号化され、 NET Core 3.0 Preview 8 以降で実行されている場合は AES-256 で暗号化されます。
+次のサンプル コードでは、.NET Core 2.2 以前で実行されている場合、データは TripleDES で暗号化されます。 NET Core 3.0 以降で実行されている場合は AES-256 で暗号化されます。
 
 ```csharp
 EnvelopedCms cms = new EnvelopedCms(content);
@@ -26,7 +26,7 @@ return cms.Encode();
 
 #### <a name="version-introduced"></a>導入されたバージョン
 
-3.0 Preview 8
+3.0
 
 #### <a name="recommended-action"></a>推奨アクション
 
