@@ -1,48 +1,46 @@
 ---
-title: を使用して再利用可能な UI コンポーネントを構築するBlazor
+title: を使用して再利用可能な UI コンポーネントを構築する Blazor
 description: を使用して再利用可能な UI コンポーネントを構築する方法 Blazor と、それらを ASP.NET Web フォームコントロールと比較する方法について説明します。
 author: danroth27
 ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 09/18/2019
-ms.openlocfilehash: 9577fc916bb11783b885b2641242820865c0b115
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 4fdf062fb719e62b53e47f79db1e93d0bf079350
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173342"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267686"
 ---
-# <a name="build-reusable-ui-components-with-blazor"></a><span data-ttu-id="183a7-103">を使用して再利用可能な UI コンポーネントを構築するBlazor</span><span class="sxs-lookup"><span data-stu-id="183a7-103">Build reusable UI components with Blazor</span></span>
+# <a name="build-reusable-ui-components-with-no-locblazor"></a><span data-ttu-id="b53ab-103">を使用して再利用可能な UI コンポーネントを構築する Blazor</span><span class="sxs-lookup"><span data-stu-id="b53ab-103">Build reusable UI components with Blazor</span></span>
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+<span data-ttu-id="b53ab-104">ASP.NET Web フォームに関するすばらしい点の1つは、再利用可能なユーザーインターフェイス (UI) コードを再利用可能な UI コントロールにカプセル化できるようにする方法です。</span><span class="sxs-lookup"><span data-stu-id="b53ab-104">One of the beautiful things about ASP.NET Web Forms is how it enables encapsulation of reusable pieces of user interface (UI) code into reusable UI controls.</span></span> <span data-ttu-id="b53ab-105">カスタムユーザーコントロールは、 *.ascx* ファイルを使用してマークアップで定義できます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-105">Custom user controls can be defined in markup using *.ascx* files.</span></span> <span data-ttu-id="b53ab-106">デザイナーを完全にサポートするコードで、複雑なサーバーコントロールを作成することもできます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-106">You can also build elaborate server controls in code with full designer support.</span></span>
 
-<span data-ttu-id="183a7-104">ASP.NET Web フォームに関するすばらしい点の1つは、再利用可能なユーザーインターフェイス (UI) コードを再利用可能な UI コントロールにカプセル化できるようにする方法です。</span><span class="sxs-lookup"><span data-stu-id="183a7-104">One of the beautiful things about ASP.NET Web Forms is how it enables encapsulation of reusable pieces of user interface (UI) code into reusable UI controls.</span></span> <span data-ttu-id="183a7-105">カスタムユーザーコントロールは、 *.ascx*ファイルを使用してマークアップで定義できます。</span><span class="sxs-lookup"><span data-stu-id="183a7-105">Custom user controls can be defined in markup using *.ascx* files.</span></span> <span data-ttu-id="183a7-106">デザイナーを完全にサポートするコードで、複雑なサーバーコントロールを作成することもできます。</span><span class="sxs-lookup"><span data-stu-id="183a7-106">You can also build elaborate server controls in code with full designer support.</span></span>
+<span data-ttu-id="b53ab-107">Blazor では、 *コンポーネント*による UI カプセル化もサポートされています。</span><span class="sxs-lookup"><span data-stu-id="b53ab-107">Blazor also supports UI encapsulation through *components*.</span></span> <span data-ttu-id="b53ab-108">コンポーネント:</span><span class="sxs-lookup"><span data-stu-id="b53ab-108">A component:</span></span>
 
-Blazor<span data-ttu-id="183a7-107">では、*コンポーネント*による UI カプセル化もサポートされています。</span><span class="sxs-lookup"><span data-stu-id="183a7-107"> also supports UI encapsulation through *components*.</span></span> <span data-ttu-id="183a7-108">コンポーネント:</span><span class="sxs-lookup"><span data-stu-id="183a7-108">A component:</span></span>
+- <span data-ttu-id="b53ab-109">は、UI の自己完結型のチャンクです。</span><span class="sxs-lookup"><span data-stu-id="b53ab-109">Is a self-contained chunk of UI.</span></span>
+- <span data-ttu-id="b53ab-110">は、独自の状態およびレンダリングロジックを保持します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-110">Maintains its own state and rendering logic.</span></span>
+- <span data-ttu-id="b53ab-111">UI イベントハンドラーを定義し、入力データにバインドして、独自のライフサイクルを管理できます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-111">Can define UI event handlers, bind to input data, and manage its own lifecycle.</span></span>
+- <span data-ttu-id="b53ab-112">は、通常、Razor 構文を使用する *razor* ファイルで定義されます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-112">Is typically defined in a *.razor* file using Razor syntax.</span></span>
 
-- <span data-ttu-id="183a7-109">は、UI の自己完結型のチャンクです。</span><span class="sxs-lookup"><span data-stu-id="183a7-109">Is a self-contained chunk of UI.</span></span>
-- <span data-ttu-id="183a7-110">は、独自の状態およびレンダリングロジックを保持します。</span><span class="sxs-lookup"><span data-stu-id="183a7-110">Maintains its own state and rendering logic.</span></span>
-- <span data-ttu-id="183a7-111">UI イベントハンドラーを定義し、入力データにバインドして、独自のライフサイクルを管理できます。</span><span class="sxs-lookup"><span data-stu-id="183a7-111">Can define UI event handlers, bind to input data, and manage its own lifecycle.</span></span>
-- <span data-ttu-id="183a7-112">は、通常、Razor 構文を使用する*razor*ファイルで定義されます。</span><span class="sxs-lookup"><span data-stu-id="183a7-112">Is typically defined in a *.razor* file using Razor syntax.</span></span>
+## <a name="an-introduction-to-razor"></a><span data-ttu-id="b53ab-113">Razor の概要</span><span class="sxs-lookup"><span data-stu-id="b53ab-113">An introduction to Razor</span></span>
 
-## <a name="an-introduction-to-razor"></a><span data-ttu-id="183a7-113">Razor の概要</span><span class="sxs-lookup"><span data-stu-id="183a7-113">An introduction to Razor</span></span>
+<span data-ttu-id="b53ab-114">Razor は、HTML および C# に基づく軽量のマークアップテンプレート言語です。</span><span class="sxs-lookup"><span data-stu-id="b53ab-114">Razor is a light-weight markup templating language based on HTML and C#.</span></span> <span data-ttu-id="b53ab-115">Razor を使用すると、マークアップと C# のコードをシームレスに切り替えて、コンポーネントのレンダリングロジックを定義できます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-115">With Razor, you can seamlessly transition between markup and C# code to define your component rendering logic.</span></span> <span data-ttu-id="b53ab-116">*Razor*ファイルがコンパイルされると、レンダリングロジックは .net クラスで構造化された方法でキャプチャされます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-116">When the *.razor* file is compiled, the rendering logic is captured in a structured way in a .NET class.</span></span> <span data-ttu-id="b53ab-117">コンパイル済みクラスの名前は、 *razor* ファイル名から取得されます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-117">The name of the compiled class is taken from the *.razor* file name.</span></span> <span data-ttu-id="b53ab-118">名前空間は、プロジェクトの既定の名前空間およびフォルダーパスから取得されます。また、ディレクティブを使用して名前空間を明示的に指定することもでき `@namespace` ます (以下の Razor ディレクティブについてはこちらを参照してください)。</span><span class="sxs-lookup"><span data-stu-id="b53ab-118">The namespace is taken from the default namespace for the project and the folder path, or you can explicitly specify the namespace using the `@namespace` directive (more on Razor directives below).</span></span>
 
-<span data-ttu-id="183a7-114">Razor は、HTML および C# に基づく軽量のマークアップテンプレート言語です。</span><span class="sxs-lookup"><span data-stu-id="183a7-114">Razor is a light-weight markup templating language based on HTML and C#.</span></span> <span data-ttu-id="183a7-115">Razor を使用すると、マークアップと C# のコードをシームレスに切り替えて、コンポーネントのレンダリングロジックを定義できます。</span><span class="sxs-lookup"><span data-stu-id="183a7-115">With Razor, you can seamlessly transition between markup and C# code to define your component rendering logic.</span></span> <span data-ttu-id="183a7-116">*Razor*ファイルがコンパイルされると、レンダリングロジックは .net クラスで構造化された方法でキャプチャされます。</span><span class="sxs-lookup"><span data-stu-id="183a7-116">When the *.razor* file is compiled, the rendering logic is captured in a structured way in a .NET class.</span></span> <span data-ttu-id="183a7-117">コンパイル済みクラスの名前は、 *razor*ファイル名から取得されます。</span><span class="sxs-lookup"><span data-stu-id="183a7-117">The name of the compiled class is taken from the *.razor* file name.</span></span> <span data-ttu-id="183a7-118">名前空間は、プロジェクトの既定の名前空間およびフォルダーパスから取得されます。また、ディレクティブを使用して名前空間を明示的に指定することもでき `@namespace` ます (以下の Razor ディレクティブについてはこちらを参照してください)。</span><span class="sxs-lookup"><span data-stu-id="183a7-118">The namespace is taken from the default namespace for the project and the folder path, or you can explicitly specify the namespace using the `@namespace` directive (more on Razor directives below).</span></span>
-
-<span data-ttu-id="183a7-119">コンポーネントのレンダリングロジックは、C# を使用して動的なロジックが追加された通常の HTML マークアップを使用して作成されます。</span><span class="sxs-lookup"><span data-stu-id="183a7-119">A component's rendering logic is authored using normal HTML markup with dynamic logic added using C#.</span></span> <span data-ttu-id="183a7-120">`@`文字は、C# に移行するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="183a7-120">The `@` character is used to transition to C#.</span></span> <span data-ttu-id="183a7-121">Razor は、通常、HTML に切り替えたときに理解することが賢明です。</span><span class="sxs-lookup"><span data-stu-id="183a7-121">Razor is typically smart about figuring out when you've switched back to HTML.</span></span> <span data-ttu-id="183a7-122">たとえば、次のコンポーネントは、 `<p>` 現在の時刻を使用してタグをレンダリングします。</span><span class="sxs-lookup"><span data-stu-id="183a7-122">For example, the following component renders a `<p>` tag with the current time:</span></span>
+<span data-ttu-id="b53ab-119">コンポーネントのレンダリングロジックは、C# を使用して動的なロジックが追加された通常の HTML マークアップを使用して作成されます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-119">A component's rendering logic is authored using normal HTML markup with dynamic logic added using C#.</span></span> <span data-ttu-id="b53ab-120">`@`文字は、C# に移行するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-120">The `@` character is used to transition to C#.</span></span> <span data-ttu-id="b53ab-121">Razor は、通常、HTML に切り替えたときに理解することが賢明です。</span><span class="sxs-lookup"><span data-stu-id="b53ab-121">Razor is typically smart about figuring out when you've switched back to HTML.</span></span> <span data-ttu-id="b53ab-122">たとえば、次のコンポーネントは、 `<p>` 現在の時刻を使用してタグをレンダリングします。</span><span class="sxs-lookup"><span data-stu-id="b53ab-122">For example, the following component renders a `<p>` tag with the current time:</span></span>
 
 ```razor
 <p>@DateTime.Now</p>
 ```
 
-<span data-ttu-id="183a7-123">C# 式の開始と終了を明示的に指定するには、かっこを使用します。</span><span class="sxs-lookup"><span data-stu-id="183a7-123">To explicitly specify the beginning and ending of a C# expression, use parentheses:</span></span>
+<span data-ttu-id="b53ab-123">C# 式の開始と終了を明示的に指定するには、かっこを使用します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-123">To explicitly specify the beginning and ending of a C# expression, use parentheses:</span></span>
 
 ```razor
 <p>@(DateTime.Now)</p>
 ```
 
-<span data-ttu-id="183a7-124">Razor では、レンダリングロジックで C# の制御フローを簡単に使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="183a7-124">Razor also makes it easy to use C# control flow in your rendering logic.</span></span> <span data-ttu-id="183a7-125">たとえば、次のような HTML を条件付きでレンダリングできます。</span><span class="sxs-lookup"><span data-stu-id="183a7-125">For example, you can conditionally render some HTML like this:</span></span>
+<span data-ttu-id="b53ab-124">Razor では、レンダリングロジックで C# の制御フローを簡単に使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-124">Razor also makes it easy to use C# control flow in your rendering logic.</span></span> <span data-ttu-id="b53ab-125">たとえば、次のような HTML を条件付きでレンダリングできます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-125">For example, you can conditionally render some HTML like this:</span></span>
 
 ```razor
 @if (value % 2 == 0)
@@ -51,7 +49,7 @@ Blazor<span data-ttu-id="183a7-107">では、*コンポーネント*による UI
 }
 ```
 
-<span data-ttu-id="183a7-126">または、次のような通常の C# ループを使用して項目の一覧を生成することもでき `foreach` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-126">Or you can generate a list of items using a normal C# `foreach` loop like this:</span></span>
+<span data-ttu-id="b53ab-126">または、次のような通常の C# ループを使用して項目の一覧を生成することもでき `foreach` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-126">Or you can generate a list of items using a normal C# `foreach` loop like this:</span></span>
 
 ```razor
 <ul>
@@ -62,65 +60,65 @@ Blazor<span data-ttu-id="183a7-107">では、*コンポーネント*による UI
 </ul>
 ```
 
-<span data-ttu-id="183a7-127">Razor ディレクティブは、ASP.NET Web フォームのディレクティブと同様に、Razor コンポーネントのコンパイル方法の多くの側面を制御します。</span><span class="sxs-lookup"><span data-stu-id="183a7-127">Razor directives, like directives in ASP.NET Web Forms, control many aspects of how a Razor component is compiled.</span></span> <span data-ttu-id="183a7-128">コンポーネントの例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="183a7-128">Examples include the component's:</span></span>
+<span data-ttu-id="b53ab-127">Razor ディレクティブは、ASP.NET Web フォームのディレクティブと同様に、Razor コンポーネントのコンパイル方法の多くの側面を制御します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-127">Razor directives, like directives in ASP.NET Web Forms, control many aspects of how a Razor component is compiled.</span></span> <span data-ttu-id="b53ab-128">コンポーネントの例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-128">Examples include the component's:</span></span>
 
-- <span data-ttu-id="183a7-129">名前空間</span><span class="sxs-lookup"><span data-stu-id="183a7-129">Namespace</span></span>
-- <span data-ttu-id="183a7-130">基底クラス</span><span class="sxs-lookup"><span data-stu-id="183a7-130">Base class</span></span>
-- <span data-ttu-id="183a7-131">実装されたインターフェイス</span><span class="sxs-lookup"><span data-stu-id="183a7-131">Implemented interfaces</span></span>
-- <span data-ttu-id="183a7-132">ジェネリックパラメーター</span><span class="sxs-lookup"><span data-stu-id="183a7-132">Generic parameters</span></span>
-- <span data-ttu-id="183a7-133">[インポートされた名前空間]</span><span class="sxs-lookup"><span data-stu-id="183a7-133">Imported namespaces</span></span>
-- <span data-ttu-id="183a7-134">ルート</span><span class="sxs-lookup"><span data-stu-id="183a7-134">Routes</span></span>
+- <span data-ttu-id="b53ab-129">名前空間</span><span class="sxs-lookup"><span data-stu-id="b53ab-129">Namespace</span></span>
+- <span data-ttu-id="b53ab-130">基本クラス</span><span class="sxs-lookup"><span data-stu-id="b53ab-130">Base class</span></span>
+- <span data-ttu-id="b53ab-131">実装されたインターフェイス</span><span class="sxs-lookup"><span data-stu-id="b53ab-131">Implemented interfaces</span></span>
+- <span data-ttu-id="b53ab-132">ジェネリックパラメーター</span><span class="sxs-lookup"><span data-stu-id="b53ab-132">Generic parameters</span></span>
+- <span data-ttu-id="b53ab-133">[インポートされた名前空間]</span><span class="sxs-lookup"><span data-stu-id="b53ab-133">Imported namespaces</span></span>
+- <span data-ttu-id="b53ab-134">ルート</span><span class="sxs-lookup"><span data-stu-id="b53ab-134">Routes</span></span>
 
-<span data-ttu-id="183a7-135">Razor ディレクティブは、文字で始まり、 `@` 通常、ファイルの先頭にある新しい行の先頭で使用されます。</span><span class="sxs-lookup"><span data-stu-id="183a7-135">Razor directives start with the `@` character and are typically used at the start of a new line at the start of the file.</span></span> <span data-ttu-id="183a7-136">たとえば、ディレクティブは `@namespace` コンポーネントの名前空間を定義します。</span><span class="sxs-lookup"><span data-stu-id="183a7-136">For example, the `@namespace` directive defines the component's namespace:</span></span>
+<span data-ttu-id="b53ab-135">Razor ディレクティブは、文字で始まり、 `@` 通常、ファイルの先頭にある新しい行の先頭で使用されます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-135">Razor directives start with the `@` character and are typically used at the start of a new line at the start of the file.</span></span> <span data-ttu-id="b53ab-136">たとえば、ディレクティブは `@namespace` コンポーネントの名前空間を定義します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-136">For example, the `@namespace` directive defines the component's namespace:</span></span>
 
 ```razor
 @namespace MyComponentNamespace
 ```
 
-<span data-ttu-id="183a7-137">次の表は、で使用されるさまざまな Razor ディレクティブ Blazor と、それらが存在する場合の ASP.NET Web フォームに相当するものをまとめたものです。</span><span class="sxs-lookup"><span data-stu-id="183a7-137">The following table summarizes the various Razor directives used in Blazor and their ASP.NET Web Forms equivalents, if they exist.</span></span>
+<span data-ttu-id="b53ab-137">次の表は、で使用されるさまざまな Razor ディレクティブ Blazor と、それらが存在する場合の ASP.NET Web フォームに相当するものをまとめたものです。</span><span class="sxs-lookup"><span data-stu-id="b53ab-137">The following table summarizes the various Razor directives used in Blazor and their ASP.NET Web Forms equivalents, if they exist.</span></span>
 
-|<span data-ttu-id="183a7-138">ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="183a7-138">Directive</span></span>    |<span data-ttu-id="183a7-139">説明</span><span class="sxs-lookup"><span data-stu-id="183a7-139">Description</span></span>|<span data-ttu-id="183a7-140">例</span><span class="sxs-lookup"><span data-stu-id="183a7-140">Example</span></span>|<span data-ttu-id="183a7-141">同等の Web フォーム</span><span class="sxs-lookup"><span data-stu-id="183a7-141">Web Forms equivalent</span></span>|
+|<span data-ttu-id="b53ab-138">ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="b53ab-138">Directive</span></span>    |<span data-ttu-id="b53ab-139">説明</span><span class="sxs-lookup"><span data-stu-id="b53ab-139">Description</span></span>|<span data-ttu-id="b53ab-140">例</span><span class="sxs-lookup"><span data-stu-id="b53ab-140">Example</span></span>|<span data-ttu-id="b53ab-141">同等の Web フォーム</span><span class="sxs-lookup"><span data-stu-id="b53ab-141">Web Forms equivalent</span></span>|
 |-------------|-----------|-------|--------------------|
-|`@attribute` |<span data-ttu-id="183a7-142">コンポーネントにクラスレベルの属性を追加します。</span><span class="sxs-lookup"><span data-stu-id="183a7-142">Adds a class-level attribute to the component</span></span>|`@attribute [Authorize]`|<span data-ttu-id="183a7-143">なし</span><span class="sxs-lookup"><span data-stu-id="183a7-143">None</span></span>|
-|`@code`      |<span data-ttu-id="183a7-144">コンポーネントにクラスメンバーを追加します。</span><span class="sxs-lookup"><span data-stu-id="183a7-144">Adds class members to the component</span></span>|`@code { ... }`|`<script runat="server">...</script>`|
-|`@implements`|<span data-ttu-id="183a7-145">指定したインターフェイスを実装します。</span><span class="sxs-lookup"><span data-stu-id="183a7-145">Implements the specified interface</span></span>|`@implements IDisposable`|<span data-ttu-id="183a7-146">コードビハインドを使用する</span><span class="sxs-lookup"><span data-stu-id="183a7-146">Use code-behind</span></span>|
-|`@inherits`  |<span data-ttu-id="183a7-147">指定した基底クラスから継承します。</span><span class="sxs-lookup"><span data-stu-id="183a7-147">Inherits from the specified base class</span></span>|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
-|`@inject`    |<span data-ttu-id="183a7-148">コンポーネントにサービスを挿入します。</span><span class="sxs-lookup"><span data-stu-id="183a7-148">Injects a service into the component</span></span>|`@inject IJSRuntime JS`|<span data-ttu-id="183a7-149">なし</span><span class="sxs-lookup"><span data-stu-id="183a7-149">None</span></span>|
-|`@layout`    |<span data-ttu-id="183a7-150">コンポーネントのレイアウトコンポーネントを指定します。</span><span class="sxs-lookup"><span data-stu-id="183a7-150">Specifies a layout component for the component</span></span>|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
-|`@namespace` |<span data-ttu-id="183a7-151">コンポーネントの名前空間を設定します。</span><span class="sxs-lookup"><span data-stu-id="183a7-151">Sets the namespace for the component</span></span>|`@namespace MyNamespace`|<span data-ttu-id="183a7-152">なし</span><span class="sxs-lookup"><span data-stu-id="183a7-152">None</span></span>|
-|`@page`      |<span data-ttu-id="183a7-153">コンポーネントのルートを指定します。</span><span class="sxs-lookup"><span data-stu-id="183a7-153">Specifies the route for the component</span></span>|`@page "/product/{id}"`|`<%@ Page %>`|
-|`@typeparam` |<span data-ttu-id="183a7-154">コンポーネントのジェネリック型パラメーターを指定します。</span><span class="sxs-lookup"><span data-stu-id="183a7-154">Specifies a generic type parameter for the component</span></span>|`@typeparam TItem`|<span data-ttu-id="183a7-155">コードビハインドを使用する</span><span class="sxs-lookup"><span data-stu-id="183a7-155">Use code-behind</span></span>|
-|`@using`     |<span data-ttu-id="183a7-156">スコープに取り込む名前空間を指定します</span><span class="sxs-lookup"><span data-stu-id="183a7-156">Specifies a namespace to bring into scope</span></span>|`@using MyComponentNamespace`|<span data-ttu-id="183a7-157">*web.config*に名前空間を追加する</span><span class="sxs-lookup"><span data-stu-id="183a7-157">Add namespace in *web.config*</span></span>|
+|`@attribute` |<span data-ttu-id="b53ab-142">コンポーネントにクラスレベルの属性を追加します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-142">Adds a class-level attribute to the component</span></span>|`@attribute [Authorize]`|<span data-ttu-id="b53ab-143">None</span><span class="sxs-lookup"><span data-stu-id="b53ab-143">None</span></span>|
+|`@code`      |<span data-ttu-id="b53ab-144">コンポーネントにクラスメンバーを追加します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-144">Adds class members to the component</span></span>|`@code { ... }`|`<script runat="server">...</script>`|
+|`@implements`|<span data-ttu-id="b53ab-145">指定したインターフェイスを実装します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-145">Implements the specified interface</span></span>|`@implements IDisposable`|<span data-ttu-id="b53ab-146">コードビハインドを使用する</span><span class="sxs-lookup"><span data-stu-id="b53ab-146">Use code-behind</span></span>|
+|`@inherits`  |<span data-ttu-id="b53ab-147">指定した基底クラスから継承します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-147">Inherits from the specified base class</span></span>|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
+|`@inject`    |<span data-ttu-id="b53ab-148">コンポーネントにサービスを挿入します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-148">Injects a service into the component</span></span>|`@inject IJSRuntime JS`|<span data-ttu-id="b53ab-149">None</span><span class="sxs-lookup"><span data-stu-id="b53ab-149">None</span></span>|
+|`@layout`    |<span data-ttu-id="b53ab-150">コンポーネントのレイアウトコンポーネントを指定します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-150">Specifies a layout component for the component</span></span>|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
+|`@namespace` |<span data-ttu-id="b53ab-151">コンポーネントの名前空間を設定します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-151">Sets the namespace for the component</span></span>|`@namespace MyNamespace`|<span data-ttu-id="b53ab-152">None</span><span class="sxs-lookup"><span data-stu-id="b53ab-152">None</span></span>|
+|`@page`      |<span data-ttu-id="b53ab-153">コンポーネントのルートを指定します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-153">Specifies the route for the component</span></span>|`@page "/product/{id}"`|`<%@ Page %>`|
+|`@typeparam` |<span data-ttu-id="b53ab-154">コンポーネントのジェネリック型パラメーターを指定します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-154">Specifies a generic type parameter for the component</span></span>|`@typeparam TItem`|<span data-ttu-id="b53ab-155">コードビハインドを使用する</span><span class="sxs-lookup"><span data-stu-id="b53ab-155">Use code-behind</span></span>|
+|`@using`     |<span data-ttu-id="b53ab-156">スコープに取り込む名前空間を指定します</span><span class="sxs-lookup"><span data-stu-id="b53ab-156">Specifies a namespace to bring into scope</span></span>|`@using MyComponentNamespace`|<span data-ttu-id="b53ab-157">*web.config*に名前空間を追加する</span><span class="sxs-lookup"><span data-stu-id="b53ab-157">Add namespace in *web.config*</span></span>|
 
-<span data-ttu-id="183a7-158">また、Razor コンポーネントでは、要素に対して*ディレクティブ属性*を広範に使用して、コンポーネントのコンパイル (イベント処理、データバインディング、コンポーネント & 要素参照など) のさまざまな側面を制御します。</span><span class="sxs-lookup"><span data-stu-id="183a7-158">Razor components also make extensive use of *directive attributes* on elements to control various aspects of how components get compiled (event handling, data binding, component & element references, and so on).</span></span> <span data-ttu-id="183a7-159">ディレクティブ属性は、かっこ内の値が省略可能である一般的なジェネリック構文に従います。</span><span class="sxs-lookup"><span data-stu-id="183a7-159">Directive attributes all follow a common generic syntax where the values in parenthesis are optional:</span></span>
+<span data-ttu-id="b53ab-158">また、Razor コンポーネントでは、要素に対して *ディレクティブ属性* を広範に使用して、コンポーネントのコンパイル (イベント処理、データバインディング、コンポーネント & 要素参照など) のさまざまな側面を制御します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-158">Razor components also make extensive use of *directive attributes* on elements to control various aspects of how components get compiled (event handling, data binding, component & element references, and so on).</span></span> <span data-ttu-id="b53ab-159">ディレクティブ属性は、かっこ内の値が省略可能である一般的なジェネリック構文に従います。</span><span class="sxs-lookup"><span data-stu-id="b53ab-159">Directive attributes all follow a common generic syntax where the values in parenthesis are optional:</span></span>
 
 ```razor
 @directive(-suffix(:name))(="value")
 ```
 
-<span data-ttu-id="183a7-160">次の表は、で使用される Razor ディレクティブのさまざまな属性をまとめたもの Blazor です。</span><span class="sxs-lookup"><span data-stu-id="183a7-160">The following table summarizes the various attributes for Razor directives used in Blazor.</span></span>
+<span data-ttu-id="b53ab-160">次の表は、で使用される Razor ディレクティブのさまざまな属性をまとめたもの Blazor です。</span><span class="sxs-lookup"><span data-stu-id="b53ab-160">The following table summarizes the various attributes for Razor directives used in Blazor.</span></span>
 
-|<span data-ttu-id="183a7-161">属性</span><span class="sxs-lookup"><span data-stu-id="183a7-161">Attribute</span></span>    |<span data-ttu-id="183a7-162">[説明]</span><span class="sxs-lookup"><span data-stu-id="183a7-162">Description</span></span>|<span data-ttu-id="183a7-163">例</span><span class="sxs-lookup"><span data-stu-id="183a7-163">Example</span></span>|
+|<span data-ttu-id="b53ab-161">属性</span><span class="sxs-lookup"><span data-stu-id="b53ab-161">Attribute</span></span>    |<span data-ttu-id="b53ab-162">説明</span><span class="sxs-lookup"><span data-stu-id="b53ab-162">Description</span></span>|<span data-ttu-id="b53ab-163">例</span><span class="sxs-lookup"><span data-stu-id="b53ab-163">Example</span></span>|
 |-------------|-----------|-------|
-|`@attributes`|<span data-ttu-id="183a7-164">属性のディクショナリをレンダリングします</span><span class="sxs-lookup"><span data-stu-id="183a7-164">Renders a dictionary of attributes</span></span>|`<input @attributes="ExtraAttributes" />`|
-|`@bind`      |<span data-ttu-id="183a7-165">双方向のデータバインディングを作成します。</span><span class="sxs-lookup"><span data-stu-id="183a7-165">Creates a two-way data binding</span></span>    |`<input @bind="username" @bind:event="oninput" />`|
-|`@on{event}` |<span data-ttu-id="183a7-166">指定したイベントのイベントハンドラーを追加します。</span><span class="sxs-lookup"><span data-stu-id="183a7-166">Adds an event handler for the specified event</span></span>|`<button @onclick="IncrementCount">Click me!</button>`|
-|`@key`       |<span data-ttu-id="183a7-167">コレクション内の要素を保持するために比較アルゴリズムによって使用されるキーを指定します。</span><span class="sxs-lookup"><span data-stu-id="183a7-167">Specifies a key to be used by the diffing algorithm for preserving elements in a collection</span></span>|`<DetailsEditor @key="person" Details="person.Details" />`|
-|`@ref`       |<span data-ttu-id="183a7-168">コンポーネントまたは HTML 要素への参照をキャプチャします。</span><span class="sxs-lookup"><span data-stu-id="183a7-168">Captures a reference to the component or HTML element</span></span>|`<MyDialog @ref="myDialog" />`|
+|`@attributes`|<span data-ttu-id="b53ab-164">属性のディクショナリをレンダリングします</span><span class="sxs-lookup"><span data-stu-id="b53ab-164">Renders a dictionary of attributes</span></span>|`<input @attributes="ExtraAttributes" />`|
+|`@bind`      |<span data-ttu-id="b53ab-165">双方向のデータバインディングを作成します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-165">Creates a two-way data binding</span></span>    |`<input @bind="username" @bind:event="oninput" />`|
+|`@on{event}` |<span data-ttu-id="b53ab-166">指定したイベントのイベントハンドラーを追加します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-166">Adds an event handler for the specified event</span></span>|`<button @onclick="IncrementCount">Click me!</button>`|
+|`@key`       |<span data-ttu-id="b53ab-167">コレクション内の要素を保持するために比較アルゴリズムによって使用されるキーを指定します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-167">Specifies a key to be used by the diffing algorithm for preserving elements in a collection</span></span>|`<DetailsEditor @key="person" Details="person.Details" />`|
+|`@ref`       |<span data-ttu-id="b53ab-168">コンポーネントまたは HTML 要素への参照をキャプチャします。</span><span class="sxs-lookup"><span data-stu-id="b53ab-168">Captures a reference to the component or HTML element</span></span>|`<MyDialog @ref="myDialog" />`|
 
-<span data-ttu-id="183a7-169">で使用されるさまざまなディレクティブ属性 Blazor ( `@onclick` 、 `@bind` 、 `@ref` など) については、以降の章で説明します。</span><span class="sxs-lookup"><span data-stu-id="183a7-169">The various directive attributes used by Blazor (`@onclick`, `@bind`, `@ref`, and so on) are covered in the sections below and later chapters.</span></span>
+<span data-ttu-id="b53ab-169">で使用されるさまざまなディレクティブ属性 Blazor ( `@onclick` 、 `@bind` 、 `@ref` など) については、以降の章で説明します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-169">The various directive attributes used by Blazor (`@onclick`, `@bind`, `@ref`, and so on) are covered in the sections below and later chapters.</span></span>
 
-<span data-ttu-id="183a7-170">*.Aspx*および *.ascx*ファイルで使用される構文の多くには、Razor の並列構文があります。</span><span class="sxs-lookup"><span data-stu-id="183a7-170">Many of the syntaxes used in *.aspx* and *.ascx* files have parallel syntaxes in Razor.</span></span> <span data-ttu-id="183a7-171">次に、ASP.NET Web フォームと Razor の構文を簡単に比較します。</span><span class="sxs-lookup"><span data-stu-id="183a7-171">Below is a simple comparison of the syntaxes for ASP.NET Web Forms and Razor.</span></span>
+<span data-ttu-id="b53ab-170">*.Aspx*および *.ascx*ファイルで使用される構文の多くには、Razor の並列構文があります。</span><span class="sxs-lookup"><span data-stu-id="b53ab-170">Many of the syntaxes used in *.aspx* and *.ascx* files have parallel syntaxes in Razor.</span></span> <span data-ttu-id="b53ab-171">次に、ASP.NET Web フォームと Razor の構文を簡単に比較します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-171">Below is a simple comparison of the syntaxes for ASP.NET Web Forms and Razor.</span></span>
 
-|<span data-ttu-id="183a7-172">機能</span><span class="sxs-lookup"><span data-stu-id="183a7-172">Feature</span></span>                      |<span data-ttu-id="183a7-173">Web フォーム</span><span class="sxs-lookup"><span data-stu-id="183a7-173">Web Forms</span></span>           |<span data-ttu-id="183a7-174">構文</span><span class="sxs-lookup"><span data-stu-id="183a7-174">Syntax</span></span>               |<span data-ttu-id="183a7-175">Razor</span><span class="sxs-lookup"><span data-stu-id="183a7-175">Razor</span></span>         |<span data-ttu-id="183a7-176">構文</span><span class="sxs-lookup"><span data-stu-id="183a7-176">Syntax</span></span> |
+|<span data-ttu-id="b53ab-172">特徴</span><span class="sxs-lookup"><span data-stu-id="b53ab-172">Feature</span></span>                      |<span data-ttu-id="b53ab-173">Web フォーム</span><span class="sxs-lookup"><span data-stu-id="b53ab-173">Web Forms</span></span>           |<span data-ttu-id="b53ab-174">構文</span><span class="sxs-lookup"><span data-stu-id="b53ab-174">Syntax</span></span>               |<span data-ttu-id="b53ab-175">Razor</span><span class="sxs-lookup"><span data-stu-id="b53ab-175">Razor</span></span>         |<span data-ttu-id="b53ab-176">構文</span><span class="sxs-lookup"><span data-stu-id="b53ab-176">Syntax</span></span> |
 |-----------------------------|--------------------|---------------------|--------------|-------|
-|<span data-ttu-id="183a7-177">ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="183a7-177">Directives</span></span>                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
-|<span data-ttu-id="183a7-178">コード ブロック</span><span class="sxs-lookup"><span data-stu-id="183a7-178">Code blocks</span></span>                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
-|<span data-ttu-id="183a7-179">式</span><span class="sxs-lookup"><span data-stu-id="183a7-179">Expressions</span></span><br><span data-ttu-id="183a7-180">(HTML エンコード)</span><span class="sxs-lookup"><span data-stu-id="183a7-180">(HTML-encoded)</span></span>|`<%: %>`            |`<%:DateTime.Now %>` |<span data-ttu-id="183a7-181">順序`@`</span><span class="sxs-lookup"><span data-stu-id="183a7-181">Implicit: `@`</span></span><br><span data-ttu-id="183a7-182">順序`@()`</span><span class="sxs-lookup"><span data-stu-id="183a7-182">Explicit: `@()`</span></span>|`@DateTime.Now`<br>`@(DateTime.Now)`|
-|<span data-ttu-id="183a7-183">コメント</span><span class="sxs-lookup"><span data-stu-id="183a7-183">Comments</span></span>                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
-|<span data-ttu-id="183a7-184">データ バインディング</span><span class="sxs-lookup"><span data-stu-id="183a7-184">Data binding</span></span>                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
+|<span data-ttu-id="b53ab-177">ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="b53ab-177">Directives</span></span>                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
+|<span data-ttu-id="b53ab-178">コード ブロック</span><span class="sxs-lookup"><span data-stu-id="b53ab-178">Code blocks</span></span>                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
+|<span data-ttu-id="b53ab-179">式</span><span class="sxs-lookup"><span data-stu-id="b53ab-179">Expressions</span></span><br><span data-ttu-id="b53ab-180">(HTML エンコード)</span><span class="sxs-lookup"><span data-stu-id="b53ab-180">(HTML-encoded)</span></span>|`<%: %>`            |`<%:DateTime.Now %>` |<span data-ttu-id="b53ab-181">順序 `@`</span><span class="sxs-lookup"><span data-stu-id="b53ab-181">Implicit: `@`</span></span><br><span data-ttu-id="b53ab-182">順序 `@()`</span><span class="sxs-lookup"><span data-stu-id="b53ab-182">Explicit: `@()`</span></span>|`@DateTime.Now`<br>`@(DateTime.Now)`|
+|<span data-ttu-id="b53ab-183">コメント</span><span class="sxs-lookup"><span data-stu-id="b53ab-183">Comments</span></span>                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
+|<span data-ttu-id="b53ab-184">データ バインディング</span><span class="sxs-lookup"><span data-stu-id="b53ab-184">Data binding</span></span>                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
 
-<span data-ttu-id="183a7-185">Razor コンポーネントクラスにメンバーを追加するには、ディレクティブを使用し `@code` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-185">To add members to the Razor component class, use the `@code` directive.</span></span> <span data-ttu-id="183a7-186">この手法は、 `<script runat="server">...</script>` ASP.NET Web フォームのユーザーコントロールまたはページでブロックを使用するのと似ています。</span><span class="sxs-lookup"><span data-stu-id="183a7-186">This technique is similar to using a `<script runat="server">...</script>` block in an ASP.NET Web Forms user control or page.</span></span>
+<span data-ttu-id="b53ab-185">Razor コンポーネントクラスにメンバーを追加するには、ディレクティブを使用し `@code` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-185">To add members to the Razor component class, use the `@code` directive.</span></span> <span data-ttu-id="b53ab-186">この手法は、 `<script runat="server">...</script>` ASP.NET Web フォームのユーザーコントロールまたはページでブロックを使用するのと似ています。</span><span class="sxs-lookup"><span data-stu-id="b53ab-186">This technique is similar to using a `<script runat="server">...</script>` block in an ASP.NET Web Forms user control or page.</span></span>
 
 ```razor
 @code {
@@ -133,24 +131,24 @@ Blazor<span data-ttu-id="183a7-107">では、*コンポーネント*による UI
 }
 ```
 
-<span data-ttu-id="183a7-187">Razor は c# に基づいているため、C# プロジェクト (*.csproj*) 内からコンパイルする必要があります。</span><span class="sxs-lookup"><span data-stu-id="183a7-187">Because Razor is based on C#, it must be compiled from within a C# project (*.csproj*).</span></span> <span data-ttu-id="183a7-188">Visual Basic プロジェクト (*.vbproj*) から*razor*ファイルをコンパイルすることはできません。</span><span class="sxs-lookup"><span data-stu-id="183a7-188">You can't compile *.razor* files from a Visual Basic project (*.vbproj*).</span></span> <span data-ttu-id="183a7-189">プロジェクトから Visual Basic プロジェクトを参照することもでき Blazor ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-189">You can still reference Visual Basic projects from your Blazor project.</span></span> <span data-ttu-id="183a7-190">逆も同様です。</span><span class="sxs-lookup"><span data-stu-id="183a7-190">The opposite is true too.</span></span>
+<span data-ttu-id="b53ab-187">Razor は c# に基づいているため、C# プロジェクト (*.csproj*) 内からコンパイルする必要があります。</span><span class="sxs-lookup"><span data-stu-id="b53ab-187">Because Razor is based on C#, it must be compiled from within a C# project (*.csproj*).</span></span> <span data-ttu-id="b53ab-188">Visual Basic プロジェクト (*.vbproj*) から*razor*ファイルをコンパイルすることはできません。</span><span class="sxs-lookup"><span data-stu-id="b53ab-188">You can't compile *.razor* files from a Visual Basic project (*.vbproj*).</span></span> <span data-ttu-id="b53ab-189">プロジェクトから Visual Basic プロジェクトを参照することもでき Blazor ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-189">You can still reference Visual Basic projects from your Blazor project.</span></span> <span data-ttu-id="b53ab-190">逆も同様です。</span><span class="sxs-lookup"><span data-stu-id="b53ab-190">The opposite is true too.</span></span>
 
-<span data-ttu-id="183a7-191">完全 Razor 構文リファレンスについては、「 [ASP.NET Core の Razor 構文リファレンス](/aspnet/core/mvc/views/razor)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="183a7-191">For a full Razor syntax reference, see [Razor syntax reference for ASP.NET Core](/aspnet/core/mvc/views/razor).</span></span>
+<span data-ttu-id="b53ab-191">完全 Razor 構文リファレンスについては、「 [ASP.NET Core の Razor 構文リファレンス](/aspnet/core/mvc/views/razor)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b53ab-191">For a full Razor syntax reference, see [Razor syntax reference for ASP.NET Core](/aspnet/core/mvc/views/razor).</span></span>
 
-## <a name="use-components"></a><span data-ttu-id="183a7-192">コンポーネントを使う</span><span class="sxs-lookup"><span data-stu-id="183a7-192">Use components</span></span>
+## <a name="use-components"></a><span data-ttu-id="b53ab-192">コンポーネントを使う</span><span class="sxs-lookup"><span data-stu-id="b53ab-192">Use components</span></span>
 
-<span data-ttu-id="183a7-193">通常の HTML とは別に、コンポーネントはレンダリングロジックの一部として他のコンポーネントを使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="183a7-193">Aside from normal HTML, components can also use other components as part of their rendering logic.</span></span> <span data-ttu-id="183a7-194">Razor でコンポーネントを使用するための構文は、ASP.NET Web フォームアプリでユーザーコントロールを使用する場合と似ています。</span><span class="sxs-lookup"><span data-stu-id="183a7-194">The syntax for using a component in Razor is similar to using a user control in an ASP.NET Web Forms app.</span></span> <span data-ttu-id="183a7-195">コンポーネントは、コンポーネントの型名と一致する要素タグを使用して指定されます。</span><span class="sxs-lookup"><span data-stu-id="183a7-195">Components are specified using an element tag that matches the type name of the component.</span></span> <span data-ttu-id="183a7-196">たとえば、次の `Counter` ようなコンポーネントを追加できます。</span><span class="sxs-lookup"><span data-stu-id="183a7-196">For example, you can add a `Counter` component like this:</span></span>
+<span data-ttu-id="b53ab-193">通常の HTML とは別に、コンポーネントはレンダリングロジックの一部として他のコンポーネントを使用することもできます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-193">Aside from normal HTML, components can also use other components as part of their rendering logic.</span></span> <span data-ttu-id="b53ab-194">Razor でコンポーネントを使用するための構文は、ASP.NET Web フォームアプリでユーザーコントロールを使用する場合と似ています。</span><span class="sxs-lookup"><span data-stu-id="b53ab-194">The syntax for using a component in Razor is similar to using a user control in an ASP.NET Web Forms app.</span></span> <span data-ttu-id="b53ab-195">コンポーネントは、コンポーネントの型名と一致する要素タグを使用して指定されます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-195">Components are specified using an element tag that matches the type name of the component.</span></span> <span data-ttu-id="b53ab-196">たとえば、次の `Counter` ようなコンポーネントを追加できます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-196">For example, you can add a `Counter` component like this:</span></span>
 
 ```razor
 <Counter />
 ```
 
-<span data-ttu-id="183a7-197">ASP.NET Web フォームとは異なり、のコンポーネントは Blazor 次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="183a7-197">Unlike ASP.NET Web Forms, components in Blazor:</span></span>
+<span data-ttu-id="b53ab-197">ASP.NET Web フォームとは異なり、のコンポーネントは Blazor 次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="b53ab-197">Unlike ASP.NET Web Forms, components in Blazor:</span></span>
 
-- <span data-ttu-id="183a7-198">要素のプレフィックスは使用しないでください (たとえば、 `asp:` )。</span><span class="sxs-lookup"><span data-stu-id="183a7-198">Don't use an element prefix (for example, `asp:`).</span></span>
-- <span data-ttu-id="183a7-199">ページまたは*web.config*での登録は必要ありません。</span><span class="sxs-lookup"><span data-stu-id="183a7-199">Don't require registration on the page or in the *web.config*.</span></span>
+- <span data-ttu-id="b53ab-198">要素のプレフィックスは使用しないでください (たとえば、 `asp:` )。</span><span class="sxs-lookup"><span data-stu-id="b53ab-198">Don't use an element prefix (for example, `asp:`).</span></span>
+- <span data-ttu-id="b53ab-199">ページまたは *web.config*での登録は必要ありません。</span><span class="sxs-lookup"><span data-stu-id="b53ab-199">Don't require registration on the page or in the *web.config*.</span></span>
 
-<span data-ttu-id="183a7-200">.NET 型のような Razor コンポーネントについて考えてみましょう。これはまさにそのようなものです。</span><span class="sxs-lookup"><span data-stu-id="183a7-200">Think of Razor components like you would .NET types, because that's exactly what they are.</span></span> <span data-ttu-id="183a7-201">コンポーネントを含むアセンブリが参照されている場合は、コンポーネントを使用できます。</span><span class="sxs-lookup"><span data-stu-id="183a7-201">If the assembly containing the component is referenced, then the component is available for use.</span></span> <span data-ttu-id="183a7-202">コンポーネントの名前空間をスコープに入れるには、ディレクティブを適用し `@using` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-202">To bring the component's namespace into scope, apply the `@using` directive:</span></span>
+<span data-ttu-id="b53ab-200">.NET 型のような Razor コンポーネントについて考えてみましょう。これはまさにそのようなものです。</span><span class="sxs-lookup"><span data-stu-id="b53ab-200">Think of Razor components like you would .NET types, because that's exactly what they are.</span></span> <span data-ttu-id="b53ab-201">コンポーネントを含むアセンブリが参照されている場合は、コンポーネントを使用できます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-201">If the assembly containing the component is referenced, then the component is available for use.</span></span> <span data-ttu-id="b53ab-202">コンポーネントの名前空間をスコープに入れるには、ディレクティブを適用し `@using` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-202">To bring the component's namespace into scope, apply the `@using` directive:</span></span>
 
 ```razor
 @using MyComponentLib
@@ -158,19 +156,19 @@ Blazor<span data-ttu-id="183a7-107">では、*コンポーネント*による UI
 <Counter />
 ```
 
-<span data-ttu-id="183a7-203">既定のプロジェクトに示されているように Blazor 、ディレクティブを _Imports の razor ファイルに配置するのが一般的です。 `@using` これにより、同じディレクトリおよび子ディレクトリ内のすべての*razor*ファイルにディレクティブがインポート *_Imports.razor*されます。</span><span class="sxs-lookup"><span data-stu-id="183a7-203">As seen in the default Blazor projects, it's common to put `@using` directives into a *_Imports.razor* file so that they're imported into all *.razor* files in the same directory and in child directories.</span></span>
+<span data-ttu-id="b53ab-203">既定のプロジェクトに示されているように Blazor 、ディレクティブを _Imports の razor ファイルに配置するのが一般的です。 `@using` これにより、同じディレクトリおよび子ディレクトリ内のすべての*razor*ファイルにディレクティブがインポート *_Imports.razor*されます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-203">As seen in the default Blazor projects, it's common to put `@using` directives into a *_Imports.razor* file so that they're imported into all *.razor* files in the same directory and in child directories.</span></span>
 
-<span data-ttu-id="183a7-204">コンポーネントの名前空間がスコープ内にない場合は、C# の場合と同様に、完全な型名を使用してコンポーネントを指定できます。</span><span class="sxs-lookup"><span data-stu-id="183a7-204">If the namespace for a component isn't in scope, you can specify a component using its full type name, as you can in C#:</span></span>
+<span data-ttu-id="b53ab-204">コンポーネントの名前空間がスコープ内にない場合は、C# の場合と同様に、完全な型名を使用してコンポーネントを指定できます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-204">If the namespace for a component isn't in scope, you can specify a component using its full type name, as you can in C#:</span></span>
 
 ```razor
 <MyComponentLib.Counter />
 ```
 
-## <a name="component-parameters"></a><span data-ttu-id="183a7-205">コンポーネントのパラメーター</span><span class="sxs-lookup"><span data-stu-id="183a7-205">Component parameters</span></span>
+## <a name="component-parameters"></a><span data-ttu-id="b53ab-205">コンポーネントのパラメーター</span><span class="sxs-lookup"><span data-stu-id="b53ab-205">Component parameters</span></span>
 
-<span data-ttu-id="183a7-206">ASP.NET Web フォームでは、パブリックプロパティを使用して、パラメーターとデータをコントロールにフローできます。</span><span class="sxs-lookup"><span data-stu-id="183a7-206">In ASP.NET Web Forms, you can flow parameters and data to controls using public properties.</span></span> <span data-ttu-id="183a7-207">これらのプロパティは、属性を使用してマークアップで設定することも、コードで直接設定することもできます。</span><span class="sxs-lookup"><span data-stu-id="183a7-207">These properties can be set in markup using attributes or set directly in code.</span></span> Blazor<span data-ttu-id="183a7-208">コンポーネントのプロパティは、コンポーネントのパラメーターと見なされるように属性でマークする必要もありますが、同様の方法で動作し `[Parameter]` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-208"> components work in a similar fashion, although the component properties must also be marked with the `[Parameter]` attribute to be considered component parameters.</span></span>
+<span data-ttu-id="b53ab-206">ASP.NET Web フォームでは、パブリックプロパティを使用して、パラメーターとデータをコントロールにフローできます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-206">In ASP.NET Web Forms, you can flow parameters and data to controls using public properties.</span></span> <span data-ttu-id="b53ab-207">これらのプロパティは、属性を使用してマークアップで設定することも、コードで直接設定することもできます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-207">These properties can be set in markup using attributes or set directly in code.</span></span> <span data-ttu-id="b53ab-208">Blazor コンポーネントのプロパティは、コンポーネントのパラメーターと見なされるように属性でマークする必要もありますが、同様の方法で動作し `[Parameter]` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-208">Blazor components work in a similar fashion, although the component properties must also be marked with the `[Parameter]` attribute to be considered component parameters.</span></span>
 
-<span data-ttu-id="183a7-209">次のコンポーネントでは、 `Counter` `IncrementAmount` ボタンがクリックされるたびにがインクリメントされる量を指定するために使用できる、というコンポーネントパラメーターを定義して `Counter` います。</span><span class="sxs-lookup"><span data-stu-id="183a7-209">The following `Counter` component defines a component parameter called `IncrementAmount` that can be used to specify the amount that the `Counter` should be incremented each time the button is clicked.</span></span>
+<span data-ttu-id="b53ab-209">次のコンポーネントでは、 `Counter` `IncrementAmount` ボタンがクリックされるたびにがインクリメントされる量を指定するために使用できる、というコンポーネントパラメーターを定義して `Counter` います。</span><span class="sxs-lookup"><span data-stu-id="b53ab-209">The following `Counter` component defines a component parameter called `IncrementAmount` that can be used to specify the amount that the `Counter` should be incremented each time the button is clicked.</span></span>
 
 ```razor
 <h1>Counter</h1>
@@ -192,23 +190,23 @@ Blazor<span data-ttu-id="183a7-107">では、*コンポーネント*による UI
 }
 ```
 
-<span data-ttu-id="183a7-210">でコンポーネントパラメーターを指定するに Blazor は、ASP.NET Web フォームの場合と同じように属性を使用します。</span><span class="sxs-lookup"><span data-stu-id="183a7-210">To specify a component parameter in Blazor, use an attribute as you would in ASP.NET Web Forms:</span></span>
+<span data-ttu-id="b53ab-210">でコンポーネントパラメーターを指定するに Blazor は、ASP.NET Web フォームの場合と同じように属性を使用します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-210">To specify a component parameter in Blazor, use an attribute as you would in ASP.NET Web Forms:</span></span>
 
 ```razor
 <Counter IncrementAmount="10" />
 ```
 
-## <a name="event-handlers"></a><span data-ttu-id="183a7-211">イベント ハンドラー</span><span class="sxs-lookup"><span data-stu-id="183a7-211">Event handlers</span></span>
+## <a name="event-handlers"></a><span data-ttu-id="b53ab-211">イベント ハンドラー</span><span class="sxs-lookup"><span data-stu-id="b53ab-211">Event handlers</span></span>
 
-<span data-ttu-id="183a7-212">ASP.NET Web フォームとはどちらも、 Blazor UI イベントを処理するためのイベントベースのプログラミングモデルを提供します。</span><span class="sxs-lookup"><span data-stu-id="183a7-212">Both ASP.NET Web Forms and Blazor provide an event-based programming model for handling UI events.</span></span> <span data-ttu-id="183a7-213">このようなイベントの例としては、ボタンのクリックやテキスト入力などがあります。</span><span class="sxs-lookup"><span data-stu-id="183a7-213">Examples of such events include button clicks and text input.</span></span> <span data-ttu-id="183a7-214">ASP.NET Web フォームでは、HTML サーバーコントロールを使用して、DOM によって公開される UI イベントを処理したり、web サーバーコントロールによって公開されるイベントを処理したりすることができます。</span><span class="sxs-lookup"><span data-stu-id="183a7-214">In ASP.NET Web Forms, you use HTML server controls to handle UI events exposed by the DOM, or you can handle events exposed by web server controls.</span></span> <span data-ttu-id="183a7-215">イベントは、ポストバック要求のフォームを使用してサーバー上に表示されます。</span><span class="sxs-lookup"><span data-stu-id="183a7-215">The events are surfaced on the server through form post-back requests.</span></span> <span data-ttu-id="183a7-216">次の Web フォームのボタンをクリックする例を考えてみましょう。</span><span class="sxs-lookup"><span data-stu-id="183a7-216">Consider the following Web Forms button click example:</span></span>
+<span data-ttu-id="b53ab-212">ASP.NET Web フォームとはどちらも、 Blazor UI イベントを処理するためのイベントベースのプログラミングモデルを提供します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-212">Both ASP.NET Web Forms and Blazor provide an event-based programming model for handling UI events.</span></span> <span data-ttu-id="b53ab-213">このようなイベントの例としては、ボタンのクリックやテキスト入力などがあります。</span><span class="sxs-lookup"><span data-stu-id="b53ab-213">Examples of such events include button clicks and text input.</span></span> <span data-ttu-id="b53ab-214">ASP.NET Web フォームでは、HTML サーバーコントロールを使用して、DOM によって公開される UI イベントを処理したり、web サーバーコントロールによって公開されるイベントを処理したりすることができます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-214">In ASP.NET Web Forms, you use HTML server controls to handle UI events exposed by the DOM, or you can handle events exposed by web server controls.</span></span> <span data-ttu-id="b53ab-215">イベントは、ポストバック要求のフォームを使用してサーバー上に表示されます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-215">The events are surfaced on the server through form post-back requests.</span></span> <span data-ttu-id="b53ab-216">次の Web フォームのボタンをクリックする例を考えてみましょう。</span><span class="sxs-lookup"><span data-stu-id="b53ab-216">Consider the following Web Forms button click example:</span></span>
 
-<span data-ttu-id="183a7-217">*カウンタ .ascx*</span><span class="sxs-lookup"><span data-stu-id="183a7-217">*Counter.ascx*</span></span>
+<span data-ttu-id="b53ab-217">*カウンタ .ascx*</span><span class="sxs-lookup"><span data-stu-id="b53ab-217">*Counter.ascx*</span></span>
 
 ```aspx-csharp
 <asp:Button ID="ClickMeButton" runat="server" Text="Click me!" OnClick="ClickMeButton_Click" />
 ```
 
-<span data-ttu-id="183a7-218">*Counter.ascx.cs*</span><span class="sxs-lookup"><span data-stu-id="183a7-218">*Counter.ascx.cs*</span></span>
+<span data-ttu-id="b53ab-218">*Counter.ascx.cs*</span><span class="sxs-lookup"><span data-stu-id="b53ab-218">*Counter.ascx.cs*</span></span>
 
 ```csharp
 public partial class Counter : System.Web.UI.UserControl
@@ -220,7 +218,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-<span data-ttu-id="183a7-219">では Blazor 、フォームのディレクティブ属性を使用して、DOM UI イベントのハンドラーを直接登録でき `@on{event}` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-219">In Blazor, you can register handlers for DOM UI events directly using directive attributes of the form `@on{event}`.</span></span> <span data-ttu-id="183a7-220">プレースホルダーは、 `{event}` イベントの名前を表します。</span><span class="sxs-lookup"><span data-stu-id="183a7-220">The `{event}` placeholder represents the name of the event.</span></span> <span data-ttu-id="183a7-221">たとえば、次のようなボタンのクリックをリッスンできます。</span><span class="sxs-lookup"><span data-stu-id="183a7-221">For example, you can listen for button clicks like this:</span></span>
+<span data-ttu-id="b53ab-219">では Blazor 、フォームのディレクティブ属性を使用して、DOM UI イベントのハンドラーを直接登録でき `@on{event}` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-219">In Blazor, you can register handlers for DOM UI events directly using directive attributes of the form `@on{event}`.</span></span> <span data-ttu-id="b53ab-220">プレースホルダーは、 `{event}` イベントの名前を表します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-220">The `{event}` placeholder represents the name of the event.</span></span> <span data-ttu-id="b53ab-221">たとえば、次のようなボタンのクリックをリッスンできます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-221">For example, you can listen for button clicks like this:</span></span>
 
 ```razor
 <button @onclick="OnClick">Click me!</button>
@@ -233,7 +231,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-<span data-ttu-id="183a7-222">イベントハンドラーは、イベントに関する詳細情報を提供するために、省略可能なイベント固有の引数を受け取ることができます。</span><span class="sxs-lookup"><span data-stu-id="183a7-222">Event handlers can accept an optional, event-specific argument to provide more information about the event.</span></span> <span data-ttu-id="183a7-223">たとえば、マウスイベントは引数を受け取ることができますが、必須ではありません `MouseEventArgs` 。</span><span class="sxs-lookup"><span data-stu-id="183a7-223">For example, mouse events can take a `MouseEventArgs` argument, but it isn't required.</span></span>
+<span data-ttu-id="b53ab-222">イベントハンドラーは、イベントに関する詳細情報を提供するために、省略可能なイベント固有の引数を受け取ることができます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-222">Event handlers can accept an optional, event-specific argument to provide more information about the event.</span></span> <span data-ttu-id="b53ab-223">たとえば、マウスイベントは引数を受け取ることができますが、必須ではありません `MouseEventArgs` 。</span><span class="sxs-lookup"><span data-stu-id="b53ab-223">For example, mouse events can take a `MouseEventArgs` argument, but it isn't required.</span></span>
 
 ```razor
 <button @onclick="OnClick">Click me!</button>
@@ -246,7 +244,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-<span data-ttu-id="183a7-224">イベントハンドラーのメソッドグループを参照する代わりに、ラムダ式を使用できます。</span><span class="sxs-lookup"><span data-stu-id="183a7-224">Instead of referring to a method group for an event handler, you can use a lambda expression.</span></span> <span data-ttu-id="183a7-225">ラムダ式を使用すると、他のスコープ内の値を閉じることができます。</span><span class="sxs-lookup"><span data-stu-id="183a7-225">A lambda expression allows you to close over other in-scope values.</span></span>
+<span data-ttu-id="b53ab-224">イベントハンドラーのメソッドグループを参照する代わりに、ラムダ式を使用できます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-224">Instead of referring to a method group for an event handler, you can use a lambda expression.</span></span> <span data-ttu-id="b53ab-225">ラムダ式を使用すると、他のスコープ内の値を閉じることができます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-225">A lambda expression allows you to close over other in-scope values.</span></span>
 
 ```razor
 @foreach (var buttonLabel in buttonLabels)
@@ -255,7 +253,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-<span data-ttu-id="183a7-226">イベントハンドラーは、同期または非同期で実行できます。</span><span class="sxs-lookup"><span data-stu-id="183a7-226">Event handlers can execute synchronously or asynchronously.</span></span> <span data-ttu-id="183a7-227">たとえば、次の `OnClick` イベントハンドラーは非同期的に実行されます。</span><span class="sxs-lookup"><span data-stu-id="183a7-227">For example, the following `OnClick` event handler executes asynchronously:</span></span>
+<span data-ttu-id="b53ab-226">イベントハンドラーは、同期または非同期で実行できます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-226">Event handlers can execute synchronously or asynchronously.</span></span> <span data-ttu-id="b53ab-227">たとえば、次の `OnClick` イベントハンドラーは非同期的に実行されます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-227">For example, the following `OnClick` event handler executes asynchronously:</span></span>
 
 ```razor
 <button @onclick="OnClick">Click me!</button>
@@ -268,7 +266,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-<span data-ttu-id="183a7-228">イベントが処理されると、コンポーネントは、コンポーネントの状態の変更を考慮してレンダリングされます。</span><span class="sxs-lookup"><span data-stu-id="183a7-228">After an event is handled, the component is rendered to account for any component state changes.</span></span> <span data-ttu-id="183a7-229">非同期イベントハンドラーを使用すると、ハンドラーの実行が完了した直後にコンポーネントがレンダリングされます。</span><span class="sxs-lookup"><span data-stu-id="183a7-229">With asynchronous event handlers, the component is rendered immediately after the handler execution completes.</span></span> <span data-ttu-id="183a7-230">非同期の完了後に、コンポーネントが*再び*表示され `Task` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-230">The component is rendered *again* after the asynchronous `Task` completes.</span></span> <span data-ttu-id="183a7-231">この非同期実行モードでは、非同期の処理中に適切な UI を表示することが `Task` できます。</span><span class="sxs-lookup"><span data-stu-id="183a7-231">This asynchronous execution mode provides an opportunity to render some appropriate UI while the asynchronous `Task` is still in progress.</span></span>
+<span data-ttu-id="b53ab-228">イベントが処理されると、コンポーネントは、コンポーネントの状態の変更を考慮してレンダリングされます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-228">After an event is handled, the component is rendered to account for any component state changes.</span></span> <span data-ttu-id="b53ab-229">非同期イベントハンドラーを使用すると、ハンドラーの実行が完了した直後にコンポーネントがレンダリングされます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-229">With asynchronous event handlers, the component is rendered immediately after the handler execution completes.</span></span> <span data-ttu-id="b53ab-230">非同期の完了後に、コンポーネントが *再び* 表示され `Task` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-230">The component is rendered *again* after the asynchronous `Task` completes.</span></span> <span data-ttu-id="b53ab-231">この非同期実行モードでは、非同期の処理中に適切な UI を表示することが `Task` できます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-231">This asynchronous execution mode provides an opportunity to render some appropriate UI while the asynchronous `Task` is still in progress.</span></span>
 
 ```razor
 <button @onclick="ShowMessage">Get message</button>
@@ -298,7 +296,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-<span data-ttu-id="183a7-232">コンポーネントは、型のコンポーネントパラメーターを定義することで、独自のイベントを定義することもでき `EventCallback<TValue>` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-232">Components can also define their own events by defining a component parameter of type `EventCallback<TValue>`.</span></span> <span data-ttu-id="183a7-233">イベントコールバックは、省略可能な引数、同期または非同期、メソッドグループ、ラムダ式など、DOM UI イベントハンドラーのすべてのバリエーションをサポートします。</span><span class="sxs-lookup"><span data-stu-id="183a7-233">Event callbacks support all the variations of DOM UI event handlers: optional arguments, synchronous or asynchronous, method groups, or lambda expressions.</span></span>
+<span data-ttu-id="b53ab-232">コンポーネントは、型のコンポーネントパラメーターを定義することで、独自のイベントを定義することもでき `EventCallback<TValue>` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-232">Components can also define their own events by defining a component parameter of type `EventCallback<TValue>`.</span></span> <span data-ttu-id="b53ab-233">イベントコールバックは、省略可能な引数、同期または非同期、メソッドグループ、ラムダ式など、DOM UI イベントハンドラーのすべてのバリエーションをサポートします。</span><span class="sxs-lookup"><span data-stu-id="b53ab-233">Event callbacks support all the variations of DOM UI event handlers: optional arguments, synchronous or asynchronous, method groups, or lambda expressions.</span></span>
 
 ```razor
 <button class="btn btn-primary" @onclick="OnClick">Click me!</button>
@@ -309,11 +307,11 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-## <a name="data-binding"></a><span data-ttu-id="183a7-234">データ バインディング</span><span class="sxs-lookup"><span data-stu-id="183a7-234">Data binding</span></span>
+## <a name="data-binding"></a><span data-ttu-id="b53ab-234">データ バインディング</span><span class="sxs-lookup"><span data-stu-id="b53ab-234">Data binding</span></span>
 
-Blazor<span data-ttu-id="183a7-235">UI コンポーネントのデータをコンポーネントの状態にバインドするための単純なメカニズムを提供します。</span><span class="sxs-lookup"><span data-stu-id="183a7-235"> provides a simple mechanism to bind data from a UI component to the component's state.</span></span> <span data-ttu-id="183a7-236">この方法は、データソースから UI コントロールにデータをバインドするための ASP.NET Web フォームの機能とは異なります。</span><span class="sxs-lookup"><span data-stu-id="183a7-236">This approach differs from the features in ASP.NET Web Forms for binding data from data sources to UI controls.</span></span> <span data-ttu-id="183a7-237">データの処理に[関する](data.md)セクションでは、さまざまなデータソースからのデータの処理について説明します。</span><span class="sxs-lookup"><span data-stu-id="183a7-237">We'll cover handling data from different data sources in the [Dealing with data](data.md) section.</span></span>
+<span data-ttu-id="b53ab-235">Blazor UI コンポーネントのデータをコンポーネントの状態にバインドするための単純なメカニズムを提供します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-235">Blazor provides a simple mechanism to bind data from a UI component to the component's state.</span></span> <span data-ttu-id="b53ab-236">この方法は、データソースから UI コントロールにデータをバインドするための ASP.NET Web フォームの機能とは異なります。</span><span class="sxs-lookup"><span data-stu-id="b53ab-236">This approach differs from the features in ASP.NET Web Forms for binding data from data sources to UI controls.</span></span> <span data-ttu-id="b53ab-237">データの処理に [関する](data.md) セクションでは、さまざまなデータソースからのデータの処理について説明します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-237">We'll cover handling data from different data sources in the [Dealing with data](data.md) section.</span></span>
 
-<span data-ttu-id="183a7-238">UI コンポーネントからコンポーネントの状態への双方向のデータバインディングを作成するには、ディレクティブ属性を使用し `@bind` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-238">To create a two-way data binding from a UI component to the component's state, use the `@bind` directive attribute.</span></span> <span data-ttu-id="183a7-239">次の例では、チェックボックスの値がフィールドにバインドされてい `isChecked` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-239">In the following example, the value of the check box is bound to the `isChecked` field.</span></span>
+<span data-ttu-id="b53ab-238">UI コンポーネントからコンポーネントの状態への双方向のデータバインディングを作成するには、ディレクティブ属性を使用し `@bind` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-238">To create a two-way data binding from a UI component to the component's state, use the `@bind` directive attribute.</span></span> <span data-ttu-id="b53ab-239">次の例では、チェックボックスの値がフィールドにバインドされてい `isChecked` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-239">In the following example, the value of the check box is bound to the `isChecked` field.</span></span>
 
 ```razor
 <input type="checkbox" @bind="isChecked" />
@@ -323,13 +321,13 @@ Blazor<span data-ttu-id="183a7-235">UI コンポーネントのデータをコ�
 }
 ```
 
-<span data-ttu-id="183a7-240">コンポーネントがレンダリングされると、チェックボックスの値がフィールドの値に設定され `isChecked` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-240">When the component is rendered, the value of the checkbox is set to the value of the `isChecked` field.</span></span> <span data-ttu-id="183a7-241">ユーザーがチェックボックスをオンにすると、 `onchange` イベントが発生し、 `isChecked` フィールドが新しい値に設定されます。</span><span class="sxs-lookup"><span data-stu-id="183a7-241">When the user toggles the checkbox, the `onchange` event is fired and the `isChecked` field is set to the new value.</span></span> <span data-ttu-id="183a7-242">`@bind`この場合の構文は、次のマークアップに相当します。</span><span class="sxs-lookup"><span data-stu-id="183a7-242">The `@bind` syntax in this case is equivalent to the following markup:</span></span>
+<span data-ttu-id="b53ab-240">コンポーネントがレンダリングされると、チェックボックスの値がフィールドの値に設定され `isChecked` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-240">When the component is rendered, the value of the checkbox is set to the value of the `isChecked` field.</span></span> <span data-ttu-id="b53ab-241">ユーザーがチェックボックスをオンにすると、 `onchange` イベントが発生し、 `isChecked` フィールドが新しい値に設定されます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-241">When the user toggles the checkbox, the `onchange` event is fired and the `isChecked` field is set to the new value.</span></span> <span data-ttu-id="b53ab-242">`@bind`この場合の構文は、次のマークアップに相当します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-242">The `@bind` syntax in this case is equivalent to the following markup:</span></span>
 
 ```razor
 <input value="@isChecked" @onchange="(UIChangeEventArgs e) => isChecked = e.Value" />
 ```
 
-<span data-ttu-id="183a7-243">バインドに使用するイベントを変更するには、属性を使用し `@bind:event` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-243">To change the event used for the bind, use the `@bind:event` attribute.</span></span>
+<span data-ttu-id="b53ab-243">バインドに使用するイベントを変更するには、属性を使用し `@bind:event` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-243">To change the event used for the bind, use the `@bind:event` attribute.</span></span>
 
 ```razor
 <input @bind="text" @bind:event="oninput" />
@@ -340,9 +338,9 @@ Blazor<span data-ttu-id="183a7-235">UI コンポーネントのデータをコ�
 }
 ```
 
-<span data-ttu-id="183a7-244">コンポーネントは、パラメーターへのデータバインディングをサポートすることもできます。</span><span class="sxs-lookup"><span data-stu-id="183a7-244">Components can also support data binding to their parameters.</span></span> <span data-ttu-id="183a7-245">データバインドには、バインド可能なパラメーターと同じ名前のイベントコールバックパラメーターを定義します。</span><span class="sxs-lookup"><span data-stu-id="183a7-245">To data bind, define an event callback parameter with the same name as the bindable parameter.</span></span> <span data-ttu-id="183a7-246">"Changed" サフィックスが名前に追加されます。</span><span class="sxs-lookup"><span data-stu-id="183a7-246">The "Changed" suffix is added to the name.</span></span>
+<span data-ttu-id="b53ab-244">コンポーネントは、パラメーターへのデータバインディングをサポートすることもできます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-244">Components can also support data binding to their parameters.</span></span> <span data-ttu-id="b53ab-245">データバインドには、バインド可能なパラメーターと同じ名前のイベントコールバックパラメーターを定義します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-245">To data bind, define an event callback parameter with the same name as the bindable parameter.</span></span> <span data-ttu-id="b53ab-246">"Changed" サフィックスが名前に追加されます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-246">The "Changed" suffix is added to the name.</span></span>
 
-<span data-ttu-id="183a7-247">*PasswordBox。 razor*</span><span class="sxs-lookup"><span data-stu-id="183a7-247">*PasswordBox.razor*</span></span>
+<span data-ttu-id="b53ab-247">*PasswordBox。 razor*</span><span class="sxs-lookup"><span data-stu-id="b53ab-247">*PasswordBox.razor*</span></span>
 
 ```razor
 Password: <input
@@ -369,9 +367,9 @@ Password: <input
 }
 ```
 
-<span data-ttu-id="183a7-248">データバインディングを基になる UI 要素に連結するには、属性を使用するのではなく、値を設定し、UI 要素のイベントを直接処理し `@bind` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-248">To chain a data binding to an underlying UI element, set the value and handle the event directly on the UI element instead of using the `@bind` attribute.</span></span>
+<span data-ttu-id="b53ab-248">データバインディングを基になる UI 要素に連結するには、属性を使用するのではなく、値を設定し、UI 要素のイベントを直接処理し `@bind` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-248">To chain a data binding to an underlying UI element, set the value and handle the event directly on the UI element instead of using the `@bind` attribute.</span></span>
 
-<span data-ttu-id="183a7-249">コンポーネントパラメーターにバインドするには、属性を使用して、バインド先の `@bind-{Parameter}` パラメーターを指定します。</span><span class="sxs-lookup"><span data-stu-id="183a7-249">To bind to a component parameter, use a `@bind-{Parameter}` attribute to specify the parameter to which you want to bind.</span></span>
+<span data-ttu-id="b53ab-249">コンポーネントパラメーターにバインドするには、属性を使用して、バインド先の `@bind-{Parameter}` パラメーターを指定します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-249">To bind to a component parameter, use a `@bind-{Parameter}` attribute to specify the parameter to which you want to bind.</span></span>
 
 ```razor
 <PasswordBox @bind-Password="password" />
@@ -381,11 +379,11 @@ Password: <input
 }
 ```
 
-## <a name="state-changes"></a><span data-ttu-id="183a7-250">状態変更</span><span class="sxs-lookup"><span data-stu-id="183a7-250">State changes</span></span>
+## <a name="state-changes"></a><span data-ttu-id="b53ab-250">状態変更</span><span class="sxs-lookup"><span data-stu-id="b53ab-250">State changes</span></span>
 
-<span data-ttu-id="183a7-251">コンポーネントの状態が通常の UI イベントまたはイベントコールバックの外部で変更された場合、コンポーネントは、再レンダリングが必要であることを手動で通知する必要があります。</span><span class="sxs-lookup"><span data-stu-id="183a7-251">If the component's state has changed outside of a normal UI event or event callback, then the component must manually signal that it needs to be rendered again.</span></span> <span data-ttu-id="183a7-252">コンポーネントの状態が変更されたことを通知するには、 `StateHasChanged` コンポーネントでメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="183a7-252">To signal that a component's state has changed, call the `StateHasChanged` method on the component.</span></span>
+<span data-ttu-id="b53ab-251">コンポーネントの状態が通常の UI イベントまたはイベントコールバックの外部で変更された場合、コンポーネントは、再レンダリングが必要であることを手動で通知する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b53ab-251">If the component's state has changed outside of a normal UI event or event callback, then the component must manually signal that it needs to be rendered again.</span></span> <span data-ttu-id="b53ab-252">コンポーネントの状態が変更されたことを通知するには、 `StateHasChanged` コンポーネントでメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-252">To signal that a component's state has changed, call the `StateHasChanged` method on the component.</span></span>
 
-<span data-ttu-id="183a7-253">次の例では、コンポーネントに `AppState` よって、アプリの他の部分で更新可能なサービスからのメッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="183a7-253">In the example below, a component displays a message from an `AppState` service that can be updated by other parts of the app.</span></span> <span data-ttu-id="183a7-254">コンポーネントは、 `StateHasChanged` `AppState.OnChange` メッセージが更新されるたびにコンポーネントがレンダリングされるように、そのメソッドをイベントに登録します。</span><span class="sxs-lookup"><span data-stu-id="183a7-254">The component registers its `StateHasChanged` method with the `AppState.OnChange` event so that the component is rendered whenever the message gets updated.</span></span>
+<span data-ttu-id="b53ab-253">次の例では、コンポーネントに `AppState` よって、アプリの他の部分で更新可能なサービスからのメッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-253">In the example below, a component displays a message from an `AppState` service that can be updated by other parts of the app.</span></span> <span data-ttu-id="b53ab-254">コンポーネントは、 `StateHasChanged` `AppState.OnChange` メッセージが更新されるたびにコンポーネントがレンダリングされるように、そのメソッドをイベントに登録します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-254">The component registers its `StateHasChanged` method with the `AppState.OnChange` event so that the component is rendered whenever the message gets updated.</span></span>
 
 ```csharp
 public class AppState
@@ -418,11 +416,11 @@ public class AppState
 }
 ```
 
-## <a name="component-lifecycle"></a><span data-ttu-id="183a7-255">コンポーネントのライフサイクル</span><span class="sxs-lookup"><span data-stu-id="183a7-255">Component lifecycle</span></span>
+## <a name="component-lifecycle"></a><span data-ttu-id="b53ab-255">コンポーネントのライフサイクル</span><span class="sxs-lookup"><span data-stu-id="b53ab-255">Component lifecycle</span></span>
 
-<span data-ttu-id="183a7-256">ASP.NET Web Forms framework には、モジュール、ページ、およびコントロールに対して明確に定義されたライフサイクルメソッドがあります。</span><span class="sxs-lookup"><span data-stu-id="183a7-256">The ASP.NET Web Forms framework has well-defined lifecycle methods for modules, pages, and controls.</span></span> <span data-ttu-id="183a7-257">たとえば、次のコントロールは `Init` 、、、およびの各 `Load` ライフサイクルイベントのイベントハンドラーを実装し `UnLoad` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-257">For example, the following control implements event handlers for the `Init`, `Load`, and `UnLoad` lifecycle events:</span></span>
+<span data-ttu-id="b53ab-256">ASP.NET Web Forms framework には、モジュール、ページ、およびコントロールに対して明確に定義されたライフサイクルメソッドがあります。</span><span class="sxs-lookup"><span data-stu-id="b53ab-256">The ASP.NET Web Forms framework has well-defined lifecycle methods for modules, pages, and controls.</span></span> <span data-ttu-id="b53ab-257">たとえば、次のコントロールは `Init` 、、、およびの各 `Load` ライフサイクルイベントのイベントハンドラーを実装し `UnLoad` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-257">For example, the following control implements event handlers for the `Init`, `Load`, and `UnLoad` lifecycle events:</span></span>
 
-<span data-ttu-id="183a7-258">*Counter.ascx.cs*</span><span class="sxs-lookup"><span data-stu-id="183a7-258">*Counter.ascx.cs*</span></span>
+<span data-ttu-id="b53ab-258">*Counter.ascx.cs*</span><span class="sxs-lookup"><span data-stu-id="b53ab-258">*Counter.ascx.cs*</span></span>
 
 ```csharp
 public partial class Counter : System.Web.UI.UserControl
@@ -433,31 +431,31 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-Blazor<span data-ttu-id="183a7-259">コンポーネントには、明確に定義されたライフサイクルもあります。</span><span class="sxs-lookup"><span data-stu-id="183a7-259"> components also have a well-defined lifecycle.</span></span> <span data-ttu-id="183a7-260">コンポーネントのライフサイクルは、コンポーネントの状態を初期化し、高度なコンポーネントの動作を実装するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="183a7-260">A component's lifecycle can be used to initialize component state and implement advanced component behaviors.</span></span>
+<span data-ttu-id="b53ab-259">Blazor コンポーネントには、明確に定義されたライフサイクルもあります。</span><span class="sxs-lookup"><span data-stu-id="b53ab-259">Blazor components also have a well-defined lifecycle.</span></span> <span data-ttu-id="b53ab-260">コンポーネントのライフサイクルは、コンポーネントの状態を初期化し、高度なコンポーネントの動作を実装するために使用できます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-260">A component's lifecycle can be used to initialize component state and implement advanced component behaviors.</span></span>
 
-<span data-ttu-id="183a7-261">のすべての Blazor コンポーネントライフサイクルメソッドには、同期バージョンと非同期バージョンの両方があります。</span><span class="sxs-lookup"><span data-stu-id="183a7-261">All of Blazor's component lifecycle methods have both synchronous and asynchronous versions.</span></span> <span data-ttu-id="183a7-262">コンポーネントのレンダリングは同期です。</span><span class="sxs-lookup"><span data-stu-id="183a7-262">Component rendering is synchronous.</span></span> <span data-ttu-id="183a7-263">コンポーネントレンダリングの一部として非同期ロジックを実行することはできません。</span><span class="sxs-lookup"><span data-stu-id="183a7-263">You can't run asynchronous logic as part of the component rendering.</span></span> <span data-ttu-id="183a7-264">すべての非同期ロジックは、ライフサイクルメソッドの一部として実行する必要があり `async` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-264">All asynchronous logic must execute as part of an `async` lifecycle method.</span></span>
+<span data-ttu-id="b53ab-261">のすべての Blazor コンポーネントライフサイクルメソッドには、同期バージョンと非同期バージョンの両方があります。</span><span class="sxs-lookup"><span data-stu-id="b53ab-261">All of Blazor's component lifecycle methods have both synchronous and asynchronous versions.</span></span> <span data-ttu-id="b53ab-262">コンポーネントのレンダリングは同期です。</span><span class="sxs-lookup"><span data-stu-id="b53ab-262">Component rendering is synchronous.</span></span> <span data-ttu-id="b53ab-263">コンポーネントレンダリングの一部として非同期ロジックを実行することはできません。</span><span class="sxs-lookup"><span data-stu-id="b53ab-263">You can't run asynchronous logic as part of the component rendering.</span></span> <span data-ttu-id="b53ab-264">すべての非同期ロジックは、ライフサイクルメソッドの一部として実行する必要があり `async` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-264">All asynchronous logic must execute as part of an `async` lifecycle method.</span></span>
 
-### <a name="oninitialized"></a><span data-ttu-id="183a7-265">OnInitialized 化</span><span class="sxs-lookup"><span data-stu-id="183a7-265">OnInitialized</span></span>
+### <a name="oninitialized"></a><span data-ttu-id="b53ab-265">OnInitialized 化</span><span class="sxs-lookup"><span data-stu-id="b53ab-265">OnInitialized</span></span>
 
-<span data-ttu-id="183a7-266">`OnInitialized`コンポーネントを `OnInitializedAsync` 初期化するには、メソッドとメソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="183a7-266">The `OnInitialized` and `OnInitializedAsync` methods are used to initialize the component.</span></span> <span data-ttu-id="183a7-267">コンポーネントは通常、最初のレンダリング後に初期化されます。</span><span class="sxs-lookup"><span data-stu-id="183a7-267">A component is typically initialized after it's first rendered.</span></span> <span data-ttu-id="183a7-268">コンポーネントが初期化されると、最終的に破棄される前に複数回レンダリングされる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="183a7-268">After a component is initialized, it may be rendered multiple times before it's eventually disposed.</span></span> <span data-ttu-id="183a7-269">`OnInitialized`メソッドは、 `Page_Load` ASP.NET Web フォームのページおよびコントロールのイベントに似ています。</span><span class="sxs-lookup"><span data-stu-id="183a7-269">The `OnInitialized` method is similar to the `Page_Load` event in ASP.NET Web Forms pages and controls.</span></span>
+<span data-ttu-id="b53ab-266">`OnInitialized`コンポーネントを `OnInitializedAsync` 初期化するには、メソッドとメソッドを使用します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-266">The `OnInitialized` and `OnInitializedAsync` methods are used to initialize the component.</span></span> <span data-ttu-id="b53ab-267">コンポーネントは通常、最初のレンダリング後に初期化されます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-267">A component is typically initialized after it's first rendered.</span></span> <span data-ttu-id="b53ab-268">コンポーネントが初期化されると、最終的に破棄される前に複数回レンダリングされる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="b53ab-268">After a component is initialized, it may be rendered multiple times before it's eventually disposed.</span></span> <span data-ttu-id="b53ab-269">`OnInitialized`メソッドは、 `Page_Load` ASP.NET Web フォームのページおよびコントロールのイベントに似ています。</span><span class="sxs-lookup"><span data-stu-id="b53ab-269">The `OnInitialized` method is similar to the `Page_Load` event in ASP.NET Web Forms pages and controls.</span></span>
 
 ```csharp
 protected override void OnInitialized() { ... }
 protected override async Task OnInitializedAsync() { await ... }
 ```
 
-### <a name="onparametersset"></a><span data-ttu-id="183a7-270">OnParametersSet</span><span class="sxs-lookup"><span data-stu-id="183a7-270">OnParametersSet</span></span>
+### <a name="onparametersset"></a><span data-ttu-id="b53ab-270">OnParametersSet</span><span class="sxs-lookup"><span data-stu-id="b53ab-270">OnParametersSet</span></span>
 
-<span data-ttu-id="183a7-271">`OnParametersSet`コンポーネントが `OnParametersSetAsync` 親からパラメーターを受け取り、値がプロパティに割り当てられるときに、メソッドとメソッドが呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="183a7-271">The `OnParametersSet` and `OnParametersSetAsync` methods are called when a component has received parameters from its parent and the value are assigned to properties.</span></span> <span data-ttu-id="183a7-272">これらのメソッドは、コンポーネントの初期化の後、および*コンポーネントがレンダリング*されるたびに実行されます。</span><span class="sxs-lookup"><span data-stu-id="183a7-272">These methods are executed after component initialization and *each time the component is rendered*.</span></span>
+<span data-ttu-id="b53ab-271">`OnParametersSet`コンポーネントが `OnParametersSetAsync` 親からパラメーターを受け取り、値がプロパティに割り当てられるときに、メソッドとメソッドが呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-271">The `OnParametersSet` and `OnParametersSetAsync` methods are called when a component has received parameters from its parent and the value are assigned to properties.</span></span> <span data-ttu-id="b53ab-272">これらのメソッドは、コンポーネントの初期化の後、および *コンポーネントがレンダリング*されるたびに実行されます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-272">These methods are executed after component initialization and *each time the component is rendered*.</span></span>
 
 ```csharp
 protected override void OnParametersSet() { ... }
 protected override async Task OnParametersSetAsync() { await ... }
 ```
 
-### <a name="onafterrender"></a><span data-ttu-id="183a7-273">OnAfterRender</span><span class="sxs-lookup"><span data-stu-id="183a7-273">OnAfterRender</span></span>
+### <a name="onafterrender"></a><span data-ttu-id="b53ab-273">OnAfterRender</span><span class="sxs-lookup"><span data-stu-id="b53ab-273">OnAfterRender</span></span>
 
-<span data-ttu-id="183a7-274">`OnAfterRender`メソッドと `OnAfterRenderAsync` メソッドは、コンポーネントのレンダリングが完了した後に呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="183a7-274">The `OnAfterRender` and `OnAfterRenderAsync` methods are called after a component has finished rendering.</span></span> <span data-ttu-id="183a7-275">この時点で、要素参照とコンポーネント参照が設定されます (以下の概念を参照)。</span><span class="sxs-lookup"><span data-stu-id="183a7-275">Element and component references are populated at this point (more on these concepts below).</span></span> <span data-ttu-id="183a7-276">この時点では、ブラウザーとの対話機能が有効になっています。</span><span class="sxs-lookup"><span data-stu-id="183a7-276">Interactivity with the browser is enabled at this point.</span></span> <span data-ttu-id="183a7-277">DOM および JavaScript の実行とのやり取りは、安全に実行できます。</span><span class="sxs-lookup"><span data-stu-id="183a7-277">Interactions with the DOM and JavaScript execution can safely take place.</span></span>
+<span data-ttu-id="b53ab-274">`OnAfterRender`メソッドと `OnAfterRenderAsync` メソッドは、コンポーネントのレンダリングが完了した後に呼び出されます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-274">The `OnAfterRender` and `OnAfterRenderAsync` methods are called after a component has finished rendering.</span></span> <span data-ttu-id="b53ab-275">この時点で、要素参照とコンポーネント参照が設定されます (以下の概念を参照)。</span><span class="sxs-lookup"><span data-stu-id="b53ab-275">Element and component references are populated at this point (more on these concepts below).</span></span> <span data-ttu-id="b53ab-276">この時点では、ブラウザーとの対話機能が有効になっています。</span><span class="sxs-lookup"><span data-stu-id="b53ab-276">Interactivity with the browser is enabled at this point.</span></span> <span data-ttu-id="b53ab-277">DOM および JavaScript の実行とのやり取りは、安全に実行できます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-277">Interactions with the DOM and JavaScript execution can safely take place.</span></span>
 
 ```csharp
 protected override void OnAfterRender(bool firstRender)
@@ -476,13 +474,13 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 }
 ```
 
-<span data-ttu-id="183a7-278">`OnAfterRender``OnAfterRenderAsync`*サーバーでのプリレンダリング時には呼び出されませ*ん。</span><span class="sxs-lookup"><span data-stu-id="183a7-278">`OnAfterRender` and `OnAfterRenderAsync` *aren't called when prerendering on the server*.</span></span>
+<span data-ttu-id="b53ab-278">`OnAfterRender``OnAfterRenderAsync`*サーバーでのプリレンダリング時には呼び出されませ*ん。</span><span class="sxs-lookup"><span data-stu-id="b53ab-278">`OnAfterRender` and `OnAfterRenderAsync` *aren't called when prerendering on the server*.</span></span>
 
-<span data-ttu-id="183a7-279">`firstRender`パラメーターは、 `true` コンポーネントが初めてレンダリングされるときに指定します。それ以外の場合は、値はに `false` なります。</span><span class="sxs-lookup"><span data-stu-id="183a7-279">The `firstRender` parameter is `true` the first time the component is rendered; otherwise, its value is `false`.</span></span>
+<span data-ttu-id="b53ab-279">`firstRender`パラメーターは、 `true` コンポーネントが初めてレンダリングされるときに指定します。それ以外の場合は、値はに `false` なります。</span><span class="sxs-lookup"><span data-stu-id="b53ab-279">The `firstRender` parameter is `true` the first time the component is rendered; otherwise, its value is `false`.</span></span>
 
-### <a name="idisposable"></a><span data-ttu-id="183a7-280">IDisposable</span><span class="sxs-lookup"><span data-stu-id="183a7-280">IDisposable</span></span>
+### <a name="idisposable"></a><span data-ttu-id="b53ab-280">IDisposable</span><span class="sxs-lookup"><span data-stu-id="b53ab-280">IDisposable</span></span>
 
-Blazor<span data-ttu-id="183a7-281">コンポーネント `IDisposable` が UI から削除されると、コンポーネントはを実装してリソースを破棄できます。</span><span class="sxs-lookup"><span data-stu-id="183a7-281"> components can implement `IDisposable` to dispose of resources when the component is removed from the UI.</span></span> <span data-ttu-id="183a7-282">Razor コンポーネントは、ディレクティブを使用してを実装でき `IDispose` `@implements` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-282">A Razor component can implement `IDispose` by using the `@implements` directive:</span></span>
+<span data-ttu-id="b53ab-281">Blazor コンポーネント `IDisposable` が UI から削除されると、コンポーネントはを実装してリソースを破棄できます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-281">Blazor components can implement `IDisposable` to dispose of resources when the component is removed from the UI.</span></span> <span data-ttu-id="b53ab-282">Razor コンポーネントは、ディレクティブを使用してを実装でき `IDispose` `@implements` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-282">A Razor component can implement `IDispose` by using the `@implements` directive:</span></span>
 
 ```razor
 @using System
@@ -498,11 +496,11 @@ Blazor<span data-ttu-id="183a7-281">コンポーネント `IDisposable` が UI �
 }
 ```
 
-## <a name="capture-component-references"></a><span data-ttu-id="183a7-283">コンポーネント参照のキャプチャ</span><span class="sxs-lookup"><span data-stu-id="183a7-283">Capture component references</span></span>
+## <a name="capture-component-references"></a><span data-ttu-id="b53ab-283">コンポーネント参照のキャプチャ</span><span class="sxs-lookup"><span data-stu-id="b53ab-283">Capture component references</span></span>
 
-<span data-ttu-id="183a7-284">ASP.NET Web フォームでは、ID を参照することによって、コントロールインスタンスをコード内で直接操作するのが一般的です。</span><span class="sxs-lookup"><span data-stu-id="183a7-284">In ASP.NET Web Forms, it's common to manipulate a control instance directly in code by referring to its ID.</span></span> <span data-ttu-id="183a7-285">では Blazor 、コンポーネントへの参照をキャプチャして操作することもできますが、これはあまり一般的ではありません。</span><span class="sxs-lookup"><span data-stu-id="183a7-285">In Blazor, it's also possible to capture and manipulate a reference to a component, although it's much less common.</span></span>
+<span data-ttu-id="b53ab-284">ASP.NET Web フォームでは、ID を参照することによって、コントロールインスタンスをコード内で直接操作するのが一般的です。</span><span class="sxs-lookup"><span data-stu-id="b53ab-284">In ASP.NET Web Forms, it's common to manipulate a control instance directly in code by referring to its ID.</span></span> <span data-ttu-id="b53ab-285">では Blazor 、コンポーネントへの参照をキャプチャして操作することもできますが、これはあまり一般的ではありません。</span><span class="sxs-lookup"><span data-stu-id="b53ab-285">In Blazor, it's also possible to capture and manipulate a reference to a component, although it's much less common.</span></span>
 
-<span data-ttu-id="183a7-286">でコンポーネント参照をキャプチャするには Blazor 、 `@ref` ディレクティブ属性を使用します。</span><span class="sxs-lookup"><span data-stu-id="183a7-286">To capture a component reference in Blazor, use the `@ref` directive attribute.</span></span> <span data-ttu-id="183a7-287">属性の値は、参照されるコンポーネントと同じ型の設定可能フィールドの名前と一致している必要があります。</span><span class="sxs-lookup"><span data-stu-id="183a7-287">The value of the attribute should match the name of a settable field with the same type as the referenced component.</span></span>
+<span data-ttu-id="b53ab-286">でコンポーネント参照をキャプチャするには Blazor 、 `@ref` ディレクティブ属性を使用します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-286">To capture a component reference in Blazor, use the `@ref` directive attribute.</span></span> <span data-ttu-id="b53ab-287">属性の値は、参照されるコンポーネントと同じ型の設定可能フィールドの名前と一致している必要があります。</span><span class="sxs-lookup"><span data-stu-id="b53ab-287">The value of the attribute should match the name of a settable field with the same type as the referenced component.</span></span>
 
 ```razor
 <MyLoginDialog @ref="loginDialog" ... />
@@ -517,25 +515,25 @@ Blazor<span data-ttu-id="183a7-281">コンポーネント `IDisposable` が UI �
 }
 ```
 
-<span data-ttu-id="183a7-288">親コンポーネントがレンダリングされると、そのフィールドに子コンポーネントインスタンスが設定されます。</span><span class="sxs-lookup"><span data-stu-id="183a7-288">When the parent component is rendered, the field is populated with the child component instance.</span></span> <span data-ttu-id="183a7-289">その後、コンポーネントインスタンスのメソッドを呼び出したり、それ以外の操作を行ったりすることができます。</span><span class="sxs-lookup"><span data-stu-id="183a7-289">You can then call methods on, or otherwise manipulate, the component instance.</span></span>
+<span data-ttu-id="b53ab-288">親コンポーネントがレンダリングされると、そのフィールドに子コンポーネントインスタンスが設定されます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-288">When the parent component is rendered, the field is populated with the child component instance.</span></span> <span data-ttu-id="b53ab-289">その後、コンポーネントインスタンスのメソッドを呼び出したり、それ以外の操作を行ったりすることができます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-289">You can then call methods on, or otherwise manipulate, the component instance.</span></span>
 
-<span data-ttu-id="183a7-290">コンポーネント参照を使用してコンポーネントの状態を直接操作することは推奨されません。</span><span class="sxs-lookup"><span data-stu-id="183a7-290">Manipulating component state directly using component references isn't recommended.</span></span> <span data-ttu-id="183a7-291">これにより、コンポーネントが適切な時刻に自動的にレンダリングされるのを防ぐことができます。</span><span class="sxs-lookup"><span data-stu-id="183a7-291">Doing so prevents the component from being rendered automatically at the correct times.</span></span>
+<span data-ttu-id="b53ab-290">コンポーネント参照を使用してコンポーネントの状態を直接操作することは推奨されません。</span><span class="sxs-lookup"><span data-stu-id="b53ab-290">Manipulating component state directly using component references isn't recommended.</span></span> <span data-ttu-id="b53ab-291">これにより、コンポーネントが適切な時刻に自動的にレンダリングされるのを防ぐことができます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-291">Doing so prevents the component from being rendered automatically at the correct times.</span></span>
 
-## <a name="capture-element-references"></a><span data-ttu-id="183a7-292">要素参照のキャプチャ</span><span class="sxs-lookup"><span data-stu-id="183a7-292">Capture element references</span></span>
+## <a name="capture-element-references"></a><span data-ttu-id="b53ab-292">要素参照のキャプチャ</span><span class="sxs-lookup"><span data-stu-id="b53ab-292">Capture element references</span></span>
 
-Blazor<span data-ttu-id="183a7-293">コンポーネントは、要素への参照をキャプチャできます。</span><span class="sxs-lookup"><span data-stu-id="183a7-293"> components can capture references to an element.</span></span> <span data-ttu-id="183a7-294">ASP.NET Web フォームの HTML サーバーコントロールとは異なり、の要素参照を使用して DOM を直接操作することはできません Blazor 。</span><span class="sxs-lookup"><span data-stu-id="183a7-294">Unlike HTML server controls in ASP.NET Web Forms, you can't manipulate the DOM directly using an element reference in Blazor.</span></span> Blazor<span data-ttu-id="183a7-295">dom 比較アルゴリズムを使用して、ほとんどの DOM 対話を処理します。</span><span class="sxs-lookup"><span data-stu-id="183a7-295"> handles most DOM interactions for you using its DOM diffing algorithm.</span></span> <span data-ttu-id="183a7-296">でキャプチャされた要素参照 Blazor は不透明です。</span><span class="sxs-lookup"><span data-stu-id="183a7-296">Captured element references in Blazor are opaque.</span></span> <span data-ttu-id="183a7-297">ただし、JavaScript の相互運用呼び出しで特定の要素参照を渡すために使用されます。</span><span class="sxs-lookup"><span data-stu-id="183a7-297">However, they're used to pass a specific element reference in a JavaScript interop call.</span></span> <span data-ttu-id="183a7-298">JavaScript の相互運用機能の詳細については、「 [ASP.NET Core Blazor javascript interop](/aspnet/core/blazor/javascript-interop)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="183a7-298">For more information about JavaScript interop, see [ASP.NET Core Blazor JavaScript interop](/aspnet/core/blazor/javascript-interop).</span></span>
+<span data-ttu-id="b53ab-293">Blazor コンポーネントは、要素への参照をキャプチャできます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-293">Blazor components can capture references to an element.</span></span> <span data-ttu-id="b53ab-294">ASP.NET Web フォームの HTML サーバーコントロールとは異なり、の要素参照を使用して DOM を直接操作することはできません Blazor 。</span><span class="sxs-lookup"><span data-stu-id="b53ab-294">Unlike HTML server controls in ASP.NET Web Forms, you can't manipulate the DOM directly using an element reference in Blazor.</span></span> <span data-ttu-id="b53ab-295">Blazor dom 比較アルゴリズムを使用して、ほとんどの DOM 対話を処理します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-295">Blazor handles most DOM interactions for you using its DOM diffing algorithm.</span></span> <span data-ttu-id="b53ab-296">でキャプチャされた要素参照 Blazor は不透明です。</span><span class="sxs-lookup"><span data-stu-id="b53ab-296">Captured element references in Blazor are opaque.</span></span> <span data-ttu-id="b53ab-297">ただし、JavaScript の相互運用呼び出しで特定の要素参照を渡すために使用されます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-297">However, they're used to pass a specific element reference in a JavaScript interop call.</span></span> <span data-ttu-id="b53ab-298">JavaScript の相互運用機能の詳細については、「 [ASP.NET Core Blazor javascript interop](/aspnet/core/blazor/javascript-interop)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b53ab-298">For more information about JavaScript interop, see [ASP.NET Core Blazor JavaScript interop](/aspnet/core/blazor/javascript-interop).</span></span>
 
-## <a name="templated-components"></a><span data-ttu-id="183a7-299">テンプレート コンポーネント</span><span class="sxs-lookup"><span data-stu-id="183a7-299">Templated components</span></span>
+## <a name="templated-components"></a><span data-ttu-id="b53ab-299">テンプレート コンポーネント</span><span class="sxs-lookup"><span data-stu-id="b53ab-299">Templated components</span></span>
 
-<span data-ttu-id="183a7-300">ASP.NET Web フォームでは、テンプレート化された*コントロール*を作成できます。</span><span class="sxs-lookup"><span data-stu-id="183a7-300">In ASP.NET Web Forms, you can create *templated controls*.</span></span> <span data-ttu-id="183a7-301">開発者は、テンプレート化されたコントロールを使用して、コンテナーコントロールの表示に使用する HTML の一部を指定できます。</span><span class="sxs-lookup"><span data-stu-id="183a7-301">Templated controls enable the developer to specify a portion of the HTML used to render a container control.</span></span> <span data-ttu-id="183a7-302">テンプレート化されたサーバーコントロールを構築するメカニズムは複雑ですが、ユーザーがカスタマイズ可能な方法でデータを表示するための強力なシナリオを実現します。</span><span class="sxs-lookup"><span data-stu-id="183a7-302">The mechanics of building templated server controls are complex, but they enable powerful scenarios for rendering data in a user customizable way.</span></span> <span data-ttu-id="183a7-303">テンプレート化されたコントロールの例 `Repeater` として、やがあり `DataList` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-303">Examples of templated controls include `Repeater` and `DataList`.</span></span>
+<span data-ttu-id="b53ab-300">ASP.NET Web フォームでは、テンプレート化された *コントロール*を作成できます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-300">In ASP.NET Web Forms, you can create *templated controls*.</span></span> <span data-ttu-id="b53ab-301">開発者は、テンプレート化されたコントロールを使用して、コンテナーコントロールの表示に使用する HTML の一部を指定できます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-301">Templated controls enable the developer to specify a portion of the HTML used to render a container control.</span></span> <span data-ttu-id="b53ab-302">テンプレート化されたサーバーコントロールを構築するメカニズムは複雑ですが、ユーザーがカスタマイズ可能な方法でデータを表示するための強力なシナリオを実現します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-302">The mechanics of building templated server controls are complex, but they enable powerful scenarios for rendering data in a user customizable way.</span></span> <span data-ttu-id="b53ab-303">テンプレート化されたコントロールの例 `Repeater` として、やがあり `DataList` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-303">Examples of templated controls include `Repeater` and `DataList`.</span></span>
 
-Blazor<span data-ttu-id="183a7-304">コンポーネントは、型または型のコンポーネントパラメーターを定義することによって、テンプレートを設定することもでき `RenderFragment` `RenderFragment<T>` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-304"> components can also be templated by defining component parameters of type `RenderFragment` or `RenderFragment<T>`.</span></span> <span data-ttu-id="183a7-305">は、 `RenderFragment` コンポーネントによってレンダリングできる Razor マークアップのチャンクを表します。</span><span class="sxs-lookup"><span data-stu-id="183a7-305">A `RenderFragment` represents a chunk of Razor markup that can then be rendered by the component.</span></span> <span data-ttu-id="183a7-306">は、 `RenderFragment<T>` レンダリングフラグメントのレンダリング時に指定できるパラメーターを受け取る Razor マークアップのチャンクです。</span><span class="sxs-lookup"><span data-stu-id="183a7-306">A `RenderFragment<T>` is a chunk of Razor markup that takes a parameter that can be specified when the render fragment is rendered.</span></span>
+<span data-ttu-id="b53ab-304">Blazor コンポーネントは、型または型のコンポーネントパラメーターを定義することによって、テンプレートを設定することもでき `RenderFragment` `RenderFragment<T>` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-304">Blazor components can also be templated by defining component parameters of type `RenderFragment` or `RenderFragment<T>`.</span></span> <span data-ttu-id="b53ab-305">は、 `RenderFragment` コンポーネントによってレンダリングできる Razor マークアップのチャンクを表します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-305">A `RenderFragment` represents a chunk of Razor markup that can then be rendered by the component.</span></span> <span data-ttu-id="b53ab-306">は、 `RenderFragment<T>` レンダリングフラグメントのレンダリング時に指定できるパラメーターを受け取る Razor マークアップのチャンクです。</span><span class="sxs-lookup"><span data-stu-id="b53ab-306">A `RenderFragment<T>` is a chunk of Razor markup that takes a parameter that can be specified when the render fragment is rendered.</span></span>
 
-### <a name="child-content"></a><span data-ttu-id="183a7-307">子コンテンツ</span><span class="sxs-lookup"><span data-stu-id="183a7-307">Child content</span></span>
+### <a name="child-content"></a><span data-ttu-id="b53ab-307">子コンテンツ</span><span class="sxs-lookup"><span data-stu-id="b53ab-307">Child content</span></span>
 
-Blazor<span data-ttu-id="183a7-308">コンポーネントは、子コンテンツをとしてキャプチャ `RenderFragment` し、コンポーネントレンダリングの一部としてそのコンテンツをレンダリングできます。</span><span class="sxs-lookup"><span data-stu-id="183a7-308"> components can capture their child content as a `RenderFragment` and render that content as part of the component rendering.</span></span> <span data-ttu-id="183a7-309">子コンテンツをキャプチャするには、型のコンポーネントパラメーターを定義 `RenderFragment` し、という名前を指定し `ChildContent` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-309">To capture child content, define a component parameter of type `RenderFragment` and name it `ChildContent`.</span></span>
+<span data-ttu-id="b53ab-308">Blazor コンポーネントは、子コンテンツをとしてキャプチャ `RenderFragment` し、コンポーネントレンダリングの一部としてそのコンテンツをレンダリングできます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-308">Blazor components can capture their child content as a `RenderFragment` and render that content as part of the component rendering.</span></span> <span data-ttu-id="b53ab-309">子コンテンツをキャプチャするには、型のコンポーネントパラメーターを定義 `RenderFragment` し、という名前を指定し `ChildContent` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-309">To capture child content, define a component parameter of type `RenderFragment` and name it `ChildContent`.</span></span>
 
-<span data-ttu-id="183a7-310">*ChildContentComponent。 razor*</span><span class="sxs-lookup"><span data-stu-id="183a7-310">*ChildContentComponent.razor*</span></span>
+<span data-ttu-id="b53ab-310">*ChildContentComponent。 razor*</span><span class="sxs-lookup"><span data-stu-id="b53ab-310">*ChildContentComponent.razor*</span></span>
 
 ```razor
 <h1>Component with child content</h1>
@@ -548,7 +546,7 @@ Blazor<span data-ttu-id="183a7-308">コンポーネントは、子コンテン�
 }
 ```
 
-<span data-ttu-id="183a7-311">親コンポーネントは、通常の Razor 構文を使用して子コンテンツを提供できます。</span><span class="sxs-lookup"><span data-stu-id="183a7-311">A parent component can then supply child content using normal Razor syntax.</span></span>
+<span data-ttu-id="b53ab-311">親コンポーネントは、通常の Razor 構文を使用して子コンテンツを提供できます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-311">A parent component can then supply child content using normal Razor syntax.</span></span>
 
 ```razor
 <ChildContentComponent>
@@ -556,11 +554,11 @@ Blazor<span data-ttu-id="183a7-308">コンポーネントは、子コンテン�
 </ChildContentComponent>
 ```
 
-### <a name="template-parameters"></a><span data-ttu-id="183a7-312">テンプレート パラメーター</span><span class="sxs-lookup"><span data-stu-id="183a7-312">Template parameters</span></span>
+### <a name="template-parameters"></a><span data-ttu-id="b53ab-312">テンプレート パラメーター</span><span class="sxs-lookup"><span data-stu-id="b53ab-312">Template parameters</span></span>
 
-<span data-ttu-id="183a7-313">また、テンプレート Blazor コンポーネントでは、型または型の複数のコンポーネントパラメーターを定義することもでき `RenderFragment` `RenderFragment<T>` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-313">A templated Blazor component can also define multiple component parameters of type `RenderFragment` or `RenderFragment<T>`.</span></span> <span data-ttu-id="183a7-314">のパラメーターは、 `RenderFragment<T>` 呼び出されたときに指定できます。</span><span class="sxs-lookup"><span data-stu-id="183a7-314">The parameter for a `RenderFragment<T>` can be specified when it's invoked.</span></span> <span data-ttu-id="183a7-315">コンポーネントのジェネリック型パラメーターを指定するには、Razor ディレクティブを使用し `@typeparam` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-315">To specify a generic type parameter for a component, use the `@typeparam` Razor directive.</span></span>
+<span data-ttu-id="b53ab-313">また、テンプレート Blazor コンポーネントでは、型または型の複数のコンポーネントパラメーターを定義することもでき `RenderFragment` `RenderFragment<T>` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-313">A templated Blazor component can also define multiple component parameters of type `RenderFragment` or `RenderFragment<T>`.</span></span> <span data-ttu-id="b53ab-314">のパラメーターは、 `RenderFragment<T>` 呼び出されたときに指定できます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-314">The parameter for a `RenderFragment<T>` can be specified when it's invoked.</span></span> <span data-ttu-id="b53ab-315">コンポーネントのジェネリック型パラメーターを指定するには、Razor ディレクティブを使用し `@typeparam` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-315">To specify a generic type parameter for a component, use the `@typeparam` Razor directive.</span></span>
 
-<span data-ttu-id="183a7-316">*SimpleListView。 razor*</span><span class="sxs-lookup"><span data-stu-id="183a7-316">*SimpleListView.razor*</span></span>
+<span data-ttu-id="b53ab-316">*SimpleListView。 razor*</span><span class="sxs-lookup"><span data-stu-id="b53ab-316">*SimpleListView.razor*</span></span>
 
 ```razor
 @typeparam TItem
@@ -586,7 +584,7 @@ Blazor<span data-ttu-id="183a7-308">コンポーネントは、子コンテン�
 }
 ```
 
-<span data-ttu-id="183a7-317">テンプレート化されたコンポーネントを使用する場合、テンプレートパラメーターは、パラメーターの名前と一致する子要素を使用して指定できます。</span><span class="sxs-lookup"><span data-stu-id="183a7-317">When using a templated component, the template parameters can be specified using child elements that match the names of the parameters.</span></span> <span data-ttu-id="183a7-318">`RenderFragment<T>`要素として渡される型のコンポーネント引数には、という名前の暗黙的なパラメーターがあり `context` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-318">Component arguments of type `RenderFragment<T>` passed as elements have an implicit parameter named `context`.</span></span> <span data-ttu-id="183a7-319">子要素の属性を使用して、この実装パラメーターの名前を変更でき `Context` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-319">You can change the name of this implement parameter using the `Context` attribute on the child element.</span></span> <span data-ttu-id="183a7-320">ジェネリック型パラメーターは、型パラメーターの名前と一致する属性を使用して指定できます。</span><span class="sxs-lookup"><span data-stu-id="183a7-320">Any generic type parameters can be specified using an attribute that matches the name of the type parameter.</span></span> <span data-ttu-id="183a7-321">可能な場合は、型パラメーターが推論されます。</span><span class="sxs-lookup"><span data-stu-id="183a7-321">The type parameter will be inferred if possible:</span></span>
+<span data-ttu-id="b53ab-317">テンプレート化されたコンポーネントを使用する場合、テンプレートパラメーターは、パラメーターの名前と一致する子要素を使用して指定できます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-317">When using a templated component, the template parameters can be specified using child elements that match the names of the parameters.</span></span> <span data-ttu-id="b53ab-318">`RenderFragment<T>`要素として渡される型のコンポーネント引数には、という名前の暗黙的なパラメーターがあり `context` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-318">Component arguments of type `RenderFragment<T>` passed as elements have an implicit parameter named `context`.</span></span> <span data-ttu-id="b53ab-319">子要素の属性を使用して、この実装パラメーターの名前を変更でき `Context` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-319">You can change the name of this implement parameter using the `Context` attribute on the child element.</span></span> <span data-ttu-id="b53ab-320">ジェネリック型パラメーターは、型パラメーターの名前と一致する属性を使用して指定できます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-320">Any generic type parameters can be specified using an attribute that matches the name of the type parameter.</span></span> <span data-ttu-id="b53ab-321">可能な場合は、型パラメーターが推論されます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-321">The type parameter will be inferred if possible:</span></span>
 
 ```razor
 <SimpleListView Items="messages" TItem="string">
@@ -599,7 +597,7 @@ Blazor<span data-ttu-id="183a7-308">コンポーネントは、子コンテン�
 </SimpleListView>
 ```
 
-<span data-ttu-id="183a7-322">このコンポーネントの出力は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="183a7-322">The output of this component looks like this:</span></span>
+<span data-ttu-id="b53ab-322">このコンポーネントの出力は次のようになります。</span><span class="sxs-lookup"><span data-stu-id="b53ab-322">The output of this component looks like this:</span></span>
 
 ```html
 <h1>My list</h1>
@@ -609,11 +607,11 @@ Blazor<span data-ttu-id="183a7-308">コンポーネントは、子コンテン�
 <ul>
 ```
 
-## <a name="code-behind"></a><span data-ttu-id="183a7-323">分離コード</span><span class="sxs-lookup"><span data-stu-id="183a7-323">Code-behind</span></span>
+## <a name="code-behind"></a><span data-ttu-id="b53ab-323">分離コード</span><span class="sxs-lookup"><span data-stu-id="b53ab-323">Code-behind</span></span>
 
-<span data-ttu-id="183a7-324">Blazorコンポーネントは通常、単一の*razor*ファイルで作成されます。</span><span class="sxs-lookup"><span data-stu-id="183a7-324">A Blazor component is typically authored in a single *.razor* file.</span></span> <span data-ttu-id="183a7-325">ただし、分離コードファイルを使用して、コードとマークアップを分離することもできます。</span><span class="sxs-lookup"><span data-stu-id="183a7-325">However, it's also possible to separate the code and markup using a code-behind file.</span></span> <span data-ttu-id="183a7-326">コンポーネントファイルを使用するには、コンポーネントファイルのファイル名と一致し、 *.cs*拡張子を追加した C# ファイルを追加します (*Counter.razor.cs*)。</span><span class="sxs-lookup"><span data-stu-id="183a7-326">To use a component file, add a C# file that matches the file name of the component file but with a *.cs* extension added (*Counter.razor.cs*).</span></span> <span data-ttu-id="183a7-327">コンポーネントの基本クラスを定義するには、C# ファイルを使用します。</span><span class="sxs-lookup"><span data-stu-id="183a7-327">Use the C# file to define a base class for the component.</span></span> <span data-ttu-id="183a7-328">基底クラスには任意の名前を指定できますが、クラスにはコンポーネントクラスと同じ名前を付けますが、 `Base` 拡張機能が追加され `CounterBase` ます ()。</span><span class="sxs-lookup"><span data-stu-id="183a7-328">You can name the base class anything you'd like, but it's common to name the class the same as the component class, but with a `Base` extension added (`CounterBase`).</span></span> <span data-ttu-id="183a7-329">コンポーネントベースのクラスも、から派生する必要があり `ComponentBase` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-329">The component-based class must also derive from `ComponentBase`.</span></span> <span data-ttu-id="183a7-330">次に、Razor コンポーネントファイルで、ディレクティブを追加して、 `@inherits` コンポーネントの基本クラスを指定し `@inherits CounterBase` ます ()。</span><span class="sxs-lookup"><span data-stu-id="183a7-330">Then, in the Razor component file, add the `@inherits` directive to specify the base class for the component (`@inherits CounterBase`).</span></span>
+<span data-ttu-id="b53ab-324">Blazorコンポーネントは通常、単一の*razor*ファイルで作成されます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-324">A Blazor component is typically authored in a single *.razor* file.</span></span> <span data-ttu-id="b53ab-325">ただし、分離コードファイルを使用して、コードとマークアップを分離することもできます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-325">However, it's also possible to separate the code and markup using a code-behind file.</span></span> <span data-ttu-id="b53ab-326">コンポーネントファイルを使用するには、コンポーネントファイルのファイル名と一致し、 *.cs* 拡張子を追加した C# ファイルを追加します (*Counter.razor.cs*)。</span><span class="sxs-lookup"><span data-stu-id="b53ab-326">To use a component file, add a C# file that matches the file name of the component file but with a *.cs* extension added (*Counter.razor.cs*).</span></span> <span data-ttu-id="b53ab-327">コンポーネントの基本クラスを定義するには、C# ファイルを使用します。</span><span class="sxs-lookup"><span data-stu-id="b53ab-327">Use the C# file to define a base class for the component.</span></span> <span data-ttu-id="b53ab-328">基底クラスには任意の名前を指定できますが、クラスにはコンポーネントクラスと同じ名前を付けますが、 `Base` 拡張機能が追加され `CounterBase` ます ()。</span><span class="sxs-lookup"><span data-stu-id="b53ab-328">You can name the base class anything you'd like, but it's common to name the class the same as the component class, but with a `Base` extension added (`CounterBase`).</span></span> <span data-ttu-id="b53ab-329">コンポーネントベースのクラスも、から派生する必要があり `ComponentBase` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-329">The component-based class must also derive from `ComponentBase`.</span></span> <span data-ttu-id="b53ab-330">次に、Razor コンポーネントファイルで、ディレクティブを追加して、 `@inherits` コンポーネントの基本クラスを指定し `@inherits CounterBase` ます ()。</span><span class="sxs-lookup"><span data-stu-id="b53ab-330">Then, in the Razor component file, add the `@inherits` directive to specify the base class for the component (`@inherits CounterBase`).</span></span>
 
-<span data-ttu-id="183a7-331">*カウンタ。 razor*</span><span class="sxs-lookup"><span data-stu-id="183a7-331">*Counter.razor*</span></span>
+<span data-ttu-id="b53ab-331">*カウンタ。 razor*</span><span class="sxs-lookup"><span data-stu-id="b53ab-331">*Counter.razor*</span></span>
 
 ```razor
 @inherits CounterBase
@@ -625,7 +623,7 @@ Blazor<span data-ttu-id="183a7-308">コンポーネントは、子コンテン�
 <button @onclick="IncrementCount">Click me</button>
 ```
 
-<span data-ttu-id="183a7-332">*Counter.razor.cs*</span><span class="sxs-lookup"><span data-stu-id="183a7-332">*Counter.razor.cs*</span></span>
+<span data-ttu-id="b53ab-332">*Counter.razor.cs*</span><span class="sxs-lookup"><span data-stu-id="b53ab-332">*Counter.razor.cs*</span></span>
 
 ```csharp
 public class CounterBase : ComponentBase
@@ -639,13 +637,13 @@ public class CounterBase : ComponentBase
 }
 ```
 
-<span data-ttu-id="183a7-333">基底クラスのコンポーネントのメンバーの可視性は、 `protected` コンポーネントクラスに表示される必要があり `public` ます。</span><span class="sxs-lookup"><span data-stu-id="183a7-333">The visibility of the component's members in the base class must be `protected` or `public` to be visible to the component class.</span></span>
+<span data-ttu-id="b53ab-333">基底クラスのコンポーネントのメンバーの可視性は、 `protected` コンポーネントクラスに表示される必要があり `public` ます。</span><span class="sxs-lookup"><span data-stu-id="b53ab-333">The visibility of the component's members in the base class must be `protected` or `public` to be visible to the component class.</span></span>
 
-## <a name="additional-resources"></a><span data-ttu-id="183a7-334">その他の技術情報</span><span class="sxs-lookup"><span data-stu-id="183a7-334">Additional resources</span></span>
+## <a name="additional-resources"></a><span data-ttu-id="b53ab-334">その他の技術情報</span><span class="sxs-lookup"><span data-stu-id="b53ab-334">Additional resources</span></span>
 
-<span data-ttu-id="183a7-335">前のは、コンポーネントのすべての側面を網羅するものではありません Blazor 。</span><span class="sxs-lookup"><span data-stu-id="183a7-335">The preceding isn't an exhaustive treatment of all aspects of Blazor components.</span></span> <span data-ttu-id="183a7-336">[ASP.NET Core Razor コンポーネントを作成して使用](/aspnet/core/blazor/components)する方法の詳細については、のドキュメントを参照してください Blazor 。</span><span class="sxs-lookup"><span data-stu-id="183a7-336">For more information on how to [Create and use ASP.NET Core Razor components](/aspnet/core/blazor/components), see the Blazor documentation.</span></span>
+<span data-ttu-id="b53ab-335">前のは、コンポーネントのすべての側面を網羅するものではありません Blazor 。</span><span class="sxs-lookup"><span data-stu-id="b53ab-335">The preceding isn't an exhaustive treatment of all aspects of Blazor components.</span></span> <span data-ttu-id="b53ab-336">[ASP.NET Core Razor コンポーネントを作成して使用](/aspnet/core/blazor/components)する方法の詳細については、のドキュメントを参照してください Blazor 。</span><span class="sxs-lookup"><span data-stu-id="b53ab-336">For more information on how to [Create and use ASP.NET Core Razor components](/aspnet/core/blazor/components), see the Blazor documentation.</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="183a7-337">[前へ](app-startup.md)
->[次へ](pages-routing-layouts.md)</span><span class="sxs-lookup"><span data-stu-id="183a7-337">[Previous](app-startup.md)
+><span data-ttu-id="b53ab-337">[前へ](app-startup.md)
+>[次へ](pages-routing-layouts.md)</span><span class="sxs-lookup"><span data-stu-id="b53ab-337">[Previous](app-startup.md)
 [Next](pages-routing-layouts.md)</span></span>
