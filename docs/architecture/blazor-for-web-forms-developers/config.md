@@ -6,25 +6,23 @@ ms.author: jefritz
 no-loc:
 - Blazor
 ms.date: 04/01/2020
-ms.openlocfilehash: a13f663c2c6908ba906e42cb939c3b8707b8cccd
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 6154b4f8c7a5bff42e603b12d5ef85468b80224e
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173316"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267504"
 ---
 # <a name="app-configuration"></a>アプリの構成
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
-Web フォームでアプリ構成を読み込む主な方法は、 *web.config*ファイルのエントリを、 &mdash; サーバー上または*web.config*が参照する関連構成ファイルに入力することです。静的オブジェクトを使用して、アプリ `ConfigurationManager` の設定、データリポジトリの接続文字列、およびアプリに追加されたその他の拡張構成プロバイダーとやり取りすることができます。 一般的に、次のコードに示すように、アプリ構成との相互作用を確認します。
+Web フォームでアプリ構成を読み込む主な方法は、 *web.config* ファイルのエントリを、 &mdash; サーバー上または *web.config*が参照する関連構成ファイルに入力することです。静的オブジェクトを使用して、アプリ `ConfigurationManager` の設定、データリポジトリの接続文字列、およびアプリに追加されたその他の拡張構成プロバイダーとやり取りすることができます。 一般的に、次のコードに示すように、アプリ構成との相互作用を確認します。
 
 ```csharp
 var configurationValue = ConfigurationManager.AppSettings["ConfigurationSettingName"];
 var connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionName"].ConnectionString;
 ```
 
-ASP.NET Core とサーバー側で Blazor は、アプリが WINDOWS IIS サーバーでホストされている場合、 *web.config*ファイルが存在する可能性があります。 ただし、 `ConfigurationManager` この構成は相互作用しないため、他のソースからさらに構造化されたアプリ構成を受け取ることができます。 構成の収集方法と、 *web.config*ファイルから構成情報にアクセスする方法を見てみましょう。
+ASP.NET Core とサーバー側で Blazor は、アプリが WINDOWS IIS サーバーでホストされている場合、 *web.config* ファイルが存在する可能性があります。 ただし、 `ConfigurationManager` この構成は相互作用しないため、他のソースからさらに構造化されたアプリ構成を受け取ることができます。 構成の収集方法と、 *web.config* ファイルから構成情報にアクセスする方法を見てみましょう。
 
 ## <a name="configuration-sources"></a>構成元
 
@@ -35,14 +33,14 @@ ASP.NET Core は、クラウド対応であり、オペレーターと開発者�
 アプリは、環境の名前に基づいて複数のソースから構成をトリガーし、構成を追加することができます。 既定では、構成は次のリソースから順に読み込まれます。
 
 1. ファイル*のappsettings.js* (存在する場合)
-1. *appsettings。{ENVIRONMENT_NAME}. json*ファイル (存在する場合)
+1. *appsettings。{ENVIRONMENT_NAME}. json* ファイル (存在する場合)
 1. ディスク上のユーザーシークレットファイル (存在する場合)
 1. 環境変数
 1. コマンド ライン引数
 
 ## <a name="appsettingsjson-format-and-access"></a>形式とアクセスに appsettings.js
 
-ファイル*のappsettings.js*は、次の JSON のように構造化された値を使用して階層化できます。
+ファイル * のappsettings.js* は、次の JSON のように構造化された値を使用して階層化できます。
 
 ```json
 {
@@ -82,7 +80,7 @@ dotnet user-secrets set "Parent:ApiKey" "12345"
 
 上記のコマンドは、 `Parent:ApiKey` 値を使用して、開発者のワークステーションで構成キーを使用できるようにし `12345` ます。
 
-ユーザーシークレットの作成、格納、および管理の詳細については、 [ASP.NET Core ドキュメントの「開発におけるアプリシークレットの安全な格納](/aspnet/core/security/app-secrets)」を参照してください。
+ユーザーシークレットの作成、格納、および管理の詳細については、 [ASP.NET Core ドキュメントの「開発におけるアプリシークレットの安全な格納](/aspnet/core/security/app-secrets) 」を参照してください。
 
 ## <a name="environment-variables"></a>環境変数
 
@@ -100,7 +98,7 @@ dotnet run Parent:ApiKey=67890
 
 ## <a name="the-return-of-webconfig"></a>web.config の戻り値
 
-アプリを IIS の Windows にデプロイした場合、 *web.config*ファイルによって、アプリケーションを管理するための iis が引き続き構成されます。 既定では、IIS は ASP.NET Core モジュール (モジュール) への参照を追加します。 モジュールは、Kestrel web サーバーの代わりにアプリをホストするネイティブ IIS モジュールです。 この*web.config*セクションは、次の XML マークアップに似ています。
+アプリを IIS の Windows にデプロイした場合、 *web.config* ファイルによって、アプリケーションを管理するための iis が引き続き構成されます。 既定では、IIS は ASP.NET Core モジュール (モジュール) への参照を追加します。 モジュールは、Kestrel web サーバーの代わりにアプリをホストするネイティブ IIS モジュールです。 この *web.config* セクションは、次の XML マークアップに似ています。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -161,7 +159,7 @@ ASP.NET Core では、構成値を受け取るクラス階層を指定できま�
 * 親クラスから継承する必要はありません。
 * には、 `public` キャプチャする構成構造のプロパティおよび型参照に一致するプロパティが含まれている必要があります。
 
-サンプルの前の*appsettings.js*では、次のクラスを定義して値をキャプチャできます。
+サンプルの前の *appsettings.js* では、次のクラスを定義して値をキャプチャできます。
 
 ```csharp
 public class MyConfig
@@ -195,7 +193,7 @@ services.Configure<MyConfig>(Configuration);
 }
 ```
 
-オプションの機能の詳細については ASP.NET Core ドキュメント[のオプションパターン](/aspnet/core/fundamentals/configuration/options#options-interfaces)を参照してください。
+オプションの機能の詳細については ASP.NET Core ドキュメント [のオプションパターン](/aspnet/core/fundamentals/configuration/options#options-interfaces) を参照してください。
 
 >[!div class="step-by-step"]
 >[前へ](middleware.md)

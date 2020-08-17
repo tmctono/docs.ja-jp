@@ -1,5 +1,5 @@
 ---
-title: ASP.NET Web フォームからへの移行Blazor
+title: ASP.NET Web フォームからへの移行 Blazor
 description: 既存の ASP.NET Web フォームアプリをに移行する方法について説明し Blazor ます。
 author: twsouthwick
 ms.author: tasou
@@ -7,25 +7,23 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: 464d2f535acd3b9774fe240b4feeda1875f98022
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: ca3d8747b02602c89aec187ea0826e658fb0cbc4
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267803"
 ---
-# <a name="migrate-from-aspnet-web-forms-to-blazor"></a>ASP.NET Web フォームからへの移行Blazor
+# <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>ASP.NET Web フォームからへの移行 Blazor
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+ASP.NET Web フォームからへのコードベースの移行 Blazor は、計画を必要とする時間のかかる作業です。 この章では、プロセスの概要を示します。 移行を容易にするには、アプリが *N 層* アーキテクチャに準拠していることを確認し、アプリモデル (この場合は Web フォーム) がビジネスロジックとは別のものになるようにします。 このレイヤーを論理的に分離することにより、.NET Core とに移動する必要があることが明確になり Blazor ます。
 
-ASP.NET Web フォームからへのコードベースの移行 Blazor は、計画を必要とする時間のかかる作業です。 この章では、プロセスの概要を示します。 移行を容易にするには、アプリが*N 層*アーキテクチャに準拠していることを確認し、アプリモデル (この場合は Web フォーム) がビジネスロジックとは別のものになるようにします。 このレイヤーを論理的に分離することにより、.NET Core とに移動する必要があることが明確になり Blazor ます。
-
-この例では、 [GitHub](https://github.com/dotnet-architecture/eShopOnBlazor)で入手できる eShop アプリが使用されています。 eShop は、フォームの入力と検証によって CRUD 機能を提供するカタログサービスです。
+この例では、 [GitHub](https://github.com/dotnet-architecture/eShopOnBlazor) で入手できる eShop アプリが使用されています。 eShop は、フォームの入力と検証によって CRUD 機能を提供するカタログサービスです。
 
 作業中のアプリ Blazor をに移行する理由 何度も必要ありません。 ASP.NET Web フォームは、長年にわたって引き続きサポートされます。 ただし、で提供される機能の多くは、移行された Blazor アプリでのみサポートされています。 次のような機能があります。
 
-- フレームワークにおけるパフォーマンスの向上 (`Span<T>`
-- 実行する機能WebAssembly
+- フレームワークにおけるパフォーマンスの向上 ( `Span<T>`
+- 実行する機能 WebAssembly
 - Linux と macOS のクロスプラットフォームサポート
 - アプリローカル配置または共有フレームワークの配置 (他のアプリに影響を与えることはありません)
 
@@ -43,13 +41,13 @@ ASP.NET Web フォームからへのコードベースの移行 Blazor は、計
 
 ## <a name="create-a-new-project"></a>新しいプロジェクトを作成する
 
-この最初の移行手順では、新しいプロジェクトを作成します。 このプロジェクトの種類は、.NET Core の SDK スタイルプロジェクトに基づいており、以前のプロジェクト形式で使用されていた定型句の多くが単純化されています。 詳細については、「プロジェクトの[構造](project-structure.md)」の章を参照してください。
+この最初の移行手順では、新しいプロジェクトを作成します。 このプロジェクトの種類は、.NET Core の SDK スタイルプロジェクトに基づいており、以前のプロジェクト形式で使用されていた定型句の多くが単純化されています。 詳細については、「プロジェクトの [構造](project-structure.md)」の章を参照してください。
 
-プロジェクトが作成されたら、前のプロジェクトで使用したライブラリをインストールします。 以前の Web フォームプロジェクトでは、 *packages.config*ファイルを使用して、必要な NuGet パッケージが一覧表示されている場合がありました。 新しい SDK スタイルのプロジェクトでは、 *packages.config*はプロジェクトファイルの要素に置き換えられてい `<PackageReference>` ます。 この方法の利点は、すべての依存関係が推移的にインストールされることです。 必要な最上位レベルの依存関係のみが表示されます。
+プロジェクトが作成されたら、前のプロジェクトで使用したライブラリをインストールします。 以前の Web フォームプロジェクトでは、 *packages.config* ファイルを使用して、必要な NuGet パッケージが一覧表示されている場合がありました。 新しい SDK スタイルのプロジェクトでは、 *packages.config* はプロジェクトファイルの要素に置き換えられてい `<PackageReference>` ます。 この方法の利点は、すべての依存関係が推移的にインストールされることです。 必要な最上位レベルの依存関係のみが表示されます。
 
 使用している依存関係の多くは、Entity Framework 6 や log4net など、.NET Core で使用できます。 使用可能な .NET Core または .NET Standard バージョンがない場合は、.NET Framework バージョンを使用することがよくあります。 実際のメリットはケースによって異なります。 .NET Core で使用できない API を使用すると、ランタイムエラーが発生します。 Visual Studio は、このようなパッケージを通知します。 **ソリューションエクスプローラー**のプロジェクトの [**参照**] ノードに黄色いアイコンが表示されます。
 
-ベースの eShop プロジェクトでは、インストールされている Blazor パッケージを確認できます。 以前は、 *packages.config*ファイルには、プロジェクトで使用されているすべてのパッケージが一覧表示されており、約50行のファイルが生成されていました。 *packages.config*のスニペットは次のとおりです。
+ベースの eShop プロジェクトでは、インストールされている Blazor パッケージを確認できます。 以前は、 *packages.config* ファイルには、プロジェクトで使用されているすべてのパッケージが一覧表示されており、約50行のファイルが生成されていました。 *packages.config*のスニペットは次のとおりです。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -95,7 +93,7 @@ Web フォーム開発者の有効期間を簡略化する NuGet パッケージ
 
 *Global.asax.cs*ファイルは、Web フォームプロジェクトの既定のスタートアップページです。 EShop プロジェクトでは、このファイルによってコントロールの反転 (IoC) コンテナーが構成され、アプリまたは要求のさまざまなライフサイクルイベントが処理されます。 これらのイベントの一部は、ミドルウェア (など) で処理され `Application_BeginRequest` ます。 他のイベントでは、依存関係の挿入 (DI) によって特定のサービスをオーバーライドする必要があります。
 
-たとえば、eShop の*Global.asax.cs*ファイルには、次のコードが含まれています。
+たとえば、eShop の *Global.asax.cs* ファイルには、次のコードが含まれています。
 
 ```csharp
 public class Global : HttpApplication, IContainerProviderAccessor
@@ -251,19 +249,19 @@ Web フォームからの重要な変更点の1つに、DI のこうし突出が
 
 元の eShop アプリには、セッション管理の構成がいくつかあります。 サーバー側で Blazor は通信に ASP.NET Core SignalR が使用されるため、接続が HTTP コンテキストとは関係なく発生する可能性があるため、セッション状態はサポートされません。 セッション状態を使用するアプリでは、アプリとして実行する前に再設計が必要です Blazor 。
 
-アプリの起動の詳細については、「[アプリのスタートアップ](app-startup.md)」を参照してください。
+アプリの起動の詳細については、「 [アプリのスタートアップ](app-startup.md)」を参照してください。
 
 ## <a name="migrate-http-modules-and-handlers-to-middleware"></a>HTTP モジュールとハンドラーのミドルウェアへの移行
 
-Http モジュールとハンドラーは、HTTP 要求パイプラインを制御するための Web フォームの一般的なパターンです。 またはを実装するクラス `IHttpModule` は `IHttpHandler` 、登録して、受信要求を処理することができます。 Web フォームは、 *web.config*ファイル内のモジュールとハンドラーを構成します。 Web フォームは、アプリライフサイクルイベントの処理にも大きく基づいています。 代わりに、ミドルウェアを使用 ASP.NET Core ます。 ミドルウェアはクラスのメソッドに登録され `Configure` `Startup` ます。 ミドルウェアの実行順序は、登録順序によって決まります。
+Http モジュールとハンドラーは、HTTP 要求パイプラインを制御するための Web フォームの一般的なパターンです。 またはを実装するクラス `IHttpModule` は `IHttpHandler` 、登録して、受信要求を処理することができます。 Web フォームは、 *web.config* ファイル内のモジュールとハンドラーを構成します。 Web フォームは、アプリライフサイクルイベントの処理にも大きく基づいています。 代わりに、ミドルウェアを使用 ASP.NET Core ます。 ミドルウェアはクラスのメソッドに登録され `Configure` `Startup` ます。 ミドルウェアの実行順序は、登録順序によって決まります。
 
-[[スタートアッププロセスを有効](#enable-startup-process)にする] セクションでは、Web フォームによってライフサイクルイベントがメソッドとして生成されました `Application_BeginRequest` 。 このイベントは ASP.NET Core では使用できません。 この動作を実現する1つの方法は、 *Startup.cs*ファイルの例に示すようにミドルウェアを実装することです。 このミドルウェアは同じロジックを行い、ミドルウェアパイプライン内の次のハンドラーに制御を転送します。
+[ [スタートアッププロセスを有効](#enable-startup-process) にする] セクションでは、Web フォームによってライフサイクルイベントがメソッドとして生成されました `Application_BeginRequest` 。 このイベントは ASP.NET Core では使用できません。 この動作を実現する1つの方法は、 *Startup.cs* ファイルの例に示すようにミドルウェアを実装することです。 このミドルウェアは同じロジックを行い、ミドルウェアパイプライン内の次のハンドラーに制御を転送します。
 
 モジュールとハンドラーの移行の詳細については、「 [ASP.NET Core ミドルウェアへの HTTP ハンドラーとモジュールの移行](/aspnet/core/migration/http-modules)」を参照してください。
 
 ## <a name="migrate-static-files"></a>静的ファイルを移行する
 
-静的ファイル (HTML、CSS、画像、JavaScript など) を提供するには、ミドルウェアによってファイルが公開されている必要があります。 メソッドを呼び出す `UseStaticFiles` と、web ルートパスからの静的ファイルを提供できるようになります。 既定の web ルートディレクトリは*wwwroot*ですが、カスタマイズすることができます。 EShop のクラスのメソッドに含まれているように、次のように `Configure` `Startup` なります。
+静的ファイル (HTML、CSS、画像、JavaScript など) を提供するには、ミドルウェアによってファイルが公開されている必要があります。 メソッドを呼び出す `UseStaticFiles` と、web ルートパスからの静的ファイルを提供できるようになります。 既定の web ルートディレクトリは *wwwroot*ですが、カスタマイズすることができます。 EShop のクラスのメソッドに含まれているように、次のように `Configure` `Startup` なります。
 
 ```csharp
 public void Configure(IApplicationBuilder app)
@@ -280,15 +278,15 @@ EShop プロジェクトは、基本的な静的ファイルアクセスを可�
 
 ## <a name="migrate-runtime-bundling-and-minification-setup"></a>ランタイムのバンドルと縮小のセットアップを移行する
 
-バンドルと縮小は、特定のファイルの種類を取得するためのサーバー要求の数とサイズを減らすためのパフォーマンスの最適化手法です。 多くの場合、JavaScript と CSS では、クライアントに送信される前に何らかの形式のバンドルまたは縮小が行われます。 ASP.NET Web フォームでは、これらの最適化は実行時に処理されます。 最適化規則は、 *App_Start/bundleconfig.cs*ファイルに定義されています。 ASP.NET Core では、より宣言的な方法が採用されています。 ファイルには、特定の縮小設定と共に、縮小するファイルが一覧表示されます。
+バンドルと縮小は、特定のファイルの種類を取得するためのサーバー要求の数とサイズを減らすためのパフォーマンスの最適化手法です。 多くの場合、JavaScript と CSS では、クライアントに送信される前に何らかの形式のバンドルまたは縮小が行われます。 ASP.NET Web フォームでは、これらの最適化は実行時に処理されます。 最適化規則は、 *App_Start/bundleconfig.cs* ファイルに定義されています。 ASP.NET Core では、より宣言的な方法が採用されています。 ファイルには、特定の縮小設定と共に、縮小するファイルが一覧表示されます。
 
 バンドルと縮小の詳細については、「 [ASP.NET Core での静的資産のバンドルと](/aspnet/core/client-side/bundling-and-minification)縮小」を参照してください。
 
 ## <a name="migrate-aspx-pages"></a>ASPX ページの移行
 
-Web フォームアプリのページは、 *.aspx*拡張子を持つファイルです。 Web フォームページは、多くの場合、のコンポーネントにマップでき Blazor ます。 Blazorコンポーネントは、 *razor*拡張子を持つファイルで作成されます。 EShop プロジェクトの場合、5つのページが Razor ページに変換されます。
+Web フォームアプリのページは、 *.aspx* 拡張子を持つファイルです。 Web フォームページは、多くの場合、のコンポーネントにマップでき Blazor ます。 Blazorコンポーネントは、 *razor*拡張子を持つファイルで作成されます。 EShop プロジェクトの場合、5つのページが Razor ページに変換されます。
 
-たとえば、詳細ビューは、Web フォームプロジェクト内の3つのファイル ( *details*、 *Details.aspx.cs*、および*Details.aspx.designer.cs*) で構成されます。 に変換する場合 Blazor 、分離コードとマークアップは、*詳細な razor*に結合されます。 Razor コンパイル ( *designer.cs*ファイルの内容と同じ) は、 *obj*ディレクトリに格納されていますが、既定では**ソリューションエクスプローラー**で表示できません。 Web フォームページは、次のマークアップで構成されています。
+たとえば、詳細ビューは、Web フォームプロジェクト内の3つのファイル ( *details*、 *Details.aspx.cs*、および *Details.aspx.designer.cs*) で構成されます。 に変換する場合 Blazor 、分離コードとマークアップは、 *詳細な razor*に結合されます。 Razor コンパイル ( *designer.cs* ファイルの内容と同じ) は、 *obj* ディレクトリに格納されていますが、既定では **ソリューションエクスプローラー**で表示できません。 Web フォームページは、次のマークアップで構成されています。
 
 ```aspx-csharp
 <%@ Page Title="Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="eShopLegacyWebForms.Catalog.Details" %>
@@ -523,13 +521,13 @@ namespace eShopLegacyWebForms.Catalog
 }
 ```
 
-コードとマークアップが同じファイル内にあることに注意してください。 必要なサービスは、属性を使用してアクセスできるように `@inject` なります。 ディレクティブごと `@page` に、ルートでこのページにアクセスでき `Catalog/Details/{id}` ます。 ルートのプレースホルダーの値は、 `{id}` 整数に制限されています。 「[ルーティング](pages-routing-layouts.md)」セクションで説明したように、Web フォームとは異なり、Razor コンポーネントはそのルートと、含まれるすべてのパラメーターを明示的に指定します。 多くの Web フォームコントロールには、の対応するものが含まれていない場合があり Blazor ます。 多くの場合、同じ目的で使用される同等の HTML スニペットがあります。 たとえば、コントロールを `<asp:Label />` HTML 要素に置き換えることができ `<label>` ます。
+コードとマークアップが同じファイル内にあることに注意してください。 必要なサービスは、属性を使用してアクセスできるように `@inject` なります。 ディレクティブごと `@page` に、ルートでこのページにアクセスでき `Catalog/Details/{id}` ます。 ルートのプレースホルダーの値は、 `{id}` 整数に制限されています。 「 [ルーティング](pages-routing-layouts.md) 」セクションで説明したように、Web フォームとは異なり、Razor コンポーネントはそのルートと、含まれるすべてのパラメーターを明示的に指定します。 多くの Web フォームコントロールには、の対応するものが含まれていない場合があり Blazor ます。 多くの場合、同じ目的で使用される同等の HTML スニペットがあります。 たとえば、コントロールを `<asp:Label />` HTML 要素に置き換えることができ `<label>` ます。
 
-### <a name="model-validation-in-blazor"></a>でのモデル検証Blazor
+### <a name="model-validation-in-no-locblazor"></a>でのモデル検証 Blazor
 
 Web フォームのコードに検証が含まれている場合は、ほとんど変更せずに、必要なものの多くを転送できます。 でを実行する利点 Blazor は、カスタム JavaScript がなくても同じ検証ロジックを実行できることです。 データ注釈を使用すると、モデルの検証が容易になります。
 
-たとえば、 *Create .aspx*ページには、検証を含むデータ入力フォームがあります。 スニペットの例は次のようになります。
+たとえば、 *Create .aspx* ページには、検証を含むデータ入力フォームがあります。 スニペットの例は次のようになります。
 
 ```aspx
 <div class="form-group">
@@ -542,7 +540,7 @@ Web フォームのコードに検証が含まれている場合は、ほとん�
 </div>
 ```
 
-で Blazor は、同等のマークアップが作成用の*razor*ファイルに用意されています。
+で Blazor は、同等のマークアップが作成用の *razor* ファイルに用意されています。
 
 ```razor
 <EditForm Model="_item" OnValidSubmit="@...">
@@ -568,11 +566,11 @@ Web フォームのコードに検証が含まれている場合は、ほとん�
 
 ## <a name="migrate-configuration"></a>構成の移行
 
-Web フォームプロジェクトでは、通常、構成データは*web.config*ファイルに格納されます。 構成データには、を使用してアクセスし `ConfigurationManager` ます。 多くの場合、オブジェクトの解析にはサービスが必要でした。 .NET Framework 4.7.2 では、省かはを介して構成に追加されました `ConfigurationBuilders` 。 これらのビルダーを使用すると、開発者は、必要な値を取得するために実行時に構成された構成のさまざまなソースを追加できます。
+Web フォームプロジェクトでは、通常、構成データは *web.config* ファイルに格納されます。 構成データには、を使用してアクセスし `ConfigurationManager` ます。 多くの場合、オブジェクトの解析にはサービスが必要でした。 .NET Framework 4.7.2 では、省かはを介して構成に追加されました `ConfigurationBuilders` 。 これらのビルダーを使用すると、開発者は、必要な値を取得するために実行時に構成された構成のさまざまなソースを追加できます。
 
 ASP.NET Core には、アプリとデプロイで使用される構成ソースを定義できる柔軟な構成システムが導入されました。 `ConfigurationBuilder`Web フォームアプリで使用する可能性のあるインフラストラクチャは、ASP.NET Core 構成システムで使用されている概念に基づいてモデル化されています。
 
-次のスニペットは、Web フォームの eShop プロジェクトが*web.config*を使用して構成値を格納する方法を示しています。
+次のスニペットは、Web フォームの eShop プロジェクトが *web.config* を使用して構成値を格納する方法を示しています。
 
 ```xml
 <configuration>
@@ -618,7 +616,7 @@ public class Startup
 }
 ```
 
-既定では、環境変数、JSON ファイル (*appsettings.js*と*appsettings. {Environment}. json*)、およびコマンドラインオプションは、構成オブジェクトの有効な構成ソースとして登録されます。 構成ソースには、を使用してアクセスでき `Configuration[key]` ます。 より高度な手法は、オプションパターンを使用して、構成データをオブジェクトにバインドすることです。 構成とオプションのパターンの詳細については、それぞれ ASP.NET Core の「ASP.NET Core と[オプションのパターン](/aspnet/core/fundamentals/configuration/options)の[構成](/aspnet/core/fundamentals/configuration/)」を参照してください。
+既定では、環境変数、JSON ファイル (*appsettings.js* と *appsettings. {Environment}. json*)、およびコマンドラインオプションは、構成オブジェクトの有効な構成ソースとして登録されます。 構成ソースには、を使用してアクセスでき `Configuration[key]` ます。 より高度な手法は、オプションパターンを使用して、構成データをオブジェクトにバインドすることです。 構成とオプションのパターンの詳細については、それぞれ ASP.NET Core の「ASP.NET Core と[オプションのパターン](/aspnet/core/fundamentals/configuration/options)の[構成](/aspnet/core/fundamentals/configuration/)」を参照してください。
 
 ## <a name="migrate-data-access"></a>データアクセスの移行
 
@@ -626,10 +624,10 @@ public class Startup
 
 EShop には、次の EF 関連の変更が必要でした。
 
-- .NET Framework では、 `DbContext` オブジェクトは、 *Name = ConnectionString*という形式の文字列を受け取り、からの接続文字列を使用して `ConfigurationManager.AppSettings[ConnectionString]` 接続します。 .NET Core では、これはサポートされていません。 接続文字列を指定する必要があります。
+- .NET Framework では、 `DbContext` オブジェクトは、 *Name = ConnectionString* という形式の文字列を受け取り、からの接続文字列を使用して `ConfigurationManager.AppSettings[ConnectionString]` 接続します。 .NET Core では、これはサポートされていません。 接続文字列を指定する必要があります。
 - データベースは同期的にアクセスされました。 これは機能しますが、スケーラビリティが低下する可能性があります。 このロジックは、非同期パターンに移行する必要があります。
 
-データセットバインドのネイティブサポートは同じではありませんが、では、 Blazor Razor ページでの C# のサポートに柔軟性と性能があります。 たとえば、計算を実行して結果を表示できます。 のデータパターンの詳細につい Blazor ては、「[データアクセス](data.md)」の章を参照してください。
+データセットバインドのネイティブサポートは同じではありませんが、では、 Blazor Razor ページでの C# のサポートに柔軟性と性能があります。 たとえば、計算を実行して結果を表示できます。 のデータパターンの詳細につい Blazor ては、「 [データアクセス](data.md) 」の章を参照してください。
 
 ## <a name="architectural-changes"></a>アーキテクチャの変更
 
@@ -657,4 +655,4 @@ ASP.NET Core の多くの操作は非同期であるため、i/o バインドタ
 この時点で、Web フォームプロジェクトを移動するために必要ないくつかの例を見てきました Blazor 。 完全な例については[、 Blazor eShopOn](https://github.com/dotnet-architecture/eShopOnBlazor)プロジェクトを参照してください。
 
 >[!div class="step-by-step"]
->[前へ](security-authentication-authorization.md)
+>[[戻る]](security-authentication-authorization.md)

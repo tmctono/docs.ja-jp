@@ -6,26 +6,24 @@ ms.author: jefritz
 no-loc:
 - Blazor
 ms.date: 04/26/2020
-ms.openlocfilehash: 4bf9bee21ce1db828dbe0aeb156d5e15cae4f703
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 8bd326e6952708b2099c3a575d6811990335df17
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173305"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267595"
 ---
 # <a name="work-with-data"></a>データの処理
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
 データアクセスは、ASP.NET Web フォームアプリのバックボーンです。 Web 用のフォームを構築している場合、そのデータはどうなりますか。 Web フォームでは、データベースの操作に使用できるデータアクセス手法が複数ありました。
 
-- Data Sources
+- ソリューション エクスプローラー
 - ADO.NET
 - Entity Framework
 
 データソースは、Web フォームページ上に配置し、他のコントロールと同様に構成できるコントロールでした。 Visual Studio には、コントロールを構成して Web フォームページにバインドするための一連のダイアログボックスが用意されています。 "低コード" または "コードなし" のアプローチを利用している開発者は、Web フォームが最初にリリースされたときにこの手法を使用することをお勧めします。
 
-![Data Sources](media/data/datasources.png)
+![ソリューション エクスプローラー](media/data/datasources.png)
 
 ADO.NET は、データベースと対話するための低レベルのアプローチです。 アプリでは、操作のためのコマンド、レコードセット、およびデータセットを使用してデータベースへの接続を作成できます。 結果は、コードを記述せずに画面上のフィールドにバインドすることができます。 この方法の欠点は、ADO.NET オブジェクト (、、および) の各セットが、 `Connection` `Command` `Recordset` データベースベンダーによって提供されるライブラリにバインドされていることでした。 これらのコンポーネントを使用すると、コードが固定され、別のデータベースへの移行が困難になります。
 
@@ -57,8 +55,8 @@ public class Product
 製品には主キーと、データベースに作成される3つの追加フィールドがあります。  
 
 - EF では、 `Id` 規則によってプロパティが主キーとして識別されます。
-- `Name`は、テキストストレージ用に構成された列に格納されます。 `[Required]`このプロパティを装飾する属性は、 `not null` プロパティのこの宣言された動作を強制するための制約を追加します。
-- `Description`は、テキストストレージ用に構成された列に格納され、最大長は属性で指定された4000文字に設定され `[MaxLength]` ます。 データベーススキーマは、 `MaxLength` データ型を使用してという名前の列で構成され `varchar(4000)` ます。
+- `Name` は、テキストストレージ用に構成された列に格納されます。 `[Required]`このプロパティを装飾する属性は、 `not null` プロパティのこの宣言された動作を強制するための制約を追加します。
+- `Description` は、テキストストレージ用に構成された列に格納され、最大長は属性で指定された4000文字に設定され `[MaxLength]` ます。 データベーススキーマは、 `MaxLength` データ型を使用してという名前の列で構成され `varchar(4000)` ます。
 - `Price`プロパティは通貨として格納されます。 属性は、 `[Range]` 宣言された最小値と最大値の範囲外のデータストレージを防ぐために、適切な制約を生成します。
 
 この `Product` クラスは、データベースでの接続操作と変換操作を定義するデータベースコンテキストクラスに追加する必要があります。
@@ -77,7 +75,7 @@ services.AddDbContext<MyDbContext>(options =>
     options.UseSqlServer("MY DATABASE CONNECTION STRING"));
 ```
 
-上記のコードは、指定された接続文字列を使用して SQL Server データベースに接続します。 appsettings.jsの接続文字列を、ファイル、環境変数、またはその他の構成ストレージの場所に配置し、この埋め込み文字列を適切*に*置き換えることができます。
+上記のコードは、指定された接続文字列を使用して SQL Server データベースに接続します。 appsettings.jsの接続文字列を、ファイル、環境変数、またはその他の構成ストレージの場所に配置し、この埋め込み文字列を適切 * に* 置き換えることができます。
 
 その後、次のコマンドを使用して、このクラスに適したデータベーステーブルを生成できます。
 
@@ -88,7 +86,7 @@ dotnet ef database update
 
 最初のコマンドは、という新しい EF 移行として、データベーススキーマに対して行っている変更を定義し `Create Product table` ます。  移行では、新しいデータベースの変更を適用および削除する方法を定義します。
 
-適用すると、データベースの単純な `Product` テーブルと、データベーススキーマの管理に役立つ新しいクラスがプロジェクトに追加されます。  これらの生成されたクラスは、既定では、*移行*という名前の新しいフォルダーにあります。  クラスに変更を加え `Product` たり、データベースと対話する関連クラスを追加したりする場合は、移行の新しい名前を指定してコマンドラインコマンドを再度実行する必要があります。  このコマンドでは、データベーススキーマを更新するために別の一連の移行クラスが生成されます。
+適用すると、データベースの単純な `Product` テーブルと、データベーススキーマの管理に役立つ新しいクラスがプロジェクトに追加されます。  これらの生成されたクラスは、既定では、 *移行*という名前の新しいフォルダーにあります。  クラスに変更を加え `Product` たり、データベースと対話する関連クラスを追加したりする場合は、移行の新しい名前を指定してコマンドラインコマンドを再度実行する必要があります。  このコマンドでは、データベーススキーマを更新するために別の一連の移行クラスが生成されます。
 
 ### <a name="ef-database-first"></a>EF Database First
 
@@ -98,7 +96,7 @@ dotnet ef database update
 dotnet ef dbcontext scaffold "CONNECTION STRING" Microsoft.EntityFrameworkCore.SqlServer -c MyDbContext -t Product -t Customer
 ```
 
-上記のコマンドは、指定された接続文字列とプロバイダーを使用してデータベースに接続し `Microsoft.EntityFrameworkCore.SqlServer` ます。 接続されると、という名前のデータベースコンテキストクラス `MyDbContext` が作成されます。 また、 `Product` オプションで指定されたテーブルおよびテーブルに対してサポートクラスが作成され `Customer` `-t` ます。 このコマンドには、データベースに適したクラス階層を生成するための多くの構成オプションがあります。 完全なリファレンスについては、[コマンドのドキュメント](/ef/core/miscellaneous/cli/dotnet#dotnet-ef-dbcontext-scaffold)を参照してください。
+上記のコマンドは、指定された接続文字列とプロバイダーを使用してデータベースに接続し `Microsoft.EntityFrameworkCore.SqlServer` ます。 接続されると、という名前のデータベースコンテキストクラス `MyDbContext` が作成されます。 また、 `Product` オプションで指定されたテーブルおよびテーブルに対してサポートクラスが作成され `Customer` `-t` ます。 このコマンドには、データベースに適したクラス階層を生成するための多くの構成オプションがあります。 完全なリファレンスについては、 [コマンドのドキュメント](/ef/core/miscellaneous/cli/dotnet#dotnet-ef-dbcontext-scaffold)を参照してください。
 
 [EF Core](/ef/core/)の詳細については、Microsoft Docs サイトを参照してください。
 

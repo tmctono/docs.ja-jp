@@ -7,22 +7,20 @@ no-loc:
 - Blazor
 - Blazor WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: 1a99719f59415872510aef051d1f3c73daf53e15
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: d2dce23996e996a736b04c9cdd1ccf3b549ff3ff
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173277"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267556"
 ---
 # <a name="forms-and-validation"></a>フォームと検証
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
 ASP.NET Web Forms framework には、フォーム (、、など) に入力されたユーザー入力の検証を処理する一連の検証サーバーコントロールが含まれてい `RequiredFieldValidator` `CompareValidator` `RangeValidator` ます。 ASP.NET Web Forms framework では、モデルのバインドと、データ注釈 (、、など) に基づくモデルの検証もサポートされて `[Required]` `[StringLength]` `[Range]` います。 検証ロジックは、控えめな JavaScript ベースの検証を使用して、サーバーとクライアントの両方に適用できます。 `ValidationSummary`サーバーコントロールは、検証エラーの概要をユーザーに表示するために使用されます。
 
-Blazorでは、クライアントとサーバーの間の検証ロジックの共有がサポートされています。 ASP.NET には、多くの一般的なサーバー検証の事前構築済みの JavaScript 実装が用意されています。 多くの場合、開発者は、アプリ固有の検証ロジックを完全に実装するために JavaScript を作成する必要があります。 サーバーとクライアントの両方で、同じモデル型、データ注釈、および検証ロジックを使用できます。
+Blazor では、クライアントとサーバーの間の検証ロジックの共有がサポートされています。 ASP.NET には、多くの一般的なサーバー検証の事前構築済みの JavaScript 実装が用意されています。 多くの場合、開発者は、アプリ固有の検証ロジックを完全に実装するために JavaScript を作成する必要があります。 サーバーとクライアントの両方で、同じモデル型、データ注釈、および検証ロジックを使用できます。
 
-Blazor入力コンポーネントのセットを提供します。 入力コンポーネントは、モデルへのフィールドデータのバインドを処理し、フォームが送信されたときにユーザー入力を検証します。
+Blazor 入力コンポーネントのセットを提供します。 入力コンポーネントは、モデルへのフィールドデータのバインドを処理し、フォームが送信されたときにユーザー入力を検証します。
 
 |入力コンポーネント|レンダリングされた HTML 要素    |
 |---------------|-------------------------|
@@ -126,11 +124,11 @@ public class Starship
 }
 ```
 
-フォームの送信後、モデルバインドデータは、データベースのようなデータストアに保存されていません。 アプリでは、 Blazor WebAssembly データをサーバーに送信する必要があります。 たとえば、HTTP POST 要求を使用します。 Blazorサーバーアプリでは、データはサーバーに既に存在していますが、保存する必要があります。 アプリでのデータアクセス Blazor の処理は、データの処理に[関する](data.md)セクションの対象です。
+フォームの送信後、モデルバインドデータは、データベースのようなデータストアに保存されていません。 アプリでは、 Blazor WebAssembly データをサーバーに送信する必要があります。 たとえば、HTTP POST 要求を使用します。 Blazorサーバーアプリでは、データはサーバーに既に存在していますが、保存する必要があります。 アプリでのデータアクセス Blazor の処理は、データの処理に [関する](data.md) セクションの対象です。
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-アプリの[フォームと検証](/aspnet/core/blazor/forms-validation)の詳細につい Blazor ては、のドキュメントを参照してください Blazor 。
+アプリの [フォームと検証](/aspnet/core/blazor/forms-validation) の詳細につい Blazor ては、のドキュメントを参照してください Blazor 。
 
 >[!div class="step-by-step"]
 >[前へ](state-management.md)
