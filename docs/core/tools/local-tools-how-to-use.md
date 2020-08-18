@@ -1,13 +1,14 @@
 ---
 title: 'チュートリアル: .NET Core ローカル ツールをインストールして使用する'
 description: .NET ツールをローカル ツールとしてインストールして使用する方法について説明します。
+ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: a4355886513040e2436bdbd87905e5baee2dd7a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 555497a71d54713e62e54f8f293afdf74ead1743
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156700"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062677"
 ---
 # <a name="tutorial-install-and-use-a-net-core-local-tool-using-the-net-core-cli"></a>チュートリアル: .NET Core CLI を使って .NET Core ローカル ツールをインストールして使用する
 

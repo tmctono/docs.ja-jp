@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: d3fe4cf92ca17457bd541f092f5d146ba6c1c095
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: ec1058d1590d64fa8d8786b3118ecf9733c55d6f
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794417"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063147"
 ---
 # <a name="yield-c-reference"></a>yield (C# リファレンス)
 
@@ -47,7 +47,7 @@ Iterator メソッドから返されるシーケンスを、[foreach](foreach-in
 
 `yield return` または `yield break` ステートメントを以下に含めることはできません。
 
-- [ラムダ式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)および[匿名メソッド](../operators/delegate-operator.md)。
+- [ラムダ式](../operators/lambda-expressions.md)および[匿名メソッド](../operators/delegate-operator.md)。
 
 - unsafe ブロックを含むメソッド。 詳しくは、「[unsafe](unsafe.md)」をご覧ください。
 

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: 829e7dce4801508a8311f7bcbfeccbc36184cffc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: eee04959493914018904b61b0e5a289f172f2f18
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286638"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063719"
 ---
 # <a name="queries-in-linq-to-dataset"></a>LINQ to DataSet でのクエリ
 クエリは、データ ソースからデータを取得する式です。 一般に、クエリは専用のクエリ言語で表現されます。たとえば、リレーショナル データベースであれば SQL、XML であれば XQuery が使用されます。 そのため、開発者はクエリの対象となるデータ ソースやデータ形式ごとに新しいクエリ言語を習得する必要があります。 統合言語クエリ (LINQ) は、データ ソースや形式の違いを意識することなくデータを扱うことのできる、より簡素化された一貫したモデルを提供します。 LINQ クエリでは、常にプログラミング オブジェクトを操作することになります。  
@@ -40,7 +40,7 @@ ms.locfileid: "84286638"
  [!code-vb[DP LINQ to DataSet Examples#SelectSimple1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectsimple1)]  
   
 ### <a name="method-based-query-syntax"></a>メソッド ベースのクエリ構文  
- LINQ to DataSet クエリを作成するもう 1 つの方法は、メソッド ベースのクエリを使用するものです。 メソッド ベースのクエリ構文は、LINQ の演算子メソッドに対する直接メソッド呼び出しのシーケンスであり、パラメーターとしてラムダ式を渡します。 詳細については、「[ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)」を参照してください。  
+ LINQ to DataSet クエリを作成するもう 1 つの方法は、メソッド ベースのクエリを使用するものです。 メソッド ベースのクエリ構文は、LINQ の演算子メソッドに対する直接メソッド呼び出しのシーケンスであり、パラメーターとしてラムダ式を渡します。 詳細については、「[ラムダ式](../../../csharp/language-reference/operators/lambda-expressions.md)」を参照してください。  
   
  次の例では、<xref:System.Linq.Enumerable.Select%2A> を使用して `Product` テーブルからすべての行を取得し、製品名を表示しています。  
   

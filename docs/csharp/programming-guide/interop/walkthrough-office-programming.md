@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: bf4725f3f636bb208450cb9b5c58766d84947f86
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 76f0e2eccb5d1a59d9aaa3eed11b25dd2dd9cac3
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302946"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063004"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>チュートリアル: Office のプログラミング (C# および Visual Basic)
 
@@ -125,7 +125,7 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
 
 ### <a name="to-invoke-displayinexcel"></a>DisplayInExcel を起動するには
 
-1. `ThisAddIn_StartUp` メソッドの末尾に、次のコードを追加します。 `DisplayInExcel` に対する呼び出しには、2 つの引数が含まれています。 最初の引数は、処理する口座の一覧の名前です。 2 番目の引数は、データの処理方法を定義する複数行のラムダ式です。 各口座の `ID` 値と `balance` 値が隣接するセルに表示され、残高が 0 より少ない場合、行が赤で表示されます。 詳細については、「[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)」を参照してください。
+1. `ThisAddIn_StartUp` メソッドの末尾に、次のコードを追加します。 `DisplayInExcel` に対する呼び出しには、2 つの引数が含まれています。 最初の引数は、処理する口座の一覧の名前です。 2 番目の引数は、データの処理方法を定義する複数行のラムダ式です。 各口座の `ID` 値と `balance` 値が隣接するセルに表示され、残高が 0 より少ない場合、行が赤で表示されます。 詳細については、「[ラムダ式](../../language-reference/operators/lambda-expressions.md)」を参照してください。
 
      [!code-csharp[csOfficeWalkthrough#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#9)]
 
@@ -203,7 +203,7 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
 - [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [dynamic 型の使用](../types/using-type-dynamic.md)
 - [ラムダ式 (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [ラムダ式 (C#)](../statements-expressions-operators/lambda-expressions.md)
+- [ラムダ式 (C#)](../../language-reference/operators/lambda-expressions.md)
 - [COM 相互運用機能を使用したプログラミングでインデックス付きプロパティを使用する方法](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [チュートリアル: Visual Studio で Microsoft Office アセンブリからの型情報を埋め込む ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
 - [チュートリアル: マネージド アセンブリからの型の埋め込み](../../../standard/assembly/embed-types-visual-studio.md)

@@ -4,12 +4,12 @@ description: デリゲートをサポートする .NET のクラスと、それ�
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 87fdf19c4ea810c5ac4409fe16c3cba9d5fc6574
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9df8ad68f6bfa62863ee047875b6419fc81ad779
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146282"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062465"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate と `delegate` キーワード
 
@@ -100,7 +100,7 @@ Comparison<string> comparer = CompareLength;
 phrases.Sort(comparer);
 ```
 
-デリゲート ターゲットとして使用されているメソッドが小さなメソッドである場合は、[ラムダ式](./programming-guide/statements-expressions-operators/lambda-expressions.md)構文を使用して割り当てを実行することが一般的です。
+デリゲート ターゲットとして使用されているメソッドが小さなメソッドである場合は、[ラムダ式](language-reference/operators/lambda-expressions.md)構文を使用して割り当てを実行することが一般的です。
 
 ```csharp
 Comparison<string> comparer = (left, right) => left.Length.CompareTo(right.Length);

@@ -3,12 +3,12 @@ title: 概念と用語 (関数型変換) (C#)
 description: 関数型プログラミング機能を使用すると、XML の変換が容易になります。 C# での純粋関数型変換の概念と用語について学習します。
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: ee972b376f0d0898b7681049b9641b43780ed353
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: ca05a914f6156730e773d1effebfc72626b16507
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103981"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063277"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>概念と用語 (関数型変換) (C#)
 
@@ -55,7 +55,7 @@ ms.locfileid: "87103981"
 ラムダ式 \
 基本的には、デリゲート型が必要とされる場所で使用できるインラインの匿名関数です。 これはラムダ式の簡略化した定義ですが、このチュートリアルの目的には十分です。
 
-詳細については、「[ラムダ式](../../statements-expressions-operators/lambda-expressions.md)」を参照してください。
+詳細については、「[ラムダ式](../../../language-reference/operators/lambda-expressions.md)」を参照してください。
 
 コレクション \
 データの構造化されたセットです。コレクション内のデータは同じ型であるのが一般的です。 コレクションで LINQ との互換性を確保するには、<xref:System.Collections.IEnumerable> インターフェイスか <xref:System.Linq.IQueryable> インターフェイス (または対応するジェネリック インターフェイスである <xref:System.Collections.Generic.IEnumerator%601> か <xref:System.Linq.IQueryable%601>) を実装する必要があります。

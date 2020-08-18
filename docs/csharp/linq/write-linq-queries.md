@@ -3,12 +3,12 @@ title: C# での LINQ クエリの作成
 description: C# で LINQ クエリを作成する方法について説明します。
 ms.date: 12/01/2016
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
-ms.openlocfilehash: ed32543b0422e0664a8577f2c27f7c7c00a719a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bd7da81f2873c6a25570cab32fafecc66fd98be4
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "65632873"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063446"
 ---
 # <a name="write-linq-queries-in-c"></a>C\# での LINQ クエリの作成
 
@@ -43,7 +43,7 @@ ms.locfileid: "65632873"
 
 [!code-csharp[csProgGuideLINQ#6](~/samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_2.cs)]
 
-メソッドに Action または Func パラメーターがある場合、それらは[ラムダ](../programming-guide/statements-expressions-operators/lambda-expressions.md)式の形式で提供されます。次に例を示します。
+メソッドに Action または Func パラメーターがある場合、それらは[ラムダ](../language-reference/operators/lambda-expressions.md)式の形式で提供されます。次に例を示します。
 
 [!code-csharp[csProgGuideLINQ#7](~/samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_3.cs)]
 

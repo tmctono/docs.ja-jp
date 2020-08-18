@@ -7,18 +7,18 @@ helpviewer_keywords:
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: ae8bda3c68542637b1430587ca4a537980c028bc
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 1fde7d535054f09d55018a010468776622ebfba7
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381672"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063264"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>匿名関数 (C# プログラミング ガイド)
 
 匿名関数は、デリゲート型が必要とされる任意の場所で使用できる "インライン" のステートメントまたは式です。 名前付きデリゲートを初期化するときや、メソッドのパラメーターとして名前付きデリゲート型の代わりに渡したりするときに使用できます。
 
-[ラムダ式](lambda-expressions.md)または[匿名メソッド](../../language-reference/operators/delegate-operator.md)を使って匿名関数を作成できます。 ラムダ式を使った方がより簡潔で表現性に優れた方法でインライン コードを記述できるため、こちらを使うことをお勧めします。 匿名メソッドとは異なり、一部の型のラムダ式は式ツリー型に変換することができます。
+[ラムダ式](../../language-reference/operators/lambda-expressions.md)または[匿名メソッド](../../language-reference/operators/delegate-operator.md)を使って匿名関数を作成できます。 ラムダ式を使った方がより簡潔で表現性に優れた方法でインライン コードを記述できるため、こちらを使うことをお勧めします。 匿名メソッドとは異なり、一部の型のラムダ式は式ツリー型に変換することができます。
 
 ## <a name="the-evolution-of-delegates-in-c"></a>C\# のデリゲートの進化
 
@@ -35,6 +35,6 @@ ms.locfileid: "87381672"
 ## <a name="see-also"></a>関連項目
 
 - [ステートメント、式、および演算子](./index.md)
-- [ラムダ式](./lambda-expressions.md)
+- [ラムダ式](../../language-reference/operators/lambda-expressions.md)
 - [デリゲート](../delegates/index.md)
 - [式ツリー (C#)](../concepts/expression-trees/index.md)

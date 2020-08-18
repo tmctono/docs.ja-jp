@@ -4,12 +4,12 @@ description: C# のローカル関数は、別のメンバーの入れ子にな�
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: 9987d6d5ad57c1dceb3a4bffbae22a81c240c794
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 854ec7ab4a4cc637c0a5ad03e0344d2f1f7679d2
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864528"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063303"
 ---
 # <a name="local-functions-c-programming-guide"></a>ローカル関数 (C# プログラミング ガイド)
 
@@ -78,7 +78,7 @@ C# 7.0 以降、C# では*ローカル関数*がサポートされています�
 
 ## <a name="local-functions-vs-lambda-expressions"></a>ローカル関数とラムダ式の比較
 
-一見したところ、ローカル関数と[ラムダ式](../statements-expressions-operators/lambda-expressions.md)は、非常に似ています。 多くの場合、ラムダ式とローカル関数の使用のどちらを選択するかは、スタイルと個人的な好みの問題です。 ただし、どちらか一方を使用できる場合、認識しておくべき実質的な違いがあります。
+一見したところ、ローカル関数と[ラムダ式](../../language-reference/operators/lambda-expressions.md)は、非常に似ています。 多くの場合、ラムダ式とローカル関数の使用のどちらを選択するかは、スタイルと個人的な好みの問題です。 ただし、どちらか一方を使用できる場合、認識しておくべき実質的な違いがあります。
 
 階乗アルゴリズムのローカル関数とラムダ式の実装の違いについて見てみましょう。 まずは、ローカル関数を使用するバージョンです。
 

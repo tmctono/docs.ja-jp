@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: e57447c89749451862bbb80047ed74135a0eb752
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 116087ac1aab57f2869b05f436801c7861c56eca
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474814"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063706"
 ---
 # <a name="extension-methods-c-programming-guide"></a>拡張メソッド (C# プログラミング ガイド)
 
@@ -22,7 +22,7 @@ ms.locfileid: "86474814"
 
 ### <a name="orderby-example"></a>OrderBy の例
 
-整数の配列において、標準クエリ演算子の `OrderBy` メソッドを呼び出す方法を次の例に示します。 かっこ内の式はラムダ式です。 標準クエリ演算子の多くはパラメーターとしてラムダ式を受け取りますが、拡張メソッドでは、これは必須ではありません。 詳細については、「[ラムダ式](../statements-expressions-operators/lambda-expressions.md)」を参照してください。
+整数の配列において、標準クエリ演算子の `OrderBy` メソッドを呼び出す方法を次の例に示します。 かっこ内の式はラムダ式です。 標準クエリ演算子の多くはパラメーターとしてラムダ式を受け取りますが、拡張メソッドでは、これは必須ではありません。 詳細については、「[ラムダ式](../../language-reference/operators/lambda-expressions.md)」を参照してください。
 
 [!code-csharp[csProgGuideExtensionMethods#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#3)]
 
@@ -121,7 +121,7 @@ static class DomainEntityExtensions
 
 - [C# プログラミング ガイド](../index.md)
 - [並列プログラミングのサンプル (拡張メソッドの例が多数掲載されています)](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)
-- [ラムダ式](../statements-expressions-operators/lambda-expressions.md)
+- [ラムダ式](../../language-reference/operators/lambda-expressions.md)
 - [標準クエリ演算子の概要](../concepts/linq/standard-query-operators-overview.md)
 - [インスタンス パラメーターの変換規則とその影響](https://docs.microsoft.com/archive/blogs/sreekarc/conversion-rules-for-instance-parameters-and-their-impact)
 - [拡張メソッドの言語間での相互運用性](https://docs.microsoft.com/archive/blogs/sreekarc/extension-methods-interoperability-between-languages)

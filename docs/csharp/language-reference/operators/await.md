@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 20fc492e45b2d248602de59682e752026d421e06
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 1941174d7e8d1676d11a13fa3ee6c7b84fe3952c
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916917"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063238"
 ---
 # <a name="await-operator-c-reference"></a>await 演算子 (C# リファレンス)
 
@@ -27,7 +27,7 @@ ms.locfileid: "87916917"
 > [!NOTE]
 > 非同期プログラミングの概要については、「[async および await を使用した非同期プログラミング](../../programming-guide/concepts/async/index.md)」を参照してください。 `async` と `await` による非同期プログラミングは、[タスクベースの非同期パターン](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)に続きます。
 
-メソッド、[ラムダ式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)、[async](../keywords/async.md) キーワードで修飾される[匿名メソッド](delegate-operator.md)でのみ `await` 演算子を使用できます。 async メソッド内では、同期関数の本文の中、[lock ステートメント](../keywords/lock-statement.md)のブロックの内部、[安全でない](../keywords/unsafe.md)コンテキストの中で `await` 演算子を使用することはできません。
+メソッド、[ラムダ式](lambda-expressions.md)、[async](../keywords/async.md) キーワードで修飾される[匿名メソッド](delegate-operator.md)でのみ `await` 演算子を使用できます。 async メソッド内では、同期関数の本文の中、[lock ステートメント](../keywords/lock-statement.md)のブロックの内部、[安全でない](../keywords/unsafe.md)コンテキストの中で `await` 演算子を使用することはできません。
 
 .NET の型として <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.ValueTask>、<xref:System.Threading.Tasks.ValueTask%601> がありますが、`await` 演算子のオペランドはそのいずれかになります。 ただし、待機可能な式であれば `await` 演算子のオペランドになります。 詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の「[待機可能な式](~/_csharplang/spec/expressions.md#awaitable-expressions)」セクションを参照してください。
 

@@ -4,12 +4,12 @@ description: C# ライブラリやアプリケーションでの継承の使用�
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 8e24ad3e93dcd11f39ae979a3acda4c4ada13dc5
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 70db8716bea84984ad56d79fa9e26aab3a8182fa
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007729"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063511"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# と .NET での継承
 
@@ -142,9 +142,9 @@ public struct ValueStructure : ValueType // Generates CS0527.
 | 型のカテゴリ | 暗黙的な継承元                                                      |
 | ------------- | ----------------------------------------------------------------------------- |
 | class         | <xref:System.Object>                                                          |
-| struct        | <xref:System.ValueType>、<xref:System.Object>                                 |
-| enum          | <xref:System.Enum>、<xref:System.ValueType>、<xref:System.Object>             |
-| delegate      | <xref:System.MulticastDelegate>、<xref:System.Delegate>、<xref:System.Object> |
+| struct        | <xref:System.ValueType>, <xref:System.Object>                                 |
+| enum          | <xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object>             |
+| delegate      | <xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object> |
 
 ## <a name="inheritance-and-an-is-a-relationship"></a>継承と "is a" 関係
 
@@ -297,5 +297,4 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 ## <a name="see-also"></a>関連項目
 
-- [クラスとオブジェクト](../tour-of-csharp/classes-and-objects.md)
 - [継承 (C# プログラミング ガイド)](../programming-guide/classes-and-structs/inheritance.md)

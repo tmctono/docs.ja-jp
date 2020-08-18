@@ -1,13 +1,14 @@
 ---
 title: 'チュートリアル: .NET Core ツールを作成する'
 description: .NET Core ツールを作成する方法について説明します。 ツールは、.NET Core CLI を使用してインストールされるコンソール アプリケーションです。
+ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: 88cc3be7b149834ace0c5f3ba8ac8c039199908f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c1c17368d8efdece73f5312899553bacf884cfb3
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156726"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062783"
 ---
 # <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>チュートリアル: .NET Core CLI を使用して .NET Core ツールを作成する
 

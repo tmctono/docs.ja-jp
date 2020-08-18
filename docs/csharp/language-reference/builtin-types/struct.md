@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: dbe9b47625589de834b7a8021640885ca0920b96
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 515b8d9adc1359581625f0d822e254d2c1df3b58
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "82021269"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062497"
 ---
 # <a name="structure-types-c-reference"></a>構造体型 (C# リファレンス)
 
@@ -111,7 +111,7 @@ C# 7.2 以降、`ref` 修飾子は、構造体型の宣言内で使用できま�
 - `ref` 構造体ではインターフェイスを実装できません。
 - `ref` 構造体を <xref:System.ValueType?displayProperty=nameWithType> または <xref:System.Object?displayProperty=nameWithType> にボックス化することはできません。
 - `ref` 構造体を型引数にすることはできません。
-- `ref` 構造体変数を[ラムダ式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)または[ローカル関数](../../programming-guide/classes-and-structs/local-functions.md)でキャプチャすることはできません。
+- `ref` 構造体変数を[ラムダ式](../operators/lambda-expressions.md)または[ローカル関数](../../programming-guide/classes-and-structs/local-functions.md)でキャプチャすることはできません。
 - `ref` 構造体変数を [`async`](../keywords/async.md) メソッド内で使用することはできません。 ただし、<xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> を返す場合など、同期メソッドで `ref` 構造体変数を使用することはできます。
 - `ref` 構造体変数を[反復子](../../iterators.md)内で使用することはできません。
 

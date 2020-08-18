@@ -8,16 +8,16 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 89133339a75c70e3ac86d627065e78d555bff71d
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 279ea2f9875681401c9c7acab922d9e4424e6827
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507205"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062536"
 ---
 # <a name="async-c-reference"></a>async (C# リファレンス)
 
-`async` 修飾子を使用して、メソッド、[ラムダ式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)、または[匿名メソッド](../operators/delegate-operator.md)が非同期であることを指定します。 この修飾子が使用されているメソッドまたは式を、"*非同期メソッド*" と呼びます。 次の例では、`ExampleMethodAsync` という名前の非同期メソッドを定義します。
+`async` 修飾子を使用して、メソッド、[ラムダ式](../operators/lambda-expressions.md)、または[匿名メソッド](../operators/delegate-operator.md)が非同期であることを指定します。 この修飾子が使用されているメソッドまたは式を、"*非同期メソッド*" と呼びます。 次の例では、`ExampleMethodAsync` という名前の非同期メソッドを定義します。
   
 ```csharp  
 public async Task<int> ExampleMethodAsync()  

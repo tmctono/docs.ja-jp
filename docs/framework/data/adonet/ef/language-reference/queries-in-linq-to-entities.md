@@ -3,12 +3,12 @@ title: LINQ to Entities でのクエリ
 description: LINQ が、さまざまな種類のデータ ソースやデータ形式のデータを操作するためのシンプルで一貫性のあるモデルを、プログラミング オブジェクトを使用して提供するしくみについて説明します。
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: 048fd56fc687dd715292fb3bb09405130de09779
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: eaf44cf6c995be335c6127f42d7aaec0dd98527c
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286819"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063732"
 ---
 # <a name="queries-in-linq-to-entities"></a>LINQ to Entities でのクエリ
 クエリは、データ ソースからデータを取得する式です。 一般に、クエリは専用のクエリ言語で表現されます。たとえば、リレーショナル データベースであれば SQL、XML であれば XQuery が使用されます。 そのため、開発者はクエリの対象となるデータ ソースやデータ形式ごとに新しいクエリ言語を習得する必要があります。 統合言語クエリ (LINQ) は、データ ソースや形式の違いを意識することなくデータを扱うことのできる、より簡素化された一貫したモデルを提供します。 LINQ クエリでは、常にプログラミング オブジェクトを操作することになります。  
@@ -44,7 +44,7 @@ ms.locfileid: "84286819"
 - [クエリ式の構文例: リレーションシップのナビゲーション](query-expression-syntax-examples-navigating-relationships.md)  
   
 ### <a name="method-based-query-syntax"></a>メソッド ベースのクエリ構文  
- LINQ to Entities クエリを作成するもう 1 つの方法として、メソッド ベースのクエリがあります。 メソッド ベースのクエリ構文は、LINQ の演算子メソッドに対する直接メソッド呼び出しのシーケンスであり、パラメーターとしてラムダ式を渡します。 詳細については、「[ラムダ式](../../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)」を参照してください。 メソッドベースの構文の使用方法を示す例については、次のトピックを参照してください。  
+ LINQ to Entities クエリを作成するもう 1 つの方法として、メソッド ベースのクエリがあります。 メソッド ベースのクエリ構文は、LINQ の演算子メソッドに対する直接メソッド呼び出しのシーケンスであり、パラメーターとしてラムダ式を渡します。 詳細については、「[ラムダ式](../../../../../csharp/language-reference/operators/lambda-expressions.md)」を参照してください。 メソッドベースの構文の使用方法を示す例については、次のトピックを参照してください。  
   
 - [メソッド ベースのクエリ構文例: 射影](method-based-query-syntax-examples-projection.md)  
   
