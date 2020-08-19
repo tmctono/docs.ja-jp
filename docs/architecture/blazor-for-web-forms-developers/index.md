@@ -7,18 +7,16 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/11/2019
-ms.openlocfilehash: 779eb47d9796c61df9939d0e7de287443870576e
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 1c869cce6ab8a0ab7c4b83817fe1afc3d6a4a7fd
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173251"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267472"
 ---
-# <a name="blazor-for-aspnet-web-forms-developers"></a>ASP.NET Web Forms 開発者向け Blazor
+# <a name="no-locblazor-for-aspnet-web-forms-developers"></a>ASP.NET Web Forms 開発者向け Blazor
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
-![サーバーレス アプリの e-book のカバーを示すスクリーン ショット。](./media/index/blazor-for-web-forms-developers-cover.png)
+![サーバーレス アプリの e-book のカバーを示すスクリーン ショット。](./media/index/blazor-for-aspnet-web-forms-developers.png)
 
 > 次の場所でダウンロードできます: <https://aka.ms/blazor-ebook>
 
@@ -32,7 +30,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2019 by Microsoft Corporation
+Copyright © 2020 by Microsoft Corporation
 
 All rights reserved. 本書のいかなる部分も、書面による発行者の許可なしに、いかなる形式または方法によっても、複製または伝送することを禁じます。
 
@@ -55,6 +53,8 @@ Mac および macOS は Apple Inc. の商標です。
 > **[Taylor Southwick](https://github.com/twsouthwick)** 、Microsoft Corporation のシニア ソフトウェア エンジニア
 
 > **[Scott Addie](https://github.com/scottaddie)** 、Microsoft Corporation のシニア コンテンツ開発者
+
+> **[Steve "ardalis" Smith](https://ardalis.com)** 、ソフトウェア アーキテクトおよびトレーナー - Ardalis Services LLC
 
 ## <a name="introduction"></a>はじめに
 
