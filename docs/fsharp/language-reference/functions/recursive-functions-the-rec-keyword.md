@@ -1,13 +1,13 @@
 ---
 title: '再帰関数: rec キーワード'
 description: "再帰関数を定義するために、' let ' キーワードと共に F # ' rec ' キーワードを使用する方法について説明します。"
-ms.date: 05/16/2016
-ms.openlocfilehash: c2374f90b4585327c6f5208a3d6bca75a23d0cbb
-ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
+ms.date: 08/12/2020
+ms.openlocfilehash: 389357bd13cef39b1d07972c1a3167320b61612b
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87455657"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558713"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>再帰関数: rec キーワード
 
@@ -18,32 +18,48 @@ ms.locfileid: "87455657"
 ```fsharp
 // Recursive function:
 let rec function-nameparameter-list =
-function-body
+    function-body
 
 // Mutually recursive functions:
 let rec function1-nameparameter-list =
-function1-body
+    function1-body
+
 and function2-nameparameter-list =
-function2-body
+    function2-body
 ...
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-再帰関数は、それ自体を呼び出す関数で、F # 言語で明示的に識別されます。 これにより、定義されている識別子が関数のスコープで使用できるようになります。
+再帰関数-自身を呼び出す関数は、F # 言語でキーワードを使用して明示的に識別され `rec` ます。 キーワードを使用すると、 `rec` バインディングの名前を `let` 本体で使用できるようになります。
 
-次のコードは、数学的定義を使用して*n*<sup>番目</sup>のフィボナッチ数を計算する再帰関数を示しています。
+次の例は、数学的定義を使用して *n*<sup>番目</sup> のフィボナッチ数を計算する再帰関数を示しています。
 
-[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
+```fsharp
+let fib n =
+    match n with
+    | 0 | 1 -> 1
+    | n -> fib (n-1) + fib (n-2)
+```
 
 > [!NOTE]
 > 実際には、前のサンプルのようなコードは、既に計算されている値を unecessarily しているため、理想的ではありません。 これは、この記事で詳しく説明されている末尾の再帰ではないためです。
 
-メソッドは、型の中で暗黙的に再帰的になります。キーワードを追加する必要はありません `rec` 。 クラス内のバインディングは暗黙的に再帰的ではありません。
+メソッドは、定義されている型内で暗黙的に再帰的に行われます。つまり、キーワードを追加する必要はありません `rec` 。 次に例を示します。
+
+```fsharp
+type MyClass() =
+    member this.Fib(n) =
+        match n with
+        | 0 | 1 -> 1
+        | n -> this.Fib(n-1) + this.Fib(n-2)
+```
+
+ただし、クラス内のバインディングは暗黙的に再帰的ではありません。 すべて `let` のバインドされた関数にはキーワードが必要 `rec` です。
 
 ## <a name="tail-recursion"></a>Tail 再帰
 
-再帰関数によっては、より "純粋な" 定義を[末尾の再帰](https://cs.stackexchange.com/questions/6230/what-is-tail-recursion)型にリファクタリングする必要があります。 これにより、不要な再計算が防止されます。 たとえば、前のフィボナッチ数ジェネレーターは次のように書き換えることができます。
+再帰関数によっては、より "純粋な" 定義を [末尾の再帰](https://cs.stackexchange.com/questions/6230/what-is-tail-recursion)型にリファクタリングする必要があります。 これにより、不要な再計算が防止されます。 たとえば、前のフィボナッチ数ジェネレーターは次のように書き換えることができます。
 
 ```fsharp
 let fib n =
@@ -70,11 +86,19 @@ let fib n =
 
 ## <a name="mutually-recursive-functions"></a>相互再帰関数
 
-場合によっては、関数が*相互に再帰的*であることを意味します。これは、呼び出しが円を形成することを意味します。この場合、1つ目の関数はを呼び出し、その間に任意の数の呼び出しを呼び出します。 このような関数は、1つのバインディングで定義し `let` 、キーワードを使用してそれらをリンクする必要があり `and` ます。
+場合によっては、関数が *相互に再帰的*であることを意味します。これは、呼び出しが円を形成することを意味します。この場合、1つ目の関数はを呼び出し、その間に任意の数の呼び出しを呼び出します。 このような関数は、1つのバインディングで定義し `let` 、キーワードを使用してそれらをリンクする必要があり `and` ます。
 
 次の例は、2つの相互再帰関数を示しています。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet4002.fs)]
+
+## <a name="recursive-values"></a>再帰的な値
+
+また、 `let` 再帰的になるように、バインドされた値を定義することもできます。 これは、ログ記録のために行われることがあります。 F # 5 と関数を使用 `nameof` すると、次の操作を実行できます。
+
+```fsharp
+let rec nameDoubles = nameof nameDoubles + nameof nameDoubles
+```
 
 ## <a name="see-also"></a>関連項目
 

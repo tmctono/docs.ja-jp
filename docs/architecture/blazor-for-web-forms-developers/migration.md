@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: ca3d8747b02602c89aec187ea0826e658fb0cbc4
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: ba6dbfdf9a4fa9973dfe84cf5d58f1300f5d0cb4
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267803"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557543"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>ASP.NET Web フォームからへの移行 Blazor
 
@@ -559,10 +559,6 @@ Web フォームのコードに検証が含まれている場合は、ほとん�
 ```
 
 コンテキストには `EditForm` 検証のサポートが含まれており、入力をラップすることができます。 データ注釈は、検証を追加する一般的な方法です。 このような検証のサポートは、コンポーネントを通じて追加でき `DataAnnotationsValidator` ます。 このメカニズムの詳細については、「 [ Blazor フォームと検証の ASP.NET Core](/aspnet/core/blazor/forms-validation)」を参照してください。
-
-## <a name="migrate-built-in-web-forms-controls"></a>組み込みの Web フォームコントロールを移行する
-
-*このコンテンツは近日公開予定です。*
 
 ## <a name="migrate-configuration"></a>構成の移行
 

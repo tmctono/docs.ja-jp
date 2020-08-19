@@ -1,41 +1,40 @@
 ---
 title: 基本型
-description: 使用される基本的な基本的な型を検出、F#言語。
-ms.date: 07/09/2018
-ms.openlocfilehash: fb9f275490cb402ff36e959774cd65450de77115
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+description: 'F # 言語で使用される基本的な基本型について説明します。'
+ms.date: 08/15/2020
+ms.openlocfilehash: 659ac8424c62985affcca1741e1b2a74c9c3ee8d
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645586"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557699"
 ---
-# <a name="basic-types"></a>基本的な型
+# <a name="basic-types"></a>基本型
 
-このトピックでは、F# 言語で定義されている基本的な型を使用します。 これらの型は、最も基本的な F# でほぼすべての F# プログラムの基礎を形成します。 .NET プリミティブ型のスーパー セットです。
+このトピックでは、F # 言語で定義されている基本型の一覧を示します。 これらの型は F # で最も基本的なものであり、ほぼすべての F # プログラムの基礎となります。 これらは、.NET プリミティブ型のスーパーセットです。
 
-|型|.NET 型|説明|
-|----|---------|-----------|
-|`bool`|<xref:System.Boolean>|有効な値は、`true` と `false` です。|
-|`byte`|<xref:System.Byte>|0 から 255 の値です。|
-|`sbyte`|<xref:System.SByte>|-128 から 127 の値です。|
-|`int16`|<xref:System.Int16>|-32768 から 32767 の値です。|
-|`uint16`|<xref:System.UInt16>|0 から 65535 の値です。|
-|`int`|<xref:System.Int32>|-2,147, 483,648 から 2,147, 483,647 の値です。|
-|`uint32`|<xref:System.UInt32>|0 から 4,294,967,295 の値です。|
-|`int64`|<xref:System.Int64>|9,223,372,036,854,775,807-9,223,372,036,854,775,808 から値です。|
-|`uint64`|<xref:System.UInt64>|0 から 18,446,744,073,709,551,615 の値です。|
-|`nativeint`|<xref:System.IntPtr>|符号付き整数としてのネイティブ ポインターです。|
-|`unativeint`|<xref:System.UIntPtr>|符号なし整数としてのネイティブ ポインターです。|
-|`char`|<xref:System.Char>|Unicode 文字の値。|
-|`string`|<xref:System.String>|Unicode テキスト。|
-|`decimal`|<xref:System.Decimal>|浮動小数点、少なくとも 28 の有効桁数を持つデータ型です。|
-|`unit`|該当なし|実際の値がないことを示します。 型が示される 1 つだけの仮引数の値を持つ`()`します。 単位の値、`()`値が必要なが実際の値が使用可能なまたは意味のプレース ホルダーとして使用されます。|
-|`void`|<xref:System.Void>|ないことを示します型または値。|
-|`float32`, `single`|<xref:System.Single>|32 ビット浮動小数点型。|
-|`float`, `double`|<xref:System.Double>|64 ビット浮動小数点型。|
+|Type|.NET の種類|説明|例|
+|----|---------|-----------|-------|
+|`bool`|<xref:System.Boolean>|設定可能な値は `true` および `false` です。|`true`/`false`|
+|`byte`|<xref:System.Byte>|0 ~ 255 の値。|`1uy`|
+|`sbyte`|<xref:System.SByte>|-128 から127までの値。|`1y`|
+|`int16`|<xref:System.Int16>|-32768 から32767までの値。|`1s`|
+|`uint16`|<xref:System.UInt16>|0 ~ 65535 の値。|`1us`|
+|`int`|<xref:System.Int32>|-2147483648 から2147483647までの値。|`1`|
+|`uint`|<xref:System.UInt32>|0 ~ 4294967295 の値。|`1u`|
+|`int64`|<xref:System.Int64>|-9223372036854775808 ~ 9223372036854775807 の値。|`1L`|
+|`uint64`|<xref:System.UInt64>|0 ~ 18446744073709551615 の値。|`1UL`|
+|`nativeint`|<xref:System.IntPtr>|符号付き整数としてのネイティブポインター。|`nativeint 1`|
+|`unativeint`|<xref:System.UIntPtr>|符号なし整数としてのネイティブポインター。|`unativeint 1`|
+|`decimal`|<xref:System.Decimal>|有効桁数が28以上の浮動小数点データ型。|`1.0`|
+|`float`, `double`|<xref:System.Double>|64ビットの浮動小数点型。|`1.0`|
+|`float32`, `single`|<xref:System.Single>|32ビットの浮動小数点型。|`1.0f`|
+|`char`|<xref:System.Char>|Unicode 文字の値。|`'c'`|
+|`string`|<xref:System.String>|Unicode テキスト。|`"str"`|
+|`unit`|適用外|実際の値が存在しないことを示します。 型には、示されている仮値が1つだけあり `()` ます。 単位値は、 `()` 値が必要であるものの、実際の値を使用できない、または意味を持つプレースホルダーとしてよく使用されます。|`()`|
 
 > [!NOTE]
-> 使用して、64 ビット整数型の整数が大きすぎると計算を行うことができます、 [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa)型。 `bigint` 基本的な型であるとは見なされません省略形は`System.Numerics.BigInteger`します。
+> [Bigint](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-bigint.html)型を使用して、整数値が64ビット整数型に対して大きすぎる計算を実行できます。 `bigint` は基本的な型とは見なされません。これは、の省略形です `System.Numerics.BigInteger` 。
 
 ## <a name="see-also"></a>関連項目
 

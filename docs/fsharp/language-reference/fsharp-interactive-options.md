@@ -1,13 +1,13 @@
 ---
 title: 対話形式のオプション
 description: F# インタラクティブ、fsi.exe でサポートされているコマンドラインオプションについて説明します。
-ms.date: 07/22/2020
-ms.openlocfilehash: abddd1fd990be18ede139ab26ffe80513ba6e0dd
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/15/2020
+ms.openlocfilehash: da2251c1d2e57090ed926e501cebf3c53ac58052
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855349"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558609"
 ---
 # <a name="f-interactive-options"></a>F# インタラクティブオプション
 
@@ -25,7 +25,7 @@ F# スクリプト ファイルのファイル拡張子は `.fsx` です。
 
 ## <a name="table-of-f-interactive-options"></a>F# Interactive のオプションの表
 
-次の表は、F# Interactive でサポートされるオプションの一覧です。 これらのオプションは、コマンドラインまたは Visual Studio IDE を使用して設定できます。 Visual Studio IDE でこれらのオプションを設定するには、[**ツール**] メニューを開き、[**オプション**] を選択し、[ **F # ツール**] ノードを展開して、[ **F# インタラクティブ**] を選択します。
+次の表は、F# Interactive でサポートされるオプションの一覧です。 これらのオプションは、コマンドラインまたは Visual Studio IDE を使用して設定できます。 Visual Studio IDE でこれらのオプションを設定するには、[ **ツール** ] メニューを開き、[ **オプション**] を選択し、[ **F # ツール** ] ノードを展開して、[ **F# インタラクティブ**] を選択します。
 
 F# Interactive オプションの引数でリストを指定する場合は、リストの要素をセミコロン (`;`) で区切ります。
 
@@ -44,7 +44,7 @@ F# Interactive オプションの引数でリストを指定する場合は、�
 |**--gui**[ **+**&#124;**-** ]|Windows フォーム イベントのループを有効または無効にします。 既定値は有効です。|
 |**--help**<br /><br />**-?**|コマンドライン構文と各オプションの簡単な説明を表示するために使用します。|
 |**--lib: &lt; フォルダー一覧&gt;**<br /><br />**-I: &lt; フォルダー一覧&gt;**|**fsc.exe**コンパイラオプションと同じです。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。|
-|**--load: &lt; ファイル名&gt;**|指定したソース コードを起動時にコンパイルし、コンパイルされた F# の構成要素をセッションに読み込みます。 ターゲットソースに **#use**や **#load**などのスクリプトディレクティブが含まれている場合は、-- **load**または **#load**の代わりに **--use**または **#use**を使用する必要があります。|
+|**--load: &lt; ファイル名&gt;**|指定したソース コードを起動時にコンパイルし、コンパイルされた F# の構成要素をセッションに読み込みます。|
 |**--mlcompatibility**|**fsc.exe**コンパイラオプションと同じです。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。|
 |**--noframework**|**fsc.exe**コンパイラオプションと同じです。 詳細については、「[コンパイラオプション](compiler-options.md)」を参照してください。|
 |**--nologo**|**fsc.exe**コンパイラオプションと同じです。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。|
@@ -52,7 +52,7 @@ F# Interactive オプションの引数でリストを指定する場合は、�
 |**--optimize**[ **+**&#124;**-** ]|**fsc.exe**コンパイラオプションと同じです。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。|
 |**--preferreduilang: &lt; lang&gt;**| 優先する出力言語のカルチャ名を指定します (例: es、ja-jp)。 |
 |**--quiet**|**Stdout**ストリームへの F# インタラクティブの出力を抑制します。|
-|**--引用符-デバッグ**|追加のデバッグ情報が F# 引用符リテラルとリフレクション定義から派生した式に対して生成されるように指定します。 デバッグ情報は F# 式ツリー ノードのカスタム属性に追加されます。 「[コード引用符](code-quotations.md)」と「 [Expr. customattributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3)」を参照してください。|
+|**--引用符-デバッグ**|追加のデバッグ情報が F# 引用符リテラルとリフレクション定義から派生した式に対して生成されるように指定します。 デバッグ情報は F# 式ツリー ノードのカスタム属性に追加されます。 「 [コード引用符](code-quotations.md) 」と「 [Expr. customattributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3)」を参照してください。|
 |**--readline**[ **+**&#124;**-** ]|対話モードでのタブ補完を有効または無効にします。|
 |**--reference: &lt; ファイル名&gt;**<br /><br />**-r: &lt; ファイル名&gt;**|**fsc.exe**コンパイラオプションと同じです。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。|
 |**--tail**[ **+**&#124;**-** ]|tail IL 命令の使用を有効または無効にします。有効にすると、スタック フレームが tail 再帰関数で再利用されます。 このオプションは、既定で有効です。|
@@ -65,7 +65,7 @@ F# Interactive オプションの引数でリストを指定する場合は、�
 
 ## <a name="f-interactive-structured-printing"></a>構造化された印刷の F# インタラクティブ
 
-F# インタラクティブ ( `dotnet fsi` ) では、構造化された[プレーンテキストの書式設定](plaintext-formatting.md)を使用して値を報告します。
+F# インタラクティブ ( `dotnet fsi` ) では、構造化された [プレーンテキストの書式設定](plaintext-formatting.md) を使用して値を報告します。
 
 1. プレーンテキスト形式のすべての機能がサポートされて `%A` おり、さらにカスタマイズも可能です。
 
@@ -126,7 +126,7 @@ val newYearsDay1999 : DateAndLabel = { Date = 1999-01-01T00:00:00
                                        Label = "New Year" }
 ```
 
-`fsi.AddPrintTransformer`を使用して、印刷する代理オブジェクトを指定できます。
+`fsi.AddPrintTransformer` を使用して、印刷する代理オブジェクトを指定できます。
 
 ```fsharp
 type MyList(values: int list) =
@@ -165,4 +165,4 @@ val y : string = ["quack"; "quack"; "quack"]
 
 |Title|説明|
 |-----|-----------|
-|[コンパイラオプション](compiler-options.md)|F # コンパイラ、 **fsc.exe**で使用できるコマンドラインオプションについて説明します。|
+|[コンパイラ オプション](compiler-options.md)|F # コンパイラ、 **fsc.exe**で使用できるコマンドラインオプションについて説明します。|

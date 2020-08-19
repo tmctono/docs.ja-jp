@@ -1,19 +1,17 @@
 ---
 title: クエリ式
 description: 'F # プログラミング言語における LINQ のクエリ式のサポートについて説明します。'
-ms.date: 05/16/2016
-ms.openlocfilehash: c6f33a58bc959745a5f83bdcfe378a4dbbe577c5
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/15/2020
+ms.openlocfilehash: afcc6e92818b1648a210ad9cfc3f1dcfa46037b5
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855037"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559064"
 ---
 # <a name="query-expressions"></a>クエリ式
 
 クエリ式を使用すると、データソースに対してクエリを実行し、データを必要な形式で格納できます。 クエリ式は、F # での LINQ のサポートを提供します。
-> [!NOTE]
-> F # の docs.microsoft.com API リファレンスが完全ではありません。 壊れたリンクが見つかった場合は、代わりに[F # コアライブラリのドキュメント](https://fsharp.github.io/fsharp-core-docs/)を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -21,7 +19,7 @@ ms.locfileid: "87855037"
 query { expression }
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 クエリ式は、シーケンス式に似た計算式の一種です。 シーケンス式にコードを提供することでシーケンスを指定するのと同じように、クエリ式にコードを提供することによってデータのセットを指定します。 シーケンス式では、キーワードは、 `yield` 結果のシーケンスの一部として返されるデータを識別します。 クエリ式では、 `select` キーワードは同じ関数を実行します。 キーワードに加え `select` て、F # では、SQL SELECT ステートメントの部分とよく似た多数のクエリ演算子もサポートされています。 Northwind OData ソースに接続するコードと共に、単純なクエリ式の例を次に示します。
 
@@ -45,9 +43,9 @@ query1
 |> Seq.iter (fun customer -> printfn "Company: %s Contact: %s" customer.CompanyName customer.ContactName)
 ```
 
-前のコード例では、クエリ式は中かっこで囲まれています。 式のコードの意味はで、クエリ結果のデータベースの Customers テーブルにあるすべての顧客を返します。 クエリ式は、とを実装する型を返し <xref:System.Linq.IQueryable%601> <xref:System.Collections.Generic.IEnumerable%601> ます。このため、例に示すように、 [Seq モジュール](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)を使用して反復処理できます。
+前のコード例では、クエリ式は中かっこで囲まれています。 式のコードの意味はで、クエリ結果のデータベースの Customers テーブルにあるすべての顧客を返します。 クエリ式は、とを実装する型を返し <xref:System.Linq.IQueryable%601> <xref:System.Collections.Generic.IEnumerable%601> ます。このため、例に示すように、 [Seq モジュール](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html) を使用して反復処理できます。
 
-すべてのコンピュテーション式の型は、ビルダークラスから構築されます。 クエリ計算式のビルダークラスは `QueryBuilder` です。 詳細については、「[コンピュテーション式](computation-expressions.md)」および「[ビルダークラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)」を参照してください。
+すべてのコンピュテーション式の型は、ビルダークラスから構築されます。 クエリ計算式のビルダークラスは `QueryBuilder` です。 詳細については、「 [コンピュテーション式](computation-expressions.md) 」および「 [ビルダークラス](hhttps://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html)」を参照してください。
 
 ## <a name="query-operators"></a>クエリ演算子
 
@@ -55,7 +53,7 @@ query1
 
 クエリ式では、SQL に変換できる式のみを使用できます。 たとえば、クエリ演算子を使用する場合、式で関数呼び出しを使用することはできません `where` 。
 
-表1に、使用できるクエリ演算子を示します。 また、このトピックで後述する「Table2」を参照してください。これは、SQL クエリと同等の F # クエリ式を比較したものです。 一部のクエリ演算子は、一部の型プロバイダーではサポートされていません。 特に、odata の型プロバイダーは、OData の制限によってサポートされるクエリ演算子で制限されます。 詳細については、「 [Odataservice 型プロバイダー (F #)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)」を参照してください。
+表1に、使用できるクエリ演算子を示します。 また、このトピックで後述する「Table2」を参照してください。これは、SQL クエリと同等の F # クエリ式を比較したものです。 一部のクエリ演算子は、一部の型プロバイダーではサポートされていません。 特に、odata の型プロバイダーは、OData の制限によってサポートされるクエリ演算子で制限されます。
 
 このテーブルは、次の形式のデータベースを前提としています。
 
@@ -682,7 +680,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>IN</code>指定された値のセット<br/>
+<code>IN</code> 指定された値のセット<br/>
 
 <pre><code class="lang-sql">SELECT *
 FROM Student
@@ -723,7 +721,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>パターン一致が設定されています。<br/>
+<code>LIKE</code> パターン一致が設定されています。<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -740,7 +738,7 @@ WHERE Student.Name LIKE '[abc]%'
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>を設定します。<br/>
+<code>LIKE</code> を設定します。<br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -759,7 +757,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>1つのフィールドを選択しますが、別のフィールドを選択します。<br/>
+<code>LIKE</code> 1つのフィールドを選択しますが、別のフィールドを選択します。<br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
 WHERE Student.Name LIKE '[^abc]%'
@@ -809,7 +807,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>LEFT JOIN</code>2つのテーブルを使用します。<br/>
+</td></tr><tr><td><code>LEFT JOIN</code> 2つのテーブルを使用します。<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -911,7 +909,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>OR</code>順序付き<br/>
+</td></tr><tr><td><code>OR</code> 順序付き<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -951,7 +949,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>UNION</code>2つのクエリの。<br/>
+</td></tr><tr><td><code>UNION</code> 2つのクエリの。<br/>
 
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable no-space-in-emphasis -->
@@ -1006,7 +1004,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td><code>CASE</code>フィルター.<br/>
+</td></tr><tr><td><code>CASE</code> フィルター.<br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age
@@ -2439,5 +2437,5 @@ end
 ## <a name="see-also"></a>関連項目
 
 - [F# 言語リファレンス](index.md)
-- [ビルダークラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
+- [ビルダークラス](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html)
 - [コンピュテーション式](Computation-Expressions.md)

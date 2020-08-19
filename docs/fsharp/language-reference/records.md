@@ -1,13 +1,13 @@
 ---
 title: レコード
-description: レコードがF#名前付きの値の単純な集計を表す方法について説明します。メンバーを使用することもできます。
-ms.date: 06/09/2019
-ms.openlocfilehash: 874c5fa30a36f2778f7a43266316deb8c59d1d72
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+description: 'F # のレコードが名前付きの値の単純な集計を表す方法について説明します。メンバーを使用することもできます。'
+ms.date: 08/15/2020
+ms.openlocfilehash: 182b2e83c3940c866197052af102787a96e49c54
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216792"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559051"
 ---
 # <a name="records"></a>レコード
 
@@ -24,17 +24,17 @@ type [accessibility-modifier] typename =
     [ member-list ]
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-前の構文では、 *typename*はレコード型の名前、 *label1*と*label2*は*ラベル*と*呼ばれる値*の名前、 *type1 と type1*はこれらの値の型です。 *メンバーリスト*は、型のメンバーの省略可能なリストです。  属性を使用し`[<Struct>]`て、参照型であるレコードではなく、構造体レコードを作成できます。
+前の構文では、 *typename*はレコード型の名前、 *label1*と*label2]* は*ラベル*と*呼ばれる値*の名前、 *type1 と type1*はこれらの値の型です。 *メンバーリスト* は、型のメンバーの省略可能なリストです。  属性を使用して、参照型であるレコードでは `[<Struct>]` なく、構造体レコードを作成できます。
 
-次に例をいくつか示します。
+次は一部の例です。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1901.fs)]
 
 各ラベルが個別の行にある場合、セミコロンは省略可能です。
 
-*レコード式*と呼ばれる式に値を設定できます。 コンパイラは、使用されているラベルから型を推測します (ラベルが他のレコードの種類とは十分に異なる場合)。 中かっこ ({}) は、レコード式を囲みます。 次のコードは、 `x` `y`とと`z`いうラベルを持つ3つの float 要素を持つレコードを初期化するレコード式を示しています。
+*レコード式*と呼ばれる式に値を設定できます。 コンパイラは、使用されているラベルから型を推測します (ラベルが他のレコードの種類とは十分に異なる場合)。 中かっこ ({}) は、レコード式を囲みます。 次のコードは、とというラベルを持つ3つの float 要素を持つレコードを初期化するレコード式を示して `x` `y` `z` います。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1907.fs)]
 
@@ -42,7 +42,7 @@ type [accessibility-modifier] typename =
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1903.fs)]
 
-最後に宣言された型のラベルは、以前に宣言された型よりも`mypoint3D` `Point3D`優先されます。したがって、前の例では、はと推論されます。 レコードの種類は、次のコードのように明示的に指定できます。
+最後に宣言された型のラベルは、以前に宣言された型よりも優先されます。したがって、前の例で `mypoint3D` は、はと推論され `Point3D` ます。 レコードの種類は、次のコードのように明示的に指定できます。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1908.fs)]
 
@@ -50,7 +50,7 @@ type [accessibility-modifier] typename =
 
 ## <a name="creating-records-by-using-record-expressions"></a>レコード式を使用したレコードの作成
 
-レコードで定義されているラベルを使用して、レコードを初期化できます。 これを行う式は、*レコード式*と呼ばれます。 中かっこを使用してレコード式を囲み、セミコロンを区切り記号として使用します。
+レコードで定義されているラベルを使用して、レコードを初期化できます。 これを行う式は、 *レコード式*と呼ばれます。 中かっこを使用してレコード式を囲み、セミコロンを区切り記号として使用します。
 
 次の例では、レコードを作成する方法を示します。
 
@@ -60,7 +60,7 @@ type [accessibility-modifier] typename =
 
 レコードを作成するときは、各フィールドに値を指定する必要があります。 任意のフィールドについて、初期化式の他のフィールドの値を参照することはできません。
 
-次のコードでは、の`myRecord2`型はフィールドの名前から推論されます。 必要に応じて、型名を明示的に指定できます。
+次のコードでは、の型は `myRecord2` フィールドの名前から推論されます。 必要に応じて、型名を明示的に指定できます。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1905.fs)]
 
@@ -68,7 +68,7 @@ type [accessibility-modifier] typename =
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1906.fs)]
 
-この形式のレコード式は、レコードの*コピーと更新の式*と呼ばれます。
+この形式のレコード式は、レコードの *コピーと更新の式*と呼ばれます。
 
 既定では、レコードは変更できません。ただし、コピーと更新の式を使用して、変更されたレコードを簡単に作成できます。 また、変更可能なフィールドを明示的に指定することもできます。
 
@@ -94,9 +94,9 @@ let rr3 = { defaultRecord1 with Field2 = 42 }
 
 レコードを作成するときに、後で定義する別の型に依存するように設定することもできます。 レコードの種類が相互に再帰的に定義されている場合を除き、コンパイルエラーになります。
 
-同時に再帰的なレコードを定義`and`するには、キーワードを使用します。 これにより、2つ以上のレコードの種類をリンクすることができます。
+同時に再帰的なレコードを定義するには、キーワードを使用 `and` します。 これにより、2つ以上のレコードの種類をリンクすることができます。
 
-たとえば、次のコードでは、 `Person`と`Address`型が相互に再帰的に定義されています。
+たとえば、次のコードでは、 `Person` と型が相互に再帰的に定義され `Address` ています。
 
 ```fsharp
 // Create a Person type and use the Address type that is not defined
@@ -112,7 +112,7 @@ and Address =
     Occupant: Person }
 ```
 
-`and`キーワードを使用せずに前の例を定義すると、コンパイルされません。 相互再帰的な定義にはキーワードが必要です。`and`
+キーワードを使用せずに前の例を定義すると `and` 、コンパイルされません。 `and`相互再帰的な定義にはキーワードが必要です。
 
 ## <a name="pattern-matching-with-records"></a>レコードを使用したパターンマッチ
 
@@ -126,6 +126,39 @@ and Address =
 Point is at the origin.
 Point is on the x-axis. Value is 100.000000.
 Point is at (10.000000, 0.000000, -1.000000).
+```
+
+## <a name="records-and-members"></a>レコードとメンバー
+
+クラスの場合と同様に、レコードのメンバーを指定できます。 フィールドはサポートされていません。 一般的な方法は、レコードを `Default` 簡単に構築できるように静的メンバーを定義することです。
+
+```fsharp
+type Person =
+  { Name: string
+    Age: int
+    Address: string }
+
+    static member Default =
+        { Name = "Phillip"
+          Age = 12
+          Address = "123 happy fun street" }
+
+let defaultPerson = Person.Default
+```
+
+自己識別子を使用する場合、その識別子は、メンバーが呼び出されるレコードのインスタンスを参照します。
+
+```fsharp
+type Person =
+  { Name: string
+    Age: int
+    Address: string }
+
+    member this.WeirdToString() =
+        this.Name + this.Address + string this.Age
+
+let p = { Name = "a"; Age = 12; Address = "abc123 }
+let weirdString = p.WeirdToString()
 ```
 
 ## <a name="differences-between-records-and-classes"></a>レコードとクラスの違い
@@ -142,9 +175,9 @@ Union 型や structure 型と同様に、レコードには構造的等価性の
 The records are equal.
 ```
 
-クラスを使用して同じコードを記述した場合、2つのクラスオブジェクトは等しくなります。これは、2つの値がヒープ上の2つのオブジェクトを表し、 `System.Object.Equals`アドレスのみが比較されるためです (クラス型がメソッドをオーバーライドする場合を除きます)。
+クラスを使用して同じコードを記述した場合、2つのクラスオブジェクトは等しくなります。これは、2つの値がヒープ上の2つのオブジェクトを表し、アドレスのみが比較されるためです (クラス型がメソッドをオーバーライドする場合を除き `System.Object.Equals` ます)。
 
-レコードの参照の等価性が必要な場合は`[<ReferenceEquality>]` 、レコードの上に属性を追加します。
+レコードの参照の等価性が必要な場合は、レコードの上に属性を追加し `[<ReferenceEquality>]` ます。
 
 ## <a name="see-also"></a>関連項目
 

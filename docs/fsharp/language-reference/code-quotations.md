@@ -1,20 +1,17 @@
 ---
 title: コード クォート
 description: 'F # コードの引用符について説明します。これは、プログラムで F # コード式を生成して操作できる言語機能です。'
-ms.date: 05/16/2016
-ms.openlocfilehash: bb5c03edd180c42667731bb90d7a1f624ed2e522
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/13/2020
+ms.openlocfilehash: 070e127397a5da7d70281d08ef7cafdb9b4f4fe5
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855395"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558336"
 ---
 # <a name="code-quotations"></a>コード引用符
 
-この記事では、*コードの引用符*について説明します。これは、プログラムによって F # コード式を生成して操作できる言語機能です。 この機能を使用すると、F # コードを表す抽象構文ツリーを生成できます。 次に、アプリケーションのニーズに応じて、抽象構文ツリーを走査して処理できます。 たとえば、ツリーを使用すると、F # コードを生成したり、他の言語でコードを生成したりできます。
-
-> [!NOTE]
-> F # の docs.microsoft.com API リファレンスが完全ではありません。 壊れたリンクが見つかった場合は、代わりに[F # コアライブラリのドキュメント](https://fsharp.github.io/fsharp-core-docs/)を参照してください。
+この記事では、 *コードの引用符*について説明します。これは、プログラムによって F # コード式を生成して操作できる言語機能です。 この機能を使用すると、F # コードを表す抽象構文ツリーを生成できます。 次に、アプリケーションのニーズに応じて、抽象構文ツリーを走査して処理できます。 たとえば、ツリーを使用すると、F # コードを生成したり、他の言語でコードを生成したりできます。
 
 ## <a name="quoted-expressions"></a>引用符で囲まれた式
 
@@ -22,7 +19,7 @@ ms.locfileid: "87855395"
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet501.fs)]
 
-型情報を含めないと、大きな式ツリーを走査する方が高速になります。 型指定された記号で囲まれた式の結果の型はです `Expr<'T>` 。ここで、型パラメーターには、F # コンパイラの型推論アルゴリズムによって決定される式の型があります。 型情報を含まないコード引用符を使用する場合、引用符で囲まれた式の型は非ジェネリック型の[Expr](https://msdn.microsoft.com/library/ed6a2caf-69d4-45c2-ab97-e9b3be9bce65)になります。 型指定されたクラスで[Raw](https://msdn.microsoft.com/library/47fb94f1-e77f-4c68-aabc-2b0ba40d59c2)プロパティを呼び出して、 `Expr` 型指定のないオブジェクトを取得でき `Expr` ます。
+型情報を含めないと、大きな式ツリーを走査する方が高速になります。 型指定された記号で囲まれた式の結果の型はです `Expr<'T>` 。ここで、型パラメーターには、F # コンパイラの型推論アルゴリズムによって決定される式の型があります。 型情報を含まないコード引用符を使用する場合、引用符で囲まれた式の型は非ジェネリック型の [Expr](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-fsharpexpr.html)になります。 型指定されたクラスで [Raw](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-fsharpexpr-1.html#Raw) プロパティを呼び出して、 `Expr` 型指定のないオブジェクトを取得でき `Expr` ます。
 
 クラスでは、 `Expr` 引用符で囲まれた式を使用せずに、プログラムによって F # 式オブジェクトを生成できるようにする静的メソッドがいくつかあります。
 
@@ -43,7 +40,7 @@ F # の引用符を評価するには、 [f # の引用符](https://github.com/f
 
 ## <a name="expr-type"></a>Expr 型
 
-型のインスタンスは `Expr` F # の式を表します。 ジェネリック型と非ジェネリック型の両方 `Expr` が、F # ライブラリのドキュメントに記載されています。 詳細については、「 [Fsharp.core 名前空間](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.quotations-namespace-%5bfsharp%5d)と[引用クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/quotations.expr-class-%5bfsharp%5d)」を参照してください。
+型のインスタンスは `Expr` F # の式を表します。 ジェネリック型と非ジェネリック型の両方 `Expr` が、F # ライブラリのドキュメントに記載されています。 詳細については、「 [Fsharp.core 名前空間](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations.html) と [引用クラス](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-fsharpexpr.html)」を参照してください。
 
 ## <a name="splicing-operators"></a>スプライス演算子
 
@@ -63,7 +60,7 @@ F # の引用符を評価するには、 [f # の引用符](https://github.com/f
 
 ### <a name="description"></a>説明
 
-次の例では、コード引用符を使用して F # コードを式オブジェクトに配置し、式を表す F # コードを出力する方法を示します。 `println` `print` F # expression オブジェクト (型 `Expr` ) をわかりやすい形式で表示する再帰関数を含む関数が定義されています。 [Fsharp.core](https://msdn.microsoft.com/library/093944a9-c752-403a-8983-5fcd5dbf92a4)および[fsharp.core](https://msdn.microsoft.com/library/d2434a6e-ae7b-4f3d-b567-c162938bc9cd)モジュールには、式オブジェクトの分析に使用できるアクティブなパターンがいくつかありますが、これらはいくつか存在します。 この例には、F # 式に出現する可能性のあるすべてのパターンが含まれているわけではありません。 認識されていないパターンは、ワイルドカードパターン () との一致をトリガーし、メソッドを使用して `_` 表示します。このメソッドを使用すると、 `ToString` `Expr` 一致式に追加するアクティブパターンを知ることができます。
+次の例では、コード引用符を使用して F # コードを式オブジェクトに配置し、式を表す F # コードを出力する方法を示します。 `println` `print` F # expression オブジェクト (型 `Expr` ) をわかりやすい形式で表示する再帰関数を含む関数が定義されています。 [Fsharp.core](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-patternsmodule.html)および[fsharp.core](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-derivedpatternsmodule.html)モジュールには、式オブジェクトの分析に使用できるアクティブなパターンがいくつかあります。 この例には、F # 式に出現する可能性のあるすべてのパターンが含まれているわけではありません。 認識されていないパターンは、ワイルドカードパターン () との一致をトリガーし、メソッドを使用して `_` 表示します。このメソッドを使用すると、 `ToString` `Expr` 一致式に追加するアクティブパターンを知ることができます。
 
 ### <a name="code"></a>コード
 
@@ -81,9 +78,9 @@ let f = fun (x:System.Int32) -> x + 10 in f 10
 
 ### <a name="description"></a>説明
 
-また、 [Exprshape モジュール](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de)内の3つのアクティブパターンを使用して、アクティブなパターンが少数の式ツリーを走査することもできます。 これらのアクティブなパターンは、ツリーを走査するときに、ほとんどのノードの情報をすべて必要としない場合に便利です。 これらのパターンを使用すると、F # の式は、次の3つのパターンのいずれかと一致します。式が `ShapeVar` 変数である場合、 `ShapeLambda` 式がラムダ式である場合、または `ShapeCombination` 式が他のものである場合は。 前のコード例のようにアクティブなパターンを使用して式ツリーを走査する場合は、使用可能な F # 式の型をすべて処理するために、さらに多くのパターンを使用する必要があります。また、コードがより複雑になります。 詳細については、「 [Exprshape. の&#124;&#124;](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d)、「スナップショット」を参照してください。また、このパターンを使用します。
+また、 [Exprshape モジュール](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-exprshapemodule.html) 内の3つのアクティブパターンを使用して、アクティブなパターンが少数の式ツリーを走査することもできます。 これらのアクティブなパターンは、ツリーを走査するときに、ほとんどのノードの情報をすべて必要としない場合に便利です。 これらのパターンを使用すると、F # の式は、次の3つのパターンのいずれかと一致します。式が `ShapeVar` 変数である場合、 `ShapeLambda` 式がラムダ式である場合、または `ShapeCombination` 式が他のものである場合は。 前のコード例のようにアクティブなパターンを使用して式ツリーを走査する場合は、使用可能な F # 式の型をすべて処理するために、さらに多くのパターンを使用する必要があります。また、コードがより複雑になります。 詳細については、「 [Exprshape. の&#124;&#124;](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-exprshapemodule.html#(%20|ShapeVar|ShapeLambda|ShapeCombination|%20))、「スナップショット」を参照してください。また、このパターンを使用します。
 
-次のコード例は、より複雑なトラバーサルの基礎として使用できます。 このコードでは、関数呼び出しを含む式に対して式ツリーが作成され `add` ます。 特定の[呼び出し](https://msdn.microsoft.com/library/05a77b21-20fe-4b9a-8e07-aa999538198d)のアクティブパターンは、 `add` 式ツリー内のへの呼び出しを検出するために使用されます。 このアクティブパターンは、呼び出しの引数を値に割り当て `exprList` ます。 この場合は、2つしか存在しないため、これらの関数は引数に対して再帰的に呼び出されます。 結果は、 `mul` スプライス演算子 () を使用したへの呼び出しを表すコード引用符に挿入され `%%` ます。 `println`前の例の関数は、結果を表示するために使用されます。
+次のコード例は、より複雑なトラバーサルの基礎として使用できます。 このコードでは、関数呼び出しを含む式に対して式ツリーが作成され `add` ます。 特定の [呼び出し](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-derivedpatternsmodule.html#(%20|SpecificCall|_|%20)) のアクティブパターンは、 `add` 式ツリー内のへの呼び出しを検出するために使用されます。 このアクティブパターンは、呼び出しの引数を値に割り当て `exprList` ます。 この場合は、2つしか存在しないため、これらの関数は引数に対して再帰的に呼び出されます。 結果は、 `mul` スプライス演算子 () を使用したへの呼び出しを表すコード引用符に挿入され `%%` ます。 `println`前の例の関数は、結果を表示するために使用されます。
 
 もう一方のアクティブパターン分岐のコードは同じ式ツリーを再生成するだけなので、結果として得られる式の変更はからに変更されるだけです `add` `mul` 。
 
