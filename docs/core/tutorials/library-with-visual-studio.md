@@ -1,29 +1,29 @@
 ---
 title: Visual Studio を使用して .NET Standard クラス ライブラリを作成する
 description: Visual Studio を使用して .NET Standard クラス ライブラリを作成する方法について説明します。
-ms.date: 06/08/2020
+ms.date: 08/07/2020
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 69259b1d47a8e30945c578db10c6d697c81fa261
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.custom: vs-dotnet,contperfq1
+ms.openlocfilehash: 595e93d8d8d22478c6770ddd4f70a0214653f5b9
+ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164405"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88187948"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>チュートリアル: Visual Studio を使用して .NET Standard ライブラリを作成する
 
-このチュートリアルでは、1 つの文字列処理メソッドを含む簡単なユーティリティ ライブラリを作成します。 それを[拡張メソッド](../../csharp/programming-guide/classes-and-structs/extension-methods.md)として実装し、<xref:System.String> クラスのメンバーと同じように呼び出すことができるようにします。
+このチュートリアルでは、1 つの文字列処理メソッドを含むシンプルなクラス ライブラリを作成します。
 
-"*クラス ライブラリ*" は、アプリケーションから呼び出される型とメソッドを定義します。 .NET Standard 2.0 をターゲットとするクラス ライブラリでは、お使いのライブラリを、そのバージョンの .NET Standard をサポートする任意の .NET 実装によって呼び出すことができます。 クラス ライブラリが完成したら、サードパーティ製のコンポーネントとして配布するか、1 つ以上のアプリケーションを含むバンドルされたコンポーネントとして配布することができます。
+"*クラス ライブラリ*" は、アプリケーションから呼び出される型とメソッドを定義します。 .NET Standard 2.0 をターゲットとするクラス ライブラリでは、お使いのライブラリを、そのバージョンの .NET Standard をサポートする任意の .NET 実装によって呼び出すことができます。
+
+自分のクラス ライブラリが完成したら、NuGet パッケージとして配布するか、それを使用するアプリケーションにコンポーネントとしてバンドルして配布することができます。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
 - **.NET Core クロスプラットフォーム開発**ワークロードがインストールされている [Visual Studio 2019 バージョン 16.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 このワークロードを選択すると、.NET Core 3.1 SDK が自動的にインストールされます。
-
-  詳細については、記事「[.NET Core SDK をインストールする](../install/sdk.md?pivots=os-windows)」の「[Visual Studio を使用してインストールする](../install/sdk.md?pivots=os-windows#install-with-visual-studio)」のセクションを参照してください。
 
 ## <a name="create-a-solution"></a>ソリューションを作成する
 
@@ -67,6 +67,8 @@ ms.locfileid: "87164405"
    :::code language="vb" source="./snippets/library-with-visual-studio/vb/StringLibrary/Class1.vb":::
 
    クラス ライブラリ `UtilityLibraries.StringLibrary` には、`StartsWithUpper` という名前のメソッドが含まれています。 このメソッドによって、現在の文字列のインスタンスが大文字で始まるかどうかを示す <xref:System.Boolean> 値が返されます。 Unicode 規格では、大文字と小文字が区別されます。 <xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> メソッドは文字が大文字の場合に `true` を返します。
+
+   `StartsWithUpper` は、<xref:System.String> クラスのメンバーであるかのように呼び出すことができる[拡張メソッド](../../csharp/programming-guide/classes-and-structs/extension-methods.md)として実装されます。
 
 1. メニュー バーで、 **[ビルド]**  >  **[ソリューションのビルド]** を選択し、プロジェクトがエラーなくコンパイルされることを確認します。
 
@@ -126,7 +128,17 @@ ms.locfileid: "87164405"
 
 ## <a name="next-steps"></a>次の手順
 
-このチュートリアルでは、ソリューションを作成し、ライブラリ プロジェクトを追加し、ライブラリを使用するコンソール アプリ プロジェクトを追加しました。 次のチュートリアルでは、ソリューションに単体テスト プロジェクトを追加します。
+このチュートリアルでは、クラス ライブラリを作成しました。 次のチュートリアルでは、そのクラス ライブラリを単体テストする方法について説明します。
 
 > [!div class="nextstepaction"]
-> [Visual Studio を使用して .NET Core で .NET Standard ライブラリをテストする](testing-library-with-visual-studio.md)
+> [Visual Studio を使用して .NET Standard ライブラリを単体テストする](testing-library-with-visual-studio.md)
+
+または、自動化された単体テストをスキップし、NuGet パッケージを作成してそのライブラリを共有する方法を学習することもできます。
+
+> [!div class="nextstepaction"]
+> [Visual Studio を使用した、パッケージの作成と公開](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
+
+または、コンソール アプリを公開する方法を学習することもできます。 このチュートリアルで作成したソリューションからそのコンソール アプリを発行すると、それに付属するクラス ライブラリは *.dll* ファイルとなります。
+
+> [!div class="nextstepaction"]
+> [Visual Studio を使用して .NET Core コンソール アプリケーションを発行する](publishing-with-visual-studio.md)

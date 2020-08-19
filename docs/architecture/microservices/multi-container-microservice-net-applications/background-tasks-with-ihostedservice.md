@@ -1,17 +1,17 @@
 ---
 title: IHostedService と BackgroundService クラスを使ってマイクロサービスのバックグラウンド タスクを実装する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービスの .NET Core でバックグラウンド タスクを実装する IHostedService と BackgroundService を使用する新しいオプションについて理解します。
-ms.date: 01/30/2020
-ms.openlocfilehash: fd26d0444312d3525ad95b2273f28a6ceaa27911
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 08/14/2020
+ms.openlocfilehash: 4ab215f2196cd2e66b116465c3a582a9846c8066
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988337"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267998"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>IHostedService と BackgroundService クラスを使ってマイクロサービスのバックグラウンド タスクを実装する
 
-バックグラウンド タスクとスケジュールされたジョブは、最終的にはマイクロサービス ベースのアプリケーションまたはあらゆる種類のアプリケーションで、実装する必要がある可能性があるものです。 マイクロサービス アーキテクチャを使用した場合の違いは、これらのバックグラウンド タスクをホストするために単一のマイクロサービスのプロセス/コンテナーを実装できるため、必要に応じてスケールダウンまたはスケールアップしたり、そのマイクロサービスのプロセス/コンテナーの単一のインスタンスを確実に実行させたりすることができることです。
+バックグラウンド タスクとスケジュールされたジョブは、マイクロサービス アーキテクチャのパターンに従っているかどうかにかかわらず、すべてのアプリケーションで使用する必要があります。 マイクロサービス アーキテクチャを使用する場合との違いは、自分のニーズに応じてスケールアップおよびスケールダウンできるように、バックグラウンド タスクをホスト用の別のプロセスまたはコンテナーに実装することです。
 
 これらの種類のタスクは、ホスト、アプリケーション、マイクロサービス内でホストするサービス、ロジックであるため、全体的な観点から、.NET Core では*ホステッド サービス*と呼びます。 このケースでは、ホステッド サービスは、単にバックグラウンド タスク ロジックを持つクラスを意味していることに注意してください。
 
@@ -68,29 +68,7 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 
 ## <a name="the-ihostedservice-interface"></a>IHostedService インターフェイス
 
-`IHostedService` を登録すると、アプリケーションの起動時と停止時にそれぞれ、.NET Core によって `IHostedService` 型の `StartAsync()` メソッドと `StopAsync()` メソッドが呼び出されます。 具体的には、開始は、サーバーが起動して `IApplicationLifetime.ApplicationStarted` がトリガーされた後に呼び出されます。
-
-.NET Core で定義されたように、`IHostedService` は次のようになります。
-
-```csharp
-namespace Microsoft.Extensions.Hosting
-{
-    //
-    // Summary:
-    //     Defines methods for objects that are managed by the host.
-    public interface IHostedService
-    {
-        //
-        // Summary:
-        // Triggered when the application host is ready to start the service.
-        Task StartAsync(CancellationToken cancellationToken);
-        //
-        // Summary:
-        // Triggered when the application host is performing a graceful shutdown.
-        Task StopAsync(CancellationToken cancellationToken);
-    }
-}
-```
+`IHostedService` を登録すると、アプリケーションの起動時と停止時にそれぞれ、.NET Core によって `IHostedService` 型の `StartAsync()` メソッドと `StopAsync()` メソッドが呼び出されます。 詳細については、「[IHostedService インターフェイス](https://docs.microsoft.com/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-3.1&tabs=visual-studio#ihostedservice-interface)」を参照してください。
 
 ご想像のとおり、以前に示したように、IHostedService の複数の実装を作成し、`ConfigureService()` メソッドでそれらを DI コンテナーに登録することができます。 これらすべてのホステッド サービスが、アプリケーション/マイクロサービスと共に開始および停止されます。
 
@@ -210,7 +188,7 @@ eShopOnContainers のこの特定のケースでは、特定の状態を持つ�
 
 もちろん、代わりに他の任意のビジネス バックグラウンド タスクを実行することもできます。
 
-既定では、キャンセル トークンは 5 秒のタイムアウトで設定されていますが、この値は、`IWebHostBuilder` の `UseShutdownTimeout` 拡張機能を使用して `WebHost` をビルドする際に変更することができます。 これは、サービスが 5 秒以内にキャンセルされることが想定されていて、そうでない場合は突然強制終了される可能性が高くなることを意味します。
+既定では、キャンセル トークンには 5 秒のタイムアウトが設定されていますが、この値は、`IWebHostBuilder` の `UseShutdownTimeout` 拡張機能を使用し、お使いの `WebHost` をビルドする際に変更することができます。 これは、サービスが 5 秒以内にキャンセルされることが想定されていて、そうでない場合は突然強制終了される可能性が高くなることを意味します。
 
 次のコードでは、その時間を 10 秒に変更します。
 
@@ -236,7 +214,7 @@ ASP.NET Core `WebHost` または .NET Core `Host` を展開する方法が最終
 
 ただし、アプリ プールに展開された `WebHost` に対しても、適用可能なアプリケーションのメモリ内キャッシュの再作成またはフラッシュのようなシナリオがあります。
 
-`IHostedService` インターフェイスには、(.NET Core 2.0 以降のバージョンの) ASP.NET Core Web アプリケーションで、または (`IHost` を使用して .NET Core 2.1 で開始する) 任意のプロセス/ホストでバックグラウンド タスクを開始する便利な方法が用意されています。 その主な利点は、ホスト自体がシャットダウンするときに、バックグラウンド タスクのコードをクリーンアップするため、適切にキャンセルする機会が得られることです。
+`IHostedService` インターフェイスには、(.NET Core 2.0 以降のバージョンの) ASP.NET Core Web アプリケーションで、または (`IHost` を使用して .NET Core 2.1 で開始する) 任意のプロセス/ホストでバックグラウンド タスクを開始する便利な方法が用意されています。 その主な利点は、ホスト自体がシャットダウンされるときに、正常なキャンセルの機会が得られ、お使いのバックグラウンド タスクのコードがクリーンアップされることです。
 
 ## <a name="additional-resources"></a>その他の技術情報
 

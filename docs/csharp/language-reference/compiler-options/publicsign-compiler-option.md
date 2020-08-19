@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -publicsign compiler option [C#]
 - publicsign compiler option [C#]
 - /publicsign compiler option [C#]
-ms.openlocfilehash: de7d9c98b0f279b52bc93711c5b986a2b2e57215
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2655e0216a412053e052ab2ec2fcc8c68ea4f968
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "61662531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88268050"
 ---
 # <a name="-publicsign-c-compiler-options"></a>-publicsign (C# コンパイラ オプション)
 
@@ -36,12 +36,15 @@ ms.locfileid: "61662531"
 
 "フェイク署名" または "OSS 署名" と呼ばれることもあり、公開署名には出力アセンブリ内の公開キーが含まれ、"署名済み" フラグは設定されますが、実際には秘密キーによるアセンブリの署名は行われません。 これは、リリースされている "完全に署名された" アセンブリと互換性を持ちながら、アセンブリの署名に使われた秘密キーへはアクセスできない、そのようなアセンブリをビルドするオープン ソース プロジェクトに役立ちます。 アセンブリが完全に署名されているかどうかをコンシューマーが実際に確認する必要があることはほとんどないので、このようなパブリックにビルドされたアセンブリは、完全に署名されたアセンブリが使われるほとんどすべてのシナリオにおいて使用可能です。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-a-csproj-file"></a>csproj ファイルでこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ]** ページを開きます。
-1. **[遅延署名のみ]** プロパティを変更します。
+プロジェクトの .csproj ファイルを開き、次の要素を追加します。
 
-## <a name="see-also"></a>参照
+```xml
+<PublicSign>true</PublicSign>
+```
+
+## <a name="see-also"></a>関連項目
 
 - [C# コンパイラの -delaysign オプション](delaysign-compiler-option.md)
 - [C# コンパイラの -keyfile オプション](keyfile-compiler-option.md)

@@ -4,12 +4,12 @@ description: .NET Core 機能をサポートおよび拡張する、インスト
 author: mlacouture
 ms.date: 02/13/2020
 ms.custom: mvc
-ms.openlocfilehash: c0224a1cc6cbb9ae6fa88e5f869c47a1e84289e0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f7bfa660f7521adf4950d5bbdd59628bb88cca4d
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77451526"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557933"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core の追加ツールの概要
 
@@ -24,6 +24,8 @@ ms.locfileid: "77451526"
 [dotnet-カウンター](../diagnostics/dotnet-counters.md)は、第 1 レベルの正常性監視とパフォーマンス調査のためのパフォーマンス監視ツールです。
 
 [dotnet-dump](../diagnostics/dotnet-dump.md) は、ネイティブ デバッガーを使用せずに Windows および Linux のコア ダンプを収集して分析する方法です。
+
+[dotnet-gcdump](../diagnostics/dotnet-gcdump.md) は、ライブ .NET プロセスの GC (ガベージコレクター) ダンプを収集する手段を提供します。
 
 [dotnet-trace](../diagnostics/dotnet-trace.md) では、自分のアプリからプロファイル データを収集できます。これは、アプリの実行速度が低下する原因を特定する必要があるシナリオで役立ちます。
 

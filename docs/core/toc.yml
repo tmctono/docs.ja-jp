@@ -300,6 +300,8 @@ items:
             href: diagnostics/dotnet-counters.md
           - name: dotnet-ダンプ
             href: diagnostics/dotnet-dump.md
+          - name: dotnet-gcdump
+            href: diagnostics/dotnet-gcdump.md
           - name: dotnet-トレース
             href: diagnostics/dotnet-trace.md
       - name: .NET Core 診断チュートリアル

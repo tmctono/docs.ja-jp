@@ -6,12 +6,12 @@ ms.date: 01/17/2020
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: df44786dfd0a384ae2498a94d14b029612450fee
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: df7acc788943e9655dbbb03ffaaa88ff22b81ad2
+ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475477"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88187907"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework のバージョンおよび依存関係
 
@@ -31,8 +31,9 @@ CLR は独自のバージョン番号で識別されます。 .NET Framework の
 
 次の表に、.NET Framework のバージョン履歴を要約し、各バージョンと Visual Studio、Windows、および Windows Server との関係を示します。 Visual Studio ではマルチターゲット機能がサポートされているため、記載されている .NET Framework のバージョンに限定される必要はありません。
 
-- チェック マーク アイコン ✔️ は .NET Framework がインストールされている OS バージョンを示しますが、[コントロール パネル](../install/dotnet-35-windows-10.md) (Windows の場合) またはサーバー マネージャー (Windows Server の場合) を使って有効にする必要があります。
+- チェック マーク アイコン ✔️ は、.NET Framework が既定でインストールされている OS バージョンを示します。
 - プラス記号アイコン ➕ は、.NET Framework がインストールされていないがインストールできる OS バージョンを示します。
+- アスタリスク **\*** は、[[コントロール パネル]](../install/dotnet-35-windows-10.md) で、またはサーバー マネージャーを介した Windows Server で有効にする必要がある (プレインストール済みかどうかには関係のない) .NET Framework の OS バージョンを示します。
 
 | | |
 | - | - |
@@ -261,7 +262,7 @@ CLR は独自のバージョン番号で識別されます。 .NET Framework の
 
 |||
 |-|-|
-|**CLR バージョン**|1|
+|**CLR バージョン**|1.0|
 |**Visual Studio バージョンに含まれる**|Visual Studio .NET|
 |**Windows バージョン**|N/A|
 |**Windows Server バージョン**|N/A|

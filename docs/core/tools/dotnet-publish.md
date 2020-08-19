@@ -2,12 +2,12 @@
 title: dotnet publish コマンド
 description: dotnet publish コマンドを実行すると、.NET Core プロジェクトまたはソリューションをディレクトリに発行できます。
 ms.date: 02/24/2020
-ms.openlocfilehash: 59fdbfa875dad13963ae198acc6a31b537279dfe
-ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
+ms.openlocfilehash: 4ff49452e4d941b3e06ad511507b1dc429ab459f
+ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87251180"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88187972"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -51,7 +51,9 @@ dotnet publish -h|--help
 
 `dotnet publish` コマンドは、`Publish` ターゲットを呼び出す MSBuild を呼び出します。 `dotnet publish` に渡されたすべてのパラメーターが MSBuild に渡されます。 `-c` と `-o` のパラメーターは、それぞれ MSBuild の `Configuration` と `PublishDir` にマップします。
 
-`dotnet publish` コマンドは、プロパティを設定する `-p` やロガーを定義する `-l` などの MSBuild オプションも受け入れます。 たとえば、`-p:<NAME>=<VALUE>` という形式を使用して、MSBuild プロパティを設定できます。 また、 *.pubxml* ファイルを参照することで、公開関連のプロパティを設定することもできます。次に例を示します。
+`dotnet publish` コマンドは、プロパティを設定する `-p` やロガーを定義する `-l` などの MSBuild オプションも受け入れます。 たとえば、`-p:<NAME>=<VALUE>` という形式を使用して、MSBuild プロパティを設定できます。
+
+また、(.NET Core 3.1 SDK 以降で入手可能な) *.pubxml* ファイルを参照することで、公開関連のプロパティを設定することもできます。 次に例を示します。
 
 ```dotnetcli
 dotnet publish -p:PublishProfile=FolderProfile
