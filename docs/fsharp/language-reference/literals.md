@@ -1,20 +1,17 @@
 ---
 title: リテラル
 description: 'F # プログラミング言語のリテラル型について説明します。'
-ms.date: 06/28/2019
-ms.openlocfilehash: 98d609a1cf0beb00c0dd4d45ea343aaa2280b62e
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/15/2020
+ms.openlocfilehash: 15f73db3c36f7c60ab1eeba96c63a28ebc6d7f01
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855024"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559155"
 ---
 # <a name="literals"></a>リテラル
 
 この記事では、F # でリテラルの型を指定する方法を示す表を示します。
-
-> [!NOTE]
-> F # の docs.microsoft.com API リファレンスが完全ではありません。 壊れたリンクが見つかった場合は、代わりに[F # コアライブラリのドキュメント](https://fsharp.github.io/fsharp-core-docs/)を参照してください。
 
 ## <a name="literal-types"></a>リテラル型
 
@@ -39,14 +36,14 @@ F# のリテラル型を次の表に示します。 16 進表記で桁を表す�
 |bigint|64 ビット表現に制限されない整数|I|`9999999999999999999999999999I`|
 |decimal|固定小数点数または有理数として表現される小数|M または m|`0.7833M` または `0.7833m`|
 |Char|Unicode 文字|なし|`'a'` または `'\u0061'`|
-|String|Unicode 文字列|なし|`"text\n"`<br /><br />or<br /><br />`@"c:\filename"`<br /><br />or<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />or<br /><br />`"string1" + "string2"`<br /><br />「[文字列](Strings.md)」も参照してください。|
+|String|Unicode 文字列|なし|`"text\n"`<br /><br />or<br /><br />`@"c:\filename"`<br /><br />or<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />or<br /><br />`"string1" + "string2"`<br /><br />「 [文字列](Strings.md)」も参照してください。|
 |byte|ASCII 文字|B|`'a'B`|
 |byte[]|ASCII 文字列|B|`"text"B`|
-|String または byte[]|逐語的文字列|@ プリフィックス|`@"\\server\share"`対応<br /><br />`@"\\server\share"B`ASCII|
+|String または byte[]|逐語的文字列|@ プリフィックス|`@"\\server\share"` 対応<br /><br />`@"\\server\share"B` ASCII|
 
 ## <a name="named-literals"></a>名前付きリテラル
 
-定数として使用する値は、[リテラル](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285)属性でマークできます。 この属性には、値が定数としてコンパイルされる効果があります。
+定数として使用する値は、 [リテラル](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-literalattribute.html) 属性でマークできます。 この属性には、値が定数としてコンパイルされる効果があります。
 
 パターン マッチ式では、小文字で始まる識別子は、リテラルとしてではなく常にバインドされる変数として扱われます。そのため、一般的に、リテラルを定義する場合は先頭大文字を使用する必要があります。
 
@@ -67,7 +64,7 @@ let Literal2 = 1 ||| 64
 let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>注釈
 
 Unicode 文字列には、を使用して指定できる明示的なエンコーディングを含めることができます。それに32は、の後に `\u` 16 ビットの16進コード (0000-FFFF)、またはを使用して指定することができ、その `\U` 後に unicode コードポイント (00000000-0010FFFF) を表す32ビットの16進コードを指定できます
 
@@ -93,7 +90,3 @@ let valueAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
 
 let exampleSSN = 123_456_7890
 ```
-
-## <a name="see-also"></a>関連項目
-
-- [LiteralAttribute クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.literalattribute-class-%5bfsharp%5d)

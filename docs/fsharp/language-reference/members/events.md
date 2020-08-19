@@ -1,20 +1,17 @@
 ---
 title: イベント
 description: 'F # イベントを使用して関数呼び出しをユーザーアクションに関連付ける方法について説明します。これは GUI プログラミングで重要です。'
-ms.date: 05/16/2016
-ms.openlocfilehash: 682686ba58d0f7a56e7da2585e6507ccd0156a44
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/15/2020
+ms.openlocfilehash: 42783255412d56c6ff6729694c31d0868ed99633
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854933"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559194"
 ---
-# <a name="events"></a>イベント
+# <a name="events"></a>events
 
 イベントを使用すると、関数呼び出しをユーザーによる操作に関連付けることができます。イベントは、GUI プログラミングの重要な要素です。 イベントは、アプリケーションまたはオペレーティング システムによってトリガーすることもできます。
-
-> [!NOTE]
-> F # の docs.microsoft.com API リファレンスが完全ではありません。 壊れたリンクが見つかった場合は、代わりに[F # コアライブラリのドキュメント](https://fsharp.github.io/fsharp-core-docs/)を参照してください。
 
 ## <a name="handling-events"></a>イベントの処理
 
@@ -28,9 +25,9 @@ Windows フォームや WPF (Windows Presentation Foundation) などの GUI ラ�
 
 ## <a name="creating-custom-events"></a>カスタム イベントの作成
 
-F # イベントは、 [ievent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862)インターフェイスを実装する f #[イベント](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9)クラスによって表されます。 `IEvent`は、他の2つのインターフェイスの機能と IDelegateEvent を組み合わせたインターフェイスです `System.IObservable<'T>` 。 [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a) したがって、`Event` は、他の言語のデリゲートに相当する機能と、`IObservable` からの追加機能を備えていることになります。つまり、F# のイベントでは、イベントのフィルター処理がサポートされるほか、F# のファースト クラスの関数とラムダ式をイベント ハンドラーとして使用できます。 この機能は、[イベントモジュール](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7)に用意されています。
+F # イベントは、 [ievent](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-ievent-1.html)インターフェイスを実装する f #[イベント](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpevent-1.html)の種類によって表されます。 `IEvent`は、他の2つのインターフェイスの機能と IDelegateEvent を組み合わせたインターフェイスです `System.IObservable<'T>` 。 [IDelegateEvent](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-idelegateevent-1.html) したがって、`Event` は、他の言語のデリゲートに相当する機能と、`IObservable` からの追加機能を備えていることになります。つまり、F# のイベントでは、イベントのフィルター処理がサポートされるほか、F# のファースト クラスの関数とラムダ式をイベント ハンドラーとして使用できます。 この機能は、 [イベントモジュール](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-eventmodule.html)に用意されています。
 
-他の任意の .NET Framework イベントと同様に動作するイベントをクラスに作成するには、クラスのフィールドとして `let` を定義する `Event` 束縛をクラスに追加します。 目的のイベント引数の型を型引数として指定することも、指定せずにコンパイラによって適切な型を推論することもできます。 CLI イベントとしてイベントを公開するイベント メンバーも定義する必要があります。 このメンバーには[Clievent](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333)属性が必要です。 これはプロパティのように宣言され、その実装はイベントの[Publish](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e)プロパティの呼び出しにすぎません。 クラスのユーザーは、公開されたイベントの `Add` メソッドを使用してハンドラーを追加できます。 `Add` メソッドの引数はラムダ式にすることができます。 イベントの `Trigger` プロパティを使用すると、イベントを発生させて、引数をハンドラー関数に渡すことができます。 これを次のコード例に示します。 この例では、イベントの型引数はタプルとして推論され、ラムダ式の引数を表します。
+他の任意の .NET Framework イベントと同様に動作するイベントをクラスに作成するには、クラスのフィールドとして `let` を定義する `Event` 束縛をクラスに追加します。 目的のイベント引数の型を型引数として指定することも、指定せずにコンパイラによって適切な型を推論することもできます。 CLI イベントとしてイベントを公開するイベント メンバーも定義する必要があります。 このメンバーには [Clievent](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-clieventattribute.html) 属性が必要です。 これはプロパティのように宣言され、その実装はイベントの [Publish](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpevent-1.html#Publish) プロパティの呼び出しにすぎません。 クラスのユーザーは、公開されたイベントの `Add` メソッドを使用してハンドラーを追加できます。 `Add` メソッドの引数はラムダ式にすることができます。 イベントの `Trigger` プロパティを使用すると、イベントを発生させて、引数をハンドラー関数に渡すことができます。 これを次のコード例に示します。 この例では、イベントの型引数はタプルとして推論され、ラムダ式の引数を表します。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3605.fs)]
 
@@ -53,13 +50,13 @@ Given a value: Event occurred.
 
 ## <a name="processing-event-streams"></a>イベント ストリームの処理
 
-イベントのイベントハンドラーを追加するだけではなく、イベント[Event.add](https://msdn.microsoft.com/library/10670d3b-8d47-4f6e-b8df-ebc6f64ef4fd) `Event` のストリームを高度にカスタマイズされた方法で処理することができます。 これを行うには、一連の関数呼び出しの最初の値として、イベントと共に前方パイプ (`|>`) を使用します。`Event` モジュールは、以降の関数呼び出しとして機能します。
+イベントのイベントハンドラーを追加するだけではなく、イベント[Event.add](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-eventmodule.html#add) `Event` のストリームを高度にカスタマイズされた方法で処理することができます。 これを行うには、一連の関数呼び出しの最初の値として、イベントと共に前方パイプ (`|>`) を使用します。`Event` モジュールは、以降の関数呼び出しとして機能します。
 
 特定の条件でのみ呼び出されるハンドラーを持つイベントを設定する方法を次のコード例に示します。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3604.fs)]
 
-監視可能な[モジュール](https://msdn.microsoft.com/library/16b8610b-b30a-4df7-aa99-d9d352276227)には、観測可能なオブジェクトを操作する類似した関数が含まれています。 観測可能なオブジェクトはイベントに似ていますが、オブジェクト自体がサブスクライブされている場合にのみ、イベントをアクティブにサブスクライブします。
+監視可能な [モジュール](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-observablemodule.html) には、観測可能なオブジェクトを操作する類似した関数が含まれています。 観測可能なオブジェクトはイベントに似ていますが、オブジェクト自体がサブスクライブされている場合にのみ、イベントをアクティブにサブスクライブします。
 
 ## <a name="implementing-an-interface-event"></a>インターフェイス イベントの実装
 
@@ -176,9 +173,6 @@ Application.Run(appForm)
 
 ## <a name="see-also"></a>関連項目
 
-- [メンバー](index.md)
+- [[メンバー]](index.md)
 - [イベントの処理と発生](../../../standard/events/index.md)
 - [ラムダ式: `fun` キーワード](../functions/lambda-expressions-the-fun-keyword.md)
-- [コントロール. イベントモジュール](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
-- [Control. Event&#60; t&#62; クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
-- [Control. イベント&#60; ' Delegate, ' Args&#62; クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)
