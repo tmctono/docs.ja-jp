@@ -2,12 +2,12 @@
 title: コレクション型
 description: 'F # コレクション型と、それらがコレクション型 .NET とどのように異なるかについて説明します。'
 ms.date: 08/14/2020
-ms.openlocfilehash: 197ba754d632051b5a0bf9c8364d45a1fb932f48
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 394f6bbaf58e7e8607abc3a0c20bbc2b1c9c3c8d
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267283"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656906"
 ---
 # <a name="f-collection-types"></a>F# コレクション型
 
@@ -21,11 +21,11 @@ F # のコレクション型を次の表に示します。
 
 |Type|説明|関連リンク|
 |----|-----------|-------------|
-|[一覧](https://msdn.microsoft.com/library/c627b668-477b-4409-91ed-06d7f1b3e4a7)|同じ型の順序付けられ、変更できない一連の要素。 リンクリストとして実装されます。|[リスト](lists.md)<br /><br />[List モジュール](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)|
-|[Array](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|同じ型の連続するデータ要素の、固定サイズの、0から始まる変更可能なコレクション。|[配列](arrays.md)<br /><br />[Array モジュール](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2D モジュール](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Array3D モジュール](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
-|[seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|すべてが1つの型である、要素の論理系列。 シーケンスは、大量の順序付けられたデータのコレクションがあり、必ずしもすべての要素を使用するとは限らない場合に特に便利です。 個々のシーケンス要素は必要に応じてのみ計算されるので、すべての要素が使用されていない場合、シーケンスはリストよりもパフォーマンスが向上します。 シーケンスは、のエイリアスである型によって表され `seq<'T>` `IEnumerable<T>` ます。 したがって、を実装するすべての .NET Framework 型を `System.Collections.Generic.IEnumerable<'T>` シーケンスとして使用できます。|[シーケンス](sequences.md)<br /><br />[Seq モジュール](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
-|[Map](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|要素の変更できないディクショナリ。 要素は、キーによってアクセスされます。|[マップモジュール](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
-|[SET](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|バイナリツリーに基づく変更できないセット。比較は F # の構造的な比較関数であり、 `System.IComparable` キー値に対するインターフェイスの実装を使用する可能性があります。|[モジュールの設定](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
+|[一覧](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharplist-1.html)|同じ型の順序付けられ、変更できない一連の要素。 リンクリストとして実装されます。|[リスト](lists.md)<br /><br />[List モジュール](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html)|
+|[Array](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-array-1.html)|同じ型の連続するデータ要素の、固定サイズの、0から始まる変更可能なコレクション。|[配列](arrays.md)<br /><br />[Array モジュール](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html)<br /><br />[Array2D モジュール](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array2dmodule.html)<br /><br />[Array3D モジュール](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array3dmodule.html)|
+|[seq](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seq-1.html)|すべてが1つの型である、要素の論理系列。 シーケンスは、大量の順序付けられたデータのコレクションがあり、必ずしもすべての要素を使用するとは限らない場合に特に便利です。 個々のシーケンス要素は必要に応じてのみ計算されるので、すべての要素が使用されていない場合、シーケンスはリストよりもパフォーマンスが向上します。 シーケンスは、のエイリアスである型によって表され `seq<'T>` `IEnumerable<T>` ます。 したがって、を実装するすべての .NET Framework 型を `System.Collections.Generic.IEnumerable<'T>` シーケンスとして使用できます。|[シーケンス](sequences.md)<br /><br />[Seq モジュール](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html)|
+|[Map](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharpmap-2.html)|要素の変更できないディクショナリ。 要素は、キーによってアクセスされます。|[マップモジュール](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-mapmodule.html)|
+|[SET](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharpset-1.html)|バイナリツリーに基づく変更できないセット。比較は F # の構造的な比較関数であり、 `System.IComparable` キー値に対するインターフェイスの実装を使用する可能性があります。|[モジュールの設定](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-setmodule.html)|
 
 ### <a name="table-of-functions"></a>関数の表
 
@@ -93,7 +93,7 @@ F # のコレクション型を次の表に示します。
 |max|O (N)|O (N)|O (N)|-|-|[Max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce)演算子を使用した場合と比較して、コレクション内の最大の要素を返します。|
 |maxBy|O (N)|O (N)|O (N)|-|-|関数の結果に対して [max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) を使用することにより、コレクション内の最大の要素を返します。|
 |Set.maxelement|-|-|-|-|O (log (N))|セットで使用されている順序に従って、セット内の最大の要素を返します。|
-|分|O (N)|O (N)|O (N)|-|-|[Min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed)演算子を使用した場合と比較して、コレクション内の最小の要素を返します。|
+|min|O (N)|O (N)|O (N)|-|-|[Min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed)演算子を使用した場合と比較して、コレクション内の最小の要素を返します。|
 |Array.minby|O (N)|O (N)|O (N)|-|-|関数の結果に対して [min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) 演算子を使用することにより、コレクション内の最小の要素を返します。|
 |Set.minelement|-|-|-|-|O (log (N))|セットで使用されている順序に従って、セット内の最も小さい要素を返します。|
 |List.ofarray|-|O (N)|O(1)|O (N)|O (N)|指定された配列と同じ要素を含むコレクションを作成します。|
