@@ -2,12 +2,12 @@
 title: 正常性の監視
 description: 正常性の監視を実施する 1 つの方法を探ります。
 ms.date: 03/02/2020
-ms.openlocfilehash: 88354ae0ae59dbfbe40dbe1b25320f8f93d042ce
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 3e3e8ec41de1469f0c397d8d80d224dd2f7a2bd2
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988857"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267894"
 ---
 # <a name="health-monitoring"></a>正常性の監視
 
@@ -195,7 +195,6 @@ app.UseHealthChecks("/hc", new HealthCheckOptions()
     Predicate = _ => true,
     ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
 });
-}
 ```
 
 ### <a name="query-your-microservices-to-report-about-their-health-status"></a>マイクロサービスでクエリを実行してその正常性状態についてレポートする
@@ -220,7 +219,7 @@ eShopOnContainers サンプルには、図 8-9 に示すように、サンプル
 
 **図 8-9** eShopOnContainers のサンプルの正常性チェック レポート
 
-まとめると、このウォッチドッグ サービスは各マイクロサービスの "/hc" エンドポイントをクエリします。 これにより、定義されているすべての正常性チェックが実行され、これらすべてのチェックに応じて、全体的な正常性状態が返されます。 HealthChecksUI は、ウォッチドッグ サービスの Startup.cs に追加する必要があるいくつかの構成エントリと 2 つのコード行と共に簡単に使用できます。
+まとめると、このウォッチドッグ サービスは各マイクロサービスの "/hc" エンドポイントをクエリします。 これにより、定義されているすべての正常性チェックが実行され、これらすべてのチェックに応じて、全体的な正常性状態が返されます。 HealthChecksUI は、ウォッチドッグ サービスの *Startup.cs* に追加する必要があるいくつかの構成エントリと 2 つのコード行と共に簡単に使用できます。
 
 正常性チェック UI のサンプル構成ファイル:
 
@@ -242,7 +241,7 @@ eShopOnContainers サンプルには、図 8-9 に示すように、サンプル
 }
 ```
 
-HealthChecksUI を追加する Startup.cs ファイル:
+HealthChecksUI を追加する *Startup.cs* ファイル:
 
 ```csharp
 // Startup.cs from WebStatus(Watch Dog) service
@@ -257,7 +256,7 @@ public void ConfigureServices(IServiceCollection services)
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
     //…
-    app.UseHealthChecksUI(config=> config.UIPath = "/hc-ui");
+    app.UseHealthChecksUI(config => config.UIPath = "/hc-ui");
     //…
 }
 ```

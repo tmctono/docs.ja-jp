@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c5204e8c80cb737338b053c39083c0cc43786447
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 7cb146d19486618a4cee9976abe2220ea4b72790
+ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517330"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88203996"
 ---
 ### <a name="binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps"></a>BinaryFormatter シリアル化メソッドが古い形式になり、ASP.NET アプリでは使用不可に
 
@@ -12,7 +12,7 @@ ms.locfileid: "87517330"
 
 #### <a name="change-description"></a>変更の説明
 
-<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> の[セキュリティ脆弱性](../../../../docs/standard/serialization/binaryformatter-security-guide.md#binaryformatter-security-vulnerabilities)により、次のメソッドは古い形式になりました。 また、ASP.NET 5.0 以降のアプリでは、Web アプリによって <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 機能が再有効化されていない限り、<xref:System.NotSupportedException> がスローされます。
+<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> の[セキュリティ脆弱性](../../../../docs/standard/serialization/binaryformatter-security-guide.md#binaryformatter-security-vulnerabilities)により、次のメソッドは古い形式になりました。 また、ASP.NET Core 5.0 以降のアプリでは、Web アプリによって <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 機能が再有効化されていない限り、<xref:System.NotSupportedException> がスローされます。
 
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType>
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType>

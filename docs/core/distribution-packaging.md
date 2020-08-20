@@ -3,12 +3,12 @@ title: .NET Core の配布パッケージ
 description: .NET Core を配布用にパッケージ化、名前付け、およびバージョン管理する方法について説明します。
 author: tmds
 ms.date: 10/09/2019
-ms.openlocfilehash: a345aeded29b3058c6c56abbff439ea26cbc7afb
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 3324a6a151fc6dc46a8f13ea17c89da99d108d82
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "81386640"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062887"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core の配布パッケージ
 
@@ -67,19 +67,19 @@ ms.locfileid: "81386640"
 
 ホストは 1 つですが、他のコンポーネントのほとんどはバージョン管理されたディレクトリに入っています (2、3、5、6)。 つまり、複数のバージョンが並列インストールされるので、それらをシステム上に置くことができます。
 
-- (2) **host/fxr/\<fxr バージョン>** には、ホストが使用するフレームワーク解決ロジックが含まれます。 ホストでは、インストールされている最新の hostfxr が使用されます。 hostfxr は、.NET Core アプリケーションの実行時に適切なランタイムを選択する役割を担います。 たとえば、.NET Core 2.0.0 用としてビルドされたアプリケーションは、2.0.5 が利用できればそれを利用します。 同様に、hostfxr は開発中、適切な SDK を選択します。
+- (2) **host/fxr/\<fxr version>** には、ホストが使用するフレームワーク解決ロジックが含まれます。 ホストでは、インストールされている最新の hostfxr が使用されます。 hostfxr は、.NET Core アプリケーションの実行時に適切なランタイムを選択する役割を担います。 たとえば、.NET Core 2.0.0 用としてビルドされたアプリケーションは、2.0.5 が利用できればそれを利用します。 同様に、hostfxr は開発中、適切な SDK を選択します。
 
-- (3) **sdk/\<sdk バージョン>** SDK (別名 "ツール") は、.NET Core のライブラリやアプリケーションを記述し、ビルドするために使用されるマネージド ツールのセットです。 SDK には、.NET Core CLI、マネージ言語コンパイラ、MSBuild、関連するビルド タスクとターゲット、NuGet、新しいプロジェクト テンプレートなどが含まれています。
+- (3) **sdk/\<sdk version>** SDK (別名 "the tooling (ツール)") は、.NET Core のライブラリやアプリケーションを記述およびビルドするために使用されるマネージド ツールのセットです。 SDK には、.NET Core CLI、マネージ言語コンパイラ、MSBuild、関連するビルド タスクとターゲット、NuGet、新しいプロジェクト テンプレートなどが含まれています。
 
 - (4) **sdk/NuGetFallbackFolder** には、`dotnet restore` や `dotnet build` の実行時など、復元操作中に SDK によって使用される NuGet パッケージのキャッシュが含まれています。 このフォルダーは、.NET Core 3.0 より前でのみ使用されます。 `nuget.org` からの構築済みのバイナリ アセットを含むため、ソースから作成することはできません。
 
 **共有**フォルダーには、フレームワークが含まれています。 共有フレームワークは、さまざまなアプリケーションで利用できるように、中央の場所で一連のライブラリを提供します。
 
-- (5) **shared/Microsoft.NETCore.App/\<runtime バージョン&gt;** このフレームワークには、.NET Core のランタイムと補助マネージド ライブラリが含まれています。
+- (5) **shared/Microsoft.NETCore.App/\<runtime version>** このフレームワークには、.NET Core のランタイムと補助マネージド ライブラリが含まれています。
 
-- (6) **shared/Microsoft.AspNetCore.{App,All}/\<aspnetcore バージョン>** には、ASP.NET Core ライブラリが含まれます。 `Microsoft.AspNetCore.App` の下にあるライブラリは、.NET Core プロジェクトの一部として開発され、サポートされています。 `Microsoft.AspNetCore.All` の下にあるライブラリは、サードパーティ製ライブラリも含まれるスーパーセットです。
+- (6) **shared/Microsoft.AspNetCore.{App,All}/\<aspnetcore version>** には、ASP.NET Core ライブラリが含まれます。 `Microsoft.AspNetCore.App` の下にあるライブラリは、.NET Core プロジェクトの一部として開発され、サポートされています。 `Microsoft.AspNetCore.All` の下にあるライブラリは、サードパーティ製ライブラリも含まれるスーパーセットです。
 
-- (7) **shared/Microsoft.Desktop.App/\<デスクトップ アプリ バージョン>** には、Windows デスクトップ ライブラリが含まれます。 これは、Windows 以外のプラットフォームには含まれていません。
+- (7) **shared/Microsoft.Desktop.App/\<desktop app version>** には、Windows デスクトップ ライブラリが含まれます。 これは、Windows 以外のプラットフォームには含まれていません。
 
 - (8) **LICENSE.txt、ThirdPartyNotices.txt** は、それぞれ .NET Core ライセンスと、.NET Core で利用されるサードパーティ ライブラリのライセンスです。
 
@@ -87,7 +87,7 @@ ms.locfileid: "81386640"
 
 - (11,12) **Microsoft.NETCore.App.Ref,Microsoft.AspNetCore.App.Ref** には、.NET Core と ASP.NET Core のそれぞれの `x.y` バージョンの API が記述されています。 これらのパックは、それのターゲット バージョンのコンパイル時に使用されます。
 
-- (13) **Microsoft.NETCore.App.Host.\<rid>** には、プラットフォーム `rid` のネイティブ バイナリが含まれます。 このバイナリは、.NET Core アプリケーションをそのプラットフォームのネイティブ バイナリにコンパイルするときのテンプレートです。
+- (13) **Microsoft.NETCore.App.Host.\<rid>** にはプラットフォームのネイティブ バイナリが含まれています`rid`。 このバイナリは、.NET Core アプリケーションをそのプラットフォームのネイティブ バイナリにコンパイルするときのテンプレートです。
 
 - (14) **Microsoft.WindowsDesktop.App.Ref** には、Windows Desktop アプリケーションの `x.y` バージョンの API が記述されています。 これらのファイルは、そのターゲットに対してコンパイルする場合に使用されます。 これは、Windows 以外のプラットフォームにはありません。
 
@@ -111,57 +111,57 @@ SDK バージョンは同じ `[major].[minor]` を利用し、SDK の機能と�
 推奨するパッケージを、以下に示します。
 
 - `dotnet-sdk-[major].[minor]`: 特定のランタイム用に最新の sdk をインストールします
-  - **バージョン:** \<ランタイム バージョン>
+  - **バージョン:** \<sdk version>
   - **例:** dotnet-sdk-2.1
   - **内容:** (3),(4)
   - **依存関係:** `dotnet-runtime-[major].[minor]`、`aspnetcore-runtime-[major].[minor]`、`dotnet-targeting-pack-[major].[minor]`、`aspnetcore-targeting-pack-[major].[minor]`、`netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`、`dotnet-apphost-pack-[major].[minor]`、`dotnet-templates-[major].[minor]`
 
 - `aspnetcore-runtime-[major].[minor]`: 特定の ASP.NET Core ランタイムをインストールします
-  - **バージョン:** \<aspnetcore ランタイム バージョン>
+  - **バージョン:** \<aspnetcore runtime version>
   - **例:** aspnetcore-runtime-2.1
   - **内容:** (6)
   - **依存関係:** `dotnet-runtime-[major].[minor]`
 
 - `dotnet-runtime-deps-[major].[minor]` _(省略可能)_ : 自己完結型アプリケーションを実行する依存関係をインストールします
-  - **バージョン:** \<ランタイム バージョン>
+  - **バージョン:** \<runtime version>
   - **例:** dotnet-runtime-deps-2.1
   - **依存関係:** _ディストリビューション固有の依存関係_
 
 - `dotnet-runtime-[major].[minor]`: 特定のランタイムをインストールします
-  - **バージョン:** \<ランタイム バージョン>
+  - **バージョン:** \<runtime version>
   - **例:** dotnet-runtime-2.1
   - **内容:** (5)
   - **依存関係:** `dotnet-hostfxr-[major].[minor]`, `dotnet-runtime-deps-[major].[minor]`
 
 - `dotnet-hostfxr-[major].[minor]`: 依存関係
-  - **バージョン:** \<ランタイム バージョン>
+  - **バージョン:** \<runtime version>
   - **例:**  dotnet-hostfxr-3.0
   - **内容:** (2)
   - **依存関係:** `dotnet-host`
 
 - `dotnet-host`: 依存関係
-  - **バージョン:** \<ランタイム バージョン>
+  - **バージョン:** \<runtime version>
   - **例:** dotnet-host
   - **内容:** (1)、(8)、(9)、(10)、(16)
 
 - `dotnet-apphost-pack-[major].[minor]`: 依存関係
-  - **バージョン:** \<ランタイム バージョン>
+  - **バージョン:** \<runtime version>
   - **内容:** (13)
 
 - `dotnet-targeting-pack-[major].[minor]`: 最新ではないランタイムを対象にできます
-  - **バージョン:** \<ランタイム バージョン>
+  - **バージョン:** \<runtime version>
   - **内容:** (12)
 
 - `aspnetcore-targeting-pack-[major].[minor]`: 最新ではないランタイムを対象にできます
-  - **バージョン:** \<aspnetcore ランタイム バージョン>
+  - **バージョン:** \<aspnetcore runtime version>
   - **内容:** (11)
 
 - `netstandard-targeting-pack-[netstandard_major].[netstandard_minor]`: netstandard バージョンを対象にできます
-  - **バージョン:** \<sdk バージョン>
+  - **バージョン:** \<sdk version>
   - **内容:** (15)
 
 - `dotnet-templates-[major].[minor]`
-  - **バージョン:** \<sdk バージョン>
+  - **バージョン:** \<sdk version>
   - **内容:** (15)
 
 `dotnet-runtime-deps-[major].[minor]` では、_ディストリビューション固有の依存関係_を理解している必要があります。 ディストリビューションのビルド システムは、これを自動的に得ることができる可能性があるため、このパッケージは省略可能です。これらの場合、これらの依存関係は `dotnet-runtime-[major].[minor]` パッケージに直接追加されます。

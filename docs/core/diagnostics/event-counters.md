@@ -2,12 +2,12 @@
 title: .NET Core の EventCounters
 description: この記事では、EventCounters の概要とその実装方法および使用方法について学習します。
 ms.date: 08/07/2020
-ms.openlocfilehash: 68868ff8b4e1393fc3b23af2bc8eef239ac56975
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: fc2f945e3de732a81b9ce3fd82eff10e455cae87
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024962"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062965"
 ---
 # <a name="eventcounters-in-net-core"></a>.NET Core の EventCounters
 
@@ -177,7 +177,9 @@ EventCounters は Azure Monitor、つまり、Azure Application Insights で使�
 
 #### <a name="dotnet-monitor"></a>dotnet-monitor
 
-`dotnet-monitor` は、.NET プロセスでの診断情報へのアクセスを容易にする実験用のツールです。 詳細については、「[実験用のツール、dotnet-monitor の概要](https://devblogs.microsoft.com/dotnet/introducing-dotnet-monitor)」を参照してください。
+`dotnet-monitor` ツールは、.NET プロセスでの診断情報へのアクセスを容易にする実験用のツールです。 このツールは、すべての診断ツールのスーパーセットとして機能します。 トレースに加えて、メトリックの監視、メモリ ダンプの収集、および GC ダンプの収集を行うことができます。 CLI ツールと Docker イメージの両方として配布されます。 これによって REST API が公開され、診断アーティファクトの収集は REST 呼び出しを介して行われます。
+
+詳細については、「[実験用のツール、dotnet-monitor の概要](https://devblogs.microsoft.com/dotnet/introducing-dotnet-monitor)」を参照してください。
 
 ### <a name="consume-in-proc"></a>インプロセスで使用する
 

@@ -1,13 +1,13 @@
 ---
 title: 単純なデータ ドリブン CRUD マイクロサービスの作成
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービス アプリケーションのコンテキストでの単純な CRUD (データ ドリブン) マイクロサービスの作成を理解する。
-ms.date: 01/30/2020
-ms.openlocfilehash: b72d7defed81e57e2971c5e2b53df2d86b2dc947
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/14/2020
+ms.openlocfilehash: 4d475ba42cb0f86b57b2467549635556cab1136d
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267959"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>単純なデータ ドリブン CRUD マイクロサービスの作成
 
@@ -57,7 +57,7 @@ Entity Framework (EF) Core は人気の Entity Framework データ アクセス 
 
 #### <a name="the-data-model"></a>データ モデル
 
-EF Core では、データ アクセスはモデルを利用して実行されます。 モデルは (ドメイン モデル) エンティティ クラスと、データベースとのセッションを表す、派生コンテキスト (DbContext) から構成されます。このセッションにより、データのクエリと保存が可能になります。 既存データベースからモデルを生成したり、自分のデータベースに合わせてモデルのコードを手動で記述したり、Code First アプローチを使用して EF 移行を利用してモデルからデータベースを作成したり (モデルが時間の経過と共に変化するのに合わせ、データベースを進化させることが簡単になります) できます。 カタログ マイクロサービスでは、最後のアプローチを使用しています。 次のコード例には、CatalogItem エンティティ クラスの例があります。これは単純な従来の CLR オブジェクト ([POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)) エンティティ クラスです。
+EF Core では、データ アクセスはモデルを利用して実行されます。 モデルは (ドメイン モデル) エンティティ クラスと、データベースとのセッションを表す、派生コンテキスト (DbContext) から構成されます。このセッションにより、データのクエリと保存が可能になります。 既存データベースからモデルを生成したり、自分のデータベースに合わせてモデルのコードを手動で記述したり、Code First アプローチを使用して EF 移行テクニックを利用してモデルからデータベースを作成したり (モデルが時間の経過と共に変化するのに合わせ、データベースを進化させることが簡単になります) できます。 カタログ マイクロサービスの場合は、最後の方法が使用されています。 次のコード例には、CatalogItem エンティティ クラスの例があります。これは単純な従来の CLR オブジェクト ([POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)) エンティティ クラスです。
 
 ```csharp
 public class CatalogItem
@@ -185,15 +185,14 @@ _context.SaveChanges();
 
 ASP.NET Core では、既定の依存関係の挿入 (DI) を使用できます。 優先 IoC コンテナーを ASP.NET Core インフラストラクチャに接続することもできますが、サード パーティ製の制御の反転 (IoC) コンテナーを設定する必要はありません。 この場合、必須の EF DBContext またはコントローラー コンストラクターを通じた追加のリポジトリを直接挿入できることを意味します。
 
-上記の `CatalogController` クラスの例では、`CatalogController()` コンストラクターを通じて `CatalogContext` 型のオブジェクトやその他のオブジェクトを挿入しています。
+前に説明した `CatalogController` クラスでは、`CatalogContext` (`DbContext` から継承) 型が、`CatalogController()` コンストラクター内の他の必須のオブジェクトと共に挿入されます。
 
-Web API プロジェクトを設定するための重要な構成は、サービスの IoC コンテナーへの DbContext クラスの登録です。 通常、この操作は、次の**簡略化された**例に示すように、`ConfigureServices()` メソッド内で `services.AddDbContext<DbContext>()` メソッドを呼び出して `Startup` クラス内で実行します。
+Web API プロジェクトを設定するための重要な構成は、サービスの IoC コンテナーへの DbContext クラスの登録です。 通常、この操作は、次の**簡略化された**例に示すように、`ConfigureServices()` メソッド内で `services.AddDbContext<CatalogContext>()` メソッドを呼び出して `Startup` クラス内で実行します。
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     // Additional code...
-
     services.AddDbContext<CatalogContext>(options =>
     {
         options.UseSqlServer(Configuration["ConnectionString"],

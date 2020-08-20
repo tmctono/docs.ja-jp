@@ -1,17 +1,17 @@
 ---
 title: 結果
-description: "\"Result\" 型をF#使用して、エラートレラントなコードを記述する方法について説明します。"
-ms.date: 04/24/2017
-ms.openlocfilehash: 187aa26ccbaac7e0ec998756377bb7b0489eb1ab
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+description: 'F # の "Result" 型を使用して、エラートレラントコードを記述する方法について説明します。'
+ms.date: 08/13/2020
+ms.openlocfilehash: d69e6ddc37bcf5cb5fc28644d59a11a822b83faa
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424846"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656919"
 ---
 # <a name="results"></a>結果
 
-F# 4.1 以降では、構成可能なエラートレラントコードを記述するために使用できる `Result<'T,'TFailure>` 型があります。
+`Result<'T,'TFailure>`型を使用すると、構成可能なエラートレラントコードを記述できます。
 
 ## <a name="syntax"></a>構文
 
@@ -25,11 +25,13 @@ type Result<'T,'TError> =
     | Error of ErrorValue:'TError
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-結果の型は、4.1 でF#導入された別の機能である[構造体の判別共用体](discriminated-unions.md#struct-discriminated-unions)であることに注意してください。  ここでは構造的等値セマンティクスが適用されます。
+の組み込み連結子については、モジュールを参照してください [`Result`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-resultmodule.html) `Result` 。 型のパラメーターに変換されます。
 
-`Result` の種類は、通常、monadic のエラー処理で使用されます。これは、 F#コミュニティ内では、"[フロント指向" プログラミング](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html)と呼ばれることがよくあります。  次の簡単な例は、この方法を示しています。
+結果の型は、 [構造体の判別共用体](discriminated-unions.md#struct-discriminated-unions)であることに注意してください。 ここでは構造的等値セマンティクスが適用されます。
+
+この `Result` 型は、通常、monadic のエラー処理で使用されます。これは、F # コミュニティ内では、" [フロント指向" プログラミング](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) と呼ばれることがよくあります。  次の簡単な例は、この方法を示しています。
 
 ```fsharp
 // Define a simple type which has fields that can be validated
@@ -80,7 +82,7 @@ let test() =
 test()
 ```
 
-ご覧のように、すべてを強制的に `Result`を返す場合は、さまざまな検証関数を連結するのが非常に簡単です。  これにより、このような機能を、必要に応じてコンポーザブルな小さな部分に分割できます。  これには、検証のラウンドの最後に[パターン一致](pattern-matching.md)の使用を*強制*するための追加の値も含まれます。これにより、より高度なプログラムの正確性が適用されます。
+ご覧のように、すべてを強制的にを返すようにすると、さまざまな検証関数を連結するのは非常に簡単です `Result` 。  これにより、このような機能を、必要に応じてコンポーザブルな小さな部分に分割できます。  これには、検証のラウンドの最後に[パターン一致](pattern-matching.md)の使用を*強制*するための追加の値も含まれます。これにより、より高度なプログラムの正確性が適用されます。
 
 ## <a name="see-also"></a>関連項目
 

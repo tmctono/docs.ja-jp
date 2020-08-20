@@ -2,12 +2,12 @@
 title: 基本クラス ライブラリの破壊的変更
 description: Core .NET ライブラリにおける破壊的変更の一覧を示します。
 ms.date: 07/27/2020
-ms.openlocfilehash: 0667d975ce5bba5692fe5d179341235bd3c61790
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: c8eb5ec7d2bb1879a38a18337463230c7b731d29
+ms.sourcegitcommit: d3c09791297f0edc468a4849a5f11ef62e0e90fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024702"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88137494"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Core .NET ライブラリの破壊的変更
 
@@ -17,6 +17,7 @@ Core .NET ライブラリでは、.NET Core で使用されるプリミティブ
 
 | 互換性に影響する変更点 | 導入されたバージョン |
 | - | :-: |
+| [LINQ OrderBy.First{OrDefault} の複雑さが増大](#complexity-of-linq-orderbyfirstordefault-increased) | 5.0 |
 | [IntPtr と UIntPtr の IFormattable 実装](#intptr-and-uintptr-implement-iformattable) | 5.0 |
 | [PrincipalPermissionAttribute は現在使用されていないエラーです](#principalpermissionattribute-is-obsolete-as-error) | 5.0 |
 | [BinaryFormatter シリアル化メソッドが古い形式になり、ASP.NET アプリでは使用不可に](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps) | 5.0 |
@@ -40,11 +41,15 @@ Core .NET ライブラリでは、.NET Core で使用されるプリミティブ
 | [UseShellExecute の既定値の変更](#change-in-default-value-of-useshellexecute) | 2.1 |
 | [macOS 上の OpenSSL バージョン](#openssl-versions-on-macos) | 2.1 |
 | [FileSystemInfo.Attributes によってスローされる UnauthorizedAccessException](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1.0 |
-| [プロセス破損状態例外の処理がサポートされない](#handling-corrupted-state-exceptions-is-not-supported) | 1.0 |
+| [プロセス破損状態例外の処理がサポートされない](#handling-corrupted-state-exceptions-is-not-supported) | 1 |
 | [UriBuilder のプロパティでは今後、先頭に文字が付加されない](#uribuilder-properties-no-longer-prepend-leading-characters) | 1 |
-| [開始されなかったプロセスについて Process.StartInfo が InvalidOperationException をスローする](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1 |
+| [開始されなかったプロセスについて Process.StartInfo が InvalidOperationException をスローする](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [orderby-firstordefault-complexity-increase](../../../includes/core-changes/corefx/5.0/orderby-firstordefault-complexity-increase.md)]
+
+***
 
 [!INCLUDE [intptr-uintptr-implement-iformattable](../../../includes/core-changes/corefx/5.0/intptr-uintptr-implement-iformattable.md)]
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: 2fc47a834f8f5b18021aa4f321345b8d7e4e8459
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 3ffdd481ac001b4e1bd229c6f5fa0bf285b508b2
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662889"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063810"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>量指定子 (正規表現)
 量指定子は、一致と見なされるために入力中に存在する必要がある文字、グループ、または文字クラスの出現数を指定します。  次の表に、.NET でサポートされている量指定子の一覧を示します。  
@@ -48,7 +48,7 @@ ms.locfileid: "84662889"
 ### <a name="match-zero-or-more-times-"></a>0 回以上の繰り返しに一致: *  
  `*` 量指定子は、直前の要素の 0 回以上の繰り返しに一致します。 これは `{0,}` 量指定子と同じです。 `*` は最長一致の量指定子であり、最短一致でこれに対応するのは `*?` です。  
   
- 次の例は、この正規表現を示しています。 入力文字列の 9 個の数字のうち、5 個がパターンに一致し、4 個 (`95`、`929`、`9219`、および `9919`) が一致しません。  
+ 次の例は、この正規表現を示しています。 入力文字列の 9 個の数字グループにおいて、5 個がパターンに一致し、4 個 (`95`、`929`、`9219`、および `9919`) が一致しません。  
   
  [!code-csharp[RegularExpressions.Quantifiers#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#1)]
  [!code-vb[RegularExpressions.Quantifiers#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#1)]  

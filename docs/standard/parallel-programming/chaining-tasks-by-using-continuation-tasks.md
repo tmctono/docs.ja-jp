@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: 132518b9d8d22efecfcf3ed14e8b5969aa768cd4
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: d42d244e644bf3ee1f45b25a71d60bbb2ef8e590
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024590"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063836"
 ---
 # <a name="chaining-tasks-using-continuation-tasks"></a>継続タスクを使用したタスクの連結
 
@@ -52,7 +52,7 @@ ms.locfileid: "88024590"
 
 タスク グループの一部または全部のタスクが完了したときに実行される継続を作成することもできます。 すべての継続元タスクが完了した時点で継続を実行するには、静的 (Visual Basic では`Shared` ) <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> メソッドまたはインスタンス <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> メソッドを呼び出します。 いずれかの継続元タスクが完了した時点で継続を実行するには、静的 (Visual Basic では`Shared` ) <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> メソッドまたはインスタンス <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType> メソッドを呼び出します。
 
-<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> オーバーロードの呼び出しによって、呼び出しスレッドがブロックされることはない点に注意してください。 ただし、通常、返された <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> プロパティを取得するために <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> メソッドと <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> メソッドを除いたすべてを呼び出しますが、そうした場合は呼び出しスレッドがブロックされます。
+<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> オーバーロードの呼び出しによって、呼び出しスレッドがブロックされることはありません。 ただし、通常、返された <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> プロパティを取得するために <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> メソッドと <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> メソッドを除いたすべてを呼び出しますが、そうした場合は呼び出しスレッドがブロックされます。
 
 次の例では、<xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> メソッドを呼び出して、10 個の継続元タスクの結果を反映する継続タスクを作成します。 各継続元タスクでは、1 から 10 までの範囲内のインデックス値が二乗されます。 継続元が正常に完了すると (その <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> プロパティが <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>)、継続の <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> プロパティは、各継続元から返される <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 値の配列になります。 この例では、1 から 10 までのすべての数値の二乗の合計を計算するため、これらを追加します。
 
