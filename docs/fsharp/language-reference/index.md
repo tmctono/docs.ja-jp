@@ -1,17 +1,21 @@
 ---
 title: 言語リファレンス
 description: 言語トークン、概念、型、式、コンパイラでサポートされるコンストラクトのトピックに対するこのリファレンスで、F# 言語の機能に関する情報を見つけてください。
-ms.date: 05/16/2016
-ms.openlocfilehash: 43272c6684c8fc763e8f99611901f35695f48981
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/13/2020
+ms.openlocfilehash: 02711489c214c1fcdb2da80f30bff63d67769c17
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854959"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558154"
 ---
 # <a name="f-language-reference"></a>F# 言語リファレンス
 
 このセクションは、.NET をターゲットとするマルチパラダイム プログラミング言語である F# 言語の参照となっています。 F# 言語は、関数型、オブジェクト指向、および命令型のプログラミング モデルをサポートします。
+
+## <a name="f-core-library-api-reference"></a>F# コア ライブラリ API リファレンス
+
+[F# コア ライブラリ (FSharp.Core) API リファレンス](https://fsharp.github.io/fsharp-core-docs/)は、すべての F# コア ライブラリの名前空間、モジュール、型、関数のリファレンスです。
 
 ## <a name="f-tokens"></a>F# トークン
 
