@@ -7,12 +7,12 @@ helpviewer_keywords:
 - garbage collection events [.NET Framework]
 - ETW, garbage collection events (CLR)
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
-ms.openlocfilehash: 58ad874ef6a12c18c404640aa66577c391573534
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 2e1e0fda5c1a80627c8dde7f49954a867b9a2b66
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309743"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720138"
 ---
 # <a name="garbage-collection-etw-events"></a>ガベージ コレクション ETW イベント
 
@@ -23,6 +23,7 @@ ms.locfileid: "86309743"
 - [GCStart_V1 イベント](#gcstart_v1-event)
 - [GCEnd_V1 イベント](#gcend_v1-event)
 - [GCHeapStats_V1 イベント](#gcheapstats_v1-event)
+- [GCHeapStats_V2 イベント](#gcheapstats_v2-event)
 - [GCCreateSegment_V1 イベント](#gccreatesegment_v1-event)
 - [GCFreeSegment_V1 イベント](#gcfreesegment_v1-event)
 - [GCRestartEEBegin_V1 イベント](#gcrestarteebegin_v1-event)
@@ -30,6 +31,7 @@ ms.locfileid: "86309743"
 - [GCSuspendEE_V1 イベント](#gcsuspendee_v1-event)
 - [GCSuspendEEEnd_V1 イベント](#gcsuspendeeend_v1-event)
 - [GCAllocationTick_V2 イベント](#gcallocationtick_v2-event)
+- [GCAllocationTick_V3 イベント](#gcallocationtick_v3-event)
 - [GCFinalizersBegin_V1 イベント](#gcfinalizersbegin_v1-event)
 - [GCFinalizersEnd_V1 イベント](#gcfinalizersend_v1-event)
 - [GCCreateConcurrentThread_V1 イベント](#gccreateconcurrentthread_v1-event)
@@ -39,7 +41,7 @@ ms.locfileid: "86309743"
 
 次の表に、キーワードとレベルを示します。 詳細については、「 [CLR ETW のキーワードとレベル](clr-etw-keywords-and-levels.md)」を参照してください。
 
-|イベントを発生させるキーワード|レベル|
+|イベントを発生させるキーワード|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|情報提供 (4)|
 
@@ -54,7 +56,7 @@ ms.locfileid: "86309743"
 |フィールド名|データ型|説明|
 |----------------|---------------|-----------------|
 |Count|win:UInt32|*n*回めのガベージ コレクション。|
-|奥行き|win:UInt32|収集されるジェネレーション。|
+|奥行|win:UInt32|収集されるジェネレーション。|
 |理由|win:UInt32|ガベージ コレクションが発生した理由:<br /><br /> 0x0 - 小さなオブジェクト ヒープの割り当て。<br /><br /> 0x1 - 強制実行。<br /><br /> 0x2 - メモリ不足。<br /><br /> 0x3 - 空。<br /><br /> 0x4 - 大きなオブジェクト ヒープの割り当て。<br /><br /> 0x5 - 領域不足 (小さなオブジェクト ヒープが対象)。<br /><br /> 0x6 - 領域不足 (大きなオブジェクト ヒープが対象)。<br /><br /> 0x7 - 強制実行されるが、ブロッキングとして強制されない。|
 |Type|win:UInt32|0x0 - バックグラウンド ガベージ コレクションの外部で発生するブロッキング ガベージ コレクション。<br /><br /> 0x1 - バックグラウンド ガベージ コレクション。<br /><br /> 0x2 - バックグラウンド ガベージ コレクションの実行中に発生するブロッキング ガベージ コレクション。|
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|
@@ -63,7 +65,7 @@ ms.locfileid: "86309743"
 
 次の表に、キーワードとレベルを示します。
 
-|イベントを発生させるキーワード|レベル|
+|イベントを発生させるキーワード|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|情報提供 (4)|
 
@@ -78,20 +80,20 @@ ms.locfileid: "86309743"
 |フィールド名|データ型|説明|
 |----------------|---------------|-----------------|
 |Count|win:UInt32|*n*回めのガベージ コレクション。|
-|奥行き|win:UInt32|収集されたジェネレーション。|
+|奥行|win:UInt32|収集されたジェネレーション。|
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|
 
 ## <a name="gcheapstats_v1-event"></a>GCHeapStats_V1 イベント
 
 次の表に、キーワードとレベルを示します。
 
-|イベントを発生させるキーワード|レベル|
+|イベントを発生させるキーワード|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|情報提供 (4)|
 
 次の表に、イベント情報を示します。
 
-|Event|イベント ID|説明|
+|Event|イベント ID|[説明]|
 |-----------|--------------|-----------------|
 |`GCHeapStats_V1`|4|各ガベージ コレクション終了時のヒープの統計情報を示します。|
 
@@ -114,11 +116,46 @@ ms.locfileid: "86309743"
 |GCHandleCount|win:UInt32|使用中のガベージ コレクション ハンドルの数。|
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|
   
+## <a name="gcheapstats_v2-event"></a>GCHeapStats_V2 イベント
+
+次の表に、キーワードとレベルを示します。
+
+|イベントを発生させるキーワード|Level|
+|-----------------------------------|-----------|
+|`GCKeyword` (0x1)|情報提供 (4)|
+
+次の表に、イベント情報を示します。
+
+|Event|イベント ID|[説明]|
+|-----------|--------------|-----------------|
+|`GCHeapStats_V2`|4|各ガベージ コレクション終了時のヒープの統計情報を示します。|
+
+次の表に、イベント データを示します。
+
+|フィールド名|データ型|説明|
+|----------------|---------------|-----------------|
+|GenerationSize0|win:UInt64|ジェネレーション 0 メモリのサイズ (バイト単位)。|
+|TotalPromotedSize0|win:UInt64|ジェネレーション 0 からジェネレーション 1 に移されたバイト数。|
+|GenerationSize1|win:UInt64|ジェネレーション 1 メモリのサイズ (バイト単位)。|
+|TotalPromotedSize1|win:UInt64|ジェネレーション 1 からジェネレーション 2 に移されたバイト数。|
+|GenerationSize2|win:UInt64|ジェネレーション 2 メモリのサイズ (バイト単位)。|
+|TotalPromotedSize2|win:UInt64|最後のガベージ コレクションの後にジェネレーション 2 に残ったバイト数。|
+|GenerationSize3|win:UInt64|大きなオブジェクト ヒープのサイズ (バイト単位)。|
+|TotalPromotedSize3|win:UInt64|最後のガベージ コレクションの後に大きなオブジェクト ヒープに残ったバイト数。|
+|FinalizationPromotedSize|win:UInt64|終了準備が完了しているオブジェクトの合計サイズ (バイト単位)。|
+|FinalizationPromotedCount|win:UInt64|終了準備が完了しているオブジェクトの数。|
+|PinnedObjectCount|win:UInt32|ピン止めオブジェクト (移動できないオブジェクト) の数。|
+|SinkBlockCount|win:UInt32|使用中の同期ブロックの数。|
+|GCHandleCount|win:UInt32|使用中のガベージ コレクション ハンドルの数。|
+|ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|
+|GenerationSize4|win:UInt64|固定されたオブジェクトヒープのサイズ (バイト単位)。|
+|TotalPromotedSize4|win:UInt64|最後のコレクションの後に固定されたオブジェクトヒープに残ったバイト数。|
+  
 ## <a name="gccreatesegment_v1-event"></a>GCCreateSegment_V1 イベント
 
 次の表に、キーワードとレベルを示します。
 
-|イベントを発生させるキーワード|レベル|
+|イベントを発生させるキーワード|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|情報提供 (4)|
 
@@ -143,7 +180,7 @@ ms.locfileid: "86309743"
 
 次の表に、キーワードとレベルを示します。
 
-|イベントを発生させるキーワード|レベル|
+|イベントを発生させるキーワード|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|情報提供 (4)|
 
@@ -164,7 +201,7 @@ ms.locfileid: "86309743"
 
 次の表に、キーワードとレベルを示します。
 
-|イベントを発生させるキーワード|レベル|
+|イベントを発生させるキーワード|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|情報提供 (4)|
 
@@ -180,7 +217,7 @@ ms.locfileid: "86309743"
 
 次の表に、キーワードとレベルを示します。
 
-|イベントを発生させるキーワード|レベル|
+|イベントを発生させるキーワード|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|情報提供 (4)|
 
@@ -196,7 +233,7 @@ ms.locfileid: "86309743"
 
 次の表に、キーワードとレベルを示します。
 
-|イベントを発生させるキーワード|レベル|
+|イベントを発生させるキーワード|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|情報提供 (4)|
 
@@ -211,14 +248,14 @@ ms.locfileid: "86309743"
 |フィールド名|データ型|説明|
 |----------------|---------------|-----------------|
 |原因|win:UInt16|0x0 - その他。<br /><br /> 0x1 - ガベージ コレクション。<br /><br /> 0x2 - アプリケーション ドメインのシャットダウン。<br /><br /> 0x3 - コード ピッチ。<br /><br /> 0x4 - シャットダウン。<br /><br /> 0x5 - デバッガー。<br /><br /> 0x6 - ガベージ コレクションの準備。|
-|Count|win:UInt32|その時点の GC カウント。 通常、この後に後続の GC 開始イベントが表示され、そのカウントは、ガベージ コレクション中に、GC インデックスが増えるため、このカウント + 1 になります。|
+|データの個数|win:UInt32|その時点の GC カウント。 通常、この後に後続の GC 開始イベントが表示され、そのカウントは、ガベージ コレクション中に、GC インデックスが増えるため、このカウント + 1 になります。|
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|
 
 ## <a name="gcsuspendeeend_v1-event"></a>GCSuspendEEEnd_V1 イベント
 
 次の表に、キーワードとレベルを示します。
 
-|イベントを発生させるキーワード|レベル|
+|イベントを発生させるキーワード|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|情報提供 (4)|
 
@@ -234,7 +271,7 @@ ms.locfileid: "86309743"
 
 次の表に、キーワードとレベルを示します。
 
-|イベントを発生させるキーワード|レベル|
+|イベントを発生させるキーワード|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|情報提供 (4)|
 
@@ -256,11 +293,38 @@ ms.locfileid: "86309743"
 |TypeName|win:UnicodeString|割り当てられた型の名前。 このイベント中に複数の型のオブジェクトが割り当てられた場合は、これは最後に割り当てられたオブジェクト (100 KB のしきい値を超えたオブジェクト) の型です。|
 |HeapIndex|win:UInt32|オブジェクトが割り当てられたヒープ。 ワークステーションのガベージ コレクションと共に実行する場合、この値は 0 (ゼロ) になります。|
 
+## <a name="gcallocationtick_v3-event"></a>GCAllocationTick_V3 イベント
+
+次の表に、キーワードとレベルを示します。
+
+|イベントを発生させるキーワード|Level|
+|-----------------------------------|-----------|
+|`GCKeyword` (0x1)|情報提供 (4)|
+
+次の表に、イベント情報を示します。
+
+|Event|イベント ID|いつ発生するか|
+|-----------|--------------|-----------------|
+|`GCAllocationTick_V3`|10|約 100 KB が割り当てられるたび。|
+
+次の表に、イベント データを示します。
+
+|フィールド名|データ型|説明|
+|----------------|---------------|-----------------|
+|AllocationAmount|win:UInt32|割り当てサイズ (バイト単位)。 この値は、ULONG (4,294,967,295 バイト) の長さより短い割り当ての場合に正確です。 割り当てがこれを超える場合、このフィールドには切り捨てられた値が含まれます。 非常に大きな割り当てには `AllocationAmount64` を使用します。|
+|AllocationKind|win:UInt32|0x0 - 小さなオブジェクトの割り当て (小さなオブジェクト ヒープへの割り当て)。<br /><br /> 0x1 - 大きなオブジェクトの割り当て (大きなオブジェクト ヒープへの割り当て)。|
+|ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|
+|AllocationAmount64|win:UInt64|割り当てサイズ (バイト単位)。 この値は非常に大きな割り当ての場合に正確です。|
+|TypeId|win:Pointer|MethodTable のアドレス。 このイベント中に複数の型のオブジェクトが割り当てられた場合、これは最後に割り当てられたオブジェクト (100 KB のしきい値を超えたオブジェクト) に対応する MethodTable のアドレスです。|
+|TypeName|win:UnicodeString|割り当てられた型の名前。 このイベント中に複数の型のオブジェクトが割り当てられた場合は、これは最後に割り当てられたオブジェクト (100 KB のしきい値を超えたオブジェクト) の型です。|
+|HeapIndex|win:UInt32|オブジェクトが割り当てられたヒープ。 ワークステーションのガベージ コレクションと共に実行する場合、この値は 0 (ゼロ) になります。|
+|Address|win:Pointer|最後に割り当てられたオブジェクトのアドレス。|
+
 ## <a name="gcfinalizersbegin_v1-event"></a>GCFinalizersBegin_V1 イベント
 
 次の表に、キーワードとレベルを示します。
 
-|イベントを発生させるキーワード|レベル|
+|イベントを発生させるキーワード|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|情報提供 (4)|
 
@@ -276,7 +340,7 @@ ms.locfileid: "86309743"
 
 次の表に、キーワードとレベルを示します。
 
-|イベントを発生させるキーワード|レベル|
+|イベントを発生させるキーワード|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|情報提供 (4)|
 
@@ -297,7 +361,7 @@ ms.locfileid: "86309743"
 
 次の表に、キーワードとレベルを示します。
 
-|イベントを発生させるキーワード|レベル|
+|イベントを発生させるキーワード|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|情報提供 (4)|
 |`ThreadingKeyword` (0x10000)|情報提供 (4)|
@@ -314,7 +378,7 @@ ms.locfileid: "86309743"
 
 次の表に、キーワードとレベルを示します。
 
-|イベントを発生させるキーワード|レベル|
+|イベントを発生させるキーワード|Level|
 |-----------------------------------|-----------|
 |`GCKeyword` (0x1)|情報提供 (4)|
 |`ThreadingKeyword` (0x10000)|情報提供 (4)|

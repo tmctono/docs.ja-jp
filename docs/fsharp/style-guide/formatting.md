@@ -2,12 +2,12 @@
 title: F# コードのフォーマットに関するガイドライン
 description: 'F # コードを書式設定するためのガイドラインについて説明します。'
 ms.date: 11/04/2019
-ms.openlocfilehash: fe8da6070e1c92bb5205e9cb408b8ac75372b061
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: dc871b0a8461ed93550ab02cc2c66b143285a3e3
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558310"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720151"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# コードのフォーマットに関するガイドライン
 
@@ -936,3 +936,47 @@ let MyUrl = "www.mywebsitethatiamworkingwith.com"
 ```
 
 属性を値と同じ行に配置することは避けてください。
+
+## <a name="formatting-computation-expression-operations"></a>計算式の演算の書式設定
+
+[コンピュテーション式](../language-reference/computation-expressions.md)のカスタム操作を作成する場合は、キャメルケースの名前付けを使用することをお勧めします。
+
+```fsharp
+type MathBuilder () =
+    member _.Yield _ = 0
+
+    [<CustomOperation("addOne")>]
+    member _.AddOne (state: int) =
+        state + 1
+
+    [<CustomOperation("subtractOne")>]
+    member _.SubtractOne (state: int) =
+        state - 1
+
+    [<CustomOperation("divideBy")>]
+    member _.DivideBy (state: int, divisor: int) =
+        state / divisor
+
+    [<CustomOperation("multiplyBy")>]
+    member _.MultiplyBy (state: int, factor: int) =
+        state * factor
+
+let math = MathBuilder()
+
+// 10
+let myNumber =
+    math {
+        addOne
+        addOne
+        addOne
+
+        subtractOne
+
+        divideBy 2
+
+        multiplyBy 10
+    }
+```
+
+最終的に使用される名前付け規則は、モデル化するドメインによって決まります。
+別の規則を使用する場合は、その規則を代わりに使用する必要があります慣用的なです。
