@@ -75,6 +75,8 @@
           href: how-to-guides/load-data-model-builder.md
         - name: モデル ビルダーのインストール
           href: how-to-guides/install-model-builder.md
+        - name: Model Builder での GPU のインストール
+          href: how-to-guides/install-gpu-model-builder.md
         - name: CLI をインストールする
           href: how-to-guides/install-ml-net-cli.md
         - name: 自動化された ML API を使用する
@@ -109,7 +111,7 @@
               href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
             - name: Web API にモデルをデプロイする
               href: how-to-guides/serve-model-web-api-ml-net.md
-- name: 関連項目
+- name: リファレンス
   items:
     - name: ML.NET API リファレンス
       href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
