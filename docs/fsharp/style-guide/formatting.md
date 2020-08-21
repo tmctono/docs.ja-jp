@@ -2,48 +2,48 @@
 title: F# コードのフォーマットに関するガイドライン
 description: 'F # コードを書式設定するためのガイドラインについて説明します。'
 ms.date: 11/04/2019
-ms.openlocfilehash: fe8da6070e1c92bb5205e9cb408b8ac75372b061
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: dc871b0a8461ed93550ab02cc2c66b143285a3e3
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558310"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720151"
 ---
-# <a name="f-code-formatting-guidelines"></a><span data-ttu-id="fdbe0-103">F# コードのフォーマットに関するガイドライン</span><span class="sxs-lookup"><span data-stu-id="fdbe0-103">F# code formatting guidelines</span></span>
+# <a name="f-code-formatting-guidelines"></a><span data-ttu-id="43eca-103">F# コードのフォーマットに関するガイドライン</span><span class="sxs-lookup"><span data-stu-id="43eca-103">F# code formatting guidelines</span></span>
 
-<span data-ttu-id="fdbe0-104">この記事では、F # コードが次のようになるようにコードを書式設定する方法に関するガイドラインを提供します。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-104">This article offers guidelines for how to format your code so that your F# code is:</span></span>
+<span data-ttu-id="43eca-104">この記事では、F # コードが次のようになるようにコードを書式設定する方法に関するガイドラインを提供します。</span><span class="sxs-lookup"><span data-stu-id="43eca-104">This article offers guidelines for how to format your code so that your F# code is:</span></span>
 
-* <span data-ttu-id="fdbe0-105">より読みやすく</span><span class="sxs-lookup"><span data-stu-id="fdbe0-105">More legible</span></span>
-* <span data-ttu-id="fdbe0-106">Visual Studio および他のエディターの書式設定ツールによって適用される規則に従います。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-106">In accordance with conventions applied by formatting tools in Visual Studio and other editors</span></span>
-* <span data-ttu-id="fdbe0-107">他のコードと同様</span><span class="sxs-lookup"><span data-stu-id="fdbe0-107">Similar to other code online</span></span>
+* <span data-ttu-id="43eca-105">より読みやすく</span><span class="sxs-lookup"><span data-stu-id="43eca-105">More legible</span></span>
+* <span data-ttu-id="43eca-106">Visual Studio および他のエディターの書式設定ツールによって適用される規則に従います。</span><span class="sxs-lookup"><span data-stu-id="43eca-106">In accordance with conventions applied by formatting tools in Visual Studio and other editors</span></span>
+* <span data-ttu-id="43eca-107">他のコードと同様</span><span class="sxs-lookup"><span data-stu-id="43eca-107">Similar to other code online</span></span>
 
-<span data-ttu-id="fdbe0-108">これらのガイドラインは、 [: Ahn-dung Phan](https://github.com/dungpa)による[F # の書式設定規則に関する包括的なガイド](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md)に基づいています。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-108">These guidelines are based on [A comprehensive guide to F# Formatting Conventions](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) by [Anh-Dung Phan](https://github.com/dungpa).</span></span>
+<span data-ttu-id="43eca-108">これらのガイドラインは、 [: Ahn-dung Phan](https://github.com/dungpa)による[F # の書式設定規則に関する包括的なガイド](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md)に基づいています。</span><span class="sxs-lookup"><span data-stu-id="43eca-108">These guidelines are based on [A comprehensive guide to F# Formatting Conventions](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) by [Anh-Dung Phan](https://github.com/dungpa).</span></span>
 
-## <a name="general-rules-for-indentation"></a><span data-ttu-id="fdbe0-109">インデントの一般的な規則</span><span class="sxs-lookup"><span data-stu-id="fdbe0-109">General rules for indentation</span></span>
+## <a name="general-rules-for-indentation"></a><span data-ttu-id="43eca-109">インデントの一般的な規則</span><span class="sxs-lookup"><span data-stu-id="43eca-109">General rules for indentation</span></span>
 
-<span data-ttu-id="fdbe0-110">F # では、既定で有意な空白文字が使用されます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-110">F# uses significant white space by default.</span></span> <span data-ttu-id="fdbe0-111">次のガイドラインは、このような問題の対処方法に関するガイダンスを提供することを目的としています。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-111">The following guidelines are intended to provide guidance as to how to juggle some challenges this can impose.</span></span>
+<span data-ttu-id="43eca-110">F # では、既定で有意な空白文字が使用されます。</span><span class="sxs-lookup"><span data-stu-id="43eca-110">F# uses significant white space by default.</span></span> <span data-ttu-id="43eca-111">次のガイドラインは、このような問題の対処方法に関するガイダンスを提供することを目的としています。</span><span class="sxs-lookup"><span data-stu-id="43eca-111">The following guidelines are intended to provide guidance as to how to juggle some challenges this can impose.</span></span>
 
-### <a name="using-spaces"></a><span data-ttu-id="fdbe0-112">スペースの使用</span><span class="sxs-lookup"><span data-stu-id="fdbe0-112">Using spaces</span></span>
+### <a name="using-spaces"></a><span data-ttu-id="43eca-112">スペースの使用</span><span class="sxs-lookup"><span data-stu-id="43eca-112">Using spaces</span></span>
 
-<span data-ttu-id="fdbe0-113">インデントが必要な場合は、タブではなく、スペースを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-113">When indentation is required, you must use spaces, not tabs.</span></span> <span data-ttu-id="fdbe0-114">少なくとも1つのスペースが必要です。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-114">At least one space is required.</span></span> <span data-ttu-id="fdbe0-115">組織では、インデントに使用するスペースの数を指定するためのコーディング標準を作成できます。インデントが発生する各レベルで、2つ、3つ、または4個のインデントが行われます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-115">Your organization can create coding standards to specify the number of spaces to use for indentation; two, three, or four spaces of indentation at each level where indentation occurs is typical.</span></span>
+<span data-ttu-id="43eca-113">インデントが必要な場合は、タブではなく、スペースを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="43eca-113">When indentation is required, you must use spaces, not tabs.</span></span> <span data-ttu-id="43eca-114">少なくとも1つのスペースが必要です。</span><span class="sxs-lookup"><span data-stu-id="43eca-114">At least one space is required.</span></span> <span data-ttu-id="43eca-115">組織では、インデントに使用するスペースの数を指定するためのコーディング標準を作成できます。インデントが発生する各レベルで、2つ、3つ、または4個のインデントが行われます。</span><span class="sxs-lookup"><span data-stu-id="43eca-115">Your organization can create coding standards to specify the number of spaces to use for indentation; two, three, or four spaces of indentation at each level where indentation occurs is typical.</span></span>
 
-<span data-ttu-id="fdbe0-116">**インデントごとに4つのスペースをお勧めします。**</span><span class="sxs-lookup"><span data-stu-id="fdbe0-116">**We recommend four spaces per indentation.**</span></span>
+<span data-ttu-id="43eca-116">**インデントごとに4つのスペースをお勧めします。**</span><span class="sxs-lookup"><span data-stu-id="43eca-116">**We recommend four spaces per indentation.**</span></span>
 
-<span data-ttu-id="fdbe0-117">ただし、プログラムのインデントは主観的な意味を持ちます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-117">That said, indentation of programs is a subjective matter.</span></span> <span data-ttu-id="fdbe0-118">バリエーションは問題ありませんが、最初に従う必要がある規則は、 *インデントの一貫性*です。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-118">Variations are OK, but the first rule you should follow is *consistency of indentation*.</span></span> <span data-ttu-id="fdbe0-119">一般的に受け入れられているインデントのスタイルを選択し、コードベース全体で使用します。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-119">Choose a generally accepted style of indentation and use it systematically throughout your codebase.</span></span>
+<span data-ttu-id="43eca-117">ただし、プログラムのインデントは主観的な意味を持ちます。</span><span class="sxs-lookup"><span data-stu-id="43eca-117">That said, indentation of programs is a subjective matter.</span></span> <span data-ttu-id="43eca-118">バリエーションは問題ありませんが、最初に従う必要がある規則は、 *インデントの一貫性*です。</span><span class="sxs-lookup"><span data-stu-id="43eca-118">Variations are OK, but the first rule you should follow is *consistency of indentation*.</span></span> <span data-ttu-id="43eca-119">一般的に受け入れられているインデントのスタイルを選択し、コードベース全体で使用します。</span><span class="sxs-lookup"><span data-stu-id="43eca-119">Choose a generally accepted style of indentation and use it systematically throughout your codebase.</span></span>
 
-## <a name="formatting-white-space"></a><span data-ttu-id="fdbe0-120">空白文字の書式設定</span><span class="sxs-lookup"><span data-stu-id="fdbe0-120">Formatting white space</span></span>
+## <a name="formatting-white-space"></a><span data-ttu-id="43eca-120">空白文字の書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-120">Formatting white space</span></span>
 
-<span data-ttu-id="fdbe0-121">F # は空白を区別します。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-121">F# is white space sensitive.</span></span> <span data-ttu-id="fdbe0-122">空白のほとんどのセマンティクスは適切なインデントによってカバーされますが、他にも考慮すべき点があります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-122">Although most semantics from white space are covered by proper indentation, there are some other things to consider.</span></span>
+<span data-ttu-id="43eca-121">F # は空白を区別します。</span><span class="sxs-lookup"><span data-stu-id="43eca-121">F# is white space sensitive.</span></span> <span data-ttu-id="43eca-122">空白のほとんどのセマンティクスは適切なインデントによってカバーされますが、他にも考慮すべき点があります。</span><span class="sxs-lookup"><span data-stu-id="43eca-122">Although most semantics from white space are covered by proper indentation, there are some other things to consider.</span></span>
 
-### <a name="formatting-operators-in-arithmetic-expressions"></a><span data-ttu-id="fdbe0-123">算術式での演算子の書式設定</span><span class="sxs-lookup"><span data-stu-id="fdbe0-123">Formatting operators in arithmetic expressions</span></span>
+### <a name="formatting-operators-in-arithmetic-expressions"></a><span data-ttu-id="43eca-123">算術式での演算子の書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-123">Formatting operators in arithmetic expressions</span></span>
 
-<span data-ttu-id="fdbe0-124">バイナリ算術式の前後には常に空白文字を使用します。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-124">Always use white space around binary arithmetic expressions:</span></span>
+<span data-ttu-id="43eca-124">バイナリ算術式の前後には常に空白文字を使用します。</span><span class="sxs-lookup"><span data-stu-id="43eca-124">Always use white space around binary arithmetic expressions:</span></span>
 
 ```fsharp
 let subtractThenAdd x = x - 1 + 3
 ```
 
-<span data-ttu-id="fdbe0-125">単項 `-` 演算子の直後には、その後に、その値が否定されます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-125">Unary `-` operators should always be immediately followed by the value they are negating:</span></span>
+<span data-ttu-id="43eca-125">単項 `-` 演算子の直後には、その後に、その値が否定されます。</span><span class="sxs-lookup"><span data-stu-id="43eca-125">Unary `-` operators should always be immediately followed by the value they are negating:</span></span>
 
 ```fsharp
 // OK
@@ -53,18 +53,18 @@ let negate x = -x
 let negateBad x = - x
 ```
 
-<span data-ttu-id="fdbe0-126">演算子の後に空白文字を追加すると、 `-` 他のユーザーの混乱を招く可能性があります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-126">Adding a white-space character after the `-` operator can lead to confusion for others.</span></span>
+<span data-ttu-id="43eca-126">演算子の後に空白文字を追加すると、 `-` 他のユーザーの混乱を招く可能性があります。</span><span class="sxs-lookup"><span data-stu-id="43eca-126">Adding a white-space character after the `-` operator can lead to confusion for others.</span></span>
 
-<span data-ttu-id="fdbe0-127">要約すると、常に次のことが重要になります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-127">In summary, it's important to always:</span></span>
+<span data-ttu-id="43eca-127">要約すると、常に次のことが重要になります。</span><span class="sxs-lookup"><span data-stu-id="43eca-127">In summary, it's important to always:</span></span>
 
-* <span data-ttu-id="fdbe0-128">バイナリ演算子を空白で囲む</span><span class="sxs-lookup"><span data-stu-id="fdbe0-128">Surround binary operators with white space</span></span>
-* <span data-ttu-id="fdbe0-129">単項演算子の後に末尾の空白を含めることはできません</span><span class="sxs-lookup"><span data-stu-id="fdbe0-129">Never have trailing white space after a unary operator</span></span>
+* <span data-ttu-id="43eca-128">バイナリ演算子を空白で囲む</span><span class="sxs-lookup"><span data-stu-id="43eca-128">Surround binary operators with white space</span></span>
+* <span data-ttu-id="43eca-129">単項演算子の後に末尾の空白を含めることはできません</span><span class="sxs-lookup"><span data-stu-id="43eca-129">Never have trailing white space after a unary operator</span></span>
 
-<span data-ttu-id="fdbe0-130">二項算術演算子のガイドラインは特に重要です。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-130">The binary arithmetic operator guideline is especially important.</span></span> <span data-ttu-id="fdbe0-131">二項演算子を囲まない `-` と、特定の書式設定の選択肢と組み合わせると、単項演算子として解釈される可能性が `-` あります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-131">Failing to surround a binary `-` operator, when combined with certain formatting choices, could lead to interpreting it as a unary `-`.</span></span>
+<span data-ttu-id="43eca-130">二項算術演算子のガイドラインは特に重要です。</span><span class="sxs-lookup"><span data-stu-id="43eca-130">The binary arithmetic operator guideline is especially important.</span></span> <span data-ttu-id="43eca-131">二項演算子を囲まない `-` と、特定の書式設定の選択肢と組み合わせると、単項演算子として解釈される可能性が `-` あります。</span><span class="sxs-lookup"><span data-stu-id="43eca-131">Failing to surround a binary `-` operator, when combined with certain formatting choices, could lead to interpreting it as a unary `-`.</span></span>
 
-### <a name="surround-a-custom-operator-definition-with-white-space"></a><span data-ttu-id="fdbe0-132">カスタム演算子の定義を空白で囲む</span><span class="sxs-lookup"><span data-stu-id="fdbe0-132">Surround a custom operator definition with white space</span></span>
+### <a name="surround-a-custom-operator-definition-with-white-space"></a><span data-ttu-id="43eca-132">カスタム演算子の定義を空白で囲む</span><span class="sxs-lookup"><span data-stu-id="43eca-132">Surround a custom operator definition with white space</span></span>
 
-<span data-ttu-id="fdbe0-133">演算子の定義を囲むには、常に空白文字を使用します。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-133">Always use white space to surround an operator definition:</span></span>
+<span data-ttu-id="43eca-133">演算子の定義を囲むには、常に空白文字を使用します。</span><span class="sxs-lookup"><span data-stu-id="43eca-133">Always use white space to surround an operator definition:</span></span>
 
 ```fsharp
 // OK
@@ -74,11 +74,11 @@ let ( !> ) x f = f x
 let (!>) x f = f x
 ```
 
-<span data-ttu-id="fdbe0-134">で始まり、複数の文字を含むカスタム演算子については、コンパイラのあいまいさを `*` 避けるために、定義の先頭に空白を追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-134">For any custom operator that starts with `*` and that has more than one character, you need to add a white space to the beginning of the definition to avoid a compiler ambiguity.</span></span> <span data-ttu-id="fdbe0-135">このため、すべての演算子の定義を1つの空白文字で囲むことをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-135">Because of this, we recommend that you simply surround the definitions of all operators with a single white-space character.</span></span>
+<span data-ttu-id="43eca-134">で始まり、複数の文字を含むカスタム演算子については、コンパイラのあいまいさを `*` 避けるために、定義の先頭に空白を追加する必要があります。</span><span class="sxs-lookup"><span data-stu-id="43eca-134">For any custom operator that starts with `*` and that has more than one character, you need to add a white space to the beginning of the definition to avoid a compiler ambiguity.</span></span> <span data-ttu-id="43eca-135">このため、すべての演算子の定義を1つの空白文字で囲むことをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="43eca-135">Because of this, we recommend that you simply surround the definitions of all operators with a single white-space character.</span></span>
 
-### <a name="surround-function-parameter-arrows-with-white-space"></a><span data-ttu-id="fdbe0-136">関数パラメーターの矢印を空白で囲む</span><span class="sxs-lookup"><span data-stu-id="fdbe0-136">Surround function parameter arrows with white space</span></span>
+### <a name="surround-function-parameter-arrows-with-white-space"></a><span data-ttu-id="43eca-136">関数パラメーターの矢印を空白で囲む</span><span class="sxs-lookup"><span data-stu-id="43eca-136">Surround function parameter arrows with white space</span></span>
 
-<span data-ttu-id="fdbe0-137">関数の署名を定義するときは、記号の周りに空白文字を使用し `->` ます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-137">When defining the signature of a function, use white space around the `->` symbol:</span></span>
+<span data-ttu-id="43eca-137">関数の署名を定義するときは、記号の周りに空白文字を使用し `->` ます。</span><span class="sxs-lookup"><span data-stu-id="43eca-137">When defining the signature of a function, use white space around the `->` symbol:</span></span>
 
 ```fsharp
 // OK
@@ -88,9 +88,9 @@ type MyFun = int -> int -> string
 type MyFunBad = int->int->string
 ```
 
-### <a name="surround-function-arguments-with-white-space"></a><span data-ttu-id="fdbe0-138">関数の引数を空白で囲む</span><span class="sxs-lookup"><span data-stu-id="fdbe0-138">Surround function arguments with white space</span></span>
+### <a name="surround-function-arguments-with-white-space"></a><span data-ttu-id="43eca-138">関数の引数を空白で囲む</span><span class="sxs-lookup"><span data-stu-id="43eca-138">Surround function arguments with white space</span></span>
 
-<span data-ttu-id="fdbe0-139">関数を定義する場合は、各引数の前後に空白文字を使用します。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-139">When defining a function, use white space around each argument.</span></span>
+<span data-ttu-id="43eca-139">関数を定義する場合は、各引数の前後に空白文字を使用します。</span><span class="sxs-lookup"><span data-stu-id="43eca-139">When defining a function, use white space around each argument.</span></span>
 
 ```fsharp
 // OK
@@ -100,9 +100,9 @@ let myFun (a: decimal) b c = a + b + c
 let myFunBad (a:decimal)(b)c = a + b + c
 ```
 
-### <a name="place-parameters-on-a-new-line-for-long-definitions"></a><span data-ttu-id="fdbe0-140">長い定義のために新しい行にパラメーターを配置する</span><span class="sxs-lookup"><span data-stu-id="fdbe0-140">Place parameters on a new line for long definitions</span></span>
+### <a name="place-parameters-on-a-new-line-for-long-definitions"></a><span data-ttu-id="43eca-140">長い定義のために新しい行にパラメーターを配置する</span><span class="sxs-lookup"><span data-stu-id="43eca-140">Place parameters on a new line for long definitions</span></span>
 
-<span data-ttu-id="fdbe0-141">関数定義が非常に長い場合は、パラメーターを新しい行に配置し、その後のパラメーターのインデントレベルに一致するようにインデントを設定します。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-141">If you have a very long function definition, place the parameters on new lines and indent them to match the indentation level of the subsequent parameter.</span></span>
+<span data-ttu-id="43eca-141">関数定義が非常に長い場合は、パラメーターを新しい行に配置し、その後のパラメーターのインデントレベルに一致するようにインデントを設定します。</span><span class="sxs-lookup"><span data-stu-id="43eca-141">If you have a very long function definition, place the parameters on new lines and indent them to match the indentation level of the subsequent parameter.</span></span>
 
 ```fsharp
 module M =
@@ -113,7 +113,7 @@ module M =
         // ... the body of the method follows
 ```
 
-<span data-ttu-id="fdbe0-142">これは、組を使用するメンバー、コンストラクター、およびパラメーターにも適用されます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-142">This also applies to members, constructors, and parameters using tuples:</span></span>
+<span data-ttu-id="43eca-142">これは、組を使用するメンバー、コンストラクター、およびパラメーターにも適用されます。</span><span class="sxs-lookup"><span data-stu-id="43eca-142">This also applies to members, constructors, and parameters using tuples:</span></span>
 
 ```fsharp
 type TM() =
@@ -128,7 +128,7 @@ type TC(aVeryLongCtorParam: AVeryLongTypeThatYouNeedToUse,
     // ... the body of the class follows
 ```
 
-<span data-ttu-id="fdbe0-143">パラメーターが明示的に修飾されているか、明示的な戻り値の型の注釈がある場合は、新しい行に文字を配置することをお勧めし `=` ます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-143">If the parameters are currified or there's an explicit return type annotation, it is preferable to place the `=` character on a new line:</span></span>
+<span data-ttu-id="43eca-143">パラメーターが明示的に修飾されているか、明示的な戻り値の型の注釈がある場合は、新しい行に文字を配置することをお勧めし `=` ます。</span><span class="sxs-lookup"><span data-stu-id="43eca-143">If the parameters are currified or there's an explicit return type annotation, it is preferable to place the `=` character on a new line:</span></span>
 
 ```fsharp
 type C() =
@@ -144,13 +144,13 @@ type C() =
         // ... the body of the method
 ```
 
-<span data-ttu-id="fdbe0-144">これは、長い行を回避する方法です (戻り値の型の名前が長い場合もあります)。パラメーターを追加すると、行の破損が少なくなります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-144">This is a way to avoid too long lines (in case return type might have long name) and have less line-damage when adding parameters.</span></span>
+<span data-ttu-id="43eca-144">これは、長い行を回避する方法です (戻り値の型の名前が長い場合もあります)。パラメーターを追加すると、行の破損が少なくなります。</span><span class="sxs-lookup"><span data-stu-id="43eca-144">This is a way to avoid too long lines (in case return type might have long name) and have less line-damage when adding parameters.</span></span>
 
-### <a name="type-annotations"></a><span data-ttu-id="fdbe0-145">型の注釈</span><span class="sxs-lookup"><span data-stu-id="fdbe0-145">Type annotations</span></span>
+### <a name="type-annotations"></a><span data-ttu-id="43eca-145">型の注釈</span><span class="sxs-lookup"><span data-stu-id="43eca-145">Type annotations</span></span>
 
-#### <a name="right-pad-function-argument-type-annotations"></a><span data-ttu-id="fdbe0-146">右埋め込み関数の引数の型の注釈</span><span class="sxs-lookup"><span data-stu-id="fdbe0-146">Right-pad function argument type annotations</span></span>
+#### <a name="right-pad-function-argument-type-annotations"></a><span data-ttu-id="43eca-146">右埋め込み関数の引数の型の注釈</span><span class="sxs-lookup"><span data-stu-id="43eca-146">Right-pad function argument type annotations</span></span>
 
-<span data-ttu-id="fdbe0-147">型の注釈を持つ引数を定義する場合は、シンボルの後に空白文字を使用し `:` ます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-147">When defining arguments with type annotations, use white space after the `:` symbol:</span></span>
+<span data-ttu-id="43eca-147">型の注釈を持つ引数を定義する場合は、シンボルの後に空白文字を使用し `:` ます。</span><span class="sxs-lookup"><span data-stu-id="43eca-147">When defining arguments with type annotations, use white space after the `:` symbol:</span></span>
 
 ```fsharp
 // OK
@@ -160,9 +160,9 @@ let complexFunction (a: int) (b: int) c = a + b + c
 let complexFunctionBad (a :int) (b :int) (c:int) = a + b + c
 ```
 
-#### <a name="surround-return-type-annotations-with-white-space"></a><span data-ttu-id="fdbe0-148">戻り値の型の注釈を空白で囲む</span><span class="sxs-lookup"><span data-stu-id="fdbe0-148">Surround return type annotations with white space</span></span>
+#### <a name="surround-return-type-annotations-with-white-space"></a><span data-ttu-id="43eca-148">戻り値の型の注釈を空白で囲む</span><span class="sxs-lookup"><span data-stu-id="43eca-148">Surround return type annotations with white space</span></span>
 
-<span data-ttu-id="fdbe0-149">Let バインド関数または値型の注釈 (関数の場合は戻り値の型) では、記号の前後に空白文字を使用し `:` ます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-149">In a let-bound function or value type annotation (return type in the case of a function), use white space before and after the `:` symbol:</span></span>
+<span data-ttu-id="43eca-149">Let バインド関数または値型の注釈 (関数の場合は戻り値の型) では、記号の前後に空白文字を使用し `:` ます。</span><span class="sxs-lookup"><span data-stu-id="43eca-149">In a let-bound function or value type annotation (return type in the case of a function), use white space before and after the `:` symbol:</span></span>
 
 ```fsharp
 // OK
@@ -174,16 +174,16 @@ let expensiveToComputeBad2 :int = 2
 let myFunBad (a: decimal) b c:decimal = a + b + c
 ```
 
-## <a name="formatting-blank-lines"></a><span data-ttu-id="fdbe0-150">空白行の書式設定</span><span class="sxs-lookup"><span data-stu-id="fdbe0-150">Formatting blank lines</span></span>
+## <a name="formatting-blank-lines"></a><span data-ttu-id="43eca-150">空白行の書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-150">Formatting blank lines</span></span>
 
-* <span data-ttu-id="fdbe0-151">最上位の関数とクラスの定義を、2つの空白行で区切ります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-151">Separate top-level function and class definitions with two blank lines.</span></span>
-* <span data-ttu-id="fdbe0-152">クラス内のメソッド定義は、1つの空白行で区切られます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-152">Method definitions inside a class are separated by a single blank line.</span></span>
-* <span data-ttu-id="fdbe0-153">関連する関数のグループを分離するために、余分な空白行を使用する (控えめに) ことがあります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-153">Extra blank lines may be used (sparingly) to separate groups of related functions.</span></span> <span data-ttu-id="fdbe0-154">関連する1つの liners (たとえば、一連のダミーの実装) 間で空白行を省略することができます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-154">Blank lines may be omitted between a bunch of related one-liners (for example, a set of dummy implementations).</span></span>
-* <span data-ttu-id="fdbe0-155">論理セクションを示すには、関数の空白行を控えめに使用します。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-155">Use blank lines in functions, sparingly, to indicate logical sections.</span></span>
+* <span data-ttu-id="43eca-151">最上位の関数とクラスの定義を、2つの空白行で区切ります。</span><span class="sxs-lookup"><span data-stu-id="43eca-151">Separate top-level function and class definitions with two blank lines.</span></span>
+* <span data-ttu-id="43eca-152">クラス内のメソッド定義は、1つの空白行で区切られます。</span><span class="sxs-lookup"><span data-stu-id="43eca-152">Method definitions inside a class are separated by a single blank line.</span></span>
+* <span data-ttu-id="43eca-153">関連する関数のグループを分離するために、余分な空白行を使用する (控えめに) ことがあります。</span><span class="sxs-lookup"><span data-stu-id="43eca-153">Extra blank lines may be used (sparingly) to separate groups of related functions.</span></span> <span data-ttu-id="43eca-154">関連する1つの liners (たとえば、一連のダミーの実装) 間で空白行を省略することができます。</span><span class="sxs-lookup"><span data-stu-id="43eca-154">Blank lines may be omitted between a bunch of related one-liners (for example, a set of dummy implementations).</span></span>
+* <span data-ttu-id="43eca-155">論理セクションを示すには、関数の空白行を控えめに使用します。</span><span class="sxs-lookup"><span data-stu-id="43eca-155">Use blank lines in functions, sparingly, to indicate logical sections.</span></span>
 
-## <a name="formatting-comments"></a><span data-ttu-id="fdbe0-156">コメントの書式設定</span><span class="sxs-lookup"><span data-stu-id="fdbe0-156">Formatting comments</span></span>
+## <a name="formatting-comments"></a><span data-ttu-id="43eca-156">コメントの書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-156">Formatting comments</span></span>
 
-<span data-ttu-id="fdbe0-157">一般に、ML スタイルのブロックコメントに対しては、複数のダブルスラッシュコメントを優先します。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-157">Generally prefer multiple double-slash comments over ML-style block comments.</span></span>
+<span data-ttu-id="43eca-157">一般に、ML スタイルのブロックコメントに対しては、複数のダブルスラッシュコメントを優先します。</span><span class="sxs-lookup"><span data-stu-id="43eca-157">Generally prefer multiple double-slash comments over ML-style block comments.</span></span>
 
 ```fsharp
 // Prefer this style of comments when you want
@@ -195,17 +195,17 @@ let myFunBad (a: decimal) b c:decimal = a + b + c
 *)
 ```
 
-<span data-ttu-id="fdbe0-158">インラインコメントは、最初の文字を大文字にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-158">Inline comments should capitalize the first letter.</span></span>
+<span data-ttu-id="43eca-158">インラインコメントは、最初の文字を大文字にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="43eca-158">Inline comments should capitalize the first letter.</span></span>
 
 ```fsharp
 let f x = x + 1 // Increment by one.
 ```
 
-## <a name="naming-conventions"></a><span data-ttu-id="fdbe0-159">名前付け規則</span><span class="sxs-lookup"><span data-stu-id="fdbe0-159">Naming conventions</span></span>
+## <a name="naming-conventions"></a><span data-ttu-id="43eca-159">名前付け規則</span><span class="sxs-lookup"><span data-stu-id="43eca-159">Naming conventions</span></span>
 
-### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a><span data-ttu-id="fdbe0-160">クラスバインド、式バインド、およびパターンバインドの値と関数にキャメルケースを使用する</span><span class="sxs-lookup"><span data-stu-id="fdbe0-160">Use camelCase for class-bound, expression-bound, and pattern-bound values and functions</span></span>
+### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a><span data-ttu-id="43eca-160">クラスバインド、式バインド、およびパターンバインドの値と関数にキャメルケースを使用する</span><span class="sxs-lookup"><span data-stu-id="43eca-160">Use camelCase for class-bound, expression-bound, and pattern-bound values and functions</span></span>
 
-<span data-ttu-id="fdbe0-161">ローカル変数として、またはパターン一致と関数定義でバインドされたすべての名前にキャメルケースを使用するのが一般的で、F # スタイルで受け入れられます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-161">It is common and accepted F# style to use camelCase for all names bound as local variables or in pattern matches and function definitions.</span></span>
+<span data-ttu-id="43eca-161">ローカル変数として、またはパターン一致と関数定義でバインドされたすべての名前にキャメルケースを使用するのが一般的で、F # スタイルで受け入れられます。</span><span class="sxs-lookup"><span data-stu-id="43eca-161">It is common and accepted F# style to use camelCase for all names bound as local variables or in pattern matches and function definitions.</span></span>
 
 ```fsharp
 // OK
@@ -218,7 +218,7 @@ let addIAndJ I J = I+J
 let AddIAndJ i j = i + j
 ```
 
-<span data-ttu-id="fdbe0-162">クラスのローカルにバインドされた関数は、キャメルケースも使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-162">Locally bound functions in classes should also use camelCase.</span></span>
+<span data-ttu-id="43eca-162">クラスのローカルにバインドされた関数は、キャメルケースも使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="43eca-162">Locally bound functions in classes should also use camelCase.</span></span>
 
 ```fsharp
 type MyClass() =
@@ -232,9 +232,9 @@ type MyClass() =
     member x.Result = doSomething()
 ```
 
-### <a name="use-camelcase-for-module-bound-public-functions"></a><span data-ttu-id="fdbe0-163">モジュールバインドパブリック関数にキャメルケースを使用する</span><span class="sxs-lookup"><span data-stu-id="fdbe0-163">Use camelCase for module-bound public functions</span></span>
+### <a name="use-camelcase-for-module-bound-public-functions"></a><span data-ttu-id="43eca-163">モジュールバインドパブリック関数にキャメルケースを使用する</span><span class="sxs-lookup"><span data-stu-id="43eca-163">Use camelCase for module-bound public functions</span></span>
 
-<span data-ttu-id="fdbe0-164">モジュールバインド関数がパブリック API の一部である場合、キャメルケースを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-164">When a module-bound function is part of a public API, it should use camelCase:</span></span>
+<span data-ttu-id="43eca-164">モジュールバインド関数がパブリック API の一部である場合、キャメルケースを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="43eca-164">When a module-bound function is part of a public API, it should use camelCase:</span></span>
 
 ```fsharp
 module MyAPI =
@@ -243,22 +243,22 @@ module MyAPI =
     let publicFunctionTwo param1 param2 param3 = ...
 ```
 
-### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a><span data-ttu-id="fdbe0-165">内部およびプライベートのモジュールバインド値および関数にキャメルケースを使用する</span><span class="sxs-lookup"><span data-stu-id="fdbe0-165">Use camelCase for internal and private module-bound values and functions</span></span>
+### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a><span data-ttu-id="43eca-165">内部およびプライベートのモジュールバインド値および関数にキャメルケースを使用する</span><span class="sxs-lookup"><span data-stu-id="43eca-165">Use camelCase for internal and private module-bound values and functions</span></span>
 
-<span data-ttu-id="fdbe0-166">次のように、プライベートのモジュールバインド値にはキャメルケースを使用します。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-166">Use camelCase for private module-bound values, including the following:</span></span>
+<span data-ttu-id="43eca-166">次のように、プライベートのモジュールバインド値にはキャメルケースを使用します。</span><span class="sxs-lookup"><span data-stu-id="43eca-166">Use camelCase for private module-bound values, including the following:</span></span>
 
-* <span data-ttu-id="fdbe0-167">スクリプト内のアドホック関数</span><span class="sxs-lookup"><span data-stu-id="fdbe0-167">Ad hoc functions in scripts</span></span>
+* <span data-ttu-id="43eca-167">スクリプト内のアドホック関数</span><span class="sxs-lookup"><span data-stu-id="43eca-167">Ad hoc functions in scripts</span></span>
 
-* <span data-ttu-id="fdbe0-168">モジュールまたは型の内部実装を構成する値</span><span class="sxs-lookup"><span data-stu-id="fdbe0-168">Values making up the internal implementation of a module or type</span></span>
+* <span data-ttu-id="43eca-168">モジュールまたは型の内部実装を構成する値</span><span class="sxs-lookup"><span data-stu-id="43eca-168">Values making up the internal implementation of a module or type</span></span>
 
 ```fsharp
 let emailMyBossTheLatestResults =
     ...
 ```
 
-### <a name="use-camelcase-for-parameters"></a><span data-ttu-id="fdbe0-169">パラメーターにキャメルケースを使用する</span><span class="sxs-lookup"><span data-stu-id="fdbe0-169">Use camelCase for parameters</span></span>
+### <a name="use-camelcase-for-parameters"></a><span data-ttu-id="43eca-169">パラメーターにキャメルケースを使用する</span><span class="sxs-lookup"><span data-stu-id="43eca-169">Use camelCase for parameters</span></span>
 
-<span data-ttu-id="fdbe0-170">すべてのパラメーターは、.NET の名前付け規則に従ってキャメルケースを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-170">All parameters should use camelCase in accordance with .NET naming conventions.</span></span>
+<span data-ttu-id="43eca-170">すべてのパラメーターは、.NET の名前付け規則に従ってキャメルケースを使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="43eca-170">All parameters should use camelCase in accordance with .NET naming conventions.</span></span>
 
 ```fsharp
 module MyModule =
@@ -268,9 +268,9 @@ type MyClass() =
     member this.MyMethod(paramOne, paramTwo) = ...
 ```
 
-### <a name="use-pascalcase-for-modules"></a><span data-ttu-id="fdbe0-171">モジュールに対してパスワードを使用する</span><span class="sxs-lookup"><span data-stu-id="fdbe0-171">Use PascalCase for modules</span></span>
+### <a name="use-pascalcase-for-modules"></a><span data-ttu-id="43eca-171">モジュールに対してパスワードを使用する</span><span class="sxs-lookup"><span data-stu-id="43eca-171">Use PascalCase for modules</span></span>
 
-<span data-ttu-id="fdbe0-172">すべてのモジュール (最上位レベル、内部、プライベート、入れ子になっている) では、文字を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-172">All modules (top-level, internal, private, nested) should use PascalCase.</span></span>
+<span data-ttu-id="43eca-172">すべてのモジュール (最上位レベル、内部、プライベート、入れ子になっている) では、文字を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="43eca-172">All modules (top-level, internal, private, nested) should use PascalCase.</span></span>
 
 ```fsharp
 module MyTopLevelModule
@@ -282,9 +282,9 @@ module Helpers =
     ...
 ```
 
-### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a><span data-ttu-id="fdbe0-173">型宣言、メンバー、およびラベルに対しては、文字を使用します。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-173">Use PascalCase for type declarations, members, and labels</span></span>
+### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a><span data-ttu-id="43eca-173">型宣言、メンバー、およびラベルに対しては、文字を使用します。</span><span class="sxs-lookup"><span data-stu-id="43eca-173">Use PascalCase for type declarations, members, and labels</span></span>
 
-<span data-ttu-id="fdbe0-174">クラス、インターフェイス、構造体、列挙型、デリゲート、レコード、および判別共用体の名前は、すべて、文字を使用した名前にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-174">Classes, interfaces, structs, enumerations, delegates, records, and discriminated unions should all be named with PascalCase.</span></span> <span data-ttu-id="fdbe0-175">レコードと判別共用体の型およびラベル内のメンバーも、文字を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-175">Members within types and labels for records and discriminated unions should also use PascalCase.</span></span>
+<span data-ttu-id="43eca-174">クラス、インターフェイス、構造体、列挙型、デリゲート、レコード、および判別共用体の名前は、すべて、文字を使用した名前にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="43eca-174">Classes, interfaces, structs, enumerations, delegates, records, and discriminated unions should all be named with PascalCase.</span></span> <span data-ttu-id="43eca-175">レコードと判別共用体の型およびラベル内のメンバーも、文字を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="43eca-175">Members within types and labels for records and discriminated unions should also use PascalCase.</span></span>
 
 ```fsharp
 type IMyInterface =
@@ -302,19 +302,19 @@ type SchoolPerson =
     | Administrator
 ```
 
-### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a><span data-ttu-id="fdbe0-176">.NET に固有の構造体には、パスワードを使用する</span><span class="sxs-lookup"><span data-stu-id="fdbe0-176">Use PascalCase for constructs intrinsic to .NET</span></span>
+### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a><span data-ttu-id="43eca-176">.NET に固有の構造体には、パスワードを使用する</span><span class="sxs-lookup"><span data-stu-id="43eca-176">Use PascalCase for constructs intrinsic to .NET</span></span>
 
-<span data-ttu-id="fdbe0-177">名前空間、例外、イベント、およびプロジェクト/ `.dll` 名前でも、文字を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-177">Namespaces, exceptions, events, and project/`.dll` names should also use PascalCase.</span></span> <span data-ttu-id="fdbe0-178">他の .NET 言語からの消費が、コンシューマーにとって自然なものであるだけでなく、発生する可能性のある .NET の名前付け規則とも一貫しています。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-178">Not only does this make consumption from other .NET languages feel more natural to consumers, it's also consistent with .NET naming conventions that you are likely to encounter.</span></span>
+<span data-ttu-id="43eca-177">名前空間、例外、イベント、およびプロジェクト/ `.dll` 名前でも、文字を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="43eca-177">Namespaces, exceptions, events, and project/`.dll` names should also use PascalCase.</span></span> <span data-ttu-id="43eca-178">他の .NET 言語からの消費が、コンシューマーにとって自然なものであるだけでなく、発生する可能性のある .NET の名前付け規則とも一貫しています。</span><span class="sxs-lookup"><span data-stu-id="43eca-178">Not only does this make consumption from other .NET languages feel more natural to consumers, it's also consistent with .NET naming conventions that you are likely to encounter.</span></span>
 
-### <a name="avoid-underscores-in-names"></a><span data-ttu-id="fdbe0-179">名前にアンダースコアを使わない</span><span class="sxs-lookup"><span data-stu-id="fdbe0-179">Avoid underscores in names</span></span>
+### <a name="avoid-underscores-in-names"></a><span data-ttu-id="43eca-179">名前にアンダースコアを使わない</span><span class="sxs-lookup"><span data-stu-id="43eca-179">Avoid underscores in names</span></span>
 
-<span data-ttu-id="fdbe0-180">従来、一部の F # ライブラリでは、名前にアンダースコアが使用されていました。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-180">Historically, some F# libraries have used underscores in names.</span></span> <span data-ttu-id="fdbe0-181">ただし、これは .NET の名前付け規則と競合するため、広く受け入れられなくなりました。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-181">However, this is no longer widely accepted, partly because it clashes with .NET naming conventions.</span></span> <span data-ttu-id="fdbe0-182">ただし、一部の F # プログラマーでは、多くの場合、スコアが大きくなり、履歴上の理由から、許容範囲が重要になります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-182">That said, some F# programmers use underscores heavily, partly for historical reasons, and tolerance and respect is important.</span></span> <span data-ttu-id="fdbe0-183">ただし、スタイルは多くの場合、使用するかどうかを選択できる他のユーザーによって無効になっていることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-183">However, be aware that the style is often disliked by others who have a choice about whether to use it.</span></span>
+<span data-ttu-id="43eca-180">従来、一部の F # ライブラリでは、名前にアンダースコアが使用されていました。</span><span class="sxs-lookup"><span data-stu-id="43eca-180">Historically, some F# libraries have used underscores in names.</span></span> <span data-ttu-id="43eca-181">ただし、これは .NET の名前付け規則と競合するため、広く受け入れられなくなりました。</span><span class="sxs-lookup"><span data-stu-id="43eca-181">However, this is no longer widely accepted, partly because it clashes with .NET naming conventions.</span></span> <span data-ttu-id="43eca-182">ただし、一部の F # プログラマーでは、多くの場合、スコアが大きくなり、履歴上の理由から、許容範囲が重要になります。</span><span class="sxs-lookup"><span data-stu-id="43eca-182">That said, some F# programmers use underscores heavily, partly for historical reasons, and tolerance and respect is important.</span></span> <span data-ttu-id="43eca-183">ただし、スタイルは多くの場合、使用するかどうかを選択できる他のユーザーによって無効になっていることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="43eca-183">However, be aware that the style is often disliked by others who have a choice about whether to use it.</span></span>
 
-<span data-ttu-id="fdbe0-184">1つの例外として、ネイティブコンポーネントとの相互運用 (アンダースコアが共通) があります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-184">One exception includes interoperating with native components, where underscores are common.</span></span>
+<span data-ttu-id="43eca-184">1つの例外として、ネイティブコンポーネントとの相互運用 (アンダースコアが共通) があります。</span><span class="sxs-lookup"><span data-stu-id="43eca-184">One exception includes interoperating with native components, where underscores are common.</span></span>
 
-### <a name="use-standard-f-operators"></a><span data-ttu-id="fdbe0-185">標準 F # 演算子を使用する</span><span class="sxs-lookup"><span data-stu-id="fdbe0-185">Use standard F# operators</span></span>
+### <a name="use-standard-f-operators"></a><span data-ttu-id="43eca-185">標準 F # 演算子を使用する</span><span class="sxs-lookup"><span data-stu-id="43eca-185">Use standard F# operators</span></span>
 
-<span data-ttu-id="fdbe0-186">次の演算子は、F # 標準ライブラリで定義されており、同等のを定義する代わりに使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-186">The following operators are defined in the F# standard library and should be used instead of defining equivalents.</span></span> <span data-ttu-id="fdbe0-187">コードを読みやすくし、慣用的なする傾向があるため、これらの演算子を使用することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-187">Using these operators is recommended as it tends to make code more readable and idiomatic.</span></span> <span data-ttu-id="fdbe0-188">OCaml または他の関数型プログラミング言語の背景を持つ開発者は、さまざまな表現方法に慣れている場合があります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-188">Developers with a background in OCaml or other functional programming language may be accustomed to different idioms.</span></span> <span data-ttu-id="fdbe0-189">次の一覧は、推奨される F # 演算子をまとめたものです。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-189">The following list summarizes the recommended F# operators.</span></span>
+<span data-ttu-id="43eca-186">次の演算子は、F # 標準ライブラリで定義されており、同等のを定義する代わりに使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="43eca-186">The following operators are defined in the F# standard library and should be used instead of defining equivalents.</span></span> <span data-ttu-id="43eca-187">コードを読みやすくし、慣用的なする傾向があるため、これらの演算子を使用することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="43eca-187">Using these operators is recommended as it tends to make code more readable and idiomatic.</span></span> <span data-ttu-id="43eca-188">OCaml または他の関数型プログラミング言語の背景を持つ開発者は、さまざまな表現方法に慣れている場合があります。</span><span class="sxs-lookup"><span data-stu-id="43eca-188">Developers with a background in OCaml or other functional programming language may be accustomed to different idioms.</span></span> <span data-ttu-id="43eca-189">次の一覧は、推奨される F # 演算子をまとめたものです。</span><span class="sxs-lookup"><span data-stu-id="43eca-189">The following list summarizes the recommended F# operators.</span></span>
 
 ```fsharp
 x |> f // Forward pipeline
@@ -334,23 +334,23 @@ x &&& y // Bitwise and, also for working with “flags” enumeration
 x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 ```
 
-### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a><span data-ttu-id="fdbe0-190">`Foo<T>`後置構文 () の場合は、ジェネリック () のプレフィックス構文を使用します `T Foo`</span><span class="sxs-lookup"><span data-stu-id="fdbe0-190">Use prefix syntax for generics (`Foo<T>`) in preference to postfix syntax (`T Foo`)</span></span>
+### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a><span data-ttu-id="43eca-190">`Foo<T>`後置構文 () の場合は、ジェネリック () のプレフィックス構文を使用します `T Foo`</span><span class="sxs-lookup"><span data-stu-id="43eca-190">Use prefix syntax for generics (`Foo<T>`) in preference to postfix syntax (`T Foo`)</span></span>
 
-<span data-ttu-id="fdbe0-191">F # では、ジェネリック型の名前付けの後置形式の ML スタイル (たとえば `int list` ) と、プレフィックス .net スタイル (たとえば、) の両方が継承され `list<int>` ます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-191">F# inherits both the postfix ML style of naming generic types (for example, `int list`) as well as the prefix .NET style (for example, `list<int>`).</span></span> <span data-ttu-id="fdbe0-192">次の5つの特定の種類を除き、.NET スタイルを優先します。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-192">Prefer the .NET style, except for five specific types:</span></span>
+<span data-ttu-id="43eca-191">F # では、ジェネリック型の名前付けの後置形式の ML スタイル (たとえば `int list` ) と、プレフィックス .net スタイル (たとえば、) の両方が継承され `list<int>` ます。</span><span class="sxs-lookup"><span data-stu-id="43eca-191">F# inherits both the postfix ML style of naming generic types (for example, `int list`) as well as the prefix .NET style (for example, `list<int>`).</span></span> <span data-ttu-id="43eca-192">次の5つの特定の種類を除き、.NET スタイルを優先します。</span><span class="sxs-lookup"><span data-stu-id="43eca-192">Prefer the .NET style, except for five specific types:</span></span>
 
-1. <span data-ttu-id="fdbe0-193">F # リストの場合は、ではなく、後置形式を使用します `int list` `list<int>` 。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-193">For F# Lists, use the postfix form: `int list` rather than `list<int>`.</span></span>
-2. <span data-ttu-id="fdbe0-194">F # オプションの場合は、ではなく、後置形式を使用します `int option` `option<int>` 。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-194">For F# Options, use the postfix form: `int option` rather than `option<int>`.</span></span>
-3. <span data-ttu-id="fdbe0-195">F # 値オプションの場合は、ではなく、後置形式を使用し `int voption` `voption<int>` ます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-195">For F# Value Options, use the postfix form: `int voption` rather than `voption<int>`.</span></span>
-4. <span data-ttu-id="fdbe0-196">F # の配列の場合は、またはではなく構文名を使用し `int[]` `int array` `array<int>` ます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-196">For F# arrays, use the syntactic name `int[]` rather than `int array` or `array<int>`.</span></span>
-5. <span data-ttu-id="fdbe0-197">参照セルの場合 `int ref` は、またはではなくを使用 `ref<int>` `Ref<int>` します。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-197">For Reference Cells, use `int ref` rather than `ref<int>` or `Ref<int>`.</span></span>
+1. <span data-ttu-id="43eca-193">F # リストの場合は、ではなく、後置形式を使用します `int list` `list<int>` 。</span><span class="sxs-lookup"><span data-stu-id="43eca-193">For F# Lists, use the postfix form: `int list` rather than `list<int>`.</span></span>
+2. <span data-ttu-id="43eca-194">F # オプションの場合は、ではなく、後置形式を使用します `int option` `option<int>` 。</span><span class="sxs-lookup"><span data-stu-id="43eca-194">For F# Options, use the postfix form: `int option` rather than `option<int>`.</span></span>
+3. <span data-ttu-id="43eca-195">F # 値オプションの場合は、ではなく、後置形式を使用し `int voption` `voption<int>` ます。</span><span class="sxs-lookup"><span data-stu-id="43eca-195">For F# Value Options, use the postfix form: `int voption` rather than `voption<int>`.</span></span>
+4. <span data-ttu-id="43eca-196">F # の配列の場合は、またはではなく構文名を使用し `int[]` `int array` `array<int>` ます。</span><span class="sxs-lookup"><span data-stu-id="43eca-196">For F# arrays, use the syntactic name `int[]` rather than `int array` or `array<int>`.</span></span>
+5. <span data-ttu-id="43eca-197">参照セルの場合 `int ref` は、またはではなくを使用 `ref<int>` `Ref<int>` します。</span><span class="sxs-lookup"><span data-stu-id="43eca-197">For Reference Cells, use `int ref` rather than `ref<int>` or `Ref<int>`.</span></span>
 
-<span data-ttu-id="fdbe0-198">それ以外のすべての型については、プレフィックスフォームを使用します。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-198">For all other types, use the prefix form.</span></span>
+<span data-ttu-id="43eca-198">それ以外のすべての型については、プレフィックスフォームを使用します。</span><span class="sxs-lookup"><span data-stu-id="43eca-198">For all other types, use the prefix form.</span></span>
 
-## <a name="formatting-tuples"></a><span data-ttu-id="fdbe0-199">タプルの書式設定</span><span class="sxs-lookup"><span data-stu-id="fdbe0-199">Formatting tuples</span></span>
+## <a name="formatting-tuples"></a><span data-ttu-id="43eca-199">タプルの書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-199">Formatting tuples</span></span>
 
-<span data-ttu-id="fdbe0-200">タプルのインスタンス化は、かっこで囲む必要があります。また、この中の区切り記号の後には、1つのスペースが必要です。たとえば、のようになり `(1, 2)` `(x, y, z)` ます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-200">A tuple instantiation should be parenthesized, and the delimiting commas within it should be followed by a single space, for example: `(1, 2)`, `(x, y, z)`.</span></span>
+<span data-ttu-id="43eca-200">タプルのインスタンス化は、かっこで囲む必要があります。また、この中の区切り記号の後には、1つのスペースが必要です。たとえば、のようになり `(1, 2)` `(x, y, z)` ます。</span><span class="sxs-lookup"><span data-stu-id="43eca-200">A tuple instantiation should be parenthesized, and the delimiting commas within it should be followed by a single space, for example: `(1, 2)`, `(x, y, z)`.</span></span>
 
-<span data-ttu-id="fdbe0-201">通常は、組のパターンマッチングでかっこを省略することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-201">It is commonly accepted to omit parentheses in pattern matching of tuples:</span></span>
+<span data-ttu-id="43eca-201">通常は、組のパターンマッチングでかっこを省略することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="43eca-201">It is commonly accepted to omit parentheses in pattern matching of tuples:</span></span>
 
 ```fsharp
 let (x, y) = z // Destructuring
@@ -363,7 +363,7 @@ match x, y with
 | x, y -> 1
 ```
 
-<span data-ttu-id="fdbe0-202">タプルが関数の戻り値の場合は、通常、かっこを省略することもできます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-202">It is also commonly accepted to omit parentheses if the tuple is the return value of a function:</span></span>
+<span data-ttu-id="43eca-202">タプルが関数の戻り値の場合は、通常、かっこを省略することもできます。</span><span class="sxs-lookup"><span data-stu-id="43eca-202">It is also commonly accepted to omit parentheses if the tuple is the return value of a function:</span></span>
 
 ```fsharp
 // OK
@@ -373,11 +373,11 @@ let update model msg =
     | _ -> model, [ msg ]
 ```
 
-<span data-ttu-id="fdbe0-203">まとめとして、かっこで囲まれたタプルのインスタンス化を使用しますが、パターンマッチングまたは戻り値に組を使用する場合は、かっこを使用しないことをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-203">In summary, prefer parenthesized tuple instantiations, but when using tuples for pattern matching or a return value, it is considered fine to avoid parentheses.</span></span>
+<span data-ttu-id="43eca-203">まとめとして、かっこで囲まれたタプルのインスタンス化を使用しますが、パターンマッチングまたは戻り値に組を使用する場合は、かっこを使用しないことをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="43eca-203">In summary, prefer parenthesized tuple instantiations, but when using tuples for pattern matching or a return value, it is considered fine to avoid parentheses.</span></span>
 
-## <a name="formatting-discriminated-union-declarations"></a><span data-ttu-id="fdbe0-204">判別共用体宣言の書式設定</span><span class="sxs-lookup"><span data-stu-id="fdbe0-204">Formatting discriminated union declarations</span></span>
+## <a name="formatting-discriminated-union-declarations"></a><span data-ttu-id="43eca-204">判別共用体宣言の書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-204">Formatting discriminated union declarations</span></span>
 
-<span data-ttu-id="fdbe0-205">`|`4 つのスペースで型定義をインデントする:</span><span class="sxs-lookup"><span data-stu-id="fdbe0-205">Indent `|` in type definition by four spaces:</span></span>
+<span data-ttu-id="43eca-205">`|`4 つのスペースで型定義をインデントする:</span><span class="sxs-lookup"><span data-stu-id="43eca-205">Indent `|` in type definition by four spaces:</span></span>
 
 ```fsharp
 // OK
@@ -393,9 +393,9 @@ type Volume =
 | ImperialPint of float
 ```
 
-## <a name="formatting-discriminated-unions"></a><span data-ttu-id="fdbe0-206">判別共用体の書式設定</span><span class="sxs-lookup"><span data-stu-id="fdbe0-206">Formatting discriminated unions</span></span>
+## <a name="formatting-discriminated-unions"></a><span data-ttu-id="43eca-206">判別共用体の書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-206">Formatting discriminated unions</span></span>
 
-<span data-ttu-id="fdbe0-207">複数の行に分割されるインスタンス化された判別共用体は、含まれるデータにインデントを含む新しいスコープを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-207">Instantiated Discriminated Unions that split across multiple lines should give contained data a new scope with indentation:</span></span>
+<span data-ttu-id="43eca-207">複数の行に分割されるインスタンス化された判別共用体は、含まれるデータにインデントを含む新しいスコープを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="43eca-207">Instantiated Discriminated Unions that split across multiple lines should give contained data a new scope with indentation:</span></span>
 
 ```fsharp
 let tree1 =
@@ -404,7 +404,7 @@ let tree1 =
          BinaryNode(BinaryValue 3, BinaryValue 4))
 ```
 
-<span data-ttu-id="fdbe0-208">右かっこは、新しい行にも指定できます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-208">The closing parenthesis can also be on a new line:</span></span>
+<span data-ttu-id="43eca-208">右かっこは、新しい行にも指定できます。</span><span class="sxs-lookup"><span data-stu-id="43eca-208">The closing parenthesis can also be on a new line:</span></span>
 
 ```fsharp
 let tree1 =
@@ -414,9 +414,9 @@ let tree1 =
     )
 ```
 
-## <a name="formatting-record-declarations"></a><span data-ttu-id="fdbe0-209">レコード宣言の書式設定</span><span class="sxs-lookup"><span data-stu-id="fdbe0-209">Formatting record declarations</span></span>
+## <a name="formatting-record-declarations"></a><span data-ttu-id="43eca-209">レコード宣言の書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-209">Formatting record declarations</span></span>
 
-<span data-ttu-id="fdbe0-210">`{`4 つのスペースで型定義をインデントし、同じ行でフィールドリストを開始します。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-210">Indent `{` in type definition by four spaces and start the field list on the same line:</span></span>
+<span data-ttu-id="43eca-210">`{`4 つのスペースで型定義をインデントし、同じ行でフィールドリストを開始します。</span><span class="sxs-lookup"><span data-stu-id="43eca-210">Indent `{` in type definition by four spaces and start the field list on the same line:</span></span>
 
 ```fsharp
 // OK
@@ -442,7 +442,7 @@ type PostalAddress =
     }
 ```
 
-<span data-ttu-id="fdbe0-211">インターフェイスの実装やレコードのメンバーを宣言する場合は、開始トークンを新しい行に配置し、終了トークンを新しい行に配置することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-211">Placing the opening token on a new line and the closing token on a new line is preferable if you are declaring interface implementations or members on the record:</span></span>
+<span data-ttu-id="43eca-211">インターフェイスの実装やレコードのメンバーを宣言する場合は、開始トークンを新しい行に配置し、終了トークンを新しい行に配置することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="43eca-211">Placing the opening token on a new line and the closing token on a new line is preferable if you are declaring interface implementations or members on the record:</span></span>
 
 ```fsharp
 // Declaring additional members on PostalAddress
@@ -461,15 +461,15 @@ type MyRecord =
     interface IMyInterface
 ```
 
-## <a name="formatting-records"></a><span data-ttu-id="fdbe0-212">レコードの書式設定</span><span class="sxs-lookup"><span data-stu-id="fdbe0-212">Formatting records</span></span>
+## <a name="formatting-records"></a><span data-ttu-id="43eca-212">レコードの書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-212">Formatting records</span></span>
 
-<span data-ttu-id="fdbe0-213">短いレコードは、1行に記述できます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-213">Short records can be written in one line:</span></span>
+<span data-ttu-id="43eca-213">短いレコードは、1行に記述できます。</span><span class="sxs-lookup"><span data-stu-id="43eca-213">Short records can be written in one line:</span></span>
 
 ```fsharp
 let point = { X = 1.0; Y = 0.0 }
 ```
 
-<span data-ttu-id="fdbe0-214">ラベルに新しい行を使用する必要があるレコードは次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-214">Records that are longer should use new lines for labels:</span></span>
+<span data-ttu-id="43eca-214">ラベルに新しい行を使用する必要があるレコードは次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="43eca-214">Records that are longer should use new lines for labels:</span></span>
 
 ```fsharp
 let rainbow =
@@ -477,10 +477,10 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-<span data-ttu-id="fdbe0-215">次の場合は、開始トークンを新しい行に配置し、1つのスコープの上にある [コンテンツ] タブと、新しい行の終了トークンを使用することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-215">Placing the opening token on a new line, the contents tabbed over one scope, and the closing token on a new line is preferable if you are:</span></span>
+<span data-ttu-id="43eca-215">次の場合は、開始トークンを新しい行に配置し、1つのスコープの上にある [コンテンツ] タブと、新しい行の終了トークンを使用することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="43eca-215">Placing the opening token on a new line, the contents tabbed over one scope, and the closing token on a new line is preferable if you are:</span></span>
 
-* <span data-ttu-id="fdbe0-216">異なるインデントスコープを持つコード内でのレコードの移動</span><span class="sxs-lookup"><span data-stu-id="fdbe0-216">Moving records around in code with different indentation scopes</span></span>
-* <span data-ttu-id="fdbe0-217">関数にパイプする</span><span class="sxs-lookup"><span data-stu-id="fdbe0-217">Piping them into a function</span></span>
+* <span data-ttu-id="43eca-216">異なるインデントスコープを持つコード内でのレコードの移動</span><span class="sxs-lookup"><span data-stu-id="43eca-216">Moving records around in code with different indentation scopes</span></span>
+* <span data-ttu-id="43eca-217">関数にパイプする</span><span class="sxs-lookup"><span data-stu-id="43eca-217">Piping them into a function</span></span>
 
 ```fsharp
 let rainbow =
@@ -510,19 +510,19 @@ let foo a =
         })
 ```
 
-<span data-ttu-id="fdbe0-218">リストおよび配列要素にも同じ規則が適用されます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-218">The same rules apply for list and array elements.</span></span>
+<span data-ttu-id="43eca-218">リストおよび配列要素にも同じ規則が適用されます。</span><span class="sxs-lookup"><span data-stu-id="43eca-218">The same rules apply for list and array elements.</span></span>
 
-## <a name="formatting-copy-and-update-record-expressions"></a><span data-ttu-id="fdbe0-219">コピーおよび更新レコード式の書式設定</span><span class="sxs-lookup"><span data-stu-id="fdbe0-219">Formatting copy-and-update record expressions</span></span>
+## <a name="formatting-copy-and-update-record-expressions"></a><span data-ttu-id="43eca-219">コピーおよび更新レコード式の書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-219">Formatting copy-and-update record expressions</span></span>
 
-<span data-ttu-id="fdbe0-220">コピーと更新のレコード式は依然としてレコードであるため、同様のガイドラインが適用されます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-220">A copy-and-update record expression is still a record, so similar guidelines apply.</span></span>
+<span data-ttu-id="43eca-220">コピーと更新のレコード式は依然としてレコードであるため、同様のガイドラインが適用されます。</span><span class="sxs-lookup"><span data-stu-id="43eca-220">A copy-and-update record expression is still a record, so similar guidelines apply.</span></span>
 
-<span data-ttu-id="fdbe0-221">短い式は、1行に収めることができます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-221">Short expressions can fit on one line:</span></span>
+<span data-ttu-id="43eca-221">短い式は、1行に収めることができます。</span><span class="sxs-lookup"><span data-stu-id="43eca-221">Short expressions can fit on one line:</span></span>
 
 ```fsharp
 let point2 = { point with X = 1; Y = 2 }
 ```
 
-<span data-ttu-id="fdbe0-222">長い式では、新しい行を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-222">Longer expressions should use new lines:</span></span>
+<span data-ttu-id="43eca-222">長い式では、新しい行を使用する必要があります。</span><span class="sxs-lookup"><span data-stu-id="43eca-222">Longer expressions should use new lines:</span></span>
 
 ```fsharp
 let rainbow2 =
@@ -531,7 +531,7 @@ let rainbow2 =
         Lackeys = [ "Zippy"; "George"; "Bungle" ] }
 ```
 
-<span data-ttu-id="fdbe0-223">レコードガイダンスと同様に、中かっこに個別の行を追加し、式を使用して1つのスコープを右側にインデントすることもできます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-223">And as with the record guidance, you may want to dedicate separate lines for the braces and indent one scope to the right with the expression.</span></span> <span data-ttu-id="fdbe0-224">かっこのない省略可能な値をラップするなどの特殊なケースでは、1行に中かっこを続ける必要がある場合があります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-224">In some special cases, such as wrapping a value with an optional without parentheses, you may need to keep a brace on one line:</span></span>
+<span data-ttu-id="43eca-223">レコードガイダンスと同様に、中かっこに個別の行を追加し、式を使用して1つのスコープを右側にインデントすることもできます。</span><span class="sxs-lookup"><span data-stu-id="43eca-223">And as with the record guidance, you may want to dedicate separate lines for the braces and indent one scope to the right with the expression.</span></span> <span data-ttu-id="43eca-224">かっこのない省略可能な値をラップするなどの特殊なケースでは、1行に中かっこを続ける必要がある場合があります。</span><span class="sxs-lookup"><span data-stu-id="43eca-224">In some special cases, such as wrapping a value with an optional without parentheses, you may need to keep a brace on one line:</span></span>
 
 ```fsharp
 type S = { F1: int; F2: string }
@@ -548,18 +548,18 @@ let newState =
     }
 ```
 
-## <a name="formatting-lists-and-arrays"></a><span data-ttu-id="fdbe0-225">リストと配列の書式設定</span><span class="sxs-lookup"><span data-stu-id="fdbe0-225">Formatting lists and arrays</span></span>
+## <a name="formatting-lists-and-arrays"></a><span data-ttu-id="43eca-225">リストと配列の書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-225">Formatting lists and arrays</span></span>
 
-<span data-ttu-id="fdbe0-226">`x :: l`演算子の前後にスペースを使用して記述 `::` `::` します (は挿入演算子で、そのためスペースで囲みます)。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-226">Write `x :: l` with spaces around the `::` operator (`::` is an infix operator, hence surrounded by spaces).</span></span>
+<span data-ttu-id="43eca-226">`x :: l`演算子の前後にスペースを使用して記述 `::` `::` します (は挿入演算子で、そのためスペースで囲みます)。</span><span class="sxs-lookup"><span data-stu-id="43eca-226">Write `x :: l` with spaces around the `::` operator (`::` is an infix operator, hence surrounded by spaces).</span></span>
 
-<span data-ttu-id="fdbe0-227">1つの行で宣言されたリストと配列には、左角かっこの前と右角かっこの前にスペースが必要です。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-227">List and arrays declared on a single line should have a space after the opening bracket and before the closing bracket:</span></span>
+<span data-ttu-id="43eca-227">1つの行で宣言されたリストと配列には、左角かっこの前と右角かっこの前にスペースが必要です。</span><span class="sxs-lookup"><span data-stu-id="43eca-227">List and arrays declared on a single line should have a space after the opening bracket and before the closing bracket:</span></span>
 
 ```fsharp
 let xs = [ 1; 2; 3 ]
 let ys = [| 1; 2; 3; |]
 ```
 
-<span data-ttu-id="fdbe0-228">2つの異なるかっこで囲まれた演算子の間には、常に少なくとも1つの空白文字を使用します。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-228">Always use at least one space between two distinct brace-like operators.</span></span> <span data-ttu-id="fdbe0-229">たとえば、との間にはスペースを入れ `[` `{` ます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-229">For example, leave a space between a `[` and a `{`.</span></span>
+<span data-ttu-id="43eca-228">2つの異なるかっこで囲まれた演算子の間には、常に少なくとも1つの空白文字を使用します。</span><span class="sxs-lookup"><span data-stu-id="43eca-228">Always use at least one space between two distinct brace-like operators.</span></span> <span data-ttu-id="43eca-229">たとえば、との間にはスペースを入れ `[` `{` ます。</span><span class="sxs-lookup"><span data-stu-id="43eca-229">For example, leave a space between a `[` and a `{`.</span></span>
 
 ```fsharp
 // OK
@@ -577,9 +577,9 @@ let ys = [| 1; 2; 3; |]
  { IngredientName = "Lemon"; Quantity = 1 }]
 ```
 
-<span data-ttu-id="fdbe0-230">組のリストまたは配列にも同じガイドラインが適用されます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-230">The same guideline applies for lists or arrays of tuples.</span></span>
+<span data-ttu-id="43eca-230">組のリストまたは配列にも同じガイドラインが適用されます。</span><span class="sxs-lookup"><span data-stu-id="43eca-230">The same guideline applies for lists or arrays of tuples.</span></span>
 
-<span data-ttu-id="fdbe0-231">複数の行にわたって分割されるリストと配列は、レコードと同様のルールに従います。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-231">Lists and arrays that split across multiple lines follow a similar rule as records do:</span></span>
+<span data-ttu-id="43eca-231">複数の行にわたって分割されるリストと配列は、レコードと同様のルールに従います。</span><span class="sxs-lookup"><span data-stu-id="43eca-231">Lists and arrays that split across multiple lines follow a similar rule as records do:</span></span>
 
 ```fsharp
 let pascalsTriangle =
@@ -596,9 +596,9 @@ let pascalsTriangle =
     |]
 ```
 
-<span data-ttu-id="fdbe0-232">レコードの場合と同様に、開始角かっこと右角かっこを独自の行で宣言すると、コードの移動や関数へのパイプ処理が容易になります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-232">And as with records, declaring the opening and closing brackets on their own line will make moving code around and piping into functions easier.</span></span>
+<span data-ttu-id="43eca-232">レコードの場合と同様に、開始角かっこと右角かっこを独自の行で宣言すると、コードの移動や関数へのパイプ処理が容易になります。</span><span class="sxs-lookup"><span data-stu-id="43eca-232">And as with records, declaring the opening and closing brackets on their own line will make moving code around and piping into functions easier.</span></span>
 
-<span data-ttu-id="fdbe0-233">プログラムによって配列とリストを生成する場合は、 `->` `do ... yield` 常に値が生成されるタイミングを優先します。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-233">When generating arrays and lists programmatically, prefer `->` over `do ... yield` when a value is always generated:</span></span>
+<span data-ttu-id="43eca-233">プログラムによって配列とリストを生成する場合は、 `->` `do ... yield` 常に値が生成されるタイミングを優先します。</span><span class="sxs-lookup"><span data-stu-id="43eca-233">When generating arrays and lists programmatically, prefer `->` over `do ... yield` when a value is always generated:</span></span>
 
 ```fsharp
 // Preferred
@@ -608,7 +608,7 @@ let squares = [ for x in 1..10 -> x * x ]
 let squares' = [ for x in 1..10 do yield x * x ]
 ```
 
-<span data-ttu-id="fdbe0-234">以前のバージョンの F # 言語で `yield` は、データが条件付きで生成される場合や、連続する式が評価される場合があります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-234">Older versions of the F# language required specifying `yield` in situations where data may be generated conditionally, or there may be consecutive expressions to be evaluated.</span></span> <span data-ttu-id="fdbe0-235">`yield`古い F # 言語バージョンでコンパイルする必要がある場合を除き、これらのキーワードは省略してください。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-235">Prefer omitting these `yield` keywords unless you must compile with an older F# language version:</span></span>
+<span data-ttu-id="43eca-234">以前のバージョンの F # 言語で `yield` は、データが条件付きで生成される場合や、連続する式が評価される場合があります。</span><span class="sxs-lookup"><span data-stu-id="43eca-234">Older versions of the F# language required specifying `yield` in situations where data may be generated conditionally, or there may be consecutive expressions to be evaluated.</span></span> <span data-ttu-id="43eca-235">`yield`古い F # 言語バージョンでコンパイルする必要がある場合を除き、これらのキーワードは省略してください。</span><span class="sxs-lookup"><span data-stu-id="43eca-235">Prefer omitting these `yield` keywords unless you must compile with an older F# language version:</span></span>
 
 ```fsharp
 // Preferred
@@ -638,17 +638,17 @@ let daysOfWeek' includeWeekend =
     ]
 ```
 
-<span data-ttu-id="fdbe0-236">場合によっては、 `do...yield` が読みやすくなることがあります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-236">In some cases, `do...yield` may aid in readability.</span></span> <span data-ttu-id="fdbe0-237">ただし、このような場合は主観的に考慮する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-237">These cases, though subjective, should be taken into consideration.</span></span>
+<span data-ttu-id="43eca-236">場合によっては、 `do...yield` が読みやすくなることがあります。</span><span class="sxs-lookup"><span data-stu-id="43eca-236">In some cases, `do...yield` may aid in readability.</span></span> <span data-ttu-id="43eca-237">ただし、このような場合は主観的に考慮する必要があります。</span><span class="sxs-lookup"><span data-stu-id="43eca-237">These cases, though subjective, should be taken into consideration.</span></span>
 
-## <a name="formatting-if-expressions"></a><span data-ttu-id="fdbe0-238">If 式の書式設定</span><span class="sxs-lookup"><span data-stu-id="fdbe0-238">Formatting if expressions</span></span>
+## <a name="formatting-if-expressions"></a><span data-ttu-id="43eca-238">If 式の書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-238">Formatting if expressions</span></span>
 
-<span data-ttu-id="fdbe0-239">条件のインデントは、それらを作成する式のサイズによって異なります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-239">Indentation of conditionals depends on the sizes of the expressions that make them up.</span></span> <span data-ttu-id="fdbe0-240">`cond` `e1` とが短い場合は、 `e2` 単に1行に記述するだけです。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-240">If `cond`, `e1` and `e2` are short, simply write them on one line:</span></span>
+<span data-ttu-id="43eca-239">条件のインデントは、それらを作成する式のサイズによって異なります。</span><span class="sxs-lookup"><span data-stu-id="43eca-239">Indentation of conditionals depends on the sizes of the expressions that make them up.</span></span> <span data-ttu-id="43eca-240">`cond` `e1` とが短い場合は、 `e2` 単に1行に記述するだけです。</span><span class="sxs-lookup"><span data-stu-id="43eca-240">If `cond`, `e1` and `e2` are short, simply write them on one line:</span></span>
 
 ```fsharp
 if cond then e1 else e2
 ```
 
-<span data-ttu-id="fdbe0-241">、、のいずれかが長い場合は、 `cond` `e1` 複数行では `e2` ありません。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-241">If either `cond`, `e1` or `e2` are longer, but not multi-line:</span></span>
+<span data-ttu-id="43eca-241">、、のいずれかが長い場合は、 `cond` `e1` 複数行では `e2` ありません。</span><span class="sxs-lookup"><span data-stu-id="43eca-241">If either `cond`, `e1` or `e2` are longer, but not multi-line:</span></span>
 
 ```fsharp
 if cond
@@ -656,7 +656,7 @@ then e1
 else e2
 ```
 
-<span data-ttu-id="fdbe0-242">式のいずれかが複数行の場合は、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-242">If any of the expressions are multi-line:</span></span>
+<span data-ttu-id="43eca-242">式のいずれかが複数行の場合は、次のようになります。</span><span class="sxs-lookup"><span data-stu-id="43eca-242">If any of the expressions are multi-line:</span></span>
 
 ```fsharp
 if cond then
@@ -665,7 +665,7 @@ else
     e2
 ```
 
-<span data-ttu-id="fdbe0-243">とを持つ複数の条件 `elif` `else` は、と同じスコープでインデントされ `if` ます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-243">Multiple conditionals with `elif` and `else` are indented at the same scope as the `if`:</span></span>
+<span data-ttu-id="43eca-243">とを持つ複数の条件 `elif` `else` は、と同じスコープでインデントされ `if` ます。</span><span class="sxs-lookup"><span data-stu-id="43eca-243">Multiple conditionals with `elif` and `else` are indented at the same scope as the `if`:</span></span>
 
 ```fsharp
 if cond1 then e1
@@ -674,9 +674,9 @@ elif cond3 then e3
 else e4
 ```
 
-### <a name="pattern-matching-constructs"></a><span data-ttu-id="fdbe0-244">パターン一致のコンストラクト</span><span class="sxs-lookup"><span data-stu-id="fdbe0-244">Pattern matching constructs</span></span>
+### <a name="pattern-matching-constructs"></a><span data-ttu-id="43eca-244">パターン一致のコンストラクト</span><span class="sxs-lookup"><span data-stu-id="43eca-244">Pattern matching constructs</span></span>
 
-<span data-ttu-id="fdbe0-245">`|`インデントなしで一致の for each 句を使用します。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-245">Use a `|` for each clause of a match with no indentation.</span></span> <span data-ttu-id="fdbe0-246">式が短い場合は、各部分式も単純である場合は単一行を使用することを検討してください。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-246">If the expression is short, you can consider using a single line if each subexpression is also simple.</span></span>
+<span data-ttu-id="43eca-245">`|`インデントなしで一致の for each 句を使用します。</span><span class="sxs-lookup"><span data-stu-id="43eca-245">Use a `|` for each clause of a match with no indentation.</span></span> <span data-ttu-id="43eca-246">式が短い場合は、各部分式も単純である場合は単一行を使用することを検討してください。</span><span class="sxs-lookup"><span data-stu-id="43eca-246">If the expression is short, you can consider using a single line if each subexpression is also simple.</span></span>
 
 ```fsharp
 // OK
@@ -692,7 +692,7 @@ match l with
     | [] -> failwith "Couldn't find David"
 ```
 
-<span data-ttu-id="fdbe0-247">パターン一致の矢印の右側にある式が大きすぎる場合は、から1ステップインデントされた次の行に移動し `match` / `|` ます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-247">If the expression on the right of the pattern matching arrow is too large, move it to the following line, indented one step from the `match`/`|`.</span></span>
+<span data-ttu-id="43eca-247">パターン一致の矢印の右側にある式が大きすぎる場合は、から1ステップインデントされた次の行に移動し `match` / `|` ます。</span><span class="sxs-lookup"><span data-stu-id="43eca-247">If the expression on the right of the pattern matching arrow is too large, move it to the following line, indented one step from the `match`/`|`.</span></span>
 
 ```fsharp
 match lam with
@@ -704,7 +704,7 @@ match lam with
 
 ```
 
-<span data-ttu-id="fdbe0-248">匿名関数のパターンマッチングは、から開始 `function` すると、通常はあまりインデントされません。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-248">Pattern matching of anonymous functions, starting by `function`, should generally not indent too far.</span></span> <span data-ttu-id="fdbe0-249">たとえば、次のように1つのスコープをインデントすることは問題ありません。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-249">For example, indenting one scope as follows is fine:</span></span>
+<span data-ttu-id="43eca-248">匿名関数のパターンマッチングは、から開始 `function` すると、通常はあまりインデントされません。</span><span class="sxs-lookup"><span data-stu-id="43eca-248">Pattern matching of anonymous functions, starting by `function`, should generally not indent too far.</span></span> <span data-ttu-id="43eca-249">たとえば、次のように1つのスコープをインデントすることは問題ありません。</span><span class="sxs-lookup"><span data-stu-id="43eca-249">For example, indenting one scope as follows is fine:</span></span>
 
 ```fsharp
 lambdaList
@@ -714,7 +714,7 @@ lambdaList
     | Var v -> 1)
 ```
 
-<span data-ttu-id="fdbe0-250">またはで定義された関数でパターンマッチングを `let` `let rec` 行う場合は `let` 、 `function` キーワードが使用されている場合でも、の開始後に4つのスペースをインデントする必要があります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-250">Pattern matching in functions defined by `let` or `let rec` should be indented four spaces after starting of `let`, even if `function` keyword is used:</span></span>
+<span data-ttu-id="43eca-250">またはで定義された関数でパターンマッチングを `let` `let rec` 行う場合は `let` 、 `function` キーワードが使用されている場合でも、の開始後に4つのスペースをインデントする必要があります。</span><span class="sxs-lookup"><span data-stu-id="43eca-250">Pattern matching in functions defined by `let` or `let rec` should be indented four spaces after starting of `let`, even if `function` keyword is used:</span></span>
 
 ```fsharp
 let rec sizeLambda acc = function
@@ -723,11 +723,11 @@ let rec sizeLambda acc = function
     | Var v -> succ acc
 ```
 
-<span data-ttu-id="fdbe0-251">矢印は配置しないことをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-251">We do not recommend aligning arrows.</span></span>
+<span data-ttu-id="43eca-251">矢印は配置しないことをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="43eca-251">We do not recommend aligning arrows.</span></span>
 
-## <a name="formatting-trywith-expressions"></a><span data-ttu-id="fdbe0-252">Try/with 式の書式設定</span><span class="sxs-lookup"><span data-stu-id="fdbe0-252">Formatting try/with expressions</span></span>
+## <a name="formatting-trywith-expressions"></a><span data-ttu-id="43eca-252">Try/with 式の書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-252">Formatting try/with expressions</span></span>
 
-<span data-ttu-id="fdbe0-253">例外の種類のパターンマッチングは、と同じレベルでインデントする必要があり `with` ます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-253">Pattern matching on the exception type should be indented at the same level as `with`.</span></span>
+<span data-ttu-id="43eca-253">例外の種類のパターンマッチングは、と同じレベルでインデントする必要があり `with` ます。</span><span class="sxs-lookup"><span data-stu-id="43eca-253">Pattern matching on the exception type should be indented at the same level as `with`.</span></span>
 
 ```fsharp
 try
@@ -742,11 +742,11 @@ with
     printfn "A second that was a multiple of 3"
 ```
 
-## <a name="formatting-function-parameter-application"></a><span data-ttu-id="fdbe0-254">関数パラメーターアプリケーションの書式設定</span><span class="sxs-lookup"><span data-stu-id="fdbe0-254">Formatting function parameter application</span></span>
+## <a name="formatting-function-parameter-application"></a><span data-ttu-id="43eca-254">関数パラメーターアプリケーションの書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-254">Formatting function parameter application</span></span>
 
-<span data-ttu-id="fdbe0-255">一般に、ほとんどの関数パラメーターアプリケーションは同じ行で実行されます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-255">In general, most function parameter application is done on the same line.</span></span>
+<span data-ttu-id="43eca-255">一般に、ほとんどの関数パラメーターアプリケーションは同じ行で実行されます。</span><span class="sxs-lookup"><span data-stu-id="43eca-255">In general, most function parameter application is done on the same line.</span></span>
 
-<span data-ttu-id="fdbe0-256">新しい行の関数にパラメーターを適用する場合は、1つのスコープでインデントします。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-256">If you wish to apply parameters to a function on a new line, indent them by one scope.</span></span>
+<span data-ttu-id="43eca-256">新しい行の関数にパラメーターを適用する場合は、1つのスコープでインデントします。</span><span class="sxs-lookup"><span data-stu-id="43eca-256">If you wish to apply parameters to a function on a new line, indent them by one scope.</span></span>
 
 ```fsharp
 // OK
@@ -766,7 +766,7 @@ let printVolumes x =
         (convertVolumeImperialPint x)
 ```
 
-<span data-ttu-id="fdbe0-257">ラムダ式には、関数の引数と同じガイドラインが適用されます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-257">The same guidelines apply for lambda expressions as function arguments.</span></span> <span data-ttu-id="fdbe0-258">ラムダ式の本体の場合、本文は別の行を持つことができ、1つのスコープでインデントされます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-258">If the body of a lambda expression, the body can have another line, indented by one scope</span></span>
+<span data-ttu-id="43eca-257">ラムダ式には、関数の引数と同じガイドラインが適用されます。</span><span class="sxs-lookup"><span data-stu-id="43eca-257">The same guidelines apply for lambda expressions as function arguments.</span></span> <span data-ttu-id="43eca-258">ラムダ式の本体の場合、本文は別の行を持つことができ、1つのスコープでインデントされます。</span><span class="sxs-lookup"><span data-stu-id="43eca-258">If the body of a lambda expression, the body can have another line, indented by one scope</span></span>
 
 ```fsharp
 let printListWithOffset a list1 =
@@ -782,13 +782,13 @@ let printListWithOffset a list1 =
         list1
 ```
 
-<span data-ttu-id="fdbe0-259">ただし、ラムダ式の本体が複数行である場合は、複数行の構成要素を関数に1つの引数として適用するのではなく、別の関数にファクタリングすることを検討してください。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-259">However, if the body of a lambda expression is more than one line, consider factoring it out into a separate function rather than have a multi-line construct applied as a single argument to a function.</span></span>
+<span data-ttu-id="43eca-259">ただし、ラムダ式の本体が複数行である場合は、複数行の構成要素を関数に1つの引数として適用するのではなく、別の関数にファクタリングすることを検討してください。</span><span class="sxs-lookup"><span data-stu-id="43eca-259">However, if the body of a lambda expression is more than one line, consider factoring it out into a separate function rather than have a multi-line construct applied as a single argument to a function.</span></span>
 
-### <a name="formatting-infix-operators"></a><span data-ttu-id="fdbe0-260">挿入演算子の書式設定</span><span class="sxs-lookup"><span data-stu-id="fdbe0-260">Formatting infix operators</span></span>
+### <a name="formatting-infix-operators"></a><span data-ttu-id="43eca-260">挿入演算子の書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-260">Formatting infix operators</span></span>
 
-<span data-ttu-id="fdbe0-261">演算子はスペースで区切ります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-261">Separate operators by spaces.</span></span> <span data-ttu-id="fdbe0-262">このルールの明確な例外は `!` 、 `.` 演算子と演算子です。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-262">Obvious exceptions to this rule are the `!` and `.` operators.</span></span>
+<span data-ttu-id="43eca-261">演算子はスペースで区切ります。</span><span class="sxs-lookup"><span data-stu-id="43eca-261">Separate operators by spaces.</span></span> <span data-ttu-id="43eca-262">このルールの明確な例外は `!` 、 `.` 演算子と演算子です。</span><span class="sxs-lookup"><span data-stu-id="43eca-262">Obvious exceptions to this rule are the `!` and `.` operators.</span></span>
 
-<span data-ttu-id="fdbe0-263">挿入式は、同じ列に編成することができます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-263">Infix expressions are OK to lineup on same column:</span></span>
+<span data-ttu-id="43eca-263">挿入式は、同じ列に編成することができます。</span><span class="sxs-lookup"><span data-stu-id="43eca-263">Infix expressions are OK to lineup on same column:</span></span>
 
 ```fsharp
 acc +
@@ -800,9 +800,9 @@ let function1 arg1 arg2 arg3 arg4 =
     arg3 + arg4
 ```
 
-### <a name="formatting-pipeline-operators"></a><span data-ttu-id="fdbe0-264">パイプライン演算子の書式設定</span><span class="sxs-lookup"><span data-stu-id="fdbe0-264">Formatting pipeline operators</span></span>
+### <a name="formatting-pipeline-operators"></a><span data-ttu-id="43eca-264">パイプライン演算子の書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-264">Formatting pipeline operators</span></span>
 
-<span data-ttu-id="fdbe0-265">パイプライン `|>` 演算子は、操作対象の式の下にある必要があります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-265">Pipeline `|>` operators should go underneath the expressions they operate on.</span></span>
+<span data-ttu-id="43eca-265">パイプライン `|>` 演算子は、操作対象の式の下にある必要があります。</span><span class="sxs-lookup"><span data-stu-id="43eca-265">Pipeline `|>` operators should go underneath the expressions they operate on.</span></span>
 
 ```fsharp
 // Preferred approach
@@ -825,9 +825,9 @@ let methods2 = System.AppDomain.CurrentDomain.GetAssemblies()
             |> Array.concat
 ```
 
-### <a name="formatting-modules"></a><span data-ttu-id="fdbe0-266">モジュールの書式設定</span><span class="sxs-lookup"><span data-stu-id="fdbe0-266">Formatting modules</span></span>
+### <a name="formatting-modules"></a><span data-ttu-id="43eca-266">モジュールの書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-266">Formatting modules</span></span>
 
-<span data-ttu-id="fdbe0-267">ローカルモジュール内のコードは、モジュールに対して相対的にインデントする必要がありますが、最上位レベルのモジュール内のコードをインデントすることはできません。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-267">Code in a local module must be indented relative to the module, but code in a top-level module should not be indented.</span></span> <span data-ttu-id="fdbe0-268">名前空間要素をインデントする必要はありません。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-268">Namespace elements do not have to be indented.</span></span>
+<span data-ttu-id="43eca-267">ローカルモジュール内のコードは、モジュールに対して相対的にインデントする必要がありますが、最上位レベルのモジュール内のコードをインデントすることはできません。</span><span class="sxs-lookup"><span data-stu-id="43eca-267">Code in a local module must be indented relative to the module, but code in a top-level module should not be indented.</span></span> <span data-ttu-id="43eca-268">名前空間要素をインデントする必要はありません。</span><span class="sxs-lookup"><span data-stu-id="43eca-268">Namespace elements do not have to be indented.</span></span>
 
 ```fsharp
 // A is a top-level module.
@@ -845,9 +845,9 @@ module A2 =
     let function2 a b = a * a - b * b
 ```
 
-### <a name="formatting-object-expressions-and-interfaces"></a><span data-ttu-id="fdbe0-269">オブジェクト式およびインターフェイスの書式設定</span><span class="sxs-lookup"><span data-stu-id="fdbe0-269">Formatting object expressions and interfaces</span></span>
+### <a name="formatting-object-expressions-and-interfaces"></a><span data-ttu-id="43eca-269">オブジェクト式およびインターフェイスの書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-269">Formatting object expressions and interfaces</span></span>
 
-<span data-ttu-id="fdbe0-270">オブジェクトの式とインターフェイスは、4つのスペースの後にインデントを設定するのと同じ方法で配置する必要があり `member` ます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-270">Object expressions and interfaces should be aligned in the same way with `member` being indented after four spaces.</span></span>
+<span data-ttu-id="43eca-270">オブジェクトの式とインターフェイスは、4つのスペースの後にインデントを設定するのと同じ方法で配置する必要があり `member` ます。</span><span class="sxs-lookup"><span data-stu-id="43eca-270">Object expressions and interfaces should be aligned in the same way with `member` being indented after four spaces.</span></span>
 
 ```fsharp
 let comparer =
@@ -859,9 +859,9 @@ let comparer =
               reversed.CompareTo (rev s2) }
 ```
 
-### <a name="formatting-white-space-in-expressions"></a><span data-ttu-id="fdbe0-271">式の空白の書式設定</span><span class="sxs-lookup"><span data-stu-id="fdbe0-271">Formatting white space in expressions</span></span>
+### <a name="formatting-white-space-in-expressions"></a><span data-ttu-id="43eca-271">式の空白の書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-271">Formatting white space in expressions</span></span>
 
-<span data-ttu-id="fdbe0-272">F # の式に余分なスペースを含めないでください。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-272">Avoid extraneous white space in F# expressions.</span></span>
+<span data-ttu-id="43eca-272">F # の式に余分なスペースを含めないでください。</span><span class="sxs-lookup"><span data-stu-id="43eca-272">Avoid extraneous white space in F# expressions.</span></span>
 
 ```fsharp
 // OK
@@ -871,7 +871,7 @@ spam (ham.[1])
 spam ( ham.[ 1 ] )
 ```
 
-<span data-ttu-id="fdbe0-273">名前付き引数には、を囲む領域を指定する必要もあり `=` ます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-273">Named arguments should also not have space surrounding the `=`:</span></span>
+<span data-ttu-id="43eca-273">名前付き引数には、を囲む領域を指定する必要もあり `=` ます。</span><span class="sxs-lookup"><span data-stu-id="43eca-273">Named arguments should also not have space surrounding the `=`:</span></span>
 
 ```fsharp
 // OK
@@ -881,9 +881,9 @@ let makeStreamReader x = new System.IO.StreamReader(path=x)
 let makeStreamReader x = new System.IO.StreamReader(path = x)
 ```
 
-## <a name="formatting-attributes"></a><span data-ttu-id="fdbe0-274">属性の書式設定</span><span class="sxs-lookup"><span data-stu-id="fdbe0-274">Formatting attributes</span></span>
+## <a name="formatting-attributes"></a><span data-ttu-id="43eca-274">属性の書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-274">Formatting attributes</span></span>
 
-<span data-ttu-id="fdbe0-275">[属性](../language-reference/attributes.md) はコンストラクトの上に配置されます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-275">[Attributes](../language-reference/attributes.md) are placed above a construct:</span></span>
+<span data-ttu-id="43eca-275">[属性](../language-reference/attributes.md) はコンストラクトの上に配置されます。</span><span class="sxs-lookup"><span data-stu-id="43eca-275">[Attributes](../language-reference/attributes.md) are placed above a construct:</span></span>
 
 ```fsharp
 [<SomeAttribute>]
@@ -899,9 +899,9 @@ type MyRecord =
       Label2: string }
 ```
 
-### <a name="formatting-attributes-on-parameters"></a><span data-ttu-id="fdbe0-276">パラメーターの属性の書式設定</span><span class="sxs-lookup"><span data-stu-id="fdbe0-276">Formatting attributes on parameters</span></span>
+### <a name="formatting-attributes-on-parameters"></a><span data-ttu-id="43eca-276">パラメーターの属性の書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-276">Formatting attributes on parameters</span></span>
 
-<span data-ttu-id="fdbe0-277">属性は、パラメーターにも配置できます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-277">Attributes can also be placed on parameters.</span></span> <span data-ttu-id="fdbe0-278">この場合は、パラメーターと名前の前に次の行を配置します。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-278">In this case, place then on the same line as the parameter and before the name:</span></span>
+<span data-ttu-id="43eca-277">属性は、パラメーターにも配置できます。</span><span class="sxs-lookup"><span data-stu-id="43eca-277">Attributes can also be placed on parameters.</span></span> <span data-ttu-id="43eca-278">この場合は、パラメーターと名前の前に次の行を配置します。</span><span class="sxs-lookup"><span data-stu-id="43eca-278">In this case, place then on the same line as the parameter and before the name:</span></span>
 
 ```fsharp
 // Defines a class that takes an optional value as input defaulting to false.
@@ -909,9 +909,9 @@ type C() =
     member _.M([<Optional; DefaultParameterValue(false)>] doSomething: bool)
 ```
 
-### <a name="formatting-multiple-attributes"></a><span data-ttu-id="fdbe0-279">複数の属性の書式設定</span><span class="sxs-lookup"><span data-stu-id="fdbe0-279">Formatting multiple attributes</span></span>
+### <a name="formatting-multiple-attributes"></a><span data-ttu-id="43eca-279">複数の属性の書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-279">Formatting multiple attributes</span></span>
 
-<span data-ttu-id="fdbe0-280">パラメーターではないコンストラクトに複数の属性が適用されている場合は、1行につき1つの属性が存在するように配置する必要があります。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-280">When multiple attributes are applied to a construct that is not a parameter, they should be placed such that there is one attribute per line:</span></span>
+<span data-ttu-id="43eca-280">パラメーターではないコンストラクトに複数の属性が適用されている場合は、1行につき1つの属性が存在するように配置する必要があります。</span><span class="sxs-lookup"><span data-stu-id="43eca-280">When multiple attributes are applied to a construct that is not a parameter, they should be placed such that there is one attribute per line:</span></span>
 
 ```fsharp
 [<Struct>]
@@ -921,11 +921,11 @@ type MyRecord =
       Label2: string }
 ```
 
-<span data-ttu-id="fdbe0-281">パラメーターに適用する場合は、同じ行に配置し、区切り記号で区切る必要があり `;` ます。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-281">When applied to a parameter, they must be on the same line and separated by a `;` separator.</span></span>
+<span data-ttu-id="43eca-281">パラメーターに適用する場合は、同じ行に配置し、区切り記号で区切る必要があり `;` ます。</span><span class="sxs-lookup"><span data-stu-id="43eca-281">When applied to a parameter, they must be on the same line and separated by a `;` separator.</span></span>
 
-## <a name="formatting-literals"></a><span data-ttu-id="fdbe0-282">リテラルの書式設定</span><span class="sxs-lookup"><span data-stu-id="fdbe0-282">Formatting literals</span></span>
+## <a name="formatting-literals"></a><span data-ttu-id="43eca-282">リテラルの書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-282">Formatting literals</span></span>
 
-<span data-ttu-id="fdbe0-283">属性を使用する[F # リテラル](../language-reference/literals.md)では `Literal` 、属性を独自の行に配置し、文字の名前付けを使用します。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-283">[F# literals](../language-reference/literals.md) using the `Literal` attribute should place the attribute on its own line and use PascalCase naming:</span></span>
+<span data-ttu-id="43eca-283">属性を使用する[F # リテラル](../language-reference/literals.md)では `Literal` 、属性を独自の行に配置し、文字の名前付けを使用します。</span><span class="sxs-lookup"><span data-stu-id="43eca-283">[F# literals](../language-reference/literals.md) using the `Literal` attribute should place the attribute on its own line and use PascalCase naming:</span></span>
 
 ```fsharp
 [<Literal>]
@@ -935,4 +935,48 @@ let Path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 let MyUrl = "www.mywebsitethatiamworkingwith.com"
 ```
 
-<span data-ttu-id="fdbe0-284">属性を値と同じ行に配置することは避けてください。</span><span class="sxs-lookup"><span data-stu-id="fdbe0-284">Avoid placing the attribute on the same line as the value.</span></span>
+<span data-ttu-id="43eca-284">属性を値と同じ行に配置することは避けてください。</span><span class="sxs-lookup"><span data-stu-id="43eca-284">Avoid placing the attribute on the same line as the value.</span></span>
+
+## <a name="formatting-computation-expression-operations"></a><span data-ttu-id="43eca-285">計算式の演算の書式設定</span><span class="sxs-lookup"><span data-stu-id="43eca-285">Formatting computation expression operations</span></span>
+
+<span data-ttu-id="43eca-286">[コンピュテーション式](../language-reference/computation-expressions.md)のカスタム操作を作成する場合は、キャメルケースの名前付けを使用することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="43eca-286">When creating custom operations for [computation expressions](../language-reference/computation-expressions.md) it is recommended to use camelCase naming:</span></span>
+
+```fsharp
+type MathBuilder () =
+    member _.Yield _ = 0
+
+    [<CustomOperation("addOne")>]
+    member _.AddOne (state: int) =
+        state + 1
+
+    [<CustomOperation("subtractOne")>]
+    member _.SubtractOne (state: int) =
+        state - 1
+
+    [<CustomOperation("divideBy")>]
+    member _.DivideBy (state: int, divisor: int) =
+        state / divisor
+
+    [<CustomOperation("multiplyBy")>]
+    member _.MultiplyBy (state: int, factor: int) =
+        state * factor
+
+let math = MathBuilder()
+
+// 10
+let myNumber =
+    math {
+        addOne
+        addOne
+        addOne
+
+        subtractOne
+
+        divideBy 2
+
+        multiplyBy 10
+    }
+```
+
+<span data-ttu-id="43eca-287">最終的に使用される名前付け規則は、モデル化するドメインによって決まります。</span><span class="sxs-lookup"><span data-stu-id="43eca-287">The naming convention used should ultimately be driven by the domain being modeled.</span></span>
+<span data-ttu-id="43eca-288">別の規則を使用する場合は、その規則を代わりに使用する必要があります慣用的なです。</span><span class="sxs-lookup"><span data-stu-id="43eca-288">If it is idiomatic to use a different convention, that convention should be used instead.</span></span>
