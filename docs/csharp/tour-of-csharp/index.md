@@ -2,12 +2,12 @@
 title: C# のツアー - C# ガイド
 description: C# を始めてお使いの方のために、 この言語の基本を説明します。
 ms.date: 08/06/2020
-ms.openlocfilehash: 42c4ff59a520a1b99bbb2fb01d79d8902e16bdd5
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 9fa292e8e85832d831f36cf0f21512aa0cf32580
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063550"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656229"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# 言語のツアー
 
@@ -15,7 +15,7 @@ C# ("シー シャープ" と読みます) は、最新のタイプ セーフな
 
 C# は、オブジェクト指向、"***コンポーネント指向***" のプログラミング言語です。 C# はこれらの概念を直接サポートする言語コンストラクトを提供しているので、自然にソフトウェア コンポーネントを作成して使用することができます。 当初から、C# では、新しいワークロードと新しいソフトウェア設計プラクティスをサポートする機能が追加されています。
 
-C# には、堅牢で永続的なアプリケーションの構築を支援するさまざまな機能が用意されています。 "[***ガベージ コレクション***](../../standard/garbage-collection/index.md)" は、到達できず、使用されていないオブジェクトによって占有されたメモリを自動的に解放します。 "[***例外処理***](../programming-guide/exceptions/index.md)" は、エラーの検出と復旧を行うための構造化された拡張可能なアプローチを提供します。 "[***ラムダ式***](../programming-guide/statements-expressions-operators/lambda-expressions.md)" は、関数型プログラミング手法をサポートします。 "[***クエリ構文***](../linq/index.md)" では、任意のソースからのデータを操作するための一般的なパターンが作成されます。 "[***非同期操作***](../programming-guide/concepts/async/index.md)" の言語サポートでは、分散システムを構築するための構文が提供されます。 "[***パターン マッチング***](..//pattern-matching.md)" には、最新の分散システムのアルゴリズムからのデータを簡単に分割するための構文が用意されています。 C# は "[***統合型システム***](../programming-guide/types/index.md)" を採用しています。 `int` や `double` などのプリミティブ型を含めた C# のすべての型は、ルートとなる 1 つの `object` 型から派生しています。 すべての型は、一般的な操作のセットを共有します。 すべての型の値を一貫した方法で格納、転送、操作することができます。 さらに、C# では、ユーザー定義の参照型と値型の両方がサポートされています。 C# では、オブジェクトを動的に割り当てたり、軽量の構造体をインラインで格納したりすることもできます。
+C# には、堅牢で永続的なアプリケーションの構築を支援するさまざまな機能が用意されています。 "[***ガベージ コレクション***](../../standard/garbage-collection/index.md)" は、到達できず、使用されていないオブジェクトによって占有されたメモリを自動的に解放します。 "[***例外処理***](../programming-guide/exceptions/index.md)" は、エラーの検出と復旧を行うための構造化された拡張可能なアプローチを提供します。 "[***ラムダ式***](../language-reference/operators/lambda-expressions.md)" は、関数型プログラミング手法をサポートします。 "[***クエリ構文***](../linq/index.md)" では、任意のソースからのデータを操作するための一般的なパターンが作成されます。 "[***非同期操作***](../programming-guide/concepts/async/index.md)" の言語サポートでは、分散システムを構築するための構文が提供されます。 "[***パターン マッチング***](..//pattern-matching.md)" には、最新の分散システムのアルゴリズムからのデータを簡単に分割するための構文が用意されています。 C# は "[***統合型システム***](../programming-guide/types/index.md)" を採用しています。 `int` や `double` などのプリミティブ型を含めた C# のすべての型は、ルートとなる 1 つの `object` 型から派生しています。 すべての型は、一般的な操作のセットを共有します。 すべての型の値を一貫した方法で格納、転送、操作することができます。 さらに、C# では、ユーザー定義の参照型と値型の両方がサポートされています。 C# では、オブジェクトを動的に割り当てたり、軽量の構造体をインラインで格納したりすることもできます。
 
 C# では、プログラムとライブラリが互換性を保ちながら時間とともに進化できるように、"***バージョン管理***" に重点が置かれています。 C# の設計でバージョン管理の考慮の影響を直接受けている側面として、別個の `virtual` 修飾子と `override` 修飾子、メソッドのオーバーロードの解決規則、明示的なインターフェイス メンバー宣言のサポートなどがあります。
 
@@ -45,7 +45,7 @@ C# の値型はさらに、"*単純型*"、"*列挙型*"、"*構造体型*"、�
   - [単純型](../language-reference/builtin-types/value-types.md#built-in-value-types)
     - [符号付きの整数](../language-reference/builtin-types/integral-numeric-types.md): `sbyte`、`short`、`int`、`long`
     - [符号なしの整数](../language-reference/builtin-types/integral-numeric-types.md): `byte`、`ushort`、`uint`、`ulong`
-    - [Unicode 文字](/dotnet/standard/base-types/character-encoding-introduction): `char` (UTF-16 コード単位を表します)
+    - [Unicode 文字](../../standard/base-types/character-encoding-introduction.md): `char` (UTF-16 コード単位を表します)
     - [IEEE バイナリ浮動小数点数](../language-reference/builtin-types/floating-point-numeric-types.md): `float`、`double`
     - [高精度 10 進浮動小数点数](../language-reference/builtin-types/floating-point-numeric-types.md): `decimal`
     - ブール値: `bool` (ブール値を表します。値は `true` か `false` のどちらかです)
@@ -55,18 +55,18 @@ C# の値型はさらに、"*単純型*"、"*列挙型*"、"*構造体型*"、�
     - `struct S {...}` 形式のユーザー定義型
   - [null 許容値型](../language-reference/builtin-types/nullable-value-types.md)
     - `null` 値を持つその他すべての値型の拡張子
-  - [タプル値型](../tuples.md)
+  - [タプル値型](../language-reference/builtin-types/value-tuples.md)
     - `(T1, T2, ...)` 形式のユーザー定義型
 - [参照型](../language-reference/keywords/reference-types.md)
   - [クラス型](../language-reference/keywords/class.md)
     - その他すべての型の最終的な基底クラス: `object`
-    - [Unicode 文字列](/dotnet/standard/base-types/character-encoding-introduction): `string` (一連の UTF-16 コード単位を表します)
+    - [Unicode 文字列](../../standard/base-types/character-encoding-introduction.md): `string` (一連の UTF-16 コード単位を表します)
     - `class C {...}` 形式のユーザー定義型
   - [インターフェイス型](../language-reference/keywords/interface.md)
     - `interface I {...}` 形式のユーザー定義型
   - [配列型](../programming-guide/arrays/index.md)
     - 1 次元、多次元、およびジャグ (例: `int[]`、`int[,]`、`int[][]`)
-  - [デリゲート型](../language-reference/keywords/delegate.md)
+  - [デリゲート型](../language-reference/builtin-types/reference-types.md#the-delegate-type)
     - `delegate int D(...)` 形式のユーザー定義型
 
 C# プログラムでは*型宣言*を使用して新しい型を作成します。 型宣言は、新しい型の名前とメンバーを指定します。 C# の型カテゴリのうち 5 つはユーザー定義が可能です。クラス型、構造体型、インターフェイス型、列挙型、そしてデリゲート型です。

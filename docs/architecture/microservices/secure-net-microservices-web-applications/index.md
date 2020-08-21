@@ -3,16 +3,16 @@ title: NET マイクロサービスおよび Web アプリケーションをセ�
 description: .NET マイクロサービスおよび Web アプリケーションのセキュリティ - ASP.NET Core Web アプリケーションの認証オプションをご確認ください。
 author: mjrousos
 ms.date: 08/07/2020
-ms.openlocfilehash: 9ce62039374f2256cd9adbddbb850aa4135af9f4
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: 1dcdb5d2987360ac583fa700a387d977f498d1d9
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024616"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608093"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>NET マイクロサービスおよび Web アプリケーションをセキュリティで保護する
 
-マイクロサービスと Web サービスのセキュリティに関するトピックはそれだけで何冊も本が書けるほど多岐にわたるため、このセクションでは、認証、認可、アプリケーション シークレットのみを取り上げます。
+マイクロサービスと Web アプリケーションのセキュリティには多くの側面があり、そのトピックは容易にこの記事のような内容の書籍数冊分になってしまいます。 そのためこのセクションでは、認証、承認、およびアプリケーション シークレットに焦点を当てます。
 
 ## <a name="implement-authentication-in-net-microservices-and-web-applications"></a>.NET マイクロサービスおよび Web アプリケーションに認証を実装する
 
