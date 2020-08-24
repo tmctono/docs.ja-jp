@@ -3,12 +3,12 @@ title: デッドロックのデバッグ - .NET Core
 description: .NET Core でのロックに関する問題のデバッグについて説明するチュートリアルです。
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 247521176297254180d794d4d4fc850f30e343b0
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 6f060e1ae801eb4eacbbd1fb67110f827c37f597
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86926360"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557881"
 ---
 # <a name="debug-a-deadlock-in-net-core"></a>.NET Core でデッドロックをデバッグする
 
@@ -51,7 +51,7 @@ dotnet-trace ps
 
 ご自分のコマンド出力からプロセス ID をメモしておきます。 プロセス ID は `4807` でしたが、この ID は異なります。 サンプル サイトの API エンドポイントである次の URL に移動します。
 
-[https://localhost:5001/api/diagscenario/deadlock](https://localhost:5001/api/diagscenario/deadlock)
+`https://localhost:5001/api/diagscenario/deadlock`
 
 サイトへの API 要求がハングし、応答がありません。 要求を約 10 から 15 秒間実行します。 その後、次のコマンドを使用して、コア ダンプを作成します。
 

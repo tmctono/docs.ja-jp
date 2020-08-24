@@ -1,13 +1,14 @@
 ---
 title: C# 言語のバージョン管理 - C# ガイド
 description: C# 言語のバージョンがプロジェクトに基づいて決定されるしくみとその選択の背後にある理由について説明します。 既定値を手動でオーバーライドする方法について説明します。
+ms.custom: updateeachrelease
 ms.date: 05/20/2020
-ms.openlocfilehash: bbe5b12e378cf47b7c9b2c8576088e949e526a9a
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: a27f3210f399f1bed190c18d778cf3824772d576
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803006"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656853"
 ---
 # <a name="c-language-versioning"></a>C# 言語のバージョン管理
 

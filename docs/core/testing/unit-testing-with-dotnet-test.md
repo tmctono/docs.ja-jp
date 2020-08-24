@@ -4,16 +4,16 @@ description: dotnet テストおよび xUnit を使用したサンプル ソリ�
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: d8cf0e29c8a482b39bd7e99bcde1fd60301f046f
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: feff4cabbd10064ef4acca12d4f960f2a40a2b12
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702950"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656385"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>dotnet テストと xUnit を使用した .NET Core での単体テスト C#
 
-このチュートリアルでは、単体テスト プロジェクトとソース コード プロジェクトが含まれるソリューションを構築する方法を示します。 構築済みのソリューションを使用してチュートリアルに従う場合は、[サンプル コードを表示またはダウンロードしてください](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test/)。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」を参照してください。
+このチュートリアルでは、単体テスト プロジェクトとソース コード プロジェクトが含まれるソリューションを構築する方法を示します。 構築済みのソリューションを使用してチュートリアルに従う場合は、[サンプル コードを表示またはダウンロードしてください](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test/)。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#view-and-download-samples)」を参照してください。
 
 ## <a name="create-the-solution"></a>ソリューションを作成する
 

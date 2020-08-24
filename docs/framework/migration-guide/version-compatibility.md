@@ -1,19 +1,18 @@
 ---
 title: .NET Framework のバージョンの互換性
 description: 下位互換性、side-by-side 実行など、.NET Framework のバージョン間の互換性について説明します。
-ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
 - .NET Framework, version compatibility
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: dfdc5a977b69af8aa3a0d33ed8b833745cf6bf11
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 92cfdc1a2a530f9790a693d0aa1ca5f65ff1af9f
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475503"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558765"
 ---
 # <a name="version-compatibility"></a>バージョンの互換性
 

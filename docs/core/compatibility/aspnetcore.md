@@ -5,12 +5,12 @@ description: ASP.NET Core における破壊的変更をリストアップしま
 ms.date: 07/17/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 7a07df5194d5dc220b61d55a4457d90881ac9ddf
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 1506e0aa27778d44497252231028689259f48896
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474827"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720242"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core の破壊的変更
 
@@ -28,6 +28,7 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 - [承認:IAuthorizationPolicyProvider の実装に新しいメソッドが必要](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
 - [承認:エンドポイント ルーティングのリソースは HttpContext](#authorization-resource-in-endpoint-routing-is-httpcontext)
 - [Azure:Microsoft というプレフィックスが付いた Azure 統合パッケージが削除された](#azure-microsoft-prefixed-azure-integration-packages-removed)
+- [BinaryFormatter シリアル化メソッドが古い形式になり、ASP.NET アプリでは使用不可に](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)
 - [Blazor:コンパイル時にコンポーネントからトリミングされる無意味な空白文字](#blazor-insignificant-whitespace-trimmed-from-components-at-compile-time)
 - [Blazor:NuGet パッケージのターゲット フレームワークを変更](#blazor-target-framework-of-nuget-packages-changed)
 - [キャッシュ:CompactOnMemoryPressure プロパティの削除](#caching-compactonmemorypressure-property-removed)
@@ -99,6 +100,10 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 ***
 
 [!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
+
+***
+
+[!INCLUDE [binaryformatter-serialization-obsolete](../../../includes/core-changes/corefx/5.0/binaryformatter-serialization-obsolete.md)]
 
 ***
 

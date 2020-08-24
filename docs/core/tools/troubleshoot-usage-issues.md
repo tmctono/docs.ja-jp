@@ -4,12 +4,12 @@ description: .NET Core ツールを実行するときの一般的な問題と考
 author: kdollard
 ms.topic: troubleshooting
 ms.date: 02/14/2020
-ms.openlocfilehash: b98b2735770c8259c2daf94575fc087b91bb61fd
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: db88958e1605fef589c5dbcb12065a6318183705
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062637"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608312"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>.NET Core ツールの使用に関する問題のトラブルシューティング
 
@@ -74,7 +74,7 @@ Possible reasons for this include:
 
 ### <a name="runtime-not-found"></a>ランタイムが見つからない
 
-.NET Core ツールは、[フレームワークに依存するアプリケーション](../deploying/index.md#publish-runtime-dependent)です。つまり、お使いのマシンにインストールされている .NET Core ランタイムに依存します。 予定していたランタイムが見つからない場合、ツールは次のような通常の .NET Core ランタイムのロール フォワード ルールに従います。
+.NET Core ツールは、[フレームワークに依存するアプリケーション](../deploying/index.md#publish-framework-dependent)です。つまり、お使いのマシンにインストールされている .NET Core ランタイムに依存します。 予定していたランタイムが見つからない場合、ツールは次のような通常の .NET Core ランタイムのロール フォワード ルールに従います。
 
 * アプリケーションは、指定されたメジャー バージョンおよびマイナー バージョンの最上位の修正プログラム リリースにロール フォワードされます。
 * 一致するメジャー バージョン番号とマイナー バージョン番号と一致するランタイムがない場合は、次に高いマイナー バージョンが使用されます。

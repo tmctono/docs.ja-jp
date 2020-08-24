@@ -3,17 +3,17 @@ title: .NET サンプルおよびチュートリアル
 description: .NET Core、ASP.NET Core、C# 言語に関する、.NET の学習に役立つサンプルとチュートリアルの情報です。
 author: BillWagner
 ms.author: wiwagn
-ms.date: 04/11/2017
-ms.openlocfilehash: 367b2cbea24ac0da634051bf815c319f3679f79b
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.date: 08/19/2020
+ms.openlocfilehash: 587365aae1c2069c3e94ad0452da9c31dc6e89f0
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86417334"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656958"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET サンプルおよびチュートリアル
 
-.NET ドキュメントには、.NET について学習できるサンプルとチュートリアルが含まれています。 ここでは、.NET Core、ASP.NET Core、C# のサンプルを検索、表示、ダウンロードする方法について説明します。 F# プログラミング言語の学習に最適なリソースは [F# Foundation のサイト](https://fsharp.org/learn.html)にあります。 オンラインでのコード エディターを使用して C# を学習する場合は、まず[この対話型のチュートリアル](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)、次に [C# の対話型チュートリアル](../csharp/tutorials/intro-to-csharp/index.md)をご覧ください。 サンプル コードの表示とダウンロード方法については、「[サンプルの表示とダウンロード](#viewing-and-downloading-samples)」セクションをご覧ください。
+.NET ドキュメントには、.NET について学習できるサンプルとチュートリアルが含まれています。 この記事では、.NET Core、ASP.NET Core、C# のサンプルとチュートリアルを検索、表示、ダウンロードする方法について説明します。 F# プログラミング言語の学習に最適なリソースは [F# Foundation のサイト](https://fsharp.org/learn/)にあります。 オンラインでのコード エディターを使用して C# を学習する場合は、まず[この対話型のチュートリアル](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)、次に [C# の対話型チュートリアル](../csharp/tutorials/intro-to-csharp/index.md)をご覧ください。 サンプル コードの表示とダウンロード方法については、「[サンプルの表示とダウンロード](#view-and-download-samples)」セクションをご覧ください。
 
 ## <a name="net-core"></a>.NET Core
 
@@ -25,9 +25,9 @@ ms.locfileid: "86417334"
 
 ### <a name="tutorials"></a>チュートリアル
 
-**[.NET Core CLI を使用した .NET Core コンソール アプリの作成:手順ガイド](../core/tutorials/cli-create-console-app.md)**
+**[チュートリアル: Visual Studio Code を使用して .NET Core コンソール アプリケーションを作成する](../core/tutorials/with-visual-studio-code.md)**
 
-このガイドでは、.NET Core CLI ツールを使用してクロスプラットフォーム コンソール アプリを作成する方法を説明します。 基本的なコンソール アプリから始めて、最終的にテストを含む複数プロジェクトまで拡張します。 段階的に機能を追加し、作業を進めながらナレッジを構築します。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/core/console-apps)は、GitHub の dotnet/samples リポジトリにあります。
+このチュートリアルでは、Visual Studio Code と .NET Core CLI を使用して .NET Core コンソール アプリケーションを作成して実行する方法について説明します。 プロジェクトの作成、コンパイル、実行などのプロジェクト タスクは、.NET Core CLI を使用して実行されます。
 
 **[クロス プラットフォーム ツールによるライブラリの作成](../core/tutorials/libraries.md)**
 
@@ -83,7 +83,7 @@ ms.locfileid: "86417334"
 
 このチュートリアルでは、LINQ の多くの機能と、それをサポートする言語要素について説明します。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq)は、GitHub の dotnet/samples リポジトリにあります。
 
-**[Visual Studio for Mac を使用した macOS での .NET Core の概要](../core/tutorials/using-on-mac-vs.md)**
+**[チュートリアル: Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを作成する](../core/tutorials/with-visual-studio-mac.md)**
 
 このチュートリアルでは、Visual Studio for Mac を使用した、簡単な .NET Core コンソール アプリを構築する方法を示します。
 
@@ -101,13 +101,13 @@ ms.locfileid: "86417334"
 
 このチュートリアルでは、Windows Docker コンテナーで既存の ASP.NET MVC アプリを展開する方法について説明します。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator)は、GitHub の dotnet/samples リポジトリにあります。
 
-## <a name="viewing-and-downloading-samples"></a>サンプルの表示とダウンロード
+## <a name="view-and-download-samples"></a>サンプルを表示してダウンロードする
 
 多くのトピックには、GitHub から表示またはダウンロードできるソース コードとサンプルが示されています。 サンプルを表示するには、サンプルへのリンクをクリックしてください。 コードをダウンロードするには、次の手順に従います。
 
 1. 次の手順のいずれかを実行して、サンプル コードを含むリポジトリをダウンロードします。
    * リポジトリの ZIP ファイルをローカル システムにダウンロードします。 圧縮アーカイブを解凍します。
-   * リポジトリを[フォーク](https://help.github.com/articles/fork-a-repo/)し、フォークしたものをローカル システムに[クローン](https://help.github.com/articles/cloning-a-repository/)します。 フォークとクローンを使用すると、作成したフォークに変更をコミットし、公式のドキュメントのリポジトリに対する pull request を作成することで、ドキュメントに貢献できます。 詳細については、「[.NET Documentation Contributing Guide (.NET ドキュメント貢献ガイド](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute)」と「[ASP.NET Core Docs Contributing Guide (ASP.NET Core ドキュメント貢献ガイド)](https://github.com/aspnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md)」をご覧ください。
+   * リポジトリを[フォーク](https://help.github.com/articles/fork-a-repo/)し、フォークしたものをローカル システムに[クローン](https://help.github.com/articles/cloning-a-repository/)します。 フォークとクローンを使用すると、作成したフォークに変更をコミットし、公式のドキュメントのリポジトリに対する pull request を作成することで、ドキュメントに貢献できます。 詳細については、「[.NET Documentation Contributing Guide (.NET ドキュメント貢献ガイド](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute)」と「[ASP.NET Core Docs Contributing Guide (ASP.NET Core ドキュメント貢献ガイド)](https://github.com/dotnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md)」をご覧ください。
    * リポジトリをローカル環境にクローンします。 ローカル システムにドキュメントのリポジトリを直接クローンすると、公式のリポジトリに対して直接コミットできないため、後でドキュメントに貢献できなくなります。 後でドキュメントに貢献する可能性がある場合は、前述のフォークとクローンの手順を使用してください。
 1. リポジトリ フォルダー内のサンプルがある場所に移動します。 サンプルへのリンクをクリックすると、サンプルがある場所への相対パスがブラウザーのアドレス バーに表示されます。
 1. サンプルを実行するには、次のいくつかのオプションがあります。

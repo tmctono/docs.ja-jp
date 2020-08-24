@@ -4,12 +4,12 @@ description: このチュートリアルでは、LINQ を使用してシーケ�
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: ece001e82c0aa44a91999bea78d2fd695ff9362b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9bc17700e22ea29b1861945a220e397a90b9a7c1
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240016"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656997"
 ---
 # <a name="work-with-language-integrated-query-linq"></a>統合言語クエリ (LINQ) を使用する
 
@@ -27,7 +27,7 @@ ms.locfileid: "78240016"
 
 ここでは、データ シーケンスの操作として気軽に見ていきましょう。 これから作成するアプリケーションでは、カード デッキを構築し、シャッフルのシーケンスを実行し、その都度シーケンスを書き込みます。 また、更新された順序を元の順序と比較します。
 
-このチュートリアルには、複数の手順があります。 各手順の後に、アプリケーションを実行して進行状況を確認できます。 GitHub の dotnet/samples リポジトリでは、[完全版のサンプル](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq)を確認することもできます。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」を参照してください。
+このチュートリアルには、複数の手順があります。 各手順の後に、アプリケーションを実行して進行状況を確認できます。 GitHub の dotnet/samples リポジトリでは、[完全版のサンプル](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq)を確認することもできます。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#view-and-download-samples)」を参照してください。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 

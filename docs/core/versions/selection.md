@@ -4,11 +4,12 @@ description: .NET Core がお使いのプログラム用のランタイム バ�
 author: adegeo
 ms.author: adegeo
 ms.date: 03/24/2020
-ms.openlocfilehash: faaa638905bb3c8e9cd4c09af83979d90698df3d
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 82b5522601b0ed5d3f4faf6e6c6c970ba285b11f
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803119"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608206"
 ---
 # <a name="select-the-net-core-version-to-use"></a>使用する .NET Core のバージョンを選択する
 
@@ -77,7 +78,7 @@ SDK バージョンの選択に関する詳細は、*global.json* に関する�
 
 ## <a name="framework-dependent-apps-roll-forward"></a>フレームワーク依存のアプリをロールフォワードする
 
-[`dotnet myapp.dll`](../tools/dotnet.md#description) が存在する[**フレームワークに依存するデプロイ**](../deploying/index.md#publish-runtime-dependent)で [`dotnet run`](../tools/dotnet-run.md) を使用する、または `myapp.exe` が存在する[**フレームワークに依存する実行可能ファイル**](../deploying/index.md#publish-runtime-dependent)を使用して、ソースからアプリケーションを実行した場合、`dotnet` 実行可能ファイルがアプリケーションの**ホスト**になります。
+[`dotnet myapp.dll`](../tools/dotnet.md#description) が存在する[**フレームワークに依存するデプロイ**](../deploying/index.md#publish-framework-dependent)で [`dotnet run`](../tools/dotnet-run.md) を使用する、または `myapp.exe` が存在する[**フレームワークに依存する実行可能ファイル**](../deploying/index.md#publish-framework-dependent)を使用して、ソースからアプリケーションを実行した場合、`dotnet` 実行可能ファイルがアプリケーションの**ホスト**になります。
 
 このホストがコンピューターにインストールされている最新版のパッチを選択します。 たとえば、プロジェクト ファイルに `netcoreapp3.0` を指定したとき、`3.0.2` がインストールされている最新の .NET ランタイムであれば、`3.0.2` ランタイムが使用されます。
 

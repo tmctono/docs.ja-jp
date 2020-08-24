@@ -1,19 +1,18 @@
 ---
 title: .NET Framework のアクセシビリティの新機能
 description: .NET Framework 4.7.1 以降の .NET アクセシビリティの新機能について確認します。 ユーザー補助機能を使用すると、アプリで支援機能の利用者に適切なエクスペリエンスを提供できます。
-ms.custom: updateeachrelease
 ms.date: 04/18/2019
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 593591ca340cc130a3a6d1daa015a849b8eca0f8
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: df9188c4f7c2af77f5dc87309880a41724254c5c
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925840"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558960"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework のアクセシビリティの新機能
 

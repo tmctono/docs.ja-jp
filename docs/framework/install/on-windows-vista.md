@@ -1,14 +1,13 @@
 ---
 title: Windows Vista への .NET Framework のインストール
 description: Windows Vista に .NET Framework をインストールする方法について説明します。
-ms.custom: updateeachrelease
 ms.date: 04/18/2019
-ms.openlocfilehash: 9b8470f4cdfcc6ec85fb6677f5518203c0de5de1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 54f1b9f66ce43352d2f5122c0e0e1c9bcd158b54
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181541"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558492"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Windows Vista と Windows Server 2008 に .NET Framework をインストールする
 

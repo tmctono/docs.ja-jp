@@ -1,19 +1,18 @@
 ---
 title: 互換性のために残されているメンバー - .NET Framework
 description: .NET 4.5 以降のバージョンで互換性のために残されている型メンバーの一覧を確認します。 型メンバーは、アセンブリごとにグループ化されています。 互換性のために残されている型のメンバーは、ここでは除外されています。
-ms.custom: updateeachrelease
 ms.date: 10/17/2017
 helpviewer_keywords:
 - .NET Framework, obsolete members
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: c0e320b8499fec0c56d2e3560bf6f64194f73dad
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: c3418675bf69ffaf60d6b16202fc6cb8a112ebab
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925827"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558934"
 ---
 # <a name="obsolete-members-in-net-framework"></a>.NET Framework で互換性のために残されているメンバー
 

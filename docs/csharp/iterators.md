@@ -4,12 +4,12 @@ description: 組み込み C# の反復子を使用して、独自のカスタム
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: c2a1dfe38b6a65e382e140541c71e94bb0fc76aa
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: ee72331cb85ba1a03d48e2f58526ad432c7fe6d4
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062484"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656099"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -24,7 +24,7 @@ ms.locfileid: "88062484"
 
 C# 言語には、上記の両方のシナリオに対応するための機能が用意されています。 この記事では、それらの機能の概要について説明します。
 
-このチュートリアルには、複数の手順があります。 各手順の後に、アプリケーションを実行して進行状況を確認できます。 このトピックの[完全なサンプルを表示またはダウンロードする](https://github.com/dotnet/samples/blob/master/csharp/iterators)こともできます。 ダウンロード方法については、「[サンプルおよびチュートリアル](../samples-and-tutorials/index.md#viewing-and-downloading-samples)」を参照してください。
+このチュートリアルには、複数の手順があります。 各手順の後に、アプリケーションを実行して進行状況を確認できます。 このトピックの[完全なサンプルを表示またはダウンロードする](https://github.com/dotnet/samples/blob/master/csharp/iterators)こともできます。 ダウンロード方法については、「[サンプルおよびチュートリアル](../samples-and-tutorials/index.md#view-and-download-samples)」を参照してください。
 
 ## <a name="iterating-with-foreach"></a>foreach を使用した反復処理
 

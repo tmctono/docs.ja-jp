@@ -3,12 +3,12 @@ title: .NET Core の csproj 形式に追加されたもの
 description: 既存の csproj ファイルと .NET Core の csproj ファイルの違いについて説明します
 ms.topic: reference
 ms.date: 04/08/2019
-ms.openlocfilehash: 4f45362fbb3df053b95156b8e633903f011a85ad
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 82174b2976abda2337a4a9b5a5a5e1f60a1094fb
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062874"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608332"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core の csproj 形式に追加されたもの
 
@@ -56,7 +56,7 @@ ms.locfileid: "88062874"
 
 > 既知の問題: .NET Core 2.1 SDK では、プロジェクトでも Microsoft.NET.Sdk.Web が使用されている場合にのみ、この構文がサポートされます。 これは、.NET Core 2.2 SDK で解決されます。
 
-ASP.NET Core メタパッケージに対するこれらの参照では、ほとんどの通常の NuGet パッケージとは動作が若干異なります。 これらのメタパッケージを使用するアプリケーションの[フレームワーク依存の展開](../deploying/index.md#publish-runtime-dependent)では、ASP.NET Core 共有フレームワークが自動的に利用されます。 メタパッケージを使用する場合、参照される ASP.NET Core NuGet パッケージの資産は、アプリケーションと共に展開**されません**。ASP.NET Core 共有フレームワークにはこれらの資産が含まれています。 共有フレームワーク内の資産は、アプリケーションの起動時間を向上させるため、ターゲット プラットフォームに対して最適化されています。 共有フレームワークについて詳しくは、「[.NET Core の配布パッケージ](../distribution-packaging.md)」をご覧ください。
+ASP.NET Core メタパッケージに対するこれらの参照では、ほとんどの通常の NuGet パッケージとは動作が若干異なります。 これらのメタパッケージを使用するアプリケーションの[フレームワーク依存の展開](../deploying/index.md#publish-framework-dependent)では、ASP.NET Core 共有フレームワークが自動的に利用されます。 メタパッケージを使用する場合、参照される ASP.NET Core NuGet パッケージの資産は、アプリケーションと共に展開**されません**。ASP.NET Core 共有フレームワークにはこれらの資産が含まれています。 共有フレームワーク内の資産は、アプリケーションの起動時間を向上させるため、ターゲット プラットフォームに対して最適化されています。 共有フレームワークについて詳しくは、「[.NET Core の配布パッケージ](../distribution-packaging.md)」をご覧ください。
 
 バージョンを "*指定する*" と、フレームワーク依存の展開では ASP.NET Core の共有フレームワークの "*最小*" バージョンとして扱われ、自己完結型の展開では "*厳密な*" バージョンとして扱われます。 これには、次のような影響があります。
 

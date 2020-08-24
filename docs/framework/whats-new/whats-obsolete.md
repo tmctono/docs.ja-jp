@@ -1,19 +1,18 @@
 ---
 title: .NET Framework で互換性のために残されている機能
 description: .NET クラス ライブラリでメンバーを旧版のものとしてマークする方法を確認します。 ObsoleteAttribute 属性、旧版の型とメンバーを処理する方法などについて理解します。
-ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
 - obsolete [.NET Framework]
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-ms.openlocfilehash: 2f39f5ec614b669f3a0f63677cb6f8a6f9ed11cf
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 188d9184476e58fb679421467cd68e2ea8a8a101
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925801"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558869"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>クラス ライブラリ内にある旧版のもの
 

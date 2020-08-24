@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 12/04/2018
-ms.openlocfilehash: 64cb561acd72ff5d4a11fcae7ce59eaad750f74e
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 656ef9aa2745c935c37b69ae5a54b8d126700e55
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644371"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608297"
 ---
 # <a name="whats-new-in-net-core-22"></a>.NET Core 2.2 の新機能
 
@@ -18,7 +18,7 @@ ms.locfileid: "81644371"
 
 ## <a name="new-deployment-mode"></a>新しい配置モード
 
-.NET Core 2.2 以降、[フレームワークに依存する実行可能ファイル](../deploying/index.md#publish-runtime-dependent)を配置できます。これは **.dll** ファイルではなく **.exe** ファイルとなります。 機能的にはフレームワーク依存の配置と似ていますが、フレームワークに依存する実行可能ファイル (FDE) は引き続き .NET Core のシステム全体の共有バージョンに依存して実行されます。 アプリに含まれるものは、ご自身のコードとサードパーティの依存関係のみです。 フレームワーク依存の配置とは異なり、FDE はプラットフォーム固有です。
+.NET Core 2.2 以降、[フレームワークに依存する実行可能ファイル](../deploying/index.md#publish-framework-dependent)を配置できます。これは **.dll** ファイルではなく **.exe** ファイルとなります。 機能的にはフレームワーク依存の配置と似ていますが、フレームワークに依存する実行可能ファイル (FDE) は引き続き .NET Core のシステム全体の共有バージョンに依存して実行されます。 アプリに含まれるものは、ご自身のコードとサードパーティの依存関係のみです。 フレームワーク依存の配置とは異なり、FDE はプラットフォーム固有です。
 
 この新しい配置モードの際立った利点は、ライブラリの代わりに実行可能ファイルをビルドすることです。これは、最初に `dotnet` を呼び出すことなく、直接アプリを実行できることを意味します。
 
