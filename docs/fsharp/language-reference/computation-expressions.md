@@ -1,19 +1,19 @@
 ---
 title: コンピュテーション式
 description: '制御フローの構造とバインディングを使用してシーケンス処理および結合できる、F # で計算を記述するための便利な構文を作成する方法について説明します。'
-ms.date: 11/04/2019
+ms.date: 08/15/2020
 f1_keywords:
 - let!_FS
-ms.openlocfilehash: 32638e9493fb2c6b7aae30d044a0cda2a97f2178
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 1649d8c57ea9e025d40ef6d39d92b96795964150
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855362"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812160"
 ---
 # <a name="computation-expressions"></a>コンピュテーション式
 
-F # のコンピュテーション式は、制御フローの構造とバインディングを使用して、シーケンス処理および結合できる計算を作成するための便利な構文を提供します。 計算式の種類によっては、monads、モノ id、monads トランスフォーマー、およびアプリケーションを表現する方法と考えることができます。 ただし、Haskell*のような*他の言語とは異なり、それらは1つの抽象化に関連付けられておらず、マクロやその他の形式のメタプログラミングに依存せず、便利で状況依存の構文を実現できません。
+F # のコンピュテーション式は、制御フローの構造とバインディングを使用して、シーケンス処理および結合できる計算を作成するための便利な構文を提供します。 計算式の種類によっては、monads、モノ id、monads トランスフォーマー、およびアプリケーションを表現する方法と考えることができます。 ただし、Haskell *のような* 他の言語とは異なり、それらは1つの抽象化に関連付けられておらず、マクロやその他の形式のメタプログラミングに依存せず、便利で状況依存の構文を実現できません。
 
 ## <a name="overview"></a>概要
 
@@ -24,11 +24,11 @@ F # のコンピュテーション式は、制御フローの構造とバイン�
 - Effectful の計算
 - 注釈の計算
 
-一般に、アプリケーションの特定の部分で実行する必要がある*状況依存*の計算があります。 コンテキストに依存するコードを記述することは困難な場合があります。これは、特定のコンテキストの外では、抽象化を行わずに "リーク" の計算を簡単に行うことができるためです。 多くの場合、これらの抽象化は自分で記述することが困難です。そのため、F # には**コンピュテーション式**と呼ばれる汎用的な方法があります。
+一般に、アプリケーションの特定の部分で実行する必要がある *状況依存* の計算があります。 コンテキストに依存するコードを記述することは困難な場合があります。これは、特定のコンテキストの外では、抽象化を行わずに "リーク" の計算を簡単に行うことができるためです。 多くの場合、これらの抽象化は自分で記述することが困難です。そのため、F # には **コンピュテーション式**と呼ばれる汎用的な方法があります。
 
 コンピュテーション式は、文脈に依存した計算をエンコードするための統一された構文と抽象化モデルを提供します。
 
-すべての計算式は、*ビルダー*型によってサポートされます。 ビルダーの型は、コンピュテーション式で使用できる操作を定義します。 「[コンピュテーション式の新しい型の作成](computation-expressions.md#creating-a-new-type-of-computation-expression)」を参照してください。これは、カスタム計算式の作成方法を示しています。
+すべての計算式は、 *ビルダー* 型によってサポートされます。 ビルダーの型は、コンピュテーション式で使用できる操作を定義します。 「 [コンピュテーション式の新しい型の作成](computation-expressions.md#creating-a-new-type-of-computation-expression)」を参照してください。これは、カスタム計算式の作成方法を示しています。
 
 ### <a name="syntax-overview"></a>構文の概要
 
@@ -79,9 +79,9 @@ let doThingsAsync url =
     }
 ```
 
-を使用してコンピュテーション式に呼び出しをバインドすると `let` 、コンピュテーション式の結果は得られません。 代わりに、そのコンピュテーション式に対して、*実現*されていない呼び出しの値をバインドします。 を使用し `let!` て、結果にバインドします。
+を使用してコンピュテーション式に呼び出しをバインドすると `let` 、コンピュテーション式の結果は得られません。 代わりに、そのコンピュテーション式に対して、 *実現* されていない呼び出しの値をバインドします。 を使用し `let!` て、結果にバインドします。
 
-`let!`は、ビルダー型のメンバーによって定義され `Bind(x, f)` ます。
+`let!` は、ビルダー型のメンバーによって定義され `Bind(x, f)` ます。
 
 ### `do!`
 
@@ -97,7 +97,7 @@ let doThingsAsync data url =
 
 [非同期ワークフロー](asynchronous-workflows.md)の場合、この型は `Async<unit>` です。 その他の計算式の場合、型はになる可能性があり `CExpType<unit>` ます。
 
-`do!`は、ビルダー型のメンバーによって定義され `Bind(x, f)` ます。ここで、は `f` を生成 `unit` します。
+`do!` は、ビルダー型のメンバーによって定義され `Bind(x, f)` ます。ここで、は `f` を生成 `unit` します。
 
 ### `yield`
 
@@ -144,7 +144,7 @@ let weekdays includeWeekend =
 
 [C# で yield キーワード](../../csharp/language-reference/keywords/yield.md)を使用する場合と同様に、コンピュテーション式の各要素は反復処理されるときに返されます。
 
-`yield`は、ビルダーの型のメンバーによって定義され `Yield(x)` ます。ここで、 `x` は、返される項目です。
+`yield` は、ビルダーの型のメンバーによって定義され `Yield(x)` ます。ここで、 `x` は、返される項目です。
 
 ### `yield!`
 
@@ -172,7 +172,7 @@ printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
 
 評価されると、によって呼び出されるコンピュテーション式の項目は1つずつ `yield!` 返され、結果がフラット化されます。
 
-`yield!`は、ビルダーの型のメンバーによって定義され `YieldFrom(x)` ます。ここで、 `x` は値のコレクションです。
+`yield!` は、ビルダーの型のメンバーによって定義され `YieldFrom(x)` ます。ここで、 `x` は値のコレクションです。
 
 とは異なり `yield` 、 `yield!` 明示的に指定する必要があります。 計算式では、その動作は暗黙的ではありません。
 
@@ -191,7 +191,7 @@ let req = // 'req' is of type is 'Async<data>'
 let result = Async.RunSynchronously req
 ```
 
-`return`は、ビルダーの型のメンバーによって定義され `Return(x)` ます。ここで、 `x` はラップする項目です。
+`return` は、ビルダーの型のメンバーによって定義され `Return(x)` ます。ここで、 `x` はラップする項目です。
 
 ### `return!`
 
@@ -207,7 +207,7 @@ let req = // 'req' is of type is 'Async<data>'
 let result = Async.RunSynchronously req
 ```
 
-`return!`は、ビルダーの型のメンバーによって定義され `ReturnFrom(x)` ます。ここで、 `x` は別のコンピュテーション式です。
+`return!` は、ビルダーの型のメンバーによって定義され `ReturnFrom(x)` ます。ここで、 `x` は別のコンピュテーション式です。
 
 ### `match!`
 
@@ -222,11 +222,11 @@ let doThingsAsync url =
     }
 ```
 
-でコンピュテーション式を呼び出すと `match!` 、のような呼び出しの結果が認識され `let!` ます。 これは、通常、結果が[省略可能](options.md)であるコンピュテーション式を呼び出すときに使用されます。
+でコンピュテーション式を呼び出すと `match!` 、のような呼び出しの結果が認識され `let!` ます。 これは、通常、結果が [省略可能](options.md)であるコンピュテーション式を呼び出すときに使用されます。
 
 ## <a name="built-in-computation-expressions"></a>組み込みのコンピュテーション式
 
-F # コアライブラリには、[シーケンス式](sequences.md)、[非同期ワークフロー](asynchronous-workflows.md)、および[クエリ式](query-expressions.md)という3つの組み込みのコンピュテーション式が定義されています。
+F # コアライブラリには、 [シーケンス式](sequences.md)、 [非同期ワークフロー](asynchronous-workflows.md)、および [クエリ式](query-expressions.md)という3つの組み込みのコンピュテーション式が定義されています。
 
 ## <a name="creating-a-new-type-of-computation-expression"></a>新しい種類のコンピュテーション式の作成
 
@@ -234,15 +234,15 @@ F # コアライブラリには、[シーケンス式](sequences.md)、[非同�
 
 次の表では、ワークフロービルダークラスで使用できるメソッドについて説明します。
 
-|**メソッド**|**一般的な署名**|**説明**|
+|**方法**|**一般的な署名**|**説明**|
 |----|----|----|
 |`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|`let!`コンピュテーション式でおよびに対して呼び出され `do!` ます。|
 |`Delay`|`(unit -> M<'T>) -> M<'T>`|計算式を関数としてラップします。|
 |`Return`|`'T -> M<'T>`|コンピュテーション式でに対して呼び出され `return` ます。|
 |`ReturnFrom`|`M<'T> -> M<'T>`|コンピュテーション式でに対して呼び出され `return!` ます。|
-|`Run`|`M<'T> -> M<'T>`<br /><br />`M<'T> -> 'T`|コンピュテーション式を実行します。|
-|`Combine`|`M<'T> * M<'T> -> M<'T>`<br /><br />`M<unit> * M<'T> -> M<'T>`|コンピュテーション式でシーケンス処理を行うために呼び出されます。|
-|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>`<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|コンピュテーション式の式に対して呼び出され `for...do` ます。|
+|`Run`|`M<'T> -> M<'T>` または<br /><br />`M<'T> -> 'T`|コンピュテーション式を実行します。|
+|`Combine`|`M<'T> * M<'T> -> M<'T>` または<br /><br />`M<unit> * M<'T> -> M<'T>`|コンピュテーション式でシーケンス処理を行うために呼び出されます。|
+|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>` または<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|コンピュテーション式の式に対して呼び出され `for...do` ます。|
 |`TryFinally`|`M<'T> * (unit -> unit) -> M<'T>`|コンピュテーション式の式に対して呼び出され `try...finally` ます。|
 |`TryWith`|`M<'T> * (exn -> M<'T>) -> M<'T>`|コンピュテーション式の式に対して呼び出され `try...with` ます。|
 |`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'T :> IDisposable`|コンピュテーション式の束縛に対して呼び出され `use` ます。|
@@ -262,7 +262,7 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 
 上記のコードで `Run` `Delay` は、コンピュテーション式ビルダークラスでが定義されていない場合、およびの呼び出しは省略されます。 ここではと示されているコンピュテーション式の本体は、 `{| cexpr |}` 次の表で説明する変換によって、ビルダークラスのメソッドを含む呼び出しに変換されます。 コンピュテーション式は、 `{| cexpr |}` これらの翻訳に従って再帰的に定義されます。ここで、 `expr` は F # の式で、 `cexpr` はコンピュテーション式です。
 
-|正規表現|翻訳|
+|Expression|翻訳|
 |----------|-----------|
 |<code>{ let binding in cexpr }</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
 |<code>{ let! pattern = expr in cexpr }</code>|<code>builder.Bind(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|
@@ -410,20 +410,20 @@ comp |> step |> step
 comp |> step |> step |> step |> step
 ```
 
-コンピュテーション式には基になる型があり、この式はを返します。 基になる型は、計算された結果または実行可能な遅延計算を表すことができます。また、一部の型のコレクションを反復処理する方法を提供する場合もあります。 前の例では、基になる型は**最終的**にでした。 シーケンス式の場合、基になる型は <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> です。 クエリ式の場合、基になる型は <xref:System.Linq.IQueryable?displayProperty=nameWithType> です。 非同期ワークフローの場合、基になる型は [`Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7) です。 オブジェクトは、 `Async` 結果を計算するために実行する作業を表します。 たとえば、 [`Async.RunSynchronously`](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) を呼び出して計算を実行し、その結果を返します。
+コンピュテーション式には基になる型があり、この式はを返します。 基になる型は、計算された結果または実行可能な遅延計算を表すことができます。また、一部の型のコレクションを反復処理する方法を提供する場合もあります。 前の例では、基になる型は **最終的**にでした。 シーケンス式の場合、基になる型は <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> です。 クエリ式の場合、基になる型は <xref:System.Linq.IQueryable?displayProperty=nameWithType> です。 非同期ワークフローの場合、基になる型は [`Async`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync-1.html) です。 オブジェクトは、 `Async` 結果を計算するために実行する作業を表します。 たとえば、 [`Async.RunSynchronously`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html#RunSynchronously) を呼び出して計算を実行し、その結果を返します。
 
 ## <a name="custom-operations"></a>カスタム操作
 
-コンピュテーション式でカスタム操作を定義し、コンピュテーション式で演算子としてカスタム操作を使用することができます。 たとえば、クエリ式にクエリ演算子を含めることができます。 カスタム操作を定義する場合は、コンピュテーション式の Yield メソッドと For メソッドを定義する必要があります。 カスタム操作を定義するには、それをコンピュテーション式のビルダークラスに配置し、を適用し [`CustomOperationAttribute`](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19) ます。 この属性は、引数として文字列を受け取ります。これはカスタム操作で使用される名前です。 この名前は、コンピュテーション式の左中かっこの先頭にあるスコープに含まれます。 したがって、このブロック内のカスタム操作と同じ名前を持つ識別子は使用しないでください。 たとえば、 `all` クエリ式でやなどの識別子を使用しないようにし `last` ます。
+コンピュテーション式でカスタム操作を定義し、コンピュテーション式で演算子としてカスタム操作を使用することができます。 たとえば、クエリ式にクエリ演算子を含めることができます。 カスタム操作を定義する場合は、コンピュテーション式の Yield メソッドと For メソッドを定義する必要があります。 カスタム操作を定義するには、それをコンピュテーション式のビルダークラスに配置し、を適用し [`CustomOperationAttribute`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-customoperationattribute.html) ます。 この属性は、引数として文字列を受け取ります。これはカスタム操作で使用される名前です。 この名前は、コンピュテーション式の左中かっこの先頭にあるスコープに含まれます。 したがって、このブロック内のカスタム操作と同じ名前を持つ識別子は使用しないでください。 たとえば、 `all` クエリ式でやなどの識別子を使用しないようにし `last` ます。
 
 ### <a name="extending-existing-builders-with-new-custom-operations"></a>新しいカスタム操作を使用した既存のビルダーの拡張
 
 既にビルダークラスがある場合は、そのカスタム操作をこのビルダークラスの外部から拡張できます。 拡張機能はモジュール内で宣言する必要があります。 名前空間には、同じファイルと、型が定義されている同じ名前空間宣言グループ以外の拡張メンバーを含めることはできません。
 
-次の例は、既存のクラスの拡張を示して `Microsoft.FSharp.Linq.QueryBuilder` います。
+次の例は、既存のクラスの拡張を示して `FSharp.Linq.QueryBuilder` います。
 
 ```fsharp
-type Microsoft.FSharp.Linq.QueryBuilder with
+type FSharp.Linq.QueryBuilder with
 
     [<CustomOperation("existsNot")>]
     member _.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
@@ -434,5 +434,5 @@ type Microsoft.FSharp.Linq.QueryBuilder with
 
 - [F# 言語リファレンス](index.md)
 - [非同期ワークフロー](asynchronous-workflows.md)
-- [シーケンス](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
+- [シーケンス](sequences.md)
 - [クエリ式](query-expressions.md)

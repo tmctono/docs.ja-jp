@@ -2,12 +2,12 @@
 title: 対話形式のオプション
 description: F# インタラクティブ、fsi.exe でサポートされているコマンドラインオプションについて説明します。
 ms.date: 08/15/2020
-ms.openlocfilehash: da2251c1d2e57090ed926e501cebf3c53ac58052
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: adc8dc86f14366720e1acbf35115d4e318a76aef
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558609"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810534"
 ---
 # <a name="f-interactive-options"></a>F# インタラクティブオプション
 
@@ -52,10 +52,10 @@ F# Interactive オプションの引数でリストを指定する場合は、�
 |**--optimize**[ **+**&#124;**-** ]|**fsc.exe**コンパイラオプションと同じです。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。|
 |**--preferreduilang: &lt; lang&gt;**| 優先する出力言語のカルチャ名を指定します (例: es、ja-jp)。 |
 |**--quiet**|**Stdout**ストリームへの F# インタラクティブの出力を抑制します。|
-|**--引用符-デバッグ**|追加のデバッグ情報が F# 引用符リテラルとリフレクション定義から派生した式に対して生成されるように指定します。 デバッグ情報は F# 式ツリー ノードのカスタム属性に追加されます。 「 [コード引用符](code-quotations.md) 」と「 [Expr. customattributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3)」を参照してください。|
+|**--引用符-デバッグ**|追加のデバッグ情報が F# 引用符リテラルとリフレクション定義から派生した式に対して生成されるように指定します。 デバッグ情報は F# 式ツリー ノードのカスタム属性に追加されます。 「 [コード引用符](code-quotations.md) 」と「 [Expr. customattributes](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-fsharpexpr.html#CustomAttributes)」を参照してください。|
 |**--readline**[ **+**&#124;**-** ]|対話モードでのタブ補完を有効または無効にします。|
 |**--reference: &lt; ファイル名&gt;**<br /><br />**-r: &lt; ファイル名&gt;**|**fsc.exe**コンパイラオプションと同じです。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。|
-|**--tail**[ **+**&#124;**-** ]|tail IL 命令の使用を有効または無効にします。有効にすると、スタック フレームが tail 再帰関数で再利用されます。 このオプションは、既定で有効です。|
+|**--tail**[ **+**&#124;**-** ]|tail IL 命令の使用を有効または無効にします。有効にすると、スタック フレームが tail 再帰関数で再利用されます。 既定では、このオプションは有効になっています。|
 |**--targetprofile: &lt; 文字列&gt;**|このアセンブリのターゲットフレームワークプロファイルを指定します。 有効な値は、`mscorlib`、`netcore`、または `netstandard` です。 既定では、 `mscorlib`です。|
 |**--使用: &lt; ファイル名&gt;**|指定したファイルを起動時に最初の入力として使用するよう、インタープリターに指示します。|
 |**--utf8output**|fsc.exe コンパイラ オプションと同じです。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。|

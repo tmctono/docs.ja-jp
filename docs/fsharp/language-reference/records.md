@@ -2,12 +2,12 @@
 title: レコード
 description: 'F # のレコードが名前付きの値の単純な集計を表す方法について説明します。メンバーを使用することもできます。'
 ms.date: 08/15/2020
-ms.openlocfilehash: 182b2e83c3940c866197052af102787a96e49c54
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: a72c0f15b58407e7d759e2fb5a1b35a7fc0d29e3
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559051"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812355"
 ---
 # <a name="records"></a>レコード
 
@@ -184,5 +184,5 @@ The records are equal.
 - [F# の型](fsharp-types.md)
 - [クラス](classes.md)
 - [F# 言語リファレンス](index.md)
-- [参照-等値](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
+- [参照-等値](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-referenceequalityattribute.html)
 - [パターン一致](pattern-matching.md)

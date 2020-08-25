@@ -2,12 +2,12 @@
 title: <add> の <baseAddressPrefixFilter>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: 8fdae02b558708a9b3f4535123752dce12dd5cf5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2572a6ee6763ae26fe5c56669e10f8c9aef8a280
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153141"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811796"
 ---
 # <a name="add-of-baseaddressprefixfilter"></a>\<add> の \<baseAddressPrefixFilter>
 IIS で Windows Communication Foundation (WCF) アプリケーションをホストするときに適切なインターネットインフォメーションサービス (IIS) バインドを選択するメカニズムを提供する、パススルーフィルターを指定する構成要素を表します。  
@@ -42,11 +42,11 @@ IIS で Windows Communication Foundation (WCF) アプリケーションをホス
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<baseAddressPrefixFilters>](baseaddressprefixfilters.md)|パススルーフィルターを指定する構成要素のコレクション。これは、IIS で Windows Communication Foundation (WCF) アプリケーションをホストするときに適切な IIS バインディングを選択する機構を提供します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  プレフィックス フィルターは、サービスによって使用される URI を、共有ホスティング プロバイダーが指定できるようにする手段を提供します。 これにより、共有ホストは、同じサイト上の同じスキームに対して、別々のベース アドレスを使用して複数のアプリケーションをホストできるようになります。  
   
  IIS Web サイトは、仮想ディレクトリを含む仮想アプリケーションのコンテナーです。 サイト内のアプリケーションに、1 つ以上の IIS バインディングからアクセスできます。 IIS バインディングは、バインディング プロトコルとバインディング情報という 2 つの情報を提供します。 バインディング プロトコル (HTTP など) は通信を行うスキームを定義し、バインディング情報 (IP アドレス、ポート、ホスト ヘッダーなど) にはサイトにアクセスするために使用するデータが含まれます。  
@@ -55,7 +55,7 @@ IIS で Windows Communication Foundation (WCF) アプリケーションをホス
   
  たとえば、サイトに次のベースアドレスを含めることができます。
   
-```
+```http
 http://testl.fabrikam.com/Service.svc  
 http://test2.fabrikam.com/Service.svc  
 ```  

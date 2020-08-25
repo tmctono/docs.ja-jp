@@ -1,23 +1,23 @@
 ---
 title: パターン マッチ
-description: でF#パターンを使用して、データを論理構造と比較したり、データを構成要素に分解したり、データから情報を抽出したりする方法について説明します。
-ms.date: 10/27/2019
-ms.openlocfilehash: 1acb795cbe5581898ae5e1439098f906a8a16b93
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+description: 'F # でパターンを使用して、データを論理構造と比較したり、データを構成要素に分解したり、データから情報を抽出したりする方法について説明します。'
+ms.date: 08/15/2020
+ms.openlocfilehash: 6d284b941824bc15a8e872a4e28e22c0e159191d
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73041010"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811510"
 ---
 # <a name="pattern-matching"></a>パターン マッチ
 
 パターンは、入力データの変換規則です。 データを論理構造と比較したり、データを構成要素に分解したり、さまざまな方法でデータから情報を抽出したりするために、F# 言語全体で使用されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>注釈
 
-パターンは、`match` 式などの多くの言語構成要素で使用されます。 `let` 束縛、ラムダ式、および `try...with` 式に関連付けられている例外ハンドラーで関数の引数を処理する場合に使用されます。 詳細については、「 [Match 式](match-expressions.md)、 [let 束縛](./functions/let-bindings.md)、[ラムダ式: `fun` キーワード](./functions/lambda-expressions-the-fun-keyword.md)」、および「[例外: `try...with` 式](./exception-handling/the-try-with-expression.md)」を参照してください。
+パターンは、`match` 式などの多くの言語構成要素で使用されます。 `let` 束縛、ラムダ式、および `try...with` 式に関連付けられている例外ハンドラーで関数の引数を処理する場合に使用されます。 詳細については、「 [Match 式](match-expressions.md)、 [let 束縛](./functions/let-bindings.md)、 [ラムダ式: `fun` キーワード](./functions/lambda-expressions-the-fun-keyword.md)、および [例外: `try...with` 式](./exception-handling/the-try-with-expression.md)」を参照してください。
 
-たとえば、`match` 式では、*パターン*はパイプ記号の後になります。
+たとえば、 `match` 式では、 *パターン* がパイプ記号の後に続きます。
 
 ```fsharp
 match expression with
@@ -29,23 +29,23 @@ match expression with
 
 サポートされているパターンを次の表に示します。 実行時に、表に示されている順序で次の各パターンに対して入力がテストされます。パターンは、コードに示されているとおりに先頭から末尾へ、各行のパターンの左から右へ、再帰的に適用されます。
 
-|名|説明|例|
+|名前|説明|例|
 |----|-----------|-------|
 |定数パターン|数値、文字、リテラル文字列、列挙定数、または定義済みのリテラル識別子|`1.0`, `"test"`, `30`, `Color.Red`|
 |識別子パターン|判別共用体のケース値、例外ラベル、またはアクティブ パターンのケース|`Some(x)`<br /><br />`Failure(msg)`|
 |変数パターン|*identifier*|`a`|
 |`as` パターン|*識別子*としての*パターン*|`(a, b) as tuple1`|
 |OR パターン|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
-|AND パターン|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
-|Cons パターン|*識別子*::*リスト-識別子*|`h :: t`|
-|リスト パターン|[ *pattern_1*;...;*pattern_n* ]|`[ a; b; c ]`|
-|配列パターン|[&#124; *pattern_1*;..;*pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
-|かっこで囲まれたパターン|(*パターン*)|`( a )`|
-|タプル パターン|( *pattern_1*,..., *pattern_n* )|`( a, b )`|
-|レコード パターン|{ *identifier1* = *pattern_1*;...;*identifier_n* = *pattern_n* }|`{ Name = name; }`|
+|AND パターン|*pattern1* &amp;*pattern2*|`(a, b) & (_, "test")`|
+|Cons パターン|*識別子* :: *リスト-識別子*|`h :: t`|
+|リスト パターン|[ *pattern_1*;...; *pattern_n* ]|`[ a; b; c ]`|
+|配列パターン|[&#124; *pattern_1*;..; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
+|かっこで囲まれたパターン|( *パターン* )|`( a )`|
+|タプル パターン|( *pattern_1*、...、 *pattern_n* )|`( a, b )`|
+|レコード パターン|{ *identifier1*  = *pattern_1*;... ;*identifier_n*  = *pattern_n* }|`{ Name = name; }`|
 |ワイルドカード パターン|_|`_`|
-|型の注釈が指定されたパターン|*pattern* :*型*|`a : int`|
-|型テスト パターン|:? *型*[as*識別子*]|`:? System.DateTime as dt`|
+|型の注釈が指定されたパターン|*pattern* : *型*|`a : int`|
+|型テスト パターン|:? *型* [as *識別子* ]|`:? System.DateTime as dt`|
 |null パターン|null|`null`|
 
 ## <a name="constant-patterns"></a>定数パターン
@@ -101,9 +101,9 @@ match shape with
 | _ -> ()
 ```
 
-アクティブ パターンを使用すると、より複雑なカスタム パターン マッチを定義できます。 アクティブパターンの詳細については、「[アクティブパターン](active-patterns.md)」を参照してください。
+アクティブ パターンを使用すると、より複雑なカスタム パターン マッチを定義できます。 アクティブパターンの詳細については、「 [アクティブパターン](active-patterns.md)」を参照してください。
 
-識別子が例外であるケースは、例外ハンドラーのコンテキストのパターン マッチで使用されます。 例外処理でのパターンマッチングの詳細については、「[例外: `try...with` 式](./exception-handling/the-try-with-expression.md)」を参照してください。
+識別子が例外であるケースは、例外ハンドラーのコンテキストのパターン マッチで使用されます。 例外処理でのパターンマッチングの詳細については、「 [例外: `try...with` 式](./exception-handling/the-try-with-expression.md)」を参照してください。
 
 ## <a name="variable-patterns"></a>変数パターン
 
@@ -133,13 +133,13 @@ OR パターンの使用例を次に示します。
 
 AND パターンでは、入力が 2 つのパターンと一致する必要があります。 AND パターンの両側の型に互換性があることが必要です。
 
-次の例は、このトピックで後述する「[組パターン](https://msdn.microsoft.com/library/#tuple)」で示した `detectZeroTuple` に似ていますが、ここでは `var1` と `var2` の両方を and パターンを使用して値として取得します。
+次の例は、 `detectZeroTuple` このトピックで後述する「組パターン」で示したようになりますが、との両方のパターンを使用して、との両方を `var1` `var2` 値として取得します。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4808.fs)]
 
 ## <a name="cons-pattern"></a>Cons パターン
 
-欠点パターンは、リストを最初の要素、*先頭*、および残りの要素 (*末尾*) を含むリストに分解するために使用されます。
+欠点パターンは、リストを最初の要素、 *先頭*、および残りの要素 ( *末尾*) を含むリストに分解するために使用されます。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4809.fs)]
 
@@ -193,7 +193,7 @@ AND パターンでは、入力が 2 つのパターンと一致する必要が�
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4816.fs)]
 
-識別子が特定の派生型であるかどうかを確認するだけの場合は、次の例に示すように、パターンの `as identifier` 部分は必要ありません。
+識別子が特定の派生型であるかどうかを確認するだけの場合は、 `as identifier` 次の例に示すように、パターンの一部を使用する必要はありません。
 
 ```fsharp
 type A() = class end

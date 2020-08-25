@@ -2,18 +2,18 @@
 title: <baseAddressPrefixFilters>
 ms.date: 03/30/2017
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-ms.openlocfilehash: 0673507b72690c3a5c7dcc35442c05e378dba43c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 635e4f02f4d286b63c4f4845563ba1953d23592a
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153036"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811900"
 ---
 # \<baseAddressPrefixFilters>
 パススルーフィルターを指定する構成要素のコレクションを表します。パススルーフィルターは、IIS で Windows Communication Foundation (WCF) アプリケーションをホストするときに適切なインターネットインフォメーションサービス (IIS) バインドを選択するメカニズムを提供します。  
   
 > [!WARNING]
-> \<baseAddressPrefixFilters>は "localhost" を認識しません。代わりに、完全修飾コンピューター名を使用してください。  
+> \<baseAddressPrefixFilters> は "localhost" を認識しません。代わりに、完全修飾コンピューター名を使用してください。  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
@@ -48,7 +48,7 @@ ms.locfileid: "79153036"
 |-------------|-----------------|  
 |[\<serviceHostingEnvironment>](servicehostingenvironment.md)|環境をホストするサービスがインスタンス化する特定のトランスポートの型を定義します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  プレフィックス フィルターは、サービスによって使用される URI を、共有ホスティング プロバイダーが指定できるようにする手段を提供します。 これにより、共有ホストは、同じサイト上の同じスキームに対して、別々のベース アドレスを使用して複数のアプリケーションをホストできるようになります。  
   
  IIS Web サイトは、仮想ディレクトリを含む仮想アプリケーションのコンテナーです。 サイト内のアプリケーションには、1 つ以上の IIS バインディングからアクセスできます。 IIS バインディングは、バインディング プロトコルとバインディング情報という 2 つの情報を提供します。 バインディング プロトコル (HTTP など) は通信を行うスキームを定義し、バインディング情報 (IP アドレス、ポート、ホスト ヘッダーなど) にはサイトにアクセスするために使用するデータが含まれます。  
@@ -57,7 +57,7 @@ ms.locfileid: "79153036"
   
  たとえば、サイトに次のベースアドレスを含めることができます。
   
-```
+```http
 http://testl.fabrikam.com/Service.svc  
 http://test2.fabrikam.com/Service.svc  
 ```  

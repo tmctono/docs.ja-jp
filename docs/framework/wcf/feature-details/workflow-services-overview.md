@@ -2,16 +2,16 @@
 title: ワークフローサービスの概要
 ms.date: 03/30/2017
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-ms.openlocfilehash: f752eca621f9d30f38d85d7e71228fdfe1343c32
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7055ea6e6b6d6a5d7bef8d5ff465d2eb0c838bf6
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594869"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812186"
 ---
 # <a name="workflow-services-overview"></a>ワークフローサービスの概要
 
-ワークフローサービスは、ワークフローを使用して実装される WCF ベースのサービスです。 ワークフローサービスは、メッセージングアクティビティを使用して Windows Communication Foundation (WCF) メッセージを送受信するワークフローです。 .NET Framework 4.5 では、ワークフロー内からメッセージを送受信できるようにする多数のメッセージ アクティビティが導入されています。 メッセージングアクティビティの詳細と、それらを使用してさまざまなメッセージ交換パターンを実装する方法については、「[メッセージングアクティビティ](messaging-activities.md)」を参照してください。
+ワークフローサービスは、ワークフローを使用して実装される WCF ベースのサービスです。 ワークフローサービスは、メッセージングアクティビティを使用して Windows Communication Foundation (WCF) メッセージを送受信するワークフローです。 .NET Framework 4.5 では、ワークフロー内からメッセージを送受信できるようにする多数のメッセージ アクティビティが導入されています。 メッセージングアクティビティの詳細と、それらを使用してさまざまなメッセージ交換パターンを実装する方法については、「 [メッセージングアクティビティ](messaging-activities.md)」を参照してください。
 
 ## <a name="benefits-of-using-workflow-services"></a>ワークフローサービスを使用する利点
 
@@ -58,9 +58,9 @@ WCF サービスと同様に、ワークフローサービスをホストする�
 
 マネージ .NET Framework アプリケーションまたはマネージ Windows サービスでホストされるワークフローサービスは、クラスのインスタンスを作成 <xref:System.ServiceModel.Activities.WorkflowServiceHost> し、プロパティ内にワークフロー定義を含むのインスタンスを渡し <xref:System.ServiceModel.Activities.WorkflowService> <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> ます。 メッセージ アクティビティを格納するワークフロー定義は、ワークフロー サービスとして公開されます。
 
-ワークフロー サービスを IIS または WAS でホストするには、ワークフロー サービス定義を格納する .xamlx ファイルを仮想ディレクトリに配置します。 既定のエンドポイント (を使用 <xref:System.ServiceModel.BasicHttpBinding> ) は自動的に作成されます。詳細については、「簡略化された[構成](../simplified-configuration.md)」を参照してください。 また、Web.config ファイルを仮想ディレクトリに配置し、独自のエンドポイントを指定することもできます。 ワークフロー定義がアセンブリ内にある場合は、.svc ファイルを仮想ディレクトリに配置し、ワークフロー アセンブリを App_Code ディレクトリに配置できます。 この .svc ファイルには、サービス ホスト ファクトリと、ワークフロー サービスを実装するクラスを指定する必要があります。 次の例に、サービス ホスト ファクトリを指定し、ワークフロー サービスを実装するクラスを指定する方法を示します。
+ワークフロー サービスを IIS または WAS でホストするには、ワークフロー サービス定義を格納する .xamlx ファイルを仮想ディレクトリに配置します。 既定のエンドポイント (を使用 <xref:System.ServiceModel.BasicHttpBinding> ) は自動的に作成されます。詳細については、「簡略化された [構成](../simplified-configuration.md)」を参照してください。 また、Web.config ファイルを仮想ディレクトリに配置し、独自のエンドポイントを指定することもできます。 ワークフロー定義がアセンブリ内にある場合は、.svc ファイルを仮想ディレクトリに配置し、ワークフロー アセンブリを App_Code ディレクトリに配置できます。 この .svc ファイルには、サービス ホスト ファクトリと、ワークフロー サービスを実装するクラスを指定する必要があります。 次の例に、サービス ホスト ファクトリを指定し、ワークフロー サービスを実装するクラスを指定する方法を示します。
 
-```
-<%@ServiceHost Factory=" System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory
+```aspx-csharp
+<%@ServiceHost Factory="System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory"
 Service="EchoService"%>
 ```

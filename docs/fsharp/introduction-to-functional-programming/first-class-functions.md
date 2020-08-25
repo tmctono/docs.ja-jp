@@ -1,13 +1,13 @@
 ---
 title: ファーストクラス関数
-description: ファーストクラス関数と、F# の関数型プログラミングの重要な機能について説明します。
+description: 'ファーストクラスの関数と F # での関数型プログラミングの重要な機能について説明します。'
 ms.date: 10/29/2018
-ms.openlocfilehash: 4681d32abd59cc4aade6f4cb2d062e7888bcfbbc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1dc8eae1655187282f05bf4e9501ecc8a17deba8
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629711"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810912"
 ---
 # <a name="first-class-functions"></a>ファーストクラス関数
 
@@ -23,15 +23,15 @@ ms.locfileid: "68629711"
 
 - 関数呼び出しから関数を返すことはできますか。
 
-最後の 2 つの基準では、*上位の操作*または*高階関数*と呼ばれるものを定義します。 高階関数は、引数として関数を受け取り、関数呼び出しの結果値として関数を返します。 これらの処理によって、関数型プログラミングの中心となる、関数のマッピングや関数の合成などの機能がサポートされます。
+最後の2つのメジャーでは、 *上位の操作* または *高階関数*と呼ばれるものを定義します。 高階関数は、引数として関数を受け取り、関数呼び出しの結果値として関数を返します。 これらの処理によって、関数型プログラミングの中心となる、関数のマッピングや関数の合成などの機能がサポートされます。
 
 ## <a name="give-the-value-a-name"></a>値に名前を付ける
 
-関数がファースト クラスの値である場合は、整数や文字列、その他の組み込みの型に名前を付けることができるのと同様に、関数に名前を付けることができる必要があります。 関数型プログラミングの記述では、これを "値に識別子をバインド(束縛)する" と表現しています。 F#では、 [ `let`バインディング](../language-reference/functions/let-bindings.md)を使用して`let <identifier> = <value>`名前を値にバインドします。 次に、2 つのコード例を示します。
+関数がファースト クラスの値である場合は、整数や文字列、その他の組み込みの型に名前を付けることができるのと同様に、関数に名前を付けることができる必要があります。 関数型プログラミングの記述では、これを "値に識別子を束縛する" と表現しています。 F # では、 [ `let` バインディング](../language-reference/functions/let-bindings.md)を使用して、名前を値にバインドします `let <identifier> = <value>` 。 次に、2 つのコード例を示します。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet20.fs)]
 
-関数には簡単に名前を付けることができます。 次の例では、識別子`squareIt` `squareIt`を[ラムダ式](../language-reference/functions/lambda-expressions-the-fun-keyword.md) `fun n -> n * n`にバインドすることによって、という名前の関数を定義します。 関数 `squareIt` は、1 つのパラメーター `n` を受け取り、このパラメーターの 2 乗を返します。
+関数には簡単に名前を付けることができます。 次の例では、 `squareIt` 識別子を `squareIt` [ラムダ式](../language-reference/functions/lambda-expressions-the-fun-keyword.md)にバインドすることによって、という名前の関数を定義し `fun n -> n * n` ます。 関数 `squareIt` は、1 つのパラメーター `n` を受け取り、このパラメーターの 2 乗を返します。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet21.fs)]
 
@@ -43,7 +43,7 @@ F# では、次に示すより簡潔な構文が用意されており、少量�
 
 ## <a name="store-the-value-in-a-data-structure"></a>値をデータ構造に格納する
 
-ファースト クラスの値はデータ構造に格納する事ができます。 次のコード例では、リストとタプルに値を格納する方法を示しています。
+ファースト クラスの値はデータ構造に格納できます。 次のコード例では、リストとタプルに値を格納する方法を示しています。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet23.fs)]
 
@@ -69,11 +69,11 @@ F# では、次に示すより簡潔な構文が用意されており、少量�
 
 関数を引数として他の関数に送信できる機能は、マップ操作やフィルター操作など、関数型プログラミング言語に共通の抽象化が基礎になっています。 たとえば、マップ操作は、複数の関数で共有される計算を引き受ける高階関数であり、リストを走査し、各要素に対してなんらかの処理を実行し、結果のリストを返します。 整数のリストの各要素をインクリメントしたり、各要素を 2 乗したり、文字列のリストの各要素を大文字に変更したりできます。 計算のエラーが発生しやすい部分は、リストを走査し、返す結果のリストを構築する再帰プロセスです。 この部分はマッピング関数に取り込まれます。 特定のアプリケーションで記述する必要があるのは、各リスト要素に個別に適用する関数 (加算、2 乗、大文字と小文字の変更) だけです。 その関数は、前の例で `squareIt` が `applyIt` に渡されたように、マッピング関数への引数として渡されます。
 
-F#[リスト](../language-reference/lists.md)、[配列](../language-reference/arrays.md)、[シーケンス](../language-reference/sequences.md)など、ほとんどのコレクション型にマップメソッドを提供します。 次の例では、リストを使用しています。 構文は `List.map <the function> <the list>` です。
+F # では、 [リスト](../language-reference/lists.md)、 [配列](../language-reference/arrays.md)、 [シーケンス](../language-reference/sequences.md)など、ほとんどのコレクション型にマップメソッドが用意されています。 次の例では、リストを使用しています。 構文は `List.map <the function> <the list>`です。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet28.fs)]
 
-詳細については、「[リスト](../language-reference/lists.md)」を参照してください。
+詳細については、「 [リスト](../language-reference/lists.md)」を参照してください。
 
 ## <a name="return-the-value-from-a-function-call"></a>関数呼び出しの結果値を返す
 
@@ -91,7 +91,7 @@ F#[リスト](../language-reference/lists.md)、[配列](../language-reference/a
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet31.fs)]
 
-関数呼び出しの結果値として関数を返すことができるのは、高階関数のもう 1 つの特徴です。 次の例では、1 つの引数 `checkFor` を受け取り、結果値として新しい関数を返す `item` という関数を定義します。 返された関数は、引数 `lst` としてリストを受け取り、その `item` 内で `lst` を検索します。 `item` が存在する場合、関数は `true` を返します。 `item` がない場合、関数は `false` を返します。 前のセクションと同様に、次のコードでは、リストを検索するために、指定されたリスト関数[list. exists](https://msdn.microsoft.com/library/15a3ebd5-98f0-44c0-8220-7dedec3e68a8)を使用しています。
+関数呼び出しの結果値として関数を返すことができるのは、高階関数のもう 1 つの特徴です。 次の例では、1 つの引数 `checkFor` を受け取り、結果値として新しい関数を返す `item` という関数を定義します。 返された関数は、引数 `lst` としてリストを受け取り、その `item` 内で `lst` を検索します。 `item` が存在する場合、関数は `true` を返します。 `item` がない場合、関数は `false` を返します。 前のセクションと同様に、次のコードでは、リストを検索するために、指定されたリスト関数 [list. exists](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#exists)を使用しています。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet32.fs)]
 
@@ -123,7 +123,7 @@ F#[リスト](../language-reference/lists.md)、[配列](../language-reference/a
 
 ## <a name="curried-functions"></a>カリー化関数
 
-暗黙を利用してより簡潔書き込む前のセクションの例の多く*カリー化*F# の関数の宣言。 カリー化とは、複数のパラメーターを持つ関数を、それぞれが単一のパラメーターを持つ一連の埋め込み関数に変換するプロセスです。 F# では、複数のパラメーターを持つ関数は本質的にカリー化されます。 たとえば、前のセクションの `compose` は、次に示すように、3 つのパラメーターを使用する簡潔なスタイルで記述できます。
+前のセクションの例の多くは、F # の関数宣言で暗黙的な *カリー化* を利用することで、より簡潔に記述できます。 カリー化とは、複数のパラメーターを持つ関数を、それぞれが単一のパラメーターを持つ一連の埋め込み関数に変換するプロセスです。 F# では、複数のパラメーターを持つ関数は本質的にカリー化されます。 たとえば、前のセクションの `compose` は、次に示すように、3 つのパラメーターを使用する簡潔なスタイルで記述できます。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet38.fs)]
 
@@ -140,13 +140,13 @@ F#[リスト](../language-reference/lists.md)、[配列](../language-reference/a
 [!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet41.fs)]
 
 > [!NOTE]
-> パラメーターをタプルとして囲むことで、カリー化を制限できます。 詳細については、「[パラメーターと引数](../language-reference/parameters-and-arguments.md)」の「パラメーターパターン」を参照してください。
+> パラメーターをタプルとして囲むことで、カリー化を制限できます。 詳細については、「 [パラメーターと引数](../language-reference/parameters-and-arguments.md)」の「パラメーターパターン」を参照してください。
 
 次の例では、暗黙的なカリー化を使用して、より短いバージョンの `makeGame` を作成します。 この形式では、`makeGame` が `game` 関数を作成して返す方法の詳細はそれほど明確ではありませんが、同じ結果を返す元のテスト ケースを使用することで確認できます。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet42.fs)]
 
-カリー化の詳細については、「[関数](../language-reference/functions/index.md)」の「引数の部分的な適用」を参照してください。
+カリー化の詳細については、「 [関数](../language-reference/functions/index.md)」の「引数の部分的な適用」を参照してください。
 
 ## <a name="identifier-and-function-definition-are-interchangeable"></a>識別子と関数定義の交換可能性
 
@@ -176,7 +176,7 @@ F#[リスト](../language-reference/lists.md)、[配列](../language-reference/a
 - 関数を関数呼び出しの結果値として返すことができます。
 [!code-fsharp[Main](~/samples/snippets/fsharp/contour/snippet32.fs)]
 
-F# の詳細については、、 [F# 言語リファレンス](../language-reference/index.md)を参照してください。
+F # の詳細については、「 [f # 言語リファレンス](../language-reference/index.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -193,5 +193,5 @@ F# の詳細については、、 [F# 言語リファレンス](../language-refe
 - [リスト](../language-reference/lists.md)
 - [タプル](../language-reference/tuples.md)
 - [関数](../language-reference/functions/index.md)
-- [`let`現存](../language-reference/functions/let-bindings.md)
-- [ラムダ式:`fun`キーワード](../language-reference/functions/lambda-expressions-the-fun-keyword.md)
+- [`let` 現存](../language-reference/functions/let-bindings.md)
+- [ラムダ式: `fun` キーワード](../language-reference/functions/lambda-expressions-the-fun-keyword.md)
