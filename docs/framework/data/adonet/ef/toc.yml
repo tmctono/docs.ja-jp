@@ -77,38 +77,17 @@
               href: sqlclient-for-ef-types.md
             - name: Entity Framework 用の .NET Framework Data Provider for SQL Server (SqlClient) の既知の問題
               href: known-issues-in-sqlclient-for-entity-framework.md
-    - name: Entity Framework データ プロバイダーの作成
-      href: writing-an-ef-data-provider.md
+    - name: 開発および配置に関する注意事項
+      href: development-and-deployment-considerations.md
       items:
-        - name: SQL 生成
-          href: sql-generation.md
-          items:
-            - name: コマンド ツリーの構造
-              href: the-shape-of-the-command-trees.md
-            - name: 'コマンド ツリーからの SQL の生成: ベスト プラクティス'
-              href: generating-sql-from-command-trees-best-practices.md
-            - name: サンプル プロバイダーでの SQL 生成
-              href: sql-generation-in-the-sample-provider.md
-              items:
-                - name: アーキテクチャとデザイン
-                  href: architecture-and-design.md
-                - name: 'チュートリアル: SQL 生成'
-                  href: walkthrough-sql-generation.md
-        - name: 変更 SQL 生成
-          href: modification-sql-generation.md
-        - name: プロバイダー マニフェストの仕様
-          href: provider-manifest-specification.md
-- name: 開発および配置に関する注意事項
-  href: development-and-deployment-considerations.md
-  items:
-    - name: セキュリティの考慮事項
-      href: security-considerations.md
-    - name: パフォーマンスに関する考慮事項
-      href: performance-considerations.md
-    - name: 移行に関する注意事項
-      href: migration-considerations.md
-    - name: 配置に関する注意事項
-      href: deployment-considerations.md
+        - name: セキュリティの考慮事項
+          href: security-considerations.md
+        - name: パフォーマンスに関する考慮事項
+          href: performance-considerations.md
+        - name: 移行に関する注意事項
+          href: migration-considerations.md
+        - name: 配置に関する注意事項
+          href: deployment-considerations.md
 - name: Entity Framework のリソース
   href: resources.md
 - name: Entity Framework の用語

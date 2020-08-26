@@ -368,6 +368,13 @@ items:
         href: run-time-config/networking.md
       - name: スレッドの設定
         href: run-time-config/threading.md
+  - name: コード分析
+    items:
+      - name: 概要
+        href: ../fundamentals/productivity/code-analysis.md
+        displayName: 'code analysis, analyzers'
+      - name: ルールを構成する
+        href: ../fundamentals/productivity/configure-code-analysis-rules.md
   - name: 移行
     items:
       - name: .NET Core 2.0 から 2.1 へ
