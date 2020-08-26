@@ -2,16 +2,16 @@
 title: Protobuf maps for dictionary-gRPC for WCF 開発者
 description: Protobuf maps を使用して .NET で辞書型を表す方法について説明します。
 ms.date: 09/09/2019
-ms.openlocfilehash: bf848bbc7e3618f6d78e280fcd85d5eb88d5cfae
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 2c2ae76d47b2309227d22235b5acbe2afa794158
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543132"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867466"
 ---
 # <a name="protobuf-maps-for-dictionaries"></a>Protobuf のディクショナリのマップ
 
-メッセージ内の名前付きの値の任意のコレクションを表すことができることが重要です。 .NET では、通常、これはディクショナリ型によって処理されます。 プロトコルバッファー (Protobuf) の .NET <xref:System.Collections.Generic.IDictionary%602> 型に相当するものは、`map<key_type, value_type>` の種類です。 このセクションでは、Protobuf で `map` 型を宣言する方法と、生成されたコードを使用する方法について説明します。
+メッセージ内の名前付きの値の任意のコレクションを表すことができることが重要です。 .NET では、通常、これはディクショナリ型によって処理されます。 <xref:System.Collections.Generic.IDictionary%602>プロトコルバッファー (Protobuf) の .net 型に相当するものが `map<key_type, value_type>` 型です。 このセクションでは、Protobuf で型を宣言する方法 `map` と、生成されたコードを使用する方法について説明します。
 
 ```protobuf
 message StockPrices {
@@ -19,9 +19,9 @@ message StockPrices {
 }
 ```
 
-生成されたコードでは、`map` フィールドは `Google.Protobuf.Collections.MapField<TKey, TValue>` クラスを使用します。 このクラスは、<xref:System.Collections.Generic.IDictionary%602>を含む標準の .NET コレクションインターフェイスを実装します。
+生成されたコードで `map` は、フィールドは、型の読み取り専用プロパティによって表され [`Google.Protobuf.Collections.MapField<TKey, TValue>`][map-field] ます。 この型は、を含む標準の .NET コレクションインターフェイスを実装し <xref:System.Collections.Generic.IDictionary%602> ます。
 
-マップフィールドは、メッセージ定義内で直接繰り返すことはできません。 ただし、次の例のように、マップを含む入れ子になったメッセージを作成し、メッセージの種類に `repeated` を使用することができます。
+マップフィールドは、メッセージ定義内で直接繰り返すことはできません。 ただし、次の例のように、マップを含む入れ子になったメッセージを作成し、メッセージの種類でを使用することができ `repeated` ます。
 
 ```protobuf
 message Order {
@@ -34,7 +34,7 @@ message Order {
 
 ## <a name="using-mapfield-properties-in-code"></a>コードでの MapField プロパティの使用
 
-`map` フィールドから生成された `MapField` プロパティは読み取り専用であり、`null`されることはありません。 マッププロパティを設定するには、空の `MapField` プロパティの `Add(IDictionary<TKey,TValue> values)` メソッドを使用して、任意の .NET ディクショナリから値をコピーします。
+`MapField`フィールドから生成されたプロパティ `map` は読み取り専用であり、になることはありません `null` 。 マッププロパティを設定するには、空のプロパティに対してメソッドを使用して、 `Add(IDictionary<TKey,TValue> values)` `MapField` 任意の .net ディクショナリから値をコピーします。
 
 ```csharp
 public Order CreateOrder(Dictionary<string, string> attributes)
@@ -45,9 +45,11 @@ public Order CreateOrder(Dictionary<string, string> attributes)
 }
 ```
 
-## <a name="further-reading"></a>関連項目
+## <a name="further-reading"></a>参考資料
 
-Protobuf の詳細については、公式の[Protobuf のドキュメント](https://developers.google.com/protocol-buffers/docs/overview)を参照してください。
+Protobuf の詳細については、公式の [Protobuf のドキュメント](https://developers.google.com/protocol-buffers/docs/overview)を参照してください。
+
+[map-field]: https://developers.google.cn/protocol-buffers/docs/reference/csharp/class/google/protobuf/collections/map-field-t-key-t-value-
 
 >[!div class="step-by-step"]
 >[前へ](protobuf-enums.md)
