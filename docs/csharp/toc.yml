@@ -299,38 +299,25 @@
         - name: 概要
           displayName: programming concepts
           href: programming-guide/concepts/index.md
-        - name: async および await を使用した非同期プログラミング
+        - name: 非同期プログラミング
+          displayName: 'async, await, asynchronous programming, task, cancellation'
           items:
             - name: 概要
               displayName: asynchronous programming
               href: programming-guide/concepts/async/index.md
             - name: 非同期プログラミング モデル
               href: programming-guide/concepts/async/task-asynchronous-programming-model.md
-            - name: 'チュートリアル: Async と Await を使用した Web へのアクセス'
-              href: programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md
-            - name: Task.WhenAll を使用して AsyncWalkthrough を拡張する方法
-              href: programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md
-            - name: Async と Await を使用して複数の Web 要求を並列して作成する方法
-              href: programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
             - name: 非同期の戻り値の型
               href: programming-guide/concepts/async/async-return-types.md
-            - name: 非同期プログラムにおける制御フロー
-              href: programming-guide/concepts/async/control-flow-in-async-programs.md
-            - name: タスクと処理の完了タスクのキャンセル
+            - name: タスクの取り消し
               items:
-                - name: 概要
-                  href: programming-guide/concepts/async/fine-tuning-your-async-application.md
-                - name: 非同期タスクまたはタスクの一覧のキャンセル
+                - name: タスクの一覧を取り消す
                   href: programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md
-                - name: 指定した時間の経過後の非同期タスクのキャンセル
+                - name: 指定した時間の経過後のタスクのキャンセル
                   href: programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md
-                - name: 完了後の残りの非同期タスクのキャンセル
-                  href: programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md
-                - name: 完了時での複数の同期タスクとプロセスの実行
-                  href: programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md
-            - name: 非同期アプリにおける再入の処理
-              href: programming-guide/concepts/async/handling-reentrancy-in-async-apps.md
-            - name: ファイル アクセスにおける非同期の使用
+            - name: 完了時の非同期タスクの処理
+              href: programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md
+            - name: ファイルへの非同期アクセス
               href: programming-guide/concepts/async/using-async-for-file-access.md
         - name: 属性
           items:
