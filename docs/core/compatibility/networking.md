@@ -2,12 +2,12 @@
 title: ネットワークに関する破壊的変更
 description: .NET Core のネットワークに関する破壊的変更の一覧を示します。
 ms.date: 05/05/2020
-ms.openlocfilehash: 07e0b2e062ce244cd6312bbe08bcc63db4c74347
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 568d26bde43ccd6e19fbe2d947f576ef5f99450a
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82859629"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608484"
 ---
 # <a name="networking-breaking-changes"></a>ネットワークに関する破壊的変更
 
@@ -15,8 +15,20 @@ ms.locfileid: "82859629"
 
 | 互換性に影響する変更点 | 導入されたバージョン |
 | - | - |
+| [.NET ランタイムからの WinHttpHandler の削除](#winhttphandler-removed-from-net-runtime) | 5.0 |
+| [MulticastOption.Group で null 値を受け付けない](#multicastoptiongroup-doesnt-accept-a-null-value) | 5.0 |
 | [HttpRequestMessage.Version の既定値が 1.1 に変更された](#default-value-of-httprequestmessageversion-changed-to-11) | 3.0 |
 | [WebClient.CancelAsync がすぐにキャンセルされない場合がある](#webclientcancelasync-doesnt-always-cancel-immediately) | 2.0 |
+
+## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [winhttphandler-removed-from-runtime](../../../includes/core-changes/networking/5.0/winhttphandler-removed-from-runtime.md)]
+
+***
+
+[!INCLUDE [multicastoption-group-doesnt-accept-null](../../../includes/core-changes/networking/5.0/multicastoption-group-doesnt-accept-null.md)]
+
+***
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 

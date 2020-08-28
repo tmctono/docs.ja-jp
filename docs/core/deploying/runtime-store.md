@@ -2,12 +2,12 @@
 title: ランタイム パッケージ ストア
 description: .NET Core で使用されるランタイム パッケージ ストアとターゲット マニフェストの使用方法について説明します。
 ms.date: 08/12/2017
-ms.openlocfilehash: 4395370c3bb2d97511d549a63813022fb8cac4b7
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: e9e27ef535dbd9e7197c323f7e49a9960aeff0f9
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158292"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608349"
 ---
 # <a name="runtime-package-store"></a>ランタイム パッケージ ストア
 
@@ -128,11 +128,11 @@ dotnet publish --manifest manifest.xml
 
 ASP.NET Core の暗黙的なストアは、ASP.NET Core 2.0 にのみ適用されます。 暗黙的なストアを使用**しない** ASP.NET Core 2.1 以降を、アプリケーションで使用することを強くお勧めします。 ASP.NET Core 2.1 以降では、共有フレームワークを使用します。
 
-.NET Core 2.0 では、このランタイム パッケージ ストア機能は、アプリが[ランタイムに依存する展開](index.md#publish-runtime-dependent)のアプリとして展開されるときに、ASP.NET Core アプリによって暗黙的に使用されます。 [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) のターゲットには、ターゲット システムの暗黙的なパッケージ ストアを参照しているマニフェストが含まれます。 さらに、`Microsoft.AspNetCore.All` パッケージに依存するランタイムに依存するアプリは、アプリとそのアセットのみが含まれ、`Microsoft.AspNetCore.All` メタパッケージにリストされているパッケージは含まれないアプリとして発行されます。 それらのパッケージは、ターゲット システムに存在すると想定されます。
+.NET Core 2.0 では、このランタイム パッケージ ストア機能は、アプリが[フレームワークに依存する配置](index.md#publish-framework-dependent)のアプリとして配置されるときに、ASP.NET Core アプリによって暗黙的に使用されます。 [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) のターゲットには、ターゲット システムの暗黙的なパッケージ ストアを参照しているマニフェストが含まれます。 さらに、`Microsoft.AspNetCore.All` パッケージに依存するフレームワークに依存するアプリは、アプリとそのアセットのみが含まれ、`Microsoft.AspNetCore.All` メタパッケージにリストされているパッケージは含まれないアプリとして発行されます。 それらのパッケージは、ターゲット システムに存在すると想定されます。
 
 ランタイム パッケージ ストアは、.NET Core SDK がインストールされるときに、ホストにインストールされます。 その他のインストーラーでは、Zip/tarball インストールの .NET Core SDK、`apt-get`、Red Hat Yum、.NET Core Windows Server Hosting バンドル、および手動のランタイム パッケージ ストアのインストールなど、ランタイム パッケージ ストアを提供する場合があります。
 
-[ランタイムに依存する展開](index.md#publish-runtime-dependent)アプリを展開するときは、ターゲット環境に .NET Core SDK がインストールされていることを確認します。 アプリが ASP.NET Core を含まない環境に展開される場合、次の例のように、プロジェクト ファイルで **\<PublishWithAspNetCoreTargetManifest>** を `false` に指定して、暗黙的なストアを無効にできます。
+[フレームワークに依存する配置](index.md#publish-framework-dependent)のアプリを配置するときに、ターゲット環境に .NET Core SDK がインストールされていることを確認します。 アプリが ASP.NET Core を含まない環境に配置される場合、次の例のように、プロジェクト ファイルで **\<PublishWithAspNetCoreTargetManifest>** を `false` に指定して、暗黙的なストアを無効にできます。
 
 ```xml
 <PropertyGroup>

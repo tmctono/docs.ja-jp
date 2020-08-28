@@ -3,12 +3,12 @@ title: 高い CPU 使用率をデバッグする - .NET Core
 description: .NET Core での高い CPU 使用率のデバッグについて説明するチュートリアルです。
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: e69585d0eb6f04bf37d0c023a1956be62c2a1cf3
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 93076bbce3baf3a219b25c927d2aba3d2d57456f
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86926359"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557803"
 ---
 # <a name="debug-high-cpu-usage-in-net-core"></a>.NET Core で高い CPU 使用率をデバッグする
 
@@ -85,7 +85,7 @@ Press p to pause, r to resume, q to quit.
 
 Web アプリを実行している状態で、スタートアップ直後に CPU が使用されておらず、`0%` で報告されます。 ルート パラメーターとして `60000` を使用して `api/diagscenario/highcpu` ルートに移動します。
 
-[https://localhost:5001/api/diagscenario/highcpu/60000](https://localhost:5001/api/diagscenario/highcpu/60000)
+`https://localhost:5001/api/diagscenario/highcpu/60000`
 
 次に、[dotnet-counters](dotnet-counters.md) コマンドを再実行します。 `cpu-usage` だけを監視するには、コマンドの一部として `System.Runtime[cpu-usage]` を指定します。
 
@@ -127,7 +127,7 @@ export COMPlus_PerfMapEnabled=1
 dotnet run
 ```
 
-高 CPU API (<https://localhost:5001/api/diagscenario/highcpu/60000>) エンドポイントをもう一度実行します。 それが 1 分間の要求内で実行されている間に、プロセス ID を使用して `perf` コマンドを実行します。
+高 CPU API エンドポイント (`https://localhost:5001/api/diagscenario/highcpu/60000`) をもう一度実行します。 それが 1 分間の要求内で実行されている間に、プロセス ID を使用して `perf` コマンドを実行します。
 
 ```bash
 sudo perf record -p 2266 -g
@@ -152,7 +152,7 @@ sudo perf script | FlameGraph/stackcollapse-perf.pl | FlameGraph/flamegraph.pl >
 
 ### <a name="windows"></a>[Windows](#tab/windows)
 
-Windows では、プロファイラーとして [dotnet-trace](dotnet-trace.md) ツールを使用できます。 前の[サンプル デバッグ ターゲット](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)を使用して、高 CPU (<https://localhost:5001/api/diagscenario/highcpu/60000>) エンドポイントをもう一度実行します。 それが 1 分間の要求内で実行されている間に、次のように `collect` コマンドを使用します。
+Windows では、プロファイラーとして [dotnet-trace](dotnet-trace.md) ツールを使用できます。 前の[サンプル デバッグ ターゲット](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)を使用して、高 CPU エンドポイント (`https://localhost:5001/api/diagscenario/highcpu/60000`) をもう一度実行します。 それが 1 分間の要求内で実行されている間に、次のように `collect` コマンドを使用します。
 
 ```dotnetcli
 dotnet-trace collect -p 22884 --providers Microsoft-DotNETCore-SampleProfiler

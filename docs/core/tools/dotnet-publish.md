@@ -2,12 +2,12 @@
 title: dotnet publish コマンド
 description: dotnet publish コマンドを実行すると、.NET Core プロジェクトまたはソリューションをディレクトリに発行できます。
 ms.date: 02/24/2020
-ms.openlocfilehash: 4ff49452e4d941b3e06ad511507b1dc429ab459f
-ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
+ms.openlocfilehash: 45bf8504fd882286041794d27ecb56464fc8d13d
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88187972"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656666"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -123,7 +123,7 @@ dotnet publish -p:PublishProfile=FolderProfile
 
   出力ディレクトリのパスを指定します。
   
-  指定しない場合、ランタイムに依存する実行可能ファイルおよびクロスプラットフォーム バイナリの既定値は *[project_file_folder]./bin/[configuration]/[framework]/publish/* に設定されます。 自己完結型の実行可能ファイルの場合、既定値は *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* に設定されます。
+  指定しない場合、フレームワークに依存する実行可能ファイルおよびクロスプラットフォーム バイナリの既定値は *[project_file_folder]./bin/[configuration]/[framework]/publish/* に設定されます。 自己完結型の実行可能ファイルの場合、既定値は *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* に設定されます。
 
   Web プロジェクトで、出力フォルダーがプロジェクト フォルダー内にある場合、`dotnet publish` コマンドを連続して実行すると、出力フォルダーが入れ子になって生成されます。 たとえば、プロジェクト フォルダーが *myproject* で、発行の出力フォルダーが *myproject/publish* であり、`dotnet publish` を 2 回実行した場合、2 回目の実行では *myproject/publish/publish* に *.config* および *.json* ファイルなどのコンテンツ ファイルが配置されます。 発行フォルダーが入れ子にならないようにするには、プロジェクト フォルダーの**直下以外**の発行フォルダーを指定するか、またはプロジェクトから発行フォルダーを除外します。 *publishoutput* という名前の発行フォルダーを除外するには、 *.csproj* ファイルの `PropertyGroup` 要素に次の要素を追加します。
 
@@ -159,7 +159,7 @@ dotnet publish -p:PublishProfile=FolderProfile
 
 - **`-p:PublishTrimmed=true`**
 
-  自己完結型の実行可能ファイルを発行するとき、使用されていないライブラリをトリミングして、アプリの展開サイズを減らします。 詳細については、「[自己完結型の展開と実行可能ファイルのトリミング](../deploying/trim-self-contained.md)」を参照してください。 .NET Core 3.0 SDK 以降で使用できます。
+  自己完結型の実行可能ファイルを発行するとき、使用されていないライブラリをトリミングして、アプリの展開サイズを減らします。 詳細については、「[自己完結型の展開と実行可能ファイルのトリミング](../deploying/trim-self-contained.md)」を参照してください。 .NET Core 3.0 SDK 以降では、プレビュー機能として利用できます。
 
   このオプションは、コマンド ラインではなく、発行プロファイルで指定することをお勧めします。 詳細については、「[MSBuild](#msbuild)」を参照してください。
 
@@ -187,13 +187,13 @@ dotnet publish -p:PublishProfile=FolderProfile
 
 ## <a name="examples"></a>使用例
 
-- 現在のディレクトリ内にプロジェクト用の[ランタイムに依存するクロスプラットフォーム バイナリ](../deploying/index.md#produce-a-cross-platform-binary)を作成します。
+- 現在のディレクトリに、プロジェクト用の[フレームワークに依存するクロスプラットフォーム バイナリ](../deploying/index.md#produce-a-cross-platform-binary)を作成します。
 
   ```dotnetcli
   dotnet publish
   ```
 
-  .NET Core 3.0 SDK 以降の場合、この例では、現在のプラットフォーム用の[ランタイムに依存する実行可能ファイル](../deploying/index.md#publish-runtime-dependent)も作成されます。
+  この例では、.NET Core 3.0 SDK 以降、現在のプラットフォーム用の[フレームワークに依存する実行可能ファイル](../deploying/index.md#publish-framework-dependent)も作成されます。
 
 - 特定のランタイムに対して、現在のディレクトリ内にプロジェクト用の[自己完結型の実行可能ファイル](../deploying/index.md#publish-self-contained)を作成します。
 
@@ -203,7 +203,7 @@ dotnet publish -p:PublishProfile=FolderProfile
 
   RID をプロジェクト ファイルに含める必要があります。
 
-- 特定のプラットフォーム用に、プロジェクト用の[ランタイムに依存する実行可能ファイル](../deploying/index.md#publish-runtime-dependent)を現在のディレクトリに作成します。
+- 特定のプラットフォーム用に、プロジェクト用の[フレームワークに依存する実行可能ファイル](../deploying/index.md#publish-framework-dependent)を現在のディレクトリに作成します。
 
   ```dotnetcli
   dotnet publish --runtime osx.10.11-x64 --self-contained false
@@ -234,7 +234,7 @@ dotnet publish -p:PublishProfile=FolderProfile
 - [.NET Core アプリケーションの発行の概要](../deploying/index.md)
 - [.NET Core CLI を使用して .NET Core アプリを発行する](../deploying/deploy-with-cli.md)
 - [ターゲット フレームワーク](../../standard/frameworks.md)
-- [ランタイム識別子 (RID) のカタログ](../rid-catalog.md)
+- [Runtime Identifier (RID) カタログ](../rid-catalog.md)
 - [macOS Catalina の公証に対応する](../install/macos-notarization-issues.md)
 - [発行されたアプリケーションのディレクトリ構造](/aspnet/core/hosting/directory-structure)
 - [MSBuild コマンド ライン リファレンス](/visualstudio/msbuild/msbuild-command-line-reference)

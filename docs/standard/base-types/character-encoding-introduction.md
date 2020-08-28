@@ -1,6 +1,6 @@
 ---
-title: .NET での文字エンコードの概要
-description: .NET での文字エンコーディング/デコーディングについて説明します。
+title: .NET でのchar文字エンコードの概要
+description: .NET でのchar文字のエンコードとデコードについて説明します。
 ms.date: 03/09/2020
 no-loc:
 - Rune
@@ -10,20 +10,20 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: 85349e1e1c4eca4dd3ef7980f48350a4145fca24
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a5d838176bf4437a295ebe6c2cea8b1fe0eeeb61
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599868"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656294"
 ---
 # <a name="character-encoding-in-net"></a>.NET での文字エンコード
 
-この記事では、.NET で使用される文字エンコード システムの概要について説明します。 この記事では、<xref:System.String>、<xref:System.Char>、<xref:System.Text.Rune>、および <xref:System.Globalization.StringInfo> 型が Unicode、UTF-16、および UTF-8 でどのように動作するかについて説明します。
+この記事では、.NET で使用されるchar文字エンコード システムの概要について説明します。 この記事では、<xref:System.String>、<xref:System.Char>、<xref:System.Text.Rune>、および <xref:System.Globalization.StringInfo> 型が Unicode、UTF-16、および UTF-8 でどのように動作するかについて説明します。
 
-ここでは、"*文字*" という用語が "*読者が 1 つの表示要素として認識するもの*" という全般的な意味で使用されます。 一般的な例としては、文字 "a"、記号 "@"、絵文字 "🐂" などがあります。 場合によっては、1 つの文字に見えるものが、[書記素クラスター](#grapheme-clusters)に関するセクションで説明しているように、実際には複数の独立した表示要素で構成されていることがあります。
+ここでは、" *char文字*" という用語を、"*読者が 1 つの表示要素として認識するもの*" という一般的な意味で使用します。 一般的な例としては、文字 "a"、記号 "@"、絵文字 "🐂" などがあります。 場合によっては、1 つのchar文字に見えるものが、[書記素クラスター](#grapheme-clusters)に関するセクションで説明しているように、実際には複数の独立した表示要素で構成されていることがあります。
 
-## <a name="the-string-and-char-types"></a>string 型と char 型
+## <a name="the-no-locstring-and-no-locchar-types"></a>string 型と char 型
 
 [string](xref:System.String) クラスのインスタンスは、何らかのテキストを表します。 `string` は、論理的には 16 ビット値のシーケンスであり、そのそれぞれが [char](xref:System.Char) 構造体のインスタンスです。 [string.Length](xref:System.String.Length) プロパティでは、`string` インスタンスに含まれる `char` インスタンスの数が返されます。
 
@@ -46,7 +46,7 @@ s[3] = 'l' ('\u006c')
 s[4] = 'o' ('\u006f')
 ```
 
-各文字は、1 つの `char` 値で表されます。 このパターンは、世界のほとんどの言語に当てはまります。 たとえば、*nǐ hǎo* のように発音し "*こんにちは*" を意味する中国語の 2 文字に対する出力を次に示します。
+各文字は、1 つの `char` 値で表されます。 このパターンは、世界のほとんどの言語に当てはまります。 たとえば、*nǐ hǎo* のように発音し "*こんにちは*" を意味する中国語の 2 char文字に対する出力を次に示します。
 
 ```csharp
 PrintChars("你好");
@@ -58,7 +58,7 @@ s[0] = '你' ('\u4f60')
 s[1] = '好' ('\u597d')
 ```
 
-ただし、一部の言語および一部の記号と絵文字については、1 つの文字を表すために 2 つの `char` インスタンスが必要です。 たとえば、オセージ語で "*オセージ*" を表す単語に含まれる文字と `char` インスタンスを比較してください。
+ただし、一部の言語および一部の記号と絵文字については、1 つの文字を表すために 2 つの `char` インスタンスが必要です。 たとえば、オセージ語で "*オセージ*" を表す単語に含まれるchar文字と `char` インスタンスを比較してください。
 
 ```csharp
 PrintChars("𐓏𐓘𐓻𐓘𐓻𐓟 𐒻𐓟");
@@ -95,17 +95,17 @@ s[0] = '�' ('\ud83d')
 s[1] = '�' ('\udc02')
 ```
 
-これらの例では、`char` インスタンスの数を示す `string.Length` の値が、必ずしも表示される文字数を示していないことがわかります。 1 つの `char` インスタンスは、必ずしもそれ自体で 1 文字を表すとは限りません。
+これらの例では、`char` インスタンスの数を示す `string.Length` の値が、必ずしも表示される文字数を示していないことがわかります。 1 つの `char` インスタンスは、必ずしもそれ自体で 1 char文字を表すとは限りません。
 
-1 つの文字にマップされる `char` のペアは、"*サロゲート ペア*" と呼ばれます。 それらがどのように動作するかを理解するには、Unicode と UTF-16 のエンコードについて理解する必要があります。
+1 つのchar文字にマップされる `char` のペアは、"*サロゲート ペア*" と呼ばれます。 それらがどのように動作するかを理解するには、Unicode と UTF-16 のエンコードについて理解する必要があります。
 
 ## <a name="unicode-code-points"></a>Unicode コード ポイント
 
 Unicode は、さまざまなプラットフォーム上で、さまざまな言語とスクリプトで使用するための国際エンコード標準です。
 
-Unicode 標準では、110 万個を超える[コード ポイント](https://www.unicode.org/glossary/#code_point)が定義されています。 コード ポイントは、0 から `U+10FFFF` (10 進数の 1,114,111) までの範囲の整数値です。 一部のコード ポイントは、文字、記号、または絵文字に割り当てられています。 その他は、新しい行に進むなど、テキストや文字の表示方法を制御するアクションに割り当てられています。 多くのコード ポイントはまだ割り当てられていません。
+Unicode 標準では、110 万個を超える[コード ポイント](https://www.unicode.org/glossary/#code_point)が定義されています。 コード ポイントは、0 から `U+10FFFF` (10 進数の 1,114,111) までの範囲の整数値です。 一部のコード ポイントは、文字、記号、または絵文字に割り当てられています。 その他は、新しい行に進むなど、テキストや文字charの表示方法を制御するアクションに割り当てられています。 多くのコード ポイントはまだ割り当てられていません。
 
-コード ポイントの割り当てのいくつかの例と、それらが記載されている Unicode 表へのリンクを次に示します。
+コード ポイントの割り当てのいくつかの例と、それらが記載されている Unicode 表charへのリンクを次に示します。
 
 |Decimal (10 進数型)|Hex       |例|説明|
 |------:|----------|-------|-----------|
@@ -128,7 +128,7 @@ Unicode 標準では、110 万個を超える[コード ポイント](https://ww
 
 ## <a name="utf-16-code-units"></a>UTF-16 コード単位
 
-16 ビット Unicode Transformation Format ([UTF-16](https://www.unicode.org/faq/utf_bom.html#UTF16)) は、16 ビットの "*コード単位*" を使用して Unicode コード ポイントを表す、文字エンコード システムです。 .NET では、`string` 内のテキストをエンコードするために UTF-16 が使用されています。 `char` インスタンスは、16 ビットのコード単位を表します。
+16 ビット Unicode Transformation Format ([UTF-16](https://www.unicode.org/faq/utf_bom.html#UTF16)) は、16 ビットの "*コード単位*" を使用して Unicode コード ポイントを表す、文字 charエンコード システムです。 .NET では、`string` 内のテキストをエンコードするために UTF-16 が使用されています。 `char` インスタンスは、16 ビットのコード単位を表します。
 
 1 つの 16 ビット コード単位は、基本多言語面の 16 ビット範囲に含まれる任意のコード ポイントを表すことができます。 ただし、補助範囲内のコード ポイントについては、2 つの `char` インスタンスが必要です。
 
@@ -180,13 +180,13 @@ actual =  65,536 + ((55,356 - 55,296) * 1,024) + (57,145 - 56320)
 
 ## <a name="unicode-scalar-values"></a>Unicode スカラー値
 
-[Unicode スカラー値](https://www.unicode.org/glossary/#unicode_scalar_value)という用語は、サロゲート コード ポイント以外のすべてのコード ポイントを指します。 つまり、スカラー値とは、文字が割り当てられているか、将来文字が割り当てられる可能性があるコード ポイントです。 ここでの "文字" は、コード ポイントに割り当てることができるすべてのものを指します。これには、テキストや文字の表示方法を制御するアクションなどが含まれます。
+[Unicode スカラー値](https://www.unicode.org/glossary/#unicode_scalar_value)という用語は、サロゲート コード ポイント以外のすべてのコード ポイントを指します。 つまり、スカラー値とは、文字charが割り当てられているか、将来文字charが割り当てられる可能性があるコード ポイントです。 ここでの "文字" は、コード ポイントに割り当てることができるすべてのものを指します。これには、テキストや文字 charの表示方法を制御するアクションなどが含まれます。
 
 次の図は、スカラー値のコード ポイントを示しています。
 
 :::image type="content" source="media/character-encoding-introduction/scalar-values.svg" alt-text="スカラー値":::
 
-### <a name="the-rune-type-as-a-scalar-value"></a>スカラー値としての Rune 型
+### <a name="the-no-locrune-type-as-a-scalar-value"></a>スカラー値としての Rune 型
 
 .NET Core 3.0 以降では、<xref:System.Text.Rune?displayProperty=fullName> 型によって Unicode スカラー値が表されます。 **`Rune` は、.NET Core 2.x または .NET Framework 4.x では使用できません。**
 
@@ -202,7 +202,7 @@ actual =  65,536 + ((55,356 - 55,296) * 1,024) + (57,145 - 56320)
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/InstantiateRunes.cs" id="SnippetInvalidHigh":::
 
-### <a name="rune-usage-example-changing-letter-case"></a>Rune の使用例: 大文字と小文字の変更
+### <a name="no-locrune-usage-example-changing-letter-case"></a>Rune の使用例: 大文字と小文字の変更
 
 `char` を受け取り、スカラー値であるコード ポイントを操作していると仮定する API は、その `char` がサロゲート ペアのものであった場合、正しく動作しません。 たとえば、string に含まれる各 char に対して <xref:System.Char.ToUpperInvariant%2A?displayProperty=nameWithType> を呼び出す、次のようなメソッドを考えてみます。
 
@@ -217,7 +217,7 @@ string を適切に大文字に変換するための 2 つのオプションを�
 
   :::code language="csharp" source="snippets/character-encoding-introduction/csharp/ConvertToUpper.cs" id="SnippetGoodExample":::
 
-### <a name="other-rune-apis"></a>その他の Rune API
+### <a name="other-no-locrune-apis"></a>その他の Rune API
 
 `Rune` 型では、多くの `char` API と類似した機能が公開されています。 たとえば、以下のメソッドは、`char` 型の静的 API に対応しています。
 
@@ -236,9 +236,9 @@ string を適切に大文字に変換するための 2 つのオプションを�
 
 ## <a name="grapheme-clusters"></a>書記素クラスター
 
-1 つの文字に見えるものが、複数のコード ポイントの組み合わせから生成されている場合があります。このため、"文字" の代わりに使用されることが多い、[書記素クラスター](https://www.unicode.org/glossary/#grapheme_cluster)というよりわかりやすい用語があります。 .NET における同等の用語は、[テキスト要素](xref:System.Globalization.StringInfo.GetTextElementEnumerator%2A)です。
+1 つの文字charに見えるものが、複数のコード ポイントの組み合わせから生成されている場合があります。このため、"文字"char の代わりに使用されることが多い、[書記素クラスター](https://www.unicode.org/glossary/#grapheme_cluster)というよりわかりやすい用語があります。 .NET における同等の用語は、[テキスト要素](xref:System.Globalization.StringInfo.GetTextElementEnumerator%2A)です。
 
-次の `string` インスタンスについて考えてみましょう: "a"、"á"。 "á"、"`👩🏽‍🚒`"。 お使いのオペレーティング システムによってこれらが Unicode 標準で指定されているとおりに処理される場合、これらの各 `string` インスタンスは、1 つのテキスト要素、または書記素クラスターとして表示されます。 ただし、最後の 2 つは、複数のスカラー値コード ポイントによって表されます。
+`string` インスタンス "a"、"á"、"á"、"`👩🏽‍🚒`" について考えてみましょう。 お使いのオペレーティング システムによってこれらが Unicode 標準で指定されているとおりに処理される場合、これらの各 `string` インスタンスは、1 つのテキスト要素、または書記素クラスターとして表示されます。 ただし、最後の 2 つは、複数のスカラー値コード ポイントによって表されます。
 
 * string "a" は 1 つのスカラー値で表され、1 つの `char` インスタンスが含まれます。
 
@@ -260,11 +260,11 @@ string を適切に大文字に変換するための 2 つのオプションを�
   * `U+200D ZERO WIDTH JOINER`
   * `U+1F692 FIRE ENGINE` (補助範囲、サロゲート ペアが必要)
 
-前の例の一部 (結合アクセントの修飾子や肌の色の修飾子など) では、コード ポイントが画面にスタンドアロン要素として表示されません。 代わりに、それは、その前に現れるテキスト要素の外観を変更する役割を果たしています。 これらの例は、1 つの "文字" または "書記素クラスター" と見なされるものを構成するために、複数のスカラー値が必要になる場合があることを示しています。
+前の例の一部 (結合アクセントの修飾子や肌の色の修飾子など) では、コード ポイントが画面にスタンドアロン要素として表示されません。 代わりに、それは、その前に現れるテキスト要素の外観を変更する役割を果たしています。 これらの例は、1 つの "文字"char または "書記素クラスター" と見なされるものを構成するために、複数のスカラー値が必要になる場合があることを示しています。
 
 `string` の書記素クラスターを列挙するには、次の例に示すように <xref:System.Globalization.StringInfo> クラスを使用します。 Swift に慣れている場合、.NET の `StringInfo` 型は、概念的に [Swift の `character` 型](https://developer.apple.com/documentation/swift/character)と似ています。
 
-### <a name="example-count-char-rune-and-text-element-instances"></a>例: char、Rune、テキスト要素のインスタンス数を数える
+### <a name="example-count-no-locchar-no-locrune-and-text-element-instances"></a>例: char、Rune、テキスト要素のインスタンス数を数える
 
 .NET API では、書記素クラスターは "*テキスト要素*" と呼ばれます。 次のメソッドは、`string` に含まれる `char`、`Rune`、およびテキスト要素のインスタンスの違いを示しています。
 
@@ -274,9 +274,9 @@ string を適切に大文字に変換するための 2 つのオプションを�
 
 .NET Framework または .NET Core 3.1 以前でこのコードを実行すると、絵文字のテキスト要素の数として `4` が表示されます。 これは、.NET 5 で修正されている `StringInfo` クラスのバグが原因です。
 
-### <a name="example-splitting-string-instances"></a>例: string インスタンスの分割
+### <a name="example-splitting-no-locstring-instances"></a>例: string インスタンスの分割
 
-`string` インスタンスを分割する場合は、サロゲート ペアと書記素クラスターを分割しないようにします。 不適切なコードを示す次の例について考えてみましょう。ここでは、string 内の 10 文字ごとに改行を挿入しようとしています。
+`string` インスタンスを分割する場合は、サロゲート ペアと書記素クラスターを分割しないようにします。 不適切なコードを示す次の例について考えてみましょう。ここでは、string 内の 10 文字 charごとに改行を挿入しようとしています。
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/InsertNewlines.cs" id="SnippetBadExample":::
 
@@ -372,9 +372,9 @@ await outputStream.WriteAsync(stringAsUtf8Bytes, 0, stringAsUtf8Bytes.Length);
   string y = x.Substring(1, 1); // "\udd70" standalone low surrogate
   ```
 
-[`Encoding.UTF8.GetString`](xref:System.Text.UTF8Encoding.GetString%2A) のような API を使用する場合、不適切な形式の `string` インスタンスが返されることはありません。 `Encoding.GetString` および `Encoding.GetBytes` メソッドでは、入力に含まれる不適切な形式のシーケンスが検出され、出力を生成する際に文字の置換が実行されます。 たとえば、[`Encoding.ASCII.GetString(byte[])`](xref:System.Text.ASCIIEncoding.GetString%2A) への入力に非 ASCII バイト (U+0000..U+007F の範囲外) が含まれていた場合、返される `string` インスタンスには '?' が挿入されます。 [`Encoding.UTF8.GetString(byte[])`](xref:System.Text.UTF8Encoding.GetString%2A) によって返される `string` インスタンスでは、不適切な形式の UTF-8 シーケンスが `U+FFFD REPLACEMENT CHARACTER ('�')` に置き換えられます。 詳細については、[Unicode 標準](https://www.unicode.org/versions/latest/)の、セクション 5.22 および 3.9 を参照してください。
+[`Encoding.UTF8.GetString`](xref:System.Text.UTF8Encoding.GetString%2A) のような API を使用する場合、不適切な形式の `string` インスタンスが返されることはありません。 `Encoding.GetString` および `Encoding.GetBytes` メソッドによって、入力に含まれる不適切な形式のシーケンスが検出され、出力を生成する場合に文字charの置換が行われます。 たとえば、[`Encoding.ASCII.GetString(byte[])`](xref:System.Text.ASCIIEncoding.GetString%2A) への入力に非 ASCII バイト (U+0000..U+007F の範囲外) が含まれていた場合、返される `string` インスタンスには '?' が挿入されます。 [`Encoding.UTF8.GetString(byte[])`](xref:System.Text.UTF8Encoding.GetString%2A) によって返される `string` インスタンスでは、不適切な形式の UTF-8 シーケンスが `U+FFFD REPLACEMENT CHARACTER ('�')` に置き換えられます。 詳細については、[Unicode 標準](https://www.unicode.org/versions/latest/)の、セクション 5.22 および 3.9 を参照してください。
 
-組み込みの `Encoding` クラスは、不適切な形式のシーケンスが検出されたときに、文字の置換を実行するのではなく、例外をスローするように構成することもできます。 この方法は、文字の置換が受け入れられない可能性がある、セキュリティに影響するアプリケーションでよく使用されます。
+組み込みの `Encoding` クラスは、不適切な形式のシーケンスが検出されたときに、文字charの置換を実行するのではなく、例外をスローするように構成することもできます。 この方法は、文字charの置換が受け入れられない可能性がある、セキュリティに影響するアプリケーションでよく使用されます。
 
 ```csharp
 byte[] utf8Bytes = ReadFromNetwork();
@@ -382,7 +382,7 @@ UTF8Encoding encoding = new UTF8Encoding(encoderShouldEmitUTF8Identifier: false,
 string asString = encoding.GetString(utf8Bytes); // will throw if 'utf8Bytes' is ill-formed
 ```
 
-組み込みの `Encoding` クラスの使用方法について詳しくは、「[.NET で文字エンコーディング クラスを使用する方法](character-encoding.md)」をご覧ください。
+組み込みの `Encoding` クラスの使用方法について詳しくは、「[.NET で文字charエンコーディング クラスを使用する方法](character-encoding.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

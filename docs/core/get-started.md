@@ -5,18 +5,18 @@ author: adegeo
 ms.author: adegeo
 ms.date: 12/03/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: ddbee0764897b511cac0c4142354ba995d94a2b6
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 56eebc0fc5bad6f57d93358cbbef389d6355d66b
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416056"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656691"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core の概要
 
 この記事では、.NET Core の概要について説明します。 .NET Core は、Windows、Linux、および macOS にインストールすることができます。 任意のテキスト エディターでコーディングし、クロスプラットフォーム ライブラリとアプリケーションを作成できます。
 
-.NET Core が何であるかや、他の .NET テクノロジとどのように関連しているのかがわからない場合は、まず、[.NET の概要](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet)を確認してください。 簡単に言うと、.NET Core は .NET のオープンソースのクロスプラットフォーム実装です。
+.NET Core が何であるか、またはこれが他の .NET テクノロジとどのように関連しているのかわからない場合は、まず、[.NET の概要](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet)を確認してください。 簡単に言うと、.NET Core は .NET のオープンソースのクロスプラットフォーム実装です。
 
 ## <a name="create-an-application"></a>アプリケーションの作成
 
@@ -35,7 +35,7 @@ dotnet run --project sample1
 Hello World!
 ```
 
-おめでとうございます! シンプルな .NET Core アプリケーションが作成されました。 [Visual Studio Code](./tutorials/with-visual-studio-code.md)、[Visual Studio](./tutorials/with-visual-studio.md) (Windows のみ)、または [Visual Studio for Mac](./tutorials/using-on-mac-vs.md) (macOS のみ) を使用して、.NET Core アプリケーションを作成することもできます。
+おめでとうございます! シンプルな .NET Core アプリケーションが作成されました。 [Visual Studio Code](./tutorials/with-visual-studio-code.md)、[Visual Studio](./tutorials/with-visual-studio.md) (Windows のみ)、または [Visual Studio for Mac](tutorials/with-visual-studio-mac.md) (macOS のみ) を使用して、.NET Core アプリケーションを作成することもできます。
 
 ## <a name="tutorials"></a>チュートリアル
 
@@ -47,7 +47,7 @@ Hello World!
 
 - [Visual Studio 2019 で最初の .NET Core コンソール アプリケーションを作成する](./tutorials/with-visual-studio.md)
 - [Visual Studio で .NET Standard を使用してクラス ライブラリを構築する](./tutorials/library-with-visual-studio.md)
-- [.NET Core での .NET Core CLI の使用に関する概要](./tutorials/cli-create-console-app.md)
+- [チュートリアル: Visual Studio Code を使用して .NET Core コンソール アプリを作成する](tutorials/with-visual-studio-code.md)
 
 |   |   |
 |---|---|
@@ -60,7 +60,7 @@ Hello World!
 
 次のステップ バイ ステップのチュートリアルに従って、.NET Core アプリケーションの開発を開始します。
 
-- [.NET Core でのコマンド ラインの使用に関する概要](./tutorials/cli-create-console-app.md)
+- [チュートリアル: Visual Studio Code を使用して .NET Core コンソール アプリを作成する](tutorials/with-visual-studio-code.md)
 
 |   |   |
 |---|---|
@@ -72,9 +72,8 @@ Hello World!
 
 次のステップ バイ ステップのチュートリアルに従って、.NET Core アプリケーションの開発を開始します。
 
-- [macOS 上の .NET Core での Visual Studio Code の使用に関する概要](./tutorials/using-on-macos.md)
-- [.NET Core でのコマンド ラインの使用に関する概要](./tutorials/cli-create-console-app.md)
-- [Visual Studio for Mac を使用した macOS での .NET Core の概要](./tutorials/using-on-mac-vs.md)
+- [チュートリアル: Visual Studio Code を使用して .NET Core コンソール アプリケーションを作成する](tutorials/with-visual-studio-code.md)
+- [チュートリアル: Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを作成する](tutorials/with-visual-studio-mac.md)
 - [Visual Studio for Mac を使用して macOS で .NET Standard ライブラリを構築する](tutorials/library-with-visual-studio-mac.md)
 
 |   |   |

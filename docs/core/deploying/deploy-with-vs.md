@@ -6,11 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 7a4ffd5b1b58e6ea7fd46c676e139b77a126aa2b
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 73eee58a3d11f2f898a6d57cb282ccf4e802cdca
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803028"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656600"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio を使用して .NET Core アプリを展開する
 
@@ -119,7 +120,7 @@ Visual Studio でアプリを発行するには、次の操作を行います。
 
    1. **ソリューション エクスプローラー**で (ソリューションではなく) プロジェクトを右クリックし、 **[Edit SCD.csproj]\(SCD.csproj の編集\)** を選択します。
 
-   1. *csproj* ファイルの `<PropertyGroup>` セクションに、アプリの対象のプラットフォームを定義する `<RuntimeIdentifiers>` タグを作成し、対象とするプラットフォームごとにランタイム識別子 (RID) を指定します。 なお、RID を分離するにはセミコロンを追加する必要があります。 ランタイム識別子の一覧については、「[ランタイム識別子のカタログ](../rid-catalog.md)」 (ランタイム識別子のカタログ) を参照してください。
+   1. *csproj* ファイルの `<PropertyGroup>` セクションに、アプリの対象のプラットフォームを定義する `<RuntimeIdentifiers>` タグを作成し、対象とするプラットフォームごとにランタイム識別子 (RID) を指定します。 なお、RID を分離するにはセミコロンを追加する必要があります。 ランタイム識別子の一覧については、[ランタイム識別子のカタログ](../rid-catalog.md)に関するページを参照してください。
 
    たとえば、次の例は、アプリが 64 ビット Windows 10 オペレーティング システムおよび 64 ビット OS X バージョン 10.11 オペレーティング システムで実行されることを示します。
 
@@ -311,4 +312,4 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 ## <a name="see-also"></a>関連項目
 
 - [.NET Core アプリケーションの配置](index.md)
-- [.NET Core のランタイム識別子 (RID) のカタログ](../rid-catalog.md)
+- [.NET Core ランタイム識別子 (RID) のカタログ](../rid-catalog.md)

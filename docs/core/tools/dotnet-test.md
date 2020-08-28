@@ -2,12 +2,12 @@
 title: dotnet test コマンド
 description: dotnet test コマンドは、指定されたプロジェクトで単体テストを実行する場合に使用されます。
 ms.date: 04/29/2020
-ms.openlocfilehash: 9b1e190579902dda71547b01f31dd5adcc22fe9c
-ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
+ms.openlocfilehash: d67521084330b206afca89baf59228b99ca799a1
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87251193"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656756"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -104,7 +104,7 @@ dotnet test -h|--help
   - 5400s (秒)
   - 5400000ms (ミリ秒)
 
-  単位が使用されていない場合 (例: 5400000)、値はミリ秒単位であると見なされます。 データ ドリブン テストと共に使用すると、タイムアウトの動作は、利用するテスト アダプターに応じて異なります。 xUnit および NUnit の場合、タイムアウトはテスト ケースの後に毎回更新されます。 MSTest の場合、タイムアウトはすべてのテスト ケースに使用されます。 このオプションは、netcoreapp 2.1 以降がインストールされている Windows と、netcoreapp 3.1 以降がインストールされている Linux でサポートされています。 macOS はサポートされていません。
+  単位が使用されていない場合 (例: 5400000)、値はミリ秒単位であると見なされます。 データ ドリブン テストと共に使用すると、タイムアウトの動作は、利用するテスト アダプターに応じて異なります。 xUnit および NUnit の場合、タイムアウトはテスト ケースの後に毎回更新されます。 MSTest の場合、すべてのテスト ケースにこのタイムアウトが使用されます。 このオプションは、netcoreapp 2.1 以降がインストールされている Windows と、netcoreapp 3.1 以降がインストールされている Linux でサポートされています。 macOS はサポートされていません。
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -274,5 +274,5 @@ dotnet test -h|--help
 ## <a name="see-also"></a>関連項目
 
 - [フレームワークとターゲット](../../standard/frameworks.md)
-- [.NET Core のランタイム識別子 (RID) のカタログ](../rid-catalog.md)
+- [.NET Core ランタイム識別子 (RID) のカタログ](../rid-catalog.md)
 - [コマンドラインを使用して runsettings 引数を渡す](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)

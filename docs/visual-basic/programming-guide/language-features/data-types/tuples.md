@@ -4,12 +4,12 @@ ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-ms.openlocfilehash: 378ee4e7d3a3b106b719e5da819b09f336ff218e
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: b169a1c13b3f20d7b5e2a1386cfb28a9cc093dcd
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226661"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559090"
 ---
 # <a name="tuples-visual-basic"></a>タプル (Visual Basic)
 
@@ -84,14 +84,14 @@ Visual Basic のタプルは、**System.ValueTuple** ジェネリック型の 1 
 
 Visual Basic のタプルは、**ValueTuple** 型のメンバーを継承します。 フィールドに加えて、次のメソッドが含まれています。
 
-| メンバー | 説明 |
+| Method | 説明 |
 | ---|---|
 | CompareTo | 現在のタプルを、同じ数の要素を持つ別のタプルと比較します。 |
 | 次の値に等しい | 現在のタプルが別のタプルまたはオブジェクトと等しいかどうかを判断します。 |
 | GetHashCode | 現在のインスタンスのハッシュ コードを計算します。 |
 | ToString | `(Item1, Item2...)` という形式で、このタプルの文字列表現を返します。`Item1` と `Item2` はタプルのフィールドの値を表しています。 |
 
-さらに、**ValueTuple** 型は <xref:System.Collections.IStructuralComparable> および <xref:System.Collections.IStructuralEquatable> インターフェイスを実装し、これらによって顧客の比較機能を定義できます。
+さらに、**ValueTuple** 型は <xref:System.Collections.IStructuralComparable> および <xref:System.Collections.IStructuralEquatable> インターフェイスを実装し、これらによってカスタム比較演算子を定義できます。
 
 ## <a name="assignment-and-tuples"></a>割り当てとタプル
 

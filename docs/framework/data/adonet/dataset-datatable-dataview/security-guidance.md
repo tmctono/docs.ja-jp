@@ -3,12 +3,12 @@ title: DataSet と DataTable のセキュリティ ガイダンス
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: 2fbac625ae0049fc4c363977dc1d3fbcfb376025
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: f0fa43c467cc7866e69115acb5f807e6487fda7a
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416203"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608528"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>DataSet と DataTable のセキュリティ ガイダンス
 
@@ -488,3 +488,28 @@ public class MyClass
 * 信頼されていないソースからデータを逆シリアル化するときに、組み込みの保護が提供されます。
 
 `.aspx` SOAP エンドポイントを使用するアプリの場合、[WCF](/dotnet/framework/wcf/) を使用するようにそれらのエンドポイントを変更することを検討してください。 WCF は、`.asmx` Web サービスに対する、より完全な機能を備えた代替手段です。 既存の呼び出し元との互換性のため、WCF エンドポイントは [SOAP 経由で公開できます](../../../wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)。
+
+## <a name="code-analyzers"></a>コード アナライザー
+
+自分のソース コードをコンパイルするときに実行されるコード アナライザーのセキュリティ規則は、C# および Visual Basic コードで、このセキュリティの問題に関連する脆弱性を検出するのに役立ちます。 Microsoft.CodeAnalysis.FxCopAnalyzers は、[nuget.org](https://www.nuget.org/) で配布されるコード アナライザーの NuGet パッケージです。
+
+コード アナライザーの概要については、「[ソース コード アナライザーの概要](https://docs.microsoft.com/visualstudio/code-quality/roslyn-analyzers-overview)」を参照してください。
+
+次の Microsoft.CodeAnalysis.FxCopAnalyzers 規則を有効にします。
+
+- [CA2350](https://docs.microsoft.com/visualstudio/code-quality/ca2350):信頼されていないデータで DataTable.ReadXml() を使用しない
+- [CA2351](https://docs.microsoft.com/visualstudio/code-quality/ca2351):信頼されていないデータで DataSet.ReadXml() を使用しない
+- [CA2352](https://docs.microsoft.com/visualstudio/code-quality/ca2352):シリアル化可能な型の安全でない DataSet または DataTable は、リモート コード実行攻撃に対して脆弱になる可能性があります
+- [CA2353](https://docs.microsoft.com/visualstudio/code-quality/ca2353):シリアル化可能な型の安全でない DataSet または DataTable
+- [CA2354](https://docs.microsoft.com/visualstudio/code-quality/ca2354):逆シリアル化されたオブジェクト グラフの安全でない DataSet または DataTable が、リモート コード実行攻撃に対して脆弱になる可能性があります
+- [CA2355](https://docs.microsoft.com/visualstudio/code-quality/ca2355):逆シリアル化可能なオブジェクト グラフに、安全でない DataSet または DataTable 型が見つかりました
+- [CA2356](https://docs.microsoft.com/visualstudio/code-quality/ca2356):Web の逆シリアル化可能なオブジェクト グラフに含まれる安全でない DataSet または DataTable 型
+- [CA2361](https://docs.microsoft.com/visualstudio/code-quality/ca2361):DataSet.ReadXml() を含む自動生成クラスが信頼されていないデータで使用されていないことを確認してください
+- [CA2362](https://docs.microsoft.com/visualstudio/code-quality/ca2362):シリアル化可能な自動生成型の安全でない DataSet または DataTable は、リモート コード実行攻撃に対して脆弱になる可能性があります
+
+ルールの構成の詳細については、「[コード アナライザーを使用する](https://docs.microsoft.com/visualstudio/code-quality/use-roslyn-analyzers)」を参照してください。
+
+この新しいルールは、次の NuGet パッケージで入手できます。
+
+- Microsoft.CodeAnalysis.FxCopAnalyzers 3.3.0: Visual Studio 2019 バージョン 16.3 以降向け
+- Microsoft.CodeAnalysis.FxCopAnalyzers 2.9.11: Visual Studio 2017 バージョン 15.9 向け

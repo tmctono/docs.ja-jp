@@ -1,7 +1,6 @@
 ---
 title: .NET Framework のシステム要件
 description: .NET Framework 4.5 以降のバージョンをインストールするためのハードウェア、オペレーティング システム、ソフトウェアの要件を示します。
-ms.custom: updateeachrelease
 ms.date: 04/18/2019
 helpviewer_keywords:
 - software requirements
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: 571075f7d0f330cf88ac9618376876b4f72e75ed
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 92cc95f80d18251314db8d953520732841b0274c
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389481"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557335"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework のシステム要件
 
@@ -54,6 +53,8 @@ ms.locfileid: "81389481"
 
 | オペレーティング システム | サポートされているエディション | OS と共にプレインストール済み | 個別にインストール可能 |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
+| Windows 10 May 2020 Update<br/> (バージョン 2004) | 32 ビットおよび 64 ビット | .NET Framework 4.8 | -- |
+| Windows 10 November 2019 Update<br/> (バージョン 1909) | 32 ビットおよび 64 ビット | .NET Framework 4.8 | -- |
 | Windows 10 May 2019 Update<br/> (バージョン 1903) | 32 ビットおよび 64 ビット | .NET Framework 4.8 | -- |
 | Windows 10 October 2018 Update<br/> (バージョン 1809) | 32 ビットおよび 64 ビット | .NET Framework 4.7.2 | .NET Framework 4.8 |
 | Windows 10 April 2018 Update<br/> (バージョン 1803) | 32 ビットおよび 64 ビット | .NET Framework 4.7.2 |.NET Framework 4.8|

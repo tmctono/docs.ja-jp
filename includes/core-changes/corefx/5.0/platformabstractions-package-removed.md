@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d85fb8df7afdc5f4c3faecebcd24d11677798bc9
-ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
+ms.openlocfilehash: a635e2ed6a735b5234c92fd8f5ffa1685fe9373e
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85365617"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558181"
 ---
 ### <a name="microsoftdotnetplatformabstractions-package-removed"></a>Microsoft.DotNet.PlatformAbstractions パッケージの削除
 
@@ -39,7 +39,7 @@ ms.locfileid: "85365617"
   | `RuntimeEnvironment.OperatingSystemVersion` | <xref:System.Runtime.InteropServices.RuntimeInformation.OSDescription?displayProperty=nameWithType> および <xref:System.Environment.OSVersion?displayProperty=nameWithType> |
 
   > [!NOTE]
-  > `RuntimeEnvironment.OperatingSystem` と `RuntimeEnvironment.OperatingSystemVersion` のほとんどのユース ケースは、表示目的で使用されます。たとえば、ユーザー、ログ記録、テレメトリに表示するためのものです。 オペレーティング システム (OS) のバージョンに基づいて、実行時の決定を行うことはお勧めできません。 <xref:System.Environment.OSVersion?displayProperty=nameWithType> では、Windows および macOS オペレーティング システムの正しいバージョンが返されるようになりました。 しかし、ほとんどの Unix ディストリビューションでは、どのようなものを "OS バージョン" と見なすかは簡単ではありません。 たとえば、Linux カーネル バージョンの場合もあれば、ディストリビューション バージョンの場合もあります。 ほとんどの Unix プラットフォームでは、<xref:System.Environment.OSVersion?displayProperty=nameWithType> と <xref:System.Runtime.InteropServices.RuntimeInformation.OSDescription?displayProperty=nameWithType> から、`uname` で返されるバージョンが返されます。 Linux ディストリビューションの名前とバージョン情報を取得する場合は、 */etc/os-release* ファイルを読み取ることをお勧めします。
+  > `RuntimeEnvironment.OperatingSystem` と `RuntimeEnvironment.OperatingSystemVersion` のほとんどのユース ケースは、表示目的で使用されます。たとえば、ユーザー、ログ記録、テレメトリに表示するためのものです。 オペレーティング システム (OS) のバージョンに基づいて、実行時の決定を行うことはお勧めできません。 <xref:System.Environment.OSVersion?displayProperty=nameWithType> では、Windows および macOS オペレーティング システムの[正しいバージョンが返される](../../../../docs/core/compatibility/corefx.md#environmentosversion-returns-the-correct-operating-system-version)ようになりました。 しかし、ほとんどの Unix ディストリビューションでは、どのようなものを "OS バージョン" と見なすかは簡単ではありません。 たとえば、Linux カーネル バージョンの場合もあれば、ディストリビューション バージョンの場合もあります。 ほとんどの Unix プラットフォームでは、<xref:System.Environment.OSVersion?displayProperty=nameWithType> と <xref:System.Runtime.InteropServices.RuntimeInformation.OSDescription?displayProperty=nameWithType> から、`uname` で返されるバージョンが返されます。 Linux ディストリビューションの名前とバージョン情報を取得する場合は、 */etc/os-release* ファイルを読み取ることをお勧めします。
 
 #### <a name="category"></a>カテゴリ
 

@@ -4,12 +4,12 @@ description: この記事では、BinaryFormatter 型に固有のセキュリテ
 ms.date: 07/11/2020
 ms.author: levib
 author: GrabYourPitchforks
-ms.openlocfilehash: f6a54b34bbf1e19212fe37aadb448a1722fe9ff0
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: 2c76a81650e5b83677f6c4df64770bd1ef5f775e
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86444750"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88607940"
 ---
 # <a name="binaryformatter-security-guide"></a>BinaryFormatter セキュリティ ガイド
 
@@ -22,7 +22,7 @@ ms.locfileid: "86444750"
 ## <a name="background"></a>背景
 
 > [!WARNING]
-> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 型は危険であり、データ処理用としては "***推奨されません***"。 アプリケーションでは、処理するデータが信頼できると思われる場合でも、できるだけ早く `BinaryFormatter` の使用をやめる必要があります。 `BinaryFormatter` は安全ではなく、安全にすることはできません。
+> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 型は危険であり、データ処理用としては "***推奨されません***"。 アプリケーションでは、処理するデータが信頼できると思われる場合でも、できるだけ早く `BinaryFormatter` の使用をやめる必要があります。 `BinaryFormatter` は安全ではなく、セキュリティで保護することはできません。
 
 この記事は、次の型に適用されます。
 
@@ -87,7 +87,6 @@ __デスクトップ インストール モデルからクラウド ファース
 ## <a name="further-resources"></a>他のリソース
 
 * `BinaryFormatter` を利用しているアプリがどのように敵対者の攻撃を受けているかを調査するには、[YSoSerial.Net](https://github.com/pwntester/ysoserial.net) を参照してください。
-* 脅威をモデル化するアプリとサービスに関する情報については、[脅威のモデル化](/securityengineering/sdl/threatmodeling)に関するページを参照してください。
 * 逆シリアル化の脆弱性に関する一般的な背景情報:
   * [OWASP Top 10 - A8:2017-安全でない逆シリアル化](https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A8-Insecure_Deserialization)
   * [CWE-502: 信頼されていないデータの逆シリアル化](https://cwe.mitre.org/data/definitions/502.html)

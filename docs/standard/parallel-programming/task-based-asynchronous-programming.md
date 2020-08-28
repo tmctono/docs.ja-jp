@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: f7cb42c8982cb6a704b39730a4f7aa0ce781d506
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 968da880fc7e0e811f5e8712ccb43726426a019e
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446380"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720164"
 ---
 # <a name="task-based-asynchronous-programming"></a>タスク ベースの非同期プログラミング
 
@@ -159,7 +159,7 @@ Visual Studio を使用している場合、プロジェクトを **[新しい�
 
 ## <a name="creating-child-tasks"></a>子タスクの作成
 
-タスクで実行中のユーザー コードで <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> オプションを使用してタスクを作成すると、新しいタスクは親タスクに "*アタッチされた子タスク*" になります。 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> オプションを使用すると、構成されたタスクの並列化を表現できます。親タスクは、すべてのアタッチされた子タスクが終了するのを暗黙的に待機するためです。 次の例は、アタッチされた子タスクを 10 個作成する親タスクを示しています。 この例は <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> メソッドを呼び出して親タスクの完了を待機しているが、アタッチされた子タスクの完了を明示的には待機する必要がないことに注意してください。
+タスクで実行中のユーザー コードで <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> オプションを使用してタスクが作成されると、その新しいタスクは、親タスクに "*アタッチされた子タスク*" になります。 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> オプションを使用すると、構成されたタスクの並列化を表現できます。親タスクは、すべてのアタッチされた子タスクが終了するのを暗黙的に待機するためです。 次の例は、アタッチされた子タスクを 10 個作成する親タスクを示しています。 この例は <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> メソッドを呼び出して親タスクの完了を待機しているが、アタッチされた子タスクの完了を明示的には待機する必要がないことに注意してください。
 
 [!code-csharp[TPL_TaskIntro#8](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/child1.cs#8)]
 [!code-vb[TPL_TaskIntro#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/child1.vb#8)]

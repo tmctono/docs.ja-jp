@@ -4,12 +4,12 @@ description: 依存関係を特定するための .NET Core の System.Runtime.L
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 1e347c716c2d739a1bd03be056b57fdbda6c678f
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 13ce4c7de5f6ce1b76b2e61db810c0f19717540f
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82859516"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608428"
 ---
 # <a name="default-probing"></a>既定のプローブ
 
@@ -38,9 +38,11 @@ ms.locfileid: "82859516"
 
 また、参照されているフレームワークの *\*.deps.json* ファイルも同様に解析されます。
 
-最後に、環境変数 `ADDITIONAL_DEPS` を使用して、依存関係を追加できます。
+最後に、環境変数 `ADDITIONAL_DEPS` を使用して、依存関係を追加できます。  `dotnet.exe` には、アプリケーションの起動時にこの値を設定するための省略可能なパラメーター `--additional-deps` も含まれます。
 
 `APP_PATHS` プロパティと `APP_NI_PATHS` プロパティには既定でデータが入力されず、ほとんどのアプリケーションで省略されます。
+
+アプリケーションで使用されるすべての *\*.deps.json* ファイルの一覧は、`System.AppContext.GetData("APP_CONTEXT_DEPS_FILES")` を使用してアクセスできます。
 
 ### <a name="how-do-i-see-the-probing-properties-from-managed-code"></a>マネージド コードからプローブ プロパティを参照する方法
 
