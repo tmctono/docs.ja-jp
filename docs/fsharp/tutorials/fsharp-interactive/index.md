@@ -1,30 +1,21 @@
 ---
-title: F# Interactive (fsi.exe) のリファレンス
-description: F# インタラクティブ (fsi.exe) を使用して、コンソールで F# コードを対話形式で実行したり、F# スクリプトを実行したりする方法について説明します。
-ms.date: 05/16/2016
+title: F# インタラクティブ (dotnet) リファレンス
+description: F# インタラクティブ (dotnet fsi) を使用して、コンソールで F# コードを対話形式で実行したり、F# スクリプトを実行したりする方法について説明します。
+ms.date: 08/20/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 8bb1563ad34e65101fb9f09d6e347278e4b0de78
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 760b096c8a3ee0d495b893ab66fa6f9007cdbbf9
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854946"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867621"
 ---
 # <a name="interactive-programming-with-f"></a>F\# による対話型プログラミング
 
-> [!NOTE]
-> この記事では、現時点の Windows のエクスペリエンスについてのみ説明します。
+F# インタラクティブ (dotnet fsi) は、コンソールで F# コードを対話形式で実行したり、F# スクリプトを実行したりするために使用します。 つまり、F# Interactive は、F# 言語の REPL (Read、Evaluate、Print Loop) を実行します。
 
-F# Interactive (fsi.exe) は、コンソールで F# コードを対話形式で実行したり、F# スクリプトを実行したりするために使用します。 つまり、F# Interactive は、F# 言語の REPL (Read、Evaluate、Print Loop) を実行します。
-
-コンソールから F# Interactive を実行するには、fsi.exe を実行します。 fsi.exe は次の場所にあります。
-
-```console
-C:\Program Files (x86)\Microsoft Visual Studio\2019\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
-```
-
-`sku` は、`Community`、`Professional`、または `Enterprise` のいずれかになります。
+コンソールから F# インタラクティブを実行するには、`dotnet fsi` を実行します。 `dotnet fsi` はすべての .NET SDK に備わっています。
 
 使用できるコマンド ライン オプションについては、「[F# Interactive Options](../../language-reference/fsharp-interactive-options.md)」 (F# Interactive オプション) を参照してください。
 
@@ -44,7 +35,7 @@ Visual Studio で実行する場合、F# Interactive はプロジェクトとは
 
 ## <a name="scripting-with-f"></a>F\# によるスクリプト
 
-スクリプトで使用されるファイル拡張子は **.fsx** または **.fsscript** です。 ソース コードをコンパイルし、後でそのコンパイル済みのアセンブリを実行する代わりに、**fsi.exe** を実行し、F# ソース コードのスクリプトのファイル名を指定するだけで、F# Interactive によってコードを読み取り、リアルタイムで実行することができます。
+スクリプトで使用されるファイル拡張子は **.fsx** または **.fsscript** です。 ソース コードをコンパイルした後でそのコンパイル済みのアセンブリを実行する代わりに、**dotnet fsi** を実行して F# ソース コードのスクリプトのファイル名を指定するだけで、F# インタラクティブによってコードを読み取り、リアルタイムで実行することができます。
 
 ## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>対話型、スクリプト、およびコンパイル型の環境の違い
 
@@ -92,6 +83,36 @@ Command line arguments:
 file1.fsx
 test
 90
+```
+
+## <a name="package-management-in-f-interactive"></a>F# インタラクティブの Package Management
+
+[!NOTE] Package Management は、.NET SDK バージョン `3.1.300` 以降と、.NET SDK バージョン `5.*` のすべてに付属するバージョンの `dotnet fsi` のプレビュー機能として使用できます。 このプレビュー リリースで有効にするには、`--langversion:preview` 引数を指定して `dotnet fsi` を実行します。
+
+F# インタラクティブで DLL を参照するための `#r` 構文を使用して、nuget パッケージを参照することもできます。それには次の構文を使用します。
+
+```fsharp
+#r "nuget: <package name>
+```
+
+たとえば、`FSharp.Data` パッケージを参照するには、次の `#r` 参照を使用します。
+
+```fsharp
+#r "nuget: FSharp.Data"
+```
+
+この行を実行すると、最新バージョンの `FSharp.Data` パッケージが nuget キャッシュにダウンロードされ、現在の F# インタラクティブ セッションで参照されます。
+
+パッケージ名に加えて、パッケージの特定のバージョンも次の短い構文で参照できます。
+
+```fsharp
+#r "nuget: FSharp.Data, 3.3.2"
+```
+
+より明確な形式は次のとおりです。
+
+```fsharp
+#r "nuget: FSharp.Data, Version=3.3.2"
 ```
 
 ## <a name="related-articles"></a>関連記事
