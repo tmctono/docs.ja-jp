@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 95c0368889dfa4e69b5e40b32ea19ba845aa5c30
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 2d7cf73e37fe8c4bbdbef3d356f1dbb8903815f3
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76747058"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812329"
 ---
 # <a name="globalization-for-wpf"></a>WPF のグローバリゼーション
 このトピックでは、グローバル市場向けに [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションを開発するときに注意するべき問題を紹介します。 グローバリゼーション プログラミング要素は、.NET の <xref:System.Globalization> 名前空間に定義されています。
@@ -25,13 +25,13 @@ ms.locfileid: "76747058"
 ### <a name="character-references"></a>文字参照
 文字参照は、特定の Unicode 文字の UTF16 コード ユニットを、10 進数または 16 進数で表したものです。 次の例は、コプト語の大文字のホリ (つまり 'Ϩ') の 10 進の文字参照を示しています。
 
-```
+```xaml
 &#1000;
 ```
 
 次は、16 進数の文字参照の例です。 16 進数の前には **x** が付くことに注意してください。
 
-```
+```xaml
 &#x3E8;
 ```
 

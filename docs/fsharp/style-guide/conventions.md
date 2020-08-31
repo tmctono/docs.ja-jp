@@ -2,12 +2,12 @@
 title: F# のコーディング規則
 description: 'F # コードを記述するときの一般的なガイドラインと表現方法について説明します。'
 ms.date: 01/15/2020
-ms.openlocfilehash: 47e9183ce22689a050878cf10d7a9bcf3b929ec6
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 748a9c26794f46dcc67fdcfcf21f41847a462a19
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84143532"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053012"
 ---
 # <a name="f-coding-conventions"></a>F# のコーディング規則
 
@@ -46,7 +46,7 @@ type MyClass() =
     ...
 ```
 
-### <a name="carefully-apply-autoopen"></a>慎重に適用する`[<AutoOpen>]`
+### <a name="carefully-apply-autoopen"></a>慎重に適用する `[<AutoOpen>]`
 
 この `[<AutoOpen>]` 構成体は、呼び出し元が使用できるもののスコープを汚染ことができます。また、その結果は "マジック" になります。 これは適切な方法ではありません。 このルールの例外として、F # コアライブラリ自体があります (ただし、これは少しの議論でもあります)。
 
@@ -93,7 +93,7 @@ F # では、ステートメントを含め、宣言の順序が重要に `open`
 
 F # では、スコープ内で開かれた要素は、既に存在する他の要素をシャドウできます。 これは、並べ替えステートメントによって `open` コードの意味が変更される可能性があることを意味します。 その結果、すべての `open` ステートメント (たとえば、英数字順) の任意の並べ替えを使用することは推奨されません。ようを使用すると、必要に応じて異なる動作を生成できます。
 
-代わりに、[位相的](https://en.wikipedia.org/wiki/Topological_sorting)を並べ替えることをお勧めします。つまり、ステートメントは、 `open` システムの_層_が定義されている順序で並べ替えられます。 異なるトポロジレイヤー内で英数字の並べ替えを行うこともできます。
+代わりに、 [位相的](https://en.wikipedia.org/wiki/Topological_sorting)を並べ替えることをお勧めします。つまり、ステートメントは、 `open` システムの _層_ が定義されている順序で並べ替えられます。 異なるトポロジレイヤー内で英数字の並べ替えを行うこともできます。
 
 例として、F # コンパイラサービスパブリック API ファイルのトポロジの並べ替えを次に示します。
 
@@ -108,34 +108,19 @@ open System.IO
 open System.Reflection
 open System.Text
 
-open Microsoft.FSharp.Compiler
-open Microsoft.FSharp.Compiler.AbstractIL
-open Microsoft.FSharp.Compiler.AbstractIL.Diagnostics
-open Microsoft.FSharp.Compiler.AbstractIL.IL
-open Microsoft.FSharp.Compiler.AbstractIL.ILBinaryReader
-open Microsoft.FSharp.Compiler.AbstractIL.Internal
-open Microsoft.FSharp.Compiler.AbstractIL.Internal.Library
+open FSharp.Compiler
+open FSharp.Compiler.AbstractIL
+open FSharp.Compiler.AbstractIL.Diagnostics
+open FSharp.Compiler.AbstractIL.IL
+open FSharp.Compiler.AbstractIL.ILBinaryReader
+open FSharp.Compiler.AbstractIL.Internal
+open FSharp.Compiler.AbstractIL.Internal.Library
 
-open Microsoft.FSharp.Compiler.AccessibilityLogic
-open Microsoft.FSharp.Compiler.Ast
-open Microsoft.FSharp.Compiler.CompileOps
-open Microsoft.FSharp.Compiler.CompileOptions
-open Microsoft.FSharp.Compiler.Driver
-open Microsoft.FSharp.Compiler.ErrorLogger
-open Microsoft.FSharp.Compiler.Infos
-open Microsoft.FSharp.Compiler.InfoReader
-open Microsoft.FSharp.Compiler.Lexhelp
-open Microsoft.FSharp.Compiler.Layout
-open Microsoft.FSharp.Compiler.Lib
-open Microsoft.FSharp.Compiler.NameResolution
-open Microsoft.FSharp.Compiler.PrettyNaming
-open Microsoft.FSharp.Compiler.Parser
-open Microsoft.FSharp.Compiler.Range
-open Microsoft.FSharp.Compiler.Tast
-open Microsoft.FSharp.Compiler.Tastops
-open Microsoft.FSharp.Compiler.TcGlobals
-open Microsoft.FSharp.Compiler.TypeChecker
-open Microsoft.FSharp.Compiler.SourceCodeServices.SymbolHelpers
+open FSharp.Compiler.AccessibilityLogic
+open FSharp.Compiler.Ast
+open FSharp.Compiler.CompileOps
+open FSharp.Compiler.CompileOptions
+open FSharp.Compiler.Driver
 
 open Internal.Utilities
 open Internal.Utilities.Collections
@@ -189,7 +174,7 @@ type MyParametricApi(dep1, dep2, dep3) =
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>ドメインに固有の型のエラーケースと無効な状態を表します。
 
-[判別共用体](../language-reference/discriminated-unions.md)を使用すると、F # では、型システム内の問題のあるプログラムの状態を表すことができます。 次に例を示します。
+[判別共用体](../language-reference/discriminated-unions.md)を使用すると、F # では、型システム内の問題のあるプログラムの状態を表すことができます。 たとえば、次のように入力します。
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -211,16 +196,16 @@ let handleWithdrawal amount =
     | UndisclosedFailure -> printfn "Failed: unknown"
 ```
 
-一般に、ドメイン内で何らかのエラーが**発生**する可能性のあるさまざまな方法をモデル化できる場合、通常のプログラムフローに加えて、エラー処理コードは処理する必要のあるものとして扱われなくなりました。 これは単に通常のプログラムフローの一部であり、**例外的**とは見なされません。 これには主に次の2つの利点があります。
+一般に、ドメイン内で何らかのエラーが **発生** する可能性のあるさまざまな方法をモデル化できる場合、通常のプログラムフローに加えて、エラー処理コードは処理する必要のあるものとして扱われなくなりました。 これは単に通常のプログラムフローの一部であり、 **例外的**とは見なされません。 これには主に次の2つの利点があります。
 
 1. 時間の経過と共にドメインが変化するため、保守が容易になります。
 2. エラーケースは、単体テストの方が簡単です。
 
 ### <a name="use-exceptions-when-errors-cannot-be-represented-with-types"></a>エラーを型で表すことができない場合に例外を使用する
 
-問題のあるドメインでは、すべてのエラーを表すことはできません。 この種のエラーは本質的に*例外的*であり、F # で例外を発生させたりキャッチしたりすることができます。
+問題のあるドメインでは、すべてのエラーを表すことはできません。 この種のエラーは本質的に *例外的* であり、F # で例外を発生させたりキャッチしたりすることができます。
 
-まず、[例外のデザインガイドライン](../../standard/design-guidelines/exceptions.md)を読むことをお勧めします。 これらは F # にも適用できます。
+まず、 [例外のデザインガイドライン](../../standard/design-guidelines/exceptions.md)を読むことをお勧めします。 これらは F # にも適用できます。
 
 例外を発生させるために F # で使用できる主な構成要素は、次の優先順位で考慮する必要があります。
 
@@ -237,7 +222,7 @@ let handleWithdrawal amount =
 
 `failwith`関数と関数は、通常、特定の例外では `failwithf` なく基本型を生成するため、回避する必要があり `Exception` ます。 [例外のデザインガイドライン](../../standard/design-guidelines/exceptions.md)に従って、可能な限りより具体的な例外を生成する必要があります。
 
-### <a name="using-exception-handling-syntax"></a>例外処理構文の使用
+### <a name="use-exception-handling-syntax"></a>例外処理構文を使用する
 
 F # では、次の構文を使用して例外パターンをサポートしてい `try...with` ます。
 
@@ -249,7 +234,7 @@ with
 | :? System.Security.SecurityException as e -> // Do something with it here
 ```
 
-パターンマッチングを使用して例外が発生したときに実行する機能を調整することは、コードをクリーンな状態に保つ必要がある場合に少し厄介になることがあります。 このような処理を行う1つの方法として、[アクティブパターン](../language-reference/active-patterns.md)を使用して、エラーの発生したケースを例外自体にグループ化する方法があります。 たとえば、例外がスローされたときに、例外メタデータで重要な情報を囲む API を使用している可能性があります。 アクティブパターン内でキャプチャされた例外の本体にある有用な値をラップ解除し、状況によってはこの値を返すことができます。
+パターンマッチングを使用して例外が発生したときに実行する機能を調整することは、コードをクリーンな状態に保つ必要がある場合に少し厄介になることがあります。 このような処理を行う1つの方法として、 [アクティブパターン](../language-reference/active-patterns.md) を使用して、エラーの発生したケースを例外自体にグループ化する方法があります。 たとえば、例外がスローされたときに、例外メタデータで重要な情報を囲む API を使用している可能性があります。 アクティブパターン内でキャプチャされた例外の本体にある有用な値をラップ解除し、状況によってはこの値を返すことができます。
 
 ### <a name="do-not-use-monadic-error-handling-to-replace-exceptions"></a>Monadic のエラー処理を使用して例外を置き換えることはできません
 
@@ -259,7 +244,7 @@ with
 
 1. これらには詳細な診断情報が含まれており、問題をデバッグするときに非常に便利です。
 2. これらは、ランタイムやその他の .NET 言語によってよく理解されています。
-3. これらのコードを使用すると、セマンティクスの一部のサブセットをアドホックベースで実装することによって例外を*回避*するコードと比較すると、重要な定型句を減らすことができます。
+3. これらのコードを使用すると、セマンティクスの一部のサブセットをアドホックベースで実装することによって例外を *回避* するコードと比較すると、重要な定型句を減らすことができます。
 
 この3番目のポイントは重要です。 複雑な操作の場合、例外を使用しないと、次のような構造体が処理される可能性があります。
 
@@ -306,7 +291,7 @@ match r with
 
 例外オブジェクト自体をコンストラクターに配置すると、 `Error` 関数ではなく、呼び出しサイトで例外の型を適切に処理するだけです。 これを有効にすると、確認済みの例外が効果的に作成されます。これは、API の呼び出し元として扱うことができないことが周知されています。
 
-上記の例の代わりに、*特定*の例外をキャッチし、その例外のコンテキストで意味のある値を返す方法があります。 関数を次のように変更すると `tryReadAllText` 、の `None` 意味が大きくなります。
+上記の例の代わりに、 *特定* の例外をキャッチし、その例外のコンテキストで意味のある値を返す方法があります。 関数を次のように変更すると `tryReadAllText` 、の `None` 意味が大きくなります。
 
 ```fsharp
 let tryReadAllTextIfPresent (path : string) =
@@ -350,7 +335,7 @@ val funcWithApplication : (string -> int -> unit)
 
 パブリックに使用できるようなポイントフリーのコードが発生した場合は `funcWithApplication` 、ηを完全に展開することをお勧めします。これにより、ツールが引数の意味のある名前を取得できるようになります。
 
-さらに、ポイントフリーのコードのデバッグは困難な場合もあります。 デバッグツールは、名前にバインドされた値 (たとえば、バインド) に依存しているので、 `let` 実行の途中で中間値を検査できます。 コードに検査する値がない場合、デバッグするものはありません。 将来的には、デバッグツールは、以前に実行されたパスに基づいてこれらの値を合成するために発展することがありますが、*潜在的*なデバッグ機能については、お客様のコンテンツを生垣するのは得策ではありません。
+さらに、ポイントフリーのコードのデバッグは困難な場合もあります。 デバッグツールは、名前にバインドされた値 (たとえば、バインド) に依存しているので、 `let` 実行の途中で中間値を検査できます。 コードに検査する値がない場合、デバッグするものはありません。 将来的には、デバッグツールは、以前に実行されたパスに基づいてこれらの値を合成するために発展することがありますが、 *潜在的* なデバッグ機能については、お客様のコンテンツを生垣するのは得策ではありません。
 
 ### <a name="consider-partial-application-as-a-technique-to-reduce-internal-boilerplate"></a>内部の定型句を減らすための手法として部分的なアプリケーションを検討する
 
@@ -365,7 +350,7 @@ MySolution.sln
 |_/API.fsproj
 ```
 
-`ImplementationLogic.fsproj`は、次のようなコードを公開する場合があります。
+`ImplementationLogic.fsproj` は、次のようなコードを公開する場合があります。
 
 ```fsharp
 module Transactions =
@@ -417,7 +402,7 @@ let ``Test withdrawal transaction with 0.0 for balance``() =
 
 ## <a name="access-control"></a>アクセス制御
 
-F # には、.NET ランタイムで使用できるものから継承された[アクセス制御](../language-reference/access-control.md)のための複数のオプションがあります。 これらは、型では使用できません。関数にも使用できます。
+F # には、.NET ランタイムで使用できるものから継承された [アクセス制御](../language-reference/access-control.md)のための複数のオプションがあります。 これらは、型では使用できません。関数にも使用できます。
 
 * `public`パブリックに使用できるようにするには、非型メンバーとメンバーを優先します。 これにより、コンシューマーの数を最小限に抑えることができます。
 * すべてのヘルパー機能を維持 `private` してください。
@@ -429,7 +414,7 @@ F # には、.NET ランタイムで使用できるものから継承された[�
 
 * パブリック Api に明示的な型を使用して引数名にラベルを付けることを検討し、このの型の推定に依存しないでください。
 
-    その理由は、コンパイラではなく、API の形状を制御**する必要があるため**です。 コンパイラは、型を推測する場合でも、適切なジョブを実行できますが、内部的に依存している型が変更されている場合は、API を変更することができます。 これは必要なものになりますが、ほとんどの場合、ダウンストリームのコンシューマーが対処する必要がある、API の変更が中断されます。 代わりに、パブリック API の構造を明示的に制御する場合は、これらの重大な変更を制御できます。 DDD の用語では、これは破損対策レイヤーと考えることができます。
+    その理由は、コンパイラではなく、API の形状を制御 **する必要があるため** です。 コンパイラは、型を推測する場合でも、適切なジョブを実行できますが、内部的に依存している型が変更されている場合は、API を変更することができます。 これは必要なものになりますが、ほとんどの場合、ダウンストリームのコンシューマーが対処する必要がある、API の変更が中断されます。 代わりに、パブリック API の構造を明示的に制御する場合は、これらの重大な変更を制御できます。 DDD の用語では、これは破損対策レイヤーと考えることができます。
 
 * 汎用引数にわかりやすい名前を付けることを検討してください。
 
@@ -443,18 +428,18 @@ F # には、.NET ランタイムで使用できるものから継承された[�
 
 ## <a name="performance"></a>パフォーマンス
 
-### <a name="prefer-structs-for-small-data-types"></a>小さいデータ型に対して構造体を優先する
+### <a name="consider-structs-for-small-types-with-high-allocation-rates"></a>小さい型の構造体を高い割り当て率で考慮する
 
 構造体 (値型とも呼ばれます) を使用すると、多くの場合、オブジェクトの割り当てが回避されるため、一部のコードのパフォーマンスが向上します。 ただし、構造体は常に "高速に進む" ボタンではありません。構造体のデータのサイズが16バイトを超えた場合、データをコピーすると、参照型を使用するよりも多くの CPU 時間が消費される可能性があります。
 
 構造体を使用する必要があるかどうかを判断するには、次の条件を考慮してください。
 
 - データのサイズが16バイト以下の場合。
-- これらのデータ型の多くが、実行中のプログラムのメモリに常駐している可能性が高い場合。
+- これらの型のインスタンスの多くが、実行中のプログラムのメモリに常駐している可能性が高い場合。
 
 最初の条件が適用される場合は、通常、構造体を使用する必要があります。 両方とも適用される場合は、ほとんどの場合、構造体を使用する必要があります。 前の条件が適用される場合もありますが、構造体の使用は参照型を使用するよりも適切ではなく、最悪の場合もあります。 ただし、このような変更を行う場合は常に測定することが重要です。また、想定または直感には作用しません。
 
-#### <a name="prefer-struct-tuples-when-grouping-small-value-types"></a>小さい値の型をグループ化するときに構造体の組を優先する
+#### <a name="consider-struct-tuples-when-grouping-small-value-types-with-high-allocation-rates"></a>小さい値の型を高い割り当て率でグループ化する場合は、構造体の組を検討してください
 
 次の2つの関数について考えてみます。
 
@@ -482,11 +467,11 @@ let rec runWithStructTuple t offset times =
         runWithStructTuple r offset (times - 1)
 ```
 
-これらの関数を[BenchmarkDotNet](https://benchmarkdotnet.org/)のような統計ベンチマークツールでベンチマークする場合は、 `runWithStructTuple` 構造体のタプルを使用する関数が40% 高速に実行され、メモリが割り当てられないことがわかります。
+これらの関数を [BenchmarkDotNet](https://benchmarkdotnet.org/)のような統計ベンチマークツールでベンチマークする場合は、 `runWithStructTuple` 構造体のタプルを使用する関数が40% 高速に実行され、メモリが割り当てられないことがわかります。
 
 ただし、これらの結果は、常に独自のコードには当てはまりません。 関数をとしてマークすると `inline` 、参照タプルを使用するコードが追加の最適化を行うことがあります。また、割り当てられるコードは単に最適化されている可能性があります。 パフォーマンスに懸念がある場合は常に結果を測定し、想定または直感に基づいて動作することはありません。
 
-#### <a name="prefer-struct-records-when-the-data-type-is-small"></a>データ型が小さい場合に構造体レコードを優先する
+#### <a name="consider-struct-records-when-the-type-is-small-and-has-high-allocation-rates"></a>型が小さく、割り当て率が高い場合は、構造体のレコードを検討します。
 
 前述の経験則では、 [F # のレコード型](../language-reference/records.md)についても保持しています。 これらを処理する次のデータ型と関数について考えてみます。
 
@@ -519,9 +504,9 @@ let rec processStructPoint (p: SPoint) offset times =
 
 これは前の組コードに似ていますが、今回の例ではレコードとインライン内部関数を使用します。
 
-これらの関数を[BenchmarkDotNet](https://benchmarkdotnet.org/)のような統計ベンチマークツールでベンチマークする場合は、が `processStructPoint` 約60% 高速に実行され、マネージヒープには何も割り当てられません。
+これらの関数を [BenchmarkDotNet](https://benchmarkdotnet.org/)のような統計ベンチマークツールでベンチマークする場合は、が `processStructPoint` 約60% 高速に実行され、マネージヒープには何も割り当てられません。
 
-#### <a name="prefer-struct-discriminated-unions-when-the-data-type-is-small"></a>データ型が小さい場合に構造体の判別共用体を優先する
+#### <a name="consider-struct-discriminated-unions-when-the-data-type-is-small-with-high-allocation-rates"></a>データ型が高い割り当て率を持つ小さい場合は、構造体の判別共用体を考慮する
 
 構造体の組とレコードを使用したパフォーマンスに関する前の観察でも、 [F # 判別共用体](../language-reference/discriminated-unions.md)が保持されます。 次のコードがあるとします。
 
@@ -544,7 +529,7 @@ let rec processStructPoint (p: SPoint) offset times =
         |> SName
 ```
 
-ドメインのモデリングには、このような単一ケースの判別共用体を定義するのが一般的です。 これらの関数を[BenchmarkDotNet](https://benchmarkdotnet.org/)のような統計ベンチマークツールでベンチマークすると、 `structReverseName` 小さい文字列の場合よりも約25% 高速に実行さ `reverseName` れます。 大きな文字列の場合は、どちらも同じを実行します。 そのため、この場合は、常に構造体を使用することをお勧めします。 既に説明したように、は常に測定し、想定または直感には作用しません。
+ドメインのモデリングには、このような単一ケースの判別共用体を定義するのが一般的です。 これらの関数を [BenchmarkDotNet](https://benchmarkdotnet.org/)のような統計ベンチマークツールでベンチマークすると、 `structReverseName` 小さい文字列の場合よりも約25% 高速に実行さ `reverseName` れます。 大きな文字列の場合は、どちらも同じを実行します。 そのため、この場合は、常に構造体を使用することをお勧めします。 既に説明したように、は常に測定し、想定または直感には作用しません。
 
 前の例では、struct 判別共用体がパフォーマンスを向上させたことが示されていましたが、ドメインをモデル化する場合は、より大きな判別共用体を使用するのが一般的です。 このような大規模なデータ型は、それに対する操作に応じて構造体である場合には、より多くのコピーが関係する可能性があるため、実行できない可能性があります。
 
@@ -616,7 +601,7 @@ type Closure1Table() =
         | (false, _) -> false
 ```
 
-`Closure1Table`基になる変異ベースのデータ構造体をカプセル化し、呼び出し元が基になるデータ構造を維持することを強制しません。 クラスは、呼び出し元に詳細情報を公開せずに、変異ベースのデータとルーチンをカプセル化するための強力な方法です。
+`Closure1Table` 基になる変異ベースのデータ構造体をカプセル化し、呼び出し元が基になるデータ構造を維持することを強制しません。 クラスは、呼び出し元に詳細情報を公開せずに、変異ベースのデータとルーチンをカプセル化するための強力な方法です。
 
 #### <a name="prefer-let-mutable-to-reference-cells"></a>`let mutable`参照セルを優先
 
@@ -672,7 +657,7 @@ F # では、オブジェクトとオブジェクト指向 (OO) の概念が完�
 * 自動プロパティ
 * `IDisposable`およびの実装`IEnumerable`
 * 型拡張
-* events
+* イベント
 * 構造体
 * 代理人
 * 列挙型
@@ -680,17 +665,17 @@ F # では、オブジェクトとオブジェクト指向 (OO) の概念が完�
 **一般に、これらの機能を使用する必要がない場合は、次のようにしてください。**
 
 * 継承に基づく型の階層と実装の継承
-* Null と`Unchecked.defaultof<_>`
+* Null と `Unchecked.defaultof<_>`
 
 ### <a name="prefer-composition-over-inheritance"></a>継承を使ってコンポジションを優先する
 
-[継承](https://en.wikipedia.org/wiki/Composition_over_inheritance)を使用したコンポジションは、優れた F # コードに従うことができる長い表現形式です。 基本的な原則は、基底クラスを公開せずに、呼び出し元がその基底クラスから継承して機能を取得する必要があることです。
+[継承](https://en.wikipedia.org/wiki/Composition_over_inheritance) を使用したコンポジションは、優れた F # コードに従うことができる長い表現形式です。 基本的な原則は、基底クラスを公開せずに、呼び出し元がその基底クラスから継承して機能を取得する必要があることです。
 
 ### <a name="use-object-expressions-to-implement-interfaces-if-you-dont-need-a-class"></a>クラスが不要な場合は、オブジェクト式を使用してインターフェイスを実装する
 
-[オブジェクト式](../language-reference/object-expressions.md)を使用すると、インターフェイスを即座に実装し、実装されたインターフェイスをクラス内ではなく値にバインドできます。 これは特に、インターフェイスを実装_する必要があり、_ 完全なクラスを必要としない場合に便利です。
+[オブジェクト式](../language-reference/object-expressions.md) を使用すると、インターフェイスを即座に実装し、実装されたインターフェイスをクラス内ではなく値にバインドできます。 これは特に、インターフェイスを実装 _する必要があり、_ 完全なクラスを必要としない場合に便利です。
 
-たとえば、次に示すのは、ステートメントのないシンボルを追加した場合にコード修正アクションを提供するために[Ionide](https://ionide.io/)で実行されるコードです `open` 。
+たとえば、次に示すのは、ステートメントのないシンボルを追加した場合にコード修正アクションを提供するために [Ionide](https://ionide.io/) で実行されるコードです `open` 。
 
 ```fsharp
     let private createProvider () =
@@ -718,7 +703,7 @@ Visual Studio Code API と対話するときにはクラスは不要であるた
 
 ## <a name="consider-type-abbreviations-to-shorten-signatures"></a>型略称を検討して署名を短縮する
 
-[型略称](../language-reference/type-abbreviations.md)は、関数シグネチャやより複雑な型など、ラベルを別の型に割り当てるのに便利な方法です。 たとえば、次のエイリアスは、ディープラーニングライブラリである[Cntk](https://docs.microsoft.com/cognitive-toolkit/)で計算を定義するために必要なラベルを割り当てます。
+[型略称](../language-reference/type-abbreviations.md) は、関数シグネチャやより複雑な型など、ラベルを別の型に割り当てるのに便利な方法です。 たとえば、次のエイリアスは、ディープラーニングライブラリである [Cntk](https://docs.microsoft.com/cognitive-toolkit/)で計算を定義するために必要なラベルを割り当てます。
 
 ```fsharp
 open CNTK
@@ -740,7 +725,7 @@ type BufferSize = int
 
 これは、次のような複数の方法で混乱する可能性があります。
 
-* `BufferSize`は抽象ではありません。これは、整数の別の名前にすぎません。
+* `BufferSize` は抽象ではありません。これは、整数の別の名前にすぎません。
 * `BufferSize`がパブリック API で公開されている場合、単にではなく、誤って解釈される可能性があり `int` ます。 通常、ドメイン型には複数の属性があり、のようなプリミティブ型ではありません `int` 。 この略語は、このような仮定に違反します。
 * の大文字と小文字の区別は、 `BufferSize` この型がより多くのデータを保持することを意味します。
 * 関数に名前付き引数を指定する場合と比べて、この別名ではわかりやすさが向上していません。
@@ -752,7 +737,7 @@ module Networking =
     let send data (bufferSize: int) = ...
 ```
 
-要約すると、型略称の落とし穴は、それらが取りされている型に抽象では**ない**ということです。 前の例で `BufferSize` は、は、 `int` 追加データを含まない、または `int` 既に含まれているもの以外の型システムの利点を備えただけです。
+要約すると、型略称の落とし穴は、それらが取りされている型に抽象では **ない** ということです。 前の例で `BufferSize` は、は、 `int` 追加データを含まない、または `int` 既に含まれているもの以外の型システムの利点を備えただけです。
 
 型略称を使用してドメインを表す別の方法として、単一ケース判別共用体を使用する方法があります。 前のサンプルは次のようにモデル化できます。
 

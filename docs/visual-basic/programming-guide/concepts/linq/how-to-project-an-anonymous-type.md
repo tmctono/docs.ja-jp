@@ -2,19 +2,19 @@
 title: '方法: 匿名型を射影する'
 ms.date: 07/20/2015
 ms.assetid: 30b42987-0e0e-4b2b-adb1-5255ddfbcd7b
-ms.openlocfilehash: 459602eb7ede0bd055e00d3c7620cb95ec5408ff
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c486fbd7ee8ae917cd0ccf57e2b04e472784b11d
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396481"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810561"
 ---
 # <a name="how-to-project-an-anonymous-type-visual-basic"></a>方法: 匿名型を射影する (Visual Basic)
 短期間しか使用しないことがわかっている新しい型にクエリを射影することが必要になる場合があります。 単に射影で使用するために新しい型を作成するのは大きな負担です。 この場合は、匿名型に射影する方法が効率的です。 匿名型を使用すると、クラス名を指定することなくクラスを定義し、そのクラスのオブジェクトを宣言して初期化できます。  
   
  匿名型とは、*タプル*の数学的概念を C# で実装したものです。 タプルという数学用語は、1 タプル、2 タプル、3 タプル、4 タプル、5 タプル、n タプルという数列に基づいています。 組とは、それぞれが特定の型を持つオブジェクトの有限のシーケンスを意味します。 名前と値のペアの一覧と呼ばれることもあります。 たとえば、[サンプル XML ファイル: 一般的な購買発注書 (LINQ to XML)](sample-xml-file-typical-purchase-order-linq-to-xml.md) の XML ドキュメントのアドレス コンテンツは次のように表されます。  
   
-```  
+```
 Name: Ellen Adams  
 Street: 123 Maple Street  
 City: Mill Valley  

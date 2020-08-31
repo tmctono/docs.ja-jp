@@ -2,12 +2,12 @@
 title: 互換性に影響する変更
 description: .NET Core の各バージョンの破壊的変更について説明します。
 ms.date: 11/27/2019
-ms.openlocfilehash: 550553ef14cd0635fbe4a5346c457a41264a4b82
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 73c1576aa92f0e236ead0ca1a12ac26efcbf3cbe
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916267"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810899"
 ---
 # <a name="breaking-change-selectors"></a>破壊的変更のセレクター
 
@@ -33,6 +33,7 @@ ms.locfileid: "87916267"
 > [!div class="op_single_selector"]
 >
 > - [ASP.NET Core](aspnetcore.md)
+> - [コード分析](code-analysis.md)
 > - [Core .NET ライブラリ](corefx.md)
 > - [暗号](cryptography.md)
 > - [EF Core](/ef/core/what-is-new/ef-core-3.0/breaking-changes)

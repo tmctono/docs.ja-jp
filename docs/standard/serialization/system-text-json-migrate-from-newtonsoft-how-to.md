@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 4390f46492ada4b15d187be4c43a4f7865f64a80
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 11de13a6674411bbad52678b59879ed26366e0f1
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916976"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811055"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>Newtonsoft.Json から System.Text.Json に移行する方法
 
@@ -147,7 +147,7 @@ ASP.NET Core を使用し、`System.Text.Json` を間接的に使用している
 
 値を単一引用符で囲むと、次のメッセージと共に [JsonException](xref:System.Text.Json.JsonException) が発生します。
 
-```
+```output
 ''' is an invalid start of a value.
 ```
 
@@ -174,7 +174,7 @@ public class ExampleClass
 
 `System.Text.Json` では、文字列以外の値は文字列プロパティに逆シリアル化されません。 文字列フィールドに対して文字列以外の値を受け取ると、次のメッセージと共に [JsonException](xref:System.Text.Json.JsonException) が発生します。
 
-```
+```output
 The JSON value could not be converted to System.String.
 ```
 
