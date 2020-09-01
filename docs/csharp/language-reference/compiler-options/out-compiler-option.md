@@ -1,4 +1,5 @@
 ---
+description: -out (C# コンパイラ オプション)
 title: -out (C# コンパイラ オプション)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 6c8408c0c613e361dae0c1db19f854e9421ca467
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d1b79879639e1cbdc3dc040977d9fcd0c3a73602
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70970380"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125021"
 ---
 # <a name="-out-c-compiler-options"></a>-out (C# コンパイラ オプション)
 **-out** オプションは、出力ファイルの名前を指定します。  
@@ -28,8 +29,8 @@ ms.locfileid: "70970380"
  `filename`  
  コンパイラによって作成された出力ファイルの名前です。  
   
-## <a name="remarks"></a>解説  
- コマンド ラインでは、コンパイル用に複数の出力ファイルを指定することができます。 コンパイラは、 **-out** オプションの後に 1 つまたは複数のソース コード ファイルがあることを想定しています。 そしてすべてのソース コード ファイルがその **-out** オプションで指定された出力ファイルにコンパイルされます。  
+## <a name="remarks"></a>注釈  
+ コマンド ラインでは、コンパイル用に複数の出力ファイルを指定することができます。 コンパイラは、**-out** オプションの後に 1 つまたは複数のソース コード ファイルがあることを想定しています。 そしてすべてのソース コード ファイルがその **-out** オプションで指定された出力ファイルにコンパイルされます。  
   
  作成するファイルの完全な名前と拡張子を指定します。  
   
@@ -41,7 +42,7 @@ ms.locfileid: "70970380"
   
  1 つの出力ファイルをコンパイルするために使用されるソース コード ファイルは、別の出力ファイルのコンパイルの同じコンパイルでは使用できません。  
   
- コマンド ラインのコンパイルで複数の出力ファイルを生成する場合は、出力ファイルのいずれか 1 つだけがアセンブリになれること、および ( **-out** で暗黙的または明示的に) 指定された最初の出力ファイルだけがアセンブリになれることに留意してください。  
+ コマンド ラインのコンパイルで複数の出力ファイルを生成する場合は、出力ファイルのいずれか 1 つだけがアセンブリになれること、および (**-out** で暗黙的または明示的に) 指定された最初の出力ファイルだけがアセンブリになれることに留意してください。  
   
  コンパイルの一部として生成されるすべてのモジュールが、同じくコンパイルで作成されるアセンブリに関連付けらるファイルになります。 [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md) を使用して、アセンブリ マニフェストを表示し、関連付けられているファイルを確認します。  
   
@@ -64,7 +65,7 @@ ms.locfileid: "70970380"
 csc t.cs -out:mymodule.netmodule -target:module t2.cs  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# コンパイラ オプション](./index.md)
 - [フレンド アセンブリ](../../../standard/assembly/friend.md)

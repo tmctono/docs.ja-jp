@@ -1,4 +1,5 @@
 ---
+description: -refonly (C# コンパイラ オプション)
 title: -refonly (C# コンパイラ オプション)
 ms.date: 07/08/2017
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
 - refonly compiler option [C#]
-ms.openlocfilehash: 856b65d3b2217dbe5d53ecda00723b47247d80a4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f9a92462203bedff93a4a711ca8742465b7a561c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72773849"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89124748"
 ---
 # <a name="-refonly-c-compiler-options"></a>-refonly (C# コンパイラ オプション)
 
@@ -30,7 +31,7 @@ ms.locfileid: "72773849"
 
 `-refonly` オプションと [`-refout`](refout-compiler-option.md) オプションは同時に指定できません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# コンパイラ オプション](./index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

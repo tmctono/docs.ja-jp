@@ -1,4 +1,5 @@
 ---
+description: -pdb (C# コンパイラ オプション)
 title: -pdb (C# コンパイラ オプション)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pdb compiler option [C#]
 - /pdb compiler option [C#]
 ms.assetid: e9d0f96a-5b75-45d6-9765-92538dd5f823
-ms.openlocfilehash: 3081f4716e8cd858d789db6050e635af941aa05c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0dcafd0fd260488922c74a2330b312e80467e779
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69602566"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89124917"
 ---
 # <a name="-pdb-c-compiler-options"></a>-pdb (C# コンパイラ オプション)
 **-pdb** コンパイラ オプションは、デバッグ シンボル ファイルの場所と名前を指定します。  
@@ -28,7 +29,7 @@ ms.locfileid: "69602566"
  `filename`  
  デバッグ シンボル ファイルの名前と場所です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  [-debug (C# コンパイラ オプション)](./debug-compiler-option.md) を指定すると、コンパイラは、コンパイラが出力ファイル (.exe または .dll) を作成するのと同じディレクトリに、出力ファイルと同じ名前のファイル名で .pdb ファイルを作成します。  
   
  **-pdb** では、.pdb ファイルに対し、既定以外のファイル名と場所を指定することができます。  
@@ -42,7 +43,7 @@ ms.locfileid: "69602566"
 csc -debug -pdb:tt t.cs  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# コンパイラ オプション](./index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)
