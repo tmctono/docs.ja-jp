@@ -1,4 +1,5 @@
 ---
+description: '#pragma warning - C# リファレンス'
 title: '#pragma warning - C# リファレンス'
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-ms.openlocfilehash: 5620ea9e5f31c22e26bee95a450335bb179ced25
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3085c21db386ca215d48bbe8ade83cd26732242c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712469"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137969"
 ---
-# <a name="pragma-warning-c-reference"></a>#pragma warning (C# リファレンス)
+# <a name="pragma-warning-c-reference"></a>#pragma 警告 (C# リファレンス)
 `#pragma warning` を使用すると、特定の警告を有効または無効にすることができます。  
   
 ## <a name="syntax"></a>構文  
@@ -30,7 +31,7 @@ ms.locfileid: "75712469"
  警告番号が指定されていないと、`disable` はすべての警告を無効にし、`restore` はすべての警告を有効にします。  
   
 > [!NOTE]
-> Visual Studio で警告番号を調べるには、プロジェクトをビルドし、 **[出力]** ウィンドウで警告番号を探してください。  
+> Visual Studio で警告番号を調べるには、プロジェクトをビルドし、**[出力]** ウィンドウで警告番号を探してください。  
   
 ## <a name="example"></a>例  
   
@@ -58,9 +59,9 @@ public class D
 }  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミングガイド](../../programming-guide/index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# プリプロセッサ ディレクティブ](./index.md)
 - [C# コンパイラ エラー](../compiler-messages/index.md)

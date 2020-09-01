@@ -1,4 +1,5 @@
 ---
+description: '#line - C# リファレンス'
 title: '#line - C# リファレンス'
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-ms.openlocfilehash: 79033fa652af62c76d54737fbf0a0b47cf3aae99
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2a5ecb6c29184123b8a88ae1b12caf24ec7296a
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712495"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137995"
 ---
 # <a name="line-c-reference"></a>#line (C# リファレンス)
 
@@ -48,7 +49,7 @@ MainClass.cs(12,16): warning CS0168: The variable 's' is declared but never used
 MainClass.cs(13,16): warning CS0168: The variable 'd' is declared but never used
 ```
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 `#line` ディレクティブは、ビルド プロセスで自動化された中間ステップで使用される場合があります。 たとえば、行が元のソース コード ファイルから削除されても、ファイル内の元の行番号付けに基づいてコンパイラに引き続き出力を生成させる場合は、行を削除してから `#line` を使用して元の行番号付けをシミュレートできます。
 
@@ -80,8 +81,8 @@ class MainClass
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミングガイド](../../programming-guide/index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# プリプロセッサ ディレクティブ](./index.md)

@@ -1,4 +1,5 @@
 ---
+description: event - C# リファレンス
 title: event - C# リファレンス
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: eb1805ed55921497fea88e6b39989c876ef003d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e75fec12390cb694126c5bec684c40caa378915
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713559"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89139100"
 ---
 # <a name="event-c-reference"></a>event (C# リファレンス)
 
@@ -34,7 +35,7 @@ ms.locfileid: "75713559"
 
 イベントには次のキーワードが適用されます。
 
-|キーワード|[説明]|詳細情報|
+|キーワード|説明|詳細情報|
 |-------------|-----------------|--------------------------|
 |[static](./static.md)|クラスのインスタンスが存在しない場合でも、呼び出し元がいつでもイベントを使用できるようになります。|[静的クラスと静的クラス メンバー](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)|
 |[virtual](./virtual.md)|[override](./override.md) キーワードを使用してイベントの動作をオーバーライドすることを派生クラスに許可します。|[継承](../../programming-guide/classes-and-structs/inheritance.md)|
@@ -49,10 +50,10 @@ ms.locfileid: "75713559"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミングガイド](../../programming-guide/index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](./index.md)
 - [add](./add.md)
 - [remove](./remove.md)

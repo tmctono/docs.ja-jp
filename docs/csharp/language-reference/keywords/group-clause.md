@@ -1,4 +1,5 @@
 ---
+description: group 句 - C# リファレンス
 title: group 句 - C# リファレンス
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 75a366ec24e4e48af7e87d3372950aad8d76435b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e642492b4b36bb0464baf16baa80c58c19ba9f1
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713469"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89138229"
 ---
 # <a name="group-clause-c-reference"></a>group 句 (C# リファレンス)
 
@@ -81,11 +82,11 @@ group person by new {name = person.surname, city = person.city};
 
 [!code-csharp[cscsrefQueryKeywords#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#17)]
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 コンパイル時に `group` 句が <xref:System.Linq.Enumerable.GroupBy%2A> メソッドの呼び出しに変換されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq.IGrouping%602>
 - <xref:System.Linq.Enumerable.GroupBy%2A>
