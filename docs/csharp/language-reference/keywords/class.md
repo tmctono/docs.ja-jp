@@ -1,4 +1,5 @@
 ---
+description: class キーワード - C# リファレンス
 title: class キーワード - C# リファレンス
 ms.date: 07/18/2017
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 500160d3bc9280b866e5f5ba24c5edc623e752c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 67c9c4be55cce25edf9ecb84b257a8523f193bec
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77673096"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89142116"
 ---
 # <a name="class-c-reference"></a>class (C# リファレンス)
 
@@ -26,14 +27,14 @@ class TestClass
 }
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>注釈
 
 C# では、単一継承のみを使用できます。 つまり、クラスは 1 つの基底クラスの実装だけを継承できます。 ただし、クラスは複数のインターフェイスを実装できます。 クラスの継承とインターフェイスの実装の例を次の表に示します。
 
 |継承|例|
 |-----------------|-------------|
-|None|`class ClassA { }`|
-|Single|`class DerivedClass : BaseClass { }`|
+|なし|`class ClassA { }`|
+|単一|`class DerivedClass : BaseClass { }`|
 |なし。2 つのインターフェイスを実装|`class ImplClass : IFace1, IFace2 { }`|
 |1 つ。1 つのインターフェイスを実装|`class ImplDerivedClass : BaseClass, IFace1 { }`|
 
@@ -81,7 +82,7 @@ C# では、単一継承のみを使用できます。 つまり、クラスは 
 
 [!code-csharp[csrefKeywordsTypes#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#5)]
 
-## <a name="comments"></a>コメント
+## <a name="comments"></a>備考
 
 前の例で、プライベート フィールド (`name` および `age`) にアクセスできるのは、`Child` クラスのパブリック メソッドだけであることに注意してください。 たとえば、次のステートメントを使用して `Main` メソッドから子の名前を印刷することはできません。
 
