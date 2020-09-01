@@ -3,12 +3,12 @@ title: クラウドネイティブアプリケーションの Elasticsearch
 description: クラウドネイティブアプリケーションにエラスティック検索機能を追加する方法について説明します。
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: e956f28877d88ce5279944964a877efc324918b6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 70d1925d6b8c7bbe515ee4f178513dc61212ebce
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614085"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271803"
 ---
 # <a name="elasticsearch-in-a-cloud-native-app"></a>クラウドネイティブアプリでの Elasticsearch
 
@@ -18,7 +18,7 @@ Elasticsearch は、さまざまな種類のデータに対して複雑な検索
 - 800万コードリポジトリにインデックスを作成して公開する[GitHub](https://www.elastic.co/customers/github) 。  
 - コンテナーライブラリを検出できるようにするための[Docker](https://www.elastic.co/customers/docker) 。
 
-Elasticsearch は、 [Apache Lucene](https://lucene.apache.org/core/)フルテキスト検索エンジンの上に構築されています。 Lucene は、高パフォーマンスのドキュメントのインデックス作成とクエリを実行します。 逆インデックススキームを使用してデータのインデックスを作成します。ページをキーワードにマップするのではなく、ブックの最後にある用語集と同じように、キーワードをページにマップします。 Lucene には強力なクエリ構文機能があり、次の方法でデータを照会できます。
+Elasticsearch は、 [Apache Lucene](https://lucene.apache.org/core/) フルテキスト検索エンジンの上に構築されています。 Lucene は、高パフォーマンスのドキュメントのインデックス作成とクエリを実行します。 逆インデックススキームを使用してデータのインデックスを作成します。ページをキーワードにマップするのではなく、ブックの最後にある用語集と同じように、キーワードをページにマップします。 Lucene には強力なクエリ構文機能があり、次の方法でデータを照会できます。
 
 - 用語 (完全な単語)
 - プレフィックス (先頭は word)
@@ -32,15 +32,15 @@ Lucene では検索のための低レベルのプラミングが提供されま�
 
 Microsoft Azure Marketplace から、開発者は、Azure で Elasticsearch クラスターをすばやくデプロイするために構築された構成済みテンプレートを使用できます。 Azure で管理されたサービスを使用すると、最大50のデータノード、20個の調整ノード、3つの専用マスターノードをデプロイできます。
 
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
 
 この章では、クラウドネイティブシステムのデータについて詳しく説明します。 クラウドネイティブシステムのデータストレージパターンを使用してモノリシックアプリケーションのデータストレージを比較することから始めました。 クラウドネイティブシステムに実装されているデータパターンを見てきました。これには、クロスサービスクエリ、分散トランザクション、および大量システムを扱うためのパターンが含まれます。 NoSQL データを使用して SQL を比較しています。 Microsoft の中心とオープンソースの両方のオプションを含む、Azure で利用可能なデータストレージオプションについて説明しました。 最後に、クラウドネイティブアプリケーションでのキャッシュと Elasticsearch について説明しました。
 
-### <a name="references"></a>References
+### <a name="references"></a>参考資料
 
-- [コマンド クエリ責務分離 (CQRS) パターン](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
+- [コマンドクエリ責務分離 (CQRS) パターン](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
 
-- [イベントソーシングパターン](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
+- [イベント ソーシング パターン](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
 
 - [定理で RDBMS パーティショントレラントが使用できないのはなぜですか。](https://stackoverflow.com/questions/36404765/why-isnt-rdbms-partition-tolerant-in-cap-theorem-and-why-is-it-available)
 
@@ -74,7 +74,7 @@ Microsoft Azure Marketplace から、開発者は、Azure で Elasticsearch ク�
 
 - [Vitess](https://vitess.io/)
 
-- [Elasticsearch: 決定版ガイド](http://shop.oreilly.com/product/0636920028505.do)
+- [Elasticsearch: 決定版ガイド](https://shop.oreilly.com/product/0636920028505.do)
   
 - [Apache Lucene の概要](https://www.baeldung.com/lucene)
 
