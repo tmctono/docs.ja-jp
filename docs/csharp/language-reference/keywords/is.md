@@ -1,4 +1,5 @@
 ---
+description: is - C# リファレンス
 title: is - C# リファレンス
 ms.date: 06/21/2019
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: e64b690482419963a92764b2c97a42dbb231fbfc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3508f08857f88fd34478f968a71bae0121d54d1c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398305"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134511"
 ---
 # <a name="is-c-reference"></a>is (C# リファレンス)
 
@@ -76,7 +77,7 @@ C#7.1 以降、*expr* はジェネリック型パラメーターとその制約�
    expr is constant
 ```
 
-ここで *expr* は評価する式、*constant* はテストする値を表しています。 *constant* には以下のいずれかの定数式を指定できます。
+ここで *expr* は評価する式、*constant* はテストする値を表しています。 *constant* には、次のいずれかの定数式を指定できます。
 
 - リテラル値。
 

@@ -1,4 +1,5 @@
 ---
+description: ':::no-loc text=interface::: (C# リファレンス)'
 title: インターフェイス - C# リファレンス
 ms.date: 01/17/2020
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: 869f1398ae0af3c7379655aa018a9f4aacb934d7
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 24f95e828522f467c519c0c8a7ba9410aa97af4e
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85243972"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134589"
 ---
 # <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface"::: (C# リファレンス)
 
@@ -28,7 +29,7 @@ ms.locfileid: "85243972"
 インターフェイスには、名前空間またはクラスのメンバーを指定できます。 インターフェイス宣言には、次のメンバーの宣言を含めることができます (実装なしのシグネチャ)。
 
 - [メソッド](../../programming-guide/classes-and-structs/methods.md)
-- [Properties](../../programming-guide/classes-and-structs/using-properties.md)
+- [プロパティ](../../programming-guide/classes-and-structs/using-properties.md)
 - [インデクサー](../../programming-guide/indexers/using-indexers.md)
 - [イベント](event.md)
 
@@ -69,10 +70,10 @@ public interface INamed
 
 詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の「[インターフェイス](~/_csharplang/spec/interfaces.md)」セクションと [C# 8.0 の既定のインターフェイス メンバー](~/_csharplang/proposals/csharp-8.0/default-interface-methods.md)に関するページを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミングガイド](../../programming-guide/index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [参照型](reference-types.md)
 - [インターフェイス](../../programming-guide/interfaces/index.md)
