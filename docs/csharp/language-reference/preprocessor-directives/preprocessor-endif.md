@@ -1,4 +1,5 @@
 ---
+description: '#endif - C# リファレンス'
 title: '#endif - C# リファレンス'
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#endif directive [C#]'
 ms.assetid: 6a5fca55-5aee-441f-86f6-1c99fbe9ec05
-ms.openlocfilehash: cc344a224e2308e843328b228dd5e2466d02069f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8068a6e437145178fd5c88763c86692a8700c349
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712547"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89138164"
 ---
-# <a name="endif-c-reference"></a><span data-ttu-id="123bf-102">#endif (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="123bf-102">#endif (C# Reference)</span></span>
-<span data-ttu-id="123bf-103">`#endif` は [#if](./preprocessor-if.md)ディレクティブで始まる、条件付きディレクティブの終了を指定します。</span><span class="sxs-lookup"><span data-stu-id="123bf-103">`#endif` specifies the end of a conditional directive, which began with the [#if](./preprocessor-if.md) directive.</span></span> <span data-ttu-id="123bf-104">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="123bf-104">For example,</span></span>  
+# <a name="endif-c-reference"></a><span data-ttu-id="0842c-103">#endif (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="0842c-103">#endif (C# Reference)</span></span>
+<span data-ttu-id="0842c-104">`#endif` は [#if](./preprocessor-if.md)ディレクティブで始まる、条件付きディレクティブの終了を指定します。</span><span class="sxs-lookup"><span data-stu-id="0842c-104">`#endif` specifies the end of a conditional directive, which began with the [#if](./preprocessor-if.md) directive.</span></span> <span data-ttu-id="0842c-105">たとえば、次のように入力します。</span><span class="sxs-lookup"><span data-stu-id="0842c-105">For example,</span></span>  
   
 ```csharp
 #define DEBUG  
@@ -24,11 +25,11 @@ ms.locfileid: "75712547"
 #endif  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="123bf-105">解説</span><span class="sxs-lookup"><span data-stu-id="123bf-105">Remarks</span></span>  
- <span data-ttu-id="123bf-106">`#if` ディレクティブで始まる条件付きディレクティブは、`#endif` ディレクティブで明示的に終了させる必要があります。</span><span class="sxs-lookup"><span data-stu-id="123bf-106">A conditional directive, beginning with a `#if` directive, must explicitly be terminated with a `#endif` directive.</span></span> <span data-ttu-id="123bf-107">`#endif` の使用例については、「[#if](./preprocessor-if.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="123bf-107">See [#if](./preprocessor-if.md) for an example of how to use `#endif`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0842c-106">注釈</span><span class="sxs-lookup"><span data-stu-id="0842c-106">Remarks</span></span>  
+ <span data-ttu-id="0842c-107">`#if` ディレクティブで始まる条件付きディレクティブは、`#endif` ディレクティブで明示的に終了させる必要があります。</span><span class="sxs-lookup"><span data-stu-id="0842c-107">A conditional directive, beginning with a `#if` directive, must explicitly be terminated with a `#endif` directive.</span></span> <span data-ttu-id="0842c-108">`#endif` の使用例については、「[#if](./preprocessor-if.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0842c-108">See [#if](./preprocessor-if.md) for an example of how to use `#endif`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="123bf-108">参照</span><span class="sxs-lookup"><span data-stu-id="123bf-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0842c-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="0842c-109">See also</span></span>
 
-- [<span data-ttu-id="123bf-109">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="123bf-109">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="123bf-110">C# プログラミングガイド</span><span class="sxs-lookup"><span data-stu-id="123bf-110">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="123bf-111">C# プリプロセッサ ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="123bf-111">C# Preprocessor Directives</span></span>](./index.md)
+- [<span data-ttu-id="0842c-110">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="0842c-110">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="0842c-111">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="0842c-111">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="0842c-112">C# プリプロセッサ ディレクティブ</span><span class="sxs-lookup"><span data-stu-id="0842c-112">C# Preprocessor Directives</span></span>](./index.md)
