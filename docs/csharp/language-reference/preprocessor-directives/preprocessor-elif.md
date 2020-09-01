@@ -1,4 +1,5 @@
 ---
+description: '#elif - C# リファレンス'
 title: '#elif - C# リファレンス'
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#elif directive [C#]'
 ms.assetid: 731d78df-08e0-4d51-b8c8-f193c27de13f
-ms.openlocfilehash: c78818f40b76414d289af6c704ff019b63befe37
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3aa9082b392b352091b9fde74a85f9dd155ad7b1
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712573"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89132288"
 ---
 # <a name="elif-c-reference"></a>#elif (C# リファレンス)
 `#elif` を使用すると、複合条件付きディレクティブを作成できます。 `#elif` 式が評価されるのは、先行するディレクティブ式 [#if](./preprocessor-if.md) および `#elif` (オプション) が `true` と評価されなかった場合です。 `#elif` 式が `true` と評価された場合は、`#elif` と次の条件付きディレクティブの間にあるすべてのコードが、コンパイラによって評価されます。 次に例を示します。  
@@ -28,7 +29,7 @@ ms.locfileid: "75712573"
   
  複数のシンボルを評価するときには、`==` (等値)、`!=` (非等値)、`&&` (AND)、および `||` (OR) の演算子を使用できます。 シンボルと演算子は、かっこを使用してグループ化できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  `#elif` では、次のように記述した場合と同じ結果が得られます。  
   
 ```csharp
@@ -40,8 +41,8 @@ ms.locfileid: "75712573"
   
  `#elif` の使用例については、「[#if](./preprocessor-if.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミングガイド](../../programming-guide/index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# プリプロセッサ ディレクティブ](./index.md)

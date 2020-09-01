@@ -1,4 +1,5 @@
 ---
+description: '#define - C# リファレンス'
 title: '#define - C# リファレンス'
 ms.date: 06/30/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: c08d6f42c11184a4d14aa6712f9f0f8706a72cab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a37f883a249ec74b66769ee40b84b20e8568c451
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173433"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89132340"
 ---
 # <a name="define-c-reference"></a>#define (C# リファレンス)
 `#define` は、シンボルを定義するために使用します。 次の例に示すように、定義したシンボルを式として [#if](./preprocessor-if.md) ディレクティブに渡すと、式は `true` と評価されます。  
@@ -20,7 +21,7 @@ ms.locfileid: "79173433"
  #define DEBUG
  ```
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
   
 > [!NOTE]
 > `#define` ディレクティブを使用して、通常 C および C++ で行うように定数値を宣言することはできません。 C# の定数は、クラスまたは構造体の静的メンバーとして定義することができます。 そのような定数がいくつかある場合は、それを保持するための "Constants" クラスを個別に作成することを検討してください。  
@@ -63,12 +64,12 @@ public class TestDefine
   
  シンボルの定義を解除する方法の例については、「[#undef](./preprocessor-undef.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミングガイド](../../programming-guide/index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# プリプロセッサ ディレクティブ](./index.md)
 - [const](../keywords/const.md)
-- [方法 : トレースとデバッグを指定して条件付きコンパイルを実行する](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [方法: トレースとデバッグを指定して条件付きコンパイルを実行する](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
 - [#undef](./preprocessor-undef.md)
 - [#if](./preprocessor-if.md)
