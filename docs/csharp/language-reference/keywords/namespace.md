@@ -1,4 +1,5 @@
 ---
+description: 名前空間キーワード - C# リファレンス
 title: 名前空間キーワード - C# リファレンス
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: b35f0a2a5cc0b2895b491d4ee24f89955f4b8fed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6cfd1c3d37cbdef1f0dd72ddca85ce91f2e183b
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77625801"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89139581"
 ---
 # <a name="namespace-c-reference"></a>namespace (C# リファレンス)
 
@@ -21,7 +22,7 @@ ms.locfileid: "77625801"
 
 [!code-csharp[csrefKeywordsNamespace#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#1)]
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 名前空間内では、以下の型を 0 個以上宣言できます。
 
@@ -55,7 +56,7 @@ C# ソース ファイル内に名前空間を明示的に宣言しているか�
 
 詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)に関する記事の「[名前空間](~/_csharplang/spec/namespaces.md)」に関するセクションを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
 - [C# キーワード](index.md)
