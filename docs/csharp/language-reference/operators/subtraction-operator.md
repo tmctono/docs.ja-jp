@@ -1,4 +1,5 @@
 ---
+description: '- および -= 演算子 - C# リファレンス'
 title: '- および -= 演算子 - C# リファレンス'
 ms.date: 05/27/2019
 f1_keywords:
@@ -12,75 +13,75 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: c126837309b5fe3495a5e9e6af589892670b62c3
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 871067d8049c66f2b8d863987b668e5287b36911
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063082"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89124696"
 ---
-# <a name="--and---operators-c-reference"></a><span data-ttu-id="1dcbf-102">- および -= 演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="1dcbf-102">- and -= operators (C# reference)</span></span>
+# <a name="--and---operators-c-reference"></a><span data-ttu-id="b672d-103">- および -= 演算子 (C# リファレンス)</span><span class="sxs-lookup"><span data-stu-id="b672d-103">- and -= operators (C# reference)</span></span>
 
-<span data-ttu-id="1dcbf-103">`-` 演算子と `-=` 演算子は、組み込みの[整数](../builtin-types/integral-numeric-types.md)および[浮動小数点型](../builtin-types/floating-point-numeric-types.md)の数値型と、[デリゲート](../builtin-types/reference-types.md#the-delegate-type)型によってサポートされています。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-103">The `-` and `-=` operators are supported by the built-in [integral](../builtin-types/integral-numeric-types.md) and [floating-point](../builtin-types/floating-point-numeric-types.md) numeric types and [delegate](../builtin-types/reference-types.md#the-delegate-type) types.</span></span>
+<span data-ttu-id="b672d-104">`-` 演算子と `-=` 演算子は、組み込みの[整数](../builtin-types/integral-numeric-types.md)および[浮動小数点型](../builtin-types/floating-point-numeric-types.md)の数値型と、[デリゲート](../builtin-types/reference-types.md#the-delegate-type)型によってサポートされています。</span><span class="sxs-lookup"><span data-stu-id="b672d-104">The `-` and `-=` operators are supported by the built-in [integral](../builtin-types/integral-numeric-types.md) and [floating-point](../builtin-types/floating-point-numeric-types.md) numeric types and [delegate](../builtin-types/reference-types.md#the-delegate-type) types.</span></span>
 
-<span data-ttu-id="1dcbf-104">算術演算子 `-` については、「[算術演算子 (C# リファレンス)](arithmetic-operators.md)」の記事の「[単項プラス演算子と単項マイナス演算子](arithmetic-operators.md#unary-plus-and-minus-operators)」セクションと「[減算演算子 -](arithmetic-operators.md#subtraction-operator--)」セクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-104">For information about the arithmetic `-` operator, see the [Unary plus and minus operators](arithmetic-operators.md#unary-plus-and-minus-operators) and [Subtraction operator -](arithmetic-operators.md#subtraction-operator--) sections of the [Arithmetic operators](arithmetic-operators.md) article.</span></span>
+<span data-ttu-id="b672d-105">算術演算子 `-` については、「[算術演算子 (C# リファレンス)](arithmetic-operators.md)」の記事の「[単項プラス演算子と単項マイナス演算子](arithmetic-operators.md#unary-plus-and-minus-operators)」セクションと「[減算演算子 -](arithmetic-operators.md#subtraction-operator--)」セクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b672d-105">For information about the arithmetic `-` operator, see the [Unary plus and minus operators](arithmetic-operators.md#unary-plus-and-minus-operators) and [Subtraction operator -](arithmetic-operators.md#subtraction-operator--) sections of the [Arithmetic operators](arithmetic-operators.md) article.</span></span>
 
-## <a name="delegate-removal"></a><span data-ttu-id="1dcbf-105">デリゲートの削除</span><span class="sxs-lookup"><span data-stu-id="1dcbf-105">Delegate removal</span></span>
+## <a name="delegate-removal"></a><span data-ttu-id="b672d-106">デリゲートの削除</span><span class="sxs-lookup"><span data-stu-id="b672d-106">Delegate removal</span></span>
 
-<span data-ttu-id="1dcbf-106">同じ[デリゲート](../builtin-types/reference-types.md#the-delegate-type)型のオペランドに対しては、`-` 演算子は、次のように計算されるデリゲート インスタンスを返します。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-106">For operands of the same [delegate](../builtin-types/reference-types.md#the-delegate-type) type, the `-` operator returns a delegate instance that is calculated as follows:</span></span>
+<span data-ttu-id="b672d-107">同じ[デリゲート](../builtin-types/reference-types.md#the-delegate-type)型のオペランドに対しては、`-` 演算子は、次のように計算されるデリゲート インスタンスを返します。</span><span class="sxs-lookup"><span data-stu-id="b672d-107">For operands of the same [delegate](../builtin-types/reference-types.md#the-delegate-type) type, the `-` operator returns a delegate instance that is calculated as follows:</span></span>
 
-- <span data-ttu-id="1dcbf-107">両方のオペランドが null 値ではなく、右側のオペランドの呼び出しリストが左側のオペランドの呼び出しリストの適切な連続するサブリストの場合は、演算の結果は右側のオペランドのエントリを左側のオペランドの呼び出しリストから削除することによって取得される新しい呼び出しリストとなります。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-107">If both operands are non-null and the invocation list of the right-hand operand is a proper contiguous sublist of the invocation list of the left-hand operand, the result of the operation is a new invocation list that is obtained by removing the right-hand operand's entries from the invocation list of the left-hand operand.</span></span> <span data-ttu-id="1dcbf-108">右側のオペランドのリストが、左側のオペランドのリストで複数の連続するサブリストと一致する場合、右端の一致するサブリストのみが削除されます。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-108">If the right-hand operand's list matches multiple contiguous sublists in the left-hand operand's list, only the right-most matching sublist is removed.</span></span> <span data-ttu-id="1dcbf-109">削除によりリストが空になる場合、結果は `null` になります。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-109">If removal results in an empty list, the result is `null`.</span></span>
+- <span data-ttu-id="b672d-108">両方のオペランドが null 値ではなく、右側のオペランドの呼び出しリストが左側のオペランドの呼び出しリストの適切な連続するサブリストの場合は、演算の結果は右側のオペランドのエントリを左側のオペランドの呼び出しリストから削除することによって取得される新しい呼び出しリストとなります。</span><span class="sxs-lookup"><span data-stu-id="b672d-108">If both operands are non-null and the invocation list of the right-hand operand is a proper contiguous sublist of the invocation list of the left-hand operand, the result of the operation is a new invocation list that is obtained by removing the right-hand operand's entries from the invocation list of the left-hand operand.</span></span> <span data-ttu-id="b672d-109">右側のオペランドのリストが、左側のオペランドのリストで複数の連続するサブリストと一致する場合、右端の一致するサブリストのみが削除されます。</span><span class="sxs-lookup"><span data-stu-id="b672d-109">If the right-hand operand's list matches multiple contiguous sublists in the left-hand operand's list, only the right-most matching sublist is removed.</span></span> <span data-ttu-id="b672d-110">削除によりリストが空になる場合、結果は `null` になります。</span><span class="sxs-lookup"><span data-stu-id="b672d-110">If removal results in an empty list, the result is `null`.</span></span>
 
   [!code-csharp-interactive[delegate removal](snippets/shared/SubtractionOperator.cs#DelegateRemoval)]
 
-- <span data-ttu-id="1dcbf-110">右側のオペランドの呼び出しリストが左側のオペランドの呼び出しリストの適切な連続するサブリストでない場合は、演算結果は左側のオペランドになります。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-110">If the invocation list of the right-hand operand is not a proper contiguous sublist of the invocation list of the left-hand operand, the result of the operation is the left-hand operand.</span></span> <span data-ttu-id="1dcbf-111">たとえば、マルチキャストのデリゲートの一部ではないデリゲートを削除しても何も行われず、マルチキャストのデリゲートは変更されません。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-111">For example, removing a delegate that is not part of the multicast delegate does nothing and results in the unchanged multicast delegate.</span></span>
+- <span data-ttu-id="b672d-111">右側のオペランドの呼び出しリストが左側のオペランドの呼び出しリストの適切な連続するサブリストでない場合は、演算結果は左側のオペランドになります。</span><span class="sxs-lookup"><span data-stu-id="b672d-111">If the invocation list of the right-hand operand is not a proper contiguous sublist of the invocation list of the left-hand operand, the result of the operation is the left-hand operand.</span></span> <span data-ttu-id="b672d-112">たとえば、マルチキャストのデリゲートの一部ではないデリゲートを削除しても何も行われず、マルチキャストのデリゲートは変更されません。</span><span class="sxs-lookup"><span data-stu-id="b672d-112">For example, removing a delegate that is not part of the multicast delegate does nothing and results in the unchanged multicast delegate.</span></span>
 
   [!code-csharp-interactive[delegate removal with no effect](snippets/shared/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
-  <span data-ttu-id="1dcbf-112">前の例では、デリゲート中に削除デリゲートのインスタンスが比較されることも示しています。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-112">The preceding example also demonstrates that during delegate removal delegate instances are compared.</span></span> <span data-ttu-id="1dcbf-113">たとえば、同一の[ラムダ式](lambda-expressions.md)の評価から生成されるデリゲートが等しくない、などです。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-113">For example, delegates that are produced from evaluation of identical [lambda expressions](lambda-expressions.md) are not equal.</span></span> <span data-ttu-id="1dcbf-114">デリゲートの等値の詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の[デリゲートの等値演算子](~/_csharplang/spec/expressions.md#delegate-equality-operators)に関するセクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-114">For more information about delegate equality, see the [Delegate equality operators](~/_csharplang/spec/expressions.md#delegate-equality-operators) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
+  <span data-ttu-id="b672d-113">前の例では、デリゲート中に削除デリゲートのインスタンスが比較されることも示しています。</span><span class="sxs-lookup"><span data-stu-id="b672d-113">The preceding example also demonstrates that during delegate removal delegate instances are compared.</span></span> <span data-ttu-id="b672d-114">たとえば、同一の[ラムダ式](lambda-expressions.md)の評価から生成されるデリゲートが等しくない、などです。</span><span class="sxs-lookup"><span data-stu-id="b672d-114">For example, delegates that are produced from evaluation of identical [lambda expressions](lambda-expressions.md) are not equal.</span></span> <span data-ttu-id="b672d-115">デリゲートの等値の詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の[デリゲートの等値演算子](~/_csharplang/spec/expressions.md#delegate-equality-operators)に関するセクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b672d-115">For more information about delegate equality, see the [Delegate equality operators](~/_csharplang/spec/expressions.md#delegate-equality-operators) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
 
-- <span data-ttu-id="1dcbf-115">左側のオペランドが `null` の場合は、演算結果は `null` になります。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-115">If the left-hand operand is `null`, the result of the operation is `null`.</span></span> <span data-ttu-id="1dcbf-116">右側のオペランドが `null` の場合は、演算結果は左側のオペランドになります。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-116">If the right-hand operand is `null`, the result of the operation is the left-hand operand.</span></span>
+- <span data-ttu-id="b672d-116">左側のオペランドが `null` の場合は、演算結果は `null` になります。</span><span class="sxs-lookup"><span data-stu-id="b672d-116">If the left-hand operand is `null`, the result of the operation is `null`.</span></span> <span data-ttu-id="b672d-117">右側のオペランドが `null` の場合は、演算結果は左側のオペランドになります。</span><span class="sxs-lookup"><span data-stu-id="b672d-117">If the right-hand operand is `null`, the result of the operation is the left-hand operand.</span></span>
 
   [!code-csharp-interactive[delegate removal and null](snippets/shared/SubtractionOperator.cs#DelegateRemovalAndNull)]
 
-<span data-ttu-id="1dcbf-117">デリゲートを組み合わせるには、[`+` 演算子](addition-operator.md#delegate-combination)を使用します。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-117">To combine delegates, use the [`+` operator](addition-operator.md#delegate-combination).</span></span>
+<span data-ttu-id="b672d-118">デリゲートを組み合わせるには、[`+` 演算子](addition-operator.md#delegate-combination)を使用します。</span><span class="sxs-lookup"><span data-stu-id="b672d-118">To combine delegates, use the [`+` operator](addition-operator.md#delegate-combination).</span></span>
 
-<span data-ttu-id="1dcbf-118">デリゲート型の詳細については、[デリゲート](../../programming-guide/delegates/index.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-118">For more information about delegate types, see [Delegates](../../programming-guide/delegates/index.md).</span></span>
+<span data-ttu-id="b672d-119">デリゲート型の詳細については、[デリゲート](../../programming-guide/delegates/index.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b672d-119">For more information about delegate types, see [Delegates](../../programming-guide/delegates/index.md).</span></span>
 
-## <a name="subtraction-assignment-operator--"></a><span data-ttu-id="1dcbf-119">減算代入演算子 -=</span><span class="sxs-lookup"><span data-stu-id="1dcbf-119">Subtraction assignment operator -=</span></span>
+## <a name="subtraction-assignment-operator--"></a><span data-ttu-id="b672d-120">減算代入演算子 -=</span><span class="sxs-lookup"><span data-stu-id="b672d-120">Subtraction assignment operator -=</span></span>
 
-<span data-ttu-id="1dcbf-120">次のような `-=` 演算子を使用する式があるとします</span><span class="sxs-lookup"><span data-stu-id="1dcbf-120">An expression using the `-=` operator, such as</span></span>
+<span data-ttu-id="b672d-121">次のような `-=` 演算子を使用する式があるとします</span><span class="sxs-lookup"><span data-stu-id="b672d-121">An expression using the `-=` operator, such as</span></span>
 
 ```csharp
 x -= y
 ```
 
-<span data-ttu-id="1dcbf-121">上記の式は、次の式と同じです。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-121">is equivalent to</span></span>
+<span data-ttu-id="b672d-122">上記の式は、次の式と同じです。</span><span class="sxs-lookup"><span data-stu-id="b672d-122">is equivalent to</span></span>
 
 ```csharp
 x = x - y
 ```
 
-<span data-ttu-id="1dcbf-122">ただし、`x` が評価されるのは 1 回だけです。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-122">except that `x` is only evaluated once.</span></span>
+<span data-ttu-id="b672d-123">ただし、`x` が評価されるのは 1 回だけです。</span><span class="sxs-lookup"><span data-stu-id="b672d-123">except that `x` is only evaluated once.</span></span>
 
-<span data-ttu-id="1dcbf-123">`-=` 演算子の使用例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-123">The following example demonstrates the usage of the `-=` operator:</span></span>
+<span data-ttu-id="b672d-124">`-=` 演算子の使用例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="b672d-124">The following example demonstrates the usage of the `-=` operator:</span></span>
 
 [!code-csharp-interactive[-= examples](snippets/shared/SubtractionOperator.cs#SubtractAndAssign)]
 
-<span data-ttu-id="1dcbf-124">[イベント](../keywords/event.md)から登録を解除するときに、`-=` 演算子を使用して削除するイベント ハンドラー メソッドを指定することもできます。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-124">You also use the `-=` operator to specify an event handler method to remove when you unsubscribe from an [event](../keywords/event.md).</span></span> <span data-ttu-id="1dcbf-125">詳細については、「[イベントのサブスクリプションとサブスクリプション解除を行う方法](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-125">For more information, see [How to subscribe to and unsubscribe from events](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).</span></span>
+<span data-ttu-id="b672d-125">[イベント](../keywords/event.md)から登録を解除するときに、`-=` 演算子を使用して削除するイベント ハンドラー メソッドを指定することもできます。</span><span class="sxs-lookup"><span data-stu-id="b672d-125">You also use the `-=` operator to specify an event handler method to remove when you unsubscribe from an [event](../keywords/event.md).</span></span> <span data-ttu-id="b672d-126">詳細については、「[イベントのサブスクリプションとサブスクリプション解除を行う方法](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b672d-126">For more information, see [How to subscribe to and unsubscribe from events](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).</span></span>
 
-## <a name="operator-overloadability"></a><span data-ttu-id="1dcbf-126">演算子のオーバーロード可/不可</span><span class="sxs-lookup"><span data-stu-id="1dcbf-126">Operator overloadability</span></span>
+## <a name="operator-overloadability"></a><span data-ttu-id="b672d-127">演算子のオーバーロード可/不可</span><span class="sxs-lookup"><span data-stu-id="b672d-127">Operator overloadability</span></span>
 
-<span data-ttu-id="1dcbf-127">ユーザー定義型は `-` 演算子を[オーバーロード](operator-overloading.md)できます。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-127">A user-defined type can [overload](operator-overloading.md) the `-` operator.</span></span> <span data-ttu-id="1dcbf-128">2 項 `-` 演算子をオーバーロードすると、`-=` 演算子も暗黙的にオーバーロードされます。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-128">When a binary `-` operator is overloaded, the `-=` operator is also implicitly overloaded.</span></span> <span data-ttu-id="1dcbf-129">ユーザー定義型では、`-=` 演算子を明示的にオーバーロードできません。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-129">A user-defined type cannot explicitly overload the `-=` operator.</span></span>
+<span data-ttu-id="b672d-128">ユーザー定義型は `-` 演算子を[オーバーロード](operator-overloading.md)できます。</span><span class="sxs-lookup"><span data-stu-id="b672d-128">A user-defined type can [overload](operator-overloading.md) the `-` operator.</span></span> <span data-ttu-id="b672d-129">2 項 `-` 演算子をオーバーロードすると、`-=` 演算子も暗黙的にオーバーロードされます。</span><span class="sxs-lookup"><span data-stu-id="b672d-129">When a binary `-` operator is overloaded, the `-=` operator is also implicitly overloaded.</span></span> <span data-ttu-id="b672d-130">ユーザー定義型では、`-=` 演算子を明示的にオーバーロードできません。</span><span class="sxs-lookup"><span data-stu-id="b672d-130">A user-defined type cannot explicitly overload the `-=` operator.</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="1dcbf-130">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="1dcbf-130">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="b672d-131">C# 言語仕様</span><span class="sxs-lookup"><span data-stu-id="b672d-131">C# language specification</span></span>
 
-<span data-ttu-id="1dcbf-131">詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の[単項マイナス演算子](~/_csharplang/spec/expressions.md#unary-minus-operator)と[減算演算子](~/_csharplang/spec/expressions.md#subtraction-operator)に関するセクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="1dcbf-131">For more information, see the [Unary minus operator](~/_csharplang/spec/expressions.md#unary-minus-operator) and [Subtraction operator](~/_csharplang/spec/expressions.md#subtraction-operator) sections of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
+<span data-ttu-id="b672d-132">詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の[単項マイナス演算子](~/_csharplang/spec/expressions.md#unary-minus-operator)と[減算演算子](~/_csharplang/spec/expressions.md#subtraction-operator)に関するセクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="b672d-132">For more information, see the [Unary minus operator](~/_csharplang/spec/expressions.md#unary-minus-operator) and [Subtraction operator](~/_csharplang/spec/expressions.md#subtraction-operator) sections of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="1dcbf-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="1dcbf-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b672d-133">関連項目</span><span class="sxs-lookup"><span data-stu-id="b672d-133">See also</span></span>
 
-- [<span data-ttu-id="1dcbf-133">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="1dcbf-133">C# reference</span></span>](../index.md)
-- [<span data-ttu-id="1dcbf-134">C# の演算子と式</span><span class="sxs-lookup"><span data-stu-id="1dcbf-134">C# operators and expressions</span></span>](index.md)
-- [<span data-ttu-id="1dcbf-135">イベント</span><span class="sxs-lookup"><span data-stu-id="1dcbf-135">Events</span></span>](../../programming-guide/events/index.md)
-- [<span data-ttu-id="1dcbf-136">算術演算子</span><span class="sxs-lookup"><span data-stu-id="1dcbf-136">Arithmetic operators</span></span>](arithmetic-operators.md)
-- [<span data-ttu-id="1dcbf-137">+ および += 演算子</span><span class="sxs-lookup"><span data-stu-id="1dcbf-137">+ and += operators</span></span>](addition-operator.md)
+- [<span data-ttu-id="b672d-134">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="b672d-134">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="b672d-135">C# の演算子と式</span><span class="sxs-lookup"><span data-stu-id="b672d-135">C# operators and expressions</span></span>](index.md)
+- [<span data-ttu-id="b672d-136">イベント</span><span class="sxs-lookup"><span data-stu-id="b672d-136">Events</span></span>](../../programming-guide/events/index.md)
+- [<span data-ttu-id="b672d-137">算術演算子</span><span class="sxs-lookup"><span data-stu-id="b672d-137">Arithmetic operators</span></span>](arithmetic-operators.md)
+- [<span data-ttu-id="b672d-138">+ および += 演算子</span><span class="sxs-lookup"><span data-stu-id="b672d-138">+ and += operators</span></span>](addition-operator.md)
