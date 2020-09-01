@@ -1,15 +1,16 @@
 ---
+description: delegate 演算子 - C# リファレンス
 title: delegate 演算子 - C# リファレンス
 ms.date: 07/18/2019
 helpviewer_keywords:
 - delegate [C#]
 - anonymous method [C#]
-ms.openlocfilehash: 33c438b88f1e993f4648786da9b20b91961b7ee1
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 1dfaaf40c0f5a19534adef3be7e3c917bc95c4a8
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062991"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89122252"
 ---
 # <a name="delegate-operator-c-reference"></a>delegate 演算子 (C# リファレンス)
 
@@ -36,7 +37,7 @@ ms.locfileid: "88062991"
 
 詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の[無名関数の式](~/_csharplang/spec/expressions.md#anonymous-function-expressions)に関するセクションを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
 - [C# の演算子と式](index.md)
