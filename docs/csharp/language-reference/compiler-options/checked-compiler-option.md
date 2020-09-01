@@ -1,4 +1,5 @@
 ---
+description: -checked (C# コンパイラ オプション)
 title: -checked (C# コンパイラ オプション)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: cb4dbadfa4efd0750ffd3dea88a3f661e2f85a8e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c90696edd3031271e16cd2c1a332da5b605f81f
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173771"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125944"
 ---
 # <a name="-checked-c-compiler-options"></a>-checked (C# コンパイラ オプション)
 **-checked** オプションは、データ型の範囲外の値になる整数の算術ステートメントと、[checked](../keywords/checked.md) または [unchecked](../keywords/unchecked.md) キーワードのスコープ内に含まれない整数の算術ステートメントで、ランタイム例外が発生するかどうかを指定します。  
@@ -24,10 +25,10 @@ ms.locfileid: "79173771"
 -checked[+ | -]  
 ```  
   
-## <a name="remarks"></a>Remarks  
- `checked` または `unchecked` キーワードのスコープ内に含まれる整数の算術ステートメントは、 **-checked** オプションの作用の対象になりません。  
+## <a name="remarks"></a>解説  
+ `checked` または `unchecked` キーワードのスコープ内に含まれる整数の算術ステートメントは、**-checked** オプションの作用の対象になりません。  
   
- `checked` または `unchecked` キーワードのスコープ内に含まれない整数の算術ステートメントがデータ型の範囲外の値になり、 **-checked+** (または **-checked**) がコンパイル時に使用されている場合は、そのステートメントでランタイム例外が発生します。 **-checked-** がコンパイル時に使用された場合、そのステートメントでランタイム例外は発生しません。  
+ `checked` または `unchecked` キーワードのスコープ内に含まれない整数の算術ステートメントがデータ型の範囲外の値になり、**-checked+** (または **-checked**) がコンパイル時に使用されている場合は、そのステートメントでランタイム例外が発生します。 **-checked-** がコンパイル時に使用された場合、そのステートメントでランタイム例外は発生しません。  
   
  このオプションの既定値は **-checked-** です。オーバーフロー チェックは無効になっています。
 
@@ -39,7 +40,7 @@ ms.locfileid: "79173771"
   
 2. **[ビルド]** プロパティ ページをクリックします。  
   
-3. **[詳細設定]** ボタンをクリックします。  
+3. **[詳細設定]** をクリックします。  
   
 4. **[演算のオーバーフローのチェック]** プロパティを変更します。  
   

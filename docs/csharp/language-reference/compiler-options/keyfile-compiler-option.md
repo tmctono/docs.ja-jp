@@ -1,4 +1,5 @@
 ---
+description: -keyfile (C# コンパイラ オプション)
 title: -keyfile (C# コンパイラ オプション)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -keyfile compiler option [C#]
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
-ms.openlocfilehash: bf271cc6b6887e930911071d4603b51daed55e61
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a97fc00201be1cf8043fc353b20ef447468a06bf
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70970262"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125489"
 ---
 # <a name="-keyfile-c-compiler-options"></a>-keyfile (C# コンパイラ オプション)
 暗号化キーを格納するファイル名を指定します。  
@@ -26,11 +27,11 @@ ms.locfileid: "70970262"
   
 ## <a name="arguments"></a>引数  
   
-|用語|定義|  
+|期間|定義|  
 |----------|----------------|  
 |`file`|厳密な名前のキーを格納するファイルの名前。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  このオプションを指定すると、コンパイラは、指定したファイルからアセンブリ マニフェストに公開キーを挿入し、最終的なアセンブリに秘密キーで署名します。 キー ファイルを生成するには、コマンド ラインで「sn -k `file`」と入力します。  
   
  **-target:module** を指定してコンパイルした場合は、キー ファイルの名前がモジュールに保持され、[-addmodule](./addmodule-compiler-option.md) でアセンブリをコンパイルすると作成されるアセンブリに組み込まれます。  
@@ -41,7 +42,7 @@ ms.locfileid: "70970262"
   
  キー ファイルには公開キーだけが含まれる場合があることに注意してください。  
   
- 詳細については、「[厳密な名前付きアセンブリの作成と使用](../../../standard/assembly/create-use-strong-named.md)」および「[アセンブリへの遅延署名](../../../standard/assembly/delay-sign.md)」をご覧ください。  
+ 詳しくは、「[厳密な名前付きアセンブリの作成と使用](../../../standard/assembly/create-use-strong-named.md)」および「[アセンブリへの遅延署名](../../../standard/assembly/delay-sign.md)」をご覧ください。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
@@ -53,7 +54,7 @@ ms.locfileid: "70970262"
   
  このコンパイラ オプションには、プログラムで <xref:VSLangProj.ProjectProperties.AssemblyOriginatorKeyFile%2A> を使ってアクセスできます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# コンパイラ オプション](./index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

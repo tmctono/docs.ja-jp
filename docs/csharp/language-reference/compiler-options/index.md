@@ -1,4 +1,5 @@
 ---
+description: C# コンパイラ オプション
 title: C# コンパイラ オプション
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-ms.openlocfilehash: 787f9c5fff79eb67e2d74043782532c1fc4034b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bcb246055ecb553bbefad2a0d5c95bf6a083ee6f
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73972750"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125528"
 ---
 # <a name="c-compiler-options"></a>C# コンパイラ オプション
 
@@ -23,7 +24,7 @@ ms.locfileid: "73972750"
 
 すべてのコンパイル オプションは、 **-option** および **/option** という 2 つの形で使用できます。 このドキュメントでは、 **-option** のみを示しています。
 
-Visual Studio では、コンパイラ オプションは *web.config* ファイルに設定します。 詳細については、「[\<compiler> 要素](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)」を参照してください。
+Visual Studio では、コンパイラ オプションは *web.config* ファイルに設定します。 詳細については、[\<compiler> 要素](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)に関するページを参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

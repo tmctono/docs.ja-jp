@@ -1,4 +1,5 @@
 ---
+description: Visual Studio のコマンドラインのための環境変数を設定する方法
 title: Visual Studio のコマンドラインのための環境変数を設定する方法
 ms.date: 12/20/2019
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: 99e2a837877494dd4c7e0106047bce3cc39a9282
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b985c85e2fddce459ed68b3d07ba7d54a8b2d0a7
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75342364"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125606"
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Visual Studio のコマンドラインのための環境変数を設定する方法
 
@@ -33,7 +34,7 @@ VsDevCmd.bat ファイルは、適切な環境変数を設定してコマンド 
 
 ### <a name="to-run-vsdevcmdbat"></a>VsDevCmd.BAT を実行するには
 
-1. **[スタート]** メニューから、**VS 2019 の開発者コマンド プロンプト**を開きます。  これは、 **[Visual Studio 2019]** フォルダーにあります。
+1. **[スタート]** メニューから、**VS 2019 の開発者コマンド プロンプト**を開きます。  これは、**[Visual Studio 2019]** フォルダーにあります。
 
 2. インストールの \Program Files\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools または \Program Files (x86)\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools サブディレクトリに移動します。  (*Version* は最新バージョンの *2019* です。 *Offering* は *Enterprise*、*Professional* または *Community* のいずれかです。)
 
@@ -50,6 +51,6 @@ VsDevCmd.BAT に使用できるオプションを確認するには、`-help` �
 VsDevCmd.bat -help
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [csc.exe を使用したコマンド ラインからのビルド](./command-line-building-with-csc-exe.md)

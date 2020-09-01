@@ -1,15 +1,16 @@
 ---
+description: アクセシビリティ ドメイン - C# リファレンス
 title: アクセシビリティ ドメイン - C# リファレンス
 ms.date: 07/20/2015
 helpviewer_keywords:
 - accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
-ms.openlocfilehash: 4a4319b03f3e0d7f9ec721e611b78c124a8a8ee5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2cfc4cc72a79b33276b7d822a2b31eb518dcf784
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713832"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89127062"
 ---
 # <a name="accessibility-domain-c-reference"></a>アクセシビリティ ドメイン (C# リファレンス)
 メンバーのアクセシビリティ ドメインとは、どのプログラム セクションをメンバーから参照できるかを規定するものです。 そのメンバーが他の型の入れ子になっている場合、そのアクセシビリティ ドメインは、そのメンバーの[アクセシビリティ レベル](./accessibility-levels.md)と、その直接のコンテナーである型のアクセシビリティ ドメインとの両方によって決定されます。  

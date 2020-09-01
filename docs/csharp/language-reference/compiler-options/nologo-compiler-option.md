@@ -1,4 +1,5 @@
 ---
+description: -nologo (C# コンパイラ オプション)
 title: -nologo (C# コンパイラ オプション)
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - banners, suppressing startup
 - /nologo compiler option [C#]
 ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
-ms.openlocfilehash: 84fc7f7448309a0800ea05f03f0c5039a6b4f807
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5107563b5133c183dca7626281ad11df9d09a8d8
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606651"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125216"
 ---
 # <a name="-nologo-c-compiler-options"></a>-nologo (C# コンパイラ オプション)
 **-nologo** オプションは、コンパイラの開始時のサインオン バナーの表示と、コンパイル時の情報メッセージの表示を抑制します。  
@@ -30,7 +31,7 @@ ms.locfileid: "69606651"
   
  このコンパイラ オプションは Visual Studio では使用できず、プログラムで変更することはできません。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# コンパイラ オプション](./index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)
