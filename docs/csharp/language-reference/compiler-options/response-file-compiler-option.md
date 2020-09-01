@@ -1,4 +1,5 @@
 ---
+description: '@ (C# コンパイラ オプション)'
 title: '@ (C# コンパイラ オプション)'
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: d8e5c0ec148754c3e4cebfa32ad9f44a0bb0119e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89a057cba6e0d23c15fc9b652e5bfbc89b6ecbaa
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70202914"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128648"
 ---
 # <a name="-c-compiler-options"></a>@ (C# コンパイラ オプション)
 @ オプションを使用すると、コンパイラ オプションおよびコンパイルするソース コード ファイルを含むファイルを指定できます。  
@@ -27,7 +28,7 @@ ms.locfileid: "70202914"
  `response_file`  
  コンパイラ オプションやコンパイルするソース コード ファイルの一覧を含むファイルです。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>注釈  
  コンパイラ オプションとソース コード ファイルは、コマンド ラインで指定した場合と同じように、コンパイラによって処理されます。  
   
  コンパイル時に複数の応答ファイルを指定するには、複数の応答ファイル オプションを指定します。 次に例を示します。  
@@ -38,7 +39,8 @@ ms.locfileid: "70202914"
   
  応答ファイルでは、複数のコンパイラ オプションとソース コード ファイルを 1 行に記述できます。 1 つのコンパイラ オプションは 1 行に指定する必要があり、複数行にわたって指定できません。 応答ファイルには、シャープ記号 (#) で始まるコメントを記述できます。  
   
- 応答ファイルでのコンパイラ オプションの指定方法は、コマンド ラインでのコンパイラ オプションの指定方法と同じです。 詳細については、[コマンド ラインからのビルド](./how-to-set-environment-variables-for-the-visual-studio-command-line.md) に関するページを参照してください。  
+ 応答ファイルでのコンパイラ オプションの指定方法は、コマンド ラインでのコンパイラ オプションの指定方法と同じです。 詳細については、[コマンド ラインからのビルド](./how-to-set-environment-variables-for-the-visual-studio-command-line.md) に関するページを参照してください。
+  
   
  コンパイラは、検出した順にコマンド オプションを処理します。 このため、コマンド ライン引数によって、応答ファイルで先に指定したオプションをオーバーライドできます。 逆に、応答ファイルのオプションが、コマンド ラインや他の応答ファイルで先に指定したオプションをオーバーライドすることもあります。  
   
@@ -54,6 +56,6 @@ ms.locfileid: "70202914"
 -target:exe -out:MyExe.exe source1.cs source2.cs  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# コンパイラ オプション](./index.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - time zones [.NET Framework], type options
 - DateTime structure
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
-ms.openlocfilehash: 03d00fb802032b981a5ebe80f7166eba0fb54a60
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 7ef8782c15ad816b8bb0356e74615a49387f73b9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85326048"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89129129"
 ---
 # <a name="choose-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>DateTime、DateTimeOffset、TimeSpan、TimeZoneInfo のいずれかを選択してください
 
@@ -43,6 +43,28 @@ ms.locfileid: "85326048"
 
 > [!NOTE]
 > このトピック <xref:System.TimeZone> では、その機能がほぼ完全にクラスに組み込まれているため、説明しません <xref:System.TimeZoneInfo> 。 可能な限り、クラス <xref:System.TimeZoneInfo> の代わりにクラスを使用し <xref:System.TimeZone> ます。
+
+## <a name="the-datetimeoffset-structure"></a>DateTimeOffset 構造体
+
+<xref:System.DateTimeOffset> 構造体は、日付と時刻の値、およびその値と UTC との差異を示すオフセットを表します。 そのため、値は常に明確に単一時点を識別します。
+
+<xref:System.DateTimeOffset> 型には、 <xref:System.DateTime> 型のすべての機能に加え、タイム ゾーンの処理機能が含まれます。 これにより、次のようなアプリケーションに適しています。
+
+- 単一の時点を一意かつ明確に識別する。 <xref:System.DateTimeOffset> 型を使用して、「現在」の意味を明確に定義し、トランザクションの時刻を記録し、システム イベントまたはアプリケーション イベントの時刻を記録し、ファイル作成時刻とファイル変更時刻を記録することができます。
+
+- 一般的な日付と時刻の演算を実行する。
+
+- その時刻が 2 つの別々の値または構造体の 2 つのメンバーである場合、関連する複数の時刻を保持する。
+
+> [!NOTE]
+> <xref:System.DateTimeOffset> 値のこの用途は、 <xref:System.DateTime> 値の用途と比べてはるかに一般的です。 そのため、 <xref:System.DateTimeOffset> アプリケーション開発の既定の日付と時刻の型として考慮してください。
+
+<xref:System.DateTimeOffset>値は特定のタイムゾーンに関連付けられていませんが、さまざまなタイムゾーンから発生することがあります。 次の例では、複数の <xref:System.DateTimeOffset> 値 (ローカルの太平洋標準時を含む) が属することができるタイムゾーンを一覧表示します。
+
+[!code-csharp[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual1.cs#1)]
+[!code-vb[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual1.vb#1)]
+
+この例の日付と時刻の値はそれぞれ少なくとも 3 つの異なるタイム ゾーンに属することができることを出力は示しています。 <xref:System.DateTimeOffset>6/10/2007 の値は、日付と時刻の値が夏時間を表す場合、utc からのオフセットは必ずしも元のタイムゾーンの基本 UTC オフセット、またはその表示名で見つかった utc からのオフセットに対応していないことを示しています。 単一の <xref:System.DateTimeOffset> 値はそのタイムゾーンと密接に結び付いていないため、夏時間との間のタイムゾーンの遷移を反映することはできません。 日付と時刻の演算を使用して値を操作すると、問題が発生する可能性があり <xref:System.DateTimeOffset> ます。 タイムゾーンの調整規則を考慮する方法で日付と時刻の演算を実行する方法については、「 [日付と時刻を使用](performing-arithmetic-operations.md)した算術演算の実行」を参照してください。
 
 ## <a name="the-datetime-structure"></a>DateTime 構造体
 
@@ -68,28 +90,6 @@ ms.locfileid: "85326048"
 
 > [!IMPORTANT]
 > <xref:System.DateTime> データを保存または共有する際、UTC を使用する必要があり、 <xref:System.DateTime> 値の <xref:System.DateTime.Kind%2A> プロパティを <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>に設定する必要があります。
-
-## <a name="the-datetimeoffset-structure"></a>DateTimeOffset 構造体
-
-<xref:System.DateTimeOffset> 構造体は、日付と時刻の値、およびその値と UTC との差異を示すオフセットを表します。 そのため、値は常に明確に単一時点を識別します。
-
-<xref:System.DateTimeOffset> 型には、 <xref:System.DateTime> 型のすべての機能に加え、タイム ゾーンの処理機能が含まれます。 これにより、次のようなアプリケーションに適しています。
-
-- 単一の時点を一意かつ明確に識別する。 <xref:System.DateTimeOffset> 型を使用して、「現在」の意味を明確に定義し、トランザクションの時刻を記録し、システム イベントまたはアプリケーション イベントの時刻を記録し、ファイル作成時刻とファイル変更時刻を記録することができます。
-
-- 一般的な日付と時刻の演算を実行する。
-
-- その時刻が 2 つの別々の値または構造体の 2 つのメンバーである場合、関連する複数の時刻を保持する。
-
-> [!NOTE]
-> <xref:System.DateTimeOffset> 値のこの用途は、 <xref:System.DateTime> 値の用途と比べてはるかに一般的です。 そのため、 <xref:System.DateTimeOffset> アプリケーション開発の既定の日付と時刻の型として考慮してください。
-
-<xref:System.DateTimeOffset>値は特定のタイムゾーンに関連付けられていませんが、さまざまなタイムゾーンから発生することがあります。 次の例では、複数の <xref:System.DateTimeOffset> 値 (ローカルの太平洋標準時を含む) が属することができるタイムゾーンを一覧表示します。
-
-[!code-csharp[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual1.cs#1)]
-[!code-vb[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual1.vb#1)]
-
-この例の日付と時刻の値はそれぞれ少なくとも 3 つの異なるタイム ゾーンに属することができることを出力は示しています。 <xref:System.DateTimeOffset>6/10/2007 の値は、日付と時刻の値が夏時間を表す場合、utc からのオフセットは必ずしも元のタイムゾーンの基本 UTC オフセット、またはその表示名で見つかった utc からのオフセットに対応していないことを示しています。 単一の <xref:System.DateTimeOffset> 値はそのタイムゾーンと密接に結び付いていないため、夏時間との間のタイムゾーンの遷移を反映することはできません。 日付と時刻の演算を使用して値を操作すると、問題が発生する可能性があり <xref:System.DateTimeOffset> ます。 タイムゾーンの調整規則を考慮する方法で日付と時刻の演算を実行する方法については、「[日付と時刻を使用](performing-arithmetic-operations.md)した算術演算の実行」を参照してください。
 
 ## <a name="the-timespan-structure"></a>TimeSpan 構造体
 
