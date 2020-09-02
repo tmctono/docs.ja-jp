@@ -1,13 +1,13 @@
 ---
 title: F# コードのフォーマットに関するガイドライン
 description: 'F # コードを書式設定するためのガイドラインについて説明します。'
-ms.date: 11/04/2019
-ms.openlocfilehash: dc871b0a8461ed93550ab02cc2c66b143285a3e3
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.date: 08/31/2020
+ms.openlocfilehash: 401c0688cd7d0a945dc469f1ab5841b21e1d4ab4
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720151"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359286"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# コードのフォーマットに関するガイドライン
 
@@ -897,6 +897,15 @@ module M =
 type MyRecord =
     { Label1: int
       Label2: string }
+```
+
+これらは、XML ドキュメントの後に記述する必要があります。
+
+```fsharp
+/// Module with some things in it.
+[<RequireQualifiedAccess>]
+module M =
+    let f x = x
 ```
 
 ### <a name="formatting-attributes-on-parameters"></a>パラメーターの属性の書式設定
