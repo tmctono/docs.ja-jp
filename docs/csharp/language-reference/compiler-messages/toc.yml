@@ -217,6 +217,16 @@
       href: cs2032.md
     - name: コンパイラ エラー CS7003
       href: cs7003.md
+    - name: コンパイラ エラー CS8400
+      href: cs8400.md
+    - name: コンパイラ エラー CS8401
+      href: cs8401.md
+    - name: コンパイラ エラー CS8403
+      href: cs8403.md
+    - name: コンパイラ エラー CS8410
+      href: cs8410.md
+    - name: コンパイラ エラー CS8411
+      href: cs8411.md
     - name: コンパイラの警告 (レベル 1) CS0420
       href: cs0420.md
     - name: コンパイラの警告 (レベル 1) CS0465
