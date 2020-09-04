@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: fa87fdba830398786cce8951d353e86bc4ff7491
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 947a3bc7da0949781ae89ed74a87edb2637daf73
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111050"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89126516"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC アプリのテスト
 
@@ -155,14 +155,14 @@ ASP.NET Core アプリのほとんどの統合テストで、インフラスト�
 
 ASP.NET Core アプリケーションの場合、`TestServer` クラスを利用すると、機能テストをとても簡単に記述できます。 `TestServer` を `WebHostBuilder` (または `HostBuilder`) を使用するように直接構成する (アプリケーションに対して通常実行するのと同じ)、または `WebApplicationFactory` 型 (バージョン 2.1 以降で使用可能) で構成します。 テスト ホストを運用ホストとできる限り一致させるようにしてください。これにより、運用環境でのアプリの動作と同様の動作がテストで実行されます。 `WebApplicationFactory` クラスは、ビューなどの静的リソースを検索するために ASP.NET Core によって使用される、TestServer の ContentRoot を構成するときに便利です。
 
-IClassFixture\<WebApplicationFactory\<TEntry>> を実装するテスト クラスを作成することによって、シンプルな機能テストを作成できます。ここで、TEntry はご利用の Web アプリケーションの Startup クラスです。 これを配置すると、ファクトリの CreateClient メソッドを使用して、テスト フィクスチャでクライアントを作成できます。
+TEntry が Web アプリケーションの Startup クラスである、IClassFixture\<WebApplicationFactory\<TEntry>> を実装するテスト クラスを作成することによって、シンプルな機能テストを作成できます。 これを配置すると、ファクトリの CreateClient メソッドを使用して、テスト フィクスチャでクライアントを作成できます。
 
 ```cs
 public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 {
     protected readonly HttpClient _client;
 
-    public BaseWebTest(WebApplicationFactory<Startup> factory)
+    public BasicWebTests(WebApplicationFactory<Startup> factory)
     {
         _client = factory.CreateClient();
     }

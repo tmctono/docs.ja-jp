@@ -3,12 +3,13 @@ title: Microsoft.NET.Sdk の MSBuild プロパティ
 description: .NET Core SDK によって認識される MSBuild のプロパティと項目のリファレンスです。
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: 7980369b87d606d3876fe043e929a65da1d0d92b
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.custom: updateeachrelease
+ms.openlocfilehash: 39cbd18121d2b8659b2f5270f39624798f4ebbdc
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916247"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810523"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>.NET Core SDK プロジェクトの MSBuild リファレンス
 
@@ -165,6 +166,50 @@ ms.locfileid: "87916247"
 ```
 
 詳細については、「[C# 言語のバージョン管理](../../csharp/language-reference/configure-language-version.md#override-a-default)」を参照してください。
+
+## <a name="code-analysis-properties"></a>コード分析のプロパティ
+
+### <a name="analysislevel"></a>AnalysisLevel
+
+`AnalysisLevel` プロパティを使用すると、コード分析レベルを指定できます。 たとえば、プレビューのコード アナライザーにアクセスする場合は、`AnalysisLevel` を `preview` に設定します。 既定値は `latest` です。
+
+```xml
+<PropertyGroup>
+  <AnalysisLevel>preview</AnalysisLevel>
+</PropertyGroup>
+```
+
+次の表で利用可能なオプションについて説明します。
+
+| 値 | 説明 |
+|-|-|
+| `latest` | リリースされている最新のコード アナライザーが使用されます。 既定値です。 |
+| `preview` | 最新のコード アナライザーが、プレビュー段階であっても使用されます。 |
+| `5.0` | 新しいルールが使用可能な場合でも、.NET 5.0 リリースで有効になっていた一連のルールが使用されます。 |
+| `5` | 新しいルールが使用可能な場合でも、.NET 5.0 リリースで有効になっていた一連のルールが使用されます。 |
+
+### <a name="codeanalysistreatwarningsaserrors"></a>CodeAnalysisTreatWarningsAsErrors
+
+`CodeAnalysisTreatWarningsAsErrors` プロパティを使用すると、コード分析の警告を警告として扱い、ビルドを中断するかどうかを構成できます。 プロジェクトをビルドするときに `-warnaserror` フラグを使用すると、[.NET コード分析](../../fundamentals/productivity/code-analysis.md)の警告もエラーとして扱われます。 コンパイラの警告のみをエラーとして処理する場合は、プロジェクト ファイル内の `CodeAnalysisTreatWarningsAsErrors` MSBuild プロパティを `false` に設定できます。
+
+```xml
+<PropertyGroup>
+  <CodeAnalysisTreatWarningsAsErrors>false</CodeAnalysisTreatWarningsAsErrors>
+</PropertyGroup>
+```
+
+### <a name="enablenetanalyzers"></a>EnableNETAnalyzers
+
+[.Net コード分析](../../fundamentals/productivity/code-analysis.md)は、.NET 5.0 以降を対象とするプロジェクトで既定で有効になっています。 以前のバージョンの .NET を対象とするプロジェクトで .NET コード分析を有効にするには、`EnableNETAnalyzers` プロパティを true に設定します。 任意のプロジェクトでコード分析を無効にするには、このプロパティを `false` に設定します。
+
+```xml
+<PropertyGroup>
+  <EnableNETAnalyzers>true</EnableNETAnalyzers>
+</PropertyGroup>
+```
+
+> [!TIP]
+> .Net 5.0 より前の .NET バージョンを対象とするプロジェクトで .NET コード分析を有効にするもう 1 つの方法は、[AnalysisLevel](#analysislevel) プロパティを `latest` に設定することです。
 
 ## <a name="run-time-configuration-properties"></a>ランタイム構成プロパティ
 

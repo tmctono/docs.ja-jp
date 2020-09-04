@@ -1,4 +1,5 @@
 ---
+description: C# での組み込みのブール型について
 title: bool 型 - C# リファレンス
 ms.date: 11/26/2019
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - bool data type [C#]
 - Boolean [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 4623dc7d6c8c6c437c78aee45f0eeee8a92e3200
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 23e5bc34f1751b0a706c20dae340920239fcda9d
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854881"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89126464"
 ---
 # <a name="bool-c-reference"></a>bool (C# リファレンス)
 
@@ -47,8 +48,8 @@ C# には、`bool` 型が関係する変換が 2 つのみ用意されていま�
 
 詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の「[Bool 型](~/_csharplang/spec/types.md#the-bool-type)」セクションを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
 - [値型](value-types.md)
-- [True および False 演算子](../operators/true-false-operators.md)
+- [true および false 演算子](../operators/true-false-operators.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: db35b48d4d7e70a54b38342e79fa2881b3857bd7
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 7b411283822360f3057b0d4f4e60ebade4fe45bc
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864151"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810938"
 ---
 # <a name="methods-c-programming-guide"></a>メソッド (C# プログラミング ガイド)
 
@@ -24,7 +24,7 @@ ms.locfileid: "86864151"
 
 メソッドは、[クラス](../../language-reference/keywords/class.md)、[構造体](../../language-reference/builtin-types/struct.md)、または[インターフェイス](../interfaces/index.md)内で、アクセス レベル (`public` や `private` など)、オプションの修飾子 (`abstract` や `sealed` など)、戻り値、メソッドの名前、およびメソッド パラメーターを指定して宣言されます。 これらのまとまりがメソッドのシグネチャとなります。
 
-> [!NOTE]
+> [!IMPORTANT]
 > メソッドのオーバーロードを可能にするために、メソッドの戻り値の型はメソッドのシグネチャには含まれません。 ただし、デリゲートとそれが指すメソッドの互換性を決定する場合には、メソッドのシグネチャの一部となります。
 
 メソッド パラメーターはかっこで囲み、各パラメーターをコンマで区切ります。 かっこ内を空にすると、メソッドでパラメーターが不要なことを意味します。 このクラスには次の 4 つのメソッドが含まれています。
@@ -129,13 +129,13 @@ public static void FillMatrix(int[,] matrix)
 
 次の例で、 `DelayAsync` は戻り値の型が <xref:System.Threading.Tasks.Task%601>である非同期メソッドです。 `DelayAsync` には、整数を返す `return` ステートメントがあります。 そのため、メソッド宣言 `DelayAsync` では、戻り値の型を `Task<int>`とする必要があります。 戻り値の型が `Task<int>`であるため、ステートメント `await` に示すように、 `DoSomethingAsync` 内の `int result = await delayTask`式を評価すると整数が生成されます。
 
-`startButton_Click` メソッドは、戻り値の型が void の非同期メソッドの例です。 `DoSomethingAsync` が非同期メソッドであるため、 `DoSomethingAsync` を呼び出すタスクは、ステートメント `await DoSomethingAsync();`に示すように待機する必要があります。 `startButton_Click` メソッドでは `async` 式が使用されているため、 `await` 修飾子を使用して定義する必要があります。
+`Main` メソッドは、戻り値の型が <xref:System.Threading.Tasks.Task> の非同期メソッドの例です。 これは `DoSomethingAsync` メソッドに進みます。1 行で表現されるため、キーワードの `async` と `await` を省略できます。 `DoSomethingAsync` が非同期メソッドであるため、 `DoSomethingAsync` を呼び出すタスクは、ステートメント `await DoSomethingAsync();`に示すように待機する必要があります。
 
-[!code-csharp[csAsyncMethod#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncmethod/cs/mainwindow.xaml.cs#2)]
+:::code language="csharp" source="snippets/classes-and-structs/methods/Program.cs":::
 
 非同期メソッドで [ref](../../language-reference/keywords/ref.md) パラメーターまたは [out](../../language-reference/keywords/out-parameter-modifier.md) パラメーターを宣言することはできませんが、これらのパラメーターを持つメソッドを呼び出すことはできます。
 
-非同期メソッドの詳細については、「[Async および Await を使用した非同期プログラミング](../concepts/async/index.md)」、「[非同期プログラムにおける制御フロー](../concepts/async/control-flow-in-async-programs.md)」、「[非同期の戻り値の型](../concepts/async/async-return-types.md)」を参照してください。
+非同期メソッドの詳細については、「[async および await を使用した非同期プログラミング](../concepts/async/index.md)」と[非同期の戻り値の型](../concepts/async/async-return-types.md)に関するページを参照してください。
 
 ## <a name="expression-body-definitions"></a>式本体の定義
 

@@ -2,12 +2,12 @@
 title: Visual Studio Code を使用して .NET Core コンソール アプリケーションを発行する
 description: 発行では、.NET Core アプリケーションを実行するために必要なファイルのセットを作成します。
 ms.date: 07/04/2020
-ms.openlocfilehash: 8fd9975e8a88704b9dea45b40127c8dc03f7d09f
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: a84e66126806e2ab45c14527df1b931fa9980468
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051884"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867647"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET Core コンソール アプリケーションを発行する
 
@@ -17,13 +17,13 @@ ms.locfileid: "86051884"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- このチュートリアルでは、[Visual Studio Code での .NET Core コンソール アプリケーションの作成](with-visual-studio-code.md)に関するページで作成した、コンソール アプリを使用します。
+- このチュートリアルでは、「[Visual Studio Code を使用して .NET Core コンソール アプリケーションを作成する](with-visual-studio-code.md)」で作成したコンソール アプリを使用します。
 
 ## <a name="publish-the-app"></a>アプリの発行
 
 1. Visual Studio Code を開始します。
 
-1. [Visual Studio Code での .NET Core コンソール アプリケーションの作成](with-visual-studio-code.md)に関する記事で作成した *HelloWorld* プロジェクト フォルダーを開きます。
+1. 「[Visual Studio Code を使用して .NET Core コンソール アプリケーションを作成する](with-visual-studio-code.md)」で作成した *HelloWorld* プロジェクト フォルダーを開きます。
 
 1. メイン メニューから **[表示]**  >  **[ターミナル]** の順に選択します。
 
@@ -39,7 +39,7 @@ ms.locfileid: "86051884"
 
    コマンドの出力は次の例のようになります。
 
-   ```
+   ```output
    Microsoft (R) Build Engine version 16.6.0+5ff7b0c9e for .NET Core
    Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -112,4 +112,4 @@ ms.locfileid: "86051884"
 このチュートリアルでは、コンソール アプリを発行しました。 次のチュートリアルでは、クラス ライブラリを作成します。
 
 > [!div class="nextstepaction"]
-> [Visual Studio Code で .NET Standard ライブラリを作成する](library-with-visual-studio-code.md)
+> [Visual Studio Code を使用して .NET Core コンソール アプリケーションを作成する](library-with-visual-studio-code.md)

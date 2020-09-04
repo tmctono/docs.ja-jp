@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 44646a307d230db395b55b9dec5acfd168605940
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: e0033d52ab54259ce5e4ccf2a25bf4e3d4f244de
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84701285"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867556"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio"></a>チュートリアル: Visual Studio を使用して .NET Core コンソール アプリケーションを発行する
 
@@ -19,13 +19,13 @@ ms.locfileid: "84701285"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- このチュートリアルでは、[Visual Studio 2019 での .NET Core コンソール アプリケーションの作成](with-visual-studio.md)に関するページで作成した、コンソール アプリを使用します。
+- このチュートリアルでは、「[Visual Studio を使用して .NET Core コンソール アプリケーションを作成する](with-visual-studio.md)」で作成したコンソール アプリを使用します。
 
 ## <a name="publish-the-app"></a>アプリの発行
 
 1. Visual Studio を起動します。
 
-1. [Visual Studio での .NET Core コンソール アプリケーションの作成](with-visual-studio.md)に関する記事で作成した *HelloWorld* プロジェクトを開きます。
+1. 「[Visual Studio を使用して .NET Core コンソール アプリケーションを作成する](with-visual-studio.md)」で作成した *HelloWorld* プロジェクトを開きます。
 
 1. Visual Studio でリリース ビルド構成が使用されていることを確認します。 必要に応じて、ツール バーのビルド構成の設定を **[デバッグ]** から **[リリース]** に変更します。
 
@@ -87,7 +87,7 @@ ms.locfileid: "84701285"
 
 1. コマンド プロンプトを開いて、*publish* フォルダーに移動します。 これを行うには、「`cd`」と入力して、完全なパスを貼り付けます。 次に例を示します。
 
-   ```
+   ```console
    cd C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\publish\
    ```
 
@@ -112,4 +112,4 @@ ms.locfileid: "84701285"
 このチュートリアルでは、コンソール アプリを発行しました。 次のチュートリアルでは、クラス ライブラリを作成します。
 
 > [!div class="nextstepaction"]
-> [Visual Studio で .NET Standard ライブラリを構築する](library-with-visual-studio.md)
+> [Visual Studio を使用して .NET Standard ライブラリを作成する](library-with-visual-studio.md)

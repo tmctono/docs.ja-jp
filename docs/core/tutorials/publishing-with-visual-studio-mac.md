@@ -2,12 +2,12 @@
 title: Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを発行する
 description: 発行では、.NET Core アプリケーションを実行するために必要なファイルのセットを作成します。
 ms.date: 06/08/2020
-ms.openlocfilehash: 67762481d3a56b8473e643f71b8df909b6e54fc6
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: ec6b867f145ffdea491187de3745149f2cebd8dd
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84713353"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867543"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-for-mac"></a>チュートリアル: Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを発行する
 
@@ -15,13 +15,13 @@ ms.locfileid: "84713353"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- このチュートリアルでは、[Visual Studio for Mac での .NET Core コンソール アプリケーションの作成](with-visual-studio-mac.md)に関する記事で作成したコンソール アプリを使用します。
+- このチュートリアルでは、「[Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを作成する](with-visual-studio-mac.md)」で作成したコンソール アプリを使用します。
 
 ## <a name="publish-the-app"></a>アプリの発行
 
 1. Visual Studio for Mac を起動します。
 
-1. [Visual Studio for Mac での .NET Core コンソール アプリケーションの作成](with-visual-studio-mac.md)に関する記事で作成した HelloWorld プロジェクトを開きます。
+1. 「[Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを作成する](with-visual-studio-mac.md)」で作成した HelloWorld プロジェクトを開きます。
 
 1. Visual Studio がアプリケーションのリリース バージョンをビルドしていることを確認します。 必要に応じて、ツール バーのビルド構成の設定を **[デバッグ]** から **[リリース]** に変更します。
 
@@ -69,7 +69,7 @@ ms.locfileid: "84713353"
 
 1. ターミナルを開いて *publish* フォルダーに移動します。 これを行うには、「`cd`」と入力してから前にコピーしたパスを貼り付けます。 次に例を示します。
 
-   ```
+   ```console
    cd ~/Projects/HelloWorld/HelloWorld/bin/Release/netcoreapp3.1/publish/
    ```
 
@@ -88,4 +88,4 @@ ms.locfileid: "84713353"
 このチュートリアルでは、コンソール アプリを発行しました。 次のチュートリアルでは、クラス ライブラリを作成します。
 
 > [!div class="nextstepaction"]
-> [Visual Studio for mac で .NET Standard ライブラリを作成する](library-with-visual-studio-mac.md)
+> [Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを作成する](library-with-visual-studio-mac.md)

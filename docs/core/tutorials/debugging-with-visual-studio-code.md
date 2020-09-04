@@ -2,12 +2,12 @@
 title: Visual Studio Code を使用して .NET Core コンソール アプリケーションをデバッグする
 description: Visual Studio Code を使用して .NET Core コンソール アプリをデバッグする方法について説明します。
 ms.date: 05/26/2020
-ms.openlocfilehash: 40e9b114df1bd12fb05bfb773781d6009d087a06
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 8e84747256551b633a5bf74b72723ba8d2840d52
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84702128"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118300"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET Core コンソール アプリケーションをデバッグする
 
@@ -15,7 +15,7 @@ ms.locfileid: "84702128"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- このチュートリアルでは、[Visual Studio Code での .NET Core コンソール アプリケーションの作成](with-visual-studio-code.md)に関するページで作成した、コンソール アプリを使用します。
+- このチュートリアルでは、「[Visual Studio Code を使用して .NET Core コンソール アプリケーションを作成する](with-visual-studio-code.md)」で作成したコンソール アプリを使用します。
 
 ## <a name="use-debug-build-configuration"></a>デバッグ ビルド構成の使用
 
@@ -27,7 +27,7 @@ ms.locfileid: "84702128"
 
 1. Visual Studio Code を開始します。
 
-1. [Visual Studio Code での .NET Core コンソール アプリケーションの作成](with-visual-studio-code.md)に関する記事で作成したプロジェクトのフォルダーを開きます。
+1. [Visual Studio Code を使用した .NET Core コンソール アプリケーションの作成](with-visual-studio-code.md)に関するページで作成したプロジェクトのフォルダーを開きます。
 
 ## <a name="set-a-breakpoint"></a>ブレークポイントの設定
 
@@ -51,13 +51,13 @@ ms.locfileid: "84702128"
 
    差出人:
 
-   ```
+   ```json
    "console": "internalConsole",
    ```
 
    移動先:
 
-   ```
+   ```json
    "console": "integratedTerminal",
    ```
 
@@ -69,7 +69,7 @@ ms.locfileid: "84702128"
 
    :::image type="content" source="media/debugging-with-visual-studio-code/select-debug-pane.png" alt-text="Visual Studio Code で [デバッグ] タブを開く":::
 
-1. ペインの上部にある **[.NET Core Launch (console)]\(.NET Core の起動 (コンソール)\)** の横の緑色の矢印を選択します。 デバッグ モードでプログラムを起動するもう 1 つの方法は、メニューから **[実行]**  >  **[デバッグの開始]** を選択することです。
+1. ペインの上部にある **[.NET Core Launch (console)]\(.NET Core の起動 (コンソール)\)** の横の緑色の矢印を選択します。 デバッグ モードでプログラムを起動するその他の方法は、<kbd>F5</kbd> キーを押すか、メニューから **[実行]**  >  **[デバッグの開始]** を選択することです。
 
    :::image type="content" source="media/debugging-with-visual-studio-code/start-debugging.png" alt-text="デバッグの開始":::
 
@@ -133,7 +133,7 @@ ms.locfileid: "84702128"
 
 1. **[ターミナル]** タブで、自分の名前を入力するように求められたら、<kbd>Enter</kbd> キーを押します。
 
-   指定した条件 (`name` が `null` または <xref:System.String.Empty?displayProperty=nameWithType>) が満たされたため、ブレークポイントに到達すると、`Console.WriteLine` メソッドが実行される前に、プログラムの実行が停止します。
+   指定した条件 (`name` は `null` または <xref:System.String.Empty?displayProperty=nameWithType> のどちらか) が満たされたため、ブレークポイントに到達すると、`Console.WriteLine` メソッドが実行される前に、プログラムの実行が停止します。
 
    **[変数]** ウィンドウには、`name` 変数の値が `""` または <xref:System.String.Empty?displayProperty=nameWithType> であることが表示されます。
 

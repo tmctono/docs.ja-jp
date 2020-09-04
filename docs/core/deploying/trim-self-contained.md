@@ -4,20 +4,24 @@ description: 自己完結型アプリケーションをトリミングしてサ�
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 0fde409e9e5911213855ab206368d302b73eebb3
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: 7a4731e2cbaa3835e6aa6ba558dfa8cd03828e01
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720125"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053108"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>自己完結型の展開と実行可能ファイルのトリミング
 
 [フレームワークに依存するデプロイ モデル](index.md#publish-framework-dependent)は、.NET の開始以降に最も一般的となったデプロイ モデルです。 このシナリオでは、アプリケーション開発者は、.NET ランタイムおよびフレームワーク ライブラリがクライアント コンピューターで利用できることを見込んで、アプリケーションとサードパーティのアセンブリのみをバンドルします。 このデプロイ モデルは .NET Core でも引き続き主に使用されますが、フレームワークに依存するモデルが最適ではないシナリオもあります。 別の方法としては、[自己完結型アプリケーション](index.md#publish-self-contained)を発行します。この場合、.NET Core ランタイムおよびフレームワークは、アプリケーションとサードパーティのアセンブリと共にバンドルされます。
 
-トリミング自己完結型のデプロイ モデルは、展開のサイズを小さくするために最適化された、自己完結型のデプロイ モデルの特殊なバージョンです。 展開のサイズを最小限に抑えることは、Blazor アプリケーションなどの一部のクライアント側のシナリオでは重要な要件です。 アプリケーションの複雑さによっては、アプリケーションの実行にフレームワーク アセンブリのサブセットだけが必要となります。 このようなライブラリの未使用部分は不要であり、パッケージ化されたアプリケーションから削除することができます。 ただし、アプリケーションのビルド時分析によってランタイム エラーが発生しうるというリスクがあります。これは、問題のあるさまざまなコード パターンを確実に分析できないためです (ほとんどの場合、リフレクション使用が中心となります)。 信頼性を保証できないため、このデプロイ モデルはプレビュー機能として提供されます。 ビルド時分析エンジンによって、問題のあるコード パターンの開発者に対して、これらのコード パターンが修正されることを見込んで警告が示されます。 可能な限り、同じ要件を満たすコードを使用して、アプリケーションのランタイム リフレクションの依存関係をビルド時に移動することをお勧めします。
+トリミング自己完結型のデプロイ モデルは、展開のサイズを小さくするために最適化された、自己完結型のデプロイ モデルの特殊なバージョンです。 展開のサイズを最小限に抑えることは、Blazor アプリケーションなどの一部のクライアント側のシナリオでは重要な要件です。 アプリケーションの複雑さによっては、アプリケーションを実行するために、フレームワーク アセンブリのサブセットのみが参照され、各アセンブリ内のコードのサブセットのみが必要となります。 ライブラリの未使用部分は不要であり、パッケージ化されたアプリケーションから削除することができます。
 
-アプリケーションのトリミング モードは、TrimMode を使用して構成でき、既定 (`copyused`) では、アプリケーションで使用されるアセンブリがバンドルされます。 Blazor WebAssembly アプリケーションによって、よりアグレッシブなモード (`link`) を使用して、アセンブリ内の使用されていないコードがトリミングされます。 トリミング分析の警告により、完全な依存関係分析が不可能なコード パターンに関する情報が示されます。 これらの警告は、既定では非表示となり、フラグ `SuppressTrimAnalysisWarnings` を false に設定することで有効にすることができます。 使用できるトリミング オプションの詳細については、[ILLinker ページ](https://github.com/mono/linker/blob/master/docs/illink-options.md)を参照してください。
+ただし、アプリケーションのビルド時分析によってランタイム エラーが発生しうるというリスクがあります。これは、問題のあるさまざまなコード パターンを確実に分析できないためです (ほとんどの場合、リフレクション使用が中心となります)。 信頼性を保証できないため、このデプロイ モデルはプレビュー機能として提供されます。
+
+ビルド時分析エンジンによって、問題のあるコード パターンの開発者に対して、必要な他のコードを検出するように警告が与えられます。 コードには、他に含めるものをトリマーに指示する属性を使用して注釈が付けられます。 多くのリフレクション パターンは、[ソース ジェネレーター](https://github.com/dotnet/roslyn/blob/master/docs/features/source-generators.md)を使用して、ビルド時コード生成に置き換えることができます。
+
+アプリケーションのトリミング モードは、`TrimMode` 設定で構成されます。 既定値は `copyused` で、参照されるアセンブリがアプリケーションとバンドルされます。 Blazor WebAssembly では、`link` 値が使用され、アセンブリ内の使用されていないコードがトリミングされます。 トリミング分析の警告により、完全な依存関係分析が不可能なコード パターンに関する情報が示されます。 これらの警告は、既定では非表示となり、フラグ `SuppressTrimAnalysisWarnings` を `false` に設定することで有効にすることができます。 使用可能なトリミング オプションの詳細については、「[トリミング オプション](trimming-options.md)」を参照してください。
 
 > [!NOTE]
 > トリミングは .NET Core 3.1、5.0 の実験的な機能であり、自己完結型で公開されるアプリケーションで "_のみ_" 使用できます。
@@ -36,28 +40,29 @@ ms.locfileid: "88720125"
 
 ## <a name="trim-your-app---cli"></a>アプリをトリミングする - CLI
 
-[dotnet publish](../tools/dotnet-publish.md) コマンドを使用してアプリケーションをトリミングします。 アプリを発行するときは、次の 3 つの設定を設定します。
+[dotnet publish](../tools/dotnet-publish.md) コマンドを使用してアプリケーションをトリミングします。 アプリを発行する場合、次のプロパティを設定します。
 
-- 自己完結型として発行する: `--self-contained true`
-- トリミングを有効にする: `p:PublishTrimmed=true`
+- 特定のランタイムの自己完結型アプリとして発行する: `-r win-x64`
+- トリミングを有効にする: `/p:PublishTrimmed=true`
 
 次の例では、Windows 用のアプリを自己完結型として発行し、出力をトリミングします。
 
 ```xml
-<ItemGroup>
+<PropertyGroup>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-    <SelfContained>true</SelfContained>
     <PublishTrimmed>true</PublishTrimmed>
-</ItemGroup>
+</PropertyGroup>
 ```
 
 次の例では、アグレッシブなトリミング モードでアプリを発行します。このモードでは、アセンブリ内の使用されていないコードがトリミングされ、トリマー警告が有効になります。
 
 ```xml
-<ItemGroup>
+<PropertyGroup>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishTrimmed>true</PublishTrimmed>
     <TrimMode>link</TrimMode>
     <SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
-</ItemGroup>
+</PropertyGroup>
 ```
 
 詳細については、「[.NET Core CLI を使用して .NET Core アプリを発行する](deploy-with-cli.md)」を参照してください。

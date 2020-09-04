@@ -1,13 +1,13 @@
 ---
 title: 値オブジェクトの実装
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 新しい Entity Framework 機能を使用し、値オブジェクトを実装する方法の詳細とオプション。
-ms.date: 01/30/2020
-ms.openlocfilehash: 4a8a92a8dabcf09654ecd0e5dea2a7df25d7abf7
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.date: 08/21/2020
+ms.openlocfilehash: 02eed7baaa364c62aa2df599f1d8b0e700dd215f
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805740"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811120"
 ---
 # <a name="implement-value-objects"></a>値オブジェクトを実装する
 
@@ -56,7 +56,7 @@ public abstract class ValueObject
         return !(EqualOperator(left, right));
     }
 
-    protected abstract IEnumerable<object> GetAtomicValues();
+    protected abstract IEnumerable<object> GetEqualityComponents();
 
     public override bool Equals(object obj)
     {
@@ -65,31 +65,16 @@ public abstract class ValueObject
             return false;
         }
 
-        ValueObject other = (ValueObject)obj;
-        IEnumerator<object> thisValues = GetAtomicValues().GetEnumerator();
-        IEnumerator<object> otherValues = other.GetAtomicValues().GetEnumerator();
-        while (thisValues.MoveNext() && otherValues.MoveNext())
-        {
-            if (ReferenceEquals(thisValues.Current, null) ^
-                ReferenceEquals(otherValues.Current, null))
-            {
-                return false;
-            }
+        var other = (ValueObject)obj;
 
-            if (thisValues.Current != null &&
-                !thisValues.Current.Equals(otherValues.Current))
-            {
-                return false;
-            }
-        }
-        return !thisValues.MoveNext() && !otherValues.MoveNext();
+        return this.GetEqualityComponents().SequenceEqual(other.GetEqualityComponents());
     }
 
     public override int GetHashCode()
     {
-        return GetAtomicValues()
-         .Select(x => x != null ? x.GetHashCode() : 0)
-         .Aggregate((x, y) => x ^ y);
+        return GetEqualityComponents()
+            .Select(x => x != null ? x.GetHashCode() : 0)
+            .Aggregate((x, y) => x ^ y);
     }
     // Other utility methods
 }
@@ -106,7 +91,7 @@ public class Address : ValueObject
     public String Country { get; private set; }
     public String ZipCode { get; private set; }
 
-    private Address() { }
+    public Address() { }
 
     public Address(string street, string city, string state, string country, string zipcode)
     {
@@ -117,7 +102,7 @@ public class Address : ValueObject
         ZipCode = zipcode;
     }
 
-    protected override IEnumerable<object> GetAtomicValues()
+    protected override IEnumerable<object> GetEqualityComponents()
     {
         // Using a yield return statement to return each element one at a time
         yield return Street;
@@ -180,7 +165,7 @@ DDD の標準の値オブジェクト パターンと EF Core の所有エンテ
 
 - 所有型のコレクションの場合は、独立したコンポーネント (EF Core 2.2 以降でサポートされています)。
 
-たとえば、eShopOnContainers の Ordering ドメイン モデルでは、Order エンティティの一部である Address 値オブジェクトは、所有者エンティティ (Order エンティティ) 内の所有エンティティ型として実装されます。 Address は、ドメイン モデルに定義されている ID プロパティのない型です。 特定の注文の配送先住所を指定するために、Order 型のプロパティとして使用されます。
+たとえば、eShopOnContainers の Ordering ドメイン モデルでは、Order エンティティの一部である Address 値オブジェクトは、所有者エンティティ (Order エンティティ) 内の所有エンティティ型として実装されます。 `Address` は、ドメイン モデルに定義されている ID プロパティのない型です。 特定の注文の配送先住所を指定するために、Order 型のプロパティとして使用されます。
 
 規約によって、所有されている型に対してシャドウ主キーが作成され、テーブル分割を利用し、同じテーブルに所有者としてマップされます。 そのため、従来の .NET Framework の EF6 で複合型を使用する方法と同様に所有型を使用できます。
 
@@ -295,7 +280,7 @@ public class Address
 
 - 所有型で `ModelBuilder.Entity<T>()` を呼び出すことはできません (現在は仕様です)。
 
-- 同じテーブル内の所有者とマップされている (つまり、テーブル分割を使用している) 省略可能な (つまり、null を許容する) 所有型はサポートされていません。 これはプロパティごとにマッピングが行われるためです。全体としての null 複合値を個別に見張ることはしません。
+- 同じテーブル内の所有者とマップされている (つまり、テーブル分割を使用している) 省略可能な (つまり、null を許容する) 所有型はサポートされていません。 これはプロパティごとにマッピングが行われるためです。全体としての null 複合値を個別に見張ることはありません。
 
 - 所有型の継承マッピングはサポートされていませんが、異なる所有型と同じ継承階層の 2 つのリーフ型をマップすることはできます。 EF Core は、同じ階層に属することの理由にはなりません。
 

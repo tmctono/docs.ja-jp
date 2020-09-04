@@ -2,12 +2,12 @@
 title: Visual Studio for Mac を使用して .NET Core コンソール アプリケーションをデバッグする
 description: Visual Studio Mac を使用して .NET Core コンソール アプリをデバッグする方法について説明します。
 ms.date: 06/08/2020
-ms.openlocfilehash: 7e2a25266fab40b5ef1d0a38b8bbf06a6843746b
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 011647a6e3e676909880befa3b770205eb9616d6
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416014"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957526"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-for-mac"></a>チュートリアル: Visual Studio for Mac を使用して .NET Core コンソール アプリケーションをデバッグする
 
@@ -15,7 +15,7 @@ ms.locfileid: "86416014"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- このチュートリアルでは、[Visual Studio for Mac での .NET Core コンソール アプリケーションの作成](with-visual-studio-mac.md)に関する記事で作成したコンソール アプリを使用します。
+- このチュートリアルでは、「[Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを作成する](with-visual-studio-mac.md)」で作成したコンソール アプリを使用します。
 
 ## <a name="use-debug-build-configuration"></a>デバッグ ビルド構成の使用
 
@@ -23,11 +23,11 @@ ms.locfileid: "86416014"
 
 デバッグ構成では、プログラムのコンパイルにシンボリック デバッグ情報が完全に含まれ、最適化は行われません。 ソース コードと生成された命令の関係は非常に複雑であり、最適化を行うとデバッグが困難になるためです。 プログラムのリリース構成は、シンボリック デバッグ情報を含まず、完全に最適化されます。
 
-既定では、Visual Studio ではデバッグ ビルド構成が使用されるため、デバッグの前に変更を加える必要はありません。
+既定では、Visual Studio for Mac ではデバッグ ビルド構成が使用されるため、デバッグの前に変更を加える必要はありません。
 
 1. Visual Studio for Mac を起動します。
 
-1. [Visual Studio for Mac での .NET Core コンソール アプリケーションの作成](with-visual-studio-mac.md)に関する記事で作成したプロジェクトを開きます。
+1. 「[Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを作成する](with-visual-studio-mac.md)」で作成したプロジェクトを開きます。
 
    現時点のビルド構成はツールバーに表示されています。 次のツール バーの画像では、アプリのデバッグ バージョンをコンパイルするように Visual Studio が構成されています。
 

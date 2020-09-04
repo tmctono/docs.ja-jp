@@ -3,12 +3,12 @@ title: C# 言語のバージョン管理 - C# ガイド
 description: C# 言語のバージョンがプロジェクトに基づいて決定されるしくみとその選択の背後にある理由について説明します。 既定値を手動でオーバーライドする方法について説明します。
 ms.custom: updateeachrelease
 ms.date: 05/20/2020
-ms.openlocfilehash: a27f3210f399f1bed190c18d778cf3824772d576
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 24797c564890b034683d2989010bc694aabc423c
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656853"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811952"
 ---
 # <a name="c-language-versioning"></a>C# 言語のバージョン管理
 
@@ -37,6 +37,9 @@ C# 8.0 (以降) は .NET Core 3.x 以降のバージョンでのみサポート�
 | .NET Framework   | all     | C# 7.3                      |
 
 ご自分のプロジェクトが、対応するプレビュー バージョンの言語を持つプレビュー フレームワークをターゲットにしている場合、使用される言語バージョンはプレビュー バージョンの言語です。 環境を問わず、そのプレビューでは最新の機能が使用されます。リリース済みの .NET Core バージョンをターゲットにするプロジェクトに影響はありません。
+
+> [!TIP]
+> 現在使用している言語バージョンを確認するには、コードに `#error version` を入れます (大文字と小文字を区別します)。 これによりコンパイラから診断の CS8304 と、使用されているコンパイラのバージョンと現在選択されている言語バージョンが含まれるメッセージが生成されます。
 
 ## <a name="override-a-default"></a>既定値のオーバーライド
 

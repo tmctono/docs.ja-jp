@@ -1,4 +1,5 @@
 ---
+description: try-catch - C# リファレンス
 title: try-catch - C# リファレンス
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 4715a27a94ac86c5e4955c0e8be95c6ee4a28507
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: e3154da2103029f704abd6873d16d372f1ae19ac
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619703"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141999"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C# リファレンス)
 
@@ -131,9 +132,9 @@ catch の詳細については、「[try-catch-finally](try-catch-finally.md)」
 
 非同期メソッドは [async](async.md) 修飾子でマークされ、通常は 1 つ以上の await 式またはステートメントが含まれます。 await 式では、[await](../operators/await.md) 演算子が <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> に適用されます。
 
-コントロールが非同期メソッドの `await` に到達すると、メソッドの進行状況は、待機中のタスクが完了するまで中断されます。 タスクが完了すると、メソッドで実行を再開できます。 詳細については、「[Async および Await を使用した非同期プログラミング](../../programming-guide/concepts/async/index.md)」と「[非同期プログラムにおける制御フロー](../../programming-guide/concepts/async/control-flow-in-async-programs.md)」を参照してください。
+コントロールが非同期メソッドの `await` に到達すると、メソッドの進行状況は、待機中のタスクが完了するまで中断されます。 タスクが完了すると、メソッドで実行を再開できます。 詳細については、[Async および Await を使用した非同期プログラミング](../../programming-guide/concepts/async/index.md)に関するページをご覧ください。
 
-`await` が適用される完了したタスクは、タスクを返すメソッドでハンドルされない例外が発生したことが原因で、違反状態になる場合があります。 タスクを待機すると例外がスローされます。 タスクを返す非同期処理が取り消された場合に、取り消された状態でタスクを終了することもできます。 取り消されたタスクを待機すると、`OperationCanceledException` がスローされます。 非同期処理を取り消す方法の詳細については、「[非同期アプリケーションの微調整](../../programming-guide/concepts/async/fine-tuning-your-async-application.md)」を参照してください。
+`await` が適用される完了したタスクは、タスクを返すメソッドでハンドルされない例外が発生したことが原因で、違反状態になる場合があります。 タスクを待機すると例外がスローされます。 タスクを返す非同期処理が取り消された場合に、取り消された状態でタスクを終了することもできます。 キャンセルされたタスクを待機していると、`OperationCanceledException` がスローされます。
 
 例外をキャッチするには、`try` ブロックでタスクを待機し、関連付けられている `catch` ブロックで例外をキャッチします。 例については、[async メソッドの例](#async-method-example)に関するセクションを参照してください。
 

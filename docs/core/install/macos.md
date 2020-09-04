@@ -4,12 +4,12 @@ description: .NET Core をインストールできる macOS のバージョン�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/25/2020
-ms.openlocfilehash: 951e9b6a64d55274729e233b4a2d7728c75d05d4
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 19d5ca77b0308533c8f228be70c61daf1b7f82d9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302933"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89132756"
 ---
 # <a name="install-net-core-on-macos"></a>macOS に .NET Core をインストールする
 
@@ -159,7 +159,7 @@ export PATH=$PATH:$HOME/dotnet
 
 ## <a name="install-with-visual-studio-for-mac"></a>Visual Studio for Mac を使用してインストールする
 
-Visual Studio for Mac では、 **[.NET Core]** ワークロードを選択すると、.NET Core SDK がインストールされます。 macOS で .NET Core の開発を始めるには、「[Visual Studio 2019 for Mac をインストールする](/visualstudio/mac/installation)」を参照してください。 最新リリースである .NET Core 3.1 の場合は、Visual Studio for Mac 8.4 Preview を使用する必要があります。
+Visual Studio for Mac では、 **[.NET Core]** ワークロードを選択すると、.NET Core SDK がインストールされます。 macOS で .NET Core の開発を始めるには、「[Visual Studio 2019 for Mac をインストールする](/visualstudio/mac/installation)」を参照してください。 最新リリースである .NET Core 3.1 の場合は、Visual Studio for Mac 8.4 を使用する必要があります。
 
 [![macOS Visual Studio 2019 for Mac と .NET Core ワークロード機能](media/install-sdk/mac-install-selection.png)](media/install-sdk/mac-install-selection.png#lightbox)
 

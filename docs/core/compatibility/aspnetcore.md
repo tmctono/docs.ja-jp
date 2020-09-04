@@ -2,21 +2,27 @@
 title: ASP.NET Core の破壊的変更
 titleSuffix: ''
 description: ASP.NET Core における破壊的変更をリストアップします。
-ms.date: 07/17/2020
+ms.date: 08/25/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 1506e0aa27778d44497252231028689259f48896
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: 443494291f4ec58aecd7c8d8ed42cb4086e64095
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720242"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957731"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core の破壊的変更
 
 ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能が提供されます。
 
-このページでは、次の破壊的変更について説明します。
+特定のバージョンの破壊的変更については、次のリンクのいずれかを選択します。
+
+* [ASP.NET Core 5.0](#aspnet-core-50)
+* [ASP.NET Core 3.1](#aspnet-core-31)
+* [ASP.NET Core 3.0](#aspnet-core-30)
+
+ASP.NET Core 3.0、3.1、5.0 の次の破壊的変更はこのページに記録されています。
 
 - [Antiforgery、CORS、Diagnostics、MVC、Routing の古い API の削除](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
 - [認証:Google+ の非推奨](#authentication-google-deprecated-and-replaced)
@@ -69,11 +75,13 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 - [ローカリゼーション:ローカライズ ミドルウェア要求で古いコンストラクターを削除](#localization-obsolete-constructor-removed-in-request-localization-middleware)
 - [ローカリゼーション:ResourceManagerWithCultureStringLocalizer クラスと WithCulture インターフェイス メンバーを削除](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [ログ:internal になった DebugLogger クラス](#logging-debuglogger-class-made-internal)
+- [ミドルウェア:非推奨とマークされたデータベース エラー ページ](#middleware-database-error-page-marked-as-obsolete)
 - [MVC:コントローラー アクション Async サフィックスを削除](#mvc-async-suffix-trimmed-from-controller-action-names)
 - [MVC:JsonResult を Microsoft.AspNetCore.Mvc.Core に移動](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
 - [MVC:プリコンパイル ツールを非推奨](#mvc-precompilation-tool-deprecated)
 - [MVC:型を internal に変更](#mvc-pubternal-types-changed-to-internal)
 - [MVC:Web API 互換性 shim を削除](#mvc-web-api-compatibility-shim-removed)
+- [Razor:RazorTemplateEngine API が削除されました](#razor-razortemplateengine-api-removed)
 - [Razor:実行時コンパイルをパッケージに移動](#razor-runtime-compilation-moved-to-a-package)
 - [セキュリティ:Cookie 名のエンコードを削除](#security-cookie-name-encoding-removed)
 - [セキュリティ:IdentityModel NuGet パッケージのバージョンを更新](#security-identitymodel-nuget-package-versions-updated)
@@ -159,6 +167,10 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 ***
 
 [!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
+
+***
+
+[!INCLUDE[Middleware: Database error page marked as obsolete](~/includes/core-changes/aspnetcore/5.0/middleware-database-error-page-obsolete.md)]
 
 ***
 
@@ -343,6 +355,10 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 ***
 
 [!INCLUDE[MVC: Web API compatibility shim removed](~/includes/core-changes/aspnetcore/3.0/mvc-webapi-compat-shim-removed.md)]
+
+***
+
+[!INCLUDE[Razor: RazorTemplatEengine API removed](~/includes/core-changes/aspnetcore/3.0/razor-razortemplateengine-api-removed.md)]
 
 ***
 

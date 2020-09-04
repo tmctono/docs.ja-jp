@@ -4,12 +4,12 @@ description: Ubuntu に .NET Core SDK と .NET Core ランタイムをインス�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: c590bd89b718a5cd31dae9f83049eac910cb4049
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 9694dac719024264edee849044f048970b63b7b7
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86863892"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89132945"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-ubuntu"></a>Ubuntu に .NET Core SDK または .NET Core ランタイムをインストールする
 
@@ -173,7 +173,7 @@ sudo apt-get upgrade
 
 このセクションでは、APT を使用して .NET Core をインストールするときに発生する可能性のある一般的なエラーについて説明します。
 
-### <a name="unable-to-locate"></a>見つからない
+### <a name="unable-to-locate--some-packages-could-not-be-installed"></a>見つからない \\ 一部のパッケージをインストールできませんでした
 
 [!INCLUDE [package-manager-failed-to-find-deb](includes/package-manager-failed-to-find-deb.md)]
 

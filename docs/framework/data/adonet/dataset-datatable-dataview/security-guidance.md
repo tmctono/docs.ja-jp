@@ -3,12 +3,12 @@ title: DataSet と DataTable のセキュリティ ガイダンス
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: f0fa43c467cc7866e69115acb5f807e6487fda7a
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 4fe8a062c762cc70d33243e3443aa9bf55635f98
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608528"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137618"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>DataSet と DataTable のセキュリティ ガイダンス
 
@@ -34,10 +34,20 @@ ms.locfileid: "88608528"
 
 受信 XML データに、このリストにない型のオブジェクトが含まれている場合:
 
-* 例外がスローされる。
+* 例外が、次のメッセージおよびスタック トレースでスローされます。  
+エラー メッセージ:  
+System.InvalidOperationException :Type '\<Type Name\>, Version=\<n.n.n.n\>, Culture=\<culture\>, PublicKeyToken=\<token value\>' is not allowed here. 詳細については、「[https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227)」を参照してください。  
+スタック トレース:  
+at System.Data.TypeLimiter.EnsureTypeIsAllowed(Type type, TypeLimiter capturedLimiter)  
+at System.Data.DataColumn.UpdateColumnType(Type type, StorageType typeCode)  
+at System.Data.DataColumn.set_DataType(Type value)  
+
 * 逆シリアル化操作が失敗する。
 
 既存の `DataSet` または `DataTable` インスタンスに XML を読み込むときは、既存の列の定義も考慮されます。 テーブルにカスタム型の列定義が既に含まれている場合は、XML の逆シリアル化操作の間だけ、その型が許可リストに一時的に追加されます。
+
+> [!NOTE]
+> 列を `DataTable` に追加すると、`ReadXml` は XML からスキーマを読み取らず、スキーマが一致しない場合は、レコードも読み取りません。そのため、このメソッドを使用するには、すべての列を手動で追加する必要があります。
 
 ```cs
 XmlReader xmlReader = GetXmlReader();

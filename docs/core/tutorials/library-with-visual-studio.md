@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet,contperfq1
-ms.openlocfilehash: 595e93d8d8d22478c6770ddd4f70a0214653f5b9
-ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
+ms.openlocfilehash: 45a44dcd73e1abcc8dfd75cd54da5a2310f027c4
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88187948"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118261"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>チュートリアル: Visual Studio を使用して .NET Standard ライブラリを作成する
 
@@ -70,7 +70,7 @@ ms.locfileid: "88187948"
 
    `StartsWithUpper` は、<xref:System.String> クラスのメンバーであるかのように呼び出すことができる[拡張メソッド](../../csharp/programming-guide/classes-and-structs/extension-methods.md)として実装されます。
 
-1. メニュー バーで、 **[ビルド]**  >  **[ソリューションのビルド]** を選択し、プロジェクトがエラーなくコンパイルされることを確認します。
+1. メニュー バーで、 **[ビルド]**  >  **[ソリューションのビルド]** を選択するか、<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> キーを押して、プロジェクトがエラーなくコンパイルされることを確認します。
 
 ## <a name="add-a-console-app-to-the-solution"></a>ソリューションにコンソール アプリを追加する
 

@@ -1,4 +1,5 @@
 ---
+description: C# での構造体型について
 title: 構造体型 - C# リファレンス
 ms.date: 04/21/2020
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 515b8d9adc1359581625f0d822e254d2c1df3b58
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 7f3940ce487b9e382150234f317cf1dba34bb060
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062497"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89132730"
 ---
 # <a name="structure-types-c-reference"></a>構造体型 (C# リファレンス)
 
@@ -38,14 +39,14 @@ C# 7.2 以降では、構造体型が変更不可であることを宣言する�
 - すべてのフィールド宣言には、[`readonly` 修飾子が必要です](../keywords/readonly.md)
 - 自動的に実装されるプロパティも含めて、すべてのプロパティは、読み取り専用である必要があります
 
-それにより、`readonly` 構造体のどのメンバーも構造体の状態を変更しないことが保証されます。
+それにより、`readonly` 構造体のどのメンバーも構造体の状態を変更しないことが保証されます。 C# 8.0 以降では、コンストラクターを除く他のインスタンス メンバーは、暗黙的に [`readonly`](#readonly-instance-members) になるということです。
 
 > [!NOTE]
 > `readonly` 構造体でも、変更可能な参照型のデータ メンバーは、それ自身の状態を変更できます。 たとえば、<xref:System.Collections.Generic.List%601> インスタンスを置き換えることはできませんが、新しい要素をそれに追加することはできます。
 
 ## <a name="readonly-instance-members"></a>`readonly` インスタンス メンバー
 
-C# 8.0 以降では、`readonly` 修飾子を使用して、インスタンス メンバーで構造体の状態を変更しないことを宣言することもできます。 構造体の型全体を `readonly` として宣言できない場合は、`readonly` 修飾子を使用して、構造体の状態を変更しないインスタンス メンバーをマークします。 `readonly` 構造体では、すべてのインスタンス メンバーは暗黙的に `readonly` です。
+C# 8.0 以降では、`readonly` 修飾子を使用して、インスタンス メンバーで構造体の状態を変更しないことを宣言することもできます。 構造体の型全体を `readonly` として宣言できない場合は、`readonly` 修飾子を使用して、構造体の状態を変更しないインスタンス メンバーをマークします。
 
 `readonly` インスタンス メンバー内では、構造体のインスタンス フィールドに割り当てることはできません。 ただし、`readonly` メンバーから非 `readonly` メンバーを呼び出すことができます。 その場合、コンパイラを使用して構造体インスタンスのコピーを作成し、そのコピーで非 `readonly` メンバーを呼び出します。 その結果、元の構造インスタンスは変更されません。
 

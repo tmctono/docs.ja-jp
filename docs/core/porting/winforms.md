@@ -4,12 +4,12 @@ description: .NET Framework Windows フォーム アプリケーションを .NE
 author: Thraka
 ms.author: adegeo
 ms.date: 01/24/2020
-ms.openlocfilehash: efa73428c816eddc00c62c2275d3457c92284388
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 71bd5740e1ea380fdde86328a5aed71fded64765
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206134"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118547"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Windows フォーム デスクトップ アプリを .NET Core に移植する方法
 
@@ -26,7 +26,7 @@ ms.locfileid: "83206134"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- デザイナー作業を行う必要がある場合、[Visual Studio 2019 16.5 Preview 1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&ch=pre&rel=16) 以降。 最新の[プレビュー バージョンの Visual Studio](https://visualstudio.microsoft.com/vs/preview/) に更新することをお勧めします。
+- デザイナー作業を行う必要がある場合、[Visual Studio 2019 バージョン 16.5 以降](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&rel=16)。 [最新バージョンの Visual Studio](https://visualstudio.microsoft.com/vs/) に更新することをお勧めします。
 
   次の Visual Studio ワークロードをインストールします。
   
@@ -37,7 +37,7 @@ ms.locfileid: "83206134"
 - C# でコードを書いたプロジェクト。
 
 > [!NOTE]
-> .NET Core 3.0 プロジェクトは、**Visual Studio 2019** 以降のバージョンでのみサポートされています。 **Visual Studio 2019 version 16.5 Preview 1** 以降では、.NET Core Windows フォーム デザイナーもサポートされています。
+> .NET Core Windows フォーム プロジェクトは、Visual Studio 2019 以降のバージョンでサポートされます。 .NET Core Windows フォーム デザイナーは、Visual Studio 2019 バージョン 16.5 以降でサポートされます。
 >
 > デザイナーを有効にするには、 **[ツール]**  >  **[オプション]**  >  **[環境]**  >  **[プレビュー機能]** に移動し、 **[Use the preview Windows Forms designer for .NET Core apps]\(プレビュー版 Windows フォーム デザイナー (.NET Core アプリ) を使用する\)** オプションを選択します。
 

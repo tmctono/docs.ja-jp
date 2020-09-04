@@ -4,14 +4,14 @@ description: メソッド、メソッド パラメーター、メソッド戻り
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 09a287b3d74e1b8dbdaf4a53cb207dfe1fad8a0c
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 8c33bcb9dd4052589222c2cb1b375d94d6792ba2
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063355"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810574"
 ---
-# <a name="methods"></a>メソッド
+# <a name="methods-in-c"></a>(C#) のメソッド
 
 メソッドは、一連のステートメントが含まれているコード ブロックです。 必要なメソッド引数を指定してプログラムからメソッドを呼び出すと、メソッド内のステートメントが実行されます。 C# では、実行されるすべての命令がメソッドのコンテキストで実行されます。 `Main` メソッドは、すべての C# アプリケーションのエントリ ポイントです。プログラムが開始されると、このメソッドが共通言語ランタイム (CLR) によって呼び出されます。
 
@@ -32,7 +32,7 @@ ms.locfileid: "88063355"
 
 これらのまとまりがメソッド シグネチャとなります。
 
-> [!NOTE]
+> [!IMPORTANT]
 > メソッドのオーバーロードを可能にするために、メソッドの戻り値の型はメソッドのシグネチャには含まれません。 ただし、デリゲートとそれが指すメソッドの互換性を決定する場合には、メソッドのシグネチャの一部となります。
 
 次の例では、5 つのメソッドを含む `Motorcycle` という名前のクラスを定義します。
@@ -249,11 +249,11 @@ Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 
 次の例では、`DelayAsync` は、整数を返す return ステートメントのある非同期メソッドです。 非同期メソッドであるため、そのメソッド宣言で戻り値の型 `Task<int>` を指定する必要があります。 戻り値の型が `Task<int>`であるため、次のステートメント `int result = await delayTask` に示すように、`DoSomethingAsync` 内の `await` 式を評価すると整数が生成されます。
 
-[!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
+:::code language="csharp" source="programming-guide/classes-and-structs/snippets/classes-and-structs/methods/Program.cs":::
 
 非同期メソッドで [in](language-reference/keywords/in-parameter-modifier.md)、[ref](language-reference/keywords/ref.md)、[out](language-reference/keywords/out-parameter-modifier.md) パラメーターを宣言することはできませんが、これらのパラメーターを持つメソッドを呼び出すことはできます。
 
- 非同期メソッドの詳細については、「[Async および Await を使用した非同期プログラミング](async.md)」、「[非同期プログラムにおける制御フロー](programming-guide/concepts/async/control-flow-in-async-programs.md)」、「[非同期の戻り値の型](programming-guide/concepts/async/async-return-types.md)」を参照してください。
+ 非同期メソッドの詳細については、「[async および await を使用した非同期プログラミング](async.md)」と[非同期の戻り値の型](programming-guide/concepts/async/async-return-types.md)に関するページを参照してください。
 
 <a name="expr"></a>
 
