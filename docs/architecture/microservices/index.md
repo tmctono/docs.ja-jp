@@ -1,19 +1,19 @@
 ---
 title: .NET マイクロサービス。 コンテナー化された .NET アプリケーションのアーキテクチャ
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービスはモジュール式で独自に展開可能なサービスです。 Docker コンテナー (Linux と Windows 向け) は、サービスとその依存関係を 1 つの単位にバンドル化する (その後、分離された環境で実行される) ことで、展開とテストを簡略化します。
-ms.date: 01/30/2020
-ms.openlocfilehash: 9cdd5556f92e1acde540b647e7b68628a3ecf67f
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 09/02/2020
+ms.openlocfilehash: aea5012fee102f388827d146043e69592e14f22b
+ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988792"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89379136"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ
 
 ![本の表紙](./media/cover-small.png)
 
-**エディション v3.1** - ASP.NET Core 3.1 に更新
+**エディション v 3.1.2** - ASP.NET Core 3.1 に更新されました
 
 このガイドでは、マイクロサービス ベースのアプリケーションの開発とコンテナーを使用してこれらを管理する方法を紹介します。 .NET Core と Docker のコンテナーを使用したアーキテクチャの設計と実装アプローチについて説明します。
 
@@ -23,7 +23,7 @@ ms.locfileid: "80988792"
 
 - この電子書籍は、PDF 形式 (英語版のみ) で[ダウンロード](https://aka.ms/microservicesebook)することもできます
 
-- 参照アプリケーションをクローン/フォーク[ on GitHub の eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)
+- 参照アプリケーションを複製/フォーク[ on GitHub の eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)
 
 - [Channel 9 で入門ビデオ](https://aka.ms/microservices-video)を視聴
 
@@ -68,11 +68,11 @@ Docker は、コンテナー業界では事実上の標準になりつつあり�
 
 このガイドの最初の部分では、Docker コンテナーを紹介し、開発フレームワークとして .NET Core または .NET Framework を選択する方法について説明し、マイクロサービスの概要を説明します。 このコンテンツは、概要は知りたいが、コード実装の詳細について詳しく知る必要がないアーキテクトおよび技術的意思決定者向けです。
 
-ガイドの 2 番目の部分は、「[Docker ベースのアプリケーションの開発プロセス](./docker-application-development-process/index.md)」セクションから始まります。 これは、.NET Core と Docker を使用してアプリケーションを実装するための開発とマイクロ サービスのパターンを中心に説明します。 これは、コード、パターンおよび実装の詳細を重視する開発者やアーキテクトにとって最も関心が高いセクションです。
+ガイドの 2 番目の部分は、「[Docker ベースのアプリケーションの開発プロセス](./docker-application-development-process/index.md)」セクションから始まります。 .NET Core と Docker を使用してアプリケーションを実装するための開発とマイクロサービスのパターンに焦点を当てています。 これは、コード、パターンおよび実装の詳細を重視する開発者やアーキテクトにとって最も関心が高いセクションです。
 
 ## <a name="related-microservice-and-container-based-reference-application-eshoponcontainers"></a>関連するマイクロサービスとコンテナー ベースの参照アプリケーション: eShopOnContainers
 
-eShopOnContainers アプリケーションは、 Docker コンテナーを使用して展開するように設計された .NET Core とマイクロサービスのためのオープン ソースの参照アプリです。 アプリケーションは、さまざまな e ストア UI フロント エンド (Web MVC アプリ、Web SPA、およびネイティブ モバイル アプリ) を含む複数のサブシステムで構成されます。 また、バック エンドのマイクロサービスと必要なサーバー側のすべての操作のためのコンテナーも含まれています。
+eShopOnContainers アプリケーションは、 Docker コンテナーを使用して展開するように設計された .NET Core とマイクロサービスのためのオープン ソースの参照アプリです。 アプリケーションは、さまざまな e ストア UI フロントエンド (Web MVC アプリ、Web SPA、およびネイティブ モバイル アプリ) を含む複数のサブシステムで構成されます。 また、バック エンドのマイクロサービスと必要なサーバー側のすべての操作のためのコンテナーも含まれています。
 
 このアプリケーションの目的は、アーキテクチャのパターンを紹介することです。 それは、現実の世界で使用されるアプリケーションを開始するための**実稼働可能なテンプレートではありません**。 実際は、このアプリケーションは永久にベータ版の状態であり、新しい可能性のある興味深いテクノロジをテストするためにも使用されます。
 
@@ -145,6 +145,8 @@ eShopOnContainers アプリケーションは、 Docker コンテナーを使用
 > **Charles Lowell**、Microsoft、VS CAT チーム、ソフトウェア エンジニア
 >
 > **Miguel Veloso**、Plain Concepts のソフトウェア開発エンジニア
+>
+> **Sumit Ghosh**、Neudesic、主席コンサルタント
 
 ## <a name="copyright"></a>Copyright
 

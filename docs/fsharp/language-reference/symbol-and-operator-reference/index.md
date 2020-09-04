@@ -1,22 +1,19 @@
 ---
 title: シンボルと演算子のリファレンス
 description: F# プログラミング言語で使用するシンボルと演算子について説明します。
-ms.date: 02/11/2019
+ms.date: 08/15/2020
 fl_keywords:
 - '|>_FS'
-ms.openlocfilehash: 4c3af80e8f5a686535b7c09579d29bb3da8591a3
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 5943352f0a1710ba7a666a79b7871b7269c75a6b
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855398"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359091"
 ---
 # <a name="symbol-and-operator-reference"></a>シンボルと演算子のリファレンス
 
 この記事では、F# 言語で使用するシンボルと演算子の表を示します。
-
-> [!NOTE]
-> F# 用の docs.microsoft.com API リファレンスは完全ではありません。 壊れたリンクが見つかった場合は、代わりに [F# コア ライブラリのドキュメント](https://fsharp.github.io/fsharp-core-docs/)を参照してください。
 
 ## <a name="table-of-symbols-and-operators"></a>シンボルと演算子の表
 
@@ -76,9 +73,12 @@ ms.locfileid: "87855398"
 |`<>?`|[Null 許容の演算子](nullable-operators.md)|<ul><li>右辺が null 許容型である場合は、"等しくない" 演算を実行します。<br /></li></ul>|
 |`<=`|[算術演算子](arithmetic-operators.md)|<ul><li>左辺が右辺以下である場合は `true` を返します。それ以外の場合は `false` を返します。<br /></li></ul>|
 |`<=?`|[Null 許容の演算子](nullable-operators.md)|<ul><li>右辺が null 許容型である場合は、"以下" 演算を実行します。<br /></li></ul>|
+|<code>&#124;></code>|[関数](../functions/index.md)|<ul><li>左辺の結果を関数を右辺の関数に渡します (前方パイプ演算子)。<br /></li></ul>|
+|<code>&#124;&#124;></code>|[&#40; &#124;&#124;&#62; &#41;&#60;'T1,'T2,'U&#62; 関数](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#(%20%7C%7C%3E%20))|<ul><li>左辺の 2 つの引数のタプルを右辺の関数に渡します。<br /></li></ul>|
+|<code>&#124;&#124;&#124;></code>|[&#40; &#124;&#124;&#124;&#62; &#41;&#60;'T1,'T2,'T3,'U&#62; 関数](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#(%20%7C%7C%7C%3E%20))|<ul><li>左辺の 3 つの引数のタプルを右辺の関数に渡します。<br /></li></ul>|
 |<code>&lt;&#124;</code>|[関数](../functions/index.md)|<ul><li>右辺の式の結果を左辺の関数に渡します (後方パイプ演算子)。<br /></li></ul>|
-|<code>&lt;&#124;&#124;</code>|[Operators.&#40; &#60;&#124;&#124; &#41;&#60;'T1,'T2,'U&#62; 関数](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhh-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>右辺にある 2 つの引数のタプルを左辺の関数に渡します。<br /></li></ul>|
-|<code>&lt;&#124;&#124;&#124;</code>|[Operators.&#40; &#60;&#124;&#124;&#124; &#41;&#60;'T1,'T2,'T3,'U&#62; 関数](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhhh-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>右辺にある 3 つの引数のタプルを左辺の関数に渡します。<br /></li></ul>|
+|<code>&lt;&#124;&#124;</code>|[&#40; &#60;&#124;&#124; &#41;&#60;'T1,'T2,'U&#62; 関数](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#(%20%3C%7C%7C%20))|<ul><li>右辺にある 2 つの引数のタプルを左辺の関数に渡します。<br /></li></ul>|
+|<code>&lt;&#124;&#124;&#124;</code>|[&#40; &#60;&#124;&#124;&#124; &#41;&#60;'T1,'T2,'T3,'U&#62; 関数](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#(%20%3C%7C%7C%7C%20))|<ul><li>右辺にある 3 つの引数のタプルを左辺の関数に渡します。<br /></li></ul>|
 |`<@...@>`|[コード クォート](../code-quotations.md)|<ul><li>型指定されたコード クォートを区切ります。<br /></li></ul>|
 |`<@@...@@>`|[コード クォート](../code-quotations.md)|<ul><li>型指定されていないコード クォートを区切ります。<br /></li></ul>|
 |`=`|[算術演算子](arithmetic-operators.md)|<ul><li>左辺が右辺と等しい場合は `true` を返します。それ以外の場合は `false` を返します。<br /></li></ul>|
@@ -108,9 +108,6 @@ ms.locfileid: "87855398"
 |<code>&#124;</code>|[match 式](../match-expressions.md)|<ul><li>個々の一致ケース、個々の判別共用体ケース、および列挙値を区切ります。<br /></li></ul>|
 |<code>&#124;&#124;</code>|[ブール演算子](boolean-operators.md)|<ul><li>ブール型の OR 演算を実行します。<br /></li></ul>|
 |<code>&#124;&#124;&#124;</code>|[ビット処理演算子 &、^、&#124;](bitwise-operators.md)|<ul><li>ビットごとの OR 演算を実行します。<br /></li></ul>|
-|<code>&#124;></code>|[関数](../functions/index.md)|<ul><li>左辺の結果を関数を右辺の関数に渡します (前方パイプ演算子)。<br /></li></ul>|
-|<code>&#124;&#124;></code>|[Operators.&#40; &#124;&#124;&#62; &#41;&#60;'T1,'T2,'U&#62; 関数](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hh%5d-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>左辺の 2 つの引数のタプルを右辺の関数に渡します。<br /></li></ul>|
-|<code>&#124;&#124;&#124;></code>|[Operators.&#40; &#124;&#124;&#124;&#62; &#41;&#60;'T1,'T2,'T3,'U&#62; 関数](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hhh%5d-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>左辺の 3 つの引数のタプルを右辺の関数に渡します。<br /></li></ul>|
 |`~~`|[演算子のオーバーロード](../operator-overloading.md)|<ul><li>単項否定演算子のオーバー ロードを宣言するために使用されます。<br /></li></ul>|
 |`~~~`|[ビット処理演算子 &、^、&#124;](bitwise-operators.md)|<ul><li>ビットごとの NOT 演算を実行します。<br /></li></ul>|
 |`~-`|[演算子のオーバーロード](../operator-overloading.md)|<ul><li>単項マイナス演算子のオーバー ロードを宣言するために使用されます。<br /></li></ul>|

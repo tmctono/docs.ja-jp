@@ -11,12 +11,12 @@ metadata:
   helpviewer_keywords:
   - .NET Framework guide
   ms.date: 04/22/2020
-  ms.openlocfilehash: 67e1549395ab5657a5d609b186fc1816211c5af3
-  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+  ms.openlocfilehash: 47781bbc5b1b1a2f4c0bc44929c5bb29fe3e7978
+  ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 04/24/2020
-  ms.locfileid: "82135907"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89379175"
 landingContent:
 - title: .NET Framework の詳細
   linkLists:
@@ -74,24 +74,16 @@ landingContent:
     links:
     - text: Windows サービスをインストールおよびアンインストールする
       url: windows-services/how-to-install-and-uninstall-services.md
-- title: Windows フォーム アプリを作成する
+- title: デスクトップ アプリを作成する
   linkLists:
   - linkListType: overview
     links:
-    - text: Windows フォームの概要
-      url: winforms/index.md
-  - linkListType: tutorial
-    links:
-    - text: Windows フォーム デザイナーを使ってみる
-      url: /visualstudio/designers/walkthrough-windows-forms-designer
-    - text: コマンド ラインから Windows フォーム アプリを作成する
-      url: winforms/how-to-create-a-windows-forms-application-from-the-command-line.md
-  - linkListType: how-to-guide
-    links:
-    - text: ComboBox、ListBox、および CheckedListBox コントロールの項目を追加および削除する
-      url: winforms/controls/add-and-remove-items-from-a-wf-combobox.md
-    - text: コントロールに対してスレッドセーフな呼び出しを行う
-      url: winforms/controls/how-to-make-thread-safe-calls-to-windows-forms-controls.md
+    - text: デスクトップ ガイドの概要
+      url: /dotnet/desktop/
+    - text: .NET Framework WPF
+      url: wpf/index.md
+    - text: .NET Framework Windows フォーム
+      url: /dotnet/desktop/winforms/?view=netframework-4-8
 - title: WPF アプリを作成する
   linkLists:
   - linkListType: overview
