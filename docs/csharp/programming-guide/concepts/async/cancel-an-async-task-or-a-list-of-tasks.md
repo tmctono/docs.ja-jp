@@ -1,527 +1,205 @@
 ---
-title: 非同期タスクまたはタスクの一覧のキャンセル (C#)
-description: これらの例を使用して、非同期アプリケーションをその完了前にキャンセルするボタンを追加します。 この C# アプリケーションによって、1 つ以上の Web サイトのコンテンツがダウンロードされます。
-ms.date: 07/20/2015
+title: タスクの一覧をキャンセルする (C#)
+description: キャンセル トークンを使用して、タスクの一覧にキャンセル要求を通知する方法について説明します。
+ms.date: 08/19/2020
+ms.topic: tutorial
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 21bdbc3bc7c3b752fab160429d71356fb87d9976
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 30bef5d1a5082fbd3757377dbedb8f9b9d17e218
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925347"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053094"
 ---
-# <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a><span data-ttu-id="ba872-104">非同期タスクまたはタスクの一覧のキャンセル (C#)</span><span class="sxs-lookup"><span data-stu-id="ba872-104">Cancel an async task or a list of tasks (C#)</span></span>
+# <a name="cancel-a-list-of-tasks-c"></a><span data-ttu-id="7dc38-103">タスクの一覧をキャンセルする (C#)</span><span class="sxs-lookup"><span data-stu-id="7dc38-103">Cancel a list of tasks (C#)</span></span>
 
-<span data-ttu-id="ba872-105">非同期のアプリケーションが終了するまで待機しない場合、それを取り消すために使用できるボタンを設定できます。</span><span class="sxs-lookup"><span data-stu-id="ba872-105">You can set up a button that you can use to cancel an async application if you don't want to wait for it to finish.</span></span> <span data-ttu-id="ba872-106">このトピックの例に従うと、1 つの Web サイトのコンテンツまたは Web サイトのリストをダウンロードするアプリケーションにキャンセル ボタンを追加できます。</span><span class="sxs-lookup"><span data-stu-id="ba872-106">By following the examples in this topic, you can add a cancellation button to an application that downloads the contents of one website or a list of websites.</span></span>
+<span data-ttu-id="7dc38-104">非同期のコンソール アプリケーションは、終了まで待機しない場合にキャンセルすることができます。</span><span class="sxs-lookup"><span data-stu-id="7dc38-104">You can cancel an async console application if you don't want to wait for it to finish.</span></span> <span data-ttu-id="7dc38-105">このトピックの例に従うと、Web サイトの一覧のコンテンツをダウンロードするアプリケーションにキャンセルを追加できます。</span><span class="sxs-lookup"><span data-stu-id="7dc38-105">By following the example in this topic, you can add a cancellation to an application that downloads the contents of a list of websites.</span></span> <span data-ttu-id="7dc38-106">各タスクに <xref:System.Threading.CancellationTokenSource> インスタンスを関連付けると、多くのタスクをキャンセルすることができます。</span><span class="sxs-lookup"><span data-stu-id="7dc38-106">You can cancel many tasks by associating the <xref:System.Threading.CancellationTokenSource> instance with each task.</span></span> <span data-ttu-id="7dc38-107"><kbd>Enter</kbd> キーを選択すると、完了していないすべてのタスクがキャンセルされます。</span><span class="sxs-lookup"><span data-stu-id="7dc38-107">If you select the <kbd>Enter</kbd> key, you cancel all tasks that aren't yet complete.</span></span>
 
-<span data-ttu-id="ba872-107">例では、「[非同期アプリケーションの微調整 (C#)](./fine-tuning-your-async-application.md)」で説明している UI を使用しています。</span><span class="sxs-lookup"><span data-stu-id="ba872-107">The examples use the UI that [Fine-Tuning Your Async Application (C#)](./fine-tuning-your-async-application.md) describes.</span></span>
+<span data-ttu-id="7dc38-108">このチュートリアルの内容:</span><span class="sxs-lookup"><span data-stu-id="7dc38-108">This tutorial covers:</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="ba872-108">この例を実行するには、コンピューターに Visual Studio 2012 以降および .NET Framework 4.5 以降がインストールされている必要があります。</span><span class="sxs-lookup"><span data-stu-id="ba872-108">To run the examples, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>
+> [!div class="checklist"]
+>
+> - <span data-ttu-id="7dc38-109">.NET コンソール アプリケーションの作成</span><span class="sxs-lookup"><span data-stu-id="7dc38-109">Creating a .NET console application</span></span>
+> - <span data-ttu-id="7dc38-110">キャンセルをサポートする非同期アプリケーションの作成</span><span class="sxs-lookup"><span data-stu-id="7dc38-110">Writing an async application that supports cancellation</span></span>
+> - <span data-ttu-id="7dc38-111">キャンセル通知のデモンストレーション</span><span class="sxs-lookup"><span data-stu-id="7dc38-111">Demonstrating signaling cancellation</span></span>
 
-## <a name="cancel-a-task"></a><span data-ttu-id="ba872-109">タスクをキャンセルする</span><span class="sxs-lookup"><span data-stu-id="ba872-109">Cancel a task</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="7dc38-112">前提条件</span><span class="sxs-lookup"><span data-stu-id="7dc38-112">Prerequisites</span></span>
 
-<span data-ttu-id="ba872-110">最初の例では、**キャンセル** ボタンを単一のダウンロード タスクと関連付けます。</span><span class="sxs-lookup"><span data-stu-id="ba872-110">The first example associates the **Cancel** button with a single download task.</span></span> <span data-ttu-id="ba872-111">アプリケーションがコンテンツをダウンロード中にボタンをクリックすると、ダウンロードは取り消されます。</span><span class="sxs-lookup"><span data-stu-id="ba872-111">If you choose the button while the application is downloading content, the download is canceled.</span></span>
+<span data-ttu-id="7dc38-113">このチュートリアルには、次のものが必要です。</span><span class="sxs-lookup"><span data-stu-id="7dc38-113">This tutorial requires the following:</span></span>
 
-### <a name="download-the-example"></a><span data-ttu-id="ba872-112">サンプルをダウンロードする</span><span class="sxs-lookup"><span data-stu-id="ba872-112">Download the example</span></span>
+- [<span data-ttu-id="7dc38-114">.NET 5.0 以降の SDK</span><span class="sxs-lookup"><span data-stu-id="7dc38-114">.NET 5.0 or later SDK</span></span>](https://dotnet.microsoft.com/download/dotnet/5.0)
+- <span data-ttu-id="7dc38-115">統合開発環境 (IDE)</span><span class="sxs-lookup"><span data-stu-id="7dc38-115">Integrated development environment (IDE)</span></span>
+  - [<span data-ttu-id="7dc38-116">Visual Studio、Visual Studio Code、または Visual Studio for Mac をお勧めします</span><span class="sxs-lookup"><span data-stu-id="7dc38-116">We recommend Visual Studio, Visual Studio Code, or Visual Studio for Mac</span></span>](https://visualstudio.microsoft.com)
 
-<span data-ttu-id="ba872-113">完全な Windows Presentation Foundation (WPF) プロジェクトは、「[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」(非同期のサンプル: アプリケーションの微調整) からダウンロードできます。その後、次の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="ba872-113">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>
+### <a name="create-example-application"></a><span data-ttu-id="7dc38-117">サンプル アプリケーションの作成</span><span class="sxs-lookup"><span data-stu-id="7dc38-117">Create example application</span></span>
 
-1. <span data-ttu-id="ba872-114">ダウンロードしたファイルを圧縮解除し、Visual Studio を起動します。</span><span class="sxs-lookup"><span data-stu-id="ba872-114">Decompress the file that you downloaded, and then start Visual Studio.</span></span>
+<span data-ttu-id="7dc38-118">新しい .NET Core コンソール アプリケーションを作成します。</span><span class="sxs-lookup"><span data-stu-id="7dc38-118">Create a new .NET Core console application.</span></span> <span data-ttu-id="7dc38-119">[`dotnet new console`](../../../../core/tools/dotnet-new.md#console) コマンドを使用するか、[Visual Studio](/visualstudio/install/install-visual-studio) から作成できます。</span><span class="sxs-lookup"><span data-stu-id="7dc38-119">You can create one by using the [`dotnet new console`](../../../../core/tools/dotnet-new.md#console) command or from [Visual Studio](/visualstudio/install/install-visual-studio).</span></span> <span data-ttu-id="7dc38-120">任意のコード エディターで *Program.cs* ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="7dc38-120">Open the *Program.cs* file in your favorite code editor.</span></span>
 
-2. <span data-ttu-id="ba872-115">メニュー バーで、 **[ファイル]**  >  **[開く]**  >  **[プロジェクト/ソリューション]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="ba872-115">On the menu bar, choose **File** > **Open** > **Project/Solution**.</span></span>
+### <a name="replace-using-statements"></a><span data-ttu-id="7dc38-121">using ステートメントの置換</span><span class="sxs-lookup"><span data-stu-id="7dc38-121">Replace using statements</span></span>
 
-3. <span data-ttu-id="ba872-116">**[プロジェクトを開く]** ダイアログ ボックスで、圧縮解除したサンプル コードを含むフォルダーを開き、AsyncFineTuningCS のソリューション (.sln) ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="ba872-116">In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningCS.</span></span>
-
-4. <span data-ttu-id="ba872-117">**ソリューション エクスプローラー**で、**CancelATask** プロジェクトのショートカット メニューを開き、 **[スタートアップ プロジェクトに設定]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="ba872-117">In **Solution Explorer**, open the shortcut menu for the **CancelATask** project, and then choose **Set as StartUp Project**.</span></span>
-
-5. <span data-ttu-id="ba872-118">**F5** キーを選択してプロジェクトを実行し (または、**Ctrl**+**F5** キーを押してプロジェクトをデバッグなしで実行します)。</span><span class="sxs-lookup"><span data-stu-id="ba872-118">Choose the **F5** key to run the project (or, press **Ctrl**+**F5** to run the project without debugging it).</span></span>
-
-> [!TIP]
-> <span data-ttu-id="ba872-119">プロジェクトをダウンロードしない場合は、このトピックの最後の MainWindow.xaml.cs ファイルをレビューできます。</span><span class="sxs-lookup"><span data-stu-id="ba872-119">If you don't want to download the project, you can review the MainWindow.xaml.cs files at the end of this topic.</span></span>
-
-### <a name="build-the-example"></a><span data-ttu-id="ba872-120">サンプルをビルドする</span><span class="sxs-lookup"><span data-stu-id="ba872-120">Build the example</span></span>
- <span data-ttu-id="ba872-121">次の変更は、Web サイトをダウンロードするアプリケーションに**キャンセル** ボタンを追加します。</span><span class="sxs-lookup"><span data-stu-id="ba872-121">The following changes add a **Cancel** button to an application that downloads a website.</span></span> <span data-ttu-id="ba872-122">この例のダウンロードまたはビルドをしない場合は、このトピックの最後にある「コード例全体」のセクションで最終製品をレビューできます。</span><span class="sxs-lookup"><span data-stu-id="ba872-122">If you don't want to download or build the example, you can review the final product in the "Complete Examples" section at the end of this topic.</span></span> <span data-ttu-id="ba872-123">アスタリスクはコードの変更点を示しています。</span><span class="sxs-lookup"><span data-stu-id="ba872-123">Asterisks mark the changes in the code.</span></span>
-
- <span data-ttu-id="ba872-124">この例を自分でビルドするには、「例をダウンロードする」のセクションの詳細な手順の指示に従いますが、 **[スタートアップ プロジェクト]** として、 **[CancelATask]** の代わりに **[StarterCode]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="ba872-124">To build the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **StarterCode** as the **StartUp Project** instead of **CancelATask**.</span></span>
-
- <span data-ttu-id="ba872-125">次の変更点をプロジェクトの MainWindow.xaml.cs ファイルに追加します。</span><span class="sxs-lookup"><span data-stu-id="ba872-125">Then add the following changes to the MainWindow.xaml.cs file of that project.</span></span>
-
-1. <span data-ttu-id="ba872-126">アクセスするすべてのメソッドのスコープである `CancellationTokenSource` 変数、`cts` を宣言します。</span><span class="sxs-lookup"><span data-stu-id="ba872-126">Declare a `CancellationTokenSource` variable, `cts`, that’s in scope for all methods that access it.</span></span>
-
-    ```csharp
-    public partial class MainWindow : Window
-    {
-        // ***Declare a System.Threading.CancellationTokenSource.
-        CancellationTokenSource cts;
-    ```
-
-2. <span data-ttu-id="ba872-127">次のような**キャンセル** ボタンのイベント ハンドラーのコードを追加します。</span><span class="sxs-lookup"><span data-stu-id="ba872-127">Add the following event handler for the **Cancel** button.</span></span> <span data-ttu-id="ba872-128">ユーザーが取り消しを要求すると、イベント ハンドラーは <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> メソッドを使って `cts` に通知します。</span><span class="sxs-lookup"><span data-stu-id="ba872-128">The event handler uses the <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> method to notify `cts` when the user requests cancellation.</span></span>
-
-    ```csharp
-    // ***Add an event handler for the Cancel button.
-    private void cancelButton_Click(object sender, RoutedEventArgs e)
-    {
-        if (cts != null)
-        {
-            cts.Cancel();
-        }
-    }
-    ```
-
-3. <span data-ttu-id="ba872-129">**開始**ボタン `startButton_Click` のためのイベント ハンドラーに次の変更を行います。</span><span class="sxs-lookup"><span data-stu-id="ba872-129">Make the following changes in the event handler for the **Start** button, `startButton_Click`.</span></span>
-
-    - <span data-ttu-id="ba872-130">`CancellationTokenSource`、`cts` をインスタンス化します。</span><span class="sxs-lookup"><span data-stu-id="ba872-130">Instantiate the `CancellationTokenSource`, `cts`.</span></span>
-
-        ```csharp
-        // ***Instantiate the CancellationTokenSource.
-        cts = new CancellationTokenSource();
-        ```
-
-    - <span data-ttu-id="ba872-131">指定された Web サイトのコンテンツをダウンロードする `AccessTheWebAsync` の呼び出しでは、引数として <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> の `cts` プロパティを送ります。</span><span class="sxs-lookup"><span data-stu-id="ba872-131">In the call to `AccessTheWebAsync`, which downloads the contents of a specified website, send the <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> property of `cts` as an argument.</span></span> <span data-ttu-id="ba872-132">取り消しが要求されると、`Token` プロパティがメッセージを伝達します。</span><span class="sxs-lookup"><span data-stu-id="ba872-132">The `Token` property propagates the message if cancellation is requested.</span></span> <span data-ttu-id="ba872-133">ユーザーがダウンロード操作の取り消しを選択するとメッセージを表示する catch ブロックを追加します。</span><span class="sxs-lookup"><span data-stu-id="ba872-133">Add a catch block that displays a message if the user chooses to cancel the download operation.</span></span> <span data-ttu-id="ba872-134">次のコードは変更点を示しています。</span><span class="sxs-lookup"><span data-stu-id="ba872-134">The following code shows the changes.</span></span>
-
-        ```csharp
-        try
-        {
-            // ***Send a token to carry the message if cancellation is requested.
-            int contentLength = await AccessTheWebAsync(cts.Token);
-            resultsTextBox.Text += $"\r\nLength of the downloaded string: {contentLength}.\r\n";
-        }
-        // *** If cancellation is requested, an OperationCanceledException results.
-        catch (OperationCanceledException)
-        {
-            resultsTextBox.Text += "\r\nDownload canceled.\r\n";
-        }
-        catch (Exception)
-        {
-            resultsTextBox.Text += "\r\nDownload failed.\r\n";
-        }
-        ```
-
-4. <span data-ttu-id="ba872-135">`AccessTheWebAsync` では、Web サイトのコンテンツをダウンロードするために <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 型の `GetAsync` メソッドの <xref:System.Net.Http.HttpClient> オーバーロードを使用します。</span><span class="sxs-lookup"><span data-stu-id="ba872-135">In `AccessTheWebAsync`, use the  <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> overload of the `GetAsync` method in the <xref:System.Net.Http.HttpClient> type to download the contents of a website.</span></span> <span data-ttu-id="ba872-136">2 番目の引数として、`ct` の <xref:System.Threading.CancellationToken> パラメーターである `AccessTheWebAsync` を渡します。</span><span class="sxs-lookup"><span data-stu-id="ba872-136">Pass `ct`, the <xref:System.Threading.CancellationToken> parameter of `AccessTheWebAsync`, as the second argument.</span></span> <span data-ttu-id="ba872-137">ユーザーが**キャンセル** ボタンをクリックすると、トークンがメッセージを送信します。</span><span class="sxs-lookup"><span data-stu-id="ba872-137">The token carries the message if the user chooses the **Cancel** button.</span></span>
-
-     <span data-ttu-id="ba872-138">次のコードは、`AccessTheWebAsync` の変更点を示しています。</span><span class="sxs-lookup"><span data-stu-id="ba872-138">The following code shows the changes in `AccessTheWebAsync`.</span></span>
-
-    ```csharp
-    // ***Provide a parameter for the CancellationToken.
-    async Task<int> AccessTheWebAsync(CancellationToken ct)
-    {
-        HttpClient client = new HttpClient();
-
-        resultsTextBox.Text += "\r\nReady to download.\r\n";
-
-        // You might need to slow things down to have a chance to cancel.
-        await Task.Delay(250);
-
-        // GetAsync returns a Task<HttpResponseMessage>.
-        // ***The ct argument carries the message if the Cancel button is chosen.
-        HttpResponseMessage response = await client.GetAsync("https://msdn.microsoft.com/library/dd470362.aspx", ct);
-
-        // Retrieve the website contents from the HttpResponseMessage.
-        byte[] urlContents = await response.Content.ReadAsByteArrayAsync();
-
-        // The result of the method is the length of the downloaded website.
-        return urlContents.Length;
-    }
-    ```
-
-5. <span data-ttu-id="ba872-139">プログラムの取り消しをしない場合、次の出力を生成します。</span><span class="sxs-lookup"><span data-stu-id="ba872-139">If you don’t cancel the program, it produces the following output.</span></span>
-
-    ```text
-    Ready to download.
-    Length of the downloaded string: 158125.
-    ```
-
-     <span data-ttu-id="ba872-140">プログラムがコンテンツのダウンロードを終了する前に**キャンセル** ボタンをクリックすると、プログラムは次の出力を生成します。</span><span class="sxs-lookup"><span data-stu-id="ba872-140">If you choose the **Cancel** button before the program finishes downloading the content, the program produces the following output.</span></span>
-
-    ```text
-    Ready to download.
-    Download canceled.
-    ```
-
-## <a name="cancel-a-list-of-tasks"></a><span data-ttu-id="ba872-141">タスクの一覧を取り消す</span><span class="sxs-lookup"><span data-stu-id="ba872-141">Cancel a list of tasks</span></span>
-
-<span data-ttu-id="ba872-142">前の例を拡張すると、同じ `CancellationTokenSource` のインスタンスを各タスクに関連付けることによって、多数のタスクを取り消すことができます。</span><span class="sxs-lookup"><span data-stu-id="ba872-142">You can extend the previous example to cancel many tasks by associating the same `CancellationTokenSource` instance with each task.</span></span> <span data-ttu-id="ba872-143">**キャンセル** ボタンをクリックすると、完了していないすべてのタスクを取り消します。</span><span class="sxs-lookup"><span data-stu-id="ba872-143">If you choose the **Cancel** button, you cancel all tasks that aren’t yet complete.</span></span>
-
-### <a name="download-the-example"></a><span data-ttu-id="ba872-144">サンプルをダウンロードする</span><span class="sxs-lookup"><span data-stu-id="ba872-144">Download the example</span></span>
-
-<span data-ttu-id="ba872-145">完全な Windows Presentation Foundation (WPF) プロジェクトは、「[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」(非同期のサンプル: アプリケーションの微調整) からダウンロードできます。その後、次の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="ba872-145">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>
-
-1. <span data-ttu-id="ba872-146">ダウンロードしたファイルを圧縮解除し、Visual Studio を起動します。</span><span class="sxs-lookup"><span data-stu-id="ba872-146">Decompress the file that you downloaded, and then start Visual Studio.</span></span>
-
-2. <span data-ttu-id="ba872-147">メニュー バーで、 **[ファイル]**  >  **[開く]**  >  **[プロジェクト/ソリューション]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="ba872-147">On the menu bar, choose **File** > **Open** > **Project/Solution**.</span></span>
-
-3. <span data-ttu-id="ba872-148">**[プロジェクトを開く]** ダイアログ ボックスで、圧縮解除したサンプル コードを含むフォルダーを開き、AsyncFineTuningCS のソリューション (.sln) ファイルを開きます。</span><span class="sxs-lookup"><span data-stu-id="ba872-148">In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningCS.</span></span>
-
-4. <span data-ttu-id="ba872-149">**ソリューション エクスプローラー**で、**CancelAListOfTasks** プロジェクトのショートカット メニューを開き、 **[スタートアップ プロジェクトに設定]** をクリックします。</span><span class="sxs-lookup"><span data-stu-id="ba872-149">In **Solution Explorer**, open the shortcut menu for the **CancelAListOfTasks** project, and then choose **Set as StartUp Project**.</span></span>
-
-5. <span data-ttu-id="ba872-150">**F5** キーを押してプロジェクトを実行します。</span><span class="sxs-lookup"><span data-stu-id="ba872-150">Choose the **F5** key to run the project.</span></span>
-
-     <span data-ttu-id="ba872-151">**Ctrl**+**F5** キーを押して、デバッグなしでプロジェクトを実行します。</span><span class="sxs-lookup"><span data-stu-id="ba872-151">Choose the **Ctrl**+**F5** keys to run the project without debugging it.</span></span>
-
-<span data-ttu-id="ba872-152">プロジェクトをダウンロードしない場合は、このトピックの最後の MainWindow.xaml.cs ファイルをレビューできます。</span><span class="sxs-lookup"><span data-stu-id="ba872-152">If you don't want to download the project, you can review the MainWindow.xaml.cs files at the end of this topic.</span></span>
-
-### <a name="build-the-example"></a><span data-ttu-id="ba872-153">サンプルをビルドする</span><span class="sxs-lookup"><span data-stu-id="ba872-153">Build the example</span></span>
-
-<span data-ttu-id="ba872-154">この例を自分で拡張するには、「例をダウンロードする」のセクションの詳細な手順の指示に従いますが、 **[スタートアップ プロジェクト]** として **CancelATask** を選択します。</span><span class="sxs-lookup"><span data-stu-id="ba872-154">To extend the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **CancelATask** as the **StartUp Project**.</span></span> <span data-ttu-id="ba872-155">次の変更点をプロジェクトに追加します。</span><span class="sxs-lookup"><span data-stu-id="ba872-155">Add the following changes to that project.</span></span> <span data-ttu-id="ba872-156">アスタリスクはプログラムの変更点を示しています。</span><span class="sxs-lookup"><span data-stu-id="ba872-156">Asterisks mark the changes in the program.</span></span>
-
-1. <span data-ttu-id="ba872-157">Web アドレスのリストを作成するメソッドを追加します。</span><span class="sxs-lookup"><span data-stu-id="ba872-157">Add a method to create a list of web addresses.</span></span>
-
-    ```csharp
-    // ***Add a method that creates a list of web addresses.
-    private List<string> SetUpURLList()
-    {
-        List<string> urls = new List<string>
-        {
-            "https://msdn.microsoft.com",
-            "https://msdn.microsoft.com/library/hh290138.aspx",
-            "https://msdn.microsoft.com/library/hh290140.aspx",
-            "https://msdn.microsoft.com/library/dd470362.aspx",
-            "https://msdn.microsoft.com/library/aa578028.aspx",
-            "https://msdn.microsoft.com/library/ms404677.aspx",
-            "https://msdn.microsoft.com/library/ff730837.aspx"
-        };
-        return urls;
-    }
-    ```
-
-2. <span data-ttu-id="ba872-158">`AccessTheWebAsync` のメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="ba872-158">Call the method in `AccessTheWebAsync`.</span></span>
-
-    ```csharp
-    // ***Call SetUpURLList to make a list of web addresses.
-    List<string> urlList = SetUpURLList();
-    ```
-
-3. <span data-ttu-id="ba872-159">次のループを `AccessTheWebAsync` に追加して、リストの各 Web アドレスを処理します。</span><span class="sxs-lookup"><span data-stu-id="ba872-159">Add the following loop in `AccessTheWebAsync` to process each web address in the list.</span></span>
-
-    ```csharp
-    // ***Add a loop to process the list of web addresses.
-    foreach (var url in urlList)
-    {
-        // GetAsync returns a Task<HttpResponseMessage>.
-        // Argument ct carries the message if the Cancel button is chosen.
-        // ***Note that the Cancel button can cancel all remaining downloads.
-        HttpResponseMessage response = await client.GetAsync(url, ct);
-
-        // Retrieve the website contents from the HttpResponseMessage.
-        byte[] urlContents = await response.Content.ReadAsByteArrayAsync();
-
-        resultsTextBox.Text +=
-            $"\r\nLength of the downloaded string: {urlContents.Length}.\r\n";
-    }
-    ```
-
-4. <span data-ttu-id="ba872-160">`AccessTheWebAsync` は長さを表示するため、メソッドは何も返す必要はありません。</span><span class="sxs-lookup"><span data-stu-id="ba872-160">Because `AccessTheWebAsync` displays the lengths, the method doesn't need to return anything.</span></span> <span data-ttu-id="ba872-161">return ステートメントを削除し、メソッドの戻り値の型を <xref:System.Threading.Tasks.Task%601> ではなく <xref:System.Threading.Tasks.Task> に変更します。</span><span class="sxs-lookup"><span data-stu-id="ba872-161">Remove the return statement, and change the return type of the method to <xref:System.Threading.Tasks.Task> instead of <xref:System.Threading.Tasks.Task%601>.</span></span>
-
-    ```csharp
-    async Task AccessTheWebAsync(CancellationToken ct)
-    ```
-
-     <span data-ttu-id="ba872-162">式の代わりにステートメントを使って、`startButton_Click` からメソッドを呼び出します。</span><span class="sxs-lookup"><span data-stu-id="ba872-162">Call the method from `startButton_Click` by using a statement instead of an expression.</span></span>
-
-    ```csharp
-    await AccessTheWebAsync(cts.Token);
-    ```
-
-5. <span data-ttu-id="ba872-163">プログラムの取り消しをしない場合、次の出力を生成します。</span><span class="sxs-lookup"><span data-stu-id="ba872-163">If you don’t cancel the program, it produces the following output.</span></span>
-
-    ```text
-    Length of the downloaded string: 35939.
-
-    Length of the downloaded string: 237682.
-
-    Length of the downloaded string: 128607.
-
-    Length of the downloaded string: 158124.
-
-    Length of the downloaded string: 204890.
-
-    Length of the downloaded string: 175488.
-
-    Length of the downloaded string: 145790.
-
-    Downloads complete.
-    ```
-
-     <span data-ttu-id="ba872-164">ダウンロードが完了する前に**キャンセル** ボタンをクリックすると、出力には取り消しの前に完了したダウンロードの長さが含まれています。</span><span class="sxs-lookup"><span data-stu-id="ba872-164">If you choose the **Cancel** button before the downloads are complete, the output contains the lengths of the downloads that completed before the cancellation.</span></span>
-
-    ```text
-    Length of the downloaded string: 35939.
-
-    Length of the downloaded string: 237682.
-
-    Length of the downloaded string: 128607.
-
-    Downloads canceled.
-    ```
-
-## <a name="complete-examples"></a><span data-ttu-id="ba872-165">完全な例</span><span class="sxs-lookup"><span data-stu-id="ba872-165">Complete examples</span></span>
-
-<span data-ttu-id="ba872-166">次のセクションには、前の例の各コードが含まれています。</span><span class="sxs-lookup"><span data-stu-id="ba872-166">The following sections contain the code for each of the previous examples.</span></span> <span data-ttu-id="ba872-167"><xref:System.Net.Http> の参照を追加する必要があることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="ba872-167">Notice that you must add a reference for <xref:System.Net.Http>.</span></span>
-
-<span data-ttu-id="ba872-168">プロジェクトは、「[Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」 (非同期のサンプル: アプリケーションの微調整) からダウンロードできます。</span><span class="sxs-lookup"><span data-stu-id="ba872-168">You can download the projects from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).</span></span>
-
-### <a name="example---cancel-a-task"></a><span data-ttu-id="ba872-169">例 - タスクを取り消す</span><span class="sxs-lookup"><span data-stu-id="ba872-169">Example - Cancel a task</span></span>
-
-<span data-ttu-id="ba872-170">次のコードは、単一のタスクを取り消す例での MainWindow.xaml.cs ファイルの全体です。</span><span class="sxs-lookup"><span data-stu-id="ba872-170">The following code is the complete MainWindow.xaml.cs file for the example that cancels a single task.</span></span>
+<span data-ttu-id="7dc38-122">既存の using ステートメントを次の宣言に置き換えます。</span><span class="sxs-lookup"><span data-stu-id="7dc38-122">Replace the existing using statements with these declarations:</span></span>
 
 ```csharp
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-// Add a using directive and a reference for System.Net.Http.
+using System.Diagnostics;
 using System.Net.Http;
-
-// Add the following using directive for System.Threading.
-
 using System.Threading;
-namespace CancelATask
-{
-    public partial class MainWindow : Window
-    {
-        // ***Declare a System.Threading.CancellationTokenSource.
-        CancellationTokenSource cts;
-
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
-
-        private async void startButton_Click(object sender, RoutedEventArgs e)
-        {
-            // ***Instantiate the CancellationTokenSource.
-            cts = new CancellationTokenSource();
-
-            resultsTextBox.Clear();
-
-            try
-            {
-                // ***Send a token to carry the message if cancellation is requested.
-                int contentLength = await AccessTheWebAsync(cts.Token);
-                resultsTextBox.Text +=
-                    $"\r\nLength of the downloaded string: {contentLength}.\r\n";
-            }
-            // *** If cancellation is requested, an OperationCanceledException results.
-            catch (OperationCanceledException)
-            {
-                resultsTextBox.Text += "\r\nDownload canceled.\r\n";
-            }
-            catch (Exception)
-            {
-                resultsTextBox.Text += "\r\nDownload failed.\r\n";
-            }
-
-            // ***Set the CancellationTokenSource to null when the download is complete.
-            cts = null;
-        }
-
-        // ***Add an event handler for the Cancel button.
-        private void cancelButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (cts != null)
-            {
-                cts.Cancel();
-            }
-        }
-
-        // ***Provide a parameter for the CancellationToken.
-        async Task<int> AccessTheWebAsync(CancellationToken ct)
-        {
-            HttpClient client = new HttpClient();
-
-            resultsTextBox.Text += "\r\nReady to download.\r\n";
-
-            // You might need to slow things down to have a chance to cancel.
-            await Task.Delay(250);
-
-            // GetAsync returns a Task<HttpResponseMessage>.
-            // ***The ct argument carries the message if the Cancel button is chosen.
-            HttpResponseMessage response = await client.GetAsync("https://msdn.microsoft.com/library/dd470362.aspx", ct);
-
-            // Retrieve the website contents from the HttpResponseMessage.
-            byte[] urlContents = await response.Content.ReadAsByteArrayAsync();
-
-            // The result of the method is the length of the downloaded website.
-            return urlContents.Length;
-        }
-    }
-
-    // Output for a successful download:
-
-    // Ready to download.
-
-    // Length of the downloaded string: 158125.
-
-    // Or, if you cancel:
-
-    // Ready to download.
-
-    // Download canceled.
-}
+using System.Threading.Tasks;
 ```
 
-### <a name="example---cancel-a-list-of-tasks"></a><span data-ttu-id="ba872-171">例 - タスクの一覧を取り消す</span><span class="sxs-lookup"><span data-stu-id="ba872-171">Example - Cancel a list of tasks</span></span>
+## <a name="add-fields"></a><span data-ttu-id="7dc38-123">フィールドを追加する</span><span class="sxs-lookup"><span data-stu-id="7dc38-123">Add fields</span></span>
 
-<span data-ttu-id="ba872-172">次のコードは、タスクの一覧を取り消す例での MainWindow.xaml.cs ファイルの全体です。</span><span class="sxs-lookup"><span data-stu-id="ba872-172">The following code is the complete MainWindow.xaml.cs file for the example that cancels a list of tasks.</span></span>
+<span data-ttu-id="7dc38-124">`Program` クラス定義で、次の 3 つのフィールドを追加します。</span><span class="sxs-lookup"><span data-stu-id="7dc38-124">In the `Program` class definition, add these three fields:</span></span>
 
 ```csharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+static readonly CancellationTokenSource s_cts = new CancellationTokenSource();
 
-// Add a using directive and a reference for System.Net.Http.
-using System.Net.Http;
-
-// Add the following using directive for System.Threading.
-using System.Threading;
-
-namespace CancelAListOfTasks
+static readonly HttpClient s_client = new HttpClient
 {
-    public partial class MainWindow : Window
+    MaxResponseContentBufferSize = 1_000_000
+};
+
+static readonly IEnumerable<string> s_urlList = new string[]
+{
+    "https://docs.microsoft.com",
+    "https://docs.microsoft.com/aspnet/core",
+    "https://docs.microsoft.com/azure",
+    "https://docs.microsoft.com/azure/devops",
+    "https://docs.microsoft.com/dotnet",
+    "https://docs.microsoft.com/dynamics365",
+    "https://docs.microsoft.com/education",
+    "https://docs.microsoft.com/enterprise-mobility-security",
+    "https://docs.microsoft.com/gaming",
+    "https://docs.microsoft.com/graph",
+    "https://docs.microsoft.com/microsoft-365",
+    "https://docs.microsoft.com/office",
+    "https://docs.microsoft.com/powershell",
+    "https://docs.microsoft.com/sql",
+    "https://docs.microsoft.com/surface",
+    "https://docs.microsoft.com/system-center",
+    "https://docs.microsoft.com/visualstudio",
+    "https://docs.microsoft.com/windows",
+    "https://docs.microsoft.com/xamarin"
+};
+```
+
+<span data-ttu-id="7dc38-125"><xref:System.Threading.CancellationTokenSource> は、要求されるキャンセルを <xref:System.Threading.CancellationToken> に通知するために使用されます。</span><span class="sxs-lookup"><span data-stu-id="7dc38-125">The <xref:System.Threading.CancellationTokenSource> is used to signal a requested cancellation to a <xref:System.Threading.CancellationToken>.</span></span> <span data-ttu-id="7dc38-126">`HttpClient` では、HTTP 要求を送信して HTTP 応答を受信する機能が公開されます。</span><span class="sxs-lookup"><span data-stu-id="7dc38-126">The `HttpClient` exposes the ability to send HTTP requests and receive HTTP responses.</span></span> <span data-ttu-id="7dc38-127">`s_urlList` には、このアプリケーションで処理を計画するすべての URL が格納されます。</span><span class="sxs-lookup"><span data-stu-id="7dc38-127">The `s_urlList` holds all of the URLs that the application plans to process.</span></span>
+
+## <a name="update-application-entry-point"></a><span data-ttu-id="7dc38-128">アプリケーション エントリ ポイントの更新</span><span class="sxs-lookup"><span data-stu-id="7dc38-128">Update application entry point</span></span>
+
+<span data-ttu-id="7dc38-129">コンソール アプリケーションのメイン エントリ ポイントは、`Main` メソッドです。</span><span class="sxs-lookup"><span data-stu-id="7dc38-129">The main entry point into the console application is the `Main` method.</span></span> <span data-ttu-id="7dc38-130">既存のメソッドを以下に置き換えます。</span><span class="sxs-lookup"><span data-stu-id="7dc38-130">Replace the existing method with the following:</span></span>
+
+```csharp
+static async Task Main()
+{
+    Console.WriteLine("Application started.");
+    Console.WriteLine("Press the ENTER key to cancel...\n");
+
+    Task cancelTask = Task.Run(() =>
     {
-        // Declare a System.Threading.CancellationTokenSource.
-        CancellationTokenSource cts;
-
-        public MainWindow()
+        while (Console.ReadKey().Key != ConsoleKey.Enter)
         {
-            InitializeComponent();
+            Console.WriteLine("Press the ENTER key to cancel...");
         }
 
-        private async void startButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Instantiate the CancellationTokenSource.
-            cts = new CancellationTokenSource();
+        Console.WriteLine("\nENTER key pressed: cancelling downloads.\n");
+        s_cts.Cancel();
+    });
 
-            resultsTextBox.Clear();
+    Task sumPageSizesTask = SumPageSizesAsync();
 
-            try
-            {
-                await AccessTheWebAsync(cts.Token);
-                // ***Small change in the display lines.
-                resultsTextBox.Text += "\r\nDownloads complete.";
-            }
-            catch (OperationCanceledException)
-            {
-                resultsTextBox.Text += "\r\nDownloads canceled.";
-            }
-            catch (Exception)
-            {
-                resultsTextBox.Text += "\r\nDownloads failed.";
-            }
+    await Task.WhenAny(new[] { cancelTask, sumPageSizesTask });
 
-            // Set the CancellationTokenSource to null when the download is complete.
-            cts = null;
-        }
-
-        // Add an event handler for the Cancel button.
-        private void cancelButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (cts != null)
-            {
-                cts.Cancel();
-            }
-        }
-
-        // Provide a parameter for the CancellationToken.
-        // ***Change the return type to Task because the method has no return statement.
-        async Task AccessTheWebAsync(CancellationToken ct)
-        {
-            // Declare an HttpClient object.
-            HttpClient client = new HttpClient();
-
-            // ***Call SetUpURLList to make a list of web addresses.
-            List<string> urlList = SetUpURLList();
-
-            // ***Add a loop to process the list of web addresses.
-            foreach (var url in urlList)
-            {
-                // GetAsync returns a Task<HttpResponseMessage>.
-                // Argument ct carries the message if the Cancel button is chosen.
-                // ***Note that the Cancel button can cancel all remaining downloads.
-                HttpResponseMessage response = await client.GetAsync(url, ct);
-
-                // Retrieve the website contents from the HttpResponseMessage.
-                byte[] urlContents = await response.Content.ReadAsByteArrayAsync();
-
-                resultsTextBox.Text +=
-                    $"\r\nLength of the downloaded string: {urlContents.Length}.\r\n";
-            }
-        }
-
-        // ***Add a method that creates a list of web addresses.
-        private List<string> SetUpURLList()
-        {
-            List<string> urls = new List<string>
-            {
-                "https://msdn.microsoft.com",
-                "https://msdn.microsoft.com/library/hh290138.aspx",
-                "https://msdn.microsoft.com/library/hh290140.aspx",
-                "https://msdn.microsoft.com/library/dd470362.aspx",
-                "https://msdn.microsoft.com/library/aa578028.aspx",
-                "https://msdn.microsoft.com/library/ms404677.aspx",
-                "https://msdn.microsoft.com/library/ff730837.aspx"
-            };
-            return urls;
-        }
-    }
-
-    // Output if you do not choose to cancel:
-
-    //Length of the downloaded string: 35939.
-
-    //Length of the downloaded string: 237682.
-
-    //Length of the downloaded string: 128607.
-
-    //Length of the downloaded string: 158124.
-
-    //Length of the downloaded string: 204890.
-
-    //Length of the downloaded string: 175488.
-
-    //Length of the downloaded string: 145790.
-
-    //Downloads complete.
-
-    // Sample output if you choose to cancel:
-
-    //Length of the downloaded string: 35939.
-
-    //Length of the downloaded string: 237682.
-
-    //Length of the downloaded string: 128607.
-
-    //Downloads canceled.
+    Console.WriteLine("Application ending.");
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="ba872-173">関連項目</span><span class="sxs-lookup"><span data-stu-id="ba872-173">See also</span></span>
+<span data-ttu-id="7dc38-131">更新した `Main` メソッドは、[async main](../../../whats-new/csharp-7-1.md#async-main) と見なされるようになります。これにより、実行可能ファイルへの非同期エントリ ポイントが可能になります。</span><span class="sxs-lookup"><span data-stu-id="7dc38-131">The updated `Main` method is now considered an [Async main](../../../whats-new/csharp-7-1.md#async-main), which allows for an asynchronous entry point into the executable.</span></span> <span data-ttu-id="7dc38-132">いくつかの指示メッセージがコンソールに出力され、次に `cancelTask` という名前の <xref:System.Threading.Tasks.Task> インスタンスが宣言されます。これにより、コンソールのキー ストロークが読み取られるようになります。</span><span class="sxs-lookup"><span data-stu-id="7dc38-132">It writes a few instructional messages to the console, then declares a <xref:System.Threading.Tasks.Task> instance named `cancelTask`, which will read console key strokes.</span></span> <span data-ttu-id="7dc38-133"><kbd>Enter</kbd> キーが押されると、<xref:System.Threading.CancellationTokenSource.Cancel?displayProperty=nameWithType> の呼び出しが行われます。</span><span class="sxs-lookup"><span data-stu-id="7dc38-133">If the <kbd>Enter</kbd> key is pressed, a call to <xref:System.Threading.CancellationTokenSource.Cancel?displayProperty=nameWithType> is made.</span></span> <span data-ttu-id="7dc38-134">これにより、キャンセルが通知されるようになります。</span><span class="sxs-lookup"><span data-stu-id="7dc38-134">This will signal cancellation.</span></span> <span data-ttu-id="7dc38-135">次に、`sumPageSizesTask` 変数が `SumPageSizesAsync` メソッドから割り当てられています。</span><span class="sxs-lookup"><span data-stu-id="7dc38-135">Next, the `sumPageSizesTask` variable is assigned from the `SumPageSizesAsync` method.</span></span> <span data-ttu-id="7dc38-136">両方のタスクは次に <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])?displayProperty=nameWithType> に渡され、2 つのタスクのいずれかが完了したときに続行されるようになります。</span><span class="sxs-lookup"><span data-stu-id="7dc38-136">Both tasks are then passed to <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])?displayProperty=nameWithType>, which will continue when any of the two tasks have completed.</span></span>
 
-- <xref:System.Threading.CancellationTokenSource>
+## <a name="create-the-asynchronous-sum-page-sizes-method"></a><span data-ttu-id="7dc38-137">非同期の合計ページ サイズ メソッドの作成</span><span class="sxs-lookup"><span data-stu-id="7dc38-137">Create the asynchronous sum page sizes method</span></span>
+
+<span data-ttu-id="7dc38-138">`Main` メソッドの下に、`SumPageSizesAsync` メソッドを追加します。</span><span class="sxs-lookup"><span data-stu-id="7dc38-138">Below the `Main` method, add the `SumPageSizesAsync` method:</span></span>
+
+```csharp
+static async Task SumPageSizesAsync()
+{
+    var stopwatch = Stopwatch.StartNew();
+
+    int total = 0;
+    foreach (string url in s_urlList)
+    {
+        int contentLength = await ProcessUrlAsync(url, s_client, s_cts.Token);
+        total += contentLength;
+    }
+
+    stopwatch.Stop();
+
+    Console.WriteLine($"\nTotal bytes returned:  {total:#,#}");
+    Console.WriteLine($"Elapsed time:          {stopwatch.Elapsed}\n");
+}
+```
+
+<span data-ttu-id="7dc38-139">このメソッドを開始するには、<xref:System.Diagnostics.Stopwatch> をインスタンス化して開始します。</span><span class="sxs-lookup"><span data-stu-id="7dc38-139">The method starts by instantiating and starting a <xref:System.Diagnostics.Stopwatch>.</span></span> <span data-ttu-id="7dc38-140">次に、`s_urlList` 内の各 URL をループし、`ProcessUrlAsync` を呼び出します。</span><span class="sxs-lookup"><span data-stu-id="7dc38-140">It then loops through each URL in the `s_urlList` and calls `ProcessUrlAsync`.</span></span> <span data-ttu-id="7dc38-141">反復処理のたびに、`s_cts.Token` が `ProcessUrlAsync` メソッドに渡され、コードから <xref:System.Threading.Tasks.Task%601> が返されます。`TResult` は整数です。</span><span class="sxs-lookup"><span data-stu-id="7dc38-141">With each iteration, the `s_cts.Token` is passed into the `ProcessUrlAsync` method and the code returns a <xref:System.Threading.Tasks.Task%601>, where `TResult` is an integer:</span></span>
+
+```csharp
+int total = 0;
+foreach (string url in s_urlList)
+{
+    int contentLength = await ProcessUrlAsync(url, s_client, s_cts.Token);
+    total += contentLength;
+}
+```
+
+## <a name="add-process-method"></a><span data-ttu-id="7dc38-142">プロセス メソッドの追加</span><span class="sxs-lookup"><span data-stu-id="7dc38-142">Add process method</span></span>
+
+<span data-ttu-id="7dc38-143">`SumPageSizesAsync` メソッドの下に次の `ProcessUrlAsync` メソッドを追加します。</span><span class="sxs-lookup"><span data-stu-id="7dc38-143">Add the following `ProcessUrlAsync` method below the `SumPageSizesAsync` method:</span></span>
+
+```csharp
+static async Task<int> ProcessUrlAsync(string url, HttpClient client, CancellationToken token)
+{
+    HttpResponseMessage response = await client.GetAsync(url, token);
+    byte[] content = await response.Content.ReadAsByteArrayAsync(token);
+    Console.WriteLine($"{url,-60} {content.Length,10:#,#}");
+
+    return content.Length;
+}
+```
+
+<span data-ttu-id="7dc38-144">どの URL に対しても、このメソッドにより、提供される `client` インスタンスが使用され、応答が `byte[]` として取得されます。</span><span class="sxs-lookup"><span data-stu-id="7dc38-144">For any given URL, the method will use the `client` instance provided to get the response as a `byte[]`.</span></span> <span data-ttu-id="7dc38-145"><xref:System.Threading.CancellationToken> インスタンスは、<xref:System.Net.Http.HttpClient.GetAsync(System.String,System.Threading.CancellationToken)?displayProperty=nameWithType> および <xref:System.Net.Http.HttpContent.ReadAsByteArrayAsync(System.Threading.CancellationToken)?displayProperty=nameWithType> メソッドに渡されます。</span><span class="sxs-lookup"><span data-stu-id="7dc38-145">The <xref:System.Threading.CancellationToken> instance is passed into the <xref:System.Net.Http.HttpClient.GetAsync(System.String,System.Threading.CancellationToken)?displayProperty=nameWithType> and <xref:System.Net.Http.HttpContent.ReadAsByteArrayAsync(System.Threading.CancellationToken)?displayProperty=nameWithType> methods.</span></span> <span data-ttu-id="7dc38-146">`token` は、要求されるキャンセルの登録に使用されます。</span><span class="sxs-lookup"><span data-stu-id="7dc38-146">The `token` is used to register for requested cancellation.</span></span> <span data-ttu-id="7dc38-147">URL と長さがコンソールに出力された後、長さが返されます。</span><span class="sxs-lookup"><span data-stu-id="7dc38-147">The length is returned after the URL and length is written to the console.</span></span>
+
+### <a name="example-application-output"></a><span data-ttu-id="7dc38-148">アプリケーション出力の例</span><span class="sxs-lookup"><span data-stu-id="7dc38-148">Example application output</span></span>
+
+```console
+Application started.
+Press the ENTER key to cancel...
+
+https://docs.microsoft.com                                       37,357
+https://docs.microsoft.com/aspnet/core                           85,589
+https://docs.microsoft.com/azure                                398,939
+https://docs.microsoft.com/azure/devops                          73,663
+https://docs.microsoft.com/dotnet                                67,452
+https://docs.microsoft.com/dynamics365                           48,582
+https://docs.microsoft.com/education                             22,924
+
+ENTER key pressed: cancelling downloads.
+
+Application ending.
+```
+
+## <a name="complete-example"></a><span data-ttu-id="7dc38-149">コード例全体</span><span class="sxs-lookup"><span data-stu-id="7dc38-149">Complete example</span></span>
+
+<span data-ttu-id="7dc38-150">次のコードは、この例の *Program.cs* ファイルの完全なテキストです。</span><span class="sxs-lookup"><span data-stu-id="7dc38-150">The following code is the complete text of the *Program.cs* file for the example.</span></span>
+
+:::code language="csharp" source="snippets/cancel-tasks/cancel-tasks/Program.cs":::
+
+## <a name="see-also"></a><span data-ttu-id="7dc38-151">関連項目</span><span class="sxs-lookup"><span data-stu-id="7dc38-151">See also</span></span>
+
 - <xref:System.Threading.CancellationToken>
-- [<span data-ttu-id="ba872-174">Async および Await を使用した非同期プログラミング (C#)</span><span class="sxs-lookup"><span data-stu-id="ba872-174">Asynchronous Programming with async and await (C#)</span></span>](./index.md)
-- [<span data-ttu-id="ba872-175">非同期アプリケーションの微調整 (C#)</span><span class="sxs-lookup"><span data-stu-id="ba872-175">Fine-Tuning Your Async Application (C#)</span></span>](./fine-tuning-your-async-application.md)
-- [<span data-ttu-id="ba872-176">Async Sample:Fine Tuning Your Application (非同期のサンプル: アプリケーションの微調整)</span><span class="sxs-lookup"><span data-stu-id="ba872-176">Async Sample: Fine Tuning Your Application</span></span>](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- <xref:System.Threading.CancellationTokenSource>
+- [<span data-ttu-id="7dc38-152">Async および Await を使用した非同期プログラミング (C#)</span><span class="sxs-lookup"><span data-stu-id="7dc38-152">Asynchronous programming with async and await (C#)</span></span>](index.md)
+
+## <a name="next-steps"></a><span data-ttu-id="7dc38-153">次の手順</span><span class="sxs-lookup"><span data-stu-id="7dc38-153">Next steps</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="7dc38-154">指定した時間の経過後の非同期タスクのキャンセル (C#)</span><span class="sxs-lookup"><span data-stu-id="7dc38-154">Cancel async tasks after a period of time (C#)</span></span>](cancel-async-tasks-after-a-period-of-time.md)
