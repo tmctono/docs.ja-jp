@@ -1,7 +1,9 @@
 - name: Visual Basic のガイド
   href: index.yml
 - name: Visual Basic の新機能
-  href: getting-started/whats-new.md
+  href: whats-new/index.md
+- name: コンパイラでの破壊的変更
+  href: whats-new/breaking-changes.md
 - name: はじめに
   href: getting-started/index.md
   items:
@@ -535,7 +537,7 @@
               href: language-reference/operators/addition-operator.md
             - name: += 演算子
               href: language-reference/operators/addition-assignment-operator.md
-            - name: = 演算子
+            - name: '= 演算子'
               href: language-reference/operators/assignment-operator.md
             - name: '- 演算子'
               href: language-reference/operators/subtraction-operator.md
