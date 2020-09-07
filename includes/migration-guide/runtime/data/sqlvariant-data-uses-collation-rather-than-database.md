@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d606fbc4048421bc572cfe3db2e06bbcd4529e25
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: fb339fb35cdcbba4f1c860fae9c17162c4cff596
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620290"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497470"
 ---
 ### <a name="sql_variant-data-uses-sql_variant-collation-rather-than-database-collation"></a>sql_variant データはデータベースの照合順序ではなく、sql_variant の照合順序を使用する
 
@@ -21,3 +21,15 @@ ms.locfileid: "85620290"
 | スコープ   |透明|
 |バージョン|4.5|
 |種類|ランタイム|
+
+#### <a name="affected-apis"></a>影響を受ける API
+
+API 分析では検出できません。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

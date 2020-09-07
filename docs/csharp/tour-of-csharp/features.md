@@ -2,12 +2,12 @@
 title: C# のツアー - 主要な言語分野
 description: C# を始めてお使いの方のために、 この言語の基本を説明します。
 ms.date: 08/06/2020
-ms.openlocfilehash: f0e9bff144cc3c853a82f2ee6b400049df60683d
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: e1e533982757c10085f0444197ff97ee7487391f
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88068472"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414904"
 ---
 # <a name="major-language-areas"></a>主な言語の領域
 
@@ -60,7 +60,7 @@ C# [***文字列補間***](../language-reference/tokens/interpolated.md) を使�
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="StringInterpolation":::
 
-補間文字列は `$` トークンを使用して宣言されます。 文字列補間では、`{` と `}` の間の式が評価され、結果が `string` に変換され、角かっこ内のテキストが式の文字列の結果に置き換えられます。 最初の式 `{weatherData.Data:MM-DD-YYYY}` 内にある `:` は、"*書式文字列*" を指定するものです。 前の例では、それによって、日付を "MM-DD-YYYY" 形式で出力するように指定されています。
+補間文字列は `$` トークンを使用して宣言されます。 文字列補間では、`{` と `}` の間の式が評価され、結果が `string` に変換され、角かっこ内のテキストが式の文字列の結果に置き換えられます。 最初の式 `{weatherData.Date:MM-DD-YYYY}` 内にある `:` は、"*書式文字列*" を指定するものです。 前の例では、それによって、日付を "MM-DD-YYYY" 形式で出力するように指定されています。
 
 ## <a name="pattern-matching"></a>パターン マッチング
 

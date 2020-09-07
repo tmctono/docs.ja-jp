@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6da589057cebfbf3f67a46b8d49d3a61f037c4c7
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: f50022d9a7bacd7be40fe3050ced26e7c25cf7aa
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622257"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497738"
 ---
 ### <a name="crash-in-selector-when-removing-an-item-from-a-custom-incc-collection"></a>カスタム INCC コレクションから項目を削除すると、セレクターでクラッシュが発生する
 
@@ -21,3 +21,15 @@ ms.locfileid: "85622257"
 | スコープ   |マイナー|
 |バージョン|4.7|
 |種類|ランタイム|
+
+#### <a name="affected-apis"></a>影響を受ける API
+
+API 分析では検出できません。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

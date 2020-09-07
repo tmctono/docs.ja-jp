@@ -2,12 +2,12 @@
 title: C# 8.0 の新機能 - C# ガイド
 description: C# 8.0 で使用できる新しい機能の概要を説明します。
 ms.date: 04/07/2020
-ms.openlocfilehash: 14df381e17fe89bd862f97522c7efd814857e71e
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: eee395c33585028cd81861045f05f7790d8db949
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309405"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414891"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 の新機能
 
@@ -311,8 +311,8 @@ static int WriteLinesToFile(IEnumerable<string> lines)
                 skippedLines++;
             }
         }
+        return skippedLines;
     } // file is disposed here
-    return skippedLines;
 }
 ```
 

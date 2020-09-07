@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 135d59de135c8416d384b221379f912c8a9172ad
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: ed669364efe9dd8f57d831a3764dd3fc68cd5e05
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621972"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496182"
 ---
 ### <a name="aspnet-incorrect-multipart-handling-may-result-in-lost-form-data"></a>ASP.NET 正しくないマルチパート処理により、フォーム データが失われる場合がある。
 
@@ -20,8 +20,20 @@ ms.locfileid: "85621972"
 |:--------|:------------|
 | スコープ   |不明|
 |バージョン|4.8|
-|種類|ランタイム
+|種類|ランタイム|
 
 #### <a name="affected-apis"></a>影響を受ける API
 
--<xref:System.Web.HttpRequest.Form?displayProperty=nameWithType></li><li><xref:System.Web.HttpRequest.Files?displayProperty=nameWithType></li><li><xref:System.Web.HttpRequest.ContentEncoding?displayProperty=nameWithType></li></ul>|
+- <xref:System.Web.HttpRequest.Form?displayProperty=nameWithType>
+- <xref:System.Web.HttpRequest.Files?displayProperty=nameWithType>
+- <xref:System.Web.HttpRequest.ContentEncoding?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `P:System.Web.HttpRequest.Form`
+- `P:System.Web.HttpRequest.Files`
+- `P:System.Web.HttpRequest.ContentEncoding`
+
+-->

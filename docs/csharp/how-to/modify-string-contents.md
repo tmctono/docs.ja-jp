@@ -4,12 +4,12 @@ description: いくつかの手法の例を確認したら、新しい文字列�
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: ecce8857befc66353deea341d81f8c6e4313b951
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: bae54757fdb6f02cdc0dc8fc15ad3f7583c230a7
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86473969"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465053"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>C\# で文字列の内容を変更する方法
 
@@ -73,5 +73,5 @@ ms.locfileid: "86473969"
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework の正規表現](../../standard/base-types/regular-expressions.md)
+- [.NET 正規表現](../../standard/base-types/regular-expressions.md)
 - [正規表現言語 - クイック リファレンス](../../standard/base-types/regular-expression-language-quick-reference.md)

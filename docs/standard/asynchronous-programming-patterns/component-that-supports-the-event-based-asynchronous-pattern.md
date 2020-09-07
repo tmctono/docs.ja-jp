@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 83a60e0e793f33b8b0a1cec8342942fd05c82f55
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d635135e58c2fd86897b06b20a6aa0c251335e70
+ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289890"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89379123"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>方法 : イベントベースの非同期パターンをサポートするコンポーネントを実装する
 顕著な遅延が発生する可能性がある操作を伴うクラスを作成する場合は、[イベント ベースの非同期パターン](event-based-asynchronous-pattern-overview.md)を実装することによって、非同期機能を与えることを検討します。  
@@ -64,23 +64,23 @@ ms.locfileid: "84289890"
   
 1. ファイルの先頭で <xref:System.Threading?displayProperty=nameWithType> および <xref:System.Collections.Specialized?displayProperty=nameWithType> 名前空間をインポートします。  
   
-     [!code-csharp[System.ComponentModel.AsyncOperationManager#11](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#11)]
-     [!code-vb[System.ComponentModel.AsyncOperationManager#11](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#11)]  
+     [!code-csharp[System.ComponentModel.AsyncOperationManager#11](snippets/component-that-supports-the-event-based-asynchronous-pattern/csharp/primenumbercalculatormain.cs#11)]
+     [!code-vb[System.ComponentModel.AsyncOperationManager#11](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#11)]  
   
 2. `PrimeNumberCalculator` クラスの定義の前で、進行状況イベントと完了イベントのデリゲートを宣言します。  
   
-     [!code-csharp[System.ComponentModel.AsyncOperationManager#7](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#7)]
-     [!code-vb[System.ComponentModel.AsyncOperationManager#7](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#7)]  
+     [!code-csharp[System.ComponentModel.AsyncOperationManager#7](snippets/component-that-supports-the-event-based-asynchronous-pattern/csharp/primenumbercalculatormain.cs#7)]
+     [!code-vb[System.ComponentModel.AsyncOperationManager#7](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#7)]  
   
 3. `PrimeNumberCalculator` クラスの定義で、進行状況と完了をクライアントに報告するイベントを宣言します。  
   
-     [!code-csharp[System.ComponentModel.AsyncOperationManager#8](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#8)]
-     [!code-vb[System.ComponentModel.AsyncOperationManager#8](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#8)]  
+     [!code-csharp[System.ComponentModel.AsyncOperationManager#8](snippets/component-that-supports-the-event-based-asynchronous-pattern/csharp/primenumbercalculatormain.cs#8)]
+     [!code-vb[System.ComponentModel.AsyncOperationManager#8](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#8)]  
   
 4. `PrimeNumberCalculator` クラスの定義の後で、`CalculatePrimeCompleted` イベントに対するクライアントのイベント ハンドラーに各計算の結果を報告するための `CalculatePrimeCompletedEventArgs` クラスを派生します。 `AsyncCompletedEventArgs` プロパティに加えて、このクラスにより、クライアントはテストされた値、その値が素数かどうか、素数でない場合は最初の約数を知ることができます。  
   
-     [!code-csharp[System.ComponentModel.AsyncOperationManager#6](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#6)]
-     [!code-vb[System.ComponentModel.AsyncOperationManager#6](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#6)]  
+     [!code-csharp[System.ComponentModel.AsyncOperationManager#6](snippets/component-that-supports-the-event-based-asynchronous-pattern/csharp/primenumbercalculatormain.cs#6)]
+     [!code-vb[System.ComponentModel.AsyncOperationManager#6](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#6)]  
   
 ## <a name="checkpoint"></a>チェックポイント  
  この段階で、コンポーネントをビルドすることができます。  
@@ -106,28 +106,28 @@ ms.locfileid: "84289890"
 1. `PrimeNumberCalculator` クラスで <xref:System.Threading.SendOrPostCallback> デリゲートを宣言して作成します。 `InitializeDelegates` という名前のユーティリティ メソッドで <xref:System.Threading.SendOrPostCallback> オブジェクトを作成します。  
   
      2 つのデリゲートが必要です。1 つはクライアントに進行状況を報告するためのもので、もう 1 つはクライアントに完了を報告するためのものです。  
-  
-     [!code-csharp[System.ComponentModel.AsyncOperationManager#9](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#9)]
-     [!code-vb[System.ComponentModel.AsyncOperationManager#9](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#9)]  
-    [!code-csharp[System.ComponentModel.AsyncOperationManager#20](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#20)]
-    [!code-vb[System.ComponentModel.AsyncOperationManager#20](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#20)]  
+
+     [!code-csharp[System.ComponentModel.AsyncOperationManager#9](snippets/component-that-supports-the-event-based-asynchronous-pattern/csharp/primenumbercalculatormain.cs#9)]
+     [!code-vb[System.ComponentModel.AsyncOperationManager#9](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#9)]  
+    [!code-csharp[System.ComponentModel.AsyncOperationManager#20](snippets/component-that-supports-the-event-based-asynchronous-pattern/csharp/primenumbercalculatormain.cs#20)]
+    [!code-vb[System.ComponentModel.AsyncOperationManager#20](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#20)]  
   
 2. コンポーネントのコンストラクターで `InitializeDelegates` メソッドを呼び出します。  
   
-     [!code-csharp[System.ComponentModel.AsyncOperationManager#21](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#21)]
-     [!code-vb[System.ComponentModel.AsyncOperationManager#21](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#21)]  
+     [!code-csharp[System.ComponentModel.AsyncOperationManager#21](snippets/component-that-supports-the-event-based-asynchronous-pattern/csharp/primenumbercalculatormain.cs#21)]
+     [!code-vb[System.ComponentModel.AsyncOperationManager#21](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#21)]  
   
 3. 実際の処理を非同期に行う `PrimeNumberCalculator` クラスのデリゲートを宣言します。 このデリゲートは、数値が素数かどうかをテストするワーカー メソッドをラップします。 デリゲートは <xref:System.ComponentModel.AsyncOperation> パラメーターを受け取ります。このパラメーターは、非同期操作の有効期間を追跡するために使われます。  
   
-     [!code-csharp[System.ComponentModel.AsyncOperationManager#22](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#22)]
-     [!code-vb[System.ComponentModel.AsyncOperationManager#22](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#22)]  
+     [!code-csharp[System.ComponentModel.AsyncOperationManager#22](snippets/component-that-supports-the-event-based-asynchronous-pattern/csharp/primenumbercalculatormain.cs#22)]
+     [!code-vb[System.ComponentModel.AsyncOperationManager#22](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#22)]  
   
 4. 保留中の非同期操作の有効期間を管理するためのコレクションを作成します。 クライアントは操作の実行と完了を追跡する手段が必要であり、この追跡は、クライアントが非同期メソッドを呼び出すときに渡す必要のある一意のトークン (タスク ID) を使って行われます。 `PrimeNumberCalculator` コンポーネントは、タスク ID を対応する呼び出しと関連付けることによって、各呼び出しの追跡を維持する必要があります。 クライアントが一意でないタスク ID を渡した場合、`PrimeNumberCalculator` コンポーネントは例外を生成する必要があります。  
   
      `PrimeNumberCalculator` コンポーネントは、<xref:System.Collections.Specialized.HybridDictionary> という特別なコレクション クラスを使ってタスク ID を追跡します。 クラスの定義で、`userTokenToLifetime` という名前の <xref:System.Collections.Specialized.HybridDictionary> を作成します。  
   
-     [!code-csharp[System.ComponentModel.AsyncOperationManager#23](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#23)]
-     [!code-vb[System.ComponentModel.AsyncOperationManager#23](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#23)]  
+     [!code-csharp[System.ComponentModel.AsyncOperationManager#23](snippets/component-that-supports-the-event-based-asynchronous-pattern/csharp/primenumbercalculatormain.cs#23)]
+     [!code-vb[System.ComponentModel.AsyncOperationManager#23](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#23)]  
   
 ## <a name="implementing-public-events"></a>パブリック イベントの実装  
  イベント ベースの非同期パターンを実装するコンポーネントは、イベントを使ってクライアントに通信します。 これらのイベントは、<xref:System.ComponentModel.AsyncOperation> クラスを使って適切なスレッドで呼び出されます。  
@@ -136,8 +136,8 @@ ms.locfileid: "84289890"
   
 1. クライアントに報告するためのパブリック イベントを実装します。 進行状況報告用のイベントと、完了報告用のイベントが必要です。  
   
-     [!code-csharp[System.ComponentModel.AsyncOperationManager#24](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#24)]
-     [!code-vb[System.ComponentModel.AsyncOperationManager#24](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#24)]  
+     [!code-csharp[System.ComponentModel.AsyncOperationManager#24](snippets/component-that-supports-the-event-based-asynchronous-pattern/csharp/primenumbercalculatormain.cs#24)]
+     [!code-vb[System.ComponentModel.AsyncOperationManager#24](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#24)]  
   
 ## <a name="implementing-the-completion-method"></a>完了メソッドの実装  
  完了デリゲートは、非同期操作が正常完了、エラー、またはキャンセルで終了すると、基になっているフリー スレッドの非同期動作が呼び出すメソッドです。 この呼び出しは、任意のスレッドで発生します。  
@@ -150,8 +150,8 @@ ms.locfileid: "84289890"
   
 - 完了メソッドを実装します。 このメソッドは 6 つのパラメーターを受け取り、それを使って、クライアントの `CalculatePrimeCompletedEventHandler` によってクライアントに返される `CalculatePrimeCompletedEventArgs` を設定します。 また、クライアントのタスク ID トークンを内部コレクションから削除し、<xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> を呼び出して非同期操作の有効期間を終了します。 <xref:System.ComponentModel.AsyncOperation> は、アプリケーション モデルに適したスレッドまたはコンテキストへの呼び出しをマーシャリングします。  
   
-     [!code-csharp[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#26)]
-     [!code-vb[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#26)]  
+     [!code-csharp[System.ComponentModel.AsyncOperationManager#26](snippets/component-that-supports-the-event-based-asynchronous-pattern/csharp/primenumbercalculatormain.cs#26)]
+     [!code-vb[System.ComponentModel.AsyncOperationManager#26](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#26)]  
   
 ## <a name="checkpoint"></a>チェックポイント  
  この段階で、コンポーネントをビルドすることができます。  
@@ -182,30 +182,30 @@ ms.locfileid: "84289890"
   
 1. `TaskCanceled` ユーティリティ メソッドを実装します。 このメソッドは、タスク有効期間コレクションで指定されたタスク ID をチェックし、タスク ID が見つからない場合は `true` を返します。  
   
-     [!code-csharp[System.ComponentModel.AsyncOperationManager#32](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#32)]
-     [!code-vb[System.ComponentModel.AsyncOperationManager#32](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#32)]  
+     [!code-csharp[System.ComponentModel.AsyncOperationManager#32](snippets/component-that-supports-the-event-based-asynchronous-pattern/csharp/primenumbercalculatormain.cs#32)]
+     [!code-vb[System.ComponentModel.AsyncOperationManager#32](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#32)]  
   
 2. `CalculateWorker` メソッドを実装します。 このメソッドは、テストする数と <xref:System.ComponentModel.AsyncOperation> の 2 つのパラメーターを受け取ります。  
   
-     [!code-csharp[System.ComponentModel.AsyncOperationManager#27](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#27)]
-     [!code-vb[System.ComponentModel.AsyncOperationManager#27](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#27)]  
+     [!code-csharp[System.ComponentModel.AsyncOperationManager#27](snippets/component-that-supports-the-event-based-asynchronous-pattern/csharp/primenumbercalculatormain.cs#27)]
+     [!code-vb[System.ComponentModel.AsyncOperationManager#27](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#27)]  
   
 3. `BuildPrimeNumberList`を実装します。 このメソッドは、テストする数と <xref:System.ComponentModel.AsyncOperation> の 2 つのパラメーターを受け取ります。 <xref:System.ComponentModel.AsyncOperation> を使って、進行状況とインクリメンタルな結果を報告します。 これにより、アプリケーション モデルの適切なスレッドまたはコンテキストで、クライアントのイベント ハンドラーが呼び出されます。 `BuildPrimeNumberList` は、素数を見つけると、`ProgressChanged` イベントに対するクライアントのイベント ハンドラーに、インクリメンタルな結果としてこれを報告します。 これには <xref:System.ComponentModel.ProgressChangedEventArgs> から派生した `CalculatePrimeProgressChangedEventArgs` という名前のクラスが必要であり、このクラスには `LatestPrimeNumber` という名前の追加プロパティが 1 つあります。  
   
      `BuildPrimeNumberList` メソッドは `TaskCanceled` メソッドも定期的に呼び出し、このメソッドが `true` を返すと終了します。  
   
-     [!code-csharp[System.ComponentModel.AsyncOperationManager#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#5)]
-     [!code-vb[System.ComponentModel.AsyncOperationManager#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#5)]  
+     [!code-csharp[System.ComponentModel.AsyncOperationManager#5](snippets/component-that-supports-the-event-based-asynchronous-pattern/csharp/primenumbercalculatormain.cs#5)]
+     [!code-vb[System.ComponentModel.AsyncOperationManager#5](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#5)]  
   
 4. `IsPrime`を実装します。 このメソッドは、既知の素数のリスト、テスト対象の数、および見つかった最初の約数の出力パラメーターの、3 つのパラメーターを受け取ります。 素数のリストを基に、テスト対象の数が素数かどうかを特定します。  
   
-     [!code-csharp[System.ComponentModel.AsyncOperationManager#28](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#28)]
-     [!code-vb[System.ComponentModel.AsyncOperationManager#28](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#28)]  
+     [!code-csharp[System.ComponentModel.AsyncOperationManager#28](snippets/component-that-supports-the-event-based-asynchronous-pattern/csharp/primenumbercalculatormain.cs#28)]
+     [!code-vb[System.ComponentModel.AsyncOperationManager#28](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#28)]  
   
 5. <xref:System.ComponentModel.ProgressChangedEventArgs> から `CalculatePrimeProgressChangedEventArgs` を派生します。 このクラスは、`ProgressChanged` イベントに対するクライアントのイベント ハンドラーにインクリメンタルな結果を報告するために必要です。 `LatestPrimeNumber` という名前の追加プロパティが 1 つあります。  
   
-     [!code-csharp[System.ComponentModel.AsyncOperationManager#29](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#29)]
-     [!code-vb[System.ComponentModel.AsyncOperationManager#29](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#29)]  
+     [!code-csharp[System.ComponentModel.AsyncOperationManager#29](snippets/component-that-supports-the-event-based-asynchronous-pattern/csharp/primenumbercalculatormain.cs#29)]
+     [!code-vb[System.ComponentModel.AsyncOperationManager#29](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#29)]  
   
 ## <a name="checkpoint"></a>チェックポイント  
  この段階で、コンポーネントをビルドすることができます。  
@@ -225,13 +225,13 @@ ms.locfileid: "84289890"
   
 1. `CalculatePrimeAsync` メソッドを実装します。 クライアントが提供したトークン (タスク ID) が、現在保留中のタスクを表すすべてのトークンの間で一意であることを確認します。 クライアントが一意ではないトークンを渡した場合、`CalculatePrimeAsync` は例外を生成します。 一意の場合は、トークンはタスク ID のコレクションに追加されます。  
   
-     [!code-csharp[System.ComponentModel.AsyncOperationManager#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#3)]
-     [!code-vb[System.ComponentModel.AsyncOperationManager#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#3)]  
+     [!code-csharp[System.ComponentModel.AsyncOperationManager#3](snippets/component-that-supports-the-event-based-asynchronous-pattern/csharp/primenumbercalculatormain.cs#3)]
+     [!code-vb[System.ComponentModel.AsyncOperationManager#3](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#3)]  
   
 2. `CancelAsync` メソッドを実装します。 トークン コレクションに `taskId` パラメーターが存在する場合は、削除されます。 これにより、開始する前に取り消されたタスクが実行するのを防ぎます。 タスクが実行中の場合、`BuildPrimeNumberList` メソッドは、タスク ID が有効期間コレクションから削除されたことを検出すると終了します。  
   
-     [!code-csharp[System.ComponentModel.AsyncOperationManager#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#4)]
-     [!code-vb[System.ComponentModel.AsyncOperationManager#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#4)]  
+     [!code-csharp[System.ComponentModel.AsyncOperationManager#4](snippets/component-that-supports-the-event-based-asynchronous-pattern/csharp/primenumbercalculatormain.cs#4)]
+     [!code-vb[System.ComponentModel.AsyncOperationManager#4](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#4)]  
   
 ## <a name="checkpoint"></a>チェックポイント  
  この段階で、コンポーネントをビルドすることができます。  

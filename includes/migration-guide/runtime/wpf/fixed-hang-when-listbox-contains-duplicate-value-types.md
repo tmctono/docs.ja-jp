@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5d5423d18091545ad9d50325900f5a9a4fff6dd9
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 7637c2d96aef93b4cf8f2314c1dd1edba51d553c
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622013"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496975"
 ---
 ### <a name="fixed-a-hang-when-listbox-contains-duplicate-value-types"></a>ListBox に重複する値型が含まれている場合のハングの修正
 
@@ -17,3 +17,15 @@ Items コレクションに重複する値型オブジェクトが含まれて�
 | スコープ   |Major|
 |バージョン|4.8|
 |種類|ランタイム|
+
+#### <a name="affected-apis"></a>影響を受ける API
+
+API 分析では検出できません。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

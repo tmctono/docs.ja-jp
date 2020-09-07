@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ad953a1562db407c04d7860c60eb5964fe6fe2ca
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 2c44c2e1658f8de556d3f7222de3fa6d4594163a
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620345"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497489"
 ---
 ### <a name="deserialization-of-mailmessage-objects-serialized-under-the-net-framework-45-may-fail"></a>.NET Framework 4.5 でシリアル化された MailMessage オブジェクトの逆シリアル化が失敗する可能性がある
 
@@ -20,8 +20,16 @@ ms.locfileid: "85620345"
 |:--------|:------------|
 | スコープ   |マイナー|
 |バージョン|4.5|
-|種類|ランタイム
+|種類|ランタイム|
 
 #### <a name="affected-apis"></a>影響を受ける API
 
--<xref:System.Web.Mail.MailMessage?displayProperty=nameWithType></li></ul>|
+- <xref:System.Web.Mail.MailMessage?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `T:System.Web.Mail.MailMessage`
+
+-->

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4cd06fd02fadbaa9f74e40f850e688ee883454ed
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 68b0c4bb032b9744ef585eaef3d68e31afebee24
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620445"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496122"
 ---
 ### <a name="winforms-checkforoverflowunderflow-property-is-now-true-for-systemdrawing"></a>WinForm の CheckForOverflowUnderflow プロパティが System.Drawing に対して true に設定されるようになった
 
@@ -21,3 +21,15 @@ System.Drawing.dll アセンブリの CheckForOverflowUnderflow プロパティ�
 | スコープ   |エッジ|
 |バージョン|4.5|
 |種類|ランタイム|
+
+#### <a name="affected-apis"></a>影響を受ける API
+
+API 分析では検出できません。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

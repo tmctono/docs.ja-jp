@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3aafb14b65f7c0f9e5d77927809547f9d4b96e1c
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 26facb645de175d7ef0432394fc2b84f59e8437d
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620370"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496410"
 ---
 ### <a name="error-codes-for-maxrequestlength-or-maxreceivedmessagesize-are-different"></a>maxRequestLength または maxReceivedMessageSize のエラー コードが異なる
 
@@ -21,3 +21,15 @@ Internet Information Services (IIS) または ASP.NET 開発サーバーでホ�
 | スコープ   |エッジ|
 |バージョン|4.5|
 |種類|ランタイム|
+
+#### <a name="affected-apis"></a>影響を受ける API
+
+API 分析では検出できません。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

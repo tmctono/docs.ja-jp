@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 87013a04f7ff975e40a3c49c41c1c5acc2374066
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 06424c4fa40343a881356c20003300f65e93efbb
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620410"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496398"
 ---
 ### <a name="wf-serializes-expressionsliterallttgt-datetimes-differently-now-breaks-custom-xaml-parsers"></a>WF による Expressions.Literal&lt;T&gt; DateTimes のシリアル化の方法が変わった (カスタム XAML パーサーが機能しなくなる)
 
@@ -21,3 +21,15 @@ ms.locfileid: "85620410"
 | スコープ   |エッジ|
 |バージョン|4.5|
 |種類|ランタイム|
+
+#### <a name="affected-apis"></a>影響を受ける API
+
+API 分析では検出できません。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

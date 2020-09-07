@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c20d5fb3d700ba7649e423a79e4598b327c50a00
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 018c99d60dc8926cae2682dc9c035e25fba711e5
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622254"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497093"
 ---
 ### <a name="incorrect-code-generation-when-passing-and-comparing-uint16-values"></a>UInt16 値を渡して比較する場合にコード生成が正しく行われません
 
@@ -21,3 +21,15 @@ ms.locfileid: "85622254"
 | スコープ   |エッジ|
 |バージョン|4.7|
 |種類|ランタイム|
+
+#### <a name="affected-apis"></a>影響を受ける API
+
+API 分析では検出できません。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

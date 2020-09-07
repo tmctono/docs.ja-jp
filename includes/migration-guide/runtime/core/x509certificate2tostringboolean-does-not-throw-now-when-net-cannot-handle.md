@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 51208762cea2a5688c5d43e5d444d4e014e5f0b4
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 7f8f97adcca7e66fa5756212bb977daadd92b8b6
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621320"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496281"
 ---
 ### <a name="x509certificate2tostringboolean-does-not-throw-now-when-net-cannot-handle-the-certificate"></a>.NET で証明書を処理できないときに、X509Certificate2.ToString(Boolean) がスローしなくなった
 
@@ -20,8 +20,16 @@ ms.locfileid: "85621320"
 |:--------|:------------|
 | スコープ   |エッジ|
 |バージョン|4.6|
-|種類|ランタイム
+|種類|ランタイム|
 
 #### <a name="affected-apis"></a>影響を受ける API
 
--<xref:System.Security.Cryptography.X509Certificates.X509Certificate2.ToString(System.Boolean)?displayProperty=nameWithType></li></ul>|
+- <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.ToString(System.Boolean)?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Security.Cryptography.X509Certificates.X509Certificate2.ToString(System.Boolean)`
+
+-->

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7d3568fef933758c40e47cefa86c24d31d4119fc
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: cf34c5df1badcfd86d8a07bafdf1b759234712e0
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620132"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496569"
 ---
 ### <a name="httprequestcontentencoding-property-prohibits-utf7"></a>HttpRequest.ContentEncoding プロパティで UTF7 が禁止される
 
@@ -20,8 +20,16 @@ ms.locfileid: "85620132"
 |:--------|:------------|
 | スコープ   |エッジ|
 |バージョン|4.5|
-|種類|ランタイム
+|種類|ランタイム|
 
 #### <a name="affected-apis"></a>影響を受ける API
 
--<xref:System.Web.HttpRequest.ContentEncoding?displayProperty=nameWithType></li></ul>|
+- <xref:System.Web.HttpRequest.ContentEncoding?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `P:System.Web.HttpRequest.ContentEncoding`
+
+-->

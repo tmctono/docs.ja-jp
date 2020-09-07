@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 150b94b55fa8f2a29f1da7cf7ac7bf6dd06b9666
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 65fa5d8629ce8e426cf1623590a056e5cad0b91f
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621982"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497669"
 ---
 ### <a name="net-interop-will-now-queryinterface-for-iagileobject-a-winrt-interface"></a>.NET 相互運用で IAgileObject に対して QueryInterface が呼び出されるようになる (WinRT インターフェイス)
 
@@ -21,3 +21,15 @@ IAgileObject に対して QI を有効にすると実行が中断される場合
 | スコープ   |エッジ|
 |バージョン|4.8|
 |種類|ランタイム|
+
+#### <a name="affected-apis"></a>影響を受ける API
+
+API 分析では検出できません。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

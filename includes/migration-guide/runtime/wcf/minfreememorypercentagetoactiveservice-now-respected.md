@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f8e5dee9e97956cea78b7c8ec999af1afe9ac66b
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: b23182ad1da8208a69b78fc7bc872780d386a59a
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620365"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496442"
 ---
 ### <a name="minfreememorypercentagetoactiveservice-is-now-respected"></a>MinFreeMemoryPercentageToActiveService が順守されるようになった
 
@@ -21,3 +21,15 @@ Web サーバーで使用できる空きメモリが構成設定によって定�
 | スコープ   |マイナー|
 |バージョン|4.5.1|
 |種類|ランタイム|
+
+#### <a name="affected-apis"></a>影響を受ける API
+
+API 分析では検出できません。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

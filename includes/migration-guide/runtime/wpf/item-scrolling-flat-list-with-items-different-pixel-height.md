@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: fbf3c0c8f1d11f9f5997a4d1027242c4710c7107
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: d23d7821e19b9d7f2db13a6bfdf868a8414cf721
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621808"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496162"
 ---
 ### <a name="item-scrolling-a-flat-list-with-items-of-different-pixel-height"></a>ピクセルの高さが異なる項目を含むフラット リストでの項目スクロール
 
@@ -20,8 +20,16 @@ ms.locfileid: "85621808"
 |:--------|:------------|
 | スコープ   |マイナー|
 |バージョン|4.6.1|
-|種類|ランタイム
+|種類|ランタイム|
 
 #### <a name="affected-apis"></a>影響を受ける API
 
--<xref:System.Windows.Controls.VirtualizingStackPanel?displayProperty=nameWithType></li></ul>|
+- <xref:System.Windows.Controls.VirtualizingStackPanel?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `T:System.Windows.Controls.VirtualizingStackPanel`
+
+-->

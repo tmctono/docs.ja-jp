@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 768a948849064cedb38110f5ed271717442325c0
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: e77e37156de759856c8a6f2e0c009caf9e1fe826
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620315"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497888"
 ---
 ### <a name="log-file-name-created-by-the-objectcontextcreatedatabase-method-has-changed-to-match-sql-server-specifications"></a>ObjectContext.CreateDatabase メソッドによって作成されたログ ファイル名が、SQL Server の仕様に一致するように変更された
 
@@ -24,4 +24,12 @@ ms.locfileid: "85620315"
 
 #### <a name="affected-apis"></a>影響を受ける API
 
--<xref:System.Data.Objects.ObjectContext.CreateDatabase?displayProperty=nameWithType></li></ul>|
+- <xref:System.Data.Objects.ObjectContext.CreateDatabase?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Data.Objects.ObjectContext.CreateDatabase`
+
+-->

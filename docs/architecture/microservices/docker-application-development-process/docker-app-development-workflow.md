@@ -2,12 +2,12 @@
 title: Docker アプリの開発ワークフロー
 description: Docker ベースのアプリケーションを開発するためのワークフローの詳細を理解します。 まず、段階的に見ていき、Dockerfile の最適化について詳しく確認し、最終的には Visual Studio を使用する際に利用できる簡略化されたワークフローを理解します。
 ms.date: 01/30/2020
-ms.openlocfilehash: 2f380c840e186c345f9222aa6b0cf1097a74874e
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 421b1aaf3965bd3aa80c6e09da963404d2a46c09
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389197"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359076"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker アプリの開発ワークフロー
 
@@ -383,7 +383,7 @@ services:
       - sqldata
 
   sqldata:
-    image: mssql-server-linux:latest
+    image: mcr.microsoft.com/mssql/server:latest
     environment:
       - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y

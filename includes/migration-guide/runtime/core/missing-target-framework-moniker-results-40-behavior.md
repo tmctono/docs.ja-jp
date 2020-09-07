@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 26a001ec2009a1a66dd9038b9bd3a42d7bcefb73
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 49740d3b1890d72935e6e329a4f4be836ed70b25
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620255"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497811"
 ---
 ### <a name="missing-target-framework-moniker-results-in-40-behavior"></a>ターゲット フレームワーク モニカーがないと、4.0 の動作になる
 
@@ -21,3 +21,15 @@ ms.locfileid: "85620255"
 | スコープ   |Major|
 |バージョン|4.5|
 |種類|ランタイム|
+
+#### <a name="affected-apis"></a>影響を受ける API
+
+API 分析では検出できません。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

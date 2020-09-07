@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d276e2bbf24c8b2389a0a8078c62c327c3729d50
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: a133c2ea48df11915f8708029c70549e8a1ccefd
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621356"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496994"
 ---
 ### <a name="wpf-windows-are-rendered-without-clipping-when-extending-outside-a-single-monitor"></a>1 つのモニターの外部に拡張すると、クリッピングなしで WPF ウィンドウがレンダリングされる
 
@@ -21,3 +21,15 @@ Windows 8 以上で実行している .NET Framework 4.6 では、マルチ モ�
 | スコープ   |マイナー|
 |バージョン|4.6|
 |種類|ランタイム|
+
+#### <a name="affected-apis"></a>影響を受ける API
+
+API 分析では検出できません。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

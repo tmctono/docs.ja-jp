@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 13d3799aeede86b01aa81ce1cd69b3c4c22311ca
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 9d960774161fc44810f90ca30f56eb98f98de3ff
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620481"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496578"
 ---
 ### <a name="wpf-textbox-defaults-to-undo-limit-of-100"></a>WPF TextBox は既定で元に戻す上限が 100 に設定される
 
@@ -20,8 +20,16 @@ ms.locfileid: "85620481"
 |:--------|:------------|
 | スコープ   |エッジ|
 |バージョン|4.5|
-|種類|ランタイム
+|種類|ランタイム|
 
 #### <a name="affected-apis"></a>影響を受ける API
 
--<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType></li></ul>|
+- <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `T:System.Windows.Controls.TextBox`
+
+-->

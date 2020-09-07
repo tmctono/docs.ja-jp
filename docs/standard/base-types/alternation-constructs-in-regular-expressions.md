@@ -15,12 +15,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.openlocfilehash: 02664bd2812f89649ec933483161263bae530a75
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 506c1cdeb577452628d67ab00df20dd30881f406
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159690"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495435"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>正規表現での代替コンストラクト
 
@@ -60,7 +60,7 @@ ms.locfileid: "78159690"
 |-------------|-----------------|  
 |`\b`|ワード境界から開始します。|  
 |<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|「2 桁と 7 桁の 10 進数がハイフンでつながれた文字列」または「3 桁、2 桁、4 桁の 10 進数がそれぞれハイフンでつながれた文字列」のいずれかと一致します。|  
-|`\d`|ワード境界で照合を終了します。|  
+|`\b`|ワード境界で照合を終了します。|  
   
 <a name="Conditional_Expr"></a>
 ## <a name="conditional-matching-with-an-expression"></a>式を使用した条件一致

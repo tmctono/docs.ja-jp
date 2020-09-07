@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b2fcacdb02c411c4dcb12051bf0c6759faccdea2
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: fccf349517133245ec85ae3c25cedbfb27a7dd8b
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620390"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497386"
 ---
 ### <a name="the-replace-method-in-odata-urls-is-disabled-by-default"></a>OData URL の Replace メソッドが既定で無効になる
 
@@ -20,8 +20,16 @@ Replace メソッドが必要な場合 (一般的ではない)、構成設定 (<
 |:--------|:------------|
 | スコープ   |エッジ|
 |バージョン|4.5|
-|種類|ランタイム
+|種類|ランタイム|
 
 #### <a name="affected-apis"></a>影響を受ける API
 
--<xref:System.Data.Services.DataService%601?displayProperty=nameWithType></li></ul>|
+- <xref:System.Data.Services.DataService%601?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- ``T:System.Data.Services.DataService`1``
+
+-->

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: af8cb9435be078351e3430dc8ded3f7cac377948
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: e9f769af6d85403c2a6f085cbc3462cf549adae9
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620498"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496389"
 ---
 ### <a name="wpf-treeviewitem-must-be-used-within-a-treeview"></a>WPF TreeViewItem は TreeView 内で使用する必要がある
 
@@ -21,3 +21,15 @@ ms.locfileid: "85620498"
 | スコープ   |マイナー|
 |バージョン|4.5|
 |種類|ランタイム|
+
+#### <a name="affected-apis"></a>影響を受ける API
+
+API 分析では検出できません。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ae0f68a19d6eae53998d61e924cfef3aaaec1784
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 450bfc56c99a3df9be71be2ef7df6e4e12d4ed76
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620230"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497390"
 ---
 ### <a name="a-concurrentdictionary-serialized-in-net-framework-45-with-netdatacontractserializer-cannot-be-deserialized-by-net-framework-451-or-452"></a>NetDataContractSerializer を使用して .NET Framework 4.5 でシリアル化された ConcurrentDictionary は、.NET Framework 4.5.1 または 4.5.2 で逆シリアル化できない
 
@@ -21,3 +21,15 @@ ms.locfileid: "85620230"
 | スコープ   |マイナー|
 |バージョン|4.5.1|
 |種類|ランタイム|
+
+#### <a name="affected-apis"></a>影響を受ける API
+
+API 分析では検出できません。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

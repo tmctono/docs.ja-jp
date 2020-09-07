@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: beaac7b14535335a665add4fa056a60793879753
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 51ac10e6b4cc9c757cb7f68d7d665982bcb57d4e
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620405"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496384"
 ---
 ### <a name="systemactivities-is-now-aptca"></a>System.Activities が APTCA に
 
@@ -21,3 +21,15 @@ ms.locfileid: "85620405"
 | スコープ   |エッジ|
 |バージョン|4.5|
 |種類|ランタイム|
+
+#### <a name="affected-apis"></a>影響を受ける API
+
+API 分析では検出できません。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

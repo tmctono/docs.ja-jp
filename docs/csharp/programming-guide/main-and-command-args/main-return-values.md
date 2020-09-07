@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 4458f3cd7c8259c5725cfe5e853f826fe2ef61cc
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 469ed872c1c8c4eb41eecd04277d4fc53fb3d112
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87382062"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414644"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() の戻り値 (C# プログラミング ガイド)
 
@@ -26,7 +26,7 @@ ms.locfileid: "87382062"
 
 ## <a name="example"></a>例
 
-この例では、[.NET Core](../../../core/index.yml) コマンドライン ツールを使用します。 .NET Core コマンドライン ツールに慣れていない場合は、この[概要の記事](../../../core/tutorials/with-visual-studio-code.md)を参照してください。
+この例では、[.NET Core](../../../core/introduction.md) コマンドライン ツールを使用します。 .NET Core コマンドライン ツールに慣れていない場合は、この[概要の記事](../../../core/tutorials/with-visual-studio-code.md)を参照してください。
 
 *program.cs* の `Main` メソッドを次のように変更します。
 

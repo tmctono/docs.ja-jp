@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f955e270f709ddf6eea2e44bbcf386e372b9f6e3
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 4e685722271a8079e727ea9c2e0e501f68b30fc9
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621315"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496587"
 ---
 ### <a name="targetframeworkname-for-default-app-domain-no-longer-defaults-to-null-if-not-set"></a>既定のアプリケーション ドメインの TargetFrameworkName は、設定されなかった場合、既定で null に設定されなくなった
 
@@ -20,8 +20,16 @@ ms.locfileid: "85621315"
 |:--------|:------------|
 | スコープ   |エッジ|
 |バージョン|4.6|
-|種類|ランタイム
+|種類|ランタイム|
 
 #### <a name="affected-apis"></a>影響を受ける API
 
--<xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=nameWithType></li></ul>|
+- <xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `P:System.AppDomainSetup.TargetFrameworkName`
+
+-->

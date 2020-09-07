@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f17efc89b738a9fd20cc687de1dae01a44664271
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 0d38e2177377e7e9ea911071eb65aa13aa1f5900
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621236"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496758"
 ---
 ### <a name="dataannotationsdatatypeattributedisableregex-app-setting-is-on-by-default-in-net-framework-472"></a>.NET Framework 4.7.2 で "dataAnnotations:dataTypeAttribute:disableRegEx" アプリ設定が既定で有効になっている
 
@@ -21,3 +21,15 @@ ms.locfileid: "85621236"
 | スコープ   |マイナー|
 |バージョン|4.7.2|
 |種類|ランタイム|
+
+#### <a name="affected-apis"></a>影響を受ける API
+
+API 分析では検出できません。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

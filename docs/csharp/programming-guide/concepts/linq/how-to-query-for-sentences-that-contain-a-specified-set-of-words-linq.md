@@ -3,12 +3,12 @@ title: 指定されたワードのセットを含む文章を照会する方法 
 description: C# で LINQ を使用して、実行時に設定される一連の単語のそれぞれと一致する文言を含む文をテキスト ファイルから検索する方法について説明します。
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: c334c7948f19fb857709ff04a83e1dae56fc69da
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: daf86d6641b82fb77ca237e8a190b4f60b9dea4d
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104525"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465651"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>指定されたワードのセットを含む文章を照会する方法 (LINQ) (C#)
 この例は、指定された一連の単語と一致する文言を含む文をテキスト ファイルから検索する方法を示しています。 この例では検索語句の配列をハードコーディングしていますが、実行時に動的に設定することもできます。 この例のクエリを実行すると、"Historically"、"data"、"integrated" という単語をすべて含んだ文が返されます。  
@@ -23,7 +23,7 @@ class FindSentences
         string text = @"Historically, the world of data and the world of objects " +  
         @"have not been well integrated. Programmers work in C# or Visual Basic " +  
         @"and also in SQL or XQuery. On the one side are concepts such as classes, " +  
-        @"objects, fields, inheritance, and .NET Framework APIs. On the other side " +  
+        @"objects, fields, inheritance, and .NET APIs. On the other side " +  
         @"are tables, columns, rows, nodes, and separate languages for dealing with " +  
         @"them. Data types often require translation between the two worlds; there are " +  
         @"different standard functions. Because the object world has no notion of query, a " +  

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ccdf232d743c9e270b6ed21f698998eb95a97399
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 9baca45de1c8994f610815e84fdee8ba3930eb04
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621219"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496455"
 ---
 ### <a name="wcf-msmqsecurehashalgorithm-default-value-is-now-sha256"></a>WCF MsmqSecureHashAlgorithm の既定値が SHA256 になった
 
@@ -21,3 +21,15 @@ ms.locfileid: "85621219"
 | スコープ   |マイナー|
 |バージョン|4.7.1|
 |種類|ランタイム|
+
+#### <a name="affected-apis"></a>影響を受ける API
+
+API 分析では検出できません。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

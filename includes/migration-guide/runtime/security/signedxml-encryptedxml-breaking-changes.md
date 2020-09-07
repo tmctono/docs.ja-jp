@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8cc4f2ba2923774ef4e4e6861a89a7797ca988e1
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 5c8ea3565fbe599dd53a71ba8bd339704f7d7f8a
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621200"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497791"
 ---
 ### <a name="signedxml-and-encryptedxml-breaking-changes"></a>SignedXml と EncryptedXml の互換性に影響する変更点
 
@@ -20,8 +20,20 @@ ms.locfileid: "85621200"
 |:--------|:------------|
 | スコープ   |マイナー|
 |バージョン|4.6.2|
-|種類|ランタイム
+|種類|ランタイム|
 
 #### <a name="affected-apis"></a>影響を受ける API
 
--<xref:System.Security.Cryptography.Xml.Transform?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.Xml.XmlDsigXsltTransform?displayProperty=nameWithType></li></ul>|
+- <xref:System.Security.Cryptography.Xml.Transform?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.Xml.XmlDsigXPathTransform?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.Xml.XmlDsigXsltTransform?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `T:System.Security.Cryptography.Xml.Transform`
+- `T:System.Security.Cryptography.Xml.XmlDsigXPathTransform`
+- `T:System.Security.Cryptography.Xml.XmlDsigXsltTransform`
+
+-->
