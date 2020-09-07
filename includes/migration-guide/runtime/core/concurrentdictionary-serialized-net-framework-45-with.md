@@ -1,23 +1,35 @@
 ---
-ms.openlocfilehash: ae0f68a19d6eae53998d61e924cfef3aaaec1784
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 450bfc56c99a3df9be71be2ef7df6e4e12d4ed76
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620230"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497390"
 ---
-### <a name="a-concurrentdictionary-serialized-in-net-framework-45-with-netdatacontractserializer-cannot-be-deserialized-by-net-framework-451-or-452"></a><span data-ttu-id="aaad6-101">NetDataContractSerializer を使用して .NET Framework 4.5 でシリアル化された ConcurrentDictionary は、.NET Framework 4.5.1 または 4.5.2 で逆シリアル化できない</span><span class="sxs-lookup"><span data-stu-id="aaad6-101">A ConcurrentDictionary serialized in .NET Framework 4.5 with NetDataContractSerializer cannot be deserialized by .NET Framework 4.5.1 or 4.5.2</span></span>
+### <a name="a-concurrentdictionary-serialized-in-net-framework-45-with-netdatacontractserializer-cannot-be-deserialized-by-net-framework-451-or-452"></a><span data-ttu-id="7757c-101">NetDataContractSerializer を使用して .NET Framework 4.5 でシリアル化された ConcurrentDictionary は、.NET Framework 4.5.1 または 4.5.2 で逆シリアル化できない</span><span class="sxs-lookup"><span data-stu-id="7757c-101">A ConcurrentDictionary serialized in .NET Framework 4.5 with NetDataContractSerializer cannot be deserialized by .NET Framework 4.5.1 or 4.5.2</span></span>
 
-#### <a name="details"></a><span data-ttu-id="aaad6-102">説明</span><span class="sxs-lookup"><span data-stu-id="aaad6-102">Details</span></span>
+#### <a name="details"></a><span data-ttu-id="7757c-102">説明</span><span class="sxs-lookup"><span data-stu-id="7757c-102">Details</span></span>
 
-<span data-ttu-id="aaad6-103">型に対する内部的な変更のため、<xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=fullName> を使って .NET Framework 4.5 でシリアル化された <xref:System.Collections.Concurrent.ConcurrentDictionary%602> オブジェクトは、.NET Framework 4.5.1 または .NET Framework 4.5.2 では逆シリアル化できません。反対の方向 (.NET Framework 4.5.x でシリアル化して、.NET Framework 4.5 で逆シリアル化する) は動作することに注意してください。</span><span class="sxs-lookup"><span data-stu-id="aaad6-103">Due to internal changes to the type, <xref:System.Collections.Concurrent.ConcurrentDictionary%602> objects that are serialized with the .NET Framework 4.5 using the <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=fullName> cannot be deserialized in the .NET Framework 4.5.1 or in the .NET Framework 4.5.2.Note that moving in the other direction (serializing with the .NET Framework 4.5.x and deserializing with the .NET Framework 4.5) works.</span></span> <span data-ttu-id="aaad6-104">同様に、すべての 4.x バージョン間のシリアル化は、.NET Framework 4.6 で機能します。 .NET Framework の 1 つのバージョンでのシリアル化と逆シリアル化は影響を受けません。</span><span class="sxs-lookup"><span data-stu-id="aaad6-104">Similarly, all 4.x cross-version serialization works with the .NET Framework 4.6.Serializing and deserializing with a single version of the .NET Framework is not affected.</span></span>
+<span data-ttu-id="7757c-103">型に対する内部的な変更のため、<xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=fullName> を使って .NET Framework 4.5 でシリアル化された <xref:System.Collections.Concurrent.ConcurrentDictionary%602> オブジェクトは、.NET Framework 4.5.1 または .NET Framework 4.5.2 では逆シリアル化できません。反対の方向 (.NET Framework 4.5.x でシリアル化して、.NET Framework 4.5 で逆シリアル化する) は動作することに注意してください。</span><span class="sxs-lookup"><span data-stu-id="7757c-103">Due to internal changes to the type, <xref:System.Collections.Concurrent.ConcurrentDictionary%602> objects that are serialized with the .NET Framework 4.5 using the <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=fullName> cannot be deserialized in the .NET Framework 4.5.1 or in the .NET Framework 4.5.2.Note that moving in the other direction (serializing with the .NET Framework 4.5.x and deserializing with the .NET Framework 4.5) works.</span></span> <span data-ttu-id="7757c-104">同様に、すべての 4.x バージョン間のシリアル化は、.NET Framework 4.6 で機能します。 .NET Framework の 1 つのバージョンでのシリアル化と逆シリアル化は影響を受けません。</span><span class="sxs-lookup"><span data-stu-id="7757c-104">Similarly, all 4.x cross-version serialization works with the .NET Framework 4.6.Serializing and deserializing with a single version of the .NET Framework is not affected.</span></span>
 
-#### <a name="suggestion"></a><span data-ttu-id="aaad6-105">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="aaad6-105">Suggestion</span></span>
+#### <a name="suggestion"></a><span data-ttu-id="7757c-105">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="7757c-105">Suggestion</span></span>
 
-<span data-ttu-id="aaad6-106">.NET Framework 4.5 と .NET Framework 4.5.1/4.5.2 の間で <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName> のシリアル化と逆シリアル化を行う必要がある場合は、<xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=fullName> の代わりに、<xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> または <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=fullName> シリアライザーなど、代替のシリアライザーを使う必要があります。または、この問題は .NET Framework 4.6 で修正されたため、このバージョンの .NET Framework にアップグレードすることによって解決できます。</span><span class="sxs-lookup"><span data-stu-id="aaad6-106">If it is necessary to serialize and deserialize a <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName> between the .NET Framework 4.5 and .NET Framework 4.5.1/4.5.2, an alternate serializer like the <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> or <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=fullName> serializer should be used instead of the <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=fullName>.Alternatively, because this issue is addressed in the .NET Framework 4.6, it may be solved by upgrading to that version of the .NET Framework.</span></span>
+<span data-ttu-id="7757c-106">.NET Framework 4.5 と .NET Framework 4.5.1/4.5.2 の間で <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName> のシリアル化と逆シリアル化を行う必要がある場合は、<xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=fullName> の代わりに、<xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> または <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=fullName> シリアライザーなど、代替のシリアライザーを使う必要があります。または、この問題は .NET Framework 4.6 で修正されたため、このバージョンの .NET Framework にアップグレードすることによって解決できます。</span><span class="sxs-lookup"><span data-stu-id="7757c-106">If it is necessary to serialize and deserialize a <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName> between the .NET Framework 4.5 and .NET Framework 4.5.1/4.5.2, an alternate serializer like the <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> or <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=fullName> serializer should be used instead of the <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=fullName>.Alternatively, because this issue is addressed in the .NET Framework 4.6, it may be solved by upgrading to that version of the .NET Framework.</span></span>
 
-| <span data-ttu-id="aaad6-107">名前</span><span class="sxs-lookup"><span data-stu-id="aaad6-107">Name</span></span>    | <span data-ttu-id="aaad6-108">[値]</span><span class="sxs-lookup"><span data-stu-id="aaad6-108">Value</span></span>       |
+| <span data-ttu-id="7757c-107">名前</span><span class="sxs-lookup"><span data-stu-id="7757c-107">Name</span></span>    | <span data-ttu-id="7757c-108">[値]</span><span class="sxs-lookup"><span data-stu-id="7757c-108">Value</span></span>       |
 |:--------|:------------|
-| <span data-ttu-id="aaad6-109">スコープ</span><span class="sxs-lookup"><span data-stu-id="aaad6-109">Scope</span></span>   |<span data-ttu-id="aaad6-110">マイナー</span><span class="sxs-lookup"><span data-stu-id="aaad6-110">Minor</span></span>|
-|<span data-ttu-id="aaad6-111">バージョン</span><span class="sxs-lookup"><span data-stu-id="aaad6-111">Version</span></span>|<span data-ttu-id="aaad6-112">4.5.1</span><span class="sxs-lookup"><span data-stu-id="aaad6-112">4.5.1</span></span>|
-|<span data-ttu-id="aaad6-113">種類</span><span class="sxs-lookup"><span data-stu-id="aaad6-113">Type</span></span>|<span data-ttu-id="aaad6-114">ランタイム</span><span class="sxs-lookup"><span data-stu-id="aaad6-114">Runtime</span></span>|
+| <span data-ttu-id="7757c-109">スコープ</span><span class="sxs-lookup"><span data-stu-id="7757c-109">Scope</span></span>   |<span data-ttu-id="7757c-110">マイナー</span><span class="sxs-lookup"><span data-stu-id="7757c-110">Minor</span></span>|
+|<span data-ttu-id="7757c-111">バージョン</span><span class="sxs-lookup"><span data-stu-id="7757c-111">Version</span></span>|<span data-ttu-id="7757c-112">4.5.1</span><span class="sxs-lookup"><span data-stu-id="7757c-112">4.5.1</span></span>|
+|<span data-ttu-id="7757c-113">種類</span><span class="sxs-lookup"><span data-stu-id="7757c-113">Type</span></span>|<span data-ttu-id="7757c-114">ランタイム</span><span class="sxs-lookup"><span data-stu-id="7757c-114">Runtime</span></span>|
+
+#### <a name="affected-apis"></a><span data-ttu-id="7757c-115">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="7757c-115">Affected APIs</span></span>
+
+<span data-ttu-id="7757c-116">API 分析では検出できません。</span><span class="sxs-lookup"><span data-stu-id="7757c-116">Not detectable via API analysis.</span></span>
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

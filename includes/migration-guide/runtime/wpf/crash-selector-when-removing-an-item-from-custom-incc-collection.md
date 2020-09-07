@@ -1,23 +1,35 @@
 ---
-ms.openlocfilehash: 6da589057cebfbf3f67a46b8d49d3a61f037c4c7
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: f50022d9a7bacd7be40fe3050ced26e7c25cf7aa
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622257"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497738"
 ---
-### <a name="crash-in-selector-when-removing-an-item-from-a-custom-incc-collection"></a><span data-ttu-id="d1516-101">カスタム INCC コレクションから項目を削除すると、セレクターでクラッシュが発生する</span><span class="sxs-lookup"><span data-stu-id="d1516-101">Crash in Selector when removing an item from a custom INCC collection</span></span>
+### <a name="crash-in-selector-when-removing-an-item-from-a-custom-incc-collection"></a><span data-ttu-id="a4e74-101">カスタム INCC コレクションから項目を削除すると、セレクターでクラッシュが発生する</span><span class="sxs-lookup"><span data-stu-id="a4e74-101">Crash in Selector when removing an item from a custom INCC collection</span></span>
 
-#### <a name="details"></a><span data-ttu-id="d1516-102">説明</span><span class="sxs-lookup"><span data-stu-id="d1516-102">Details</span></span>
+#### <a name="details"></a><span data-ttu-id="a4e74-102">説明</span><span class="sxs-lookup"><span data-stu-id="a4e74-102">Details</span></span>
 
-<span data-ttu-id="d1516-103"><code>T:System.InvalidOperationException</code> は、次のシナリオで発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="d1516-103">An <code>T:System.InvalidOperationException</code> can occur in the following scenario:</span></span><ul><li><span data-ttu-id="d1516-104"><code>T:System.Windows.Controls.Primitives.Selector</code> の ItemsSource が、<code>T:System.Collections.Specialized.INotifyCollectionChanged</code> のカスタム実装を含むコレクションである。</span><span class="sxs-lookup"><span data-stu-id="d1516-104">The ItemsSource for a <code>T:System.Windows.Controls.Primitives.Selector</code> is a collection with a custom implementation of <code>T:System.Collections.Specialized.INotifyCollectionChanged</code>.</span></span></li><li><span data-ttu-id="d1516-105">選択した項目をコレクションから削除する。</span><span class="sxs-lookup"><span data-stu-id="d1516-105">The selected item is removed from the collection.</span></span></li><li><span data-ttu-id="d1516-106"><code>T:System.Collections.Specialized.NotifyCollectionChangedEventArgs</code> の <code>P:System.Collections.Specialized.NotifyCollectionChangedEventArgs.OldStartingIndex</code> が -1 (不明な位置を示す) である。</span><span class="sxs-lookup"><span data-stu-id="d1516-106">The <code>T:System.Collections.Specialized.NotifyCollectionChangedEventArgs</code> has <code>P:System.Collections.Specialized.NotifyCollectionChangedEventArgs.OldStartingIndex</code> = -1 (indicating an unknown position).</span></span></li></ul><span data-ttu-id="d1516-107">例外のコールスタックは、System.Windows.Threading.Dispatcher.VerifyAccess()、System.Windows.DependencyObject.GetValue(DependencyProperty dp)、System.Windows.Controls.Primitives.Selector.GetIsSelected(DependencyObject element) で始まります。アプリケーションに複数のディスパッチャー スレッドがある場合、この例外は .NET Framework 4.5 で発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="d1516-107">The exception's callstack begins at System.Windows.Threading.Dispatcher.VerifyAccess() at System.Windows.DependencyObject.GetValue(DependencyProperty dp) at System.Windows.Controls.Primitives.Selector.GetIsSelected(DependencyObject element)This exception can occur in .NET Framework 4.5 if the application has more than one Dispatcher thread.</span></span> <span data-ttu-id="d1516-108">.NET Framework 4.7 では、1 つのディスパッチャー スレッドのアプリケーションでも例外が発生する場合があります。</span><span class="sxs-lookup"><span data-stu-id="d1516-108">In .NET Framework 4.7 the exception can also occur in applications with a single Dispatcher thread.</span></span> <span data-ttu-id="d1516-109">この問題は .NET Framework 4.7.1 で修正されます。</span><span class="sxs-lookup"><span data-stu-id="d1516-109">The issue is fixed in .NET Framework 4.7.1.</span></span>
+<span data-ttu-id="a4e74-103"><code>T:System.InvalidOperationException</code> は、次のシナリオで発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="a4e74-103">An <code>T:System.InvalidOperationException</code> can occur in the following scenario:</span></span><ul><li><span data-ttu-id="a4e74-104"><code>T:System.Windows.Controls.Primitives.Selector</code> の ItemsSource が、<code>T:System.Collections.Specialized.INotifyCollectionChanged</code> のカスタム実装を含むコレクションである。</span><span class="sxs-lookup"><span data-stu-id="a4e74-104">The ItemsSource for a <code>T:System.Windows.Controls.Primitives.Selector</code> is a collection with a custom implementation of <code>T:System.Collections.Specialized.INotifyCollectionChanged</code>.</span></span></li><li><span data-ttu-id="a4e74-105">選択した項目をコレクションから削除する。</span><span class="sxs-lookup"><span data-stu-id="a4e74-105">The selected item is removed from the collection.</span></span></li><li><span data-ttu-id="a4e74-106"><code>T:System.Collections.Specialized.NotifyCollectionChangedEventArgs</code> の <code>P:System.Collections.Specialized.NotifyCollectionChangedEventArgs.OldStartingIndex</code> が -1 (不明な位置を示す) である。</span><span class="sxs-lookup"><span data-stu-id="a4e74-106">The <code>T:System.Collections.Specialized.NotifyCollectionChangedEventArgs</code> has <code>P:System.Collections.Specialized.NotifyCollectionChangedEventArgs.OldStartingIndex</code> = -1 (indicating an unknown position).</span></span></li></ul><span data-ttu-id="a4e74-107">例外のコールスタックは、System.Windows.Threading.Dispatcher.VerifyAccess()、System.Windows.DependencyObject.GetValue(DependencyProperty dp)、System.Windows.Controls.Primitives.Selector.GetIsSelected(DependencyObject element) で始まります。アプリケーションに複数のディスパッチャー スレッドがある場合、この例外は .NET Framework 4.5 で発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="a4e74-107">The exception's callstack begins at System.Windows.Threading.Dispatcher.VerifyAccess() at System.Windows.DependencyObject.GetValue(DependencyProperty dp) at System.Windows.Controls.Primitives.Selector.GetIsSelected(DependencyObject element)This exception can occur in .NET Framework 4.5 if the application has more than one Dispatcher thread.</span></span> <span data-ttu-id="a4e74-108">.NET Framework 4.7 では、1 つのディスパッチャー スレッドのアプリケーションでも例外が発生する場合があります。</span><span class="sxs-lookup"><span data-stu-id="a4e74-108">In .NET Framework 4.7 the exception can also occur in applications with a single Dispatcher thread.</span></span> <span data-ttu-id="a4e74-109">この問題は .NET Framework 4.7.1 で修正されます。</span><span class="sxs-lookup"><span data-stu-id="a4e74-109">The issue is fixed in .NET Framework 4.7.1.</span></span>
 
-#### <a name="suggestion"></a><span data-ttu-id="d1516-110">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="d1516-110">Suggestion</span></span>
+#### <a name="suggestion"></a><span data-ttu-id="a4e74-110">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="a4e74-110">Suggestion</span></span>
 
-<span data-ttu-id="d1516-111">.NET Framework 4.7.1 にアップグレードします。</span><span class="sxs-lookup"><span data-stu-id="d1516-111">Upgrade to .NET Framework 4.7.1.</span></span>
+<span data-ttu-id="a4e74-111">.NET Framework 4.7.1 にアップグレードします。</span><span class="sxs-lookup"><span data-stu-id="a4e74-111">Upgrade to .NET Framework 4.7.1.</span></span>
 
-| <span data-ttu-id="d1516-112">名前</span><span class="sxs-lookup"><span data-stu-id="d1516-112">Name</span></span>    | <span data-ttu-id="d1516-113">値</span><span class="sxs-lookup"><span data-stu-id="d1516-113">Value</span></span>       |
+| <span data-ttu-id="a4e74-112">名前</span><span class="sxs-lookup"><span data-stu-id="a4e74-112">Name</span></span>    | <span data-ttu-id="a4e74-113">値</span><span class="sxs-lookup"><span data-stu-id="a4e74-113">Value</span></span>       |
 |:--------|:------------|
-| <span data-ttu-id="d1516-114">スコープ</span><span class="sxs-lookup"><span data-stu-id="d1516-114">Scope</span></span>   |<span data-ttu-id="d1516-115">マイナー</span><span class="sxs-lookup"><span data-stu-id="d1516-115">Minor</span></span>|
-|<span data-ttu-id="d1516-116">バージョン</span><span class="sxs-lookup"><span data-stu-id="d1516-116">Version</span></span>|<span data-ttu-id="d1516-117">4.7</span><span class="sxs-lookup"><span data-stu-id="d1516-117">4.7</span></span>|
-|<span data-ttu-id="d1516-118">種類</span><span class="sxs-lookup"><span data-stu-id="d1516-118">Type</span></span>|<span data-ttu-id="d1516-119">ランタイム</span><span class="sxs-lookup"><span data-stu-id="d1516-119">Runtime</span></span>|
+| <span data-ttu-id="a4e74-114">スコープ</span><span class="sxs-lookup"><span data-stu-id="a4e74-114">Scope</span></span>   |<span data-ttu-id="a4e74-115">マイナー</span><span class="sxs-lookup"><span data-stu-id="a4e74-115">Minor</span></span>|
+|<span data-ttu-id="a4e74-116">バージョン</span><span class="sxs-lookup"><span data-stu-id="a4e74-116">Version</span></span>|<span data-ttu-id="a4e74-117">4.7</span><span class="sxs-lookup"><span data-stu-id="a4e74-117">4.7</span></span>|
+|<span data-ttu-id="a4e74-118">種類</span><span class="sxs-lookup"><span data-stu-id="a4e74-118">Type</span></span>|<span data-ttu-id="a4e74-119">ランタイム</span><span class="sxs-lookup"><span data-stu-id="a4e74-119">Runtime</span></span>|
+
+#### <a name="affected-apis"></a><span data-ttu-id="a4e74-120">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="a4e74-120">Affected APIs</span></span>
+
+<span data-ttu-id="a4e74-121">API 分析では検出できません。</span><span class="sxs-lookup"><span data-stu-id="a4e74-121">Not detectable via API analysis.</span></span>
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->
