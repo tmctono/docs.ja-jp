@@ -350,9 +350,9 @@ items:
           - name: 概要
             href: develop-client-apps.md
           - name: Windows Presentation Foundation
-            href: wpf/
+            href: /dotnet/desktop/wpf/?view=netframeworkdesktop-4.8&preserve-view=true
           - name: Windows フォーム
-            href: /dotnet/desktop/winforms/?view=netframeworkdesktop-4.8
+            href: /dotnet/desktop/winforms/?view=netframeworkdesktop-4.8&preserve-view=true
       - name: WCF を使用したサービス指向アプリ
         href: wcf/
       - name: Windows Workflow Foundation
