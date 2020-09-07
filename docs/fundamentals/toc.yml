@@ -1,0 +1,1323 @@
+items:
+  - name: .NET のドキュメント
+    href: index.yml
+  - name: はじめに (1 日目)
+    items:
+      - name: Hello World
+        href: ../core/get-started.md
+      - name: 概要のチュートリアル
+        href: ../standard/get-started.md
+      - name: .NET 101 のビデオ
+        href: 'https://www.youtube.com/playlist?list=PLdo4fOcmZ0oWoazjhXQzBKMrFuArxpW80'
+      - name: インストール方法
+        items:
+          - name: 概要
+            href: ../core/install/index.yml
+          - name: Windows にインストールする
+            href: ../core/install/windows.md
+          - name: macOS へのインストール
+            href: ../core/install/macos.md
+          - name: Linux にインストールする
+            items:
+              - name: 概要
+                href: ../core/install/linux.md
+              - name: Ubuntu
+                href: ../core/install/linux-ubuntu.md
+              - name: Alpine
+                href: ../core/install/linux-alpine.md
+              - name: CentOS
+                href: ../core/install/linux-centos.md
+              - name: Debian
+                href: ../core/install/linux-debian.md
+              - name: Fedora
+                href: ../core/install/linux-fedora.md
+              - name: OpenSUSE
+                href: ../core/install/linux-opensuse.md
+              - name: Redhat Enterprise Linux
+                href: ../core/install/linux-rhel.md
+              - name: SLES
+                href: ../core/install/linux-sles.md
+          - name: 期限切れのランタイムと SDK の削除
+            href: ../core/install/remove-runtime-sdk-versions.md
+          - name: .NET テンプレートの管理
+            href: ../core/install/templates.md
+          - name: macOS の公証の問題
+            href: ../core/install/macos-notarization-issues.md
+          - name: .NET Core のバージョンを確認する方法
+            href: ../core/install/how-to-detect-installed-versions.md
+          - name: ローカライズされた IntelliSense をインストールする
+            href: ../core/install/localized-intellisense.md
+  - name: 概要 (第 1 週)
+    items:
+      - name: .NET のツアー
+        href: ../standard/tour.md
+      - name: .NET アーキテクチャ コンポーネント
+        href: ../standard/components.md
+      - name: .NET クラス ライブラリ
+        href: ../standard/class-libraries.md
+      - name: .NET Core の概要
+        href: ../core/introduction.md
+      - name: .NET Standard の概要
+        href: ../standard/net-standard.md
+      - name: .NET 用語集
+        href: ../standard/glossary.md
+      - name: チュートリアル
+        items:
+          - name: Visual Studio を使用する
+            items:
+              - name: コンソール アプリを作成する
+                href: ../core/tutorials/with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: アプリをデバッグする
+                href: ../core/tutorials/debugging-with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: アプリの発行
+                href: ../core/tutorials/publishing-with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: ライブラリを作成する
+                href: ../core/tutorials/library-with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: ライブラリを単体テストする
+                href: ../core/tutorials/testing-library-with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: パッケージをインストールして使用する
+                href: /nuget/quickstart/install-and-use-a-package-in-visual-studio
+                displayName: 'tutorials, visual studio, vs'
+              - name: パッケージの作成と公開
+                href: /nuget/quickstart/create-and-publish-a-package-using-visual-studio
+                displayName: 'tutorials, visual studio, vs'
+          - name: Visual Studio Code の使用
+            items:
+              - name: コンソール アプリを作成する
+                href: ../core/tutorials/with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code, cli'
+              - name: アプリをデバッグする
+                href: ../core/tutorials/debugging-with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code'
+              - name: アプリの発行
+                href: ../core/tutorials/publishing-with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code'
+              - name: ライブラリを作成する
+                href: ../core/tutorials/library-with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code'
+              - name: ライブラリを単体テストする
+                href: ../core/tutorials/testing-library-with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code'
+              - name: パッケージをインストールして使用する
+                href: /nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli
+                displayName: 'tutorials, cli'
+              - name: パッケージの作成と公開
+                href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
+                displayName: tutorials
+          - name: Visual Studio for Mac の使用
+            items:
+              - name: コンソール アプリを作成する
+                href: ../core/tutorials/with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac, cli'
+              - name: アプリをデバッグする
+                href: ../core/tutorials/debugging-with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: アプリの発行
+                href: ../core/tutorials/publishing-with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: ライブラリを作成する
+                href: ../core/tutorials/library-with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: ライブラリを単体テストする
+                href: ../core/tutorials/testing-library-with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: パッケージをインストールして使用する
+                href: /nuget/quickstart/install-and-use-a-package-in-visual-studio-mac
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: パッケージの作成と公開
+                href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
+                displayName: tutorials
+          - name: その他のチュートリアル
+            href: ../core/tutorials/index.md
+  - name: 新機能
+    items:
+      - name: .NET Core 3.1 の新機能
+        href: ../core/whats-new/dotnet-core-3-1.md
+      - name: .NET Core 3.0 の新機能
+        href: ../core/whats-new/dotnet-core-3-0.md
+      - name: .NET Core 2.2 の新機能
+        href: ../core/whats-new/dotnet-core-2-2.md
+      - name: .NET Core 2.1 の新機能
+        href: ../core/whats-new/dotnet-core-2-1.md
+      - name: .NET Core 2.0 の新機能
+        href: ../core/whats-new/dotnet-core-2-0.md
+      - name: .NET Standard の新機能
+        href: ../standard/whats-new/whats-new-in-dotnet-standard.md
+  - name: 環境コンポーネントとランタイム コンポーネント
+    items:
+      - name: ツールと生産性
+        items:
+          - name: .NET Core SDK の概要
+            href: ../core/sdk.md
+          - name: .NET Core CLI
+            items:
+              - name: 概要
+                href: ../core/tools/index.md
+              - name: 関連項目
+                items:
+                  - name: dotnet
+                    href: ../core/tools/dotnet.md
+                  - name: dotnet build
+                    href: ../core/tools/dotnet-build.md
+                  - name: dotnet build-server
+                    href: ../core/tools/dotnet-build-server.md
+                  - name: dotnet clean
+                    href: ../core/tools/dotnet-clean.md
+                  - name: dotnet help
+                    href: ../core/tools/dotnet-help.md
+                  - name: dotnet migrate
+                    href: ../core/tools/dotnet-migrate.md
+                  - name: dotnet msbuild
+                    href: ../core/tools/dotnet-msbuild.md
+                  - name: dotnet new
+                    href: ../core/tools/dotnet-new.md
+                  - name: dotnet nuget
+                    items:
+                      - name: dotnet nuget delete
+                        href: ../core/tools/dotnet-nuget-delete.md
+                      - name: dotnet nuget locals
+                        href: ../core/tools/dotnet-nuget-locals.md
+                      - name: dotnet nuget push
+                        href: ../core/tools/dotnet-nuget-push.md
+                      - name: dotnet nuget add source
+                        href: ../core/tools/dotnet-nuget-add-source.md
+                      - name: dotnet nuget disable source
+                        href: ../core/tools/dotnet-nuget-disable-source.md
+                      - name: dotnet nuget enable source
+                        href: ../core/tools/dotnet-nuget-enable-source.md
+                      - name: dotnet nuget list source
+                        href: ../core/tools/dotnet-nuget-list-source.md
+                      - name: dotnet nuget remove source
+                        href: ../core/tools/dotnet-nuget-remove-source.md
+                      - name: dotnet nuget update source
+                        href: ../core/tools/dotnet-nuget-update-source.md
+                  - name: dotnet pack
+                    href: ../core/tools/dotnet-pack.md
+                  - name: dotnet publish
+                    href: ../core/tools/dotnet-publish.md
+                  - name: dotnet restore
+                    href: ../core/tools/dotnet-restore.md
+                  - name: dotnet run
+                    href: ../core/tools/dotnet-run.md
+                  - name: dotnet sln
+                    href: ../core/tools/dotnet-sln.md
+                  - name: dotnet store
+                    href: ../core/tools/dotnet-store.md
+                  - name: dotnet test
+                    href: ../core/tools/dotnet-test.md
+                  - name: dotnet tool
+                    items:
+                      - name: dotnet tool install
+                        href: ../core/tools/dotnet-tool-install.md
+                      - name: dotnet tool list
+                        href: ../core/tools/dotnet-tool-list.md
+                      - name: dotnet tool restore
+                        href: ../core/tools/dotnet-tool-restore.md
+                      - name: dotnet tool run
+                        href: ../core/tools/dotnet-tool-run.md
+                      - name: dotnet tool uninstall
+                        href: ../core/tools/dotnet-tool-uninstall.md
+                      - name: dotnet tool update
+                        href: ../core/tools/dotnet-tool-update.md
+                  - name: dotnet vstest
+                    href: ../core/tools/dotnet-vstest.md
+                  - name: dotnet-install スクリプト
+                    href: ../core/tools/dotnet-install-script.md
+                  - name: プロジェクト参照のコマンド
+                    items:
+                      - name: dotnet add reference
+                        href: ../core/tools/dotnet-add-reference.md
+                      - name: dotnet list reference
+                        href: ../core/tools/dotnet-list-reference.md
+                      - name: dotnet remove reference
+                        href: ../core/tools/dotnet-remove-reference.md
+                  - name: プロジェクト パッケージのコマンド
+                    items:
+                      - name: dotnet add package
+                        href: ../core/tools/dotnet-add-package.md
+                      - name: dotnet list package
+                        href: ../core/tools/dotnet-list-package.md
+                      - name: dotnet remove package
+                        href: ../core/tools/dotnet-remove-package.md
+              - name: グローバル ツールとローカル ツール
+                items:
+                  - name: ツールを管理する
+                    href: ../core/tools/global-tools.md
+                  - name: ツールのトラブルシューティング
+                    href: ../core/tools/troubleshoot-usage-issues.md
+                  - name: CLI のツールを作成する
+                    items:
+                      - name: 1 - ツールを作成する
+                        displayName: 'tools, tutorials, cli'
+                        href: ../core/tools/global-tools-how-to-create.md
+                      - name: 2 - グローバル ツールを使用する
+                        displayName: 'tools, tutorials, cli'
+                        href: ../core/tools/global-tools-how-to-use.md
+                      - name: 3 - ローカル ツールを使用する
+                        href: ../core/tools/local-tools-how-to-use.md
+                        displayName: 'tools, tutorials, cli'
+              - name: global.json の概要
+                href: ../core/tools/global-json.md
+              - name: 製品利用統計情報
+                href: ../core/tools/telemetry.md
+              - name: 昇格されたアクセス権
+                href: ../core/tools/elevated-access.md
+              - name: タブ補完を有効にする
+                href: ../core/tools/enable-tab-autocomplete.md
+          - name: CLI との継続的インテグレーション
+            href: ../core/tools/using-ci-with-cli.md
+          - name: CLI を使用したライブラリの開発
+            href: ../core/tutorials/libraries.md
+          - name: CLI のテンプレートを作成する
+            items:
+              - name: カスタム テンプレート
+                href: ../core/tools/custom-templates.md
+              - name: 1 - 項目テンプレートを作成する
+                href: ../core/tutorials/cli-templates-create-item-template.md
+                displayName: 'tutorials, cli'
+              - name: 2 - プロジェクト テンプレートを作成する
+                href: ../core/tutorials/cli-templates-create-project-template.md
+                displayName: 'tutorials, cli'
+              - name: 3 - テンプレート パックを作成する
+                href: ../core/tutorials/cli-templates-create-template-pack.md
+                displayName: 'tutorials, cli'
+          - name: .NET Core の追加ツール
+            items:
+              - name: 概要
+                href: ../core/additional-tools/index.md
+              - name: .NET Core アンインストール ツール
+                href: ../core/additional-tools/uninstall-tool.md
+              - name: WCF Web サービス リファレンス プロバイダー
+                href: ../core/additional-tools/wcf-web-service-reference-guide.md
+              - name: dotnet-svcutil
+                href: ../core/additional-tools/dotnet-svcutil-guide.md
+              - name: dotnet-svcutil.xmlserializer
+                href: ../core/additional-tools/dotnet-svcutil.xmlserializer-guide.md
+              - name: XML シリアライザー ジェネレーター
+                href: ../core/additional-tools/xml-serializer-generator.md
+          - name: 診断ツール
+            items:
+              - name: 概要
+                href: ../core/diagnostics/index.md
+              - name: マネージド デバッガー
+                href: ../core/diagnostics/managed-debuggers.md
+              - name: EventCounters
+                href: ../core/diagnostics/event-counters.md
+              - name: ログとトレース
+                href: ../core/diagnostics/logging-tracing.md
+              - name: .NET Core CLI グローバル ツール
+                items:
+                  - name: dotnet-カウンター
+                    href: ../core/diagnostics/dotnet-counters.md
+                  - name: dotnet-ダンプ
+                    href: ../core/diagnostics/dotnet-dump.md
+                  - name: dotnet-gcdump
+                    href: ../core/diagnostics/dotnet-gcdump.md
+                  - name: dotnet-トレース
+                    href: ../core/diagnostics/dotnet-trace.md
+              - name: .NET Core 診断チュートリアル
+                items:
+                  - name: EventCounters を使用してパフォーマンス メトリックを取得する
+                    href: ../core/diagnostics/event-counter-perf.md
+                  - name: メモリ リークをデバッグする
+                    href: ../core/diagnostics/debug-memory-leak.md
+                  - name: 高い CPU 使用率をデバッグする
+                    href: ../core/diagnostics/debug-highcpu.md
+                  - name: デッドロックをデバッグする
+                    href: ../core/diagnostics/debug-deadlock.md
+          - name: コード分析
+            items:
+              - name: 概要
+                href: productivity/code-analysis.md
+                displayName: 'code analysis, analyzers'
+              - name: ルールを構成する
+                href: productivity/configure-code-analysis-rules.md
+              - name: API アナライザー
+                href: ../standard/analyzers/api-analyzer.md
+              - name: 移植性アナライザー
+                href: ../standard/analyzers/portability-analyzer.md
+      - name: 実行モデル
+        items:
+          - name: 共通言語ランタイム (CLR)
+            href: ../standard/clr.md
+          - name: マネージ実行プロセス
+            href: ../standard/managed-execution-process.md
+          - name: .NET のアセンブリ
+            href: ../standard/assembly/
+          - name: メタデータと自己言及的なコンポーネント
+            href: ../standard/metadata-and-self-describing-components.md
+          - name: 依存関係の読み込み
+            items:
+              - name: 依存関係の読み込み
+                href: ../core/dependency-loading/overview.md
+              - name: AssemblyLoadContext について
+                href: ../core/dependency-loading/understanding-assemblyloadcontext.md
+              - name: 依存関係の読み込みの詳細
+                items:
+                  - name: 既定の依存関係プローブ
+                    href: ../core/dependency-loading/default-probing.md
+                  - name: マネージド アセンブリを読み込む
+                    href: ../core/dependency-loading/loading-managed.md
+                  - name: サテライト アセンブリを読み込む
+                    href: ../core/dependency-loading/loading-resources.md
+                  - name: アンマネージド ライブラリを読み込む
+                    href: ../core/dependency-loading/loading-unmanaged.md
+              - name: チュートリアル
+                items:
+                  - name: プラグインがある .NET Core アプリケーションを作成する
+                    href: ../core/tutorials/creating-app-with-plugin-support.md
+                  - name: .NET Core でアセンブリのアンローダビリティを使用およびデバッグする方法
+                    href: ../core/../standard/assembly/unloadability.md
+          - name: バージョン管理
+            items:
+              - name: 概要
+                href: ../core/versions/index.md
+              - name: .NET Core のバージョンの選択
+                href: ../core/versions/selection.md
+          - name: ランタイム構成
+            items:
+              - name: 設定
+                href: ../core/run-time-config/index.md
+              - name: コンパイル設定
+                href: ../core/run-time-config/compilation.md
+              - name: 設定のデバッグとプロファイリング
+                href: ../core/run-time-config/debugging-profiling.md
+              - name: ガベージ コレクター設定
+                href: ../core/run-time-config/garbage-collector.md
+              - name: グローバリゼーションの設定
+                href: ../core/run-time-config/globalization.md
+              - name: ネットワークの設定
+                href: ../core/run-time-config/networking.md
+              - name: スレッドの設定
+                href: ../core/run-time-config/threading.md
+      - name: デプロイ モデル
+        items:
+          - name: 概要
+            href: ../core/deploying/index.md
+          - name: Visual Studio を使用したアプリの展開
+            href: ../core/deploying/deploy-with-vs.md
+          - name: CLI を使用してアプリを発行する
+            href: ../core/deploying/deploy-with-cli.md
+          - name: CLI を使用して NuGet パッケージを作成する
+            href: ../core/deploying/creating-nuget-packages.md
+          - name: 自己完結型展開ランタイムのロール フォワード
+            href: ../core/deploying/runtime-patch-selection.md
+          - name: 自己完結型の展開と実行可能ファイルのトリミング
+            href: ../core/deploying/trim-self-contained.md
+          - name: ランタイム パッケージ ストア
+            href: ../core/deploying/runtime-store.md
+          - name: ランタイム識別子 (RID) のカタログ
+            href: ../core/rid-catalog.md
+          - name: リソース マニフェスト名
+            href: ../core/resources/manifest-file-names.md
+          - name: Docker
+            items:
+              - name: .NET および Docker の概要
+                href: ../core/docker/introduction.md
+              - name: NET Core アプリのコンテナー化
+                href: ../core/docker/build-container.md
+              - name: Visual Studio のコンテナー ツール
+                href: /visualstudio/containers/overview
+      - name: MSBuild とプロジェクト ファイル
+        items:
+          - name: プロジェクト SDK
+            items:
+              - name: 概要
+                href: ../core/project-sdk/overview.md
+              - name: 関連項目
+                items:
+                  - name: Microsoft.NET.Sdk
+                    href: ../core/project-sdk/msbuild-props.md
+                  - name: Microsoft.NET.Sdk.Web
+                    href: /aspnet/core/razor-pages/web-sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
+                  - name: Microsoft.NET.Sdk.Razor
+                    href: /aspnet/core/razor-pages/sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
+          - name: ターゲット フレームワーク
+            href: ../standard/frameworks.md
+          - name: csproj 形式に追加されたもの
+            href: ../core/tools/csproj.md
+          - name: 依存関係管理
+            href: ../core/tools/dependencies.md
+  - name: 基本的なコーディング コンポーネント
+    items:
+      - name: 基本データ型の概要
+        items:
+          - name: 共通型システムと共通言語仕様
+            href: ../standard/common-type-system.md
+          - name: 共通型システム
+            href: ../standard/base-types/common-type-system.md
+          - name: 言語の独立性
+            href: ../standard/language-independence.md
+          - name: 言語依存コンポーネント
+            href: ../standard/language-independence-and-language-independent-components.md
+          - name: .NET での型変換
+            href: ../standard/base-types/type-conversion.md
+          - name: 型変換の表
+            href: ../standard/base-types/conversion-tables.md
+          - name: フレームワーク ライブラリ
+            href: ../standard/framework-libraries.md
+          - name: クラス ライブラリの概要
+            href: ../standard/class-library-overview.md
+      - name: ジェネリック型
+        items:
+          - name: 概要
+            href: ../standard/generics/index.md
+          - name: ジェネリック型の概要
+            href: ../standard/generics.md
+          - name: .NET の汎用コレクション
+            href: ../standard/generics/collections.md
+          - name: 配列とリストの操作に使用する汎用デリゲート
+            href: ../standard/generics/delegates-for-manipulating-arrays-and-lists.md
+          - name: ジェネリック インターフェイス
+            href: ../standard/generics/interfaces.md
+          - name: 共変性と反変性
+            href: ../standard/generics/covariance-and-contravariance.md
+      - name: コレクションとデータ構造
+        items:
+          - name: 概要
+            href: ../standard/collections/index.md
+            displayName: 'collections, data structures'
+          - name: コレクション クラスの選択
+            href: ../standard/collections/selecting-a-collection-class.md
+          - name: 一般的に使用されるコレクション型
+            href: ../standard/collections/commonly-used-collection-types.md
+          - name: ジェネリック コレクションを使用する状況
+            href: ../standard/collections/when-to-use-generic-collections.md
+          - name: コレクション内での比較と並べ替え
+            href: ../standard/collections/comparisons-and-sorts-within-collections.md
+          - name: Sorted コレクション型
+            href: ../standard/collections/sorted-collection-types.md
+          - name: Hashtable 型と Dictionary 型
+            href: ../standard/collections/hashtable-and-dictionary-collection-types.md
+          - name: スレッド セーフなコレクション
+            href: ../standard/collections/thread-safe/
+      - name: デリゲートとラムダ
+        href: ../standard/delegates-lambdas.md
+      - name: events
+        items:
+          - name: 概要
+            href: ../standard/events/index.md
+            displayName: events
+          - name: イベントを発生させる/使用する
+            href: ../standard/events/how-to-raise-and-consume-events.md
+          - name: イベント プロパティを使用して複数のイベントを処理する
+            href: ../standard/events/how-to-handle-multiple-events-using-event-properties.md
+          - name: オブサーバー設計パターン
+            items:
+              - name: 概要
+                href: ../standard/events/observer-design-pattern.md
+                displayName: Observer design pattern
+              - name: ベスト プラクティス
+                href: ../standard/events/observer-design-pattern-best-practices.md
+              - name: '方法:プロバイダーを実装する'
+                href: ../standard/events/how-to-implement-a-provider.md
+              - name: '方法:オブザーバーを実装する'
+                href: ../standard/events/how-to-implement-an-observer.md
+      - name: 例外
+        items:
+          - name: 概要
+            href: ../standard/exceptions/index.md
+            displayName: exceptions
+          - name: Exception クラスとプロパティ
+            href: ../standard/exceptions/exception-class-and-properties.md
+          - name: 方法
+            items:
+              - name: try-catch ブロックを使用して例外をキャッチする
+                href: ../standard/exceptions/how-to-use-the-try-catch-block-to-catch-exceptions.md
+              - name: catch ブロックで特定の例外を使用する
+                href: ../standard/exceptions/how-to-use-specific-exceptions-in-a-catch-block.md
+              - name: 例外を明示的にスローする
+                href: ../standard/exceptions/how-to-explicitly-throw-exceptions.md
+              - name: ユーザー定義の例外を作成する
+                href: ../standard/exceptions/how-to-create-user-defined-exceptions.md
+              - name: ローカライズされた例外メッセージを使用してユーザー定義の例外を作成する
+                href: ../standard/exceptions/how-to-create-localized-exception-messages.md
+              - name: finally ブロックを使用する
+                href: ../standard/exceptions/how-to-use-finally-blocks.md
+          - name: ユーザー フィルター例外ハンドラーを使用する
+            href: ../standard/exceptions/using-user-filtered-exception-handlers.md
+          - name: COM 相互運用の例外を処理する
+            href: ../standard/exceptions/handling-com-interop-exceptions.md
+          - name: ベスト プラクティス
+            href: ../standard/exceptions/best-practices-for-exceptions.md
+      - name: 数値型
+        href: ../standard/numerics.md
+      - name: 日付、時刻、およびタイム ゾーン
+        href: ../standard/datetime/
+      - name: 数値、日付、その他の型の書式を設定する
+        items:
+          - name: 概要
+            href: ../standard/base-types/formatting-types.md
+          - name: 標準の数値書式指定文字列
+            href: ../standard/base-types/standard-numeric-format-strings.md
+          - name: カスタム数値形式文字列
+            href: ../standard/base-types/custom-numeric-format-strings.md
+          - name: 標準の日時書式指定文字列
+            href: ../standard/base-types/standard-date-and-time-format-strings.md
+          - name: カスタム日時形式文字列
+            href: ../standard/base-types/custom-date-and-time-format-strings.md
+          - name: 標準 TimeSpan 書式指定文字列
+            href: ../standard/base-types/standard-timespan-format-strings.md
+          - name: カスタム TimeSpan 書式指定文字列
+            href: ../standard/base-types/custom-timespan-format-strings.md
+          - name: 列挙型形式文字列
+            href: ../standard/base-types/enumeration-format-strings.md
+          - name: 複合書式指定
+            href: ../standard/base-types/composite-formatting.md
+          - name: 方法
+            items:
+              - name: 数値に先行するゼロを埋め込む
+                href: ../standard/base-types/how-to-pad-a-number-with-leading-zeros.md
+              - name: 日付から曜日を抽出する
+                href: ../standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md
+              - name: カスタム数値書式プロバイダーを使用する
+                href: ../standard/base-types/how-to-define-and-use-custom-numeric-format-providers.md
+              - name: 日付と時刻の値をラウンドトリップさせる
+                href: ../standard/base-types/how-to-round-trip-date-and-time-values.md
+              - name: 日付および時刻の値のミリ秒部分を表示する
+                href: ../standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md
+              - name: グレゴリオ暦以外の暦の日付を表示する
+                href: ../standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md
+      - name: 文字列の操作
+        items:
+          - name: .NET での文字エンコード
+            href: ../standard/base-types/character-encoding-introduction.md
+          - name: 文字エンコード クラスを使用する方法
+            href: ../standard/base-types/character-encoding.md
+          - name: 文字列を使用するためのベスト プラクティス
+            href: ../standard/base-types/best-practices-strings.md
+          - name: 基本的な文字列操作
+            items:
+              - name: 概要
+                href: ../standard/base-types/basic-string-operations.md
+                displayName: string operations
+              - name: 新しい文字列の作成
+                href: ../standard/base-types/creating-new.md
+              - name: 文字のトリミングと削除
+                href: ../standard/base-types/trimming.md
+              - name: 文字列を埋め込む
+                href: ../standard/base-types/padding.md
+              - name: 文字列を比較する
+                href: ../standard/base-types/comparing.md
+              - name: 大文字/小文字の変更
+                href: ../standard/base-types/changing-case.md
+              - name: StringBuilder クラスの使用
+                href: ../standard/base-types/stringbuilder.md
+              - name: '方法:基本的な文字列操作を実行する'
+                href: ../standard/base-types/basic-manipulations.md
+          - name: .NET の正規表現
+            items:
+              - name: 概要
+                href: ../standard/base-types/regular-expressions.md
+                displayName: regular expressions
+              - name: 言語のリファレンス
+                items:
+                  - name: 概要
+                    href: ../standard/base-types/regular-expression-language-quick-reference.md
+                  - name: 文字のエスケープ
+                    href: ../standard/base-types/character-escapes-in-regular-expressions.md
+                  - name: 文字クラス
+                    href: ../standard/base-types/character-classes-in-regular-expressions.md
+                  - name: アンカー
+                    href: ../standard/base-types/anchors-in-regular-expressions.md
+                  - name: グループ化構成体
+                    href: ../standard/base-types/grouping-constructs-in-regular-expressions.md
+                  - name: 量指定子
+                    href: ../standard/base-types/quantifiers-in-regular-expressions.md
+                  - name: 前方参照構成体
+                    href: ../standard/base-types/backreference-constructs-in-regular-expressions.md
+                  - name: 代替構成体
+                    href: ../standard/base-types/alternation-constructs-in-regular-expressions.md
+                  - name: 置換
+                    href: ../standard/base-types/substitutions-in-regular-expressions.md
+                  - name: 正規表現のオプション
+                    href: ../standard/base-types/regular-expression-options.md
+                  - name: その他の構成体
+                    href: ../standard/base-types/miscellaneous-constructs-in-regular-expressions.md
+              - name: 正規表現に関するベスト プラクティス
+                href: ../standard/base-types/best-practices.md
+              - name: 正規表現のオブジェクト モデル
+                href: ../standard/base-types/the-regular-expression-object-model.md
+              - name: 正規表現の動作
+                items:
+                  - name: 概要
+                    href: ../standard/base-types/details-of-regular-expression-behavior.md
+                  - name: バックトラッキング
+                    href: ../standard/base-types/backtracking-in-regular-expressions.md
+                  - name: コンパイルと再利用
+                    href: ../standard/base-types/compilation-and-reuse-in-regular-expressions.md
+                  - name: スレッド セーフ
+                    href: ../standard/base-types/thread-safety-in-regular-expressions.md
+              - name: 例
+                items:
+                  - name: HREF のスキャン
+                    href: ../standard/base-types/regular-expression-example-scanning-for-hrefs.md
+                  - name: 日付形式の変更
+                    href: ../standard/base-types/regular-expression-example-changing-date-formats.md
+                  - name: URL からプロトコルとポート番号を抽出する
+                    href: ../standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md
+                  - name: 文字列から無効な文字を取り除く
+                    href: ../standard/base-types/how-to-strip-invalid-characters-from-a-string.md
+                  - name: 文字列が有効な電子メール形式であるかどうかを検証する
+                    href: ../standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md
+      - name: 文字列の解析
+        items:
+          - name: 概要
+            href: ../standard/base-types/parsing-strings.md
+          - name: 数値文字列の解析
+            href: ../standard/base-types/parsing-numeric.md
+          - name: 日付と時刻文字列の解析
+            href: ../standard/base-types/parsing-datetime.md
+          - name: その他の文字列の解析
+            href: ../standard/base-types/parsing-other.md
+      - name: 属性
+        items:
+          - name: 概要
+            href: ../standard/attributes/index.md
+            displayName: attributes
+          - name: 属性を適用する
+            href: ../standard/attributes/applying-attributes.md
+          - name: カスタム属性を記述する
+            href: ../standard/attributes/writing-custom-attributes.md
+          - name: 属性に格納されている情報を取得する
+            href: ../standard/attributes/retrieving-information-stored-in-attributes.md
+      - name: 匿名型と組型の選択
+        href: ../standard/base-types/choosing-between-anonymous-and-tuple.md
+  - name: Microsoft 拡張機能
+    items:
+      - name: 構成
+        href: /aspnet/core/fundamentals/configuration/
+      - name: 依存関係の挿入
+        href: /aspnet/core/fundamentals/dependency-injection/
+      - name: ログの記録
+        href: /aspnet/core/fundamentals/logging/
+  - name: データ アクセス
+    items:
+      - name: LINQ
+        href: ../standard/using-linq.md
+      - name: XML ドキュメントと XML データ
+        href: ../standard/data/xml/
+      - name: Microsoft.Data.Sqlite
+        href: ../standard/data/sqlite/
+  - name: 並列処理、コンカレンシー、および非同期
+    items:
+      - name: 概要
+        href: ../standard/parallel-processing-and-concurrency.md
+        displayName: 'Parallel processing, concurrency, async'
+      - name: 非同期プログラミング
+        items:
+          - name: 概要
+            href: ../standard/async.md
+          - name: 非同期プログラミングの詳細
+            href: ../standard/async-in-depth.md
+          - name: 非同期プログラミングのパターン
+            href: ../standard/asynchronous-programming-patterns/
+      - name: 並列プログラミング
+        items:
+          - name: 概要
+            href: ../standard/parallel-programming/index.md
+          - name: タスク並列ライブラリ (TPL)
+            href: ../standard/parallel-programming/task-parallel-library-tpl.md
+            items:
+              - name: データ並列
+                href: ../standard/parallel-programming/data-parallelism-task-parallel-library.md
+                items:
+                  - name: '方法:単純な Parallel.For ループを記述する'
+                    href: ../standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md
+                  - name: '方法:単純な Parallel.ForEach ループを記述する'
+                    href: ../standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md
+                  - name: '方法:スレッド ローカル変数を使用する Parallel.For ループを記述する'
+                    href: ../standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md
+                  - name: '方法:パーティション ローカル変数を使用する Parallel.ForEach ループを記述する'
+                    href: ../standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md
+                  - name: '方法:Parallel.For または ForEach ループを取り消す'
+                    href: ../standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md
+                  - name: '方法:並列ループの例外を処理する'
+                    href: ../standard/parallel-programming/how-to-handle-exceptions-in-parallel-loops.md
+                  - name: '方法:小さいループ本体を高速化する'
+                    href: ../standard/parallel-programming/how-to-speed-up-small-loop-bodies.md
+                  - name: '方法:Parallel クラスを使用してファイル ディレクトリを反復処理する'
+                    href: ../standard/parallel-programming/how-to-iterate-file-directories-with-the-parallel-class.md
+              - name: タスク ベースの非同期プログラミング
+                href: ../standard/parallel-programming/task-based-asynchronous-programming.md
+                items:
+                  - name: 継続タスクを使用したタスクの連結
+                    href: ../standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md
+                  - name: アタッチされた子タスクとデタッチされた子タスク
+                    href: ../standard/parallel-programming/attached-and-detached-child-tasks.md
+                  - name: タスクのキャンセル
+                    href: ../standard/parallel-programming/task-cancellation.md
+                  - name: 例外処理
+                    href: ../standard/parallel-programming/exception-handling-task-parallel-library.md
+                  - name: '方法:Parallel.Invoke を使用して並列操作を実行する'
+                    href: ../standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md
+                  - name: '方法:タスクから値を返す'
+                    href: ../standard/parallel-programming/how-to-return-a-value-from-a-task.md
+                  - name: '方法:タスクとその子を取り消す'
+                    href: ../standard/parallel-programming/how-to-cancel-a-task-and-its-children.md
+                  - name: '方法:事前計算済みのタスクを作成する'
+                    href: ../standard/parallel-programming/how-to-create-pre-computed-tasks.md
+                  - name: '方法:並列タスクでバイナリ ツリーを走査する'
+                    href: ../standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md
+                  - name: '方法:入れ子のタスクのラップを解除する'
+                    href: ../standard/parallel-programming/how-to-unwrap-a-nested-task.md
+                  - name: '方法:子タスクがその親にアタッチしないようにする'
+                    href: ../standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md
+              - name: データフロー
+                href: ../standard/parallel-programming/dataflow-task-parallel-library.md
+                items:
+                  - name: '方法:データフロー ブロックに対してメッセージの読み取りと書き込みを行う'
+                    href: ../standard/parallel-programming/how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md
+                  - name: '方法:プロデューサー/コンシューマーのデータフロー パターンを実装する'
+                    href: ../standard/parallel-programming/how-to-implement-a-producer-consumer-dataflow-pattern.md
+                  - name: '方法:データフロー ブロックでデータを受信したときにアクションを実行する'
+                    href: ../standard/parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md
+                  - name: 'チュートリアル:データフロー パイプラインの作成'
+                    href: ../standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md
+                  - name: '方法:データ フロー ブロックのリンクを解除する'
+                    href: ../standard/parallel-programming/how-to-unlink-dataflow-blocks.md
+                  - name: 'チュートリアル:Windows フォーム アプリケーションでのデータフローの使用'
+                    href: ../standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md
+                  - name: '方法:データフロー ブロックをキャンセルする'
+                    href: ../standard/parallel-programming/how-to-cancel-a-dataflow-block.md
+                  - name: 'チュートリアル:カスタム データ フロー ブロックの型の作成'
+                    href: ../standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md
+                  - name: '方法:JoinBlock を使用して複数のソースからデータを読み込む'
+                    href: ../standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md
+                  - name: '方法:データ フロー ブロックで並列処理の範囲を指定する'
+                    href: ../standard/parallel-programming/how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md
+                  - name: '方法:データフロー ブロックのタスク スケジューラを指定する'
+                    href: ../standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md
+                  - name: 'チュートリアル:BatchBlock および BatchedJoinBlock を使用した効率の向上'
+                    href: ../standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md
+              - name: TPL と他の非同期パターンの使用
+                href: ../standard/parallel-programming/using-tpl-with-other-asynchronous-patterns.md
+                items:
+                  - name: TPL と従来の .NET Framework 非同期プログラミング
+                    href: ../standard/parallel-programming/tpl-and-traditional-async-programming.md
+                  - name: '方法:タスクに EAP パターンをラップする'
+                    href: ../standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md
+              - name: データとタスクの並列化における注意点
+                href: ../standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md
+          - name: Parallel LINQ (PLINQ)
+            items:
+              - name: PLINQ の概要
+                href: ../standard/parallel-programming/introduction-to-plinq.md
+              - name: PLINQ での高速化について
+                href: ../standard/parallel-programming/understanding-speedup-in-plinq.md
+              - name: PLINQ における順序維持
+                href: ../standard/parallel-programming/order-preservation-in-plinq.md
+              - name: PLINQ のマージ オプション
+                href: ../standard/parallel-programming/merge-options-in-plinq.md
+              - name: PLINQ の非利便性
+                href: ../standard/parallel-programming/potential-pitfalls-with-plinq.md
+              - name: '方法:単純な PLINQ クエリを作成して実行する'
+                href: ../standard/parallel-programming/how-to-create-and-execute-a-simple-plinq-query.md
+              - name: '方法:PLINQ クエリの順序を制御する'
+                href: ../standard/parallel-programming/how-to-control-ordering-in-a-plinq-query.md
+              - name: '方法:並列および順次の LINQ クエリを連結する'
+                href: ../standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md
+              - name: '方法:PLINQ クエリの例外を処理する'
+                href: ../standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md
+              - name: '方法:PLINQ クエリを取り消す'
+                href: ../standard/parallel-programming/how-to-cancel-a-plinq-query.md
+              - name: '方法:カスタムの PLINQ 集約関数を記述する'
+                href: ../standard/parallel-programming/how-to-write-a-custom-plinq-aggregate-function.md
+              - name: '方法:PLINQ の実行モードを指定する'
+                href: ../standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md
+              - name: '方法:PLINQ のマージ オプションを指定する'
+                href: ../standard/parallel-programming/how-to-specify-merge-options-in-plinq.md
+              - name: '方法:PLINQ を使用してファイル ディレクトリを反復処理する'
+                href: ../standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md
+              - name: '方法:PLINQ クエリのパフォーマンスを測定する'
+                href: ../standard/parallel-programming/how-to-measure-plinq-query-performance.md
+              - name: PLINQ データのサンプル
+                href: ../standard/parallel-programming/plinq-data-sample.md
+          - name: 並列プログラミング向けのデータ構造
+            href: ../standard/parallel-programming/data-structures-for-parallel-programming.md
+          - name: 並列診断ツール
+            href: ../standard/parallel-programming/parallel-diagnostic-tools.md
+          - name: PLINQ および TPL 用のカスタム パーティショナー
+            items:
+              - name: 概要
+                href: ../standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md
+                displayName: custom partitioners
+              - name: '方法:動的パーティションを実装する'
+                href: ../standard/parallel-programming/how-to-implement-dynamic-partitions.md
+              - name: '方法:静的パーティション分割用にパーティショナーを実装する'
+                href: ../standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md
+          - name: PLINQ および TPL のラムダ式
+            href: ../standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md
+          - name: 関連項目
+            href: ../standard/parallel-programming/for-further-reading-parallel-programming.md
+      - name: スレッド処理
+        href: ../standard/threading/
+  - name: シリアル化
+    items:
+      - name: 概要
+        href: ../standard/serialization/index.md
+      - name: JSON シリアル化
+        items:
+          - name: 概要
+            href: ../standard/serialization/system-text-json-overview.md
+            displayName: json serialization
+          - name: JSON をシリアル化および逆シリアル化する方法
+            href: ../standard/serialization/system-text-json-how-to.md
+          - name: カスタム コンバーターを記述する方法
+            href: ../standard/serialization/system-text-json-converters-how-to.md
+          - name: Newtonsoft. Json から移行する方法
+            href: ../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md
+      - name: バイナリ シリアル化
+        items:
+          - name: 概要
+            href: ../standard/serialization/binary-serialization.md
+            displayName: binary serialization
+          - name: BinaryFormatter セキュリティ ガイド
+            href: ../standard/serialization/binaryformatter-security-guide.md
+          - name: シリアル化の概念
+            href: ../standard/serialization/serialization-concepts.md
+          - name: 基本的なシリアル化
+            href: ../standard/serialization/basic-serialization.md
+          - name: 選択的シリアル化
+            href: ../standard/serialization/selective-serialization.md
+          - name: カスタムのシリアル化
+            href: ../standard/serialization/custom-serialization.md
+          - name: シリアル化プロセスの手順
+            href: ../standard/serialization/steps-in-the-serialization-process.md
+          - name: バージョン トレラントなシリアル化
+            href: ../standard/serialization/version-tolerant-serialization.md
+          - name: シリアル化のガイドライン
+            href: ../standard/serialization/serialization-guidelines.md
+          - name: '方法:シリアル化されたデータをチャンクする'
+            href: ../standard/serialization/how-to-chunk-serialized-data.md
+          - name: '方法:.NET 標準オブジェクトがシリアル化可能なのかどうかを判断する'
+            href: ../standard/serialization/how-to-determine-if-netstandard-object-is-serializable.md
+          - name: サンプル
+            href: ../standard/serialization/basic-serialization-technology-sample.md
+      - name: XML シリアル化および SOAP シリアル化
+        items:
+          - name: 概要
+            href: ../standard/serialization/xml-and-soap-serialization.md
+          - name: XML シリアル化の詳細
+            href: ../standard/serialization/introducing-xml-serialization.md
+          - name: 例
+            href: ../standard/serialization/examples-of-xml-serialization.md
+          - name: XML スキーマ定義ツール
+            href: ../standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md
+          - name: 属性を使用した XML シリアル化の制御
+            href: ../standard/serialization/controlling-xml-serialization-using-attributes.md
+          - name: XML シリアル化を制御する属性
+            href: ../standard/serialization/attributes-that-control-xml-serialization.md
+          - name: XML Web サービスを使用した XML シリアル化
+            href: ../standard/serialization/xml-serialization-with-xml-web-services.md
+          - name: エンコード済み SOAP シリアル化を制御する属性
+            href: ../standard/serialization/attributes-that-control-encoded-soap-serialization.md
+          - name: 方法
+            items:
+              - name: オブジェクトをシリアル化する
+                href: ../standard/serialization/how-to-serialize-an-object.md
+              - name: オブジェクトを逆シリアル化する
+                href: ../standard/serialization/how-to-deserialize-an-object.md
+              - name: XML スキーマ定義ツールを使用してクラスと XML スキーマ ドキュメントを生成する
+                href: ../standard/serialization/xml-schema-def-tool-gen.md
+              - name: 派生クラスのシリアル化を制御する
+                href: ../standard/serialization/how-to-control-serialization-of-derived-classes.md
+              - name: XML ストリームの代替要素名を指定する
+                href: ../standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md
+              - name: XML 要素および XML 属性名を修飾する
+                href: ../standard/serialization/how-to-qualify-xml-element-and-xml-attribute-names.md
+              - name: オブジェクトを SOAP エンコード済み XML ストリームとしてシリアル化する
+                href: ../standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md
+              - name: SOAP エンコード済み XML シリアル化をオーバーライドする
+                href: ../standard/serialization/how-to-override-encoded-soap-xml-serialization.md
+          - name: XML シリアル化要素
+            items:
+              - name: system.xml.serialization
+                href: ../standard/serialization/system-xml-serialization-element.md
+              - name: dateTimeSerialization
+                href: ../standard/serialization/datetimeserialization-element.md
+              - name: schemaImporterExtensions
+                href: ../standard/serialization/schemaimporterextensions-element.md
+              - name: schemaImporterExtensions の add 要素
+                href: ../standard/serialization/add-element-for-schemaimporterextensions.md
+              - name: xmlSerializer
+                href: ../standard/serialization/xmlserializer-element.md
+          - name: ツール
+            items:
+              - name: XML シリアライザー ジェネレーター ツール (Sgen.exe)
+                href: ../standard/serialization/xml-serializer-generator-tool-sgen-exe.md
+              - name: XML スキーマ定義ツール (Xsd.exe)
+                href: ../standard/serialization/xml-schema-definition-tool-xsd-exe.md
+  - name: ファイルおよびストリーム入出力
+    items:
+      - name: 概要
+        href: ../standard/io/index.md
+      - name: Windows システムのファイル パス形式
+        href: ../standard/io/file-path-formats.md
+      - name: 共通 I/O タスク
+        href: ../standard/io/common-i-o-tasks.md
+        items:
+          - name: '方法:ディレクトリをコピーする'
+            href: ../standard/io/how-to-copy-directories.md
+          - name: '方法:ディレクトリとファイルを列挙する'
+            href: ../standard/io/how-to-enumerate-directories-and-files.md
+          - name: '方法:新しく作成されたデータ ファイルに対して読み書きする'
+            href: ../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md
+          - name: '方法:ログ ファイルを開いて情報を追加する'
+            href: ../standard/io/how-to-open-and-append-to-a-log-file.md
+          - name: '方法:ファイルにテキストを書き込む'
+            href: ../standard/io/how-to-write-text-to-a-file.md
+          - name: '方法:ファイルからのテキストの読み取り'
+            href: ../standard/io/how-to-read-text-from-a-file.md
+          - name: '方法:文字列から文字を読み取る'
+            href: ../standard/io/how-to-read-characters-from-a-string.md
+          - name: '方法:文字列への文字の書き込み'
+            href: ../standard/io/how-to-write-characters-to-a-string.md
+          - name: '方法:アクセス制御リスト エントリを追加または削除する'
+            href: ../standard/io/how-to-add-or-remove-access-control-list-entries.md
+          - name: '方法:ファイルを圧縮して抽出する'
+            href: ../standard/io/how-to-compress-and-extract-files.md
+          - name: ストリームの構成
+            href: ../standard/io/composing-streams.md
+          - name: '方法:.NET Framework ストリームと Windows ランタイム ストリームの間で変換を行う'
+            href: ../standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md
+      - name: 非同期ファイル I/O
+        href: ../standard/io/asynchronous-file-i-o.md
+      - name: I/O エラーの処理
+        href: ../standard/io/handling-io-errors.md
+      - name: 分離ストレージ
+        href: ../standard/io/isolated-storage.md
+        items:
+          - name: 分離のタイプ
+            href: ../standard/io/types-of-isolation.md
+          - name: '方法:分離ストレージでストアを取得する'
+            href: ../standard/io/how-to-obtain-stores-for-isolated-storage.md
+          - name: '方法:分離ストレージでストアを列挙する'
+            href: ../standard/io/how-to-enumerate-stores-for-isolated-storage.md
+          - name: '方法:分離ストレージでストアを削除する'
+            href: ../standard/io/how-to-delete-stores-in-isolated-storage.md
+          - name: '方法:分離ストレージの領域不足状態に備える'
+            href: ../standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
+          - name: '方法:分離ストレージでファイルおよびディレクトリを作成する'
+            href: ../standard/io/how-to-create-files-and-directories-in-isolated-storage.md
+          - name: '方法:分離ストレージ内で既存のファイルおよびディレクトリを検索する'
+            href: ../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md
+          - name: '方法:分離ストレージ内でファイルの読み取りと書き込みを行う'
+            href: ../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md
+          - name: '方法:分離ストレージでファイルおよびディレクトリを削除する'
+            href: ../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md
+      - name: パイプ
+        href: ../standard/io/pipe-operations.md
+        items:
+          - name: '方法:ローカルのプロセス間通信で匿名パイプを使用する'
+            href: ../standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md
+          - name: '方法:ネットワークのプロセス間通信で名前付きパイプを使用する'
+            href: ../standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md
+      - name: パイプライン
+        href: ../standard/io/pipelines.md
+      - name: バッファーを操作する
+        href: ../standard/io/buffers.md
+      - name: メモリ マップト ファイル
+        href: ../standard/io/memory-mapped-files.md
+  - name: 単体テスト
+    displayName: 'xUnit,NUnit,MSTest,unit testing,testing'
+    items:
+      - name: 概要
+        href: ../core/testing/index.md
+      - name: 単体テストのベスト プラクティス
+        href: ../core/testing/unit-testing-best-practices.md
+      - name: xUnit
+        items:
+          - name: C# 単体テスト
+            href: ../core/testing/unit-testing-with-dotnet-test.md
+          - name: F# 単体テスト
+            href: ../core/testing/unit-testing-fsharp-with-dotnet-test.md
+          - name: VB 単体テスト
+            href: ../core/testing/unit-testing-visual-basic-with-dotnet-test.md
+          - name: プロジェクトの整理と xUnit でのテスト
+            href: ../core/tutorials/testing-with-cli.md
+            displayName: 'tutorials, cli'
+      - name: NUnit
+        items:
+          - name: C# 単体テスト
+            href: ../core/testing/unit-testing-with-nunit.md
+          - name: F# 単体テスト
+            href: ../core/testing/unit-testing-fsharp-with-nunit.md
+          - name: VB 単体テスト
+            href: ../core/testing/unit-testing-visual-basic-with-nunit.md
+      - name: MSTest
+        items:
+          - name: C# 単体テスト
+            href: ../core/testing/unit-testing-with-mstest.md
+          - name: F# 単体テスト
+            href: ../core/testing/unit-testing-fsharp-with-mstest.md
+          - name: VB 単体テスト
+            href: ../core/testing/unit-testing-visual-basic-with-mstest.md
+      - name: 選択的単体テストの実行
+        href: ../core/testing/selective-unit-tests.md
+      - name: 単体テストの順序を設定する
+        href: ../core/testing/order-unit-tests.md
+      - name: 単体テストのコード カバレッジ
+        href: ../core/testing/unit-testing-code-coverage.md
+      - name: 発行された出力の単体テスト
+        href: ../core/testing/unit-testing-published-output.md
+      - name: Visual Studio での .NET Core プロジェクトのライブ単体テスト
+        href: /visualstudio/test/live-unit-testing-start
+  - name: Security
+    href: ../standard/security/
+  - name: 高度なトピック
+    items:
+      - name: パフォーマンス
+        items:
+          - name: メモリ管理
+            items:
+              - name: '"マネージド コード" とは'
+                href: ../standard/managed-code.md
+              - name: 自動メモリ管理
+                href: ../standard/automatic-memory-management.md
+              - name: アンマネージド リソースのクリーンアップ
+                items:
+                  - name: 概要
+                    href: ../standard/garbage-collection/unmanaged.md
+                    displayName: 'unmanaged resources, memory management'
+                  - name: Dispose メソッドの実装
+                    href: ../standard/garbage-collection/implementing-dispose.md
+                    displayName: 'using, Dispose, dispose pattern, IDisposable'
+                  - name: DisposeAsync メソッドの実装
+                    href: ../standard/garbage-collection/implementing-disposeasync.md
+                    displayName: 'await using, DisposeAsync, async dispose pattern, IAsyncDisposable'
+                  - name: IDisposable を実装するオブジェクトの使用
+                    href: ../standard/garbage-collection/using-objects.md
+              - name: ガベージ コレクション
+                items:
+                  - name: 概要
+                    href: ../standard/garbage-collection/index.md
+                    displayName: garbage collection
+                  - name: 基礎
+                    href: ../standard/garbage-collection/fundamentals.md
+                  - name: ワークステーションとサーバーの GC
+                    href: ../standard/garbage-collection/workstation-server-gc.md
+                  - name: バックグラウンド GC
+                    href: ../standard/garbage-collection/background-gc.md
+                  - name: 大きなオブジェクト ヒープ
+                    href: ../standard/garbage-collection/large-object-heap.md
+                  - name: ガベージ コレクションとパフォーマンス
+                    href: ../standard/garbage-collection/performance.md
+                  - name: 発生したコレクション
+                    href: ../standard/garbage-collection/induced.md
+                  - name: 待機モード
+                    href: ../standard/garbage-collection/latency.md
+                  - name: 共有 Web ホストの最適化
+                    href: ../standard/garbage-collection/optimization-for-shared-web-hosting.md
+                  - name: ガベージ コレクションの通知
+                    href: ../standard/garbage-collection/notifications.md
+                  - name: アプリケーション ドメインのリソース監視
+                    href: ../standard/garbage-collection/app-domain-resource-monitoring.md
+                  - name: 弱い参照
+                    href: ../standard/garbage-collection/weak-references.md
+          - name: メモリおよびスパンに関連する型
+            items:
+              - name: 概要
+                href: ../standard/memory-and-spans/index.md
+              - name: Memory<T> と Span<T> の使用ガイドライン
+                href: ../standard/memory-and-spans/memory-t-usage-guidelines.md
+          - name: SIMD が有効な型
+            href: ../standard/simd.md
+      - name: ネイティブ相互運用性
+        items:
+          - name: 概要
+            href: ../standard/native-interop/index.md
+            displayName: Native interop
+          - name: P/Invoke
+            href: ../standard/native-interop/pinvoke.md
+          - name: 型のマーシャリング
+            href: ../standard/native-interop/type-marshaling.md
+          - name: 構造体のマーシャリングのカスタマイズ
+            href: ../standard/native-interop/customize-struct-marshaling.md
+          - name: パラメーターのマーシャリングのカスタマイズ
+            href: ../standard/native-interop/customize-parameter-marshaling.md
+          - name: 相互運用のガイダンス
+            href: ../standard/native-interop/best-practices.md
+          - name: 文字セットとマーシャリング
+            href: ../standard/native-interop/charset.md
+          - name: COM への .NET Core コンポーネントの公開
+            href: ../core/native-interop/expose-components-to-com.md
+          - name: ネイティブ コードからの .NET Core のホスト
+            href: ../core/tutorials/netcore-hosting.md
+          - name: COM 相互運用
+            items:
+              - name: 概要
+                href: ../standard/native-interop/cominterop.md
+                displayName: COM interop
+              - name: COM ラッパー
+                items:
+                  - name: 概要
+                    href: ../standard/native-interop/com-wrappers.md
+                    displayName: COM wrappers
+                  - name: ランタイム呼び出し可能ラッパー
+                    href: ../standard/native-interop/runtime-callable-wrapper.md
+                  - name: COM 呼び出し可能ラッパー
+                    href: ../standard/native-interop/com-callable-wrapper.md
+              - name: COM 相互運用のための .NET 型の修飾
+                href: ../standard/native-interop/qualify-net-types-for-interoperation.md
+          - name: 相互運用属性の適用
+            href: ../standard/native-interop/apply-interop-attributes.md
+          - name: 例外
+            href: ../standard/native-interop/exceptions-interoperability.md
+      - name: .NET Core の配布パッケージ
+        href: ../core/distribution-packaging.md
+      - name: グローバリゼーションとローカリゼーション
+        href: ../standard/globalization-localization/
+      - name: オープン ソース ライブラリのガイダンス
+        href: ../standard/library-guidance/
+      - name: フレームワーク デザインのガイドライン
+        items:
+          - name: 概要
+            href: ../standard/design-guidelines/index.md
+          - name: 名前付けのガイドライン
+            href: ../standard/design-guidelines/naming-guidelines.md
+            items:
+              - name: 大文字の表記規則
+                href: ../standard/design-guidelines/capitalization-conventions.md
+              - name: 一般的な名前付け規則
+                href: ../standard/design-guidelines/general-naming-conventions.md
+              - name: アセンブリと DLL の名前
+                href: ../standard/design-guidelines/names-of-assemblies-and-dlls.md
+              - name: 名前空間の名前
+                href: ../standard/design-guidelines/names-of-namespaces.md
+              - name: クラス、構造体、インターフェイスの名前
+                href: ../standard/design-guidelines/names-of-classes-structs-and-interfaces.md
+              - name: 型のメンバーの名前
+                href: ../standard/design-guidelines/names-of-type-members.md
+              - name: パラメーターの名前付け
+                href: ../standard/design-guidelines/naming-parameters.md
+              - name: リソースの名前付け
+                href: ../standard/design-guidelines/naming-resources.md
+          - name: 型のデザインのガイドライン
+            href: ../standard/design-guidelines/type.md
+            items:
+              - name: クラスと構造体の間の選択
+                href: ../standard/design-guidelines/choosing-between-class-and-struct.md
+              - name: 抽象クラスのデザイン
+                href: ../standard/design-guidelines/abstract-class.md
+              - name: 静的クラスのデザイン
+                href: ../standard/design-guidelines/static-class.md
+              - name: インターフェイスのデザイン
+                href: ../standard/design-guidelines/interface.md
+              - name: 構造体のデザイン
+                href: ../standard/design-guidelines/struct.md
+              - name: 列挙型のデザイン
+                href: ../standard/design-guidelines/enum.md
+              - name: 入れ子にされた型
+                href: ../standard/design-guidelines/nested-types.md
+          - name: メンバーのデザインのガイドライン
+            href: ../standard/design-guidelines/member.md
+            items:
+              - name: メンバーのオーバーロード
+                href: ../standard/design-guidelines/member-overloading.md
+              - name: プロパティのデザイン
+                href: ../standard/design-guidelines/property.md
+              - name: コンストラクターのデザイン
+                href: ../standard/design-guidelines/constructor.md
+              - name: イベントのデザイン
+                href: ../standard/design-guidelines/event.md
+              - name: フィールドのデザイン
+                href: ../standard/design-guidelines/field.md
+              - name: 拡張メソッド
+                href: ../standard/design-guidelines/extension-methods.md
+              - name: 演算子のオーバーロード
+                href: ../standard/design-guidelines/operator-overloads.md
+              - name: パラメーターのデザイン
+                href: ../standard/design-guidelines/parameter-design.md
+          - name: 機能拡張のための設計
+            href: ../standard/design-guidelines/designing-for-extensibility.md
+            items:
+              - name: シールされていないクラス
+                href: ../standard/design-guidelines/unsealed-classes.md
+              - name: プロテクト メンバー
+                href: ../standard/design-guidelines/protected-members.md
+              - name: イベントとコールバック
+                href: ../standard/design-guidelines/events-and-callbacks.md
+              - name: 仮想メンバー
+                href: ../standard/design-guidelines/virtual-members.md
+              - name: 抽象化 (抽象型とインターフェイス)
+                href: ../standard/design-guidelines/abstractions-abstract-types-and-interfaces.md
+              - name: 抽象化を実装するための基本クラス
+                href: ../standard/design-guidelines/base-classes-for-implementing-abstractions.md
+              - name: シール
+                href: ../standard/design-guidelines/sealing.md
+          - name: 例外のデザインのガイドライン
+            href: ../standard/design-guidelines/exceptions.md
+            items:
+              - name: 例外のスロー
+                href: ../standard/design-guidelines/exception-throwing.md
+              - name: 標準の例外の種類を使用する
+                href: ../standard/design-guidelines/using-standard-exception-types.md
+              - name: 例外とパフォーマンス
+                href: ../standard/design-guidelines/exceptions-and-performance.md
+          - name: 使用上のガイドライン
+            href: ../standard/design-guidelines/usage-guidelines.md
+            items:
+              - name: 配列
+                href: ../standard/design-guidelines/arrays.md
+              - name: 属性
+                href: ../standard/design-guidelines/attributes.md
+              - name: コレクション
+                href: ../standard/design-guidelines/guidelines-for-collections.md
+              - name: シリアル化
+                href: ../standard/design-guidelines/serialization.md
+              - name: System.Xml の使用法
+                href: ../standard/design-guidelines/system-xml-usage.md
+              - name: 等値演算子
+                href: ../standard/design-guidelines/equality-operators.md
+          - name: 一般的なデザイン パターン
+            href: ../standard/design-guidelines/common-design-patterns.md
+            items:
+              - name: 依存関係プロパティ
+                href: ../standard/design-guidelines/dependency-properties.md
+  - name: 移行ガイド
+    items:
+      - name: 重大な変更
+        displayName: app compatibility
+        href: ../core/compatibility/
+      - name: 移行
+        items:
+          - name: .NET Core 2.0 から 2.1 へ
+            href: ../core/migration/20-21.md
+          - name: project.json からの移行
+            href: ../core/migration/index.md
+          - name: project.json と csproj 間のマッピング
+            href: ../core/tools/project-json-to-csproj.md
+          - name: CLI の変更概要
+            href: ../core/tools/cli-msbuild-architecture.md
+          - name: DNX からの移行
+            href: ../core/migration/from-dnx.md
+      - name: .NET Framework から移植する
+        items:
+          - name: 概要
+            href: ../core/porting/index.md
+          - name: サード パーティの依存関係を分析する
+            href: ../core/porting/third-party-deps.md
+          - name: ライブラリを移植する
+            href: ../core/porting/libraries.md
+          - name: .NET Core のプロジェクトを整理する
+            href: ../core/porting/project-structure.md
+          - name: 利用できないテクノロジ
+            href: ../core/porting/net-framework-tech-unavailable.md
+          - name: ツール
+            href: ../core/porting/tools.md
+          - name: Windows 互換機能パックを使用する
+            href: ../core/porting/windows-compat-pack.md
+          - name: Windows フォーム プロジェクトを移植する
+            href: ../core/porting/winforms.md
+          - name: WPF プロジェクトを移植する
+            href: ../core/../desktop-wpf/migration/convert-project-from-net-framework.md
+          - name: C++/CLI プロジェクトを移植する
+            href: ../core/porting/cpp-cli.md
+      - name: サーバー アプリ用 .NET Core と .NET Framework の選択
+        href: ../standard/choosing-core-framework-server.md
