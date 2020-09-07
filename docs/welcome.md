@@ -3,12 +3,12 @@ title: .NET にようこそ
 description: .NET ファミリのテクノロジの概要です。
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 64b9b0402631d34adc7ebd3bf8f7bc13416026b0
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 7b1c5eceefd1e108eabf17d5cb6f7552af00e0d5
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646293"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495148"
 ---
 # <a name="welcome-to-net"></a>.NET にようこそ
 
@@ -36,14 +36,13 @@ ms.locfileid: "81646293"
 - [.NET Core 3.1 の新機能](core/whats-new/dotnet-core-3-1.md)
 - [.NET Framework の新機能](framework/whats-new/index.md)
 - [C# の新機能](csharp/whats-new/index.md)
-- [Visual Basic の新機能](visual-basic/getting-started/whats-new.md)
+- [Visual Basic の新機能](visual-basic/whats-new/index.md)
 
 ## <a name="documentation"></a>ドキュメント
 
 このドキュメントでは、.NET 全体のプラットフォームおよび言語について説明します。 次のいずれかのセクションから .NET とその言語の作業を開始できます。
 
-- [.NET のガイド](standard/index.yml)
-- [.NET Core のガイド](core/index.yml)
+- [.NET の基礎](fundamentals/index.yml)
 - [.NET Framework ガイド](framework/index.yml)
 - [C# のガイド](csharp/index.yml)
 - [F# のガイド](fsharp/index.yml)
