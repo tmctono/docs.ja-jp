@@ -2,12 +2,12 @@
 title: 方法に関する記事 (C# ガイド)
 description: 簡単なヒントと、焦点を絞った短いコード サンプルのコレクション
 ms.date: 12/20/2017
-ms.openlocfilehash: 81ef8106add757cf3c83aa7dc130f5474b936461
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 9dd069ff767d65002b78c18b398b700a1f26ebfa
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794703"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465157"
 ---
 # <a name="how-to-c"></a>方法 (C#)
 
@@ -94,7 +94,7 @@ C# の開発者には一般的な方法といえるヒントやコツがいく�
 
 - [イベントのサブスクリプションとサブスクリプションの解除](../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
 - [インターフェイスで宣言されたイベントを実装する](../programming-guide/events/how-to-implement-interface-events.md)。
-- [コードがイベントを発行するときに .NET Framework ガイドラインに準拠する](../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)。
+- [コードによってイベントを発行するときに .NET ガイドラインに準拠する](../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)。
 - [派生クラスから基底クラスで定義されているイベントを発生させる](../programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)。
 - [カスタム イベント アクセサーを実装する](../programming-guide/events/how-to-implement-custom-event-accessors.md)。
 
