@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: dd7d3e445772e4b5ec148576ccd1374d56e251bd
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: f61cf21f9f30662cc8e383bb3aeb5c642f1665b8
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614781"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497784"
 ---
 ### <a name="deadlock-may-result-when-using-reentrant-services"></a>再入可能なサービスを使用していると、デッドロックが発生する可能性がある
 
@@ -20,7 +20,7 @@ ms.locfileid: "85614781"
 
 この問題に対処するために、次の操作を行うことができます。
 
-- サービスのコンカレンシー モードを <xref:System.ServiceModel.ConcurrencyMode.Single?displayProperty=nameWithType> または &lt;System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType&gt; に設定します。 次に例を示します。
+- サービスのコンカレンシー モードを <xref:System.ServiceModel.ConcurrencyMode.Single?displayProperty=nameWithType> または <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType> に設定します。 次に例を示します。
 
 ```csharp
 [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Reentrant)]
