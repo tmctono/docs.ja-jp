@@ -3,12 +3,12 @@ title: 診断ツールの概要 - .NET Core
 description: .NET Core アプリケーションの診断に使用できるツールと手法の概要。
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: ae3b9a1961f331c9cdea786bd5fe06b7bfa10927
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 568f237e131cde18dad7c87ddff2fdd3d4bc5b8b
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558115"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89597977"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core で使用できる診断ツール
 
@@ -28,7 +28,11 @@ ms.locfileid: "88558115"
 
 [単体テスト](../testing/index.md)は、高品質のソフトウェアを継続的に統合して展開するための重要なコンポーネントです。 単体テストは、何かを中断するときに早期警告を提供するように設計されています。
 
-## <a name="net-core-dotnet-diagnostic-global-tools"></a>.NET Core dotnet 診断グローバル ツール
+## <a name="debug-linux-dumps"></a>Linux ダンプのデバッグ
+
+「[Linux ダンプのデバッグ](debug-linux-dumps.md)」では、Linux でダンプを収集して分析する方法について説明します。
+
+## <a name="net-core-diagnostic-global-tools"></a>.NET Core 診断グローバル ツール
 
 ### <a name="dotnet-counters"></a>dotnet-カウンター
 
@@ -45,6 +49,14 @@ ms.locfileid: "88558115"
 ### <a name="dotnet-trace"></a>dotnet-トレース
 
 .NET Core には、診断データが公開される `EventPipe` と呼ばれるものが含まれています。 [dotnet-トレース](dotnet-trace.md) ツールを使用すると、アプリから興味深いプロファイル データを使用できます。これは、アプリケーションの実行速度が低下する可能性のあるシナリオに役立ちます。
+
+### <a name="dotnet-symbol"></a>dotnet-symbol
+
+[dotnet-symbol](dotnet-symbol.md) によって、コア ダンプまたはミニダンプを開くために必要なファイル (シンボル、DAC/DBI、ホスト ファイルなど) をダウンロードできます。 別のコンピューターでキャプチャされたダンプ ファイルをデバッグするためにシンボルとモジュールが必要な場合は、このツールを使用します。
+
+### <a name="dotnet-sos"></a>dotnet-sos
+
+[dotnet-sos](dotnet-sos.md) を使用すると、Linux または MacOS (または、以前のデバッグ ツールを使用している場合は Windows) に [SOS デバッガー拡張](https://docs.microsoft.com/dotnet/framework/tools/sos-dll-sos-debugging-extension)をインストールできます。
 
 ## <a name="net-core-diagnostics-tutorials"></a>.NET Core 診断チュートリアル
 

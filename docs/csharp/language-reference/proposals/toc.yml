@@ -104,6 +104,8 @@
           href: ../../../../_csharplang/proposals/csharp-9.0/target-typed-conditional-expression.md
         - name: 共変の戻り値の型
           href: ../../../../_csharplang/proposals/csharp-9.0/covariant-returns.md
+        - name: foreach ループでの拡張機能 GetEnumerator
+          href: ../../../../_csharplang/proposals/csharp-9.0/extension-getenumerator.md
         - name: ラムダ ディスカード パラメーター
           href: ../../../../_csharplang/proposals/csharp-9.0/lambda-discard-parameters.md
         - name: ローカル関数の属性

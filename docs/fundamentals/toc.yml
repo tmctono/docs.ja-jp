@@ -129,9 +129,6 @@ items:
               - name: パッケージをインストールして使用する
                 href: /nuget/quickstart/install-and-use-a-package-in-visual-studio-mac
                 displayName: 'tutorials, visual studio for mac, vs for mac'
-              - name: パッケージの作成と公開
-                href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
-                displayName: tutorials
           - name: その他のチュートリアル
             href: ../core/tutorials/index.md
   - name: 新機能
@@ -308,6 +305,8 @@ items:
                 href: ../core/diagnostics/index.md
               - name: マネージド デバッガー
                 href: ../core/diagnostics/managed-debuggers.md
+              - name: Linux ダンプのデバッグ
+                href: ../core/diagnostics/debug-linux-dumps.md
               - name: EventCounters
                 href: ../core/diagnostics/event-counters.md
               - name: ログとトレース
@@ -322,6 +321,10 @@ items:
                     href: ../core/diagnostics/dotnet-gcdump.md
                   - name: dotnet-トレース
                     href: ../core/diagnostics/dotnet-trace.md
+                  - name: dotnet-symbol
+                    href: ../core/diagnostics/dotnet-symbol.md
+                  - name: dotnet-sos
+                    href: ../core/diagnostics/dotnet-sos.md
               - name: .NET Core 診断チュートリアル
                 items:
                   - name: EventCounters を使用してパフォーマンス メトリックを取得する
@@ -619,7 +622,7 @@ items:
               - name: 概要
                 href: ../standard/base-types/regular-expressions.md
                 displayName: regular expressions
-              - name: 言語のリファレンス
+              - name: 言語リファレンス
                 items:
                   - name: 概要
                     href: ../standard/base-types/regular-expression-language-quick-reference.md
@@ -1072,7 +1075,7 @@ items:
         href: ../core/testing/unit-testing-published-output.md
       - name: Visual Studio での .NET Core プロジェクトのライブ単体テスト
         href: /visualstudio/test/live-unit-testing-start
-  - name: セキュリティ
+  - name: Security
     href: ../standard/security/
   - name: 高度なトピック
     items:

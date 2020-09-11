@@ -50,3 +50,5 @@
       href: visualbasic.md
     - name: Windows フォーム
       href: winforms.md
+    - name: WPF
+      href: wpf.md
