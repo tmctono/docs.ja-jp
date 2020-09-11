@@ -1,0 +1,350 @@
+- name: LINQ
+  items:
+    - name: LINQ の概要
+      href: index.md
+    - name: LINQ to XML
+      items:
+        - name: 作業開始
+          items:
+            - name: LINQ to XML の概要
+              href: linq-xml-overview.md
+            - name: LINQ to XML およびDOM
+              href: linq-xml-vs-dom.md
+            - name: LINQ to XML とその他の XML テクノロジ
+              href: linq-xml-vs-xml-technologies.md
+        - name: プログラミング ガイド
+          items:
+            - name: LINQ to XML プログラミングの概要
+              items:
+                - name: 関数型プログラミングと手続き型プログラミング
+                  href: functional-vs-procedural-programming.md
+                - name: LINQ to XML クラスの概要
+                  href: linq-xml-classes-overview.md
+                - name: XElement クラスの概要
+                  href: xelement-class-overview.md
+                - name: XAttribute クラスの概要
+                  href: xattribute-class-overview.md
+                - name: XDocument クラスの概要
+                  href: xdocument-class-overview.md
+                - name: LINQ to XML の例をビルドする方法
+                  href: build-linq-xml-examples.md
+            - name: XML ツリー
+              items:
+                - name: 関数型構築
+                  href: functional-construction.md
+                - name: C# で XML ツリーを作成する
+                  href: create-xml-trees.md
+                - name: Visual Basic の XML リテラル
+                  href: xml-literals.md
+                - name: 解析 XML
+                  items:
+                    - name: 文字列を解析する方法
+                      href: parse-string.md
+                    - name: ファイルから XML を読み込む方法
+                      href: load-xml-file.md
+                    - name: XML の読み込み時または解析時に空白を維持する
+                      href: preserve-white-space-loading-parsing-xml.md
+                    - name: 解析エラーをキャッチする方法
+                      href: catch-parsing-errors.md
+                    - name: XmlReader からツリーを作成する方法
+                      href: create-tree-xmlreader.md
+                    - name: XmlReader から XML フラグメントをストリーム出力する方法
+                      href: stream-xml-fragments-xmlreader.md
+                - name: XmlWriter を使用して XML ツリーを設定する方法
+                  href: populate-xml-tree-xmlwriter.md
+                - name: XSD を使用して検証する方法
+                  href: validate-xsd.md
+                - name: XElement オブジェクトと XDocument オブジェクトの有効なコンテンツ
+                  href: valid-content-xelement-xdocument-objects.md
+            - name: XML 名前空間を使用する
+              items:
+                - name: 名前空間の概要
+                  href: namespaces-overview.md
+                - name: C# で名前空間を持つドキュメントを作成する方法
+                  href: create-document-namespaces-csharp.md
+                - name: Visual Basic で名前空間を持つドキュメントを作成する方法
+                  href: create-document-namespaces-visual-basic.md
+                - name: 名前空間プレフィックスを制御する方法
+                  href: control-namespace-prefixes.md
+                - name: 既定名前空間のスコープ
+                  href: scope-default-namespaces.md
+                - name: Visual Basic でグローバル名前空間を使用する
+                  href: work-global-namespaces.md
+                - name: 名前空間内の XML に対するクエリを記述する方法
+                  href: write-queries-xml-namespaces.md
+            - name: XML ツリーをシリアル化する
+              items:
+                - name: シリアル化時に空白を維持する
+                  href: preserve-white-space-serializing.md
+                - name: XML 宣言付きでシリアル化する
+                  href: serialize-xml-declaration.md
+                - name: ファイル、TextWriter、および XmlWriter にシリアル化する
+                  href: serialize-files-textwriters-xmlwriters.md
+                - name: XmlReader にシリアル化する (XSLT の呼び出し)
+                  href: serialize-xmlreader-invoke-xslt.md
+            - name: LINQ to XML 軸
+              items:
+                - name: LINQ to XML 軸の概要
+                  href: linq-xml-axes-overview.md
+                - name: 要素のコレクションを取得する方法
+                  href: retrieve-collection-elements.md
+                - name: 要素の値を取得する方法
+                  href: retrieve-value-element.md
+                - name: 要素名をフィルター処理する方法
+                  href: filter-element-names.md
+                - name: 軸メソッド呼び出しを連結する方法
+                  href: chain-axis-method-calls.md
+                - name: 単一の子要素を取得する方法
+                  href: retrieve-single-child-element.md
+                - name: 属性のコレクションを取得する方法
+                  href: retrieve-collection-attributes.md
+                - name: 単一の属性を取得する方法
+                  href: retrieve-single-attribute.md
+                - name: 属性の値を取得する方法
+                  href: retrieve-value-attribute.md
+                - name: 要素の浅い値を取得する方法
+                  href: retrieve-shallow-value-element.md
+                - name: Visual Basic の統合言語軸
+                  href: language-integrated-axes.md
+            - name: XML ツリーのクエリ
+              items:
+                - name: XML ツリーのクエリの概要
+                  href: query-xml-trees-overview.md
+                - name: 基本的なクエリ
+                  items:
+                    - name: 特定の属性を持つ要素を検索する方法
+                      href: find-element-specific-attribute.md
+                    - name: 特定の子要素を持つ要素を検索する方法
+                      href: find-element-specific-child-element.md
+                    - name: XDocument のクエリと XElement のクエリ
+                      href: query-xdocument-vs-query-xelement.md
+                    - name: 特定の要素名を持つ子孫を検索する方法
+                      href: find-descendants-specific-element-name.md
+                    - name: Descendants メソッドを使用して単一の子孫を検索する方法
+                      href: find-single-descendant-descendants-method.md
+                    - name: 複雑なフィルターを使用してクエリを記述する方法
+                      href: write-queries-complex-filtering.md
+                    - name: 省略可能な要素をフィルター処理する方法
+                      href: filter-optional-element.md
+                    - name: 名前空間内のすべてのノードを検索する方法
+                      href: find-all-nodes-namespace.md
+                    - name: 要素を並べ替える方法
+                      href: sort-elements.md
+                    - name: 複数のキーに基づいて要素を並べ替える方法
+                      href: sort-elements-multiple-keys.md
+                    - name: 中間値を計算する方法
+                      href: calculate-intermediate-values.md
+                    - name: コンテキストに基づいて要素を検索するクエリを記述する方法
+                      href: write-query-finds-elements-based-context.md
+                    - name: 空のクエリ結果セットをデバッグする方法
+                      href: debug-empty-query-results-sets.md
+                - name: 射影と変換
+                  items:
+                    - name: LINQ to XML を使用してディクショナリを操作する方法
+                      href: work-dictionaries-linq-xml.md
+                    - name: XML ツリーの構造を変換する方法
+                      href: transform-shape-xml-tree.md
+                    - name: 射影の型を制御する方法
+                      href: control-type-projection.md
+                    - name: 新しい型を射影する方法
+                      href: project-new-type.md
+                    - name: オブジェクト グラフを射影する方法
+                      href: project-object-graph.md
+                    - name: 匿名型を射影する方法
+                      href: project-anonymous-type.md
+                    - name: XML からテキスト ファイルを生成する方法
+                      href: generate-text-files-xml.md
+                    - name: CSV ファイルから XML を生成する方法
+                      href: generate-xml-csv-files.md
+                - name: 高度なクエリ手法
+                  items:
+                    - name: 2 つのコレクションを結合する方法
+                      href: join-two-collections.md
+                    - name: グループ化を使用して階層を作成する方法
+                      href: create-hierarchy-grouping.md
+                    - name: XPath を使用して LINQ to XML にクエリを実行する方法
+                      href: query-linq-xml-xpath.md
+                    - name: LINQ to XML 軸メソッドを記述する方法
+                      href: write-linq-xml-axis-method.md
+                    - name: テキストから XML へのストリーミング変換を実行する方法 (C#)
+                      href: perform-streaming-transformations-text-xml.md
+                    - name: ツリー内のすべてのノードを一覧表示する方法
+                      href: list-all-nodes-tree.md
+                    - name: Office Open XML ドキュメントから段落を取得する方法
+                      href: retrieve-paragraphs-office-open-xml-document.md
+                    - name: Office Open XML ドキュメントを変更する方法
+                      href: modify-office-open-xml-document.md
+                    - name: ファイル システムから XML ツリーを設定する方法
+                      href: populate-xml-tree-file-system.md
+                - name: XPath ユーザー向けの LINQ to XML
+                  items:
+                    - name: XPath と LINQ to XML の比較
+                      href: comparison-xpath-linq-xml.md
+                    - name: 子要素を検索する方法
+                      href: find-child-element.md
+                    - name: 子要素の一覧を検索する方法
+                      href: find-list-child-elements.md
+                    - name: ルート要素を検索する方法
+                      href: find-root-element.md
+                    - name: 子孫要素を検索する方法
+                      href: find-descendant-elements.md
+                    - name: 属性をフィルター処理する方法
+                      href: filter-attribute.md
+                    - name: 関連要素を検索する方法
+                      href: find-related-elements.md
+                    - name: 名前空間内の要素を検索する方法
+                      href: find-elements-namespace.md
+                    - name: 先行する兄弟を検索する方法
+                      href: find-preceding-siblings.md
+                    - name: 子要素の子孫を検索する方法
+                      href: find-descendants-child-element.md
+                    - name: 2 つのロケーション パスの和集合を検索する方法
+                      href: find-union-two-location-paths.md
+                    - name: 兄弟ノードを検索する方法
+                      href: find-sibling-nodes.md
+                    - name: 親の属性を検索する方法
+                      href: find-attribute-parent.md
+                    - name: 特定の名前を持つ兄弟の属性を検索する方法
+                      href: find-attributes-siblings-specific-name.md
+                    - name: 特定の属性を持つ要素を検索する方法
+                      href: find-elements-specific-attribute.md
+                    - name: 位置に基づいて子要素を検索する方法
+                      href: find-child-elements-based-position.md
+                    - name: 直前の兄弟を検索する方法
+                      href: find-immediate-preceding-sibling.md
+                - name: XML の純粋関数型変換
+                  items:
+                    - name: 純粋関数型変換の概要
+                      href: introduction-pure-functional-transformations.md
+                    - name: 概念と用語 (関数型変換)
+                      href: concepts-terminology-functional-transformation.md
+                    - name: 関数型プログラミングと命令型プログラミング
+                      href: functional-vs-imperative-programming.md
+                    - name: 純粋関数にリファクタリングする
+                      href: refactor-pure-functions.md
+                    - name: 関数型変換の適用範囲
+                      href: applicability-functional-transformation.md
+                    - name: XML の関数型変換
+                      href: functional-transformation-xml.md
+                    - name: 遅延実行とレイジー評価
+                      href: deferred-execution-lazy-evaluation.md
+                    - name: 遅延実行の例
+                      href: deferred-execution-example.md
+                    - name: 'チュートリアル: クエリを連結する (C#)'
+                      items:
+                        - name: クエリの連結の例 (C#)
+                          href: chain-queries-example.md
+                        - name: 中間結果の具体化 (C#)
+                          href: intermediate-materialization.md
+                        - name: 標準クエリ演算子を連結する (C#)
+                          href: chain-standard-query-operators-together.md
+                    - name: 'チュートリアル: WordprocessingML ドキュメント内のコンテンツを操作する'
+                      items:
+                        - name: WordprocessingML ドキュメントの XML 構造
+                          href: xml-shape-wordprocessingml-documents.md
+                        - name: ソースとなる Office Open XML ドキュメントを作成する
+                          href: create-source-office-open-xml-document.md
+                        - name: 既定の段落スタイルを検索する
+                          href: find-default-paragraph-style.md
+                        - name: 段落とそのスタイルを取得する
+                          href: retrieve-paragraphs-styles.md
+                        - name: 段落のテキストを取得する
+                          href: retrieve-text-paragraphs.md
+                        - name: 拡張メソッドを使用してリファクタリングする
+                          href: refactor-extension-method.md
+                        - name: 純粋関数を使用してリファクタリングする
+                          href: refactor-pure-function.md
+                        - name: 異なる構造の XML を射影する
+                          href: project-xml-different-shape.md
+                        - name: Word 文書内のテキストを検索する
+                          href: find-text-word-documents.md
+                        - name: Office Open XML WordprocessingML ドキュメントの詳細
+                          items:
+                            - name: スタイルを含む WordprocessingML ドキュメント
+                              href: wordprocessingml-document-styles.md
+                            - name: WordprocessingML ドキュメントのスタイル パーツ
+                              href: style-part-wordprocessingml-document.md
+                            - name: Office Open XML ドキュメント パーツを出力する例
+                              href: example-outputs-office-open-xml-document-parts.md
+            - name: XML ツリーを変更する
+              items:
+                - name: メモリ内の XML ツリーの変更と関数型構築の比較
+                  href: in-memory-xml-tree-modification-vs-functional-construction.md
+                - name: XML ツリーに要素、属性、ノードを追加する
+                  href: add-elements-attributes-nodes-xml-tree.md
+                - name: XML ツリーの要素、属性、ノードを変更する
+                  href: modify-elements-attributes-nodes-xml-tree.md
+                - name: XML ツリーから要素、属性、ノードを削除する
+                  href: remove-elements-attributes-nodes-xml-tree.md
+                - name: 名前と値のペアを保持する
+                  href: maintain-name-value-pairs.md
+                - name: XML ツリー全体の名前空間を変更する方法
+                  href: change-namespace-entire-xml-tree.md
+            - name: パフォーマンス
+              items:
+                - name: 連結クエリのパフォーマンス
+                  href: performance-chained-queries.md
+                - name: アトミック化された XName および XNamespace オブジェクト
+                  href: atomized-xname-xnamespace-objects.md
+                - name: XName オブジェクトの事前アトミック化
+                  href: pre-atomization-xname-objects.md
+                - name: 静的にコンパイルされたクエリ
+                  href: statically-compiled-queries.md
+            - name: 高度な LINQ to XML プログラミング
+              items:
+                - name: LINQ to XML の注釈
+                  href: linq-xml-annotations.md
+                - name: LINQ to XML イベント
+                  href: linq-xml-events.md
+                - name: ノードでのプログラミング
+                  href: program-nodes.md
+                - name: 混在バグ (宣言型コードと命令型コードの)
+                  href: mixed-declarative-imperative-code-bugs.md
+                - name: ヘッダー情報にアクセスして XML フラグメントをストリーム出力する方法
+                  href: stream-xml-fragments-access-header-information.md
+                - name: 大きな XML ドキュメントのストリーミング変換を実行する方法
+                  href: perform-streaming-transform-large-xml-documents.md
+                - name: エンコードされたドキュメントを読み書きする方法
+                  href: read-write-encoded-document.md
+                - name: XSLT を使用して XML ツリーを変換する
+                  href: use-xslt-transform-xml-tree.md
+                - name: 注釈を使用して XSLT スタイルの LINQ to XML ツリーを変換する方法
+                  href: use-annotations-transform-linq-xml-trees-xslt-style.md
+                - name: XElement オブジェクトを含むオブジェクト グラフをシリアル化する
+                  items:
+                    - name: XmlSerializer を使用してシリアル化する方法
+                      href: serialize-xmlserializer.md
+                    - name: DataContractSerializer を使用してシリアル化する方法
+                      href: serialize-datacontractserializer.md
+            - name: LINQ to XML のセキュリティ
+              href: linq-xml-security.md
+            - name: サンプル XML ドキュメント
+              items:
+                - name: 'サンプル XML ファイル:一般的な購買発注書'
+                  href: sample-xml-file-typical-purchase-order.md
+                - name: 'サンプル XML ファイル:名前空間内の一般的な購買発注書'
+                  href: sample-xml-file-typical-purchase-order-namespace.md
+                - name: 'サンプル XML ファイル:複数の購買発注書'
+                  href: sample-xml-file-multiple-purchase-orders.md
+                - name: 'サンプル XML ファイル:名前空間内の複数の購買発注書'
+                  href: sample-xml-file-multiple-purchase-orders-namespace.md
+                - name: 'サンプル XML ファイル:テスト構成'
+                  href: sample-xml-file-test-configuration.md
+                - name: 'サンプル XML ファイル:名前空間内のテスト構成'
+                  href: sample-xml-file-test-configuration-namespace.md
+                - name: 'サンプル XML ファイル:顧客と注文'
+                  href: sample-xml-file-customers-orders.md
+                - name: 'サンプル XSD ファイル:顧客と注文'
+                  href: sample-xsd-file-customers-orders.md
+                - name: 'サンプル XML ファイル:名前空間内の顧客と注文'
+                  href: sample-xml-file-customers-orders-namespace.md
+                - name: 'サンプル XML ファイル:数値データ'
+                  href: sample-xml-file-numerical-data.md
+                - name: 'サンプル XML ファイル:名前空間内の数値データ'
+                  href: sample-xml-file-numerical-data-namespace.md
+                - name: 'サンプル XML ファイル:ブック'
+                  href: sample-xml-file-books.md
+                - name: 'サンプル XML ファイル:統合購買発注書'
+                  href: sample-xml-file-consolidated-purchase-orders.md
+        - name: リファレンス
+          href: reference.md
