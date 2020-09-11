@@ -7,12 +7,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 27445b6685f48f7acf646c16de3201e68767da69
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: a1b65db6efb60d27ab82ab47854c0399b9476729
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125294"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466080"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>カテゴリ別の C# コンパイラ オプションの一覧
 
@@ -41,7 +41,7 @@ ms.locfileid: "89125294"
 |[-target](target-compiler-option.md)|次のオプション ([-target:appcontainerexe](target-appcontainerexe-compiler-option.md)、[-target:exe](target-exe-compiler-option.md)、[-target:library](target-library-compiler-option.md)、[-target:module](target-module-compiler-option.md)、[-target:winexe](target-winexe-compiler-option.md)、[-target:winmdobj](target-winmdobj-compiler-option.md)) のいずれかを使用して、出力ファイルの形式を指定します。|
 |-modulename:\<string>|ソース モジュールの名前を指定します。|
 
-## <a name="net-framework-assemblies"></a>.NET Framework アセンブリ
+## <a name="net-assemblies"></a>.NET アセンブリ
 
 |オプション|目的|
 |------------|-------------|
@@ -85,7 +85,7 @@ ms.locfileid: "89125294"
 |------------|-------------|
 |[-link](link-compiler-option.md)|指定したアセンブリ内の COM 型情報をプロジェクトで使用できるようにします。|
 |[-linkresource](linkresource-compiler-option.md)|マネージド リソースへのリンクを作成します。|
-|[-resource](resource-compiler-option.md)|.NET Framework のリソースを出力ファイルに埋め込みます。|
+|[-resource](resource-compiler-option.md)|.NET リソースを出力ファイルに組み込みます。|
 |[-win32icon](win32icon-compiler-option.md)|出力ファイルに挿入する .ico ファイルを指定します。|
 |[/win32res:](win32res-compiler-option.md)|出力ファイルに挿入する Win32 リソースを指定します。|
 

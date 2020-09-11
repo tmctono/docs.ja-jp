@@ -4,12 +4,12 @@ description: 自己完結型アプリケーションをトリミングしてサ�
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 7a4731e2cbaa3835e6aa6ba558dfa8cd03828e01
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: 9c2994c98a2ebe6f45b056256c2bda28db017fbf
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053108"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465482"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>自己完結型の展開と実行可能ファイルのトリミング
 

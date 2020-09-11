@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: c9a8e9450d81ac2e63a8c8ea54592ed81e646e05
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: de90db9061d0b7bd15141b277ae4272b5208f76b
+ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988129"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89379162"
 ---
 # <a name="common-web-application-architectures"></a>一般的な Web アプリケーション アーキテクチャ
 
@@ -145,28 +145,34 @@ UI レイヤーはインフラストラクチャ プロジェクトで定義さ�
 
 クリーン アーキテクチャでは、各プロジェクトが明確な責任を担っています。 そのため、各プロジェクトにはそれぞれ特定の型が属しており、該当するプロジェクトではこれらの型に対応するフォルダーを頻繁に確認できます。
 
+#### <a name="application-core"></a>アプリケーション コア
+
 アプリケーション コアでは、エンティティ、サービス、およびインターフェイスが含まれるビジネス モデルを保持します。 これらのインターフェイスには、データ アクセス、ファイル システム アクセス、ネットワーク呼び出しなどのインフラストラクチャを使用して実行される操作のための抽象化が含まれます。このレイヤーで定義されたサービスまたはインターフェイスは場合によって、UI またはインフラストラクチャに対して依存関係を持たない非エンティティ型を操作する必要があります。 これらは単純なデータ転送オブジェクト (DTO) として定義することができます。
 
-### <a name="application-core-types"></a>アプリケーション コアの種類
+##### <a name="application-core-types"></a>アプリケーション コアの種類
 
 - エンティティ (永続化されたビジネス モデル クラス)
 - インターフェイス
 - Services
 - DTO
 
+#### <a name="infrastructure"></a>インフラストラクチャ
+
 インフラストラクチャ プロジェクトには、通常、データ アクセス実装が含まれます。 代表的な ASP.NET Core Web アプリケーションの場合、これらの実装には Entity Framework (EF) DbContext、定義済みの任意の EF Core `Migration` オブジェクト、およびデータ アクセス実装クラスが含まれます。 データ アクセス実装コードを抽象化するには、[リポジトリ デザイン パターン](https://deviq.com/repository-pattern/)を使用するのが最も一般的な方法です。
 
 データ アクセス実装に加えて、インフラストラクチャ プロジェクトにはインフラストラクチャの懸念事項とやり取りする必要があるサービスの実装を含める必要があります。 これらのサービスではアプリケーション コアで定義されているインターフェイスを実装する必要があります。そのため、インフラストラクチャにはアプリケーション コア プロジェクトへの参照を含める必要があります。
 
-### <a name="infrastructure-types"></a>インフラストラクチャの種類
+##### <a name="infrastructure-types"></a>インフラストラクチャの種類
 
 - EF Core 型 (`DbContext`、`Migration`)
 - データ アクセス実装型 (リポジトリ)
 - インフラストラクチャに固有のサービス (`FileLogger` や `SmtpNotifier` など)
 
+#### <a name="ui-layer"></a>UI レイヤー
+
 ASP.NET Core MVC アプリケーション内のユーザー インターフェイス レイヤーは、アプリケーションのエントリ ポイントです。 このプロジェクトはアプリケーション コア プロジェクトを参照する必要があり、その型はアプリケーション コアで定義されているインターフェイスを介してインフラストラクチャと厳密にやり取りする必要があります。 UI レイヤーでは、インフラストラクチャ レイヤー型の直接的なインスタンス化や静的呼び出しを許可すべきではありません。
 
-### <a name="ui-layer-types"></a>UI レイヤーの種類
+##### <a name="ui-layer-types"></a>UI レイヤーの型
 
 - Controllers
 - フィルター

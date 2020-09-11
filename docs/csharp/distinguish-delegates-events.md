@@ -4,12 +4,12 @@ description: デリゲートとイベントの違いと、.NET Core の各機能
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.openlocfilehash: 51d982c9b5b16a5fc28ede5f0318bc100bb33b68
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 193a9b0fe0e0c36deb6552449c92135057412225
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805768"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414670"
 ---
 # <a name="distinguishing-delegates-and-events"></a>デリゲートとイベントの識別
 
@@ -23,7 +23,7 @@ ms.locfileid: "80805768"
 
 ## <a name="listening-to-events-is-optional"></a>イベントの待機は任意です
 
-使用する言語機能を決定するときに考慮するべき最も重要なことは、サブスクライバーをアタッチする必要があるのかどうかです。 サブスクライバーが提供するコードをコードが呼び出す必要がある場合、デリゲートに基づくデザインを使用してください。 サブスクライバーを呼び出さなくてもすべての作業をコードで完了できる場合、イベントに基づくデザインを使用してください。
+使用する言語機能を決定するときに考慮するべき最も重要なことは、サブスクライバーをアタッチする必要があるのかどうかです。 サブスクライバーが提供するコードをコードで呼び出す必要がある場合、コールバックを実装する必要があるとき、デリゲートに基づくデザインを使用してください。 サブスクライバーを呼び出さなくてもすべての作業をコードで完了できる場合、イベントに基づくデザインを使用してください。
 
 このセクションで作成されたサンプルを考察してください。 `List.Sort()` を利用して作成したコードには、要素を適切に並べ替える目的で、比較関数を与える必要があります。 LINQ クエリには、返す要素を決定する目的で、デリゲートを指定する必要があります。 いずれもデリゲートで作成したデザインを使用しています。
 

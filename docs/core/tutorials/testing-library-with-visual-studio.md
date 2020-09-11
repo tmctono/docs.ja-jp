@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: f20b089fd22794d5aaeff34502e960fe41a565e1
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 049f0636b1c2c2df33461714aea5a11810ef00ad
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84700970"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359195"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>チュートリアル: Visual Studio を使用して .NET Core で .NET Standard クラス ライブラリをテストする
 
@@ -19,7 +19,7 @@ ms.locfileid: "84700970"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- このチュートリアルでは、「[Visual Studio で .NET Standard ライブラリを構築する](library-with-visual-studio.md)」で作成したソリューションを使用します。
+- このチュートリアルでは、「[Visual Studio を使用して .NET Standard ライブラリを作成する](library-with-visual-studio.md)」で作成したソリューションを使用します。
 
 ## <a name="create-a-unit-test-project"></a>単体テスト プロジェクトを作成する
 
@@ -27,7 +27,7 @@ ms.locfileid: "84700970"
 
 1. Visual Studio を起動します。
 
-1. 「[Visual Studio で .NET Standard ライブラリを構築する](library-with-visual-studio.md)」で作成した `ClassLibraryProjects` ソリューションを開きます。
+1. 「[Visual Studio を使用して .NET Standard ライブラリを作成する](library-with-visual-studio.md)」で作成した `ClassLibraryProjects` ソリューションを開きます。
 
 1. 「StringLibraryTest」 という名前の新しい単体テスト プロジェクトをソリューションに追加します。
 
@@ -207,4 +207,4 @@ Visual Studio で単体テストを実行すると、<xref:Microsoft.VisualStudi
 ライブラリはパッケージとして配布する必要はありません。 それが使用されるコンソール アプリにバンドルすることができます。 コンソール アプリを発行する方法については、このシリーズの前のチュートリアルを参照してください。
 
 > [!div class="nextstepaction"]
-> [Visual Studio での .NET Core コンソール アプリケーションの発行](publishing-with-visual-studio.md)
+> [Visual Studio を使用して .NET Core コンソール アプリケーションを発行する](publishing-with-visual-studio.md)

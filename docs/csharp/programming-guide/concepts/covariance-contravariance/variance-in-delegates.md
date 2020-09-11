@@ -1,14 +1,14 @@
 ---
 title: デリゲートの変性 (C#)
-description: .NET Framework での変性のサポートによって、メソッド シグネチャをすべてのデリゲートのデリゲート型に一致させる方法について説明します。
+description: .NET での変性のサポートによって、メソッド シグネチャをすべてのデリゲートのデリゲート型に一致させる方法について説明します。
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: ef57a7fa7feaef98a47822e3f1c9242d0205932d
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 02b59dd97cedc6ab35c3122912ee528f7ca29238
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105660"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466132"
 ---
 # <a name="variance-in-delegates-c"></a>デリゲートの変性 (C#)
 .NET Framework 3.5 では、C# のすべてのデリゲートで、メソッド シグネチャとデリゲート型を一致させるために変性 (共変性と反変性) のサポートが導入されました。 つまり、シグネチャが一致するメソッドだけでなく、デリゲート型で指定された型よりも強い派生型を返す (共変性) メソッドや、弱い派生型のパラメーターを受け取る (反変性) メソッドを、デリゲートに割り当てることができます。 これには、汎用デリゲートと非汎用デリゲートの両方が含まれます。  

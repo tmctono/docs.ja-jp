@@ -3,12 +3,12 @@ title: イベントの概要
 description: この概要では、.NET Core のイベントと、イベントの言語上の設計目標について説明します。
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: 4e660f85eecfd5668919baf21a0d26f858faf5a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4da44c151244e8b5de34f550040c271131d9598c
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146115"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465235"
 ---
 # <a name="introduction-to-events"></a>イベントの概要
 
@@ -77,7 +77,7 @@ fileLister.Progress += onProgress;
 fileLister.Progress -= onProgress;
 ```
 
-イベント ハンドラーを表す式にローカル変数が宣言されたことに注目してください。 これで受信登録解除によりハンドラーが削除されます。
+イベント ハンドラーを表す式にローカル変数が宣言することが重要です。 これで受信登録解除によりハンドラーが削除されます。
 代わりにラムダ式の本文を使用した場合、アタッチされたことがないハンドラーの削除が試行され、何も起こりません。
 
 次回の記事では、一般的なイベント パターンと今回のサンプルのさまざまなバリエーションについて学習します。

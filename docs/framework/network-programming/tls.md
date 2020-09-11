@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: d1218e5db2ee4fc0ec044c6e0aa16187390708b0
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 8de15dc033ecda3137f5f3ea37b9e35ac9df7e13
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134384"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359299"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス
 
@@ -236,7 +236,7 @@ Windows Registry Editor Version 5.00
 
 レジストリを使って、クライアントやサーバー アプリがネゴシエートするプロトコルをきめ細かく制御することができます。 アプリのネットワークは Schannel ([Secure Channel (セキュリティで保護されたチャネル)](/windows/desktop/SecAuthN/secure-channel) の別名) を通してやり取りされます。 `Schannel` を構成することにより、アプリの動作を構成することができます。
 
-最上位は `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols` レジストリ キーです。 そのキーの下に、`SSL 2.0`、`SSL 3.0`、`TLS 1.0`、`TLS 1.1`、`TLS 1.2` のセットで任意のサブキーを作成できます。 これらの各サブキーの下に、サブキー `Client` と `Server` の一方または両方を作成できます。 `Client` および `Server` の下には、DWORD 値 `DisabledByDefault` (0 または 1) および `Enabled` (0 または 0xFFFFFFFF) を作成できます。
+最上位は `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols` レジストリ キーです。 そのキーの下に、`SSL 2.0`、`SSL 3.0`、`TLS 1.0`、`TLS 1.1`、`TLS 1.2` のセットで任意のサブキーを作成できます。 これらの各サブキーの下に、サブキー `Client` と `Server` の一方または両方を作成できます。 `Client` および `Server` の下には、DWORD 値 `DisabledByDefault` (0 または 1) および `Enabled` (0 または 1) を作成できます。
 
 ## <a name="the-sch_use_strong_crypto-flag"></a><a name="the-sch_use_strong_crypto-flag"></a>SCH_USE_STRONG_CRYPTO フラグ
 

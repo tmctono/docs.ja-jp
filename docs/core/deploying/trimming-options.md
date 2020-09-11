@@ -4,12 +4,12 @@ description: 自己完結型アプリのトリミングを制御する方法に�
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: 5597d4cdb9e8e96dcec6545e039d43295ca991bd
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 42e98f9ede004f06221d2df5ecd076500061e37d
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89142259"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465417"
 ---
 # <a name="trimming-options"></a>トリミングのオプション
 
@@ -25,7 +25,7 @@ ms.locfileid: "89142259"
 
 ## <a name="trimming-granularity"></a>トリミングの最小単位
 
-次の最小単位の設定により、使用されていない IL をどの程度まで破棄するかが制御されます。 これは、プロパティとして、または[個々のアセンブリ](#Trimmed-assemblies)のメタデータとして、設定することができます。
+次の最小単位の設定により、使用されていない IL をどの程度まで破棄するかが制御されます。 これは、プロパティとして、または[個々のアセンブリ](#trimmed-assemblies)のメタデータとして、設定することができます。
 
 - `<TrimMode>copyused</TrimMode>`
 
@@ -39,7 +39,7 @@ ms.locfileid: "89142259"
 
 ## <a name="trimmed-assemblies"></a>トリミングされたアセンブリ
 
-トリミングされたアプリが発行されるとき、SDK では、トリミングで処理されるファイルのセットを表す、`ManagedAssemblyToLink` と呼ばれる `ItemGroup` が計算されます。 `ManagedAssemblyToLink` では、アセンブリごとのトリミング動作を制御するメタデータを使用できます。 このメタデータを設定するには、組み込みの `PrepareForILLink` ターゲットの前に実行されるターゲットを作成します。 次の例では、`MyAssembly` のトリミングを有効にする方法を示します。
+トリミングされたアプリが発行されるとき、SDK では、トリミングで処理されるファイルのセットを表す、`ManagedAssemblyToLink` と呼ばれる `ItemGroup` が計算されます。 `ManagedAssemblyToLink` では、アセンブリごとのトリミング動作を制御するメタデータを使用できます。 このメタデータを設定するには、組み込みの `PrepareForILLink` ターゲットの前に実行されるターゲットを作成します。 次の例からは、`MyAssembly` のトリミングを有効にする方法がわかります。
 
 ```xml
 <Target Name="ConfigureTrimming"
@@ -60,7 +60,7 @@ ms.locfileid: "89142259"
 
 - `<TrimMode>copyused</TrimMode>` または `<TrimMode>link</TrimMode>`
 
-  このアセンブリの[トリミングの最小単位](#Trimming-granularity)を制御します。 これは、グローバルな `TrimMode` より優先されます。 アセンブリで `TrimMode` を設定すると、`<IsTrimmable>true</IsTrimmable>` を示します。
+  このアセンブリの[トリミングの最小単位](#trimming-granularity)を制御します。 これは、グローバルな `TrimMode` より優先されます。 アセンブリで `TrimMode` を設定すると、`<IsTrimmable>true</IsTrimmable>` を示します。
 
 ## <a name="root-assemblies"></a>ルート アセンブリ
 
@@ -106,7 +106,7 @@ ms.locfileid: "89142259"
 
 ## <a name="warning-versions"></a>警告のバージョン
 
-トリミング分析は、SDK 全体の分析警告のバージョンを制御する [`AnalysisLevel`](../project-sdk/msbuild-props.md#AnalysisLevel) プロパティに従います。 トリミング分析の警告のバージョンを個別に制御するプロパティもあります (コンパイラの `WarningLevel` に似ています)。
+トリミング分析は、SDK 全体の分析警告のバージョンを制御する [`AnalysisLevel`](../project-sdk/msbuild-props.md#analysislevel) プロパティに従います。 トリミング分析の警告のバージョンを個別に制御するプロパティもあります (コンパイラの `WarningLevel` に似ています)。
 
 - `<ILLinkWarningLevel>5</ILLinkWarningLevel>`
 

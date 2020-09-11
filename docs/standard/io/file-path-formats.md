@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 5eb9d5127dffd2e80349352ad7a4b57f8848d56b
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 8cbb687b0c7cfb69d3f3807c083f1c25e9d39594
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165798"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271790"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows システムのファイル パス形式
 
@@ -33,19 +33,19 @@ ms.locfileid: "87165798"
 
 |パス  |説明  |
 | -- | -- |
-| `C:\Documents\Newsletters\Summer2018.pdf` | ドライブ C: のルートからの絶対ファイル パス。 |
+| `C:\Documents\Newsletters\Summer2018.pdf` | ドライブ `C:` のルートからの絶対ファイル パス。 |
 | `\Program Files\Custom Utilities\StringFinder.exe` | 現在のドライブのルートからの絶対パス。 |
 | `2018\January.xlsx` | 現在のディレクトリのサブディレクトリにあるファイルへの相対パス。 |
 | `..\Publications\TravelBrochure.pdf` | 現在のディレクトリと同等になるディレクトリにあるファイルへの相対パス。 |
-| `C:\Projects\apilibrary\apilibrary.sln` | ドライブ C: のルートからのファイルへの絶対パス。 |
-| `C:Projects\apilibrary\apilibrary.sln` | C: ドライブの現在のディレクトリからの相対パス。 |
+| `C:\Projects\apilibrary\apilibrary.sln` | ドライブ `C:` のルートからのファイルへの絶対パス。 |
+| `C:Projects\apilibrary\apilibrary.sln` | `C:` ドライブの現在のディレクトリからの相対パス。 |
 
 > [!IMPORTANT]
-> 最後の 2 つのパスの違いにご注意ください。 いずれも任意のボリューム指定子を指定しますが (いずれの場合も C:)、最後から 2 番目のパスが指定ボリュームのルートから始まるのに対し、最後のパスは指定ボリュームのルートから始まりません。 結果として、最後から 2 番目のパスがドライブ C: のルート ディレクトリからの絶対パスであるのに対し、最後のパスはドライブ C: の現在のディレクトリからの相対パスになります。 最後から 2 番目のパス形式を意図しているときに最後のパス形式を使用することが、Windows ファイル パス関連のバグの共通の源になっています。
+> 最後の 2 つのパスの違いにご注意ください。 いずれも任意のボリューム指定子を指定しますが (いずれの場合も `C:`)、最後から 2 番目のパスが指定ボリュームのルートから始まるのに対し、最後のパスは指定ボリュームのルートから始まりません。 結果として、最後から 2 番目のパスがドライブ `C:` のルート ディレクトリからの絶対パスであるのに対し、最後のパスはドライブ `C:` の現在のディレクトリからの相対パスになります。 最後から 2 番目のパス形式を意図しているときに最後のパス形式を使用することが、Windows ファイル パス関連のバグの共通の源になっています。
 
 <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType> メソッドを呼び出すことで、ファイルが完全修飾であるかどうかを判断できます。完全修飾の場合、パスが現在のディレクトリに依存せず、現在のディレクトリが変更されても完全修飾のパスは変わりません。 そのようなパスには相対ディレクトリのセグメント (`.` や `..`) が含まれている可能性があり、解決後のパスが常に同じ場所を指す場合、完全修飾できることにご留意ください。
 
-次の例では、絶対パスと相対パスの違いを示します。 ディレクトリ D:\FY2018\ が存在すること、この例を実行する前に、コマンド プロンプトから D:\ に現在のディレクトリを設定していないことを想定しています。
+次の例では、絶対パスと相対パスの違いを示します。 ディレクトリ `D:\FY2018\` が存在すること、この例を実行する前に、コマンド プロンプトから `D:\` に現在のディレクトリを設定していないことを想定しています。
 
 [!code-csharp[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/cs/paths.cs)]
 [!code-vb[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/vb/paths.vb)]
@@ -56,8 +56,8 @@ ms.locfileid: "87165798"
 
 UNC (汎用命名規則) パスはネットワーク リソースへのアクセスに利用され、次の形式になっています。
 
-- サーバーまたはホストの名前。先頭に \\\\ が付きます。 サーバー名は、NetBIOS マシン名か IP/FQDN アドレス (IPv4 と v6 に対応) にすることができます。
-- 共有名。ホスト名とは \\ で区切られます。 サーバーと共有名を合わせてボリュームになります。
+- サーバーまたはホストの名前。先頭に `\\` が付きます。 サーバー名は、NetBIOS マシン名か IP/FQDN アドレス (IPv4 と v6 に対応) にすることができます。
+- 共有名。ホスト名とは `\` で区切られます。 サーバーと共有名を合わせてボリュームになります。
 - ディレクトリ名。 [ディレクトリ区切り文字](<xref:System.IO.Path.DirectorySeparatorChar>)によって、入れ子になっているディレクトリ階層内でサブディレクトリが分割されます。
 - 任意のファイル名。 [ディレクトリ区切り文字](<xref:System.IO.Path.DirectorySeparatorChar>)によって、ファイル パスとファイル名が分割されます。
 
@@ -65,8 +65,8 @@ UNC パスの例を次に示します。
 
 |パス  |説明  |
 | -- | -- |
-| `\\system07\C$\` | `system07` の C: のルート ディレクトリ。 |
-| `\\Server2\Share\Test\Foo.txt` | \\\\Server2\\Share ボリュームの Test ディレクトリの Foo.txt ファイル。|
+| `\\system07\C$\` | `system07` の `C:` ドライブのルート ディレクトリ。 |
+| `\\Server2\Share\Test\Foo.txt` | `\\Server2\Share` ボリュームの Test ディレクトリにある `Foo.txt` ファイル。|
 
 UNC パスは常に完全修飾にする必要があります。 相対ディレクトリ セグメント (`.` や `..`) を含めることができますが、そのようなセグメントは完全修飾パスの一部にする必要があります。 相対パスは、UNC パスをドライブ文字にマッピングする方法でのみ使用できます。
 
@@ -101,7 +101,7 @@ DOS デバイス パスは次の要素から構成されます。
   `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`
 
-    デバイス UNC の場合、サーバー/共有の部分がボリュームになります。 たとえば、`\\?\server1\e:\utilities\\filecomparer\` では、サーバー/共有部分は server1\utilities です。 相対ディレクトリ セグメントのある <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> のようなメソッドを呼び出すとき、これは重要です。ボリュームを通り過ぎて移動することはできません。
+    デバイス UNC の場合、サーバー/共有の部分がボリュームになります。 たとえば、`\\?\server1\e:\utilities\\filecomparer\` の、サーバー/共有の部分は `server1\utilities` です。 相対ディレクトリ セグメントのある <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> のようなメソッドを呼び出すとき、これは重要です。ボリュームを通り過ぎて移動することはできません。
 
 DOS デバイス パスは定義によって完全修飾されます。 相対ディレクトリ セグメント (`.` や `..`) は許可されません。 現在のディレクトリが使用されることはありません。
 
@@ -146,7 +146,7 @@ Windows API に渡されるパスはほとんどすべて正規化されます�
 
 ### <a name="apply-the-current-directory"></a>現在のディレクトリの適用
 
-パスが完全修飾ではない場合、Windows はそのパスに現在のディレクトリを適用します。 UNC とデバイス パスの場合、現在のディレクトリは適用されません。 区切り記号 (C:\\) を使用するフル ドライブの場合も適用されません。
+パスが完全修飾ではない場合、Windows はそのパスに現在のディレクトリを適用します。 UNC とデバイス パスの場合、現在のディレクトリは適用されません。 区切り記号 (`C:\`) を使用するフル ドライブの場合も適用されません。
 
 パスが 1 つのコンポーネント区切り記号で始まる場合、現在のディレクトリからのドライブが適用されます。 たとえば、ファイル パスが `\utilities` で、現在のディレクトリが `C:\temp\` の場合、正規化の結果、`C:\utilities` になります。
 

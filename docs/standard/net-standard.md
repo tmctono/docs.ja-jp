@@ -5,12 +5,12 @@ ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: b52d69756d85e3e422b798c3ac7d53de3b538b8d
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: e96a03ca55682d3e30bc13fb20a8e443105301fc
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167406"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359312"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -92,7 +92,7 @@ NuGet パッケージは 1 つまたは複数の[フレームワーク](framewor
 
 .NET Standard は、1 つの .NET 実装に固有ではなく、それらの実装のいずれかのバージョン管理スキームに一致することもありません。
 
-いずれかの実装 (.NET Framework、.NET Core、Mono など) に追加された API は、本質的に基本的であると考えられる場合に、仕様に追加される候補とみなされる可能性があります。 新しい[.NET Standard のバージョン](https://github.com/dotnet/standard/blob/master/docs/versions.md) は、.NET 実装のリリースに基づいて作成されるので、.NET Standard PCL から新しい API を対象にすることができます。 バージョン管理メカニズムの詳細は、「[.NET Core のバージョン管理](../core/versions/index.md)」に関するページで説明されています。
+いずれかの .NET 実装 (.NET Framework、.NET Core、Mono など) に追加された API は、本質的に基本的であると考えられる場合に、仕様に追加される候補とみなされる可能性があります。 新しい[.NET Standard のバージョン](https://github.com/dotnet/standard/blob/master/docs/versions.md) は、.NET 実装のリリースに基づいて作成されるので、.NET Standard ポータブル クラス ライブラリ (PCL) から新しい API を対象にすることができます。 バージョン管理メカニズムの詳細は、「[.NET Core のバージョン管理](../core/versions/index.md)」に関するページで説明されています。
 
 .NET Standard のバージョン管理は、使用する場合に重要です。 .NET Standard のバージョンが指定されている場合、それと同じか以下のバージョンを対象とするライブラリを使用できます。 次の方法では、.NET Standard の対象設定に固有の、.NET Standard PCL の使用のワークフローを説明します。
 

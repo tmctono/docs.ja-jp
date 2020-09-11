@@ -4,12 +4,12 @@ description: メソッド、メソッド パラメーター、メソッド戻り
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 8c33bcb9dd4052589222c2cb1b375d94d6792ba2
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 879c553f8df560a3e2f3dccdbbf0d7e8a05c50cd
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810574"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495539"
 ---
 # <a name="methods-in-c"></a>(C#) のメソッド
 
@@ -61,7 +61,7 @@ ms.locfileid: "88810574"
 
 [!code-csharp[csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/named1.cs#45)]
 
-位置引数と名前付き引数の両方を利用してメソッドを呼び出すことができます。 ただし、名前付き引数の後に位置指定引数を使用することはできません。 次の例では、前の例にあった `TestMotorcycle.Drive` メソッドを呼び出していますが、位置引数が 1 つ、名前付き引数が 1 つ使用されています。
+位置引数と名前付き引数の両方を利用してメソッドを呼び出すことができます。 ただし、位置引数は、名前付き引数が正しい位置にある場合にのみ、名前付き引数に従うことができます。 次の例では、前の例にあった `TestMotorcycle.Drive` メソッドを呼び出していますが、位置引数が 1 つ、名前付き引数が 1 つ使用されています。
 
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
 

@@ -7,12 +7,12 @@ ms.author: adegeo
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 829c93e97990b87e6e568614236de9708ef080d9
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 3c9615d7d79b5da1c180bb505f5f37b99aeae775
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325758"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271998"
 ---
 # <a name="data-binding-overview-in-wpf"></a>WPF のデータ バインディングの概要
 
@@ -173,12 +173,12 @@ WPF のデータ バインディング機能には、広範なプロパティに
 
 データ バインディングの他の機能や使用方法に入る前に、<xref:System.Windows.Data.BindingExpression> クラスを紹介します。 前のセクションで説明したように、<xref:System.Windows.Data.Binding> クラスは、バインディング宣言のための高レベルのクラスです。このクラスには、バインドの特性を指定するための多数のプロパティが用意されています。 関連クラスである <xref:System.Windows.Data.BindingExpression> は、ソースとターゲットの間の接続を維持する基になるオブジェクトです。 バインドには、複数のバインド式の間で共有できるすべての情報が含まれています。 <xref:System.Windows.Data.BindingExpression> は、<xref:System.Windows.Data.Binding> のすべてのインスタンス情報を含む、共有できないインスタンス式です。
 
-次の例を考えてみます。ここで `myDataObject` は `MyData` クラスのインスタンス、`myBinding` はソース <xref:System.Windows.Data.Binding> オブジェクト、`MyData` は `MyDataProperty` という名前の文字列プロパティを含む定義済みのクラスです。 この例では、<xref:System.Windows.Controls.TextBlock> のインスタンスである `myText` のテキストの内容を `MyDataProperty` にバインドします。
+次の例を考えてみます。ここで `myDataObject` は `MyData` クラスのインスタンス、`myBinding` はソース <xref:System.Windows.Data.Binding> オブジェクト、`MyData` は `ColorName` という名前の文字列プロパティを含む定義済みのクラスです。 この例では、<xref:System.Windows.Controls.TextBlock> のインスタンスである `myText` のテキストの内容を `ColorName` にバインドします。
 
 [!code-csharp[CodeOnlyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/ManualBinding.cs#CodeOnlyBinding)]
 [!code-vb[CodeOnlyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/ManualBinding.vb#CodeOnlyBinding)]
 
-同じ *myBinding* オブジェクトを使用して、他のバインディングを作成できます。 たとえば、*myBinding* オブジェクトを使用して、チェック ボックスのテキストの内容を *MyDataProperty* にバインドすることができます。 このシナリオには、*myBinding* オブジェクトを共有する 2 つの <xref:System.Windows.Data.BindingExpression> のインスタンスがあります。
+同じ *myBinding* オブジェクトを使用して、他のバインディングを作成できます。 たとえば、*myBinding* オブジェクトを使用して、チェック ボックスのテキストの内容を *ColorName* にバインドすることができます。 このシナリオには、*myBinding* オブジェクトを共有する 2 つの <xref:System.Windows.Data.BindingExpression> のインスタンスがあります。
 
 <xref:System.Windows.Data.BindingExpression> オブジェクトは、データ バインドされたオブジェクトで <xref:System.Windows.Data.BindingOperations.GetBindingExpression%2A> を呼び出すことによって返されます。 次の記事では、<xref:System.Windows.Data.BindingExpression> クラスの使用方法について説明します。
 

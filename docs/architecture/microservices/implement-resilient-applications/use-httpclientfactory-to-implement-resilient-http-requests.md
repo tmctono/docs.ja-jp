@@ -1,13 +1,13 @@
 ---
 title: IHttpClientFactory を使用して回復力の高い HTTP 要求を実装する
 description: .NET Core 2.1 以降で使用できる IHttpClientFactory を使用して、`HttpClient` インスタンスを作成し、それをアプリケーションで簡単に使用できるようにする方法について説明します。
-ms.date: 03/03/2020
-ms.openlocfilehash: ade26208a931faa456c8e267def2caef7a3f32de
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 08/31/2020
+ms.openlocfilehash: 1df5432f215371b60722212cf706c28a4a5bb5f6
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507300"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271829"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>IHttpClientFactory を使用して回復力の高い HTTP 要求を実装する
 
@@ -17,7 +17,7 @@ ms.locfileid: "82507300"
 
 よく知られている元の <xref:System.Net.Http.HttpClient> クラスは、簡単に使用できますが、場合によっては、多くの開発者が適切に使用していません。
 
-このクラスでは `IDisposable` が実装されますが、これを `using` ステートメント内で宣言およびインスタンス化することはお勧めできません。その理由は、`HttpClient` オブジェクトが破棄されても、基になるソケットがすぐに解放されず、_ソケットの枯渇_の問題が発生する可能性があるということにあります。 この問題の詳細については、ブログ記事「[HttpClient の誤った使い方がソフトウェアを不安定にする](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/)」を参照してください。
+このクラスでは `IDisposable` が実装されますが、これを `using` ステートメント内で宣言およびインスタンス化することはお勧めできません。その理由は、`HttpClient` オブジェクトが破棄されても、基になるソケットがすぐに解放されず、"_ソケットの枯渇_" の問題が発生する可能性があるということにあります。 この問題の詳細については、ブログ記事「[HttpClient の誤った使い方がソフトウェアを不安定にする](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/)」を参照してください。
 
 そのため、`HttpClient` は一度インスタンス化されたら、アプリケーションの有効期間にわたって再利用されることを目的としています。 すべての要求に対して `HttpClient` クラスをインスタンス化すると、高負荷の下で使用可能なソケットの数が枯渇してしまいます。 この問題により、`SocketException` エラーが発生します。 この問題を解決するために可能なアプローチは、HttpClient クライアントの使用に関するこの [Microsoft の記事](../../../csharp/tutorials/console-webapiclient.md)で説明されているように、`HttpClient` オブジェクトをシングルトンまたは静的として作成することに基づいています。 これは、1 日に数回実行される有効期間の短いコンソールアプリまたは類似のものに適したソリューションとなります。
 
@@ -153,11 +153,11 @@ public class CatalogService : ICatalogService
 
 型指定されたクライアント (この例では `CatalogService`) は、依存関係の挿入 (DI) によってアクティブ化されます。つまり `HttpClient` だけでなく、そのコンストラクター内に登録されている任意のサービスを受け取ることができます。
 
-型指定されたクライアントは、実際には、一時的なオブジェクトです。つまり、新しいインスタンスは必要になるたびに作成され、新しい `HttpClient` インスタンスが構築されるたびにそれを受け取ります。 ただし、プール内の `HttpMessageHandler` オブジェクトは、複数の `HttpClient` 要求で再利用されるオブジェクトです。
+型指定されたクライアントは実質的に一時的なオブジェクトであるため、新しいインスタンスは必要になるたびに作成されます。 作成されるたびに、新しい `HttpClient` インスタンスを受け取ります。 ただし、プール内の `HttpMessageHandler` オブジェクトは、複数の `HttpClient` 要求で再利用されるオブジェクトです。
 
 ### <a name="use-your-typed-client-classes"></a>型指定されたクライアント クラスを使用する
 
-最後に、型指定されたクラスを実装し、`AddHttpClient()` に登録して構成したら、DI によってサービスを挿入できる場所であればどこでもそれらを使用できます。 たとえば、次の eShopOnContainers のコードのように、Razor ページ コード、または MVC Web アプリのコントローラーなどがあります。
+最後に、型指定されたクラスを実装したら、`AddHttpClient()` に登録して構成できます。 その後、DI によってサービスが挿入される場所であればどこでもそれらを使用できます。 たとえば、次の eShopOnContainers のコードのように、Razor ページ コード、または MVC Web アプリのコントローラーなどがあります。
 
 ```csharp
 namespace Microsoft.eShopOnContainers.WebMVC.Controllers
@@ -186,7 +186,7 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 }
 ```
 
-この時点までは、示されているコードは、通常の Http 要求を実行するだけですが、次のセクションでは、"不思議なこと" が起こります。ポリシーを追加して、ハンドラーを登録済みの型指定されているクライアントにデリゲートするだけで、`HttpClient` によって実行されるすべての HTTP 要求が、指数バックオフを含む再試行、サーキット ブレーカー、またはその他の任意のカスタム デリゲート ハンドラーなど、回復力のあるポリシーを考慮して、追加のセキュリティ機能 (認証トークンの使用など) やその他のカスタム機能を実装するようになります。
+この時点で、上記のコードスニペットには、通常の HTTP 要求を実行する例のみが示されています。 ただし、この "魔法" は、`HttpClient` によって行われるすべての HTTP 要求に、エクスポネンシャル バックオフによる再試行、回路遮断器、認証トークンを使用したセキュリティ機能、さらにはその他のあらゆるカスタム機能など、回復性があるポリシーが与えられるしくみについて説明する後続のセクションで登場します。 いずれも、ポリシーを追加し、登録済みの型指定されたクライアントにハンドラーを委任するだけで完了できます。
 
 ## <a name="additional-resources"></a>その他の技術情報
 

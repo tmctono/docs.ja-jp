@@ -2,12 +2,12 @@
 title: Visual Studio for Mac を使用して .NET Core で .NET Standard クラス ライブラリをテストする
 description: .NET Core クラス ライブラリ用の単体テスト プロジェクトを作成します。 .NET Core クラス ライブラリが単体テストで正しく動作することを確認します。
 ms.date: 06/08/2020
-ms.openlocfilehash: a183049623df44cbb8c4abd47ce6e78d91adae12
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: d3c8a5e01d16047949e977f3af6a429970d996d0
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84713305"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359221"
 ---
 # <a name="test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>Visual Studio を使用して .NET Core で .NET Standard クラス ライブラリをテストする
 
@@ -15,7 +15,7 @@ ms.locfileid: "84713305"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- このチュートリアルでは、[Visual Studio for Mac での .NET Standard ライブラリの作成](library-with-visual-studio-mac.md)に関する記事で作成したソリューションを使用します。
+- このチュートリアルでは、「[Visual Studio for Mac を使用して .NET Standard ライブラリを作成する](library-with-visual-studio-mac.md)」で作成したソリューションを使用します。
 
 ## <a name="create-a-unit-test-project"></a>単体テスト プロジェクトを作成する
 
@@ -23,7 +23,7 @@ ms.locfileid: "84713305"
 
 1. Visual Studio for Mac を起動します。
 
-1. [Visual Studio for Mac での .NET Standard ライブラリの作成](library-with-visual-studio-mac.md)に関する記事で作成した `ClassLibraryProjects` ソリューションを開きます。
+1. 「[Visual Studio for Mac を使用して .NET Standard ライブラリを作成する](library-with-visual-studio-mac.md)」で作成した `ClassLibraryProjects` ソリューションを開きます。
 
 1. **[ソリューション]** パッドで、<kbd>ctrl</kbd> キーを押しながら `ClassLibraryProjects` ソリューションをクリックし、 **[追加]**  >  **[新しいプロジェクト]** の順に選択します。
 

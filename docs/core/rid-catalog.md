@@ -2,12 +2,12 @@
 title: .NET Core ランタイム識別子 (RID) のカタログ
 description: ランタイム識別子 (RID) と .NET Core での RID の使用方法について説明します。
 ms.date: 02/22/2019
-ms.openlocfilehash: 903dd9c619008c9e3c6149a471ba814bdc9c97cc
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 719c84248b955ec05d7cd9b361c7e5ebea6aa37b
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84903286"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414566"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core の RID カタログ
 
@@ -72,7 +72,7 @@ NuGet はパッケージを復元する際、指定されたランタイムと�
 
 RID を使用する際に留意しておく必要のある注意事項があります。
 
-- RID は**不透明な文字列**であり、ブラック ボックスとして処理する必要があります。
+- コンポーネント パーツを取得する目的で RID を解析する行為はお止めください。
 - RID をプログラムによって作成しないでください。
 - プラットフォームであらかじめ定義されている RID を使用します。
 - RID は特定の値である必要があるため、実際の値から推測した値にしないでください。

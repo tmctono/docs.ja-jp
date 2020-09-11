@@ -12,12 +12,12 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: 963004820f56272b4f1b1d92ccc4d0a60493a4a0
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 1e2de095b460b684fb06faf46731283a1304906e
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89128700"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465690"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (C# コンパイラ オプション)
 指定されたリソースを出力ファイルに埋め込みます。  
@@ -30,7 +30,7 @@ ms.locfileid: "89128700"
   
 ## <a name="arguments"></a>引数  
  `filename`  
- 出力ファイルに埋め込む .NET Framework リソース ファイルです。  
+ 出力ファイルに埋め込む .NET リソース ファイルです。  
   
  `identifier` (省略可)  
  リソースの論理名。リソースを読み込むために使われる名前です。 既定値はファイル名です。  
@@ -43,7 +43,7 @@ ms.locfileid: "89128700"
   
  既定では、リソースは、C# コンパイラを使用して作成されるときにアセンブリ内でパブリックになります。 リソースをプライベートにするには、アクセシビリティ修飾子として `private` を指定します。 `public` と `private` 以外のアクセシビリティは使用できません。  
   
- `filename` が [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) や開発環境などで作成された .NET Framework リソース ファイルである場合は、<xref:System.Resources> 名前空間のメンバーを使ってそのファイルにアクセスできます。 詳細については、「<xref:System.Resources.ResourceManager?displayProperty=nameWithType>」を参照してください。 それ以外のすべてのリソースに対しては、<xref:System.Reflection.Assembly> クラスの `GetManifestResource` メソッドを使用して、実行時にリソースにアクセスします。  
+ `filename` が、たとえば [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) によって作成されたり、開発環境で作成されたりした .NET リソース ファイルである場合は、<xref:System.Resources> 名前空間のメンバーを使ってそのファイルにアクセスできます。 詳細については、「<xref:System.Resources.ResourceManager?displayProperty=nameWithType>」を参照してください。 それ以外のすべてのリソースに対しては、<xref:System.Reflection.Assembly> クラスの `GetManifestResource` メソッドを使用して、実行時にリソースにアクセスします。  
   
  **-res** は **-resource** の省略形です。  
   

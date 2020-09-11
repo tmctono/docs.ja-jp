@@ -1,7 +1,7 @@
 ---
 title: I/O パイプライン - .NET
 description: .NET で I/O パイプラインを効率的に使用し、コードの問題を回避する方法について学習します。
-ms.date: 10/01/2019
+ms.date: 08/27/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - Pipelines
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 8822e731ae805e83d4072c5bd78dff3fcf9a31a1
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: a24d7f5c22c936cd3fd3fdc51f0f3ace56386574
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81462524"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271985"
 ---
 # <a name="systemiopipelines-in-net"></a>.NET の System.IO.Pipelines
 
@@ -64,7 +64,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 * メモリが繰り返し割り当てられないようにするために、バッファー プーリングの使用を検討します。
 * 次のコードでは、これらの問題の一部に対処します。
 
-[!code-csharp[](~/samples/snippets/csharp/pipelines/ProcessLinesAsync.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/ProcessLinesAsync.cs" id="snippet":::
 
 上記のコードは複雑で、特定されたすべての問題には対処していません。 ハイ パフォーマンス ネットワークは、通常、パフォーマンスを最大化するために非常に複雑なコードを記述することを意味します。 `System.IO.Pipelines` は、この種のコードをより簡単に記述できるように設計されています。
 
@@ -74,13 +74,13 @@ async Task ProcessLinesAsync(NetworkStream stream)
 
 <xref:System.IO.Pipelines.Pipe> クラスを使用して、`PipeWriter/PipeReader` ペアを作成できます。 `PipeWriter` に書き込まれたすべてのデータは、`PipeReader` で利用できます。
 
-[!code-csharp[](~/samples/snippets/csharp/pipelines/Pipe.cs?name=snippet2)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/Pipe.cs" id="snippet2":::
 
 <a name="pbu"></a>
 
 ### <a name="pipe-basic-usage"></a>パイプの基本的な使用方法
 
-[!code-csharp[](~/samples/snippets/csharp/pipelines/Pipe.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/Pipe.cs" id="snippet":::
 
 次の 2 つのループがあります。
 
@@ -128,7 +128,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 * <xref:System.IO.Pipelines.PipeOptions.PauseWriterThreshold>:<xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> の呼び出しが一時停止する前に、バッファーに格納する必要があるデータ量を判別します。
 * <xref:System.IO.Pipelines.PipeOptions.ResumeWriterThreshold>:`PipeWriter.FlushAsync` の呼び出しが再開される前に、リーダーが監視する必要があるデータの量を判別します。
 
-![ResumeWriterThreshold と PauseWriterThreshold を含む図](./media/pipelines/resume-pause.png)
+![ResumeWriterThreshold と PauseWriterThreshold を含む図](media/pipelines/resume-pause.png)
 
 <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A?displayProperty=nameWithType>:
 
@@ -155,7 +155,7 @@ I/O を行う場合は、I/O が実行される場所をきめ細かく制御す
 * 現在の <xref:System.Threading.SynchronizationContext> が使用されます。
 * `SynchronizationContext` がない場合は、スレッド プールを使用してコールバックを実行します。
 
-[!code-csharp[](~/samples/snippets/csharp/pipelines/Program.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/Program.cs" id="snippet":::
 
 [PipeScheduler.ThreadPool](xref:System.IO.Pipelines.PipeScheduler.ThreadPool) は、スレッド プールへのコールバックをキューに登録する <xref:System.IO.Pipelines.PipeScheduler> の実装です。 `PipeScheduler.ThreadPool` は既定値であり、一般的に最適な選択肢です。 [PipeScheduler.Inline](xref:System.IO.Pipelines.PipeScheduler.Inline) を使用すると、デッドロックなどの意図しない結果となる可能性があります。
 
@@ -191,7 +191,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 次のコードでは、`PipeReader` からの 1 つのメッセージを読み取り、呼び出し元に返します。
 
-[!code-csharp[ReadSingleMsg](~/samples/snippets/csharp/pipelines/ReadSingleMsg.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/ReadSingleMsg.cs" id="snippet":::
 
 上記のコードでは次の操作が行われます。
 
@@ -209,7 +209,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 次のコードでは、`PipeReader` からのすべてのメッセージを読み取り、それぞれに対して `ProcessMessageAsync` を呼び出します。
 
-[!code-csharp[MyConnection1](~/samples/snippets/csharp/pipelines/MyConnection1.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/MyConnection1.cs" id="snippet":::
 
 ### <a name="cancellation"></a>キャンセル
 
@@ -219,7 +219,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 * 読み取りが保留中のときに `CancellationToken` が取り消された場合は、<xref:System.OperationCanceledException> をスローします。
 * <xref:System.IO.Pipelines.PipeReader.CancelPendingRead%2A?displayProperty=nameWithType> を使用して現在の読み取り操作を取り消す方法をサポートします。これにより、例外の発生を回避できます。 `PipeReader.CancelPendingRead` を呼び出すと、`PipeReader.ReadAsync` の現在の呼び出しまたは次の呼び出しで、`IsCanceled` が `true` に設定された <xref:System.IO.Pipelines.ReadResult> が返されます。 これは、既存の読み取りループを非破壊的で非例外的な方法で停止する際に役立つ場合があります。
 
-[!code-csharp[MyConnection](~/samples/snippets/csharp/pipelines/MyConnection.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/MyConnection.cs" id="snippet":::
 
 <a name="gotchas"></a>
 
@@ -245,7 +245,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#1](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
@@ -255,7 +255,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#2](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet2)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet2":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
@@ -263,7 +263,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#3](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet3)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet3":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
@@ -276,7 +276,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#4](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet4)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet4":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
@@ -289,7 +289,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#5](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet5)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet5":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
@@ -299,9 +299,9 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#Message](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippetMessage)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippetMessage":::
 
-[!code-csharp[DoNotUse#6](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet6)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet6":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
@@ -309,7 +309,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 <xref:System.IO.Pipelines.PipeWriter> では、呼び出し元の代わりに書き込むバッファーを管理します。 `PipeWriter` では、[`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter%601) を実装します。 `IBufferWriter<byte>` は、バッファーのコピーを追加せずに、書き込みを実行するためにバッファーにアクセスできるようにします。
 
-[!code-csharp[MyPipeWriter](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/MyPipeWriter.cs" id="snippet":::
 
 上記のコードでは、次のようになります。
 
@@ -323,7 +323,7 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 * 既存のバッファーを `PipeWriter` にコピーします。
 * `GetSpan` を呼び出し、必要に応じて `Advance` を呼び出してから、<xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> を呼び出します。
 
-[!code-csharp[MyPipeWriter#2](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet2)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/MyPipeWriter.cs" id="snippet2":::
 
 ### <a name="cancellation"></a>キャンセル
 
@@ -347,4 +347,30 @@ bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 
 ## <a name="streams"></a>ストリーム
 
-ストリーム データの読み取りまたは書き込みを行う場合、通常は、デシリアライザーを使用してデータを読み取り、シリアライザーを使用してデータを書き込みます。 これらの読み取りおよび書き込みストリーム API のほとんどに、`Stream` パラメーターがあります。 これらの既存の API との統合をより容易にするために、`PipeReader` および `PipeWriter` で <xref:System.IO.Pipelines.PipeReader.AsStream%2A> が公開されます。  <xref:System.IO.Pipelines.PipeWriter.AsStream%2A> では、`PipeReader` または `PipeWriter` に関する `Stream` 実装を返します。
+ストリーム データの読み取りまたは書き込みを行う場合、通常は、デシリアライザーを使用してデータを読み取り、シリアライザーを使用してデータを書き込みます。 これらの読み取りおよび書き込みストリーム API のほとんどに、`Stream` パラメーターがあります。 これらの既存の API との統合をより容易にするために、`PipeReader` および `PipeWriter` で <xref:System.IO.Pipelines.PipeReader.AsStream%2A> メソッドが公開されます。 <xref:System.IO.Pipelines.PipeWriter.AsStream%2A> では、`PipeReader` または `PipeWriter` に関する `Stream` 実装を返します。
+
+### <a name="stream-example"></a>ストリームの例
+
+`PipeReader` および `PipeWriter` インスタンスは、静的な `Create` メソッドを使用し、<xref:System.IO.Stream> オブジェクトとそれに対応する任意の作成オプションを指定して作成できます。
+
+<xref:System.IO.Pipelines.StreamPipeReaderOptions> では、次のパラメーターを使用して `PipeReader` インスタンスの作成を制御できます。
+
+- <xref:System.IO.Pipelines.StreamPipeReaderOptions.BufferSize?displayProperty=nameWithType> はプールからメモリを借りるときに使用される最小バッファー サイズ (バイト単位) であり、既定値は `4096` です。
+- <xref:System.IO.Pipelines.StreamPipeReaderOptions.LeaveOpen?displayProperty=nameWithType> フラグによって、`PipeReader` の完了後、基礎となるストリームを開いたままにするかどうかが決定されます。既定値は `false` です。
+- <xref:System.IO.Pipelines.StreamPipeReaderOptions.MinimumReadSize?displayProperty=nameWithType> は、新しいバッファーが割り当てられる前のバッファー内に残るバイト数のしきい値を表します。既定値は `1024` です。
+- <xref:System.IO.Pipelines.StreamPipeReaderOptions.Pool?displayProperty=nameWithType> はメモリを割り当てるときに使用される `MemoryPool<byte>` であり、既定値は `null` です。
+
+<xref:System.IO.Pipelines.StreamPipeWriterOptions> では、次のパラメーターを使用して `PipeWriter` インスタンスの作成を制御できます。
+
+- <xref:System.IO.Pipelines.StreamPipeWriterOptions.LeaveOpen?displayProperty=nameWithType> フラグによって、`PipeWriter` の完了後、基礎となるストリームを開いたままにするかどうかが決定されます。既定値は `false` です。
+- <xref:System.IO.Pipelines.StreamPipeWriterOptions.MinimumBufferSize?displayProperty=nameWithType> は、<xref:System.IO.Pipelines.StreamPipeWriterOptions.Pool> からメモリをレンタルしているときに使用する最小バッファー サイズを表します。既定値は `4096` です。
+- <xref:System.IO.Pipelines.StreamPipeWriterOptions.Pool?displayProperty=nameWithType> はメモリを割り当てるときに使用される `MemoryPool<byte>` であり、既定値は `null` です。
+
+> [!IMPORTANT]
+> `Create` メソッドを使用して `PipeReader` および `PipeWriter` インスタンスを作成するとき、`Stream` オブジェクトの有効期間を考慮する必要があります。 リーダーまたはライターでストリームの利用が終わった後にストリームにアクセスする必要がある場合、作成オプションで `LeaveOpen` フラグを `true` に設定する必要があります。 設定しない場合、ストリームは閉じられます。
+
+次のコードでは、ストリームからの `Create` メソッドを利用し、`PipeReader` および `PipeWriter` インスタンスが作成されます。
+
+:::code language="csharp" source="snippets/pipelines/Program.cs":::
+
+このアプリケーションによって <xref:System.IO.StreamReader> が使用され、ストリームとして *lorem-ipsum.txt* ファイルが読み取られます。 <xref:System.IO.FileStream> は、`PipeReader` オブジェクトをインスタンス化する <xref:System.IO.Pipelines.PipeReader.Create%2A?displayProperty=nameWithType> に渡されます。 次に、コンソール アプリケーションから <xref:System.Console.OpenStandardOutput?displayProperty=nameWithType> を使用して <xref:System.IO.Pipelines.PipeWriter.Create%2A?displayProperty=nameWithType> にその標準出力ストリームが渡されます。 この例では[キャンセル](#cancellation)がサポートされます。

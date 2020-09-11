@@ -3,12 +3,12 @@ title: .NET 用語集
 description: .NET のドキュメントで使われている用語からいくつか選択してその意味を説明します。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 59e338de99510759e3e7acfd782915ed6dc5d988
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: b79580baa12cc8081346678f06d49a9d0455375c
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957574"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89415011"
 ---
 # <a name="net-glossary"></a>.NET 用語集
 
@@ -161,7 +161,7 @@ Mono はオープン ソースであり、主に小規模なランタイムが�
 
 [.NET 5](#net-5-and-later-versions) (現在、プレビュー段階) がリリースされると、すべての新しい .NET 開発で推奨される .NET 実装となります。そのため、一部のコンテキストでは、".NET" は ".NET 5 以降のバージョン" を意味します。
 
-「[.NET ガイド](index.yml)」をご覧ください。
+[.NET の基礎](../fundamentals/index.yml)に関するページを参照してください
 
 ## <a name="net-5-and-later-versions"></a>.NET 5 以降のバージョン
 
@@ -169,7 +169,7 @@ Mono はオープン ソースであり、主に小規模なランタイムが�
 
 この .NET 実装の以前のバージョンは、.NET Core と呼ばれています。 .Net 5.0 は、.NET Core 3.1 の次のバージョンです。 バージョン 4 は、この .NET の新しい実装を、[.NET Framework](#net-framework) と呼ばれる古い実装と混同しないようにするためにスキップされました。 .NET Framework の現在のバージョンは 4.8 です。
 
-「[.NET](../core/index.yml)」を参照してください。
+[.NET の基礎](../fundamentals/index.yml)に関するページを参照してください。
 
 ## <a name="net-cli"></a>.NET CLI
 
@@ -294,8 +294,7 @@ NuGet パッケージ &mdash; または単にパッケージ &mdash; は、同�
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET のガイド](index.yml)
+- [.NET の基礎](../fundamentals/index.yml)
 - [.NET Framework ガイド](../framework/index.yml)
-- [.NET Core](../core/index.yml)
 - [ASP.NET の概要](/aspnet/index#pivot=aspnet)
 - [ASP.NET Core の概要](/aspnet/index#pivot=core)

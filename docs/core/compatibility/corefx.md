@@ -2,12 +2,12 @@
 title: 基本クラス ライブラリの破壊的変更
 description: Core .NET ライブラリにおける破壊的変更の一覧を示します。
 ms.date: 07/27/2020
-ms.openlocfilehash: e0ebc054e0abccfe934b505a727060653fe313cd
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: d8d886785ff71f22a3b2da65e973d899cf0371f6
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720201"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465889"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Core .NET ライブラリの破壊的変更
 
@@ -17,6 +17,8 @@ Core .NET ライブラリでは、.NET Core で使用されるプリミティブ
 
 | 互換性に影響する変更点 | 導入されたバージョン |
 | - | :-: |
+| [ConsoleLoggerOptions の古いプロパティ](#obsolete-properties-on-consoleloggeroptions) | 5.0 |
+| [ハードウェアに組み込みの IsSupported チェックは、入れ子にされた型によって異なる場合があります](#hardware-intrinsic-issupported-checks-may-differ-for-nested-types) | 5.0 |
 | [参照アセンブリのパラメーター名の変更](#parameter-names-changed-in-reference-assemblies) | 5.0 |
 | [Unix 上で ASCII 以外の文字を含む URI パスが正しく解析される](#uri-paths-with-non-ascii-characters-parse-correctly-on-unix) | 5.0 |
 | [Unix での UNC パスの URI 認識](#uri-recognition-of-unc-paths-on-unix) | 5.0 |
@@ -50,6 +52,14 @@ Core .NET ライブラリでは、.NET Core で使用されるプリミティブ
 | [開始されなかったプロセスについて Process.StartInfo が InvalidOperationException をスローする](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [obsolete-consoleloggeroptions-properties](../../../includes/core-changes/corefx/5.0/obsolete-consoleloggeroptions-properties.md)]
+
+***
+
+[!INCLUDE [hardware-instrinsics-issupported-checks](../../../includes/core-changes/corefx/5.0/hardware-instrinsics-issupported-checks.md)]
+
+***
 
 [!INCLUDE [reference-assembly-parameter-names](../../../includes/core-changes/corefx/5.0/reference-assembly-parameter-names.md)]
 

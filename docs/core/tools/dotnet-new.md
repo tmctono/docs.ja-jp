@@ -4,13 +4,13 @@ description: dotnet new コマンドは、指定されたテンプレートに�
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 04/10/2020
-ms.openlocfilehash: ec41b3b79ed5eded7c9124d3e4d95c658ee39580
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.date: 09/01/2020
+ms.openlocfilehash: 70297cfe15732716b9ceacae091abe3c8957fb61
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173121"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495474"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -60,40 +60,40 @@ dotnet new -h|--help
 
 | テンプレート                                    | 短い名前                      | 言語     | Tags                                  | 導入時期 |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
-| コンソール アプリケーション                          | [console](#console)             | [C#], F#, VB | Common/Console                        | 1        |
-| クラス ライブラリ                                | [classlib](#classlib)           | [C#], F#, VB | Common/Library                        | 1        |
-| WPF アプリケーション                              | [wpf](#wpf)                     | [C#]         | Common/WPF                            | 3.0        |
-| WPF クラス ライブラリ                            | [wpflib](#wpf)                  | [C#]         | Common/WPF                            | 3.0        |
-| WPF カスタム コントロール ライブラリ                   | [wpfcustomcontrollib](#wpf)     | [C#]         | Common/WPF                            | 3.0        |
-| WPF ユーザー コントロール ライブラリ                     | [wpfusercontrollib](#wpf)       | [C#]         | Common/WPF                            | 3.0        |
-| Windows フォーム (WinForms) アプリケーション         | [winforms](#winforms)           | [C#]         | Common/WinForms                       | 3.0        |
-| Windows フォーム (WinForms) クラス ライブラリ       | [winformslib](#winforms)        | [C#]         | Common/WinForms                       | 3.0        |
+| コンソール アプリケーション                          | [console](#console)             | [C#], F#, VB | Common/Console                        | 1.0        |
+| クラス ライブラリ                                | [classlib](#classlib)           | [C#], F#, VB | Common/Library                        | 1.0        |
+| WPF アプリケーション                              | [wpf](#wpf)                     | [C#]、VB     | Common/WPF                            | 3.0 (VB の場合は 5.0)|
+| WPF クラス ライブラリ                            | [wpflib](#wpf)                  | [C#]、VB     | Common/WPF                            | 3.0 (VB の場合は 5.0)|
+| WPF カスタム コントロール ライブラリ                   | [wpfcustomcontrollib](#wpf)     | [C#]、VB     | Common/WPF                            | 3.0 (VB の場合は 5.0)|
+| WPF ユーザー コントロール ライブラリ                     | [wpfusercontrollib](#wpf)       | [C#]、VB     | Common/WPF                            | 3.0 (VB の場合は 5.0)|
+| Windows フォーム (WinForms) アプリケーション         | [winforms](#winforms)           | [C#]、VB     | Common/WinForms                       | 3.0 (VB の場合は 5.0)|
+| Windows フォーム (WinForms) クラス ライブラリ       | [winformslib](#winforms)        | [C#]、VB     | Common/WinForms                       | 3.0 (VB の場合は 5.0)|
 | Worker Service                               | [worker](#web-others)           | [C#]         | Common/Worker/Web                     | 3.0        |
-| 単体テスト プロジェクト                            | [mstest](#test)                 | [C#], F#, VB | Test/MSTest                           | 1        |
-| NUnit 3 テスト プロジェクト                         | [nunit](#nunit)                  | [C#], F#, VB | Test/NUnit                            | 2.1.400    |
+| 単体テスト プロジェクト                            | [mstest](#test)                 | [C#], F#, VB | Test/MSTest                           | 1.0        |
+| NUnit 3 テスト プロジェクト                         | [nunit](#nunit)                 | [C#], F#, VB | Test/NUnit                            | 2.1.400    |
 | NUnit 3 テスト項目                            | `nunit-test`                    | [C#], F#, VB | Test/NUnit                            | 2.2        |
-| xUnit テスト プロジェクト                           | [xunit](#test)                  | [C#], F#, VB | Test/xUnit                            | 1        |
+| xUnit テスト プロジェクト                           | [xunit](#test)                  | [C#], F#, VB | Test/xUnit                            | 1.0        |
 | Razor コンポーネント                              | `razorcomponent`                | [C#]         | Web/ASP.NET                           | 3.0        |
 | Razor ページ                                   | [page](#page)                   | [C#]         | Web/ASP.NET                           | 2.0        |
 | MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
 | MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
 | Blazor サーバー アプリ                            | [blazorserver](#blazorserver)   | [C#]         | Web/Blazor                            | 3.0        |
-| Blazor WebAssembly アプリ                       | `blazorwasm`                    | [C#]         | Web/Blazor/WebAssembly                            | 3.1.300    |
-| ASP.NET Core 空                           | [web](#web)                     | [C#], F#     | Web/Empty                             | 1        |
-| ASP.NET Core Web アプリ (モデル ビュー コントローラー) | [mvc](#web-options)             | [C#], F#     | Web/MVC                               | 1        |
+| Blazor WebAssembly アプリ                       | `blazorwasm`                    | [C#]         | Web/Blazor/WebAssembly                | 3.1.300    |
+| ASP.NET Core 空                           | [web](#web)                     | [C#], F#     | Web/Empty                             | 1.0        |
+| ASP.NET Core Web アプリ (モデル ビュー コントローラー) | [mvc](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
 | ASP.NET Core Web アプリ                         | [webapp、razor](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2.2、2.0   |
 | Angular 付きの ASP.NET Core                    | [angular](#spa)                 | [C#]         | Web/MVC/SPA                           | 2.0        |
 | React.js 付きの ASP.NET Core                   | [react](#spa)                   | [C#]         | Web/MVC/SPA                           | 2.0        |
 | React.js および Redux 付きの ASP.NET Core         | [reactredux](#reactredux)       | [C#]         | Web/MVC/SPA                           | 2.0        |
 | Razor クラス ライブラリ                          | [razorclasslib](#razorclasslib) | [C#]         | Web/Razor/Library/Razor Class Library | 2.1        |
-| ASP.NET Core Web API                         | [webapi](#webapi)               | [C#], F#     | Web/WebAPI                            | 1        |
+| ASP.NET Core Web API                         | [webapi](#webapi)               | [C#], F#     | Web/WebAPI                            | 1.0        |
 | ASP.NET Core gRPC サービス                    | [grpc](#web-others)             | [C#]         | Web/gRPC                              | 3.0        |
 | dotnet gitignore ファイル                        | `gitignore`                     |              | 構成                                | 3.0        |
 | global.json file                             | [globaljson](#globaljson)       |              | 構成                                | 2.0        |
-| NuGet 構成                                 | `nugetconfig`                   |              | 構成                                | 1        |
+| NuGet 構成                                 | `nugetconfig`                   |              | 構成                                | 1.0        |
 | dotnet ローカル ツール マニフェスト ファイル              | `tool-manifest`                 |              | 構成                                | 3.0        |
-| Web 構成                                   | `webconfig`                     |              | 構成                                | 1        |
-| ソリューション ファイル                                | `sln`                           |              | ソリューション                              | 1        |
+| Web 構成                                   | `webconfig`                     |              | 構成                                | 1.0        |
+| ソリューション ファイル                                | `sln`                           |              | ソリューション                              | 1.0        |
 | プロトコル バッファー ファイル                         | [proto](#namespace)             |              | Web/gRPC                              | 3.0        |
 
 ## <a name="options"></a>オプション

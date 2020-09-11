@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: 5e75fec12390cb694126c5bec684c40caa378915
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: dff93496dfeceaf67777abe0b02ee2d620b3a5ca
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89139100"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466041"
 ---
 # <a name="event-c-reference"></a>event (C# リファレンス)
 
@@ -23,7 +23,7 @@ ms.locfileid: "89139100"
 
 ## <a name="example"></a>例
 
-次の例では、基になるデリゲート型として <xref:System.EventHandler> を使用するイベントを宣言し、発生させる方法について説明します。 完全なコード例については、「[.NET Framework ガイドラインに準拠したイベントを発行する方法](../../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)」を参照してください。完全なコード例では、ジェネリック <xref:System.EventHandler%601> デリゲート型の使用方法と、イベントをサブスクライブして、イベント ハンドラー メソッドを作成する方法も確認できます。
+次の例では、基になるデリゲート型として <xref:System.EventHandler> を使用するイベントを宣言し、発生させる方法について説明します。 完全なコード例については、「[.NET ガイドラインに準拠したイベントを発行する方法](../../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)」を参照してください。この例では、ジェネリック <xref:System.EventHandler%601> デリゲート型を使用する方法と、イベントをサブスクライブして、イベント ハンドラー メソッドを作成する方法も確認できます。
 
 [!code-csharp[csrefKeywordsModifiers#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#7)]
 

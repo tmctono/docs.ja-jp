@@ -4,12 +4,12 @@ description: .NET Standard、.NET 実装、.NET ランタイム、ツールな�
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 027fdb4cec47550f88f6930a4bbdff4ab5cdfb36
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 2fc8bcea59cd2ba652b88644677f077d62994ca4
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344162"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414735"
 ---
 # <a name="net-architectural-components"></a>.NET アーキテクチャ コンポーネント
 
@@ -38,7 +38,7 @@ Microsoft が積極的に開発し保守している主要な .NET 実装とし�
 
 .NET Core は .NET のクラスプラットフォーム実装であり、サーバーとクラウドのワークロードをその規模に応じて処理するように設計されています。 Windows、macOS、および Linux で実行されます。 .NET Standard を実装しているので、.NET Standard をターゲットとするすべてのコードを .NET Core 上で実行できます。 [ASP.NET](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core)、[Windows フォーム](../framework/winforms/windows-forms-overview.md)、[Windows Presentation Foundation (WPF)](../framework/wpf/index.md) はすべて、.NET Core で実行されます。
 
-.NET Core の詳細については、[.NET Core に関するページ](../core/index.yml)、および「[サーバー アプリ用 .NET Core と .NET Framework の選択](choosing-core-framework-server.md)」を参照してください。
+.NET Core の詳細については、[.NET Core の概要](../core/introduction.md)に関するページと、[サーバー アプリに .NET Core か .NET Framework を選択する](choosing-core-framework-server.md)方法に関するページを参照してください。
 
 ### <a name="net-framework"></a>.NET Framework
 
@@ -106,8 +106,8 @@ C# 言語および共通言語基盤 (CLI) の仕様は、[エクマ インタ�
 ## <a name="see-also"></a>関連項目
 
 - [サーバー アプリ用 .NET Core と .NET Framework の選択](choosing-core-framework-server.md)
-- [.NET Standard](net-standard.md)
-- [.NET Core のガイド](../core/index.yml)
+- [.NET Standard の概要](net-standard.md)
+- [.NET Core の概要](../core/introduction.md)
 - [.NET Framework ガイド](../framework/index.yml)
 - [C# のガイド](../csharp/index.yml)
 - [F# のガイド](../fsharp/index.yml)

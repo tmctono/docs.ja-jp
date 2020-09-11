@@ -3,12 +3,12 @@ title: .NET Core SDK 製品利用統計情報
 description: 利用情報を収集して分析する .NET Core SDK の製品利用統計情報機能や収集されるデータ、およびこの機能を無効にする方法について説明します。
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 0917dae23588ccd1809252aaf484c397e84561c7
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: 01376cabc4f59f64c59a78dcff061fb6ec11e3c3
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226570"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359234"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 製品利用統計情報
 
@@ -138,5 +138,5 @@ at Microsoft.DotNet.Cli.Program.Main(String[] args)
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Core CLI 製品利用統計情報 - 2019 年第 2 四半期データ](https://dotnet.microsoft.com/platform/telemetry/dotnet-core-cli-2019q2)
+- [.NET Core CLI 利用統計情報データ](https://dotnet.microsoft.com/platform/telemetry)
 - [製品利用統計情報の参照のソース (dotnet/sdk リポジトリ)](https://github.com/dotnet/sdk/tree/master/src/Cli/dotnet/Telemetry)

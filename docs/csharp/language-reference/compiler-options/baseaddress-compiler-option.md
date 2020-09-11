@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -baseaddress compiler option [C#]
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
-ms.openlocfilehash: 42b1891c29457745689542a4c9e0482ec5e918fa
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: f79ee449eafd04906dab49700a1af6441d54cece
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89126009"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89464884"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-baseaddress (C# コンパイラ オプション)
 **-baseaddress** オプションを使用すると、DLL を読み込む位置に推奨されるベース アドレスを指定できます。 このオプションを使用するタイミングと理由の詳細については、[Larry Osterman のブログ](https://docs.microsoft.com/archive/blogs/larryosterman/why-should-i-even-bother-to-use-dlls-in-my-system)を参照してください。  
@@ -30,7 +30,7 @@ ms.locfileid: "89126009"
  DLL のベース アドレス。 このアドレスは、10 進数、16 進数、または 8 進数で指定できます。  
   
 ## <a name="remarks"></a>注釈  
- DLL の既定のベース アドレスは、.NET Framework 共通言語ランタイムにより設定されます。  
+ DLL の既定のベース アドレスは、.NET 共通言語ランタイムにより設定されます。  
   
  このアドレスの下位ワードは丸められることに注意してください。 たとえば、0x11110001 と指定すると、丸められて 0x11110000 になります。  
   

@@ -2,12 +2,12 @@
 title: dotnet publish コマンド
 description: dotnet publish コマンドを実行すると、.NET Core プロジェクトまたはソリューションをディレクトリに発行できます。
 ms.date: 02/24/2020
-ms.openlocfilehash: 45bf8504fd882286041794d27ecb56464fc8d13d
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: f171baaa0dbc070b6389ec0fa9895b2c5dcfafff
+ms.sourcegitcommit: f279a4488c48236793c04bf825ae6f9128790849
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656666"
+ms.lasthandoff: 09/06/2020
+ms.locfileid: "89501910"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -123,7 +123,7 @@ dotnet publish -p:PublishProfile=FolderProfile
 
   出力ディレクトリのパスを指定します。
   
-  指定しない場合、フレームワークに依存する実行可能ファイルおよびクロスプラットフォーム バイナリの既定値は *[project_file_folder]./bin/[configuration]/[framework]/publish/* に設定されます。 自己完結型の実行可能ファイルの場合、既定値は *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* に設定されます。
+  指定しない場合、フレームワークに依存する実行可能ファイルおよびクロスプラットフォーム バイナリの既定値は *[project_file_folder]/bin/[configuration]/[framework]/publish/* に設定されます。 自己完結型の実行可能ファイルの場合、既定値は *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* に設定されます。
 
   Web プロジェクトで、出力フォルダーがプロジェクト フォルダー内にある場合、`dotnet publish` コマンドを連続して実行すると、出力フォルダーが入れ子になって生成されます。 たとえば、プロジェクト フォルダーが *myproject* で、発行の出力フォルダーが *myproject/publish* であり、`dotnet publish` を 2 回実行した場合、2 回目の実行では *myproject/publish/publish* に *.config* および *.json* ファイルなどのコンテンツ ファイルが配置されます。 発行フォルダーが入れ子にならないようにするには、プロジェクト フォルダーの**直下以外**の発行フォルダーを指定するか、またはプロジェクトから発行フォルダーを除外します。 *publishoutput* という名前の発行フォルダーを除外するには、 *.csproj* ファイルの `PropertyGroup` 要素に次の要素を追加します。
 

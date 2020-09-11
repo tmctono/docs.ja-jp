@@ -3,15 +3,16 @@ title: .NET Core とオープン ソース
 description: .NET Core の概要について説明します。これは、汎用、モジュール型、クロスプラットフォーム、およびオープンソースの .NET Standard の実装です。
 ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-ms.openlocfilehash: 08d30d047c25b3b6d681d72b46b81a0cb21f8e0a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 4627d4cc1bf45f3a7ad3f269279384b4a303f00d
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622758"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414917"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core とオープン ソース
 
-この記事では、.NET Core の概要のほか、詳細情報の入手方法を説明します。 .NET Core に関するドキュメントの完全な一覧については、[.NET Core ガイド](../../core/index.yml)を参照してください。
+この記事では、.NET Core の概要のほか、詳細情報の入手方法を説明します。
 
 ## <a name="what-is-net-core"></a>.NET Core とは何ですか?  
 
@@ -46,5 +47,5 @@ ms.locfileid: "85622758"
 ## <a name="see-also"></a>関連項目
 
 - [.NET チュートリアル - 10 分で Hello World](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
-- [.NET Core ガイド](../../core/index.yml)
+- [.NET Core の概要](../../core/introduction.md)
 - [ASP.NET Core ドキュメント](/aspnet/core/)

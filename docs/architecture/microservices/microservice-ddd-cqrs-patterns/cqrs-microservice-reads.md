@@ -2,12 +2,12 @@
 title: CQRS マイクロサービスに読み取り/クエリを実装する
 description: コンテナー化された .NET アプリケーション用の .NET マイクロサービス アーキテクチャ | Dapper を使用した eShopOnContainers でのオーダリング マイクロサービスの CQRS のクエリ側の実装を理解する。
 ms.date: 10/08/2018
-ms.openlocfilehash: 71db95e6fc17475693183be9c6854884cd331ce1
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 41932122326cf4c49b9c9e2c344d2ac17da7466b
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614410"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358896"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>CQRS マイクロサービスに読み取り/クエリを実装する
 
@@ -33,7 +33,7 @@ ms.locfileid: "83614410"
 
 返されるデータ (ViewModel) は、データベースの複数のエンティティまたはテーブルからの、あるいはトランザクション領域のドメイン モデルで定義されている複数の集計全体のデータの結合結果である場合があります。 この場合、ドメイン モデルには依存しないクエリを作成するため、集約の境界と制約は無視され、必要なテーブルと列に対して自由にクエリを実行できます。 この方法では、開発者がクエリの作成または更新を行う場合に優れた柔軟性と生産性が提供されます。
 
-ViewModel として、クラスで定義されている静的な型を指定することができます。 または、実行 (オーダリング マイクロサービスで実装) されたクエリに基づいて動的に作成することもできます。これは、開発者にとって非常にアジャイルな方法です。
+ViewModels は、クラスに定義されている静的な型にすることができます (オーダリング マイクロサービスで実装されているように)。 または、実行されたクエリに基づいて動的に作成することもできます。これは、開発者にとって非常にアジャイルな方法です。
 
 ## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>クエリを実行するためのマイクロ ORM としての Dapper の使用
 

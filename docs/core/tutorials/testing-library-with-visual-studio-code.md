@@ -2,12 +2,12 @@
 title: Visual Studio Code を使用して .NET Core で .NET Standard クラス ライブラリをテストする
 description: .NET Core クラス ライブラリ用の単体テスト プロジェクトを作成します。 .NET Core クラス ライブラリが単体テストで正しく動作することを確認します。
 ms.date: 06/08/2020
-ms.openlocfilehash: b5f394b5dea2bf0b4af6e8b119df3fa0ec113dd3
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: f49974e1b918424ae5b5d7f3969f52c371e37154
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811718"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359169"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET Core で .NET Standard クラス ライブラリをテストする
 
@@ -15,7 +15,7 @@ ms.locfileid: "88811718"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- このチュートリアルでは、「[Visual Studio Code での .NET Standard ライブラリの作成](library-with-visual-studio-code.md)」で作成したソリューションを使用します。
+- このチュートリアルでは、「[Visual Studio Code を使用して .NET Standard ライブラリを作成する](library-with-visual-studio-code.md)」で作成したソリューションを使用します。
 
 ## <a name="create-a-unit-test-project"></a>単体テスト プロジェクトを作成する
 
@@ -23,7 +23,7 @@ ms.locfileid: "88811718"
 
 1. Visual Studio Code を開始します。
 
-1. 「[Visual Studio で .NET Standard ライブラリを構築する](library-with-visual-studio.md)」で作成した `ClassLibraryProjects` ソリューションを開きます。
+1. 「[Visual Studio Code を使用して .NET Standard ライブラリを作成する](library-with-visual-studio-code.md)」で作成した `ClassLibraryProjects` ソリューションを開きます。
 
 1. 「StringLibraryTest」という名前の単体テスト プロジェクトを作成します。
 

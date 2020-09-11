@@ -3,12 +3,12 @@ title: コレクションでの作業 - C# チュートリアルの概要
 description: このチュートリアルでは、リスト コレクションについて確認して C# を学習します。
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: c99f5582702120db238de1206de42d964837cdbd
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: e2282df21420630634911e07f4fb3b94f34a792b
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396893"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414684"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>リスト型を使用したデータ コレクションの管理について説明します
 
@@ -230,4 +230,4 @@ foreach (var item in fibonacciNumbers)
 
 おつかれさまでした。リストについてのチュートリアルはこれで終了です。 続けて独自の開発環境で[クラスの概要](introduction-to-classes.md)のチュートリアルに進むことができます。
 
-`List` 型の使用方法の詳細については、「[.NET ガイド](../../../standard/index.yml)」の[コレクション](../../../standard/collections/index.md)に関する記事を参照してください。 その他の多くのコレクション型についても学習できます。
+`List` 型の使用方法の詳細については、[コレクション](../../../standard/collections/index.md)に関する .NET 基礎の記事を参照してください。 その他の多くのコレクション型についても学習できます。
