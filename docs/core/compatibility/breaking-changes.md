@@ -2,12 +2,12 @@
 title: 互換性に影響する変更
 description: .NET Core の各バージョンの破壊的変更について説明します。
 ms.date: 11/27/2019
-ms.openlocfilehash: 73c1576aa92f0e236ead0ca1a12ac26efcbf3cbe
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: eea6542acb9fa659af764bfd3a2af00fd9740191
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810899"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656276"
 ---
 # <a name="breaking-change-selectors"></a>破壊的変更のセレクター
 
@@ -43,6 +43,7 @@ ms.locfileid: "88810899"
 > - [シリアル化](serialization.md)
 > - [Visual Basic](visualbasic.md)
 > - [Windows フォーム](winforms.md)
+> - [WPF](wpf.md)
 
 ## <a name="github-issues-and-announcements"></a>GitHub のイシューとお知らせ
 

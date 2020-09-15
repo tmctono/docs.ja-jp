@@ -4,12 +4,12 @@ description: .NET Core ツールをインストール、使用、更新、およ
 author: KathleenDollard
 ms.topic: how-to
 ms.date: 02/12/2020
-ms.openlocfilehash: 00c0317fcfc4da0e7205c23faa7b355c20882ec9
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 08277ed791036201d1dfa30c21799db1c21a924e
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062731"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598135"
 ---
 # <a name="how-to-manage-net-core-tools"></a>.NET Core ツールの管理方法
 
@@ -42,7 +42,7 @@ ms.locfileid: "88062731"
 * ツールの一覧については、[natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub リポジトリを参照してください。
 * [ToolGet](https://www.toolget.net/) を使用して .NET ツールを検索します。
 * ASP.NET Core チームが作成したツールのソース コードについては、[dotnet/aspnetcore GitHub リポジトリの Tools ディレクトリ](https://github.com/dotnet/aspnetcore/tree/master/src/Tools)を参照してください。
-* 診断ツールについては、[.NET Core dotnet 診断ツール](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools)に関する記事を参照してください。
+* 診断ツールについては、[.NET Core dotnet 診断ツール](../diagnostics/index.md#net-core-diagnostic-global-tools)に関する記事を参照してください。
 
 ## <a name="check-the-author-and-statistics"></a>作成者と統計情報の確認
 
