@@ -18,7 +18,7 @@ NET Framework 4.7 以降を対象とする場合に <xref:System.NullReferenceEx
 
 <pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Media.ImageSourceConverter.OverrideExceptionWithNullReferenceException=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
 
-| 名前    | [値]       |
+| 名前    | 値       |
 |:--------|:------------|
 | スコープ   | エッジ        |
 | バージョン | 4.7         |

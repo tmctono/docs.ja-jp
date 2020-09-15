@@ -22,7 +22,7 @@ Visual Studio を使用した XOML ベースのワークフローのデバッグ
 
 <pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Workflow.ComponentModel.UseLegacyHashForXomlFileChecksum=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
 
-| 名前    | [値]       |
+| 名前    | 値       |
 |:--------|:------------|
 | スコープ   | マイナー       |
 | バージョン | 4.8         |

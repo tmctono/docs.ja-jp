@@ -16,10 +16,10 @@ ms.locfileid: "85614919"
 
 .NET Framework 4.7.1 より前のフレームワーク バージョンを対象とするときにこの変更を利用する開発者または .NET Framework 4.7.1 以上を対象とするときに以前の機能を必要とする開発者は、次の AppContext フラグを適宜設定することができます。  true の値を設定すると、SHA1 が既定のアルゴリズムとして使用され、false の値を設定すると SHA256 が使用されます。<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.MS.Internal.UseSha1AsDefaultHashAlgorithmForDigitalSignatures=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
 
-| 名前    | [値]       |
+| 名前    | 値       |
 |:--------|:------------|
 | スコープ   | エッジ        |
-| バージョン | 4.7.1       |
+| Version | 4.7.1       |
 | 種類    | 再ターゲット中 |
 
 #### <a name="affected-apis"></a>影響を受ける API
