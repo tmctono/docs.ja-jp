@@ -6,102 +6,102 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: ca6b196e8c910f97ead6d1df5b6c0dd6c49c68a4
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: c36967236c40efbf432d554c3f551aea22cfb148
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85503851"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549680"
 ---
-# <a name="wcf-data-services-45"></a><span data-ttu-id="580c4-103">WCF Data Services 4.5</span><span class="sxs-lookup"><span data-stu-id="580c4-103">WCF Data Services 4.5</span></span>
+# <a name="wcf-data-services-45"></a><span data-ttu-id="cd6ca-103">WCF Data Services 4.5</span><span class="sxs-lookup"><span data-stu-id="cd6ca-103">WCF Data Services 4.5</span></span>
 
-<span data-ttu-id="580c4-104">WCF Data Services (従来の "ADO.NET Data Services") は .NET Framework のコンポーネントです。これを使用すると、[Representational State Transfer (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) のセマンティクスを使用し、Open Data Protocol (OData) を使用して Web またはイントラネット上のデータを公開および使用するサービスを作成できます。</span><span class="sxs-lookup"><span data-stu-id="580c4-104">WCF Data Services (formerly known as "ADO.NET Data Services") is a component of the .NET Framework that enables you to create services that use the Open Data Protocol (OData) to expose and consume data over the Web or intranet by using the semantics of [representational state transfer (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm).</span></span> <span data-ttu-id="580c4-105">OData は、URI でアドレス指定できるリソースとしてデータを公開します。</span><span class="sxs-lookup"><span data-stu-id="580c4-105">OData exposes data as resources that are addressable by URIs.</span></span> <span data-ttu-id="580c4-106">標準的な HTTP 動詞である GET、PUT、POST、および DELETE を使用してデータにアクセスし、変更できます。</span><span class="sxs-lookup"><span data-stu-id="580c4-106">Data is accessed and changed by using standard HTTP verbs of GET, PUT, POST, and DELETE.</span></span> <span data-ttu-id="580c4-107">OData では、[Entity Data Model](../adonet/entity-data-model.md) のエンティティとリレーションシップの規則を使用して、アソシエーションで関連付けられた一連のエンティティとしてリソースを公開します。</span><span class="sxs-lookup"><span data-stu-id="580c4-107">OData uses the entity-relationship conventions of the [Entity Data Model](../adonet/entity-data-model.md) to expose resources as sets of entities that are related by associations.</span></span>
+<span data-ttu-id="cd6ca-104">WCF Data Services (従来の "ADO.NET Data Services") は .NET Framework のコンポーネントです。これを使用すると、[Representational State Transfer (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) のセマンティクスを使用し、Open Data Protocol (OData) を使用して Web またはイントラネット上のデータを公開および使用するサービスを作成できます。</span><span class="sxs-lookup"><span data-stu-id="cd6ca-104">WCF Data Services (formerly known as "ADO.NET Data Services") is a component of the .NET Framework that enables you to create services that use the Open Data Protocol (OData) to expose and consume data over the Web or intranet by using the semantics of [representational state transfer (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm).</span></span> <span data-ttu-id="cd6ca-105">OData は、URI でアドレス指定できるリソースとしてデータを公開します。</span><span class="sxs-lookup"><span data-stu-id="cd6ca-105">OData exposes data as resources that are addressable by URIs.</span></span> <span data-ttu-id="cd6ca-106">標準的な HTTP 動詞である GET、PUT、POST、および DELETE を使用してデータにアクセスし、変更できます。</span><span class="sxs-lookup"><span data-stu-id="cd6ca-106">Data is accessed and changed by using standard HTTP verbs of GET, PUT, POST, and DELETE.</span></span> <span data-ttu-id="cd6ca-107">OData では、[Entity Data Model](../adonet/entity-data-model.md) のエンティティとリレーションシップの規則を使用して、アソシエーションで関連付けられた一連のエンティティとしてリソースを公開します。</span><span class="sxs-lookup"><span data-stu-id="cd6ca-107">OData uses the entity-relationship conventions of the [Entity Data Model](../adonet/entity-data-model.md) to expose resources as sets of entities that are related by associations.</span></span>
 
-<span data-ttu-id="580c4-108">WCF Data Services は、OData プロトコルを使用してリソースのアドレス指定および更新を行います。</span><span class="sxs-lookup"><span data-stu-id="580c4-108">WCF Data Services uses the OData protocol for addressing and updating resources.</span></span> <span data-ttu-id="580c4-109">これにより、OData をサポートする任意のクライアントからサービスにアクセスできるようになります。</span><span class="sxs-lookup"><span data-stu-id="580c4-109">In this way, you can access these services from any client that supports OData.</span></span> <span data-ttu-id="580c4-110">OData を使用すると、XML としてデータを交換および更新するための標準のセットである Atom と、AJAX アプリケーションで広範に使用されるテキスト ベースのデータ交換形式である JavaScript Object Notation (JSON) という広く知られている転送形式を使用して、データをリソースに要求または書き込むことができます。</span><span class="sxs-lookup"><span data-stu-id="580c4-110">OData enables you to request and write data to resources by using well-known transfer formats: Atom, a set of standards for exchanging and updating data as XML, and JavaScript Object Notation (JSON), a text-based data exchange format used extensively in AJAX applications.</span></span>
+<span data-ttu-id="cd6ca-108">WCF Data Services は、OData プロトコルを使用してリソースのアドレス指定および更新を行います。</span><span class="sxs-lookup"><span data-stu-id="cd6ca-108">WCF Data Services uses the OData protocol for addressing and updating resources.</span></span> <span data-ttu-id="cd6ca-109">これにより、OData をサポートする任意のクライアントからサービスにアクセスできるようになります。</span><span class="sxs-lookup"><span data-stu-id="cd6ca-109">In this way, you can access these services from any client that supports OData.</span></span> <span data-ttu-id="cd6ca-110">OData を使用すると、XML としてデータを交換および更新するための標準のセットである Atom と、AJAX アプリケーションで広範に使用されるテキスト ベースのデータ交換形式である JavaScript Object Notation (JSON) という広く知られている転送形式を使用して、データをリソースに要求または書き込むことができます。</span><span class="sxs-lookup"><span data-stu-id="cd6ca-110">OData enables you to request and write data to resources by using well-known transfer formats: Atom, a set of standards for exchanging and updating data as XML, and JavaScript Object Notation (JSON), a text-based data exchange format used extensively in AJAX applications.</span></span>
 
-<span data-ttu-id="580c4-111">WCF Data Services では、さまざまなソースからのデータを OData フィードとして公開できます。</span><span class="sxs-lookup"><span data-stu-id="580c4-111">WCF Data Services can expose data that originates from various sources as OData feeds.</span></span> <span data-ttu-id="580c4-112">Visual Studio のツールを使用すると、ADO.NET Entity Framework データ モデルを使用して OData ベースのサービスを簡単に作成できます。</span><span class="sxs-lookup"><span data-stu-id="580c4-112">Visual Studio tools make it easier for you to create an OData-based service by using an ADO.NET Entity Framework data model.</span></span> <span data-ttu-id="580c4-113">OData フィードは、共通言語ランタイム (CLR) クラスに基づいて作成できます。また、遅延バインディング データまたは型指定されていないデータに基づいて作成することもできます。</span><span class="sxs-lookup"><span data-stu-id="580c4-113">You can also create OData feeds based on common language runtime (CLR) classes and even late-bound or un-typed data.</span></span>
+<span data-ttu-id="cd6ca-111">WCF Data Services では、さまざまなソースからのデータを OData フィードとして公開できます。</span><span class="sxs-lookup"><span data-stu-id="cd6ca-111">WCF Data Services can expose data that originates from various sources as OData feeds.</span></span> <span data-ttu-id="cd6ca-112">Visual Studio のツールを使用すると、ADO.NET Entity Framework データ モデルを使用して OData ベースのサービスを簡単に作成できます。</span><span class="sxs-lookup"><span data-stu-id="cd6ca-112">Visual Studio tools make it easier for you to create an OData-based service by using an ADO.NET Entity Framework data model.</span></span> <span data-ttu-id="cd6ca-113">OData フィードは、共通言語ランタイム (CLR) クラスに基づいて作成できます。また、遅延バインディング データまたは型指定されていないデータに基づいて作成することもできます。</span><span class="sxs-lookup"><span data-stu-id="cd6ca-113">You can also create OData feeds based on common language runtime (CLR) classes and even late-bound or un-typed data.</span></span>
 
-<span data-ttu-id="580c4-114">WCF Data Services には、クライアント ライブラリのセット (一般的な .NET Framework クライアント アプリケーション用と Silverlight ベースのアプリケーション用) も含まれています。</span><span class="sxs-lookup"><span data-stu-id="580c4-114">WCF Data Services also includes a set of client libraries, one for general .NET Framework client applications and another specifically for Silverlight-based applications.</span></span> <span data-ttu-id="580c4-115">これらのクライアント ライブラリは、.NET Framework や Silverlight などの環境から OData フィードにアクセスするときにオブジェクト ベースのプログラミング モデルを提供します。</span><span class="sxs-lookup"><span data-stu-id="580c4-115">These client libraries provide an object-based programming model when you access an OData feed from environments such as the .NET Framework and Silverlight.</span></span>
+<span data-ttu-id="cd6ca-114">WCF Data Services には、クライアント ライブラリのセット (一般的な .NET Framework クライアント アプリケーション用と Silverlight ベースのアプリケーション用) も含まれています。</span><span class="sxs-lookup"><span data-stu-id="cd6ca-114">WCF Data Services also includes a set of client libraries, one for general .NET Framework client applications and another specifically for Silverlight-based applications.</span></span> <span data-ttu-id="cd6ca-115">これらのクライアント ライブラリは、.NET Framework や Silverlight などの環境から OData フィードにアクセスするときにオブジェクト ベースのプログラミング モデルを提供します。</span><span class="sxs-lookup"><span data-stu-id="cd6ca-115">These client libraries provide an object-based programming model when you access an OData feed from environments such as the .NET Framework and Silverlight.</span></span>
 
-## <a name="where-should-i-start"></a><span data-ttu-id="580c4-116">開始すべき場所</span><span class="sxs-lookup"><span data-stu-id="580c4-116">Where Should I Start?</span></span>
+## <a name="where-should-i-start"></a><span data-ttu-id="cd6ca-116">開始すべき場所</span><span class="sxs-lookup"><span data-stu-id="cd6ca-116">Where Should I Start?</span></span>
 
-<span data-ttu-id="580c4-117">各自の興味に応じて、次のトピックのいずれかから WCF Data Services の使用を開始することを検討してください。</span><span class="sxs-lookup"><span data-stu-id="580c4-117">Depending on your interests, consider getting started with WCF Data Services in one of the following topics.</span></span>
+<span data-ttu-id="cd6ca-117">各自の興味に応じて、次のトピックのいずれかから WCF Data Services の使用を開始することを検討してください。</span><span class="sxs-lookup"><span data-stu-id="cd6ca-117">Depending on your interests, consider getting started with WCF Data Services in one of the following topics.</span></span>
 
-<span data-ttu-id="580c4-118">すぐに使用を開始する…</span><span class="sxs-lookup"><span data-stu-id="580c4-118">I want to jump right in...</span></span>
+<span data-ttu-id="cd6ca-118">すぐに使用を開始する…</span><span class="sxs-lookup"><span data-stu-id="cd6ca-118">I want to jump right in...</span></span>
 
-- [<span data-ttu-id="580c4-119">クイック スタート</span><span class="sxs-lookup"><span data-stu-id="580c4-119">Quickstart</span></span>](quickstart-wcf-data-services.md)
+- [<span data-ttu-id="cd6ca-119">クイック スタート</span><span class="sxs-lookup"><span data-stu-id="cd6ca-119">Quickstart</span></span>](quickstart-wcf-data-services.md)
 
-- [<span data-ttu-id="580c4-120">はじめに</span><span class="sxs-lookup"><span data-stu-id="580c4-120">Getting Started</span></span>](getting-started-with-wcf-data-services.md)
+- [<span data-ttu-id="cd6ca-120">はじめに</span><span class="sxs-lookup"><span data-stu-id="cd6ca-120">Getting Started</span></span>](getting-started-with-wcf-data-services.md)
 
-<span data-ttu-id="580c4-121">コードを見たい...</span><span class="sxs-lookup"><span data-stu-id="580c4-121">Just show me some code...</span></span>
+<span data-ttu-id="cd6ca-121">コードを見たい...</span><span class="sxs-lookup"><span data-stu-id="cd6ca-121">Just show me some code...</span></span>
 
-- [<span data-ttu-id="580c4-122">クイック スタート</span><span class="sxs-lookup"><span data-stu-id="580c4-122">Quickstart</span></span>](quickstart-wcf-data-services.md)
+- [<span data-ttu-id="cd6ca-122">クイック スタート</span><span class="sxs-lookup"><span data-stu-id="cd6ca-122">Quickstart</span></span>](quickstart-wcf-data-services.md)
 
-- [<span data-ttu-id="580c4-123">方法: データ サービス クエリを実行する</span><span class="sxs-lookup"><span data-stu-id="580c4-123">How to: Execute Data Service Queries</span></span>](how-to-execute-data-service-queries-wcf-data-services.md)
+- [<span data-ttu-id="cd6ca-123">方法: データ サービス クエリを実行する</span><span class="sxs-lookup"><span data-stu-id="cd6ca-123">How to: Execute Data Service Queries</span></span>](how-to-execute-data-service-queries-wcf-data-services.md)
 
-- [<span data-ttu-id="580c4-124">方法: Windows Presentation Foundation 要素にデータをバインドする</span><span class="sxs-lookup"><span data-stu-id="580c4-124">How to: Bind Data to Windows Presentation Foundation Elements</span></span>](bind-data-to-wpf-elements-wcf-data-services.md)
+- [<span data-ttu-id="cd6ca-124">方法: Windows Presentation Foundation 要素にデータをバインドする</span><span class="sxs-lookup"><span data-stu-id="cd6ca-124">How to: Bind Data to Windows Presentation Foundation Elements</span></span>](bind-data-to-wpf-elements-wcf-data-services.md)
 
-<span data-ttu-id="580c4-125">OData について詳しく知りたい...</span><span class="sxs-lookup"><span data-stu-id="580c4-125">I want to know more about OData...</span></span>
+<span data-ttu-id="cd6ca-125">OData について詳しく知りたい...</span><span class="sxs-lookup"><span data-stu-id="cd6ca-125">I want to know more about OData...</span></span>
 
-- [<span data-ttu-id="580c4-126">ホワイト ペーパー: OData の概要</span><span class="sxs-lookup"><span data-stu-id="580c4-126">White paper: Introducing OData</span></span>](https://download.microsoft.com/download/E/5/A/E5A59052-EE48-4D64-897B-5F7C608165B8/IntroducingOData.pdf)
-- [<span data-ttu-id="580c4-127">Open Data Protocol Web サイト</span><span class="sxs-lookup"><span data-stu-id="580c4-127">Open Data Protocol website</span></span>](https://www.odata.org/)
-- [<span data-ttu-id="580c4-128">OData: SDK</span><span class="sxs-lookup"><span data-stu-id="580c4-128">OData: SDK</span></span>](https://www.odata.org/ecosystem/)
+- [<span data-ttu-id="cd6ca-126">ホワイト ペーパー: OData の概要</span><span class="sxs-lookup"><span data-stu-id="cd6ca-126">White paper: Introducing OData</span></span>](https://download.microsoft.com/download/E/5/A/E5A59052-EE48-4D64-897B-5F7C608165B8/IntroducingOData.pdf)
+- [<span data-ttu-id="cd6ca-127">Open Data Protocol Web サイト</span><span class="sxs-lookup"><span data-stu-id="cd6ca-127">Open Data Protocol website</span></span>](https://www.odata.org/)
+- [<span data-ttu-id="cd6ca-128">OData: SDK</span><span class="sxs-lookup"><span data-stu-id="cd6ca-128">OData: SDK</span></span>](https://www.odata.org/ecosystem/)
 
-<span data-ttu-id="580c4-129">エンド ツー エンドのサンプルを見たい...</span><span class="sxs-lookup"><span data-stu-id="580c4-129">I want to see end-to-end samples...</span></span>
+<span data-ttu-id="cd6ca-129">エンド ツー エンドのサンプルを見たい...</span><span class="sxs-lookup"><span data-stu-id="cd6ca-129">I want to see end-to-end samples...</span></span>
 
-- <span data-ttu-id="580c4-130">[WCF Data Services クイックスタート](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/WCF%20Data%20Services%20Quickstart%20(OData%20Service%20and%20WPF%20Client))</span><span class="sxs-lookup"><span data-stu-id="580c4-130">[WCF Data Services Quickstart](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/WCF%20Data%20Services%20Quickstart%20(OData%20Service%20and%20WPF%20Client))</span></span>
-- [<span data-ttu-id="580c4-131">OData SDK - サンプル コード</span><span class="sxs-lookup"><span data-stu-id="580c4-131">OData SDK - Sample Code</span></span>](https://www.odata.org/ecosystem/#sdk)
+- <span data-ttu-id="cd6ca-130">[WCF Data Services クイックスタート](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/WCF%20Data%20Services%20Quickstart%20(OData%20Service%20and%20WPF%20Client))</span><span class="sxs-lookup"><span data-stu-id="cd6ca-130">[WCF Data Services Quickstart](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/WCF%20Data%20Services%20Quickstart%20(OData%20Service%20and%20WPF%20Client))</span></span>
+- [<span data-ttu-id="cd6ca-131">OData SDK - サンプル コード</span><span class="sxs-lookup"><span data-stu-id="cd6ca-131">OData SDK - Sample Code</span></span>](https://www.odata.org/ecosystem/#sdk)
 
-<span data-ttu-id="580c4-132">Visual Studio との統合について知りたい</span><span class="sxs-lookup"><span data-stu-id="580c4-132">How does it integrate with Visual Studio?</span></span>
+<span data-ttu-id="cd6ca-132">Visual Studio との統合について知りたい</span><span class="sxs-lookup"><span data-stu-id="cd6ca-132">How does it integrate with Visual Studio?</span></span>
 
-- [<span data-ttu-id="580c4-133">データ サービス クライアント ライブラリの生成</span><span class="sxs-lookup"><span data-stu-id="580c4-133">Generating the Data Service Client Library</span></span>](generating-the-data-service-client-library-wcf-data-services.md)
+- [<span data-ttu-id="cd6ca-133">データ サービス クライアント ライブラリの生成</span><span class="sxs-lookup"><span data-stu-id="cd6ca-133">Generating the Data Service Client Library</span></span>](generating-the-data-service-client-library-wcf-data-services.md)
 
-- [<span data-ttu-id="580c4-134">データ サービスの作成</span><span class="sxs-lookup"><span data-stu-id="580c4-134">Creating the Data Service</span></span>](creating-the-data-service.md)
+- [<span data-ttu-id="cd6ca-134">データ サービスの作成</span><span class="sxs-lookup"><span data-stu-id="cd6ca-134">Creating the Data Service</span></span>](creating-the-data-service.md)
 
-- [<span data-ttu-id="580c4-135">Entity Framework プロバイダー</span><span class="sxs-lookup"><span data-stu-id="580c4-135">Entity Framework Provider</span></span>](entity-framework-provider-wcf-data-services.md)
+- [<span data-ttu-id="cd6ca-135">Entity Framework プロバイダー</span><span class="sxs-lookup"><span data-stu-id="cd6ca-135">Entity Framework Provider</span></span>](entity-framework-provider-wcf-data-services.md)
 
-<span data-ttu-id="580c4-136">何に使用できるかを知りたい</span><span class="sxs-lookup"><span data-stu-id="580c4-136">What can I do with it?</span></span>
+<span data-ttu-id="cd6ca-136">何に使用できるかを知りたい</span><span class="sxs-lookup"><span data-stu-id="cd6ca-136">What can I do with it?</span></span>
 
-- [<span data-ttu-id="580c4-137">概要</span><span class="sxs-lookup"><span data-stu-id="580c4-137">Overview</span></span>](wcf-data-services-overview.md)
+- [<span data-ttu-id="cd6ca-137">概要</span><span class="sxs-lookup"><span data-stu-id="cd6ca-137">Overview</span></span>](wcf-data-services-overview.md)
 
-- [<span data-ttu-id="580c4-138">アプリケーション シナリオ</span><span class="sxs-lookup"><span data-stu-id="580c4-138">Application Scenarios</span></span>](application-scenarios-wcf-data-services.md)
+- [<span data-ttu-id="cd6ca-138">アプリケーション シナリオ</span><span class="sxs-lookup"><span data-stu-id="cd6ca-138">Application Scenarios</span></span>](application-scenarios-wcf-data-services.md)
 
-<span data-ttu-id="580c4-139">LINQ を使用したい...</span><span class="sxs-lookup"><span data-stu-id="580c4-139">I want to use LINQ...</span></span>
+<span data-ttu-id="cd6ca-139">LINQ を使用したい...</span><span class="sxs-lookup"><span data-stu-id="cd6ca-139">I want to use LINQ...</span></span>
 
-- [<span data-ttu-id="580c4-140">データ サービスに対するクエリ</span><span class="sxs-lookup"><span data-stu-id="580c4-140">Querying the Data Service</span></span>](querying-the-data-service-wcf-data-services.md)
+- [<span data-ttu-id="cd6ca-140">データ サービスに対するクエリ</span><span class="sxs-lookup"><span data-stu-id="cd6ca-140">Querying the Data Service</span></span>](querying-the-data-service-wcf-data-services.md)
 
-- [<span data-ttu-id="580c4-141">LINQ に関する留意点</span><span class="sxs-lookup"><span data-stu-id="580c4-141">LINQ Considerations</span></span>](linq-considerations-wcf-data-services.md)
+- [<span data-ttu-id="cd6ca-141">LINQ に関する留意点</span><span class="sxs-lookup"><span data-stu-id="cd6ca-141">LINQ Considerations</span></span>](linq-considerations-wcf-data-services.md)
 
-- [<span data-ttu-id="580c4-142">方法: データ サービス クエリを実行する</span><span class="sxs-lookup"><span data-stu-id="580c4-142">How to: Execute Data Service Queries</span></span>](how-to-execute-data-service-queries-wcf-data-services.md)
+- [<span data-ttu-id="cd6ca-142">方法: データ サービス クエリを実行する</span><span class="sxs-lookup"><span data-stu-id="cd6ca-142">How to: Execute Data Service Queries</span></span>](how-to-execute-data-service-queries-wcf-data-services.md)
 
-<span data-ttu-id="580c4-143">より詳しい情報が欲しい...</span><span class="sxs-lookup"><span data-stu-id="580c4-143">I still need some more information...</span></span>
+<span data-ttu-id="cd6ca-143">より詳しい情報が欲しい...</span><span class="sxs-lookup"><span data-stu-id="cd6ca-143">I still need some more information...</span></span>
 
-- [<span data-ttu-id="580c4-144">WCF Data Services チームのブログ</span><span class="sxs-lookup"><span data-stu-id="580c4-144">WCF Data Services Team Blog</span></span>](https://docs.microsoft.com/archive/blogs/astoriateam/)
+- [<span data-ttu-id="cd6ca-144">WCF Data Services チームのブログ</span><span class="sxs-lookup"><span data-stu-id="cd6ca-144">WCF Data Services Team Blog</span></span>](/archive/blogs/astoriateam/)
 
-- [<span data-ttu-id="580c4-145">リソース</span><span class="sxs-lookup"><span data-stu-id="580c4-145">Resources</span></span>](wcf-data-services-resources.md)
+- [<span data-ttu-id="cd6ca-145">リソース</span><span class="sxs-lookup"><span data-stu-id="cd6ca-145">Resources</span></span>](wcf-data-services-resources.md)
 
-## <a name="in-this-section"></a><span data-ttu-id="580c4-146">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="580c4-146">In This Section</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="cd6ca-146">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="cd6ca-146">In This Section</span></span>
 
-[<span data-ttu-id="580c4-147">概要</span><span class="sxs-lookup"><span data-stu-id="580c4-147">Overview</span></span>](wcf-data-services-overview.md)
+[<span data-ttu-id="cd6ca-147">概要</span><span class="sxs-lookup"><span data-stu-id="cd6ca-147">Overview</span></span>](wcf-data-services-overview.md)
 
-<span data-ttu-id="580c4-148">WCF Data Services で使用可能な機能の概要について説明します。</span><span class="sxs-lookup"><span data-stu-id="580c4-148">Provides an overview of the features and functionality available in WCF Data Services.</span></span>
+<span data-ttu-id="cd6ca-148">WCF Data Services で使用可能な機能の概要について説明します。</span><span class="sxs-lookup"><span data-stu-id="cd6ca-148">Provides an overview of the features and functionality available in WCF Data Services.</span></span>
 
-<span data-ttu-id="580c4-149">[WCF Data Services 5.0 の新機能](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))</span><span class="sxs-lookup"><span data-stu-id="580c4-149">[What's New in WCF Data Services 5.0](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))</span></span>
+<span data-ttu-id="cd6ca-149">[WCF Data Services 5.0 の新機能](/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))</span><span class="sxs-lookup"><span data-stu-id="cd6ca-149">[What's New in WCF Data Services 5.0](/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))</span></span>
 
-<span data-ttu-id="580c4-150">WCF Data Services の新機能と、OData の新機能のサポートについて説明します。</span><span class="sxs-lookup"><span data-stu-id="580c4-150">Describes new functionality in WCF Data Services and support for new OData features.</span></span>
+<span data-ttu-id="cd6ca-150">WCF Data Services の新機能と、OData の新機能のサポートについて説明します。</span><span class="sxs-lookup"><span data-stu-id="cd6ca-150">Describes new functionality in WCF Data Services and support for new OData features.</span></span>
 
-[<span data-ttu-id="580c4-151">はじめに</span><span class="sxs-lookup"><span data-stu-id="580c4-151">Getting Started</span></span>](getting-started-with-wcf-data-services.md)
+[<span data-ttu-id="cd6ca-151">はじめに</span><span class="sxs-lookup"><span data-stu-id="cd6ca-151">Getting Started</span></span>](getting-started-with-wcf-data-services.md)
 
-<span data-ttu-id="580c4-152">WCF Data Services を使用して OData フィードを公開および使用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="580c4-152">Describes how to expose and consume OData feeds by using WCF Data Services.</span></span>
+<span data-ttu-id="cd6ca-152">WCF Data Services を使用して OData フィードを公開および使用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="cd6ca-152">Describes how to expose and consume OData feeds by using WCF Data Services.</span></span>
 
-[<span data-ttu-id="580c4-153">WCF Data Services の定義</span><span class="sxs-lookup"><span data-stu-id="580c4-153">Defining WCF Data Services</span></span>](defining-wcf-data-services.md)
+[<span data-ttu-id="cd6ca-153">WCF Data Services の定義</span><span class="sxs-lookup"><span data-stu-id="cd6ca-153">Defining WCF Data Services</span></span>](defining-wcf-data-services.md)
 
-<span data-ttu-id="580c4-154">OData フィードを公開するデータ サービスを作成および構成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="580c4-154">Describes how to create and configure a data service that exposes OData feeds.</span></span>
+<span data-ttu-id="cd6ca-154">OData フィードを公開するデータ サービスを作成および構成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="cd6ca-154">Describes how to create and configure a data service that exposes OData feeds.</span></span>
 
-[<span data-ttu-id="580c4-155">WCF Data Services クライアント ライブラリ</span><span class="sxs-lookup"><span data-stu-id="580c4-155">WCF Data Services Client Library</span></span>](wcf-data-services-client-library.md)
+[<span data-ttu-id="cd6ca-155">WCF Data Services クライアント ライブラリ</span><span class="sxs-lookup"><span data-stu-id="cd6ca-155">WCF Data Services Client Library</span></span>](wcf-data-services-client-library.md)
 
-<span data-ttu-id="580c4-156">クライアント ライブラリを使用して .NET Framework クライアント アプリケーションから OData フィードを使用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="580c4-156">Describes how to use client libraries to consume OData feeds from a .NET Framework client application.</span></span>
+<span data-ttu-id="cd6ca-156">クライアント ライブラリを使用して .NET Framework クライアント アプリケーションから OData フィードを使用する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="cd6ca-156">Describes how to use client libraries to consume OData feeds from a .NET Framework client application.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="580c4-157">関連項目</span><span class="sxs-lookup"><span data-stu-id="580c4-157">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cd6ca-157">関連項目</span><span class="sxs-lookup"><span data-stu-id="cd6ca-157">See also</span></span>
 
-- [<span data-ttu-id="580c4-158">Representational State Transfer (REST)</span><span class="sxs-lookup"><span data-stu-id="580c4-158">Representational State Transfer (REST)</span></span>](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
+- [<span data-ttu-id="cd6ca-158">Representational State Transfer (REST)</span><span class="sxs-lookup"><span data-stu-id="cd6ca-158">Representational State Transfer (REST)</span></span>](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
