@@ -2,12 +2,12 @@
 title: <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
-ms.openlocfilehash: 73d8549f68e8ca77115619431c857c4a2aac3fdf
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d4b912d003af201b19697854a67943e3d87e3734
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153023"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558486"
 ---
 # \<commonParameters>
 複数のサービスでグローバルに使用されるパラメーターのコレクションを表します。 このコレクションには通常、永続性サービスによって共有されるデータベース接続文字列が格納されます。  
@@ -49,7 +49,7 @@ ms.locfileid: "79153023"
 |-------------|-----------------|  
 |[\<workflowRuntime>](workflowruntime.md)|<xref:System.Workflow.Runtime.WorkflowRuntime>ワークフローベースの Windows Communication Foundation (WCF) サービスをホストするためののインスタンスの設定を指定します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  最初の要素 `<commonParameters>` は、複数のサービスでグローバルに使用されるパラメーターを定義します (たとえば `ConnectionString` を使用する場合の <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>)。  
   
 > [!NOTE]
@@ -80,7 +80,7 @@ ConnectionString="Data Source=localhost;Initial Catalog=Partner20WFTP;Integrated
 </workflowRuntime>
 ```  
   
- パラメーターは、 `EnableRetries` *commonparameters*セクションに示されているようにグローバルレベルで設定するか `EnableRetries` 、(*サービス*セクションに示すように) をサポートする個々のサービスに対して設定できます。  
+ パラメーターは、 `EnableRetries` *commonparameters* セクションに示されているようにグローバルレベルで設定するか `EnableRetries` 、( *サービス* セクションに示すように) をサポートする個々のサービスに対して設定できます。  
   
  次のサンプルコードは、一般的なパラメーターをプログラムで変更する方法を示しています。
   
@@ -92,7 +92,7 @@ commonParameters["ConnectionString"].Value="another connection string";
 config.Save();  
 ```  
   
- 構成ファイルを使用して Windows Workflow Foundation ホストアプリケーションのオブジェクトの動作を制御する方法の詳細について <xref:System.Workflow.Runtime.WorkflowRuntime> は、「[ワークフロー構成ファイル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))」を参照してください。  
+ 構成ファイルを使用して Windows Workflow Foundation ホストアプリケーションのオブジェクトの動作を制御する方法の詳細について <xref:System.Workflow.Runtime.WorkflowRuntime> は、「 [ワークフロー構成ファイル](/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))」を参照してください。  
   
 ## <a name="example"></a>例  
   
@@ -112,5 +112,5 @@ config.Save();
 - <xref:System.Workflow.Runtime.WorkflowRuntime>
 - <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>
 - <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>
-- [ワークフロー構成ファイル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
+- [ワークフロー構成ファイル](/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
 - [\<add>](add-of-commonparameters.md)

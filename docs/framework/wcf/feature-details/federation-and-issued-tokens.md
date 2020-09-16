@@ -6,12 +6,12 @@ helpviewer_keywords:
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-ms.openlocfilehash: aeffc1e2a7b61dfd9406b9f06678064533ea61ec
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: dffba51c1bf1aaffbed8725aafc96fd747cb31c6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595506"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559253"
 ---
 # <a name="federation-and-issued-tokens"></a>フェデレーションと発行済みトークン
 Windows Communication Foundation (WCF) を使用すると、WS-FEDERATION および WS-TRUST 仕様を実装するサービスと安全に通信するクライアントを作成できます。 これらの仕様では、異なる信頼領域間での認証と承認を可能にする機構を提供するために、XML、SOAP、および Web サービス記述言語 (WSDL: Web Services Description Language) が使用されます。  
@@ -65,4 +65,4 @@ Windows Communication Foundation (WCF) を使用すると、WS-FEDERATION およ
 
 - [承認](authorization-in-wcf.md)
 - [カスタム トークン](../extending/custom-tokens.md)
-- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric のセキュリティ モデル](/previous-versions/appfabric/ee677202(v=azure.10))

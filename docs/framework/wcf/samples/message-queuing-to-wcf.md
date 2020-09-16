@@ -2,12 +2,12 @@
 title: Windows Communication Foundation へのメッセージ キュー
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: 82e71afc911bff2504be15f7f9f2e736d943972b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5132e0380aebd595e79429fab9df8a7fb94574a0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84584962"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558694"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Windows Communication Foundation へのメッセージ キュー
 
@@ -121,11 +121,11 @@ Console.ReadLine();
 
     1. Visual Studio 2012 でサーバーマネージャーを開きます。
 
-    2. [**機能**] タブを展開します。
+    2. [ **機能** ] タブを展開します。
 
-    3. [**プライベートメッセージキュー**] を右クリックし、[**新規**]、[**プライベートキュー**] の順に選択します。
+    3. [ **プライベートメッセージキュー**] を右クリックし、[ **新規**]、[ **プライベートキュー**] の順に選択します。
 
-    4. [**トランザクション**] ボックスをオンにします。
+    4. [ **トランザクション** ] ボックスをオンにします。
 
     5. `ServiceModelSamplesTransacted`新しいキューの名前として「」と入力します。
 
@@ -150,7 +150,7 @@ Console.ReadLine();
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`
 
@@ -158,4 +158,4 @@ Console.ReadLine();
 
 - [WCF のキュー](../feature-details/queues-in-wcf.md)
 - [方法: WCF エンドポイントとメッセージ キュー アプリケーションを使用してメッセージを交換する](../feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
-- [メッセージ キューイング (Message Queuing)](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))
+- [メッセージ キューイング (Message Queuing)](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))

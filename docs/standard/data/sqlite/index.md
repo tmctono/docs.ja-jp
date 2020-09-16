@@ -2,12 +2,12 @@
 title: 概要
 ms.date: 12/13/2019
 description: Microsoft.Data.Sqlite の概要
-ms.openlocfilehash: e84c68f0615f187e8dea7ab87ac917c0ad796a1c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7c952848f7e7ea04f11fe9340f77a1f376a1be07
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77543600"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552441"
 ---
 # <a name="microsoftdatasqlite-overview"></a>Microsoft.Data.Sqlite 概要
 
@@ -40,5 +40,5 @@ Install-Package Microsoft.Data.Sqlite
 ## <a name="see-also"></a>関連項目
 
 * [接続文字列](connection-strings.md)
-* [API リファレンス](/dotnet/api/?view=msdata-sqlite-3.0)
+* [API リファレンス](../../../../api/index.md?view=msdata-sqlite-3.0)
 * [SQL 構文](https://www.sqlite.org/lang.html)

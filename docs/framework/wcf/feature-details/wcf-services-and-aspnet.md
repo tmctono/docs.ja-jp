@@ -3,12 +3,12 @@ title: WCF サービスと ASP.NET
 description: WCF サービスを ASP.NET とサイドバイサイドでホストし、ASP.NET 互換モードでホストする方法について説明します。
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: 1d7401f6a326bc50923123acf803e26ce8238415
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 765a509f94a0a934cdbbf0212cfc1d4053d29f9c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246416"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553318"
 ---
 # <a name="wcf-services-and-aspnet"></a>WCF サービスと ASP.NET
 
@@ -66,7 +66,7 @@ Wcf ホスティングインフラストラクチャが WCF メッセージを�
 
 - 構成可能な URL 承認: ASP。Wcf サービスが ASP.NET 互換モードで実行されている場合、WCF 要求に対しては、NET の URL 承認規則が適用されます。
 
-- <xref:System.Web.HttpModuleCollection>拡張性: ASP.NET 互換モードで実行される WCF サービスは、ASP.NET HTTP 要求ライフサイクルに完全に参加するため、HTTP パイプラインで構成された HTTP モジュールは、サービス呼び出しの前後に WCF 要求を処理できます。
+- <xref:System.Web.HttpModuleCollection> 拡張性: ASP.NET 互換モードで実行される WCF サービスは、ASP.NET HTTP 要求ライフサイクルに完全に参加するため、HTTP パイプラインで構成された HTTP モジュールは、サービス呼び出しの前後に WCF 要求を処理できます。
 
 - ASP.NET Impersonation: WCF サービスは、ASP.NET 偽装スレッドの現在の id を使用して実行されます。これは、アプリケーションに対して ASP.NET Impersonation が有効になっている場合、IIS プロセス id とは異なる場合があります。 ASP.NET impersonation と WCF impersonation の両方が特定のサービス操作に対して有効になっている場合、サービス実装は最終的に WCF から取得した id を使用して実行されます。
 
@@ -102,9 +102,9 @@ public class CalculatorService : ICalculatorSession
 > [!NOTE]
 > IIS 7.0 および WAS では、WCF サービスは、HTTP 以外のプロトコルを介して通信を行うことができます。 ただし、ASP.NET 互換モードが有効になっているアプリケーションで実行されている WCF サービスでは、非 HTTP エンドポイントの公開は許可されていません。 最初のメッセージを受信した時点で、アクティベーション例外が発生します。
 
-WCF サービスの ASP.NET 互換モードを有効にする方法の詳細については、「」 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode> および[ASP.NET の互換性](../samples/aspnet-compatibility.md)のサンプルを参照してください。
+WCF サービスの ASP.NET 互換モードを有効にする方法の詳細については、「」 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode> および [ASP.NET の互換性](../samples/aspnet-compatibility.md) のサンプルを参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>
-- [AppFabric のホスティング機能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [AppFabric のホスティング機能](/previous-versions/appfabric/ee677189(v=azure.10))

@@ -2,15 +2,15 @@
 title: パフォーマンス カウンターの使用
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 0b63cdc145ff8806c26b255500bcb2a132e9ef9f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f2b0f39303d000e2e9aab8fc5280f75ab9309c4d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596501"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553045"
 ---
 # <a name="using-performance-counters"></a>パフォーマンス カウンターの使用
-このサンプルでは、Windows Communication Foundation (WCF) パフォーマンスカウンターにアクセスする方法と、ユーザー定義のパフォーマンスカウンターを作成する方法を示します。 このサンプルは、[はじめに](getting-started-sample.md)に基づいています。  
+このサンプルでは、Windows Communication Foundation (WCF) パフォーマンスカウンターにアクセスする方法と、ユーザー定義のパフォーマンスカウンターを作成する方法を示します。 このサンプルは、 [はじめに](getting-started-sample.md)に基づいています。  
   
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -27,7 +27,7 @@ ms.locfileid: "84596501"
 </configuration>  
 ```  
   
- このタスクは、[構成エディターツール (svcconfigeditor.exe)](../configuration-editor-tool-svcconfigeditor-exe.md)を使用して行うこともできます。  
+ このタスクは、 [構成エディターツール (SvcConfigEditor.exe)](../configuration-editor-tool-svcconfigeditor-exe.md)を使用して行うこともできます。  
   
  パフォーマンスカウンターを有効にすると、WCF パフォーマンスカウンターのスイート全体がサービスに対して有効になります。 .NET Framework は、`ServiceModelService`、`ServiceModelEndpoint`、および `ServiceModelOperation` の 3 つのレベルで、パフォーマンス データを自動的に保持します。 これらの各レベルには、"呼び出し"、"1 秒あたりの呼び出し回数"、"承認されていないセキュリティ呼び出し" などのパフォーマンス カウンタがあります。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "84596501"
   
 2. 一覧表示されているパフォーマンス カウンタを削除するには、削除するパフォーマンス カウンタを選択して Del キーを押します。  
   
-3. WCF カウンターを追加するには、グラフペインを右クリックし、[**カウンターの追加**] を選択します。 [**カウンターの追加**] ダイアログボックスで、[パフォーマンスオブジェクト] ボックスの一覧の [ **ServiceModelOperation 3.0.0.0、ServiceModelEndpoint 3.0.0.0、または ServiceModelService 3.0.0.0** ] を選択します。 表示するカウンタを一覧から選択します。  
+3. WCF カウンターを追加するには、グラフペインを右クリックし、[ **カウンターの追加**] を選択します。 [ **カウンターの追加** ] ダイアログボックスで、[パフォーマンスオブジェクト] ボックスの一覧の [ **ServiceModelOperation 3.0.0.0、ServiceModelEndpoint 3.0.0.0、または ServiceModelService 3.0.0.0** ] を選択します。 表示するカウンタを一覧から選択します。  
   
     > [!NOTE]
     > コンピューターで WCF サービスが実行されていない場合、サービスの WCF パフォーマンスカウンターはありません。  
@@ -57,11 +57,11 @@ ms.locfileid: "84596501"
   
 1. SvcConfigEditor.exe のインスタンスを開きます。  
   
-2. [ファイル] メニューの [**開く**] をクリックし、[**構成ファイル...**] をクリックします。  
+2. [ファイル] メニューの [ **開く** ] をクリックし、[ **構成ファイル...**] をクリックします。  
   
 3. サンプル アプリケーションの service フォルダーに移動し、Web.config ファイルを開きます。  
   
-4. 構成ツリーで [**診断**] をクリックします。  
+4. 構成ツリーで [ **診断** ] をクリックします。  
   
 5. [**診断**] ウィンドウの [**パフォーマンスカウンター** ] を [すべて] に切り替えます。  
   
@@ -72,10 +72,10 @@ ms.locfileid: "84596501"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   
 ## <a name="see-also"></a>関連項目
 
-- [AppFabric の監視のサンプル](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric の監視のサンプル](/previous-versions/appfabric/ff383407(v=azure.10))

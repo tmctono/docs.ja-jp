@@ -7,12 +7,12 @@ helpviewer_keywords:
 - native API reference [.NET Framework]
 - unmanaged API reference [.NET Framework]
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
-ms.openlocfilehash: 9b8671f2bd278e9e6153476d742f43150a4f6e3e
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 0153279608e2359747f1be6b9542d6906c1b3995
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795613"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559305"
 ---
 # <a name="unmanaged-api-reference"></a>アンマネージ API リファレンス
 このセクションには、ランタイム ホスト、コンパイラ、逆アセンブラー、難読化ツール、デバッガー、プロファイラーなど、マネージ コード関連のアプリケーションが使用できるアンマネージ API に関する情報が含まれています。  
@@ -30,7 +30,7 @@ ms.locfileid: "82795613"
  [定数](constants-unmanaged-api-reference.md)  
  CorSym.idl で定義される定数について説明します。  
   
- [カスタム インターフェイス属性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms231946(v=vs.100))  
+ [カスタム インターフェイス属性](/previous-versions/dotnet/netframework-4.0/ms231946(v=vs.100))  
  コンポーネント オブジェクト モデル (COM) のカスタム インターフェイス属性について説明します。  
   
  [デバッグ](./debugging/index.md)  
@@ -61,4 +61,4 @@ ms.locfileid: "82795613"
  タイプ ライブラリ エクスポーター (Tlbexp.exe) がアセンブリからタイプ ライブラリへの変換プロセス中に使用する、2 つのヘルパー関数とインターフェイスについて説明します。  
   
 ## <a name="related-sections"></a>関連項目  
- [開発ガイド](../development-guide.md)  
+ [開発ガイド](../development-guide.md)

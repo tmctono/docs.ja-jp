@@ -2,12 +2,12 @@
 title: インターネット インフォメーション サービス ホスティングのベスト プラクティス
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: e62fed4f6a711ecc317b8f758d4948a477d136e1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c875920ed70ea8bd35642d0b7725b2dfad08f2b1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595272"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558876"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>インターネット インフォメーション サービス ホスティングのベスト プラクティス
 このトピックでは、Windows Communication Foundation (WCF) サービスをホストするためのいくつかのベストプラクティスについて説明します。  
@@ -30,7 +30,7 @@ ms.locfileid: "84595272"
 ## <a name="optimizing-performance-in-middle-tier-scenarios"></a>中間層シナリオでのパフォーマンスの最適化  
  *中間層シナリオ*で最適なパフォーマンスを実現するために、受信メッセージへの応答として他のサービスを呼び出すサービスは、WCF サービスクライアントをリモートサービスに1回インスタンス化して、複数の受信要求にわたって再利用します。 WCF サービスクライアントのインスタンス化は、既存のクライアントインスタンスでのサービス呼び出しを行う場合に比べてコストのかかる操作であり、中間層シナリオでは、複数の要求にわたってリモートクライアントをキャッシュすることによって、パフォーマンスが個別に向上します。 WCF サービスクライアントはスレッドセーフであるため、複数のスレッドにわたってクライアントへのアクセスを同期する必要はありません。  
   
- また、中間層シナリオでは、`svcutil /a` オプションによって生成された非同期 API を使用してパフォーマンスを向上させます。 `/a`オプションを指定すると、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)によって `BeginXXX/EndXXX` 各サービス操作のメソッドが生成されます。これにより、バックグラウンドスレッドでリモートサービスへの実行時間の長い呼び出しが行われる可能性があります。  
+ また、中間層シナリオでは、`svcutil /a` オプションによって生成された非同期 API を使用してパフォーマンスを向上させます。 `/a`オプションを指定すると、 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)によって `BeginXXX/EndXXX` 各サービス操作のメソッドが生成されます。これにより、バックグラウンドスレッドでリモートサービスに対して実行時間の長い呼び出しが行われる可能性があります。  
   
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>マルチホーム シナリオまたはマルチネーム シナリオでの WCF  
  WCF サービスは、一連のコンピューターが共通の外部名 (など) を共有し、 `http://www.contoso.com` 異なるホスト名によって個別にアドレス指定される IIS Web ファーム内に配置できます (たとえば、 `http://www.contoso.com` とという名前の2つの異なるコンピューターにトラフィックを転送する場合があり `http://machine1.internal.contoso.com` `http://machine2.internal.contoso.com` ます)。 この展開シナリオは WCF で完全にサポートされていますが、サービスのメタデータ (Web サービス記述言語) に正しい (外部の) ホスト名を表示するには、WCF サービスをホストする IIS Web サイトの特別な構成が必要です。  
@@ -47,7 +47,7 @@ ms.locfileid: "84595272"
  これで、user2 は、(c:\tempForUser1 の下にある) /Application2 のコード生成フォルダーを変更できなくなります。  
   
 ## <a name="enabling-asynchronous-processing"></a>非同期処理の有効化  
- 既定では、IIS 6.0 以前でホストされている WCF サービスに送信されるメッセージは、同期方式で処理されます。 ASP.NET は、独自のスレッド (ASP.NET ワーカースレッド) で WCF を呼び出し、WCF は別のスレッドを使用して要求を処理します。 WCF は、その処理が完了するまで ASP.NET のワーカー スレッドに保持されます。 このため、要求は同期的に処理されます。 要求を非同期で処理することで、要求の処理に必要なスレッド数を減らすことができるため、スケーラビリティが向上します。 WCF は、要求の処理中に ASP.NET スレッドに対してを保持しません。 IIS 6.0 を実行しているコンピューターでは、非同期動作の使用は推奨されません。これは、サーバーが*サービス拒否*(DOS) 攻撃を仕掛けてくる受信要求を調整する方法がないためです。 IIS 7.0 以降では、同時要求スロットルが導入されています`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ASP.NET\2.0.50727.0]"MaxConcurrentRequestsPerCpu`。 この新しいスロットルにより、非同期処理を安全に使用することができます。  IIS 7.0 の既定では、非同期のハンドラーとモジュールが登録されます。 この機能が無効になっている場合は、アプリケーションの Web.config ファイルで要求の非同期処理を手動で有効にすることができます。 使用する設定は、`aspNetCompatibilityEnabled` 設定によって異なります。 `aspNetCompatibilityEnabled` を `false` に設定している場合は、次の構成スニペットに示すように、`System.ServiceModel.Activation.ServiceHttpModule` を構成します。  
+ 既定では、IIS 6.0 以前でホストされている WCF サービスに送信されるメッセージは、同期方式で処理されます。 ASP.NET は、独自のスレッド (ASP.NET ワーカースレッド) で WCF を呼び出し、WCF は別のスレッドを使用して要求を処理します。 WCF は、その処理が完了するまで ASP.NET のワーカー スレッドに保持されます。 このため、要求は同期的に処理されます。 要求を非同期で処理することで、要求の処理に必要なスレッド数を減らすことができるため、スケーラビリティが向上します。 WCF は、要求の処理中に ASP.NET スレッドに対してを保持しません。 IIS 6.0 を実行しているコンピューターでは、非同期動作の使用は推奨されません。これは、サーバーが *サービス拒否* (DOS) 攻撃を仕掛けてくる受信要求を調整する方法がないためです。 IIS 7.0 以降では、同時要求スロットルが導入されています`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ASP.NET\2.0.50727.0]"MaxConcurrentRequestsPerCpu`。 この新しいスロットルにより、非同期処理を安全に使用することができます。  IIS 7.0 の既定では、非同期のハンドラーとモジュールが登録されます。 この機能が無効になっている場合は、アプリケーションの Web.config ファイルで要求の非同期処理を手動で有効にすることができます。 使用する設定は、`aspNetCompatibilityEnabled` 設定によって異なります。 `aspNetCompatibilityEnabled` を `false` に設定している場合は、次の構成スニペットに示すように、`System.ServiceModel.Activation.ServiceHttpModule` を構成します。  
   
 ```xml  
 <system.serviceModel>  
@@ -84,4 +84,4 @@ ms.locfileid: "84595272"
 ## <a name="see-also"></a>関連項目
 
 - [サービス ホスト サンプル](../samples/hosting.md)
-- [AppFabric のホスティング機能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [AppFabric のホスティング機能](/previous-versions/appfabric/ee677189(v=azure.10))

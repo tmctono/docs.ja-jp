@@ -2,12 +2,12 @@
 title: 再ホストされたワークフロー デザイナーにおける Workflow Foundation 4.5 の新機能のサポート
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 1c554c60bf2e50a8eb89764a21ad15b95343b182
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: b561e580f0d7f2d77847d91612e8b06bc57a2a45
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937730"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558434"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>再ホストされたワークフロー デザイナーにおける Workflow Foundation 4.5 の新機能のサポート
 .NET Framework 4.5 の Windows Workflow Foundation (WF) では、ワークフローデザイナーのエクスペリエンスに対するいくつかの機能強化など、多くの新機能が導入されました。 このトピックでは、このような新機能のうち、再ホストされたデザイナーでサポートされている機能と現時点ではサポートされていない機能について詳しく説明します。
@@ -15,11 +15,11 @@ ms.locfileid: "75937730"
 > [!NOTE]
 > .NET Framework 4.5 で導入された新しい Windows Workflow Foundation (WF) 機能の一覧については、「 [.net 4.5 における Windows Workflow Foundation の新](whats-new-in-wf-in-dotnet.md)機能」を参照してください。
 
-## <a name="activities"></a>活動
+## <a name="activities"></a>アクティビティ
  組み込みのアクティビティ ライブラリには、既存のアクティビティ用の新しいアクティビティと新しい機能が含まれています。 これらの新しいアクティビティはすべて、再ホストされたデザイナーでサポートされています。 これらの新しいアクティビティの詳細については、「 [.net 4.5 の Windows Workflow Foundation の新機能](whats-new-in-wf-in-dotnet.md)」の「[アクティビティ](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities)」セクションを参照してください。
 
 ## <a name="c-expressions"></a>C# の式
- .NET Framework 4.5 より前では、ワークフロー内のすべての式は Visual Basic でのみ記述できました。 .NET Framework 4.5 では、Visual Basic 式は Visual Basic を使用して作成されたプロジェクトにのみ使用されます。 Visual C# プロジェクトでは、式に C# が使用されるようになりました。 Visual Studio 2012 でワークフローを作成する場合、完全C#に機能する式エディターには、文法の強調表示や intellisense などの機能が用意されています。 以前のバージョンで作成された、Visual Basic の式を使用する C# ワークフロー プロジェクトは引き続き動作します。
+ .NET Framework 4.5 より前では、ワークフロー内のすべての式は Visual Basic でのみ記述できました。 .NET Framework 4.5 では、Visual Basic 式は Visual Basic を使用して作成されたプロジェクトにのみ使用されます。 Visual C# プロジェクトでは、式に C# が使用されるようになりました。 Visual Studio 2012 でワークフローを作成する場合、完全に機能する C# 式エディターには、文法の強調表示や intellisense などの機能が用意されています。 以前のバージョンで作成された、Visual Basic の式を使用する C# ワークフロー プロジェクトは引き続き動作します。
 
 > [!WARNING]
 > C# の式は、再ホストされたデザイナーではサポートされていません。
@@ -27,7 +27,7 @@ ms.locfileid: "75937730"
 ## <a name="new-designer-capabilities"></a>デザイナーの新機能
 
 ### <a name="designer-search"></a>デザイナーでの検索
- .NET Framework 4.5 で導入された [[クイック検索](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)] 機能と[[フォルダーを](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)使用して検索] 機能は、再ホストされたデザイナーではサポートされていません。 `Toolbox` による検索は、再ホストされたデザイナーでもサポートされています。 これらの機能の詳細については、「[デザイナー検索](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)」を参照してください。
+ .NET Framework 4.5 で導入された [ [クイック検索](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) ] 機能と [[フォルダーを](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) 使用して検索] 機能は、再ホストされたデザイナーではサポートされていません。 `Toolbox` による検索は、再ホストされたデザイナーでもサポートされています。 これらの機能の詳細については、「 [デザイナー検索](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)」を参照してください。
 
 > [!WARNING]
 > [[クイック検索](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)] と[[フォルダーを検索](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)する] は、再ホストされたデザイナーではサポートされていません。
@@ -40,7 +40,7 @@ ms.locfileid: "75937730"
  ![変数/引数デザイナーのコンテキスト メニュー](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
 
 ### <a name="auto-surround-with-sequence"></a>ブロックの自動挿入シーケンス
- ワークフローまたは特定のコンテナー アクティビティ (<xref:System.Activities.Statements.NoPersistScope> など) には Body アクティビティを 1 つしか含めることができないため、2 つ目のアクティビティを追加するには、開発者が最初のアクティビティを削除し、<xref:System.Activities.Statements.Sequence> アクティビティを追加してから、シーケンス アクティビティに両方のアクティビティを追加する必要がありました。 .NET Framework 4.5 以降では、デザイナー画面に2つ目のアクティビティを追加すると、両方のアクティビティをラップする `Sequence` アクティビティが自動的に作成されます。 この機能は、再ホストされたデザイナーでサポートされています。
+ ワークフローまたは特定のコンテナー アクティビティ (<xref:System.Activities.Statements.NoPersistScope> など) には Body アクティビティを 1 つしか含めることができないため、2 つ目のアクティビティを追加するには、開発者が最初のアクティビティを削除し、<xref:System.Activities.Statements.Sequence> アクティビティを追加してから、シーケンス アクティビティに両方のアクティビティを追加する必要がありました。 .NET Framework 4.5 以降では、デザイナー画面に2つ目のアクティビティを追加すると、両方のアクティビティを `Sequence` ラップするアクティビティが自動的に作成されます。 この機能は、再ホストされたデザイナーでサポートされています。
 
  次のスクリーンショットは、`WriteLine` の `Body` 内の `NoPersistScope` アクティビティを示しています。
 
@@ -65,14 +65,14 @@ ms.locfileid: "75937730"
  選択した複数のアクティビティは、デザイナー内でドラッグ アンド ドロップすることも、コンテキスト メニューを使用して操作することもできます。
 
 ### <a name="outline-view-of-workflow-items"></a>ワークフロー項目のアウトライン表示
- 階層ワークフローを移動しやすくするため、ワークフローのコンポーネントはツリー スタイルのアウトライン表示で示されます。 アウトライン ビューは、**ドキュメントアウトライン** ビューに表示されます。 このビューを Visual Studio で開くには、上部のメニューで **[表示]** 、 **[その他のウィンドウ]** 、 **[ドキュメントアウトライン]** の順に選択するか、Ctrl W キーを押しながら U キーを押します。 アウトライン表示でノードをクリックすると、ワークフロー デザイナーの対応するアクティビティに移動し、アウトライン表示が更新されて、デザイナーで選択されているアクティビティが表示されます。 この機能は、再ホストされたデザイナーでサポートされています。
+ 階層ワークフローを移動しやすくするため、ワークフローのコンポーネントはツリー スタイルのアウトライン表示で示されます。 [アウトライン] ビューは、[ **ドキュメントアウトライン** ] ビューに表示されます。 このビューを Visual Studio で開くには、上部のメニューで [ **表示**]、[ **その他のウィンドウ**]、[ **ドキュメントアウトライン**] の順に選択するか、Ctrl W キーを押しながら U キーを押します。 アウトライン表示でノードをクリックすると、ワークフロー デザイナーの対応するアクティビティに移動し、アウトライン表示が更新されて、デザイナーで選択されているアクティビティが表示されます。 この機能は、再ホストされたデザイナーでサポートされています。
 
  [はじめにチュートリアル](getting-started-tutorial.md)の完成したワークフローの次のスクリーンショットは、シーケンシャルワークフローを含むアウトラインビューを示しています。
 
  ![Visual Studio のシーケンシャルワークフローを含むアウトラインビューのスクリーンショット](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
 
 ### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>シェル バーおよびヘッダー項目の可視性の詳細な制御
- 再ホストされたデザイナーでは、標準 UI コントロールの中に、特定のワークフローにとって意味がないものもあれば、無効になっているものもあります。 .NET Framework 4 では、このカスタマイズはデザイナーの下部にあるシェルバーでのみサポートされています。 .NET Framework 4.5 では、デザイナーの上部にあるシェルヘッダー項目の表示を調整するには、適切な <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> 値を使用して <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> を設定します。
+ 再ホストされたデザイナーでは、標準 UI コントロールの中に、特定のワークフローにとって意味がないものもあれば、無効になっているものもあります。 .NET Framework 4 では、このカスタマイズはデザイナーの下部にあるシェルバーでのみサポートされています。 .NET Framework 4.5 では、デザイナーの上部にあるシェルヘッダー項目の表示を適切な値に設定することによって調整でき <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> ます。
 
 ### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a>フローチャートおよびステート マシンのワークフローの自動接続と自動挿入
  .NET Framework 4 では、フローチャートワークフロー内のノード間の接続を手動で追加する必要がありました。 .NET Framework 4.5 では、フローチャートおよびステートマシンノードには、アクティビティをツールボックスからデザイナー画面にドラッグしたときに表示される自動接続ポイントがあります。 アクティビティをこれらのポイントのうち 1 つにドロップすると、アクティビティが必要な接続と共に自動的に追加されます。
@@ -95,7 +95,7 @@ ms.locfileid: "75937730"
  デザイナー注釈は、再ホストされたデザイナーでサポートされています。
 
 ### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a>デザイナーでの ActivityDelegate オブジェクトの定義と使用
- .NET Framework 4 のアクティビティは、ワークフローの他の部分がワークフローの実行と対話できる実行ポイントを公開するためにオブジェクト <xref:System.Activities.ActivityDelegate> 使用されていますが、通常、これらの実行ポイントを使用するにはかなりの量のコードが必要です。 このリリースでは、開発者はワークフロー デザイナーを使用してアクティビティ デリゲートを定義および使用できます。 詳細については、「[方法: ワークフローデザイナーでアクティビティデリゲートを定義および使用する](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer)」を参照してください。
+ .NET Framework 4 のアクティビティは、 <xref:System.Activities.ActivityDelegate> ワークフローの他の部分がワークフローの実行と対話できる実行ポイントを公開するために使用されます。ただし、通常、これらの実行ポイントを使用するには、かなりの量のコードが必要です。 このリリースでは、開発者はワークフロー デザイナーを使用してアクティビティ デリゲートを定義および使用できます。 詳細については、「 [方法: ワークフローデザイナーでアクティビティデリゲートを定義および使用する](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer)」を参照してください。
 
  アクティビティ デリゲートは、再ホストされたデザイナーでサポートされています。
 
@@ -122,7 +122,7 @@ ms.locfileid: "75937730"
  このリリースには、フローチャートおよびシーケンシャル ワークフロー開発モデルに加えて、ステート マシンのワークフロー、およびコントラクト優先ワークフロー サービスが含まれています。  
   
 ### <a name="state-machine-workflows"></a>ステート マシンのワークフロー  
- ステートマシンのワークフローは、 [Microsoft .NET Framework 4 Platform Update 1](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)の .NET Framework 4.0.1 の一部として導入されました。 この更新プログラムには、開発者がステート マシンのワークフローを作成できるようにする、いくつかの新しいクラスとアクティビティが含まれていました。 これらのクラスとアクティビティは .NET Framework 4.5 に対して更新されました。 更新プログラムは、下記のものなどです。  
+ ステートマシンのワークフローは、 [Microsoft .NET Framework 4 Platform Update 1](/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)の .NET Framework 4.0.1 の一部として導入されました。 この更新プログラムには、開発者がステート マシンのワークフローを作成できるようにする、いくつかの新しいクラスとアクティビティが含まれていました。 これらのクラスとアクティビティは .NET Framework 4.5 に対して更新されました。 更新プログラムには次のものが含まれています。  
   
 1. 状態にブレークポイントを設定する機能。  
   
@@ -132,14 +132,14 @@ ms.locfileid: "75937730"
   
 4. ステート マシンのワークフロー作成に使用するアクティビティ (<xref:System.Activities.Statements.StateMachine><xref:System.Activities.Statements.State>、<xref:System.Activities.Statements.Transition> など)。  
   
- 次のスクリーンショットは、[はじめにチュートリアル](getting-started-tutorial.md)の手順[「ステートマシンワークフローを作成する方法](how-to-create-a-state-machine-workflow.md)」の完成したステートマシンワークフローを示しています。  
+ 次のスクリーンショットは、 [はじめにチュートリアル](getting-started-tutorial.md) の手順 [「ステートマシンワークフローを作成する方法](how-to-create-a-state-machine-workflow.md)」の完成したステートマシンワークフローを示しています。  
   
  ![完成したステートマシンのワークフローを示す図。](./media/wf-features-in-the-rehosted-workflow-designer/complete-state-machine-workflow.jpg)  
   
- ステートマシンワークフローの作成の詳細については、「[ステートマシンワークフロー](state-machine-workflows.md)」を参照してください。 ステート マシンのワークフローは、再ホストされたデザイナーでサポートされています。  
+ ステートマシンワークフローの作成の詳細については、「 [ステートマシンワークフロー](state-machine-workflows.md)」を参照してください。 ステート マシンのワークフローは、再ホストされたデザイナーでサポートされています。  
   
 ### <a name="contract-first-workflow-development"></a>コントラクト優先ワークフローの開発  
- コントラクト優先ワークフロー開発ツールを使用すると、開発者は code first でコントラクトをデザインできます。 Visual Studio で数回クリックするだけで、各操作を表すアクティビティテンプレートがツールボックスに自動的に生成されます。 これらのアクティビティは、コントラクトで定義された操作を実装するワークフローを作成するために使用されます。 ワークフロー デザイナーは、ワークフロー サービスを検証し、これらの操作が実装され、ワークフローの署名がコントラクトの署名と一致することを確認します。 また、開発者は、ワークフロー サービスを、実装済みコントラクトのコレクションと関連付けることもできます。 コントラクト優先ワークフローサービスの開発の詳細については、「[方法: 既存のサービスコントラクトを使用するワークフローサービスを作成](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)する」を参照してください。  
+ コントラクト優先ワークフロー開発ツールを使用すると、開発者は code first でコントラクトをデザインできます。 Visual Studio で数回クリックするだけで、各操作を表すアクティビティテンプレートがツールボックスに自動的に生成されます。 これらのアクティビティは、コントラクトで定義された操作を実装するワークフローを作成するために使用されます。 ワークフロー デザイナーは、ワークフロー サービスを検証し、これらの操作が実装され、ワークフローの署名がコントラクトの署名と一致することを確認します。 また、開発者は、ワークフロー サービスを、実装済みコントラクトのコレクションと関連付けることもできます。 コントラクト優先ワークフローサービスの開発の詳細については、「 [方法: 既存のサービスコントラクトを使用するワークフローサービスを作成](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)する」を参照してください。  
   
 > [!WARNING]
 > コントラクト優先ワークフローの開発は、ワークフロー デザイナーではサポートされていません。

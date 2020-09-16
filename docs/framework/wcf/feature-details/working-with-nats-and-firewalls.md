@@ -5,12 +5,12 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: 28360b8b5b07c7c532dd2406ca98604870b8335f
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: bab29d738c7562753a826b47c03867eeebac4372
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921075"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558980"
 ---
 # <a name="working-with-nats-and-firewalls"></a>NAT とファイアウォールの使用
 ネットワーク接続のクライアントとサーバーには、直接開いている通信用のパスが存在しないことがよくあります。 パケットは、エンドポイント コンピューター上だけでなく、ネットワーク上の中間コンピューターによってもフィルター処理、ルーティング、分析、および変換されます。 ネットワーク アドレス変換 (NAT: Network Address Translation) とファイアウォールは、ネットワーク通信に参加できる中間アプリケーションの一般的な例です。  
@@ -33,7 +33,7 @@ ms.locfileid: "76921075"
   
 ## <a name="using-teredo"></a>Teredo の使用  
 
- Teredo は、NAT の内側にあるコンピューターの直接アドレス指定を可能にする IPv6 移行テクノロジです。 Teredo は、パブリックにもグローバルにもルーティングが可能なサーバーを使用して考えられる接続をアドバタイズします。 Teredo サーバーは、アプリケーション クライアントとサーバーに、接続情報を交換できる共通のミーティング ポイントを提供します。 コンピューターは一時 Teredo アドレスを要求し、パケットが既存のネットワークをトンネリングされます。 WCF で teredo をサポートするには、オペレーティングシステムで IPv6 および Teredo のサポートを有効にする必要があります。 Windows XP 以降のオペレーティングシステムでは、Teredo がサポートされています。 Windows Vista 以降のオペレーティングシステムでは、IPv6 が既定でサポートされており、ユーザーのみが Teredo を有効にする必要があります。 Windows XP SP2 および Windows Server 2003 では、ユーザーは IPv6 と Teredo の両方を有効にする必要があります。 詳細については、「 [Teredo の概要](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457011(v%3dtechnet.10))」を参照してください。  
+ Teredo は、NAT の内側にあるコンピューターの直接アドレス指定を可能にする IPv6 移行テクノロジです。 Teredo は、パブリックにもグローバルにもルーティングが可能なサーバーを使用して考えられる接続をアドバタイズします。 Teredo サーバーは、アプリケーション クライアントとサーバーに、接続情報を交換できる共通のミーティング ポイントを提供します。 コンピューターは一時 Teredo アドレスを要求し、パケットが既存のネットワークをトンネリングされます。 WCF で teredo をサポートするには、オペレーティングシステムで IPv6 および Teredo のサポートを有効にする必要があります。 Windows XP 以降のオペレーティングシステムでは、Teredo がサポートされています。 Windows Vista 以降のオペレーティングシステムでは、IPv6 が既定でサポートされており、ユーザーのみが Teredo を有効にする必要があります。 Windows XP SP2 および Windows Server 2003 では、ユーザーは IPv6 と Teredo の両方を有効にする必要があります。 詳細については、「 [Teredo の概要](/previous-versions/windows/it-pro/windows-xp/bb457011(v=technet.10))」を参照してください。  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>トランスポートとメッセージ交換パターンの選択  
  トランスポートと MEP の選択は、次の 3 つの手順から成るプロセスです。  

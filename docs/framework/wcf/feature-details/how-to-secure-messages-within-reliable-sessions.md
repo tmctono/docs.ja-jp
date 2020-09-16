@@ -2,12 +2,12 @@
 title: '方法: 信頼できるセッション内でメッセージをセキュリティで保護する'
 ms.date: 03/30/2017
 ms.assetid: aee33e50-936f-4486-9ca8-c1520c19a62d
-ms.openlocfilehash: 306d0f96b5163fe5c24d270b4b9a7c1d3f499e7e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cec9356467886be022d05ead55d5cb6ccddcd838
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596956"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558681"
 ---
 # <a name="how-to-secure-messages-within-reliable-sessions"></a>方法: 信頼できるセッション内でメッセージをセキュリティで保護する
 
@@ -21,7 +21,7 @@ ms.locfileid: "84596956"
 
 1. サービスに対する認証時にクライアントが使用する必要があるクライアント資格情報を指定します。
 
-最初のタスクでは、エンドポイント構成要素に `bindingConfiguration` という名前のバインディング構成 (この例では) を参照する属性が含まれていることが重要です `MessageSecurity` 。 次に、 [**\<binding>**](../../configure-apps/file-schema/wcf/bindings.md) 要素の属性をに設定して、構成要素がこの名前を参照して信頼できるセッションを有効にし `enabled` [**\<reliableSession>**](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) `true` ます。 信頼できるセッション内で使用できる順序付き配信の保証は、`ordered` 属性を `true` に設定することによって要求できます。
+最初のタスクでは、エンドポイント構成要素に `bindingConfiguration` という名前のバインディング構成 (この例では) を参照する属性が含まれていることが重要です `MessageSecurity` 。 次に、 [**\<binding>**](../../configure-apps/file-schema/wcf/bindings.md) 要素の属性をに設定して、構成要素がこの名前を参照して信頼できるセッションを有効にし `enabled` [**\<reliableSession>**](/previous-versions/ms731375(v=vs.90)) `true` ます。 信頼できるセッション内で使用できる順序付き配信の保証は、`ordered` 属性を `true` に設定することによって要求できます。
 
 この構成手順の基になっている例のソースコピーについては、「 [WS Reliable Session](../samples/ws-reliable-session.md)」を参照してください。
 
@@ -34,11 +34,11 @@ ms.locfileid: "84596956"
 
 ### <a name="configure-the-service-with-a-wshttpbinding-to-use-a-reliable-session"></a>信頼できるセッションを使用するようにサービスを WSHttpBinding で構成する
 
-この手順については[、「方法: 信頼できるセッション内でメッセージを交換](how-to-exchange-messages-within-a-reliable-session.md)する」を参照してください。
+この手順については [、「方法: 信頼できるセッション内でメッセージを交換](how-to-exchange-messages-within-a-reliable-session.md)する」を参照してください。
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>信頼できるセッションを使用するようにクライアントを WSHttpBinding で構成する
 
-この手順については[、「方法: 信頼できるセッション内でメッセージを交換](how-to-exchange-messages-within-a-reliable-session.md)する」を参照してください。
+この手順については [、「方法: 信頼できるセッション内でメッセージを交換](how-to-exchange-messages-within-a-reliable-session.md)する」を参照してください。
 
 ### <a name="set-the-mode-and-clientcredentialtype-in-configuration"></a>構成にモードと ClientCredentialType を設定する
 

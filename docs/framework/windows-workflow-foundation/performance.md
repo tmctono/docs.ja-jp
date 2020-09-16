@@ -3,12 +3,12 @@ title: Windows Workflow Foundation 4 のパフォーマンス
 description: この記事では、.NET Framework 4 の一部である Windows Workflow Foundation のメジャーリビジョンのパフォーマンス特性について説明します。
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 9b1b9e7c4fd7cdd122d425b2746859dde30ec209
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 1ad12d9fd69205bde726fe650a2ec28ba6c750ef
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421567"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558343"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 のパフォーマンス
 
@@ -18,11 +18,11 @@ ms.locfileid: "83421567"
 
 ## <a name="terminology"></a>用語
 
- .NET Framework 4 で導入されたのバージョンは、 [!INCLUDE[wf1](../../../includes/wf1-md.md)] このトピックの残りの部分で WF4 と呼ばれます。 [!INCLUDE[wf1](../../../includes/wf1-md.md)]は .NET Framework 3.0 で導入され、.NET Framework 3.5 SP1 によっていくつかのマイナーリビジョンがありました。 Workflow Foundation の .NET Framework 3.5 バージョンは、このトピックの残りの部分で WF3 と呼ばれます。 WF3 は .NET Framework 4 に WF4 とサイドバイサイドで同梱されています。 WF3 アーティファクトを WF4 に移行する方法の詳細については、「 [Windows Workflow Foundation 4 移行ガイド](migration-guidance.md)」を参照してください。
+ .NET Framework 4 で導入されたのバージョンは、 [!INCLUDE[wf1](../../../includes/wf1-md.md)] このトピックの残りの部分で WF4 と呼ばれます。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] は .NET Framework 3.0 で導入され、.NET Framework 3.5 SP1 によっていくつかのマイナーリビジョンがありました。 Workflow Foundation の .NET Framework 3.5 バージョンは、このトピックの残りの部分で WF3 と呼ばれます。 WF3 は .NET Framework 4 に WF4 とサイドバイサイドで同梱されています。 WF3 アーティファクトを WF4 に移行する方法の詳細については、「 [Windows Workflow Foundation 4 移行ガイド](migration-guidance.md)」を参照してください。
 
  Windows Communication Foundation (WCF) は、サービス指向アプリケーションを構築するための Microsoft の統一プログラミングモデルです。 WF3 と共に .NET 3.0 の一部として初めて導入されましたが、現在は .NET Framework の重要なコンポーネントの1つです。
 
- Windows Server AppFabric はインターネット インフォメーション サービス (IIS) 上で実行する Web アプリケーションおよび複合アプリケーションの構築、拡張、および管理を容易にする一連の統合テクノロジです。 監視およびサービスとワークフローの管理を行うためのツールを提供します。 詳細については、「 [Windows Server AppFabric 1.0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10))」を参照してください。
+ Windows Server AppFabric はインターネット インフォメーション サービス (IIS) 上で実行する Web アプリケーションおよび複合アプリケーションの構築、拡張、および管理を容易にする一連の統合テクノロジです。 監視およびサービスとワークフローの管理を行うためのツールを提供します。 詳細については、「 [Windows Server AppFabric 1.0](/previous-versions/appfabric/ff384253(v=azure.10))」を参照してください。
 
 ## <a name="goals"></a>目標
  このトピックの目的は、WF4 のパフォーマンス特性のさまざまな状況での測定データを示し、 WF4 と WF3 を詳細に比較して、新しいリビジョンでの大幅な機能強化について説明することです。 この記事のシナリオとデータは WF4 と WF3 のさまざまな側面の基本的なコストを定量化しています。 このデータは WF4 のパフォーマンス特性を理解するうえで役立ちます。また、WF3 から WF4 への移行計画または WF4 を使用したアプリケーション開発に役立つことがあります。 ただし、この記事に記載されているデータから結論を導き出す場合には注意が必要です。 複合ワークフロー アプリケーションのパフォーマンスは、ワークフローの実装方法や異なるコンポーネントの統合方法に大きく依存します。 アプリケーションのパフォーマンス特性を確認するには、各アプリケーションを測定する必要があります。
@@ -56,7 +56,7 @@ ms.locfileid: "83421567"
  .NET 4 の WCF に用意されている統合メッセージ処理パイプラインを使用すると、WF4 サービスは WF3 よりもはるかに優れたパフォーマンスとスケーラビリティを実現できます。 WF4 ではメッセージング プログラミングのサポートも強化され、複雑なメッセージ交換パターン (MEP) をモデル化できます。 開発者は、型指定されたサービス コントラクトを使用することで、プログラミングを簡素化できます。また、型指定されないサービス コントラクトを使用することで、シリアル化のコストをなくしてパフォーマンスを向上させることができます。 WF4 の <xref:System.ServiceModel.Activities.SendMessageChannelCache> クラスを使用したクライアント側チャネルのキャッシュのサポートにより、少ない手間で短時間にアプリケーションを作成できます。 詳細については、「 [Send アクティビティのキャッシュ共有レベルの変更](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)」を参照してください。
 
 ### <a name="declarative-programming"></a>宣言型プログラミング
- WF4 にはビジネス プロセスおよびサービスをモデル化するための単純明快な宣言型プログラミング フレームワークがあります。 このプログラミング モデルは、完全な宣言型のアクティビティの作成をサポートし、コードの記述をなくしてワークフローの作成を大幅に簡素化します。 .NET Framework 4 では、XAML ベースの宣言型プログラミングフレームワークが、WPF と WF の両方をサポートするために単一のアセンブリシステム .Xaml に統合されています。
+ WF4 にはビジネス プロセスおよびサービスをモデル化するための単純明快な宣言型プログラミング フレームワークがあります。 このプログラミング モデルは、完全な宣言型のアクティビティの作成をサポートし、コードの記述をなくしてワークフローの作成を大幅に簡素化します。 .NET Framework 4 では、XAML ベースの宣言型プログラミングフレームワークは、WPF と WF の両方をサポートするために単一のアセンブリ System.Xaml.dll に統合されています。
 
  WF4 では、XAML で完全な宣言型の記述を行い、ワークフローの定義全体を XML マークアップに定義して、.NET を使用して作成したアクティビティや型を参照できます。 WF3 の XOML 形式の場合、この操作をカスタム分離コード ロジックなしで行うことは困難です。 .NET 4 の新しい XAML スタックでは、ワークフローの成果物をシリアル化/逆シリアル化する際のパフォーマンスが格段に向上し、宣言型のプログラミングがより魅力的で安定しています。
 
@@ -232,7 +232,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 #### <a name="test-setup"></a>テストの設定
 ![相関スループットのワークフロー テスト](./media/performance/correlation-throughput-workflow.gif "相関スループットワークフローテストのセットアップ")
 
- 前のワークフローは、[永続](#persistence)化セクションで使用されるものと同じです。 永続化なしの関連付けテストでは、ランタイムに永続化プロバイダーがインストールされていません。 相関関係は CreateOrder と CompleteOrder の 2 か所で発生します。
+ 前のワークフローは、 [永続](#persistence) 化セクションで使用されるものと同じです。 永続化なしの関連付けテストでは、ランタイムに永続化プロバイダーがインストールされていません。 相関関係は CreateOrder と CompleteOrder の 2 か所で発生します。
 
 #### <a name="test-results"></a>テスト結果
 ![相関スループット](./media/performance/correlation-throughput-graph.gif "関連付けのスループットグラフ")
@@ -421,7 +421,7 @@ public class Workflow1 : Activity
 
  WF4 には SQL 追跡プロバイダーはありませんが、AppFabric に SQL 追跡プロバイダーがあります。  AppFabric の SQL 追跡では、クイック挿入用にイベントをバッチ処理して SQL テーブルに書き込む Windows サービスを使用して、ETW イベントに定期受信します。  別のジョブでこのテーブルからデータを排出し、形式を変更して AppFabric ダッシュボードに表示可能なレポート テーブルに格納します。  追跡イベントのバッチは元になるワークフローとは独立して処理されるため、永続化ポイントを待機せずに記録されます。
 
- ETW イベントの記録には logman や xperf などのツールを使用できます。  小規模な ETL ファイルは xperfview などのツールで表示できます。または、tracerpt を使用して XML などのわかりやすい形式に変換することもできます。  WF3 では、SQL データベースなしで追跡イベントを取得する唯一の方法は、カスタム追跡サービスを作成することです。 ETW の詳細については、「 [WCF サービスと Windows イベントトレーシング](../wcf/samples/wcf-services-and-event-tracing-for-windows.md)」および「[イベントトレース-Windows アプリケーション](/windows/desktop/etw/event-tracing-portal)」を参照してください。
+ ETW イベントの記録には logman や xperf などのツールを使用できます。  小規模な ETL ファイルは xperfview などのツールで表示できます。または、tracerpt を使用して XML などのわかりやすい形式に変換することもできます。  WF3 では、SQL データベースなしで追跡イベントを取得する唯一の方法は、カスタム追跡サービスを作成することです。 ETW の詳細については、「 [WCF サービスと Windows イベントトレーシング](../wcf/samples/wcf-services-and-event-tracing-for-windows.md) 」および「 [イベントトレース-Windows アプリケーション](/windows/desktop/etw/event-tracing-portal)」を参照してください。
 
  ワークフロー追跡を有効にした場合のパフォーマンスへの影響の程度はさまざまです。  次のベンチマークでは、logman ツールを使用し、ETW 追跡イベントを使用してそのイベントを ETL ファイルに記録します。  AppFabric の SQL 追跡のコストについてはこの記事の対象外です。  このベンチマークには AppFabric でも使用される基本的な追跡プロファイルが示されています。  状態監視イベントのみを追跡した場合のコストも含まれています。  これらのイベントは問題をトラブルシューティングし、システムの平均スループットを確認するために役立ちます。
 
@@ -452,5 +452,5 @@ public class Workflow1 : Activity
 
  Interop を使用した場合の方が直接 WF3 を使用した場合よりパフォーマンスが顕著に高くなっていますが、  WF4 アクティビティと比較した場合、パフォーマンスの向上はごくわずかです。
 
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
  WF4 のパフォーマンスに対する多大な投資は多くの重要な面で成果をもたらしました。  個々のワークフロー コンポーネントのパフォーマンスは、[!INCLUDE[wf1](../../../includes/wf1-md.md)] ランタイムが効率的になることにより、WF4 が WF3 と比較して数百倍高速になる場合があります。  待機時間の数値も大幅に向上しています。  これは、WCF orchestration サービスを手動でコーディングするのではなく、を使用する場合のパフォーマンスの低下 [!INCLUDE[wf1](../../../includes/wf1-md.md)] が非常に少ないことを意味し [!INCLUDE[wf1](../../../includes/wf1-md.md)] ます。  永続化のパフォーマンスは 2.5 ～ 3.0 倍向上しています。  ワークフロー追跡による状態監視のオーバーヘッドもごくわずかになりました。  WF3 から WF4 への移行を検討する場合の包括的な移行ガイドも提供されています。  これらのあらゆる要素を考慮すると、WF4 は複雑なアプリケーションの作成において魅力的な選択肢です。

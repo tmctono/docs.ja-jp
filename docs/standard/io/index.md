@@ -11,12 +11,12 @@ helpviewer_keywords:
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-ms.openlocfilehash: 2761d17846009ba06a2ffb1fc58b430f3ec9a949
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 2f7da6bd967abce8c2fefdc54a0043b5505e22e3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662720"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558941"
 ---
 # <a name="file-and-stream-io"></a>ファイルおよびストリーム入出力
 
@@ -46,7 +46,7 @@ ms.locfileid: "84662720"
 
 これらのクラスに加えて、Visual Basic のユーザーは、ファイル I/O 用の <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> クラスに用意されているメソッドとプロパティを使用できます。
 
-「[方法: ディレクトリをコピーする](how-to-copy-directories.md)、「[方法: ディレクトリ一覧を作成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))」、「[方法: ディレクトリとファイルを列挙する](how-to-enumerate-directories-and-files.md)。
+「[方法: ディレクトリをコピーする](how-to-copy-directories.md)、「[方法: ディレクトリ一覧を作成する](/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))」、「[方法: ディレクトリとファイルを列挙する](how-to-enumerate-directories-and-files.md)。
 
 ## <a name="streams"></a>ストリーム
 
@@ -128,7 +128,7 @@ ms.locfileid: "84662720"
 
 分離ストレージは、コードと保存データを関連付ける標準化された方法を定義することにより、分離性と安全性を提供するデータ ストレージ機構です。 ストレージは、ユーザー、アセンブリ、および (必要に応じて) ドメイン別に分離された仮想ファイル システムを提供します。 分離ストレージは、アプリケーションにユーザー ファイルへのアクセス許可がない場合に特に便利です。 コンピューターのセキュリティ ポリシーによって制御される方法でアプリケーションの設定またはファイルを保存できます。
 
-分離ストレージは Windows 8.x ストア アプリには使用できません。代わりに、<xref:Windows.Storage?displayProperty=nameWithType> 名前空間のアプリケーション データ クラスを使用します。 詳細については、[アプリケーション データ](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29)に関するページをご覧ください。
+分離ストレージは Windows 8.x ストア アプリには使用できません。代わりに、<xref:Windows.Storage?displayProperty=nameWithType> 名前空間のアプリケーション データ クラスを使用します。 詳細については、[アプリケーション データ](/previous-versions/windows/apps/hh464917(v=win.10))に関するページをご覧ください。
 
 次のクラスは、分離ストレージを実装するときによく使用します。
 
@@ -148,7 +148,7 @@ Windows 8.x ストア アプリ用 .NET には、ストリームの読み取り�
 
 - <xref:System.IO.File>、<xref:System.IO.FileInfo>、<xref:System.IO.Directory>、<xref:System.IO.DirectoryInfo> など、特にファイル操作に関連する型は、Windows 8.x ストア アプリ用 .NET には含まれていません。 代わりに、Windows ランタイムの名前空間 <xref:Windows.Storage?displayProperty=nameWithType> の型 (<xref:Windows.Storage.StorageFile> や <xref:Windows.Storage.StorageFolder> など) を使用します。
 
-- 分離ストレージは使用できません。代わりに、[アプリケーション データ](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))を使用します。
+- 分離ストレージは使用できません。代わりに、[アプリケーション データ](/previous-versions/windows/apps/hh464917(v=win.10))を使用します。
 
 - UI スレッドをブロックしないように、<xref:System.IO.Stream.ReadAsync%2A>、<xref:System.IO.Stream.WriteAsync%2A> などの非同期メソッドを使用します。
 
@@ -156,13 +156,13 @@ Windows 8.x ストア アプリ用 .NET には、ストリームの読み取り�
 
 必要に応じて、.NET Framework ストリームと Windows ランタイム ストリームを変換できます。 詳細については、「[方法:.NET Framework ストリームと Windows ランタイム ストリームの間で変換を行う](how-to-convert-between-dotnet-streams-and-winrt-streams.md)」または <xref:System.IO.WindowsRuntimeStreamExtensions> を参照してください。
 
-Windows 8.x ストア アプリでの I/O 操作の詳細については、「[Quickstart: Reading and writing files](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10))」 (クイック スタート: ファイルの読み取りと書き込み) を参照してください。
+Windows 8.x ストア アプリでの I/O 操作の詳細については、「[Quickstart: Reading and writing files](/previous-versions/windows/apps/hh758325(v=win.10))」 (クイック スタート: ファイルの読み取りと書き込み) を参照してください。
 
 ## <a name="io-and-security"></a>I/O とセキュリティ
 
 <xref:System.IO?displayProperty=nameWithType> 名前空間のクラスを使用する場合、アクセス制御リスト (ACL: Access Control List) などのオペレーティング システムのセキュリティ要件に従い、ファイルとディレクトリへのアクセスを制御する必要があります。 この要件の他にも、<xref:System.Security.Permissions.FileIOPermission> で指定されている要件を満たす必要があります。 ACL はプログラムで管理できます。 詳細については、「[方法: アクセス制御リスト エントリを追加または削除する](how-to-add-or-remove-access-control-list-entries.md)」を参照してください。
 
-既定のセキュリティ ポリシーでは、インターネットまたはイントラネットのアプリケーションはユーザーのコンピューターのファイルにアクセスできません。 したがって、インターネットまたはイントラネットを経由してダウンロードされるコードを記述する場合に、物理ファイル パスを必要とする I/O クラスを使用しないでください。 代わりに、従来の .NET Framework アプリケーション用の[分離ストレージ](isolated-storage.md)を使用するか、Windows 8.x ストア アプリ用の[アプリケーション データ](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))を使用します。
+既定のセキュリティ ポリシーでは、インターネットまたはイントラネットのアプリケーションはユーザーのコンピューターのファイルにアクセスできません。 したがって、インターネットまたはイントラネットを経由してダウンロードされるコードを記述する場合に、物理ファイル パスを必要とする I/O クラスを使用しないでください。 代わりに、従来の .NET Framework アプリケーション用の[分離ストレージ](isolated-storage.md)を使用するか、Windows 8.x ストア アプリ用の[アプリケーション データ](/previous-versions/windows/apps/hh464917(v=win.10))を使用します。
 
 セキュリティ チェックが実行されるのは、ストリームが構築されている場合だけです。 したがって、ストリームを開いて、そのストリームを信頼度の低いコードやアプリケーション ドメインに渡さないでください。
 

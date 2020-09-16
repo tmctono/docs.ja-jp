@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: bfb3efb479668bcd70a3ce87b80253a73c18bb51
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: 313cb46813d8c0cfa9f1f317a65d2e21298ecff9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "85840371"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552852"
 ---
 # <a name="xaml-services"></a>XAML サービス
 
@@ -35,7 +35,7 @@ ms.locfileid: "85840371"
 
 - XAML 型システムに、および型バッキングの評価方法に影響を与える`Lookup` または `Invoker` 手法を使用する。
 
-言語としての XAML に関する入門資料をお探しの場合は、[XAML の概要 (WPF)](../fundamentals/xaml.md)に関するページを参照してみてください。 そのトピックでは、Windows Presentation Foundation (WPF) にも、XAML マークアップおよび XAML 言語機能の使い方にも初心者である対象ユーザー向けに XAML が説明されています。 その他にも有用なドキュメントとして、[XAML 言語仕様](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))内の入門資料があります。
+言語としての XAML に関する入門資料をお探しの場合は、[XAML の概要 (WPF)](../fundamentals/xaml.md)に関するページを参照してみてください。 そのトピックでは、Windows Presentation Foundation (WPF) にも、XAML マークアップおよび XAML 言語機能の使い方にも初心者である対象ユーザー向けに XAML が説明されています。 その他にも有用なドキュメントとして、[XAML 言語仕様](/previous-versions/msp-n-p/ff650760(v=pandp.10))内の入門資料があります。
 
 ## <a name="net-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET アーキテクチャでの .NET XAML サービスと `System.Xaml`
 

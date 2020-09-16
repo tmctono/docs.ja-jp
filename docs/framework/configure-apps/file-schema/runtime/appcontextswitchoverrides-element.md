@@ -7,12 +7,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 394523e81da96d596a00010a393b9a034c0d552f
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 0ead35559a17eb06304e6c251d2fe388ca178a30
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558752"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552285"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides> 要素
 
@@ -39,7 +39,7 @@ ms.locfileid: "88558752"
 
 ### <a name="value-attribute"></a>value 属性
 
-|値|説明|
+|[値]|説明|
 |-----------|-----------------|
 |"name = value"|定義済みのスイッチ名とその値 ( `true` または `false` )。 複数のスイッチの名前と値のペアは、セミコロン (";") で区切られます。 .NET Framework でサポートされている定義済みスイッチ名の一覧については、「解説」を参照してください。|
 
@@ -53,7 +53,7 @@ ms.locfileid: "88558752"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>Remarks
  .NET Framework 4.6 以降では、 `<AppContextSwitchOverrides>` API の呼び出し元は、アプリが新しい機能を利用できるか、ライブラリの以前のバージョンとの互換性を維持できるかを判断するために、API の呼び出し元によって、API の呼び出し元に許可されます。 たとえば、API の動作がライブラリの2つのバージョン間で変更されている場合、要素を使用すると、 `<AppContextSwitchOverrides>` その api の呼び出し元は、新しい機能をサポートするライブラリのバージョンで新しい動作を無効にすることができます。 .NET Framework で Api を呼び出すアプリの場合、要素は、アプリ `<AppContextSwitchOverrides>` がその機能を含むバージョンの .NET Framework で実行されている場合に、アプリが以前のバージョンの .NET Framework をターゲットにして新しい機能をオプトインできるようにすることもできます。
 
  `value`要素の属性は、 `<AppContextSwitchOverrides>` セミコロンで区切られた1つ以上の名前と値のペアで構成される1つの文字列で構成されます。  各名前は互換性スイッチを識別し、対応する値は、 `true` `false` スイッチが設定されているかどうかを示すブール値 (または) です。 既定では、スイッチは `false` で、ライブラリは新しい機能を提供します。 スイッチが設定されている場合 (つまり、値がである場合) にのみ、以前の機能が提供され `true` ます。 これにより、ライブラリは既存の API に新しい動作を提供できるようになり、以前の動作に依存する呼び出し元は新しい機能を無効にすることができます。
@@ -70,7 +70,7 @@ ms.locfileid: "88558752"
 |`Switch.System.Diagnostics.`<br/>`IgnorePortablePDBsInStackTraces`|移植可能な Pdb を使用するときにスタックトレースが取得するかどうかを制御します。ソースファイルと行情報を含めることができます。 `false` ソースファイルと行情報を含める場合は。それ以外の場合は `true` 。|.NET Framework 4.7.2|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|<xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> <xref:System.Drawing.Icon> オブジェクトに PNG フレームが含まれている場合に、メソッドが例外をスローするかどうかを制御します。 詳細については、「[軽減策: Icon オブジェクトの PNG フレーム](../../../migration-guide/mitigation-png-frames-in-icon-objects.md)」を参照してください。|.NET Framework 4.6|
 |`Switch.System.Drawing.Text.`<br/>`DoNotRemoveGdiFontsResourcesFromFontCollection`|<xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType>メソッドによってコレクションに追加されたときにオブジェクトが正しく破棄されるかどうかを判断し <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType> ます。 `true` 従来の動作を維持するには `false` すべてのプライベートフォントオブジェクトを破棄する場合は。 |.NET Framework 4.7.2|
-|`Switch.System.Drawing.Printing.`<br>`OptimizePrintPreview`|のパフォーマンスを <xref:System.Windows.Forms.PrintPreviewDialog> ネットワークプリンター用に最適化するかどうかを制御します。 詳細については、「 [Printプレビューダイアログコントロールの概要](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md)」を参照してください。|.NET Framework 4.6|
+|`Switch.System.Drawing.Printing.`<br>`OptimizePrintPreview`|のパフォーマンスを <xref:System.Windows.Forms.PrintPreviewDialog> ネットワークプリンター用に最適化するかどうかを制御します。 詳細については、「 [Printプレビューダイアログコントロールの概要](/dotnet/desktop/winforms/controls/printpreviewdialog-control-overview-windows-forms)」を参照してください。|.NET Framework 4.6|
 |`Switch.System.Globalization.EnforceJapaneseEraYearRanges`|日本語の暦の時代 (年号) をチェックするかどうかを制御します。 `true` 年範囲のチェックを強制する場合は `false` 。それを無効にする場合は (既定の動作)。 詳細については、「 [カレンダーの操作](../../../../standard/datetime/working-with-calendars.md)」を参照してください。|.NET Framework 4.6|
 |`Switch.System.Globalization.EnforceLegacyJapaneseDateParsing`|解析操作で、"1" だけを日本語の暦時代 (年号) の最初の年として認識するかどうかを制御します。 `true` "1" だけを認識する場合は。 `false` "1" またはガント (既定の動作) のいずれかを認識します。 詳細については、「 [カレンダーの操作](../../../../standard/datetime/working-with-calendars.md)」を参照してください。|.NET Framework 4.6|
 |`Switch.System.Globalization.FormatJapaneseFirstYearAsANumber`|日本語の暦時代 (年号) の最初の年を、書式設定操作で "1" または "ガント" として表示するかどうかを制御します。 `true` 時代 (年号) の最初の年を "1" として書式設定するには、 `false` (既定の動作) として書式設定します。 詳細については、「 [カレンダーの操作](../../../../standard/datetime/working-with-calendars.md)」を参照してください。|.NET Framework 4.6|

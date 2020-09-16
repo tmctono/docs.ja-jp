@@ -2,12 +2,12 @@
 title: 認証の拡張保護の概要
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-ms.openlocfilehash: 400bf7987b5fcd4ec75628d19a30739dd5f23b08
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: fdc42228077bbc703e2e7557c8d7fdb3ff57a150
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964607"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559266"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>認証の拡張保護の概要
 認証時の拡張保護によって、攻撃者がクライアントの資格情報をインターセプトして特定のサーバーに転送する man-in-the-middle (MITM) 攻撃を防ぐことができます。  
@@ -24,9 +24,9 @@ ms.locfileid: "75964607"
   
  サーバーには、次の保護レベルを設定できます。  
   
-- ありません。 チャネル バインディングの検証は実行されません。 更新されていないすべてのサーバーの動作です。  
+- [なし] : チャネル バインディングの検証は実行されません。 更新されていないすべてのサーバーの動作です。  
   
-- 一部。 更新されたすべてのクライアントは、サーバーにチャネル バインディング情報を提供する必要があります。 クライアントが更新されていなければ、その必要はありません。 アプリケーションの互換性を許容する中間のオプションです。  
+- 部分的。 更新されたすべてのクライアントは、サーバーにチャネル バインディング情報を提供する必要があります。 クライアントが更新されていなければ、その必要はありません。 アプリケーションの互換性を許容する中間のオプションです。  
   
 - 完全。 すべてのクライアントがチャネル バインディング情報を提供する必要があります。 サーバーは、クライアントが要求しないクライアントからの認証要求を拒否します。  
   
@@ -34,4 +34,4 @@ ms.locfileid: "75964607"
   
 ## <a name="see-also"></a>関連項目
 
-- [Windows Server App Fabric のセキュリティモデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric のセキュリティ モデル](/previous-versions/appfabric/ee677202(v=azure.10))

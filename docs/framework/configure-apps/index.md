@@ -25,12 +25,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 444d3700f36a2928b79f40dd5265d6166de762da
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 92ecc4a430aa3c238a7cd8705dc0cec5a9d0cb11
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105368"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559292"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>構成ファイルを使用してアプリを構成する方法
 .NET Framework を使用すると、開発者および管理者は、構成ファイルを使用することにより、アプリケーションの実行方法を制御し、アプリケーションの実行に柔軟性を持たせることができます。 構成ファイルは XML ファイルで、必要に応じて変更できます。 管理者は、アプリケーションからアクセスできるプロテクト リソース、アプリケーションが使用するアセンブリのバージョン、およびリモート アプリケーションやオブジェクトの配置場所を制御できます。 開発者は、構成ファイル内に設定を格納できます。これにより、設定変更のたびにアプリケーションを再コンパイルする必要がなくなります。 このセクションでは、設定できる内容と、アプリケーションを設定することが有益である理由を説明します。  
@@ -53,7 +53,7 @@ ms.locfileid: "85105368"
 ```  
   
 ## <a name="machine-configuration-files"></a>マシン構成ファイル  
- マシン構成ファイル Machine.config には、コンピューター全体に適用する設定を含めます。 このファイルは、%*runtime install path*%\Config ディレクトリに含まれています。 Machine.config には、マシン全体のアセンブリ バインディング、組み込みの[リモート処理チャネル](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100))、および ASP.NET に関する構成設定が含まれます。  
+ マシン構成ファイル Machine.config には、コンピューター全体に適用する設定を含めます。 このファイルは、%*runtime install path*%\Config ディレクトリに含まれています。 Machine.config には、マシン全体のアセンブリ バインディング、組み込みの[リモート処理チャネル](/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100))、および ASP.NET に関する構成設定が含まれます。  
   
  構成システムは、まず、開発者が定義する[ **\<appSettings>** 要素](./file-schema/appsettings/index.md)とその他の構成セクションのマシン構成ファイルを検索します。 次に、アプリケーション構成ファイルを調べます。 マシン構成ファイルを管理しやすくするには、これらの設定をアプリケーション構成ファイルに配置するのが最適です。 しかし、それらの設定をマシン構成ファイル内に配置した方が、システムの保守が簡単になります。 たとえば、クライアント アプリケーションとサーバー アプリケーションの両方で使用されるサードパーティ コンポーネントがある場合、そのコンポーネントの設定を 1 か所に設まとめた方が簡単です。 この場合、同じ設定を 2 つのファイルに配置する必要がなくなるという点から、設定を格納するのに適した場所はマシン構成ファイルになります。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "85105368"
   
 - ASP.NET によってホストされるアプリケーション。  
   
-     ASP.NET 構成ファイルの詳細については、「 [ASP.NET Configuration Settings](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))」を参照してください。
+     ASP.NET 構成ファイルの詳細については、「 [ASP.NET Configuration Settings](/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))」を参照してください。
   
 - Internet Explorer によってホストされるアプリケーション。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "85105368"
 - [構成ファイル スキーマ](./file-schema/index.md)
 - [アセンブリの場所の指定](specify-assembly-location.md)
 - [アセンブリ バージョンのリダイレクト](redirect-assembly-versions.md)
-- [ASP.NET Web サイト管理](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
-- [セキュリティ ポリシーの管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
+- [ASP.NET Web サイト管理](/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
+- [セキュリティ ポリシーの管理](/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
 - [Caspol.exe (コード アクセス セキュリティ ポリシー ツール)](../tools/caspol-exe-code-access-security-policy-tool.md)
 - [.NET のアセンブリ](../../standard/assembly/index.md)

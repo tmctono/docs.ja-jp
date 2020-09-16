@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
-ms.openlocfilehash: 783969342f007895016ed4183257d6b24188d76c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c6b742cbb438b10b443aa8d1cfca21a80acd2afe
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84584728"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558616"
 ---
 # <a name="message-security-user-name"></a>メッセージ セキュリティ ユーザー名
 このサンプルでは、クライアントのユーザー名認証による WS-Security を使用するアプリケーションを実装する方法を示します。このアプリケーションでは、サーバーの X.509v3 証明書を使用するサーバー認証が必要です。 クライアント/サーバー間のすべてのアプリケーション メッセージは署名され、暗号化されます。 既定では、クライアントによって提供されるユーザー名とパスワードが、有効な Windows アカウントへのログオンに使用されます。 このサンプルは、 [WSHttpBinding](wshttpbinding.md)に基づいています。 このサンプルは、クライアント コンソール プログラム (Client.exe) と、インターネット インフォメーション サービス (IIS) によってホストされるサービス ライブラリ (Service.dll) で構成されています。 サービスは、要求/応答通信パターンを定義するコントラクトを実装します。  
@@ -23,7 +23,7 @@ ms.locfileid: "84584728"
   
 - サービス コードから呼び出し元の ID 情報にアクセスする方法。  
   
- サービスは、構成ファイル web.config を使用して定義されているサービスと通信するための単一のエンドポイントを公開します。エンドポイントは、アドレス、バインディング、およびコントラクトで構成されます。 バインディングは、標準のを使用して構成され [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) ます。既定では、メッセージセキュリティが使用されます。 このサンプルでは、 [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) クライアントのユーザー名認証を使用するように標準を設定します。 この動作により、サービス認証でユーザーの資格情報が使用されることが指定されます。 サーバー証明書のサブジェクト名には、の属性と同じ値が含まれている必要があり `findValue` [\<serviceCredentials>](../../configure-apps/file-schema/wcf/servicecredentials.md) ます。  
+ サービスは、構成ファイル Web.config を使用して定義されているサービスと通信するための単一のエンドポイントを公開します。エンドポイントは、アドレス、バインディング、およびコントラクトで構成されます。 バインディングは、標準のを使用して構成され [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) ます。既定では、メッセージセキュリティが使用されます。 このサンプルでは、 [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) クライアントのユーザー名認証を使用するように標準を設定します。 この動作により、サービス認証でユーザーの資格情報が使用されることが指定されます。 サーバー証明書のサブジェクト名には、の属性と同じ値が含まれている必要があり `findValue` [\<serviceCredentials>](../../configure-apps/file-schema/wcf/servicecredentials.md) ます。  
   
 ```xml  
 <system.serviceModel>  
@@ -173,7 +173,7 @@ Press <ENTER> to terminate client.
   
 - 証明書の秘密キーに関する権限の付与  
   
-     セットアップのバッチファイルの次の行を使用して、LocalMachine ストアに格納されているサーバー証明書を ASP.NET ワーカープロセスアカウントにアクセスできるようにします。  
+     Setup.bat バッチファイルの次の行は、LocalMachine ストアに格納されているサーバー証明書を ASP.NET ワーカープロセスアカウントにアクセスできるようにします。  
   
     ```bat
     echo ************  
@@ -187,7 +187,7 @@ Press <ENTER> to terminate client.
     ```  
   
     > [!NOTE]
-    > 米国英語版以外の Windows を使用している場合は、セットアップの .bat ファイルを編集し、 `NT AUTHORITY\NETWORK SERVICE` アカウント名をそれと同等の地域に置き換える必要があります。  
+    > 非 U. S を使用している場合。英語版の Windows では、Setup.bat ファイルを編集し、 `NT AUTHORITY\NETWORK SERVICE` アカウント名をそれと同等の地域に置き換える必要があります。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
@@ -199,16 +199,16 @@ Press <ENTER> to terminate client.
   
 1. Makecert.exe と FindPrivateKey.exe が含まれているフォルダーがパスに含まれていることを確認します。  
   
-2. 管理者特権で Visual Studio を開いた開発者コマンドプロンプトで、サンプルのインストールフォルダーから Setup.exe を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。  
+2. 管理者特権で開いた Visual Studio の開発者コマンドプロンプトでサンプルのインストールフォルダーから Setup.bat を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。  
   
     > [!NOTE]
-    > セットアップの .bat バッチファイルは、Visual Studio の開発者コマンドプロンプトから実行するように設計されています。 path 環境変数が SDK のインストール ディレクトリを指している必要があります。 この環境変数は、Visual Studio の開発者コマンドプロンプト内で自動的に設定されます。  
+    > Setup.bat バッチファイルは、Visual Studio の開発者コマンドプロンプトから実行するように設計されています。 path 環境変数が SDK のインストール ディレクトリを指している必要があります。 この環境変数は、Visual Studio の開発者コマンドプロンプト内で自動的に設定されます。  
   
 3. アドレスを入力して、ブラウザーを使用してサービスへのアクセスを確認し `http://localhost/servicemodelsamples/service.svc` ます。
   
 4. Client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
   
-5. クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
+5. クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
   
 ### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには  
   
@@ -228,13 +228,13 @@ Press <ENTER> to terminate client.
   
 8. クライアント コンピューターの Client.exe.config ファイルで、エンドポイントのアドレス値をサービスの新しいアドレスに合わせます。  
   
-9. クライアントで、管理者特権で開かれた Visual Studio の開発者コマンドプロンプトで Importservicecert.bat を実行します。 これにより、サービス証明書が Service.cer ファイルから CurrentUser - TrustedPeople ストアにインポートされます。  
+9. クライアントで、管理者特権で開いた Visual Studio の開発者コマンドプロンプトで ImportServiceCert.bat を実行します。 これにより、サービス証明書が Service.cer ファイルから CurrentUser - TrustedPeople ストアにインポートされます。  
   
-10. クライアント コンピューターで、コマンド プロンプトから Client.exe を起動します。 クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
+10. クライアント コンピューターで、コマンド プロンプトから Client.exe を起動します。 クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
   
 ### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   
 - サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。  
   
     > [!NOTE]
-    > このサンプルを複数のコンピューターで実行している場合、このスクリプトはサービス証明書をクライアントから削除しません。 コンピューター間で証明書を使用する Windows Communication Foundation (WCF) サンプルを実行した場合は、CurrentUser-TrustedPeople ストアにインストールされているサービス証明書を必ずオフにしてください。 削除するには、コマンド `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` を実行します。たとえば、`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` となります。  
+    > このサンプルを複数のコンピューターで実行している場合、このスクリプトはサービス証明書をクライアントから削除しません。 コンピューター間で証明書を使用する Windows Communication Foundation (WCF) サンプルを実行した場合は、CurrentUser-TrustedPeople ストアにインストールされているサービス証明書を必ずオフにしてください。 削除するには、コマンド `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` を実行します。たとえば、`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` となります。

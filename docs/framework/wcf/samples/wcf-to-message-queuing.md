@@ -2,12 +2,12 @@
 title: Windows Communication Foundation でのメッセージ キュー
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: 872632dc7d0a8a94f8829ffb3fe8eea2607697c8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a6e322936740f7d88d30b9a205ac937a807bedc1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602345"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552928"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation でのメッセージ キュー
 
@@ -131,7 +131,7 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
  サンプルを実行すると、クライアントとサービスのアクティビティがサービスとクライアントの両方のコンソール ウィンドウに表示されます。 サービスがクライアントから受信したメッセージを表示できます。 どちらかのコンソールで Enter キーを押すと、サービスとクライアントがどちらもシャットダウンされます。 キューが使用されているので、クライアントとサービスが同時に実行されている必要はありません。 たとえば、クライアントを実行してシャットダウンした後にサービスを起動しても、サービスはメッセージを受信します。
 
 > [!NOTE]
-> このサンプルを実行するには、メッセージ キューがインストールされている必要があります。 「[メッセージキュー](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))」のインストール手順を参照してください。
+> このサンプルを実行するには、メッセージ キューがインストールされている必要があります。 「 [メッセージキュー](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))」のインストール手順を参照してください。
 
 ## <a name="set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行する
 
@@ -141,11 +141,11 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 
     1. Visual Studio 2012 でサーバーマネージャーを開きます。
 
-    2. [**機能**] タブを展開します。
+    2. [ **機能** ] タブを展開します。
 
     3. [**プライベートメッセージキュー**] を右クリックし、[**新しい**  >  **プライベートキュー**] を選択します。
 
-    4. [**トランザクション**] ボックスをオンにします。
+    4. [ **トランザクション** ] ボックスをオンにします。
 
     5. `ServiceModelSamplesTransacted`新しいキューの名前として「」と入力します。
 
@@ -170,11 +170,11 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`
 
 ## <a name="see-also"></a>関連項目
 
 - [方法: WCF エンドポイントとメッセージ キュー アプリケーションを使用してメッセージを交換する](../feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
-- [メッセージ キューイング (Message Queuing)](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))
+- [メッセージ キューイング (Message Queuing)](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: c61e960078557282de39bdc30f1d614ce8a77f29
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 264c639656b592c0cc660d3745528df7cc89c851
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "85503807"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559338"
 ---
 # <a name="events-visual-basic"></a>イベント (Visual Basic)
 Visual Studio プロジェクトとは、順に実行される一連のプロシージャと思っているかもしれませんが、実際には、ほとんどのプログラムはイベント ドリブン型です。つまり、実行の流れは、外部で発生する "*イベント*" と呼ばれる事象によって決まります。  
@@ -105,5 +105,5 @@ Visual Studio プロジェクトとは、順に実行される一連のプロシ
 |[方法: カスタム イベントを宣言してメモリを節約する](how-to-declare-custom-events-to-conserve-memory.md)|イベントを処理するときにのみ、メモリを使用するカスタム イベントを定義する方法を示します。|  
 |[Visual Basic での継承されたイベント ハンドラーのトラブルシューティング](troubleshooting-inherited-event-handlers.md)|継承されたコンポーネントのイベント ハンドラーで生じる一般的な問題を一覧表示します。|  
 |[イベント](../../../../standard/events/index.md)|.NET Framework のイベント モデルについて概説します。|  
-|[Windows フォーム内でのイベント ハンドラーの作成](../../../../framework/winforms/creating-event-handlers-in-windows-forms.md)|Windows フォーム オブジェクトに関連付けられているイベントの処理方法について説明します。|  
+|[Windows フォーム内でのイベント ハンドラーの作成](/dotnet/desktop/winforms/creating-event-handlers-in-windows-forms)|Windows フォーム オブジェクトに関連付けられているイベントの処理方法について説明します。|  
 |[デリゲート](../delegates/index.md)|Visual Basic でのデリゲートの概要を示します。|

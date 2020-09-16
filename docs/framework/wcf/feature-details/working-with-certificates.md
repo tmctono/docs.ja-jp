@@ -8,18 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 8090e84b33e2a6f442d387c7012e6ccdc2900dd1
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: a12e723c763cdc3b9cf2105df9d0ee601f8bda1a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246403"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559019"
 ---
 # <a name="working-with-certificates"></a>証明書の使用
 
 Windows Communication Foundation (WCF) のセキュリティをプログラミングする場合、一般に X.509 デジタル証明書を使用して、クライアントとサーバーの認証、暗号化、およびメッセージのデジタル署名を行います。 ここでは、X.509 デジタル証明書の機能および WCF でのそれらの機能の使用方法について簡単に説明します。また、これらの概念の詳細を説明するトピックや、WCF と証明書を使用した一般的なタスクの実行方法が記載されたトピックへのリンクも示します。
 
-簡単に言うと、デジタル証明書は、"*公開キー基盤 (PKI: Public Key Infrastructure)*" の一部です。PKI は、デジタル証明書、証明機関、およびその他の登録機関から成るシステムです。登録機関では、公開キー暗号化を使用して、電子取引に関与する各当事者の有効性の検証と認証を行います。 証明機関は証明書を発行します。各証明書には、"*サブジェクト*" (証明書の発行先のエンティティ)、有効期間 (証明書が有効な場合)、発行者 (証明書を発行したエンティティ)、公開キーなどのデータが含まれた一連のフィールドがあります。 WCF では、これらの各プロパティは <xref:System.IdentityModel.Claims.Claim> (クレーム) として処理されます。各クレームは、さらに ID と権限の 2 種類に分けられます。 X.509 証明書の詳細については、「[X.509 Public Key Certificates](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates)」(X.509 公開キー証明書) を参照してください。 WCF におけるクレームと承認の詳細については、「[ID モデルを使用したクレームと承認の管理](managing-claims-and-authorization-with-the-identity-model.md)」を参照してください。 PKI の実装の詳細については、「 [Windows Server 2012 R2 でのエンタープライズ pki Active Directory 証明書サービス](https://docs.microsoft.com/archive/blogs/yungchou/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2)」を参照してください。
+簡単に言うと、デジタル証明書は、"*公開キー基盤 (PKI: Public Key Infrastructure)*" の一部です。PKI は、デジタル証明書、証明機関、およびその他の登録機関から成るシステムです。登録機関では、公開キー暗号化を使用して、電子取引に関与する各当事者の有効性の検証と認証を行います。 証明機関は証明書を発行します。各証明書には、"*サブジェクト*" (証明書の発行先のエンティティ)、有効期間 (証明書が有効な場合)、発行者 (証明書を発行したエンティティ)、公開キーなどのデータが含まれた一連のフィールドがあります。 WCF では、これらの各プロパティは <xref:System.IdentityModel.Claims.Claim> (クレーム) として処理されます。各クレームは、さらに ID と権限の 2 種類に分けられます。 X.509 証明書の詳細については、「[X.509 Public Key Certificates](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates)」(X.509 公開キー証明書) を参照してください。 WCF におけるクレームと承認の詳細については、「[ID モデルを使用したクレームと承認の管理](managing-claims-and-authorization-with-the-identity-model.md)」を参照してください。 PKI の実装の詳細については、「 [Windows Server 2012 R2 でのエンタープライズ pki Active Directory 証明書サービス](/archive/blogs/yungchou/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2)」を参照してください。
 
 証明書の第一の機能は、他者に対して証明書の所有者の ID を認証することです。 証明書は所有者の "*公開キー*" を含んでおり、所有者が秘密キーを保持しています。 公開キーを使用して、証明書の所有者に送信されるメッセージを暗号化できます。 秘密キーにアクセスできるのは所有者だけであるため、所有者だけが暗号化されたメッセージを復号化できます。
 
@@ -64,7 +64,7 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
 
 証明書は、各証明書がその発行元の CA にリンクされる階層構造で作成されます。 このリンクは CA の証明書へのリンクになります。 CA の証明書は、元の CA の証明書を発行した CA にリンクされます。 ルート CA の証明書に到達するまでこのプロセスが繰り返されます。 ルート CA の証明書は本質的に信頼されています。
 
-デジタル証明書を使用する場合、この階層 ("*信頼チェーン*" とも呼ばれます) に依存してエンティティを認証します。 MMC スナップインを使用して証明書のチェーンを表示するには、任意の証明書をダブルクリックし、[**証明書のパス**] タブをクリックします。証明機関の証明書チェーンをインポートする方法の詳細については、「[方法: 署名の検証に使用する証明機関の証明書チェーンを指定](specify-the-certificate-authority-chain-verify-signatures-wcf.md)する」を参照してください。
+デジタル証明書を使用する場合、この階層 ("*信頼チェーン*" とも呼ばれます) に依存してエンティティを認証します。 MMC スナップインを使用して証明書のチェーンを表示するには、任意の証明書をダブルクリックし、[ **証明書のパス** ] タブをクリックします。証明機関の証明書チェーンをインポートする方法の詳細については、「 [方法: 署名の検証に使用する証明機関の証明書チェーンを指定](specify-the-certificate-authority-chain-verify-signatures-wcf.md)する」を参照してください。
 
 > [!NOTE]
 > 証明書を "信頼されたルート証明機関" 証明書ストアに配置することにより、その証明書の発行者を信頼されたルート証明機関として指定できます。
@@ -114,7 +114,7 @@ PowerShell の新しい SelfSignedCertificate コマンドレットは、x.509 �
 
 ### <a name="service-certificates"></a>サービス証明書
 
-サービス証明書の第一の目的は、クライアントに対してサーバーを認証することです。 クライアントがサーバーを認証するときの最初のチェックの 1 つとして、"**サブジェクト**" フィールドの値とサービスへのアクセスに使用する URI (Uniform Resource Identifier) が比較されます。この場合、双方の DNS が一致する必要があります。 たとえば、サービスの URI がの場合、 `http://www.contoso.com/endpoint/` **サブジェクト**フィールドにも値が含まれている必要があり `www.contoso.com` ます。
+サービス証明書の第一の目的は、クライアントに対してサーバーを認証することです。 クライアントがサーバーを認証するときの最初のチェックの 1 つとして、"**サブジェクト**" フィールドの値とサービスへのアクセスに使用する URI (Uniform Resource Identifier) が比較されます。この場合、双方の DNS が一致する必要があります。 たとえば、サービスの URI がの場合、 `http://www.contoso.com/endpoint/` **サブジェクト** フィールドにも値が含まれている必要があり `www.contoso.com` ます。
 
 このフィールドには複数の値を含めることができますが、各値の先頭にはその値を示す初期化コードが付加されます。 一般的に、初期化は一般的な名前の "CN" です。たとえば、のように `CN = www.contoso.com` なります。 "**サブジェクト**" フィールドを空白にすることもできます。この場合、"**サブジェクト代替名**" フィールドに値として **DNS 名**を含めることができます。
 
@@ -165,9 +165,9 @@ WCF では、認証、暗号化、またはメッセージのデジタル署名�
 
 ## <a name="mapping-a-certificate-to-a-user-account"></a>ユーザー アカウントへの証明書のマッピング
 
-IIS と Active Directory には、証明書を Windows ユーザー アカウントにマップできる機能があります。 この機能の詳細については、「[Map certificates to user accounts](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc736706(v=ws.10))」(ユーザー アカウントへの証明書のマッピング) を参照してください。
+IIS と Active Directory には、証明書を Windows ユーザー アカウントにマップできる機能があります。 この機能の詳細については、「[Map certificates to user accounts](/previous-versions/windows/it-pro/windows-server-2003/cc736706(v=ws.10))」(ユーザー アカウントへの証明書のマッピング) を参照してください。
 
-Active Directory のマッピングを使用する方法の詳細については、「[Mapping Client Certificates with Directory Service Mapping](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc758484(v=ws.10))」(ディレクトリ サービスのマッピングによるクライアント証明書のマッピング) を参照してください。
+Active Directory のマッピングを使用する方法の詳細については、「[Mapping Client Certificates with Directory Service Mapping](/previous-versions/windows/it-pro/windows-server-2003/cc758484(v=ws.10))」(ディレクトリ サービスのマッピングによるクライアント証明書のマッピング) を参照してください。
 
 この機能が有効になっている場合、<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> クラスの <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> プロパティを `true` に設定できます。 構成では、 `mapClientCertificateToWindowsAccount` [\<authentication>](../../configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 次の `true` コードに示すように、要素の属性をに設定できます。
 

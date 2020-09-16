@@ -2,12 +2,12 @@
 title: フィルターの選択
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: e951c472543239df0c01dcba3e46f120ced9e192
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2f96e7001a41682ef595d003e87daa06d0244f3b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587496"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559390"
 ---
 # <a name="choosing-a-filter"></a>フィルターの選択
 ルーティング サービスを構成する際には、適切なメッセージ フィルターを選択し、受信するメッセージと正確に一致できるように、それらのフィルターを構成することが重要です。 選択したフィルターの適合基準が幅広すぎる場合や、適切に構成されていない場合は、メッセージが正しくルーティングされません。 フィルターの適合基準が厳格すぎると、一部のメッセージの有効なルーティング先が見つからないことがあります。
@@ -84,9 +84,9 @@ StrictAndMessageFilter and1=new StrictAndMessageFilter(address1, action1);
 
 複数のフィルターのロジックを組み合わせて一致を判断する必要がある場合は、このフィルターを使用します。 たとえば、アクションとメッセージの特定の組み合わせだけを特定のアドレスに受け取る必要がある複数の送信先がある場合は、AND フィルターを使用して、必要な Action フィルターと Address フィルターを組み合わせることができます。
 
-### <a name="custom"></a>カスタム
+### <a name="custom"></a>Custom
 
-カスタムフィルターの種類を選択する場合は、このフィルターに使用する**Messagefilter**実装を含むアセンブリの型を含む customtype 値を指定する必要があります。 また、filterData には、Custom フィルターがメッセージの評価に必要とするすべての値が格納されている必要があります。 次の例では、`FilterElement` MessageFilter 実装を使用する `CustomAssembly.MyCustomMsgFilter` を定義します。
+カスタムフィルターの種類を選択する場合は、このフィルターに使用する **Messagefilter** 実装を含むアセンブリの型を含む customtype 値を指定する必要があります。 また、filterData には、Custom フィルターがメッセージの評価に必要とするすべての値が格納されている必要があります。 次の例では、`FilterElement` MessageFilter 実装を使用する `CustomAssembly.MyCustomMsgFilter` を定義します。
 
 ```xml
 <filter name="custom1" filterType="Custom" customType="CustomAssembly.MyCustomMsgFilter, CustomAssembly" filterData="Custom Data" />
@@ -96,7 +96,7 @@ StrictAndMessageFilter and1=new StrictAndMessageFilter(address1, action1);
 MyCustomMsgFilter custom1=new MyCustomMsgFilter("Custom Data");
 ```
 
-に用意されているフィルターの対象ではないメッセージに対してカスタムの照合ロジックを実行する必要がある場合は、 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] **messagefilter**クラスの実装であるカスタムフィルターを作成する必要があります。 たとえば、受信メッセージ内の 1 つのフィールドを、構成としてフィルターに指定された既知の値のリストと比較するカスタム フィルターや、特定のメッセージ要素をハッシュしてから、その値を調査してフィルターが `true` と `false` のどちらを返すかを判断するカスタム フィルターを作成することができます。
+に用意されているフィルターの対象ではないメッセージに対してカスタムの照合ロジックを実行する必要がある場合は、 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] **messagefilter** クラスの実装であるカスタムフィルターを作成する必要があります。 たとえば、受信メッセージ内の 1 つのフィールドを、構成としてフィルターに指定された既知の値のリストと比較するカスタム フィルターや、特定のメッセージ要素をハッシュしてから、その値を調査してフィルターが `true` と `false` のどちらを返すかを判断するカスタム フィルターを作成することができます。
 
 ### <a name="endpointname"></a>EndpointName
 
@@ -140,9 +140,9 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
 
 受信するメッセージに特定の値が含まれていることがわかっている場合は、このフィルターが便利です。 たとえば、同じサービスの 2 つのバージョンをホストしており、そのサービスの新しい方のバージョン宛てのメッセージのカスタム ヘッダーに一意の値が含まれていることがわかっている場合は、XPath を使用するフィルターを作成してそのヘッダーに移動し、そのヘッダー内にある値を、フィルター構成で指定されている別の値と比較して、そのフィルターが一致するかどうかを判断できます。
 
-XPath クエリには、長い文字列値または複雑な文字列値である一意の名前空間が含まれていることが多いため、XPath フィルターでは、名前空間用の一意のプレフィックスを定義する名前空間テーブルを使用できます。 名前空間テーブルの詳細については、「[メッセージフィルター](message-filters.md)」を参照してください。
+XPath クエリには、長い文字列値または複雑な文字列値である一意の名前空間が含まれていることが多いため、XPath フィルターでは、名前空間用の一意のプレフィックスを定義する名前空間テーブルを使用できます。 名前空間テーブルの詳細については、「 [メッセージフィルター](message-filters.md)」を参照してください。
 
-XPath クエリのデザインの詳細については、「 [Xpath 構文](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256471(v=vs.100))」を参照してください。
+XPath クエリのデザインの詳細については、「 [Xpath 構文](/previous-versions/dotnet/netframework-4.0/ms256471(v=vs.100))」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

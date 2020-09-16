@@ -14,16 +14,16 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: f75d4e30dc41bbce995e466466c96c1a2830949b
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: 00e6684f6ad1eb8d96f72f49bd5e0d211c8166c3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "81432636"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559071"
 ---
 # <a name="xtype-markup-extension"></a>x:Type マークアップ拡張機能
 
-指定した<xref:System.Type>XAML 型の基になる型である CLR オブジェクトを提供します。
+<xref:System.Type>指定された XAML 型の基になる型である CLR オブジェクトを提供します。
 
 ## <a name="xaml-attribute-usage"></a>XAML 属性の使用方法
 
@@ -41,52 +41,52 @@ ms.locfileid: "81432636"
 
 |||
 |-|-|
-|`prefix`|省略可能。 既定以外の XAML 名前空間をマップするプレフィックス。 プレフィックスを指定する必要がない場合は、多くの場合必要ありません。 「解説」を参照してください。|
-|`typeNameValue`|必須。 現在の既定の XAML 名前空間に解決できる型名。または指定されたマップされたプレフィックス`prefix`(指定されている場合)|
+|`prefix`|省略可能。 既定以外の XAML 名前空間をマップするプレフィックス。 多くの場合、プレフィックスを指定する必要はありません。 「解説」を参照してください。|
+|`typeNameValue`|必須です。 現在の既定の XAML 名前空間に解決可能な型名。または、が指定されている場合は、指定されたマップされたプレフィックス `prefix` 。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-マークアップ`x:Type`拡張機能は、C# の`typeof()`演算子や、Visual Basic`GetType`の演算子と同様の関数を持っています。
+`x:Type`マークアップ拡張機能には、 `typeof()` C# の演算子または Microsoft Visual Basic の演算子と同様の関数があり `GetType` ます。
 
-マークアップ`x:Type`拡張機能は、型を取得するプロパティに対して文字列から変換する<xref:System.Type>動作を提供します。 入力は XAML 型です。 入力<xref:System.Type>XAML 型と出力 CLR の関係は、XAML<xref:System.Type>スキーマ<xref:System.Xaml.XamlType.UnderlyingType%2A>コンテキストと<xref:System.Xaml.XamlType>コンテキストが提供する<xref:System.Windows.Markup.IXamlTypeResolver>サービスに<xref:System.Xaml.XamlType>基づいて必要なを検索した後、出力が入力の .
+`x:Type`マークアップ拡張機能は、型を受け取るプロパティに対して、文字列変換動作を提供し <xref:System.Type> ます。 入力は XAML 型です。 入力 XAML 型と出力 CLR の関係では、 <xref:System.Type> <xref:System.Type> <xref:System.Xaml.XamlType.UnderlyingType%2A> <xref:System.Xaml.XamlType> <xref:System.Xaml.XamlType> xaml スキーマコンテキストとコンテキストによって提供されるサービスに基づいて必要なを検索した後、出力は入力のになり <xref:System.Windows.Markup.IXamlTypeResolver> ます。
 
-NET XAML サービスでは、このマークアップ拡張機能の処理は、クラスによって定義<xref:System.Windows.Markup.TypeExtension>されます。
+.NET XAML サービスでは、このマークアップ拡張機能の処理はクラスによって定義され <xref:System.Windows.Markup.TypeExtension> ます。
 
-特定のフレームワーク実装では、値として受け<xref:System.Type>取る一部のプロパティは、型の名前 (型`Name`の文字列値) を直接受け入れることができます。 ただし、この動作を実装することは複雑なシナリオです。 例については、後述の「WPF の使用に関する注意事項」を参照してください。
+特定のフレームワーク実装では、 <xref:System.Type> 値として使用される一部のプロパティは、型の名前 (型の文字列値) を直接受け入れることができ `Name` ます。 ただし、この動作の実装は複雑なシナリオです。 例については、後述の「WPF の使用に関する注意事項」を参照してください。
 
-属性構文は、このマークアップ拡張機能で使用される最も一般的な構文です。 `x:Type` 識別子文字列の後に設定される文字列トークンは、基になる <xref:System.Windows.Markup.TypeExtension.TypeName%2A> 拡張クラスの <xref:System.Windows.Markup.TypeExtension> 値として割り当てられます。 CLR 型に基づく .NET XAML サービスの既定の XAML スキーマ コンテキストでは、この属性の<xref:System.Reflection.MemberInfo.Name%2A>値は、目的の型の値<xref:System.Reflection.MemberInfo.Name%2A>か、既定以外の XAML 名前空間マッピングのプレフィックスが含まれています。
+属性構文は、このマークアップ拡張機能で使用される最も一般的な構文です。 `x:Type` 識別子文字列の後に設定される文字列トークンは、基になる <xref:System.Windows.Markup.TypeExtension.TypeName%2A> 拡張クラスの <xref:System.Windows.Markup.TypeExtension> 値として割り当てられます。 CLR 型に基づく .NET XAML サービスの既定の XAML スキーマコンテキストでは、この属性の値は <xref:System.Reflection.MemberInfo.Name%2A> 目的の型の、またはその <xref:System.Reflection.MemberInfo.Name%2A> 前に既定以外の xaml 名前空間マッピングのプレフィックスが付いているを含んでいます。
 
-マークアップ`x:Type`拡張機能は、オブジェクト要素構文で使用できます。 この場合、拡張機能を正しく初期化するには、<xref:System.Windows.Markup.TypeExtension.TypeName%2A>プロパティの値を指定する必要があります。
+`x:Type`マークアップ拡張機能は、オブジェクト要素構文で使用できます。 この場合、 <xref:System.Windows.Markup.TypeExtension.TypeName%2A> 拡張機能を正しく初期化するには、プロパティの値を指定する必要があります。
 
-マークアップ`x:Type`拡張機能は、詳細な属性としても使用できます。ただし、この使用は一般的ではありません。`<object property="{x:Type TypeName=typeNameValue}" .../>`
+`x:Type`マークアップ拡張機能は、verbose 属性としても使用できます。ただし、この使用は一般的ではありません。`<object property="{x:Type TypeName=typeNameValue}" .../>`
 
 ## <a name="wpf-usage-notes"></a>WPF の使用上の注意
 
-### <a name="default-xaml-namespace-and-type-mapping"></a>既定の XAML 名前空間と型マッピング
+### <a name="default-xaml-namespace-and-type-mapping"></a>既定の XAML 名前空間と型のマッピング
 
-WPF プログラミングの既定の XAML 名前空間には、一般的な XAML シナリオに必要な XAML 型のほとんどが含まれています。したがって、XAML 型の値を参照するときにプレフィックスを回避できることがよくあります。 カスタム アセンブリから型を参照する場合、または WPF アセンブリに存在するが、既定の XAML 名前空間にマップされていない CLR 名前空間の型を参照している場合は、プレフィックスをマップする必要があります。 プレフィックス、XAML 名前空間、および CLR 名前空間のマッピングの詳細については、「 [WPF XAML の XAML 名前空間と名前空間マッピング](../../framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)」を参照してください。
+WPF プログラミングの既定の XAML 名前空間には、一般的な XAML シナリオに必要な XAML 型の大部分が含まれています。そのため、多くの場合、XAML 型の値を参照するときにプレフィックスを避けることができます。 カスタムアセンブリの型を参照している場合、または WPF アセンブリに存在するが、既定の XAML 名前空間にマップされていない CLR 名前空間の型を参照している場合は、プレフィックスの割り当てが必要になることがあります。 プレフィックス、XAML 名前空間、および CLR 名前空間のマッピングの詳細については、「 [WPF xaml の Xaml 名前空間と名前空間のマッピング](/dotnet/desktop/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml)」を参照してください。
 
-### <a name="type-properties-that-support-typename-as-string"></a>文字列として型名をサポートする型プロパティ
+### <a name="type-properties-that-support-typename-as-string"></a>文字列型としての Typename をサポートする型プロパティ
 
-WPF では、マークアップ拡張機能の使用を必要とせずに、型<xref:System.Type>の一部のプロパティ`x:Type`の値を指定できるようにする手法がサポートされています。 代わりに、型に名前を付け、文字列として値を指定できます。 この例は<xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=nameWithType>、<xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>および です。 この動作のサポートは、型コンバーターまたはマークアップ拡張機能を通じて提供されません。 代わりに、 を通じて<xref:System.Windows.FrameworkElementFactory>実装される遅延動作です。
+WPF は <xref:System.Type> 、 `x:Type` マークアップ拡張機能の使用を必要とせずに、型の一部のプロパティの値を指定できるようにする手法をサポートしています。 代わりに、型に名前を付けた文字列として値を指定できます。 この例 <xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=nameWithType> として、とが <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType> あります。 この動作のサポートは、型コンバーターまたはマークアップ拡張機能では提供されません。 代わりに、これはを介して実装される遅延動作です <xref:System.Windows.FrameworkElementFactory> 。
 
-Silverlight は、同様の規則をサポートしています。 実際、現在、Silverlight は`{x:Type}`XAML 言語サポートをサポートしておらず、WPF-Silverlight XAML の移行をサポートすることを目的としたいくつかの状況以外では使用を受け付`{x:Type}`けなくなります。 したがって、文字列としての型名の動作は、値を<xref:System.Type>指定する場合、すべての Silverlight ネイティブ プロパティ評価に組み込まれています。
+Silverlight は同様の規則をサポートしています。 実際、Silverlight では、XAML 言語のサポートは現在サポートされていません `{x:Type}` 。また、 `{x:Type}` WPF と SILVERLIGHT の xaml 移行をサポートするように設計されたいくつかの状況では使用できません。 そのため、typename としての typename の動作は、が値であるすべての Silverlight ネイティブプロパティ評価に組み込まれてい <xref:System.Type> ます。
 
 ## <a name="xaml-2009"></a>XAML 2009
 
-XAML 2009 では、ジェネリック型の追加サポートを提供し、`x:TypeArguments`この`x:Type`サポートを提供する機能の動作を変更します。
+XAML 2009 は、ジェネリック型の追加サポートを提供し、 `x:TypeArguments` `x:Type` このサポートを提供するためにおよびの機能の動作を変更します。
 
-- `x:TypeArguments`また、汎用オブジェクトのインスタンス化に関連付けられたオブジェクト要素は、ルート以外の要素に対して使用できます。 詳細については[、「xaml](xtypearguments-directive.md)2009」セクションを参照してください。
+- `x:TypeArguments` また、ジェネリックオブジェクトのインスタンス化に関連付けられたオブジェクト要素は、ルート以外の要素にもできます。 詳細については、 [X:TypeArguments ディレクティブ](xtypearguments-directive.md)の「XAML 2009」セクションを参照してください。
 
-- XAML 2009 では、マークアップでジェネリック型の制約を指定するための構文がサポートされています。 この機能は、`x:TypeArguments`によって`x:Type`、または 2 つの機能を組み合わせて使用できます。
+- XAML 2009 では、マークアップでジェネリック型の制約を指定するための構文がサポートされています。 これは `x:TypeArguments` 、、、 `x:Type` またはの2つの機能の組み合わせによって使用できます。
 
-- 読み込み用の XAML 2009 を処理する際の WPF XAML 実装は、型を<xref:System.Type>使用する特定のフレームワーク プロパティの暗黙の型変換動作にもこの機能を追加します。
+- XAML 2009 を読み込み用に処理するときの WPF XAML の実装では、型を使用する特定のフレームワークプロパティの暗黙的な型変換動作にもこの機能が追加され <xref:System.Type> ます。
 
-WPF では、XAML 2009 の機能を使用できますが、緩い XAML (マークアップ コンパイルされていない XAML) に対してのみ使用できます。 WPF 向けにマークアップ コンパイルされた XAML、および XAML の BAML 形式は、現在、XAML 2009 のキーワードと機能をサポートしていません。
+WPF では、XAML 2009 の機能を使用できますが、ルース XAML (マークアップコンパイルされていない XAML) に対してのみ使用できます。 WPF 向けにマークアップ コンパイルされた XAML、および XAML の BAML 形式は、現在、XAML 2009 のキーワードと機能をサポートしていません。
 
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Style>
 - [スタイルとテンプレート](../fundamentals/styles-templates-overview.md)
 - [XAML の概要 (WPF)](../fundamentals/xaml.md)
-- [マークアップ拡張機能と WPF XAML](../../framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [マークアップ拡張機能と WPF XAML](/dotnet/desktop/wpf/advanced/markup-extensions-and-wpf-xaml)

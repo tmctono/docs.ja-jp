@@ -7,22 +7,22 @@ helpviewer_keywords:
 - Windows Forms, application settings schema
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
-ms.openlocfilehash: 90d471888950347c041b4824b659ce33fda512d7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: fc9cd8ac3819c6a02019c871e7bd45ceb4c2cef7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81242830"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552311"
 ---
 # <a name="application-settings-schema"></a>アプリケーション設定スキーマ
 
-アプリケーション設定を使用すると、Windows フォームまたは ASP.NET アプリケーションで、アプリケーションスコープの設定とユーザースコープの設定を格納および取得できます。 このコンテキストでは、*設定*は、アプリケーションに固有の情報、または現在のユーザーに固有の情報です。データベース接続文字列からユーザーの優先される既定のウィンドウサイズに至るまでのあらゆるものです。
+アプリケーション設定を使用すると、Windows フォームまたは ASP.NET アプリケーションで、アプリケーションスコープの設定とユーザースコープの設定を格納および取得できます。 このコンテキストでは、 *設定* は、アプリケーションに固有の情報、または現在のユーザーに固有の情報です。データベース接続文字列からユーザーの優先される既定のウィンドウサイズに至るまでのあらゆるものです。
 
-既定では、Windows フォームアプリケーションのアプリケーション設定はクラスを使用します。このクラスは、 <xref:System.Configuration.LocalFileSettingsProvider> .net 構成システムを使用して XML 構成ファイルに設定を格納します。 アプリケーション設定で使用されるファイルの詳細については、「[アプリケーション設定アーキテクチャ](../../winforms/advanced/application-settings-architecture.md)」を参照してください。
+既定では、Windows フォームアプリケーションのアプリケーション設定はクラスを使用します。このクラスは、 <xref:System.Configuration.LocalFileSettingsProvider> .net 構成システムを使用して XML 構成ファイルに設定を格納します。 アプリケーション設定で使用されるファイルの詳細については、「 [アプリケーション設定アーキテクチャ](/dotnet/desktop/winforms/advanced/application-settings-architecture)」を参照してください。
 
 アプリケーション設定は、使用する構成ファイルの一部として、次の要素を定義します。
 
-| 要素                    | Description                                                                           |
+| 要素                    | 説明                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
 | **\<applicationSettings>** | **\<setting>** アプリケーションに固有のすべてのタグが含まれます。                         |
 | **\<userSettings>**        | **\<setting>** 現在のユーザーに固有のすべてのタグが含まれます。                        |
@@ -44,7 +44,7 @@ ms.locfileid: "81242830"
 | 属性        | 説明 |
 | ---------------- | ----------- |
 | **name**         | 必須。 設定の一意の ID。 Visual Studio で作成された設定は、という名前で保存され `ProjectName.Properties.Settings` ます。 |
-| **serializeAs** | 必須。 値をテキストにシリアル化するために使用する形式。 有効な値は次のとおりです。<br><br>- `string`. 値は、を使用して文字列としてシリアル化され <xref:System.ComponentModel.TypeConverter> ます。<br>- `xml`. 値は、XML シリアル化を使用してシリアル化されます。<br>- `binary`. この値は、バイナリシリアル化を使用して、テキストエンコードバイナリとしてシリアル化されます。<br />- `custom`. 設定プロバイダーは、この設定に固有の情報を持ち、シリアル化および逆シリアル化を行います。 |
+| **serializeAs** | 必須です。 値をテキストにシリアル化するために使用する形式。 有効な値は次のとおりです。<br><br>- `string`. 値は、を使用して文字列としてシリアル化され <xref:System.ComponentModel.TypeConverter> ます。<br>- `xml`. 値は、XML シリアル化を使用してシリアル化されます。<br>- `binary`. この値は、バイナリシリアル化を使用して、テキストエンコードバイナリとしてシリアル化されます。<br />- `custom`. 設定プロバイダーは、この設定に固有の情報を持ち、シリアル化および逆シリアル化を行います。 |
 
 ## <a name="value-element"></a>\<value> 要素
 
@@ -90,5 +90,5 @@ ms.locfileid: "81242830"
 
 ## <a name="see-also"></a>関連項目
 
-- [アプリケーション設定の概要](../../winforms/advanced/application-settings-overview.md)
-- [アプリケーション設定アーキテクチャ](../../winforms/advanced/application-settings-architecture.md)
+- [アプリケーション設定の概要](/dotnet/desktop/winforms/advanced/application-settings-overview)
+- [アプリケーション設定アーキテクチャ](/dotnet/desktop/winforms/advanced/application-settings-architecture)

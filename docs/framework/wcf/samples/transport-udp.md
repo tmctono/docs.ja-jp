@@ -2,31 +2,31 @@
 title: トランスポート:UDP
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 44e47dd2d291ffc27d1777a04b645d57984919cd
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: dcf2d9896ab7c95101e224521174b54c88ca3fc2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591437"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559006"
 ---
 # <a name="transport-udp"></a>トランスポート:UDP
 UDP トランスポートのサンプルでは、カスタム Windows Communication Foundation (WCF) トランスポートとして UDP ユニキャストとマルチキャストを実装する方法を示します。 このサンプルでは、チャネルフレームワークと次の WCF のベストプラクティスを使用して、WCF でカスタムトランスポートを作成するための推奨手順について説明します。 カスタム トランスポートを作成する手順は、次のとおりです。  
   
-1. ChannelFactory と ChannelListener がサポートするチャネル[メッセージ交換パターン](#MessageExchangePatterns)(Ioutputchannel、IInputChannel、IDuplexChannel、ioutputchannel、または IReplyChannel) を決定します。 次に、こうしたインターフェイスのセッションフル バリエーションをサポートするかどうかを決定します。  
+1. ChannelFactory と ChannelListener がサポートするチャネル [メッセージ交換パターン](#MessageExchangePatterns) (Ioutputchannel、IInputChannel、IDuplexChannel、ioutputchannel、または IReplyChannel) を決定します。 次に、こうしたインターフェイスのセッションフル バリエーションをサポートするかどうかを決定します。  
   
 2. メッセージ交換パターンをサポートするチャネル ファクトリおよびリスナーを作成します。  
   
 3. ネットワーク固有の例外が、<xref:System.ServiceModel.CommunicationException> の適切な派生クラスに標準化されていることを確認します。  
   
-4. [\<binding>](../../configure-apps/file-schema/wcf/bindings.md)チャネルスタックにカスタムトランスポートを追加する要素を追加します。 詳細については、「[バインド要素の追加](#AddingABindingElement)」を参照してください。  
+4. [\<binding>](../../configure-apps/file-schema/wcf/bindings.md)チャネルスタックにカスタムトランスポートを追加する要素を追加します。 詳細については、「 [バインド要素の追加](#AddingABindingElement)」を参照してください。  
   
 5. バインド要素拡張セクションを追加して、新しいバインド要素を構成システムに公開します。  
   
 6. 他のエンドポイントに機能を伝達するメタデータ拡張を追加します。  
   
-7. 適切に定義されたプロファイルに従って、バインド要素のスタックを事前構成するバインディングを追加します。 詳細については、「[標準バインディングの追加](#AddingAStandardBinding)」を参照してください。  
+7. 適切に定義されたプロファイルに従って、バインド要素のスタックを事前構成するバインディングを追加します。 詳細については、「 [標準バインディングの追加](#AddingAStandardBinding)」を参照してください。  
   
-8. 構成システムにバインディングを開示する、バインディング セクションおよびバインド構成要素を追加します。 詳細については、「[構成サポートの追加](#AddingConfigurationSupport)」を参照してください。  
+8. 構成システムにバインディングを開示する、バインディング セクションおよびバインド構成要素を追加します。 詳細については、「 [構成サポートの追加](#AddingConfigurationSupport)」を参照してください。  
   
 <a name="MessageExchangePatterns"></a>
 ## <a name="message-exchange-patterns"></a>メッセージ交換パターン  
@@ -141,7 +141,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
  また、この要素には、`BindingElement` を複製したり、スキーム (soap.udp) を返したりするためのメンバーも含まれます。  
   
 ## <a name="adding-metadata-support-for-a-transport-binding-element"></a>トランスポート バインド要素のメタデータ サポートの追加  
- トランスポートをメタデータ システムに統合するには、ポリシーのインポートとエクスポートの両方をサポートする必要があります。 これにより、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用して、バインドのクライアントを生成できます。  
+ トランスポートをメタデータ システムに統合するには、ポリシーのインポートとエクスポートの両方をサポートする必要があります。 これにより、 [ServiceModel メタデータユーティリティツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用して、バインドのクライアントを生成できます。  
   
 ### <a name="adding-wsdl-support"></a>WSDL サポートの追加  
  バインディングのトランスポート バインド要素は、メタデータのアドレス指定情報のインポートとエクスポートを行います。 SOAP バインディングを使用する場合は、トランスポート バインド要素によっても、メタデータの正しいトランスポート URI がエクスポートされます。  
@@ -185,7 +185,7 @@ if (soapBinding != null)
   
  Svcutil.exe を実行する場合、Svcutil.exe に WSDL インポートの拡張を読み込ませるために次の 2 つのオプションがあります。  
   
-1. /SvcutilConfig を使用して、Svcutil.exe に構成ファイルをポイントし \<file> ます。  
+1. /SvcutilConfig を使用して、構成ファイルに Svcutil.exe ポイントし \<file> ます。  
   
 2. Svcutil.exe と同じディレクトリにある Svcutil.exe.config に構成セクションを追加します。  
   
@@ -247,7 +247,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
  次に、登録されたクラス (`IPolicyImporterExtension`) から `UdpBindingElementImporter` を実装します。 `ImportPolicy()` で、名前空間内のアサーションを調べ、そのアサーションを処理してトランスポートを生成し、マルチキャストであるかどうかをチェックします。 さらに、処理したアサーションをバインディング アサーションの一覧から削除する必要もあります。 Svcutil.exe を実行する場合、ここでも、統合用に次の 2 つのオプションがあります。  
   
-1. /SvcutilConfig を使用して、Svcutil.exe に構成ファイルをポイントし \<file> ます。  
+1. /SvcutilConfig を使用して、構成ファイルに Svcutil.exe ポイントし \<file> ます。  
   
 2. Svcutil.exe と同じディレクトリにある Svcutil.exe.config に構成セクションを追加します。  
   
@@ -394,7 +394,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>UDP テスト サービスとクライアント  
- このサンプルのトランスポートを使用するテスト コードは、UdpTestService ディレクトリと UdpTestClient ディレクトリで使用できます。 サービス コードは 2 つのテストで構成されています。1 つ目はコードからバインディングとエンドポイントをセットアップするテストで、2 つ目は構成を使用してバインディングとエンドポイントをセットアップするテストです。 両方のテストで、2 つのエンドポイントを使用します。 1つのエンドポイントは、 `SampleUdpProfileBinding` [\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) をに設定してを使用し `true` ます。 もう 1 つのエンドポイントでは、 `UdpTransportBindingElement` が含まれるカスタム バインドを使用します。 これは、をに設定してを使用することと同じです `SampleUdpProfileBinding` [\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) `false` 。 両方のテストでサービスが作成され、各バインドのエンドポイントが追加されてサービスが開きます。その後 Enter キーを押すと、サービスが閉じます。  
+ このサンプルのトランスポートを使用するテスト コードは、UdpTestService ディレクトリと UdpTestClient ディレクトリで使用できます。 サービス コードは 2 つのテストで構成されています。1 つ目はコードからバインディングとエンドポイントをセットアップするテストで、2 つ目は構成を使用してバインディングとエンドポイントをセットアップするテストです。 両方のテストで、2 つのエンドポイントを使用します。 1つのエンドポイントは、 `SampleUdpProfileBinding` [\<reliableSession>](/previous-versions/ms731375(v=vs.90)) をに設定してを使用し `true` ます。 もう 1 つのエンドポイントでは、 `UdpTransportBindingElement` が含まれるカスタム バインドを使用します。 これは、をに設定してを使用することと同じです `SampleUdpProfileBinding` [\<reliableSession>](/previous-versions/ms731375(v=vs.90)) `false` 。 両方のテストでサービスが作成され、各バインドのエンドポイントが追加されてサービスが開きます。その後 Enter キーを押すと、サービスが閉じます。  
   
  このサービス テスト アプリケーションを開始すると、次の出力が表示されます。  
   
@@ -477,6 +477,6 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTranspor
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\Udp`

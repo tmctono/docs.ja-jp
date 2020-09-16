@@ -8,26 +8,26 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: e012ec9ad340c74f5bc776cfc6d8b88326210fec
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 86b9a1d7b0c772a308b9f059bb31c1f489635300
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245336"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559403"
 ---
 # <a name="bindings-and-security"></a>バインディングとセキュリティ
 
 Windows Communication Foundation (WCF) に含まれるシステム指定のバインディングを使用すると、WCF アプリケーションをすばやくプログラミングできます。 1 つの例外を除き、すべてのバインディングにはセキュリティ スキームが含まれており、既定で有効になっています。 ここでは、セキュリティ ニーズに適した正しいバインディングの選択方法について説明します。
 
-WCF セキュリティの概要については、「[セキュリティの概要](security-overview.md)」を参照してください。 バインディングを使用した WCF のプログラミングの詳細については、「 [Wcf セキュリティのプログラミング](programming-wcf-security.md)」を参照してください。
+WCF セキュリティの概要については、「 [セキュリティの概要](security-overview.md)」を参照してください。 バインディングを使用した WCF のプログラミングの詳細については、「 [Wcf セキュリティのプログラミング](programming-wcf-security.md)」を参照してください。
 
-バインディングを既に選択している場合は、セキュリティ[動作](security-behaviors-in-wcf.md)のセキュリティに関連付けられている実行時の動作の詳細を確認できます。
+バインディングを既に選択している場合は、セキュリティ [動作](security-behaviors-in-wcf.md)のセキュリティに関連付けられている実行時の動作の詳細を確認できます。
 
-セキュリティ機能のなかには、システム指定のバインディングを使用してプログラミングできないものがあります。 カスタムバインドを使用した詳細な制御については、「[カスタムバインドを使用したセキュリティ機能](security-capabilities-with-custom-bindings.md)」を参照してください。
+セキュリティ機能のなかには、システム指定のバインディングを使用してプログラミングできないものがあります。 カスタムバインドを使用した詳細な制御については、「 [カスタムバインドを使用したセキュリティ機能](security-capabilities-with-custom-bindings.md)」を参照してください。
 
 ## <a name="security-functions-of-bindings"></a>バインディングのセキュリティ機能
 
-WCF には、ほとんどのニーズを満たすシステム指定のバインディングが多数用意されています。 特定のバインディングでは不十分な場合は、カスタム バインディングを作成することもできます。 システム指定のバインディングの一覧については、「[システム指定のバインディング](../system-provided-bindings.md)」を参照してください。 カスタムバインディングの詳細については、「[カスタムバインド](../extending/custom-bindings.md)」を参照してください。
+WCF には、ほとんどのニーズを満たすシステム指定のバインディングが多数用意されています。 特定のバインディングでは不十分な場合は、カスタム バインディングを作成することもできます。 システム指定のバインディングの一覧については、「 [システム指定のバインディング](../system-provided-bindings.md)」を参照してください。 カスタムバインディングの詳細については、「 [カスタムバインド](../extending/custom-bindings.md)」を参照してください。
 
 WCF のすべてのバインドには、API として、構成ファイルで使用される XML 要素として、という2つの形式があります。 たとえば、 `WSHttpBinding` (API) には、に対応するがあり [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) ます。
 
@@ -47,7 +47,7 @@ WCF のすべてのバインドには、API として、構成ファイルで使
 
 - WS-I で定義されている基本セキュリティ プロファイル
 
-既定では、このバインディングはセキュリティで保護されません。 ASMX サービスと相互運用するように設計されています。 セキュリティを有効にした場合、このバインディングは、インターネット インフォメーション サービス (IIS: Internet Information Services) のセキュリティ機構 (基本認証、ダイジェスト、Windows 統合セキュリティなど) とシームレスに相互運用できるように設計されています。 詳細については、「[トランスポートセキュリティの概要](transport-security-overview.md)」を参照してください。 このバインディングでは、以下をサポートしています。
+既定では、このバインディングはセキュリティで保護されません。 ASMX サービスと相互運用するように設計されています。 セキュリティを有効にした場合、このバインディングは、インターネット インフォメーション サービス (IIS: Internet Information Services) のセキュリティ機構 (基本認証、ダイジェスト、Windows 統合セキュリティなど) とシームレスに相互運用できるように設計されています。 詳細については、「 [トランスポートセキュリティの概要](transport-security-overview.md)」を参照してください。 このバインディングでは、以下をサポートしています。
 
 - HTTPS トランスポート セキュリティ
 
@@ -187,16 +187,16 @@ WCF のすべてのバインドには、API として、構成ファイルで使
 
 ## <a name="custom-bindings"></a>カスタム バインディング
 
-システム指定のバインディングがいずれも要件を満たさない場合は、カスタム セキュリティ バインド要素を使用してカスタム バインディングを作成できます。 詳細については、「[カスタムバインドを使用したセキュリティ機能](security-capabilities-with-custom-bindings.md)」を参照してください。
+システム指定のバインディングがいずれも要件を満たさない場合は、カスタム セキュリティ バインド要素を使用してカスタム バインディングを作成できます。 詳細については、「 [カスタムバインドを使用したセキュリティ機能](security-capabilities-with-custom-bindings.md)」を参照してください。
 
 ## <a name="binding-choices"></a>バインディングの選択肢
 
 次の表は、セキュリティ モード設定で提供される機能をまとめたものです。つまり、セキュリティ モードを `Transport`、`Message`、または `TransportWithMessageCredential` に設定したときに使用できる機能の一覧です。 アプリケーションで必要なセキュリティ機能を決定するときに、この表を参考にしてください。
 
-|設定|機能|
+|設定|特徴|
 |-------------|--------------|
 |トランスポート|サーバー認証<br /><br /> クライアント認証<br /><br /> Point-to-Point のセキュリティ<br /><br /> 相互運用性<br /><br /> ハードウェアの高速化<br /><br /> 高スループット<br /><br /> セキュリティで保護されたファイアウォール<br /><br /> 待ち時間の長いアプリケーション<br /><br /> 複数のホップでの再暗号化|
-|Message|サーバー認証<br /><br /> クライアント認証<br /><br /> エンドツーエンドのセキュリティ<br /><br /> 相互運用性<br /><br /> 多様なクレーム<br /><br /> フェデレーション<br /><br /> 多要素認証<br /><br /> カスタム トークン<br /><br /> Notary/Timestamp サービス<br /><br /> 待ち時間の長いアプリケーション<br /><br /> メッセージ署名の永続化|
+|メッセージ|サーバー認証<br /><br /> クライアント認証<br /><br /> エンドツーエンドのセキュリティ<br /><br /> 相互運用性<br /><br /> 多様なクレーム<br /><br /> フェデレーション<br /><br /> 多要素認証<br /><br /> カスタム トークン<br /><br /> Notary/Timestamp サービス<br /><br /> 待ち時間の長いアプリケーション<br /><br /> メッセージ署名の永続化|
 |TransportWithMessageCredential|サーバー認証<br /><br /> クライアント認証<br /><br /> Point-to-Point のセキュリティ<br /><br /> 相互運用性<br /><br /> ハードウェアの高速化<br /><br /> 高スループット<br /><br /> 多様なクライアント クレーム<br /><br /> フェデレーション<br /><br /> 多要素認証<br /><br /> カスタム トークン<br /><br /> セキュリティで保護されたファイアウォール<br /><br /> 待ち時間の長いアプリケーション<br /><br /> 複数のホップでの再暗号化|
 
 さまざまなモード設定をサポートするバインディングを次の表に示します。 サービス エンドポイントを作成するときは、使用するバインディングをこの表から選択してください。
@@ -216,26 +216,26 @@ WCF のすべてのバインドには、API として、構成ファイルで使
 
 トランスポート セキュリティ モードで `BasicHttpBinding` または `WSHttpBinding` を使用するときに使用できるクライアント資格情報の種類を、次の表に示します。
 
-|Type|説明|
+|種類|説明|
 |----------|-----------------|
 |なし|クライアントが資格情報を提示する必要がないことを指定します。 匿名クライアントであると解釈されます。|
 |Basic|基本認証です。 詳細については、「RFC 2617 – HTTP 認証: 基本認証とダイジェスト認証」を参照してください <https://go.microsoft.com/fwlink/?LinkId=84023> 。|
 |ダイジェスト|ダイジェスト認証です。 詳細については、「RFC 2617 – HTTP 認証: 基本認証とダイジェスト認証」を参照してください <https://go.microsoft.com/fwlink/?LinkId=84023> 。|
 |NTLM|NTLM (NT LAN Manager) 認証です。|
 |Windows|Windows 認証です。|
-|証明書|証明書を使用して実行される認証です。|
-|IssuedToken|サービスが、Security Token Service または CardSpace によって発行されたトークンを使用して、クライアントの認証を要求できるようにします。 詳細については、「[フェデレーションと発行済みトークン](federation-and-issued-tokens.md)」を参照してください。|
+|Certificate|証明書を使用して実行される認証です。|
+|IssuedToken|サービスが、Security Token Service または CardSpace によって発行されたトークンを使用して、クライアントの認証を要求できるようにします。 詳細については、「 [フェデレーションと発行済みトークン](federation-and-issued-tokens.md)」を参照してください。|
 
 ### <a name="message-client-credentials-in-bindings"></a>バインディングにおけるメッセージ クライアント資格情報
 
 メッセージ セキュリティ モードでバインディングを使用するときに使用できるクライアント資格情報の種類を次の表に示します。
 
-|Type|説明|
+|種類|説明|
 |----------|-----------------|
 |なし|サービスが匿名クライアントとやり取りを行うことが可能になります。|
 |Windows|Windows 資格情報の認証済みコンテキストの制御下で SOAP メッセージ交換を行うことができます。|
 |UserName|サービスが、ユーザー名資格情報を使用したクライアントの認証を要求できるようにします。 セキュリティモードがに設定されている場合 `TransportWithMessageCredential` 、WCF では、パスワードダイジェストの送信や、パスワードを使用したキーの派生、およびメッセージモードセキュリティのためのこのようなキーの使用はサポートされていません。 そのため、ユーザー名の資格情報を使用する場合、WCF はトランスポートがセキュリティで保護されることを強制します。|
-|証明書|証明書を使用したクライアントの認証を、サービスで要求することが可能になります。|
+|Certificate|証明書を使用したクライアントの認証を、サービスで要求することが可能になります。|
 |IssuedToken|サービスは、セキュリティ トークン サービスを使用してカスタム トークンを提供できます。|
 
 ## <a name="see-also"></a>関連項目
@@ -245,4 +245,4 @@ WCF のすべてのバインドには、API として、構成ファイルで使
 - [資格情報の種類の選択](selecting-a-credential-type.md)
 - [カスタム バインディングを使用したセキュリティ機能](security-capabilities-with-custom-bindings.md)
 - [セキュリティ動作](security-behaviors-in-wcf.md)
-- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric のセキュリティ モデル](/previous-versions/appfabric/ee677202(v=azure.10))

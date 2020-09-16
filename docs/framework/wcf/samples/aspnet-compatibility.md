@@ -2,12 +2,12 @@
 title: ASP.NET 互換性
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 23930e0756d3fbefc28a8f650b5a056106145a50
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b1d1a72b9ac3041a1547ac42a33eb7d3e1f87a63
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594713"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553189"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 互換性
 
@@ -22,22 +22,22 @@ ms.locfileid: "84594713"
 
 1. **[コントロール パネル]** を開きます。  [**システムとセキュリティ**] 見出しの下にある [**管理ツール**] アプレットを開きます。 **インターネットインフォメーションサービス (IIS) マネージャー**アプレットを開きます。
 
-2. [**接続**] ウィンドウで treeview を展開します。 [**アプリケーションプール**] ノードを選択します。
+2. [ **接続** ] ウィンドウで treeview を展開します。 [ **アプリケーションプール** ] ノードを選択します。
 
-3. 既定のアプリケーションプールで .NET Framework 4 を使用するように設定するには (既存のサイトで非互換性の問題が発生する可能性があります)、 **DefaultAppPool**リスト項目を右クリックし、[**基本設定...**] を選択します。 **.Net Framework バージョン**のプルダウンを **.net framework v v4.0.30128** (またはそれ以降) に設定します。
+3. 既定のアプリケーションプールで .NET Framework 4 を使用するように設定するには (既存のサイトで非互換性の問題が発生する可能性があります)、 **DefaultAppPool** リスト項目を右クリックし、[ **基本設定...**] を選択します。 **.Net Framework バージョン**のプルダウンを **.net framework v v4.0.30128** (またはそれ以降) に設定します。
 
-4. (他のアプリケーションとの互換性を維持するために) .NET Framework 4 を使用する新しいアプリケーションプールを作成するには、[**アプリケーション**プール] ノードを右クリックし、[**アプリケーションプールの追加**] を選択します。 新しいアプリケーションプールにという名前を設定し、[ **.Net Framework バージョン**] プルダウンを [ **.net framework v v4.0.30128** (またはそれ以降)] に設定します。 次のセットアップ手順を実行したら、 **ServiceModelSamples**アプリケーションを右クリックし、[**アプリケーションの管理**]、[**詳細設定.**..] の順に選択します。 **アプリケーションプール**を新しいアプリケーションプールに設定します。
+4. (他のアプリケーションとの互換性を維持するために) .NET Framework 4 を使用する新しいアプリケーションプールを作成するには、[ **アプリケーション** プール] ノードを右クリックし、[ **アプリケーションプールの追加**] を選択します。 新しいアプリケーションプールにという名前を設定し、[ **.Net Framework バージョン** ] プルダウンを [ **.net framework v v4.0.30128** (またはそれ以降)] に設定します。 次のセットアップ手順を実行したら、 **ServiceModelSamples** アプリケーションを右クリックし、[ **アプリケーションの管理**]、[ **詳細設定.**..] の順に選択します。 **アプリケーションプール**を新しいアプリケーションプールに設定します。
 
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebHost\ASPNetCompatibility`
 
-このサンプルは、電卓サービスを実装する[はじめに](getting-started-sample.md)に基づいています。 `ICalculator` コントラクトは、一連の算術演算を実行して実行結果を保持できるように `ICalculatorSession` コントラクトに変更されました。
+このサンプルは、電卓サービスを実装する [はじめに](getting-started-sample.md)に基づいています。 `ICalculator` コントラクトは、一連の算術演算を実行して実行結果を保持できるように `ICalculatorSession` コントラクトに変更されました。
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -63,7 +63,7 @@ public interface ICalculatorSession
 サービスは、ASP.NET セッションを使用して、各クライアントセッションの結果を格納します。 これにより、サービスは、サービスへの複数の呼び出しによる各クライアントの実行結果を保持できます。
 
 > [!NOTE]
-> ASP.NET セッション状態と WCF セッションは、非常に異なるものです。 WCF セッションの詳細については、「[セッション](session.md)」を参照してください。
+> ASP.NET セッション状態と WCF セッションは、非常に異なるものです。 WCF セッションの詳細については、「 [セッション](session.md) 」を参照してください。
 
 このサービスは、ASP.NET セッション状態に対してより深い依存関係を持ち、ASP.NET 互換モードが正常に機能することを必要とします。 これらの要件は、`AspNetCompatibilityRequirements` 属性を適用することにより宣言によって表されます。
 
@@ -124,10 +124,10 @@ Press <ENTER> to terminate client.
 
 2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](building-the-samples.md)」の手順に従います。
 
-3. ソリューションがビルドされたら、Setup.exe を実行して IIS 7.0 で ServiceModelSamples アプリケーションを設定します。 これで、ServiceModelSamples ディレクトリが IIS 7.0 アプリケーションとして表示されます。
+3. ソリューションをビルドした後、Setup.bat を実行して IIS 7.0 で ServiceModelSamples アプリケーションを設定します。 これで、ServiceModelSamples ディレクトリが IIS 7.0 アプリケーションとして表示されます。
 
 4. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](running-the-samples.md)」の手順に従います。
 
 ## <a name="see-also"></a>関連項目
 
-- [AppFabric のホストおよび永続化のサンプル](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [AppFabric のホストおよび永続化のサンプル](/previous-versions/appfabric/ff383418(v=azure.10))

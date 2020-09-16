@@ -2,16 +2,16 @@
 title: 承認ポリシー
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 5b93f7e05261d9770650335160ddb56404aed94d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a789faae1f6224512f9a8a9ab084c8a82e4a2b87
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585507"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553663"
 ---
 # <a name="authorization-policy"></a>承認ポリシー
 
-このサンプルでは、カスタム クレーム承認ポリシーと、関連するカスタム サービス承認マネージャーを実装する方法を示します。 この方法は、サービスがクレームに基づくアクセス チェックをサービス操作に行う場合や、アクセス チェックを行う前に呼び出し元に特定の権限を与える場合に便利です。 このサンプルでは、クレームの追加プロセスと、完了したクレーム セットに対してアクセス チェックを行うプロセスの両方を示します。 クライアント/サーバー間のすべてのアプリケーション メッセージは署名され、暗号化されます。 `wsHttpBinding` バインディングを使用する際の既定では、クライアントによって提供されるユーザー名とパスワードが、有効な Windows NT アカウントへのログオンに使用されます。 このサンプルでは、カスタム <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> を使用してクライアントを認証する方法を示します。 さらにこのサンプルでは、クライアントが X.509 証明書を使用してサービスを認証する方法を示します。 また、<xref:System.IdentityModel.Policy.IAuthorizationPolicy> と <xref:System.ServiceModel.ServiceAuthorizationManager> の実装も示します。これらの間では、特定のユーザーに対するサービスの特定のメソッドへのアクセスが許可されます。 このサンプルは、[メッセージセキュリティユーザー名](message-security-user-name.md)に基づいていますが、が呼び出される前に要求変換を実行する方法を示してい <xref:System.ServiceModel.ServiceAuthorizationManager> ます。
+このサンプルでは、カスタム クレーム承認ポリシーと、関連するカスタム サービス承認マネージャーを実装する方法を示します。 この方法は、サービスがクレームに基づくアクセス チェックをサービス操作に行う場合や、アクセス チェックを行う前に呼び出し元に特定の権限を与える場合に便利です。 このサンプルでは、クレームの追加プロセスと、完了したクレーム セットに対してアクセス チェックを行うプロセスの両方を示します。 クライアント/サーバー間のすべてのアプリケーション メッセージは署名され、暗号化されます。 `wsHttpBinding` バインディングを使用する際の既定では、クライアントによって提供されるユーザー名とパスワードが、有効な Windows NT アカウントへのログオンに使用されます。 このサンプルでは、カスタム <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> を使用してクライアントを認証する方法を示します。 さらにこのサンプルでは、クライアントが X.509 証明書を使用してサービスを認証する方法を示します。 また、<xref:System.IdentityModel.Policy.IAuthorizationPolicy> と <xref:System.ServiceModel.ServiceAuthorizationManager> の実装も示します。これらの間では、特定のユーザーに対するサービスの特定のメソッドへのアクセスが許可されます。 このサンプルは、 [メッセージセキュリティユーザー名](message-security-user-name.md)に基づいていますが、が呼び出される前に要求変換を実行する方法を示してい <xref:System.ServiceModel.ServiceAuthorizationManager> ます。
 
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。
@@ -451,22 +451,22 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>サンプルを同じコンピューターで実行するには
 
-1. 管理者特権で Visual Studio の開発者コマンドプロンプトを開き、サンプルのインストールフォルダーから*setup.exe*を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
+1. 管理者特権で Visual Studio の開発者コマンドプロンプトを開き、サンプルのインストールフォルダーから *Setup.bat* を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
 
     > [!NOTE]
-    > セットアップの .bat バッチファイルは、Visual Studio の開発者コマンドプロンプトから実行するように設計されています。 Visual Studio の開発者コマンドプロンプト内で設定された PATH 環境変数は、*セットアップの .bat*スクリプトで必要な実行可能ファイルが格納されているディレクトリを指します。
+    > Setup.bat バッチファイルは、Visual Studio の開発者コマンドプロンプトから実行するように設計されています。 Visual Studio の開発者コマンドプロンプト内で設定された PATH 環境変数は、 *Setup.bat* スクリプトで必要な実行可能ファイルを含むディレクトリを指します。
 
-1. *Service\bin*から Service .exe を起動します。
+1. *Service\bin*から Service.exe を起動します。
 
-1. - *Client\bin*から client.exe を起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。
+1. *\ Client\bin*から Client.exe を起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。
 
-クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。
+クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。
 
 ### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには
 
 1. サービス コンピューターにディレクトリを作成します。
 
-2. サービスプログラムファイルを*\ service\bin*からサービスコンピューターのディレクトリにコピーします。 Setup.bat、Cleanup.bat、GetComputerName.vbs、ImportClientCert.bat の各ファイルもサービス コンピューターにコピーします。
+2. サービスプログラムファイルを *\ service\bin* からサービスコンピューターのディレクトリにコピーします。 Setup.bat、Cleanup.bat、GetComputerName.vbs、ImportClientCert.bat の各ファイルもサービス コンピューターにコピーします。
 
 3. クライアント コンピューターにクライアント バイナリ用のディレクトリを作成します。
 
@@ -476,35 +476,35 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
     引数を指定してを実行する `setup.bat` `service` と、コンピューターの完全修飾ドメイン名を使用してサービス証明書が作成され、service *.cer*という名前のファイルにエクスポートされます。
 
-6. *サービスの .exe*を編集して、新しい証明書名 (の属性) を反映します。 `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) これは、コンピューターの完全修飾ドメイン名と同じです。 また、要素の**computername**を \<service> / \<baseAddresses> localhost からサービスコンピューターの完全修飾名に変更します。
+6. *Service.exe.config*を編集して、新しい証明書名 ( `findValue` の属性) を反映し [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) ます。これは、コンピューターの完全修飾ドメイン名と同じです。 また、要素の**computername**を \<service> / \<baseAddresses> localhost からサービスコンピューターの完全修飾名に変更します。
 
-7. サービスの *.cer*ファイルを、サービスディレクトリからクライアントコンピューターのクライアントディレクトリにコピーします。
+7. サービスの *.cer* ファイルを、サービスディレクトリからクライアントコンピューターのクライアントディレクトリにコピーします。
 
 8. クライアントで、 `setup.bat client` 管理者特権で開いた Visual Studio の開発者コマンドプロンプトでを実行します。
 
-    引数を指定してを実行する `setup.bat` `client` と、 **test1**という名前のクライアント証明書が作成され、クライアント証明書が*クライアント .cer*という名前のファイルにエクスポートされます。
+    引数を指定してを実行する `setup.bat` `client` と、 **test1** という名前のクライアント証明書が作成され、クライアント証明書が *クライアント .cer*という名前のファイルにエクスポートされます。
 
-9. クライアントコンピューターの*クライアントの .exe*ファイルで、エンドポイントのアドレス値をサービスの新しいアドレスに変更します。 これを行うには、 **localhost**をサーバーの完全修飾ドメイン名に置き換えます。
+9. クライアントコンピューターの *Client.exe.config* ファイルで、エンドポイントのアドレス値をサービスの新しいアドレスに変更します。 これを行うには、 **localhost** をサーバーの完全修飾ドメイン名に置き換えます。
 
 10. Client.cer ファイルを、クライアント ディレクトリからサーバーのサービス ディレクトリにコピーします。
 
-11. クライアントで、管理者特権で開かれた Visual Studio の開発者コマンドプロンプトで*importservicecert.bat*を実行します。
+11. クライアントで、管理者特権で開いた Visual Studio の開発者コマンドプロンプトで *ImportServiceCert.bat* を実行します。
 
-    これにより、サービス証明書がサービス .cer ファイルから**CurrentUser-TrustedPeople**ストアにインポートされます。
+    これにより、サービス証明書がサービス .cer ファイルから **CurrentUser-TrustedPeople** ストアにインポートされます。
 
-12. サーバーで、管理者特権で開かれた Visual Studio の開発者コマンドプロンプトで*importclientcert.bat*を実行します。
+12. サーバーで、管理者特権で開いた Visual Studio の開発者コマンドプロンプトで *ImportClientCert.bat* を実行します。
 
-    これにより、クライアント証明書がクライアント .cer ファイルから**LocalMachine-TrustedPeople**ストアにインポートされます。
+    これにより、クライアント証明書がクライアント .cer ファイルから **LocalMachine-TrustedPeople** ストアにインポートされます。
 
 13. サーバー コンピューターで、コマンド プロンプト ウィンドウから Service.exe を起動します。
 
 14. クライアント コンピューターで、コマンド プロンプト ウィンドウから Client.exe を起動します。
 
-    クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。
+    クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。
 
 ### <a name="clean-up-after-the-sample"></a>サンプルの後にクリーンアップする
 
-サンプルの実行後にクリーンアップするには、サンプルの実行が完了したら、samples フォルダーで*Cleanup*を実行します。 これにより、証明書ストアからサーバー証明書とクライアント証明書が削除されます。
+サンプルの実行が完了したら、サンプルフォルダー内の *Cleanup.bat* を実行してください。 これにより、証明書ストアからサーバー証明書とクライアント証明書が削除されます。
 
 > [!NOTE]
 > このサンプルを複数のコンピューターで実行している場合、このスクリプトはサービス証明書をクライアントから削除しません。 コンピューター間で証明書を使用する WCF サンプルを実行している場合は、CurrentUser-TrustedPeople ストアにインストールされているサービス証明書を必ずオフにしてください。 削除するには、コマンド `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` を実行します。たとえば、`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` となります。
