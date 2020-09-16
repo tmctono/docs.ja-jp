@@ -5,21 +5,21 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: e58e6757b88958bf8a3547c8a272c2e6298dcecb
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: dfa2841d8bc1ed1429372908f0dda97d178c4ac3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "81432840"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556708"
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009 言語機能
-XAML 2009 とは、既存の XAML 言語仕様を拡張した、XAML の新しい言語機能の短縮名です。 XAML 2009 には、いくつかの新しいディレクティブとコンストラクトが導入されています。 これには[、x:Arguments ディレクティブ](xarguments-directive.md)が含まれます。[ディレクティブを指定](xfactorymethod-directive.md)します。[x:参照マークアップ拡張機能](xreference-markup-extension.md)。[ディレクティブを指定](xtypearguments-directive.md)します。および共通言語プリミティブの組み込み型 (たとえば`x:Char`)
+XAML 2009 とは、既存の XAML 言語仕様を拡張した、XAML の新しい言語機能の短縮名です。 XAML 2009 には、いくつかの新しいディレクティブとコンストラクトが導入されています。 これには、 [X:Arguments ディレクティブ](xarguments-directive.md)が含まれます。 [X:FactoryMethod ディレクティブ](xfactorymethod-directive.md)です。 [x:Reference のマークアップ拡張機能](xreference-markup-extension.md)。 [X:TypeArguments ディレクティブ](xtypearguments-directive.md)です。および共通言語プリミティブの組み込み型 (など `x:Char` )。
 
 ## <a name="xaml-2009-support-in-wpf-and-visual-studio"></a>XAML 2009 は、WPF および Visual Studio でサポートされています。
 
 WPF では XAML 2009 の機能を使用できますが、WPF マークアップ コンパイルされていない XAML に限定されます。 マークアップ コンパイルされた XAML、および XAML の BAML 形式は、現在、XAML 2009 言語のキーワードと機能をサポートしていません。
 
-なお、WPF に Loose XAML を読み込むための既存の方法には、CLR 型および型システムに対するセキュリティ制限およびアクセス制限が課されていることがあります。この制限は、マークアップ コンパイルされた XAML に対する制限よりも限定的です。 詳細については、「 [セキュリティ (WPF)](../../framework/wpf/security-wpf.md) 」または「 [WPF のセキュリティ方針 - プラットフォーム セキュリティ](../../framework/wpf/wpf-security-strategy-platform-security.md)」を参照してください。
+なお、WPF に Loose XAML を読み込むための既存の方法には、CLR 型および型システムに対するセキュリティ制限およびアクセス制限が課されていることがあります。この制限は、マークアップ コンパイルされた XAML に対する制限よりも限定的です。 詳細については、「 [セキュリティ (WPF)](/dotnet/desktop/wpf/security-wpf) 」または「 [WPF のセキュリティ方針 - プラットフォーム セキュリティ](/dotnet/desktop/wpf/wpf-security-strategy-platform-security)」を参照してください。
 
 また、XAML 2009 では、以前の XAML 2006 構造を変更するか、または基本的なマークアップ形式を変更する、追加機能も導入されました。
 

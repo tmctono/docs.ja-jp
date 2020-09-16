@@ -2,12 +2,12 @@
 title: ランタイムの構成オプション
 description: ランタイム構成設定を使用して .NET Core アプリケーションを構成する方法について説明します。
 ms.date: 01/21/2020
-ms.openlocfilehash: 68690689fd4f936e3af76ab647f0b58d8ec6ca27
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 21673a221d0f21202febf4730b955da66132d5f7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761955"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538199"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>.NET Core ランタイム構成設定
 
@@ -18,7 +18,7 @@ ms.locfileid: "83761955"
 - アプリケーションの複数のインスタンスが 1 つのシステムで同時に実行され、最適なパフォーマンスを実現するために各インスタンスを構成する必要がある。
 
 > [!NOTE]
-> このドキュメントは現在作成中です。 ここに記載されている情報が不完全であるか、不正確であることがわかった場合は、[イシューを作成](https://github.com/dotnet/docs/issues)してお知らせになるか、[pull request を送信](https://github.com/dotnet/docs/pulls)してイシューに対処してください。 dotnet/docs リポジトリに対する pull request の送信については、[共同作成者のガイド](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute)のページを参照してください。
+> このドキュメントは現在作成中です。 ここに記載されている情報が不完全であるか、不正確であることがわかった場合は、[イシューを作成](https://github.com/dotnet/docs/issues)してお知らせになるか、[pull request を送信](https://github.com/dotnet/docs/pulls)してイシューに対処してください。 dotnet/docs リポジトリに対する pull request の送信については、[共同作成者のガイド](/contribute/dotnet/dotnet-contribute)のページを参照してください。
 
 .NET Core には、実行時にアプリケーションを構成する次のメカニズムがあります。
 

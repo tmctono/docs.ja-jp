@@ -2,12 +2,12 @@
 title: '統合言語クエリ (LINQ: Language-Integrated Query)'
 ms.date: 07/20/2015
 ms.assetid: a99371f7-097c-49a0-b62b-0e31c34aad0e
-ms.openlocfilehash: 62b07043bd6148d8ec9aeaaf45ee1adb108d2c6c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 53c4033c4626fd34c3cd8752e74af3f8e9b481c3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "85503785"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549943"
 ---
 # <a name="language-integrated-query-linq-visual-basic"></a>統合言語クエリ (LINQ) (Visual Basic)
 LINQ は、強力なクエリ機能を Visual Basic の言語構文に拡張する機能のセットです。 LINQ には、データを照会したり、更新したりするための、容易に覚えることのできる標準的なパターンが採用されており、あらゆる種類のデータ ストアをサポートするようにテクノロジを拡張できます。  .NET Framework には LINQ プロバイダー アセンブリが含まれているため、.NET Framework コレクション、SQL Server データベース、ADO.NET データセット、および XML ドキュメントで LINQ を使用できます。  
@@ -28,7 +28,7 @@ LINQ は、強力なクエリ機能を Visual Basic の言語構文に拡張す�
  [LINQ to Objects (Visual Basic)](linq-to-objects.md)  
  LINQ to Objects を使用してインメモリ データ構造にアクセスする方法を説明するトピックへのリンクがあります。  
   
- [LINQ to XML (Visual Basic)](linq-to-xml.md)  
+ [LINQ to XML (Visual Basic)](../../../../standard/linq/linq-xml-overview.md)  
  LINQ to XML の使い方を説明するトピックへのリンクがあります。これは、ドキュメント オブジェクト モデル (DOM) のインメモリ ドキュメント変更機能を提供し、LINQ クエリ式をサポートします。  
   
  [LINQ to ADO.NET (ポータル ページ)](linq-to-adonet-portal-page.md)  

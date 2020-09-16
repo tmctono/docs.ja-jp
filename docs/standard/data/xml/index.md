@@ -3,12 +3,12 @@ title: XML ドキュメントと XML データ
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-ms.openlocfilehash: a752d634141a56df1caa61eb5d375dd2a402832f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6d2a52567a1fc8bdbbb1d039ac583c889d77d4af
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287689"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540135"
 ---
 # <a name="xml-documents-and-data"></a>XML ドキュメントと XML データ
 
@@ -24,7 +24,7 @@ ms.locfileid: "84287689"
 
 - <xref:System.Xml.Linq>
 
-完全な一覧で、[.NET API ブラウザー](https://docs.microsoft.com/dotnet/api/?term=system.xml)で "System.Xml" を検索、ます。
+完全な一覧で、[.NET API ブラウザー](../../../../api/index.md?term=system.xml)で "System.Xml" を検索、ます。
 
 次の名前空間のクラスでは、World Wide Web Consortium (W3C) 勧告がサポートされます。 次に例を示します。
 
@@ -38,7 +38,7 @@ ms.locfileid: "84287689"
 
 .NET Framework の XML クラスの利点を次に示します。
 
-- **生産性** [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) および [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) により XML でのプログラミングがさらに容易になるほか、SQL と同じようにクエリを利用できます。
+- **生産性** [LINQ to XML (C#)](../../linq/linq-xml-overview.md) および [LINQ to XML (Visual Basic)](../../linq/linq-xml-overview.md) により XML でのプログラミングがさらに容易になるほか、SQL と同じようにクエリを利用できます。
 
 - **拡張性** .NET Framework の XML クラスは、抽象基本クラスと仮想メソッドを使用することによって拡張できます。 たとえば、キャッシュ ストリームをローカルのディスクに格納する <xref:System.Xml.XmlUrlResolver> クラスの派生クラスを作成できます。
 
@@ -60,7 +60,7 @@ ms.locfileid: "84287689"
 
 [XML の処理オプション](xml-processing-options.md) XML データの処理に関するオプションについて説明します。
 
-[メモリ内の XML データの処理](processing-xml-data-in-memory.md) XML データをメモリ内で処理する 3 つの方法について説明します。[LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) および [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)、<xref:System.Xml.XmlDocument> クラス (W3C ドキュメント オブジェクト モデルに基づく)、および <xref:System.Xml.XPath.XPathDocument> クラス (XPath データ モデルに基づく)。
+[メモリ内の XML データの処理](processing-xml-data-in-memory.md) XML データをメモリ内で処理する 3 つの方法について説明します。[LINQ to XML (C#)](../../linq/linq-xml-overview.md) および [LINQ to XML (Visual Basic)](../../linq/linq-xml-overview.md)、<xref:System.Xml.XmlDocument> クラス (W3C ドキュメント オブジェクト モデルに基づく)、および <xref:System.Xml.XPath.XPathDocument> クラス (XPath データ モデルに基づく)。
 
 [XSLT 変換](xslt-transformations.md)\
 XSLT プロセッサの使い方について説明します。

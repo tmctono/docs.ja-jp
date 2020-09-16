@@ -5,17 +5,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 6b0b23c21762009341fd62c029431824dd26d6c3
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 860806fb6406b8ada075b449616f84a360e9ef3a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247261"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555823"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows プロセス アクティブ化サービスでのホスティング
 Windows プロセス アクティブ化サービス (WAS) は、Windows Communication Foundation (WCF) サービスをホストするアプリケーションが含まれているワーカー プロセスのアクティブ化と有効期間を管理します。 WAS プロセス モデルは、HTTP への依存性を取り除くことで、HTTP サーバーの IIS 6.0 プロセス モデルを一般化します。 これにより、WCF サービスは、メッセージベースのアクティブ化をサポートするホスティング環境で HTTP プロトコルと非 HTTP プロトコルの両方を使用できるようになり、特定のコンピューターで多数のアプリケーションをホストできるようになります。  
   
- WAS ホスティング環境で実行される WCF サービスの構築の詳細については、「[方法: was で Wcf サービスをホスト](how-to-host-a-wcf-service-in-was.md)する」を参照してください。  
+ WAS ホスティング環境で実行される WCF サービスの構築の詳細については、「 [方法: was で Wcf サービスをホスト](how-to-host-a-wcf-service-in-was.md)する」を参照してください。  
   
  WAS プロセスモデルは、信頼性が高く管理も容易でリソースを効果的に使用する方法でアプリケーションのホストを実現するいくつかの機能を提供します。  
   
@@ -26,10 +26,10 @@ Windows プロセス アクティブ化サービス (WAS) は、Windows Communic
 - 集中化されたアプリケーション設定と管理。  
   
 - 完全な IIS インストールの配置スペースを必要とせずに、アプリケーションで IIS プロセス モデルを利用可能。  
-[Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10))は、IIS 7.0 および Windows プロセスアクティブ化サービス (WAS) と連携して、NET4 WCF および WF サービスのための豊富なアプリケーションホスティング環境を提供します。 この利点には、プロセス ライフサイクル管理、プロセス リサイクル、共有ホスティング、迅速な障害保護、プロセスの孤立化、オンデマンド アクティブ化、状態監視などがあります。 詳細については、「 [appfabric のホスティング機能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))」と「 [appfabric のホスティングの概念](https://docs.microsoft.com/previous-versions/appfabric/ee677371(v=azure.10))」を参照してください。  
+[Windows Server AppFabric](/previous-versions/appfabric/ff384253(v=azure.10)) は、IIS 7.0 および Windows プロセスアクティブ化サービス (WAS) と連携して、NET4 WCF および WF サービスのための豊富なアプリケーションホスティング環境を提供します。 この利点には、プロセス ライフサイクル管理、プロセス リサイクル、共有ホスティング、迅速な障害保護、プロセスの孤立化、オンデマンド アクティブ化、状態監視などがあります。 詳細については、「 [appfabric のホスティング機能](/previous-versions/appfabric/ee677189(v=azure.10)) 」と「 [appfabric のホスティングの概念](/previous-versions/appfabric/ee677371(v=azure.10))」を参照してください。  
   
 ## <a name="elements-of-the-was-addressing-model"></a>WAS アドレス指定モデルの要素  
- アプリケーションには、サーバーによって有効期間と実行環境が管理されているコード単位である URI (Uniform Resource Identifier) アドレスがあります。 1 つの WAS サーバー インスタンスを多数の異なるアプリケーションでホームとすることができます。 サーバーは、アプリケーションを*サイト*と呼ばれるグループに編成します。 サイト内でアプリケーションは階層で整理されます。この階層は URI の構造に反映されてアプリケーションの外部アドレスとして提供されます。  
+ アプリケーションには、サーバーによって有効期間と実行環境が管理されているコード単位である URI (Uniform Resource Identifier) アドレスがあります。 1 つの WAS サーバー インスタンスを多数の異なるアプリケーションでホームとすることができます。 サーバーは、アプリケーションを *サイト*と呼ばれるグループに編成します。 サイト内でアプリケーションは階層で整理されます。この階層は URI の構造に反映されてアプリケーションの外部アドレスとして提供されます。  
   
  アプリケーション アドレスは、ベース URI プレフィックスとアプリケーション固有の相対アドレス (パス) の 2 つの部分に分かれます。この 2 つの部分が結合されアプリケーションの外部アドレスが提供されます。 ベース URI プレフィックスは、サイト バインドで構築され、サイト内のすべてのアプリケーションで使用されます。 アプリケーションアドレスは、アプリケーション固有のパスフラグメント ("/applicationone" など) を取得し、それらをベース URI プレフィックス (例: "net.tcp:/localhost") に追加することによって作成され、完全なアプリケーション URI に到達します。  
   
@@ -55,4 +55,4 @@ Windows プロセス アクティブ化サービス (WAS) は、Windows Communic
 - [WCF で使用するための WAS を設定する](configuring-the-wpa--service-for-use-with-wcf.md)
 - [方法: WCF アクティブ化コンポーネントをインストールして設定する](how-to-install-and-configure-wcf-activation-components.md)
 - [方法: WAS で WCF サービスをホストする](how-to-host-a-wcf-service-in-was.md)
-- [AppFabric のホスティング機能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [AppFabric のホスティング機能](/previous-versions/appfabric/ee677189(v=azure.10))

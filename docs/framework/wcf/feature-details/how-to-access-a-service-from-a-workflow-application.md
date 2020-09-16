@@ -2,39 +2,39 @@
 title: '方法: ワークフロー アプリケーションからサービスにアクセスする'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 2ce79b726b623c2a25bf14065682e685455ca575
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7375dc4f9af2eb0209b83724cd2ac9b9619b56dd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597242"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556877"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>方法: ワークフロー アプリケーションからサービスにアクセスする
-このトピックでは、ワークフロー コンソール アプリケーションからワークフロー サービスを呼び出す方法について説明します。 これは、「[方法: メッセージングアクティビティを使用してワークフローサービスを作成する](how-to-create-a-workflow-service-with-messaging-activities.md)」トピックの完了に依存します。 このトピックでは、ワークフローアプリケーションからワークフローサービスを呼び出す方法について説明しますが、同じメソッドを使用して、ワークフローアプリケーションから任意の Windows Communication Foundation (WCF) サービスを呼び出すこともできます。
+このトピックでは、ワークフロー コンソール アプリケーションからワークフロー サービスを呼び出す方法について説明します。 これは、「 [方法: メッセージングアクティビティを使用してワークフローサービスを作成する](how-to-create-a-workflow-service-with-messaging-activities.md) 」トピックの完了に依存します。 このトピックでは、ワークフローアプリケーションからワークフローサービスを呼び出す方法について説明しますが、同じメソッドを使用して、ワークフローアプリケーションから任意の Windows Communication Foundation (WCF) サービスを呼び出すこともできます。
 
 ### <a name="create-a-workflow-console-application-project"></a>ワークフロー コンソール アプリケーション プロジェクトの作成
 
 1. Visual Studio 2012 を起動します。
 
-2. 「[方法: メッセージングアクティビティを使用してワークフローサービスを作成](how-to-create-a-workflow-service-with-messaging-activities.md)する」のトピックで作成した myのサービスプロジェクトを読み込みます。
+2. 「 [方法: メッセージングアクティビティを使用してワークフローサービスを作成](how-to-create-a-workflow-service-with-messaging-activities.md) する」のトピックで作成した myのサービスプロジェクトを読み込みます。
 
 3. **ソリューションエクスプローラー**で**my[サービス**] ソリューションを右クリックし、[**追加**]、[**新しいプロジェクト**] の順に選択します。 プロジェクトの種類の一覧から、[**インストールされたテンプレート**と**ワークフローコンソールアプリケーション**] の [**ワークフロー** ] を選択します。 次の図に示すように、プロジェクトに MyWFClient という名前を付け、既定の場所を使用します。
 
      ![[新しいプロジェクトの追加] ダイアログ](./media/how-to-access-a-service-from-a-workflow-application/add-new-project-dialog.jpg)
 
-     [ **OK** ] ボタンをクリックして、[**新しいプロジェクトの追加] ダイアログボックス**を閉じます。
+     [ **OK** ] ボタンをクリックして、[ **新しいプロジェクトの追加] ダイアログボックス**を閉じます。
 
-4. プロジェクトが作成されると、Workflow1.xaml ファイルがデザイナーで開かれます。 まだ開いていない場合は [**ツールボックス**] タブをクリックしてツールボックスを開き、プッシュピンをクリックしてツールボックスウィンドウを開いたままにします。
+4. プロジェクトが作成されると、Workflow1.xaml ファイルがデザイナーで開かれます。 まだ開いていない場合は [ **ツールボックス** ] タブをクリックしてツールボックスを開き、プッシュピンをクリックしてツールボックスウィンドウを開いたままにします。
 
 5. **Ctrl** + **F5**キーを押して、サービスをビルドして起動します。 以前と同様に、ASP.NET 開発サーバーが起動され、Internet Explorer に WCF ヘルプ ページが表示されます。 このページの URI は、次の手順で使用する必要があるため、確認しておいてください。
 
      ![WCF ヘルプページと URI を表示している IE](./media/how-to-access-a-service-from-a-workflow-application/ie-wcf-help-page-uri.jpg)
 
-6. **ソリューションエクスプローラー**で**myのクライアント**プロジェクトを右クリックし、[ **Add**  >  **サービス参照**の追加] を選択します。 [**検出**] ボタンをクリックして、現在のソリューションで任意のサービスを検索します。 [サービス] ボックスで、Service1.xamlx の横にある三角形をクリックします。 Service1 の横にある三角形をクリックして、Service1 サービスによって実装されるコントラクトの一覧を表示します。 **サービス**の一覧で [ **Service1** ] ノードを展開します。 次の図に示すように、Echo 操作は**操作**の一覧に表示されます。
+6. **ソリューションエクスプローラー**で**myのクライアント**プロジェクトを右クリックし、[ **Add**  >  **サービス参照**の追加] を選択します。 [ **検出** ] ボタンをクリックして、現在のソリューションで任意のサービスを検索します。 [サービス] ボックスで、Service1.xamlx の横にある三角形をクリックします。 Service1 の横にある三角形をクリックして、Service1 サービスによって実装されるコントラクトの一覧を表示します。 **サービス**の一覧で [ **Service1** ] ノードを展開します。 次の図に示すように、Echo 操作は **操作** の一覧に表示されます。
 
      ![[サービス参照の追加] ダイアログ](./media/how-to-access-a-service-from-a-workflow-application/add-service-reference.jpg)
 
-     既定の名前空間をそのままにし、[ **OK** ] をクリックして [**サービス参照の追加**] ダイアログボックスを閉じます。 次のダイアログ ボックスが表示されます。
+     既定の名前空間をそのままにし、[ **OK** ] をクリックして [ **サービス参照の追加** ] ダイアログボックスを閉じます。 次のダイアログ ボックスが表示されます。
 
      ![サービス参照の追加通知ダイアログ](./media/how-to-access-a-service-from-a-workflow-application/add-service-reference-dialog.jpg)
 
@@ -42,9 +42,9 @@ ms.locfileid: "84597242"
 
      ![ツールボックスの Echo アクティビティ](./media/how-to-access-a-service-from-a-workflow-application/echo-activity-toolbox.jpg)
 
-7. <xref:System.Activities.Statements.Sequence> アクティビティをデザイナー画面にドラッグ アンド ドロップします。 これは、ツールボックスの [**制御フロー** ] セクションにあります。
+7. <xref:System.Activities.Statements.Sequence> アクティビティをデザイナー画面にドラッグ アンド ドロップします。 これは、ツールボックスの [ **制御フロー** ] セクションにあります。
 
-8. アクティビティがフォーカスされた状態で、 <xref:System.Activities.Statements.Sequence> [**変数**] リンクをクリックし、という名前の文字列変数を追加し `inString` ます。 `"Hello, world"`次の図に示すように、変数にの既定値とという名前の文字列変数を指定し `outString` ます。
+8. アクティビティがフォーカスされた状態で、 <xref:System.Activities.Statements.Sequence> [ **変数** ] リンクをクリックし、という名前の文字列変数を追加し `inString` ます。 `"Hello, world"`次の図に示すように、変数にの既定値とという名前の文字列変数を指定し `outString` ます。
 
      ![InString 変数の追加](./media/how-to-access-a-service-from-a-workflow-application/add-instring-variable.jpg)
 
@@ -66,4 +66,4 @@ ms.locfileid: "84597242"
 
 - [ワークフロー サービス](workflow-services.md)
 - [方法: メッセージング アクティビティを使用してワークフロー サービスを作成する](how-to-create-a-workflow-service-with-messaging-activities.md)
-- [Web プロジェクトでのワークフローからの WCF サービスの使用](https://docs.microsoft.com/archive/blogs/endpoint/how-to-consume-a-wcf-service-from-a-wf4-workflow)
+- [Web プロジェクトでのワークフローからの WCF サービスの使用](/archive/blogs/endpoint/how-to-consume-a-wcf-service-from-a-wf4-workflow)

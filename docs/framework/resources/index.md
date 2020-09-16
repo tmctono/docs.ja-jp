@@ -12,12 +12,12 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-ms.openlocfilehash: 105325170389917bfb2022314791aa1ed5923db3
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 3941c912348a652ddcbaea517cf7626c2a8f88e3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865165"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535571"
 ---
 # <a name="resources-in-net-apps"></a>.NET アプリのリソース
 
@@ -25,7 +25,7 @@ ms.locfileid: "86865165"
 
 .NET Framework および .NET Core では、リソースの作成とローカライズが包括的にサポートされます。 さらに、.NET では、ローカライズされたリソースのパッケージ化および配置のためのシンプルなモデルがサポートされています。
 
-ASP.NET のリソースについては、「[ASP.NET Web ページのリソースの概要](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100))」を参照してください。
+ASP.NET のリソースについては、「[ASP.NET Web ページのリソースの概要](/previous-versions/aspnet/ms227427(v=vs.100))」を参照してください。
 
 ## <a name="create-and-localize-resources"></a>リソースを作成してローカライズする
 
@@ -53,7 +53,7 @@ ASP.NET のリソースについては、「[ASP.NET Web ページのリソー�
 
 現在の UI カルチャを設定する方法の詳細については、<xref:System.Globalization.CultureInfo> と <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> のリファレンス ページを参照してください。
 
-これで、<xref:System.Resources.ResourceManager?displayProperty=nameWithType> クラスを使用して、現在の UI カルチャまたは特定のカルチャのリソースを取得できます。 <xref:System.Resources.ResourceManager> クラスは、リソースを取得する場合に最もよく使用されますが、<xref:System.Resources?displayProperty=nameWithType> 名前空間には、リソースの取得に使用できるその他の型も含まれています。 次のようなものがあります。
+これで、<xref:System.Resources.ResourceManager?displayProperty=nameWithType> クラスを使用して、現在の UI カルチャまたは特定のカルチャのリソースを取得できます。 <xref:System.Resources.ResourceManager> クラスは、リソースを取得する場合に最もよく使用されますが、<xref:System.Resources?displayProperty=nameWithType> 名前空間には、リソースの取得に使用できるその他の型も含まれています。 次の設定があります。
 
 - <xref:System.Resources.ResourceReader> クラス。アセンブリに埋め込まれているリソースまたはスタンドアロンの .resources バイナリ ファイルに格納されているリソースを列挙できます。 これは、実行時に使用可能なリソースの正確な名前がわからない場合に役立ちます。
 

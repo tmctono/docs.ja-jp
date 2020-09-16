@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-ms.openlocfilehash: 7dd50fcc07c6c090042cf87acb4aa5d2b5321a68
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1ebc4e145528c3025b0299ea7e421c248c28cdc0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579580"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556370"
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>方法: WCF クライアントと WSE3.0 サービスを相互運用するために構成する
 Windows Communication Foundation (WCF) クライアントは、WS-ADDRESSING 仕様の8月2004バージョンを使用するように WCF クライアントが構成されている場合に、Web サービス拡張 Microsoft .NET 3.0 (WSE) サービスとのワイヤレベルの互換性があります。  
   
 ### <a name="to-configure-a-wcf-client-to-interoperate-with-a-wse-30-web-service"></a>WSE 3.0 Web サービスと相互運用するように WCF クライアントを構成するには  
   
-1. [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を実行して、WSE 3.0 Web サービス用の WCF クライアントを作成します。  
+1. [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を実行して、WSE 3.0 Web サービス用の WCF クライアントを作成します。  
   
      WSE Web サービスの場合は、WCF クライアントクラスが作成されます。  
   
-     WCF クライアントの作成の詳細については、「[方法: クライアントを作成](../how-to-create-a-wcf-client.md)する」を参照してください。  
+     WCF クライアントの作成の詳細については、「 [方法: クライアントを作成](../how-to-create-a-wcf-client.md)する」を参照してください。  
   
 2. WSE 3.0 Web サービスと通信できるバインディングを表すクラスを作成します。  
   
-     次のクラスは、 [WSE との相互運用](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)のサンプルに含まれています。  
+     次のクラスは、 [WSE との相互運用](/previous-versions/dotnet/netframework-3.5/ms752257(v=vs.90)) のサンプルに含まれています。  
   
     1. <xref:System.ServiceModel.Channels.Binding> クラスから派生するクラスを作成します。  
   
@@ -64,4 +64,4 @@ Windows Communication Foundation (WCF) クライアントは、WS-ADDRESSING 仕
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.Channels.Binding>
-- [WSE との相互運用](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)
+- [WSE との相互運用](/previous-versions/dotnet/netframework-3.5/ms752257(v=vs.90))

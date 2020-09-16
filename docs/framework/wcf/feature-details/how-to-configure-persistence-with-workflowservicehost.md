@@ -2,15 +2,15 @@
 title: '方法: WorkflowServiceHost を使用して永続性を構成する'
 ms.date: 03/30/2017
 ms.assetid: e31cd4df-13a3-4a9a-9be8-5243e0055356
-ms.openlocfilehash: 4ed9c76f091e75cf6ba7658f0314d2e21bbe962e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 93397923154d780ed3b714bf0bb95c15bc71bbfb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599114"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556311"
 ---
 # <a name="how-to-configure-persistence-with-workflowservicehost"></a>方法: WorkflowServiceHost を使用して永続性を構成する
-このトピックでは、構成ファイルを使用して、<xref:System.ServiceModel.Activities.WorkflowServiceHost> でホストされるワークフローに対して永続化を有効にするように、SQL Workflow Instance Store の機能を構成する方法について説明します。 SQL Workflow Instance Store 機能を使用する前に、ワークフロー インスタンスの永続化に使用する SQL データベースを作成する必要があります。 詳細については、「[方法: ワークフローとワークフローサービスの SQL 永続化を有効](../../windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)にする」を参照してください。  
+このトピックでは、構成ファイルを使用して、<xref:System.ServiceModel.Activities.WorkflowServiceHost> でホストされるワークフローに対して永続化を有効にするように、SQL Workflow Instance Store の機能を構成する方法について説明します。 SQL Workflow Instance Store 機能を使用する前に、ワークフロー インスタンスの永続化に使用する SQL データベースを作成する必要があります。 詳細については、「 [方法: ワークフローとワークフローサービスの SQL 永続化を有効](../../windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)にする」を参照してください。  
   
 ### <a name="to-configure-the-sql-workflow-instance-store-in-configuration"></a>構成において SQL Workflow Instance Store を構成するには  
   
@@ -31,7 +31,7 @@ ms.locfileid: "84599114"
     </serviceBehaviors>  
     ```  
   
-     SQL workflow instance store を構成する方法の詳細については、「[方法: ワークフローとワークフローサービスの Sql 永続化を有効](../../windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)にする」を参照してください。 <> behavior 要素の個々の設定の詳細については `sqlWorkflowInstanceStore` 、「 [SQL Workflow Instance Store](../../windows-workflow-foundation/sql-workflow-instance-store.md)」を参照してください。 Windows Server AppFabric は自己の永続ストアを提供します。 詳細については、「 [Windows Server App Fabric の永続](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10))化」を参照してください。  
+     SQL workflow instance store を構成する方法の詳細については、「 [方法: ワークフローとワークフローサービスの Sql 永続化を有効](../../windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)にする」を参照してください。 <> behavior 要素の個々の設定の詳細については `sqlWorkflowInstanceStore` 、「 [SQL Workflow Instance Store](../../windows-workflow-foundation/sql-workflow-instance-store.md)」を参照してください。 Windows Server AppFabric は自己の永続ストアを提供します。 詳細については、「 [Windows Server App Fabric の永続](/previous-versions/appfabric/ee677272(v=azure.10))化」を参照してください。  
   
     > [!NOTE]
     > 前の構成例では、簡略化された構成を使用しています。 詳細については、「[構成の簡略化](../simplified-configuration.md)」を参照してください。  
@@ -52,15 +52,15 @@ ms.locfileid: "84599114"
     });  
     ```  
   
-     SQL workflow instance store を構成する方法の詳細については、「[方法: ワークフローとワークフローサービスの Sql 永続化を有効](../../windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)にする」を参照してください。 Behavior 要素の個々の設定の詳細については <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> 、「 [SQL Workflow Instance Store](../../windows-workflow-foundation/sql-workflow-instance-store.md)」を参照してください。 Windows Server AppFabric は自己の永続ストアを提供します。 詳細については、「 [Windows Server App Fabric の永続](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10))化」を参照してください。  
+     SQL workflow instance store を構成する方法の詳細については、「 [方法: ワークフローとワークフローサービスの Sql 永続化を有効](../../windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)にする」を参照してください。 Behavior 要素の個々の設定の詳細については <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> 、「 [SQL Workflow Instance Store](../../windows-workflow-foundation/sql-workflow-instance-store.md)」を参照してください。 Windows Server AppFabric は自己の永続ストアを提供します。 詳細については、「 [Windows Server App Fabric の永続](/previous-versions/appfabric/ee677272(v=azure.10))化」を参照してください。  
   
     > [!NOTE]
     > 前の構成例では、簡略化された構成を使用しています。 詳細については、「[構成の簡略化](../simplified-configuration.md)」を参照してください。  
   
-     プログラムによって永続化を構成する方法の例については、「[方法: ワークフローとワークフローサービスの永続化を有効](../../windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md)にする」を参照してください。  
+     プログラムによって永続化を構成する方法の例については、「 [方法: ワークフローとワークフローサービスの永続化を有効](../../windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md)にする」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
 - [ワークフロー サービス](workflow-services.md)
 - [ワークフローの永続性](../../windows-workflow-foundation/workflow-persistence.md)
-- [Windows Server AppFabric の永続化](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10))
+- [Windows Server AppFabric の永続化](/previous-versions/appfabric/ee677272(v=azure.10))

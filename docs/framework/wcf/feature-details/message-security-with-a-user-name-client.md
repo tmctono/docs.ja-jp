@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 9447487012cae370d35880e5b780465f9434051b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9bcac0e45d44270d27a4cf04677e967a80e94b90
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602623"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550203"
 ---
 # <a name="message-security-with-a-user-name-client"></a>ユーザー名クライアントを使用したメッセージ セキュリティ
 次の図は、メッセージレベルのセキュリティを使用してセキュリティで保護された Windows Communication Foundation (WCF) サービスとクライアントを示しています。 サービスは X.509 証明書を使用して認証されます。 クライアントはユーザー名とパスワードを使用して認証されます。  
   
- サンプルアプリケーションについては、「[メッセージセキュリティユーザー名](../samples/message-security-user-name.md)」を参照してください。  
+ サンプルアプリケーションについては、「 [メッセージセキュリティユーザー名](../samples/message-security-user-name.md)」を参照してください。  
   
  ![ユーザー名認証を使用したメッセージ セキュリティ](media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
   
 |特徴|説明|  
 |--------------------|-----------------|  
-|セキュリティ モード|Message|  
+|セキュリティ モード|メッセージ|  
 |相互運用性|Windows Communication Foundation (WCF) のみ|  
 |認証 (サーバー)|初期ネゴシエーションにはサーバー認証が必要|  
 |認証 (クライアント)|ユーザー名/パスワード|  
 |整合性|はい、共有のセキュリティ コンテキストを使用します|  
-|機密情報|はい、共有のセキュリティ コンテキストを使用します|  
+|機密性|はい、共有のセキュリティ コンテキストを使用します|  
 |トランスポート|HTTP|  
 |バインド|<xref:System.ServiceModel.WSHttpBinding>|  
   
@@ -131,4 +131,4 @@ ms.locfileid: "84602623"
 - [メッセージ セキュリティ ユーザー名](../samples/message-security-user-name.md)
 - [サービス ID と認証](service-identity-and-authentication.md)
 - [\<identity>](../../configure-apps/file-schema/wcf/identity.md)
-- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric のセキュリティ モデル](/previous-versions/appfabric/ee677202(v=azure.10))

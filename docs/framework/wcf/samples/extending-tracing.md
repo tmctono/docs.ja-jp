@@ -2,18 +2,18 @@
 title: トレースの拡張
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: 59bdfeea41bac812840ffe166895050a6cd1ad2d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f2b9deb346077609193ec08c2c01b10a3ad9357b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600517"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556513"
 ---
 # <a name="extend-tracing"></a>トレースの拡張
 
-このサンプルでは、ユーザー定義のアクティビティトレースをクライアントとサービスコードに記述することによって、Windows Communication Foundation (WCF) トレース機能を拡張する方法を示します。 ユーザー定義のアクティビティトレースを記述すると、ユーザーはトレースアクティビティを作成し、トレースを論理的な作業単位にグループ化することができます。 さらに、転送 (同じエンドポイント内) や伝達 (異なるエンドポイント間) を経由してアクティビティを相互に関連付けることもできます。 このサンプルでは、トレースはクライアントとサービスの両方で有効です。 クライアントとサービスの構成ファイルでトレースを有効にする方法の詳細については、「[トレースとメッセージログ](tracing-and-message-logging.md)」を参照してください。  
+このサンプルでは、ユーザー定義のアクティビティトレースをクライアントとサービスコードに記述することによって、Windows Communication Foundation (WCF) トレース機能を拡張する方法を示します。 ユーザー定義のアクティビティトレースを記述すると、ユーザーはトレースアクティビティを作成し、トレースを論理的な作業単位にグループ化することができます。 さらに、転送 (同じエンドポイント内) や伝達 (異なるエンドポイント間) を経由してアクティビティを相互に関連付けることもできます。 このサンプルでは、トレースはクライアントとサービスの両方で有効です。 クライアントとサービスの構成ファイルでトレースを有効にする方法の詳細については、「 [トレースとメッセージログ](tracing-and-message-logging.md)」を参照してください。  
   
- このサンプルは、[はじめに](getting-started-sample.md)に基づいています。  
+ このサンプルは、 [はじめに](getting-started-sample.md)に基づいています。  
   
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -23,7 +23,7 @@ ms.locfileid: "84600517"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ExtendingTracing`  
   
@@ -31,7 +31,7 @@ ms.locfileid: "84600517"
  ユーザー定義のアクティビティトレースを使用すると、ユーザーは独自のトレースアクティビティを作成して、トレースを論理的な作業単位にグループ化し、転送と伝達を通じてアクティビティを相互に関連付けることができます。また、WCF トレース (ログファイルのディスク領域コストなど) のパフォーマンスコストを削減することもできます。  
   
 ### <a name="add-custom-sources"></a>カスタムソースの追加  
- ユーザー定義のトレースは、クライアントとサービス コードの両方に追加できます。 トレースソースをクライアントまたはサービスの構成ファイルに追加すると、これらのカスタムトレースを記録して[サービストレースビューアーツール (svctraceviewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)に表示できます。 次のコードは、`ServerCalculatorTraceSource` というユーザー定義のトレース ソースを構成ファイルに追加する方法を示します。  
+ ユーザー定義のトレースは、クライアントとサービス コードの両方に追加できます。 トレースソースをクライアントまたはサービスの構成ファイルに追加することで、これらのカスタムトレースを記録し、 [サービストレースビューアーツール (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)に表示することができます。 次のコードは、`ServerCalculatorTraceSource` というユーザー定義のトレース ソースを構成ファイルに追加する方法を示します。  
   
 ```xml  
 <system.diagnostics>  
@@ -99,4 +99,4 @@ ms.locfileid: "84600517"
   
 ## <a name="see-also"></a>関連項目
 
-- [AppFabric の監視のサンプル](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric の監視のサンプル](/previous-versions/appfabric/ff383407(v=azure.10))

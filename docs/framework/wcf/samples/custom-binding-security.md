@@ -2,12 +2,12 @@
 title: カスタム バインディング セキュリティ
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: eb575594cec9ea714578bc104344acc14b00e9df
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ce4cd76a053b9b3611751fe081d0ca710240049d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84592464"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555706"
 ---
 # <a name="custom-binding-security"></a>カスタム バインディング セキュリティ
 
@@ -24,7 +24,7 @@ ms.locfileid: "84592464"
 
 - Windows メッセージ セキュリティ。
 
-カスタム バインドの構成により、トランスポートのセキュリティ保護が有効になると同時に、メッセージ レベルのセキュリティも有効になります。 バインディング要素の順序は、カスタムバインディングを定義する際に重要です。これは、それぞれがチャネルスタック内のレイヤーを表しているためです (「[カスタムバインド](../extending/custom-bindings.md)」を参照してください)。 カスタム バインディングはサービスとクライアントの構成ファイルで定義されます。次のサンプル構成を参照してください。
+カスタム バインドの構成により、トランスポートのセキュリティ保護が有効になると同時に、メッセージ レベルのセキュリティも有効になります。 バインディング要素の順序は、カスタムバインディングを定義する際に重要です。これは、それぞれがチャネルスタック内のレイヤーを表しているためです (「 [カスタムバインド](../extending/custom-bindings.md)」を参照してください)。 カスタム バインディングはサービスとクライアントの構成ファイルで定義されます。次のサンプル構成を参照してください。
 
 ```xml
 <bindings>
@@ -114,16 +114,16 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>サンプルを同じコンピューターで実行するには
 
-1. 管理者特権で Visual Studio の開発者コマンドプロンプトを開き、サンプルのインストールフォルダーから Setup.exe を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
+1. 管理者特権で Visual Studio の開発者コマンドプロンプトを開き、サンプルのインストールフォルダーから Setup.bat を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
 
     > [!NOTE]
-    > セットアップの .bat バッチファイルは、Visual Studio 2012 のコマンドプロンプトから実行するように設計されています。 Visual Studio 2012 のコマンドプロンプト内で設定された PATH 環境変数は、セットアップの .bat スクリプトで必要な実行可能ファイルが格納されているディレクトリを指します。
+    > Setup.bat バッチファイルは、Visual Studio 2012 のコマンドプロンプトから実行するように設計されています。 Visual Studio 2012 のコマンドプロンプト内で設定された PATH 環境変数は、Setup.bat スクリプトで必要な実行可能ファイルを含むディレクトリを指します。
 
 2. Service.exe を \service\bin で起動します。
 
 3. Client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。
 
-4. クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。
+4. クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。
 
 ### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには
 
@@ -140,7 +140,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         > [!NOTE]
         > Setup.bat バッチ ファイルは、Visual Studio 2010 コマンド プロンプトから実行します。 path 環境変数が SDK のインストール ディレクトリを指している必要があります。 この環境変数は、Visual Studio 2010 コマンド プロンプトで自動設定されます。
 
-    5. 前の [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) 手順で生成された証明書のサブジェクト名を反映するように、サービスの .exe ファイル内のを変更します。
+    5. [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)Service.exe.config ファイル内のを、前の手順で生成した証明書のサブジェクト名を反映するように変更します。
 
     6. コマンド プロンプトから Service.exe を起動します。
 
@@ -179,7 +179,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         </client>
         ```
 
-    7. ドメイン環境でサービスが NetworkService または LocalSystem 以外のアカウントで実行されている場合は、クライアントの App.config ファイル内のサービス エンドポイントのエンドポイント ID を変更し、サービスの実行に使用されているアカウントに基づいて、適切な UPN または SPN を設定する必要がある場合があります。 エンドポイント id の詳細については、「[サービス id と認証](../feature-details/service-identity-and-authentication.md)」トピックを参照してください。
+    7. ドメイン環境でサービスが NetworkService または LocalSystem 以外のアカウントで実行されている場合は、クライアントの App.config ファイル内のサービス エンドポイントのエンドポイント ID を変更し、サービスの実行に使用されているアカウントに基づいて、適切な UPN または SPN を設定する必要がある場合があります。 エンドポイント id の詳細については、「 [サービス id と認証](../feature-details/service-identity-and-authentication.md) 」トピックを参照してください。
 
     8. コマンド プロンプトから Client.exe を起動します。
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: 44d06762bf66950ea0cc06986c61ecd548ae2e0c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bbe99b133e7edda191d17e9fe8a1dea89d3f0eb7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576409"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556526"
 ---
 # <a name="message-security-with-mutual-certificates"></a>メッセージ セキュリティと相互の証明書
 次のシナリオは、メッセージセキュリティモードを使用してセキュリティで保護された Windows Communication Foundation (WCF) サービスとクライアントを示しています。 クライアントとサービスは、証明書を使用して認証されます。  
@@ -24,11 +24,11 @@ ms.locfileid: "84576409"
   
 |特徴|説明|  
 |--------------------|-----------------|  
-|セキュリティ モード|Message|  
+|セキュリティ モード|メッセージ|  
 |相互運用性|○ WS-Security および X.509 証明書トークン プロファイルと互換性があるクライアントとサービスで相互運用性があります。|  
 |認証|サーバーとクライアントの相互認証|  
 |整合性|はい|  
-|機密情報|はい|  
+|機密性|はい|  
 |トランスポート|HTTP|  
 |バインド|<xref:System.ServiceModel.WSHttpBinding>|  
   
@@ -161,5 +161,5 @@ ms.locfileid: "84576409"
 ## <a name="see-also"></a>関連項目
 
 - [セキュリティの概要](security-overview.md)
-- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
-- [方法: 開発時にトランスポートセキュリティのために WCF で一時的な証明書を作成およびインストールする](https://docs.microsoft.com/previous-versions/msp-n-p/ff648498(v=pandp.10))
+- [Windows Server AppFabric のセキュリティ モデル](/previous-versions/appfabric/ee677202(v=azure.10))
+- [方法: 開発時にトランスポートセキュリティのために WCF で一時的な証明書を作成およびインストールする](/previous-versions/msp-n-p/ff648498(v=pandp.10))

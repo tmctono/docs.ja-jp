@@ -11,12 +11,12 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-ms.openlocfilehash: 88868ab29fc37854959a044b9c0fed5bd8c82d77
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: f9b9bc00058aefc8f58facff43509e717967c2a7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855765"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555719"
 ---
 # <a name="securing-method-access"></a>メソッド アクセスの保護
 
@@ -30,7 +30,7 @@ ms.locfileid: "87855765"
   
 - クラス、アセンブリ、派生クラスが信頼されている場合は、これらへのアクセシビリティのスコープを制限します。 これが、メソッド アクセスを制限する最も簡単な方法です。 一般に、派生クラスは、派生元のクラスよりも信頼度が低くなる場合がありますが、場合によっては親クラスの id を共有します。 特に、キーワードから信頼を推測しないでください `protected` 。これは、必ずしもセキュリティコンテキストで使用されるわけではありません。  
   
-- 指定された id の呼び出し元へのメソッドアクセスを制限します。基本的には、任意の特定の[証拠](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29)(厳密な名前、発行元、ゾーンなど) を選択します。  
+- 指定された id の呼び出し元へのメソッドアクセスを制限します。基本的には、任意の特定の [証拠](/previous-versions/dotnet/netframework-4.0/7y5x1hcd(v=vs.100)) (厳密な名前、発行元、ゾーンなど) を選択します。  
   
 - 選択したアクセス許可を持つ呼び出し元だけにメソッド アクセスを制限します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "87855765"
   
 - 特定のメソッドをオーバーライドする派生クラスに、特定の ID またはアクセス許可を要求します。  
   
- 呼び出し元に特定の厳密な名前による署名を要求することによってアクセスを制限し、パブリック クラスの保護に役立つ方法の例を次に示します。 この例では、 <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> 厳密な名前の**要求**でを使用します。 厳密な名前でアセンブリに署名する方法についてのタスクベースの情報については、「厳密な名前[付きアセンブリの作成と使用](../../standard/assembly/create-use-strong-named.md)」を参照してください。  
+ 呼び出し元に特定の厳密な名前による署名を要求することによってアクセスを制限し、パブリック クラスの保護に役立つ方法の例を次に示します。 この例では、 <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> 厳密な名前の **要求** でを使用します。 厳密な名前でアセンブリに署名する方法についてのタスクベースの情報については、「厳密な名前 [付きアセンブリの作成と使用](../../standard/assembly/create-use-strong-named.md)」を参照してください。  
   
 ```vb  
 <StrongNameIdentityPermissionAttribute(SecurityAction.Demand, PublicKey := "…hex…", Name := "App1", Version := "0.0.0.0")>  _  
@@ -62,7 +62,7 @@ public class Class1
 > [!NOTE]
 > 新しい透過性モデルは .NET Framework 4 で導入されました。 [透過的セキュリティコード、レベル 2](security-transparent-code-level-2.md)モデルは、属性を使用してセキュリティで保護されたコードを識別し <xref:System.Security.SecurityCriticalAttribute> ます。 セキュリティ クリティカル コードでは、呼び出し元と継承先の両方が完全に信頼されていることが必要です。 .NET Framework の以前のバージョンのコード アクセス セキュリティ規則で実行されているアセンブリは、レベル 2 のアセンブリを呼び出すことができます。 この場合、セキュリティ クリティカル属性は、完全な信頼のためのリンク確認要求として扱われます。  
   
- 厳密な名前が付けられたアセンブリでは、すべてのパブリックにアクセスできるメソッド、プロパティ、およびイベントに[LinkDemand](link-demands.md)が適用され、完全に信頼された呼び出し元に対して使用が制限されます。 この機能を無効にするには、<xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性を適用する必要があります。 このため、信頼関係のない呼び出し元を除外するクラスを明示的に指定することは、署名のないアセンブリまたはこの属性を持つアセンブリだけに必要です。これらの宣言を使用して、信頼関係のない呼び出し元からの利用を想定していない型のサブセットをマークできます。  
+ 厳密な名前が付けられたアセンブリでは、すべてのパブリックにアクセスできるメソッド、プロパティ、およびイベントに [LinkDemand](link-demands.md) が適用され、完全に信頼された呼び出し元に対して使用が制限されます。 この機能を無効にするには、<xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性を適用する必要があります。 このため、信頼関係のない呼び出し元を除外するクラスを明示的に指定することは、署名のないアセンブリまたはこの属性を持つアセンブリだけに必要です。これらの宣言を使用して、信頼関係のない呼び出し元からの利用を想定していない型のサブセットをマークできます。  
   
  クラスおよびメンバーを信頼関係のないコードによって使用されるのを防ぐ方法の例を次に示します。  
   
@@ -236,7 +236,7 @@ class Implemented : ICanCastToMe
 > [!NOTE]
 > このセクションでは、メソッドを `virtual` および `internal` ( `Overloads` `Overridable` `Friend` Visual Basic) の両方として宣言するときのセキュリティの問題について警告します。 この警告は .NET Framework バージョン1.0 および1.1 にのみ適用されます。これは、それ以降のバージョンには適用されません。  
   
- .NET Framework バージョン1.0 および1.1 では、他のアセンブリでコードを使用できないことを確認するときに、型システムのアクセシビリティの微妙な違いに注意する必要があります。 **Virtual**および**internal**として宣言されているメソッド (Visual Basic 内のオーバーロードのオーバーライド可能な**Friend** ) は、親クラスの vtable エントリをオーバーライドできます。また、内部のため、同じアセンブリ内からのみ使用できます。 ただし、オーバーライドのアクセシビリティは**virtual**キーワードによって決定され、そのコードがクラス自体にアクセスできる限り、別のアセンブリからオーバーライドできます。 オーバーライドの可能性が問題を示している場合は、宣言セキュリティを使用して修正します。または、厳密には必要でない場合は、**仮想**キーワードを削除します。  
+ .NET Framework バージョン1.0 および1.1 では、他のアセンブリでコードを使用できないことを確認するときに、型システムのアクセシビリティの微妙な違いに注意する必要があります。 **Virtual**および**internal**として宣言されているメソッド (Visual Basic 内のオーバーロードのオーバーライド可能な**Friend** ) は、親クラスの vtable エントリをオーバーライドできます。また、内部のため、同じアセンブリ内からのみ使用できます。 ただし、オーバーライドのアクセシビリティは **virtual** キーワードによって決定され、そのコードがクラス自体にアクセスできる限り、別のアセンブリからオーバーライドできます。 オーバーライドの可能性が問題を示している場合は、宣言セキュリティを使用して修正します。または、厳密には必要でない場合は、 **仮想** キーワードを削除します。  
   
  言語コンパイラによってコンパイルエラーによってこれらのオーバーライドが回避される場合でも、他のコンパイラで記述されたコードがオーバーライドされる可能性があります。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-ms.openlocfilehash: 0a5cbcd4fa60b819d3ab07a4f221e77ca106c321
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 96df5a0c8487d3ba344b3aa13ca74b92e428d5aa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166844"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556682"
 ---
 # <a name="net-framework-tools"></a>.NET Framework ツール
 
@@ -37,7 +37,7 @@ ms.locfileid: "87166844"
 ActiveX コントロール用の COM タイプ ライブラリに属する型定義を Windows フォーム コントロールに変換します。
 
 - [Caspol.exe (コード アクセス セキュリティ ポリシー ツール)](caspol-exe-code-access-security-policy-tool.md)  
-コンピューター ポリシー レベル、ユーザー ポリシー レベル、およびエンタープライズ ポリシー レベルのセキュリティ ポリシーを表示および構成できます。 .NET Framework 4 以降では、[\<legacyCasPolicy> 要素](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)が `true` に設定されていない限り、このツールがコード アクセス セキュリティ (CAS) ポリシーに影響を与えることはありません。 詳細については、「[セキュリティの変更点](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)」を参照してください。
+コンピューター ポリシー レベル、ユーザー ポリシー レベル、およびエンタープライズ ポリシー レベルのセキュリティ ポリシーを表示および構成できます。 .NET Framework 4 以降では、[\<legacyCasPolicy> 要素](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)が `true` に設定されていない限り、このツールがコード アクセス セキュリティ (CAS) ポリシーに影響を与えることはありません。 詳細については、「[セキュリティの変更点](/previous-versions/dotnet/framework/security/security-changes)」を参照してください。
 
 - [Cert2spc.exe (ソフトウェア発行元証明書テスト ツール)](cert2spc-exe-software-publisher-certificate-test-tool.md)  
 1 つ以上の X.509 証明書からソフトウェア発行元証明書 (SPC: Software Publisher's Certificate) を作成します。 このツールはテスト専用です。
@@ -134,7 +134,7 @@ Windows フォームで使用されるユーザー インターフェイス (UI)
 
 ## <a name="related-sections"></a>関連項目
 
-- [WPF ツール](https://docs.microsoft.com/previous-versions/ms742404(v=vs.110))  
+- [WPF ツール](/previous-versions/ms742404(v=vs.110))  
 isXPS 適合性ツール (isXPS.exe) およびパフォーマンス プロファイリング ツールなどのツールを含みます。
 
 - [Windows Communication Foundation ツール](../wcf/tools.md)  

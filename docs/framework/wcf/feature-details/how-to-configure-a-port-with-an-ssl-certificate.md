@@ -10,12 +10,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 0eccdf916dae7b886cbc4e6563e6dfe17039c321
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 619a893e0973f6691e32446d75f101201a0b6799
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247183"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556383"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>方法: SSL 証明書を使用してポートを構成する
 
@@ -23,7 +23,7 @@ ms.locfileid: "85247183"
   
  ポートを構成する場合に使用するツールは、コンピューターで実行されているオペレーティング システムによって異なります。  
   
- Windows Server 2003 を実行している場合は、HttpCfg.exe ツールを使用します。 Windows Server 2003 では、このツールはインストールされています。 詳細については、「 [httpcfg.exe の概要](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10))」を参照してください。 [Windows サポートツールのドキュメント](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10))では、Httpcfg.exe ツールの構文について説明しています。  
+ Windows Server 2003 を実行している場合は、HttpCfg.exe ツールを使用します。 Windows Server 2003 では、このツールはインストールされています。 詳細については、「 [httpcfg.exe の概要](/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10))」を参照してください。 [Windows サポートツールのドキュメント](/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10))では、Httpcfg.exe ツールの構文について説明しています。  
   
  Windows Vista を実行している場合は、既にインストールされている Netsh.exe ツールを使用します。
   
@@ -32,7 +32,7 @@ ms.locfileid: "85247183"
   
 ## <a name="determine-how-ports-are-configured"></a>ポートの構成方法を決定する  
   
-1. Windows Server 2003 または Windows XP では、次の例に示すように、HttpCfg.exe ツールを使用して現在のポート構成を表示します。**クエリ**と**ssl**スイッチを使用します。  
+1. Windows Server 2003 または Windows XP では、次の例に示すように、HttpCfg.exe ツールを使用して現在のポート構成を表示します。 **クエリ** と **ssl** スイッチを使用します。  
   
     ```console
     httpcfg query ssl  
@@ -102,7 +102,7 @@ ms.locfileid: "85247183"
     httpcfg query ssl>myMachinePorts.txt  
     ```
   
-2. Windows Server 2003 または Windows XP では、HttpCfg.exe ツールと**delete**および**ssl**キーワードを使用します。 **-I**スイッチを使用して、 `IP` : `port` number を指定し、 **-h**スイッチを使用してサムプリントを指定します。  
+2. Windows Server 2003 または Windows XP では、HttpCfg.exe ツールと **delete** および **ssl** キーワードを使用します。 **-I**スイッチを使用して、 `IP` : `port` number を指定し、 **-h**スイッチを使用してサムプリントを指定します。  
   
     ```console  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  

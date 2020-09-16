@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e27a83b5-2698-4996-9032-1e0fed8b91ca
 topic_type:
 - apiref
-ms.openlocfilehash: 7318a7ea3eb1ddb047a799e58ebdfd9ce6cd76d1
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: e474cac6437413565a1ebddfa88c3e228fe59d41
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007586"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556350"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags 列挙型
 マニフェスト ファイルを開くときにメタデータの動作を制御するフラグ値を含めます。  
@@ -59,7 +59,7 @@ typedef enum CorOpenFlags
 |`ofReadOnly`|は、ファイルを読み取り用に開く必要があること、および IMetaDataEmit に対するの呼び出しを行うことができないことを示し `QueryInterface` ます。 [IMetaDataEmit](imetadataemit-interface.md)|  
 |`ofTakeOwnership`|[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)への呼び出しを使用してメモリが割り当てられ、メタデータによって解放されることを示します。|  
 |`ofNoTypeLib`|互換性のために残されています。 このフラグは無視されます。|  
-|`ofNoTransform`|.winmd ファイルの自動変換を無効にする必要があることを示します。 つまり、Windows Runtime タイプから .NET Framework タイプへの投射は無効になります。 詳細については、「 [Windows ランタイムと CLR-.net と Windows ランタイム](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime)」を参照してください。|  
+|`ofNoTransform`|.winmd ファイルの自動変換を無効にする必要があることを示します。 つまり、Windows Runtime タイプから .NET Framework タイプへの投射は無効になります。 詳細については、「 [Windows ランタイムと CLR-.net と Windows ランタイム](/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime)」を参照してください。|  
 |`ofReserved1`|内部使用のために予約されています。|  
 |`ofReserved2`|内部使用のために予約されています。|  
 |`ofReserved`|内部使用のために予約されています。|  

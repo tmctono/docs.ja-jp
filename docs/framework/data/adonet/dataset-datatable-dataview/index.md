@@ -3,12 +3,12 @@ title: DataSet、DataTable、および DataView
 description: 一貫したリレーショナル プログラミング モデルを提供するメモリ常駐型のデータ表現である、ADO.NET の DataSet を使用するいくつかの方法を学習します。
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 53e12f701b9be1938d62f46bbeb6e63d95c03386
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: 4e1c0ea5f1de1715ad8e862e6a3ed7370b53c6ce
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374508"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555865"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>DataSet、DataTable、および DataView
 
@@ -22,7 +22,7 @@ ADO.NET <xref:System.Data.DataSet> はメモリ常駐型のデータ表現であ
   
 - XML を使用して、<xref:System.Data.DataSet> の内容を読み込んだり、永続化したりできます。 詳しくは、「[DataSet での XML の使用](using-xml-in-a-dataset.md)」を参照してください。  
   
-厳密に型指定された <xref:System.Data.DataSet> も XML Web サービスを使用して転送できます。 <xref:System.Data.DataSet> は、XML Web サービスを使用してデータの転送が理想的に行えるように設計されています。 XML Web サービスの概要については、「[XML Web サービスの概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100))」を参照してください。 XML Web サービスから <xref:System.Data.DataSet> を使用する例については、「[XML Web サービスからの DataSet の使用](consuming-a-dataset-from-an-xml-web-service.md)」を参照してください。  
+厳密に型指定された <xref:System.Data.DataSet> も XML Web サービスを使用して転送できます。 <xref:System.Data.DataSet> は、XML Web サービスを使用してデータの転送が理想的に行えるように設計されています。 XML Web サービスの概要については、「[XML Web サービスの概要](/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100))」を参照してください。 XML Web サービスから <xref:System.Data.DataSet> を使用する例については、「[XML Web サービスからの DataSet の使用](consuming-a-dataset-from-an-xml-web-service.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容
 

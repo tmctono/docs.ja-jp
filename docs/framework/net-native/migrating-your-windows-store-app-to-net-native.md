@@ -2,16 +2,16 @@
 title: Windows ストア アプリの .NET ネイティブへの移行
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 5e5c655d0e8d6f1730f27d35525692e110b3c80c
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: cef985200efaf2ed7488d5e99394a5f01cc38594
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309197"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556929"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>Windows ストアアプリを .NET ネイティブに移行する
 
-.NET ネイティブは、Windows ストアまたは開発者のコンピューターでアプリの静的なコンパイルを行います。 これは、デバイス上で Just-In-Time (JIT) コンパイラまたは [ネイティブ イメージ ジェネレーター (Ngen.exe)](../tools/ngen-exe-native-image-generator.md) によって Windows ストア アプリに対して実行される動的なコンパイルとは異なります。 違いにかかわらず、.NET ネイティブは[Windows ストアアプリ用 .net](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)との互換性を維持しようとします。 ほとんどの場合、Windows ストアアプリ用 .NET で動作するものは、.NET ネイティブでも動作します。  ただし、動作に違いがある場合もあります。 このドキュメントでは、Windows ストアアプリ用の標準 .NET と、次の領域の .NET ネイティブにおけるこれらの違いについて説明します。
+.NET ネイティブは、Windows ストアまたは開発者のコンピューターでアプリの静的なコンパイルを行います。 これは、デバイス上で Just-In-Time (JIT) コンパイラまたは [ネイティブ イメージ ジェネレーター (Ngen.exe)](../tools/ngen-exe-native-image-generator.md) によって Windows ストア アプリに対して実行される動的なコンパイルとは異なります。 違いにかかわらず、.NET ネイティブは [Windows ストアアプリ用 .net](/previous-versions/windows/apps/br230302(v=vs.140))との互換性を維持しようとします。 ほとんどの場合、Windows ストアアプリ用 .NET で動作するものは、.NET ネイティブでも動作します。  ただし、動作に違いがある場合もあります。 このドキュメントでは、Windows ストアアプリ用の標準 .NET と、次の領域の .NET ネイティブにおけるこれらの違いについて説明します。
 
 - [全般的なランタイムの違い](#Runtime)
 
@@ -85,7 +85,7 @@ Windows ストアアプリ用 .NET と .NET ネイティブの動作には、リ
 
 - <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> と <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> の基底クラスには隠ぺいされたメンバーが含まれるため、明示的なオーバーライドなしでオーバーライドできます。 これは、その他の [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) メソッドの場合も同様です。
 
-- <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>とは、 <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> 特定の組み合わせ (たとえば、オブジェクトの配列) を作成しようとしたときに失敗しません `byref` 。
+- <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> とは、 <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> 特定の組み合わせ (たとえば、オブジェクトの配列) を作成しようとしたときに失敗しません `byref` 。
 
 - リフレクションを使用して、ポインター パラメーターを持つメンバーを呼び出すことはできません。
 
@@ -225,9 +225,9 @@ Windows ストア アプリ用 .NET では、 <xref:System.Net.Http.HttpClientHa
 - <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>
 
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>はサポートされていますが、 [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)や variant で使用されている場合など、一部のシナリオでは例外をスロー `byref` します。
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> はサポートされていますが、 [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) や variant で使用されている場合など、一部のシナリオでは例外をスロー `byref` します。
 
- 非推奨の[IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)サポート用 api は次のとおりです。
+ 非推奨の [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) サポート用 api は次のとおりです。
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch?displayProperty=fullName>
 - <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual?displayProperty=fullName>
@@ -324,7 +324,7 @@ Windows ストア アプリ用 .NET では、 <xref:System.Net.Http.HttpClientHa
 
 - マネージド型での <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> インターフェイスの実装
 
-- [属性を使用したマネージド型での](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) IDispatch <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> インターフェイスの実装。 ただし、から COM オブジェクトを呼び出すことはできません `IDispatch` 。また、マネージオブジェクトでを実装することもできません `IDispatch` 。
+- [属性を使用したマネージド型での](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) IDispatch <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> インターフェイスの実装。 ただし、から COM オブジェクトを呼び出すことはできません `IDispatch` 。また、マネージオブジェクトでを実装することもできません `IDispatch` 。
 
 リフレクションを使用したプラットフォーム呼び出しメソッドの呼び出しはサポートされません。 この制限を回避するには、別のメソッドでメソッド呼び出しをラップし、リフレクションを使用してラッパーを代わりに呼び出します。
 
@@ -665,5 +665,5 @@ Windows ストアアプリプロジェクトの単体テストライブラリで
 
 - [はじめに](getting-started-with-net-native.md)
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)
-- [Windows ストアアプリ用 .NET の概要](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
+- [Windows ストアアプリ用 .NET の概要](/previous-versions/windows/apps/br230302(v=vs.140))
 - [Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

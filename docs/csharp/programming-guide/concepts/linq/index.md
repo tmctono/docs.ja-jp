@@ -3,12 +3,12 @@ title: 統合言語クエリ (LINQ) (C#)
 description: 統合言語クエリ (LINQ) について説明し、完全なクエリ操作の例を確認します。
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: 6c8844c387177ce858b63a52b1f5c7246b570beb
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 967f69e94b0424e208fb675a312ab306d5e11842
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103421"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556734"
 ---
 # <a name="language-integrated-query-linq"></a>統合言語クエリ (LINQ)
 
@@ -41,7 +41,7 @@ C# を使って LINQ クエリを記述できます。対象は、<xref:System.C
 
 LINQ の詳細については、最初に「[クエリ式の基本](../../../linq/query-expression-basics.md)」で基本的な概念を理解してから、関心のある LINQ テクノロジのドキュメントを参照してください。
 
-- XML ドキュメント:[LINQ to XML](linq-to-xml-overview.md)  
+- XML ドキュメント:[LINQ to XML](../../../../standard/linq/linq-xml-overview.md)  
 - ADO.NET Entity Framework:[LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
 - .NET のコレクション、ファイル、文字列など:[LINQ to Objects](linq-to-objects.md)
 
