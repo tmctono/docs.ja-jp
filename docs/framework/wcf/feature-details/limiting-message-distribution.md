@@ -2,12 +2,12 @@
 title: メッセージ配布の制限
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: 188d7bd365caad7d4cd438744c78ae8e7cd95e7e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e736aba60d7d2b39d1b8eb958a8c72e6e8d55e13
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586313"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555017"
 ---
 # <a name="limiting-message-distribution"></a>メッセージ配布の制限
 
@@ -19,7 +19,7 @@ ms.locfileid: "84586313"
 
 ホップ数をメッセージに追加するには、メッセージ クラスの実装で、適切なプロパティまたはフィールドに `PeerHopCount` を属性として追加します。 この値は、メッセージをメッシュに送信する前に特定の値に設定できます。 このように、ホップ数を使用するとメッシュを経由したメッセージの配布を必要に応じて制限し、不要なメッセージの重複を避けることができます。 これは、メッシュに大量の重複データが含まれている場合や、メッセージをすぐ隣の近隣ノードまたはいくつかのホップ内の近隣ノードに送信する場合に役立ちます。
 
-- コードスニペットと関連情報については、ピアチャネルブログの「 [PeerHopCount Attribute: Message Distribution](https://docs.microsoft.com/archive/blogs/peerchan/the-peerhopcount-attribute-controlling-message-distribution) Post の制御」を参照してください。
+- コードスニペットと関連情報については、ピアチャネルブログの「 [PeerHopCount Attribute: Message Distribution](/archive/blogs/peerchan/the-peerhopcount-attribute-controlling-message-distribution) Post の制御」を参照してください。
 
 ## <a name="message-propagation-filter"></a>メッセージ伝達フィルター
 
@@ -27,7 +27,7 @@ ms.locfileid: "84586313"
 
 <xref:System.ServiceModel.PeerMessagePropagationFilter> は、単一の関数 <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A> を持つ抽象基本クラスです。 メソッド呼び出しの最初の引数には、メッセージの完全なコピーを渡します。 このメッセージに対して行われた変更が実際のメッセージに影響することはありません。 このメソッド呼び出しの最後の引数は、メッセージの送信元 (`PeerMessageOrigination.Local` または `PeerMessageOrigination.Remote`) を識別します。 このメソッドの具体的な実装は、メッセージの転送先 (ローカル アプリケーション (<xref:System.ServiceModel.PeerMessagePropagation>)、リモート クライアント (`Local`)、ローカル アプリケーションとリモート クライアントの両方 (`Remote`)、どちらにも転送しない (`LocalAndRemote`)) を示す `None` 列挙体から定数を返す必要があります。 このフィルターは、対応する `PeerNode` オブジェクトにアクセスし、`PeerNode.MessagePropagationFilter` プロパティで伝達フィルター派生クラスのインスタンスを指定することによって適用できます。 ピア チャネルを開く前に、伝達フィルターがアタッチされていることを確認してください。
 
-- コードスニペットと関連情報については、ピアチャネルブログの「[ピアチャネルと MessagePropagationFilter](https://docs.microsoft.com/archive/blogs/peerchan/peer-channel-and-messagepropagationfilter) post」を参照してください。
+- コードスニペットと関連情報については、ピアチャネルブログの「 [ピアチャネルと MessagePropagationFilter](/archive/blogs/peerchan/peer-channel-and-messagepropagationfilter) post」を参照してください。
 
 ## <a name="contacting-an-individual-node-in-the-mesh"></a>メッシュ内の個別ノードへのアクセス
 
@@ -41,11 +41,11 @@ ms.locfileid: "84586313"
 
 メッセージの配布を制限する必要があるシナリオに遭遇した場合は、次の点を検討してください。
 
-- **だれ**がメッセージを受信する必要がありますか。 1 つの近隣ノードのみか。 メッシュ内の別の場所にあるノードか。 メッシュ内の半分のノードか。
+- **だれ** がメッセージを受信する必要がありますか。 1 つの近隣ノードのみか。 メッシュ内の別の場所にあるノードか。 メッシュ内の半分のノードか。
 
 - このメッセージは**どのくらいの頻度**で送信されますか。
 
-- このメッセージで使用される**帯域幅**の種類
+- このメッセージで使用される **帯域幅** の種類
 
 これらの質問の回答は、ホップ数、メッセージ伝達フィルター、ローカル フィルター、直接接続のいずれを使用するかを決定するのに役立ちます。 次の一般的なガイドラインを考慮してください。
 

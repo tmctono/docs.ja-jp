@@ -8,20 +8,20 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: eb3274b98234324bd47aa456feb4845da5a7f3a9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7a896b12f9e877c00688ade176c1e0c730d9591b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599283"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557607"
 ---
 # <a name="debug-windows-authentication-errors"></a>Windows 認証エラーのデバッグ
 
 セキュリティ機構として Windows 認証を使用する場合、セキュリティ サポート プロバイダー インターフェイス (SSPI: Security Support Provider Interface) がセキュリティ プロセスを処理します。 SSPI 層でセキュリティエラーが発生すると、Windows Communication Foundation (WCF) によって表示されます。 このトピックでは、エラーの診断に役立つフレームワークと一連の質問を示します。  
   
- Kerberos プロトコルの概要については、 [kerberos の説明](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/bb742516(v=technet.10))を参照してください。SSPI の概要については、「 [sspi](/windows/win32/secauthn/sspi)」を参照してください。  
+ Kerberos プロトコルの概要については、 [kerberos の説明](/previous-versions/windows/it-pro/windows-2000-server/bb742516(v=technet.10))を参照してください。SSPI の概要については、「 [sspi](/windows/win32/secauthn/sspi)」を参照してください。  
   
- Windows 認証の場合、WCF は通常、クライアントとサービスの間で Kerberos 相互認証を実行する*ネゴシエート*セキュリティサポートプロバイダー (SSP) を使用します。 Kerberos プロトコルが使用できない場合、既定では、WCF は NT LAN Manager (NTLM) にフォールバックします。 ただし、Kerberos プロトコルのみを使用するように WCF を構成することができます (および Kerberos が使用できない場合は例外をスローします)。 Kerberos プロトコルの制限付き形式を使用するように WCF を構成することもできます。  
+ Windows 認証の場合、WCF は通常、クライアントとサービスの間で Kerberos 相互認証を実行する *ネゴシエート* セキュリティサポートプロバイダー (SSP) を使用します。 Kerberos プロトコルが使用できない場合、既定では、WCF は NT LAN Manager (NTLM) にフォールバックします。 ただし、Kerberos プロトコルのみを使用するように WCF を構成することができます (および Kerberos が使用できない場合は例外をスローします)。 Kerberos プロトコルの制限付き形式を使用するように WCF を構成することもできます。  
   
 ## <a name="debugging-methodology"></a>デバッグ方法  
  基本的な方法は次のとおりです。  
@@ -50,9 +50,9 @@ ms.locfileid: "84599283"
   
 - Local System : ドメインに参加していないコンピューターの SYSTEM ビルトイン アカウント。  
   
-- Domain User : Windows ドメインのユーザー アカウント。 たとえば、 `DomainName\ProfileName`と指定します。  
+- Domain User : Windows ドメインのユーザー アカウント。 (例: `DomainName\ProfileName`)。  
   
-- Domain Machine : Windows ドメインに参加しているコンピューターで実行されている、コンピューター ID を使用するプロセス。 たとえば、 `MachineName\Network Service`と指定します。  
+- Domain Machine : Windows ドメインに参加しているコンピューターで実行されている、コンピューター ID を使用するプロセス。 (例: `MachineName\Network Service`)。  
   
 > [!NOTE]
 > サービス資格情報は、<xref:System.ServiceModel.ICommunicationObject.Open%2A> クラスの <xref:System.ServiceModel.ServiceHost> メソッドが呼び出されたときにキャプチャされます。 クライアント資格情報は、クライアントがメッセージを送信するたびに読み取られます。  
@@ -63,11 +63,11 @@ ms.locfileid: "84599283"
 ### <a name="kerberos-protocol"></a>Kerberos プロトコル  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Kerberos プロトコルでの SPN と UPN の問題  
- Windows 認証を使用し、SSPI が Kerberos プロトコルを使用またはネゴシエートする場合、クライアント エンドポイントが使用する URL には、サービス URL 内のサービスのホストの完全修飾ドメイン名が含まれている必要があります。 これは、サービスを実行しているアカウントがコンピューターの (既定の) サービス プリンシパル名 (SPN: Service Principal Name) キーにアクセスできることを前提としています。このキーは、コンピューターを Active Directory ドメインに追加したときに作成されます。コンピューターの SPN キーにアクセスできるようにするには、Network Service アカウントでサービスを実行するのが最も一般的な方法です。 サービスがコンピューターの SPN キーにアクセスできない場合は、クライアントのエンドポイント ID でサービスを実行しているアカウントの正しい SPN またはユーザー プリンシパル名 (UPN: User Principal Name) を指定する必要があります。 WCF での SPN と UPN の使用方法の詳細については、「[サービス id と認証](service-identity-and-authentication.md)」を参照してください。  
+ Windows 認証を使用し、SSPI が Kerberos プロトコルを使用またはネゴシエートする場合、クライアント エンドポイントが使用する URL には、サービス URL 内のサービスのホストの完全修飾ドメイン名が含まれている必要があります。 これは、サービスを実行しているアカウントがコンピューターの (既定の) サービス プリンシパル名 (SPN: Service Principal Name) キーにアクセスできることを前提としています。このキーは、コンピューターを Active Directory ドメインに追加したときに作成されます。コンピューターの SPN キーにアクセスできるようにするには、Network Service アカウントでサービスを実行するのが最も一般的な方法です。 サービスがコンピューターの SPN キーにアクセスできない場合は、クライアントのエンドポイント ID でサービスを実行しているアカウントの正しい SPN またはユーザー プリンシパル名 (UPN: User Principal Name) を指定する必要があります。 WCF での SPN と UPN の使用方法の詳細については、「 [サービス id と認証](service-identity-and-authentication.md)」を参照してください。  
   
  Web ファームや Web ガーデンなどの負荷分散シナリオでは、各アプリケーションに一意のアカウントを定義し、そのアカウントに SPN を割り当て、アプリケーションのサービスすべてがそのアカウントで実行されるようにするのが一般的です。  
   
- サービスのアカウント用の SPN を取得するには、Active Directory ドメイン管理者である必要があります。 詳細については、「 [Windows 用の Kerberos テクニカル補完](https://docs.microsoft.com/previous-versions/msp-n-p/ff649429(v=pandp.10))」を参照してください。  
+ サービスのアカウント用の SPN を取得するには、Active Directory ドメイン管理者である必要があります。 詳細については、「 [Windows 用の Kerberos テクニカル補完](/previous-versions/msp-n-p/ff649429(v=pandp.10))」を参照してください。  
   
 #### <a name="kerberos-protocol-direct-requires-the-service-to-run-under-a-domain-machine-account"></a>Kerberos プロトコル ダイレクトでは Domain Machine アカウントでサービスを実行する必要がある  
  この状況は、次のコードに示すように、`ClientCredentialType` プロパティが `Windows` に設定され、<xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> プロパティが `false` に設定されている場合に発生します。  
@@ -122,7 +122,7 @@ ms.locfileid: "84599283"
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- 権限借用の詳細については、「[委任と偽装](delegation-and-impersonation-with-wcf.md)」を参照してください。  
+ 権限借用の詳細については、「 [委任と偽装](delegation-and-impersonation-with-wcf.md)」を参照してください。  
   
  もう 1 つの方法として、SYSTEM ビルトイン アカウントを使用する Windows サービスとしてクライアントを実行します。  
   

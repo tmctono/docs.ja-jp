@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: e14bdc12598d0aa6cdd2789b09a04ab8ed134169
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 3b24ff99eee9027d507ef89ca855162f221f826a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141705"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555121"
 ---
 # <a name="specifying-an-assemblys-location"></a>アセンブリの場所の指定
 アセンブリの場所を指定するには、次の2つの方法があります。  
@@ -21,10 +21,10 @@ ms.locfileid: "85141705"
   
 - 要素を使用し [\<probing>](./file-schema/runtime/probing-element.md) ます。  
   
- また、 [.NET Framework 構成ツール (mscorcfg.msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100))を使用して、アセンブリの場所を指定したり、共通言語ランタイムがアセンブリをプローブする場所を指定したりすることもできます。  
+ また、 [.NET Framework 構成ツール (mscorcfg.msc)](/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) を使用して、アセンブリの場所を指定したり、共通言語ランタイムがアセンブリをプローブする場所を指定したりすることもできます。  
   
 ## <a name="using-the-codebase-element"></a>要素の使用 \<codeBase>  
- 要素は、 **\<codeBase>** アセンブリのバージョンをリダイレクトするコンピューターの構成ファイルまたは発行者ポリシーファイルでのみ使用できます。 使用するアセンブリバージョンをランタイムが決定すると、バージョンを決定するファイルのコードベース設定が適用されます。 コードベースが指定されていない場合、ランタイムは通常の方法でアセンブリをプローブします。 詳細については、「[ランタイムがアセンブリを検索する方法](../deployment/how-the-runtime-locates-assemblies.md)」を参照してください。  
+ 要素は、 **\<codeBase>** アセンブリのバージョンをリダイレクトするコンピューターの構成ファイルまたは発行者ポリシーファイルでのみ使用できます。 使用するアセンブリバージョンをランタイムが決定すると、バージョンを決定するファイルのコードベース設定が適用されます。 コードベースが指定されていない場合、ランタイムは通常の方法でアセンブリをプローブします。 詳細については、「 [ランタイムがアセンブリを検索する方法](../deployment/how-the-runtime-locates-assemblies.md)」を参照してください。  
   
  アセンブリの場所を指定する方法を次の例に示します。  
   
@@ -44,13 +44,13 @@ ms.locfileid: "85141705"
 </configuration>  
 ```  
   
- **Version**属性は、厳密な名前を持つすべてのアセンブリに必要ですが、厳密な名前ではないアセンブリでは省略する必要があります。 要素には **\<codeBase>** **href**属性が必要です。 要素でバージョン範囲を指定することはできません **\<codeBase>** 。  
+ **Version**属性は、厳密な名前を持つすべてのアセンブリに必要ですが、厳密な名前ではないアセンブリでは省略する必要があります。 要素には **\<codeBase>** **href** 属性が必要です。 要素でバージョン範囲を指定することはできません **\<codeBase>** 。  
   
 > [!NOTE]
 > 厳密な名前が付けられていないアセンブリのコードベースヒントを指定する場合、ヒントはアプリケーションベースディレクトリのアプリケーションベースまたはサブディレクトリをポイントする必要があります。  
   
 ## <a name="using-the-probing-element"></a>要素の使用 \<probing>  
- 実行時に、プローブによってコードベースのないアセンブリが検索されます。 プローブの詳細については、「[ランタイムがアセンブリを検索する方法](../deployment/how-the-runtime-locates-assemblies.md)」を参照してください。  
+ 実行時に、プローブによってコードベースのないアセンブリが検索されます。 プローブの詳細については、「 [ランタイムがアセンブリを検索する方法](../deployment/how-the-runtime-locates-assemblies.md)」を参照してください。  
   
  アプリケーション構成ファイルの要素を使用して、 [\<probing>](./file-schema/runtime/probing-element.md) ランタイムがアセンブリを検索するときに検索する必要のあるサブディレクトリを指定できます。 次の例は、ランタイムが検索するディレクトリを指定する方法を示しています。  
   

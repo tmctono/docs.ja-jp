@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-ms.openlocfilehash: 179591c272685771fbde12e161cb38b1bd969052
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 847146c2025612689f0d69cc0c23d2be14018c0f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597203"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556838"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>方法 : WCF クライアントで WSE 3.0 サービスにアクセスする
-Windows Communication Foundation (WCF) クライアントは、WCF クライアントが WS-ADDRESSING 仕様の8月2004バージョンを使用するように構成されている場合、Microsoft .NET サービスの Web サービス拡張 (WSE) 3.0 とのワイヤレベルの互換性があります。 ただし、WSE 3.0 サービスでは、metadata exchange (MEX) プロトコルがサポートされていないため、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用して wcf クライアントクラスを作成すると、生成された wcf クライアントにセキュリティ設定が適用されません。 そのため、WCF クライアントが生成された後に、WSE 3.0 サービスが必要とするセキュリティ設定を指定する必要があります。  
+Windows Communication Foundation (WCF) クライアントは、WCF クライアントが WS-ADDRESSING 仕様の8月2004バージョンを使用するように構成されている場合、Microsoft .NET サービスの Web サービス拡張 (WSE) 3.0 とのワイヤレベルの互換性があります。 ただし、WSE 3.0 サービスでは、metadata exchange (MEX) プロトコルがサポートされていないため、 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) を使用して wcf クライアントクラスを作成すると、生成された wcf クライアントにセキュリティ設定が適用されません。 そのため、WCF クライアントが生成された後に、WSE 3.0 サービスが必要とするセキュリティ設定を指定する必要があります。  
   
  これらのセキュリティ設定を適用するには、カスタムバインディングを使用して WSE 3.0 サービスの要件と、WSE 3.0 サービスと WCF クライアントの間の相互運用可能な要件を考慮する必要があります。 これらの相互運用性要件には、前述の 2004 年 8 月版 WS-Addressing 仕様の使用と、WSE 3.0 の既定のメッセージ保護が <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt> であることが含まれます。 WCF の既定のメッセージ保護は <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature> です。 このトピックでは、WSE 3.0 サービスと相互運用する WCF バインドを作成する方法について詳しく説明します。 また、WCF には、このバインディングが組み込まれたサンプルも用意されています。 このサンプルの詳細については、「 [ASMX Web サービスとの相互運用](../samples/interoperating-with-asmx-web-services.md)」を参照してください。  
   
 ### <a name="to-access-a-wse-30-web-service-with-a-wcf-client"></a>WCF クライアントで WSE 3.0 サービスにアクセスするには  
   
-1. [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を実行して、WSE 3.0 Web サービス用の WCF クライアントを作成します。  
+1. [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を実行して、WSE 3.0 Web サービス用の WCF クライアントを作成します。  
   
      WSE 3.0 Web サービスの場合、WCF クライアントが作成されます。 WSE 3.0 は MEX プロトコルをサポートしていないため、このツールを使用して Web サービスのセキュリティ要件を取得することはできません。 アプリケーション開発者は、クライアントのセキュリティ設定を追加する必要があります。  
   
-     WCF クライアントの作成の詳細については、「[方法: クライアントを作成](../how-to-create-a-wcf-client.md)する」を参照してください。  
+     WCF クライアントの作成の詳細については、「 [方法: クライアントを作成](../how-to-create-a-wcf-client.md)する」を参照してください。  
   
 2. WSE 3.0 Web サービスと通信できるバインディングを表すクラスを作成します。  
   
-     次のクラスは、 [WSE との相互運用](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)のサンプルに含まれています。  
+     次のクラスは、 [WSE との相互運用](/previous-versions/dotnet/netframework-3.5/ms752257(v=vs.90)) のサンプルに含まれています。  
   
     1. <xref:System.ServiceModel.Channels.Binding> クラスから派生するクラスを作成します。  
   
@@ -63,4 +63,4 @@ Windows Communication Foundation (WCF) クライアントは、WCF クライア�
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.Channels.Binding>
-- [WSE との相互運用](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)
+- [WSE との相互運用](/previous-versions/dotnet/netframework-3.5/ms752257(v=vs.90))

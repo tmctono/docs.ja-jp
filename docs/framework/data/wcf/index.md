@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: ca6b196e8c910f97ead6d1df5b6c0dd6c49c68a4
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: c36967236c40efbf432d554c3f551aea22cfb148
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85503851"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549680"
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 
@@ -76,7 +76,7 @@ LINQ を使用したい...
 
 より詳しい情報が欲しい...
 
-- [WCF Data Services チームのブログ](https://docs.microsoft.com/archive/blogs/astoriateam/)
+- [WCF Data Services チームのブログ](/archive/blogs/astoriateam/)
 
 - [リソース](wcf-data-services-resources.md)
 
@@ -86,7 +86,7 @@ LINQ を使用したい...
 
 WCF Data Services で使用可能な機能の概要について説明します。
 
-[WCF Data Services 5.0 の新機能](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
+[WCF Data Services 5.0 の新機能](/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
 
 WCF Data Services の新機能と、OData の新機能のサポートについて説明します。
 

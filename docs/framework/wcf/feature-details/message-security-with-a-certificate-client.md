@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: 2b2717bc68da9f07cd38e10a5d75b2a7df9add45
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6221f253746ac304115fe844966e2cf552263d04
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602636"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551146"
 ---
 # <a name="message-security-with-a-certificate-client"></a>メッセージ セキュリティと証明書クライアント
-次のシナリオは、メッセージセキュリティモードを使用してセキュリティで保護された Windows Communication Foundation (WCF) クライアントとサービスを示しています。 クライアントとサービスは、どちらも証明書を使用して認証されます。 詳細については、「[分散アプリケーションセキュリティ](distributed-application-security.md)」を参照してください。
+次のシナリオは、メッセージセキュリティモードを使用してセキュリティで保護された Windows Communication Foundation (WCF) クライアントとサービスを示しています。 クライアントとサービスは、どちらも証明書を使用して認証されます。 詳細については、「 [分散アプリケーションセキュリティ](distributed-application-security.md)」を参照してください。
 
  ![証明書を持つクライアントを示すスクリーンショット。](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
   
- サンプルアプリケーションについては、「[メッセージセキュリティ証明書](../samples/message-security-certificate.md)」を参照してください。  
+ サンプルアプリケーションについては、「 [メッセージセキュリティ証明書](../samples/message-security-certificate.md)」を参照してください。  
 
 |特徴|説明|  
 |--------------------|-----------------|  
-|セキュリティ モード|Message|  
+|セキュリティ モード|メッセージ|  
 |相互運用性|WCF のみ|  
 |認証 (サーバー)|サービス証明書を使用|  
 |認証 (クライアント)|クライアント証明書を使用|  
 |整合性|はい|  
-|機密情報|はい|  
+|機密性|はい|  
 |トランスポート|HTTP|  
 |バインド|<xref:System.ServiceModel.WSHttpBinding>|  
   
@@ -101,7 +101,7 @@ ms.locfileid: "84602636"
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
 ### <a name="configuration"></a>構成  
- 次の構成は、エンドポイントの動作を使用してクライアント証明書を指定します。 証明書の詳細については、「[証明書の使用](working-with-certificates.md)」を参照してください。 また、このコードでは、<> 要素を使用し `identity` て、予期されるサーバー id のドメインネームシステム (DNS) を指定します。 Id の詳細については、「[サービス id と認証](service-identity-and-authentication.md)」を参照してください。  
+ 次の構成は、エンドポイントの動作を使用してクライアント証明書を指定します。 証明書の詳細については、「[証明書の使用](working-with-certificates.md)」を参照してください。 また、このコードでは、<> 要素を使用し `identity` て、予期されるサーバー id のドメインネームシステム (DNS) を指定します。 Id の詳細については、「 [サービス id と認証](service-identity-and-authentication.md)」を参照してください。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -148,4 +148,4 @@ ms.locfileid: "84602636"
 - [セキュリティの概要](security-overview.md)
 - [サービス ID と認証](service-identity-and-authentication.md)
 - [証明書の使用](working-with-certificates.md)
-- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric のセキュリティ モデル](/previous-versions/appfabric/ee677202(v=azure.10))

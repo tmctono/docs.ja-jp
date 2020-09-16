@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a9f5d50ad78b2b0bef0ece3c4fce47d2925aca5
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: d74c7b8d80f02283cd681ed0118257ed926bdc83
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063758"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555251"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>規模が大きく、応答性の高い .NET Framework アプリの作成
 
@@ -39,7 +39,7 @@ ms.locfileid: "88063758"
  アプリでの主要な顧客エクスペリエンスやシナリオについてパフォーマンスの目標を設定し、パフォーマンスを測定するテストを作成してください。 テスト失敗の調査には科学的な手法を使用します。ガイドとなるプロファイルを使用して、どのような問題が発生しているかを仮定し、実験やコード変更によってその仮定を検証します。 定期的にテストを実施して、時間の経過と共にベースライン パフォーマンス測定を確立します。これにより、パフォーマンス後退を引き起こしている変更を切り分けることができます。 パフォーマンス測定を厳密に実施することで、不要なコード更新に時間をかけることを回避できます。
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>事実 3: 優れたツールには大きな効果がある  
- 優れたツールを使用すれば、最も大きなパフォーマンスの問題 (CPU、メモリ、またはディスク) の詳細を迅速に確認し、このようなボトルネックを引き起こしているコードを特定できます。 Microsoft には、 [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling)や[perfview](https://www.microsoft.com/download/details.aspx?id=28567)などのさまざまなパフォーマンスツールが付属しています。
+ 優れたツールを使用すれば、最も大きなパフォーマンスの問題 (CPU、メモリ、またはディスク) の詳細を迅速に確認し、このようなボトルネックを引き起こしているコードを特定できます。 Microsoft には、 [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) や [perfview](https://www.microsoft.com/download/details.aspx?id=28567)などのさまざまなパフォーマンスツールが付属しています。
   
  PerfView は、ディスク I/O、GC イベント、メモリなどの深刻な問題に取り組む際に役立つ極めて強力な無償のツールです。 パフォーマンスに関連する [Windows イベント トレーシング](../wcf/samples/etw-tracing.md) (ETW) イベントをキャプチャし、アプリ別、プロセス別、スタック別、およびスレッド別に情報を容易に確認できます。 PerfView は、アプリによって割り当てられるメモリの種類と量、そしてメモリの割り当てにどの関数またはコール スタックがどの程度関与しているのかを示します。 詳細については、ツールに付属している詳しいヘルプ トピック、デモ、ビデオ (Channel 9 の [PerfView チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial) など) を参照してください。
   
@@ -282,7 +282,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
   
  **例 5: ラムダ、List \<T> 、および IEnumerable\<T>**  
   
- この例では、[LINQ と関数スタイルのコード](https://docs.microsoft.com/archive/blogs/charlie/anders-hejlsberg-on-linq-and-functional-programming)を利用し、与えられた名前文字列で、コンパイラのモデルで記号を探します。  
+ この例では、[LINQ と関数スタイルのコード](/archive/blogs/charlie/anders-hejlsberg-on-linq-and-functional-programming)を利用し、与えられた名前文字列で、コンパイラのモデルで記号を探します。  
   
 ```csharp  
 class Symbol {  
@@ -306,7 +306,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- 最初の行で、[ラムダ式  がローカル変数 `name` を](../../csharp/language-reference/operators/lambda-expressions.md) `s => s.Name == name` [閉じ込めます](https://docs.microsoft.com/archive/blogs/ericlippert/what-are-closures)。 つまり、このコードは `predicate` が保持している[デリゲート](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type)にオブジェクトを割り当てる以外に、`name` の値をキャプチャする環境を保持する静的クラスを割り当てます。 コンパイラは次のようなコードを生成します。  
+ 最初の行で、[ラムダ式  がローカル変数 `name` を](../../csharp/language-reference/operators/lambda-expressions.md) `s => s.Name == name` [閉じ込めます](/archive/blogs/ericlippert/what-are-closures)。 つまり、このコードは `predicate` が保持している[デリゲート](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type)にオブジェクトを割り当てる以外に、`name` の値をキャプチャする環境を保持する静的クラスを割り当てます。 コンパイラは次のようなコードを生成します。  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -441,7 +441,7 @@ class Compilation { /*...*/
 ### <a name="additional-considerations"></a>その他の注意点  
  大きなアプリまたは大量データを処理するアプリで発生する可能性がある問題に関するその他の点を次に説明します。
   
- **ディクショナリ**  
+ **辞書**  
   
  ディクショナリは多くのプログラムで随所に使用されており、非常に便利で本質的に効率的です。 ただし、使い方が不適切なことがよくあります。 Visual Studio と新しいコンパイラでは、分析から、多くのディクショナリでは含まれている要素が 1つだけであるか、何も含まれていないことが判明しました。 x86 マシンでは、空の <xref:System.Collections.Generic.Dictionary%602> には 10 個のフィールドがあり、ヒープで 48 バイトを占有しています。 ディクショナリが役立つのは、一定時間内の検索のマッピングまたは関連データ構造体が必要な場合です。 ただし要素の数が少ない場合は、ディクショナリを使用するとスペースを無駄に使用することになります。 代わりに、たとえば `List<KeyValuePair\<K,V>>` の繰り返し検索も、同じ速度で行えます。 ディクショナリにデータを読み込み、ディクショナリから読み取るだけのためにディクショナリを使用する場合 (非常に一般的なパターン)、N(log(N)) ルックアップで並べ替えた配列を使用すると、使用している要素の数に応じて、ほぼ同程度の速度を得ることができます。
   
@@ -468,7 +468,7 @@ class Compilation { /*...*/
 - [このトピックのプレゼンテーション動画](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [パフォーマンスプロファイルの初心者向けガイド](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [パフォーマンス](index.md)
-- [.NET のパフォーマンスに関するヒント](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
+- [.NET のパフォーマンスに関するヒント](/previous-versions/dotnet/articles/ms973839(v=msdn.10))
 - [Channel 9 PerfView チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [.NET Compiler Platform SDK](../../csharp/roslyn-sdk/index.md)
 - [GitHub の dotnet/roslyn リポジトリ](https://github.com/dotnet/roslyn)

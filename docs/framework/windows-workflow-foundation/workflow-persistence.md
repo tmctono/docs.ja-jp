@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-ms.openlocfilehash: 1178bd3800fce95be96e601a17bfeff2c05cfceb
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: c609ec5e67ce3bb0605f543806085f893acba37c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419305"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557529"
 ---
 # <a name="workflow-persistence"></a>ワークフローの永続性
 ワークフローの永続化は、ワークフロー インスタンスの状態を、プロセスやコンピューターの情報に依存せず永続的にキャプチャしたものです。 永続化の目的は、システム生涯時にワークフロー インスタンスの既知の回復ポイントを提供するため、アクティブに作業を実行していないワークフロー インスタンスをアンロードしてメモリを節約するため、またはワークフロー インスタンスの状態をサーバー ファーム内のあるノードから別のノードに移行するためです。  
@@ -19,20 +19,20 @@ ms.locfileid: "83419305"
   
  ワークフローの永続化を有効にするには、 [「方法: ワークフローとワークフローサービスの永続化を有効](how-to-enable-persistence-for-workflows-and-workflow-services.md)にする」で説明されているように、インスタンスストアを**WorkflowApplication**または**WorkflowServiceHost**に関連付ける必要があります。 **WorkflowApplication**と**WorkflowServiceHost**は、関連付けられているインスタンスストアを使用して、永続化ストアへのワークフローインスタンスの永続化と、永続化ストアに格納されているワークフローインスタンスデータに基づいたワークフローインスタンスのメモリへの読み込みを可能にします。  
   
- には、 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] **SqlWorkflowInstanceStore**クラスが付属しています。これにより、ワークフローインスタンスに関するデータとメタデータを SQL Server 2005 または SQL Server 2008 データベースに永続化できます。 詳細については、「 [SQL Workflow Instance Store](sql-workflow-instance-store.md) 」を参照してください。  
+ には、 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] **SqlWorkflowInstanceStore** クラスが付属しています。これにより、ワークフローインスタンスに関するデータとメタデータを SQL Server 2005 または SQL Server 2008 データベースに永続化できます。 詳細については、「 [SQL Workflow Instance Store](sql-workflow-instance-store.md) 」を参照してください。  
   
- アプリケーション固有のデータをワークフロー インスタンス関連の情報と共に格納し、読み込むために、<xref:System.Activities.Persistence.PersistenceParticipant> クラスを拡張する永続参加要素を作成できます。 永続参加要素は永続化プロセスに参加して、カスタムのシリアル化可能なデータを永続化ストアに保存し、インスタンス ストアからメモリにデータを読み込み、永続化トランザクションで任意の追加ロジックを実行します。 詳細については、「[永続化参加要素](persistence-participants.md)」を参照してください。  
+ アプリケーション固有のデータをワークフロー インスタンス関連の情報と共に格納し、読み込むために、<xref:System.Activities.Persistence.PersistenceParticipant> クラスを拡張する永続参加要素を作成できます。 永続参加要素は永続化プロセスに参加して、カスタムのシリアル化可能なデータを永続化ストアに保存し、インスタンス ストアからメモリにデータを読み込み、永続化トランザクションで任意の追加ロジックを実行します。 詳細については、「 [永続化参加要素](persistence-participants.md)」を参照してください。  
   
- Windows Server App Fabric を使用すると、永続化の構成のプロセスを簡潔化できます。 詳細については、「 [Windows Server App Fabric での永続](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10))化の概念」を参照してください。  
+ Windows Server App Fabric を使用すると、永続化の構成のプロセスを簡潔化できます。 詳細については、「 [Windows Server App Fabric での永続](/previous-versions/appfabric/ee677272(v=azure.10))化の概念」を参照してください。  
   
 ## <a name="implicit-persistence-points"></a>暗黙的な永続化ポイント  
  次の一覧は、インスタンス ストアがワークフローに関連付けられている場合にワークフローが永続化される条件の例です。  
   
 - **TransactionScope**アクティビティが完了するか、 **TransactedReceiveScope**アクティビティが完了したとき。  
   
-- ワークフローインスタンスがアイドル状態になり、ワークフローホストで**WorkflowIdleBehavior**が設定されたとき。 これは、たとえば、メッセージングアクティビティや**Delay**アクティビティを使用する場合に発生します。  
+- ワークフローインスタンスがアイドル状態になり、ワークフローホストで **WorkflowIdleBehavior** が設定されたとき。 これは、たとえば、メッセージングアクティビティや **Delay** アクティビティを使用する場合に発生します。  
   
-- WorkflowApplication がアイドル状態になり、アプリケーションの**Persistableidle**プロパティが**PersistableIdleAction**に設定された場合。  
+- WorkflowApplication がアイドル状態になり、アプリケーションの **Persistableidle** プロパティが **PersistableIdleAction**に設定された場合。  
   
 - ホスト アプリケーションに対して、ワークフロー インスタンスの永続化またはアンロードが指示されたとき。  
   

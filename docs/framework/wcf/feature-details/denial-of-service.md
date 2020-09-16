@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 1c1778ace6abc332517786f910d0442eeed577c9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 29798a73ec69b7f695068343d9c7b5593eeba4fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599270"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557581"
 ---
 # <a name="denial-of-service"></a>サービス拒否
 サービス拒否は、メッセージを処理できなくしたり、メッセージ処理を大幅に遅延させたりするなど、システムに過大な負荷が生じた場合に発生します。  
@@ -44,7 +44,7 @@ ms.locfileid: "84599270"
 ## <a name="auditing-event-log-can-be-filled"></a>監査イベント ログがいっぱいになる可能性がある  
  悪意のあるユーザーに監査が有効になっていることを知られると、その攻撃者に監査エントリの書き込みにつながる無効なメッセージを送信される可能性があります。 このような方法で監査ログに書き込みが行われると、監査システムに障害が発生します。  
   
- これを防ぐには、<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> プロパティを `true` に設定し、イベント ビューアーのプロパティを使用して監査動作を制御します。 イベントビューアーを使用してイベントログを表示および管理する方法の詳細については、「[イベントビューアー](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11))」を参照してください。 詳細については、「[監査](auditing-security-events.md)」を参照してください。  
+ これを防ぐには、<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> プロパティを `true` に設定し、イベント ビューアーのプロパティを使用して監査動作を制御します。 イベントビューアーを使用してイベントログを表示および管理する方法の詳細については、「 [イベントビューアー](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11))」を参照してください。 詳細については、「 [監査](auditing-security-events.md)」を参照してください。  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>Iauthorizationpolicy インターフェイスの無効な実装により、サービスが応答しなくなる可能性があります  
  <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>インターフェイスの障害のある実装に対してメソッドを呼び出す <xref:System.IdentityModel.Policy.IAuthorizationPolicy> と、サービスが応答しなくなる可能性があります。  
@@ -55,13 +55,13 @@ ms.locfileid: "84599270"
  クライアントが多数のグループ (実際の数はグループにより異なるが、約 900) に属している場合、メッセージ ヘッダーのブロックが 64 KB を超えると問題が発生する場合があります。 その場合は、Kerberos トークンの最大サイズを増やすことができます。 また、より大きな Kerberos トークンに対応するために、WCF メッセージの最大サイズを増やす必要がある場合もあります。  
   
 ## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>自動登録によってコンピューターに同一サブジェクト名の証明書が複数発生する  
- *自動登録*は、証明書用にユーザーとコンピューターを自動的に登録するための Windows Server 2003 の機能です。 この機能が有効になっているドメイン上にコンピューターがある場合、新しいコンピューターがネットワークに参加するたびに、クライアント認証を目的とする X.509 証明書が自動的に作成されローカル コンピューターの個人用証明書のストアに自動で挿入されます。 ただし、自動登録では、キャッシュに作成されたすべての証明書に同じサブジェクト名が使用されます。  
+ *自動登録* は、証明書用にユーザーとコンピューターを自動的に登録するための Windows Server 2003 の機能です。 この機能が有効になっているドメイン上にコンピューターがある場合、新しいコンピューターがネットワークに参加するたびに、クライアント認証を目的とする X.509 証明書が自動的に作成されローカル コンピューターの個人用証明書のストアに自動で挿入されます。 ただし、自動登録では、キャッシュに作成されたすべての証明書に同じサブジェクト名が使用されます。  
   
  影響として、自動登録を使用しているドメインで WCF サービスが開けないことがあります。 コンピューターの完全修飾ドメイン ネーム システム (DNS) 名を持つ証明書が複数あるため、既定サービスの X.509 資格情報検索の条件が不明確になり、このような問題が発生します。 この場合、1 つは自動登録で作成された証明書、もう 1 つは自己発行された証明書です。  
   
  これを軽減するには、でより正確な検索条件を使用して、使用する証明書を正確に参照し [\<serviceCredentials>](../../configure-apps/file-schema/wcf/servicecredentials.md) ます。 たとえば、<xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> オプションを使用し、一意の拇印 (ハッシュ) により証明書を指定します。  
   
- 自動登録機能の詳細については、「 [Windows Server 2003 での証明書の自動登録](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc778954(v%3dws.10))」を参照してください。  
+ 自動登録機能の詳細については、「 [Windows Server 2003 での証明書の自動登録](/previous-versions/windows/it-pro/windows-server-2003/cc778954(v=ws.10))」を参照してください。  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>複数の代替サブジェクト名の最後が承認に使用される  
  まれなケースとして X.509 証明書に複数の代替サブジェクト名が含まれる場合、その代替サブジェクト名を使用して承認を行うと、承認は失敗する場合があります。  
@@ -75,14 +75,14 @@ ms.locfileid: "84599270"
  クライアントがサービスにより正常に認証され、セキュリティで保護されたセッションがサービスと共に確立されると、クライアントがセッションをキャンセルするか、セッションの期限が切れるまで、サービスはそのセッションを追跡します。 セッションが確立されるたびに、1 つのサービスで同時にアクティブにできるセッションは上限に近づいていきます。 この上限に達した場合、1 つ以上のアクティブなセッションが期限切れになるかまたはクライアントによりキャンセルされるまで、そのサービスで新しいセッションの作成を試みるクライアントは拒否されます。 クライアントは 1 つのサービスで複数のセッションを保持できますが、その各セッションは上限に反映されます。  
   
 > [!NOTE]
-> ステートフルなセッションを使用する場合、前の段落は適用されません。 ステートフルセッションの詳細については、「[方法: セキュリティで保護されたセッションのセキュリティコンテキストトークンを作成](how-to-create-a-security-context-token-for-a-secure-session.md)する」を参照してください。  
+> ステートフルなセッションを使用する場合、前の段落は適用されません。 ステートフルセッションの詳細については、「 [方法: セキュリティで保護されたセッションのセキュリティコンテキストトークンを作成](how-to-create-a-security-context-token-for-a-secure-session.md)する」を参照してください。  
   
  これを防ぐには、<xref:System.ServiceModel.Channels.SecurityBindingElement> クラスの <xref:System.ServiceModel.Channels.SecurityBindingElement> プロパティを設定して、アクティブなセッションの最大数とセッションの最長有効期間の制限を設定します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [セキュリティの考慮事項](security-considerations-in-wcf.md)
-- [情報の公開](information-disclosure.md)
+- [セキュリティに関する考慮事項](security-considerations-in-wcf.md)
+- [情報漏えい](information-disclosure.md)
 - [特権の昇格](elevation-of-privilege.md)
 - [サービス拒否](denial-of-service.md)
 - [リプレイ攻撃](replay-attacks.md)

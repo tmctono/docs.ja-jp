@@ -5,15 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: bb49334252c2415223b0f8f5559a6dc838d175e3
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 9c3d83f0055a1700c675017216a7419fdba674fd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246026"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547461"
 ---
 # <a name="tracing-and-message-logging"></a>トレースとメッセージ ログ
-このサンプルでは、トレースとメッセージ ログを有効にする方法を示します。 結果のトレースとメッセージログは、[サービストレースビューアーツール (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)を使用して表示されます。 このサンプルは、[はじめに](getting-started-sample.md)に基づいています。  
+このサンプルでは、トレースとメッセージ ログを有効にする方法を示します。 結果のトレースとメッセージログは、 [サービストレースビューアーツール (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)を使用して表示されます。 このサンプルは、 [はじめに](getting-started-sample.md)に基づいています。  
   
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -44,12 +44,12 @@ ms.locfileid: "85246026"
 </system.diagnostics>  
 ```  
   
- トレースソースの詳細については、「トレースの[構成](../diagnostics/tracing/configuring-tracing.md)」トピックの「トレースソース」セクションを参照してください。  
+ トレースソースの詳細については、「トレースの [構成](../diagnostics/tracing/configuring-tracing.md) 」トピックの「トレースソース」セクションを参照してください。  
   
 ## <a name="activity-tracing-and-propagation"></a>アクティビティのトレースと伝達  
  `ActivityTracing` `propagateActivity` クライアントとサービスの両方のトレースソースに対してを有効にし、をに設定すると、 `true` `system.ServiceModel` 処理の論理単位 (アクティビティ) 内のトレース、エンドポイント内のアクティビティ間 (アクティビティの転送を通じて)、および複数のエンドポイントにまたがるアクティビティ (アクティビティ ID の伝達を通じて) の相関関係が提供されます。  
   
- 3 つの機構 (アクティビティ、転送、および伝達) により、サービス トレース ビューア ツールを使用してエラーの根本原因をより迅速に見つけることができます。 詳細については、「[サービストレースビューアーを使用した相関トレースの表示」および「トラブルシューティング](../diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)」を参照してください。  
+ 3 つの機構 (アクティビティ、転送、および伝達) により、サービス トレース ビューア ツールを使用してエラーの根本原因をより迅速に見つけることができます。 詳細については、「 [サービストレースビューアーを使用した相関トレースの表示」および「トラブルシューティング](../diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)」を参照してください。  
   
  ユーザー定義のアクティビティ トレースを作成することにより、サービス モデルによって提供されるトレースを拡張することができます。 ユーザー定義のアクティビティ トレースによって、次の操作を可能にするトレース アクティビティを作成できます。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "85246026"
   
 - WCF トレース (ログファイルのディスク領域コストなど) のパフォーマンスコストを軽減します。  
   
- ユーザー定義のアクティビティトレースの詳細については、「[トレースの拡張](extending-tracing.md)」サンプルを参照してください。  
+ ユーザー定義のアクティビティトレースの詳細については、「 [トレースの拡張](extending-tracing.md) 」サンプルを参照してください。  
   
 ## <a name="message-logging"></a>メッセージ ログ  
  メッセージログは、任意の WCF アプリケーションのクライアントとサービスの両方で有効にすることができます。 メッセージ ログを有効にするには、クライアントとサービスのどちらかに次のコードを追加する必要があります。  
@@ -112,7 +112,7 @@ ms.locfileid: "85246026"
 > [!NOTE]
 > 最初にログ ディレクトリが作成されていないと、トレース ファイルは作成されません。 ディレクトリ C:\logs\ が存在することを確認するか、またはリスナの構成でログ記録用の代替ディレクトリを指定します。 詳細については、このドキュメントの最後にある初期セットアップ手順を参照してください。  
   
- メッセージログの詳細については、「[メッセージログの構成](../diagnostics/configuring-message-logging.md)」トピックを参照してください。  
+ メッセージログの詳細については、「 [メッセージログの構成](../diagnostics/configuring-message-logging.md) 」トピックを参照してください。  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
@@ -129,11 +129,11 @@ ms.locfileid: "85246026"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   
 ## <a name="see-also"></a>関連項目
 
 - [トレース](../diagnostics/tracing/index.md)
-- [AppFabric の監視のサンプル](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric の監視のサンプル](/previous-versions/appfabric/ff383407(v=azure.10))

@@ -2,12 +2,12 @@
 title: Windows Communication Foundation での Internet Information Services 7.0 の構成
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
-ms.openlocfilehash: 6343049e2a21b06965a8c7851d891303a49c82b5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6b0cc48c7a817f71339fb6d7eea35baf1d97b245
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597567"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556656"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Windows Communication Foundation での Internet Information Services 7.0 の構成
 
@@ -28,9 +28,9 @@ Internet Information Services (IIS) 7.0 はモジュール設計になってお�
 
 - プロセス モデル
 
- WAS のルートノードを選択した場合は、[**プロセスモデル**] サブノードのみが既定でオンになっています。 このインストールでは Web サーバーをサポートしないため、WAS のみをインストールすることに注意してください。
+ WAS のルートノードを選択した場合は、[ **プロセスモデル** ] サブノードのみが既定でオンになっています。 このインストールでは Web サーバーをサポートしないため、WAS のみをインストールすることに注意してください。
 
- WCF または ASP.NET アプリケーションを機能させるには、[ **.Net 環境**] チェックボックスをオンにします。 これは、WCF と ASP.NET を適切に機能させるために、すべての WAS コンポーネントが必要であることを意味します。 これらのコンポーネントのいずれかを一度インストールすると、チェック ボックスは自動的にオンになります。
+ WCF または ASP.NET アプリケーションを機能させるには、[ **.Net 環境** ] チェックボックスをオンにします。 これは、WCF と ASP.NET を適切に機能させるために、すべての WAS コンポーネントが必要であることを意味します。 これらのコンポーネントのいずれかを一度インストールすると、チェック ボックスは自動的にオンになります。
 
 ## <a name="iis-70-default-installation"></a>IIS 7.0 : 既定のインストール
  **インターネットインフォメーションサービス**機能を確認することによって、次の図に示すように、一部のサブノードが自動的にチェックされます。
@@ -47,7 +47,7 @@ Internet Information Services (IIS) 7.0 はモジュール設計になってお�
  これは、WCF と ASP.NET の両方のアプリケーションが IIS 7.0 で動作するための最小限の環境です。
 
 ## <a name="iis-70-installation-with-iis-60-compatibility-components"></a>IIS 7.0 : IIS 6.0 互換コンポーネントを備えたインストール
- Visual Studio 2005 を使用しているシステム、または IIS 6.0 メタベース API を使用する仮想アプリケーションを構成するその他の自動化スクリプトまたはツール (Adsutil.vbs など) に IIS 7.0 をインストールする場合は、必ず IIS の 6.0**スクリプトツール**を確認してください。 これにより、IIS 6.0**管理互換性**の他のサブノードが自動的にチェックされます。 次の図は、この処理が完了した後の画面を示しています。
+ Visual Studio 2005 を使用しているシステム、または IIS 6.0 メタベース API を使用する仮想アプリケーションを構成するその他の自動化スクリプトまたはツール (Adsutil.vbs など) に IIS 7.0 をインストールする場合は、必ず IIS の 6.0 **スクリプトツール**を確認してください。 これにより、IIS 6.0 **管理互換性**の他のサブノードが自動的にチェックされます。 次の図は、この処理が完了した後の画面を示しています。
 
  ![IIS 6.0 と互換性のある管理の設定](media/scfc-turnfeaturesonoroff5s.gif "scfc_TurnFeaturesOnOrOff5s")
 
@@ -71,4 +71,4 @@ Internet Information Services (IIS) 7.0 はモジュール設計になってお�
 - [WAS アクティベーション アーキテクチャ](was-activation-architecture.md)
 - [WCF で使用するための WAS を設定する](configuring-the-wpa--service-for-use-with-wcf.md)
 - [方法: WCF アクティブ化コンポーネントをインストールして設定する](how-to-install-and-configure-wcf-activation-components.md)
-- [AppFabric のホスティング機能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [AppFabric のホスティング機能](/previous-versions/appfabric/ee677189(v=azure.10))
