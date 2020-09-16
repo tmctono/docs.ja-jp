@@ -2,12 +2,12 @@
 title: <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
-ms.openlocfilehash: f1aa68bcdda43fd77bee397c079695f7937faa52
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2364eb9d82fd17bd0b80b01070a0f1d789be3d90
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74139474"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556155"
 ---
 # \<netNamedPipeBinding>
 コンピューター上のプロセス間通信に適した、セキュリティで保護された信頼できる最適バインディングを定義します。 既定では、信頼のための WS-ReliableMessaging、転送セキュリティ用トランスポート セキュリティ、メッセージ配信用名前付きパイプ、およびバイナリ メッセージ エンコーディングを持つランタイム通信スタックを生成します。  
@@ -69,18 +69,18 @@ ms.locfileid: "74139474"
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<security>](security-of-netnamedpipebinding.md)|バインディングのセキュリティ設定を定義します。 この要素は <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement> 型です。|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|このバインドを使用して設定されるエンドポイントにより処理可能な、SOAP メッセージの複雑さに対する制約を定義します。 この要素は <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 型です。|  
+|[\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|このバインドを使用して設定されるエンドポイントにより処理可能な、SOAP メッセージの複雑さに対する制約を定義します。 この要素は <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 型です。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|この要素には、標準バインディングおよびカスタム バインドのコレクションが保持されます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  `NetNamedPipeBinding` は、トランスポート セキュリティ、メッセージ配信用の名前付きパイプ、およびバイナリ メッセージ エンコーディングを使用するランタイム通信スタックを既定で生成します。 このバインディングは、コンピューター間通信に適した、WCF (Windows Communication Foundation) システム標準の選択肢です。 トランザクションもサポートします。  
   
  `NetNamedPipeBinding` の既定の構成は、`NetTcpBinding` によって提供される構成に似ていますが、それよりも単純です。この理由は、WCF の実装はコンピューター間での使用のみを目的としているので、公開される機能が少ないためです。 最も顕著な違いは、`securityMode` 設定に `None` オプションと `Transport` オプションしか用意されていないことです。 SOAP セキュリティ サポートは、オプションに含まれません。 このセキュリティ動作は、省略可能な `securityMode` 属性を使用して構成できます。  

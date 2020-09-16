@@ -2,12 +2,12 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: f2c1335795ffd3cb395a7006bfaeb3cf7b39636b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 987dcad5e239b35f5ff367ab668d40526593f970
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77448622"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556461"
 ---
 # \<tcpTransport>
 カスタム バインドのメッセージを転送するためにチャネルで使用できる TCP トランスポートを定義します。  
@@ -62,7 +62,7 @@ ms.locfileid: "77448622"
 |maxPendingConnections|サービスでディスパッチを待機している最大接続数を取得または設定します。|  
 |maxReceivedMessageSize|受信できる最大メッセージ サイズを取得または設定します。|  
 |portSharingEnabled|TCP ポート共有をこの接続で有効にする場合に指定するブール値。 これが `false` の場合、各バインディングは独自の排他ポートを使用します。 既定値は、`false` です。<br /><br /> この設定は、サービスのみに関連します。 クライアントには影響はありません。<br /><br /> この設定を使用するには、[スタートアップの種類] を [手動] または [自動] に変更して、Windows Communication Foundation (WCF) の TCP ポート共有サービスを有効にする必要があります。|  
-|teredoEnabled|Teredo (ファイアウォールの内側にあるクライアントをアドレス指定するためのテクノロジ) が有効であるかどうかを指定するブール値。 既定値は、`false` です。<br /><br /> このプロパティは、基になる TCP ソケットで Tredo を有効にします。 詳細については、「 [Teredo の概要](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457011(v=technet.10))」を参照してください。<br /><br /> このプロパティは、Windows XP SP2 および Windows Server 2003 でのみ適用できます。 Windows Vista には、Teredo 用のコンピューター全体の構成オプションがあるため、Vista を実行する場合、このプロパティは無視されます。 Teredo の場合、クライアント コンピューターおよびサービス コンピューターの両方に Microsoft IPv6 スタックをインストールし、Teredo 用に正しく設定する必要があります。|  
+|teredoEnabled|Teredo (ファイアウォールの内側にあるクライアントをアドレス指定するためのテクノロジ) が有効であるかどうかを指定するブール値。 既定値は、`false` です。<br /><br /> このプロパティは、基になる TCP ソケットで Tredo を有効にします。 詳細については、「 [Teredo の概要](/previous-versions/windows/it-pro/windows-xp/bb457011(v=technet.10))」を参照してください。<br /><br /> このプロパティは、Windows XP SP2 および Windows Server 2003 でのみ適用できます。 Windows Vista には、Teredo 用のコンピューター全体の構成オプションがあるため、Vista を実行する場合、このプロパティは無視されます。 Teredo の場合、クライアント コンピューターおよびサービス コンピューターの両方に Microsoft IPv6 スタックをインストールし、Teredo 用に正しく設定する必要があります。|  
 |transferMode|接続指向のトランスポートでメッセージをバッファーするか、ストリーム配信するかを示す値を取得または設定します。|  
 |connectionPoolSettings|名前付きパイプ バインディングの追加の接続プール設定を指定します。|  
   
@@ -71,11 +71,11 @@ ms.locfileid: "77448622"
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|カスタム バインドのすべてのバインド機能を定義します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このトランスポートは、"net.tcp://hostname:port/path" の形式の URI を使用します。 他の URI コンポーネントは省略可能です。  
   
  `tcpTransport` 要素は、TCP トランスポート プロトコルを実装するカスタム バインディングを作成する場合の開始点となります。 このトランスポートは、WCF 間の通信用に最適化されています。  

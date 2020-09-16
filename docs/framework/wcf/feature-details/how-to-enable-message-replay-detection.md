@@ -10,33 +10,33 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: bf45b39f59e2fe38fec88d1fac23ab824c009546
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c99500a3d4dc0bd8abe7062f23e064d395cadf36
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597086"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557880"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>方法: メッセージ リプレイ検出を有効にする
 リプレイ攻撃は、攻撃者がメッセージのストリームを 2 つのパーティ間でコピーし、そのストリームを他の 1 つ以上のパーティにリプレイすることで発生します。 攻撃が止むまで、攻撃対象になったコンピューターはストリームを正当なメッセージとして処理しようとし、その結果、命令が重複するなど、望ましくない状況に陥ります。  
   
- メッセージ再生の検出の詳細については、「[メッセージ再生の検出](https://docs.microsoft.com/previous-versions/msp-n-p/ff649371(v=pandp.10))」を参照してください。  
+ メッセージ再生の検出の詳細については、「 [メッセージ再生の検出](/previous-versions/msp-n-p/ff649371(v=pandp.10))」を参照してください。  
   
  次の手順では、Windows Communication Foundation (WCF) を使用して再生検出を制御するために使用できるさまざまなプロパティについて説明します。  
   
 ### <a name="to-control-replay-detection-on-the-client-using-code"></a>コードを使用してクライアントでのリプレイ検出を制御するには  
   
-1. <xref:System.ServiceModel.Channels.SecurityBindingElement> で使用する <xref:System.ServiceModel.Channels.CustomBinding> を作成します。 詳細については、「[方法: カスタムバインディングを使用してカスタムバインディングを作成](how-to-create-a-custom-binding-using-the-securitybindingelement.md)する」を参照してください。 次の例では、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> クラスの <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> を使用して作成された <xref:System.ServiceModel.Channels.SecurityBindingElement> を使用します。  
+1. <xref:System.ServiceModel.Channels.SecurityBindingElement> で使用する <xref:System.ServiceModel.Channels.CustomBinding> を作成します。 詳細については、「 [方法: カスタムバインディングを使用してカスタムバインディングを作成](how-to-create-a-custom-binding-using-the-securitybindingelement.md)する」を参照してください。 次の例では、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> クラスの <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> を使用して作成された <xref:System.ServiceModel.Channels.SecurityBindingElement> を使用します。  
   
 2. <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> プロパティを使用して <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> クラスへの参照を返し、次のプロパティを適切な値に設定します。  
   
     1. `DetectReplay`. ブール値です。 サーバーからのリプレイをクライアントが検出するかどうかを制御します。 既定値は、`true` です。  
   
-    2. `MaxClockSkew`. <xref:System.TimeSpan> 値です。 リプレイ機構に許容されるクライアントとサーバー間の時刻のずれを制御します。 セキュリティ機構は送信されたメッセージのタイム スタンプを調べ、メッセージが古すぎるかどうかを決定します。 既定値は 5 分です。  
+    2. `MaxClockSkew`. <xref:System.TimeSpan> 値。 リプレイ機構に許容されるクライアントとサーバー間の時刻のずれを制御します。 セキュリティ機構は送信されたメッセージのタイム スタンプを調べ、メッセージが古すぎるかどうかを決定します。 既定値は 5 分です。  
   
-    3. `ReplayWindow`. `TimeSpan` 値です。 メッセージがサーバーによって送信されてから (中継局を通過して) クライアントに到達するまで、ネットワーク内に存在できる期間を制御します。 クライアントは、リプレイ検出のため、最新の `ReplayWindow` 内で送信されたメッセージの署名を追跡します。  
+    3. `ReplayWindow`. `TimeSpan` 値。 メッセージがサーバーによって送信されてから (中継局を通過して) クライアントに到達するまで、ネットワーク内に存在できる期間を制御します。 クライアントは、リプレイ検出のため、最新の `ReplayWindow` 内で送信されたメッセージの署名を追跡します。  
   
-    4. `ReplayCacheSize`. 整数値です。 クライアントは、メッセージの署名をキャッシュに格納します。 この設定は、キャッシュに格納できる署名の数を指定します。 最新のリプレイ ウィンドウ内の送信されたメッセージの数がキャッシュ制限に達すると、キャッシュされた最も古い署名が制限時間に達するまで、新しいメッセージは拒否されます。 既定値は50万です。  
+    4. `ReplayCacheSize`. 整数値。 クライアントは、メッセージの署名をキャッシュに格納します。 この設定は、キャッシュに格納できる署名の数を指定します。 最新のリプレイ ウィンドウ内の送信されたメッセージの数がキャッシュ制限に達すると、キャッシュされた最も古い署名が制限時間に達するまで、新しいメッセージは拒否されます。 既定値は50万です。  
   
 ### <a name="to-control-replay-detection-on-the-service-using-code"></a>コードを使用してサービスでのリプレイ検出を制御するには  
   

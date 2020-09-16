@@ -3,12 +3,12 @@ title: WCF のメッセージのセキュリティ
 description: トランスポートとメッセージのセキュリティモードを組み合わせて使用する WCF メッセージセキュリティの一種である TransportWithMessageCredential について説明します。
 ms.date: 03/30/2017
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-ms.openlocfilehash: 315a12c73929bfe71340e42f122ae542d4fddc07
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: ea10a87a7c8f9e545c320af30c5cf9958317c2f7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245025"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551133"
 ---
 # <a name="message-security-in-wcf"></a>WCF のメッセージのセキュリティ
 
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) には、セキュリティを提供す�
 
 - 複数のトランスポートに対するサポート。 複数のトランスポートに対するサポート : セキュリティ用のプロトコルに依存することなく、名前付きパイプ、TCP などの複数の異なるトランスポートを経由して、セキュリティで保護されたメッセージを送信できます。 トランスポート レベルのセキュリティでは、すべてのセキュリティ情報の有効範囲が 1 つの特定のトランスポート接続に限定されるので、メッセージの内容からその情報を使用することはできません。 メッセージ セキュリティでは、メッセージの送信に使用するトランスポートの種類に関係なく、メッセージがセキュリティで保護されます。セキュリティ コンテキストはメッセージの内部に直接埋め込まれます。
 
-- 資格情報とクレームのセットを広範囲にサポート。 メッセージ セキュリティは、SOAP メッセージの内部で任意の種類のクレームを送信できる拡張可能なフレームワークを提供する WS-Security 仕様に基づいています。 トランスポート セキュリティとは異なり、使用できる認証機構またはクレームはトランスポートの機能によって制限されません。 WCF メッセージセキュリティには、複数の種類の認証とクレーム転送が含まれており、必要に応じて追加の型をサポートするように拡張できます。 このため、たとえば、フェデレーション資格情報シナリオは、メッセージ セキュリティなしでは実現できません。 WCF がサポートするフェデレーションシナリオの詳細については、「[フェデレーションと発行済みトークン](federation-and-issued-tokens.md)」を参照してください。
+- 資格情報とクレームのセットを広範囲にサポート。 メッセージ セキュリティは、SOAP メッセージの内部で任意の種類のクレームを送信できる拡張可能なフレームワークを提供する WS-Security 仕様に基づいています。 トランスポート セキュリティとは異なり、使用できる認証機構またはクレームはトランスポートの機能によって制限されません。 WCF メッセージセキュリティには、複数の種類の認証とクレーム転送が含まれており、必要に応じて追加の型をサポートするように拡張できます。 このため、たとえば、フェデレーション資格情報シナリオは、メッセージ セキュリティなしでは実現できません。 WCF がサポートするフェデレーションシナリオの詳細については、「 [フェデレーションと発行済みトークン](federation-and-issued-tokens.md)」を参照してください。
 
 ## <a name="how-message-and-transport-security-compare"></a>メッセージ セキュリティとトランスポート セキュリティの比較
 
@@ -69,4 +69,4 @@ Windows Communication Foundation (WCF) には、セキュリティを提供す�
 - [サービスおよびクライアントのセキュリティ保護](securing-services-and-clients.md)
 - [トランスポートセキュリティ](transport-security.md)
 - [方法: トランスポート セキュリティとメッセージ資格情報を使用する](how-to-use-transport-security-and-message-credentials.md)
-- [Microsoft Patterns and Practices, Chapter 3: Implementing Transport and Message Layer Security](https://docs.microsoft.com/previous-versions/msp-n-p/ff647370(v=pandp.10))
+- [Microsoft Patterns and Practices, Chapter 3: Implementing Transport and Message Layer Security](/previous-versions/msp-n-p/ff647370(v=pandp.10))

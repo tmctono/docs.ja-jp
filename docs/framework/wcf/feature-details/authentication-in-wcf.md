@@ -6,12 +6,12 @@ helpviewer_keywords:
 - authentication [WCF]
 - security [WCF], authentication
 ms.assetid: 9254d873-843d-4c6e-bea4-8184ac3e44f4
-ms.openlocfilehash: 4c3348cfb84b8571dc1f24b774ffcd691aaa5001
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 414353b360992abea69d47de9efb22c3c77f4bf6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247521"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558278"
 ---
 # <a name="authentication-in-wcf"></a>WCF での認証
 次のトピックでは、Windows 認証、x.509 証明書、ユーザー名とパスワードなどの認証を提供する Windows Communication Foundation (WCF) のさまざまなメカニズムについて説明します。  
@@ -24,7 +24,7 @@ ms.locfileid: "85247521"
  カスタム ユーザー名およびパスワード検証を統合する方法を示します。  
   
  [サービス ID と認証](service-identity-and-authentication.md)  
- 追加の保護手段として、クライアントはサービスの予期される*id*を指定することによってサービスを認証できます。 予想される ID とサービスから返される ID が一致しない場合、認証は失敗します。  
+ 追加の保護手段として、クライアントはサービスの予期される *id* を指定することによってサービスを認証できます。 予想される ID とサービスから返される ID が一致しない場合、認証は失敗します。  
   
  [セキュリティ ネゴシエーションとタイムアウト](security-negotiation-and-timeouts.md)  
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.NegotiationTimeout%2A> クラスの <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> プロパティの使用方法について説明します。  
@@ -41,4 +41,4 @@ ms.locfileid: "85247521"
 ## <a name="see-also"></a>関連項目
 
 - [セキュリティの概要](security-overview.md)
-- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric のセキュリティ モデル](/previous-versions/appfabric/ee677202(v=azure.10))

@@ -2,17 +2,17 @@
 title: '方法: WAS で WCF サービスをホストする'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 40460baeb136345f2532ec6ad5035bd5d3a40254
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 8049b7961169c6ec7a8d80fb0e8747e99992247b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051988"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555973"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>方法: WAS で WCF サービスをホストする
 このトピックでは、Windows プロセスアクティブ化サービス (WAS) でホストされる Windows Communication Foundation (WCF) サービスを作成するために必要な基本的な手順について説明します。 WAS は、HTTP 以外のトランスポート プロトコルで動作するインターネット インフォメーション サービス (IIS) 機能を一般化した新しいプロセス アクティブ化サービスです。 WCF では、リスナーアダプターインターフェイスを使用して、WCF でサポートされている HTTP 以外のプロトコル (TCP、名前付きパイプ、メッセージキューなど) を介して受信されるアクティブ化要求を伝達します。  
   
- このホスト オプションでは、WAS アクティブ化コンポーネントのインストールと構成が正しく行われている必要がありますが、アプリケーションの一部としてホスト コードを記述する必要はありません。 WAS のインストールと構成の詳細については、「[方法: WCF アクティブ化コンポーネントをインストールおよび構成](how-to-install-and-configure-wcf-activation-components.md)する」を参照してください。  
+ このホスト オプションでは、WAS アクティブ化コンポーネントのインストールと構成が正しく行われている必要がありますが、アプリケーションの一部としてホスト コードを記述する必要はありません。 WAS のインストールと構成の詳細については、「 [方法: WCF アクティブ化コンポーネントをインストールおよび構成](how-to-install-and-configure-wcf-activation-components.md)する」を参照してください。  
   
 > [!WARNING]
 > Web サーバーの要求処理パイプラインをクラシック モードに設定すると、WAS のアクティブ化がサポートされません。 WAS のアクティブ化を使用する場合は、Web サーバーの要求処理パイプラインを統合モードに設定する必要があります。  
@@ -74,7 +74,7 @@ ms.locfileid: "86051988"
   
 ### <a name="to-create-a-client-to-use-the-service"></a>サービスを使用するクライアントを作成するには  
   
-1. コマンドラインから[ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用して、サービスメタデータからコードを生成します。  
+1. コマンドラインから [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) を使用して、サービスメタデータからコードを生成します。  
   
     ```console
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
@@ -101,4 +101,4 @@ ms.locfileid: "86051988"
 ## <a name="see-also"></a>関連項目
 
 - [TCP のアクティブ化](../samples/tcp-activation.md)
-- [AppFabric のホスティング機能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [AppFabric のホスティング機能](/previous-versions/appfabric/ee677189(v=azure.10))

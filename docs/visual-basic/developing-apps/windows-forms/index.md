@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 11216186a28509e1f10bafa1b24a440bcedaeeb6
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9d061aeccb914cce80e02bb7df44dae2edf25412
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "85840383"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557020"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows フォーム アプリケーションの基礎 (Visual Basic)
 
@@ -20,9 +20,9 @@ Visual Basic の重要な部分は、ユーザーのコンピューター上で�
 
 Visual Studio を使用して、Windows フォームおよび Windows サービス アプリケーションを作成できます。 詳細については、次のトピックを参照してください。
 
-- 「[Windows フォームについて](../../../framework/winforms/getting-started-with-windows-forms.md)」。 Windows フォームを作成およびプログラミングする方法について説明します。
+- 「[Windows フォームについて](/dotnet/desktop/winforms/getting-started-with-windows-forms)」。 Windows フォームを作成およびプログラミングする方法について説明します。
 
-- 「[Windows フォーム コントロール](../../../framework/winforms/controls/index.md)」。 Windows フォーム コントロールの使用について説明しているトピックのコレクションです。
+- 「[Windows フォーム コントロール](/dotnet/desktop/winforms/controls/)」。 Windows フォーム コントロールの使用について説明しているトピックのコレクションです。
 
 - [Windows サービス アプリケーション](../../../framework/windows-services/index.md)に関する記事。 Windows サービスの作成方法を説明するトピックの一覧を示しています。
 
@@ -34,11 +34,11 @@ Windows フォームでは、フォームはユーザーに情報を表示する
 
 ### <a name="events"></a>イベント
 
-ユーザーがフォームまたはそのコントロールのいずれかに何かを行うと、イベントが生成されます。 アプリケーションは、コードを使用してこれらのイベントに反応し、イベントが発生したときにそのイベントを処理します。 詳細については、「[Windows フォーム内でのイベント ハンドラーの作成](../../../framework/winforms/creating-event-handlers-in-windows-forms.md)」を参照してください。
+ユーザーがフォームまたはそのコントロールのいずれかに何かを行うと、イベントが生成されます。 アプリケーションは、コードを使用してこれらのイベントに反応し、イベントが発生したときにそのイベントを処理します。 詳細については、「[Windows フォーム内でのイベント ハンドラーの作成](/dotnet/desktop/winforms/creating-event-handlers-in-windows-forms)」を参照してください。
 
 ### <a name="controls"></a>コントロール
 
-Windows フォームには、テキスト ボックス、ボタン、ドロップダウン ボックス、ラジオ ボタン、そして Web ページなどを表示するコントロールなど、フォームに配置できるさまざまなコントロールが含まれています。 フォーム上で使用できるすべてのコントロールの一覧については、「[Windows フォームで使用するコントロール](../../../framework/winforms/controls/controls-to-use-on-windows-forms.md)」を参照してください。 既存のコントロールがニーズを満たしていない場合に、Windows フォームは <xref:System.Windows.Forms.UserControl> クラスを使用した独自のカスタム コントロールの作成もサポートしています。
+Windows フォームには、テキスト ボックス、ボタン、ドロップダウン ボックス、ラジオ ボタン、そして Web ページなどを表示するコントロールなど、フォームに配置できるさまざまなコントロールが含まれています。 フォーム上で使用できるすべてのコントロールの一覧については、「[Windows フォームで使用するコントロール](/dotnet/desktop/winforms/controls/controls-to-use-on-windows-forms)」を参照してください。 既存のコントロールがニーズを満たしていない場合に、Windows フォームは <xref:System.Windows.Forms.UserControl> クラスを使用した独自のカスタム コントロールの作成もサポートしています。
 
 Windows フォームには、Microsoft Office のようなハイエンド アプリケーションの機能をエミュレートする豊富な UI コントロールが用意されています。 <xref:System.Windows.Forms.ToolStrip> および <xref:System.Windows.Forms.MenuStrip> コントロールを使用すると、テキストとイメージを含むツールバーとメニューを作成したり、サブメニューを表示したり、テキスト ボックスやコンボ ボックスなど、その他のコントロールをホストしたりできます。
 
@@ -53,9 +53,9 @@ Visual Studio のドラッグアンドドロップ フォーム デザイナー�
 |終了|解決方法については、|
 |--------|---------|
 |Visual Studio を使用して新しい Windows フォーム アプリケーションを作成する|[チュートリアル 1: ピクチャ ビューアーの作成](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|
-|フォーム上のコントロールを使用する|[方法: Windows フォームにコントロールを追加する](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
-|<xref:System.Drawing> を使用してグラフィックスを作成する|[グラフィックス プログラミングについて](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|
-|カスタム コントロールを作成する|[方法: UserControl クラスを継承する](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
+|フォーム上のコントロールを使用する|[方法: Windows フォームにコントロールを追加する](/dotnet/desktop/winforms/controls/how-to-add-controls-to-windows-forms)|
+|<xref:System.Drawing> を使用してグラフィックスを作成する|[グラフィックス プログラミングについて](/dotnet/desktop/winforms/advanced/getting-started-with-graphics-programming)|
+|カスタム コントロールを作成する|[方法: UserControl クラスを継承する](/dotnet/desktop/winforms/controls/how-to-inherit-from-the-usercontrol-class)|
 
 ## <a name="displaying-and-manipulating-data"></a>データの表示と操作
 
@@ -75,8 +75,8 @@ Windows フォームで管理できる別の種類のデータ バインディ�
 
 |終了|解決方法については、|
 |--------|---------|
-|<xref:System.Windows.Forms.BindingSource> コンポーネントを使用する|[方法: デザイナーを使用して Windows フォーム コントロールを BindingSource コンポーネントにバインドする](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
-|ADO.NET データ ソースを操作する|[方法: Windows フォーム BindingSource コンポーネントで ADO.NET データを並べ替える/フィルター処理する](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|<xref:System.Windows.Forms.BindingSource> コンポーネントを使用する|[方法: デザイナーを使用して Windows フォーム コントロールを BindingSource コンポーネントにバインドする](/dotnet/desktop/winforms/controls/bind-wf-controls-with-the-bindingsource)|
+|ADO.NET データ ソースを操作する|[方法: Windows フォーム BindingSource コンポーネントで ADO.NET データを並べ替える/フィルター処理する](/dotnet/desktop/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component)|
 |[データ ソース] ウィンドウを使用する|[チュートリアル: Windows フォームでのデータの表示](/visualstudio/data-tools/accessing-data-in-visual-studio)|
 
 ## <a name="deploying-applications-to-client-computers"></a>クライアント コンピューターにアプリケーションを配置する
@@ -103,11 +103,11 @@ Windows フォームには、ダイアログ ボックスの作成、ヘルプ�
 
 |終了|解決方法については、|
 |--------|---------|
-|フォームの内容を印刷する|[方法: Windows フォームでグラフィックスを印刷する](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [方法: Windows フォームで複数ページのテキスト ファイルを印刷する](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
-|Windows フォームのセキュリティについての詳細|[Windows フォームのセキュリティの概要](../../../framework/winforms/security-in-windows-forms-overview.md)|
+|フォームの内容を印刷する|[方法: Windows フォームでグラフィックスを印刷する](/dotnet/desktop/winforms/advanced/how-to-print-graphics-in-windows-forms)<br /><br /> [方法: Windows フォームで複数ページのテキスト ファイルを印刷する](/dotnet/desktop/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms)|
+|Windows フォームのセキュリティについての詳細|[Windows フォームのセキュリティの概要](/dotnet/desktop/winforms/security-in-windows-forms-overview)|
 
 ## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
-- [Windows フォームの概要](../../../framework/winforms/windows-forms-overview.md)
+- [Windows フォームの概要](/dotnet/desktop/winforms/windows-forms-overview)
 - [My.Forms オブジェクト](../../language-reference/objects/my-forms-object.md)

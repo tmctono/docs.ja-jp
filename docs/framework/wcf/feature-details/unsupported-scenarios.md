@@ -2,12 +2,12 @@
 title: サポートされていないシナリオ
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: b643e6df8a877860ce36fc6ee34c4e4ca08ec748
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: a3ee91e5232926b4ea7db80db35d9a309ca8105b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921157"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557815"
 ---
 # <a name="unsupported-scenarios"></a>サポートされていないシナリオ
 
@@ -20,39 +20,39 @@ Windows Communication Foundation (WCF) では、さまざまな理由により�
 
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP およびセキュリティで保護されたコンテキストトークン cookie 有効
 
-WCF では偽装がサポートされていないため、次の条件に該当する場合は <xref:System.InvalidOperationException> がスローされます。
+WCF は偽装をサポートしていません <xref:System.InvalidOperationException> 。次の条件が存在する場合は、がスローされます。
 
 - オペレーティングシステムは Windows XP です。
 
 - 認証モードで Windows ID が生成された。
 
-- <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> の <xref:System.ServiceModel.OperationBehaviorAttribute> プロパティが <xref:System.ServiceModel.ImpersonationOption.Required> に設定されています。
+- <xref:System.ServiceModel.OperationBehaviorAttribute> の <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> プロパティは <xref:System.ServiceModel.ImpersonationOption.Required> に設定されます。
 
 - 状態ベースのセキュリティ コンテキスト トークン (SCT: Security Context Token) が作成された (既定では、作成は無効になっています)。
 
- 状態ベースの SCT はカスタム バインディングの使用によってのみ作成できます。 詳細については、「[方法: セキュリティで保護されたセッションのセキュリティコンテキストトークンを作成](how-to-create-a-security-context-token-for-a-secure-session.md)する」を参照してください。コードでは、トークンは <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> または <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> メソッドを使用してセキュリティバインド要素 (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> または <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) を作成し、`requireCancellation` パラメーターを `false`に設定することによって有効にします。 このパラメーターは、SCT のキャッシュを参照します。 値を `false` に設定することによって、状態ベースの SCT 機能が有効になります。
+ 状態ベースの SCT はカスタム バインディングの使用によってのみ作成できます。 詳細については、「 [方法: セキュリティで保護されたセッションのセキュリティコンテキストトークンを作成](how-to-create-a-security-context-token-for-a-secure-session.md)する」を参照してください。コードでトークンを有効にするには、メソッドまたはメソッドを使用してセキュリティバインディング要素 ( <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> または) を作成 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> し、 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> `requireCancellation` パラメーターをに設定し `false` ます。 このパラメーターは、SCT のキャッシュを参照します。 値を `false` に設定することによって、状態ベースの SCT 機能が有効になります。
 
- または、構成において、<`customBinding`> を作成し、<`security`> 要素を追加して `authenticationMode` 属性に SecureConversation および `requireSecurityContextCancellation` 属性に `true` を設定することによってもトークンが有効になります。
+ また、構成でトークンを有効にするには、<> を作成し、 `customBinding` <`security`> 要素を追加して、属性を `authenticationMode` ws-secureconversation に、属性をに設定し `requireSecurityContextCancellation` `true` ます。
 
 > [!NOTE]
-> 上記の要件は限定的です。 たとえば、<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> は Windows ID を生成するバインド要素を作成しますが、SCT を確立しません。 そのため、Windows XP の `Required` オプションと共に使用できます。
+> 上記の要件は限定的です。 たとえば、<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> は Windows ID を生成するバインド要素を作成しますが、SCT を確立しません。 このため、Windows XP のオプションと共に使用でき `Required` ます。
 
 ### <a name="possible-aspnet-conflict"></a>考えられる ASP.NET の競合
 
-WCF と ASP.NET は、どちらも偽装を有効または無効にすることができます。 ASP.NET が WCF アプリケーションをホストする場合、WCF と ASP.NET の構成設定の間に競合が存在する可能性があります。 競合が発生した場合は、<xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> プロパティが <xref:System.ServiceModel.ImpersonationOption.NotAllowed>に設定されていない限り、WCF 設定が優先されます。この場合、ASP.NET impersonation 設定が優先されます。
+WCF と ASP.NET は、どちらも偽装を有効または無効にすることができます。 ASP.NET が WCF アプリケーションをホストする場合、WCF と ASP.NET の構成設定の間に競合が存在する可能性があります。 競合が発生した場合は、プロパティがに設定されていない限り、WCF の設定が優先 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> され <xref:System.ServiceModel.ImpersonationOption.NotAllowed> ます。この場合、ASP.NET の権限借用の設定が優先されます。
 
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>アセンブリの読み込みが偽装の下で失敗することがある
 
 偽装されたコンテキストにアセンブリを読み込むためのアクセス権がない場合、共通言語ランタイム (CLR: Common Language Runtime) が AppDomain のアセンブリを初めて読み込もうとしたときに、その <xref:System.AppDomain> はエラーをキャッシュします。 この場合、偽装を元に戻した後、元に戻されたコンテキストにアセンブリを読み込むためのアクセス権があったとしても、それ以降のアセンブリの読み込みは失敗します。 これは、ユーザーコンテキストが変更された後に CLR が読み込みを再試行しないためです。 このエラーから回復するには、アプリケーション ドメインを再起動する必要があります。
 
 > [!NOTE]
-> <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> クラスの <xref:System.ServiceModel.Security.WindowsClientCredential> プロパティの既定値は <xref:System.Security.Principal.TokenImpersonationLevel.Identification> です。 ほとんどの場合、ID レベルの偽装コンテキストには、追加のアセンブリを読み込むための権限がありません。 これは既定値であるため、非常に一般的な状態として認識しておく必要があります。 ID レベルの偽装は、偽装プロセスが `SeImpersonate` 権限を持たない場合にも発生します。 詳細については、「[委任と偽装](delegation-and-impersonation-with-wcf.md)」を参照してください。
+> <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> クラスの <xref:System.ServiceModel.Security.WindowsClientCredential> プロパティの既定値は <xref:System.Security.Principal.TokenImpersonationLevel.Identification> です。 ほとんどの場合、ID レベルの偽装コンテキストには、追加のアセンブリを読み込むための権限がありません。 これは既定値であるため、非常に一般的な状態として認識しておく必要があります。 ID レベルの偽装は、偽装プロセスが `SeImpersonate` 権限を持たない場合にも発生します。 詳細については、「 [委任と偽装](delegation-and-impersonation-with-wcf.md)」を参照してください。
 
 ### <a name="delegation-requires-credential-negotiation"></a>委任には資格情報ネゴシエーションが必要
 
 委任で Kerberos 認証プロトコルを使用するには、資格情報ネゴシエーションを使用する Kerberos プロトコル ("マルチレッグ" Kerberos または "マルチステップ" Kerberos とも呼ばれます) を実装する必要があります。 資格情報ネゴシエーションを使用しない Kerberos 認証 (ワンショット Kerberos またはシングルレッグ Kerberos とも呼ばれる) を実装した場合は、例外がスローされます。 資格情報ネゴシエーションを実装する方法の詳細については、「 [Windows 認証エラーのデバッグ](debugging-windows-authentication-errors.md)」を参照してください。
 
-## <a name="cryptography"></a>暗号
+## <a name="cryptography"></a>暗号化
 
 ### <a name="sha-256-supported-only-for-symmetric-key-usages"></a>SHA-256 は、対称キーの使用に対してのみサポートされます。
 
@@ -80,19 +80,19 @@ FIPS 準拠の AES 暗号化は、識別レベルの権限借用の下にある�
 
 - `p/invoke` を `CertGetCertificateContextProperty` に対して実行し、返された `dwProvType` で `CertGetCertificateContextProperty` を調べる。
 
-- 証明書を照会するには、コマンドラインから `certutil` コマンドを使用します。 詳細については、「[証明書のトラブルシューティングに関する Certutil タスク](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc772619(v=ws.10))」を参照してください。
+- コマンドラインからコマンドを使用して、  `certutil` 証明書を照会します。 詳細については、「 [証明書のトラブルシューティングに関する Certutil タスク](/previous-versions/orphan-topics/ws.10/cc772619(v=ws.10))」を参照してください。
 
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>ASP.NET 権限借用を使用し、ASP.NET compatibility が必要な場合は、メッセージセキュリティが失敗する
 
 WCF では、クライアント認証が行われないようにするため、次の設定の組み合わせはサポートされていません。
 
-- ASP.NET の偽装が有効になっています。 これは、web.config ファイルで、<`identity`> 要素の `impersonate` 属性を `true`に設定することによって行われます。
+- ASP.NET の偽装が有効になっています。 これは、Web.config ファイルで、 `impersonate` <> 要素の属性をに設定することによって行われ `identity` `true` ます。
 
-- ASP.NET 互換モードを有効にするには[\<serviceHostingEnvironment >](../../configure-apps/file-schema/wcf/servicehostingenvironment.md)の `aspNetCompatibilityEnabled` 属性を `true`に設定します。
+- ASP.NET 互換モードを有効にするには `aspNetCompatibilityEnabled` 、の属性 [\<serviceHostingEnvironment>](../../configure-apps/file-schema/wcf/servicehostingenvironment.md) をに設定し `true` ます。
 
 - メッセージ モード セキュリティを使用している。
 
-回避策として、ASP.NET 互換モードをオフにします。 または、ASP.NET 互換モードが必要な場合は、ASP.NET 権限借用機能を無効にし、代わりに WCF によって提供される偽装を使用します。 詳細については、「[委任と偽装](delegation-and-impersonation-with-wcf.md)」を参照してください。
+回避策として、ASP.NET 互換モードをオフにします。 または、ASP.NET 互換モードが必要な場合は、ASP.NET 権限借用機能を無効にし、代わりに WCF によって提供される偽装を使用します。 詳細については、「 [委任と偽装](delegation-and-impersonation-with-wcf.md)」を参照してください。
 
 ## <a name="ipv6-literal-address-failure"></a>IPv6 リテラルアドレスのエラー
 
@@ -124,9 +124,9 @@ WSDL インポートの際に、WCF は `<wst:Claims>` テンプレート内の 
 
 ## <a name="see-also"></a>関連項目
 
-- [セキュリティの考慮事項](security-considerations-in-wcf.md)
-- [情報の漏えい](information-disclosure.md)
-- [権限の昇格](elevation-of-privilege.md)
+- [セキュリティに関する考慮事項](security-considerations-in-wcf.md)
+- [情報漏えい](information-disclosure.md)
+- [特権の昇格](elevation-of-privilege.md)
 - [サービス拒否](denial-of-service.md)
-- [改変](tampering.md)
+- [改ざん](tampering.md)
 - [リプレイ攻撃](replay-attacks.md)

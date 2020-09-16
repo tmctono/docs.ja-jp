@@ -2,18 +2,18 @@
 title: メッセージ セキュリティを使用したメッセージのセキュリティ保護
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: 70c645101033c31da01d79f624ab03ce328dd3a6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b5f7679d5e5ec82e63b588cebd90ce873c055088
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589982"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558304"
 ---
 # <a name="securing-messages-using-message-security"></a>メッセージ セキュリティを使用したメッセージのセキュリティ保護
 このセクションでは、を使用する場合の WCF メッセージセキュリティについて説明 <xref:System.ServiceModel.NetMsmqBinding> します。  
   
 > [!NOTE]
-> このトピックを読む前に、「[セキュリティの概念](security-concepts.md)」を読むことをお勧めします。  
+> このトピックを読む前に、「 [セキュリティの概念](security-concepts.md)」を読むことをお勧めします。  
   
  次の図は、WCF を使用したキュー通信の概念モデルを示しています。 この図および用語を使用して、トランスポート セキュリティの  
   
@@ -41,7 +41,7 @@ ms.locfileid: "84589982"
   
  キューは切断されているため、クライアントとサービスが同時にオンライン状態にならない可能性があります。 したがって、クライアントとサービスは、帯域外で証明書を交換する必要があります。 特にクライアントは、信頼されたストア内にサービスの証明書 (証明機関にチェーンできる) を保持しているという理由で、正しいサービスと通信していると信じる必要があります。 クライアントを認証する場合、サービスはメッセージに添付された X509 証明書を使用し、ストア内の証明書と照合してクライアントの信頼性を確認します。 この場合も、証明書は証明機関にチェーンされている必要があります。  
   
- Windows を実行しているコンピューターでは、証明書は数種類のストアで保持されています。 さまざまなストアの詳細については、「[証明書ストア](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10))」を参照してください。  
+ Windows を実行しているコンピューターでは、証明書は数種類のストアで保持されています。 さまざまなストアの詳細については、「 [証明書ストア](/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10))」を参照してください。  
   
 ### <a name="windows"></a>Windows  
  メッセージ資格情報の種類に Windows を設定すると、Kerberos プロトコルが使用されます。  

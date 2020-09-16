@@ -2,12 +2,12 @@
 title: Windows Communication Foundation で使用するための Windows プロセス アクティブ化サービスを設定する
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-ms.openlocfilehash: 06d3a7bd798913b06d342ac09d12e736fc436b3c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7dccfea990afff1d2aacd5e9714472e733684c33
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597502"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556604"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Windows Communication Foundation で使用するための Windows プロセス アクティブ化サービスを設定する
 このトピックでは、windows Vista で Windows プロセスアクティブ化サービス (WAS) をセットアップして、HTTP ネットワークプロトコルでは通信しない Windows Communication Foundation (WCF) サービスをホストする手順について説明します。 以降の各セクションで、この構成に関する手順について概説します。  
@@ -23,7 +23,7 @@ ms.locfileid: "84597502"
 ## <a name="configuring-a-site-with-non-http-bindings"></a>非 HTTP バインドを使用したサイトの構成  
  WAS で非 HTTP バインドを使用するには、サイト バインドを WAS 構成に追加する必要があります。 WAS の構成ストアは、%windir%\system32\inetsrv\config ディレクトリにある applicationHost.config ファイルです。 この構成ストアは、WAS と IIS 7.0 の両方で共有されます。  
   
- applicationHost.config は、任意の標準テキスト エディター (メモ帳など) で開くことが可能な XML テキスト ファイルです。 ただし、HTTP 以外のサイトバインドを追加するには、IIS 7.0 コマンドライン構成ツール (appcmd.exe) を使用することをお勧めします。  
+ applicationHost.config は、任意の標準テキスト エディター (メモ帳など) で開くことが可能な XML テキスト ファイルです。 ただし、IIS 7.0 のコマンドライン構成ツール (appcmd.exe) を使用して、HTTP 以外のサイトバインドを追加することをお勧めします。  
   
  次のコマンドは、appcmd.exe を使用して、既定の Web サイトに net.tcp サイト バインドを追加します (このコマンドは 1 行で入力します)。  
   
@@ -52,7 +52,7 @@ appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInf
 appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp  
 ```  
   
- 有効なプロトコルの一覧は、 \<applicationDefaults> applicationhost.config に格納されているサイトの XML 構成の要素で設定することもできます。  
+ 有効なプロトコルの一覧は、 \<applicationDefaults> ApplicationHost.config に格納されているサイトの XML 構成の要素で設定することもできます。  
   
  次の applicationHost.config からの XML コードは、HTTP プロトコルと非 HTTP プロトコルの両方にバインドされたサイトを示しています。 非 HTTP プロトコルのサポートに必要な追加の構成は、コメントで付記されています。  
   
@@ -89,14 +89,14 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
 [InvalidOperationException: The protocol 'net.tcp' does not have an implementation of HostedTransportConfiguration type registered.]   System.ServiceModel.AsyncResult.End(IAsyncResult result) +15778592   System.ServiceModel.Activation.HostedHttpRequestAsyncResult.End(IAsyncResult result) +15698937   System.ServiceModel.Activation.HostedHttpRequestAsyncResult.ExecuteSynchronous(HttpApplication context, Boolean flowContext) +265   System.ServiceModel.Activation.HttpModule.ProcessRequest(Object sender, EventArgs e) +227   System.Web.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +80   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +171  
 ```  
   
- このエラーが表示された場合は、非 HTTP アクティブ化の WAS が適切にインストールおよび構成されていることを確認してください。 詳細については、「[方法: WCF アクティブ化コンポーネントをインストールおよび構成](how-to-install-and-configure-wcf-activation-components.md)する」を参照してください。  
+ このエラーが表示された場合は、非 HTTP アクティブ化の WAS が適切にインストールおよび構成されていることを確認してください。 詳細については、「 [方法: WCF アクティブ化コンポーネントをインストールおよび構成](how-to-install-and-configure-wcf-activation-components.md)する」を参照してください。  
   
 ## <a name="building-a-wcf-service-that-uses-was-for-non-http-activation"></a>非 HTTP のアクティブ化で WAS を使用する WCF サービスの構築  
- WAS をインストールして構成する手順 (「[方法: WCF アクティブ化コンポーネントをインストールおよび構成](how-to-install-and-configure-wcf-activation-components.md)する」を参照してください) を実行すると、アクティブ化のために was を使用するようにサービスを構成することは、IIS でホストされるサービスの構成に似ています。  
+ WAS をインストールして構成する手順 (「 [方法: WCF アクティブ化コンポーネントをインストールおよび構成](how-to-install-and-configure-wcf-activation-components.md)する」を参照してください) を実行すると、アクティブ化のために was を使用するようにサービスを構成することは、IIS でホストされるサービスの構成に似ています。  
   
  WAS によってアクティブ化される WCF サービスを構築する方法の詳細については、「 [How to: Host a WCF service IN was](how-to-host-a-wcf-service-in-was.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
 - [Windows プロセス アクティブ化サービスでのホスティング](hosting-in-windows-process-activation-service.md)
-- [AppFabric のホスティング機能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [AppFabric のホスティング機能](/previous-versions/appfabric/ee677189(v=azure.10))

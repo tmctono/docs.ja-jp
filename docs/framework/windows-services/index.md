@@ -12,12 +12,12 @@ helpviewer_keywords:
 - .NET applications, Windows applications
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
-ms.openlocfilehash: ed02d523c21c51df2ed886843fdb71c075c93c30
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 1f02b8229c0d62fa6c0e74ae1e670831b0becb0b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925697"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557802"
 ---
 # <a name="develop-windows-service-apps"></a>Windows サービス アプリを開発する
 
@@ -52,4 +52,4 @@ Windows サービス プロジェクトのテンプレートを使用して Wind
 
 <xref:System.ServiceProcess.ServiceInstaller>: <xref:System.ServiceProcess.ServiceProcessInstaller> クラスと共に使用して、サービスをインストール/アンインストールする <xref:System.ServiceProcess.ServiceInstaller> クラスの機能について説明します。
 
-[テンプレートからプロジェクトを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0fyc0azh(v=vs.120)): この章で使用されるプロジェクトの種類と、それを選択する際に役立つガイドラインを説明します。
+[テンプレートからプロジェクトを作成する](/previous-versions/visualstudio/visual-studio-2013/0fyc0azh(v=vs.120)): この章で使用されるプロジェクトの種類と、それを選択する際に役立つガイドラインを説明します。

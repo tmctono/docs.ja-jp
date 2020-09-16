@@ -2,16 +2,16 @@
 title: NamedPipe アクティベーション
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 8d9a10b94c52514db611144352653b911d109056
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 56775842a742d0c6b07c6870bfce524ed1d275fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602467"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556103"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe アクティベーション
 
-このサンプルでは、名前付きパイプを介して通信するサービスをアクティブ化するために、Windows プロセス アクティブ化サービス (WAS: Windows Process Activation Service) を使用してサービスをホストする方法を示します。 このサンプルは[はじめに](getting-started-sample.md)に基づいており、Windows Vista を実行する必要があります。
+このサンプルでは、名前付きパイプを介して通信するサービスをアクティブ化するために、Windows プロセス アクティブ化サービス (WAS: Windows Process Activation Service) を使用してサービスをホストする方法を示します。 このサンプルは [はじめに](getting-started-sample.md) に基づいており、Windows Vista を実行する必要があります。
 
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。
@@ -21,7 +21,7 @@ ms.locfileid: "84602467"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\NamedPipeActivation`
 
@@ -167,11 +167,11 @@ Press <ENTER> to terminate client.
 
     1. **[スタート]** メニューの **[コントロール パネル]** をクリックします。
 
-    2. [**プログラムと機能**] を選択します。
+    2. [ **プログラムと機能**] を選択します。
 
     3. [ **Windows コンポーネントの有効化または無効化] を**クリックします。
 
-    4. [ **Microsoft .NET Framework 3.0** ] ノードを展開し、[ **WINDOWS COMMUNICATION FOUNDATION の非 HTTP アクティブ化**] 機能をオンにします。
+    4. [ **Microsoft .NET Framework 3.0** ] ノードを展開し、[ **WINDOWS COMMUNICATION FOUNDATION の非 HTTP アクティブ化** ] 機能をオンにします。
 
 3. 名前付きパイプのアクティブ化をサポートするように Windows プロセス アクティブ化サービス (WAS) を構成します。
 
@@ -226,4 +226,4 @@ Press <ENTER> to terminate client.
 
 ## <a name="see-also"></a>関連項目
 
-- [AppFabric のホストおよび永続化のサンプル](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [AppFabric のホストおよび永続化のサンプル](/previous-versions/appfabric/ff383418(v=azure.10))

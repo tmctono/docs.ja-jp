@@ -3,12 +3,12 @@ title: LINQ to SQL
 description: LINQ to SQL は .NET Framework のコンポーネントであり、リレーショナル データをオブジェクトとして管理するためのランタイム インフラストラクチャを提供します。
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: 13502bfee3ee24764d190dace1512bc958343973
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d6fadecf17cae21527cec2180b6d6c5b5e85d0cc
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "85503757"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551315"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は .NET Framework バージョン 3.5 のコンポーネントであり、リレーショナル データをオブジェクトとして管理するためのランタイム インフラストラクチャを提供します。  
@@ -20,7 +20,7 @@ ms.locfileid: "85503757"
   
  Visual Studio を使用する開発者は、通常、オブジェクト リレーショナル デザイナーを使用します。これには、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の機能の多くを実装するためのユーザー インターフェイスが用意されています。  
   
- このリリースの [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] に含まれているドキュメントでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] アプリケーションを構築するのに必要な基本的なビルド ブロック、プロセス、および手法について説明します。 特定の問題について Microsoft Docs を検索したり、[LINQ フォーラム](https://social.msdn.microsoft.com/forums/home?forum=linqtosql)に参加して、複雑なトピックについて専門家と検討したりすることもできます。 最後に、「[LINQ to SQL: リレーショナル データ用 .NET 統合言語クエリ](https://docs.microsoft.com/previous-versions/dotnet/articles/bb425822(v=msdn.10))」ホワイト ペーパーには、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] テクノロジの詳細と、Visual Basic および C# のコード例が記載されています。  
+ このリリースの [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] に含まれているドキュメントでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] アプリケーションを構築するのに必要な基本的なビルド ブロック、プロセス、および手法について説明します。 特定の問題について Microsoft Docs を検索したり、[LINQ フォーラム](https://social.msdn.microsoft.com/forums/home?forum=linqtosql)に参加して、複雑なトピックについて専門家と検討したりすることもできます。 最後に、「[LINQ to SQL: リレーショナル データ用 .NET 統合言語クエリ](/previous-versions/dotnet/articles/bb425822(v=msdn.10))」ホワイト ペーパーには、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] テクノロジの詳細と、Visual Basic および C# のコード例が記載されています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [はじめに](getting-started.md)  
@@ -48,11 +48,11 @@ ms.locfileid: "85503757"
  [LINQ と ADO.NET](../../linq-and-ado-net.md)  
  ADO.NET ポータルへのリンク。  
   
- [LINQ to SQL チュートリアル](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))  
+ [LINQ to SQL チュートリアル](/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のチュートリアルを一覧します。  
   
  [サンプル データベースのダウンロード](downloading-sample-databases.md)  
  ドキュメントで使用されるサンプル データベースをダウンロードする方法について説明します。  
   
- [LinqDataSource Web サーバー コントロールの概要](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
+ [LinqDataSource Web サーバー コントロールの概要](/previous-versions/aspnet/bb547113(v=vs.100))  
  <xref:System.Web.UI.WebControls.LinqDataSource> コントロールにより ASP.NET データ ソース コントロールのアーキテクチャを通じて統合言語クエリ (LINQ) が Web 開発者に公開される方法について説明します。

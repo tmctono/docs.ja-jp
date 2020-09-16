@@ -6,12 +6,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - cryptography, cross-platform
 - encryption, cross-platform
-ms.openlocfilehash: 61fd49e53761deac278b770003eb97241b6c2be9
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 7269b32e509039fdd767446bd6e10202b089c094
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557152"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550020"
 ---
 # <a name="cross-platform-cryptography-in-net-core-and-net-5"></a>.NET Core と .NET 5 でのクロスプラットフォーム暗号化
 
@@ -22,7 +22,7 @@ ms.locfileid: "87557152"
 
 OS ライブラリに対する依存関係は、OS がサポートする暗号化機能のみを .NET アプリで使用できることも意味します。 すべてのプラットフォームで特定のコア機能がサポートされますが、.NET でサポートされている一部のプラットフォームでは、一部の機能を使用できません。 この記事では、各プラットフォームでサポートされている機能について説明します。
 
-この記事では、.NET での暗号化に関する実用的な知識があることを前提としています。 詳細については、「 [.Net 暗号化モデル](cryptography-model.md)と[.net 暗号化サービス](cryptographic-services.md)」を参照してください。
+この記事では、.NET での暗号化に関する実用的な知識があることを前提としています。 詳細については、「 [.Net 暗号化モデル](cryptography-model.md) と [.net 暗号化サービス](cryptographic-services.md)」を参照してください。
 
 ## <a name="hash-algorithms"></a>ハッシュ アルゴリズム
 
@@ -109,7 +109,7 @@ OS ライブラリは、暗号化と復号化の埋め込みに使用されま�
 | PKCS1 Signature (SHA-1)               | ✔️           | ✔️              | ✔️   | ⚠️\*           |
 | PSS                                   | ✔️           | ✔️              | ✔️   | ❌             |
 
-\*Windows CryptoAPI (CAPI) は、SHA-1 アルゴリズムを使用して署名を PKCS1 ことができます。 ただし、個々の RSA オブジェクトは、それをサポートしていない暗号化サービスプロバイダー (CSP) に読み込むことができます。
+\* Windows CryptoAPI (CAPI) は、SHA-1 アルゴリズムを使用して署名を PKCS1 ことができます。 ただし、個々の RSA オブジェクトは、それをサポートしていない暗号化サービスプロバイダー (CSP) に読み込むことができます。
 
 #### <a name="rsa-on-windows"></a>Windows での RSA
 
@@ -151,9 +151,9 @@ ECDSA のキー曲線は OS ライブラリによって定義され、制限が�
 
 <sup>1</sup> Linux ディストリビューションでは、同じ名前付き曲線がサポートされていません。
 
-<sup>2</sup>名前付き曲線のサポートは、windows 10 の windows CNG に追加されました。 詳細については、「 [CNG 名前付き楕円曲線](https://msdn.microsoft.com/library/windows/desktop/mt632245(v=vs.85).aspx)」を参照してください。 名前付き曲線は、Windows 7 の3つの曲線を除き、以前のバージョンの Windows では使用できません。
+<sup>2</sup> 名前付き曲線のサポートは、windows 10 の windows CNG に追加されました。 詳細については、「 [CNG 名前付き楕円曲線](/windows/win32/seccng/cng-named-elliptic-curves)」を参照してください。 名前付き曲線は、Windows 7 の3つの曲線を除き、以前のバージョンの Windows では使用できません。
 
-<sup>3</sup>明示的な曲線パラメーターを使用してエクスポートするには、os ライブラリのサポートが必要です。これは、macOS または以前のバージョンの Windows では使用できません。
+<sup>3</sup> 明示的な曲線パラメーターを使用してエクスポートするには、os ライブラリのサポートが必要です。これは、macOS または以前のバージョンの Windows では使用できません。
 
 #### <a name="ecdsa-native-interop"></a>ECDSA ネイティブ相互運用
 
@@ -164,7 +164,7 @@ ECDSA のキー曲線は OS ライブラリによって定義され、制限が�
 | <xref:System.Security.Cryptography.ECDsaCng>     | ✔️     | ❌    | ❌    |
 | <xref:System.Security.Cryptography.ECDsaOpenSsl> | ❌     | ✔️    | ⚠️\*  |
 
-\*MacOS では、 <xref:System.Security.Cryptography.ECDsaOpenSsl> OpenSSL がシステムにインストールされ、適切な libcrypto .dylib がダイナミックライブラリの読み込みによって検出された場合に機能します。 適切なライブラリが見つからない場合は、例外がスローされます。
+\* MacOS では、 <xref:System.Security.Cryptography.ECDsaOpenSsl> OpenSSL がシステムにインストールされ、適切な libcrypto .dylib がダイナミックライブラリの読み込みによって検出された場合に機能します。 適切なライブラリが見つからない場合は、例外がスローされます。
 
 ### <a name="ecdh"></a>ECDH
 
@@ -194,9 +194,9 @@ ECDH キー曲線は OS ライブラリによって定義され、制限が適�
 
 <sup>1</sup> Linux ディストリビューションでは、同じ名前付き曲線がサポートされていません。
 
-<sup>2</sup>名前付き曲線のサポートは、windows 10 の windows CNG に追加されました。 詳細については、「 [CNG 名前付き楕円曲線](https://msdn.microsoft.com/library/windows/desktop/mt632245(v=vs.85).aspx)」を参照してください。 名前付き曲線は、Windows 7 の3つの曲線を除き、以前のバージョンの Windows では使用できません。
+<sup>2</sup> 名前付き曲線のサポートは、windows 10 の windows CNG に追加されました。 詳細については、「 [CNG 名前付き楕円曲線](/windows/win32/seccng/cng-named-elliptic-curves)」を参照してください。 名前付き曲線は、Windows 7 の3つの曲線を除き、以前のバージョンの Windows では使用できません。
 
-<sup>3</sup>明示的な曲線パラメーターを使用してエクスポートするには、os ライブラリのサポートが必要です。これは、macOS または以前のバージョンの Windows では使用できません。
+<sup>3</sup> 明示的な曲線パラメーターを使用してエクスポートするには、os ライブラリのサポートが必要です。これは、macOS または以前のバージョンの Windows では使用できません。
 
 #### <a name="ecdh-native-interop"></a>ECDH ネイティブ相互運用
 
@@ -207,13 +207,13 @@ ECDH キー曲線は OS ライブラリによって定義され、制限が適�
 | <xref:System.Security.Cryptography.ECDiffieHellmanCng>     | ✔️     | ❌    | ❌   |
 | <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> | ❌     | ✔️    | ⚠️\* |
 
-\*MacOS では、 <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> OpenSSL がインストールされていて、適切な libcrypto .dylib がダイナミックライブラリの読み込みによって検出された場合に機能します。 適切なライブラリが見つからない場合は、例外がスローされます。
+\* MacOS では、 <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> OpenSSL がインストールされていて、適切な libcrypto .dylib がダイナミックライブラリの読み込みによって検出された場合に機能します。 適切なライブラリが見つからない場合は、例外がスローされます。
 
 ### <a name="dsa"></a>DSA
 
 DSA (デジタル署名アルゴリズム) キーの生成はシステムライブラリによって実行されるため、サイズの制限やパフォーマンス特性が適用されます。
 
-| 関数                      | Windows CNG | Linux | macOS         | Windows CAPI |
+| 機能                      | Windows CNG | Linux | macOS         | Windows CAPI |
 |-------------------------------|-------------|-------|---------------|--------------|
 | キーの作成 (<= 1024 ビット)   | ✔️         | ✔️    | ❌            | ✔️           |
 | キーの作成 (> 1024 ビット)    | ✔️         | ✔️    | ❌            | ❌            |
@@ -222,7 +222,7 @@ DSA (デジタル署名アルゴリズム) キーの生成はシステムライ�
 | FIPS 186-2                    | ✔️         | ✔️    | ✔️            | ✔️           |
 | FIPS 186-3 (SHA-1 署名) | ✔️         | ✔️    | ❌            | ❌            |
 
-\*macOS は1024ビットを超える DSA キーを読み込みますが、これらのキーの動作は定義されていません。 FIPS 186-3 に従って動作しません。
+\* macOS は1024ビットを超える DSA キーを読み込みますが、これらのキーの動作は定義されていません。 FIPS 186-3 に従って動作しません。
 
 #### <a name="dsa-on-windows"></a>Windows 上の DSA
 
@@ -261,7 +261,7 @@ DSA (デジタル署名アルゴリズム) キーの生成はシステムライ�
 | 複数の証明書、1つの秘密キー       | ✔️     | ✔️    | ✔️   |
 | 複数の証明書、複数の秘密キー | ✔️     | ⚠️\*  | ✔️   |
 
-\*.NET 5 preview リリースで使用できます。
+\* .NET 5 preview リリースで使用できます。
 
 ### <a name="write-a-pkcs12pfx"></a>PKCS12/PFX の作成
 
@@ -275,7 +275,7 @@ DSA (デジタル署名アルゴリズム) キーの生成はシステムライ�
 | 複数の証明書、複数の秘密キー | ✔️     | ⚠️\*  | ✔️   |
 | 短期読み込み                            | ✔️     | ✔️    | ⚠️\* |
 
-\*.NET 5 preview リリースで使用できます。
+\* .NET 5 preview リリースで使用できます。
 
 macOS は、キーチェーンオブジェクトを使用せずに証明書の秘密キーを読み込むことができません。この場合、ディスクへの書き込みが必要です。 キーチェーンは PFX 読み込み用に自動的に作成され、使用されなくなったときに削除されます。 この <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> オプションは秘密キーがディスクに書き込まれないことを意味するため、macOS でそのフラグをアサートすると、が発生 <xref:System.PlatformNotSupportedException> します。
 

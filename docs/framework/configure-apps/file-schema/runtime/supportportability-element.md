@@ -5,12 +5,12 @@ helpviewer_keywords:
 - supportPortability element
 - <supportPortability> element
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
-ms.openlocfilehash: 63c309a8a93c1d31ed8f73a495cf5154c3590d56
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 99fa51238040f21d998a8c6c2aef7c13d288104a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73115653"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551586"
 ---
 # <a name="supportportability-element"></a>\<supportPortability> 要素
 .NET Framework の 2 つの異なる実装にある同じアセンブリを 1 つのアプリケーションから参照できるように、既定の動作を無効にすることができます。既定の動作では、アプリケーションの移植性を高めるために、このようなアセンブリは同等のものとして扱われます。  
@@ -39,9 +39,9 @@ ms.locfileid: "73115653"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|Description|  
+|[値]|説明|  
 |-----------|-----------------|  
-|true|指定した .NET Framework アセンブリの複数の実装間での移植性に対するサポートを有効にします。 既定値です。|  
+|true|指定した .NET Framework アセンブリの複数の実装間での移植性に対するサポートを有効にします。 これは既定値です。|  
 |false|指定した .NET Framework アセンブリの複数の実装間での移植性に対するサポートを無効にします。 この場合、指定したアセンブリの複数の実装をアプリケーションで参照できます。|  
   
 ### <a name="child-elements"></a>子要素  
@@ -50,13 +50,13 @@ ms.locfileid: "73115653"
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
 |`assemblyBinding`|アセンブリ バージョンのリダイレクトおよびアセンブリの位置に関する情報が含まれます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
 
 .NET Framework 4 以降、.NET Framework の2つの実装のいずれかを使用できるアプリケーションに対して、サポートが自動的に提供されます。たとえば、.NET Framework の実装や、Silverlight の実装のための .NET Framework です。 特定の .NET Framework アセンブリの 2 つの実装は、アセンブリ バインダーで同等と見なされます。 一部のシナリオでは、アプリケーションの移植性を高めるためのこの機能が問題になります。 そのようなシナリオでは、`<supportPortability>` 要素を使用して、この機能を無効にすることができます。  
   
@@ -83,4 +83,4 @@ ms.locfileid: "73115653"
 ## <a name="see-also"></a>関連項目
 
 - [-appconfig (C# コンパイラ オプション)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
-- [.NET Framework アセンブリ統合の概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))
+- [.NET Framework アセンブリ統合の概要](/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

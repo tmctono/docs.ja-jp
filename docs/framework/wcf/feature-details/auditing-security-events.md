@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: b130ed57ba086535122c8c8795c42863348870d0
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5ab10bcc58166d5a38768f988fb18f23088256cc
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597658"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558291"
 ---
 # <a name="auditing-security-events"></a>セキュリティ イベントの監査
 Windows Communication Foundation (WCF) を使用して作成されたアプリケーションは、監査機能を使用してセキュリティイベント (成功、失敗、またはその両方) をログに記録できます。 これらのイベントは Windows システム イベント ログに書き込まれ、イベント ビューアーを使用して確認できます。  
   
  監査を使用すると、管理者は既に発生した攻撃や現在進行中の攻撃を検出できます。 また、開発者がセキュリティ関連の問題をデバッグする際にも役立ちます。 たとえば、認証またはポリシー チェックの構成エラーによって承認済みユーザーへのアクセスが拒否された場合、開発者は、イベント ログを検査することによって、このエラーの原因をすばやく発見し、取り出すことができます。  
   
- WCF セキュリティの詳細については、「[セキュリティの概要](security-overview.md)」を参照してください。 WCF のプログラミングの詳細については、「[基本的な Wcf プログラミング](../basic-wcf-programming.md)」を参照してください。  
+ WCF セキュリティの詳細については、「 [セキュリティの概要](security-overview.md)」を参照してください。 WCF のプログラミングの詳細については、「 [基本的な Wcf プログラミング](../basic-wcf-programming.md)」を参照してください。  
   
 ## <a name="audit-level-and-behavior"></a>監査レベルと動作  
  セキュリティ監査には次の 2 つのレベルがあります。  
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) を使用して作成されたアプリ�
   
 - メッセージレベル。 WCF がメッセージの有効性をチェックし、呼び出し元を認証します。  
   
- 成功または失敗の両方の監査レベルを確認できます。これは、*監査の動作*と呼ばれます。  
+ 成功または失敗の両方の監査レベルを確認できます。これは、 *監査の動作*と呼ばれます。  
   
 ## <a name="audit-log-location"></a>監査ログの場所  
  監査のレベルと動作を決定したら、ユーザー (または管理者) は監査ログの場所を指定できます。 監査ログの場所は、Default、Application、および Security の 3 つから選択できます。 Default を指定した場合、ログの実際の場所は、ユーザーが使用しているシステムと、セキュリティ ログへの書き込みがサポートされているかどうかによって決まります。 詳細については、このトピックで後述する「オペレーティングシステム」を参照してください。  
@@ -51,7 +51,7 @@ Windows Communication Foundation (WCF) を使用して作成されたアプリ�
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>|サービス レベルで監査されるサービス承認イベントの種類を指定します。 `None`、`Failure`、`Success` および `SuccessOrFailure` から選択できます。|  
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>|監査が失敗した場合に、クライアント要求をどのように処理するかを指定します。 たとえば、`SeAuditPrivilege` を持たないサービスがセキュリティ ログへの書き込みを試行したとします。 この場合、既定値の `true` が設定されていると、エラーは無視され、クライアント要求は正常に処理されます。|  
   
- 監査イベントをログに記録するようにアプリケーションを設定する例については、「[方法: セキュリティイベントを監査](how-to-audit-wcf-security-events.md)する」を参照してください。  
+ 監査イベントをログに記録するようにアプリケーションを設定する例については、「 [方法: セキュリティイベントを監査](how-to-audit-wcf-security-events.md)する」を参照してください。  
   
 ### <a name="configuration"></a>構成  
  構成を使用して、の下にを追加することによって監査の動作を指定することもでき [\<serviceSecurityAudit>](../../configure-apps/file-schema/wcf/servicesecurityaudit.md) [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) ます。 次のコードに示すように、の下に要素を追加する必要があり [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) ます。  
@@ -107,4 +107,4 @@ Windows Communication Foundation (WCF) を使用して作成されたアプリ�
 - [方法: セキュリティ イベントを監査する](how-to-audit-wcf-security-events.md)
 - [\<serviceSecurityAudit>](../../configure-apps/file-schema/wcf/servicesecurityaudit.md)
 - [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md)
-- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric のセキュリティ モデル](/previous-versions/appfabric/ee677202(v=azure.10))

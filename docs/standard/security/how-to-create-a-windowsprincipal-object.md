@@ -11,12 +11,12 @@ helpviewer_keywords:
 - security [.NET], principals
 - principal objects, creating
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
-ms.openlocfilehash: d99d63dc766f37e7cc30888d2e77657595f909af
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 6cf7153250d2574783515ea53cf99709499d36f9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557035"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556207"
 ---
 # <a name="how-to-create-a-windowsprincipal-object"></a>方法: WindowsPrincipal プロジェクトを作成する
 
@@ -84,4 +84,4 @@ ms.locfileid: "87557035"
 ## <a name="see-also"></a>関連項目
 
 - [プリンシパル オブジェクトと ID オブジェクト](principal-and-identity-objects.md)
-- [ASP.NET Core のセキュリティ](https://docs.microsoft.com/aspnet/core/security/)
+- [ASP.NET Core のセキュリティ](/aspnet/core/security/)

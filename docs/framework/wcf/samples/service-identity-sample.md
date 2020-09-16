@@ -2,15 +2,15 @@
 title: サービス ID サンプル
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: e4b5e739db04fbb3270c9870468433aec7787061
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e3365b8e17d847e6e1dc42062dc7fd5c1e4de80d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599907"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558135"
 ---
 # <a name="service-identity-sample"></a>サービス ID サンプル
-このサービス ID サンプルでは、サービスの ID を設定する方法を示します。 クライアントは、デザイン時にサービスのメタデータを使用して ID を取得し、実行時にそのサービス ID を認証することができます。 サービス ID の概念は、クライアントがサービス操作を呼び出す前にそのサービスを認証できるようにし、それによって認証されていない呼び出しからクライアントを保護することにあります。 セキュリティ保護されている接続では、サービスがクライアントの資格情報を認証した後にクライアントのアクセスを許可できますが、このサンプルではこのことを主眼とはしていません。 「サーバー認証を表示する[クライアント](client.md)」のサンプルを参照してください。
+このサービス ID サンプルでは、サービスの ID を設定する方法を示します。 クライアントは、デザイン時にサービスのメタデータを使用して ID を取得し、実行時にそのサービス ID を認証することができます。 サービス ID の概念は、クライアントがサービス操作を呼び出す前にそのサービスを認証できるようにし、それによって認証されていない呼び出しからクライアントを保護することにあります。 セキュリティ保護されている接続では、サービスがクライアントの資格情報を認証した後にクライアントのアクセスを許可できますが、このサンプルではこのことを主眼とはしていません。 「サーバー認証を表示する [クライアント](client.md) 」のサンプルを参照してください。
 
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。
@@ -115,18 +115,18 @@ class CustomIdentityVerifier : IdentityVerifier
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>サンプルを同じコンピューターで実行するには
 
-1. Windows XP または Windows Vista では、MMC スナップインツールを使用して、id ソリューションフォルダー内の Id .pfx 証明書ファイルを LocalMachine/My (Personal) 証明書ストアにインポートします。 このファイルは、パスワードで保護されています。 インポート中に、パスワードの入力を求められます。 `xyz`[パスワード] ボックスに「」と入力します。 詳細については、「[方法: MMC スナップインを使用して証明書を表示する](../feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)」を参照してください。 この処理が完了したら、管理者特権を使用して Visual Studio の開発者コマンドプロンプトで Setup.exe を実行します。これにより、クライアントで使用するために、この証明書が CurrentUser/Trusted People ストアにコピーされます。
+1. Windows XP または Windows Vista では、MMC スナップインツールを使用して、id ソリューションフォルダー内の Id .pfx 証明書ファイルを LocalMachine/My (Personal) 証明書ストアにインポートします。 このファイルは、パスワードで保護されています。 インポート中に、パスワードの入力を求められます。 `xyz`[パスワード] ボックスに「」と入力します。 詳細については、「 [方法: MMC スナップインを使用して証明書を表示する](../feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) 」を参照してください。 この処理が完了したら、管理者特権を使用して Visual Studio の開発者コマンドプロンプトで Setup.bat を実行します。これにより、クライアントで使用するために、この証明書が CurrentUser/Trusted People ストアにコピーされます。
 
-2. Windows Server 2003 で、管理者特権を使用して Visual Studio 2012 コマンドプロンプト内のサンプルのインストールフォルダーから、Setup.exe を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
+2. Windows Server 2003 で、管理者特権を使用して Visual Studio 2012 コマンドプロンプト内のサンプルのインストールフォルダーから Setup.bat を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
 
     > [!NOTE]
-    > セットアップの .bat バッチファイルは、Visual Studio 2012 のコマンドプロンプトから実行するように設計されています。 Visual Studio 2012 のコマンドプロンプト内で設定された PATH 環境変数は、セットアップの .bat スクリプトで必要な実行可能ファイルが格納されているディレクトリを指します。 サンプルの実行後は、Cleanup.bat を実行して証明書を削除してください。 他のセキュリティ サンプルでも同じ証明書を使用します。  
+    > Setup.bat バッチファイルは、Visual Studio 2012 のコマンドプロンプトから実行するように設計されています。 Visual Studio 2012 のコマンドプロンプト内で設定された PATH 環境変数は、Setup.bat スクリプトで必要な実行可能ファイルを含むディレクトリを指します。 サンプルの実行後は、Cleanup.bat を実行して証明書を削除してください。 他のセキュリティ サンプルでも同じ証明書を使用します。  
   
 3. Service.exe を \service\bin ディレクトリで起動します。 サービスが準備完了であることを示し、を押してサービスを終了するように求めるプロンプトが表示されることを確認し \<Enter> ます。  
   
 4. Client.exe を \client\bin ディレクトリで起動するか、または Visual Studio で F5 を押して起動し、ビルドして実行します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
   
-5. クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
+5. クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
   
 ### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには  
   
@@ -146,11 +146,11 @@ class CustomIdentityVerifier : IdentityVerifier
   
 8. クライアント コンピューターの Client.exe.config ファイルで、エンドポイントのアドレス値をサービスの新しいアドレスに合わせます。 複数のインスタンスを変更する必要があります。  
   
-9. クライアントで、管理者特権で開かれた Visual Studio の開発者コマンドプロンプトで Importservicecert.bat を実行します。 これにより、サービス証明書が Service.cer ファイルから CurrentUser - TrustedPeople ストアにインポートされます。  
+9. クライアントで、管理者特権で開いた Visual Studio の開発者コマンドプロンプトで ImportServiceCert.bat を実行します。 これにより、サービス証明書が Service.cer ファイルから CurrentUser - TrustedPeople ストアにインポートされます。  
   
 10. サービス コンピューターで、コマンド プロンプトから Service.exe を起動します。  
   
-11. クライアント コンピューターで、コマンド プロンプトから Client.exe を起動します。 クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
+11. クライアント コンピューターで、コマンド プロンプトから Client.exe を起動します。 クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
   
 ### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   

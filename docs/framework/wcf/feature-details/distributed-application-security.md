@@ -5,17 +5,17 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 3cae20cfe8d52497646ca173740533a22326c8f8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 70718b5dfbd54693d2734a58c3da17806137ad2f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599153"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557542"
 ---
 # <a name="distributed-application-security"></a>分散アプリケーションのセキュリティ
 Windows Communication Foundation (WCF) セキュリティは、転送セキュリティ、アクセス制御、監査という3つの主要な機能領域に分割されます。 転送セキュリティは、整合性、機密性、および認証を実現します。 転送セキュリティは、トランスポート セキュリティ、メッセージ セキュリティ、または `TransportWithMessageCredential` のいずれかによって提供されます。  
   
- WCF メッセージセキュリティの概要については、「[セキュリティの概要](security-overview.md)」を参照してください。 WCF セキュリティのその他の2つの部分の詳細については、「[承認](authorization-in-wcf.md)と[監査](auditing-security-events.md)」を参照してください。  
+ WCF メッセージセキュリティの概要については、「 [セキュリティの概要](security-overview.md)」を参照してください。 WCF セキュリティのその他の2つの部分の詳細については、「 [承認](authorization-in-wcf.md) と [監査](auditing-security-events.md)」を参照してください。  
   
 ## <a name="transfer-security-scenarios"></a>転送セキュリティのシナリオ  
  WCF 転送セキュリティを使用する一般的なシナリオには、次のものがあります。  
@@ -29,11 +29,11 @@ Windows Communication Foundation (WCF) セキュリティは、転送セキュ�
 ## <a name="integrity-confidentiality-and-authentication"></a>整合性、機密性、および認証  
  整合性、機密性、および認証の 3 つの機能は、合わせて転送セキュリティと呼ばれます。 転送セキュリティは、分散アプリケーションに対する脅威の軽減に役立つ機能を提供します。 転送セキュリティを構成するこれら 3 つの機能について、次の表で簡単に説明します。  
   
-|関数|Description|  
+|機能|説明|  
 |--------------|-----------------|  
-|整合性|*整合性*とは、データが完全かつ正確であることを保証することです。特に、ある地点から別のポイントに走査した後に、多くのアクターによって読み取られた場合に役立ちます。 整合性は、データの改ざんを防止するために保持する必要があり、一般にメッセージのデジタル署名によって実現されます。|  
-|機密情報|*機密性*とは、メッセージが目的の閲覧者以外のユーザーによって読み取られていないことを保証することです。 たとえば、クレジット カード番号などは、インターネット経由で送信されるときに機密性を保持する必要があります。 機密性は、多くの場合、公開キー/秘密キー スキームを使用するデータ暗号化によって実現されます。|  
-|認証|*認証*は、要求された id の検証です。 たとえば、銀行口座の使用時には、口座の実際の所有者だけが預金の引き出しを許可されるようにすることが必須です。 認証は、さまざまな手段によって実現できます。 一般的な方法の 1 つとして、ユーザー/パスワード システムがあります。 また、サードパーティから提供される X.509 証明書を使用する方法もあります。|  
+|整合性|*整合性* とは、データが完全かつ正確であることを保証することです。特に、ある地点から別のポイントに走査した後に、多くのアクターによって読み取られた場合に役立ちます。 整合性は、データの改ざんを防止するために保持する必要があり、一般にメッセージのデジタル署名によって実現されます。|  
+|機密性|*機密性* とは、メッセージが目的の閲覧者以外のユーザーによって読み取られていないことを保証することです。 たとえば、クレジット カード番号などは、インターネット経由で送信されるときに機密性を保持する必要があります。 機密性は、多くの場合、公開キー/秘密キー スキームを使用するデータ暗号化によって実現されます。|  
+|認証|*認証* は、要求された id の検証です。 たとえば、銀行口座の使用時には、口座の実際の所有者だけが預金の引き出しを許可されるようにすることが必須です。 認証は、さまざまな手段によって実現できます。 一般的な方法の 1 つとして、ユーザー/パスワード システムがあります。 また、サードパーティから提供される X.509 証明書を使用する方法もあります。|  
   
 ## <a name="security-modes"></a>セキュリティ モード  
  WCF には、次の表に示す転送セキュリティのモードがいくつかあります。  
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) セキュリティは、転送セキュ�
 |----------|-----------------|  
 |なし|トランスポート層とメッセージ層でセキュリティが一切提供されません。 既定では、要素を除き [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) 、またはコードを使用する場合は、定義済みバインディングでこのモードを使用しません <xref:System.ServiceModel.BasicHttpBinding> 。|  
 |トランスポート|HTTPS など、セキュリティで保護されたトランスポートを使用して、整合性、機密性、および相互認証を実現します。|  
-|Message|SOAP メッセージ セキュリティを使用して、整合性、機密性、および相互認証を実現します。 SOAP メッセージは、WS-Security 標準に従ってセキュリティ保護されます。|  
+|メッセージ|SOAP メッセージ セキュリティを使用して、整合性、機密性、および相互認証を実現します。 SOAP メッセージは、WS-Security 標準に従ってセキュリティ保護されます。|  
 |混在モード|トランスポート セキュリティを使用して、整合性、機密性、およびサーバー認証を実現します。 クライアント認証のためにメッセージ セキュリティ (WS-Security およびその他の標準) を使用します。<br /><br /> (このモードの列挙体は `TransportWithMessageCredential` になります)。|  
 |両方|両方のレベルで保護と認証を実行します。 このモードは、要素でのみ使用でき [\<netMsmqBinding>](../../configure-apps/file-schema/wcf/netmsmqbinding.md) ます。|  
   
@@ -57,7 +57,7 @@ Windows Communication Foundation (WCF) セキュリティは、転送セキュ�
   
  証明書資格情報では、サブジェクト名、サブジェクト代替名、または証明書内の特定のフィールドを使用して、クレーム ID と資格を表すことができます。 資格情報に含まれるデータの所有権の証明は、署名の生成のために関連付けられた秘密キーを使用して行われます。  
   
- 転送セキュリティのプログラミングおよび資格情報の指定の詳細については、「[バインドとセキュリティ](bindings-and-security.md)と[セキュリティの動作](security-behaviors-in-wcf.md)」を参照してください。  
+ 転送セキュリティのプログラミングおよび資格情報の指定の詳細については、「 [バインドとセキュリティ](bindings-and-security.md) と [セキュリティの動作](security-behaviors-in-wcf.md)」を参照してください。  
   
 ### <a name="transport-client-credential-types"></a>トランスポート クライアント資格情報の種類  
  転送セキュリティを使用するアプリケーションを作成するときに使用できる値を次の表に示します。 これらの値は、コードまたはバインディング設定で使用できます。  
@@ -99,4 +99,4 @@ Windows Communication Foundation (WCF) セキュリティは、転送セキュ�
 - [エンドポイントの作成の概要](../endpoint-creation-overview.md)
 - [システム標準のバインディング](../system-provided-bindings.md)
 - [セキュリティの概要](security-overview.md)
-- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric のセキュリティ モデル](/previous-versions/appfabric/ee677202(v=azure.10))
