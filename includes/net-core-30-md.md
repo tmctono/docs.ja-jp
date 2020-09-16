@@ -6,4 +6,4 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/21/2019
 ms.locfileid: "69661217"
 ---
-<span data-ttu-id="a62e7-101">.NET Core 3.0 以降で使用可能</span><span class="sxs-lookup"><span data-stu-id="a62e7-101">Available since .NET Core 3.0</span></span>
+<span data-ttu-id="11c87-101">.NET Core 3.0 以降で使用可能</span><span class="sxs-lookup"><span data-stu-id="11c87-101">Available since .NET Core 3.0</span></span>
