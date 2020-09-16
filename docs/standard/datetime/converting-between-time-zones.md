@@ -13,12 +13,12 @@ helpviewer_keywords:
 - converting times
 - local time conversions
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
-ms.openlocfilehash: 7d1984866c5eacdfe21834389b8f0be4caf78fb7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 156c3d8b360d62ba72f9a4447646fafe170ea658
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446842"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547331"
 ---
 # <a name="converting-times-between-time-zones"></a>タイム ゾーン間での時刻の変換
 
@@ -26,7 +26,7 @@ ms.locfileid: "84446842"
 
 ## <a name="converting-to-coordinated-universal-time"></a>世界協定時刻への変換
 
-世界協定時刻 (UTC) は、高精度の原子時標準です。 世界のタイム ゾーンは、UTC からの正または負のオフセットとして表現されます。 したがって、UTC はタイム ゾーンの影響を受けない、またはタイム ゾーンに依存しない種類の時刻を提供します。 コンピューター間の日時の移植性が重要となる場合には、UTC 時刻の使用が推奨されます。 (日付と時刻を使用した詳細およびその他のベストプラクティスについては、「 [.NET Framework での DateTime を使用したコーディングのベストプラクティス](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973825(v=msdn.10))」を参照してください)。個々のタイムゾーンを UTC に変換すると、時間の比較が簡単になります。
+世界協定時刻 (UTC) は、高精度の原子時標準です。 世界のタイム ゾーンは、UTC からの正または負のオフセットとして表現されます。 したがって、UTC はタイム ゾーンの影響を受けない、またはタイム ゾーンに依存しない種類の時刻を提供します。 コンピューター間の日時の移植性が重要となる場合には、UTC 時刻の使用が推奨されます。 (日付と時刻を使用した詳細およびその他のベストプラクティスについては、「 [.NET Framework での DateTime を使用したコーディングのベストプラクティス](/previous-versions/dotnet/articles/ms973825(v=msdn.10))」を参照してください)。個々のタイムゾーンを UTC に変換すると、時間の比較が簡単になります。
 
 > [!NOTE]
 > また、構造体をシリアル化して <xref:System.DateTimeOffset> 、特定の時点を明確に表すこともできます。 <xref:System.DateTimeOffset>オブジェクトは日付と時刻の値を utc からのオフセットと共に格納するので、utc との関係において常に特定の時点を表します。
@@ -44,7 +44,7 @@ ms.locfileid: "84446842"
 [!code-csharp[System.TimeZone2.Concepts#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#6)]
 [!code-vb[System.TimeZone2.Concepts#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#6)]
 
-日付と時刻の値が現地時刻と UTC のどちらも表さない場合、 <xref:System.DateTime.ToUniversalTime%2A> メソッドは間違った結果を返す可能性があります。 ただし、メソッドを使用して、 <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> 指定したタイムゾーンから日付と時刻を変換することができます。 (変換先のタイムゾーンを表すオブジェクトを取得する方法の詳細につい <xref:System.TimeZoneInfo> ては、「[ローカルシステムで定義されているタイムゾーンの検索](finding-the-time-zones-on-local-system.md)」を参照してください)。次のコードでは、メソッドを使用して <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> 東部標準時を UTC に変換しています。
+日付と時刻の値が現地時刻と UTC のどちらも表さない場合、 <xref:System.DateTime.ToUniversalTime%2A> メソッドは間違った結果を返す可能性があります。 ただし、メソッドを使用して、 <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> 指定したタイムゾーンから日付と時刻を変換することができます。 (変換先のタイムゾーンを表すオブジェクトを取得する方法の詳細につい <xref:System.TimeZoneInfo> ては、「 [ローカルシステムで定義されているタイムゾーンの検索](finding-the-time-zones-on-local-system.md)」を参照してください)。次のコードでは、メソッドを使用して <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> 東部標準時を UTC に変換しています。
 
 [!code-csharp[System.TimeZone2.Concepts#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#7)]
 [!code-vb[System.TimeZone2.Concepts#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#7)]

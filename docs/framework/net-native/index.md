@@ -8,12 +8,12 @@ helpviewer_keywords:
 - .NET Native
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
-ms.openlocfilehash: 1f176e81905fe68c6d740a13240fe814659a7a59
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7601a6d5e7f49b6d8fc434ef772e2e69740f02cf
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128376"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543934"
 ---
 # <a name="compiling-apps-with-net-native"></a>.NET ネイティブによるアプリのコンパイル
 
@@ -38,7 +38,7 @@ ms.locfileid: "73128376"
 - アプリのメモリ使用量が最適化されています。
 
 > [!IMPORTANT]
-> アプリとシナリオの大部分では、IL または NGEN イメージにコンパイルされたアプリと比較した場合、起動時間が大幅に短縮され、パフォーマンスが向上します。 .NET ネイティブ。 ただし、結果は異なる場合があります。 .NET ネイティブのパフォーマンスの向上によってアプリのパフォーマンスを向上させるには、アプリの non-.NET ネイティブバージョンとのパフォーマンスを比較する必要があります。 詳細については、「[パフォーマンスセッションの概要](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview)」を参照してください。
+> アプリとシナリオの大部分では、IL または NGEN イメージにコンパイルされたアプリと比較した場合、起動時間が大幅に短縮され、パフォーマンスが向上します。 .NET ネイティブ。 ただし、結果は異なる場合があります。 .NET ネイティブのパフォーマンスの向上によってアプリのパフォーマンスを向上させるには、アプリの non-.NET ネイティブバージョンとのパフォーマンスを比較する必要があります。 詳細については、「 [パフォーマンスセッションの概要](/visualstudio/profiling/performance-session-overview)」を参照してください。
 
 ただし .NET ネイティブには、ネイティブコードへのコンパイル以外にも関係があります。 .NET Framework アプリのビルド方法と実行方法が変更されます。 特に次の点に違いがあります。
 

@@ -3,12 +3,12 @@ title: <add>
 ms.date: 03/30/2017
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
 author: BrucePerlerMS
-ms.openlocfilehash: 83ba51cbbd5100bf7412f9914a270cac88f7faa1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7c2b6bdc62da63905d7ff33a9984808e7b7d114f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73973802"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544541"
 ---
 # \<add>
 指定されたセキュリティトークンハンドラーをトークンハンドラーコレクションに追加します。  
@@ -41,11 +41,11 @@ ms.locfileid: "73973802"
   
 |属性|説明|  
 |---------------|-----------------|  
-|type|追加するトークンハンドラーの CLR 型名。 属性を指定する方法の詳細については `type` 、「[カスタム型参照](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references)」を参照してください。|  
+|type|追加するトークンハンドラーの CLR 型名。 属性を指定する方法の詳細については `type` 、「 [カスタム型参照](/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references)」を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<samlSecurityTokenRequirement>](samlsecuritytokenrequirement.md)|クラス、クラス、 <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> またはこれらのクラスの派生クラスの構成を提供します。|  
 |[\<sessionTokenRequirement>](sessiontokenrequirement.md)|<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>クラスまたは派生クラスの構成を提供します。|  
@@ -54,11 +54,11 @@ ms.locfileid: "73973802"
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<securityTokenHandlers>](securitytokenhandlers.md)|エンドポイントに登録されているセキュリティトークンハンドラーのコレクションを指定します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  要素は、 `<add>` トークンハンドラーの構成を指定する1つの子要素を受け取ることができます。 これは、要素の属性を通じて参照されるハンドラークラスが `type` この機能をサポートするかどうかによって異なり `<add>` ます。 この機能を提供するトークンハンドラークラスは、オブジェクトを受け取るコンストラクターを公開する必要があり <xref:System.Xml.XmlElement> ます。  
 
 ```csharp  

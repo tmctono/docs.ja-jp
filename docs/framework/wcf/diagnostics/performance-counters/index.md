@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 73bb02379308fbfe507137e61ac8d84e6b9760b4
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 7c8a134039526abf046136ac383fbaff3a5abbfe
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395888"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541214"
 ---
 # <a name="wcf-performance-counters"></a>WCF パフォーマンス カウンター
 Windows Communication Foundation (WCF) には、アプリケーションのパフォーマンスを測定するのに役立つ多数のパフォーマンスカウンターが含まれています。  
   
 ## <a name="enabling-performance-counters"></a>パフォーマンス カウンターの有効化  
- Wcf サービスのパフォーマンスカウンターは、wcf サービスの app.config 構成ファイルを使用して次のように有効にすることができます。  
+ Wcf サービスのパフォーマンスカウンターを有効にするには、次のように、WCF サービスの app.config 構成ファイルを使用します。  
   
 ```xml  
 <configuration>  
@@ -29,11 +29,11 @@ Windows Communication Foundation (WCF) には、アプリケーションのパ�
   
 - All : すべてのカテゴリ カウンター (ServiceModelService、ServiceModelEndpoint、ServiceModelOperation) を有効にします。  
   
-- ServiceOnly : ServiceModelService カテゴリ カウンターのみを有効にします。 これは既定値です。  
+- ServiceOnly : ServiceModelService カテゴリ カウンターのみを有効にします。 これが既定値です。  
   
 - Off : ServiceModel* パフォーマンス カウンターを無効にします。  
   
- すべての WCF アプリケーションに対してパフォーマンスカウンターを有効にする場合は、machine.config ファイルに構成設定を配置できます。  コンピューターのパフォーマンスカウンター用に十分なメモリを構成する方法の詳細については、後述の「**パフォーマンスカウンターのメモリサイズの増加**」セクションを参照してください。  
+ すべての WCF アプリケーションでパフォーマンスカウンターを有効にする場合は、構成設定を Machine.config ファイルに配置します。  コンピューターのパフォーマンスカウンター用に十分なメモリを構成する方法の詳細については、後述の「 **パフォーマンスカウンターのメモリサイズの増加** 」セクションを参照してください。  
   
  カスタム操作の呼び出し元などの WCF 機能拡張ポイントを使用する場合は、独自のパフォーマンスカウンターも生成する必要があります。 これは、機能拡張ポイントを実装すると、WCF が標準のパフォーマンスカウンターデータを既定のパスに出力しなくなる可能性があるためです。 手動パフォーマンス カウンターのサポートを実装しない場合、予測したパフォーマンス カウンター データが得られない場合があります。  
   
@@ -51,7 +51,7 @@ config.Save();
 ```  
   
 ## <a name="viewing-performance-data"></a>パフォーマンス データの表示  
- Windows に付属のパフォーマンス モニター (Perfmon.exe) を使用して、パフォーマンス カウンターによりキャプチャされたデータを表示できます。 このツールを起動するには、 **[スタート]** に移動し、 **[実行]** をクリックして、ダイアログボックスに「`perfmon.exe`」と入力します。  
+ Windows に付属のパフォーマンス モニター (Perfmon.exe) を使用して、パフォーマンス カウンターによりキャプチャされたデータを表示できます。 このツールを起動するには、[ **スタート**] に移動し、[ **実行** ] をクリックして `perfmon.exe` 、ダイアログボックスに「」と入力します。  
   
 > [!NOTE]
 > エンドポイント ディスパッチャーによって最後のメッセージが処理される前に、パフォーマンス カウンター インスタンスが解放される場合があります。 その結果、パフォーマンス データに一部のメッセージがキャプチャされない可能性があります。  
@@ -76,13 +76,13 @@ config.Save();
   
  WMI を使用してパフォーマンス カウンターのインスタンス名を取得できます。 たとえば、オブジェクトに適用された  
   
-- サービスカウンターのインスタンス名は、WMI[サービス](../wmi/service.md)インスタンスの "counterinstancename" プロパティを使用して取得できます。  
+- サービスカウンターのインスタンス名は、WMI [サービス](../wmi/service.md) インスタンスの "counterinstancename" プロパティを使用して取得できます。  
   
-- エンドポイントカウンターのインスタンス名は、WMI[エンドポイント](../wmi/endpoint.md)インスタンスの "counterinstancename" プロパティを使用して取得できます。  
+- エンドポイントカウンターのインスタンス名は、WMI [エンドポイント](../wmi/endpoint.md) インスタンスの "counterinstancename" プロパティを使用して取得できます。  
   
-- 操作カウンターのインスタンス名は、WMI[エンドポイント](../wmi/endpoint.md)インスタンスの "GetOperationCounterInstanceName" メソッドを使用して取得できます。  
+- 操作カウンターのインスタンス名は、WMI [エンドポイント](../wmi/endpoint.md) インスタンスの "GetOperationCounterInstanceName" メソッドを使用して取得できます。  
   
- WMI の詳細については、「[診断のための Windows Management Instrumentation の使用](../wmi/index.md)」を参照してください。  
+ WMI の詳細については、「 [診断のための Windows Management Instrumentation の使用](../wmi/index.md)」を参照してください。  
   
 ### <a name="service-performance-counters"></a>サービスのパフォーマンス カウンター  
  サービスのパフォーマンス カウンターはサービス動作全体を測定し、サービス全体のパフォーマンスを診断するために使用できます。 パフォーマンス モニターを使用して表示する場合、これらのカウンターは、`ServiceModelService 4.0.0.0` パフォーマンス オブジェクトの下にあります。 インスタンスには次のパターンの名前が付けられています。  
@@ -127,7 +127,7 @@ SDK のインストールフォルダーには、プログラムによって WCF
 - *\_SMSvcHostPerfCounters*
 - *\_TransactionBridgePerfCounters*
   
-プログラムによってカウンターにアクセスする方法の詳細については、「[パフォーマンスカウンターのプログラミングアーキテクチャ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/5f9bkxzf(v=vs.90))」を参照してください。
+プログラムによってカウンターにアクセスする方法の詳細については、「 [パフォーマンスカウンターのプログラミングアーキテクチャ](/previous-versions/visualstudio/visual-studio-2008/5f9bkxzf(v=vs.90))」を参照してください。
   
 ## <a name="see-also"></a>関連項目
 

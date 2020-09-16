@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: f90906b4c3fc1d1d76977451abfb238bb33fb581
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 29ac26616313ec8bd7661cb92c42f726ec051cd7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595116"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542888"
 ---
 # <a name="trusted-subsystem"></a>信頼できるサブシステム
 クライアントは、ネットワーク全体に分散している 1 つ以上の Web サービスにアクセスします。 Web サービスは、追加のリソース (データベースや他の Web サービスなど) に対するアクセスが、Web サービスのビジネス ロジック内にカプセル化されるように設計されています。 これらのリソースは、非承認のアクセスに対して保護する必要があります。 信頼できるサブシステムの処理を次の図に示します。  
@@ -31,14 +31,14 @@ ms.locfileid: "84595116"
   
 |特徴|説明|  
 |--------------------|-----------------|  
-|セキュリティ モード|Message|  
+|セキュリティ モード|メッセージ|  
 |相互運用性|Windows Communication Foundation (WCF) のみ。|  
 |認証 (サービス)|セキュリティ トークン サービスはクライアントの認証と承認を行います。|  
 |認証 (クライアント)|信頼できるサブシステムがクライアントを認証し、リソースが信頼できるサブシステム サービスを認証します。|  
 |整合性|はい|  
-|機密情報|はい|  
+|機密性|はい|  
 |トランスポート|クライアントと信頼できるサブシステム サービス間にある HTTP<br /><br /> 信頼できるサブシステム サービスとリソース (バックエンド サービス) の間にある NET.TCP|  
-|バインド|<xref:System.ServiceModel.WSHttpBinding>そして<xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|バインド|<xref:System.ServiceModel.WSHttpBinding> そして <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>リソース (バックエンド サービス)  
   
@@ -213,4 +213,4 @@ ms.locfileid: "84595116"
 ## <a name="see-also"></a>関連項目
 
 - [セキュリティの概要](security-overview.md)
-- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric のセキュリティ モデル](/previous-versions/appfabric/ee677202(v=azure.10))

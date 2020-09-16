@@ -2,21 +2,21 @@
 title: WCF 構成スキーマ
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-ms.openlocfilehash: 866b0639f4391e1898bbe36e458df87e3c24bfff
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 160be2ea43d1530cdb2ccd3de1f9e6a2e4d0aca3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77448660"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536393"
 ---
 # <a name="wcf-configuration-schema"></a>WCF 構成スキーマ
 Windows Communication Foundation (WCF) 構成要素を使用すると、WCF サービスとクライアントアプリケーションを構成できます。 [ 構成エディター ツール (SvcConfigEditor.exe)](../../../wcf/configuration-editor-tool-svcconfigeditor-exe.md) を使用して、クライアントとサービスの構成ファイルを作成および変更できます。 構成ファイルは XML として書式設定されているので、テキスト エディターを使用して手動で編集する場合は、XML について理解している必要があります。 理解しないで編集すると、XML 要素タグや属性が見つからないなどの問題が発生する可能性があります。 問題の原因は、XML 要素タグと属性が大文字と小文字を区別することによります。  
   
  WCF 構成システムは、名前空間に基づいてい <xref:System.Configuration> ます。 したがって、<xref:System.Configuration> 名前空間によって提供される、構成ロック、暗号化、マージなどのすべての標準機能を使用して、アプリケーションとその構成のセキュリティを強化できます。 これらの概念の詳細については、次のトピックを参照してください。  
   
- [保護された構成を使用した構成情報の暗号化](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))  
+ [保護された構成を使用した構成情報の暗号化](/previous-versions/aspnet/53tyfkaw(v=vs.100))  
   
- [構成設定のロック](https://docs.microsoft.com/previous-versions/aspnet/55th21y4(v=vs.100))  
+ [構成設定のロック](/previous-versions/aspnet/55th21y4(v=vs.100))  
   
  このセクションでは、各構成項目のすべての可能な値についてと各構成項目が他の WCF 構成要素とやり取りする方法について説明します。 次のマップは、WCF 構成スキーマを示しています。  
   

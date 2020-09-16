@@ -15,15 +15,15 @@ topic_type:
 - apiref
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 8fc5f1a488826d8adc6aecb8ef122609bebbe813
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1b1d6ad5d465d746f4c1a9400c43613591373322
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177098"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546947"
 ---
 # <a name="cor_prf_rejit_flags-enumeration"></a>COR_PRF_REJIT_FLAGS 列挙型
-[ICorProfilerInfo10::RequestReJITWithInライナー](icorprofilerinfo10-requestrejitwithinliners-method.md) API の動作を示す値が含まれています。  
+[ICorProfilerInfo10:: RequestReJITWithInliners](icorprofilerinfo10-requestrejitwithinliners-method.md) API の動作を示す値を格納します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,16 +40,16 @@ typedef enum
 |メンバー|説明|  
 |------------|-----------------|  
 |`COR_PRF_REJIT_BLOCK_INLINING`| ReJITted メソッドは、他のメソッドでインライン化されないようにブロックされます。 |  
-|`COR_PRF_REJIT_INLINING_CALLBACKS`| RejiTted を要求されたメソッドにインライン化するメソッドのコールバックを受信`GetFunctionParameters`します。 |  
+|`COR_PRF_REJIT_INLINING_CALLBACKS`| メソッドをインラインで ReJITted するように `GetFunctionParameters` 要求されたメソッドに対してコールバックを受信します。 |  
 
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** NET [Core サポートされるオペレーティング システム](../../../core/install/dependencies.md?pivots=os-windows)を参照してください。  
+ **プラットフォーム:** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/install/windows.md?pivots=os-windows)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
   
 ## <a name="see-also"></a>関連項目
 

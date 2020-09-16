@@ -8,12 +8,12 @@ helpviewer_keywords:
 - providerOptions
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
-ms.openlocfilehash: c8ba5b9a0680f5e5102c13eb5bb0c1904a168c07
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7e006adb86886d22ec08dc61fa092bf677b4da96
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155402"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544740"
 ---
 # <a name="provideroption-element"></a>\<providerOption> 要素
 言語プロバイダーのコンパイラバージョン属性を指定します。  
@@ -48,19 +48,19 @@ ms.locfileid: "79155402"
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
-|[\<configuration>Element](../configuration-element.md)|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
-|[\<system.codedom>Element](system-codedom-element.md)|使用可能な言語プロバイダーのコンパイラ構成設定を指定します。|  
-|[\<compilers>Element](compilers-element.md)|コンパイラ構成要素のコンテナー。0個以上の要素が含まれてい `<compiler>` ます。|  
-|[\<compiler>Element](compiler-element.md)|言語プロバイダーのコンパイラ構成属性を指定します。|  
+|[\<configuration> 要素](../configuration-element.md)|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
+|[\<system.codedom> 要素](system-codedom-element.md)|使用可能な言語プロバイダーのコンパイラ構成設定を指定します。|  
+|[\<compilers> 要素](compilers-element.md)|コンパイラ構成要素のコンテナー。0個以上の要素が含まれてい `<compiler>` ます。|  
+|[\<compiler> 要素](compiler-element.md)|言語プロバイダーのコンパイラ構成属性を指定します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  .NET Framework バージョン3.5 では、Code Document Object Model (CodeDOM) コードプロバイダーは、要素を使用してプロバイダー固有のオプションをサポートでき `<providerOption>` ます。  
   
  .NET Framework 3.5 には、更新された .NET Framework 2.0 アセンブリが含まれており、新しい型を含む新しいバージョンの3.5 アセンブリが用意されています。 Microsoft C# および Visual Basic コードプロバイダーは .NET Framework 2.0 アセンブリに含まれていますが、バージョン3.5 コンパイラをサポートするように更新されています。 既定では、更新されたコードプロバイダーはバージョン2.0 コンパイラのコードを生成します。 要素を使用し `<providerOption>` て、ターゲットコンパイラのバージョンを3.5 に変更できます。 これを行うには、属性に "CompilerVersion" を指定し、 `name` 属性に「v 3.5」を指定し `value` ます。 バージョン番号の前には、小文字の "v" を使用する必要があります。  
   
- `<providerOption>`.NET Framework 2.0 machine.config またはルート web.config ファイルに要素を追加することで、バージョン指定をグローバルにすることができます。 Machine.config ファイルで既定のコンパイラのバージョンを3.5 に更新した場合は、アプリケーション構成ファイルの要素を使用して、アプリケーションごとに2.0 に戻すことができ `<providerOption>` ます。  
+ `<providerOption>`.NET Framework 2.0 Machine.config またはルート Web.config ファイルに要素を追加することで、バージョン指定をグローバルにすることができます。 Machine.config ファイルで既定のコンパイラのバージョンを3.5 に更新した場合は、アプリケーション構成ファイルの要素を使用して、アプリケーションごとに2.0 に戻すことができ `<providerOption>` ます。  
   
  CodeDOM コードプロバイダーの実装者は、型のパラメーターを受け取るコンストラクターを指定することによって、カスタムオプションを処理でき `providerOptions` <xref:System.Collections.Generic.IDictionary%602> ます。  
   
@@ -94,6 +94,6 @@ ms.locfileid: "79155402"
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [構成ファイル スキーマ](../index.md)
-- [\<compilers>Element](compilers-element.md)
+- [\<compilers> 要素](compilers-element.md)
 - [完全修飾型名の指定](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)
-- [compilation の compilers の compiler 要素 (ASP.NET 設定スキーマ)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))
+- [compilation の compilers の compiler 要素 (ASP.NET 設定スキーマ)](/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))

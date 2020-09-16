@@ -25,12 +25,12 @@ helpviewer_keywords:
 - cryptography [.NET], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: 4cd4e493e0e7d159b2749dac78b9a560e20fd75c
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 651231dcc41926307e3a46b67c80ba3df1fb25e9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557022"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549981"
 ---
 # <a name="cryptographic-services"></a>暗号化サービス
 
@@ -87,7 +87,7 @@ CBC 暗号によって暗号化されたデータを解読する 1 つの方法�
 
 - <xref:System.Security.Cryptography.Aes>
 
-- <xref:System.Security.Cryptography.HMACSHA256>、<xref:System.Security.Cryptography.HMACSHA384> および <xref:System.Security.Cryptography.HMACSHA512>。 (これらは、秘密キーと組み合わせた暗号ハッシュ関数を使用して計算されるメッセージ認証コードを表すため、技術的には共有キーアルゴリズムです。 この記事で後述する「[ハッシュ値](#hash-values)」を参照してください)。
+- <xref:System.Security.Cryptography.HMACSHA256>、<xref:System.Security.Cryptography.HMACSHA384> および <xref:System.Security.Cryptography.HMACSHA512>。 (これらは、秘密キーと組み合わせた暗号ハッシュ関数を使用して計算されるメッセージ認証コードを表すため、技術的には共有キーアルゴリズムです。 この記事で後述する「 [ハッシュ値](#hash-values)」を参照してください)。
 
 ## <a name="public-key-encryption"></a>公開キー暗号方式
 
@@ -150,7 +150,7 @@ Alice は、公開キー暗号方式を使用してメッセージにデジタ�
 
 - Alice はプレーンテキスト メッセージとハッシュしたメッセージ (デジタル署名) を Bob に送信します。 Bob はメッセージを受信してハッシュ値を計算し、算出したハッシュ値を Alice から受け取ったハッシュ値と比較します。 ハッシュ値が同一の場合、メッセージは変更されていません。 ハッシュ値が同一でない場合は、Alice がメッセージを作成した後でその内容が変更されています。
 
-  残念ながら、この方法では送信元の信頼性を保証できません。 どのユーザーでも Alice を偽装して Bob にメッセージを送信できます。 だれもが同じハッシュ アルゴリズムを使用してメッセージに署名できます。Bob が判断できるのは、メッセージがその署名と一致するかどうかだけです。 これは、一種の man-in-the-middle 攻撃です。 詳細については、「 [Cryptography Next Generation (CNG) セキュリティで保護された通信の例](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100))」を参照してください。
+  残念ながら、この方法では送信元の信頼性を保証できません。 どのユーザーでも Alice を偽装して Bob にメッセージを送信できます。 だれもが同じハッシュ アルゴリズムを使用してメッセージに署名できます。Bob が判断できるのは、メッセージがその署名と一致するかどうかだけです。 これは、一種の man-in-the-middle 攻撃です。 詳細については、「 [Cryptography Next Generation (CNG) セキュリティで保護された通信の例](/previous-versions/cc488018(v=vs.100))」を参照してください。
 
 - Alice はセキュリティで保護されていないパブリック チャネルを使用して、Bob にプレーンテキスト メッセージを送信します。 そして、セキュリティで保護されたプライベート チャネルを使用して、Bob にハッシュしたメッセージを送信します。 Bob はプレーンテキスト メッセージを受信し、ハッシュを計算して、プライベートに交換したハッシュと比較します。 ハッシュが一致すると、Bob は次の 2 つのことを判断できます。
 
@@ -218,7 +218,7 @@ Alice のメッセージはプレーンテキストで送信されるため、�
 
 ## <a name="see-also"></a>関連項目
 
-- [暗号化モデル](cryptography-model.md)-基本クラスライブラリにおける暗号化の実装方法について説明します。
+- [暗号化モデル](cryptography-model.md) -基本クラスライブラリにおける暗号化の実装方法について説明します。
 - [クロスプラットフォーム暗号化](cross-platform-cryptography.md)
 - [パディングを使用した CBC モードの対称復号化に関するタイミングの脆弱性](vulnerabilities-cbc-mode.md)
 - [データ保護の ASP.NET Core](/aspnet/core/security/data-protection/introduction)

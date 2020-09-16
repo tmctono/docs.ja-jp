@@ -6,15 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: b6134d4cbdff0c1adea704a7f3aaff7e40fd75ec
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 9b81f2f2fb6352af254146951ed35ad4fdca8caa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244765"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545208"
 ---
 # <a name="transport-security-with-windows-authentication"></a>トランスポート セキュリティと Windows 認証
-次のシナリオは、Windows セキュリティによって保護された Windows Communication Foundation (WCF) クライアントとサービスを示しています。 プログラミングの詳細については、「[方法: Windows 資格情報を使用してサービスをセキュリティで保護](../how-to-secure-a-service-with-windows-credentials.md)する」を参照してください。  
+次のシナリオは、Windows セキュリティによって保護された Windows Communication Foundation (WCF) クライアントとサービスを示しています。 プログラミングの詳細については、「 [方法: Windows 資格情報を使用してサービスをセキュリティで保護](../how-to-secure-a-service-with-windows-credentials.md)する」を参照してください。  
   
  イントラネットの Web サービスでは人事情報を表示しています。 クライアントは Windows フォーム アプリケーションです。 このアプリケーションは、Kerberos コントローラーで保護されたドメインに展開されています。  
   
@@ -25,8 +25,8 @@ ms.locfileid: "85244765"
 |セキュリティ モード|トランスポート|  
 |相互運用性|WCF のみ|  
 |認証 (サーバー)<br /><br /> 認証 (クライアント)|○ (Windows 統合認証を使用)<br /><br /> ○ (Windows 統合認証を使用)|  
-|整合性|Yes|  
-|機密情報|Yes|  
+|整合性|はい|  
+|機密性|はい|  
 |トランスポート|NET.TCP|  
 |バインド|<xref:System.ServiceModel.NetTcpBinding>|  
   
@@ -122,4 +122,4 @@ ms.locfileid: "85244765"
 
 - [セキュリティの概要](security-overview.md)
 - [方法: Windows 資格情報でサービスをセキュリティで保護する](../how-to-secure-a-service-with-windows-credentials.md)
-- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric のセキュリティ モデル](/previous-versions/appfabric/ee677202(v=azure.10))

@@ -5,30 +5,30 @@ ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: 3da1202a5ad3b953470b50dd5924b2ab45f301eb
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 38f7d310be41455dd12460fdfa93d7e624d10c2a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244779"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545221"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>トランスポート セキュリティと証明書認証
 
-この記事では、トランスポートセキュリティを使用する場合に、サーバーとクライアントの認証に x.509 証明書を使用する方法について説明します。 X.509 証明書の詳細については、「[X.509 Public Key Certificates](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates)」(X.509 公開キー証明書) を参照してください。 証明書は証明機関によって発行される必要があります。これは、多くの場合、証明書のサードパーティ発行者です。 Windows サーバー ドメインでは、そのドメインのクライアント コンピューターに対して証明書を発行する際に Active Directory 証明書サービスを使用できます。 このシナリオでは、Secure Sockets Layer (SSL) を使用して構成されたインターネット インフォメーション サービス (IIS) でサービスをホストします。 サービスは、クライアントがサーバーの ID を確認するための SSL (X.509) 証明書を使用して構成されます。 クライアントも、サービスがクライアントの ID を確認するための X.509 証明書を使用して構成されます。 サーバーの証明書はクライアントによって信頼されている必要があり、クライアントの証明書はサーバーによって信頼されている必要があります。 サービスとクライアントが互いの id を検証する実際のしくみについては、この記事では扱いません。 詳細については、Wikipedia の[デジタル署名](https://en.wikipedia.org/wiki/Digital_signature)に関する説明を参照してください。
+この記事では、トランスポートセキュリティを使用する場合に、サーバーとクライアントの認証に x.509 証明書を使用する方法について説明します。 X.509 証明書の詳細については、「[X.509 Public Key Certificates](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates)」(X.509 公開キー証明書) を参照してください。 証明書は証明機関によって発行される必要があります。これは、多くの場合、証明書のサードパーティ発行者です。 Windows サーバー ドメインでは、そのドメインのクライアント コンピューターに対して証明書を発行する際に Active Directory 証明書サービスを使用できます。 このシナリオでは、Secure Sockets Layer (SSL) を使用して構成されたインターネット インフォメーション サービス (IIS) でサービスをホストします。 サービスは、クライアントがサーバーの ID を確認するための SSL (X.509) 証明書を使用して構成されます。 クライアントも、サービスがクライアントの ID を確認するための X.509 証明書を使用して構成されます。 サーバーの証明書はクライアントによって信頼されている必要があり、クライアントの証明書はサーバーによって信頼されている必要があります。 サービスとクライアントが互いの id を検証する実際のしくみについては、この記事では扱いません。 詳細については、Wikipedia の [デジタル署名](https://en.wikipedia.org/wiki/Digital_signature) に関する説明を参照してください。
   
  このシナリオでは、次の図に示すような要求/応答のメッセージ パターンを実装します。  
   
  ![証明書を使用した安全な転送](media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899f-4538-a9e8-0eaa872a291c")  
   
- サービスで証明書を使用する方法の詳細については、「[証明書の操作](working-with-certificates.md)」および「[方法: SSL 証明書を使用してポートを構成する](how-to-configure-a-port-with-an-ssl-certificate.md)」を参照してください。 このシナリオのさまざまな特性を次の表に示します。  
+ サービスで証明書を使用する方法の詳細については、「 [証明書の操作](working-with-certificates.md) 」および「 [方法: SSL 証明書を使用してポートを構成する](how-to-configure-a-port-with-an-ssl-certificate.md)」を参照してください。 このシナリオのさまざまな特性を次の表に示します。  
   
 |特徴|説明|  
 |--------------------|-----------------|  
 |セキュリティ モード|トランスポート|  
 |相互運用性|既存の Web サービス クライアントおよびサービスとの相互運用性|  
 |認証 (サーバー)<br /><br /> 認証 (クライアント)|○ (SSL 証明書を使用)<br /><br /> ○ (X.509 証明書を使用)|  
-|データの整合性|Yes|  
-|データの機密性|Yes|  
+|データの整合性|はい|  
+|データの機密性|はい|  
 |トランスポート|HTTPS|  
 |バインド|<xref:System.ServiceModel.WSHttpBinding>|  
   
@@ -142,4 +142,4 @@ cc.Close();
 ## <a name="see-also"></a>関連項目
 
 - [セキュリティの概要](security-overview.md)
-- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric のセキュリティ モデル](/previous-versions/appfabric/ee677202(v=azure.10))

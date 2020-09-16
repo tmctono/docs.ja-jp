@@ -2,18 +2,18 @@
 title: Windows Communication Foundation の採用
 ms.date: 03/30/2017
 ms.assetid: 49ba71e2-9468-4082-84c5-cf8daf95e34a
-ms.openlocfilehash: a31bd5382e67565bd54272c5c7f400eacd5297d6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 40a2eac1e282640f0df70a7eca16e3b2401c0764
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576539"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546009"
 ---
 # <a name="adopt-windows-communication-foundation"></a>Windows Communication Foundation を採用する
 
 ASP.NET を使用して開発した既存のアプリケーションを引き続き維持しながら、新しい開発に Windows Communication Foundation (WCF) を使用することもできます。 WCF は、任意のシナリオで .NET Framework で構築されたアプリケーションとの通信を容易にするために最適な選択肢となることを目的としているため、ASP.NET ができない方法でさまざまなソフトウェア通信の問題を解決するための標準ツールとして使用できます。
 
-新しい WCF アプリケーションは、既存の ASP.NET Web サービスと同じコンピューターにデプロイできます。 既存の ASP.NET Web サービスがバージョン2.0 より前のバージョンの .NET Framework を使用する場合は、ASP.NET IIS 登録ツールを使用して、新しい WCF アプリケーションがホストされる IIS アプリケーションに .NET Framework 2.0 を選択的に展開できます。 このツールは、 [ASP.NET Iis Registration tool (Aspnet_regiis)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90))に記載されており、iis 6.0 管理コンソールにはユーザーインターフェイスが組み込まれています。
+新しい WCF アプリケーションは、既存の ASP.NET Web サービスと同じコンピューターにデプロイできます。 既存の ASP.NET Web サービスがバージョン2.0 より前のバージョンの .NET Framework を使用する場合は、ASP.NET IIS 登録ツールを使用して、新しい WCF アプリケーションがホストされる IIS アプリケーションに .NET Framework 2.0 を選択的に展開できます。 このツールは「 [ASP.NET Iis Registration tool (Aspnet_regiis.exe)](/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90))」に記載されており、iis 6.0 管理コンソールにはユーザーインターフェイスが組み込まれています。
 
 ASP.NET 互換モードで実行するように構成されている WCF サービスを IIS の既存の ASP.NET Web サービスアプリケーションに追加することにより、WCF を使用して、既存の ASP.NET Web サービスに新しい機能を追加できます。 ASP.NET 互換モードのため、新しい WCF サービスのコードは、クラスを使用して、既存の ASP.NET コードと同じアプリケーション状態情報にアクセスし、更新することができ <xref:System.Web.HttpContext> ます。 また、アプリケーションは同じクラス ライブラリを共有することもできます。
 

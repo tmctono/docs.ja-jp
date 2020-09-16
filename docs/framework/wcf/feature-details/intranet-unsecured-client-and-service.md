@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 591f7db0f6b4e928a991961d3bc7c404f41028bf
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1edbfe2d0d25ea9f2145f879673fc9f0a6ee7f96
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579281"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547194"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>セキュリティで保護されていないイントラネットのクライアントとサービス
 次の図は、セキュリティで保護されたプライベートネットワークに関する情報を WCF アプリケーションに提供するために開発された simple Windows Communication Foundation (WCF) サービスを示しています。 データが重要度の低い、ネットワークが本質的にセキュリティで保護されている、または WCF インフラストラクチャの下にあるレイヤーによってセキュリティが提供されるため、セキュリティは必要ありません。  
@@ -25,7 +25,7 @@ ms.locfileid: "84579281"
 |相互運用性|WCF のみ|  
 |認証|なし|  
 |整合性|なし|  
-|機密情報|なし|  
+|機密性|なし|  
   
 ## <a name="service"></a>サービス  
  次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
@@ -116,4 +116,4 @@ ms.locfileid: "84579281"
 
 - <xref:System.ServiceModel.NetTcpBinding>
 - [セキュリティの概要](security-overview.md)
-- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric のセキュリティ モデル](/previous-versions/appfabric/ee677202(v=azure.10))

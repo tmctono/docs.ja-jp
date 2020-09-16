@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XData in XAML [XAML Services]
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
-ms.openlocfilehash: b7f0954158988db107feb4a6c51ba81d5db11dcb
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: d78c2fd63192dc499b119e5b038b92555511a695
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "81432792"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544805"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData 組み込み XAML 型
-XAML の運用環境内で XML データ アイランドを配置できるようにします。 内部の`x:XData`XML 要素は、動作する既定の XAML 名前空間またはその他の XAML 名前空間の一部であるかのように XAML プロセッサによって扱われるべきではありません。 `x:XData`任意の整形式 XML を含めることができます。
+XAML 運用環境内での XML データアイランドの配置を有効にします。 内の XML 要素は、 `x:XData` 動作する既定の xaml 名前空間またはその他の xaml 名前空間の一部であるかのように、xaml プロセッサによって処理されないようにする必要があります。 `x:XData` 任意の整形式の XML を含めることができます。
 
 ## <a name="xaml-object-element-usage"></a>XAML オブジェクト要素の使用方法
 
@@ -34,25 +34,25 @@ XAML の運用環境内で XML データ アイランドを配置できるよう
 
 |||
 |-|-|
-|`elementDataRoot`|囲まれたデータ アイランドの単一のルート要素。 ほとんどの最終的なコンシューマーでは、ルートが 1 つもたない XML は無効と見なされます。 特に、WPF の XML データ`x:XData`ソースとして、またはデータ バインディングに XML ソースを使用するその他の多くのテクノロジを目的とする場合は、単一のルートが必要です。|
-|`[elementData]`|省略可能。 XML データを表す XML。 要素データとして任意の数の要素を含めることができ、入れ子になった要素は他の要素に含めることができます。ただし、XML の一般的な規則が適用されます。|
+|`elementDataRoot`|囲まれたデータアイランドの単一のルート要素。 最終的なコンシューマーの多くは、1つのルートを持たない XML は無効と見なされます。 特に、 `x:XData` が WPF の xml データソースである場合、またはデータバインディングに xml ソースを使用するその他の多くのテクノロジの場合は、単一のルートが必要です。|
+|`[elementData]`|省略可能。 XML データを表す XML です。 要素データとして任意の数の要素を含めることができ、入れ子になった要素を他の要素に含めることができます。ただし、XML の一般的な規則が適用されます。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-オブジェクト内の`x:XData`XML 要素は、データ内の XMLDOM を含む名前空間とプレフィックスをすべて再宣言できます。
+オブジェクト内の XML 要素は、 `x:XData` データ内の格納されている XMLDOM のすべての可能な名前空間とプレフィックスを再宣言できます。
 
-XML データおよび`x:XData`組み込み XAML 型へのプログラムによるアクセスは、クラスを<xref:System.Windows.Markup.XData>通じて .NET XAML サービスで可能です。
+`x:XData`.NET Xaml サービスでは、クラスを使用して、プログラムで XML データと組み込み xaml 型にアクセスでき <xref:System.Windows.Markup.XData> ます。
 
 ## <a name="wpf-usage-notes"></a>WPF の使用上の注意
 
-オブジェクト`x:XData`は主に<xref:System.Windows.Data.XmlDataProvider>、 の子オブジェクトとして使用されるか、または<xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType>プロパティの子オブジェクトとして使用されます (XAML では、通常はプロパティ要素構文で表されます)。
+`x:XData`オブジェクトは、主にの子オブジェクトとして使用されるか、またはプロパティの子オブジェクトとして使用され <xref:System.Windows.Data.XmlDataProvider> <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> ます (XAML では、これは通常、プロパティ要素構文で表されます)。
 
-通常、データ アイランド内の基本 XML 名前空間を新しい既定の XML 名前空間 (空の文字列に設定) に再定義する必要があります。 データの参照とバインドに使用される式<xref:System.Windows.Data.Binding.XPath%2A>はプレフィックスを含めることを避けることができるので、これは単純なデータ アイランドにとって最も簡単です。 より複雑なデータ アイランドでは、データに対して複数のプレフィックスを定義し、ルートにある XML 名前空間に特定のプレフィックスを使用する場合があります。 この場合、すべての<xref:System.Windows.Data.Binding.XPath%2A>式参照には、適切な名前空間マップのプレフィックスを含める必要があります。 詳細については、「[データ バインディングの概要](../data/data-binding-overview.md)」を参照してください。
+データは、通常、データアイランド内の基本 XML 名前空間を新しい既定の XML 名前空間 (空の文字列に設定) に再定義する必要があります。 <xref:System.Windows.Data.Binding.XPath%2A>データの参照とバインドに使用される式ではプレフィックスが含まれないため、単純なデータアイランドではこの方法が最も簡単です。 より複雑なデータアイランドでは、データに複数のプレフィックスを定義し、ルートで XML 名前空間に特定のプレフィックスを使用する場合があります。 この場合、すべての <xref:System.Windows.Data.Binding.XPath%2A> 式参照には、適切な名前空間にマップされたプレフィックスが含まれている必要があります。 詳しくは、「 [データ バインディングの概要](../data/data-binding-overview.md)」をご覧ください。
 
-技術的には`x:XData`、 型<xref:System.Xml.Serialization.IXmlSerializable>の任意のプロパティの内容として使用できます。 しかし、<xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType>唯一の顕著な実装です。
+技術的には、 `x:XData` 型の任意のプロパティのコンテンツとして使用でき <xref:System.Xml.Serialization.IXmlSerializable> ます。 ただし、 <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> は唯一の実装です。
 
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Data.XmlDataProvider>
 - [データ バインディングの概要](../data/data-binding-overview.md)
-- [バインドのマークアップ拡張機能](../../framework/wpf/advanced/binding-markup-extension.md)
+- [バインドのマークアップ拡張機能](/dotnet/desktop/wpf/advanced/binding-markup-extension)

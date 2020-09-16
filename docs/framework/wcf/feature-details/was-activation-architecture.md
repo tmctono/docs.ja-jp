@@ -2,12 +2,12 @@
 title: WAS アクティベーション アーキテクチャ
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: cfbfd91f9e7bc2e1b4f8485d5ae22c1fb2b5228b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 77cebede5827016c5c9660663c0491614ba0ef19
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600673"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545983"
 ---
 # <a name="was-activation-architecture"></a>WAS アクティベーション アーキテクチャ
 ここでは、Windows プロセス アクティブ化サービス (WAS とも呼ばれます) の各コンポーネントについて説明します。  
@@ -32,7 +32,7 @@ ms.locfileid: "84600673"
 ### <a name="listener-adapters"></a>リスナー アダプター  
  リスナー アダプターは個別の Windows サービスであり、リッスンするネットワーク プロトコルを使用して、メッセージ受信に使用されるネットワーク通信ロジックを実装します。 次の表は、Windows Communication Foundation (WCF) プロトコルのリスナーアダプターの一覧です。  
   
-|リスナー アダプターのサービス名|プロトコル|メモ|  
+|リスナー アダプターのサービス名|Protocol|メモ|  
 |-----------------------------------|--------------|-----------|  
 |W3SVC|http|IIS 7.0 と WCF の両方に対して HTTP アクティベーションを提供する共通コンポーネント。|  
 |NetTcpActivator|net.tcp|NetTcpPortSharing サービスに依存します。|  
@@ -88,4 +88,4 @@ ms.locfileid: "84600673"
 ## <a name="see-also"></a>関連項目
 
 - [WCF で使用するための WAS を設定する](configuring-the-wpa--service-for-use-with-wcf.md)
-- [AppFabric のホスティング機能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [AppFabric のホスティング機能](/previous-versions/appfabric/ee677189(v=azure.10))

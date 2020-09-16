@@ -2,16 +2,16 @@
 title: セットアップに関する問題のトラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 2cd9ced4f0780b1a6f63e4a5833e20ac91870121
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 76d8752f8bcfcb94b77a60be60e13a66436e76b8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121578"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549654"
 ---
-# <a name="troubleshoot-setup-issues"></a>セットアップの問題のトラブルシューティング
+# <a name="troubleshoot-setup-issues"></a>セットアップに関する問題のトラブルシューティング
 
-この資料では、Windows 通信基盤 (WCF) のセットアップの問題のトラブルシューティング方法について説明します。  
+この記事では、Windows Communication Foundation (WCF) のセットアップに関する問題をトラブルシューティングする方法について説明します。  
   
 ## <a name="some-windows-communication-foundation-registry-keys-are-not-repaired-by-performing-an-msi-repair-operation-on-the-net-framework-30"></a>.NET Framework 3.0 の MSI 修復操作の実行では修復されない一部の Windows Communication Foundation レジストリ キー  
  次のいずれかのレジストリ キーを削除した場合  
@@ -26,7 +26,7 @@ ms.locfileid: "81121578"
   
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC Bridge 3.0.0.0  
   
- **コントロール パネル**の **[プログラムの追加と削除**] アプレットから起動した .NET Framework 3.0 インストーラーを使用して修復を実行した場合、キーは再作成されません。 これらのキーを正しく再作成するには、.NET Framework 3.0 をアンインストール後、再インストールする必要があります。  
+ **コントロールパネル**の [**プログラムの追加と削除**] アプレットから起動した .NET Framework 3.0 インストーラーを使用して修復を実行した場合、キーは再作成されません。 これらのキーを正しく再作成するには、.NET Framework 3.0 をアンインストール後、再インストールする必要があります。  
   
 ## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>WMI サービスの破損により .NET Framework 3.0 パッケージのインストール中に Windows Communication Foundation WMI プロバイダーのインストールがブロックされる  
  WMI サービスの破損により、Windows Communication Foundation WMI プロバイダーのインストールがブロックされることがあります。 インストール中、Windows Communication Foundation インストーラーは mofcomp.exe コンポーネントを使用して WCF .mof ファイルを登録できません。 発生する現象を次に示します。  
@@ -43,7 +43,7 @@ ms.locfileid: "81121578"
   
      または  
   
-     ServiceModelReg [07:19:33:843]: System.TypeInitializationException : 'System.Management.ManagementPath' の型初期化子が例外をスローしました。 ---> System.Runtime.InteropServices.COMException (0x80040154): CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA は次のエラーのため失敗しました: 80040154.  
+     ServiceModelReg [07:19:33:843]: System.TypeInitializationException : 'System.Management.ManagementPath' の型初期化子が例外をスローしました。 ---> InteropServices (0x80040154 が): 次のエラーにより、CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} のコンポーネントの COM クラスファクトリを取得できませんでした: 80040154。  
   
      または  
   
@@ -53,22 +53,22 @@ ms.locfileid: "81121578"
   
  上で説明した問題を解決するためには、次の手順を実行する必要があります。  
   
-1. WMI[診断ユーティリティ](https://www.microsoft.com/download/details.aspx?id=7684)を実行して、WMI サービスを修復します。 このツールの使用の詳細については、「 [WMI 診断ユーティリティ](https://docs.microsoft.com/previous-versions/tn-archive/ff404265(v%3dmsdn.10))」を参照してください。  
+1. [WMI Diagnosis Utility](https://www.microsoft.com/download/details.aspx?id=7684)を実行して、WMI サービスを修復します。 このツールの使用方法の詳細については、「 [WMI Diagnosis Utility](/previous-versions/tn-archive/ff404265(v=msdn.10))」を参照してください。  
   
- **コントロール パネル**の **[プログラムの追加と削除**] を使用して .NET Framework 3.0 のインストールを修復するか、.NET Framework 3.0 をアンインストールまたは再インストールします。  
+ **コントロールパネル**にある [**プログラムの追加と削除**] アプレットを使用して .NET Framework 3.0 インストールを修復するか、.NET Framework 3.0 をアンインストールまたは再インストールします。  
   
 ## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>.NET Framework 3.5 のインストール後に .NET Framework 3.0 を修復すると、.NET Framework 3.5 によって導入された machine.config 内の構成要素が削除される  
- .NET Framework 3.5 をインストールした後で .NET Framework 3.0 の修復を実行すると、machine.config で .NET Framework 3.5 によって導入された構成要素が削除されます。 ただし、web.config は元の状態のままになります。 回避策は、ARP を介してこの後に .NET Framework 3.5 を修復するか、またはワーク[フロー サービス登録ツール (WFServicesReg.exe) を](workflow-service-registration-tool-wfservicesreg-exe.md)スイッチと共に使用することです`/c`。  
+ .NET Framework 3.5 をインストールした後に .NET Framework 3.0 の修復を実行すると、machine.config で .NET Framework 3.5 によって導入された構成要素が削除されます。 ただし、web.config は元の状態のままになります。 この回避策としては、ARP を使用して .NET Framework 3.5 を修復するか、またはスイッチで [ワークフローサービス登録ツール (WFServicesReg.exe)](workflow-service-registration-tool-wfservicesreg-exe.md) を使用し `/c` ます。  
   
- [ワークフロー サービス登録ツール (WFServicesReg.exe) は](workflow-service-registration-tool-wfservicesreg-exe.md)、%ウィンディル%\マイクロソフト.NET\フレームワーク\v3.5\または %ウィンディル%\マイクロソフト\フレームワーク64\v3.5\ にあります。  
+ [ワークフローサービス登録ツール (WFServicesReg.exe)](workflow-service-registration-tool-wfservicesreg-exe.md) については、microsoft.net \framework\v3.5\ または%windir%\Microsoft.NET\framework64\v3.5\ を参照してください。  
   
 ## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>.NET Framework 3.5 のインストール後に WCF/WF Webhost に対して IIS を適切に構成する  
- .NET Framework 3.5 のインストールで WCF 関連の IIS 構成設定の追加構成が失敗すると、インストール ログにエラーが記録され、続行されます。 WorkflowServices アプリケーションを実行しようとしても、必要な構成設定がないため、実行することはできません。 たとえば、xoml やルール サービスの読み込みに失敗する可能性があります。  
+ .NET Framework 3.5 インストールで WCF 関連の追加の IIS 構成設定の構成に失敗した場合、インストールログにエラーが記録されて続行されます。 WorkflowServices アプリケーションを実行しようとしても、必要な構成設定がないため、実行することはできません。 たとえば、xoml やルール サービスの読み込みに失敗する可能性があります。  
   
- この問題を回避するには、[ワークフロー サービス登録ツール (WFServicesReg.exe)](workflow-service-registration-tool-wfservicesreg-exe.md) `/c`を使用して、コンピューター上の IIS スクリプト マップを適切に構成します。 [ワークフロー サービス登録ツール (WFServicesReg.exe) は](workflow-service-registration-tool-wfservicesreg-exe.md)、%ウィンディル%\マイクロソフト.NET\フレームワーク\v3.5\または %ウィンディル%\マイクロソフト\フレームワーク64\v3.5\ にあります。  
+ この問題を回避するには、 [ワークフローサービス登録ツール (WFServicesReg.exe)](workflow-service-registration-tool-wfservicesreg-exe.md) とスイッチを使用して、 `/c` コンピューター上で IIS スクリプトマップを適切に構成します。 [ワークフローサービス登録ツール (WFServicesReg.exe)](workflow-service-registration-tool-wfservicesreg-exe.md) については、microsoft.net \framework\v3.5\ または%windir%\Microsoft.NET\framework64\v3.5\ を参照してください。  
   
-## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>アセンブリ 'システム.サービスモデル、バージョン 3.0.0.0、カルチャ=ニュートラル、公開キートークン=b77a5c561934e089' から型 'System.ServiceModel.Activation.HttpModule' を読み込むことができませんでした。  
- このエラーは、.NET Framework 4 がインストールされている場合に発生し、WCF HTTP のアクティブ化が有効になります。 この問題を解決するには、Visual Studio の開発者コマンド プロンプト内から次のコマンド ラインを実行します。  
+## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>アセンブリ ' System.servicemodel, Version 3.0.0.0, Culture = ニュートラル, PublicKeyToken = b77a5c561934e089 ' から型 ' HttpModule ' を読み込めませんでした  
+ このエラーは .NET Framework 4 がインストールされ、WCF HTTP アクティブ化が有効になっている場合に発生します。 この問題を解決するには、Visual Studio の開発者コマンドプロンプト内から次のコマンドラインを実行します。  
   
 ```console
 aspnet_regiis.exe -i -enable  

@@ -2,12 +2,12 @@
 title: トークン認証システム
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: f4b49edd3b5a2cecd203feed713c7694450f7497
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a493ea48d9d339c0bc1a4b191b084374ad5f2dc4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596553"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90548593"
 ---
 # <a name="token-authenticator"></a>トークン認証システム
 このサンプルでは、カスタム トークンの認証システムを実装する方法を示します。 Windows Communication Foundation (WCF) のトークン認証システムは、メッセージで使用されるトークンを検証し、それが自己整合していることを確認し、トークンに関連付けられている id を認証するために使用されます。
@@ -330,16 +330,16 @@ static void DisplayIdentityInformation()
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>サンプルを同じコンピューターで実行するには
 
-1. 管理者特権で開いた Visual Studio 2012 コマンドプロンプト内のサンプルのインストールフォルダーから、Setup.exe を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
+1. 管理者特権で Visual Studio 2012 コマンドプロンプトを開き、サンプルのインストールフォルダーから Setup.bat を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
 
     > [!NOTE]
-    > セットアップの .bat バッチファイルは、Visual Studio 2012 のコマンドプロンプトから実行するように設計されています。 Visual Studio 2012 のコマンドプロンプト内で設定された PATH 環境変数は、セットアップの .bat スクリプトで必要な実行可能ファイルが格納されているディレクトリを指します。  
+    > Setup.bat バッチファイルは、Visual Studio 2012 のコマンドプロンプトから実行するように設計されています。 Visual Studio 2012 のコマンドプロンプト内で設定された PATH 環境変数は、Setup.bat スクリプトで必要な実行可能ファイルを含むディレクトリを指します。  
   
 2. service.exe を \service\bin で起動します。  
   
 3. client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
   
-4. クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
+4. クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
   
 #### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには  
   
@@ -347,7 +347,7 @@ static void DisplayIdentityInformation()
   
 2. サービス プログラム ファイルを、サービス コンピューターのサービス ディレクトリにコピーします。 Setup.bat ファイルと Cleanup.bat ファイルもサービス コンピューターにコピーします。  
   
-3. コンピューターの完全修飾ドメイン名を含むサブジェクト名を持つサーバー証明書が必要です。 新しい証明書名を反映するには、サービスの App.config ファイルを更新する必要があります。 `%SERVER_NAME%` 変数を、サービスを実行するコンピューターの完全修飾ホスト名に設定している場合は、Setup.bat を使用してこの証明書を作成できます。 セットアップの .bat ファイルは、管理者特権で開かれた Visual Studio の開発者コマンドプロンプトから実行する必要があることに注意してください。  
+3. コンピューターの完全修飾ドメイン名を含むサブジェクト名を持つサーバー証明書が必要です。 新しい証明書名を反映するには、サービスの App.config ファイルを更新する必要があります。 `%SERVER_NAME%` 変数を、サービスを実行するコンピューターの完全修飾ホスト名に設定している場合は、Setup.bat を使用してこの証明書を作成できます。 setup.bat ファイルは、管理者特権で開いた Visual Studio の開発者コマンドプロンプトから実行する必要があることに注意してください。  
   
 4. サーバー証明書をクライアントの CurrentUser-TrustedPeople ストアにコピーします。 サーバー証明書の発行元をクライアントが信頼できる場合を除き、この操作は不要です。  
   
@@ -361,8 +361,8 @@ static void DisplayIdentityInformation()
   
 9. クライアント コンピューターで、コマンド プロンプトから Client.exe を起動します。  
   
-10. クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
+10. クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
   
 #### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   
-1. サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。  
+1. サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。

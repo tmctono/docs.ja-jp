@@ -5,24 +5,24 @@ helpviewer_keywords:
 - WCF security
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
-ms.openlocfilehash: 27f2b7d3146199f1c3e9a228202618c992e2a1ea
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bd3156e0fa8ea976d2297ffc0767cd948c9c96b4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601362"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550483"
 ---
 # <a name="access-control-mechanisms"></a>アクセス制御機構
 Windows Communication Foundation (WCF) を使用して、いくつかの方法でアクセスを制御できます。 ここでは、正しい機構を選択して使用できるように、さまざまな機構について簡単に説明し、各機構を使用するタイミングに関するヒントを提供します。 ここでは、アクセス テクノロジを単純なものから順に示します。 最も単純なのは <xref:System.Security.Permissions.PrincipalPermissionAttribute> で、最も複雑なのは ID モデルです。  
   
- これらのメカニズムに加えて、WCF を使用した偽装と委任については、「[委任と偽装](delegation-and-impersonation-with-wcf.md)」で説明されています。  
+ これらのメカニズムに加えて、WCF を使用した偽装と委任については、「 [委任と偽装](delegation-and-impersonation-with-wcf.md)」で説明されています。  
   
 ## <a name="principalpermissionattribute"></a>PrincipalPermissionAttribute  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute> は、サービス メソッドへのアクセスを制限するために使用します。 属性をメソッドに適用すると、特定の呼び出し元の id、または Windows グループまたは ASP.NET ロールのメンバーシップを要求するために使用できます。 クライアントが、X.509 証明書を使用して認証された場合は、サブジェクト名と証明書の拇印で構成されるプライマリ ID がクライアントに割り当てられています。  
   
  サービスのユーザーが常に、サービスが実行されているものと同じ Windows ドメインのメンバーである場合、サービスが実行されているコンピューター上のリソースへのアクセスを制御するには、<xref:System.Security.Permissions.PrincipalPermissionAttribute> を使用します。 指定したアクセス レベル (なし、読み取り専用、または読み取りと書き込みなど) を持つ Windows グループを簡単に作成できます。  
   
- 属性の使用方法の詳細については、「[方法: PrincipalPermissionAttribute クラスを使用してアクセスを制限する](../how-to-restrict-access-with-the-principalpermissionattribute-class.md)」を参照してください。 Id の詳細については、「[サービス id と認証](service-identity-and-authentication.md)」を参照してください。  
+ 属性の使用方法の詳細については、「 [方法: PrincipalPermissionAttribute クラスを使用してアクセスを制限する](../how-to-restrict-access-with-the-principalpermissionattribute-class.md)」を参照してください。 Id の詳細については、「 [サービス id と認証](service-identity-and-authentication.md)」を参照してください。  
   
 ## <a name="aspnet-membership-provider"></a>ASP.NET メンバーシップ プロバイダー  
  ASP.NET の機能は、メンバーシッププロバイダーです。 メンバーシップ プロバイダーは、厳密にはアクセス制御機構ではありませんが、これを使用すると、サービスのエンドポイントにアクセスできる ID のセットを制限することで、サービスへのアクセスを制御できます。 メンバーシップ機能には、ユーザー名/パスワードの組み合わせを設定できるデータベースが含まれています。この組み合わせによって、Web サイトのユーザーはサイトのアカウントを確立できます。 メンバーシッププロバイダーを使用するサービスにアクセスするには、ユーザーがユーザー名とパスワードを使用してログオンする必要があります。  
@@ -46,14 +46,14 @@ Windows Communication Foundation (WCF) を使用して、いくつかの方法�
   
  また、既存の AzMan インストールへのアクセス権を既に持っていて、AzMan/role プロバイダーの組み合わせの機能を使用してサービスユーザーを承認する場合は、AzMan および ASP.NET ロールプロバイダーを使用することもできます。  
   
- AzMan および ASP.NET ロールプロバイダーの詳細については、「 [How to: Use Authorization Manager (azman) with ASP.NET 2.0](https://docs.microsoft.com/previous-versions/msp-n-p/ff649313(v=pandp.10))」を参照してください。 WCF サービスに対して AzMan とロールプロバイダーを使用する方法の詳細については、「 [How to: Use the ASP.NET Authorization Manager Role provider with a Service](how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)」を参照してください。  
+ AzMan および ASP.NET ロールプロバイダーの詳細については、「 [How to: Use Authorization Manager (azman) with ASP.NET 2.0](/previous-versions/msp-n-p/ff649313(v=pandp.10))」を参照してください。 WCF サービスに対して AzMan とロールプロバイダーを使用する方法の詳細については、「 [How to: Use the ASP.NET Authorization Manager Role provider with a Service](how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)」を参照してください。  
   
 ## <a name="identity-model"></a>ID モデル  
  ID モデルは、クライアントを承認するためのクレームとポリシーを管理できるようにする API のセットです。 ID モデルを使用すると、呼び出し元がサービスに対するそれ自体の認証に使用した資格情報に含まれるすべてのクレームを調べ、それらをサービスのポリシー セットと比較し、この比較に基づいてアクセスを許可または拒否できます。  
   
  アクセスを許可する前に、微調整と、特定の条件を設定する機能が必要な場合は、ID モデルを使用します。 たとえば、<xref:System.Security.Permissions.PrincipalPermissionAttribute> を使用した場合、条件は、ユーザー ID が認証され、それが特定のロールに属するということだけになります。 これに対し、ID モデルを使用すると、ドキュメントの参照を許可されるにはユーザーが 18 才以上であり、有効な運転免許証を所有している必要があることを明確に示すポリシーを作成できます。  
   
- ID モデルのクレームに基づくアクセス制御の恩恵を受けることができる例として、発行済みトークンのシナリオでフェデレーション資格情報を使用する場合が挙げられます。 フェデレーションと発行済みトークンの詳細については、「[フェデレーションと発行済みトークン](federation-and-issued-tokens.md)」を参照してください。  
+ ID モデルのクレームに基づくアクセス制御の恩恵を受けることができる例として、発行済みトークンのシナリオでフェデレーション資格情報を使用する場合が挙げられます。 フェデレーションと発行済みトークンの詳細については、「 [フェデレーションと発行済みトークン](federation-and-issued-tokens.md)」を参照してください。  
   
  Id モデルの詳細については、「 [Id モデルを使用したクレームと承認の管理](managing-claims-and-authorization-with-the-identity-model.md)」を参照してください。  
   

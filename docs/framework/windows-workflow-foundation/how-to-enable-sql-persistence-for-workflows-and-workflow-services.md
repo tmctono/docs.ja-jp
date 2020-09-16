@@ -1,19 +1,19 @@
 ---
-title: ワークフローとワークフロー サービスの SQL 永続性を有効にする方法
+title: '方法: ワークフローとワークフロー サービスの SQL 永続性を有効にする'
 ms.date: 03/30/2017
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: bbbd2e6a5eb3babeb1a4d06976fdefd621581766
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 5bcd37a654db35ba6e8af1b15d6c132a090b0579
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837689"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547754"
 ---
-# <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>ワークフローとワークフロー サービスの SQL 永続性を有効にする方法
+# <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>方法: ワークフローとワークフロー サービスの SQL 永続性を有効にする
 
 このトピックでは、ワークフローとワークフロー サービスの永続性をプログラムと構成ファイルの両方から使用して有効にできるように、SQL Workflow Instance Store の機能を構成する方法について説明します。
 
-Windows Server App Fabric を使用すると、永続化の構成のプロセスを簡潔化できます。 詳細については、「 [App Fabric の永続](https://docs.microsoft.com/previous-versions/appfabric/ee790848(v=azure.10))化の構成」を参照してください。
+Windows Server App Fabric を使用すると、永続化の構成のプロセスを簡潔化できます。 詳細については、「 [App Fabric の永続](/previous-versions/appfabric/ee790848(v=azure.10))化の構成」を参照してください。
 
 SQL Workflow Instance Store 機能を使用する前に、この機能においてワークフロー インスタンスの永続化に使用するデータベースを作成します。 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] セットアップ プログラムによって、SQL Workflow Instance Store 機能に関連する SQL スクリプト ファイルが %WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN フォルダーにコピーされます。 これらのスクリプト ファイルは、SQL Workflow Instance Store がワークフロー インスタンスの永続化に使用する SQL Server 2005 または SQL Server 2008 のデータベースに対して実行します。 最初に SqlWorkflowInstanceStoreSchema.sql ファイルを実行してから、SqlWorkflowInstanceStoreLogic.sql ファイルを実行します。
 
@@ -36,7 +36,7 @@ SQL Workflow Instance Store 機能を使用する前に、この機能におい�
 
 #### <a name="to-enable-persistence-for-self-hosted-workflows"></a>自己ホスト型ワークフローの永続化を有効にするには
 
-1. System.activities.durableinstancing.instances への参照を追加します。
+1. System.Activities.DurableInstancing.dll への参照を追加します。
 
 2. ソース ファイルの先頭にある既存の "using" ステートメントの後に、次のステートメントを追加します。
 
@@ -126,7 +126,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 
 構成ファイルを使用することで、自己ホスト型または Windows プロセス アクティブ化サービス (WAS) でホストされるワークフロー サービスの永続化を有効にできます。 WAS でホストされるワークフロー サービスは、自己ホスト型ワークフローのように WorkflowServiceHost を使用します。
 
-`SqlWorkflowInstanceStoreBehavior`。 XML 構成を使用して[SQL Workflow Instance Store](sql-workflow-instance-store.md)のプロパティを簡単に変更できるサービス動作です。 WAS でホストされるワークフロー サービスの場合は、Web.config ファイルを使用します。 次の構成例では、構成ファイルで `sqlWorkflowInstanceStore` という動作要素を使用して SQL Workflow Instance Store を構成する方法について説明します。
+`SqlWorkflowInstanceStoreBehavior`。 XML 構成を使用して[SQL Workflow Instance Store](sql-workflow-instance-store.md)のプロパティを簡単に変更できるようにするサービス動作。 WAS でホストされるワークフロー サービスの場合は、Web.config ファイルを使用します。 次の構成例では、構成ファイルで `sqlWorkflowInstanceStore` という動作要素を使用して SQL Workflow Instance Store を構成する方法について説明します。
 
 ```xml
 <serviceBehaviors>
@@ -152,13 +152,13 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 ```
 
 > [!IMPORTANT]
-> ユーザー名やパスワードなどの機密情報は、Web.config ファイルに保存しないことをお勧めします。 Web.config ファイルに機密情報を保存する場合は、ファイル システムのアクセス制御リスト (ACL) を使用して、Web.config ファイルへのアクセスをセキュリティで保護する必要があります。 さらに、「[保護された構成を使用した構成情報の暗号化](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))」で説明されているように、構成ファイル内の構成値をセキュリティで保護することもできます。
+> ユーザー名やパスワードなどの機密情報は、Web.config ファイルに保存しないことをお勧めします。 Web.config ファイルに機密情報を保存する場合は、ファイル システムのアクセス制御リスト (ACL) を使用して、Web.config ファイルへのアクセスをセキュリティで保護する必要があります。 さらに、「 [保護された構成を使用した構成情報の暗号化](/previous-versions/aspnet/53tyfkaw(v=vs.100))」で説明されているように、構成ファイル内の構成値をセキュリティで保護することもできます。
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>SQL Workflow Instance Store 機能に関連する Machine.config の要素
 
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] のインストールでは、SQL Workflow Instance Store 機能に関連する次の要素が Machine.config ファイルに追加されます。
 
-- 構成ファイルで \<sqlWorkflowInstanceStore > サービス動作要素を使用してサービスの永続化を構成できるように、machine.config ファイルに次の動作拡張要素を追加します。
+- 構成ファイルのサービス動作要素を使用してサービスの永続化を構成できるように、Machine.config ファイルに次の動作拡張要素を追加し \<sqlWorkflowInstanceStore> ます。
 
     ```xml
     <configuration>

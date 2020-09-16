@@ -2,12 +2,12 @@
 title: <netTcpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
-ms.openlocfilehash: 360cdf76e013d085022f45eba5f8549e11cd68d3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 88b3da6c81d771db255f6c0a4e86984c9ba294fe
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74140703"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546153"
 ---
 # \<netTcpContextBinding>
 保護レベルの署名を求める <xref:System.ServiceModel.NetTcpBinding> のコンテキストを指定します。 NetTcpContextBinding の contextExchangeMechanism は、SOAPHeader です。  
@@ -87,15 +87,15 @@ ms.locfileid: "74140703"
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<security>](security-of-nettcpbinding.md)|バインディングのセキュリティ設定を定義します。 この要素は <xref:System.ServiceModel.Configuration.NetTcpSecurityElement> 型です。|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|このバインドを使用して設定されるエンドポイントにより処理可能な、SOAP メッセージの複雑さに対する制約を定義します。 この要素は <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 型です。|  
-|[\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|チャネルのエンドポイント間に信頼できるセッションを確立するかどうかを指定します。|  
+|[\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|このバインドを使用して設定されるエンドポイントにより処理可能な、SOAP メッセージの複雑さに対する制約を定義します。 この要素は <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 型です。|  
+|[\<reliableSession>](/previous-versions/ms731375(v=vs.90))|チャネルのエンドポイント間に信頼できるセッションを確立するかどうかを指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|この要素には、標準バインディングおよびカスタム バインドのコレクションが保持されます。|  
   

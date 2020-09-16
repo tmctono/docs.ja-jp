@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 99706fdc3d60a5e1a7f85400c1184d5acc808e42
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: ca1643dfa980fa647164accf6432082428124acb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449731"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541240"
 ---
 # <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9:: GetNativeCodeStartAddresses メソッド
 
@@ -36,15 +36,15 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 
 - `functionId`
 
-  \[] には、ネイティブコードの開始アドレスを返す関数の ID を指定します。
+  \[in] ネイティブコードの開始アドレスを返す関数の ID。
 
 - `reJitId`
 
-  \[] JIT 再コンパイルされた関数の id。
+  \[in) JIT 再コンパイルされた関数の id。
 
 - `cCodeStartAddresses`
 
-  \[] `codeStartAddresses` 配列の最大サイズ。
+  \[in] 配列の最大サイズ `codeStartAddresses` 。
 
 - `pcCodeStartAddresses`
 
@@ -52,22 +52,22 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 
 - `codeStartAddresses`
 
-  \[out] `UINT_PTR`の配列。それぞれが指定された関数のネイティブ本体の開始アドレスです。
+  \[out] の配列 `UINT_PTR` 。各は、指定された関数のネイティブ本体の開始アドレスです。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 階層化コンパイルが有効になっている場合、関数は複数のネイティブコード本体を持つことができます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**プラットフォーム:** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/install/dependencies.md?pivots=os-windows)」を参照してください。
+**プラットフォーム:** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/install/windows.md?pivots=os-windows)」を参照してください。
 
 **ヘッダー** : CorProf.idl、CorProf.h
 
 **ライブラリ:** CorGuids.lib
 
-**.Net のバージョン:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.Net のバージョン:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ICorProfilerInfo9 インターフェイス](icorprofilerinfo9-interface.md)

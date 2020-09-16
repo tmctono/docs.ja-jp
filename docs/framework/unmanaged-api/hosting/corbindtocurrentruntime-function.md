@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6105c13e-d9cd-44d2-a95a-924e042830c7
 topic_type:
 - apiref
-ms.openlocfilehash: 4c015d77deb4e6ed3d43074f2903e26b687de84f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9c5d83b5f2ffb06c9fb14f715a3ea7ff12319086
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493566"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547832"
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime 関数
 XML ファイルに格納されているバージョン情報を使用して、共通言語ランタイム (CLR: Common Language Runtime) をプロセスに読み込みます。 XML ファイルの形式は、標準のアプリケーション構成ファイルの後にモデル化されています。 構成ファイルの詳細については、「[構成ファイル スキーマ](../../configure-apps/file-schema/index.md)」を参照してください。  
   
- この関数は .NET Framework 4 で非推奨とされました。 「[プロセスへの共通言語ランタイムの読み込み](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100))」を参照してください。  
+ この関数は .NET Framework 4 で非推奨とされました。 「 [プロセスへの共通言語ランタイムの読み込み](/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100))」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,7 +47,7 @@ HRESULT CorBindToCurrentRuntime (
  バージョンが指定されていない場合、または要素が見つからない場合は、 `<requiredRuntime>` コンピューターにインストールされている最新バージョンの CLR が読み込まれます。  
   
  `rclsid`  
- から`CLSID` [ICorRuntimeHost](icorruntimehost-interface.md)または[ICLRRuntimeHost](iclrruntimehost-interface.md)のいずれかのインターフェイスを実装するコクラスの。 サポートされている値は CLSID_CorRuntimeHost と CLSID_CLRRuntimeHost です。  
+ から `CLSID` [ICorRuntimeHost](icorruntimehost-interface.md) または [ICLRRuntimeHost](iclrruntimehost-interface.md) のいずれかのインターフェイスを実装するコクラスの。 サポートされている値は CLSID_CorRuntimeHost と CLSID_CLRRuntimeHost です。  
   
  `riid`  
  [入力] 要求するインターフェイスの `IID`。 サポートされている値は IID_ICorRuntimeHost と IID_ICLRRuntimeHost です。  
@@ -55,12 +55,12 @@ HRESULT CorBindToCurrentRuntime (
  `ppv`  
  入出力返されたインターフェイスポインター。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll  
+ **ライブラリ:** MSCorEE.dll  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
