@@ -7,16 +7,16 @@ helpviewer_keywords:
 - x:Uid attribute [XAML Services]
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-ms.openlocfilehash: b5b480016d2183268422dea861510c6a169ac27b
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: 3de02702e6fd2be63bc2d099dad11f896b281ad1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "81432618"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543499"
 ---
 # <a name="xuid-directive"></a>x:Uid ディレクティブ
 
-マークアップ要素の一意の識別子を提供します。 多くのシナリオでは、この一意の識別子は、XAML のローカリゼーション プロセスとツールで使用されます。
+マークアップ要素の一意の識別子を提供します。 多くのシナリオでは、この一意識別子は、XAML ローカリゼーションプロセスおよびツールによって使用されます。
 
 ## <a name="xaml-attribute-usage"></a>XAML 属性の使用方法
 
@@ -28,24 +28,24 @@ ms.locfileid: "81432618"
 
 |||
 |-|-|
-|`identifier`|手動で作成された文字列、またはコンシューマーによって解釈されるときにファイル内で一意である必要がある自動生成`x:Uid`された文字列。|
+|`identifier`|コンシューマーによって解釈されるときに、ファイル内で一意である必要がある、手動で作成または自動生成された文字列 `x:Uid` 。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-[MS-XAML]では、`x:Uid`ディレクティブとして定義されます。 詳細については、「 [ \[MS-XAML\]セクション 5.3.6](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))」を参照してください。
+[MS XAML] では、 `x:Uid` はディレクティブとして定義されます。 詳細については、「 [ \[ \] 5.3.6」セクション](/previous-versions/msp-n-p/ff650760(v=pandp.10))を参照してください。
 
-`x:Uid`は、記載`x:Name`されている XAML ローカリゼーション シナリオと、ローカライズに使用される識別子が のプログラミング モデルへの依存性を持たないため`x:Name`、両方から離散的です。 また、XAML`x:Name`名前スコープによって制御されます。ただし、`x:Uid`一意性の適用に関する XAML 言語定義の概念によって制御されるわけではありません。 広い意味での XAML プロセッサ (ローカリゼーション プロセスの一部ではないプロセッサ) は、値`x:Uid`の一意性を強制することは期待されていません。 その責任は概念的に値の創始者にあります。 単一の XAML`x:Uid`ソース内の値の一意性の期待は、専用のグローバリゼーション プロセスやツールなどの値のコンシューマーにとって妥当です。 一般的な一意性モデル`x:Uid`は、XAML を表す XML エンコード ファイル内で値が一意であるというものです。
+`x:Uid` は、 `x:Name` XAML ローカライズのシナリオが原因で、ローカライズに使用される識別子がのプログラミングモデルへの影響に依存しないようにするため、両方とも不連続です `x:Name` 。 また、 `x:Name` は、xaml 名前スコープによって管理されます。ただし、は、 `x:Uid` xaml 言語で定義された一意性の強制の概念には適用されません。 XAML プロセッサは、広範な意味で (ローカライズプロセスに含まれていないプロセッサ)、値の一意性を強制することは想定されていません `x:Uid` 。 その責任は、値の発行元によって異なります。 `x:Uid`単一の XAML ソース内での値の一意性の予測は、専用のグローバリゼーションプロセスやツールなど、値のコンシューマーにとっては妥当です。 一般的な一意性モデルは、 `x:Uid` 値が XAML を表す XML エンコードファイル内で一意であることです。
 
-特定の XAML スキーマに関する重要な知識を持`x:Uid`つツールは、マークアップでテキスト文字列値が検出されるすべての場合ではなく、真のローカライズ可能な文字列にのみ適用するように選択できます。
+特定の XAML スキーマについて十分な知識を持つツールは `x:Uid` 、マークアップでテキスト文字列値が検出されるすべてのケースではなく、真のローカライズ可能な文字列にのみ適用することができます。
 
-フレームワークは、定義する型に属性`x:Uid`<xref:System.Windows.Markup.UidPropertyAttribute>を適用することで、オブジェクト モデル内の特定のプロパティをエイリアスとして指定できます。 フレームワークが特定のプロパティを指定する場合、同じオブジェクトに対`x:Uid`してエイリアス化されたメンバーの両方を指定することは無効です。 エイリアスを`x:Uid`付けたメンバーの両方を指定すると、.NET XAML サービス<xref:System.Xaml.XamlDuplicateMemberException>API は通常、このケースをスローします。
+フレームワークでは、 `x:Uid` 定義する型に属性を適用することによって、オブジェクトモデル内の特定のプロパティをの別名として指定でき <xref:System.Windows.Markup.UidPropertyAttribute> ます。 フレームワークで特定のプロパティが指定されている場合、 `x:Uid` 同じオブジェクトでとエイリアスを持つメンバーの両方を指定することは無効です。 とエイリアス化されたメンバーの両方が指定されている場合 `x:Uid` 、.NET XAML サービス API は通常、 <xref:System.Xaml.XamlDuplicateMemberException> この場合にをスローします。
 
 ## <a name="wpf-usage-notes"></a>WPF の使用上の注意
 
-WPF ローカリゼーション`x:Uid`プロセスおよび BAML 形式の XAML での役割の詳細については[、「WPF のグローバリゼーション」または「WPF のグローバリゼーション](../../framework/wpf/advanced/globalization-for-wpf.md)」を参照してください。<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
+`x:Uid`Wpf のローカリゼーションプロセスにおけるのロールと、XAML の BAML 形式の詳細については、「 [Wpf のグローバリゼーション](/dotnet/desktop/wpf/advanced/globalization-for-wpf)」または「」を参照してください。<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
 
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
 - <xref:Microsoft.Build.Tasks.Windows.UidManager>
-- [WPF のグローバリゼーション](../../framework/wpf/advanced/globalization-for-wpf.md)
+- [WPF のグローバリゼーション](/dotnet/desktop/wpf/advanced/globalization-for-wpf)

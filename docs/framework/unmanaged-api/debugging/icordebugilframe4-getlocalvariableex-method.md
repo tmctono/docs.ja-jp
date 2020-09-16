@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 0c8676f8-ca0d-4998-b64d-fefac7e38912
 topic_type:
 - apiref
-ms.openlocfilehash: 8d6ef550309ea7f8bae616a5f7e5c41b4f07374a
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 7c43c32e10d8e10b0f843795bbc3f0f3bc20529c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213726"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544246"
 ---
 # <a name="icordebugilframe4getlocalvariableex-method"></a>ICorDebugILFrame4::GetLocalVariableEx メソッド
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
@@ -36,7 +36,7 @@ HRESULT GetLocalVariableEx(
   
 ## <a name="parameters"></a>パラメーター  
  `flags`  
- からプロファイラー ReJIT インストルメンテーションに追加された変数がフレームに含まれるかどうかを指定する[Ilcodekind](ilcodekind-enumeration.md)列挙体のメンバー。  
+ からプロファイラー ReJIT インストルメンテーションに追加された変数がフレームに含まれるかどうかを指定する [Ilcodekind](ilcodekind-enumeration.md) 列挙体のメンバー。  
   
  `dwIndex`  
  [in] IL スタック フレーム内のローカル変数のインデックス。  
@@ -45,7 +45,7 @@ HRESULT GetLocalVariableEx(
  入出力取得された値を表す "ICorDebugValue" オブジェクトのアドレスへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- このメソッドは、オプションでプロファイラー ReJIT インストルメンテーションに追加された変数にアクセスする点を除いて、 [Getlocalvariable](icordebugilframe-getlocalvariable-method.md)メソッドに似ています。 値を指定してこのメソッドを呼び出す `flags` `ILCODE_ORIGINAL_IL` ことは、 [getlocalvariable](icordebugilframe-getlocalvariable-method.md)を呼び出すことと同じです。メソッドが追加のローカル変数でインストルメント化されている場合、これらの変数にはアクセスできません。 `ILCODE_REJIT_IL` は、デバッガーがプロファイラー ReJIT インストルメンテーションに追加されたローカル変数にアクセスできるようにします。 IL がインストルメントされていない場合、メソッドは `E_INVALIDARG` を返します。  
+ このメソッドは、オプションでプロファイラー ReJIT インストルメンテーションに追加された変数にアクセスする点を除いて、 [Getlocalvariable](icordebugilframe-getlocalvariable-method.md) メソッドに似ています。 値を指定してこのメソッドを呼び出す `flags` `ILCODE_ORIGINAL_IL` ことは、 [getlocalvariable](icordebugilframe-getlocalvariable-method.md)を呼び出すことと同じです。メソッドが追加のローカル変数でインストルメント化されている場合、これらの変数にはアクセスできません。 `ILCODE_REJIT_IL` は、デバッガーがプロファイラー ReJIT インストルメンテーションに追加されたローカル変数にアクセスできるようにします。 IL がインストルメントされていない場合、メソッドは `E_INVALIDARG` を返します。  
   
 ## <a name="requirements"></a>必要条件  
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
@@ -60,4 +60,4 @@ HRESULT GetLocalVariableEx(
 
 - [ICorDebugILFrame4 インターフェイス](icordebugilframe4-interface.md)
 - [デバッグのインターフェイス](debugging-interfaces.md)
-- [ReJIT: ハウツーガイド](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT: ハウツーガイド](/archive/blogs/davbr/rejit-a-how-to-guide)

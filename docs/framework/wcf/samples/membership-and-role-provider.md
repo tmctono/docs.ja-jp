@@ -2,12 +2,12 @@
 title: メンバーシップとロール プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: e77e353fba194cb25b466387cf9def6773635e00
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e532f35a2c4cd9f53006c088956eadff616d2005
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591762"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543590"
 ---
 # <a name="membership-and-role-provider"></a>メンバーシップとロール プロバイダー
 メンバーシップとロールプロバイダーのサンプルでは、サービスが ASP.NET のメンバーシップとロールプロバイダーを使用して、クライアントを認証および承認する方法を示します。  
@@ -123,7 +123,7 @@ ms.locfileid: "84591762"
 2. [ASP.NET アプリケーションサービスデータベース](https://go.microsoft.com/fwlink/?LinkId=94997)が構成されていることを確認します。  
   
     > [!NOTE]
-    > SQL Server Express Edition を実行している場合、サーバー名は .\SQLEXPRESS になります。 ASP.NET アプリケーションサービスデータベースおよび web.config 接続文字列を構成する場合は、このサーバーを使用する必要があります。  
+    > SQL Server Express Edition を実行している場合、サーバー名は .\SQLEXPRESS になります。 このサーバーは、ASP.NET アプリケーションサービスデータベースおよび Web.config 接続文字列を構成するときに使用する必要があります。  
   
     > [!NOTE]
     > ASP.NET ワーカープロセスアカウントは、この手順で作成するデータベースに対する権限を持っている必要があります。 これを実行するには、sqlcmd ユーティリティまたは SQL Server Management Studio を使用します。  
@@ -134,11 +134,11 @@ ms.locfileid: "84591762"
   
 1. Makecert.exe が存在するフォルダーがパスに含まれていることを確認します。  
   
-2. Visual Studio の開発者コマンドプロンプトのサンプルのインストールフォルダーから、管理者特権で実行します。 これにより、サンプルの実行に必要なサービス証明書がインストールされます。  
+2. Visual Studio の開発者コマンドプロンプトのサンプルのインストールフォルダーから、管理者特権で実行される Setup.bat を実行します。 これにより、サンプルの実行に必要なサービス証明書がインストールされます。  
   
 3. Client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
   
-4. クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
+4. クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
   
 ### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには  
   
@@ -152,15 +152,15 @@ ms.locfileid: "84591762"
   
 5. サーバーで、管理者特権を使用して Visual Studio の開発者コマンドプロンプトを開き、を実行し `setup.bat service` ます。 引数を指定してを実行する `setup.bat` `service` と、コンピューターの完全修飾ドメイン名を使用してサービス証明書が作成され、service .cer という名前のファイルにエクスポートされます。  
   
-6. Web.config を編集して、新しい証明書名 (の属性) を反映します `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) 。これは、コンピューターの完全修飾ドメイン名と同じです。  
+6. Web.config を編集して、新しい証明書名 ( `findValue` の属性 [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) ) を反映します。これは、コンピューターの完全修飾ドメイン名と同じです。  
   
 7. Service.cer ファイルを、サービス ディレクトリからクライアント コンピューターのクライアント ディレクトリにコピーします。  
   
 8. クライアント コンピューターの Client.exe.config ファイルで、エンドポイントのアドレス値をサービスの新しいアドレスに合わせます。  
   
-9. クライアントで、管理者特権を使用して Visual Studio の開発者コマンドプロンプトを開き、Importservicecert.bat を実行します。 これにより、サービス証明書が Service.cer ファイルから CurrentUser - TrustedPeople ストアにインポートされます。  
+9. クライアントで、管理者特権を使用して Visual Studio の開発者コマンドプロンプトを開き、ImportServiceCert.bat を実行します。 これにより、サービス証明書が Service.cer ファイルから CurrentUser - TrustedPeople ストアにインポートされます。  
   
-10. クライアント コンピューターで、コマンド プロンプトから Client.exe を起動します。 クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
+10. クライアント コンピューターで、コマンド プロンプトから Client.exe を起動します。 クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
   
 ### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   
@@ -196,4 +196,4 @@ ms.locfileid: "84591762"
   
     ```bat  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
-    ```  
+    ```
