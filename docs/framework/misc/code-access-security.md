@@ -16,12 +16,12 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-ms.openlocfilehash: 49d55ffde3dcb88720f47af6f9702013d8a7f1ee
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: b5c32afb26c7b4bf7f8585c43ac11e57ebb5d015
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855869"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554867"
 ---
 # <a name="code-access-security"></a>コード アクセス セキュリティ
 
@@ -34,9 +34,9 @@ ms.locfileid: "87855869"
  コンピューター システムを悪意のあるコードから簡単に保護できるようにしたり、発生元の不明なコードを安全に実行できるようにしたり、信頼されているコードを故意または過失によって露呈したセキュリティの脆弱性から保護できるようにしたりするために、.NET Framework はコード アクセス セキュリティというセキュリティ機構を提供しています。 コード アクセス セキュリティにより、コードの発生元や、そのコードの身元を示すその他の基準に基づいて、コードをさまざまなレベルで信頼できます。 また、コードに対してさまざまな信頼レベルを強制的に適用することにより、実行するために完全に信頼されていなければならないコードの数は少なくなります。 コード アクセス セキュリティを使用することで、作成したコードが悪意のあるコードやバグのあるコードによって誤用される可能性も低くなります。 コードによって実行できる一連の操作を指定できるため、開発者の責任を軽減できます。 コード アクセス セキュリティは、コードにセキュリティの脆弱性があった場合に、それによって被る可能性のある損害を最小限に抑えるためにも役立ちます。  
   
 > [!NOTE]
-> .NET Framework 4 のコードアクセスセキュリティに大きな変更が加えられました。 最も注目すべき変更点は[セキュリティの透過性](security-transparent-code.md)ですが、コードアクセスセキュリティに影響する重要な変更も他にもあります。 これらの変更の詳細については、「[セキュリティの変更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)」を参照してください。  
+> .NET Framework 4 のコードアクセスセキュリティに大きな変更が加えられました。 最も注目すべき変更点は [セキュリティの透過性](security-transparent-code.md)ですが、コードアクセスセキュリティに影響する重要な変更も他にもあります。 これらの変更の詳細については、「 [セキュリティの変更](/previous-versions/dotnet/framework/security/security-changes)」を参照してください。  
   
- コード アクセス セキュリティは、主にライブラリ コードと部分的に信頼されたアプリケーションに影響します。 ライブラリ開発者は、部分的に信頼されたアプリケーションによる認証されていないアクセスからコードを保護する必要があります。 部分的に信頼されたアプリケーションは、インターネットなどの外部リソースから読み込まれるアプリケーションです。 デスクトップまたはローカル イントラネットにインストールされているアプリケーションは、完全に信頼されたアプリケーションとして実行されます。 完全に信頼されたアプリケーションは、完全に信頼されているため、[セキュリティ透過的](security-transparent-code.md)としてマークされている場合を除き、コードアクセスセキュリティの影響を受けません。 完全に信頼されたアプリケーションの唯一の制限事項は、<xref:System.Security.SecurityTransparentAttribute> 属性でマークされているアプリケーションは <xref:System.Security.SecurityCriticalAttribute> 属性でマークされているコードを呼び出すことができない点です。 部分的に信頼されたアプリケーションは、コード アクセス セキュリティを適用できるように、サンドボックス (Internet Explorer など) で実行する必要があります。 アプリケーションをインターネットからダウンロードし、デスクトップから実行しようとすると、 <xref:System.NotSupportedException> "ネットワークの場所からアセンブリを読み込もうとしましたが、以前のバージョンの .NET Framework では、アセンブリがサンドボックス化された可能性があります" というメッセージが表示されます。 このリリースの .NET Framework では CAS ポリシーが既定で有効ではないため、この読み込みは危険な場合があります。" というメッセージが表示されます。 アプリケーションが信頼できることが確実な場合は、 [ \<loadFromRemoteSources> 要素](../configure-apps/file-schema/runtime/loadfromremotesources-element.md)を使用して完全信頼として実行できるようにすることができます。 サンドボックスでアプリケーションを実行する方法の詳細については、「[方法: サンドボックスで部分信頼コードを実行する](how-to-run-partially-trusted-code-in-a-sandbox.md)」を参照してください。  
+ コード アクセス セキュリティは、主にライブラリ コードと部分的に信頼されたアプリケーションに影響します。 ライブラリ開発者は、部分的に信頼されたアプリケーションによる認証されていないアクセスからコードを保護する必要があります。 部分的に信頼されたアプリケーションは、インターネットなどの外部リソースから読み込まれるアプリケーションです。 デスクトップまたはローカル イントラネットにインストールされているアプリケーションは、完全に信頼されたアプリケーションとして実行されます。 完全に信頼されたアプリケーションは、完全に信頼されているため、 [セキュリティ透過的](security-transparent-code.md)としてマークされている場合を除き、コードアクセスセキュリティの影響を受けません。 完全に信頼されたアプリケーションの唯一の制限事項は、<xref:System.Security.SecurityTransparentAttribute> 属性でマークされているアプリケーションは <xref:System.Security.SecurityCriticalAttribute> 属性でマークされているコードを呼び出すことができない点です。 部分的に信頼されたアプリケーションは、コード アクセス セキュリティを適用できるように、サンドボックス (Internet Explorer など) で実行する必要があります。 アプリケーションをインターネットからダウンロードし、デスクトップから実行しようとすると、 <xref:System.NotSupportedException> "ネットワークの場所からアセンブリを読み込もうとしましたが、以前のバージョンの .NET Framework では、アセンブリがサンドボックス化された可能性があります" というメッセージが表示されます。 このリリースの .NET Framework では CAS ポリシーが既定で有効ではないため、この読み込みは危険な場合があります。" というメッセージが表示されます。 アプリケーションが信頼できることが確実な場合は、 [ \<loadFromRemoteSources> 要素](../configure-apps/file-schema/runtime/loadfromremotesources-element.md)を使用して完全信頼として実行できるようにすることができます。 サンドボックスでアプリケーションを実行する方法の詳細については、「 [方法: サンドボックスで部分信頼コードを実行する](how-to-run-partially-trusted-code-in-a-sandbox.md)」を参照してください。  
   
  共通言語ランタイムに対応したマネージド コードすべては、単一コード アクセス セキュリティ呼び出しを行わない場合でも、コード アクセス セキュリティの利点を享受することになります。 詳しくは、「[コード アクセス セキュリティの基礎](code-access-security-basics.md)」をご覧ください。  
   

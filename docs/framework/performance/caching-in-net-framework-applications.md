@@ -7,12 +7,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: 9b08a07e9b446c2998150a327dccdc8d0481722a
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 72cf7113b3fc15abd116d3a20b55f4593b172428
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309769"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553832"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework アプリケーションでのキャッシュ
 キャッシュを使用すると、メモリにデータを格納して高速にアクセスできます。 アプリケーションからそのデータに再アクセスするときに、元のソースからではなく、キャッシュからデータを取得できます。 そのため、パフォーマンスとスケーラビリティが向上します。 また、データ ソースが一時的に使用できない場合でも、キャッシュのデータを使用できます。  
@@ -42,19 +42,19 @@ ms.locfileid: "86309769"
 > [!NOTE]
 > <xref:System.Runtime.Caching.MemoryCache> クラスは、<xref:System.Web.Caching> 名前空間に定義されている ASP.NET キャッシュ オブジェクトに対してモデル化されています。 そのため、内部のキャッシュ ロジックは、旧バージョンの ASP.NET で提供されていたロジックと似ています。  
   
- WPF アプリケーションでキャッシュに使用する方法の例については、「[Walkthrough: Caching Application Data in a WPF Application](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)」(チュートリアル: WPF アプリケーション内のアプリケーション データのキャッシュ) を参照してください。  
+ WPF アプリケーションでキャッシュに使用する方法の例については、「[Walkthrough: Caching Application Data in a WPF Application](/dotnet/desktop/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application)」(チュートリアル: WPF アプリケーション内のアプリケーション データのキャッシュ) を参照してください。  
   
 ## <a name="caching-in-aspnet-applications"></a>ASP.NET アプリケーションでのキャッシュ  
  <xref:System.Runtime.Caching> 名前空間のキャッシュ クラスには、ASP.NET のデータをキャッシュするための機能があります。  
   
 > [!NOTE]
-> アプリケーションが3.5 またはそれ以前の .NET Framework を対象としている場合は、名前空間で定義されているキャッシュクラスを使用する必要があり <xref:System.Web.Caching> ます。 詳細については、「[ASP.NET のキャッシュの概要](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100))」を参照してください。  
+> アプリケーションが3.5 またはそれ以前の .NET Framework を対象としている場合は、名前空間で定義されているキャッシュクラスを使用する必要があり <xref:System.Web.Caching> ます。 詳細については、「[ASP.NET のキャッシュの概要](/previous-versions/aspnet/ms178597(v=vs.100))」を参照してください。  
   
 > [!NOTE]
-> 新しいアプリケーションを開発する場合は、<xref:System.Runtime.Caching.MemoryCache> クラスを使用することをお勧めします。 <xref:System.Runtime.Caching> 名前空間に用意されている API は、<xref:System.Web.Caching.Cache> 名前空間に用意されている API と似ています。 そのため、旧バージョンの ASP.NET でキャッシュを使用していた場合は、なじみやすい API です。 ASP.NET アプリケーションでキャッシュを使用する方法の例については、「[チュートリアル: ASP.NET 内のアプリケーション データのキャッシュ](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))」を参照してください。  
+> 新しいアプリケーションを開発する場合は、<xref:System.Runtime.Caching.MemoryCache> クラスを使用することをお勧めします。 <xref:System.Runtime.Caching> 名前空間に用意されている API は、<xref:System.Web.Caching.Cache> 名前空間に用意されている API と似ています。 そのため、旧バージョンの ASP.NET でキャッシュを使用していた場合は、なじみやすい API です。 ASP.NET アプリケーションでキャッシュを使用する方法の例については、「[チュートリアル: ASP.NET 内のアプリケーション データのキャッシュ](/previous-versions/ff477235(v=vs.100))」を参照してください。  
   
 ### <a name="output-caching"></a>出力キャッシュ  
- アプリケーション データを手動でキャッシュするには、ASP.NET で <xref:System.Runtime.Caching.MemoryCache> クラスを使用します。 ASP.NET は出力キャッシュもサポートしており、ページ、コントロール、および HTTP 応答の生成された出力をメモリに格納します。 出力キャッシュを構成するには、ASP.NET Web ページで宣言を使用するか、Web.config ファイルの設定を使用します。 詳細については、「[outputCache Element for caching (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms228124(v=vs.100))」(caching の outputCache 要素 (ASP.NET 設定スキーマ)) を参照してください。  
+ アプリケーション データを手動でキャッシュするには、ASP.NET で <xref:System.Runtime.Caching.MemoryCache> クラスを使用します。 ASP.NET は出力キャッシュもサポートしており、ページ、コントロール、および HTTP 応答の生成された出力をメモリに格納します。 出力キャッシュを構成するには、ASP.NET Web ページで宣言を使用するか、Web.config ファイルの設定を使用します。 詳細については、「[outputCache Element for caching (ASP.NET Settings Schema)](/previous-versions/dotnet/netframework-4.0/ms228124(v=vs.100))」(caching の outputCache 要素 (ASP.NET 設定スキーマ)) を参照してください。  
   
  ASP.NET では、カスタム出力キャッシュ プロバイダーを作成して、出力キャッシュを拡張できます。 カスタム プロバイダーを使用すると、キャッシュされたコンテンツを、ディスク、クラウド記憶域、分散キャッシュ エンジンなど、他の記憶域デバイスに格納できます。 カスタム出力キャッシュ プロバイダーを作成するには、<xref:System.Web.Caching.OutputCacheProvider> クラスから派生したクラスを作成し、そのカスタム出力キャッシュ プロバイダーを使用するようにアプリケーションを構成します。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "86309769"
   
 - <xref:System.Runtime.Caching.ObjectCache> クラスから派生したカスタム クラスを作成し、派生クラスでカスタム キャッシュ実装を提供します。  
   
-- <xref:System.Runtime.Caching.MemoryCache> クラスから派生したクラスを作成し、派生クラスをカスタマイズまたは拡張します。 この実行方法の例については、「[Caching Application Data by Using Multiple Cache Objects in an ASP.NET Application](https://docs.microsoft.com/archive/blogs/aspnetue/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application)」(ASP.NET アプリケーションで複数のキャッシュ オブジェクトを使用してアプリケーション データをキャッシュする) を参照してください。  
+- <xref:System.Runtime.Caching.MemoryCache> クラスから派生したクラスを作成し、派生クラスをカスタマイズまたは拡張します。 この実行方法の例については、「[Caching Application Data by Using Multiple Cache Objects in an ASP.NET Application](/archive/blogs/aspnetue/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application)」(ASP.NET アプリケーションで複数のキャッシュ オブジェクトを使用してアプリケーション データをキャッシュする) を参照してください。  
   
 - <xref:System.Web.Caching.OutputCacheProvider> クラスから派生したクラスを作成し、そのカスタム出力キャッシュ プロバイダーを使用するようにアプリケーションを構成します。  
   
@@ -80,5 +80,5 @@ ms.locfileid: "86309769"
 
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>
-- [チュートリアル: WPF アプリケーション内のアプリケーション データのキャッシュ](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
-- [チュートリアル: ASP.NET 内のアプリケーション データのキャッシュ](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))
+- [チュートリアル: WPF アプリケーション内のアプリケーション データのキャッシュ](/dotnet/desktop/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application)
+- [チュートリアル: ASP.NET 内のアプリケーション データのキャッシュ](/previous-versions/ff477235(v=vs.100))

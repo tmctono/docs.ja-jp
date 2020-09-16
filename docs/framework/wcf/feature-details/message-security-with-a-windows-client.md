@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: dcb311523c6ec41b62f6e69fe6bc7635b9d49708
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c87583bec908c3465dedf7c542e30ce264cd7b47
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595233"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553780"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows クライアントとのメッセージ セキュリティ
 このシナリオは、メッセージセキュリティモードによってセキュリティ保護された Windows Communication Foundation (WCF) クライアントおよびサーバーを示しています。 クライアントとサービスは、Windows 資格情報を使用して認証します。  
@@ -19,12 +19,12 @@ ms.locfileid: "84595233"
   
 |特徴|説明|  
 |--------------------|-----------------|  
-|セキュリティ モード|Message|  
+|セキュリティ モード|メッセージ|  
 |相互運用性|WCF のみ|  
 |認証 (サーバー)|サーバーとクライアントの相互認証|  
 |認証 (クライアント)|サーバーとクライアントの相互認証|  
 |整合性|はい、共有のセキュリティ コンテキストを使用します|  
-|機密情報|はい、共有のセキュリティ コンテキストを使用します|  
+|機密性|はい、共有のセキュリティ コンテキストを使用します|  
 |トランスポート|NET.TCP|  
 |バインド|<xref:System.ServiceModel.NetTcpBinding>|  
   
@@ -119,4 +119,4 @@ ms.locfileid: "84595233"
 ## <a name="see-also"></a>関連項目
 
 - [セキュリティの概要](security-overview.md)
-- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric のセキュリティ モデル](/previous-versions/appfabric/ee677202(v=azure.10))

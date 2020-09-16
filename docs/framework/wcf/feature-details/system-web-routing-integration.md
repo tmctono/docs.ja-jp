@@ -2,15 +2,15 @@
 title: System.Web.Routing 統合
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: 059f14c94bb7502a2e4f4616ca2c5e6ac5273afa
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6e67aa4a790edeb367b099d4a94f465f1e7b9bcc
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600738"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554776"
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing 統合
-インターネットインフォメーションサービス (IIS) で Windows Communication Foundation (WCF) サービスをホストする場合は、.svc ファイルを仮想ディレクトリに配置します。 この .svc ファイルは、使用するサービス ホスト ファクトリと、サービスを実装するクラスを指定します。 サービスに要求を行うときは、URI に .svc ファイルを指定します。たとえば、のように指定します。 `http://contoso.com/EmployeeServce.svc` REST サービスを記述するプログラマにとっては、この種類の URI は最適とは言えません。 REST サービス用の URI は、特定のリソースを指定しており、拡張子がないのが普通です。 <xref:System.Web.Routing>統合機能を使用すると、拡張されていない uri に応答する WCF REST サービスをホストできます。 ルーティングの詳細については、「 [ASP.NET routing](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))」を参照してください。  
+インターネットインフォメーションサービス (IIS) で Windows Communication Foundation (WCF) サービスをホストする場合は、.svc ファイルを仮想ディレクトリに配置します。 この .svc ファイルは、使用するサービス ホスト ファクトリと、サービスを実装するクラスを指定します。 サービスに要求を行うときは、URI に .svc ファイルを指定します。たとえば、のように指定します。 `http://contoso.com/EmployeeServce.svc` REST サービスを記述するプログラマにとっては、この種類の URI は最適とは言えません。 REST サービス用の URI は、特定のリソースを指定しており、拡張子がないのが普通です。 <xref:System.Web.Routing>統合機能を使用すると、拡張されていない uri に応答する WCF REST サービスをホストできます。 ルーティングの詳細については、「 [ASP.NET routing](/previous-versions/aspnet/cc668201(v=vs.100))」を参照してください。  
   
 ## <a name="using-systemwebrouting-integration"></a>System.Web.Routing 統合の使用  
  <xref:System.Web.Routing> 統合機能を使用するには、<xref:System.ServiceModel.Activation.ServiceRoute> クラスを使用して 1 つ以上のルートを作成し、Global.asax ファイルでそれらを <xref:System.Web.Routing.RouteTable> に追加します。 これらのルートは、サービスが応答する相対 URI を指定します。 次の例は、その方法を示したものです。  
@@ -72,4 +72,4 @@ ms.locfileid: "84600738"
 ## <a name="see-also"></a>関連項目
 
 - [WCF Web HTTP プログラミング モデル](wcf-web-http-programming-model.md)
-- [ASP.NET ルーティング](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))
+- [ASP.NET ルーティング](/previous-versions/aspnet/cc668201(v=vs.100))

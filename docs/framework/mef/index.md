@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Managed Extensibility Framework, overview
 - MEF, overview
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
-ms.openlocfilehash: 00ed48f2202d4c04039ac264b1fe71474a02432e
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: b743a26dd401e7015c588be2a197551aa891a687
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281252"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555576"
 ---
 # <a name="managed-extensibility-framework-mef"></a>MEF (Managed Extensibility Framework)
 
@@ -62,7 +62,7 @@ MEF は、.NET Framework 4 の不可欠な構成要素であり、.NET Framework
 
 MEF が実行できる処理を理解する最も簡単な方法は、単純な MEF アプリケーションを作成することです。 この例では、SimpleCalculator という名前の単純な電卓を作成します。 SimpleCalculator の目的は、"5+3" や "6-2" などの形式で基本的な算術命令を受け取り、正しい答えを返すコンソール アプリケーションを作成することです。 MEF を使用すると、アプリケーション コードを変更せずに、新しい演算子を追加できます。
 
-この例の完成したコードをダウンロードするには、[SimpleCalculator のサンプル (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/simple-calculator-vb/) をご覧ください。
+この例の完成したコードをダウンロードするには、[SimpleCalculator のサンプル (Visual Basic)](/samples/dotnet/samples/simple-calculator-vb/) をご覧ください。
 
 > [!NOTE]
 > SimpleCalculator を作成する目的は、これを使用する実際のシナリオを必ずしも提供することではなく、MEF の概念と構文を示すことにあります。 MEF の機能を最大限に活用できるアプリケーションの多くは、SimpleCalculator よりも複雑です。 その他のサンプルについては、GitHub の「[Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef)」をご覧ください。
@@ -484,6 +484,6 @@ public class Mod : SimpleCalculator.IOperation
 
 ## <a name="next-steps"></a>次の手順
 
-この例の完成したコードをダウンロードするには、[SimpleCalculator のサンプル (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/simple-calculator-vb/) をご覧ください。
+この例の完成したコードをダウンロードするには、[SimpleCalculator のサンプル (Visual Basic)](/samples/dotnet/samples/simple-calculator-vb/) をご覧ください。
 
  詳しい情報とコード例については、「[Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef)」をご覧ください。 MEF 型の一覧については、<xref:System.ComponentModel.Composition?displayProperty=nameWithType> 名前空間を参照してください。

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: ea1b5e668e29d854233d4dde4c0e6152d591da97
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: ee9fe5b3180abcc9ecbc4515e0af1e1c4b2e8b87
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84903897"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555433"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>サーバー側 UI オートメーション プロバイダーの実装
 
@@ -25,7 +25,7 @@ Windows Presentation Foundation (WPF) 要素と非 WPF 要素 (Windows フォー
 
 <a name="Security_Considerations"></a>
 
-## <a name="security-considerations"></a>セキュリティの考慮事項
+## <a name="security-considerations"></a>セキュリティに関する考慮事項
 
 プロバイダーは、部分的に信頼された環境で動作できるように記述する必要があります。 UIAutomationClient.dll は部分的な信頼で動作するように構成されていないため、プロバイダーのコードではこのアセンブリを参照しないでください。 参照している場合、完全に信頼された環境ではコードを実行できますが、部分的に信頼された環境では失敗します。
 
@@ -35,7 +35,7 @@ Windows Presentation Foundation (WPF) 要素と非 WPF 要素 (Windows フォー
 
 ## <a name="provider-implementation-by-windows-presentation-foundation-elements"></a>Windows Presentation Foundation 要素によるプロバイダーの実装
 
-このトピックの詳細については、「 [WPF カスタム コントロールの UI オートメーション](../wpf/controls/ui-automation-of-a-wpf-custom-control.md)」を参照してください。
+このトピックの詳細については、「 [WPF カスタム コントロールの UI オートメーション](/dotnet/desktop/wpf/controls/ui-automation-of-a-wpf-custom-control)」を参照してください。
 
 <a name="Provider_Implementation_by_non_WPF_Elements"></a>
 
@@ -130,7 +130,7 @@ HWND ベースのコントロールのプロバイダーは通常、次のプロ
 
 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロバイダーは、イベントを発生させて、UI の状態の変更をクライアント アプリケーションに通知する必要があります。 イベントを発生させるには、次のメソッドを使用します。
 
-|メソッド|Description|
+|メソッド|説明|
 |------------|-----------------|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationEvent%2A>|コントロール パターンによってトリガーされるイベントを含む、さまざまなイベントを発生させます。|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent%2A>|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティが変更された場合にイベントを発生させます。|
@@ -140,7 +140,7 @@ HWND ベースのコントロールのプロバイダーは通常、次のプロ
 
 パフォーマンスを最適化するため、プロバイダーは選択的にイベントを発生させたり、イベントを受け取るクライアント アプリケーションが登録されていないときにはイベントを発生させないようにすることができます。 最適化には、次のメソッドを使用します。
 
-|メソッド|Description|
+|メソッド|説明|
 |------------|-----------------|
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A>|この静的プロパティは、クライアント アプリケーションが [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントにサブスクライブしているかどうかを指定します。|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|プロバイダーがこのインターフェイスをフラグメント ルートに実装すると、クライアントがフラグメント上のイベント用のイベント ハンドラーを登録および登録解除したときに通知されるようにすることができます。|
@@ -190,7 +190,7 @@ HWND ベースのコントロールのプロバイダーは通常、次のプロ
 
 これを実現するため、Rebar のフラグメント ルート プロバイダーは、バンドを表す子のセットを公開します。 各バンドには、プロパティとパターンを公開するプロバイダーが 1 つあります。 その <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>の実装で、バンド プロバイダーはコントロール HWND の既定のウィンドウ プロバイダーを返します。これを取得するには、コントロールのウィンドウ ハンドルを渡して <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>を呼び出します。 最後に、Rebar のフラグメント ルート プロバイダーは <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> インターフェイスを実装し、その <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> の実装で、指定した HWND に含まれるコントロールの適切なバンド プロバイダーを返します。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [UI オートメーション プロバイダーの概要](ui-automation-providers-overview.md)
 - [サーバー側 UI オートメーション プロバイダーの公開](expose-a-server-side-ui-automation-provider.md)

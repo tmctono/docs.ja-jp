@@ -6,12 +6,12 @@ helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-ms.openlocfilehash: ee8260056bd87dfc66d96e394f9b93bb9427afd8
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 50ba2f51ea2fb935c2a5db27ad6249e87cb86dc7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309756"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554659"
 ---
 # <a name="net-framework-performance"></a>.NET Framework のパフォーマンス
 優れたパフォーマンスのアプリを作成する場合は、アプリのその他の機能を設計する場合と同様に、パフォーマンスについて設計および計画する必要があります。 Microsoft が提供するツールを使用して、アプリのパフォーマンスを測定し、必要に応じて、メモリの使用、コードのスループット コード、および応答性を向上させることができます。 ここでは、Microsoft が提供するパフォーマンス分析ツールの一覧と、アプリ開発の特定の領域のパフォーマンスに関する他のトピックへのリンクを示します。  
@@ -32,8 +32,8 @@ ms.locfileid: "86309756"
 |ツール|説明|  
 |----------|-----------------|  
 |Visual Studio パフォーマンス分析|Windows オペレーティング システムを実行しているコンピューターに配置されている .NET Framework アプリの CPU 使用量の分析に使用します。<br /><br /> このツールは、Visual Studio でプロジェクトを開いた後、**[デバッグ]** メニューから使用できます。 詳細については、「[Performance Explorer](/visualstudio/profiling/performance-explorer)」(パフォーマンス エクスプローラー) を参照してください。 **注:** Windows Phone を対象とする場合は、Windows Phone アプリケーション分析を使用します (次の行を参照してください)。|  
-|Windows Phone アプリケーション分析|Windows Phone アプリの CPU やメモリ、ネットワーク データ転送率、アプリの応答性、バッテリの使用量の分析に使用します。<br /><br /> このツールは、[Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773) のインストール後に、Visual Studio の Windows Phone プロジェクトの **[デバッグ]** メニューから使用できます。 詳細については、「 [Windows Phone 8 のアプリプロファイリング](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105))」を参照してください。|  
-|[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|CPU とメモリ関連のパフォーマンスの問題を識別するために使用します。 このツールは、Windows イベント トレーシング (ETW) と CLR プロファイル API を使用して、メモリと CPU の高度な調査およびガベージ コレクションや JIT コンパイルに関する情報を提供します。 PerfView を使用する方法の詳細については、アプリに含まれるチュートリアルやヘルプ ファイル、[Channel 9 のビデオ チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial)、および[ブログの投稿](https://docs.microsoft.com/archive/blogs/vancem/)を参照してください。<br /><br /> メモリ固有の問題については、[PerfView を使用したメモリの調査に関するビデオ チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots)を参照してください。|  
+|Windows Phone アプリケーション分析|Windows Phone アプリの CPU やメモリ、ネットワーク データ転送率、アプリの応答性、バッテリの使用量の分析に使用します。<br /><br /> このツールは、[Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773) のインストール後に、Visual Studio の Windows Phone プロジェクトの **[デバッグ]** メニューから使用できます。 詳細については、「 [Windows Phone 8 のアプリプロファイリング](/previous-versions/windows/apps/jj215908(v=vs.105))」を参照してください。|  
+|[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|CPU とメモリ関連のパフォーマンスの問題を識別するために使用します。 このツールは、Windows イベント トレーシング (ETW) と CLR プロファイル API を使用して、メモリと CPU の高度な調査およびガベージ コレクションや JIT コンパイルに関する情報を提供します。 PerfView を使用する方法の詳細については、アプリに含まれるチュートリアルやヘルプ ファイル、[Channel 9 のビデオ チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial)、および[ブログの投稿](/archive/blogs/vancem/)を参照してください。<br /><br /> メモリ固有の問題については、[PerfView を使用したメモリの調査に関するビデオ チュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots)を参照してください。|  
 |[Windows Performance Analyzer](https://www.microsoft.com/download/details.aspx?id=30652)|複数のアプリが同じコンピューターで実行されているときに、アプリのメモリやストレージの使用量などの全体的なシステム パフォーマンスを特定するために使用します。 このツールは、windows 8 用の Windows アセスメント & amp; デプロイメントキット (ADK) の一部としてダウンロードセンターから入手できます。 詳細については、「[Windows Performance Analyzer (Windows パフォーマンス アナライザー)](/windows-hardware/test/wpt/windows-performance-analyzer)」を参照してください。|
   
 ### <a name="event-tracing-for-windows-etw"></a>Windows イベント トレーシング (ETW)  
@@ -45,13 +45,13 @@ ms.locfileid: "86309756"
 |アプリの種類|解決方法については、|  
 |--------------|---------|  
 |すべてのプラットフォームに対応した .NET Framework アプリ|[ガベージ コレクションとパフォーマンス](../../standard/garbage-collection/performance.md)<br /><br /> [パフォーマンスに関するヒント](performance-tips.md)|  
-|C++、C#、および Visual Basic で記述された Windows 8.x ストアアプリ|[C++、C#、または Visual Basic を使った Windows ストア アプリのパフォーマンスのベスト プラクティス](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
-|Windows Presentation Foundation (WPF)|[WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
-|ASP.NET|[ASP.NET のパフォーマンスの概要](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
+|C++、C#、および Visual Basic で記述された Windows 8.x ストアアプリ|[C++、C#、または Visual Basic を使った Windows ストア アプリのパフォーマンスのベスト プラクティス](/previous-versions/windows/apps/hh750313(v=win.10))|  
+|Windows Presentation Foundation (WPF)|[WPF Performance Suite](/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
+|ASP.NET|[ASP.NET のパフォーマンスの概要](/previous-versions/aspnet/cc668225(v=vs.100))|  
   
 ## <a name="related-topics"></a>関連トピック  
   
-|Title|[説明]|  
+|Title|説明|  
 |-----------|-----------------|  
 |[.NET Framework アプリケーションでのキャッシュ](caching-in-net-framework-applications.md)|データをキャッシュしてアプリケーションのパフォーマンスを向上させる手法について説明します。|  
 |[限定的な初期化](lazy-initialization.md)|特にアプリの起動時にパフォーマンスを向上させるために、必要に応じてオブジェクトを初期化する方法について説明します。|  

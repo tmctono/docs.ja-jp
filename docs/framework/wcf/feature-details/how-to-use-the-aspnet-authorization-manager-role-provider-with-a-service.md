@@ -2,12 +2,12 @@
 title: '方法: ASP.NET の承認マネージャー ロール プロバイダーとサービスを使用する'
 ms.date: 03/30/2017
 ms.assetid: f21deb81-91ef-49ef-94d6-494785143271
-ms.openlocfilehash: 7c1076671512b33f115950cad684fba0b514abe9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4a92c9db000b703f4fdab7c34e5359de74b0228d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595337"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545605"
 ---
 # <a name="how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service"></a>方法: ASP.NET の承認マネージャー ロール プロバイダーとサービスを使用する
 ASP.NET が Web サービスをホストする場合、承認マネージャーをアプリケーションに統合して、サービスに承認を提供できます。 承認マネージャーを使用して、アプリケーション開発者は個々の操作を定義できます。また、個々の操作をグループ化してタスクを形成できます。 次に管理者は、ロールを承認して特定のタスクまたは個々の操作を実行できます。 承認マネージャーでは、ロール、タスク、操作、ユーザーを管理する管理ツールとして Microsoft 管理コンソール (MMC) スナップインが提供されます。 管理者は、承認マネージャーのポリシー ストアを XML ファイル、Active Directory、または Active Directory アプリケーション モード (ADAM) ストアに構成します。  
@@ -29,7 +29,7 @@ ASP.NET が Web サービスをホストする場合、承認マネージャー�
 </system.web>  
 ```  
   
- ASP.NET ロールプロバイダーと WCF アプリケーションの統合の詳細については、「[方法: ASP.NET Role プロバイダーをサービスで使用](how-to-use-the-aspnet-role-provider-with-a-service.md)する」を参照してください。 ASP.NET で承認マネージャーを使用する方法の詳細については、「[方法: 承認マネージャー (AzMan) と ASP.NET 2.0 を使用](https://docs.microsoft.com/previous-versions/msp-n-p/ff649313(v=pandp.10))する」を参照してください。  
+ ASP.NET ロールプロバイダーと WCF アプリケーションの統合の詳細については、「 [方法: ASP.NET Role プロバイダーをサービスで使用](how-to-use-the-aspnet-role-provider-with-a-service.md)する」を参照してください。 ASP.NET で承認マネージャーを使用する方法の詳細については、「 [方法: 承認マネージャー (AzMan) と ASP.NET 2.0 を使用](/previous-versions/msp-n-p/ff649313(v=pandp.10))する」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

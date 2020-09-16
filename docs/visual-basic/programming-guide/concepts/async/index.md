@@ -2,12 +2,12 @@
 title: Async および Await を使用した非同期プログラミング
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: 317272649eea56352fcba5402244ba70204c888f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b4f35b482b4ee3fc7e08c296cf3815fb2bdd6874
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "85503795"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555381"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Async および Await を使用した非同期プログラミング (Visual Basic)
 
@@ -25,9 +25,9 @@ Visual Studio 2012 では、.NET Framework 4.5 以降と Windows ランタイム
 
 |アプリケーション領域|サポートされている、非同期のメソッドを含む API|
 |----------------------|------------------------------------------------|
-|Web アクセス|<xref:System.Net.Http.HttpClient>、<xref:Windows.Web.Syndication.SyndicationClient>|
+|Web アクセス|<xref:System.Net.Http.HttpClient>, <xref:Windows.Web.Syndication.SyndicationClient>|
 |ファイルの処理|<xref:Windows.Storage.StorageFile>, <xref:System.IO.StreamWriter>, <xref:System.IO.StreamReader>, <xref:System.Xml.XmlReader>|
-|イメージの処理|<xref:Windows.Media.Capture.MediaCapture>、<xref:Windows.Graphics.Imaging.BitmapEncoder>、<xref:Windows.Graphics.Imaging.BitmapDecoder>|
+|イメージの処理|<xref:Windows.Media.Capture.MediaCapture>, <xref:Windows.Graphics.Imaging.BitmapEncoder>, <xref:Windows.Graphics.Imaging.BitmapDecoder>|
 |WCF プログラミング|[同期操作と非同期操作](../../../../framework/wcf/synchronous-and-asynchronous-operations.md)|
 |||
 
@@ -43,7 +43,7 @@ Visual Basic の [Async](../../../language-reference/modifiers/async.md) キー�
 
 async メソッドの例を次に示します。 コードのほとんどは、見たことのあるものと思います。 コメントは、非同期性を作成するために追加した機能を明示しています。
 
-このトピックの最後に完全な Windows Presentation Foundation (WPF) サンプル ファイルがあります。また、「[Async Sample: Example from "Asynchronous Programming with Async and Await"](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-vb/) (非同期のサンプル: 「Async および Await を使用した非同期プログラミング」の例)」からサンプルをダウンロードできます。
+このトピックの最後に完全な Windows Presentation Foundation (WPF) サンプル ファイルがあります。また、「[Async Sample: Example from "Asynchronous Programming with Async and Await"](/samples/dotnet/samples/async-and-await-vb/) (非同期のサンプル: 「Async および Await を使用した非同期プログラミング」の例)」からサンプルをダウンロードできます。
 
 ```vb
 ' Three things to note about writing an Async Function:
@@ -140,7 +140,7 @@ Dim urlContents As String = Await client.GetStringAsync()
 
 非同期のプログラミングをサポートする `GetStringAsync` などのメソッドがどこにあるのかということです。 .NET Framework 4.5 以降には、`Async` および `Await` で使用する多くのメンバーが含まれています。 メンバー名と <xref:System.Threading.Tasks.Task> または [Task(Of TResult)](xref:System.Threading.Tasks.Task%601) の戻り値の型に付けられている "Async" というサフィックスでこれらのメンバーを識別できます。 たとえば、`System.IO.Stream` のクラスには、同期メソッドの <xref:System.IO.Stream.CopyTo%2A>、<xref:System.IO.Stream.Read%2A>、および <xref:System.IO.Stream.Write%2A> と共に、<xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.ReadAsync%2A> および <xref:System.IO.Stream.WriteAsync%2A> という同期メソッドが含まれています。
 
-Windows ランタイムにも、Windows アプリの `Async` と `Await` で使用できる多くのメソッドが含まれています。 詳細とメソッドの例については、「[C# または Visual Basic での非同期 API の呼び出し](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)」、「[非同期プログラミング (Windows ランタイム アプリ)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10))」、および「[WhenAny: .NET Framework と Windows ランタイム間のブリッジ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))」を参照してください。
+Windows ランタイムにも、Windows アプリの `Async` と `Await` で使用できる多くのメソッドが含まれています。 詳細とメソッドの例については、「[C# または Visual Basic での非同期 API の呼び出し](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)」、「[非同期プログラミング (Windows ランタイム アプリ)](/previous-versions/windows/apps/hh464924(v=win.10))」、および「[WhenAny: .NET Framework と Windows ランタイム間のブリッジ](/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))」を参照してください。
 
 ## <a name="threads"></a><a name="BKMK_Threads"></a>スレッド
 
@@ -243,7 +243,7 @@ Windows ランタイム プログラミングの非同期 API には、タスク
 |[非同期プログラムにおける制御フロー (Visual Basic)](control-flow-in-async-programs.md)|非同期プログラムでの await 式を継続して、コントロールのフローの詳細をトレースします。|[非同期のサンプル:非同期プログラムにおける制御フロー](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|
 |[非同期アプリケーションの微調整 (Visual Basic)](fine-tuning-your-async-application.md)|非同期のソリューションに次の機能を追加する方法を示します:<br /><br /> - [非同期タスクまたはタスクの一覧のキャンセル (Visual Basic)](cancel-an-async-task-or-a-list-of-tasks.md)<br />- [指定した時間の経過後の非同期タスクのキャンセル (Visual Basic)](cancel-async-tasks-after-a-period-of-time.md)<br />- [完了後の残りの非同期タスクのキャンセル (Visual Basic)](cancel-remaining-async-tasks-after-one-is-complete.md)<br />- [完了時での複数の同期タスクとプロセスの実行 (Visual Basic)](start-multiple-async-tasks-and-process-them-as-they-complete.md)|[Async Sample:Fine Tuning Your Application (非同期のサンプル: アプリケーションの微調整)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|
 |[非同期アプリにおける再入の処理 (Visual Basic)](handling-reentrancy-in-async-apps.md)|実行中にアクティブな非同期操作を再起動するケースの処理方法を示します。||
-|[WhenAny:.NET Framework と Windows ランタイム間のブリッジ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|Windows ランタイムのメソッドで <xref:System.Threading.Tasks.Task.WhenAny%2A> を使えるようにするため、Windows ランタイムで .NET Framework および IAsyncOperations のタスクの種類間をブリッジする方法を示します。|[Async Sample:Bridging between .NET and Windows Runtime (AsTask and WhenAny) (非同期のサンプル: .NET と Windows ランタイム間のブリッジ (AsTask と WhenAny))](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|
+|[WhenAny:.NET Framework と Windows ランタイム間のブリッジ](/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|Windows ランタイムのメソッドで <xref:System.Threading.Tasks.Task.WhenAny%2A> を使えるようにするため、Windows ランタイムで .NET Framework および IAsyncOperations のタスクの種類間をブリッジする方法を示します。|[Async Sample:Bridging between .NET and Windows Runtime (AsTask and WhenAny) (非同期のサンプル: .NET と Windows ランタイム間のブリッジ (AsTask と WhenAny))](/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|
 |非同期のキャンセル:.NET Framework と Windows ランタイム間のブリッジ|Windows ランタイムのメソッドで <xref:System.Threading.CancellationTokenSource> を使えるようにするため、Windows ランタイムで .NET Framework および IAsyncOperations のタスクの種類間をブリッジする方法を示します。|[Async Sample:Bridging between .NET and Windows Runtime (AsTask & Cancellation) (非同期のサンプル: .NET と Windows ランタイム間のブリッジ (AsTask と Cancellation))](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|
 |[ファイル アクセスにおける非同期の使用 (Visual Basic)](using-async-for-file-access.md)|async および await を使用してファイルにアクセスすることの利点の一覧と紹介です。||
 |[タスク ベースの非同期パターン (TAP)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|.NET Framework での非同期性の新しいパターンについて説明します。 パターンは <xref:System.Threading.Tasks.Task> および [Task(Of TResult)](xref:System.Threading.Tasks.Task%601) の型に基づいています。||
@@ -251,7 +251,7 @@ Windows ランタイム プログラミングの非同期 API には、タスク
 
 ## <a name="complete-example"></a><a name="BKMK_CompleteExample"></a>コード例全体
 
-次のコードは、このトピックで説明する Windows Presentation Foundation (WPF) アプリケーションの MainWindow.xaml.vb ファイルです。 「[Async Sample:Example from "Asynchronous Programming with Async and Await" (非同期のサンプル: 「Async および Await を使用した非同期プログラミング」の例)](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-vb/)」からサンプルをダウンロードできます。
+次のコードは、このトピックで説明する Windows Presentation Foundation (WPF) アプリケーションの MainWindow.xaml.vb ファイルです。 「[Async Sample:Example from "Asynchronous Programming with Async and Await" (非同期のサンプル: 「Async および Await を使用した非同期プログラミング」の例)](/samples/dotnet/samples/async-and-await-vb/)」からサンプルをダウンロードできます。
 
 [!code-vb[async](~/samples/snippets/standard/async/async-and-await/vb/MainWindow.xaml.vb)]
 

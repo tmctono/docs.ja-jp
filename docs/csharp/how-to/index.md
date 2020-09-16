@@ -2,12 +2,12 @@
 title: 方法に関する記事 (C# ガイド)
 description: 簡単なヒントと、焦点を絞った短いコード サンプルのコレクション
 ms.date: 12/20/2017
-ms.openlocfilehash: 9dd069ff767d65002b78c18b398b700a1f26ebfa
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 26d3931ff3b4ecfcc052c3ace25a09801f84c505
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465157"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537406"
 ---
 # <a name="how-to-c"></a>方法 (C#)
 
@@ -106,23 +106,23 @@ LINQ では、LINQ クエリ式パターンをサポートするすべてのデ�
 - [クエリでラムダ式を使用する](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-in-a-query.md)。
 - [クエリ式で `var` を使用する](../programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)。
 - [クエリから要素のプロパティのサブセットを返す](../programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md)。
-- [複雑なフィルターを使用してクエリを記述する](../programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md)。
-- [データ ソースの要素を並べ替える](../programming-guide/concepts/linq/how-to-sort-elements.md)。
-- [複数のキーに基づいて要素を並べ替える](../programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md)。
-- [プロジェクションの型を制御する](../programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md)。
+- [複雑なフィルターを使用してクエリを記述する](../../standard/linq/write-queries-complex-filtering.md)。
+- [データ ソースの要素を並べ替える](../../standard/linq/sort-elements.md)。
+- [複数のキーに基づいて要素を並べ替える](../../standard/linq/sort-elements-multiple-keys.md)。
+- [プロジェクションの型を制御する](../../standard/linq/control-type-projection.md)。
 - [ソース シーケンス内の値の出現箇所をカウントする](../programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md)。
-- [中間値を計算する](../programming-guide/concepts/linq/how-to-calculate-intermediate-values.md)。
+- [中間値を計算する](../../standard/linq/calculate-intermediate-values.md)。
 - [複数のソースからデータをマージする](../programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)。
 - [2 つのシーケンスの差集合を見つける](../programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)。
-- [空のクエリ結果をデバッグする](../programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)。
+- [空のクエリ結果をデバッグする](../../standard/linq/debug-empty-query-results-sets.md)。
 - [LINQ クエリにカスタム メソッドを追加する](../programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)。
 
 ## <a name="multiple-threads-and-async-processing"></a>複数のスレッドおよび非同期処理
 
 最新のプログラムでは、多くの場合、非同期操作を使用します。 次の記事は、これらの手法の使用方法を理解するのに役立ちます。
 
-- [`System.Threading.Tasks.Task.WhenAll` を使用して非同期のパフォーマンスを向上させる](../programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。
-- [`async` および `await` を使用して複数の Web 要求を並行して作成する](../programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)。
+- [`System.Threading.Tasks.Task.WhenAll` を使用して非同期のパフォーマンスを向上させる](../programming-guide/concepts/async/index.md)。
+- [`async` および `await` を使用して複数の Web 要求を並行して作成する](../programming-guide/concepts/async/index.md)。
 - [スレッド プールを使用する](../../standard/threading/the-managed-thread-pool.md#using-the-thread-pool)。
 
 ## <a name="command-line-args-to-your-program"></a>プログラムのコマンド ライン引数
