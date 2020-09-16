@@ -2,12 +2,12 @@
 title: 部分信頼機能の互換性
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 85e34e365d125fe4f00756549ba5bda4311b78f8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6d009482037efac8e0f90d255e198f10a1234187
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579164"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551973"
 ---
 # <a name="partial-trust-feature-compatibility"></a>部分信頼機能の互換性
 Windows Communication Foundation (WCF) は、部分的に信頼された環境で実行される場合に、限られた機能のサブセットをサポートします。 部分信頼でサポートされる機能は、「 [Supported Deployment Scenarios](supported-deployment-scenarios.md) 」のトピックで説明される特定のシナリオを念頭にデザインされています。  
@@ -52,7 +52,7 @@ Windows Communication Foundation (WCF) は、部分的に信頼された環境�
   
  MTOM (Message Transmission Optimization Mechanism) エンコーダーはサポートされていません。  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>セキュリティ  
  部分的に信頼されたアプリケーションでは、WCF のトランスポートレベルのセキュリティ機能を使用して、通信をセキュリティで保護することができます。 メッセージ レベルのセキュリティはサポートされていません。 メッセージ レベルのセキュリティを使用するようにバインディングを構成すると、実行時に例外が発生します。  
   
 ### <a name="unsupported-bindings"></a>サポートされないバインディング  
@@ -63,7 +63,7 @@ Windows Communication Foundation (WCF) は、部分的に信頼された環境�
   
 - シリアル化可能なすべての `[DataContract]` 型は `public`である必要があります。  
   
-- `[DataMember]` 型にあるシリアル化可能なすべての `[DataContract]` フィールドまたはプロパティは、パブリックで読み書き可能である必要があります。 部分的に信頼されたアプリケーションで WCF を実行する場合、[読み取り専用](https://go.microsoft.com/fwlink/?LinkID=98854)フィールドのシリアル化と逆シリアル化はサポートされません。  
+- `[DataMember]` 型にあるシリアル化可能なすべての `[DataContract]` フィールドまたはプロパティは、パブリックで読み書き可能である必要があります。 部分的に信頼されたアプリケーションで WCF を実行する場合、 [読み取り専用](https://go.microsoft.com/fwlink/?LinkID=98854) フィールドのシリアル化と逆シリアル化はサポートされません。  
   
 - 部分信頼環境では、 `[Serializable]`/ISerializable プログラミング モデルはサポートされていません。  
   
@@ -90,12 +90,12 @@ Windows Communication Foundation (WCF) は、部分的に信頼された環境�
   
 - 共通動作を <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性でマークし、部分信頼アプリケーションとして展開したときに実行できるようにします。 APTCA でマークされたアセンブリを実行できないように、コンピューターでレジストリ エントリを設定できます。 .  
   
-- アプリケーションが完全信頼アプリケーションとして配置されている場合に、ユーザーが部分信頼環境でアプリケーションを実行するようにコード アクセス セキュリティ設定を変更できないことを確認します。 ユーザーがこのような変更を行うことができる場合、動作は実行されず、例外もスローされません。 これを確認するには、 [caspol.exe (コードアクセスセキュリティポリシーツール)](../../tools/caspol-exe-code-access-security-policy-tool.md)を使用して、 **levelfinal**オプションを参照してください。  
+- アプリケーションが完全信頼アプリケーションとして配置されている場合に、ユーザーが部分信頼環境でアプリケーションを実行するようにコード アクセス セキュリティ設定を変更できないことを確認します。 ユーザーがこのような変更を行うことができる場合、動作は実行されず、例外もスローされません。 これを確認するには、Caspol.exe を使用した **levelfinal** オプション [ (コードアクセスセキュリティポリシーツール)](../../tools/caspol-exe-code-access-security-policy-tool.md)を参照してください。  
   
- 一般的な動作の例については、「[方法: 企業内のエンドポイントをロックダウンする](../extending/how-to-lock-down-endpoints-in-the-enterprise.md)」を参照してください。  
+ 一般的な動作の例については、「 [方法: 企業内のエンドポイントをロックダウンする](../extending/how-to-lock-down-endpoints-in-the-enterprise.md)」を参照してください。  
   
 ## <a name="configuration"></a>構成  
- 1つの例外を除き、部分信頼コードは、ローカルファイルの WCF 構成セクションのみを読み込むことができ `app.config` ます。 Machine.config またはルートの web.config ファイル内の WCF セクションを参照する WCF 構成セクションを読み込むには、ConfigurationPermission (無制限) が必要です。 このアクセス許可がない場合、ローカル構成ファイルの外部にある WCF 構成セクション (動作、バインド) を参照すると、構成の読み込み時に例外が発生します。  
+ 1つの例外を除き、部分信頼コードは、ローカルファイルの WCF 構成セクションのみを読み込むことができ `app.config` ます。 machine.config またはルート web.config ファイル内の WCF セクションを参照する WCF 構成セクションを読み込むには、ConfigurationPermission (無制限) が必要です。 このアクセス許可がない場合、ローカル構成ファイルの外部にある WCF 構成セクション (動作、バインド) を参照すると、構成の読み込み時に例外が発生します。  
   
  例外は、このトピックのシリアル化のセクションで説明したように、シリアル化の既知の型の構成です。  
   
@@ -119,7 +119,7 @@ Windows Communication Foundation (WCF) は、部分的に信頼された環境�
   
 - <xref:System.Runtime.Serialization>  
   
-- <xref:System.IdentityModel.Claims>、 <xref:System.IdentityModel.Policy>、 <xref:System.IdentityModel.Selectors>、および <xref:System.IdentityModel.Tokens>。  
+- <xref:System.IdentityModel.Claims>、<xref:System.IdentityModel.Policy>、<xref:System.IdentityModel.Selectors>、<xref:System.IdentityModel.Tokens>。  
   
  次のトレース ソースはサポートされていません。  
   
@@ -127,7 +127,7 @@ Windows Communication Foundation (WCF) は、部分的に信頼された環境�
   
 - <xref:System.IO.Log>  
 
-- [System.servicemodel. 内部. TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
+- [System.servicemodel. 内部. TransactionBridge](/previous-versions/aa346556(v=vs.110))]
   
  <xref:System.Diagnostics.TraceOptions> 列挙体の次のメンバーは指定できません。  
   
@@ -145,7 +145,7 @@ Windows Communication Foundation (WCF) は、部分的に信頼された環境�
   
 ## <a name="other-limitations"></a>他の制約  
 
-  WCF は、一般に、ホスティングアプリケーションによって課せられるセキュリティ上の考慮事項に限定されます。 たとえば、WCF が XAML ブラウザーアプリケーション (XBAP) でホストされている場合、「 [Windows Presentation Foundation 部分信頼セキュリティ](../../wpf/wpf-partial-trust-security.md)」で説明されているように、xbap の制限が適用されます。  
+  WCF は、一般に、ホスティングアプリケーションによって課せられるセキュリティ上の考慮事項に限定されます。 たとえば、WCF が XAML ブラウザーアプリケーション (XBAP) でホストされている場合、「 [Windows Presentation Foundation 部分信頼セキュリティ](/dotnet/desktop/wpf/wpf-partial-trust-security)」で説明されているように、xbap の制限が適用されます。  
   
  次の追加機能は indigo2 が部分信頼環境で実行されていると有効になりません。  
   

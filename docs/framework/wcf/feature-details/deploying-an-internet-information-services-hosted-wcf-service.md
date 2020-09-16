@@ -3,12 +3,12 @@ title: インターネット インフォメーション サービスでホス�
 description: IIS でホストされている WCF サービスを開発および展開するために必要なタスクについて説明します。その際、コンポーネントのインストールを確認します。
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 886fd9b8d8cf3059b1fd8679c5dd89ee015f2adf
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 5d9a0b80cc75baec2325b778cee7daa68531f2d5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245094"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557568"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>インターネット インフォメーション サービスでホストされる WCF サービスの配置
 
@@ -28,23 +28,23 @@ IIS でホストされる WCF サービスの作成に関する詳細なチュ�
 
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>IIS、ASP.NET、および WCF が正しくインストールおよび登録されていることの確認
 
-IIS でホストされる WCF サービスが正常に機能するためには、WCF、IIS、および ASP.NET をインストールする必要があります。 WCF (.NET Framework の一部として)、ASP.NET、および IIS のインストール手順は、オペレーティングシステムによって異なります。 WCF と .NET Framework のインストールの詳細については、「[開発者向けの .NET Framework のインストール](../../install/guide-for-developers.md)」を参照してください。 Windows 10 に IIS をインストールするには、**コントロールパネル**の [**プログラムと機能**] を開き、[ **Windows の機能の有効化または無効化**] を選択します。 [ **Windows の機能**] で、[**インターネットインフォメーションサービス**を選択し、[ **OK]** を選択します。
+IIS でホストされる WCF サービスが正常に機能するためには、WCF、IIS、および ASP.NET をインストールする必要があります。 WCF (.NET Framework の一部として)、ASP.NET、および IIS のインストール手順は、オペレーティングシステムによって異なります。 WCF と .NET Framework のインストールの詳細については、「 [開発者向けの .NET Framework のインストール](../../install/guide-for-developers.md)」を参照してください。 Windows 10 に IIS をインストールするには、**コントロールパネル**の [**プログラムと機能**] を開き、[ **Windows の機能の有効化または無効化**] を選択します。 [ **Windows の機能**] で、[ **インターネットインフォメーションサービス** を選択し、[ **OK]** を選択します。
 
 ![IIS が強調表示されている Windows の機能](./media/windows-features-iis.png)
 
-他のオペレーティングシステムに IIS をインストールする手順については、「windows [Vista および windows 7 に](/iis/install/installing-iis-7/installing-iis-on-windows-vista-and-windows-7)Iis をインストールする」および「 [Windows Server 2012 R2 に Iis 8.5 をインストール](/iis/install/installing-iis-85/installing-iis-85-on-windows-server-2012-r2)する」を参照してください。
+他のオペレーティングシステムに IIS をインストールする手順については、「windows [Vista および windows 7 に](/iis/install/installing-iis-7/installing-iis-on-windows-vista-and-windows-7) Iis をインストールする」および「 [Windows Server 2012 R2 に Iis 8.5 をインストール](/iis/install/installing-iis-85/installing-iis-85-on-windows-server-2012-r2)する」を参照してください。
 
 IIS が既にコンピューターに存在する場合、.NET Framework のインストールプロセスによって WCF が自動的に IIS に登録されます。 .NET Framework の後に IIS がインストールされている場合は、WCF を IIS と ASP.NET に登録するために追加の手順が必要になります。 使用しているオペレーティング システムに応じて、次のように実行します。
 
-- Windows 7 および Windows Server 2003: [ServiceModel 登録ツール (ServiceModelReg.exe)](../servicemodelreg-exe.md)ツールを使用して、WCF を IIS に登録します。 このツールを使用するには、 [Visual Studio の開発者コマンドプロンプト](../../tools/developer-command-prompt-for-vs.md)で「 **ServiceModelReg.exe/i/x** 」と入力します。
+- Windows 7 および Windows Server 2003: [ServiceModel 登録ツール (ServiceModelReg.exe)](../servicemodelreg-exe.md) ツールを使用して、WCF を IIS に登録します。 このツールを使用するには、 [Visual Studio の開発者コマンドプロンプト](../../tools/developer-command-prompt-for-vs.md)で「 **ServiceModelReg.exe/i/x** 」と入力します。
 
-- Windows 7: 最後に、.NET Framework バージョン4以降を使用するように ASP.NET が構成されていることを確認する必要があります。 これを行うには、オプションを指定して ASPNET_Regiis ツールを実行し `–i` ます。 詳細については、「 [ASP.NET IIS Registration Tool](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90))」を参照してください。
+- Windows 7: 最後に、.NET Framework バージョン4以降を使用するように ASP.NET が構成されていることを確認する必要があります。 これを行うには、オプションを指定して ASPNET_Regiis ツールを実行し `–i` ます。 詳細については、「 [ASP.NET IIS Registration Tool](/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90))」を参照してください。
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>新しい IIS アプリケーションの作成、または既存の ASP.NET アプリケーションの再利用
 
-IIS でホストされる WCF サービスは、IIS アプリケーションの内部に存在する必要があります。 WCF サービスを排他的にホストする新しい IIS アプリケーションを作成できます。 または、ASP.NET 2.0 コンテンツ (.aspx ページや ASP.NET Web サービス (ASMX) など) を既にホストしている既存のアプリケーションに WCF サービスをデプロイすることもできます。 これらのオプションの詳細については、「wcf[サービスおよび ASP.NET](wcf-services-and-aspnet.md)」の「wcf と ASP.NET の同時ホスト」および「ASP.NET 互換モードでの wcf サービスのホスト」を参照してください。
+IIS でホストされる WCF サービスは、IIS アプリケーションの内部に存在する必要があります。 WCF サービスを排他的にホストする新しい IIS アプリケーションを作成できます。 または、ASP.NET 2.0 コンテンツ (.aspx ページや ASP.NET Web サービス (ASMX) など) を既にホストしている既存のアプリケーションに WCF サービスをデプロイすることもできます。 これらのオプションの詳細については、「wcf [サービスおよび ASP.NET](wcf-services-and-aspnet.md)」の「wcf と ASP.NET の同時ホスト」および「ASP.NET 互換モードでの wcf サービスのホスト」を参照してください。
 
-IIS 6.0 以降のバージョンでは、分離されたオブジェクト指向プログラミングアプリケーションが定期的に再起動されることに注意してください。 既定値は 1740 分です。 サポートされている最大値は 71,582 分です。 この再起動は、無効にできます。 このプロパティの詳細については、「 [Periodicrestarttime](https://docs.microsoft.com/previous-versions/iis/6.0-sdk/ms525914(v=vs.90))」を参照してください。
+IIS 6.0 以降のバージョンでは、分離されたオブジェクト指向プログラミングアプリケーションが定期的に再起動されることに注意してください。 既定値は 1740 分です。 サポートされている最大値は 71,582 分です。 この再起動は、無効にできます。 このプロパティの詳細については、「 [Periodicrestarttime](/previous-versions/iis/6.0-sdk/ms525914(v=vs.90))」を参照してください。
 
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>WCF サービス用の .svc ファイルの作成
 
@@ -72,7 +72,7 @@ IIS でホストされる WCF サービスでは、ASP.NET 2.0 と同じ動的�
 
 - .Svc ファイルに直接配置される、コンパイルされていないコードとして。 実装コードは、ServiceHost ディレクティブの後に、サービスの .svc ファイルにインラインで配置することもできます \@ 。 インライン コードを変更すると、次の要求を受け取ったときにアプリケーションがリサイクルされ、再コンパイルされます。
 
-ASP.NET 2.0 コンパイルモデルの詳細については、「 [ASP.NET コンパイルの概要](https://docs.microsoft.com/previous-versions/aspnet/ms178466(v=vs.100))」を参照してください。
+ASP.NET 2.0 コンパイルモデルの詳細については、「 [ASP.NET コンパイルの概要](/previous-versions/aspnet/ms178466(v=vs.100))」を参照してください。
 
 ## <a name="configure-the-wcf-service"></a>WCF サービスの構成
 
@@ -114,4 +114,4 @@ IIS でホストされる WCF サービスは、HTTP トランスポートセキ
 
 - [インターネット インフォメーション サービスでのホスティング](hosting-in-internet-information-services.md)
 - [インターネット インフォメーション サービス ホスティングのベスト プラクティス](internet-information-services-hosting-best-practices.md)
-- [AppFabric のホスティング機能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [AppFabric のホスティング機能](/previous-versions/appfabric/ee677189(v=azure.10))

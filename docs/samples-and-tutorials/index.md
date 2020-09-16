@@ -4,12 +4,12 @@ description: .NET Core、ASP.NET Core、C# 言語に関する、.NET の学習�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/19/2020
-ms.openlocfilehash: 587365aae1c2069c3e94ad0452da9c31dc6e89f0
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 7e477683834b46439626e03e6ff411fabc52672d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656958"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557191"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET サンプルおよびチュートリアル
 
@@ -107,7 +107,7 @@ ms.locfileid: "88656958"
 
 1. 次の手順のいずれかを実行して、サンプル コードを含むリポジトリをダウンロードします。
    * リポジトリの ZIP ファイルをローカル システムにダウンロードします。 圧縮アーカイブを解凍します。
-   * リポジトリを[フォーク](https://help.github.com/articles/fork-a-repo/)し、フォークしたものをローカル システムに[クローン](https://help.github.com/articles/cloning-a-repository/)します。 フォークとクローンを使用すると、作成したフォークに変更をコミットし、公式のドキュメントのリポジトリに対する pull request を作成することで、ドキュメントに貢献できます。 詳細については、「[.NET Documentation Contributing Guide (.NET ドキュメント貢献ガイド](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute)」と「[ASP.NET Core Docs Contributing Guide (ASP.NET Core ドキュメント貢献ガイド)](https://github.com/dotnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md)」をご覧ください。
+   * リポジトリを[フォーク](https://help.github.com/articles/fork-a-repo/)し、フォークしたものをローカル システムに[クローン](https://help.github.com/articles/cloning-a-repository/)します。 フォークとクローンを使用すると、作成したフォークに変更をコミットし、公式のドキュメントのリポジトリに対する pull request を作成することで、ドキュメントに貢献できます。 詳細については、「[.NET Documentation Contributing Guide (.NET ドキュメント貢献ガイド](/contribute/dotnet/dotnet-contribute)」と「[ASP.NET Core Docs Contributing Guide (ASP.NET Core ドキュメント貢献ガイド)](https://github.com/dotnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md)」をご覧ください。
    * リポジトリをローカル環境にクローンします。 ローカル システムにドキュメントのリポジトリを直接クローンすると、公式のリポジトリに対して直接コミットできないため、後でドキュメントに貢献できなくなります。 後でドキュメントに貢献する可能性がある場合は、前述のフォークとクローンの手順を使用してください。
 1. リポジトリ フォルダー内のサンプルがある場所に移動します。 サンプルへのリンクをクリックすると、サンプルがある場所への相対パスがブラウザーのアドレス バーに表示されます。
 1. サンプルを実行するには、次のいくつかのオプションがあります。

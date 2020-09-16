@@ -6,23 +6,23 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 0a21548386639a9f6a8c8572e5d7928ffdb270d6
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 0907f7f8a3767db9d83e5deaae1d86141fbee7b0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247040"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557412"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>方法: 開発中に使用する一時的な証明書を作成する
 
-Windows Communication Foundation (WCF) を使用してセキュリティで保護されたサービスまたはクライアントを開発する場合、資格情報として使用される x.509 証明書を指定することが必要になることがよくあります。 証明書は通常、単独ではなく、いくつもの証明書が信頼チェーンとしてつながった形で存在しており、その最上位に位置するルート証明機関の証明書は、各コンピューターの [信頼されたルート証明機関] の証明書ストアに格納されています。 証明書を調べて順に信頼チェーンをたどっていくと、たとえば所属する会社や事業部門が運営する、ルート証明機関に到達します。 開発時にこの過程をエミュレートするためには、セキュリティ要件を満たす 2 種類の証明書を作る必要があります。 1 つは自己署名証明書で、[信頼されたルート証明機関] の証明書ストアに配置します。もう 1 つは、先の自己署名証明書を使って署名を施した証明書で、[ローカル コンピューター] の [個人] ストア、または [現在のユーザー] の [個人] ストアに配置します。 このトピックでは、Powershell の[新しい SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)コマンドレットを使用して、これら2つの証明書を作成する手順について説明します。
+Windows Communication Foundation (WCF) を使用してセキュリティで保護されたサービスまたはクライアントを開発する場合、資格情報として使用される x.509 証明書を指定することが必要になることがよくあります。 証明書は通常、単独ではなく、いくつもの証明書が信頼チェーンとしてつながった形で存在しており、その最上位に位置するルート証明機関の証明書は、各コンピューターの [信頼されたルート証明機関] の証明書ストアに格納されています。 証明書を調べて順に信頼チェーンをたどっていくと、たとえば所属する会社や事業部門が運営する、ルート証明機関に到達します。 開発時にこの過程をエミュレートするためには、セキュリティ要件を満たす 2 種類の証明書を作る必要があります。 1 つは自己署名証明書で、[信頼されたルート証明機関] の証明書ストアに配置します。もう 1 つは、先の自己署名証明書を使って署名を施した証明書で、[ローカル コンピューター] の [個人] ストア、または [現在のユーザー] の [個人] ストアに配置します。 このトピックでは、Powershell の [新しい SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) コマンドレットを使用して、これら2つの証明書を作成する手順について説明します。
 
 > [!IMPORTANT]
 > 新しい SelfSignedCertificate コマンドレットによって生成される証明書は、テスト目的でのみ提供されます。 実際にサービスやクライアントを業務に使用する際には、証明機関から取得した、適切な証明書が必要です。 これは、組織内の Windows Server 証明書サーバーまたはサードパーティのいずれかになります。
 >
-> 既定では、[新しい-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)コマンドレットは、自己署名の証明書を作成しますが、これらの証明書は安全ではありません。 自己署名証明書を信頼されたルート証明機関ストアに配置すると、展開環境をより厳密にシミュレートする開発環境を作成できます。
+> 既定では、 [新しい-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) コマンドレットは、自己署名の証明書を作成しますが、これらの証明書は安全ではありません。 自己署名証明書を信頼されたルート証明機関ストアに配置すると、展開環境をより厳密にシミュレートする開発環境を作成できます。
 
- 証明書の作成と使用の詳細については、「[証明書の](working-with-certificates.md)使用」を参照してください。 証明書を資格情報として使用する方法の詳細については、「[サービスとクライアントのセキュリティ保護](securing-services-and-clients.md)」を参照してください。 Microsoft Authenticode テクノロジの使用方法については、「 [Authenticode Overviews and Tutorials (Authenticode の概要とチュートリアル)](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537360(v=vs.85))」を参照してください。
+ 証明書の作成と使用の詳細については、「 [証明書の](working-with-certificates.md)使用」を参照してください。 証明書を資格情報として使用する方法の詳細については、「 [サービスとクライアントのセキュリティ保護](securing-services-and-clients.md)」を参照してください。 Microsoft Authenticode テクノロジの使用方法については、「 [Authenticode Overviews and Tutorials (Authenticode の概要とチュートリアル)](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537360(v=vs.85))」を参照してください。
 
 ## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>自己署名ルート証明書を作成して秘密キーをエクスポートするには
 
@@ -32,7 +32,7 @@ Windows Communication Foundation (WCF) を使用してセキュリティで保�
 $rootcert = New-SelfSignedCertificate -CertStoreLocation Cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.19={text}CA=true") -KeyUsage CertSign,CrlSign,DigitalSignature
 ```
 
-証明書を PFX ファイルにエクスポートして、後の手順で必要な場所にインポートできるようにする必要があります。 証明書を秘密キーと共にエクスポートする場合は、パスワードを保護するためにパスワードが必要です。 パスワードをに保存し、 `SecureString` [get-pfxcertificate](/powershell/module/pkiclient/export-pfxcertificate)コマンドレットを使用して、関連付けられている秘密キーを持つ証明書を PFX ファイルにエクスポートします。 また、[証明書のエクスポート](/powershell/module/pkiclient/export-certificate)コマンドレットを使用して、公開証明書のみを CRT ファイルに保存します。
+証明書を PFX ファイルにエクスポートして、後の手順で必要な場所にインポートできるようにする必要があります。 証明書を秘密キーと共にエクスポートする場合は、パスワードを保護するためにパスワードが必要です。 パスワードをに保存し、 `SecureString` [get-pfxcertificate](/powershell/module/pkiclient/export-pfxcertificate) コマンドレットを使用して、関連付けられている秘密キーを持つ証明書を PFX ファイルにエクスポートします。 また、 [証明書のエクスポート](/powershell/module/pkiclient/export-certificate) コマンドレットを使用して、公開証明書のみを CRT ファイルに保存します。
 
 ```powershell
 [System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText

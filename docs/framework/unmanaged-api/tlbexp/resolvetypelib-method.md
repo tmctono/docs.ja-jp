@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 95d2aa0d-8eeb-4a9f-a216-5249f7e2c167
 topic_type:
 - apiref
-ms.openlocfilehash: f0f6fe321f4d38129b6d70ce94a7ea8de8fff6c8
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 65bbae614c8872ab5d78b3855b56ceaf2aad50da
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75935669"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558187"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib メソッド
 完全修飾パスを返すことにより、タイプライブラリの簡易名を解決します。  
@@ -38,7 +38,7 @@ HRESULT ResolveTypeLib(
   
 ## <a name="parameters"></a>パラメーター  
  `bstrSimpleName`  
- からタイプライブラリの簡易名を格納している[BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) 。  
+ からタイプライブラリの簡易名を格納している [BSTR](/previous-versions/windows/desktop/automat/bstr) 。  
   
  `tlbid`  
  からレジストリのタイプライブラリに割り当てられている GUID。  
@@ -47,32 +47,32 @@ HRESULT ResolveTypeLib(
  からタイプライブラリのローカライズ ID。  
   
  `wMajorVersion`  
- からタイプライブラリのメジャーバージョン番号。 たとえば、バージョン*x.y*の場合、メジャーバージョン番号は*x*になります。  
+ からタイプライブラリのメジャーバージョン番号。 たとえば、バージョン *x.y*の場合、メジャーバージョン番号は *x*になります。  
   
  `wMinorVersion`  
- からタイプライブラリのマイナーバージョン番号。 たとえば、バージョン*x.y*の場合、マイナーバージョン番号は*y*になります。  
+ からタイプライブラリのマイナーバージョン番号。 たとえば、バージョン *x.y*の場合、マイナーバージョン番号は *y*になります。  
   
  `syskind`  
- からオペレーティング環境を識別する[SYSKIND](/windows/win32/api/oaidl/ne-oaidl-syskind)フラグ。 共通値は SYS_WIN32 と SYS_WIN64 です。  
+ からオペレーティング環境を識別する [SYSKIND](/windows/win32/api/oaidl/ne-oaidl-syskind) フラグ。 共通値は SYS_WIN32 と SYS_WIN64 です。  
   
  `pbstrResolvedTlbName`  
- 入出力`bstrSimpleName` パラメーターに指定されたタイプライブラリの完全パスを格納する[BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr)へのポインター。  
+ 入出力パラメーターで指定されたタイプライブラリの完全パスを格納する [BSTR](/previous-versions/windows/desktop/automat/bstr) へのポインター `bstrSimpleName` 。  
   
 ## <a name="remarks"></a>Remarks  
- `ResolveTypeLib` メソッドは、 [tlbexp.exe (タイプライブラリエクスポーター)](../../tools/tlbexp-exe-type-library-exporter.md)の処理中に[LoadTypeLibWithResolver 関数](loadtypelibwithresolver-function.md)によって呼び出されます。  
+ `ResolveTypeLib`メソッドは[Tlbexp.exe (タイプライブラリエクスポーター)](../../tools/tlbexp-exe-type-library-exporter.md)の処理中に[LoadTypeLibWithResolver 関数](loadtypelibwithresolver-function.md)によって呼び出されます。  
   
- このインターフェイスのカスタム実装では、`bstrSimpleName`パラメーターに指定されたタイプライブラリの完全パスを含む [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) を返す必要があります。  
+ このインターフェイスのカスタム実装では、パラメーターに指定されたタイプライブラリの完全パスを含む [BSTR](/previous-versions/windows/desktop/automat/bstr) を返す必要があり `bstrSimpleName` ます。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Tlf .idl, Tl. h  
   
  **ライブラリ:** Tlf .lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - [Tlbexp ヘルパー関数](index.md)
-- [LoadTypeLibEx](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+- [LoadTypeLibEx](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

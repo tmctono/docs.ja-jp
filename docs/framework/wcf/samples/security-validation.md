@@ -2,15 +2,15 @@
 title: セキュリティ検証
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: 70408976469b1cbcf9c4679bd91d81872ec74ae1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ec7b7f96c1f6489f677970164f74c176b301f55b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599972"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557386"
 ---
 # <a name="security-validation"></a>セキュリティ検証
-このサンプルでは、サービスが特定の条件を満たしていることを確認するカスタム動作を使用して、コンピューター上のサービスを検証する方法を示します。 このサンプルでは、サービス上の各エンドポイントをスキャンし、セキュリティ保護されたバインディング要素が含まれているかどうかを確認するカスタム動作を使用して、サービスを検証します。 このサンプルは、[はじめに](getting-started-sample.md)に基づいています。  
+このサンプルでは、サービスが特定の条件を満たしていることを確認するカスタム動作を使用して、コンピューター上のサービスを検証する方法を示します。 このサンプルでは、サービス上の各エンドポイントをスキャンし、セキュリティ保護されたバインディング要素が含まれているかどうかを確認するカスタム動作を使用して、サービスを検証します。 このサンプルは、 [はじめに](getting-started-sample.md)に基づいています。  
   
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -82,11 +82,11 @@ public void Validate(ServiceDescription serviceDescription,
   
 ### <a name="view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>イベントビューアーで失敗したエンドポイント検証例外メッセージを表示する  
   
-1. [**スタート**] メニューをクリックし、[**実行**] を選択します。  
+1. [ **スタート** ] メニューをクリックし、[ **実行**] を選択します。  
   
 2. 「 `eventvwr` 」と入力して **[OK]** をクリックします。  
   
-3. [イベントビューアー] ウィンドウで、[**アプリケーション**] をクリックします。  
+3. [イベントビューアー] ウィンドウで、[ **アプリケーション**] をクリックします。  
   
 4. **アプリケーション**ウィンドウで、"WebHost" カテゴリの下に最近追加された "system.servicemodel 4.0.0.0" イベントをダブルクリックして、セキュリティで保護されていないエンドポイントのメッセージを表示します。  
   
@@ -103,10 +103,10 @@ public void Validate(ServiceDescription serviceDescription,
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
 ## <a name="see-also"></a>関連項目
 
-- [AppFabric の監視のサンプル](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric の監視のサンプル](/previous-versions/appfabric/ff383407(v=azure.10))

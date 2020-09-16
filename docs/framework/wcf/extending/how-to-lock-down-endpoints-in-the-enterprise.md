@@ -1,40 +1,40 @@
 ---
-title: '方法 : 企業内のエンドポイントをロックダウンする'
+title: '方法: 企業内のエンドポイントをロックダウンする'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 35b9a1dbebce48823799689a581033d0483c3984
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 68a7b80a01d9b1a8c5243331e63a1b82996e8ee6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937678"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558148"
 ---
-# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>方法 : 企業内のエンドポイントをロックダウンする
+# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>方法: 企業内のエンドポイントをロックダウンする
 
 大規模な企業では、多くの場合、企業のセキュリティ ポリシーに準拠してアプリケーションを開発する必要があります。 次のトピックでは、コンピューターにインストールされているすべての Windows Communication Foundation (WCF) クライアントアプリケーションの検証に使用できるクライアントエンドポイント検証コントロールを開発してインストールする方法について説明します。
 
-この場合、このエンドポイント動作は machine.config ファイルのクライアント[\<commonBehaviors >](../../configure-apps/file-schema/wcf/commonbehaviors.md)セクションに追加されるため、検証コントロールはクライアント検証コントロールです。 WCF は、クライアントアプリケーションに対してのみ共通のエンドポイント動作を読み込み、サービスアプリケーションに対してのみ共通のサービス動作を読み込みます。 サービス アプリケーション用のこの同じ検証コントロールをインストールするには、検証コントロールがサービス動作であることが必要です。 詳細については、「 [\<commonBehaviors >](../../configure-apps/file-schema/wcf/commonbehaviors.md) 」セクションを参照してください。
+この場合、このエンドポイントの動作は、machine.config ファイルの client セクションに追加されるため、検証コントロールはクライアント検証コントロールです [\<commonBehaviors>](../../configure-apps/file-schema/wcf/commonbehaviors.md) 。 WCF は、クライアントアプリケーションに対してのみ共通のエンドポイント動作を読み込み、サービスアプリケーションに対してのみ共通のサービス動作を読み込みます。 サービス アプリケーション用のこの同じ検証コントロールをインストールするには、検証コントロールがサービス動作であることが必要です。 詳細については、「」を参照してください [\<commonBehaviors>](../../configure-apps/file-schema/wcf/commonbehaviors.md) 。
 
 > [!IMPORTANT]
-> 構成ファイルの[\<commonBehaviors >](../../configure-apps/file-schema/wcf/commonbehaviors.md)セクションに追加された <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性 (APTCA) でマークされていないサービスまたはエンドポイントの動作は、アプリケーションが部分信頼環境で実行されている場合は実行されず、このような場合に例外はスローされません。 検証コントロールなどの共通動作を強制的に実行するには、次のいずれかを行う必要があります。
+> 構成ファイルのセクションに追加された属性 (APTCA) でマークされていないサービスまたはエンドポイントの動作 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> [\<commonBehaviors>](../../configure-apps/file-schema/wcf/commonbehaviors.md) は、アプリケーションが部分信頼環境で実行されている場合は実行されず、この発生時に例外はスローされません。 検証コントロールなどの共通動作を強制的に実行するには、次のいずれかを行う必要があります。
 >
-> - 部分信頼アプリケーションとして展開されたときに実行できるように、共通の動作を <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性でマークします。 APTCA でマークされたアセンブリを実行できないように、コンピューターでレジストリ エントリを設定できます。
+> - 共通動作を属性でマークして、 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 部分信頼アプリケーションとして展開されたときに実行できるようにします。 APTCA でマークされたアセンブリを実行できないように、コンピューターでレジストリ エントリを設定できます。
 >
-> - アプリケーションが完全に信頼されたアプリケーションとして配置されている場合は、ユーザーが部分信頼環境でアプリケーションを実行するようにコードアクセスセキュリティ設定を変更できないことを確認します。 ユーザーがこのような変更を行うことができる場合、カスタム検証コントロールは実行されず、例外もスローされません。 これを確認する方法の1つとして、[コードアクセスセキュリティポリシーツール (caspol.exe)](../../tools/caspol-exe-code-access-security-policy-tool.md)を使用した `levelfinal` オプションを参照してください。
+> - アプリケーションが完全に信頼されたアプリケーションとして配置されている場合は、ユーザーが部分信頼環境でアプリケーションを実行するようにコードアクセスセキュリティ設定を変更できないことを確認します。 ユーザーがこのような変更を行うことができる場合、カスタム検証コントロールは実行されず、例外もスローされません。 これを確認する方法の1つとして、「 `levelfinal` [コードアクセスセキュリティポリシーツール](../../tools/caspol-exe-code-access-security-policy-tool.md)を使用したオプション」 (Caspol.exe) を参照してください。
 >
-> 詳細については、「[部分信頼のベストプラクティス](../feature-details/partial-trust-best-practices.md)」および「[サポートされている展開シナリオ](../feature-details/supported-deployment-scenarios.md)」を参照してください。
+> 詳細については、「 [部分信頼のベストプラクティス](../feature-details/partial-trust-best-practices.md) 」および「 [サポートされている展開シナリオ](../feature-details/supported-deployment-scenarios.md)」を参照してください。
 
 ### <a name="to-create-the-endpoint-validator"></a>エンドポイント検証コントロールを作成するには
 
-1. <xref:System.ServiceModel.Description.IEndpointBehavior> メソッドに、必要な検証手順を備えた <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A> を作成します。 次にコード例を示します。 (`InternetClientValidatorBehavior` は、[セキュリティ検証](../samples/security-validation.md)のサンプルから抜粋したものです)。
+1. <xref:System.ServiceModel.Description.IEndpointBehavior> メソッドに、必要な検証手順を備えた <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A> を作成します。 コードの例は次のとおりです。 (は、 `InternetClientValidatorBehavior` [セキュリティ検証](../samples/security-validation.md) のサンプルから取得したものです)。
 
     [!code-csharp[LockdownValidation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorbehavior.cs#2)]
 
-2. 手順 1. で作成したエンドポイント検証コントロールを登録する新しい <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> を作成します。 このコード例を次に示します。 (この例の元のコードは、[セキュリティ検証](../samples/security-validation.md)のサンプルに含まれています)。
+2. 手順 1. で作成したエンドポイント検証コントロールを登録する新しい <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> を作成します。 このコード例を次に示します。 (この例の元のコードは、 [セキュリティ検証](../samples/security-validation.md) のサンプルに含まれています)。
 
     [!code-csharp[LockdownValidation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorelement.cs#3)]
 
-3. コンパイル済みのアセンブリが厳密な名前で署名されていることを確認します。 詳細については、「[厳密名ツール (SN)」を参照してください。EXE)](../../tools/sn-exe-strong-name-tool.md)を使用します。
+3. コンパイル済みのアセンブリが厳密な名前で署名されていることを確認します。 詳細については、 [厳密な名前ツール (SN.EXE)](../../tools/sn-exe-strong-name-tool.md) と、使用している言語のコンパイラコマンドを参照してください。
 
 ### <a name="to-install-the-validator-into-the-target-computer"></a>検証コントロールをターゲット コンピューターにインストールするには
 
@@ -44,11 +44,11 @@ ms.locfileid: "75937678"
 
 3. <xref:System.Configuration?displayProperty=nameWithType> 名前空間の型を使用して、次の処理を行います。
 
-    1. 完全修飾型名を使用して[\<の >](../../configure-apps/file-schema/wcf/behaviorextensions.md)セクションに拡張機能を追加し、要素をロックします。
+    1. [\<behaviorExtensions>](../../configure-apps/file-schema/wcf/behaviorextensions.md)完全修飾型名を使用して、セクションに拡張機能を追加し、要素をロックします。
 
          [!code-csharp[LockdownValidation#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#5)]
 
-    2. [\<commonBehaviors >](../../configure-apps/file-schema/wcf/commonbehaviors.md)セクションの `EndpointBehaviors` プロパティに behavior 要素を追加し、要素をロックします。 (検証コントロールをサービスにインストールするには、バリデーターが <xref:System.ServiceModel.Description.IServiceBehavior> であり、`ServiceBehaviors` プロパティに追加されている必要があります)。次のコード例は、手順の後の適切な構成を示しています。 と b. の後の適切な構成を示しています。厳密な名前が存在しない点だけが異なります。
+    2. セクションのプロパティに behavior 要素を追加 `EndpointBehaviors` [\<commonBehaviors>](../../configure-apps/file-schema/wcf/commonbehaviors.md) し、要素をロックします。 (検証コントロールをサービスにインストールするには、検証コントロールがであること、 <xref:System.ServiceModel.Description.IServiceBehavior> およびプロパティに追加されている必要があり `ServiceBehaviors` ます)。次のコード例は、手順の後の適切な構成を示しています。 と b. の後の適切な構成を示しています。厳密な名前が存在しない点だけが異なります。
 
         [!code-csharp[LockdownValidation#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#6)]
 
@@ -56,17 +56,17 @@ ms.locfileid: "75937678"
 
         [!code-csharp[LockdownValidation#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#7)]
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
-次のコード例では、machine.config ファイルに共通の動作を追加し、そのコピーをディスクに保存する方法を示します。 `InternetClientValidatorBehavior` は、[セキュリティ検証](../samples/security-validation.md)のサンプルから取得したものです。
+次のコード例では、machine.config ファイルに共通の動作を追加し、そのコピーをディスクに保存する方法を示します。 は、 `InternetClientValidatorBehavior` [セキュリティ検証](../samples/security-validation.md) のサンプルから取得されます。
 
 [!code-csharp[LockdownValidation#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#1)]
 
-## <a name="net-framework-security"></a>.NET Framework セキュリティ
+## <a name="net-framework-security"></a>.NET Framework のセキュリティ
 
 また、構成ファイルの要素を暗号化する必要がある場合もあります。 詳細については、「参照」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-- [DPAPI を使用した構成ファイルの要素の暗号化](https://docs.microsoft.com/previous-versions/msp-n-p/ff647398(v=pandp.10))
-- [RSA を使用して構成ファイルの要素を暗号化する](https://docs.microsoft.com/previous-versions/msp-n-p/ff650304(v=pandp.10))
+- [DPAPI を使用した構成ファイルの要素の暗号化](/previous-versions/msp-n-p/ff647398(v=pandp.10))
+- [RSA を使用した構成ファイルの要素の暗号化](/previous-versions/msp-n-p/ff650304(v=pandp.10))

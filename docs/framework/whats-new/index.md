@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 3eba676a4134415f0e2981d5094c0b0f6a1651be
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 15350f93ffabb10136af1b9a4d12d5301e661b29
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559025"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551713"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework の新機能
 
@@ -389,9 +389,9 @@ Public GetOrAdd(Of TArg)(key As TKey, valueFactory As Func(Of TKey, TArg, TValue
 
 [依存性挿入 (DI)](/aspnet/core/fundamentals/dependency-injection#overview-of-dependency-injection) は、オブジェクトとその依存関係を分離し、依存関係の変更だけを理由としてオブジェクトのコードを変更する必要がないようにします。 .NET Framework 4.7.2 を対象とする ASP.NET アプリケーションを開発するときに次のことができます。
 
-- ASP.NET Web アプリケーション プロジェクトの[ハンドラーとモジュール](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100))、[ページ インスタンス](xref:System.Web.UI.Page)、および[ユーザー コントロール](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100))でアクセス操作子ベース、インターフェイス ベース、およびコンストラクター ベースの挿入を使用します。
+- ASP.NET Web アプリケーション プロジェクトの[ハンドラーとモジュール](/previous-versions/aspnet/bb398986(v=vs.100))、[ページ インスタンス](xref:System.Web.UI.Page)、および[ユーザー コントロール](/previous-versions/aspnet/y6wb1a0e(v=vs.100))でアクセス操作子ベース、インターフェイス ベース、およびコンストラクター ベースの挿入を使用します。
 
-- ASP.NET Web サイト プロジェクトの[ハンドラーとモジュール](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100))、[ページ インスタンス](xref:System.Web.UI.Page)、および[ユーザー コントロール](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100))でアクセス操作子ベースおよびインターフェイス ベースの挿入を使用します。
+- ASP.NET Web サイト プロジェクトの[ハンドラーとモジュール](/previous-versions/aspnet/bb398986(v=vs.100))、[ページ インスタンス](xref:System.Web.UI.Page)、および[ユーザー コントロール](/previous-versions/aspnet/y6wb1a0e(v=vs.100))でアクセス操作子ベースおよびインターフェイス ベースの挿入を使用します。
 
 - 別の依存関係の挿入のフレームワークにプラグインします。
 
@@ -517,9 +517,9 @@ Dim dictionaries As IEnumerable(Of ResourceDictionary) = ResourceDictionaryDiagn
 
 **ResourceDictionary 所有者の検索**
 
-.NET Framework 4.7.2 以降、診断アシスタントでは、特定の <xref:Windows.UI.Xaml.ResourceDictionary> の所有者を見つけることができます。 (この機能は、実稼働アプリケーションではなく診断アシスタントによって使用されます。)<xref:Windows.UI.Xaml.ResourceDictionary> の変更が行われたときに、WPF が、変更の影響を受ける可能性があるすべての [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) の参照を自動的に見つけます。
+.NET Framework 4.7.2 以降、診断アシスタントでは、特定の <xref:Windows.UI.Xaml.ResourceDictionary> の所有者を見つけることができます。 (この機能は、実稼働アプリケーションではなく診断アシスタントによって使用されます。)<xref:Windows.UI.Xaml.ResourceDictionary> の変更が行われたときに、WPF が、変更の影響を受ける可能性があるすべての [DynamicResource](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension) の参照を自動的に見つけます。
 
-Visual Studio の "エディット コンティニュ" 機能などの診断アシスタントでは、場合によっては [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 参照を処理するためにこれを拡張する必要があります。 このプロセスの最初の手順は、ディクショナリの所有者を検索することです。つまり、`Resources` プロパティがディクショナリを (直接または <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType> プロパティを使用して間接的に) 参照しているすべてのオブジェクトを見つけます。 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType> クラスに実装された 3 つの新しい静的メソッドは、`Resources` プロパティを持つ各基本データ型ごとに 1 つずつあり、次の手順をサポートします。
+Visual Studio の "エディット コンティニュ" 機能などの診断アシスタントでは、場合によっては [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) 参照を処理するためにこれを拡張する必要があります。 このプロセスの最初の手順は、ディクショナリの所有者を検索することです。つまり、`Resources` プロパティがディクショナリを (直接または <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType> プロパティを使用して間接的に) 参照しているすべてのオブジェクトを見つけます。 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType> クラスに実装された 3 つの新しい静的メソッドは、`Resources` プロパティを持つ各基本データ型ごとに 1 つずつあり、次の手順をサポートします。
 
 - [`public static IEnumerable<FrameworkElement> GetFrameworkElementOwners(ResourceDictionary dictionary);`](xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetFrameworkElementOwners%2A)
 
@@ -531,7 +531,7 @@ Visual Studio の "エディット コンティニュ" 機能などの診断ア�
 
 **StaticResource 参照の検索**
 
-診断アシスタントで、[StaticResource](../wpf/advanced/staticresource-markup-extension.md) 参照が解決されるたびに通知を受け取ることができるようになりました。 (この機能は、実稼働アプリケーションではなく診断アシスタントによって使用されます。)Visual Studio の "エディット コンティニュ" 機能などの診断アシスタントは、場合によっては <xref:Windows.UI.Xaml.ResourceDictionary> の値が変更されたときにリソースのすべての使用を更新する必要があります。 WPF は、[DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) 参照に関してこれを自動的に実行しますが、[StaticResource](../wpf/advanced/staticresource-markup-extension.md) 参照に関しては意図的に実行しません。 .NET Framework 4.7.2 以降、診断アシスタントは、静的リソースのそれらの使用を検索するのにこれらの通知を使用できます。
+診断アシスタントで、[StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) 参照が解決されるたびに通知を受け取ることができるようになりました。 (この機能は、実稼働アプリケーションではなく診断アシスタントによって使用されます。)Visual Studio の "エディット コンティニュ" 機能などの診断アシスタントは、場合によっては <xref:Windows.UI.Xaml.ResourceDictionary> の値が変更されたときにリソースのすべての使用を更新する必要があります。 WPF は、[DynamicResource](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension) 参照に関してこれを自動的に実行しますが、[StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) 参照に関しては意図的に実行しません。 .NET Framework 4.7.2 以降、診断アシスタントは、静的リソースのそれらの使用を検索するのにこれらの通知を使用できます。
 
 通知は、新しい <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.StaticResourceResolved?displayProperty=nameWithType> イベントによって実装されます。
 
@@ -543,7 +543,7 @@ public static event EventHandler<StaticResourceResolvedEventArgs> StaticResource
 Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
 ```
 
-このイベントは、ランタイムが [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 参照を解決するたびに発生します。 <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> 引数によって解決が記述され、[StaticResource](../wpf/advanced/staticresource-markup-extension.md) 参照をホストするオブジェクトとプロパティ、および解決に使用される  <xref:Windows.UI.Xaml.ResourceDictionary> とキーが示されます。
+このイベントは、ランタイムが [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) 参照を解決するたびに発生します。 <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> 引数によって解決が記述され、[StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) 参照をホストするオブジェクトとプロパティ、および解決に使用される  <xref:Windows.UI.Xaml.ResourceDictionary> とキーが示されます。
 
 ```csharp
 public class StaticResourceResolvedEventArgs : EventArgs
@@ -758,7 +758,7 @@ WCF に競合状態を除去する複数のコード変更が追加され、シ�
 
 .NET Framework 4.7 を対象とするアプリケーションでは、Windows フォーム アプリケーションに対して高 DPI および動的 DPI がサポートされるようになっています。 高 DPI のサポートにより、フォームのレイアウトと外観および高 DPI モニターでのコントロールが向上します。 動的 DPI は、ユーザーが実行中のアプリケーションの DPI または表示倍率を変更すると、フォームのレイアウトと外観およびコントロールを変更します。
 
-高 DPI のサポートはオプトイン機能であり、アプリケーション構成ファイルの [\<System.Windows.Forms.ConfigurationSection>](../configure-apps/file-schema/winforms/index.md) セクションを定義することで構成します。 Windows フォーム アプリケーションへの高 DPI サポートおよび動的 DPI サポート追加の詳細については、「[Windows フォームの高 DPI サポート](../winforms/high-dpi-support-in-windows-forms.md)」をご覧ください。
+高 DPI のサポートはオプトイン機能であり、アプリケーション構成ファイルの [\<System.Windows.Forms.ConfigurationSection>](../configure-apps/file-schema/winforms/index.md) セクションを定義することで構成します。 Windows フォーム アプリケーションへの高 DPI サポートおよび動的 DPI サポート追加の詳細については、「[Windows フォームの高 DPI サポート](/dotnet/desktop/winforms/high-dpi-support-in-windows-forms)」をご覧ください。
 
 <a name="WPF47"></a>
 
@@ -768,7 +768,7 @@ WCF に競合状態を除去する複数のコード変更が追加され、シ�
 
 **Windows WM_POINTER メッセージに基づくタッチ/スタイラス スタックのサポート**
 
-Windows Ink Services Platform (WISP) の代わりに [WM_POINTER メッセージ](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages)に基づいてタッチ/スタイラス スタックを使うオプションが追加されました。 これは、.NET Framework のオプトイン機能です。 詳細については、「[アプリケーションの互換性](../migration-guide/application-compatibility.md)」セクションを参照してください。
+Windows Ink Services Platform (WISP) の代わりに [WM_POINTER メッセージ](/previous-versions/windows/desktop/InputMsg/messages)に基づいてタッチ/スタイラス スタックを使うオプションが追加されました。 これは、.NET Framework のオプトイン機能です。 詳細については、「[アプリケーションの互換性](../migration-guide/application-compatibility.md)」セクションを参照してください。
 
 **WPF 印刷 API の新しい実装**
 
@@ -1196,7 +1196,7 @@ WPF アプリ用の高 DPI とハイブリッド DPI 環境の最近の急激な
 
 **再ホストされた WF デザイナーにおける C# 式と IntelliSense のサポート**
 
-.NET Framework 4.5 以降では、WF によって、Visual Studio デザイナーとコード ワークフローの両方で C# 式がサポートされます。 再ホストされたワークフロー デザイナーは WF の主な機能です。これにより、ワークフロー デザイナーを Visual Studio の外部のアプリケーション (WPF など) で使用できるようになります。  Windows Workflow Foundation は、再ホストされたワークフロー デザイナーで C# 式と IntelliSense をサポートできるようにします。 詳細については、[Windows Workflow Foundation のブログ](https://docs.microsoft.com/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer)を参照してください。
+.NET Framework 4.5 以降では、WF によって、Visual Studio デザイナーとコード ワークフローの両方で C# 式がサポートされます。 再ホストされたワークフロー デザイナーは WF の主な機能です。これにより、ワークフロー デザイナーを Visual Studio の外部のアプリケーション (WPF など) で使用できるようになります。  Windows Workflow Foundation は、再ホストされたワークフロー デザイナーで C# 式と IntelliSense をサポートできるようにします。 詳細については、[Windows Workflow Foundation のブログ](/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer)を参照してください。
 
 `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` 4.6.2 より前のバージョンの .NET Framework で、お客様が Visual Studio からワークフロー プロジェクトを再ビルドした場合、WF Designer IntelliSense は破損してしまいます。 プロジェクトのビルドに成功しても、デザイナーでワークフローの種類が見つからず、 **[エラー一覧]** ウィンドウにワークフローの種類が欠落していることを示す IntelliSense からの警告が表示されます。 .NET Framework 4.6.2 ではこのイシューに対処し、IntelliSense を使用できるようにします。
 
@@ -1886,7 +1886,7 @@ Windows フォームの機能強化には次が含まれます。
 
 Visual Studio 2013 で .NET Framework アプリをデバッグするときの改善点は次のとおりです。
 
-- Visual Studio デバッガーの戻り値。 Visual Studio 2013 でマネージド アプリをデバッグする場合、メソッドの戻り値の型と値が [自動変数] ウィンドウに表示されます。 デスクトップ アプリ、Windows ストア アプリ、Windows Phone アプリについて、この情報を使用できます。 詳細については、「[メソッド呼び出しの戻り値の調査](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/dn323257(v=vs.120))」をご覧ください。
+- Visual Studio デバッガーの戻り値。 Visual Studio 2013 でマネージド アプリをデバッグする場合、メソッドの戻り値の型と値が [自動変数] ウィンドウに表示されます。 デスクトップ アプリ、Windows ストア アプリ、Windows Phone アプリについて、この情報を使用できます。 詳細については、「[メソッド呼び出しの戻り値の調査](/previous-versions/visualstudio/visual-studio-2013/dn323257(v=vs.120))」をご覧ください。
 
 - 64 ビット アプリのエディット コンティニュ。 Visual Studio 2013 では、デスクトップ、Windows ストア、Windows Phone 用の 64 ビット マネージド アプリについて、エディット コンティニュ機能がサポートされています。 既存の制限は、32 ビット アプリと 64 ビット アプリの両方でまだ有効です (「[Supported Code Changes (C#)](/visualstudio/debugger/supported-code-changes-csharp)」(サポートされているコードの変更 (C#)) の記事の最後のセクションを参照してください)。
 
@@ -1972,7 +1972,7 @@ ASP.NET 4.5.1 の新機能については、「[ASP.NET and Web Tools for Visual
 
 ASP.NET 4.5 および 4.5.1 では、Web フォーム モデルのバインディング、WebSocket のサポート、非同期ハンドラー、パフォーマンスの向上などの多くの機能が追加されています。 詳細については、次のリソースを参照してください。
 
-- [ASP.NET 4.5 と Visual Studio 2012](https://docs.microsoft.com/previous-versions/aspnet/hh420390(v=vs.110))
+- [ASP.NET 4.5 と Visual Studio 2012](/previous-versions/aspnet/hh420390(v=vs.110))
 
 - [Visual Studio 2013 の ASP.NET と Web ツールのリリース ノート](/aspnet/visual-studio/overview/2013/release-notes)
 
@@ -2066,7 +2066,7 @@ ASP.NET 4.5 および 4.5.1 では、Web フォーム モデルのバインデ�
 
 .NET Framework 4.5 では、次に示すようないくつかの新しい機能が Windows Workflow Foundation (WF) に追加されました。
 
-- 最初に .NET Framework 4.0.1 ([.NET Framework 4 Platform Update 1](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)) の一部として導入された、ステート マシンのワークフロー。 この更新プログラムには、開発者がステート マシン ワークフローを作成できるようにする新しいクラスとアクティビティが複数含まれていました。 .NET Framework 4.5 では、これらのクラスとアクティビティが、次を含むように更新されました。
+- 最初に .NET Framework 4.0.1 ([.NET Framework 4 Platform Update 1](/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)) の一部として導入された、ステート マシンのワークフロー。 この更新プログラムには、開発者がステート マシン ワークフローを作成できるようにする新しいクラスとアクティビティが複数含まれていました。 .NET Framework 4.5 では、これらのクラスとアクティビティが、次を含むように更新されました。
 
   - 状態でブレークポイントを設定する機能。
 
@@ -2118,7 +2118,7 @@ ASP.NET 4.5 および 4.5.1 では、Web フォーム モデルのバインデ�
 
 ### <a name="net-for-windows-8x-store-apps"></a>Windows 8.x ストア アプリ用 .NET
 
-Windows 8.x ストア アプリは、特定のフォーム ファクターに合わせて設計されており、Windows オペレーティング システムの機能を利用します。 C# または Visual Basic を使って Windows 用の Windows 8.x ストア アプリをビルドするために、.NET Framework 4.5 または 4.5.1 のサブセットを使うことができます。 このサブセットは Windows 8.x ストア アプリ用 .NET と呼ばれ、[概要](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))のページで説明されています。
+Windows 8.x ストア アプリは、特定のフォーム ファクターに合わせて設計されており、Windows オペレーティング システムの機能を利用します。 C# または Visual Basic を使って Windows 用の Windows 8.x ストア アプリをビルドするために、.NET Framework 4.5 または 4.5.1 のサブセットを使うことができます。 このサブセットは Windows 8.x ストア アプリ用 .NET と呼ばれ、[概要](/previous-versions/windows/apps/br230302(v=vs.140))のページで説明されています。
 
 ### <a name="portable-class-libraries"></a>ポータブル クラス ライブラリ <a name="portable"></a>
 

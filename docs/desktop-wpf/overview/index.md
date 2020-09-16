@@ -3,12 +3,12 @@ title: Windows Presentation Foundation の概要
 description: この記事では、.NET Core に関連した Windows Presentation Foundation (WPF) の概要と、提供される機能について説明します。
 ms.date: 07/18/2019
 ms.topic: overview
-ms.openlocfilehash: 63b2e431b5ab5fd3875887b8b574a77aa12018a6
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 37443b692ba840da847b2a21c3220f2c36025c12
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "85840375"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551864"
 ---
 # <a name="what-is-windows-presentation-foundation"></a>Windows Presentation Foundation の概要
 
@@ -22,7 +22,7 @@ WPF には、2 つの実装があります。
 
 01. Visual Studio 2019 および Visual Studio 2017 でサポートされている、.NET Framework 実装。
 
-このデスクトップ ガイドは、.NET Core 3.0 と WPF 向けに書かれています。 .NET Framework を使用した WPF に関する既存のドキュメントの詳細については、「[Framework Windows Presentation Foundation](../../framework/wpf/index.md)」を参照してください。
+このデスクトップ ガイドは、.NET Core 3.0 と WPF 向けに書かれています。 .NET Framework を使用した WPF に関する既存のドキュメントの詳細については、「[Framework Windows Presentation Foundation](/dotnet/desktop/wpf/)」を参照してください。
 
 ## <a name="xaml"></a>XAML
 
@@ -52,7 +52,7 @@ XAML には、マークアップ拡張の構文が用意されています。 �
 
 WPF には、データ バインディング用の `{Binding}` など、さまざまな XAML 用マークアップ拡張が用意されています。
 
-詳細については、「[マークアップ拡張機能と WPF XAML](../../framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)」を参照してください。
+詳細については、「[マークアップ拡張機能と WPF XAML](/dotnet/desktop/wpf/advanced/markup-extensions-and-wpf-xaml)」を参照してください。
 
 ## <a name="property-system"></a>プロパティ システム
 
@@ -144,6 +144,6 @@ WPF のリソースは、アプリケーションのさまざまな場所で再�
 
 ## <a name="next-steps"></a>次の手順
 
-- [WPF アプリケーションを作成する。](https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-wpf?toc=/dotnet/desktop-wpf/toc.json&bc=/dotnet/breadcrumb/toc.json)
+- [WPF アプリケーションを作成する。](/visualstudio/get-started/csharp/tutorial-wpf?bc=%252fdotnet%252fbreadcrumb%252ftoc.json&toc=%252fdotnet%252fdesktop-wpf%252ftoc.json)
 - [.NET Framework との違いを調べる。](../migration/differences-from-net-framework.md)
 - [XAML について学習する。](../fundamentals/xaml.md)
