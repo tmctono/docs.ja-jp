@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: a4b3abfe9be25c9080a362eb4a6e4c7b070528f1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 062aba26227fedeea3e5f462ebf5d55cf0cba56c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797226"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539998"
 ---
 # <a name="custom-bindings"></a>カスタム バインディング
 
-システムが提供するバインディングの中にサービスの要件を満たすものがない場合は、<xref:System.ServiceModel.Channels.CustomBinding> クラスを使用できます。 すべてのバインディングは、バインド要素の順序付き集合から作成されます。 カスタム バインディングは、一連のシステム指定のバインド要素から作成したり、ユーザー定義のカスタム バインド要素を含めたりできます。 カスタム バインド要素を使用すると、たとえば、新しいトランスポートまたはエンコーダーをサービス エンドポイントで使用できるようになります。 実際の例については、「[カスタムバインディングのサンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90))」を参照してください。 詳細については、「 [ \<customBinding >](../../configure-apps/file-schema/wcf/custombinding.md)」を参照してください。
+システムが提供するバインディングの中にサービスの要件を満たすものがない場合は、<xref:System.ServiceModel.Channels.CustomBinding> クラスを使用できます。 すべてのバインディングは、バインド要素の順序付き集合から作成されます。 カスタム バインディングは、一連のシステム指定のバインド要素から作成したり、ユーザー定義のカスタム バインド要素を含めたりできます。 カスタム バインド要素を使用すると、たとえば、新しいトランスポートまたはエンコーダーをサービス エンドポイントで使用できるようになります。 実際の例については、「 [カスタムバインディングのサンプル](/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90))」を参照してください。 詳細については、「[\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md)」を参照してください。
 
 ## <a name="construction-of-a-custom-binding"></a>カスタム バインドの構築
 
@@ -64,13 +64,13 @@ ms.locfileid: "70797226"
 
 各層のオプションの概要を次の表に示します。
 
-|レイヤー|オプション|必須|
+|レイヤー|Options|必須|
 |-----------|-------------|--------------|
 |トランザクション|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|いいえ|
-|信頼性|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Ｘ|
+|[信頼性]|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|いいえ|
 |セキュリティ|<xref:System.ServiceModel.Channels.SecurityBindingElement>|いいえ|
-|エンコード|テキスト、バイナリ、MTOM (Message Transmission Optimization Mechanism)、カスタム|[はい]|
-|Transport|TCP、HTTP、HTTPS、名前付きパイプ (IPC)、ピアツーピア (P2P)、メッセージ キュー (MSMQ)、カスタム|[はい]|
+|エンコード|テキスト、バイナリ、MTOM (Message Transmission Optimization Mechanism)、カスタム|はい|
+|トランスポート|TCP、HTTP、HTTPS、名前付きパイプ (IPC)、ピアツーピア (P2P)、メッセージ キュー (MSMQ)、カスタム|はい|
 
 さらに、独自のバインド要素を定義し、それを定義済みの層のいずれかの間に挿入できます。
 
@@ -79,6 +79,6 @@ ms.locfileid: "70797226"
 - [エンドポイントの作成の概要](../endpoint-creation-overview.md)
 - [サービスとクライアントを構成するためのバインディングの使用](../using-bindings-to-configure-services-and-clients.md)
 - [システム標準のバインディング](../system-provided-bindings.md)
-- [システム指定のバインディングをカスタマイズする](how-to-customize-a-system-provided-binding.md)
+- [方法: システム指定のバインディングをカスタマイズする](how-to-customize-a-system-provided-binding.md)
 - [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md)
 - [カスタム バインド](../samples/custom-binding.md)

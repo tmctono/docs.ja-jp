@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 0b02d1efc98f02390555861871d280f9800ced1e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 017744d692d6fd4183fde3c21e71fcee2f35844e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598880"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535359"
 ---
 # <a name="internet-unsecured-client-and-service"></a>セキュリティで保護されていないインターネット環境のクライアントとサービス
 次の図は、セキュリティで保護されていないパブリック Windows Communication Foundation (WCF) クライアントとサービスの例を示しています。  
@@ -21,11 +21,11 @@ ms.locfileid: "84598880"
 |--------------------|-----------------|  
 |セキュリティ モード|なし|  
 |トランスポート|HTTP|  
-|バインド|<xref:System.ServiceModel.BasicHttpBinding>コード内、または [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) 構成内の要素。|  
+|バインド|<xref:System.ServiceModel.BasicHttpBinding> コード内、または [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) 構成内の要素。|  
 |相互運用性|既存の Web サービス クライアントとサービスを使用する|  
 |認証|なし|  
 |整合性|なし|  
-|機密情報|なし|  
+|機密性|なし|  
   
 ## <a name="service"></a>サービス  
  次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
@@ -113,4 +113,4 @@ ms.locfileid: "84598880"
 
 - [一般的なセキュリティ シナリオ](common-security-scenarios.md)
 - [セキュリティの概要](security-overview.md)
-- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric のセキュリティ モデル](/previous-versions/appfabric/ee677202(v=azure.10))

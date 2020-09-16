@@ -3,16 +3,16 @@ title: 機能フラグ
 description: Azure アプリ構成を利用するクラウドネイティブアプリケーションで機能フラグを実装する
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 607bd14a415a25b382f550e697542cf749a21772
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: be4ab307069065975dc22d6bd984e12a2ea1457d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614072"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540466"
 ---
 # <a name="feature-flags"></a>機能フラグ
 
-第1章では、クラウドネイティブの速度と機敏性が非常に高くなっています。 ユーザーは、迅速な応答性と革新的な機能を期待し、ダウンタイムをゼロにする必要があります。 `Feature flags`は、クラウドネイティブアプリケーションの俊敏性を向上させるための最新の展開手法です。 新しい機能を運用環境に展開することはできますが、その可用性は制限されます。 スイッチのフリックを使用すると、アプリを再起動したり新しいコードを展開したりせずに、特定のユーザーに対して新しい機能をアクティブ化できます。 これらは、新機能のリリースをコード配置から分離します。
+第1章では、クラウドネイティブの速度と機敏性が非常に高くなっています。 ユーザーは、迅速な応答性と革新的な機能を期待し、ダウンタイムをゼロにする必要があります。 `Feature flags` は、クラウドネイティブアプリケーションの俊敏性を向上させるための最新の展開手法です。 新しい機能を運用環境に展開することはできますが、その可用性は制限されます。 スイッチのフリックを使用すると、アプリを再起動したり新しいコードを展開したりせずに、特定のユーザーに対して新しい機能をアクティブ化できます。 これらは、新機能のリリースをコード配置から分離します。
 
 機能フラグは、実行時にユーザーの機能の可視性を制御する条件付きロジックに基づいて構築されます。 最新のクラウドネイティブシステムでは、新しい機能を早い段階で運用環境にデプロイすることは一般的ですが、限定された対象ユーザーを使用してテストします。 信頼度が高くなるにつれて、機能をより広範な対象ユーザーに段階的にロールアウトできます。
 
@@ -29,7 +29,7 @@ ms.locfileid: "83614072"
 
 主要な特徴フラグは、単純なへの参照です `decision object` 。 またはのブール値の状態を返し `on` `off` ます。 通常、このフラグは、機能機能をカプセル化するコードブロックをラップします。 フラグの状態によって、そのコードブロックが特定のユーザーに対して実行されるかどうかが決まります。 図10-11 に実装を示します。
 
-```c#
+```csharp
 if (featureFlag) {
     // Run this code block if the featureFlag value is true
 } else {
@@ -43,13 +43,13 @@ if (featureFlag) {
 
 第1章では、「」について説明しました `Twelve-Factor App` 。 構成設定をアプリケーションの実行可能コードから外部に保持することを推奨するガイダンスです。 必要に応じて、外部ソースから設定を読み取ることができます。 機能フラグの構成値は、コードベースから独立している必要もあります。 別のリポジトリに外部化するフラグを設定することにより、アプリケーションを変更して再デプロイしなくてもフラグの状態を変更できます。
 
-[Azure アプリ構成](https://docs.microsoft.com/azure/azure-app-configuration/overview)では、機能フラグの一元的なリポジトリが提供されます。 この機能を使用すると、さまざまな種類の特徴フラグを定義し、その状態を迅速かつ自信を持って操作できます。 アプリ構成クライアントライブラリをアプリケーションに追加して、機能フラグの機能を有効にします。 さまざまなプログラミング言語フレームワークがサポートされています。
+[Azure アプリ構成](https://docs.microsoft.com/azure/azure-app-configuration/overview) では、機能フラグの一元的なリポジトリが提供されます。 この機能を使用すると、さまざまな種類の特徴フラグを定義し、その状態を迅速かつ自信を持って操作できます。 アプリ構成クライアントライブラリをアプリケーションに追加して、機能フラグの機能を有効にします。 さまざまなプログラミング言語フレームワークがサポートされています。
 
 機能フラグは、 [ASP.NET Core サービス](https://docs.microsoft.com/azure/azure-app-configuration/use-feature-flags-dotnet-core)に簡単に実装できます。 .NET 機能管理ライブラリとアプリ構成プロバイダーをインストールすると、宣言によって機能フラグをコードに追加できます。 属性を有効にすると、 `FeatureGate` コードベースで if ステートメントを手動で作成する必要がなくなります。
 
 Startup クラスで構成すると、コントローラー、アクション、またはミドルウェアレベルで機能フラグ機能を追加できます。 図10-12 は、コントローラーとアクションの実装を示しています。
 
-```c#
+```csharp
 [FeatureGate(MyFeatureFlags.FeatureA)]
 public class ProductController : Controller
 {
@@ -57,7 +57,7 @@ public class ProductController : Controller
 }
 ```
 
-```c#
+```csharp
 [FeatureGate(MyFeatureFlags.FeatureA)]
 public IActionResult UpdateProductStatus()
 {
@@ -71,7 +71,7 @@ public IActionResult UpdateProductStatus()
 
 機能フラグは、C# クラスに直接挿入することもできます。 図10-13 は、機能フラグの挿入を示しています。
 
-```c#
+```csharp
 public class ProductController : Controller
 {
     private readonly IFeatureManager _featureManager;

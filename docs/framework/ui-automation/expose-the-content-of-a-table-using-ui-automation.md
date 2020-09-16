@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI Automation, exposing content of tables
 - exposing content of tables using UI Automation
 ms.assetid: ac3c5eaa-49c7-4653-b83e-532e2a2604a2
-ms.openlocfilehash: c6ceb05421547a7e84f612ed6da2bd7002bf095b
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: e32ee52ca17120dbfef6f948711c468dd1d8a021
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168457"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540811"
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a>UI オートメーションを使用したテーブルの内容の公開
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "87168457"
  次のコード例では、テーブルセルの内容を表すを取得する方法を示し <xref:System.Windows.Automation.AutomationElement> ます。行インデックス、列インデックス、行と列の範囲、行と列のヘッダー情報などのセルプロパティも取得されます。 この例では、フォーカス変更イベントハンドラーを使用して、を実装する表形式コントロールのキーボードトラバーサルをシミュレートし [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ます。 各テーブル項目の情報は、フォーカス変更イベントで公開されます。  
   
 > [!NOTE]
-> フォーカスの変更はグローバルデスクトップイベントであるため、テーブル外部のフォーカス変更イベントをフィルター処理する必要があります。 関連する実装については、 [Trackfocus サンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771428(v=vs.90))を参照してください。  
+> フォーカスの変更はグローバルデスクトップイベントであるため、テーブル外部のフォーカス変更イベントをフィルター処理する必要があります。 関連する実装については、 [Trackfocus サンプル](/previous-versions/dotnet/netframework-3.5/ms771428(v=vs.90)) を参照してください。  
   
  [!code-csharp[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#starttarget)]
  [!code-vb[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#starttarget)]  

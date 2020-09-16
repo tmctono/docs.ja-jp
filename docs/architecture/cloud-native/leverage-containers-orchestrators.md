@@ -2,12 +2,12 @@
 title: コンテナーとコンテナー オーケストレーターの活用
 description: Azure での Docker コンテナーと Kubernetes Orchestrators 活用
 ms.date: 05/31/2020
-ms.openlocfilehash: 25e981e0fb7957e7180be09a19a406eddfe4e51b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f9e8672b742217388bd719262ffdfee63618fd14
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446868"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540544"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>コンテナーとコンテナー オーケストレーターの活用
 
@@ -45,7 +45,7 @@ ms.locfileid: "84446868"
 
 ## <a name="what-are-the-benefits-of-containers-and-orchestrators"></a>コンテナーと orchestrators はどのような利点がありますか。
 
-第1章ではコンテナーを紹介しました。 Cloud native Computing Foundation (CNCF) の順位付けは、クラウドネイティブのコンテナー化[マップ](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png)の最初の手順として、クラウドネイティブの旅を開始する企業向けのガイダンスとして強調されています。 このセクションでは、コンテナーの利点について説明します。
+第1章ではコンテナーを紹介しました。 Cloud native Computing Foundation (CNCF) の順位付けは、クラウドネイティブのコンテナー化 [マップ](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png) の最初の手順として、クラウドネイティブの旅を開始する企業向けのガイダンスとして強調されています。 このセクションでは、コンテナーの利点について説明します。
 
 Docker は、最も一般的なコンテナー管理プラットフォームです。 Linux と Windows の両方でコンテナーと連携して動作します。 コンテナーは、任意のシステムで同じように動作する、再現可能な別のアプリケーション環境を提供します。 この側面により、クラウドネイティブサービスの開発とホスティングに最適なものになります。 コンテナーは相互に分離されています。 同じホストハードウェア上の2つのコンテナーは、競合を発生させることなく、異なるバージョンのソフトウェアを持つことができます。
 
@@ -72,13 +72,13 @@ Docker は、最も一般的なコンテナー管理プラットフォームで�
 
 クラウドネイティブエコシステムでは、Kubernetes は事実上コンテナー orchestrator になりました。 これは、クラウドネイティブコンピューティングファンデーション (CNCF) によって管理されるオープンソースのプラットフォームです。 Kubernetes は、マシンクラスター全体のコンテナー化されたワークロードのデプロイ、スケーリング、および運用上の懸念事項を自動化します。 ただし、Kubernetes のインストールと管理は非常に複雑です。
 
-クラウドベンダーの管理されたサービスとして Kubernetes を利用する方が、はるかに優れたアプローチです。 Azure クラウドは、完全に管理された[Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/)の Kubernetes プラットフォームを特徴としています。 AKS は、Kubernetes を管理する際の複雑さと運用上のオーバーヘッドを抽象化します。 クラウドサービスとして Kubernetes を使用します。Microsoft は、it を管理およびサポートする責任を担います。 また、AKS は、他の Azure サービスや開発ツールと緊密に統合されています。
+クラウドベンダーの管理されたサービスとして Kubernetes を利用する方が、はるかに優れたアプローチです。 Azure クラウドは、完全に管理された [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/)の Kubernetes プラットフォームを特徴としています。 AKS は、Kubernetes を管理する際の複雑さと運用上のオーバーヘッドを抽象化します。 クラウドサービスとして Kubernetes を使用します。Microsoft は、it を管理およびサポートする責任を担います。 また、AKS は、他の Azure サービスや開発ツールと緊密に統合されています。
 
 AKS は、クラスターベースのテクノロジです。 フェデレーション仮想マシン (ノード) のプールが Azure クラウドにデプロイされます。 これらの組み合わせにより、高可用性環境 (クラスター) が形成されます。 クラスターは、クラウドネイティブアプリケーションに対してシームレスな単一のエンティティとして表示されます。 内部的には、AKS は、負荷を均等に分散する定義済みの方法に従って、これらのノード間でコンテナー化されたサービスをデプロイします。
 
 ## <a name="what-are-the-scaling-benefits"></a>スケーリングにはどのような利点がありますか。
 
-コンテナー上に構築されたサービスは、Kubernetes などのオーケストレーションツールによって提供されるスケーリングの利点を活用できます。 設計コンテナーによって認識されるのは、それ自体だけです。 複数のコンテナーを連携させる必要がある場合は、より高いレベルでそれらを整理する必要があります。 多数のコンテナーとその共有依存関係 (ネットワーク構成など) を整理すると、その日を節約するためにオーケストレーションツールが提供されます。 Kubernetes は、コンテナーのグループに対して抽象化レイヤーを作成し、*ポッド*に整理します。 ポッドは、*ノード*と呼ばれるワーカーマシン上で実行されます。 この体系化された構造は*クラスター*と呼ばれます。 図3-3 は、Kubernetes クラスターのさまざまなコンポーネントを示しています。
+コンテナー上に構築されたサービスは、Kubernetes などのオーケストレーションツールによって提供されるスケーリングの利点を活用できます。 設計コンテナーによって認識されるのは、それ自体だけです。 複数のコンテナーを連携させる必要がある場合は、より高いレベルでそれらを整理する必要があります。 多数のコンテナーとその共有依存関係 (ネットワーク構成など) を整理すると、その日を節約するためにオーケストレーションツールが提供されます。 Kubernetes は、コンテナーのグループに対して抽象化レイヤーを作成し、 *ポッド*に整理します。 ポッドは、 *ノード*と呼ばれるワーカーマシン上で実行されます。 この体系化された構造は *クラスター*と呼ばれます。 図3-3 は、Kubernetes クラスターのさまざまなコンポーネントを示しています。
 
 ![クラスターコンポーネントを Kubernetes します。 ](./media/kubernetes-cluster-components.png)
 **図 3-3**. クラスターコンポーネントを Kubernetes します。
@@ -183,7 +183,7 @@ Visual Studio では、web ベースアプリケーションの Docker 開発を
 
 このオプションを選択すると、プロジェクトはというルートに作成され、 `Dockerfile` Docker コンテナーでアプリをビルドしてホストするために使用できます。 図 3-6 に Dockerfile の例を示します。
 
-```docker
+```dockerfile
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80

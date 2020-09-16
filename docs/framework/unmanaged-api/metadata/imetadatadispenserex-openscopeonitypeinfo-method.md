@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3480bbdb-c442-44a0-b7c6-333354503c52
 topic_type:
 - apiref
-ms.openlocfilehash: 91ef9eaa855ed841bc75bfaeead462f045eb1d8b
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 8e119093800ea0a0119ba25ba38cf2eaf9afe96b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007456"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540863"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>IMetaDataDispenserEx::OpenScopeOnITypeInfo メソッド
 このメソッドは実装されていません。 呼び出された場合は E_NOTIMPL を返します。  
@@ -38,7 +38,7 @@ HRESULT OpenScopeOnITypeInfo (
   
 ## <a name="parameters"></a>パラメーター  
  `pITI`  
- からスコープを開く対象の型情報を提供する[ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)インターフェイスへのポインター。  
+ からスコープを開く対象の型情報を提供する [ITypeInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) インターフェイスへのポインター。  
   
  `dwOpenFlags`  
  からOpen モードフラグ。  
@@ -50,11 +50,11 @@ HRESULT OpenScopeOnITypeInfo (
  入出力返されたインターフェイスへのポインターへのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
+ **プラットフォーム:** 「 [システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
