@@ -9,18 +9,18 @@ helpviewer_keywords:
 - .NET Framework, and Windows Store apps
 - .NET Framework, and Windows Runtime
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
-ms.openlocfilehash: 7ca5a1259f970f2db5400837eb7d20998dd824cb
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2d1b35181f508a616ab264c859119da7512e5f23
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288863"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547572"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート
 
 .NET Framework 4.5 では、Windows ランタイムを使用した多数のソフトウェア開発シナリオがサポートされています。 これらのシナリオは次の 3 つのカテゴリに分類されます。
 
-- 「 [C# または Visual Basic を使用した Windows ストアアプリのためのロードマップ](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))」で説明されているように、xaml コントロールを使用した Windows 8.x ストアアプリの開発の[概要](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)) [」を参照](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))してください。
+- 「 [C# または Visual Basic を使用した Windows ストアアプリのためのロードマップ](/previous-versions/windows/apps/br229583(v=win.10))」で説明されているように、xaml コントロールを使用した Windows 8.x ストアアプリの開発の[概要](/previous-versions/windows/apps/br230302(v=vs.140)) [」を参照](/previous-versions/windows/apps/br229566(v=win.10))してください。
 
 - .NET Framework で作成する Windows 8.x ストアアプリで使用するクラスライブラリの開発。
 
@@ -32,7 +32,7 @@ ms.locfileid: "84288863"
 
 .NET Framework は、前に示した3つの開発シナリオをサポートしています。これは、Windows 8.x ストアアプリ用 .NET を提供し、Windows ランタイム自体をサポートすることによって行います。
 
-- [.NET Framework および Windows ランタイム名前空間](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces)は、.NET Framework クラスライブラリの簡素化されたビューを提供し、Windows 8.x ストアアプリと Windows ランタイムコンポーネントの作成に使用できる型とメンバーのみを含みます。
+- [.NET Framework および Windows ランタイム名前空間](/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces) は、.NET Framework クラスライブラリの簡素化されたビューを提供し、Windows 8.x ストアアプリと Windows ランタイムコンポーネントの作成に使用できる型とメンバーのみを含みます。
 
   - Visual Studio (Visual Studio 2012 以降) を使用して Windows 8.x ストアアプリまたは Windows ランタイムコンポーネントを開発する場合、一連の参照アセンブリによって、関連する型とメンバーのみが表示されます。
 
@@ -40,7 +40,7 @@ ms.locfileid: "84288863"
 
   - Windows ランタイムはマネージコードから簡単に呼び出すことができるため、単にオペレーティングシステム API をラップする機能も削除されます。
 
-  Windows 8.x ストアアプリ用 .NET の詳細については、「 [Windows ストアアプリ用 .net の概要](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))」を参照してください。 API の選択プロセスの詳細については、.NET ブログの「 [Metro スタイルアプリ用 .net](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) 」エントリを参照してください。
+  Windows 8.x ストアアプリ用 .NET の詳細については、「 [Windows ストアアプリ用 .net の概要](/previous-versions/windows/apps/br230302(v=vs.140))」を参照してください。 API の選択プロセスの詳細については、.NET ブログの「 [Metro スタイルアプリ用 .net](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) 」エントリを参照してください。
 
 - [Windows ランタイム](/uwp/api/)は、Windows 8.x ストアアプリを構築するためのユーザーインターフェイス要素を提供し、オペレーティングシステムの機能へのアクセスを提供します。 .NET Framework と同様に、Windows ランタイムには、C# および Visual Basic コンパイラが .NET Framework クラスライブラリの使用方法 Windows ランタイムを使用できるようにするメタデータがあります。 .NET Framework を使用すると、いくつかの相違点を非表示にすることで、Windows ランタイムを簡単に使用できるようになります。
 
@@ -54,7 +54,7 @@ ms.locfileid: "84288863"
 
 ### <a name="the-net-framework-and-the-windows-runtime-reference-documentation"></a>.NET Framework と Windows ランタイムリファレンスドキュメント
 
-Windows ランタイムと .NET Framework のドキュメントセットは別々になっています。 型またはメンバーに関するヘルプを表示するために F1 キーを押すと、該当するセットのリファレンス ドキュメントが表示されます。 ただし、 [Windows ランタイムリファレンス](/uwp/api/)を参照すると、不可解のような例が発生する可能性があります。
+Windows ランタイムと .NET Framework のドキュメントセットは別々になっています。 型またはメンバーに関するヘルプを表示するために F1 キーを押すと、該当するセットのリファレンス ドキュメントが表示されます。 ただし、 [Windows ランタイムリファレンス](/uwp/api/) を参照すると、不可解のような例が発生する可能性があります。
 
 - インターフェイスなどのトピック <xref:Windows.Foundation.Collections.IIterable%601> には、Visual Basic または C# の宣言構文がありません。 代わりに、構文セクションの上にメモが表示されます (この例では、".NET: このインターフェイスは、system.string として表示されます \<T> )。 これは、.NET Framework と Windows ランタイムは、インターフェイスが異なる同様の機能を提供するためです。 さらに、`IIterable` では列挙子を返すのに `First` メソッドではなく <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> メソッドを使用するという、動作の違いもあります。 一般的なタスクを実行する別の方法を学習するのではなく、.NET Framework は、使い慣れた型を使用するようにマネージコードを表示することによって、Windows ランタイムをサポートしています。 IDE にはインターフェイスが表示されません `IIterable` 。そのため、Windows ランタイムリファレンスドキュメントでこのインターフェイスを使用する唯一の方法は、そのドキュメントを直接参照することです。
 
@@ -110,7 +110,7 @@ Windows ランタイムでは、 `IMap<K, V>` と `IMapView<K, V>` はを使用�
 
 ### <a name="other-differences"></a>その他の相違点
 
-場合によっては、.NET Framework 型が Windows ランタイム型ではなくコードに表示されるという事実は、ユーザー側での操作が必要になります。 たとえば、クラスは <xref:Windows.Foundation.Uri?displayProperty=nameWithType> .NET Framework コードとして表示され <xref:System.Uri?displayProperty=nameWithType> ます。 <xref:System.Uri?displayProperty=nameWithType>相対 URI を使用できますが、 <xref:Windows.Foundation.Uri?displayProperty=nameWithType> 絶対 uri が必要です。 したがって、Windows ランタイムメソッドに URI を渡す場合は、絶対 URI であることを確認する必要があります。 「[Windows ランタイムへの URI の引き渡し](passing-a-uri-to-the-windows-runtime.md)」をご覧ください。
+場合によっては、.NET Framework 型が Windows ランタイム型ではなくコードに表示されるという事実は、ユーザー側での操作が必要になります。 たとえば、クラスは <xref:Windows.Foundation.Uri?displayProperty=nameWithType> .NET Framework コードとして表示され <xref:System.Uri?displayProperty=nameWithType> ます。 <xref:System.Uri?displayProperty=nameWithType> 相対 URI を使用できますが、 <xref:Windows.Foundation.Uri?displayProperty=nameWithType> 絶対 uri が必要です。 したがって、Windows ランタイムメソッドに URI を渡す場合は、絶対 URI であることを確認する必要があります。 「[Windows ランタイムへの URI の引き渡し](passing-a-uri-to-the-windows-runtime.md)」をご覧ください。
 
 <a name="WindowsRuntimeComponents"></a>
 
@@ -157,9 +157,9 @@ JavaScript を使用して windows 用 Windows 8.x ストアアプリを開発�
 
 |Title|説明|
 |-----------|-----------------|
-|[Windows ストア アプリ用 .NET の概要](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|Windows 8.x ストアアプリと Windows RuntimeComponents の作成に使用できる .NET Framework の型とメンバーについて説明します。 (Windows デベロッパー センター内)。|
-|[C# または Visual Basic を使った Windows ストア アプリのためのロードマップ](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|C# または Visual Basic (多くのクイックスタートトピック、ガイドライン、ベストプラクティスを含む) を使用して、Windows 8.x ストアアプリの開発を開始する際に役立つ主要なリソースを提供します。 (Windows デベロッパー センター内)。|
-|[How to (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))|C# または Visual Basic (多くのクイックスタートトピック、ガイドライン、ベストプラクティスを含む) を使用して、Windows 8.x ストアアプリの開発を開始する際に役立つ主要なリソースを提供します。 (Windows デベロッパー センター内)。|
+|[Windows ストア アプリ用 .NET の概要](/previous-versions/windows/apps/br230302(v=vs.140))|Windows 8.x ストアアプリと Windows RuntimeComponents の作成に使用できる .NET Framework の型とメンバーについて説明します。 (Windows デベロッパー センター内)。|
+|[C# または Visual Basic を使った Windows ストア アプリのためのロードマップ](/previous-versions/windows/apps/br229583(v=win.10))|C# または Visual Basic (多くのクイックスタートトピック、ガイドライン、ベストプラクティスを含む) を使用して、Windows 8.x ストアアプリの開発を開始する際に役立つ主要なリソースを提供します。 (Windows デベロッパー センター内)。|
+|[How to (XAML)](/previous-versions/windows/apps/br229566(v=win.10))|C# または Visual Basic (多くのクイックスタートトピック、ガイドライン、ベストプラクティスを含む) を使用して、Windows 8.x ストアアプリの開発を開始する際に役立つ主要なリソースを提供します。 (Windows デベロッパー センター内)。|
 |[C# および Visual Basic での Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)|.NET Framework を使用して Windows ランタイムコンポーネントを作成する方法について説明します。また、JavaScript を使用して Windows 用にビルドされた Windows 8.x ストアアプリの一部として使用する方法、および Visual Studio との組み合わせをデバッグする方法について説明します。 (Windows デベロッパー センター内)。|
 |[Windows ランタイム リファレンス](/uwp/api/)|Windows ランタイムのリファレンスドキュメントです。 (Windows デベロッパー センター内)。|
 |[Windows ランタイムへの URI の引き渡し](passing-a-uri-to-the-windows-runtime.md)|マネージコードから Windows ランタイムに URI を渡すときに発生する可能性がある問題と、その回避方法について説明します。|

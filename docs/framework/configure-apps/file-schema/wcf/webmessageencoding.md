@@ -2,12 +2,12 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: 4aa87acaf9080959ba8b53e3ec3216314dc745b6
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1cdce48f51b25732c256d3c867f1bba801ec4d8c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732588"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545455"
 ---
 # \<webMessageEncoding>
 Windows Communication Foundation (WCF) での使用時に、プレーンテキストの XML、JavaScript Object Notation (JSON) メッセージ エンコード、および "無変換の" バイナリ コンテンツの読み取りおよび書き込みを有効にします。  
@@ -40,17 +40,17 @@ Windows Communication Foundation (WCF) での使用時に、プレーンテキ�
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|このバインドを使用して設定されるエンドポイントにより処理可能な、SOAP メッセージの複雑さに対する制約を定義します。 この要素は <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 型です。|  
+|[\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|このバインドを使用して設定されるエンドポイントにより処理可能な、SOAP メッセージの複雑さに対する制約を定義します。 この要素は <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 型です。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|カスタム バインドのすべてのバインド機能を定義します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  エンコーディングは、メッセージをバイト シーケンスに変換するプロセスです。 デコードは、その逆のプロセスです。 これらのプロセスでは、文字エンコーディングの指定が必要です。  
   
  `webMessageEncoding` 要素は、プレーンテキストの XML と JSON エンコーディング、および "生" のバイナリ データの処理を、一連の内部エンコーダーに代行させることで機能します。 この委任は、複合メッセージ エンコーダーによって実行されます。  
@@ -61,7 +61,7 @@ Windows Communication Foundation (WCF) での使用時に、プレーンテキ�
   
  `maxReadPoolSize` と `maxWritePoolSize` を使用して、割り当てられるリーダーとライターの最大数をそれぞれ設定することもできます。 既定では、64 のリーダーと 16 のライターが割り当てられています。  
   
- 既定の複雑さの制約も、要素を使用して設定されます。これは、メッセージの複雑さを使用して [\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) エンドポイント処理リソースを分割しようとするサービス拒否 (dos) クラスの攻撃から保護します。  
+ 既定の複雑さの制約も、要素を使用して設定されます。これは、メッセージの複雑さを使用して [\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) エンドポイント処理リソースを分割しようとするサービス拒否 (dos) クラスの攻撃から保護します。  
   
 ## <a name="example"></a>例  
   

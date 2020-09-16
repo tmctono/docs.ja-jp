@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data access [.NET Framework], about .NET Framework data access
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
-ms.openlocfilehash: 654f6f37e40d5df76910a7de7c5de4ffa2787b58
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 0bf02eb56c042361c973d410b1f21e2ef92dd9f9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85503847"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553845"
 ---
 # <a name="data-and-modeling-in-net"></a>.NET のデータとモデリング
 
@@ -40,5 +40,5 @@ ms.locfileid: "85503847"
  [XML ドキュメントと XML データ](../../standard/data/xml/index.md)  
  .NET Framework で XML ドキュメントおよびデータを処理するための、統合された包括的な一連のクラスについて概説します。  
   
- [XML 標準のリファレンス](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256177(v=vs.100))  
- Microsoft がサポートする XML 標準に関するリファレンス情報を提供します。  
+ [XML 標準のリファレンス](/previous-versions/dotnet/netframework-4.0/ms256177(v=vs.100))  
+ Microsoft がサポートする XML 標準に関するリファレンス情報を提供します。

@@ -8,12 +8,12 @@ ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 2e8abef547d8cc06d80b8cbf865ec984eb91d330
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 65370a2bd21e2474af4cb070bb8d82a167f10070
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89554222"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554997"
 ---
 # <a name="linq-overview"></a>LINQ の概要
 
@@ -111,7 +111,7 @@ End Function
 
 コードを記述して XML ドキュメントを手動でスキャンし、このタスクを実行するのはとても難しいことです。
 
-XML との対話が、LINQ プロバイダーでできる唯一のことではありません。 [Linq to SQL](../../framework/data/adonet/sql/linq/index.md) は、MSSQL Server データベースの必要最低限のオブジェクト リレーショナル マッパー (ORM) です。 [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) ライブラリでは、LINQ を使用して効率的に JSON ドキュメントをトラバースできます。 さらに、必要な作業を行うライブラリがない場合は、[独自の LINQ プロバイダーを記述する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))こともできます。
+XML との対話が、LINQ プロバイダーでできる唯一のことではありません。 [Linq to SQL](../../framework/data/adonet/sql/linq/index.md) は、MSSQL Server データベースの必要最低限のオブジェクト リレーショナル マッパー (ORM) です。 [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) ライブラリでは、LINQ を使用して効率的に JSON ドキュメントをトラバースできます。 さらに、必要な作業を行うライブラリがない場合は、[独自の LINQ プロバイダーを記述する](/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))こともできます。
 
 ## <a name="reasons-to-use-the-query-syntax"></a>クエリ構文を使用する理由
 
@@ -159,7 +159,7 @@ API 構文は単に、クエリ構文を実行するより簡潔な方法であ�
 
 ## <a name="essential-linq"></a>重要な LINQ
 
-LINQ サンプルの一覧については、「[101 LINQ Samples](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/)」 (101 個の LINQ サンプル) を参照してください。
+LINQ サンプルの一覧については、「[101 LINQ Samples](/samples/dotnet/try-samples/101-linq-samples/)」 (101 個の LINQ サンプル) を参照してください。
 
 以下の例は、LINQ の重要な要素の一部を簡単に示したものです。 これは決して包括的なものではありません。LINQ ではここで紹介するものよりも多くの機能が提供されます。
 
@@ -394,6 +394,6 @@ LINQ で簡単に表すことができる (つまり、純粋関数で副作用�
 
 ## <a name="more-resources"></a>その他のリソース
 
-* [101 個の LINQ サンプル](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/)
+* [101 個の LINQ サンプル](/samples/dotnet/try-samples/101-linq-samples/)
 * [Linqpad](https://www.linqpad.net/)。プレイグラウンド環境とデータベース クエリ エンジン (C#/F#/Visual Basic 用)
 * [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/)。LINQ to Objects の実装方法を学習するための電子書籍

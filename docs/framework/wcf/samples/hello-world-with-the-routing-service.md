@@ -2,19 +2,19 @@
 title: ルーティング サービスを使用した Hello World
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 86a2981e8b861da9d5ccf0a34fe037f3ef419aab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 63cfb32a5f5d0cae7635d39d5df594a5bb07e411
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183632"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554789"
 ---
 # <a name="hello-world-with-the-routing-service"></a>ルーティング サービスを使用した Hello World
-このサンプルでは、Windows 通信基盤 (WCF) ルーティング サービスを示します。 ルーティング サービスは、アプリケーションにコンテンツ ベースのルーターを簡単に含める WCF コンポーネントです。 このサンプルでは、標準の WCF 計算サンプルを、ルーティング サービスを使用して通信するように調整します。 このサンプルの電卓クライアントは、ルーターによって公開されるエンドポイントにメッセージを送信するように構成されています。 ルーティング サービスは、送信されてきたすべてのメッセージを受け入れ、電卓サービスに対応するエンドポイントに転送するように構成されています。 したがって、クライアントから送信されたメッセージはルーターで受信され、実際の電卓サービスに再ルーティングされます。 電卓サービスからのメッセージはルーターに送り返され、ルーターから電卓クライアントに渡されます。
+このサンプルでは、Windows Communication Foundation (WCF) ルーティングサービスを示します。 ルーティングサービスは、コンテンツベースのルーターをアプリケーションに簡単に含めることができる WCF コンポーネントです。 このサンプルでは、ルーティングサービスを使用して通信するように、標準の WCF Calculator サンプルを適応させます。 このサンプルの電卓クライアントは、ルーターによって公開されるエンドポイントにメッセージを送信するように構成されています。 ルーティング サービスは、送信されてきたすべてのメッセージを受け入れ、電卓サービスに対応するエンドポイントに転送するように構成されています。 したがって、クライアントから送信されたメッセージはルーターで受信され、実際の電卓サービスに再ルーティングされます。 電卓サービスからのメッセージはルーターに送り返され、ルーターから電卓クライアントに渡されます。
 
 ### <a name="to-use-this-sample"></a>このサンプルを使用するには
 
-1. ビジュアル スタジオ 2012 を使用して、を開きます。
+1. Visual Studio 2012 を使用して、HelloRoutingService を開きます。
 
 2. F5 キーを押すか、Ctrl キーと Shift キーを押しながら B キーを押します。
 
@@ -53,10 +53,10 @@ ms.locfileid: "79183632"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   
 ## <a name="see-also"></a>関連項目
 
-- [AppFabric のホストおよび永続化のサンプル](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [AppFabric のホストおよび永続化のサンプル](/previous-versions/appfabric/ff383418(v=azure.10))

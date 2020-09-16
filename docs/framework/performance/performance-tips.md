@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2b3be8b42b5046e52074236de01ca312a0a9a361
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: c5e3f692c2bf754ccd35324019246ee905e8c591
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474268"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554646"
 ---
 # <a name="net-performance-tips"></a>.NET のパフォーマンスに関するヒント
 *パフォーマンス*という用語は、プログラムの実行速度を表す一般的な用語です。 ソース コード内で特定の基本規則に従うことにより、実行速度を上げることができることもあります。 プログラムによっては、コードを綿密に調べることが重要で、プロファイラーを使用して、可能な限り速く実行しているかどうかを確認することが必要な場合もあります。 一方、記述どおりに許容可能な速度でコードが実行されているため、このような最適化が必要ないプログラムもあります。 ここでは、パフォーマンスの低下が発生する一般的な状況と、パフォーマンスを向上させるためのヒント、およびパフォーマンスに関する追加のトピックについて説明します。 パフォーマンスの計画と計測の詳細については、「[Performance](index.md)」(パフォーマンス) を参照してください。  
@@ -31,17 +31,17 @@ ms.locfileid: "86474268"
   
 ## <a name="other-resources"></a>その他の参照情報  
   
-- [高速なマネージド コードを書く: 何にコストがかかるのかを知る](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973852(v=msdn.10))  
+- [高速なマネージド コードを書く: 何にコストがかかるのかを知る](/previous-versions/dotnet/articles/ms973852(v=msdn.10))  
   
-- [高パフォーマンスのマネージド アプリケーションを書く: 入門編](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973858(v=msdn.10))  
+- [高パフォーマンスのマネージド アプリケーションを書く: 入門編](/previous-versions/dotnet/articles/ms973858(v=msdn.10))  
   
-- [ガベージ コレクターの基本とパフォーマンスのヒント](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973837(v=msdn.10))  
+- [ガベージ コレクターの基本とパフォーマンスのヒント](/previous-versions/dotnet/articles/ms973837(v=msdn.10))  
   
-- [.NET アプリケーションのパフォーマンス関連のヒントとトリック](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v=msdn.10))  
+- [.NET アプリケーションのパフォーマンス関連のヒントとトリック](/previous-versions/dotnet/articles/ms973839(v=msdn.10))  
 
-- [Rico Mariani が紹介するパフォーマンスに関するニュース](https://docs.microsoft.com/archive/blogs/ricom/)  
+- [Rico Mariani が紹介するパフォーマンスに関するニュース](/archive/blogs/ricom/)  
 
-- [Vance Morrison 氏のブログ](https://docs.microsoft.com/archive/blogs/vancem/)
+- [Vance Morrison 氏のブログ](/archive/blogs/vancem/)
   
 ## <a name="see-also"></a>関連項目
 

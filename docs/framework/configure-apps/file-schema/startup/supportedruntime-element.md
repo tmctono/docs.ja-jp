@@ -8,12 +8,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: cc221c71b68c21b61b5fa27e0972b9e9156dbc3b
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 4517aab98235ec2172da355ad0e05d95ebee46c5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558674"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554040"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime> 要素
 
@@ -36,7 +36,7 @@ ms.locfileid: "88558674"
 |**version**|省略可能な属性です。<br /><br /> このアプリケーションがサポートする共通言語ランタイム (CLR: Common Language Runtime) のバージョンを指定する文字列値。 属性の有効な値については、「 `version` [ランタイムバージョン」の値](#version) に関するセクションを参照してください。 **注:**  .NET Framework 3.5 では、"*runtime version*" の値は *major*という形式になります。*minor*。*ビルド*。 .NET Framework 4 以降では、メジャーバージョン番号とマイナーバージョン番号 ("v v4.0.30319" の代わりに "v4.0") のみが必要です。 短い文字列を使用することをお勧めします。|
 |**sku**|省略可能な属性です。<br /><br /> 在庫管理単位 (SKU) を指定する文字列の値。SKU はこのアプリケーションがサポートする .NET Framework リリースを指定します。<br /><br /> .NET Framework 4.0 以降では、`sku` 属性の使用が推奨されます。  この属性が指定される場合は、アプリケーションが対象とする .NET Framework のバージョンを示します。<br /><br /> Sku 属性の有効な値については、「 [sku id」の値](#sku) に関するセクションを参照してください。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>Remarks
 
 **\<supportedRuntime>** アプリケーション構成ファイルに要素が存在しない場合は、アプリケーションのビルドに使用されるランタイムのバージョンが使用されます。
 
@@ -47,7 +47,7 @@ ms.locfileid: "88558674"
   
 NET Framework 1.1 から 3.5 までのランタイムの複数のバージョンをサポートするアプリケーションでは、ランタイムの複数のバージョンをサポートする場合は、最初の要素で最も優先度の高いバージョンを指定し、最後の要素で最も優先度の低いバージョンを指定する必要があります。 .NET Framework 4.0 以降のバージョンをサポートするアプリの場合、 `version` 属性は、.NET Framework 4 以降のバージョンに共通する CLR バージョンを示し、属性は、 `sku` アプリが対象とする1つの .NET Framework バージョンを示します。
 
-属性を **\<supportedRuntime>** 持つ要素 `sku` が構成ファイル内に存在し、インストールされている .NET Framework バージョンが指定したサポートされているバージョンより低い場合、アプリケーションの実行は失敗し、サポートされているバージョンをインストールするよう求めるメッセージが表示されます。 それ以外の場合は、インストールされている任意のバージョンでアプリケーションを実行しようとしますが、そのバージョンと完全に互換性がないと、予期しない動作をする可能性があります。 .NET Framework のバージョン間の互換性の違いについては、.NET Framework の「 [アプリケーションの互換性](https://docs.microsoft.com/dotnet/framework/migration-guide/application-compatibility)」を参照してください。そのため、エラー診断を容易にするために、この要素をアプリケーション構成ファイルに含めることをお勧めします。 (Visual Studio によって自動的に生成された構成ファイルは、新しいプロジェクトを作成するときに自動的に生成されます)。
+属性を **\<supportedRuntime>** 持つ要素 `sku` が構成ファイル内に存在し、インストールされている .NET Framework バージョンが指定したサポートされているバージョンより低い場合、アプリケーションの実行は失敗し、サポートされているバージョンをインストールするよう求めるメッセージが表示されます。 それ以外の場合は、インストールされている任意のバージョンでアプリケーションを実行しようとしますが、そのバージョンと完全に互換性がないと、予期しない動作をする可能性があります。 .NET Framework のバージョン間の互換性の違いについては、.NET Framework の「 [アプリケーションの互換性](../../../migration-guide/application-compatibility.md)」を参照してください。そのため、エラー診断を容易にするために、この要素をアプリケーション構成ファイルに含めることをお勧めします。 (Visual Studio によって自動的に生成された構成ファイルは、新しいプロジェクトを作成するときに自動的に生成されます)。
   
 > [!NOTE]
 > アプリケーションでレガシアクティブ化パスを使用する場合は、 [Corbindtoruntimeex 関数](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)など、以前のバージョンではなく CLR のバージョン4をアクティブ化する場合、またはアプリケーションが .NET Framework 4 でビルドされていても、以前のバージョンの .NET Framework でビルドされた混在モードのアセンブリに依存している場合は、サポートされるランタイムの一覧で .NET Framework 4 を指定するだけでは不十分です さらに、構成ファイルの[ \<startup> 要素](startup-element.md)で、属性をに設定する必要があり `useLegacyV2RuntimeActivationPolicy` `true` ます。 ただし、この属性をに設定すると、 `true` 以前のバージョンの .NET Framework でビルドされたすべてのコンポーネントが、ビルドされたランタイムではなく、.NET Framework 4 を使用して実行されることになります。

@@ -2,12 +2,12 @@
 title: ピア リゾルバー
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: a1f5bcfb721ccbc98856e81198a3f7e0b45abe93
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ef72f44a7dd7f3e8f3108e4f77dcdbdf8ef1b1b7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600777"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554633"
 ---
 # <a name="peer-resolvers"></a>ピア リゾルバー
 メッシュに接続するには、ピア ノードに他のノードの IP アドレスが必要です。 IP アドレスを取得するには、リゾルバー サービスにアクセスします。このサービスは、メッシュ ID を受け取り、そのメッシュ ID で登録されているノードに対応するアドレスの一覧を返します。 リゾルバーは登録されたアドレスのリストを保持します。そのリストには、メッシュ レジスタの各ノードとサービスが含まれます。  
@@ -32,7 +32,7 @@ ms.locfileid: "84600777"
 > [!NOTE]
 > ローカル ネットワークや即席のネットワークでカスタム リゾルバーを使用するときは、リンク ローカル ネットワークまたは即席のネットワークを使用またはサポートするアプリケーションに、接続時に使用するリンク ローカル アドレスを 1 つだけ選択するロジックを含めることを強くお勧めします。 これにより、複数のリンク ローカル アドレスを持つコンピューターによって発生する可能性のある混乱をすべて回避できます。 このロジックに従って、ピア チャネルは、1 度に 1 つのリンク ローカル アドレスを使用することだけをサポートします。 このアドレスは、`ListenIpAddress` の <xref:System.ServiceModel.NetPeerTcpBinding> プロパティを使用して指定できます。  
   
- カスタム競合回避モジュールを実装する方法のデモについては、「[ピアチャネルカスタムピアリゾルバー](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90))」を参照してください。  
+ カスタム競合回避モジュールを実装する方法のデモについては、「 [ピアチャネルカスタムピアリゾルバー](/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90))」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [CustomPeerResolverService 内部:クライアント登録](inside-the-custompeerresolverservice-client-registrations.md)  

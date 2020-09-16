@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ExceptionThrown_V1 event [.NET Framework]
 - ETW, ExceptionThrown_V1 event (CLR)
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
-ms.openlocfilehash: f800a43d0ed2a82bc51a5e3a028b5fa1870df3fb
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: f4ae277b5dfb09d2676755fec2208b63906ead84
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309457"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554672"
 ---
 # <a name="exception-thrown_v1-etw-event"></a>Exception Thrown_V1 ETW イベント
 このイベントは、スローされる例外に関する情報をキャプチャします。  
@@ -35,8 +35,8 @@ ms.locfileid: "86309457"
 |例外の種類|win:UnicodeString|例外の種類 (`System.NullReferenceException` など)。|  
 |例外メッセージ|win:UnicodeString|実際の例外メッセージ。|  
 |EIPCodeThrow|win:Pointer|例外が発生した命令ポインター。|  
-|ExceptionHR|win:UInt32|例外 [HRESULT](https://docs.microsoft.com/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a)。|  
-|ExceptionFlags|win:UInt16|0x01: HasInnerException (Visual Basic のドキュメントで「[CLR ETW イベント](clr-etw-events.md)」を参照)。<br /><br /> 0x02: IsNestedException。<br /><br /> 0x04: IsRethrownException。<br /><br /> 0x08: IsCorruptedStateException (プロセスの状態が破損していることを示します。「[破損状態の例外の処理](https://docs.microsoft.com/archive/msdn-magazine/2009/february/clr-inside-out-handling-corrupted-state-exceptions)」を参照してください)。<br /><br /> 0x10: IsCLSCompliant (<xref:System.Exception> から派生した例外は CLS 準拠で、それ以外は CLS 非準拠)。|  
+|ExceptionHR|win:UInt32|例外 [HRESULT](/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a)。|  
+|ExceptionFlags|win:UInt16|0x01: HasInnerException (Visual Basic のドキュメントで「[CLR ETW イベント](clr-etw-events.md)」を参照)。<br /><br /> 0x02: IsNestedException。<br /><br /> 0x04: IsRethrownException。<br /><br /> 0x08: IsCorruptedStateException (プロセスの状態が破損していることを示します。「 [破損状態の例外の処理](/archive/msdn-magazine/2009/february/clr-inside-out-handling-corrupted-state-exceptions)」を参照してください)。<br /><br /> 0x10: IsCLSCompliant (<xref:System.Exception> から派生した例外は CLS 準拠で、それ以外は CLS 非準拠)。|  
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
 ## <a name="see-also"></a>関連項目

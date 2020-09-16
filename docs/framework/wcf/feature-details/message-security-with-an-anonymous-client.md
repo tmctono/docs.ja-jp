@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-ms.openlocfilehash: 058163c96bba036c3183695bf986b4d0424271ac
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: aed56be359f094db483ab1d012bd77a1096433b6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595220"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553767"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>メッセージ セキュリティと匿名クライアント
 
 次のシナリオは、Windows Communication Foundation (WCF) メッセージセキュリティによってセキュリティ保護されたクライアントとサービスを示しています。 設計目標は、トランスポート セキュリティではなくメッセージ セキュリティを使用することです。これによって将来、多様なクレームに基づくモデルをサポートできます。 高度な要求を使用した承認の詳細については、「 [Id モデルを使用したクレームと承認の管理](managing-claims-and-authorization-with-the-identity-model.md)」を参照してください。
 
-サンプルアプリケーションについては、「[メッセージセキュリティ匿名](../samples/message-security-anonymous.md)」を参照してください。
+サンプルアプリケーションについては、「 [メッセージセキュリティ匿名](../samples/message-security-anonymous.md)」を参照してください。
 
 ![匿名クライアントを使用したメッセージセキュリティ](media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")
 
 |特徴|説明|
 |--------------------|-----------------|
-|セキュリティ モード|Message|
+|セキュリティ モード|メッセージ|
 |相互運用性|WCF のみ|
 |認証 (サーバー)|初期ネゴシエーションには、サーバー認証が必要ですが、クライアント認証は不要です|
 |認証 (クライアント)|なし|
 |整合性|はい、共有のセキュリティ コンテキストを使用します|
-|機密情報|はい、共有のセキュリティ コンテキストを使用します|
+|機密性|はい、共有のセキュリティ コンテキストを使用します|
 |トランスポート|HTTP|
 
 ## <a name="service"></a>サービス
@@ -144,4 +144,4 @@ ms.locfileid: "84595220"
 - [分散アプリケーションのセキュリティ](distributed-application-security.md)
 - [メッセージ セキュリティ匿名](../samples/message-security-anonymous.md)
 - [サービス ID と認証](service-identity-and-authentication.md)
-- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric のセキュリティ モデル](/previous-versions/appfabric/ee677202(v=azure.10))

@@ -15,18 +15,18 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: 8cf0ff323e9bf7305e3d9cbb6dabd8f685059e97
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 83799b0f4c6d6503825ce271fed4bffa7a9775b9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447109"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545704"
 ---
 # <a name="handling-and-raising-events"></a>イベントの処理と発生
 
 .NET でのイベントは、デリゲート モデルに基づいています。 デリゲート モデルは[オブザーバー デザイン パターン](observer-design-pattern.md)に従って、サブスクライバーがプロバイダーに登録して通知を受信できるようにします。 イベントの送信元がイベント発生の通知をプッシュしたら、イベント レシーバーはその通知を受信して、通知に対する応答を定義します。 ここでは、デリゲート モデルの主要コンポーネント、アプリケーションでイベントを利用する方法、およびコードでイベントを実装する方法について説明します。  
   
- Windows 8.x ストア アプリでのイベントの処理については、「[Events and routed events overview](https://docs.microsoft.com/previous-versions/windows/apps/hh758286(v=win.10))」(イベントとルーティング イベントの概要) を参照してください。  
+ Windows 8.x ストア アプリでのイベントの処理については、「[Events and routed events overview](/previous-versions/windows/apps/hh758286(v=win.10))」(イベントとルーティング イベントの概要) を参照してください。  
   
 ## <a name="events"></a>イベント
 

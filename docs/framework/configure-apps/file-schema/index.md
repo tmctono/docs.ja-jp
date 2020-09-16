@@ -21,18 +21,18 @@ helpviewer_keywords:
 - configuration settings [.NET Framework], applications
 - configuration file reference [.NET Framework]
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
-ms.openlocfilehash: 35ed53fc480e218df595794f80af2458f3ecec38
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ab6f12be01899f5b7e54a7ec2d9675d502d88bc3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73039160"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555134"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>.NET Framework の構成ファイル スキーマ
 
 構成ファイルは、設定を変更し、アプリのポリシーを設定するために使用できる標準 XML ファイルです。 .NET Framework の構成スキーマは、アプリの動作を制御するために構成ファイルで使用できる要素で構成されます。 このセクションの目次は、スキーマ、起動時の階層、ランタイム、ネットワーク、およびその他の種類の構成設定を反映しています。
 
-構成ファイルの種類、形式、および場所の詳細については、「[アプリの構成](../index.md)」を参照してください。 構成ファイルを直接編集する場合は、XML に関する知識が必要です。
+構成ファイルの種類、形式、および場所の詳細については、「 [アプリの構成](../index.md)」を参照してください。 構成ファイルを直接編集する場合は、XML に関する知識が必要です。
 
 > [!IMPORTANT]
 > 構成ファイルの XML タグおよび属性では、大文字と小文字が区別されます。
@@ -92,14 +92,14 @@ Windows Identity Foundation (WIF) 構成スキーマのすべての要素。
 
 ## <a name="related-sections"></a>関連項目
 
-[リモート処理設定スキーマ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100))\
+[リモート処理設定スキーマ](/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100))\
 リモート処理を実装するクライアント アプリケーションとサーバー アプリケーションを構成する要素について説明します。
 
-[ASP.NET 設定スキーマ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))\
+[ASP.NET 設定スキーマ](/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))\
 ASP.NET Web アプリケーションの動作を制御する要素について説明します。
 
-[Web サービス設定スキーマ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100))\
+[Web サービス設定スキーマ](/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100))\
 ASP.NET Web サービス、およびそれらのクライアントの動作を制御する要素について説明します。
 
-[.NET Framework アプリの構成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100))\
+[.NET Framework アプリの構成](/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100))\
 セキュリティ、アセンブリのバインディング、および .NET Framework のリモート処理を構成する方法について説明します。

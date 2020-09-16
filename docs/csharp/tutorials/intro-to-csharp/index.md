@@ -3,12 +3,12 @@ title: C# の概要 - 対話型チュートリアル
 description: お使いのブラウザーで C# を学習し、独自の開発環境で使用を開始します
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 965fa9dba559b967d3d1ce8d661cd08235c59f70
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 9a93e34f7b54d12b3f69589d7bb2181fc240403c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202433"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554568"
 ---
 # <a name="introduction-to-c"></a>C\# の概要
 
@@ -22,7 +22,7 @@ C# の概要に関するチュートリアルへようこそ。 これらのレ�
 これらのチュートリアルは、さまざまな環境で試すことができます。 学習する概念は同じです。 違いは、どのエクスペリエンスをご希望かです。
 
 - [ブラウザーの docs プラットフォームの場合](hello-world.yml): このエクスペリエンスでは、docs ページに実行可能な C# コードのウィンドウが埋め込まれます。 ブラウザーで C# コードを記述し、実行します。
-- [Microsoft Learn エクスペリエンス](https://docs.microsoft.com/learn/paths/csharp-first-steps/)。 このラーニングパスには、C# の基本を学習するいくつかのモジュールが含まれています。
+- [Microsoft Learn エクスペリエンス](/learn/paths/csharp-first-steps/)。 このラーニングパスには、C# の基本を学習するいくつかのモジュールが含まれています。
 - [Binder での Jupyter](https://mybinder.org/v2/gh/dotnet/try-samples/master?filepath=hello-csharp%2Fhello-world.ipynb)。 Binder の Jupyter Notebook で C# コードを試すことができます。
 - [ローカル コンピューター](numbers-in-csharp-local.md)。 .NET Core SDK をオンラインで探索した後、お使いのマシンに[ダウンロード](https://dotnet.microsoft.com/download)して、プログラムをビルドすることができます。
 
@@ -30,7 +30,7 @@ Hello World レッスンに続くすべての入門用チュートリアルは�
 
 ## <a name="hello-world"></a>[Hello World](hello-world.yml)
 
-「[Hello World](hello-world.yml)」チュートリアルでは、最も基本的な C# プログラムを作成します。 `string` 型とテキストの操作方法について学習します。 [Microsoft Learn](https://docs.microsoft.com/learn/paths/csharp-first-steps/) または [Binder での Jupyter](https://mybinder.org/v2/gh/dotnet/try-samples/master?filepath=hello-csharp%2Fhello-world.ipynb) でもパスを使用することができます。
+「[Hello World](hello-world.yml)」チュートリアルでは、最も基本的な C# プログラムを作成します。 `string` 型とテキストの操作方法について学習します。 [Microsoft Learn](/learn/paths/csharp-first-steps/) または [Binder での Jupyter](https://mybinder.org/v2/gh/dotnet/try-samples/master?filepath=hello-csharp%2Fhello-world.ipynb) でもパスを使用することができます。
 
 ## <a name="numbers-in-c"></a>[C# における数値](numbers-in-csharp.yml)
 

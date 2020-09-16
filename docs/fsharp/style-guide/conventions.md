@@ -2,12 +2,12 @@
 title: F# のコーディング規則
 description: 'F # コードを記述するときの一般的なガイドラインと表現方法について説明します。'
 ms.date: 01/15/2020
-ms.openlocfilehash: 748a9c26794f46dcc67fdcfcf21f41847a462a19
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: 8c7fedf429ecba6e01b26f37972ffa4eeba6d8af
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053012"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554027"
 ---
 # <a name="f-coding-conventions"></a>F# のコーディング規則
 
@@ -174,7 +174,7 @@ type MyParametricApi(dep1, dep2, dep3) =
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>ドメインに固有の型のエラーケースと無効な状態を表します。
 
-[判別共用体](../language-reference/discriminated-unions.md)を使用すると、F # では、型システム内の問題のあるプログラムの状態を表すことができます。 たとえば、次のように入力します。
+[判別共用体](../language-reference/discriminated-unions.md)を使用すると、F # では、型システム内の問題のあるプログラムの状態を表すことができます。 次に例を示します。
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -605,7 +605,7 @@ type Closure1Table() =
 
 #### <a name="prefer-let-mutable-to-reference-cells"></a>`let mutable`参照セルを優先
 
-参照セルは、値自体ではなく、値への参照を表す方法です。 パフォーマンスクリティカルなコードには使用できますが、推奨されません。 次の例を確認してください。
+参照セルは、値自体ではなく、値への参照を表す方法です。 パフォーマンスクリティカルなコードには使用できますが、推奨されません。 次に例を示します。
 
 ```fsharp
 let kernels =
@@ -657,10 +657,10 @@ F # では、オブジェクトとオブジェクト指向 (OO) の概念が完�
 * 自動プロパティ
 * `IDisposable`およびの実装`IEnumerable`
 * 型拡張
-* イベント
+* events
 * 構造体
 * 代理人
-* 列挙型
+* 列挙体
 
 **一般に、これらの機能を使用する必要がない場合は、次のようにしてください。**
 
@@ -703,7 +703,7 @@ Visual Studio Code API と対話するときにはクラスは不要であるた
 
 ## <a name="consider-type-abbreviations-to-shorten-signatures"></a>型略称を検討して署名を短縮する
 
-[型略称](../language-reference/type-abbreviations.md) は、関数シグネチャやより複雑な型など、ラベルを別の型に割り当てるのに便利な方法です。 たとえば、次のエイリアスは、ディープラーニングライブラリである [Cntk](https://docs.microsoft.com/cognitive-toolkit/)で計算を定義するために必要なラベルを割り当てます。
+[型略称](../language-reference/type-abbreviations.md) は、関数シグネチャやより複雑な型など、ラベルを別の型に割り当てるのに便利な方法です。 たとえば、次のエイリアスは、ディープラーニングライブラリである [Cntk](/cognitive-toolkit/)で計算を定義するために必要なラベルを割り当てます。
 
 ```fsharp
 open CNTK

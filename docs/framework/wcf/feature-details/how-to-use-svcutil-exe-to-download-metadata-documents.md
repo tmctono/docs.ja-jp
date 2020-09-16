@@ -3,15 +3,15 @@ title: '方法: Svcutil.exe を使用してメタデータ ドキュメントを
 description: Svcutil.exe を使用して実行中のサービスからメタデータをダウンロードし、メタデータをローカルファイルに保存する方法について説明します。
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: 42df55fe7bbae6d8c977263e05053d8a8fa87aff
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 6877d860a4465947268d6535b9edeb9856d4d689
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246767"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554307"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>方法: Svcutil.exe を使用してメタデータ ドキュメントをダウンロードする
-Svcutil.exe を使用すると、実行中のサービスからメタデータをダウンロードして、ローカル ファイルに保存できます。 HTTP および HTTPS の URL スキームの場合、Svcutil.exe は、Ws-metadataexchange と[XML Web サービス探索](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/fxx6cfx2(v=vs.100))を使用してメタデータを取得しようとします。 その他の URL スキームの場合、Svcutil.exe は WS-MetadataExchange のみを使用します。  
+Svcutil.exe を使用すると、実行中のサービスからメタデータをダウンロードして、ローカル ファイルに保存できます。 HTTP および HTTPS の URL スキームの場合、Svcutil.exe は、Ws-metadataexchange と [XML Web サービス探索](/previous-versions/dotnet/netframework-4.0/fxx6cfx2(v=vs.100))を使用してメタデータを取得しようとします。 その他の URL スキームの場合、Svcutil.exe は WS-MetadataExchange のみを使用します。  
   
  既定で、Svcutil.exe は <xref:System.ServiceModel.Description.MetadataExchangeBindings> クラスに定義されているバインディングを使用します。 WS-MetadataExchange で使用するバインディングを構成するには、Svcutil.exe の構成ファイル (svcutil.exe.config) でクライアント エンドポイントを定義する必要があります。このとき、クライアント エンドポイントが `IMetadataExchange` コントラクトを使用し、メタデータ エンドポイントのアドレスの URI (Uniform Resource Identifier) スキームと同じ名前を持つように定義します。  
   

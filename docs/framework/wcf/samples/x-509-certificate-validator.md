@@ -2,12 +2,12 @@
 title: X.509 証明書検証
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: 32d99b93ef014967aa04bc70f73fbd2ebcfe2c60
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2d117dda8e6748407b6d58677ec55e4e8e4e4740
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594830"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554242"
 ---
 # <a name="x509-certificate-validator"></a>X.509 証明書検証
 
@@ -311,16 +311,16 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>サンプルを同じコンピューターで実行するには
 
-1. 管理者特権で、Visual Studio 2012 コマンドプロンプト内のサンプルのインストールフォルダーから、Setup.exe を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
+1. 管理者特権で開いた Visual Studio 2012 コマンドプロンプト内のサンプルのインストールフォルダーから Setup.bat を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
 
     > [!IMPORTANT]
-    > セットアップの .bat バッチファイルは、Visual Studio 2012 のコマンドプロンプトから実行するように設計されています。 Visual Studio 2012 のコマンドプロンプト内で設定された PATH 環境変数は、セットアップの .bat スクリプトで必要な実行可能ファイルが格納されているディレクトリを指します。
+    > Setup.bat バッチファイルは、Visual Studio 2012 のコマンドプロンプトから実行するように設計されています。 Visual Studio 2012 のコマンドプロンプト内で設定された PATH 環境変数は、Setup.bat スクリプトで必要な実行可能ファイルを含むディレクトリを指します。
 
 2. Service.exe を service\bin で起動します。
 
 3. Client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。
 
-4. クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。
+4. クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。
 
 #### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには
 
@@ -334,7 +334,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 
 5. サーバーで、 `setup.bat service` 管理者特権で開かれた Visual Studio の開発者コマンドプロンプトでを実行します。 引数を指定してを実行する `setup.bat` `service` と、コンピューターの完全修飾ドメイン名を使用してサービス証明書が作成され、service .cer という名前のファイルにエクスポートされます。
 
-6. サービスの .exe を編集して、新しい証明書名 (の属性) を反映します。 `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) これは、コンピューターの完全修飾ドメイン名と同じです。 また、要素のコンピューター名 \<service> / \<baseAddresses> を localhost からサービスコンピューターの完全修飾名に変更します。
+6. Service.exe.config を編集して、新しい証明書名 ( `findValue` の属性) を反映し [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) ます。これは、コンピューターの完全修飾ドメイン名と同じです。 また、要素のコンピューター名 \<service> / \<baseAddresses> を localhost からサービスコンピューターの完全修飾名に変更します。
 
 7. Service.cer ファイルを、サービス ディレクトリからクライアント コンピューターのクライアント ディレクトリにコピーします。
 
@@ -344,13 +344,13 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 
 10. Client.cer ファイルを、クライアント ディレクトリからサーバーのサービス ディレクトリにコピーします。
 
-11. クライアントで、管理者特権で開かれた Visual Studio の開発者コマンドプロンプトで Importservicecert.bat を実行します。 これにより、サービス証明書が Service.cer ファイルから CurrentUser - TrustedPeople ストアにインポートされます。
+11. クライアントで、管理者特権で開いた Visual Studio の開発者コマンドプロンプトで ImportServiceCert.bat を実行します。 これにより、サービス証明書が Service.cer ファイルから CurrentUser - TrustedPeople ストアにインポートされます。
 
-12. サーバーで、管理者特権で開かれた Visual Studio の開発者コマンドプロンプトで Importclientcert.bat を実行します。 これにより、クライアント証明書が Client.cer ファイルから LocalMachine - TrustedPeople ストアにインポートされます。
+12. サーバーで、管理者特権で開いた Visual Studio の開発者コマンドプロンプトで ImportClientCert.bat を実行します。 これにより、クライアント証明書が Client.cer ファイルから LocalMachine - TrustedPeople ストアにインポートされます。
 
 13. サーバー コンピューターで、コマンド プロンプト ウィンドウから Service.exe を起動します。
 
-14. クライアント コンピューターで、コマンド プロンプト ウィンドウから Client.exe を起動します。 クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。
+14. クライアント コンピューターで、コマンド プロンプト ウィンドウから Client.exe を起動します。 クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。
 
 #### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには
 

@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 6f60aae6-70ec-4c4c-963a-138df98c4668
 topic_type:
 - apiref
-ms.openlocfilehash: aef28af3eff6aba03003f156b9226b61a8e72d5b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 3149318a1dc20c96bccc9b81347192bfa2e4bfdf
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213752"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554828"
 ---
 # <a name="icordebugilframe4enumeratelocalvariablesex-method"></a>ICorDebugILFrame4::EnumerateLocalVariablesEx メソッド
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
@@ -35,13 +35,13 @@ HRESULT EnumerateLocalVariablesEx(
   
 ## <a name="parameters"></a>パラメーター  
  `flags`  
- からプロファイラー ReJIT インストルメンテーションに追加された変数がフレームに含まれるかどうかを指定する[Ilcodekind](ilcodekind-enumeration.md)列挙型のメンバー。  
+ からプロファイラー ReJIT インストルメンテーションに追加された変数がフレームに含まれるかどうかを指定する [Ilcodekind](ilcodekind-enumeration.md) 列挙型のメンバー。  
   
  `ppValueEnum`  
  入出力このフレーム内のローカル変数の列挙子である "テキスト" オブジェクトのアドレスへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- このメソッドは、 [EnumerateLocalVariables](icordebugilframe-enumeratelocalvariables-method.md)メソッドに似ていますが、プロファイラー rejit インストルメンテーションに追加された変数にオプションでアクセスする点が異なります。 をに設定すること `flags` `ILCODE_ORIGINAL_IL` は、 [EnumerateLocalVariables](icordebugilframe-enumeratelocalvariables-method.md)を呼び出した場合と同じです。 `flags` を `ILCODE_REJIT_IL` に設定することにより、デバッガは プロファイラー ReJIT インストルメンテーションに追加されるローカル変数にアクセスできるようになります。 中間言語 (IL) がインストルメント化されていない場合は、列挙子は空になり、メソッドは `S_OK` を返します。  
+ このメソッドは、 [EnumerateLocalVariables](icordebugilframe-enumeratelocalvariables-method.md) メソッドに似ていますが、プロファイラー rejit インストルメンテーションに追加された変数にオプションでアクセスする点が異なります。 をに設定すること `flags` `ILCODE_ORIGINAL_IL` は、 [EnumerateLocalVariables](icordebugilframe-enumeratelocalvariables-method.md)を呼び出した場合と同じです。 `flags` を `ILCODE_REJIT_IL` に設定することにより、デバッガは プロファイラー ReJIT インストルメンテーションに追加されるローカル変数にアクセスできるようになります。 中間言語 (IL) がインストルメント化されていない場合は、列挙子は空になり、メソッドは `S_OK` を返します。  
   
  実行中のメソッドにあるすべてのローカル変数が列挙子に含まれない場合がありますが、それは一部のローカル変数が非アクティブである可能性があるためです。  
   
@@ -58,4 +58,4 @@ HRESULT EnumerateLocalVariablesEx(
 
 - [ICorDebugILFrame4 インターフェイス](icordebugilframe4-interface.md)
 - [デバッグのインターフェイス](debugging-interfaces.md)
-- [ReJIT: ハウツーガイド](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT: ハウツーガイド](/archive/blogs/davbr/rejit-a-how-to-guide)

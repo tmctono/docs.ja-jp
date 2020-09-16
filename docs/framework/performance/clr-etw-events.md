@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
-ms.openlocfilehash: 22a2f027462d67d5a933972a7420c5f0e38353e5
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 4184b2b34c4503eaf4e9513a85e6c018f6de7366
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309834"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553819"
 ---
 # <a name="clr-etw-events"></a>CLR ETW イベント
 このセクションのトピックでは、Windows イベント トレーシング (ETW) イベントについて説明します。 各イベントは、キーワードとレベルに関連付けられています。詳細については、「[CLR ETW のキーワードとレベル](clr-etw-keywords-and-levels.md)」トピックを参照してください。 CLR には、イベントのプロバイダーが 2 つあります。  
@@ -62,7 +62,7 @@ ms.locfileid: "86309834"
   
 ## <a name="see-also"></a>関連項目
 
-- [ETW によりデバッグおよびパフォーマンス調整を改善する](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
+- [ETW によりデバッグおよびパフォーマンス調整を改善する](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
 - [.NET Framework のログ記録の制御](controlling-logging.md)
 - [CLR ETW プロバイダー](clr-etw-providers.md)
 - [CLR ETW キーワードおよびレベル](clr-etw-keywords-and-levels.md)

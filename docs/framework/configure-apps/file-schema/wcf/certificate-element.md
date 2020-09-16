@@ -2,12 +2,12 @@
 title: <certificate> 要素
 ms.date: 03/30/2017
 ms.assetid: 9b3d9233-ef35-477a-bf5d-efd1e80a52f4
-ms.openlocfilehash: e28e7d16073a56f3b6126439644bfff86c9af18b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c5fd156904ed30035991a8391c8f975da2a97ea7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400552"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554372"
 ---
 # <a name="certificate-element"></a>\<certificate> 要素
 ピアツーピア クライアントのメッセージの署名と暗号化に使用する X.509 証明書を指定します。  
@@ -47,14 +47,14 @@ ms.locfileid: "70400552"
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<peer>](peer-of-clientcredentials-element.md)|ピアツーピア クライアントの認証時に使用される資格情報を指定します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  この構成要素には、ピア メッシュ内の近隣ノードを認証するときに使用される X509Certificate2 インスタンスが格納されます。  
   
- ピアツーピアプログラミングの詳細については、「[ピアツーピアネットワーク](../../../wcf/feature-details/peer-to-peer-networking.md)」を参照してください。  
+ ピアツーピアプログラミングの詳細については、「 [ピアツーピアネットワーク](../../../wcf/feature-details/peer-to-peer-networking.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次のコードは、ピアツーピア シナリオで使用される証明書の検索方法を指定します。  
@@ -82,7 +82,7 @@ ms.locfileid: "70400552"
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateElement>
 - <xref:System.ServiceModel.Security.PeerCredential.Certificate%2A>
 - [証明書の使用](../../../wcf/feature-details/working-with-certificates.md)
-- [ピアツーピア ネットワーク](../../../wcf/feature-details/peer-to-peer-networking.md)
-- [ピア チャネル メッセージの認証](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [ピア チャネル カスタム認証](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [ピアツーピアネットワーク](../../../wcf/feature-details/peer-to-peer-networking.md)
+- [ピア チャネル メッセージの認証](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [ピア チャネル カスタム認証](/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [セキュリティによるピア チャネル アプリケーションの保護](../../../wcf/feature-details/securing-peer-channel-applications.md)

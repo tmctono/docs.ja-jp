@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4837d398-16a1-4e32-902c-022cd1aad3ca
 topic_type:
 - apiref
-ms.openlocfilehash: d328afcba9761f686dd38bdb2dd651994faaac2a
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: ea352b189d65e0be6a2bbc81c19a03d1edd8143d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841855"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554802"
 ---
 # <a name="ihosttaskmanagerreverseleaveruntime-method"></a>IHostTaskManager::ReverseLeaveRuntime メソッド
 コントロールが共通言語ランタイム (CLR) を離れていること、およびマネージコードから呼び出されたアンマネージ関数を入力していることをホストに通知します。  
@@ -35,7 +35,7 @@ HRESULT ReverseLeaveRuntime ();
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`ReverseLeaveRuntime`正常に返されました。|  
+|S_OK|`ReverseLeaveRuntime` 正常に返されました。|  
 |HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージドコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
 |HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
@@ -43,15 +43,15 @@ HRESULT ReverseLeaveRuntime ();
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_OUTOFMEMORY|要求されたリソース割り当てを完了するために必要なメモリが不足しています。|  
   
-## <a name="remarks"></a>コメント  
- CLR はを呼び出して、 `ReverseLeaveRuntime` 現在実行中のタスクがアンマネージ関数に制御を返していることをホストに通知します。これは、プラットフォーム呼び出しによってマネージコードから呼び出されたものです。 への各呼び出し `ReverseLeaveRuntime` は、対応する[ReverseEnterRuntime](ihosttaskmanager-reverseenterruntime-method.md)への呼び出しと一致します。  
+## <a name="remarks"></a>Remarks  
+ CLR はを呼び出して、 `ReverseLeaveRuntime` 現在実行中のタスクがアンマネージ関数に制御を返していることをホストに通知します。これは、プラットフォーム呼び出しによってマネージコードから呼び出されたものです。 への各呼び出し `ReverseLeaveRuntime` は、対応する [ReverseEnterRuntime](ihosttaskmanager-reverseenterruntime-method.md)への呼び出しと一致します。  
   
 ## <a name="requirements"></a>必要条件  
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
@@ -64,4 +64,4 @@ HRESULT ReverseLeaveRuntime ();
 - [IHostTask インターフェイス](ihosttask-interface.md)
 - [IHostTaskManager インターフェイス](ihosttaskmanager-interface.md)
 - [LeaveRuntime メソッド](ihosttaskmanager-leaveruntime-method.md)
-- [プラットフォーム呼び出しの詳細](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0h9e9t7d(v=vs.100))
+- [プラットフォーム呼び出しの詳細](/previous-versions/dotnet/netframework-4.0/0h9e9t7d(v=vs.100))

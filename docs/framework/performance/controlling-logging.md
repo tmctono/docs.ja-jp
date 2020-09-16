@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-ms.openlocfilehash: 45d9244eb11b914fd203f24057e1b65c6bef18c2
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: bce5ea41149dc3b19106031fae202872dd8a8fb5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309587"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553806"
 ---
 # <a name="controlling-net-framework-logging"></a>.NET Framework のログ記録の制御
 
@@ -18,7 +18,7 @@ Windows イベント トレーシング (ETW: Event Tracing for Windows) を使�
 
 - Windows オペレーティング システムに含まれる [Logman](/windows-server/administration/windows-commands/logman) および [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) コマンド ライン ツール。
 
-- [Windows Performance Toolkit](/windows-hardware/test/wpt/) の [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) ツール。 Xperf の詳細については、[Windows のパフォーマンスに関するブログ](https://docs.microsoft.com/archive/blogs/pigscanfly/)を参照してください。
+- [Windows Performance Toolkit](/windows-hardware/test/wpt/) の [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) ツール。 Xperf の詳細については、[Windows のパフォーマンスに関するブログ](/archive/blogs/pigscanfly/)を参照してください。
 
 CLR イベントの情報をキャプチャするには、コンピューターに CLR プロバイダーがインストールされている必要があります。 プロバイダーがインストールされているかどうかを確認するには、コマンド プロンプトで「`logman query providers`」と入力します。 プロバイダーの一覧が表示されます。 その一覧に、次のような CLR プロバイダーのエントリが含まれている必要があります。
 
@@ -50,7 +50,7 @@ Provider                                 GUID
 
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`
 
-     それぞれの文字について以下に説明します。
+     ここで、
 
     - `-p` パラメーターはプロバイダーの GUID を識別します。
 
