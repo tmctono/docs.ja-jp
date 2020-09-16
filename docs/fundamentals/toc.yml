@@ -147,127 +147,125 @@ items:
         href: ../core/whats-new/dotnet-core-2-0.md
       - name: .NET Standard の新機能
         href: ../standard/whats-new/whats-new-in-dotnet-standard.md
-  - name: 環境コンポーネントとランタイム コンポーネント
+  - name: ツールと診断
     items:
-      - name: ツールと生産性
+      - name: .NET Core SDK の概要
+        href: ../core/sdk.md
+      - name: .NET Core CLI
         items:
-          - name: .NET Core SDK の概要
-            href: ../core/sdk.md
-          - name: .NET Core CLI
+          - name: 概要
+            href: ../core/tools/index.md
+          - name: 関連項目
             items:
-              - name: 概要
-                href: ../core/tools/index.md
-              - name: 関連項目
+              - name: dotnet
+                href: ../core/tools/dotnet.md
+              - name: dotnet build
+                href: ../core/tools/dotnet-build.md
+              - name: dotnet build-server
+                href: ../core/tools/dotnet-build-server.md
+              - name: dotnet clean
+                href: ../core/tools/dotnet-clean.md
+              - name: dotnet help
+                href: ../core/tools/dotnet-help.md
+              - name: dotnet migrate
+                href: ../core/tools/dotnet-migrate.md
+              - name: dotnet msbuild
+                href: ../core/tools/dotnet-msbuild.md
+              - name: dotnet new
+                href: ../core/tools/dotnet-new.md
+              - name: dotnet nuget
                 items:
-                  - name: dotnet
-                    href: ../core/tools/dotnet.md
-                  - name: dotnet build
-                    href: ../core/tools/dotnet-build.md
-                  - name: dotnet build-server
-                    href: ../core/tools/dotnet-build-server.md
-                  - name: dotnet clean
-                    href: ../core/tools/dotnet-clean.md
-                  - name: dotnet help
-                    href: ../core/tools/dotnet-help.md
-                  - name: dotnet migrate
-                    href: ../core/tools/dotnet-migrate.md
-                  - name: dotnet msbuild
-                    href: ../core/tools/dotnet-msbuild.md
-                  - name: dotnet new
-                    href: ../core/tools/dotnet-new.md
-                  - name: dotnet nuget
-                    items:
-                      - name: dotnet nuget delete
-                        href: ../core/tools/dotnet-nuget-delete.md
-                      - name: dotnet nuget locals
-                        href: ../core/tools/dotnet-nuget-locals.md
-                      - name: dotnet nuget push
-                        href: ../core/tools/dotnet-nuget-push.md
-                      - name: dotnet nuget add source
-                        href: ../core/tools/dotnet-nuget-add-source.md
-                      - name: dotnet nuget disable source
-                        href: ../core/tools/dotnet-nuget-disable-source.md
-                      - name: dotnet nuget enable source
-                        href: ../core/tools/dotnet-nuget-enable-source.md
-                      - name: dotnet nuget list source
-                        href: ../core/tools/dotnet-nuget-list-source.md
-                      - name: dotnet nuget remove source
-                        href: ../core/tools/dotnet-nuget-remove-source.md
-                      - name: dotnet nuget update source
-                        href: ../core/tools/dotnet-nuget-update-source.md
-                  - name: dotnet pack
-                    href: ../core/tools/dotnet-pack.md
-                  - name: dotnet publish
-                    href: ../core/tools/dotnet-publish.md
-                  - name: dotnet restore
-                    href: ../core/tools/dotnet-restore.md
-                  - name: dotnet run
-                    href: ../core/tools/dotnet-run.md
-                  - name: dotnet sln
-                    href: ../core/tools/dotnet-sln.md
-                  - name: dotnet store
-                    href: ../core/tools/dotnet-store.md
-                  - name: dotnet test
-                    href: ../core/tools/dotnet-test.md
-                  - name: dotnet tool
-                    items:
-                      - name: dotnet tool install
-                        href: ../core/tools/dotnet-tool-install.md
-                      - name: dotnet tool list
-                        href: ../core/tools/dotnet-tool-list.md
-                      - name: dotnet tool restore
-                        href: ../core/tools/dotnet-tool-restore.md
-                      - name: dotnet tool run
-                        href: ../core/tools/dotnet-tool-run.md
-                      - name: dotnet tool uninstall
-                        href: ../core/tools/dotnet-tool-uninstall.md
-                      - name: dotnet tool update
-                        href: ../core/tools/dotnet-tool-update.md
-                  - name: dotnet vstest
-                    href: ../core/tools/dotnet-vstest.md
-                  - name: dotnet-install スクリプト
-                    href: ../core/tools/dotnet-install-script.md
-                  - name: プロジェクト参照のコマンド
-                    items:
-                      - name: dotnet add reference
-                        href: ../core/tools/dotnet-add-reference.md
-                      - name: dotnet list reference
-                        href: ../core/tools/dotnet-list-reference.md
-                      - name: dotnet remove reference
-                        href: ../core/tools/dotnet-remove-reference.md
-                  - name: プロジェクト パッケージのコマンド
-                    items:
-                      - name: dotnet add package
-                        href: ../core/tools/dotnet-add-package.md
-                      - name: dotnet list package
-                        href: ../core/tools/dotnet-list-package.md
-                      - name: dotnet remove package
-                        href: ../core/tools/dotnet-remove-package.md
-              - name: グローバル ツールとローカル ツール
+                  - name: dotnet nuget delete
+                    href: ../core/tools/dotnet-nuget-delete.md
+                  - name: dotnet nuget locals
+                    href: ../core/tools/dotnet-nuget-locals.md
+                  - name: dotnet nuget push
+                    href: ../core/tools/dotnet-nuget-push.md
+                  - name: dotnet nuget add source
+                    href: ../core/tools/dotnet-nuget-add-source.md
+                  - name: dotnet nuget disable source
+                    href: ../core/tools/dotnet-nuget-disable-source.md
+                  - name: dotnet nuget enable source
+                    href: ../core/tools/dotnet-nuget-enable-source.md
+                  - name: dotnet nuget list source
+                    href: ../core/tools/dotnet-nuget-list-source.md
+                  - name: dotnet nuget remove source
+                    href: ../core/tools/dotnet-nuget-remove-source.md
+                  - name: dotnet nuget update source
+                    href: ../core/tools/dotnet-nuget-update-source.md
+              - name: dotnet pack
+                href: ../core/tools/dotnet-pack.md
+              - name: dotnet publish
+                href: ../core/tools/dotnet-publish.md
+              - name: dotnet restore
+                href: ../core/tools/dotnet-restore.md
+              - name: dotnet run
+                href: ../core/tools/dotnet-run.md
+              - name: dotnet sln
+                href: ../core/tools/dotnet-sln.md
+              - name: dotnet store
+                href: ../core/tools/dotnet-store.md
+              - name: dotnet test
+                href: ../core/tools/dotnet-test.md
+              - name: dotnet tool
                 items:
-                  - name: ツールを管理する
-                    href: ../core/tools/global-tools.md
-                  - name: ツールのトラブルシューティング
-                    href: ../core/tools/troubleshoot-usage-issues.md
-                  - name: CLI のツールを作成する
-                    items:
-                      - name: 1 - ツールを作成する
-                        displayName: 'tools, tutorials, cli'
-                        href: ../core/tools/global-tools-how-to-create.md
-                      - name: 2 - グローバル ツールを使用する
-                        displayName: 'tools, tutorials, cli'
-                        href: ../core/tools/global-tools-how-to-use.md
-                      - name: 3 - ローカル ツールを使用する
-                        href: ../core/tools/local-tools-how-to-use.md
-                        displayName: 'tools, tutorials, cli'
-              - name: global.json の概要
-                href: ../core/tools/global-json.md
-              - name: 製品利用統計情報
-                href: ../core/tools/telemetry.md
-              - name: 昇格されたアクセス権
-                href: ../core/tools/elevated-access.md
-              - name: タブ補完を有効にする
-                href: ../core/tools/enable-tab-autocomplete.md
+                  - name: dotnet tool install
+                    href: ../core/tools/dotnet-tool-install.md
+                  - name: dotnet tool list
+                    href: ../core/tools/dotnet-tool-list.md
+                  - name: dotnet tool restore
+                    href: ../core/tools/dotnet-tool-restore.md
+                  - name: dotnet tool run
+                    href: ../core/tools/dotnet-tool-run.md
+                  - name: dotnet tool uninstall
+                    href: ../core/tools/dotnet-tool-uninstall.md
+                  - name: dotnet tool update
+                    href: ../core/tools/dotnet-tool-update.md
+              - name: dotnet vstest
+                href: ../core/tools/dotnet-vstest.md
+              - name: dotnet-install スクリプト
+                href: ../core/tools/dotnet-install-script.md
+              - name: プロジェクト参照のコマンド
+                items:
+                  - name: dotnet add reference
+                    href: ../core/tools/dotnet-add-reference.md
+                  - name: dotnet list reference
+                    href: ../core/tools/dotnet-list-reference.md
+                  - name: dotnet remove reference
+                    href: ../core/tools/dotnet-remove-reference.md
+              - name: プロジェクト パッケージのコマンド
+                items:
+                  - name: dotnet add package
+                    href: ../core/tools/dotnet-add-package.md
+                  - name: dotnet list package
+                    href: ../core/tools/dotnet-list-package.md
+                  - name: dotnet remove package
+                    href: ../core/tools/dotnet-remove-package.md
+          - name: グローバル ツールとローカル ツール
+            items:
+              - name: ツールを管理する
+                href: ../core/tools/global-tools.md
+              - name: ツールのトラブルシューティング
+                href: ../core/tools/troubleshoot-usage-issues.md
+              - name: CLI のツールを作成する
+                items:
+                  - name: 1 - ツールを作成する
+                    displayName: 'tools, tutorials, cli'
+                    href: ../core/tools/global-tools-how-to-create.md
+                  - name: 2 - グローバル ツールを使用する
+                    displayName: 'tools, tutorials, cli'
+                    href: ../core/tools/global-tools-how-to-use.md
+                  - name: 3 - ローカル ツールを使用する
+                    href: ../core/tools/local-tools-how-to-use.md
+                    displayName: 'tools, tutorials, cli'
+          - name: global.json の概要
+            href: ../core/tools/global-json.md
+          - name: 製品利用統計情報
+            href: ../core/tools/telemetry.md
+          - name: 昇格されたアクセス権
+            href: ../core/tools/elevated-access.md
+          - name: タブ補完を有効にする
+            href: ../core/tools/enable-tab-autocomplete.md
           - name: CLI との継続的インテグレーション
             href: ../core/tools/using-ci-with-cli.md
           - name: CLI を使用したライブラリの開発
@@ -285,151 +283,6 @@ items:
               - name: 3 - テンプレート パックを作成する
                 href: ../core/tutorials/cli-templates-create-template-pack.md
                 displayName: 'tutorials, cli'
-          - name: .NET Core の追加ツール
-            items:
-              - name: 概要
-                href: ../core/additional-tools/index.md
-              - name: .NET Core アンインストール ツール
-                href: ../core/additional-tools/uninstall-tool.md
-              - name: WCF Web サービス リファレンス プロバイダー
-                href: ../core/additional-tools/wcf-web-service-reference-guide.md
-              - name: dotnet-svcutil
-                href: ../core/additional-tools/dotnet-svcutil-guide.md
-              - name: dotnet-svcutil.xmlserializer
-                href: ../core/additional-tools/dotnet-svcutil.xmlserializer-guide.md
-              - name: XML シリアライザー ジェネレーター
-                href: ../core/additional-tools/xml-serializer-generator.md
-          - name: 診断ツール
-            items:
-              - name: 概要
-                href: ../core/diagnostics/index.md
-              - name: マネージド デバッガー
-                href: ../core/diagnostics/managed-debuggers.md
-              - name: Linux ダンプのデバッグ
-                href: ../core/diagnostics/debug-linux-dumps.md
-              - name: EventCounters
-                href: ../core/diagnostics/event-counters.md
-              - name: ログとトレース
-                href: ../core/diagnostics/logging-tracing.md
-              - name: .NET Core CLI グローバル ツール
-                items:
-                  - name: dotnet-カウンター
-                    href: ../core/diagnostics/dotnet-counters.md
-                  - name: dotnet-ダンプ
-                    href: ../core/diagnostics/dotnet-dump.md
-                  - name: dotnet-gcdump
-                    href: ../core/diagnostics/dotnet-gcdump.md
-                  - name: dotnet-トレース
-                    href: ../core/diagnostics/dotnet-trace.md
-                  - name: dotnet-symbol
-                    href: ../core/diagnostics/dotnet-symbol.md
-                  - name: dotnet-sos
-                    href: ../core/diagnostics/dotnet-sos.md
-              - name: .NET Core 診断チュートリアル
-                items:
-                  - name: EventCounters を使用してパフォーマンス メトリックを取得する
-                    href: ../core/diagnostics/event-counter-perf.md
-                  - name: メモリ リークをデバッグする
-                    href: ../core/diagnostics/debug-memory-leak.md
-                  - name: 高い CPU 使用率をデバッグする
-                    href: ../core/diagnostics/debug-highcpu.md
-                  - name: デッドロックをデバッグする
-                    href: ../core/diagnostics/debug-deadlock.md
-          - name: コード分析
-            items:
-              - name: 概要
-                href: productivity/code-analysis.md
-                displayName: 'code analysis, analyzers'
-              - name: ルールを構成する
-                href: productivity/configure-code-analysis-rules.md
-              - name: API アナライザー
-                href: ../standard/analyzers/api-analyzer.md
-              - name: 移植性アナライザー
-                href: ../standard/analyzers/portability-analyzer.md
-      - name: 実行モデル
-        items:
-          - name: 共通言語ランタイム (CLR)
-            href: ../standard/clr.md
-          - name: マネージ実行プロセス
-            href: ../standard/managed-execution-process.md
-          - name: .NET のアセンブリ
-            href: ../standard/assembly/
-          - name: メタデータと自己言及的なコンポーネント
-            href: ../standard/metadata-and-self-describing-components.md
-          - name: 依存関係の読み込み
-            items:
-              - name: 依存関係の読み込み
-                href: ../core/dependency-loading/overview.md
-              - name: AssemblyLoadContext について
-                href: ../core/dependency-loading/understanding-assemblyloadcontext.md
-              - name: 依存関係の読み込みの詳細
-                items:
-                  - name: 既定の依存関係プローブ
-                    href: ../core/dependency-loading/default-probing.md
-                  - name: マネージド アセンブリを読み込む
-                    href: ../core/dependency-loading/loading-managed.md
-                  - name: サテライト アセンブリを読み込む
-                    href: ../core/dependency-loading/loading-resources.md
-                  - name: アンマネージド ライブラリを読み込む
-                    href: ../core/dependency-loading/loading-unmanaged.md
-              - name: チュートリアル
-                items:
-                  - name: プラグインがある .NET Core アプリケーションを作成する
-                    href: ../core/tutorials/creating-app-with-plugin-support.md
-                  - name: .NET Core でアセンブリのアンローダビリティを使用およびデバッグする方法
-                    href: ../core/../standard/assembly/unloadability.md
-          - name: バージョン管理
-            items:
-              - name: 概要
-                href: ../core/versions/index.md
-              - name: .NET Core のバージョンの選択
-                href: ../core/versions/selection.md
-          - name: ランタイム構成
-            items:
-              - name: 設定
-                href: ../core/run-time-config/index.md
-              - name: コンパイル設定
-                href: ../core/run-time-config/compilation.md
-              - name: 設定のデバッグとプロファイリング
-                href: ../core/run-time-config/debugging-profiling.md
-              - name: ガベージ コレクター設定
-                href: ../core/run-time-config/garbage-collector.md
-              - name: グローバリゼーションの設定
-                href: ../core/run-time-config/globalization.md
-              - name: ネットワークの設定
-                href: ../core/run-time-config/networking.md
-              - name: スレッドの設定
-                href: ../core/run-time-config/threading.md
-      - name: デプロイ モデル
-        items:
-          - name: 概要
-            href: ../core/deploying/index.md
-          - name: Visual Studio を使用したアプリの展開
-            href: ../core/deploying/deploy-with-vs.md
-          - name: CLI を使用してアプリを発行する
-            href: ../core/deploying/deploy-with-cli.md
-          - name: CLI を使用して NuGet パッケージを作成する
-            href: ../core/deploying/creating-nuget-packages.md
-          - name: 自己完結型展開ランタイムのロール フォワード
-            href: ../core/deploying/runtime-patch-selection.md
-          - name: 単一ファイルの配置と実行可能ファイル
-            href: ../core/deploying/single-file.md
-          - name: 自己完結型の展開と実行可能ファイルのトリミング
-            href: ../core/deploying/trim-self-contained.md
-          - name: ランタイム パッケージ ストア
-            href: ../core/deploying/runtime-store.md
-          - name: ランタイム識別子 (RID) のカタログ
-            href: ../core/rid-catalog.md
-          - name: リソース マニフェスト名
-            href: ../core/resources/manifest-file-names.md
-          - name: Docker
-            items:
-              - name: .NET および Docker の概要
-                href: ../core/docker/introduction.md
-              - name: NET Core アプリのコンテナー化
-                href: ../core/docker/build-container.md
-              - name: Visual Studio のコンテナー ツール
-                href: /visualstudio/containers/overview
       - name: MSBuild とプロジェクト ファイル
         items:
           - name: プロジェクト SDK
@@ -450,6 +303,151 @@ items:
             href: ../core/tools/csproj.md
           - name: 依存関係管理
             href: ../core/tools/dependencies.md
+      - name: .NET Core の追加ツール
+        items:
+          - name: 概要
+            href: ../core/additional-tools/index.md
+          - name: .NET Core アンインストール ツール
+            href: ../core/additional-tools/uninstall-tool.md
+          - name: WCF Web サービス リファレンス プロバイダー
+            href: ../core/additional-tools/wcf-web-service-reference-guide.md
+          - name: dotnet-svcutil
+            href: ../core/additional-tools/dotnet-svcutil-guide.md
+          - name: dotnet-svcutil.xmlserializer
+            href: ../core/additional-tools/dotnet-svcutil.xmlserializer-guide.md
+          - name: XML シリアライザー ジェネレーター
+            href: ../core/additional-tools/xml-serializer-generator.md
+      - name: 診断ツール
+        items:
+          - name: 概要
+            href: ../core/diagnostics/index.md
+          - name: マネージド デバッガー
+            href: ../core/diagnostics/managed-debuggers.md
+          - name: Linux ダンプのデバッグ
+            href: ../core/diagnostics/debug-linux-dumps.md
+          - name: EventCounters
+            href: ../core/diagnostics/event-counters.md
+          - name: ログとトレース
+            href: ../core/diagnostics/logging-tracing.md
+          - name: .NET Core CLI グローバル ツール
+            items:
+              - name: dotnet-カウンター
+                href: ../core/diagnostics/dotnet-counters.md
+              - name: dotnet-ダンプ
+                href: ../core/diagnostics/dotnet-dump.md
+              - name: dotnet-gcdump
+                href: ../core/diagnostics/dotnet-gcdump.md
+              - name: dotnet-トレース
+                href: ../core/diagnostics/dotnet-trace.md
+              - name: dotnet-symbol
+                href: ../core/diagnostics/dotnet-symbol.md
+              - name: dotnet-sos
+                href: ../core/diagnostics/dotnet-sos.md
+          - name: .NET Core 診断チュートリアル
+            items:
+              - name: EventCounters を使用してパフォーマンス メトリックを取得する
+                href: ../core/diagnostics/event-counter-perf.md
+              - name: メモリ リークをデバッグする
+                href: ../core/diagnostics/debug-memory-leak.md
+              - name: 高い CPU 使用率をデバッグする
+                href: ../core/diagnostics/debug-highcpu.md
+              - name: デッドロックをデバッグする
+                href: ../core/diagnostics/debug-deadlock.md
+      - name: コード分析
+        items:
+          - name: 概要
+            href: productivity/code-analysis.md
+            displayName: 'code analysis, analyzers'
+          - name: ルールを構成する
+            href: productivity/configure-code-analysis-rules.md
+          - name: API アナライザー
+            href: ../standard/analyzers/api-analyzer.md
+          - name: 移植性アナライザー
+            href: ../standard/analyzers/portability-analyzer.md
+  - name: 実行モデル
+    items:
+      - name: 共通言語ランタイム (CLR)
+        href: ../standard/clr.md
+      - name: マネージ実行プロセス
+        href: ../standard/managed-execution-process.md
+      - name: .NET のアセンブリ
+        href: ../standard/assembly/
+      - name: メタデータと自己言及的なコンポーネント
+        href: ../standard/metadata-and-self-describing-components.md
+      - name: 依存関係の読み込み
+        items:
+          - name: 依存関係の読み込み
+            href: ../core/dependency-loading/overview.md
+          - name: AssemblyLoadContext について
+            href: ../core/dependency-loading/understanding-assemblyloadcontext.md
+          - name: 依存関係の読み込みの詳細
+            items:
+              - name: 既定の依存関係プローブ
+                href: ../core/dependency-loading/default-probing.md
+              - name: マネージド アセンブリを読み込む
+                href: ../core/dependency-loading/loading-managed.md
+              - name: サテライト アセンブリを読み込む
+                href: ../core/dependency-loading/loading-resources.md
+              - name: アンマネージド ライブラリを読み込む
+                href: ../core/dependency-loading/loading-unmanaged.md
+          - name: チュートリアル
+            items:
+              - name: プラグインがある .NET Core アプリケーションを作成する
+                href: ../core/tutorials/creating-app-with-plugin-support.md
+              - name: .NET Core でアセンブリのアンローダビリティを使用およびデバッグする方法
+                href: ../core/../standard/assembly/unloadability.md
+      - name: バージョン管理
+        items:
+          - name: 概要
+            href: ../core/versions/index.md
+          - name: .NET Core のバージョンの選択
+            href: ../core/versions/selection.md
+      - name: ランタイム構成
+        items:
+          - name: 設定
+            href: ../core/run-time-config/index.md
+          - name: コンパイル設定
+            href: ../core/run-time-config/compilation.md
+          - name: 設定のデバッグとプロファイリング
+            href: ../core/run-time-config/debugging-profiling.md
+          - name: ガベージ コレクター設定
+            href: ../core/run-time-config/garbage-collector.md
+          - name: グローバリゼーションの設定
+            href: ../core/run-time-config/globalization.md
+          - name: ネットワークの設定
+            href: ../core/run-time-config/networking.md
+          - name: スレッドの設定
+            href: ../core/run-time-config/threading.md
+  - name: デプロイ モデル
+    items:
+      - name: 概要
+        href: ../core/deploying/index.md
+      - name: Visual Studio を使用したアプリの展開
+        href: ../core/deploying/deploy-with-vs.md
+      - name: CLI を使用してアプリを発行する
+        href: ../core/deploying/deploy-with-cli.md
+      - name: CLI を使用して NuGet パッケージを作成する
+        href: ../core/deploying/creating-nuget-packages.md
+      - name: 自己完結型展開ランタイムのロール フォワード
+        href: ../core/deploying/runtime-patch-selection.md
+      - name: 単一ファイルの配置と実行可能ファイル
+        href: ../core/deploying/single-file.md
+      - name: 自己完結型の展開と実行可能ファイルのトリミング
+        href: ../core/deploying/trim-self-contained.md
+      - name: ランタイム パッケージ ストア
+        href: ../core/deploying/runtime-store.md
+      - name: ランタイム識別子 (RID) のカタログ
+        href: ../core/rid-catalog.md
+      - name: リソース マニフェスト名
+        href: ../core/resources/manifest-file-names.md
+      - name: Docker
+        items:
+          - name: .NET および Docker の概要
+            href: ../core/docker/introduction.md
+          - name: NET Core アプリのコンテナー化
+            href: ../core/docker/build-container.md
+          - name: Visual Studio のコンテナー ツール
+            href: /visualstudio/containers/overview
   - name: 基本的なコーディング コンポーネント
     items:
       - name: 基本データ型の概要
@@ -1075,7 +1073,7 @@ items:
         href: ../core/testing/unit-testing-published-output.md
       - name: Visual Studio での .NET Core プロジェクトのライブ単体テスト
         href: /visualstudio/test/live-unit-testing-start
-  - name: Security
+  - name: セキュリティ
     href: ../standard/security/
   - name: 高度なトピック
     items:
