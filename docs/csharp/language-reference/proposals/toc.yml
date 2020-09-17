@@ -100,7 +100,7 @@
           href: ../../../../_csharplang/proposals/csharp-9.0/extending-partial-methods.md
         - name: 静的な匿名関数
           href: ../../../../_csharplang/proposals/csharp-9.0/static-anonymous-functions.md
-        - name: ターゲット型の条件式
+        - name: ターゲットにより型指定された条件式
           href: ../../../../_csharplang/proposals/csharp-9.0/target-typed-conditional-expression.md
         - name: 共変の戻り値の型
           href: ../../../../_csharplang/proposals/csharp-9.0/covariant-returns.md
