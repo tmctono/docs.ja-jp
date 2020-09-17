@@ -2,12 +2,12 @@
 title: クエリ式
 description: 'F # プログラミング言語における LINQ のクエリ式のサポートについて説明します。'
 ms.date: 08/15/2020
-ms.openlocfilehash: afcc6e92818b1648a210ad9cfc3f1dcfa46037b5
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: b2380bbc448aca06a40896582f3d4e7f701c6184
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559064"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720479"
 ---
 # <a name="query-expressions"></a>クエリ式
 
@@ -45,7 +45,7 @@ query1
 
 前のコード例では、クエリ式は中かっこで囲まれています。 式のコードの意味はで、クエリ結果のデータベースの Customers テーブルにあるすべての顧客を返します。 クエリ式は、とを実装する型を返し <xref:System.Linq.IQueryable%601> <xref:System.Collections.Generic.IEnumerable%601> ます。このため、例に示すように、 [Seq モジュール](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html) を使用して反復処理できます。
 
-すべてのコンピュテーション式の型は、ビルダークラスから構築されます。 クエリ計算式のビルダークラスは `QueryBuilder` です。 詳細については、「 [コンピュテーション式](computation-expressions.md) 」および「 [ビルダークラス](hhttps://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html)」を参照してください。
+すべてのコンピュテーション式の型は、ビルダークラスから構築されます。 クエリ計算式のビルダークラスは `QueryBuilder` です。 詳細については、「 [コンピュテーション式](computation-expressions.md) 」および「 [ビルダークラス](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html)」を参照してください。
 
 ## <a name="query-operators"></a>クエリ演算子
 

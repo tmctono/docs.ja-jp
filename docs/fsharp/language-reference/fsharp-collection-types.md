@@ -2,36 +2,36 @@
 title: コレクション型
 description: 'F # コレクション型と、それらがコレクション型 .NET とどのように異なるかについて説明します。'
 ms.date: 08/14/2020
-ms.openlocfilehash: 394f6bbaf58e7e8607abc3a0c20bbc2b1c9c3c8d
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 0b5be8f656d6728fe382b1944bda0a410a94d226
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656906"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720336"
 ---
-# <a name="f-collection-types"></a>F# コレクション型
+# <a name="f-collection-types"></a>F # コレクション型
 
 このトピックを確認することで、特定のニーズに最も適した F # コレクション型を特定できます。 これらのコレクション型は、.NET のコレクション型 (名前空間など) とは異なり `System.Collections.Generic` ます。 F # コレクション型は、オブジェクト指向の観点ではなく関数型プログラミングの観点から設計されています。 具体的には、配列コレクションのみに変更可能な要素があります。 したがって、コレクションを変更する場合は、元のコレクションを変更するのではなく、変更されたコレクションのインスタンスを作成します。
 
 また、コレクション型は、オブジェクトが格納されているデータ構造の型によって異なります。 ハッシュテーブル、リンクリスト、配列などのデータ構造のパフォーマンス特性と使用可能な操作のセットは異なります。
 
-## <a name="f-collection-types"></a>F# コレクション型
+## <a name="table-of-collection-types"></a>コレクション型の表
 
 F # のコレクション型を次の表に示します。
 
 |Type|説明|関連リンク|
 |----|-----------|-------------|
 |[一覧](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharplist-1.html)|同じ型の順序付けられ、変更できない一連の要素。 リンクリストとして実装されます。|[リスト](lists.md)<br /><br />[List モジュール](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html)|
-|[Array](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-array-1.html)|同じ型の連続するデータ要素の、固定サイズの、0から始まる変更可能なコレクション。|[配列](arrays.md)<br /><br />[Array モジュール](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html)<br /><br />[Array2D モジュール](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array2dmodule.html)<br /><br />[Array3D モジュール](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array3dmodule.html)|
+|[配列](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-array-1.html)|同じ型の連続するデータ要素の、固定サイズの、0から始まる変更可能なコレクション。|[配列](arrays.md)<br /><br />[Array モジュール](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html)<br /><br />[Array2D モジュール](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array2dmodule.html)<br /><br />[Array3D モジュール](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array3dmodule.html)|
 |[seq](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seq-1.html)|すべてが1つの型である、要素の論理系列。 シーケンスは、大量の順序付けられたデータのコレクションがあり、必ずしもすべての要素を使用するとは限らない場合に特に便利です。 個々のシーケンス要素は必要に応じてのみ計算されるので、すべての要素が使用されていない場合、シーケンスはリストよりもパフォーマンスが向上します。 シーケンスは、のエイリアスである型によって表され `seq<'T>` `IEnumerable<T>` ます。 したがって、を実装するすべての .NET Framework 型を `System.Collections.Generic.IEnumerable<'T>` シーケンスとして使用できます。|[シーケンス](sequences.md)<br /><br />[Seq モジュール](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html)|
 |[Map](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharpmap-2.html)|要素の変更できないディクショナリ。 要素は、キーによってアクセスされます。|[マップモジュール](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-mapmodule.html)|
 |[SET](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharpset-1.html)|バイナリツリーに基づく変更できないセット。比較は F # の構造的な比較関数であり、 `System.IComparable` キー値に対するインターフェイスの実装を使用する可能性があります。|[モジュールの設定](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-setmodule.html)|
 
 ### <a name="table-of-functions"></a>関数の表
 
-このセクションでは、F # コレクション型で使用できる関数を比較します。 関数の計算の複雑さが与えられます。ここで、N は最初のコレクションのサイズ、M は2番目のコレクションのサイズ (存在する場合) です。 ダッシュ (-) は、この関数がコレクションで使用できないことを示します。 シーケンスは遅延評価されるため、Seq などの関数は、すぐに制御を返すため、O (1) にすることができますが、列挙された場合でもシーケンスのパフォーマンスに影響します。
+このセクションでは、F # コレクション型で使用できる関数を比較します。 関数の計算の複雑さが与えられます。ここで、N は最初のコレクションのサイズ、M は2番目のコレクションのサイズ (存在する場合) です。 ダッシュ (-) は、この関数がコレクションで使用できないことを示します。 シーケンスは遅延評価されるので、のような関数は `Seq.distinct` 直ちに返されるため、O (1) になることがありますが、列挙された場合でもシーケンスのパフォーマンスに影響します。
 
-|機能|Array|List|シーケンス|マップ|オン|説明|
+|機能|Array|List|シーケンス|マップ|設定|説明|
 |--------|-----|----|--------|---|---|-----------|
 |append|O (N)|O (N)|O (N)|-|-|最初のコレクションの要素の後に2番目のコレクションの要素を含む新しいコレクションを返します。|
 |add|-|-|-|O (log (N))|O (log (N))|要素が追加された新しいコレクションを返します。|
@@ -44,7 +44,7 @@ F # のコレクション型を次の表に示します。
 |collect|O (N)|O (N)|O (N)|-|-|指定された関数をコレクションの各要素に適用し、すべての結果を連結して、結合されたリストを返します。|
 |Seq.comparewith|-|-|O (N)|-|-|指定された比較関数を要素ごとに使用して、2つのシーケンスを比較します。|
 |concat|O (N)|O (N)|O (N)|-|-|指定した列挙体の列挙体を1つの連結された列挙体として結合します。|
-|contains|-|-|-|-|O (log (N))|指定した要素がセットに含まれている場合に true を返します。|
+|次の値を含む|-|-|-|-|O (log (N))|指定した要素がセットに含まれている場合に true を返します。|
 |containsKey|-|-|-|O (log (N))|-|要素がマップのドメイン内にあるかどうかをテストします。|
 |count|-|-|-|-|O (N)|セット内の要素数を返します。|
 |countBy|-|-|O (N)|-|-|シーケンスの各要素にキー生成関数を適用し、元のシーケンスで一意のキーとその出現回数を生成するシーケンスを返します。|
@@ -90,11 +90,11 @@ F # のコレクション型を次の表に示します。
 |list.map3|-|O (N)|-|-|-|指定された関数を3つのコレクションの対応する要素に同時に適用した結果として得られる要素を含むコレクションを構築します。|
 |経由|O (N)|O (N)|O (N)|-|-|指定された関数を配列の各要素に適用した結果として得られる要素を持つ配列を構築します。 関数に渡される整数インデックスは、変換される要素のインデックスを示します。|
 |array.mapi2|O (N)|O (N)|-|-|-|指定された関数を2つのコレクションの対応する要素に適用した結果を要素として持つコレクションを構築します。また、要素のインデックスも渡します。 2つの入力配列の長さは同じである必要があります。|
-|max|O (N)|O (N)|O (N)|-|-|[Max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce)演算子を使用した場合と比較して、コレクション内の最大の要素を返します。|
-|maxBy|O (N)|O (N)|O (N)|-|-|関数の結果に対して [max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) を使用することにより、コレクション内の最大の要素を返します。|
+|max|O (N)|O (N)|O (N)|-|-|[Max](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#max)演算子を使用した場合と比較して、コレクション内の最大の要素を返します。|
+|maxBy|O (N)|O (N)|O (N)|-|-|関数の結果に対して [max](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#max) を使用することにより、コレクション内の最大の要素を返します。|
 |Set.maxelement|-|-|-|-|O (log (N))|セットで使用されている順序に従って、セット内の最大の要素を返します。|
-|min|O (N)|O (N)|O (N)|-|-|[Min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed)演算子を使用した場合と比較して、コレクション内の最小の要素を返します。|
-|Array.minby|O (N)|O (N)|O (N)|-|-|関数の結果に対して [min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) 演算子を使用することにより、コレクション内の最小の要素を返します。|
+|分|O (N)|O (N)|O (N)|-|-|[Min](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#min)演算子を使用した場合と比較して、コレクション内の最小の要素を返します。|
+|Array.minby|O (N)|O (N)|O (N)|-|-|関数の結果に対して [min](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#min) 演算子を使用することにより、コレクション内の最小の要素を返します。|
 |Set.minelement|-|-|-|-|O (log (N))|セットで使用されている順序に従って、セット内の最も小さい要素を返します。|
 |List.ofarray|-|O (N)|O(1)|O (N)|O (N)|指定された配列と同じ要素を含むコレクションを作成します。|
 |Array.oflist|O (N)|-|O(1)|O (N)|O (N)|指定されたリストと同じ要素を含むコレクションを作成します。|
@@ -115,10 +115,10 @@ F # のコレクション型を次の表に示します。
 |set|O(1)|-|-|-|-|配列の要素を指定された値に設定します。|
 |skip|-|-|O (N)|-|-|基になるシーケンスの N 個の要素をスキップし、シーケンスの残りの要素を生成するシーケンスを返します。|
 |skipWhile|-|-|O (N)|-|-|反復処理時に、指定された述語がを返したときに、基になるシーケンスの要素をスキップし、シーケンスの残りの要素を生成するシーケンスを返し `true` ます。|
-|sort|O (N \* ログ (n)) 平均<br /><br />O (N ^ 2) 最悪のケース|O (N \* ログ (n))|O (N \* ログ (n))|-|-|要素の値でコレクションを並べ替えます。 要素は [比較](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)を使用して比較されます。|
-|sortBy|O (N \* ログ (n)) 平均<br /><br />O (N ^ 2) 最悪のケース|O (N \* ログ (n))|O (N \* ログ (n))|-|-|指定されたプロジェクションによって提供されるキーを使用して、指定されたリストを並べ替えます。 キーは [比較](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)を使用して比較されます。|
-|Array.sortinplace|O (N \* ログ (n)) 平均<br /><br />O (N ^ 2) 最悪のケース|-|-|-|-|位置を変更し、指定された比較関数を使用して、配列の要素を並べ替えます。 要素の比較には、 [compare](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)を使用します。|
-|Array.sortinplaceby|O (N \* ログ (n)) 平均<br /><br />O (N ^ 2) 最悪のケース|-|-|-|-|位置を変更し、キーに対して指定された射影を使用して、配列の要素を並べ替えます。 要素の比較には、 [compare](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)を使用します。|
+|sort|O (N \* ログ (n)) 平均<br /><br />O (N ^ 2) 最悪のケース|O (N \* ログ (n))|O (N \* ログ (n))|-|-|要素の値でコレクションを並べ替えます。 要素は [比較](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#compare)を使用して比較されます。|
+|sortBy|O (N \* ログ (n)) 平均<br /><br />O (N ^ 2) 最悪のケース|O (N \* ログ (n))|O (N \* ログ (n))|-|-|指定されたプロジェクションによって提供されるキーを使用して、指定されたリストを並べ替えます。 キーは [比較](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#compare)を使用して比較されます。|
+|Array.sortinplace|O (N \* ログ (n)) 平均<br /><br />O (N ^ 2) 最悪のケース|-|-|-|-|位置を変更し、指定された比較関数を使用して、配列の要素を並べ替えます。 要素の比較には、 [compare](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#compare)を使用します。|
+|Array.sortinplaceby|O (N \* ログ (n)) 平均<br /><br />O (N ^ 2) 最悪のケース|-|-|-|-|位置を変更し、キーに対して指定された射影を使用して、配列の要素を並べ替えます。 要素の比較には、 [compare](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#compare)を使用します。|
 |Array.sortinplacewith|O (N \* ログ (n)) 平均<br /><br />O (N ^ 2) 最悪のケース|-|-|-|-|位置を変更し、指定された比較関数を順序として使用して、配列の要素を並べ替えます。|
 |List.sortwith|O (N \* ログ (n)) 平均<br /><br />O (N ^ 2) 最悪のケース|O (N \* ログ (n))|-|-|-|指定された比較関数を順序として使用し、新しいコレクションを返すコレクションの要素を並べ替えます。|
 |sub|O (N)|-|-|-|-|開始インデックスと長さによって指定された指定されたサブ範囲を含む配列を構築します。|

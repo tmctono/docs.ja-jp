@@ -2,12 +2,12 @@
 title: 非同期ワークフロー
 description: 'F # プログラミング言語でのサポートについて説明します。これは、他の作業の実行をブロックすることなく実行される計算を非同期に実行します。'
 ms.date: 08/15/2020
-ms.openlocfilehash: ac727fc630f13db01da964131ab39dc242a12cd1
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 14146cc8a643f31831475075212cc06da5f8d6ff
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557712"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720271"
 ---
 # <a name="asynchronous-workflows"></a>非同期ワークフロー
 
@@ -44,7 +44,7 @@ let! (result2 : byte[])  = stream.AsyncRead(bufferSize)
 
 1つの非同期タスクを実行し、その結果を返すメソッドは、 *非同期プリミティブ*と呼ばれ、専用に設計されてい `let!` ます。 いくつかの非同期プリミティブは、F # コアライブラリで定義されています。 このような Web アプリケーションの2つのメソッドは、モジュールで定義されて [`FSharp.Control.WebExtensions`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-webextensions.html) [`WebRequest.AsyncGetResponse`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-webextensions.html#AsyncGetResponse) [`WebClient.AsyncDownloadString`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-webextensions.html#AsyncDownloadString) います。 どちらのプリミティブも、URL を指定して Web ページからデータをダウンロードします。 `AsyncGetResponse` オブジェクトを生成 `System.Net.WebResponse` し、 `AsyncDownloadString` Web ページの HTML を表す文字列を生成します。
 
-非同期 i/o 操作のためのいくつかのプリミティブは、モジュールに含まれてい [`FSharp.Control.CommonExtensions`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html) ます。 クラスの拡張メソッド `System.IO.Stream` は [`Stream.AsyncRead`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html#AsyncRead) 、と [`Stream.AsyncWrite`](hhttps://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html#AsyncWrite) です。
+非同期 i/o 操作のためのいくつかのプリミティブは、モジュールに含まれてい [`FSharp.Control.CommonExtensions`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html) ます。 クラスの拡張メソッド `System.IO.Stream` は [`Stream.AsyncRead`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html#AsyncRead) 、と [`Stream.AsyncWrite`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html#AsyncWrite) です。
 
 また、完全な本文が非同期ブロックで囲まれた関数を定義することで、独自の非同期プリミティブを作成することもできます。
 
@@ -66,4 +66,4 @@ F # の非同期プログラミングモデルを使用して他の非同期モ�
 
 - [F# 言語リファレンス](index.md)
 - [コンピュテーション式](computation-expressions.md)
-- [Control. Async クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.async-class-%5bfsharp%5d)
+- [Control. Async クラス](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html)

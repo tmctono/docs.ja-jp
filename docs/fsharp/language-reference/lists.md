@@ -2,12 +2,12 @@
 title: リスト
 description: 'F # のリストについて説明します。同じ型の順序付けられ、変更できない一連の要素です。'
 ms.date: 08/13/2020
-ms.openlocfilehash: 16d7195039d25cf63630f5cc3be6563b1bf45c44
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 567731eb57b77d60d3dd847630d5676e8d047d09
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559168"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720349"
 ---
 # <a name="lists"></a>リスト
 
@@ -55,13 +55,13 @@ F# のリストは変更できないため、変更操作を行うと、既存�
 
 F # のリストは、シングルリンクリストとして実装されます。これは、リストの先頭にのみアクセスする操作が O (1) であり、要素アクセスが O (*n*) であることを意味します。
 
-## <a name="properties"></a>プロパティ
+## <a name="properties"></a>Properties
 
 リスト型では次のプロパティがサポートされています。
 
 |プロパティ|Type|説明|
 |--------|----|-----------|
-|[矢印](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#Head)|`'T`|1 番目の要素。|
+|[Head](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#Head)|`'T`|1 番目の要素。|
 |[空](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#Empty)|`'T list`|該当する型の空のリストを返す静的プロパティ。|
 |[IsEmpty](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#IsEmpty)|`bool`|リストに要素がない場合は `true` です。|
 |[Item](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#Item)|`'T`|指定したインデックスの要素 (起点を 0 とする)。|
@@ -233,13 +233,13 @@ Sum や average などの一般的な算術演算は、 [List モジュール](h
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet11.fs)]
 
-出力は `1.000000`になります。
+出力は `1.000000` になります。
 
 `List.averageBy` の使用方法を次のコードに示します。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet12.fs)]
 
-出力は `5.5`になります。
+出力は `5.5` になります。
 
 ### <a name="lists-and-tuples"></a>リストとタプル
 
@@ -265,7 +265,7 @@ Sum や average などの一般的な算術演算は、 [List モジュール](h
 
 対応する unzip のバージョン、array.unzip3、および[リスト](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#unzip3)は、組内の組と戻り値[のリストを](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#unzip)取得します。最初のリストには各組の最初の要素が含まれ、2番目のリストには各組の2番目の要素が含まれます。
 
-次のコード例は、 [unzip](https://msdn.microsoft.com/library/639db80c-41b5-45bb-a6b4-1eaa04d61d21)の使用方法を示しています。
+次のコード例は、 [unzip](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#unzip)の使用方法を示しています。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet15.fs)]
 
@@ -276,7 +276,7 @@ Sum や average などの一般的な算術演算は、 [List モジュール](h
 [1; 3] [2; 4]
 ```
 
-次のコード例は、 [array.unzip3](https://msdn.microsoft.com/library/43078c77-32ec-4342-85b3-c31ccf984db4)の使用方法を示しています。
+次のコード例は、 [array.unzip3](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#unzip3)の使用方法を示しています。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet16.fs)]
 

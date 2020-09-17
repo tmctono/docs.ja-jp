@@ -2,16 +2,16 @@
 title: Web サービスプロトコルの相互運用性ガイド
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: 4169a796311c402a97358de5d52c52562b6ed357
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f35ca629da65af749897d28d28808d06eced7aa8
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553175"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720115"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web サービスプロトコルの相互運用性ガイド
 
-Windows Communication Foundation (WCF) は、多くの Web サービスプロトコルを実装します。 これらのプロトコルの多くには、さまざまなオプションと拡張ポイントが用意されており、それらの実装は実装者の裁量に任されています。 このトピックでは、WCF が実装する Web サービスプロトコルの一覧を示します。 サポートされる各プロトコルの実装の詳細については、このセクションの他のトピックで説明します。
+Windows Communication Foundation (WCF) は、多くの Web サービスプロトコルを実装します。 これらのプロトコルの多くには、さまざまなオプションと拡張ポイントが用意されており、それらの実装は実装者の裁量に任されています。 この記事では、WCF が実装する Web サービスプロトコルの一覧を示します。 このセクション内の他の記事では、サポートされている各プロトコルの実装の詳細について説明します。
 
 ## <a name="web-services-protocols-implemented-by-wcf"></a>WCF によって実装された Web サービスプロトコル
 
@@ -64,9 +64,9 @@ WCF では、コントラクト機能を通じて、チャネルと Web サー�
 |WSS: X509 Token Profile 1.1|[Web Services Security X.509 Certificate Token Profile 1.1](https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf)|
 |WSS: Kerberos Token Profile 1.1|[Web Services Security Kerberos Token Profile 1.1](https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf)|
 |WSS: SAML 1.1 Token Profile 1.1|[Web Services Security SAML Token Profile 1.1](https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf)|
-|WS-SecureConversation|[Web Services Secure Conversation Language](https://specs.xmlsoap.org/ws/2005/02/sc/ws-secureconversation.pdf)|
+|WS-SecureConversation|[Web Services Secure Conversation Language](http://specs.xmlsoap.org/ws/2005/02/sc/ws-secureconversation.pdf)|
 |WS-Trust 1.4|[Web Services Trust Language](https://docs.oasis-open.org/ws-sx/ws-trust/200802)|
-|WS-SecurityPolicy 2005/07|[Web Services Secure Conversation Language](https://specs.xmlsoap.org/ws/2005/02/sc/ws-secureconversation.pdf)<br /><br /> OASIS WS-SX 技術委員会に提出された正誤表で修正されています。<br /><br /> [ws-sx message](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html)|
+|WS-SecurityPolicy 2005/07|[Web Services Secure Conversation Language](http://specs.xmlsoap.org/ws/2005/02/sc/ws-secureconversation.pdf)<br /><br /> OASIS WS-SX 技術委員会に提出された正誤表で修正されています。<br /><br /> [ws-sx message](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html)|
 |WS-ReliableMessaging 1.1|[信頼できるメッセージング プロトコル バージョン 1.1](reliable-messaging-protocol-version-1-1.md)|
 
 <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> は、次の表の仕様をサポートします。
@@ -74,7 +74,7 @@ WCF では、コントラクト機能を通じて、チャネルと Web サー�
 |仕様/ドキュメント|Link|
 |-----------------------------|----------|
 |WS-Coordination|[Web Services Coordination](/previous-versions/ms951231(v=msdn.10))|
-|WS-AtomicTransaction|[Web Services Atomic Transaction](https://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf)|
+|WS-AtomicTransaction|[Web Services Atomic Transaction](http://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf)|
 
 <xref:System.ServiceModel.Description.MetadataExporter>、<xref:System.ServiceModel.Description.MetadataImporter>、<xref:System.ServiceModel.Description.WsdlExporter>、<xref:System.ServiceModel.Description.WsdlImporter>、および <xref:System.ServiceModel.Description.MetadataResolver> の各クラスは、次のメタデータ仕様をサポートします。
 
@@ -90,7 +90,7 @@ WCF では、コントラクト機能を通じて、チャネルと Web サー�
 
 - [WS-PolicyAttachment 1.2](https://www.w3.org/Submission/2006/SUBM-WS-PolicyAttachment-20060425/)
 
-- [WS-MetadataExchange 1.1](https://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)
+- [WS-MetadataExchange 1.1](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)
 
 - [メタデータ取得のための WS-Transfer Get ](https://www.w3.org/Submission/2006/SUBM-WS-Transfer-20060315/)
 
@@ -108,7 +108,7 @@ WCF では、コントラクト機能を通じて、チャネルと Web サー�
 - [メッセージング プロトコル](messaging-protocols.md)
 - [データ コントラクト スキーマの参照](data-contract-schema-reference.md)
 - [WSDL とポリシー](wsdl-and-policy.md)
-- [セキュリティプロトコル](security-protocols.md)
+- [セキュリティ プロトコル](security-protocols.md)
 - [信頼できるメッセージング プロトコル バージョン 1.0](reliable-messaging-protocol-version-1-0.md)
 - [信頼できるメッセージング プロトコル バージョン 1.1](reliable-messaging-protocol-version-1-1.md)
 - [トランザクション プロトコル](transaction-protocols.md)
