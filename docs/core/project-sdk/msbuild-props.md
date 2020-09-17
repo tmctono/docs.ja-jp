@@ -4,12 +4,12 @@ description: .NET Core SDK によって認識される MSBuild のプロパテ�
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 39cbd18121d2b8659b2f5270f39624798f4ebbdc
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: c1093a0acd5b75ae6478767d690966a30fe84a31
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810523"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656263"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>.NET Core SDK プロジェクトの MSBuild リファレンス
 
@@ -26,7 +26,7 @@ ms.locfileid: "88810523"
 
 ### <a name="targetframework"></a>TargetFramework
 
-`TargetFramework` プロパティには、アプリのターゲット フレームワーク バージョンを指定します。 有効なターゲット フレームワーク モニカーの一覧については、「[SDK スタイルのプロジェクトでのターゲット フレームワーク](../../standard/frameworks.md#supported-target-framework-versions)」を参照してください。
+`TargetFramework` プロパティには、アプリのターゲット フレームワーク バージョンを指定します。 有効なターゲット フレームワーク モニカーの一覧については、「[SDK スタイルのプロジェクトでのターゲット フレームワーク](../../standard/frameworks.md#supported-target-frameworks)」を参照してください。
 
 ```xml
 <PropertyGroup>
@@ -38,7 +38,7 @@ ms.locfileid: "88810523"
 
 ### <a name="targetframeworks"></a>TargetFrameworks
 
-アプリで複数のプラットフォームをターゲットにする場合は、`TargetFrameworks` プロパティを使用します。 有効なターゲット フレームワーク モニカーの一覧については、「[SDK スタイルのプロジェクトでのターゲット フレームワーク](../../standard/frameworks.md#supported-target-framework-versions)」を参照してください。
+アプリで複数のプラットフォームをターゲットにする場合は、`TargetFrameworks` プロパティを使用します。 有効なターゲット フレームワーク モニカーの一覧については、「[SDK スタイルのプロジェクトでのターゲット フレームワーク](../../standard/frameworks.md#supported-target-frameworks)」を参照してください。
 
 > [!NOTE]
 > `TargetFramework` (単数形) が指定されている場合、このプロパティは無視されます。
@@ -188,9 +188,27 @@ ms.locfileid: "88810523"
 | `5.0` | 新しいルールが使用可能な場合でも、.NET 5.0 リリースで有効になっていた一連のルールが使用されます。 |
 | `5` | 新しいルールが使用可能な場合でも、.NET 5.0 リリースで有効になっていた一連のルールが使用されます。 |
 
+### <a name="analysismode"></a>AnalysisMode
+
+.NET 5.0 RC2 以降、.NET SDK には、すべての ["CA" コード品質ルール](/visualstudio/code-quality/code-analysis-for-managed-code-warnings)が付属しています。 既定では、ビルド警告として[一部のルールが有効](../../fundamentals/productivity/code-analysis.md#enabled-rules)になっています。 `AnalysisMode` プロパティを使用すると、既定で有効になるルールのセットをカスタマイズできます。 より積極的な (オプトアウト) 分析モード、またはより保守的な (オプトイン) 分析モードに切り替えることができます。 たとえば、既定ですべてのルールをビルド警告として有効にする場合は、値を `AllEnabledByDefault` に設定します。
+
+```xml
+<PropertyGroup>
+  <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+</PropertyGroup>
+```
+
+次の表で利用可能なオプションについて説明します。
+
+| 値 | 説明 |
+|-|-|
+| `Default` | 既定のモードでは、特定のルールがビルド警告として有効になり、特定のルールが Visual Studio IDE の提案として有効になり、残りは無効になります。 |
+| `AllEnabledByDefault` | 積極的な (オプトアウト) モード。すべてのルールが既定でビルド警告として有効になっています。 個々のルールを選択的に[オプトアウト](../../fundamentals/productivity/configure-code-analysis-rules.md)して無効にすることができます。 |
+| `AllDisabledByDefault` | 保守的な (オプトイン) モード。すべてのルールが既定で無効になっています。 個々のルールを選択的に[オプトイン](../../fundamentals/productivity/configure-code-analysis-rules.md)して有効にすることができます。 |
+
 ### <a name="codeanalysistreatwarningsaserrors"></a>CodeAnalysisTreatWarningsAsErrors
 
-`CodeAnalysisTreatWarningsAsErrors` プロパティを使用すると、コード分析の警告を警告として扱い、ビルドを中断するかどうかを構成できます。 プロジェクトをビルドするときに `-warnaserror` フラグを使用すると、[.NET コード分析](../../fundamentals/productivity/code-analysis.md)の警告もエラーとして扱われます。 コンパイラの警告のみをエラーとして処理する場合は、プロジェクト ファイル内の `CodeAnalysisTreatWarningsAsErrors` MSBuild プロパティを `false` に設定できます。
+`CodeAnalysisTreatWarningsAsErrors` プロパティを使用すると、コード品質分析の警告 (CAxxxx) を警告として扱い、ビルドを中断するかどうかを構成できます。 プロジェクトをビルドするときに `-warnaserror` フラグを使用すると、[.NET コード品質分析](../../fundamentals/productivity/code-analysis.md#code-quality-analysis)の警告もエラーとして扱われます。 コード品質分析の警告がエラーとして扱われないようにするには、プロジェクト ファイル内の `CodeAnalysisTreatWarningsAsErrors` MSBuild プロパティを `false` に設定します。
 
 ```xml
 <PropertyGroup>
@@ -200,7 +218,7 @@ ms.locfileid: "88810523"
 
 ### <a name="enablenetanalyzers"></a>EnableNETAnalyzers
 
-[.Net コード分析](../../fundamentals/productivity/code-analysis.md)は、.NET 5.0 以降を対象とするプロジェクトで既定で有効になっています。 以前のバージョンの .NET を対象とするプロジェクトで .NET コード分析を有効にするには、`EnableNETAnalyzers` プロパティを true に設定します。 任意のプロジェクトでコード分析を無効にするには、このプロパティを `false` に設定します。
+.NET 5.0 以降をターゲットとするプロジェクトでは、[.NET コード品質分析](../../fundamentals/productivity/code-analysis.md#code-quality-analysis)が既定で有効になっています。 以前のバージョンの .NET をターゲットとするプロジェクトで .NET コード分析を有効にするには、`EnableNETAnalyzers` プロパティを `true` に設定します。 任意のプロジェクトでコード分析を無効にするには、このプロパティを `false` に設定します。
 
 ```xml
 <PropertyGroup>
@@ -210,6 +228,18 @@ ms.locfileid: "88810523"
 
 > [!TIP]
 > .Net 5.0 より前の .NET バージョンを対象とするプロジェクトで .NET コード分析を有効にするもう 1 つの方法は、[AnalysisLevel](#analysislevel) プロパティを `latest` に設定することです。
+
+### <a name="enforcecodestyleinbuild"></a>EnforceCodeStyleInBuild
+
+すべての .NET プロジェクトのビルドでは、[.NET コード スタイル分析](../../fundamentals/productivity/code-analysis.md#code-style-analysis)は既定で無効になっています。 `EnforceCodeStyleInBuild` プロパティを `true` に設定して、.NET プロジェクトのコード スタイル分析を有効にできます。
+
+```xml
+<PropertyGroup>
+  <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+</PropertyGroup>
+```
+
+警告またはエラーになるように[構成](../../fundamentals/productivity/code-analysis.md#code-style-analysis)されているすべてのコード スタイル ルールは、ビルド時に実行され、違反を報告します。
 
 ## <a name="run-time-configuration-properties"></a>ランタイム構成プロパティ
 
@@ -327,7 +357,7 @@ ms.locfileid: "88810523"
 
 `AssetTargetFallback` プロパティを使用すると、プロジェクト参照と NuGet パッケージに対して、互換性のある追加のフレームワーク バージョンを指定できます。 たとえば、`PackageReference` を使用してパッケージの依存関係を指定し、そのパッケージにプロジェクトの `TargetFramework` と互換性のある資産が含まれない場合は、`AssetTargetFallback` プロパティが機能します。 参照されたパッケージの互換性は、`AssetTargetFallback` で指定された各ターゲット フレームワークを使用して再確認されます。
 
-`AssetTargetFallback` プロパティを 1 つ以上の[ターゲット フレームワーク バージョン](../../standard/frameworks.md#supported-target-framework-versions)に設定できます。
+`AssetTargetFallback` プロパティを 1 つ以上の[ターゲット フレームワーク バージョン](../../standard/frameworks.md#supported-target-frameworks)に設定できます。
 
 ```xml
 <PropertyGroup>

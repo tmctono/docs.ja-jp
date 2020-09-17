@@ -3,19 +3,19 @@ title: DisposeAsync メソッドの実装
 description: DisposeAsync メソッドと DisposeAsyncCore メソッドを実装し、非同期リソース クリーンアップを実行する方法について説明します。
 author: IEvangelist
 ms.author: dapine
-ms.date: 08/25/2020
+ms.date: 09/10/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 268cea7584040ad92e2da75e5e03112480cda93c
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: 88adf9e484baa0e65e2ff093b4649cf35b8c86dc
+ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053179"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90022910"
 ---
 # <a name="implement-a-disposeasync-method"></a>DisposeAsync メソッドの実装
 
@@ -70,6 +70,18 @@ public async ValueTask DisposeAsync()
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/disposeasync.cs":::
 
 前の例では、<xref:System.Text.Json.Utf8JsonWriter> を使用しています。 `System.Text.Json` の詳細については、「[Newtonsoft.Json から System.Text.Json に移行する方法](../serialization/system-text-json-migrate-from-newtonsoft-how-to.md)」を参照してください。
+
+## <a name="implement-both-dispose-and-async-dispose-patterns"></a>破棄と非同期の破棄の両方のパターンを実装する
+
+場合によっては、<xref:System.IDisposable> と <xref:System.IAsyncDisposable> の両方のインターフェイスを実装する必要があります。クラスのスコープにこれらの実装のインスタンスが含まれている場合は特にそうです。 こうすることで、クリーンアップの呼び出しを適切に連鎖させることができます。 両方のインターフェイスを実装し、クリーンアップの適切なガイダンスを示すクラスの例を次に示します。
+
+:::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/dispose-and-disposeasync.cs":::
+
+<xref:System.IDisposable.Dispose?displayProperty=nameWithType> と <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> の実装は、どちらも単純な定型コードです。 `Dispose(bool)` メソッドと `DisposeAsyncCore()` メソッドは、`_disposed` が `true` かどうかの確認から始まり、`false` の場合にのみ実行されます。
+
+`Dispose(bool)` オーバーロード メソッドでは、<xref:System.IDisposable> インスタンスは、`null` でない場合に条件により破棄されます。 <xref:System.IAsyncDisposable> インスタンスは <xref:System.IDisposable> としてキャストされ、これも `null` でない場合は破棄されます。 その後、両方のインスタンスは `null` に割り当てられます。
+
+`DisposeAsyncCore()` メソッドでは、同じ論理的アプローチに従います。 <xref:System.IAsyncDisposable> インスタンスが `null` ではない場合、`DisposeAsync().ConfigureAwait(false)` への呼び出しは待機されます。 <xref:System.IDisposable> インスタンスも <xref:System.IAsyncDisposable> の実装である場合、これも非同期的に破棄されます。 その後、両方のインスタンスは `null` に割り当てられます。
 
 ## <a name="using-async-disposable"></a>非同期の破棄可能の使用
 

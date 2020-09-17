@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: f01db9d7801d4b6f4c273a9cf82806acbb4828bb
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: dc3e235db49279691203a0db4d124239fb972c69
+ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89138138"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90065236"
 ---
 # <a name="if-c-reference"></a>#if (C# リファレンス)
 
@@ -40,12 +40,12 @@ C# コンパイラでは、`#if` ディレクティブ、次いで [#endif](prep
 
 `#define` を使用して作成したシンボルのスコープは、そのシンボルが定義されているファイルです。
 
-ビルド システムは、SDK 型プロジェクトの各種[ターゲット フレームワーク](../../../standard/frameworks.md)を表す、定義済みプリプロセッサ シンボルも認識します。 これは、複数の .NET の実装やバージョンをターゲットとできるアプリケーションを作成する場合に役立ちます。
+ビルド システムは、SDK 型プロジェクトの各種[ターゲット フレームワーク](../../../standard/frameworks.md)を表す、定義済みプリプロセッサ シンボルも認識します。 これは、複数の .NET バージョンをターゲットとできるアプリケーションを作成する場合に役立ちます。
 
 [!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
 
 > [!NOTE]
-> 従来の .NET Framework プロジェクトでは、プロジェクトの [プロパティ] ページを使用して、Visual Studio のさまざまなターゲット フレームワークの条件付きコンパイル シンボルを手動で構成する必要があります。
+> 従来の非 SDK スタイルのプロジェクトでは、プロジェクトの [プロパティ] ページを使用して、Visual Studio のさまざまなターゲット フレームワークの条件付きコンパイル シンボルを手動で構成する必要があります。
 
 他の定義済みシンボルとしては、DEBUG 定数と TRACE 定数があります。 `#define` を使用して、プロジェクトに設定された値をオーバーライドできます。 たとえば、DEBUG シンボルは、ビルド構成プロパティ ("デバッグ" モードまたは "リリース" モード) に応じて自動的に設定されます。
 

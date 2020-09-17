@@ -13,11 +13,12 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-ms.openlocfilehash: 8ee5243258ea1b853b4690b79ec032c46d1b3777
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 03d2cacea4d2c0e7452240df30350d93ce79282d
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803506"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656146"
 ---
 # <a name="best-practices-for-assembly-loading"></a>アセンブリの読み込みのベスト プラクティス
 ここでは、<xref:System.InvalidCastException>、<xref:System.MissingMethodException>、およびその他のエラーの原因となることがある型 ID の問題を回避する方法について説明します。 また、次の推奨事項について説明します。  
@@ -62,7 +63,7 @@ ms.locfileid: "85803506"
   
  <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> メソッド、またはパスから読み込む他のいずれかのメソッドを使用してアセンブリを読み込むと、次のようなデメリットが生じます。  
   
-- 同じ ID を持つアセンブリが既に読み込まれている場合、<xref:System.Reflection.Assembly.LoadFrom%2A> は、別のパスが指定されている場合であっても、読み込み済みのアセンブリを返します。  
+- 同じ ID を持つアセンブリが既に読み込み元コンテキストに読み込まれている場合、<xref:System.Reflection.Assembly.LoadFrom%2A> では、別のパスが指定されている場合でも、読み込み済みのアセンブリを返します。  
   
 - <xref:System.Reflection.Assembly.LoadFrom%2A> を使用してアセンブリを読み込んだ後、同じアセンブリを、既定の読み込みコンテキストにあるアセンブリが表示名で読み込もうとすると、読み込みが失敗します。 この問題は、アセンブリが逆シリアル化されるときに発生します。  
   

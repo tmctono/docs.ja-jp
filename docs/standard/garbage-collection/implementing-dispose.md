@@ -1,7 +1,7 @@
 ---
 title: Dispose メソッドの実装
 description: この記事では、.NET のコードで使用されるアンマネージド リソースを解放する Dispose メソッドを実装する方法について説明します。
-ms.date: 05/27/2020
+ms.date: 09/08/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 4f0cc9b88947d60638057ca83adb7f2e141c5d14
-ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
+ms.openlocfilehash: 863f78daf13ae9d795c37c1c6f428d387b9a026b
+ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87455732"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90022923"
 ---
 # <a name="implement-a-dispose-method"></a>Dispose メソッドの実装
 
@@ -77,7 +77,7 @@ ms.locfileid: "87455732"
 
   - **<xref:System.IDisposable> を実装するマネージド オブジェクト。** 条件付きブロックを使用して <xref:System.IDisposable.Dispose%2A> の実装を呼び出すことができます (カスケード破棄)。 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> の派生クラスを使用してアンマネージ リソースをラップしている場合は、ここで <xref:System.Runtime.InteropServices.SafeHandle.Dispose?displayProperty=nameWithType> の実装を呼び出す必要があります。
 
-  - **大量のメモリを消費するか、不足しているリソースを消費するマネージド オブジェクト。** `null` に大きなマネージド オブジェクト参照を割り当てて、到達不能の可能性が高くなるようにします。 こうすると、非確定的に再利用された場合よりも、速く解放されます。
+  - **大量のメモリを消費するか、不足しているリソースを消費するマネージド オブジェクト。** `null` に大きなマネージド オブジェクト参照を割り当てて、到達不能の可能性が高くなるようにします。 これにより、非決定的に要求された場合よりも早く解放されます。また、これは通常、条件付きブロックの外で行われます。
 
 メソッドの呼び出し元がファイナライザーの場合、アンマネージ リソースを解放するコードだけを実行する必要があります。 実装側は、正しくないパスが、再利用された可能性があるマネージド オブジェクトと対話しないことを保証する必要があります。 これが重要なのは、ガベージ コレクターがマネージド オブジェクトを破棄する順序が非確定的であるためです。
 

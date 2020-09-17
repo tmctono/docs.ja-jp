@@ -2,12 +2,12 @@
 title: C# 9.0 の新機能 - C# ガイド
 description: C# 9.0 で使用できる新しい機能の概要を説明します。
 ms.date: 09/04/2020
-ms.openlocfilehash: a863e544c0fcc8682994f49a464acccafc5ce92f
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 80d636db04655650c7448590cd1042cdb1b17de1
+ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495775"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90065033"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 の新機能
 
@@ -24,6 +24,7 @@ C# 9.0 によって、C# 言語に次の機能と機能強化が追加されて�
 - 静的な匿名関数
 - ターゲットにより型指定された条件式
 - 共変の戻り値の型
+- `foreach` ループの拡張機能 `GetEnumerator` サポート
 - ラムダ ディスカード パラメーター
 - ローカル関数の属性
 - モジュールの初期化子
@@ -121,7 +122,7 @@ C# 9.0 には "***レコード型***" が導入されています。これは、
 
 ```csharp
 // Error! CS8852.
-now.TempetureInCelsius = 18;
+now.TemperatureInCelsius = 18;
 ```
 
 init 専用セッターは、派生クラスから基底クラスのプロパティを設定する場合に便利です。 また、基底クラスのヘルパーを使用して派生プロパティを設定することもできます。 位置指定レコードによって、init 専用セッターを使用してプロパティが宣言されます。 これらのセッターは、with 式で使用されます。 定義する任意の `class` または `struct` に対して、init 専用セッターを宣言できます。
@@ -217,7 +218,7 @@ if (e is not null)
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="TargetTypeNewArgument":::
 
-この機能のもう 1 つの便利な用途は、init 専用プロパティと組み合わせて、新しいオブジェクトを初期化する場合です。 `new` のかっこは省略可能です。
+この機能のもう 1 つの便利な用途は、init 専用プロパティと組み合わせて、新しいオブジェクトを初期化する場合です。
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="InitWeatherStation":::
 
@@ -228,6 +229,8 @@ if (e is not null)
 C# 9.0 以降では、`static` 修飾子をラムダ式または匿名メソッドに追加できます。 静的なラムダ式は、`static` ローカル関数に似ています。静的ラムダ関数または匿名関数では、ローカル変数またはインスタンスの状態をキャプチャできません。 `static` 修飾子により、誤って他の変数がキャプチャされることがなくなります。
 
 共変の戻り値の型を使用すると、オーバーライドされた関数の戻り値の型を柔軟に指定できます。 オーバーライドされた仮想関数では、基底クラスのメソッドで宣言されている戻り値の型から派生した型を返すことができます。 これは、レコードや、仮想クローンまたはファクトリ メソッドをサポートするその他の型に役立ちます。
+
+また、`foreach` ループによって、それ以外の方法で `foreach` パターンを満たす拡張メソッド `GetEnumerator` が認識され、使用されます。 この変更は、非同期パターンやパターンベースの分解など、他のパターンベースのコンストラクションと `foreach` の間に整合性があることを意味します。 実際、この変更は、あらゆる型に `foreach` サポートを追加できることを意味します。 それの使用は、設計においてオブジェクトの列挙に意味があるときのみに限定してください。
 
 次に、ラムダ式に対するパラメーターとして破棄を使用できます。 このようにすると、引数の名前付けを避けることができ、コンパイラではその使用を避けることができます。 任意の引数に対して `_` を使用します。
 

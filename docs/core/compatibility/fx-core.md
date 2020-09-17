@@ -1,18 +1,18 @@
 ---
 title: 破壊的変更 - .NET Framework から .NET Core
 titleSuffix: ''
-description: .NET Framework から .NET Core への破壊的変更を一覧表示します。
+description: .NET Framework から .NET Core 1.0 - 3.1 への破壊的変更を一覧表示します。
 ms.date: 05/05/2020
-ms.openlocfilehash: e9fa37dba89bbd6c4829614c27cb66206069fa9b
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 5904a359813b6d07bd2a27d882ade4395efe3256
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414457"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656367"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>.NET Framework から .NET Core への移行の破壊的変更
 
-.NET Framework から .NET Core にアプリを移行する場合、この記事の一覧にある破壊的変更による影響を受ける可能性があります。 破壊的変更はカテゴリ別に分類され、そのカテゴリ内では、導入された .NET Core のバージョンによってグループ化されます。
+.NET Framework から .NET Core (バージョン 1.0 から 3.1 まで) にアプリを移行する場合、この記事の一覧にある破壊的変更による影響を受ける可能性があります。 破壊的変更はカテゴリ別に分類され、そのカテゴリ内では、導入された .NET Core のバージョンによってグループ化されます。
 
 > [!NOTE]
 > この記事は、.NET Framework と .NET Core の間の破壊的変更の完全な一覧ではありません。 最も重要な破壊的変更が認識されると、こちらに追加されます。
@@ -72,17 +72,10 @@ ms.locfileid: "89414457"
 ## <a name="networking"></a>ネットワーキング
 
 - [WebClient.CancelAsync がすぐにキャンセルされない場合がある](#webclientcancelasync-doesnt-always-cancel-immediately)
-- [現在、Cookie パスの処理は、RFC 6265 に準拠している](#cookie-path-handling-now-conforms-to-rfc-6265)
 
 ### <a name="net-core-20"></a>.NET Core 2.0
 
 [!INCLUDE [behavior-change-webclient-cancelasync](../../../includes/core-changes/networking/2.0/behavior-change-webclient-cancelasync.md)]
-
-***
-
-### <a name="net-50"></a>.NET 5.0
-
-[!INCLUDE [cookie-path-conforms-to-rfc6265](../../../includes/core-changes/networking/5.0/cookie-path-conforms-to-rfc6265.md)]
 
 ***
 

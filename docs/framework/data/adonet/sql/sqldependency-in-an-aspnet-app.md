@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: f3e28adc2cf7c24cee9ee344eb78404f01b79793
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2ec9415f63151443d5008fbce471fabeb89cdb91
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780717"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656172"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>ASP.NET アプリケーションでの SqlDependency
 ここでは、ASP.NET の <xref:System.Data.SqlClient.SqlDependency> オブジェクトを使用して、<xref:System.Web.Caching.SqlCacheDependency> を間接的に使用する方法の例を示します。 <xref:System.Web.Caching.SqlCacheDependency> オブジェクトでは <xref:System.Data.SqlClient.SqlDependency> を使用して通知をリッスンし、キャッシュを適切に更新します。  
@@ -56,7 +56,11 @@ ms.locfileid: "70780717"
  このアプリケーションは Web フォームに表示されるデータをキャッシングし、操作が行われなければ 3 分ごとにデータを更新します。 データベースに変更があれば、キャッシュは直ちに更新されます。 Visual Studio からアプリケーションを実行すると、ブラウザーにページが読み込まれます。 表示されるキャッシュ更新時刻は、最後にキャッシュが更新された時刻を示します。 3 分間の待機後、ページを更新すると、ポストバック イベントが発生します。 ページに表示される時刻が変更されることに注意してください。 3 分経過する前にページを更新した場合、ページに表示される時刻は変わりません。  
   
  次に、Transact-SQL の UPDATE コマンドを使用して、データベースのデータを更新し、ページを更新します。 表示される時刻を見ると、データベースの新しいデータを使ってキャッシュが更新されたことがわかります。 キャッシュは更新されますが、ページに表示される時刻はポストバック イベントが発生するまで変更されないことに注意してください。  
-  
+
+## <a name="distributed-cache-synchronization-using-sql-dependency"></a>SQL の依存関係を使用した分散キャッシュの同期
+
+[NCache](https://www.alachisoft.com/ncache) などの一部のサードパーティの分散キャッシュでは、[SQL の依存関係](https://www.alachisoft.com/resources/docs/ncache/prog-guide/sql-dependency.html)を使用した SQL データベースとキャッシュの同期がサポートされています。 詳細とソース コード実装の例については、[分散キャッシュの SQL の依存関係のサンプル](https://github.com/Alachisoft/NCache-Samples/tree/master/dotnet/Dependencies/SQLDependency)に関するページを参照してください。
+
 ## <a name="see-also"></a>関連項目
 
 - [SQL Server のクエリ通知](query-notifications-in-sql-server.md)
