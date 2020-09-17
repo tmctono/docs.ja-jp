@@ -1,41 +1,51 @@
 ---
 title: Windows フォームに関する破壊的変更
-description: .NET Core 用の Windows フォームにおける破壊的変更の一覧を示します。
-ms.date: 01/08/2020
-ms.openlocfilehash: beb9a42e4b5007f03480cd74f57bbfbbfc3f48b1
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+description: .NET Core および .NET 5 の Windows フォームにおける破壊的変更の一覧を示します。
+ms.date: 09/08/2020
+ms.openlocfilehash: c3d2d23601d6a2d9d44761c4371fe34d3d5ed1f3
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556204"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656342"
 ---
-# <a name="breaking-changes-in-windows-forms"></a><span data-ttu-id="ae5e6-103">Windows フォームでの破壊的変更</span><span class="sxs-lookup"><span data-stu-id="ae5e6-103">Breaking changes in Windows Forms</span></span>
+# <a name="breaking-changes-in-windows-forms"></a><span data-ttu-id="91bba-103">Windows フォームでの破壊的変更</span><span class="sxs-lookup"><span data-stu-id="91bba-103">Breaking changes in Windows Forms</span></span>
 
-<span data-ttu-id="ae5e6-104">Windows フォームのサポートは、.NET Core にバージョン 3.0 で追加されました。</span><span class="sxs-lookup"><span data-stu-id="ae5e6-104">Windows Forms support was added to .NET Core in version 3.0.</span></span> <span data-ttu-id="ae5e6-105">この記事では、Windows フォームの破壊的変更を、導入された .NET Core のバージョン別に説明します。</span><span class="sxs-lookup"><span data-stu-id="ae5e6-105">This article lists breaking changes for Windows Forms by the .NET Core version in which they were introduced.</span></span> <span data-ttu-id="ae5e6-106">.NET Framework または以前のバージョンの .NET Core (3.0 以降) から Windows フォーム アプリをアップグレードする場合は、この記事が適用されます。</span><span class="sxs-lookup"><span data-stu-id="ae5e6-106">If you're upgrading a Windows Forms app from .NET Framework or from a previous version of .NET Core (3.0 or later), this article is applicable to you.</span></span>
+<span data-ttu-id="91bba-104">Windows フォームのサポートは、.NET Core にバージョン 3.0 で追加されました。</span><span class="sxs-lookup"><span data-stu-id="91bba-104">Windows Forms support was added to .NET Core in version 3.0.</span></span> <span data-ttu-id="91bba-105">この記事では、Windows フォームの破壊的変更を、導入された .NET のバージョン別に説明します。</span><span class="sxs-lookup"><span data-stu-id="91bba-105">This article lists breaking changes for Windows Forms by the .NET version in which they were introduced.</span></span> <span data-ttu-id="91bba-106">この記事は、.NET Framework または以前のバージョンの .NET Core (3.0 以降) から Windows フォーム アプリをアップグレードするユーザーを対象としています。</span><span class="sxs-lookup"><span data-stu-id="91bba-106">If you're upgrading a Windows Forms app from .NET Framework or from a previous version of .NET Core (3.0 or later), this article applies to you.</span></span>
 
-<span data-ttu-id="ae5e6-107">このページでは、次の破壊的変更について説明します。</span><span class="sxs-lookup"><span data-stu-id="ae5e6-107">The following breaking changes are documented on this page:</span></span>
+<span data-ttu-id="91bba-107">このページでは、次の破壊的変更について説明します。</span><span class="sxs-lookup"><span data-stu-id="91bba-107">The following breaking changes are documented on this page:</span></span>
 
-| <span data-ttu-id="ae5e6-108">互換性に影響する変更点</span><span class="sxs-lookup"><span data-stu-id="ae5e6-108">Breaking change</span></span> | <span data-ttu-id="ae5e6-109">導入されたバージョン</span><span class="sxs-lookup"><span data-stu-id="ae5e6-109">Version introduced</span></span> |
+| <span data-ttu-id="91bba-108">互換性に影響する変更点</span><span class="sxs-lookup"><span data-stu-id="91bba-108">Breaking change</span></span> | <span data-ttu-id="91bba-109">導入されたバージョン</span><span class="sxs-lookup"><span data-stu-id="91bba-109">Version introduced</span></span> |
 | - | :-: |
-| [<span data-ttu-id="ae5e6-110">削除されたステータス バー コントロール</span><span class="sxs-lookup"><span data-stu-id="ae5e6-110">Removed status bar controls</span></span>](#removed-status-bar-controls) | <span data-ttu-id="ae5e6-111">5.0</span><span class="sxs-lookup"><span data-stu-id="ae5e6-111">5.0</span></span> |
-| [<span data-ttu-id="ae5e6-112">WinForms メソッドで ArgumentException がスローされるようになった</span><span class="sxs-lookup"><span data-stu-id="ae5e6-112">WinForms methods now throw ArgumentException</span></span>](#winforms-methods-now-throw-argumentexception) | <span data-ttu-id="ae5e6-113">5.0</span><span class="sxs-lookup"><span data-stu-id="ae5e6-113">5.0</span></span> |
-| [<span data-ttu-id="ae5e6-114">WinForms メソッドで ArgumentNullException がスローされるようになった</span><span class="sxs-lookup"><span data-stu-id="ae5e6-114">WinForms methods now throw ArgumentNullException</span></span>](#winforms-methods-now-throw-argumentnullexception) | <span data-ttu-id="ae5e6-115">5.0</span><span class="sxs-lookup"><span data-stu-id="ae5e6-115">5.0</span></span> |
-| [<span data-ttu-id="ae5e6-116">WinForms プロパティによる ArgumentOutOfRangeException のスロー</span><span class="sxs-lookup"><span data-stu-id="ae5e6-116">WinForms properties now throw ArgumentOutOfRangeException</span></span>](#winforms-properties-now-throw-argumentoutofrangeexception) | <span data-ttu-id="ae5e6-117">5.0</span><span class="sxs-lookup"><span data-stu-id="ae5e6-117">5.0</span></span> |
-| [<span data-ttu-id="ae5e6-118">削除されたコントロール</span><span class="sxs-lookup"><span data-stu-id="ae5e6-118">Removed controls</span></span>](#removed-controls) | <span data-ttu-id="ae5e6-119">3.1</span><span class="sxs-lookup"><span data-stu-id="ae5e6-119">3.1</span></span> |
-| [<span data-ttu-id="ae5e6-120">ヒントが表示されていると CellFormatting が発生しない</span><span class="sxs-lookup"><span data-stu-id="ae5e6-120">CellFormatting event not raised if tooltip is shown</span></span>](#cellformatting-event-not-raised-if-tooltip-is-shown) | <span data-ttu-id="ae5e6-121">3.1</span><span class="sxs-lookup"><span data-stu-id="ae5e6-121">3.1</span></span> |
-| [<span data-ttu-id="ae5e6-122">Control.DefaultFont を Segoe UI 9 pt に変更</span><span class="sxs-lookup"><span data-stu-id="ae5e6-122">Control.DefaultFont changed to Segoe UI 9 pt</span></span>](#default-control-font-changed-to-segoe-ui-9-pt) | <span data-ttu-id="ae5e6-123">3.0</span><span class="sxs-lookup"><span data-stu-id="ae5e6-123">3.0</span></span> |
-| [<span data-ttu-id="ae5e6-124">FolderBrowserDialog の最新化</span><span class="sxs-lookup"><span data-stu-id="ae5e6-124">Modernization of the FolderBrowserDialog</span></span>](#modernization-of-the-folderbrowserdialog) | <span data-ttu-id="ae5e6-125">3.0</span><span class="sxs-lookup"><span data-stu-id="ae5e6-125">3.0</span></span> |
-| [<span data-ttu-id="ae5e6-126">一部の Windows フォーム型から SerializableAttribute を削除</span><span class="sxs-lookup"><span data-stu-id="ae5e6-126">SerializableAttribute removed from some Windows Forms types</span></span>](#serializableattribute-removed-from-some-windows-forms-types) | <span data-ttu-id="ae5e6-127">3.0</span><span class="sxs-lookup"><span data-stu-id="ae5e6-127">3.0</span></span> |
-| [<span data-ttu-id="ae5e6-128">AllowUpdateChildControlIndexForTabControls 互換性スイッチがサポートされない</span><span class="sxs-lookup"><span data-stu-id="ae5e6-128">AllowUpdateChildControlIndexForTabControls compatibility switch not supported</span></span>](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported) | <span data-ttu-id="ae5e6-129">3.0</span><span class="sxs-lookup"><span data-stu-id="ae5e6-129">3.0</span></span> |
-| [<span data-ttu-id="ae5e6-130">DomainUpDown.UseLegacyScrolling 互換性スイッチがサポートされない</span><span class="sxs-lookup"><span data-stu-id="ae5e6-130">DomainUpDown.UseLegacyScrolling compatibility switch not supported</span></span>](#domainupdownuselegacyscrolling-compatibility-switch-not-supported) | <span data-ttu-id="ae5e6-131">3.0</span><span class="sxs-lookup"><span data-stu-id="ae5e6-131">3.0</span></span> |
-| [<span data-ttu-id="ae5e6-132">DoNotLoadLatestRichEditControl 互換性スイッチがサポートされない</span><span class="sxs-lookup"><span data-stu-id="ae5e6-132">DoNotLoadLatestRichEditControl compatibility switch not supported</span></span>](#donotloadlatestricheditcontrol-compatibility-switch-not-supported) | <span data-ttu-id="ae5e6-133">3.0</span><span class="sxs-lookup"><span data-stu-id="ae5e6-133">3.0</span></span> |
-| [<span data-ttu-id="ae5e6-134">DoNotSupportSelectAllShortcutInMultilineTextBox 互換性スイッチがサポートされない</span><span class="sxs-lookup"><span data-stu-id="ae5e6-134">DoNotSupportSelectAllShortcutInMultilineTextBox compatibility switch not supported</span></span>](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported) | <span data-ttu-id="ae5e6-135">3.0</span><span class="sxs-lookup"><span data-stu-id="ae5e6-135">3.0</span></span> |
-| [<span data-ttu-id="ae5e6-136">DontSupportReentrantFilterMessage 互換性スイッチがサポートされない</span><span class="sxs-lookup"><span data-stu-id="ae5e6-136">DontSupportReentrantFilterMessage compatibility switch not supported</span></span>](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported) | <span data-ttu-id="ae5e6-137">3.0</span><span class="sxs-lookup"><span data-stu-id="ae5e6-137">3.0</span></span> |
-| [<span data-ttu-id="ae5e6-138">EnableVisualStyleValidation 互換性スイッチがサポートされない</span><span class="sxs-lookup"><span data-stu-id="ae5e6-138">EnableVisualStyleValidation compatibility switch not supported</span></span>](#enablevisualstylevalidation-compatibility-switch-not-supported) | <span data-ttu-id="ae5e6-139">3.0</span><span class="sxs-lookup"><span data-stu-id="ae5e6-139">3.0</span></span> |
-| [<span data-ttu-id="ae5e6-140">UseLegacyContextMenuStripSourceControlValue 互換性スイッチがサポートされない</span><span class="sxs-lookup"><span data-stu-id="ae5e6-140">UseLegacyContextMenuStripSourceControlValue compatibility switch not supported</span></span>](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported) | <span data-ttu-id="ae5e6-141">3.0</span><span class="sxs-lookup"><span data-stu-id="ae5e6-141">3.0</span></span> |
-| [<span data-ttu-id="ae5e6-142">UseLegacyImages 互換性スイッチがサポートされない</span><span class="sxs-lookup"><span data-stu-id="ae5e6-142">UseLegacyImages compatibility switch not supported</span></span>](#uselegacyimages-compatibility-switch-not-supported) | <span data-ttu-id="ae5e6-143">3.0</span><span class="sxs-lookup"><span data-stu-id="ae5e6-143">3.0</span></span> |
+| [<span data-ttu-id="91bba-110">DataGridView 関連の API が InvalidOperationException をスローするようになった</span><span class="sxs-lookup"><span data-stu-id="91bba-110">DataGridView-related APIs now throw InvalidOperationException</span></span>](#datagridview-related-apis-now-throw-invalidoperationexception) | <span data-ttu-id="91bba-111">5.0</span><span class="sxs-lookup"><span data-stu-id="91bba-111">5.0</span></span> |
+| [<span data-ttu-id="91bba-112">WinForms と WPF アプリで Microsoft.NET.Sdk が使用される</span><span class="sxs-lookup"><span data-stu-id="91bba-112">WinForms and WPF apps use Microsoft.NET.Sdk</span></span>](#winforms-and-wpf-apps-use-microsoftnetsdk) | <span data-ttu-id="91bba-113">5.0</span><span class="sxs-lookup"><span data-stu-id="91bba-113">5.0</span></span> |
+| [<span data-ttu-id="91bba-114">削除されたステータス バー コントロール</span><span class="sxs-lookup"><span data-stu-id="91bba-114">Removed status bar controls</span></span>](#removed-status-bar-controls) | <span data-ttu-id="91bba-115">5.0</span><span class="sxs-lookup"><span data-stu-id="91bba-115">5.0</span></span> |
+| [<span data-ttu-id="91bba-116">WinForms メソッドで ArgumentException がスローされるようになった</span><span class="sxs-lookup"><span data-stu-id="91bba-116">WinForms methods now throw ArgumentException</span></span>](#winforms-methods-now-throw-argumentexception) | <span data-ttu-id="91bba-117">5.0</span><span class="sxs-lookup"><span data-stu-id="91bba-117">5.0</span></span> |
+| [<span data-ttu-id="91bba-118">WinForms メソッドで ArgumentNullException がスローされるようになった</span><span class="sxs-lookup"><span data-stu-id="91bba-118">WinForms methods now throw ArgumentNullException</span></span>](#winforms-methods-now-throw-argumentnullexception) | <span data-ttu-id="91bba-119">5.0</span><span class="sxs-lookup"><span data-stu-id="91bba-119">5.0</span></span> |
+| [<span data-ttu-id="91bba-120">WinForms プロパティによる ArgumentOutOfRangeException のスロー</span><span class="sxs-lookup"><span data-stu-id="91bba-120">WinForms properties now throw ArgumentOutOfRangeException</span></span>](#winforms-properties-now-throw-argumentoutofrangeexception) | <span data-ttu-id="91bba-121">5.0</span><span class="sxs-lookup"><span data-stu-id="91bba-121">5.0</span></span> |
+| [<span data-ttu-id="91bba-122">削除されたコントロール</span><span class="sxs-lookup"><span data-stu-id="91bba-122">Removed controls</span></span>](#removed-controls) | <span data-ttu-id="91bba-123">3.1</span><span class="sxs-lookup"><span data-stu-id="91bba-123">3.1</span></span> |
+| [<span data-ttu-id="91bba-124">ヒントが表示されていると CellFormatting が発生しない</span><span class="sxs-lookup"><span data-stu-id="91bba-124">CellFormatting event not raised if tooltip is shown</span></span>](#cellformatting-event-not-raised-if-tooltip-is-shown) | <span data-ttu-id="91bba-125">3.1</span><span class="sxs-lookup"><span data-stu-id="91bba-125">3.1</span></span> |
+| [<span data-ttu-id="91bba-126">Control.DefaultFont を Segoe UI 9 pt に変更</span><span class="sxs-lookup"><span data-stu-id="91bba-126">Control.DefaultFont changed to Segoe UI 9 pt</span></span>](#default-control-font-changed-to-segoe-ui-9-pt) | <span data-ttu-id="91bba-127">3.0</span><span class="sxs-lookup"><span data-stu-id="91bba-127">3.0</span></span> |
+| [<span data-ttu-id="91bba-128">FolderBrowserDialog の最新化</span><span class="sxs-lookup"><span data-stu-id="91bba-128">Modernization of the FolderBrowserDialog</span></span>](#modernization-of-the-folderbrowserdialog) | <span data-ttu-id="91bba-129">3.0</span><span class="sxs-lookup"><span data-stu-id="91bba-129">3.0</span></span> |
+| [<span data-ttu-id="91bba-130">一部の Windows フォーム型から SerializableAttribute を削除</span><span class="sxs-lookup"><span data-stu-id="91bba-130">SerializableAttribute removed from some Windows Forms types</span></span>](#serializableattribute-removed-from-some-windows-forms-types) | <span data-ttu-id="91bba-131">3.0</span><span class="sxs-lookup"><span data-stu-id="91bba-131">3.0</span></span> |
+| [<span data-ttu-id="91bba-132">AllowUpdateChildControlIndexForTabControls 互換性スイッチがサポートされない</span><span class="sxs-lookup"><span data-stu-id="91bba-132">AllowUpdateChildControlIndexForTabControls compatibility switch not supported</span></span>](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported) | <span data-ttu-id="91bba-133">3.0</span><span class="sxs-lookup"><span data-stu-id="91bba-133">3.0</span></span> |
+| [<span data-ttu-id="91bba-134">DomainUpDown.UseLegacyScrolling 互換性スイッチがサポートされない</span><span class="sxs-lookup"><span data-stu-id="91bba-134">DomainUpDown.UseLegacyScrolling compatibility switch not supported</span></span>](#domainupdownuselegacyscrolling-compatibility-switch-not-supported) | <span data-ttu-id="91bba-135">3.0</span><span class="sxs-lookup"><span data-stu-id="91bba-135">3.0</span></span> |
+| [<span data-ttu-id="91bba-136">DoNotLoadLatestRichEditControl 互換性スイッチがサポートされない</span><span class="sxs-lookup"><span data-stu-id="91bba-136">DoNotLoadLatestRichEditControl compatibility switch not supported</span></span>](#donotloadlatestricheditcontrol-compatibility-switch-not-supported) | <span data-ttu-id="91bba-137">3.0</span><span class="sxs-lookup"><span data-stu-id="91bba-137">3.0</span></span> |
+| [<span data-ttu-id="91bba-138">DoNotSupportSelectAllShortcutInMultilineTextBox 互換性スイッチがサポートされない</span><span class="sxs-lookup"><span data-stu-id="91bba-138">DoNotSupportSelectAllShortcutInMultilineTextBox compatibility switch not supported</span></span>](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported) | <span data-ttu-id="91bba-139">3.0</span><span class="sxs-lookup"><span data-stu-id="91bba-139">3.0</span></span> |
+| [<span data-ttu-id="91bba-140">DontSupportReentrantFilterMessage 互換性スイッチがサポートされない</span><span class="sxs-lookup"><span data-stu-id="91bba-140">DontSupportReentrantFilterMessage compatibility switch not supported</span></span>](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported) | <span data-ttu-id="91bba-141">3.0</span><span class="sxs-lookup"><span data-stu-id="91bba-141">3.0</span></span> |
+| [<span data-ttu-id="91bba-142">EnableVisualStyleValidation 互換性スイッチがサポートされない</span><span class="sxs-lookup"><span data-stu-id="91bba-142">EnableVisualStyleValidation compatibility switch not supported</span></span>](#enablevisualstylevalidation-compatibility-switch-not-supported) | <span data-ttu-id="91bba-143">3.0</span><span class="sxs-lookup"><span data-stu-id="91bba-143">3.0</span></span> |
+| [<span data-ttu-id="91bba-144">UseLegacyContextMenuStripSourceControlValue 互換性スイッチがサポートされない</span><span class="sxs-lookup"><span data-stu-id="91bba-144">UseLegacyContextMenuStripSourceControlValue compatibility switch not supported</span></span>](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported) | <span data-ttu-id="91bba-145">3.0</span><span class="sxs-lookup"><span data-stu-id="91bba-145">3.0</span></span> |
+| [<span data-ttu-id="91bba-146">UseLegacyImages 互換性スイッチがサポートされない</span><span class="sxs-lookup"><span data-stu-id="91bba-146">UseLegacyImages compatibility switch not supported</span></span>](#uselegacyimages-compatibility-switch-not-supported) | <span data-ttu-id="91bba-147">3.0</span><span class="sxs-lookup"><span data-stu-id="91bba-147">3.0</span></span> |
 
-## <a name="net-50"></a><span data-ttu-id="ae5e6-144">.NET 5.0</span><span class="sxs-lookup"><span data-stu-id="ae5e6-144">.NET 5.0</span></span>
+## <a name="net-50"></a><span data-ttu-id="91bba-148">.NET 5.0</span><span class="sxs-lookup"><span data-stu-id="91bba-148">.NET 5.0</span></span>
+
+[!INCLUDE [null-owner-causes-invalidoperationexception](../../../includes/core-changes/windowsforms/5.0/null-owner-causes-invalidoperationexception.md)]
+
+***
+
+[!INCLUDE [sdk-and-target-framework-change](../../../includes/core-changes/windowsforms/5.0/sdk-and-target-framework-change.md)]
+
+***
 
 [!INCLUDE [winforms-deprecated-controls](../../../includes/core-changes/windowsforms/5.0/winforms-deprecated-controls.md)]
 
@@ -53,7 +63,7 @@ ms.locfileid: "87556204"
 
 ***
 
-## <a name="net-core-31"></a><span data-ttu-id="ae5e6-145">.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="ae5e6-145">.NET Core 3.1</span></span>
+## <a name="net-core-31"></a><span data-ttu-id="91bba-149">.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="91bba-149">.NET Core 3.1</span></span>
 
 [!INCLUDE[Removed controls](~/includes/core-changes/windowsforms/3.1/remove-controls-3.1.md)]
 
@@ -63,7 +73,7 @@ ms.locfileid: "87556204"
 
 ***
 
-## <a name="net-core-30"></a><span data-ttu-id="ae5e6-146">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="ae5e6-146">.NET Core 3.0</span></span>
+## <a name="net-core-30"></a><span data-ttu-id="91bba-150">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="91bba-150">.NET Core 3.0</span></span>
 
 [!INCLUDE[Control.DefaultFont changed to Segoe UI 9pt](~/includes/core-changes/windowsforms/3.0/control-defaultfont-changed.md)]
 
@@ -109,6 +119,6 @@ ms.locfileid: "87556204"
 
 ***
 
-## <a name="see-also"></a><span data-ttu-id="ae5e6-147">関連項目</span><span class="sxs-lookup"><span data-stu-id="ae5e6-147">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="91bba-151">関連項目</span><span class="sxs-lookup"><span data-stu-id="91bba-151">See also</span></span>
 
-- [<span data-ttu-id="ae5e6-148">Windows フォーム アプリを .NET Core に移植する</span><span class="sxs-lookup"><span data-stu-id="ae5e6-148">Port a Windows Forms app to .NET Core</span></span>](../porting/winforms.md)
+- [<span data-ttu-id="91bba-152">Windows フォーム アプリを .NET Core に移植する</span><span class="sxs-lookup"><span data-stu-id="91bba-152">Port a Windows Forms app to .NET Core</span></span>](../porting/winforms.md)
