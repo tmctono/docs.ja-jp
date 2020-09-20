@@ -383,8 +383,6 @@ items:
         href: interop/
       - name: アンマネージ API リファレンス
         href: unmanaged-api/
-      - name: XAML サービス
-        href: ../desktop-wpf/xaml-services/
   - name: ツール
     items:
       - name: 概要
