@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 61d4792b1f1b92dd59442ee38810da96c6cf63bd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a44c3692dc9ed9b3de37955191edfb279403f152
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241144"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516022"
 ---
 # <a name="tour-of-net"></a>.NET のツアー
 
@@ -115,7 +115,7 @@ F# は、C# や Visual Basic のメソッド ローカルな型推論よりさ�
 
 LINQ は、データ操作のための単純な宣言型コードを記述できる、C# および Visual Basic の強力な一連の機能です。 データは (メモリ内オブジェクト、SQL データベース、XML ドキュメントなどの) さまざまな形式にすることができますが、記述する LINQ コードは通常、どのデータ ソースでも違いがないように見えます。
 
-詳細および一部のサンプルを確認するには、トピック「[LINQ (統合言語クエリ)](using-linq.md)」を参照してください。
+詳細および一部のサンプルについては、[LINQ (統合言語クエリ) の概要](./linq/index.md)に関する記事を参照してください。
 
 ## <a name="native-interoperability"></a>ネイティブ相互運用性
 

@@ -2,12 +2,12 @@
 title: 基本クラス ライブラリの破壊的変更
 description: Core .NET ライブラリにおける破壊的変更の一覧を示します。
 ms.date: 07/27/2020
-ms.openlocfilehash: d8d886785ff71f22a3b2da65e973d899cf0371f6
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: c73909514bc738387a21f5ea68defe49c6a2c839
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465889"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598184"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Core .NET ライブラリの破壊的変更
 
@@ -17,6 +17,7 @@ Core .NET ライブラリでは、.NET Core で使用されるプリミティブ
 
 | 互換性に影響する変更点 | 導入されたバージョン |
 | - | :-: |
+| [Thread.Abort は古い形式](#threadabort-is-obsolete) | 5.0 |
 | [ConsoleLoggerOptions の古いプロパティ](#obsolete-properties-on-consoleloggeroptions) | 5.0 |
 | [ハードウェアに組み込みの IsSupported チェックは、入れ子にされた型によって異なる場合があります](#hardware-intrinsic-issupported-checks-may-differ-for-nested-types) | 5.0 |
 | [参照アセンブリのパラメーター名の変更](#parameter-names-changed-in-reference-assemblies) | 5.0 |
@@ -52,6 +53,10 @@ Core .NET ライブラリでは、.NET Core で使用されるプリミティブ
 | [開始されなかったプロセスについて Process.StartInfo が InvalidOperationException をスローする](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [thread-abort-obsolete](../../../includes/core-changes/corefx/5.0/thread-abort-obsolete.md)]
+
+***
 
 [!INCLUDE [obsolete-consoleloggeroptions-properties](../../../includes/core-changes/corefx/5.0/obsolete-consoleloggeroptions-properties.md)]
 

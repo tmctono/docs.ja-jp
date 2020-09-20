@@ -6,13 +6,13 @@ ms.author: wiwagn
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 12/04/2019
-ms.openlocfilehash: 4fe889fe86d96a5b2ffa5bd879d2ec1801a3cf20
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.date: 07/27/2020
+ms.openlocfilehash: f04de5c350dfead4dad8c37eece7f16c9a9e00bc
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174368"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515820"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>従来の Web アプリケーションかシングル ページ アプリケーション (SPA) を選択する
 
@@ -33,7 +33,7 @@ ms.locfileid: "86174368"
 
 - アプリケーションで、多くの機能を備えた高度なユーザー インターフェイスを公開する必要がある。
 
-- チームが JavaScript や TypeScript の開発に精通している。
+- チームが JavaScript、TypeScript、または Blazor WebAssembly の開発に精通している。
 
 - 他の (内部またはパブリック) クライアントに API を公開するという要件がアプリケーションに既にある。
 
@@ -43,17 +43,17 @@ SPA の使用によって可能になるユーザー エクスペリエンスの
 
 ## Blazor
 
-ASP.NET Core 3.0 には、Blazor と呼ばれる、機能が豊富で構成可能な対話型 UI を構築するための新しいモデルが導入されています。 サーバー側 Blazor を使用すると、開発者はサーバー上で C# と Razor を使用して UI を構築し、永続的な SignalR 接続を使用して、リアルタイムで UI をブラウザーと対話的に接続させることができます。
+ASP.NET Core には、Blazor と呼ばれる、機能が豊富で構成可能な対話型ユーザー インターフェイスを構築するためのモデルが含まれています。 サーバー側 Blazor を使用すると、開発者はサーバー上で C# と Razor を使用して UI を構築し、永続的な SignalR 接続を使用して、リアルタイムで UI をブラウザーと対話的に接続させることができます。 Blazor WebAssembly では、Blazor アプリに対して別のオプションが導入されます。WebAssembly を使用して、それらをブラウザーで実行できます。 WebAssembly で実行される実際の .NET であるため、アプリケーションのサーバー側の部分からコードとライブラリを再利用できます。
 
-Blazor WebAssembly では、Blazor アプリに対して別のオプションが導入されます。WebAssembly を使用して、それらをブラウザーで実行できます。 WebAssembly で実行される実際の .NET であるため、アプリケーションのサーバー側の部分からコードとライブラリを再利用できます。
-
-Blazor には、完全にサーバー側でレンダリングされる Web アプリケーションまたは SPA をビルドするかどうかを評価する場合に検討する、新しい 3 つ目のオプションが用意されています。 Blazor を使用して、SPA に似た豊富なクライアント側の動作を構築できます。このために多くの JavaScript 開発を行う必要はありません。 Blazor アプリケーションでは、API を呼び出してデータを要求したり、サーバー側の操作を実行したりできます。
+Blazor には、完全にサーバー側でレンダリングされる Web アプリケーションまたは SPA をビルドするかどうかを評価する場合に検討する、新しい 3 つ目のオプションが用意されています。 多くの JavaScript 開発を行うことなく、Blazor を使用して、SPA に似た豊富なクライアント側の動作を構築できます。 Blazor アプリケーションでは、API を呼び出してデータを要求したり、サーバー側の操作を実行したりできます。 JavaScript ライブラリとフレームワークを利用するために必要な場合は、JavaScript と相互運用できます。
 
 次の場合は、Blazor を使用して Web アプリケーションをビルドすることを検討してください。
 
 - アプリケーションで高度なユーザー インターフェイスを公開する必要がある
 
 - チームは JavaScript や TypeScript の開発よりも .NET の開発に慣れている
+
+.NET Core への移行を検討している既存の Web Forms アプリケーションがある場合は、[Web Forms 開発者向け Blazor](../blazor-for-web-forms-developers/index.md) の無料の電子書籍を確認し、Blazor への移行を検討するのが理にかなっているかどうかを確認することができます。
 
 Blazor の詳細については、[Blazor の概要](https://blazor.net/docs/get-started.html)に関するページを参照してください。
 
@@ -100,7 +100,7 @@ SPA を作成するには、JavaScript や TypeScript と、クライアント�
 
 他のクライアントが使用する Web API をサポートしている場合は、サーバー側のフォームでロジックを再現するのではなく、このような API を利用する SPA 実装を作成する方が簡単な可能性があります。 ユーザーがアプリケーションを操作すると、SPA は多数の Web API を使用してデータのクエリと更新を行います。
 
-## <a name="when-to-choose-blazor"></a>Blazor を選択する場合
+## <a name="when-to-choose-no-locblazor"></a>Blazor を選択する場合
 
 ここでは、Web アプリケーションのために Blazor を選択する理由について詳しく説明します。
 

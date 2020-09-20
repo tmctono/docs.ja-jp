@@ -30,6 +30,8 @@
   items:
     - name: ASP.NET Core
       href: aspnetcore.md
+    - name: コード分析
+      href: code-analysis.md
     - name: Core .NET ライブラリ
       href: corefx.md
     - name: 暗号

@@ -2,12 +2,12 @@
 title: dotnet-dump - .NET Core
 description: dotnet-dump コマンドライン ツールのインストールおよび使用。
 ms.date: 10/14/2019
-ms.openlocfilehash: 5489011538a4a11d60b333f0230a718c88722c97
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: e008dcfc734a8742c495ea32a7a149c9a55c54c6
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89140933"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598105"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>ダンプの収集と分析のユーティリティ (dotnet-dump)
 
@@ -71,14 +71,15 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
   メモリ ダンプを収集するプロセスの ID 番号を指定します。
 
-- **`--type <Heap|Mini>`**
+- **`--type <Full|Heap|Mini>`**
 
-  プロセスから収集する情報の種類を決定する、ダンプの種類を指定します。 次の 2 つの種類があります。
+  プロセスから収集する情報の種類を決定する、ダンプの種類を指定します。 次の 3 種類があります。
 
+  - `Full` - モジュール イメージを含むメモリをすべて含む最大のダンプ。
   - `Heap`: モジュールの一覧、スレッドの一覧、すべてのスタック、例外情報、ハンドル情報、およびマップされたイメージを除くすべてのメモリを含む、大規模で比較的包括的なダンプです。
   - `Mini`: モジュールの一覧、スレッドの一覧、例外情報、およびすべてのスタックを含む小さいダンプです。
 
-  指定しない場合の既定は、`Heap` です。
+  指定しない場合の既定は、`Full` です。
 
 - **`-o|--output <output_dump_path>`**
 

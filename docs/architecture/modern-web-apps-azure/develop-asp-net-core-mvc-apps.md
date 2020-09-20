@@ -3,13 +3,16 @@ title: ASP.NET Core MVC アプリの開発
 description: ASP.NET Core および Azure での最新の Web アプリケーションの設計 | ASP.NET Core MVC アプリの開発
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/04/2019
-ms.openlocfilehash: be674f3292238b1983064408184777d379cf52a7
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.date: 08/12/2020
+no-loc:
+- Blazor
+- WebAssembly
+ms.openlocfilehash: 255a7f9b34752b3480ba5a8ffc5d506e6d7b05d3
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307008"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515978"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC アプリを開発する
 
@@ -20,7 +23,7 @@ ASP.NET Core は、最新のクラウド向けに最適化された Web アプ�
 
 ## <a name="mvc-and-razor-pages"></a>MVC と Razor Pages
 
-ASP.NET Core MVC は、Web ベースの API やアプリを構築する際に便利な機能をたくさん備えています。 MVC という用語は "Model-View-Controller" の略です。これは、ユーザーからの要求に応答する責任をいくつかの部分に分割する UI パターンです。 このパターンに従うだけでなく、ASP.NET Core アプリに各種機能を Razor Pages として実装することもできます。 Razor Pages は ASP.NET Core MVC に組み込まれ、経路指定やモデル バインドなどと同じ機能が使用されます。しかしながら、コントローラーやビューなどに個別のフォルダーやファイルを用意したり、属性基準で経路を指定したりする代わりに、Razor Pages は 1 つのフォルダー ("/Pages") に置かれ、このフォルダーの相対的な位置に基づいて経路を指定し、コントローラー アクションの代わりにハンドラーで要求を処理します。
+ASP.NET Core MVC は、Web ベースの API やアプリを構築する際に便利な機能をたくさん備えています。 MVC という用語は "Model-View-Controller" の略です。これは、ユーザーからの要求に応答する責任をいくつかの部分に分割する UI パターンです。 このパターンに従うだけでなく、ASP.NET Core アプリに各種機能を Razor Pages として実装することもできます。 Razor Pages は ASP.NET Core MVC に組み込まれ、ルーティング、モデル バインド、フィルター、承認などに同じ機能が使用されます。ただし、コントローラー、モデル、ビューなどに個別のフォルダーやファイルを使用したり、属性に基づくルーティングを行ったりする代わりに、Razor Pages は 1 つのフォルダー ("/Pages") に配置され、このフォルダー内の相対的な位置に基づいてルーティングを行い、コントローラー アクションではなくハンドラーで要求を処理します。 そのため、Razor Pages を使用すると、通常、必要なファイルやクラスはすべて併置され、Web プロジェクト全体に分散しません。
 
 新しい ASP.NET Core App を作成するとき、構築するアプリの書類に関して計画を立ててください。 Visual Studio では、いくつかのテンプレートの中から選択します。 プロジェクト テンプレートとして最も一般的な 3 つは、Web API、Web アプリケーション、Web アプリケーション (Model-View-Controller) です。 これを決定できるのは最初にプロジェクトを作成するときのみですが、取り消し不可能な決定ではありません。 Web API プロジェクトでは、標準の Model-View-Controller コントローラーが使用されます。既定ではビューだけがありません。 同様に、既定の Web アプリケーション テンプレートでは Razor Pages が使用され、Views フォルダーがありません。 このようなプロジェクトには Views フォルダーを後で追加し、ビューを基盤とする動作に対応できます。 Web API プロジェクトと Model-View-Controller プロジェクトには既定で Pages フォルダーがありませんが、後で追加し、Razor Pages を基盤とする動作に対応できます。 以上の 3 つのテンプレートは、データ (Web API)、ページ ベース、ビュー ベースという 3 つの異なるデフォルト ユーザー インタラクションをサポートするものであると考えることができます。 ただし、必要であれば、3 つのいずれかまたは全部を 1 つのプロジェクトに混在させることができます。
 
@@ -97,6 +100,72 @@ Razor Pages では、属性ルーティングは使用されません。 Razor P
 Web API に対しては、ASP.NET Core MVC は[_コンテンツ ネゴシエーション_](/aspnet/core/mvc/models/formatting)をサポートしており、応答の書式設定方法を要求で指定することができます。 要求で指定されたヘッダーに基づき、データを返すアクションは、XML、JSON、または他のサポートされている形式で応答を書式設定します。 この機能を使うと、同じ API を、データ形式要件が異なる複数のクライアントで使用できます。
 
 Web API プロジェクトでは `[ApiController]` 属性の使用を検討してください。この属性は個々のコントローラー、ベース コントローラー クラス、アセンブリ全体に適用できます。 この属性によって、自動モデル検証が追加されます。アクションのモデルが無効な場合、BadRequest と検証エラーの詳細が返されます。 この属性ではまた、あらゆるアクションに、従来の経路を使用せず、属性経路を与えることが要求され、エラーに対する応答で、さらに詳しい ProblemDetails 情報が返されます。
+
+### <a name="keeping-controllers-under-control"></a>コントローラーの制御
+
+ページベースのアプリケーションの場合、Razor Pages は、コントローラーが大きくなりすぎないようにするために大いに役立ちます。 個々のページには、専用のファイルとハンドラー専用のクラスが用意されます。 Razor Pages が導入される前は、多くのビュー中心のアプリケーションには、多数の異なるアクションやビューを担当する大きなコントローラー クラスがありました。 当然、これらのクラスは、多くの責任と依存関係を含めるために拡張され、保守が困難になっていきます。 ビューベースのコントローラーが大きくなりすぎていることがわかった場合は、リファクタリングして Razor Pages を使用するか、メディエーターなどのパターンを導入することを検討してください。
+
+メディエーター設計パターンを使用して、クラス間の通信を可能にしながら、クラス間の結合を削減します。 ASP.NET Core MVC アプリケーションで、"*ハンドラー*" を使用してアクション メソッドの作業を行うことにより、コントローラーをより小さな部分に分割するために、このパターンが頻繁に使用されます。 これを実現するには、多くの場合、一般的な [MediatR NuGet パッケージ](https://www.nuget.org/packages/MediatR/)が使用されます。 通常、コントローラーには、それぞれが特定の依存関係を必要とする多数の異なるアクション メソッドが含まれます。 アクションで必要となるすべての依存関係のセットをコントローラーのコンストラクターに渡す必要があります。 MediatR を使用する場合、コントローラーが持つ唯一の依存関係は、メディエーターのインスタンス上にあります。 各アクションによって、メディエーター インスタンスを使用してメッセージが送信され、メッセージはハンドラーによって処理されます。 ハンドラーは 1 つのアクション固有のものであるため、そのアクションに必要な依存関係のみを必要とします。 MediatR を使用するコントローラーの例を次に示します。
+
+```csharp
+public class OrderController : Controller
+{
+    private readonly IMediator _mediator;
+
+    public OrderController(IMediator mediator)
+    {
+        _mediator = mediator;
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> MyOrders()
+    {
+        var viewModel = await _mediator.Send(new GetMyOrders(User.Identity.Name));
+
+        return View(viewModel);
+    }
+
+    // other actions implemented similarly
+}
+```
+
+`MyOrders` アクションでは、`GetMyOrders`メッセージの `Send` の呼び出しが、このクラスによって処理されます。
+
+```csharp
+public class GetMyOrdersHandler : IRequestHandler<GetMyOrders, IEnumerable<OrderViewModel>>
+{
+    private readonly IOrderRepository _orderRepository;
+
+    public GetMyOrdersHandler(IOrderRepository orderRepository)
+    {
+        _orderRepository = orderRepository;
+    }
+
+    public async Task<IEnumerable<OrderViewModel>> Handle(GetMyOrders request, CancellationToken cancellationToken)
+    {
+        var specification = new CustomerOrdersWithItemsSpecification(request.UserName);
+        var orders = await _orderRepository.ListAsync(specification);
+
+        return orders.Select(o => new OrderViewModel
+        {
+            OrderDate = o.OrderDate,
+            OrderItems = o.OrderItems?.Select(oi => new OrderItemViewModel()
+            {
+                PictureUrl = oi.ItemOrdered.PictureUri,
+                ProductId = oi.ItemOrdered.CatalogItemId,
+                ProductName = oi.ItemOrdered.ProductName,
+                UnitPrice = oi.UnitPrice,
+                Units = oi.Units
+            }).ToList(),
+            OrderNumber = o.Id,
+            ShippingAddress = o.ShipToAddress,
+            Total = o.Total()
+        });
+    }
+}
+```
+
+このアプローチの最終的な結果として、コントローラーがはるかに小さくなり、主にルーティングとモデル バインドに集中し、個々のハンドラーが特定のエンドポイントに必要な特定のタスクを担当するようになります。 このアプローチは、[ApiEndpoints NuGet パッケージ](https://www.nuget.org/packages/Ardalis.ApiEndpoints/)を使用すると、これにより Razor Pages でビューベースのコントローラーにもたらされるのと同じ利点を API コントローラーに提供することが試みられるため、MediatR を使用しなくても実現できます。
 
 > ### <a name="references--mapping-requests-to-responses"></a>参照 – 応答と要求のマッピング
 >
@@ -234,6 +303,18 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 また、ASP.NET Core MVC はビューを配置する場合にも規則を使います。 これをカスタム規則でオーバーライドして、ビューが独自の機能フォルダーに配置されるようにすることができます (上の FeatureConvention によって提供される機能名を使用)。 この方法について詳しくは、MSDN Magazine の記事「[ASP.NET Core MVC 向け機能スライス](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc)」をご覧ください。実際に動くサンプルをダウンロードすることもできます。
 
+### <a name="apis-and-no-locblazor-applications"></a>API と Blazor アプリケーション
+
+セキュリティ保護が必要な一連の Web API がアプリケーションに含まれている場合、それらをビューまたは Razor Pages アプリケーションとは別のプロジェクトとして構成するのが理想的です。 API (特にパブリック API) をサーバー側の Web アプリケーションから分離すると、多くの利点があります。 多くの場合、これらのアプリケーションには、固有のデプロイと負荷特性があります。 また、さまざまなセキュリティ メカニズムを採用する可能性も非常に高く、標準のフォームベースのアプリケーションによって、Cookie ベースの認証と、トークンベースの認証を使用する可能性が最も高い API が利用されます。
+
+さらに、Blazor サーバーと Blazor WebAssembly のどちらを使用するかにかかわらず、Blazor は、個別のプロジェクトとして構築する必要があります。 アプリケーションのランタイム特性とセキュリティ モデルは異なります。 これらによって、サーバー側の Web アプリケーション (または API プロジェクト) と共通の種類が共有される可能性があるため、これらの種類は共通の共用プロジェクトで定義する必要があります。
+
+Blazor WebAssembly 管理インターフェイスを eShopOnWeb に追加するには、いくつかの新しいプロジェクトを追加する必要があります。 Blazor WebAssembly プロジェクト自体 (`BlazorAdmin`) です。 `BlazorAdmin` で使用され、トークンベースの認証を使用するように構成されている新しいパブリック API エンドポイント セットは、`PublicApi` プロジェクトで定義されます。 さらに、これらの両方のプロジェクトで使用される特定の共有の種類は、新しい `BlazorShared` プロジェクトに保持されます。
+
+`PublicApi` と `BlazorAdmin` の両方で必要とされる種類を共有するために使用できる共通の `ApplicationCore` プロジェクトが既にあるのに、なぜ別の `BlazorShared` プロジェクトを追加するか、と疑問に思う人もいるかもしれません。 その答えは、このプロジェクトには、アプリケーションのすべてのビジネス ロジックが含まれているため、必要以上に大きく、サーバー上でセキュリティを維持する必要がある可能性がはるかに高いということです。 Blazor アプリケーションが読み込まれると、`BlazorAdmin` で参照されるすべてのライブラリがユーザーのブラウザーにダウンロードされることにご注意ください。
+
+[フロント エンド用バックエンド (BFF) パターン](https://docs.microsoft.com/azure/architecture/patterns/backends-for-frontends)を使用しているかどうかによって、Blazor WebAssembly アプリで使用される API で、その種類を 100% Blazor と共有しない可能性があります。 特に、多くの異なるクライアントで使用することを目的としたパブリック API では、クライアント固有の共有プロジェクト内で共有するのではなく、独自の要求と結果の種類を定義することができます。 eShopOnWeb サンプルの場合、`PublicApi` プロジェクトによって、実際にはパブリック API がホストされていると想定されているため、その要求と応答の種類のすべてが `BlazorShared` プロジェクトから取得されるとは限りません。
+
 ### <a name="cross-cutting-concerns"></a>横断的な問題
 
 アプリケーションが大きくなるほど、横断的な事柄を抽出して、重複を排除し、整合性を維持することの重要性が増します。 ASP.NET Core アプリケーションでの横断的な事柄の例としては、認証、モデル検証規則、出力キャッシュ、エラー処理などがありますが、その他にも多くのことがあります。 ASP.NET Core MVC で[フィルター](/aspnet/core/mvc/controllers/filters)を使うと、要求処理パイプラインの特定のステップの前または後にコードを実行できます。 たとえば、フィルターは、モデル バインドの前後、アクションの前後、またはアクションの結果の前後に実行できます。 また、承認フィルターを使って、パイプラインの残りの部分へのアクセスを制御することができます。 図 7-2 では、フィルターを構成した場合に要求の実行がそれをどのように通過するかを示します。
@@ -323,7 +404,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 
 Web アプリケーションのセキュリティ保護は大きなトピックであり、さまざまな考慮事項があります。 最も基本的なレベルのセキュリティには、特定の要求を行ったユーザーを認識し、その要求が必要なリソースだけにアクセスできるようにすることが含まれます。 認証は、要求で提供された資格情報を、信頼できるデータ ストア内の資格情報と比較して、要求を既知のエンティティから送信されたものとして扱う必要があるかどうかを確認するプロセスです。 承認は、ユーザーの ID に基づいて特定のリソースへのアクセスを制限するプロセスです。 セキュリティに関する 3 番目の考慮事項は、第三者による傍受から要求を保護することであり、少なくとも[アプリケーションが SSL を使っていることを確認する](/aspnet/core/security/enforcing-ssl)必要があります。
 
-### <a name="authentication"></a>認証
+### <a name="identity"></a>ID
 
 ASP.NET Core Identity は、アプリケーションのログイン機能をサポートするために使うことができるメンバーシップ システムです。 ローカル ユーザー アカウントをサポートするだけでなく、Microsoft アカウント、Twitter、Facebook、Google などのプロバイダーからの外部ログイン プロバイダーもサポートします。 ASP.NET Core Identity だけでなく、アプリケーションでは Windows 認証や、[Identity Server](https://github.com/IdentityServer/IdentityServer4) のようなサード パーティの ID プロバイダーを使うこともできます。
 
@@ -342,8 +423,8 @@ public void ConfigureServices(IServiceCollection services)
     services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
     services.AddIdentity<ApplicationUser, IdentityRole>()
-    .AddEntityFrameworkStores<ApplicationDbContext>()
-    .AddDefaultTokenProviders();
+        .AddEntityFrameworkStores<ApplicationDbContext>()
+        .AddDefaultTokenProviders();
     services.AddMvc();
 }
 
@@ -362,6 +443,73 @@ Configure メソッドで UseMvc の前に UseIdentity を指定することが�
 
 詳しくは、ASP.NET Core の公式ドキュメントで [2 要素認証の構成](/aspnet/core/security/authentication/2fa)および[外部ログイン プロバイダーの有効化](/aspnet/core/security/authentication/social/)に関する記事をご覧ください。
 
+### <a name="authentication"></a>認証
+
+認証は、システムにアクセスしているユーザーを判別するプロセスです。 前のセクションで示した ASP.NET Core Identity と構成メソッドを使用すると、アプリケーションの一部の認証の既定値が自動的に構成されます。 ただし、これらの既定値を手動で構成することも、AddIdentity で設定された値をオーバーライドすることもできます。 Identity を使用している場合、既定の "*スキーム*" として Cookie ベースの認証が構成されます。
+
+Web ベースの認証では、通常、システムのクライアントを認証する過程で、最大 5 つのアクションを実行できます。 次のとおりです。
+
+- 認証。 クライアントから提供された情報を使用して、アプリケーション内で使用する ID を作成します。
+- チャレンジ。 このアクションを使用して、クライアントに自身を識別する世に要求します。
+- 禁止。 アクションの実行が禁止されていることをクライアントに通知します。
+- サインイン。 何らかの方法で既存のクライアントを保持します。
+- サインアウト。クライアントを永続化から削除します。
+
+Web アプリケーションで認証を実行するには、いくつかの一般的な手法があります。 これらは、スキームと呼ばれます。 特定のスキームで、上記のオプションの一部またはすべてのアクションを定義します。 一部のスキームでは、アクションのサブセットのみがサポートされ、サポートされていないアクションを実行するために個別のスキームが必要になります。 たとえば、OpenId-Connect (OIDC) スキームによって、サインインとサインアウトはサポートされませんが、一般的に、この永続化には Cookie 認証を使用するように構成されます。
+
+ASP.NET Core アプリケーションでは、前述の各アクションに対して `DefaultAuthenticateScheme` とオプションの特定のスキームを構成できます。 たとえば、`DefaultChallengeScheme`、`DefaultForbidScheme` などです。[`AddIdentity<TUser,TRole>`](https://github.com/dotnet/aspnetcore/blob/release/3.1/src/Identity/Core/src/IdentityServiceCollectionExtensions.cs#L38-L102) を呼び出すと、アプリケーションのさまざまな側面が構成され、多くの必要なサービスが追加されます。 これには、認証スキームを構成するためのこの呼び出しも含まれます。
+
+```csharp
+services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = IdentityConstants.ApplicationScheme;
+    options.DefaultChallengeScheme = IdentityConstants.ApplicationScheme;
+    options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
+});
+```
+
+これらのスキームにより、既定で、永続化と認証用のログインページへのリダイレクトに Cookie が使用されます。 これらのスキームは、Web ブラウザーを介してユーザーとやりとりする Web アプリケーションに適していますが、API には推奨されません。 代わりに、API では、通常、別の形式の認証 (たとえば、JWT ベアラー トークン) が使用されます。
+
+Web API は、.NET アプリケーションの `HttpClient` や他のフレームワークの同等の型などのコードによって使用されます。 これらのクライアントでは、API 呼び出しからの使用可能な応答、または発生した問題がある場合は、それを示す状態コードを想定しています。 これらのクライアントでは、ブラウザーを介してやりとりしておらず、API が返す可能性のある HTML をレンダリングまたは操作することもありません。 このため、クライアントが認証されない場合、API エンドポイントによってそれらをログイン ページにリダイレクトするのは適切ではありません。 別のスキームの方が適切です。
+
+API の認証を構成するには、次のような認証を設定できます。これは、eShopOnWeb 参照アプリケーションの `PublicApi` プロジェクトで使用されます。
+
+```csharp
+services.AddAuthentication(config =>
+{
+    config.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+    .AddJwtBearer(config =>
+    {
+        config.RequireHttpsMetadata = false;
+        config.SaveToken = true;
+        config.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(key),
+            ValidateIssuer = false,
+            ValidateAudience = false
+        };
+    });
+```
+
+1 つのプロジェクト内に複数の異なる認証スキームを構成できますが、1 つの既定のスキームを構成する方がはるかに簡単です。 このため、特に、eShopOnWeb 参照アプリケーションでは、アプリケーションのビューと Razor Pages を含むメインの `Web` プロジェクトとは別個の独自のプロジェクト `PublicApi` に API を分離します。
+
+#### <a name="authentication-in-no-locblazor-apps"></a>Blazor アプリでの認証
+
+Blazor サーバー アプリケーションでは、他の ASP.NET Core アプリケーションと同じ認証機能を利用できます。 ただし、Blazor WebAssembly アプリケーションはブラウザーで実行されるため、組み込みの ID および認証プロバイダーを使用できません。 Blazor WebAssembly アプリケーションによって、ユーザーの認証状態がローカルに保存し、要求にアクセスされ、ユーザーが実行する必要があるアクションが決定されます。 ただし、ユーザーは簡単にアプリをバイパスして API と直接やりとりすることができるため、Blazor WebAssembly アプリ内に実装されているロジックに関係なく、すべての認証および承認のチェックをサーバーで実行する必要があります。
+
+> ### <a name="references--authentication"></a>参照 - 認証
+>
+> - **認証アクションと既定値**  
+>   <https://stackoverflow.com/a/52493428>
+> - **SPA の認証と承認**
+>   <https://docs.microsoft.com/aspnet/core/security/authentication/identity-api-authorization>
+> - **ASP.NET Core Blazor の認証と承認**
+>   <https://docs.microsoft.com/aspnet/core/blazor/security/>
+> - **セキュリティ:ASP.NET Web Forms および Blazor** 
+>   <https://docs.microsoft.com/dotnet/architecture/blazor-for-web-forms-developers/security-authentication-authorization> での認証と承認
+
 ### <a name="authorization"></a>承認
 
 承認の最も単純な形式には、匿名ユーザーに対するアクセスの制限が含まれます。 これは、特定のコントローラーまたはアクションに \[Authorize\] 属性を適用するだけで実現できます。 ロールを使っている場合は、次のように、特定のロールに属しているユーザーのアクセス制限まで、属性をさらに拡張できます。
@@ -376,7 +524,7 @@ public class SalaryController : Controller
 
 この例では、HRManager ロールと Finance ロールのどちらか一方または両方に属しているユーザーは、SalaryController にアクセスできます。 ユーザーが (複数のロールの 1 つだけでなく) 複数のロールに属していることを必要とするには、属性を複数回適用し、そのたびに必要なロールを指定できます。
 
-特定のロール セットを文字列として多くの異なるコントローラーやアクションで指定すると、望ましくない繰り返しにつながります。 承認規則をカプセル化する承認ポリシーを構成し、\[Authorize\] 属性を適用するときに、個別のロールではなくポリシーを指定することができます。
+特定のロール セットを文字列として多くの異なるコントローラーやアクションで指定すると、望ましくない繰り返しにつながります。 少なくとも、これらの文字列リテラルに定数を定義し、その文字列を指定する必要がある場所でその定数を使用します。 さらに、承認規則をカプセル化する承認ポリシーを構成し、\[Authorize\] 属性を適用する場合に、そのポリシーを個々のロールの代わりに指定することもできます。
 
 ```csharp
 [Authorize(Policy = "CanViewPrivateReport")]
@@ -407,13 +555,28 @@ public void ConfigureServices(IServiceCollection services)
 
 #### <a name="securing-web-apis"></a>Web API のセキュリティ保護
 
-ほとんどの Web API は、トークン ベースの認証システムを実装する必要があります。 トークン認証はステートレスであり、拡張できるように設計されています。 トークン ベースの認証システムでは、クライアントは最初に認証プロバイダーで認証を行う必要があります。 それが成功した場合、クライアントはトークンを発行されます。トークンは、単に暗号化された意味のある文字列です。 その後、クライアントが API に要求を発行する必要があるときは、このトークンを要求のヘッダーとして追加します。 サーバーは、要求を完了する前に、要求ヘッダーに含まれるトークンを検証します。 図 7-4 はこのプロセスを示したものです。
+ほとんどの Web API は、トークン ベースの認証システムを実装する必要があります。 トークン認証はステートレスであり、拡張できるように設計されています。 トークン ベースの認証システムでは、クライアントは最初に認証プロバイダーで認証を行う必要があります。 それが成功した場合、クライアントはトークンを発行されます。トークンは、単に暗号化された意味のある文字列です。 トークンの最も一般的な形式は、JSON Web トークン (JWT、多くの場合 "ジョット" と発音します) です。 その後、クライアントが API に要求を発行する必要があるときは、このトークンを要求のヘッダーとして追加します。 サーバーは、要求を完了する前に、要求ヘッダーに含まれるトークンを検証します。 図 7-4 はこのプロセスを示したものです。
 
 ![TokenAuth](./media/image7-4.png)
 
 **図 7-4.** Web API に対するトークン ベースの認証。
 
 独自の認証サービスを作成したり、Azure AD や OAuth と統合したり、[IdentityServer](https://github.com/IdentityServer) のようなオープンソースのツールを利用してサービスを実装したりできます。
+
+JWT トークンにはユーザーに関する要求を埋め込むことができ、これらはクライアントまたはサーバーで読み取ることができます。 JWT トークンの内容を表示するには、[jwt.io](https://jwt.io/) などのツールを使用することができます。 パスワードやキーなどの機密データは、簡単に読み取られてしまうため、JTW トークンに格納しないでください。
+
+SPA または Blazor WebAssembly アプリケーションで JWT トークンを使用する場合、クライアント上の任意の場所に格納し、すべての API 呼び出しに追加する必要があります。 次のコードで示すように、通常、これはヘッダーとして実行されます。
+
+```csharp
+// AuthService.cs in BlazorAdmin project of eShopOnWeb
+private async Task SetAuthorizationHeader()
+{
+    var token = await GetToken();
+    _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+}
+```
+
+上記のメソッドが呼び出されると、`_httpClient` で作成された要求の要求ヘッダーにトークンが埋め込まれます。これにより、サーバー側の API で要求の認証と承認を行うことができます。
 
 #### <a name="custom-security"></a>カスタム セキュリティ
 
@@ -518,8 +681,6 @@ DDD ドメイン モデルでは、モデル内に複雑な動作をカプセル
 - [リポジトリ](https://deviq.com/repository-pattern/)は、永続化の詳細を抽象化します。
 
 - [ファクトリ](https://en.wikipedia.org/wiki/Factory_method_pattern)は、複雑なオブジェクトの作成をカプセル化します。
-
-- ドメイン イベントは、トリガーの動作から依存する動作を分離します。
 
 - [サービス](http://gorodinski.com/blog/2012/04/14/services-in-domain-driven-design-ddd/)は、複雑な動作やインフラストラクチャの実装の詳細をカプセル化します。
 

@@ -4,12 +4,12 @@ description: 非推奨の API およびプラットフォームの互換性の�
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: e214c91f2beebc7f3b3324f4879deba9a5623f86
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8da4b2add206daa431124a7d24efc2676cbcaa69
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156135"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598095"
 ---
 # <a name="net-api-analyzer"></a>.NET API アナライザー
 
@@ -54,32 +54,32 @@ API アナライザーは、DE (Deprecation Error の略) で始まる API 固�
 
 非推奨の API (<xref:System.Net.WebClient> など) がコードで使われていると、API アナライザーは緑の波線でそれを強調します。 API 呼び出しをポイントすると、次の例のように、電球アイコンと API の非推奨に関する情報が表示されます。
 
-!["緑の波線が表示された WebClient API と左側の電球アイコンのスクリーンショット"](media/api-analyzer/green-squiggle.jpg)
+![緑の波線が表示された WebClient API と左側の電球アイコンのスクリーンショット。](media/api-analyzer/green-squiggle.jpg)
 
 **[エラー一覧]** ウィンドウには、非推奨の API ごとに一意の ID を含む警告が表示されます。次に示すのは `DE004` の例です。
 
-!["警告の ID と説明が表示されている [エラー一覧] ウィンドウのスクリーンショット"](media/api-analyzer/warnings-id-and-descriptions.jpg "警告を含むエラー一覧ウィンドウ。")
+![警告の ID と説明が表示されている [エラー一覧] ウィンドウのスクリーンショット。](media/api-analyzer/warnings-id-and-descriptions.jpg "警告を含むエラー一覧ウィンドウ。")
 
 ID をクリックすると、API が非推奨になった理由に関する詳細情報と、使用できる代替 API に関する提案が表示される Web ページに移動します。
 
-強調表示されたメンバーを右クリックして **[\<診断 ID> の非表示]** を選ぶと、警告を抑制できます。 警告を抑制するには 2 つの方法があります。
+強調表示されたメンバーを右クリックして **[\<diagnostic ID> の非表示]** を選ぶと、警告を抑制できます。 警告を抑制するには 2 つの方法があります。
 
 - [ローカル (ソース内)](#suppress-warnings-locally)
 - [グローバル (抑制ファイル内)](#suppress-warnings-globally) - 推奨
 
 ### <a name="suppress-warnings-locally"></a>警告をローカルに抑制する
 
-警告をローカルに抑制するには、警告を抑制するメンバーを右クリックして、**[クイック アクションとリファクタリング]** > **[\<*診断 ID*> の非表示]** > **[ソース内]** の順に選びます。 [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 警告プリプロセッサ ディレクティブが、定義されているスコープ内のソース コードに追加されます。!["#pragma warning disable で囲まれたコードのスクリーンショット"](media/api-analyzer/suppress-in-source.jpg)
+警告をローカルに抑制するには、警告を抑制するメンバーを右クリックして、 **[クイック アクションとリファクタリング]**  >  **[*診断 ID*\<diagnostic ID> の非表示]**  >  **[ソース内]** の順に選択します。 [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 警告プリプロセッサ ディレクティブが、定義されているスコープ内のソース コードに追加されます。![#pragma warning disable が枠で囲まれたコードのスクリーンショット。](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppress-warnings-globally"></a>警告をグローバルに抑制する
 
-警告をグローバルに抑制するには、警告を抑制するメンバーを右クリックして、**[クイック アクションとリファクタリング]** > **[\<*診断 ID*> の非表示]** > **[抑制ファイル内]** の順に選びます。
+警告をグローバルに抑制するには、警告を抑制するメンバーを右クリックして、 **[クイック アクションとリファクタリング]**  >  **[*診断 ID*\<diagnostic ID> の非表示]**  >  **[抑制ファイル内]** の順に選択します。
 
-!["緑の波線が表示された WebClient API と左側の電球アイコンのスクリーンショット"](media/api-analyzer/suppress-in-sup-file.jpg)
+![Visual Studio の警告を抑制するオプションを示す右クリック メニューのスクリーンショット。](media/api-analyzer/suppress-in-sup-file.jpg)
 
 最初の抑制後に、*GlobalSuppressions.cs* ファイルがプロジェクトに追加されます。 新しいグローバル抑制は、このファイルに追加されます。
 
-!["緑の波線が表示された WebClient API と左側の電球アイコンのスクリーンショット"](media/api-analyzer/suppression-file.jpg)
+![ソリューション エクスプローラーの GlobalSuppressions.cs ファイルのスクリーンショット。](media/api-analyzer/suppression-file.jpg)
 
 グローバル抑制は、プロジェクト間で API 使用の一貫性を確保するのに推奨される方法です。
 
@@ -103,7 +103,7 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 }
 ```
 
-また、対象のフレームワーク/オペレーティング システムごとに条件付きでコンパイルすることもできますが、現在は[手動で](../frameworks.md#how-to-specify-target-frameworks)行う必要があります。
+また、対象のフレームワーク/オペレーティング システムごとに条件付きでコンパイルすることもできますが、現在は[手動で](../frameworks.md#how-to-specify-a-target-framework)行う必要があります。
 
 ## <a name="supported-diagnostics"></a>サポートされている診断
 
@@ -123,7 +123,7 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 ユーザーは、診断の処理方法を決定します (警告、エラー、提案、オフ)。 たとえば、設計者は、互換性の問題をエラーとして扱い、一部の非推奨の API の呼び出しでは警告を生成し、それ以外については提案を生成するだけにする、といったことを決定できます。 これを、診断 ID 別およびプロジェクト別に構成できます。 そのためには、**ソリューション エクスプローラー**で、プロジェクトの **[依存関係]** ノードに移動します。 ノード **[依存関係]**  >  **[アナライザー]**  >  **[Microsoft.DotNet.Analyzers.Compatibility]** を展開します。 診断 ID を右クリックし、 **[ルール セットの重要度を設定]** を選んで、目的のオプションを選びます。
 
-!["診断とルール セットの重要度のポップアップ ダイアログが表示されているソリューション エクスプローラーのスクリーンショット"](media/api-analyzer/disable-notifications.jpg)
+![診断とルール セットの重要度のポップアップ ダイアログが表示されているソリューション エクスプローラーのスクリーンショット。](media/api-analyzer/disable-notifications.jpg)
 
 ## <a name="see-also"></a>関連項目
 

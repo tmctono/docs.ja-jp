@@ -4,16 +4,16 @@ description: 自己完結型アプリのトリミングを制御する方法に�
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: 42e98f9ede004f06221d2df5ecd076500061e37d
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 89bd195a97c2f1bbbba9199fea51c917c4e4836b
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465417"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515833"
 ---
 # <a name="trimming-options"></a>トリミングのオプション
 
-[トリミングされた自己完結型の展開](trim-self-contained.md)の動作は、MSBuild の次のプロパティと項目によって影響を受けます。 一部のオプションで示されている `ILLink` は、トリミングが実装されている、基になるツールの名前です。 `ILLink` コマンド ライン ツールの詳細については、[illink のオプション](https://github.com/mono/linker/blob/master/docs/illink-options.md)に関する説明を参照してください。
+[トリミングされた自己完結型の展開](trim-self-contained.md)の動作は、MSBuild の次のプロパティと項目によって影響を受けます。 一部のオプションで示されている `ILLink` は、トリミングが実装されている、基になるツールの名前です。 基になるツールの詳細については、[リンカーのドキュメント](https://github.com/mono/linker/tree/master/docs)で確認できます。
 
 ## <a name="enable-trimming"></a>トリミングを有効にする
 
@@ -129,3 +129,37 @@ ms.locfileid: "89465417"
     埋め込み PDB や別の PDB ファイルなど、トリミングされたアプリケーションからシンボルを削除します。 これは、アプリケーションのコードと、シンボルに付属するすべての依存関係の両方に適用されます。
 
 また、SDK では、`DebuggerSupport` プロパティを使用してデバッガーのサポートを無効にすることもできます。 デバッガーのサポートを無効にすると、トリミングによって自動的にシンボルが削除されます (`TrimmerRemoveSymbols` は既定で true に設定されます)。
+
+## <a name="trimming-framework-library-features"></a>フレームワーク ライブラリ機能のトリミング
+
+フレームワーク ライブラリのいくつかの機能領域には、リンカー ディレクティブが付属しています。これにより、無効な機能のコードを削除できます。
+
+- `<DebuggerSupport>false</DebuggerSupport>`
+
+    デバッグ エクスペリエンスを向上させるコードを削除します。 これにより、[シンボルも削除されます](#removing-symbols)。
+
+- `<EnableUnsafeBinaryFormatterSerialization>false</EnableUnsafeBinaryFormatterSerialization>`
+
+    BinaryFormatter のシリアル化サポートを削除します。 詳細については、[古い形式の BinaryFormatter シリアル化メソッド](../compatibility/corefx.md#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)に関する記事を参照してください。
+
+- `<EnableUnsafeUTF7Encoding>false</EnableUnsafeUTF7Encoding>`
+
+    安全でない UTF-7 エンコード コードを削除します。 詳細については、「[UTF-7 コード パスが古い形式に](../compatibility/corefx.md#utf-7-code-paths-are-obsolete)」を参照してください。
+
+- `<EventSourceSupport>false</EventSourceSupport>`
+
+    EventSource に関連するコードまたはロジックを削除します。
+
+- `<HttpActivityPropagationSupport>false</HttpActivityPropagationSupport>`
+
+    System.Net.Http の診断サポートに関連するコードを削除します。
+
+- `<InvariantGlobalization>true</InvariantGlobalization>`
+
+    グローバリゼーション固有のコードとデータを削除します。 詳細については、「[インバリアント モード](../run-time-config/globalization.md#invariant-mode)」を参照してください。
+
+- `<UseSystemResourceKeys>true</UseSystemResourceKeys>`
+
+    `System.*` アセンブリの例外メッセージを削除します。 `System.*` アセンブリから例外がスローされると、メッセージは完全なメッセージではなく、簡略化されたリソース ID になります。
+
+ これらのプロパティを使用すると、関連するコードがトリミングされ、[runtimeconfig](../run-time-config/index.md) ファイルを介して機能も無効になります。 対応する runtimeconfig オプションなど、これらのプロパティの詳細については、[機能スイッチ](https://github.com/dotnet/runtime/blob/master/docs/workflow/trimming/feature-switches.md)に関するページを参照してください。 一部の SDK には、これらのプロパティに既定値が設定されている場合があります。

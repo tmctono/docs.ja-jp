@@ -3,13 +3,16 @@ title: ASP.NET Core アプリでのデータの操作
 description: ASP.NET Core および Azure での最新の Web アプリケーションの設計 | ASP.NET Core アプリでのデータの操作
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/04/2019
-ms.openlocfilehash: b706332b28aec669a841f510046aa7b185be1373
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 08/12/2020
+no-loc:
+- Blazor
+- WebAssembly
+ms.openlocfilehash: f2f2a4706ea4deba39465d8697f78be58506a09c
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987843"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515873"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core アプリでのデータの操作
 
@@ -55,7 +58,7 @@ public class CatalogContext : DbContext
 }
 ```
 
-DbContext には、DbContextOptions を受け入れるコンストラクターが必要です。また、この引数を基本の DbContext コンストラクターに渡す必要があります。 ご利用のアプリケーションに DbContext が 1 つだけ存在する場合は、DbContextOptions のインスタンスを渡すことができますが、複数存在する場合は、ジェネリックの DbContextOptions\<T> 型を使用し、ジェネリック パラメーターとして DbContext 型を渡す必要があります。
+DbContext には、DbContextOptions を受け入れるコンストラクターが必要です。また、この引数を基本の DbContext コンストラクターに渡す必要があります。 アプリケーションに DbContext を 1 つだけ含める場合は、DbContextOptions のインスタンスを渡すことができますが、複数含める場合は、汎用の DbContextOptions\<T> 型を使用し、汎用パラメーターとして DbContext 型を渡す必要があります。
 
 ### <a name="configuring-ef-core"></a>EF Core の構成
 
@@ -507,6 +510,52 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 ```
 
 キャッシュでは、データベースから同じ値を繰り返し要求する Web ページのパフォーマンスを大幅に向上させることができます。 キャッシュを適用する前に、必ずデータ アクセスとページのパフォーマンスを測定し、改善の必要性があると判断した場合にのみ、キャッシュを適用するようにしてください。 キャッシュでは Web サーバーのメモリ リソースが消費され、アプリケーションの複雑さも増すため、この手法を使用して不完全な最適化を行わないことが重要です。
+
+## <a name="getting-data-to-no-locblazor-no-locwebassembly-apps"></a>Blazor WebAssembly アプリにデータを取得する
+
+Blazor Server を使用するアプリを構築している場合は、この章でここまで説明してきたように、Entity Framework やその他の直接データ アクセス テクノロジを使用できます。 ところが、他の SPA フレームワークのように、Blazor WebAssembly アプリを構築する場合は、データ アクセスのための別の方法が必要になります。 通常、これらのアプリケーションによって、データ アクセスと Web API エンドポイントを介したサーバーとのやりとりが行われます。
+
+実行されるデータまたは操作の機密性が高い場合は、[前の章](develop-asp-net-core-mvc-apps.md)のセキュリティに関するセクションを確認し、承認されていないアクセスから API を保護してください。
+
+Blazor WebAssembly アプリの例は、BlazorAdmin プロジェクトの [eShopOnWeb 参照アプリケーション](https://github.com/dotnet-architecture/eShopOnWeb)内にあります。 このプロジェクトは eShopOnWeb Web プロジェクト内でホストされ、管理者グループのユーザーがストア内の項目を管理できます。 図 8-3 は、アプリケーションのスクリーンショットです。
+
+![eShopOnWeb Catalog Admin スクリーンショット](./media/image8-3.jpg)
+
+**図 8-3** eShopOnWeb Catalog Admin スクリーンショット。
+
+Blazor WebAssembly アプリ内の Web API からデータをフェッチする場合は、.NET アプリケーションの場合と同様に `HttpClient` のインスタンスを使用するだけです。 基本的な手順としては、送信する要求 (必要に応じて、通常は POST または PUT 要求用) を作成し、要求自体を待機して、ステータス コードを確認し、応答を逆シリアル化します。 API の特定のセットに対して行う要求の数が多い場合は、API をカプセル化し、`HttpClient` ベース アドレスを一元的に構成することをお勧めします。 このようにすると、環境間でこれらの設定を調整する必要がある場合に 1 か所で変更するだけで済みます。 このサービスのサポートを `Program.Main` に追加する必要があります。
+
+```csharp
+builder.Services.AddScoped(sp =>
+    new HttpClient
+    {
+        BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)
+    });
+```
+
+サービスに安全にアクセスする必要がある場合は、セキュリティで保護されたトークンにアクセスし、すべての要求でこのトークンを認証ヘッダーとして渡すように `HttpClient` を構成する必要があります。
+
+```csharp
+_httpClient.DefaultRequestHeaders.Authorization =
+    new AuthenticationHeaderValue("Bearer", token);
+```
+
+これは、`HttpClient` が、`Transient` 有効期間が指定されたアプリケーションのサービスに追加されていない場合に、`HttpClient` が挿入されているコンポーネントから実行できます。 アプリケーション内の `HttpClient` へのすべての参照が同じインスタンスを参照するため、1 つのコンポーネント内でそれを変更すると、アプリケーション全体にフローされます。 この認証チェックを実行する (続けてトークンを指定する) のに適した場所は、サイトのメイン ナビゲーションのような共有コンポーネントです。 このアプローチの詳細については、[eShopOnWeb 参照アプリケーション](https://github.com/dotnet-architecture/eShopOnWeb)の `BlazorAdmin` プロジェクトを参照してください。
+
+従来の JavaScript SPA に対するBlazor WebAssembly の利点の 1 つが、データ転送オブジェクト (DTO) のコピーを同期させておく必要がないことです。 Blazor WebAssembly プロジェクトと Web API プロジェクトはどちらも、共通の共有プロジェクトで同じ DTO を共有できます。 これにより、SPA 開発に伴う摩擦の一部が解消されます。
+
+API エンドポイントからデータを迅速に取得するには、組み込みのヘルパー メソッド `GetFromJsonAsync` を使用できます。 同様のメソッドは、POST、PUT などにもあります。以下は、Blazor WebAssembly アプリで構成済みの `HttpClient` を使用して、API エンドポイントから CatalogItem を取得する方法を示します。
+
+```csharp
+var item = await _httpClient.GetFromJsonAsync<CatalogItem>($"catalog-items/{id}");
+```
+
+必要なデータが得られたら、通常はローカルで変更を追跡します。 バックエンド データ ストアを更新する場合は、この目的のために追加の Web API を呼び出します。
+
+**参照 – Blazor データ**
+
+- ASP.NET Core Blazor から Web API を呼び出す
+  <https://docs.microsoft.com/aspnet/core/blazor/call-web-api>
 
 >[!div class="step-by-step"]
 >[前へ](develop-asp-net-core-mvc-apps.md)

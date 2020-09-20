@@ -1,13 +1,13 @@
 ---
 title: カスタム SQLite のバージョン
-ms.date: 05/14/2020
+ms.date: 09/04/2020
 description: ネイティブ SQLite ライブラリのカスタム バージョンを使用する方法について説明します。
-ms.openlocfilehash: 15db10db26bc7c5017313ca020a0e1e528ba207a
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: fbf4b4cd33e6e890ce0c0cfe0b7688487b94b4a3
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83440838"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516139"
 ---
 # <a name="custom-sqlite-versions"></a>カスタム SQLite のバージョン
 
@@ -22,6 +22,7 @@ ms.locfileid: "83440838"
 | [SQLitePCLRaw.bundle_e_sqlite3](https://www.nuget.org/packages/SQLitePCLRaw.bundle_e_sqlite3) | すべてのプラットフォームで同じバージョンの SQLite を提供します。 FTS4、FTS5、JSON1、R*Tree 拡張機能を含みます。 既定値です。 |
 | [SQLitePCLRaw.bundle_e_sqlcipher](https://www.nuget.org/packages/SQLitePCLRaw.bundle_e_sqlcipher) | オープン ソースの非公式の `SQLCipher` ビルドを提供します。 |
 | [SQLitePCLRaw.bundle_green](https://www.nuget.org/packages/SQLitePCLRaw.bundle_green) | `bundle_e_sqlite3` と同じですが、iOS の場合はシステム SQLite ライブラリが使用されます。 |
+| [SQLitePCLRaw.bundle_sqlite3](https://www.nuget.org/packages/SQLitePCLRaw.bundle_sqlite3) | システム SQLite ライブラリが使用されます。 |
 | [SQLitePCLRaw.bundle_winsqlite3](https://www.nuget.org/packages/SQLitePCLRaw.bundle_winsqlite3) | Windows 10 のシステム SQLite ライブラリである `winsqlite3.dll` が使用されます。 |
 | [SQLitePCLRaw.bundle_zetetic](https://www.nuget.org/packages/SQLitePCLRaw.bundle_zetetic) | Zetetic の公式の `SQLCipher` ビルドが使用されます (含まれていません)。 |
 
