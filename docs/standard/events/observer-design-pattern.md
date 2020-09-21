@@ -13,12 +13,12 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-ms.openlocfilehash: 4edcd2645b28095f4bd18f4918b9afa5c893bd39
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 80dac36199dd13abeab295d4b53a52615e7ae625
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662733"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559162"
 ---
 # <a name="observer-design-pattern"></a>オブサーバー デザイン パターン
 
@@ -47,7 +47,7 @@ ms.locfileid: "84662733"
 - プロバイダーがオブザーバーに送信するデータを含むオブジェクト。 このオブジェクトの型は、<xref:System.IObservable%601> インターフェイスと <xref:System.IObserver%601> インターフェイスのジェネリック型パラメーターに対応します。 このオブジェクトは、<xref:System.IObservable%601> の実装と同じにすることもできますが、別の型にするのが最も一般的です。
 
 > [!NOTE]
-> オブザーバー デザイン パターンを実装するだけでなく、<xref:System.IObservable%601> インターフェイスと <xref:System.IObserver%601> インターフェイスを使用して構築されたライブラリを使用することもできます。 たとえば、[.NET (Rx) の反応拡張](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103))は、非同期プログラミングをサポートする一連の拡張メソッドと LINQ 標準シーケンス演算子で構成します。
+> オブザーバー デザイン パターンを実装するだけでなく、<xref:System.IObservable%601> インターフェイスと <xref:System.IObserver%601> インターフェイスを使用して構築されたライブラリを使用することもできます。 たとえば、[.NET (Rx) の反応拡張](/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103))は、非同期プログラミングをサポートする一連の拡張メソッドと LINQ 標準シーケンス演算子で構成します。
 
 ## <a name="implementing-the-pattern"></a>パターンの実装
 

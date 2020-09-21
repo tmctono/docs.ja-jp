@@ -3,12 +3,12 @@ title: LINQ to Entities クエリ内の関数の呼び出し
 description: これらの記事では、EntityFunctions および SqlFunctions クラスにより、Entity Framework の一部として正規関数およびデータベース関数へのアクセスが可能になるしくみについて説明します。
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
-ms.openlocfilehash: faa6406713592f10e5e7371cd73f29bec4b03b7b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: eb206e9b331da1ae442c1f310e78fec5c6b57e82
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286858"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546049"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>LINQ to Entities クエリ内の関数の呼び出し
 このセクションの各トピックでは、LINQ to Entities クエリで関数を呼び出す方法について説明します。  
@@ -40,5 +40,5 @@ ms.locfileid: "84286858"
 
 - [LINQ to Entities でのクエリ](queries-in-linq-to-entities.md)
 - [正規関数](canonical-functions.md)
-- [.edmx ファイルの概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
-- [方法: 概念モデルでカスタム関数を定義する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))
+- [.edmx ファイルの概要](/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [方法: 概念モデルでカスタム関数を定義する](/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))

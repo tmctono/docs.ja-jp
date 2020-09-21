@@ -5,11 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
-ms.openlocfilehash: e562a7e963ff744bf9193821d54dd898db521464
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 0d696adbe1ee224e78f79a049ed2e41d50be1faa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619586"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554170"
 ---
 # <a name="how-to-create-wrappers-manually"></a>方法: ラッパーを手動で作成する
 マネージド ソース コード内で COM の型を手動で宣言することにした場合、まず既存のインターフェイス定義言語 (IDL: Interface Definition Language) ファイルまたはタイプ ライブラリを用意することをお勧めします。 IDL ファイルがないか、またはタイプ ライブラリ ファイルを生成できない場合には、マネージド宣言を作成してその結果のアセンブリをタイプ ライブラリにエクスポートすることで、COM の型をシミュレートできます。  
@@ -26,11 +27,11 @@ ms.locfileid: "85619586"
   
 1. IDL ファイルまたはタイプ ライブラリ ファイルがあることを前提として、カスタム RCW に含めるクラスとインターフェイスを決定します。 アプリケーション内で直接にも間接にも使用される予定がない型がある場合は、それらを除外できます。  
   
-2. CLS 準拠言語でソース ファイルを作成し、型を宣言します。 インポート変換プロセスの詳しい説明については、「[タイプ ライブラリからアセンブリへの変換の要約](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))」を参照してください。 実際には、カスタム RCW を作成する場合は、[タイプ ライブラリ インポーター (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) によって提供される型変換機能を手動で実行していることになります。 次のセクションの例では、IDL またはタイプ ライブラリ ファイル内の型と、C# コード内でそれぞれに対応する型について示します。  
+2. CLS 準拠言語でソース ファイルを作成し、型を宣言します。 インポート変換プロセスの詳しい説明については、「[タイプ ライブラリからアセンブリへの変換の要約](/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))」を参照してください。 実際には、カスタム RCW を作成する場合は、[タイプ ライブラリ インポーター (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) によって提供される型変換機能を手動で実行していることになります。 次のセクションの例では、IDL またはタイプ ライブラリ ファイル内の型と、C# コード内でそれぞれに対応する型について示します。  
   
 3. 宣言が完成したら、他のマネージド ソース コードのコンパイルと同様に、このファイルをコンパイルします。  
   
-4. Tlbimp.exe でインポートする型と同様に、追加情報が必要となる場合があります。その場合には、コードに直接追加できます。 詳細については、「[方法: 相互運用機能アセンブリ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))」を参照してください。  
+4. Tlbimp.exe でインポートする型と同様に、追加情報が必要となる場合があります。その場合には、コードに直接追加できます。 詳細については、「[方法: 相互運用機能アセンブリ](/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))」を参照してください。  
   
 ## <a name="example"></a>例  
  IDL に含まれる `ISATest` インターフェイスおよび `SATest` クラスの例と、C# ソース コードのそれらに対応する型を次のコードに示します。  
@@ -99,9 +100,9 @@ namespace SAServer
   
 ## <a name="see-also"></a>関連項目
 
-- [ランタイム呼び出し可能ラッパーのカスタマイズ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))
-- [COM のデータ型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))
-- [方法: 相互運用機能アセンブリ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))
-- [タイプ ライブラリからアセンブリへの変換の要約](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
+- [ランタイム呼び出し可能ラッパーのカスタマイズ](/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))
+- [COM のデータ型](/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))
+- [方法: 相互運用機能アセンブリ](/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))
+- [タイプ ライブラリからアセンブリへの変換の要約](/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Tlbimp.exe (タイプ ライブラリ インポーター)](../tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (タイプ ライブラリ エクスポーター)](../tools/tlbexp-exe-type-library-exporter.md)

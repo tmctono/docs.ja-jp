@@ -11,12 +11,12 @@ helpviewer_keywords:
 - generics [.NET Framework], dynamic types
 - reflection emit, generic types
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
-ms.openlocfilehash: fe8fb731fd160ab87e5c65debf367a96bc0dea2a
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: bf308b07bf4b2a863b9825e7c8d9f412bdb6d1b8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865126"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559214"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>方法: リフレクション出力を使用してジェネリック型を定義する
 このトピックでは、2 種類のパラメーターを持つ単純なジェネリック型を作成する方法、クラス制約、インターフェイス制約、特殊な制約をパラメーターに適用する方法、パラメーターの型や戻り値の型としてクラスの型パラメーターを使用するメンバーを作成する方法を紹介します。  
@@ -129,5 +129,5 @@ ms.locfileid: "86865126"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
-- [リフレクション出力の使用](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
-- [リフレクション出力による動的アセンブリのシナリオ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tt9483fk(v=vs.100))
+- [リフレクション出力の使用](/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
+- [リフレクション出力による動的アセンブリのシナリオ](/previous-versions/dotnet/netframework-4.0/tt9483fk(v=vs.100))

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 116087ac1aab57f2869b05f436801c7861c56eca
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 88d6cfd1b5262d4a4fae96cf53271467b5042319
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063706"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541943"
 ---
 # <a name="extension-methods-c-programming-guide"></a>拡張メソッド (C# プログラミング ガイド)
 
@@ -123,7 +123,7 @@ static class DomainEntityExtensions
 - [並列プログラミングのサンプル (拡張メソッドの例が多数掲載されています)](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)
 - [ラムダ式](../../language-reference/operators/lambda-expressions.md)
 - [標準クエリ演算子の概要](../concepts/linq/standard-query-operators-overview.md)
-- [インスタンス パラメーターの変換規則とその影響](https://docs.microsoft.com/archive/blogs/sreekarc/conversion-rules-for-instance-parameters-and-their-impact)
-- [拡張メソッドの言語間での相互運用性](https://docs.microsoft.com/archive/blogs/sreekarc/extension-methods-interoperability-between-languages)
-- [拡張メソッドとカリー化デリゲート](https://docs.microsoft.com/archive/blogs/sreekarc/extension-methods-and-curried-delegates)
-- [バインディングとエラー報告に関する拡張メソッド](https://docs.microsoft.com/archive/blogs/sreekarc/extension-method-binding-and-error-reporting)
+- [インスタンス パラメーターの変換規則とその影響](/archive/blogs/sreekarc/conversion-rules-for-instance-parameters-and-their-impact)
+- [拡張メソッドの言語間での相互運用性](/archive/blogs/sreekarc/extension-methods-interoperability-between-languages)
+- [拡張メソッドとカリー化デリゲート](/archive/blogs/sreekarc/extension-methods-and-curried-delegates)
+- [バインディングとエラー報告に関する拡張メソッド](/archive/blogs/sreekarc/extension-method-binding-and-error-reporting)

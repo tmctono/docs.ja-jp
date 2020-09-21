@@ -2,12 +2,12 @@
 title: Entity Framework 用の EntityClient プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: e3a87d4a936e5bdf633e1f997f66dd98add2a9cb
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: cd02f2ede37ef3518071b5d4c79cdffe2e2f1b5d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854702"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542595"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Entity Framework 用の EntityClient プロバイダー
 EntityClient プロバイダーは、概念モデルで記述されているデータにアクセスするために Entity Framework アプリケーションで使用するデータ プロバイダーです。 概念モデルについては、「[モデリングとマッピング](modeling-and-mapping.md)」をご覧ください。 EntityClient は、他の .NET Framework データ プロバイダーを使用してデータ ソースにアクセスします。 たとえば、EntityClient は、SQL Server データベースにアクセスするときは .NET Framework Data Provider for SQL Server (SqlClient) を使用します。 SqlClient プロバイダーについては、「[Entity Framework 用 SqlClient](sqlclient-for-the-entity-framework.md)」をご覧ください。 EntityClient プロバイダーは <xref:System.Data.EntityClient> 名前空間で実装されます。  
@@ -39,7 +39,7 @@ cmd.CommandText = @"SELECT VALUE p
 ## <a name="managing-transactions"></a>トランザクションの管理  
  Entity Framework では、自動トランザクションと明示的トランザクションという 2 つの使用方法があります。 自動トランザクションでは <xref:System.Transactions> 名前空間を使用し、明示的トランザクションでは <xref:System.Data.EntityClient.EntityTransaction> クラスを使用します。  
   
- 概念モデルによって公開されたデータを更新するには、「[方法: Entity Framework のトランザクションを管理する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738523(v=vs.100))」をご覧ください。  
+ 概念モデルによって公開されたデータを更新するには、「[方法: Entity Framework のトランザクションを管理する](/previous-versions/dotnet/netframework-4.0/bb738523(v=vs.100))」をご覧ください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [方法: EntityConnection の接続文字列を作成する](how-to-build-an-entityconnection-connection-string.md)  
@@ -64,6 +64,6 @@ cmd.CommandText = @"SELECT VALUE p
   
 ## <a name="see-also"></a>関連項目
 
-- [接続とトランザクションの管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
+- [接続とトランザクションの管理](/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
 - [ADO.NET Entity Framework](index.md)
 - [言語リファレンス](./language-reference/index.md)

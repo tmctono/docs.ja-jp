@@ -3,12 +3,12 @@ title: シリアル化の概念
 description: シリアル化は、オブジェクトの状態をキャプチャするために使用できます。これにより、コピーを作成したり、アプリケーション ドメイン間でオブジェクトを値渡しで送信したりできます。
 ms.date: 08/07/2017
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-ms.openlocfilehash: 35addd2dd2bed8ce878f2f159f1caefe89922d88
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a185855f4b6913c8e1d57bf36fc5c37411123e68
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84291319"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541201"
 ---
 # <a name="serialization-concepts"></a>シリアル化の概念
 シリアル化が必要となる理由について考えてみます。 最も重要な理由として、オブジェクトの状態をストレージ メディアに保持し、後の段階で同一コピーを再作成できるようにすることと、アプリケーション ドメイン間でオブジェクトを値渡しで送信することの 2 つが挙げられます。 たとえば、シリアル化は ASP.NET でのセッション状態を保存したり、オブジェクトを Windows フォームのクリップボードにコピーしたりするために使用されます。 また、リモート処理でオブジェクトを 1 つのアプリケーション ドメインから別のアプリケーション ドメインに値渡しするためにも使用されます。
@@ -31,7 +31,7 @@ ms.locfileid: "84291319"
  [バイナリ シリアル化](binary-serialization.md)  
  共通言語ランタイムに付属しているバイナル シリアル化機構について説明します。  
   
- [.NET リモート処理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
+ [.NET リモート処理](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
  .NET Framework でリモート通信に利用できるさまざまな通信方法について説明します。  
   
  [XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)  

@@ -2,12 +2,12 @@
 title: DockerFile で Windows PowerShell コマンドを使用して Windows コンテナー (Docker 標準ベース) を設定する
 description: Windows コンテナーで Docker を操作する場合の PowerShell の使用方法について説明します
 ms.date: 08/06/2020
-ms.openlocfilehash: 4e7b9e7fedf11b97b3f468aef541bf72a4e88ebc
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: be30fd4092f51acd4972c05b3c3ccc936aebd884
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915390"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539789"
 ---
 # <a name="using-windows-powershell-commands-in-a-dockerfile-to-set-up-windows-containers-docker-standard-based"></a>DockerFile で Windows PowerShell コマンドを使用して Windows コンテナー (Docker 標準ベース) を設定する
 
@@ -15,7 +15,7 @@ ms.locfileid: "87915390"
 
 Windows コンテナーを使用するには、次の例に示すように、DockerFile で PowerShell コマンドを記述するだけです。
 
-```Dockerfile
+```dockerfile
 FROM microsoft/windowsservercore
 LABEL Description="IIS" Vendor="Microsoft" Version="10"
 RUN powershell -Command Add-WindowsFeature Web-Server
@@ -26,7 +26,7 @@ CMD [ "ping", "localhost", "-t" ]
 
 同様に、Windows PowerShell コマンドを使用して、次に示すように、従来の ASP.NET 4.x および .NET 4.6、またはその他の任意の Windows ソフトウェアなどの追加コンポーネントを設定することもできます。
 
-```Dockerfile
+```dockerfile
 RUN powershell add-windowsfeature web-asp-net45
 ```
 

@@ -9,11 +9,12 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: 5263e042bafdb886b313f05751c29de0f5715211
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: ad25a79add84e43ba0a8e71a0f48c5ddf65108bd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622199"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554841"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>方法: 登録を必要としないアクティベーション用の .NET Framework ベースの COM コンポーネントを構成する
 .NET Framework ベースのコンポーネントの登録を必要としないアクティベーションは、COM コンポーネントの場合よりも少しだけ複雑です。 セットアップには 2 つのマニフェストが必要です。  
@@ -175,6 +176,6 @@ ms.locfileid: "85622199"
 ## <a name="see-also"></a>関連項目
 
 - [登録を必要としない COM 相互運用機能](registration-free-com-interop.md)
-- [登録を必要としない COM 相互運用機能の要件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
-- [登録を必要としないアクティベーション用の COM コンポーネントの構成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
-- [.NET ベースのコンポーネントの登録を必要としないアクティベーション: チュートリアル](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))
+- [登録を必要としない COM 相互運用機能の要件](/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
+- [登録を必要としないアクティベーション用の COM コンポーネントの構成](/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
+- [.NET ベースのコンポーネントの登録を必要としないアクティベーション: チュートリアル](/previous-versions/dotnet/articles/ms973915(v=msdn.10))

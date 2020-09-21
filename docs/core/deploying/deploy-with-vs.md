@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 73eee58a3d11f2f898a6d57cb282ccf4e802cdca
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 1c9aba10e27609bdf8e95d844ead60fd0ec0bd2c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656600"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538724"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio を使用して .NET Core アプリを展開する
 
@@ -24,7 +24,7 @@ ms.locfileid: "88656600"
 - 自己完結型の展開
 - サードパーティの依存関係を含む、自己完結型の展開
 
-Visual Studio を使用して、.NET Core アプリケーションを開発する方法の詳細については、[.NET Core の依存関係と要件](../install/dependencies.md?pivots=os-windows)に関する記事を参照してください。
+Visual Studio を使用して、.NET Core アプリケーションを開発する方法の詳細については、[.NET Core の依存関係と要件](../install/windows.md)に関する記事を参照してください。
 
 ## <a name="framework-dependent-deployment"></a>フレームワークに依存する展開
 

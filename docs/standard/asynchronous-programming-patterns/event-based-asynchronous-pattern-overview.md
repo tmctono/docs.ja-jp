@@ -17,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 18fbdb29e5a1fb02601dea00964538144c07122c
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: f0d3e2e8f1d1f58c9df8026b38fc0264812b092a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768860"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555680"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>イベントベースの非同期パターンの概要
 多数のタスクを同時に実行しながら、ユーザーの操作にも応答するアプリケーションには、通常、複数のスレッドを使用するデザインが必要です。 <xref:System.Threading> 名前空間は、高性能なマルチスレッド アプリケーションを作成するのに必要なすべてのツールを提供します。ただし、これらのツールを効果的に使用するには、マルチスレッド ソフトウェア エンジニアリングの豊富な経験が必要です。 比較的単純なマルチスレッド アプリケーションの場合は、<xref:System.ComponentModel.BackgroundWorker> コンポーネントが簡単なソリューションを提供します。 より高度な非同期アプリケーションの場合は、イベント ベースの非同期パターンに準拠したクラスの実装を検討してください。  
@@ -138,8 +138,8 @@ public class AsyncExample
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
 - [方法: イベントベースの非同期パターンをサポートするコンポーネントを使用する](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
-- [方法: バックグラウンドで操作を実行する](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [方法: バックグラウンド操作を使用するフォームを実装する](../../framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [方法: バックグラウンドで操作を実行する](/dotnet/desktop/winforms/controls/how-to-run-an-operation-in-the-background)
+- [方法: バックグラウンド操作を使用するフォームを実装する](/dotnet/desktop/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation)
 - [イベント ベースの非同期パターン (EAP)](event-based-asynchronous-pattern-eap.md)
 - [イベントベースの非同期パターンを実装するための推奨される手順](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
 - [イベントベースの非同期パターンをいつ実装するかの決定](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)

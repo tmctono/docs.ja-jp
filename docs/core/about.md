@@ -2,12 +2,12 @@
 title: .NET Core の概要
 description: .NET Core の特性と構成について説明し、他の .NET 実装と比較します。
 ms.date: 03/26/2020
-ms.openlocfilehash: d5ef79fe5a8fbb56beae77edd01830fe6561fa51
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: e99939cf85cc441fd473e4d033e22b1a5d053638
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100731"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539009"
 ---
 # <a name="net-core-overview"></a>.NET Core の概要
 
@@ -39,7 +39,7 @@ ms.locfileid: "86100731"
 
 * [ASP.NET Core](/aspnet/core/) を使用したクラウド アプリ
 * [Xamarin](/xamarin) を使用したモバイル アプリ
-* [System.Device.GPIO](https://docs.microsoft.com/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0) を使用した IoT アプリ
+* [System.Device.GPIO](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0) を使用した IoT アプリ
 * [WPF](../desktop-wpf/overview/index.md) と Windows フォームを使用した Windows クライアント アプリ
 * 機械学習の [ML.NET](../machine-learning/index.yml)
 
@@ -64,7 +64,7 @@ ms.locfileid: "86100731"
 
 ### <a name="open-source"></a>ソースを開く
 
-[.NET Core](about.md) は、[オープンソース](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)の汎用開発プラットフォームです。 Windows、macOS、Linux 用の .NET Core アプリを、x64、x86、ARM32、ARM64 の各プロセッサ用に作成できます。 フレームワークと API は、[クラウド](/aspnet/core/)、[IoT](https://docs.microsoft.com/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0)、[クライアント UI](../desktop-wpf/overview/index.md)、[機械学習](../machine-learning/index.yml)用に提供されています。
+[.NET Core](about.md) は、[オープンソース](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)の汎用開発プラットフォームです。 Windows、macOS、Linux 用の .NET Core アプリを、x64、x86、ARM32、ARM64 の各プロセッサ用に作成できます。 フレームワークと API は、[クラウド](/aspnet/core/)、[IoT](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0)、[クライアント UI](../desktop-wpf/overview/index.md)、[機械学習](../machine-learning/index.yml)用に提供されています。
 
 ## <a name="support"></a>サポート
 

@@ -8,11 +8,12 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: 6beedb8e3fd03049cd58ce1d2dac78d1adb820ef
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 3577a3ad13d9ef6935a1bed8a29e3d594857928e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618754"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557763"
 ---
 # <a name="overview-of-net-framework"></a>.NET Framework の概要
 
@@ -75,9 +76,9 @@ ms.locfileid: "85618754"
 
 - コンソール アプリ。 「[コンソール アプリケーションの構築](../../standard/building-console-apps.md)」を参照してください。
 
-- Windows GUI アプリケーション (Windows フォーム)。 「[Windows フォーム](../winforms/index.md)」を参照してください。
+- Windows GUI アプリケーション (Windows フォーム)。 「[Windows フォーム](/dotnet/desktop/winforms/)」を参照してください。
 
-- Windows Presentation Foundation (WPF) アプリケーション。 「[Windows Presentation Foundation](../wpf/index.md)」を参照してください。
+- Windows Presentation Foundation (WPF) アプリケーション。 「[Windows Presentation Foundation](/dotnet/desktop/wpf/)」を参照してください。
 
 - ASP.NET アプリケーション。 「[ASP.NET を使用した Web アプリケーション](../develop-web-apps-with-aspnet.md)」を参照してください。
 

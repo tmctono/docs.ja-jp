@@ -2,12 +2,12 @@
 title: dotnet-install スクリプト
 description: .NET Core SDK と共有ランタイムをインストールするための dotnet-install スクリプトについて学習します。
 ms.date: 04/30/2020
-ms.openlocfilehash: c3aa6549a0b521db7fc19c6ff44665e3c4ba0c5f
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: 8f27b8a7794e84e6e2b288d6cc2ec33ffcb7600f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024655"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538043"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install スクリプト リファレンス
 
@@ -131,7 +131,7 @@ bash スクリプトは PowerShell のスイッチも読み取るので、Linux/
 
 - **`-NoCdn|--no-cdn`**
 
-  [Azure Content Delivery Network (CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) からのダウンロードを無効にし、キャッシュされていないフィードを直接使用します。
+  [Azure Content Delivery Network (CDN)](/azure/cdn/cdn-overview) からのダウンロードを無効にし、キャッシュされていないフィードを直接使用します。
 
 - **`-NoPath|--no-path`**
 

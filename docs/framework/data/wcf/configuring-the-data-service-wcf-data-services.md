@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 6f73fa43bcb99e53adabe8b49ffee75c65802eca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 57830421eee3c94f9785a2c603eb31b96f99f4d5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400921"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552844"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>データ サービスの構成 (WCF Data Services)
 WCF Data Services を使用すると、Open Data Protocol (OData) フィードを公開するデータ サービスを作成できます。 これらのフィードには、さまざまなデータ ソースからのデータが含まれることがあります。 WCF Data Services では、データ プロバイダーを使用して、このデータが OData フィードとして公開されます。 これらのプロバイダーには、Entity Framework プロバイダー、リフレクション プロバイダー、およびカスタム データ サービス プロバイダー インターフェイスのセットがあります。 プロバイダーの実装は、サービスのデータ モデルを定義します。 詳細については、「[Data Services プロバイダー](data-services-providers-wcf-data-services.md)」を参照してください。  
@@ -69,7 +69,7 @@ WCF Data Services を使用すると、Open Data Protocol (OData) フィード�
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> および<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|サポートなし|サポートなし|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|サポートなし|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> および<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|サポートなし|サポートなし|サポートなし|サポートなし|  
   
- <sup>1</sup> この例では、`Address` は `StreetAddress` という名前のプロパティを持つ `Customers` エンティティの複合型プロパティを表します。 Northwind データ サービスによって使用されるモデルでは、この複合型は明示的に定義されていません。 Entity Framework プロバイダーを使用してデータ モデルを定義している場合、Entity Data Model ツールを使用して、このような複合型を定義できます。 詳細については、[複合型を作成および変更する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))」をご覧ください。  
+ <sup>1</sup> この例では、`Address` は `StreetAddress` という名前のプロパティを持つ `Customers` エンティティの複合型プロパティを表します。 Northwind データ サービスによって使用されるモデルでは、この複合型は明示的に定義されていません。 Entity Framework プロバイダーを使用してデータ モデルを定義している場合、Entity Data Model ツールを使用して、このような複合型を定義できます。 詳細については、[複合型を作成および変更する](/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))」をご覧ください。  
   
  <sup>2</sup> この URI は、バイナリ ラージ オブジェクト (BLOB) を返すプロパティがメディア リンク エントリであるエンティティ (この場合、`Customers`) に属するメディア リソースとして定義されている場合にサポートされます。 詳細については、「[ストリーミング プロバイダー](streaming-provider-wcf-data-services.md)」を参照してください。  
   

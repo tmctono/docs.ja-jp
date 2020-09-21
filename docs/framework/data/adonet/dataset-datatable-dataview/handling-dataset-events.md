@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54edefe0-bc38-419b-b486-3d8a0c356f13
-ms.openlocfilehash: b2b71dac58838a826933af570934bf4bbb35e025
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0f79b97b486bbc3e1150cd6aff8162d37134f62e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784608"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557997"
 ---
 # <a name="handling-dataset-events"></a>DataSet のイベント処理
 <xref:System.Data.DataSet> オブジェクトには、 <xref:System.ComponentModel.MarshalByValueComponent.Disposed>、 <xref:System.Data.DataSet.Initialized>、 <xref:System.Data.DataSet.MergeFailed>という 3 つのイベントがあります。  
@@ -51,13 +51,13 @@ private static void DataSetMergeFailed(
  `DataSet` は、 <xref:System.ComponentModel.MarshalByValueComponent> メソッドおよび <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> イベントの両方を公開する <xref:System.ComponentModel.MarshalByValueComponent.Disposed> クラスから派生しています。 <xref:System.ComponentModel.MarshalByValueComponent.Disposed> イベントでは、コンポーネントが破棄されたことを伝えるイベントをリッスンするためのイベント ハンドラーが追加されます。 <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> メソッドが呼び出されたときにコードを実行したい場合は、`DataSet` の <xref:System.ComponentModel.MarshalByValueComponent.Disposed> イベントを使用できます。 <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> では、<xref:System.ComponentModel.MarshalByValueComponent> によって使用されたリソースが解放されます。  
   
 > [!NOTE]
-> `DataSet` オブジェクトと `DataTable` オブジェクトでは、<xref:System.ComponentModel.MarshalByValueComponent> が継承されていて、リモート処理用の <xref:System.Runtime.Serialization.ISerializable> インターフェイスがサポートされています。 これらは、リモート処理ができる唯一の ADO.NET オブジェクトです。 詳しくは、「[.NET リモート処理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))」をご覧ください。  
+> `DataSet` オブジェクトと `DataTable` オブジェクトでは、<xref:System.ComponentModel.MarshalByValueComponent> が継承されていて、リモート処理用の <xref:System.Runtime.Serialization.ISerializable> インターフェイスがサポートされています。 これらは、リモート処理ができる唯一の ADO.NET オブジェクトです。 詳しくは、「[.NET リモート処理](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))」をご覧ください。  
   
  `DataSet` を操作するときに使用できる他のイベントについては、「[DataTable イベントの処理](handling-datatable-events.md)」および「[DataAdapter のイベント処理](../handling-dataadapter-events.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
 
 - [DataSet、DataTable、および DataView](index.md)
-- [データの検証](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/t3b36awf(v=vs.120))
+- [データの検証](/previous-versions/visualstudio/visual-studio-2013/t3b36awf(v=vs.120))
 - [ADO.NET でのデータの取得および変更](../retrieving-and-modifying-data.md)
 - [ADO.NET の概要](../ado-net-overview.md)

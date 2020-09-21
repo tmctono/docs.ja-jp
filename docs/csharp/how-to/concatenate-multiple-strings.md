@@ -7,12 +7,12 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: ef3d79c5b40d08cb76e58eba1c8831c468fd1fc0
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: f2aae14deac967a833fb3510acdb32e0971485b5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663019"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537484"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>複数の文字列を連結する方法 (C# ガイド)
 
@@ -41,7 +41,7 @@ ms.locfileid: "84663019"
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/Concatenate.cs" id="Snippet4":::
 
-[文字列の連結または `StringBuilder` クラスを選択する理由](https://docs.microsoft.com/dotnet/api/system.text.stringbuilder#the-string-and-stringbuilder-types)に関するページで詳細をご確認ください。
+[文字列の連結または `StringBuilder` クラスを選択する理由](/dotnet/api/system.text.stringbuilder#the-string-and-stringbuilder-types)に関するページで詳細をご確認ください。
 
 コレクションからの文字列を結合する別のオプションとして、<xref:System.String.Concat%2A?displayProperty=nameWithType> メソッドを使用する方法があります。 ソース文字列を区切り記号で区切る必要がある場合は、<xref:System.String.Join%2A?displayProperty=nameWithType> メソッドを使用します。 次のコードでは、両方のメソッドを使用して単語の配列を結合します。
 

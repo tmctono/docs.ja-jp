@@ -2,17 +2,17 @@
 title: 関連項目
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 99bbb230395b7089a29219a7d98aea49b4d5f418
-ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
+ms.openlocfilehash: 55754ef7bb06a1ceac7d4c12098847f4db16e928
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78848809"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553559"
 ---
 # <a name="reference"></a>関連項目
 このセクションには、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] を使用する開発者向けのリファレンス情報が用意されています。  
   
- 特定の問題について Microsoft Docs を検索したり、[LINQ フォーラム](https://social.msdn.microsoft.com/forums/en-us/home?forum=linqtosql)に参加して、複雑なトピックについて専門家と検討したりすることもできます。 また、Visual Basic および C# のコード例を含む、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] テクノロジについて記載されているホワイト ペーパーを参照することもできます。 詳細については、「[LINQ to SQL: .NET Language-Integrated Query for Relational Data](https://docs.microsoft.com/previous-versions/dotnet/articles/bb425822(v=msdn.10))」を参照してください。  
+ 特定の問題について Microsoft Docs を検索したり、[LINQ フォーラム](https://social.msdn.microsoft.com/forums/en-us/home?forum=linqtosql)に参加して、複雑なトピックについて専門家と検討したりすることもできます。 また、Visual Basic および C# のコード例を含む、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] テクノロジについて記載されているホワイト ペーパーを参照することもできます。 詳細については、「[LINQ to SQL: .NET Language-Integrated Query for Relational Data](/previous-versions/dotnet/articles/bb425822(v=msdn.10))」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [データ型と関数](data-types-and-functions.md)  
@@ -44,5 +44,5 @@ ms.locfileid: "78848809"
  [統合言語クエリ (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  LINQ のトピックに対するポータルを提供します。  
   
- [LinqDataSource Web サーバー コントロールの概要](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
+ [LinqDataSource Web サーバー コントロールの概要](/previous-versions/aspnet/bb547113(v=vs.100))  
  <xref:System.Web.UI.WebControls.LinqDataSource> コントロールにより ASP.NET データソース コントロールのアーキテクチャを通じて LINQ が Web 開発者に公開される方法について説明します。

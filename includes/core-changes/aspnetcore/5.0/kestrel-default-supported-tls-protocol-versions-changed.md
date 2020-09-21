@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3244a36808fb687663241e704d08775ea5c96720
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: 97870553d4ec66a569ba63cd945639b03bbbd6df
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84803246"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539504"
 ---
 ### <a name="kestrel-default-supported-tls-protocol-versions-changed"></a>Kestrel: 既定でサポートされている TLS プロトコル バージョンの変更
 
@@ -39,7 +39,7 @@ TLS 1.3 と、将来の TLS バージョンが利用できるようになった�
 
 以前のプロトコルを無効にするには、次のいずれかのアクションを行います。
 
-* [Windows の指示に従い](/dotnet/framework/network-programming/tls#configuring-schannel-protocols-in-the-windows-registry)、TLS 1.0 など、古いプロトコルをシステム全体で無効にします。 現在のところ、すべての Windows バージョンで既定で有効になっています。
+* [Windows の指示に従い](../../../../docs/framework/network-programming/tls.md#configuring-schannel-protocols-in-the-windows-registry)、TLS 1.0 など、古いプロトコルをシステム全体で無効にします。 現在のところ、すべての Windows バージョンで既定で有効になっています。
 * コードでサポートするプロトコルを次のように手動で選択します。
 
     ```csharp

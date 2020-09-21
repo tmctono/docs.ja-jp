@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 06/03/2020
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: fcd325d518b276ccb042f3702db978e9189715b8
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 89fc5169eee539aa857a9be03c82bf084fe4b60d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85326026"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554437"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>ML.NET CLI を使用してセンチメントを分析する
 
@@ -199,7 +199,7 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
 
 ただし、状況はこのブログ記事で説明されているよりもはるかに簡単になりました。 Microsoft はより簡単なアプローチに取り組み、優れた **".NET Core 統合パッケージ"** を作成しました。アプリケーションの DI サービス (Dependency Injection サービス) に登録することで ASP.NET Core アプリおよびサービスで簡単に使用できます。また、その後はコードから直接使用できます。 その実行方法については、次のチュートリアルと例を参照してください。
 
-- [チュートリアル: スケーラブルな ASP.NET Core Web アプリと WebAPI 上の ML.NET モデルの実行](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
+- [チュートリアル: スケーラブルな ASP.NET Core Web アプリと WebAPI 上の ML.NET モデルの実行](../how-to-guides/serve-model-web-api-ml-net.md)
 - [サンプル: ASP.NET Core WebAPI 上のスケーラブルな ML.NET モデル](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
 
 ## <a name="explore-the-generated-c-code-that-was-used-to-train-the-best-quality-model"></a>"最高品質" のモデルのトレーニングに使用された生成済み C# コードを調べる
@@ -226,7 +226,7 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
 ## <a name="see-also"></a>関連項目
 
 - [ML.NET CLI を使用してモデルのトレーニングを自動化する](../automate-training-with-cli.md)
-- [チュートリアル: スケーラブルな ASP.NET Core Web アプリと WebAPI 上の ML.NET モデルの実行](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
+- [チュートリアル: スケーラブルな ASP.NET Core Web アプリと WebAPI 上の ML.NET モデルの実行](../how-to-guides/serve-model-web-api-ml-net.md)
 - [サンプル: ASP.NET Core WebAPI 上のスケーラブルな ML.NET モデル](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
 - [ML.NET CLI auto-train コマンド リファレンス ガイド](../reference/ml-net-cli-reference.md)
 - [ML.NET CLI のテレメトリ](../resources/ml-net-cli-telemetry.md)

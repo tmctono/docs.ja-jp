@@ -5,12 +5,12 @@ ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 11df1d5caaa7b7974360d863f85afbff18985e47
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f168653297594a604e6f381947f31cba5376178
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73977097"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679626"
 ---
 # <a name="inspect-intermediate-data-during-processing"></a>処理中に中間データを検査する
 
@@ -62,7 +62,7 @@ HousingData[] housingData = new HousingData[]
 
 ## <a name="convert-idataview-to-ienumerable"></a>IDataView を IEnumerable に変換する
 
-[`IDataView`](xref:Microsoft.ML.IDataView) を検査する最も簡単な方法の 1 つは、[`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) に変換することです。 [`IDataView`](xref:Microsoft.ML.IDataView) を [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) に変換するには、[`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) メソッドを使用します。
+[`IDataView`](xref:Microsoft.ML.IDataView) を検査する最も簡単な方法の 1 つは、[`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) に変換することです。 [`IDataView`](xref:Microsoft.ML.IDataView) を [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) に変換するには、[`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) メソッドを使用します。
 
 パフォーマンスを最適化するには、`reuseRowObject` を `true` に設定します。 これにより、同一オブジェクトには現在の行のデータが遅れて設定され、データセット内の行ごとに新しいオブジェクトを作成する場合とは対照的に評価されます。
 
@@ -81,10 +81,10 @@ foreach (HousingData row in housingDataEnumerable)
 
 ## <a name="accessing-specific-indices-with-ienumerable"></a>IEnumerable を使用して特定のインデックスにアクセスする
 
-データの一部や特定のインデックスにしかアクセスする必要がない場合は、データセット内の要求された各行に対して新しいオブジェクトが作成されるように、[`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) を使用すると共に `reuseRowObject` パラメータ―の値を `false` に設定します。 その後、[`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) を配列またはリストに変換します。
+データの一部や特定のインデックスにしかアクセスする必要がない場合は、データセット内の要求された各行に対して新しいオブジェクトが作成されるように、[`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) を使用すると共に `reuseRowObject` パラメータ―の値を `false` に設定します。 その後、[`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) を配列またはリストに変換します。
 
 > [!WARNING]
-> [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) の結果を配列またはリストに変換すると、要求されたすべての [`IDataView`](xref:Microsoft.ML.IDataView) 行がメモリに読み込まれ、パフォーマンスに影響を及ぼす可能性があります。
+> [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) の結果を配列またはリストに変換すると、要求されたすべての [`IDataView`](xref:Microsoft.ML.IDataView) 行がメモリに読み込まれ、パフォーマンスに影響を及ぼす可能性があります。
 
 コレクションが作成されたら、データに対する操作を実行できます。 以下のコード スニペットでは、データセット内の最初の 3 つの行を取得して、現在の平均価格を計算します。
 
@@ -104,7 +104,7 @@ float averageCurrentPrice = (firstRow.CurrentPrice + secondRow.CurrentPrice + th
 
 ## <a name="inspect-values-in-a-single-column"></a>単一列内の値を検査する
 
-モデル構築プロセスの任意の時点で、[`IDataView`](xref:Microsoft.ML.IDataView) の単一列内の値には [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) メソッドを使用してアクセスできます。 [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) メソッドは、単一列内のすべての値を [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) として返します。
+モデル構築プロセスの任意の時点で、[`IDataView`](xref:Microsoft.ML.IDataView) の単一列内の値には [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn%2A) メソッドを使用してアクセスできます。 [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn%2A) メソッドは、単一列内のすべての値を [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) として返します。
 
 ```csharp
 IEnumerable<float> sizeColumn = data.GetColumn<float>("Size").ToList();
@@ -112,7 +112,7 @@ IEnumerable<float> sizeColumn = data.GetColumn<float>("Size").ToList();
 
 ## <a name="inspect-idataview-values-one-row-at-a-time"></a>IDataView の値を 1 行ずつ検査する
 
-[`IDataView`](xref:Microsoft.ML.IDataView) は遅れて評価されます。 このドキュメントの前のセクションで示したように、[`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) に変換せずに [`IDataView`](xref:Microsoft.ML.IDataView) の複数の行にわたって反復処理を行うには、[`GetRowCursor`](xref:Microsoft.ML.IDataView.GetRowCursor*) メソッドを使用して [`IDataView`](xref:Microsoft.ML.IDataView) の [DataViewSchema](xref:Microsoft.ML.DataViewSchema) をパラメーターとして渡すことで、[`DataViewRowCursor`](xref:Microsoft.ML.DataViewRowCursor) を作成します。 その後、複数の行にわたって反復処理を行うために、[`MoveNext`](xref:Microsoft.ML.DataViewRowCursor.MoveNext*) カーソル メソッドを [`ValueGetter`](xref:Microsoft.ML.ValueGetter%601) デリゲートと共に使用して、各列からそれぞれの値を抽出します。
+[`IDataView`](xref:Microsoft.ML.IDataView) は遅れて評価されます。 このドキュメントの前のセクションで示したように、[`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) に変換せずに [`IDataView`](xref:Microsoft.ML.IDataView) の複数の行にわたって反復処理を行うには、[`GetRowCursor`](xref:Microsoft.ML.IDataView.GetRowCursor%2A) メソッドを使用して [`IDataView`](xref:Microsoft.ML.IDataView) の [DataViewSchema](xref:Microsoft.ML.DataViewSchema) をパラメーターとして渡すことで、[`DataViewRowCursor`](xref:Microsoft.ML.DataViewRowCursor) を作成します。 その後、複数の行にわたって反復処理を行うために、[`MoveNext`](xref:Microsoft.ML.DataViewRowCursor.MoveNext%2A) カーソル メソッドを [`ValueGetter`](xref:Microsoft.ML.ValueGetter%601) デリゲートと共に使用して、各列からそれぞれの値を抽出します。
 
 > [!IMPORTANT]
 > パフォーマンスのために、ML.NET 内のベクターには、ネイティブなコレクション型 (つまり、`Vector`、`float[]`) ではなく、[`VBuffer`](xref:Microsoft.ML.Data.VBuffer%601) を使用します。
@@ -150,7 +150,7 @@ using (DataViewRowCursor cursor = data.GetRowCursor(columns))
 > [!WARNING]
 > `Preview` はデバッグを目的としており、パフォーマンスを低下させる可能性があるため、実稼働環境のコードでは使用しないでください。
 
-モデルのビルド プロセスは実験的であり、反復されます。 データのサブセットに対して機械学習モデルの前処理またはトレーニングを行った後にデータがどうなってるかをプレビューするには、[`DataDebuggerPreview`](xref:Microsoft.ML.Data.DataDebuggerPreview) を返す [`Preview`](xref:Microsoft.ML.DebuggerExtensions.Preview*) メソッドを使用します。 結果のオブジェクトは `ColumnView` および `RowView` プロパティを含み、どちらも [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) になっていて、特定の列または行の値が格納されています。 `maxRows` パラメータ―を使って、変換を適用する行数を指定します。
+モデルのビルド プロセスは実験的であり、反復されます。 データのサブセットに対して機械学習モデルの前処理またはトレーニングを行った後にデータがどうなってるかをプレビューするには、[`DataDebuggerPreview`](xref:Microsoft.ML.Data.DataDebuggerPreview) を返す [`Preview`](xref:Microsoft.ML.DebuggerExtensions.Preview%2A) メソッドを使用します。 結果のオブジェクトは `ColumnView` および `RowView` プロパティを含み、どちらも [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) になっていて、特定の列または行の値が格納されています。 `maxRows` パラメータ―を使って、変換を適用する行数を指定します。
 
 ![データ デバッガーによるオブジェクトのプレビュー](./media/inspect-intermediate-data-ml-net/data-debugger-preview-01.png)
 

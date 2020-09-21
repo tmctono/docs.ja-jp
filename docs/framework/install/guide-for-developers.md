@@ -8,12 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: d2bb964c3d034ea6913c91922fcff1e62130e0dc
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 4ea1954841696ef28cceca2968e750d9771be038
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558466"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543712"
 ---
 # <a name="install-the-net-framework-for-developers"></a>開発者向けの .NET Framework のインストール
 
@@ -138,7 +138,7 @@ Web インストーラーとオフライン インストーラーはどちらも
 
 - .NET Framework 4.5 以降のバージョンをインストールするには、管理者資格情報が必要です。
 
-- .NET Framework 4.5 再頒布可能パッケージは、2012 年 10 月 9 に更新されています。この更新により、Microsoft によって生成および署名されたファイルへのデジタル署名が途中で有効期限切れになるという、デジタル証明書の不適切なタイムスタンプに関連する問題が解決しました。 2012 年 8 月 16 日付けの .NET Framework 4.5 再頒布可能パッケージを以前にインストールしていた場合は、[.NET Framework ダウンロード ページ](https://dotnet.microsoft.com/download/dotnet-framework/net45)から最新の再頒布可能パッケージを入手して更新することをお勧めします。 この問題について詳しくは、「[マイクロソフト セキュリティ アドバイザリ (2749655)](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655)」および「[サポート技術情報 2770445](https://support.microsoft.com/kb/2770445)」をご覧ください。
+- .NET Framework 4.5 再頒布可能パッケージは、2012 年 10 月 9 に更新されています。この更新により、Microsoft によって生成および署名されたファイルへのデジタル署名が途中で有効期限切れになるという、デジタル証明書の不適切なタイムスタンプに関連する問題が解決しました。 2012 年 8 月 16 日付けの .NET Framework 4.5 再頒布可能パッケージを以前にインストールしていた場合は、[.NET Framework ダウンロード ページ](https://dotnet.microsoft.com/download/dotnet-framework/net45)から最新の再頒布可能パッケージを入手して更新することをお勧めします。 この問題について詳しくは、「[マイクロソフト セキュリティ アドバイザリ (2749655)](/security-updates/SecurityAdvisories/2012/2749655)」および「[サポート技術情報 2770445](https://support.microsoft.com/kb/2770445)」をご覧ください。
 
 ## <a name="to-install-language-packs"></a>言語パックのインストール
 

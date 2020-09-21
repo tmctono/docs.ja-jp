@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: 1252e214be03f8a180fadb7667ee59f36a862040
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: e4d7c96cdcfd7751e80703fe4c5a56e66f4c18c6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558427"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555355"
 ---
 # <a name="constants-c-programming-guide"></a>定数 (C# プログラミング ガイド)
 定数とは、コンパイル時に既知であり、プログラムの実行期間を通じて変更されない値です。 定数を宣言するには、[const](../../language-reference/keywords/const.md) 修飾子を使用します。 `const` として宣言できるのは、C# [組み込み型](../../language-reference/builtin-types/built-in-types.md) (<xref:System.Object?displayProperty=nameWithType> を除く) のみです。 クラス、構造体、配列などのユーザー定義型を `const` にすることはできません。 実行時に (コンストラクターなどで) 一度だけ初期化され、その後は変更できないクラス、構造体、または配列を作成するには、[readonly](../../language-reference/keywords/readonly.md) 修飾子を使用します。  
@@ -53,4 +53,4 @@ ms.locfileid: "88558427"
 - [プロパティ](./properties.md)
 - [型](../types/index.md)
 - [readonly](../../language-reference/keywords/readonly.md)
-- [C# の不変性パート 1: 不変性の種類](https://docs.microsoft.com/archive/blogs/ericlippert/immutability-in-c-part-one-kinds-of-immutability)
+- [C# の不変性パート 1: 不変性の種類](/archive/blogs/ericlippert/immutability-in-c-part-one-kinds-of-immutability)

@@ -3,12 +3,12 @@ title: 新着記事
 description: SqlClient データ プロバイダーや ADO.NET Entity Framework の新機能など、.NET Framework 4.5 の ADO.NET の新機能について説明します。
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 536b9314dd83366202f7fd9b489759681021fd9e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b34a27574b6aab75539f9ab30e2978e45b4ad9e3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286172"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553858"
 ---
 # <a name="whats-new-in-adonet"></a>ADO.NET の新機能
 
@@ -48,15 +48,15 @@ ms.locfileid: "84286172"
 
 - SqlClient は、スパース列に追加のサポートを提供します。このサポートは SQL Server 2008 で追加された機能です。 アプリケーションがスパース列を使用するテーブルのデータに既にアクセスしていると、パフォーマンスが向上します。 <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> の IsColumnSet 列は、列が列セットのメンバーであるスパース列であるかどうかを示します。 <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> では、列がスパース列であるかどうかが示されています (詳しくは「[SQL Server スキーマ コレクション](sql-server-schema-collections.md)」を参照)。 スパース列の詳細については、「[スパース列の使用](/sql/relational-databases/tables/use-sparse-columns)」を参照してください。
 
-- 空間データ型を含むアセンブリ Microsoft.SqlServer.Types.dll は、Version 10.0 から Version 11.0 にアップグレードされました。 このアセンブリを参照するホスト アプリケーションでは、エラーが発生する可能性があります。 詳細については、「[データベース エンジン機能の重大な変更](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms143179(v=sql.110))」を参照してください。
+- 空間データ型を含むアセンブリ Microsoft.SqlServer.Types.dll は、Version 10.0 から Version 11.0 にアップグレードされました。 このアセンブリを参照するホスト アプリケーションでは、エラーが発生する可能性があります。 詳細については、「[データベース エンジン機能の重大な変更](/previous-versions/sql/sql-server-2012/ms143179(v=sql.110))」を参照してください。
 
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework
 
-.NET Framework 4.5 では、Entity Framework 5.0 を使用するときに新しいシナリオを有効にする API が追加されています。 Entity Framework 5.0 に追加された機能および機能強化に関する詳細については、「[新機能](https://docs.microsoft.com/previous-versions/gg696190(v=vs.103))」および [Entity Framework のリリースとバージョン管理](/ef/ef6/what-is-new/past-releases)に関する記事をご覧ください。
+.NET Framework 4.5 では、Entity Framework 5.0 を使用するときに新しいシナリオを有効にする API が追加されています。 Entity Framework 5.0 に追加された機能および機能強化に関する詳細については、「[新機能](/previous-versions/gg696190(v=vs.103))」および [Entity Framework のリリースとバージョン管理](/ef/ef6/what-is-new/past-releases)に関する記事をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
 - [ADO.NET](index.md)
 - [ADO.NET の概要](ado-net-overview.md)
 - [SQL Server と ADO.NET](./sql/index.md)
-- [WCF Data Services 5.0 の新機能](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
+- [WCF Data Services 5.0 の新機能](/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))

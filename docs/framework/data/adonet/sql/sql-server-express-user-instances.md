@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 2bd67a9315eda4161d4b76e1638f5c08f9598a52
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 71f42cb2707c27be6c1a761d09d3a2dae1791680
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174486"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552675"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express ユーザー インスタンス
 Microsoft SQL Server Express Edition (SQL Server Express) でサポートされる機能に、ユーザー インスタンスがあります。ユーザー インスタンスは、.NET Framework Data Provider for SQL Server (`SqlClient`) を使用している場合にしか利用できません。 ユーザー インスタンスは、親インスタンスによって生成される SQL Server Express データベース エンジンの独立したインスタンスです。 ユーザー インスタンスを使用すると、ローカル コンピューター上の管理者以外のユーザーが、SQL Server Express データベースにアタッチして接続することができます。 それぞれのインスタンスは、1 ユーザーあたり 1 インスタンスの原則に基づいて、個々のユーザーのセキュリティ コンテキストで実行されます。  
@@ -144,7 +144,7 @@ private static void OpenSqlConnection()
   
 - データを共有する必要がないシングル ユーザー アプリケーション。  
   
-- ClickOnce 配置。 .NET Framework 2.0 以降および SQL Server Express が既にターゲット コンピューターにインストールされている場合、管理者以外のユーザーでも、ClickOnce アクションの結果としてダウンロードされたインストール パッケージをインストールして使用できます。 ただし、SQL Server Express がセットアップの一部として含まれている場合は、管理者が SQL Server Express をインストールする必要があります。 詳細については、「[Windows フォーム用の ClickOnce 配置](../../../winforms/clickonce-deployment-for-windows-forms.md)」を参照してください。
+- ClickOnce 配置。 .NET Framework 2.0 以降および SQL Server Express が既にターゲット コンピューターにインストールされている場合、管理者以外のユーザーでも、ClickOnce アクションの結果としてダウンロードされたインストール パッケージをインストールして使用できます。 ただし、SQL Server Express がセットアップの一部として含まれている場合は、管理者が SQL Server Express をインストールする必要があります。 詳細については、「[Windows フォーム用の ClickOnce 配置](/dotnet/desktop/winforms/clickonce-deployment-for-windows-forms)」を参照してください。
   
 - Windows 認証を使用した専用 ASP.NET ホスティング。 1 つの SQL Server Express インスタンスをイントラネット上でホストできます。 アプリケーションは、偽装を使用するのではなく、ASPNET Windows アカウントを使用して接続します。 サードパーティ製品を使ったホスティングや共有ホスティングのシナリオでユーザー インスタンスを使用することは避けてください。すべてのアプリケーションで同じユーザー インスタンスが使用され、アプリケーションを互いに分離することができなくなります。  
   

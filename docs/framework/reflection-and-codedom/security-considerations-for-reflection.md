@@ -11,12 +11,12 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-ms.openlocfilehash: 0465cbd5ceb7d4f44bb6d10865fcbd17b8ed7af6
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 9ef2ac4897b3f8c48a0b0f402ab06eb073a5c1fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865256"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556337"
 ---
 # <a name="security-considerations-for-reflection"></a>リフレクションに関するセキュリティ上の考慮事項
 
@@ -60,7 +60,7 @@ ms.locfileid: "86865256"
 
 コマンド ラインから実行されるアプリケーション コードは完全信頼で実行されます。 この場合、透過的とマークされていない限り、リフレクションを使用してセキュリティ クリティカルなメンバーにアクセスできます。 同じコードが部分信頼で実行される場合 (サンドボックス化されたアプリケーション ドメイン内など)、セキュリティ クリティカル コードにアクセスできるかどうかは、アセンブリの信頼レベルによって決まります。アセンブリが厳密な名前を持ち、グローバル アセンブリ キャッシュにインストールされている場合は、信頼されたアセンブリとして、セキュリティ クリティカルなメンバーを呼び出すことができます。 信頼されない場合は、透過的とマークされていなくても透過的として扱われ、セキュリティ クリティカルなメンバーにはアクセスできません。
 
-.NET Framework 4 のセキュリティ モデルの詳細については、「[.NET Framework におけるセキュリティの変更点](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)」を参照してください。
+.NET Framework 4 のセキュリティ モデルの詳細については、「[.NET Framework におけるセキュリティの変更点](/previous-versions/dotnet/framework/security/security-changes)」を参照してください。
 
 ## <a name="reflection-and-transparency"></a>リフレクションと透過
 
@@ -116,7 +116,7 @@ ms.locfileid: "86865256"
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
-- [セキュリティの変更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
+- [セキュリティの変更](/previous-versions/dotnet/framework/security/security-changes)
 - [コード アクセス セキュリティ](../misc/code-access-security.md)
 - [リフレクション出力のセキュリティ関連事項](security-issues-in-reflection-emit.md)
 - [型情報の表示](viewing-type-information.md)

@@ -3,18 +3,18 @@ title: 高い CPU 使用率をデバッグする - .NET Core
 description: .NET Core での高い CPU 使用率のデバッグについて説明するチュートリアルです。
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 93076bbce3baf3a219b25c927d2aba3d2d57456f
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 71e0b98f7ad38836c6a20c3e0e75a878fb6525c7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557803"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538710"
 ---
 # <a name="debug-high-cpu-usage-in-net-core"></a>.NET Core で高い CPU 使用率をデバッグする
 
 **この記事の対象: ✔️** .NET Core 3.1 SDK 以降のバージョン
 
-このチュートリアルでは、過剰な CPU 使用率のシナリオをデバッグする方法について説明します。 示されている例の [ASP.NET Core Web アプリ](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) ソース コード リポジトリを使用して、デッドロックを意図的に発生させることができます。 エンドポイントでは、ハングとスレッドが蓄積します。 さまざまなツールを使用して、診断データのいくつかの重要な部分でこのシナリオを診断する方法について説明します。
+このチュートリアルでは、過剰な CPU 使用率のシナリオをデバッグする方法について説明します。 示されている例の [ASP.NET Core Web アプリ](/samples/dotnet/samples/diagnostic-scenarios) ソース コード リポジトリを使用して、デッドロックを意図的に発生させることができます。 エンドポイントでは、ハングとスレッドが蓄積します。 さまざまなツールを使用して、診断データのいくつかの重要な部分でこのシナリオを診断する方法について説明します。
 
 このチュートリアルでは、次の作業を行います。
 
@@ -31,13 +31,13 @@ ms.locfileid: "88557803"
 このチュートリアルでは次のものを使用します。
 
 - [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) 以降のバージョン。
-- シナリオをトリガーする[サンプル デバッグ ターゲット](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)
+- シナリオをトリガーする[サンプル デバッグ ターゲット](/samples/dotnet/samples/diagnostic-scenarios)
 - [dotnet-trace](dotnet-trace.md) を使ってプロセスを一覧表示し、プロファイルを生成する
 - [dotnet-counters](dotnet-counters.md) を使って CPU 使用率を監視する
 
 ## <a name="cpu-counters"></a>CPU カウンター
 
-診断データの収集を試行する前に、高い CPU 状態を確認する必要があります。 プロジェクトのルート ディレクトリから次のコマンドを使用して、[サンプル アプリケーション](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)を実行します。
+診断データの収集を試行する前に、高い CPU 状態を確認する必要があります。 プロジェクトのルート ディレクトリから次のコマンドを使用して、[サンプル アプリケーション](/samples/dotnet/samples/diagnostic-scenarios)を実行します。
 
 ```dotnetcli
 dotnet run
@@ -116,11 +116,11 @@ Press p to pause, r to resume, q to quit.
 
 ### <a name="linux"></a>[Linux](#tab/linux)
 
-`perf` ツールを使用すると、.NET Core アプリ プロファイルを生成できます。 [サンプル デバッグ ターゲット](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)の前のインスタンスを終了します。
+`perf` ツールを使用すると、.NET Core アプリ プロファイルを生成できます。 [サンプル デバッグ ターゲット](/samples/dotnet/samples/diagnostic-scenarios)の前のインスタンスを終了します。
 
 `COMPlus_PerfMapEnabled` 環境変数を設定して、.NET Core アプリによって `/tmp` ディレクトリ内に `map` ファイルが作成されるようにします。 この `map` ファイルは、CPU アドレスを名前順に JIT 生成関数にマップするために `perf` によって使用されます。 詳細については、「[パフォーマンス マップの作成](../run-time-config/debugging-profiling.md#write-perf-map)」を参照してください。
 
-同じターミナル セッションで、[サンプル デバッグ ターゲット](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)を実行します。
+同じターミナル セッションで、[サンプル デバッグ ターゲット](/samples/dotnet/samples/diagnostic-scenarios)を実行します。
 
 ```dotnetcli
 export COMPlus_PerfMapEnabled=1
@@ -152,7 +152,7 @@ sudo perf script | FlameGraph/stackcollapse-perf.pl | FlameGraph/flamegraph.pl >
 
 ### <a name="windows"></a>[Windows](#tab/windows)
 
-Windows では、プロファイラーとして [dotnet-trace](dotnet-trace.md) ツールを使用できます。 前の[サンプル デバッグ ターゲット](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)を使用して、高 CPU エンドポイント (`https://localhost:5001/api/diagscenario/highcpu/60000`) をもう一度実行します。 それが 1 分間の要求内で実行されている間に、次のように `collect` コマンドを使用します。
+Windows では、プロファイラーとして [dotnet-trace](dotnet-trace.md) ツールを使用できます。 前の[サンプル デバッグ ターゲット](/samples/dotnet/samples/diagnostic-scenarios)を使用して、高 CPU エンドポイント (`https://localhost:5001/api/diagscenario/highcpu/60000`) をもう一度実行します。 それが 1 分間の要求内で実行されている間に、次のように `collect` コマンドを使用します。
 
 ```dotnetcli
 dotnet-trace collect -p 22884 --providers Microsoft-DotNETCore-SampleProfiler

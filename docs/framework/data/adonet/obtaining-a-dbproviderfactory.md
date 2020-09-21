@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
-ms.openlocfilehash: b790c87cc3ec293c18bf730567f92b490c7c6594
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0c7c89a9104ac72bf03f2900e7ca474b709be40c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286716"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554463"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>DbProviderFactory の取得
 <xref:System.Data.Common.DbProviderFactory> を取得する過程では、データ プロバイダーに関する情報が <xref:System.Data.Common.DbProviderFactories> クラスに渡されます。 <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> メソッドはこの情報に基づいて、厳密に型指定されたプロバイダー ファクトリを作成します。 たとえば、<xref:System.Data.SqlClient.SqlClientFactory> を作成するには、`GetFactory` の引数にプロバイダー名 System.Data.SqlClient を文字列として指定します。 `GetFactory` には、<xref:System.Data.DataRow> を引数として受け取るオーバーロードも存在します。 プロバイダー ファクトリを作成すると、対応するメソッドを使って他のオブジェクトを作成できるようになります。 `SqlClientFactory` のメソッドには、<xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>、<xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A>、<xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A> などがあります。  
@@ -100,5 +100,5 @@ ms.locfileid: "84286716"
 
 - [DbProviderFactories](dbproviderfactories.md)
 - [接続文字列](connection-strings.md)
-- [構成クラスの使用](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))
+- [構成クラスの使用](/previous-versions/aspnet/ms228063(v=vs.100))
 - [ADO.NET の概要](ado-net-overview.md)

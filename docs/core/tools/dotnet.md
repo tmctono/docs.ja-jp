@@ -2,12 +2,12 @@
 title: dotnet コマンド
 description: dotnet コマンド (.NET Core CLI の汎用ドライバー) とその使用方法について説明します。
 ms.date: 02/13/2020
-ms.openlocfilehash: 88e92b3ff5e8f68b980015a817434dd2d67df93a
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 4476dcf36455e0dc1b89712409818cf7e0352f2c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378839"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537666"
 ---
 # <a name="dotnet-command"></a>dotnet コマンド
 
@@ -258,7 +258,7 @@ dotnet myapp.dll
 
 ## <a name="environment-variables"></a>環境変数
 
-- `DOTNET_ROOT`、`DOTNET_ROOT(x86)`
+- `DOTNET_ROOT`, `DOTNET_ROOT(x86)`
 
   .NET Core ランタイムが既定の場所にインストールされていない場合、それらの場所を指定します。 Windows 上の既定の場所は `C:\Program Files\dotnet` です。 Linux と macOS 上の既定の場所は `/usr/share/dotnet` です。 この環境変数は、生成された実行可能ファイル (apphosts) を介してアプリを実行する場合にのみ使用されます。 64 ビット OS 上で 32 ビット実行可能ファイルを実行する場合は、代わりに `DOTNET_ROOT(x86)` が使用されます。
 
@@ -300,7 +300,7 @@ dotnet myapp.dll
 
 - `DOTNET_CLI_UI_LANGUAGE`
 
-  `en-us` などのロケール値を使用して、CLI UI の言語を設定します。 サポートされている値は、Visual Studio の場合と同じです。 詳細については、[Visual Studio のインストール ドキュメント](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)のインストーラーの言語を変更する方法に関するセクションを参照してください。 .NET リソース マネージャーの規則が適用されるため、完全一致を選択する必要はありません。`CultureInfo` ツリーで子孫を選択することもできます。 たとえば、`fr-CA` に設定すると、CLI によって `fr` の翻訳が検索され、使用されます。 サポートされていない言語に設定すると、CLI は英語にフォールバックします。
+  `en-us` などのロケール値を使用して、CLI UI の言語を設定します。 サポートされている値は、Visual Studio の場合と同じです。 詳細については、[Visual Studio のインストール ドキュメント](/visualstudio/install/install-visual-studio?view=vs-2019)のインストーラーの言語を変更する方法に関するセクションを参照してください。 .NET リソース マネージャーの規則が適用されるため、完全一致を選択する必要はありません。`CultureInfo` ツリーで子孫を選択することもできます。 たとえば、`fr-CA` に設定すると、CLI によって `fr` の翻訳が検索され、使用されます。 サポートされていない言語に設定すると、CLI は英語にフォールバックします。
 
 - `DOTNET_DISABLE_GUI_ERRORS`
 
@@ -328,7 +328,7 @@ dotnet myapp.dll
 
   詳細については、「[単一ファイルの実行可能ファイル](../whats-new/dotnet-core-3-0.md#single-file-executables)」を参照してください。
 
-- `COREHOST_TRACE`、`COREHOST_TRACEFILE`、`COREHOST_TRACE_VERBOSITY`
+- `COREHOST_TRACE`, `COREHOST_TRACEFILE`, `COREHOST_TRACE_VERBOSITY`
 
   `dotnet.exe`、`hostfxr`、`hostpolicy` などのホスティング コンポーネントからの診断トレースを制御します。
 

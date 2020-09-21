@@ -2,15 +2,15 @@
 title: SQL Server Compact および LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 59022359-a5a2-4c42-9a6a-5c0259c3ad17
-ms.openlocfilehash: b5a1a12018bd85cf313c1841e6b67ab2edf67b4a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bdd1237a8eac1c278e7704f3fbf0ae8b1deeff42
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792540"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541364"
 ---
 # <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact および LINQ to SQL
-SQL Server Compact は、Visual Studio と共にインストールされる既定のデータベースです。 詳しくは、「[SQL Server Compact の使用 (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/aa983321(v=vs.110))」をご覧ください。  
+SQL Server Compact は、Visual Studio と共にインストールされる既定のデータベースです。 詳しくは、「[SQL Server Compact の使用 (Visual Studio)](/previous-versions/visualstudio/visual-studio-2012/aa983321(v=vs.110))」をご覧ください。  
   
  このトピックでは、使用法、構成、機能セット、および [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のサポートのスコープに関する主要な相違を示します。  
   

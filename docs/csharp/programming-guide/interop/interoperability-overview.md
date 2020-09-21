@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 6b1dec96dfb3fc354c614983ed1dafab66c5b007
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 41ee25397d519f189b462291d823586113c78b67
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302959"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541540"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>相互運用性の概要 (C# プログラミング ガイド)
 C# マネージド コードとアンマネージド コード間で相互運用を可能にする方法について説明します。  
@@ -60,7 +60,7 @@ C# マネージド コードとアンマネージド コード間で相互運用
   
 ## <a name="see-also"></a>関連項目
 
-- [相互運用パフォーマンスの向上](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)
+- [相互運用パフォーマンスの向上](/previous-versions/msp-n-p/ff647812(v=pandp.10))
 - [COM と .NET の相互運用性の概要](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)
 - [COM 相互運用の概要 (Visual Basic)](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
 - [マネージド コードとアンマネージド コード間でのマーシャリング](../../../framework/interop/interop-marshaling.md)

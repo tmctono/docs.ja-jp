@@ -8,12 +8,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: d49cb725c9ce9a417f78f638795e98a75a086893
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: cfd2917d330a9229338790c35911502be5cd9391
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302218"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559149"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>チュートリアル: C# でのクエリの作成 (LINQ)
 このチュートリアルでは、LINQ クエリ式の記述に使用される C# 言語機能について説明します。  
@@ -179,7 +179,7 @@ ms.locfileid: "87302218"
   
  [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
- [LINQ to XML (C#)](./linq-to-xml-overview.md)  
+ [LINQ to XML (C#)](../../../../standard/linq/linq-xml-overview.md)  
   
  [LINQ to Objects (C#)](./linq-to-objects.md)  
   

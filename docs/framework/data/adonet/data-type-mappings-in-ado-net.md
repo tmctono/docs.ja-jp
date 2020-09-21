@@ -2,12 +2,12 @@
 title: データ型のマップ
 ms.date: 03/30/2017
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
-ms.openlocfilehash: 610cdc1a679b0c51125075076120e12db97da421
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 065a9dcb5e03c784c5dec9ffbe6a3153aead9e3c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980198"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554711"
 ---
 # <a name="data-type-mappings-in-adonet"></a>ADO.NET でのデータ型のマッピング
 .NET Framework は共通型システムを基にしています。このシステムは実行時の型の宣言、使用、および管理方法を定義するものです。 値型と参照型の両方から構成されており、これらはすべて <xref:System.Object> 基本型から派生します。 データ ソースを操作するときは、データ型が明示的に指定されていない場合はデータ プロバイダーから推論されます。 たとえば、<xref:System.Data.DataSet> オブジェクトは、特定のデータ ソースには依存しません。 `DataSet` 内のデータはデータ ソースから取得され、変更は `DataAdapter` によってデータ ソースに反映されます。 つまり、`DataAdapter` によって `DataSet` 内の <xref:System.Data.DataTable> に、データ ソースからの値が格納されると、`DataTable` 内の列の結果のデータ型は、データ ソースへの接続に使用された .NET Framework データ プロバイダーに固有の型ではなく、.NET Framework の型になります。  
@@ -41,5 +41,5 @@ ms.locfileid: "76980198"
 - [パラメーターおよびパラメーター データ型の構成](configuring-parameters-and-parameter-data-types.md)
 - [データベース スキーマ情報の取得](retrieving-database-schema-information.md)
 - [共通型システム](../../../standard/base-types/common-type-system.md)
-- [型の変換](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/t8s7t9bf(v=vs.90))
+- [型の変換](/previous-versions/visualstudio/visual-studio-2008/t8s7t9bf(v=vs.90))
 - [ADO.NET の概要](ado-net-overview.md)

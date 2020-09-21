@@ -2,12 +2,12 @@
 title: 開発および配置に関する注意事項
 ms.date: 03/30/2017
 ms.assetid: 535e6611-02de-484c-b5ff-6ffeed04d740
-ms.openlocfilehash: 0f6c34a9cfae08e189b89ad772321b2e43799660
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ef3940eea16ef747e46b2445a9935260fbb6769f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251585"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542582"
 ---
 # <a name="development-and-deployment-considerations"></a>開発および配置に関する注意事項
 このセクションのトピックでは、ADO.NET Entity Framework に基づくアプリケーションを開発または配置する際に考慮する必要のある問題について説明します。  
@@ -26,4 +26,4 @@ ms.locfileid: "70251585"
 - [ADO.NET Entity Framework](index.md)
 - [Entity Framework の概要](overview.md)
 - [はじめに](getting-started.md)
-- [ADO.NET Entity Data Model ツール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [ADO.NET Entity Data Model ツール](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

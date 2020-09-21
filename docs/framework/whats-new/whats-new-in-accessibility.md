@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: df9188c4f7c2af77f5dc87309880a41724254c5c
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: d204bea7f5ec1ed0c25b7b2dedd04d61c7f3e93d
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558960"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679548"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework のアクセシビリティの新機能
 
@@ -136,7 +136,7 @@ namespace WindowsFormsApplication
 
 **UIA 通知イベント**
 
-Windows 10 Fall Creators Update で導入された UIA 通知イベントをアプリで使用すると、UIA イベントを発生させ、対応するコントロールを UI に準備することなく、イベント用に指定したテキストに基づいてナレーターに単純に読み上げさせることができます。 一部のシナリオでは、これはアプリのアクセシビリティを飛躍的に向上させる最も簡単な方法です。 長時間かかる可能性のあるいくつかのプロセスの進行状況を通知するのにも便利です。 UIA 通知イベントの詳細については、[デスクトップ アプリで新しい UI 通知イベントを使用する方法](https://docs.microsoft.com/archive/blogs/winuiautomation/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need)に関する記事を参照してください。
+Windows 10 Fall Creators Update で導入された UIA 通知イベントをアプリで使用すると、UIA イベントを発生させ、対応するコントロールを UI に準備することなく、イベント用に指定したテキストに基づいてナレーターに単純に読み上げさせることができます。 一部のシナリオでは、これはアプリのアクセシビリティを飛躍的に向上させる最も簡単な方法です。 長時間かかる可能性のあるいくつかのプロセスの進行状況を通知するのにも便利です。 UIA 通知イベントの詳細については、[デスクトップ アプリで新しい UI 通知イベントを使用する方法](/archive/blogs/winuiautomation/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need)に関する記事を参照してください。
 
 次の例では、[通知イベント](xref:System.Windows.Forms.AccessibleObject.RaiseAutomationNotification%2A)を発生させています。
 
@@ -387,7 +387,7 @@ Windows 10 では 2 つの新しい UIAutomation プロパティである `SizeO
 
 **CheckBox および RadioButton コントロールに対する変更**
 
-.NET Framework 4.7.1 以前のバージョンでは、WPF の <xref:System.Windows.Controls.CheckBox?displayProperty=nameWIthType> および <xref:System.Windows.Controls.RadioButton?displayProperty=nameWIthType> コントロールのフォーカス ビジュアルに整合性がなく、クラシック テーマとハイ コントラスト テーマでは正しくありません。  これらの問題は、コントロールに内容が何も設定されていない場合に発生します。  これにより、テーマ間の遷移が混乱し、フォーカス ビジュアルが見にくくなることがあります。
+.NET Framework 4.7.1 以前のバージョンでは、WPF の <xref:System.Windows.Controls.CheckBox?displayProperty=nameWithType> および <xref:System.Windows.Controls.RadioButton?displayProperty=nameWithType> コントロールのフォーカス ビジュアルに整合性がなく、クラシック テーマとハイ コントラスト テーマでは正しくありません。  これらの問題は、コントロールに内容が何も設定されていない場合に発生します。  これにより、テーマ間の遷移が混乱し、フォーカス ビジュアルが見にくくなることがあります。
 
 .NET Framework 4.7.2 では、これらのビジュアルのテーマ間の整合性が向上し、クラシック モードとハイ コントラスト テーマでの視認性がよくなっています。
 

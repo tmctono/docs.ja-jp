@@ -4,12 +4,12 @@ description: ML.NET を使用すると、オンラインまたはオフライン
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 0929005e02ad9b43636213735f8c7232aa6d4f42
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: d9a218e57756ad8b95248193325e902c1798cc37
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607772"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679665"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET の概要とそのしくみ
 
@@ -262,7 +262,7 @@ ML.NET 機械学習パイプラインの中心には [DataView](xref:Microsoft.M
 
 さまざまな機械学習タスクの出力列の詳細については、[機械学習のタスク](resources/tasks.md)に関するガイドを参照してください。
 
-DataView オブジェクトの重要なプロパティは、**遅延**評価されることです。 データ ビューは、モデルのトレーニングと評価、およびデータの予測中にのみ読み込まれ、操作されます。 ML.NET アプリケーションの作成とテストを行っている間は、[Preview](xref:Microsoft.ML.DebuggerExtensions.Preview*) メソッドを呼び出すことで、Visual Studio デバッガーを使用して任意のデータ ビュー オブジェクトを確認することができます。
+DataView オブジェクトの重要なプロパティは、**遅延**評価されることです。 データ ビューは、モデルのトレーニングと評価、およびデータの予測中にのみ読み込まれ、操作されます。 ML.NET アプリケーションの作成とテストを行っている間は、[Preview](xref:Microsoft.ML.DebuggerExtensions.Preview%2A) メソッドを呼び出すことで、Visual Studio デバッガーを使用して任意のデータ ビュー オブジェクトを確認することができます。
 
 ```csharp
     var debug = testPriceDataView.Preview();
@@ -284,4 +284,4 @@ DataView オブジェクトの重要なプロパティは、**遅延**評価さ�
 
 * [ハウツー ガイド](./how-to-guides/index.md)で、特定のトピックについてさらに詳しく学習します。
 
-* さらに詳しく学習するには、[API リファレンスのドキュメント](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)を参照してください。
+* さらに詳しく学習するには、[API リファレンスのドキュメント](../../api/index.md?view=ml-dotnet)を参照してください。

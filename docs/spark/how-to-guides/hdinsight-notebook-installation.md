@@ -4,12 +4,12 @@ description: Azure HDInsight の Jupyter Notebook に .NET for Apache Spark を�
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 14babf7a551192b286f309393e3bbff25d4745d5
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 8110b87991e2f0253257faf19f383dec6cbd3853
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617744"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557204"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>Azure HDInsight Spark クラスター上の Jupyter Notebook に .NET for Apache Spark をインストールする
 
@@ -17,7 +17,7 @@ ms.locfileid: "85617744"
 
 Azure HDInsight クラスターには既に Jupyter Notebook が付属しているため、.NET for Apache Spark を実行するように Jupyter Notebook を構成するだけで済みます。 Jupyter Notebook で .NET for Apache Spark を使用する場合、C# コードを 1 行ずつ実行し、必要に応じて実行状態を維持するために、C# REPL が必要です。 [Try .NET](https://github.com/dotnet/try) は、公式の .NET REPL として統合されています。
 
-Jupyter Notebook のエクスペリエンスを通じて .NET for Apache Spark を有効にするには、[Ambari](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-manage-ambari) を使用したいくつかの手動の手順に従い、HDInsight Spark クラスターで[スクリプト アクション](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)を送信する必要があります。
+Jupyter Notebook のエクスペリエンスを通じて .NET for Apache Spark を有効にするには、[Ambari](/azure/hdinsight/hdinsight-hadoop-manage-ambari) を使用したいくつかの手動の手順に従い、HDInsight Spark クラスターで[スクリプト アクション](/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)を送信する必要があります。
 
 > [!NOTE]
 > この機能は "*試験段階*" であり、HDInsight Spark チームではサポートされていません。
@@ -26,7 +26,7 @@ Jupyter Notebook のエクスペリエンスを通じて .NET for Apache Spark �
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-まだお持ちでない場合は、[Azure HDInsight Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-jupyter-spark-sql-use-portal#create-an-apache-spark-cluster-in-hdinsight) クラスターを作成します。
+まだお持ちでない場合は、[Azure HDInsight Spark](/azure/hdinsight/spark/apache-spark-jupyter-spark-sql-use-portal#create-an-apache-spark-cluster-in-hdinsight) クラスターを作成します。
 
 1. [Azure portal](https://portal.azure.com) にアクセスし、 **[+ リソースの作成]** を選択します。
 
@@ -63,9 +63,9 @@ Azure portal で、前の手順で作成した **HDInsight Spark クラスター
 
    ご自分のローカル コンピューターに **install-interactive-notebook.sh** という名前の新しいファイルを作成し、[install-interactive-notebook.sh の内容](https://raw.githubusercontent.com/dotnet/spark/master/deployment/HDI-Spark/Notebooks/install-interactive-notebook.sh)を貼り付けます。
 
-   このスクリプトを、HDInsight クラスターからアクセスできる [URI](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux#understand-script-actions) にアップロードします。 たとえば、`https://<my storage account>.blob.core.windows.net/<my container>/<some dir>/install-interactive-notebook.sh` のようにします。
+   このスクリプトを、HDInsight クラスターからアクセスできる [URI](/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux#understand-script-actions) にアップロードします。 たとえば、`https://<my storage account>.blob.core.windows.net/<my container>/<some dir>/install-interactive-notebook.sh` のようにします。
 
-2. [HDInsight スクリプト アクション](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)を使用して、クラスターで `install-interactive-notebook.sh` を実行します。
+2. [HDInsight スクリプト アクション](/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)を使用して、クラスターで `install-interactive-notebook.sh` を実行します。
 
    Azure portal で HDI クラスターに戻り、左側のオプションから **[スクリプト アクション]** を選択します。 HDInsight Spark クラスターに .NET for Apache Spark の REPL をデプロイするためのスクリプト アクションを 1 つ送信します。 次の設定を使用します。
 
@@ -158,4 +158,4 @@ Azure portal で、前の手順で作成した **HDInsight Spark クラスター
 ## <a name="next-steps"></a>次の手順
 
 * [.NET for Apache Spark アプリケーションを Azure HDInsight にデプロイする](../tutorials/hdinsight-deployment.md)
-* [HDInsight のドキュメント](https://docs.microsoft.com/azure/hdinsight/)
+* [HDInsight のドキュメント](/azure/hdinsight/)

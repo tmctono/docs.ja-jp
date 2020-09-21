@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: d93bdee8d5a057be0f405fe4334d7edbdc0649ec
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 51041f5a9076ad360a84cc39704aedb50b77d40a
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174407"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679391"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>チュートリアル: 時系列解析と ML.NET を使用して自転車レンタル サービスの需要を予測する
 
@@ -73,7 +73,7 @@ ML.NET を使用して SQL Server データベースに格納されているデ�
 
 元のデータセットは、SQL Server データベースの次のスキーマを持つデータベース テーブルにマップされます。
 
-```SQL
+```sql
 CREATE TABLE [Rentals] (
     [RentalDate] DATE NOT NULL,
     [Year] INT NOT NULL,
@@ -149,7 +149,7 @@ CREATE TABLE [Rentals] (
 
     [!code-csharp [LoadData](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L31)]
 
-1. このデータセットには 2 年分のデータが含まれています。 トレーニングに使用されるのは 1 年目のデータのみで、2 年目のデータは、モデルによって生成された予測と実際の値を比較するために保持されます。 [`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn*) 変換を使用してデータをフィルター処理します。
+1. このデータセットには 2 年分のデータが含まれています。 トレーニングに使用されるのは 1 年目のデータのみで、2 年目のデータは、モデルによって生成された予測と実際の値を比較するために保持されます。 [`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn%2A) 変換を使用してデータをフィルター処理します。
 
     [!code-csharp [SplitData](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L33-L34)]
 
@@ -163,7 +163,7 @@ CREATE TABLE [Rentals] (
 
     `forecastingPipeline` では、1 年目用の 365 のデータ ポイントとサンプルを取得するか、`seriesLength` パラメーターで指定された 30 日 (月単位) 間隔に時系列データセットを分割します。 これらの各サンプルは、毎週または 7 日間の期間で解析されます。 次の期間の予測値がどのようになるかを判断する際には、前の 7 日間の値を使用して予測が行われます。 モデルは、`horizon` パラメーターで定義されているように、7 つの期間を将来まで予測するように設定されています。 予測は情報に基づいた推測であるため、100% 正確であるとは限りません。 したがって、上限と下限によって定義される最善のシナリオと最悪のシナリオにおける値の範囲を把握しておくことをお勧めします。 この場合、下限と上限の信頼レベルは 95% に設定されています。 信頼レベルは、状況に応じて増減できます。 値が大きいほど、望ましい信頼レベルを達成するために上限と下限の範囲が広くなります。
 
-1. [`Fit`](xref:Microsoft.ML.Transforms.TimeSeries.SsaForecastingEstimator.Fit*) メソッドを使用して、モデルをトレーニングし、以前に定義した `forecastingPipeline` にデータを適合させます。
+1. [`Fit`](xref:Microsoft.ML.Transforms.TimeSeries.SsaForecastingEstimator.Fit%2A) メソッドを使用して、モデルをトレーニングし、以前に定義した `forecastingPipeline` にデータを適合させます。
 
     [!code-csharp [TrainModel](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L47)]
 
@@ -180,15 +180,15 @@ CREATE TABLE [Rentals] (
     }
     ```
 
-1. `Evaluate` メソッド内で、トレーニング済みのモデルで [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) メソッドを使用して、2 年目のデータを予測します。
+1. `Evaluate` メソッド内で、トレーニング済みのモデルで [`Transform`](xref:Microsoft.ML.ITransformer.Transform%2A) メソッドを使用して、2 年目のデータを予測します。
 
     [!code-csharp [EvaluateForecast](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L62)]
 
-1. [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) メソッドを使用して、データから実際の値を取得します。
+1. [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) メソッドを使用して、データから実際の値を取得します。
 
     [!code-csharp [GetActualRentals](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L65-L67)]
 
-1. [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) メソッドを使用して、予測値を取得します。
+1. [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) メソッドを使用して、予測値を取得します。
 
     [!code-csharp [GetForecastRentals](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L70-L72)]
 
@@ -221,7 +221,7 @@ CREATE TABLE [Rentals] (
 
     [!code-csharp [CreateTimeSeriesEngine](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L51)]
 
-1. 以前に定義した `modelPath` 変数によって指定された `MLModel.zip` という名前のファイルにモデルを保存します。 [`Checkpoint`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602.CheckPoint*) メソッドを使用してモデルを保存します。
+1. 以前に定義した `modelPath` 変数によって指定された `MLModel.zip` という名前のファイルにモデルを保存します。 [`Checkpoint`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602.CheckPoint%2A) メソッドを使用してモデルを保存します。
 
     [!code-csharp [SaveModel](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L52)]
 
@@ -236,7 +236,7 @@ CREATE TABLE [Rentals] (
     }
     ```
 
-1. `Forecast` メソッド内で、[`Predict`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602.Predict*) メソッドを使用して、次の 7 日間のレンタルを予測します。
+1. `Forecast` メソッド内で、[`Predict`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602.Predict%2A) メソッドを使用して、次の 7 日間のレンタルを予測します。
 
     [!code-csharp [SingleForecast](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L91)]
 

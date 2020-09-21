@@ -3,12 +3,12 @@ title: dotnet new のカスタム テンプレート
 description: あらゆる種類の .NET プロジェクトまたはファイルのカスタム テンプレートについて説明します。
 author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: cabe220917e7ff688a2c2d2df56d9bc7f8afdf56
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 1d2e5ffcb0b279f1686855834c2357827a4dc7d5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324500"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538096"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new のカスタム テンプレート
 
@@ -96,7 +96,7 @@ dotnet new --list
 
 ## <a name="packing-a-template-into-a-nuget-package-nupkg-file"></a>テンプレートをパッケージ化し、NuGet パッケージ (nupkg ファイル) を作成する
 
-カスタム テンプレートは、[dotnet pack](dotnet-pack.md) コマンドと *.csproj* ファイルでパッケージ化されます。 または、[nuget pack](https://docs.microsoft.com/nuget/tools/cli-ref-pack) コマンドと *.nuspec* ファイルで [NuGet](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference) を使うこともできます。 ただし、NuGet の場合、Windows では .NET Framework が、Linux と macOS では [Mono](https://www.mono-project.com/) が必要です。
+カスタム テンプレートは、[dotnet pack](dotnet-pack.md) コマンドと *.csproj* ファイルでパッケージ化されます。 または、[nuget pack](/nuget/tools/cli-ref-pack) コマンドと *.nuspec* ファイルで [NuGet](/nuget/tools/nuget-exe-cli-reference) を使うこともできます。 ただし、NuGet の場合、Windows では .NET Framework が、Linux と macOS では [Mono](https://www.mono-project.com/) が必要です。
 
 *.csproj* ファイルは、従来のコード プロジェクトの *.csproj* ファイルと若干異なります。 次の設定を確認してください。
 

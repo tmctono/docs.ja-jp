@@ -7,12 +7,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: d7e367f3b4e9a6d88d2a13ca8727d2e2884bb97c
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 5d181f5bc9f7e16051f16ca68490744e9c0d3abd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810600"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557919"
 ---
 # <a name="c-walkthroughs"></a>C# チュートリアル
 
@@ -34,19 +34,19 @@ ms.locfileid: "88810600"
 - [動的オブジェクトの作成と使用 (C# および Visual Basic)](./programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)\
   テキスト ファイルの内容を動的に公開するカスタム オブジェクトを作成する方法、および `IronPython` ライブラリを使用するプロジェクトを作成する方法を示します。
 
-- [Visual C# による複合コントロールの作成](../framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)\
+- [Visual C# による複合コントロールの作成](/dotnet/desktop/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp)\
   簡単な複合コントロールを作成し、継承によってその機能を拡張する例を示します。
 
-- [Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成](../framework/winforms/controls/creating-a-wf-control-design-time-features.md)\
+- [Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成](/dotnet/desktop/winforms/controls/creating-a-wf-control-design-time-features)\
   カスタム コントロールのカスタム デザイナーを作成する方法を示します。
 
-- [Visual C# による Windows フォーム コントロールからの継承](../framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)\
+- [Visual C# による Windows フォーム コントロールからの継承](/dotnet/desktop/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp)\
   単純な継承されたボタン コントロールを作成する例を示します。 このボタンは、標準 Windows フォーム ボタンから機能を継承し、カスタム メンバーを公開します。
 
-- [カスタム Windows フォーム コントロールのデザイン時のデバッグ](../framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)\
+- [カスタム Windows フォーム コントロールのデザイン時のデバッグ](/dotnet/desktop/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time)\
   カスタム コントロールのデザイン時動作をデバッグする方法について説明します。
 
-- [チュートリアル: デザイン アクションを使って一般的なタスクを実行する](../framework/winforms/controls/perform-common-tasks-design-actions.md)\
+- [チュートリアル: デザイン アクションを使って一般的なタスクを実行する](/dotnet/desktop/winforms/controls/perform-common-tasks-design-actions)\
   `TabControl` でのタブの追加や削除、コントロールの親コントロールへのドッキング、`SplitContainer` コントロールの方向の変更など、よく実行されるタスクの例を示します。
 
 - [C# でのクエリの作成 (LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)\

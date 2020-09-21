@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 2094da7ec94028c112d6683620ac1146a1544dab
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 62a5f56bb7fffc453623a2c3202f288a19110158
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446974"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539518"
 ---
 ### <a name="localization-pubternal-apis-removed"></a>ローカリゼーション:"Pubternal" API の削除
 
-ASP.NET Core のパブリック API サーフェイスをより適切に維持するために、一部の :::no-loc text="\"pubternal\""::: ローカライズ API を削除しました。 :::no-loc text="\"pubternal\""::: API には、`public` のアクセス修飾子があり、[internal](/dotnet/csharp/language-reference/keywords/internal) インテントを意味する名前空間に定義されています。
+ASP.NET Core のパブリック API サーフェイスをより適切に維持するために、一部の :::no-loc text="\"pubternal\""::: ローカライズ API を削除しました。 :::no-loc text="\"pubternal\""::: API には、`public` のアクセス修飾子があり、[internal](../../../../docs/csharp/language-reference/keywords/internal.md) インテントを意味する名前空間に定義されています。
 
 ディスカッションについては、[dotnet/aspnetcore#22291](https://github.com/dotnet/aspnetcore/issues/22291) を参照してください。
 

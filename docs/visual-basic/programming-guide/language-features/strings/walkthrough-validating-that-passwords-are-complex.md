@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: 7b2d6a81f5dc88688a469b96d56a098a2b45c59f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8cb04286e98cf78f0fb66dde92002ee09e2ea0f5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363686"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556246"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>チュートリアル: パスワードの複雑さの検証 (Visual Basic)
 このメソッドでは、強力なパスワードの特性をチェックし、不合格になったチェックに関する情報で文字列パラメーターを更新します。  
@@ -31,7 +31,7 @@ ms.locfileid: "84363686"
 - <xref:System.Text.RegularExpressions> 名前空間のメンバーへのアクセス許可。 コード内でメンバー名を完全修飾していない場合は、`Imports` ステートメントを追加します。 詳細については、「[Imports ステートメント (.NET 名前空間および型)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)」を参照してください。  
   
 ## <a name="security"></a>セキュリティ  
- ネットワーク経由でパスワードを移動する場合は、セキュリティで保護された方法でデータを転送する必要があります。 詳細については、「[ASP.NET Web Application Security (ASP.NET Web アプリケーションのセキュリティ)](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))」をご覧ください。
+ ネットワーク経由でパスワードを移動する場合は、セキュリティで保護された方法でデータを転送する必要があります。 詳細については、「[ASP.NET Web Application Security (ASP.NET Web アプリケーションのセキュリティ)](/previous-versions/aspnet/330a99hc(v=vs.100))」をご覧ください。
   
  複雑さのチェックをさらに追加することで、`ValidatePassword` 関数の精度を高めることができます。  
   
@@ -46,4 +46,4 @@ ms.locfileid: "84363686"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Text.RegularExpressions.Regex>
-- [ASP.NET Web アプリケーションのセキュリティ](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))
+- [ASP.NET Web アプリケーションのセキュリティ](/previous-versions/aspnet/330a99hc(v=vs.100))

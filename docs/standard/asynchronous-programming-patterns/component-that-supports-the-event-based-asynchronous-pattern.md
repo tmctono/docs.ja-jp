@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: d635135e58c2fd86897b06b20a6aa0c251335e70
-ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
+ms.openlocfilehash: 8ea767976d82881d8f983c1b1e3cbf9475c73995
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89379123"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536042"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>方法 : イベントベースの非同期パターンをサポートするコンポーネントを実装する
 顕著な遅延が発生する可能性がある操作を伴うクラスを作成する場合は、[イベント ベースの非同期パターン](event-based-asynchronous-pattern-overview.md)を実装することによって、非同期機能を与えることを検討します。  
@@ -253,6 +253,6 @@ ms.locfileid: "89379123"
   
 ## <a name="see-also"></a>参照
 
-- [方法: バックグラウンドで操作を実行する](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [方法: バックグラウンドで操作を実行する](/dotnet/desktop/winforms/controls/how-to-run-an-operation-in-the-background)
 - [イベントベースの非同期パターンの概要](event-based-asynchronous-pattern-overview.md)
 - [イベント ベースの非同期パターン (EAP)](event-based-asynchronous-pattern-eap.md)

@@ -3,12 +3,12 @@ title: 非同期プログラミング
 description: .NET Framework Data Provider for SQL Server の非同期プログラミングについて説明します。 .NET Framework 4.5 で導入された機能強化についても説明します。
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 2e5f48b0818ab9cfabc75ba47c95c8198e0fe7fa
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b8f718e0def2ab0b6953ed121eb916f282562d32
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287104"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558473"
 ---
 # <a name="asynchronous-programming"></a>非同期プログラミング
 
@@ -39,9 +39,9 @@ ms.locfileid: "84287104"
 
 - [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [.NET 4.5 での SqlDataReader の新しい非同期メソッドの使用 (パート 1)](https://docs.microsoft.com/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5)
+- [.NET 4.5 での SqlDataReader の新しい非同期メソッドの使用 (パート 1)](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5)
 
-- [.NET 4.5 での SqlDataReader の新しい非同期メソッドの使用 (パート 2)](https://docs.microsoft.com/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples)
+- [.NET 4.5 での SqlDataReader の新しい非同期メソッドの使用 (パート 2)](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples)
 
 ユーザー インターフェイスが応答しない場合やサーバーのパフォーマンスが向上しない場合は、コードをさらに非同期にする必要がある可能性があります。 非同期コードの記述には、従来、非同期操作の完了後に発生するロジックを表すコールバック (または継続とも呼ばれます) のインストールが伴っていました。 これにより、同期コードと比較して、非同期コードの構造は複雑になります。
 
@@ -182,7 +182,7 @@ class A {
 
 異なるデータベースに接続してクエリを実行できるツールを作成することが必要になる場合があります。 基本プロバイダー モデルと新しい非同期機能を使用できます。
 
-分散トランザクションを使用するには、サーバー上で Microsoft Distributed Transaction Controller (MSDTC) サービスを有効にする必要があります。 MSDTC を有効にする方法の詳細については、「[Web サーバーで MSDTC を有効にする方法](https://docs.microsoft.com/previous-versions/commerce-server/dd327979(v=cs.90))」を参照してください。
+分散トランザクションを使用するには、サーバー上で Microsoft Distributed Transaction Controller (MSDTC) サービスを有効にする必要があります。 MSDTC を有効にする方法の詳細については、「[Web サーバーで MSDTC を有効にする方法](/previous-versions/commerce-server/dd327979(v=cs.90))」を参照してください。
 
 ```csharp
 using System;

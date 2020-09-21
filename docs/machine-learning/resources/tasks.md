@@ -2,12 +2,12 @@
 title: 機械学習のタスク
 description: ML.NET でサポートされる機械学習のさまざまなタスクと、それらに関連するタスクについて説明します。
 ms.date: 12/23/2019
-ms.openlocfilehash: e6e36bd65dbadb8cb7b8edbf9e2e82071c208378
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 56cdb5f3162614d0bf2fb1e5bd9e774b5548b238
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144449"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679483"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET での機械学習のタスク
 
@@ -229,4 +229,4 @@ ms.locfileid: "84144449"
 
 次のアルゴリズムを使って予測モデルをトレーニングすることができます。
 
-<xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa*>
+<xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa%2A>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-ms.openlocfilehash: f2b0e21ff5dbeab3395335f52799629859fb2d90
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 7312de7d812aa714447a60f5aa04cb48890e40e8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475269"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553728"
 ---
 # <a name="migrate-from-the-net-framework-11"></a>.NET Framework 1.1 からの移行
 
@@ -57,9 +57,9 @@ Windows 7 以降のバージョンの Windows オペレーティング システ
 
 互換性に影響する可能性がある変更点がアプリケーションに与える影響を評価するには、次の変更一覧を確認する必要があります。
 
-- 「[Breaking Changes in .NET Framework 2.0](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10))」 (.NET Framework 2.0 での破壊的変更) に記載されている .NET Framework 1.1 を対象とするアプリケーションに影響する可能性がある .NET Framework 2.0 SP1 の変更点。
+- 「[Breaking Changes in .NET Framework 2.0](/previous-versions/aa570326(v=msdn.10))」 (.NET Framework 2.0 での破壊的変更) に記載されている .NET Framework 1.1 を対象とするアプリケーションに影響する可能性がある .NET Framework 2.0 SP1 の変更点。
 
-- 「[.NET Framework 3.5 SP1 の変更点](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10))」に記載されている .NET Framework 3.5 と .NET Framework 3.5 SP1 間の変更点。
+- 「[.NET Framework 3.5 SP1 の変更点](/previous-versions/dotnet/articles/dd310284(v=msdn.10))」に記載されている .NET Framework 3.5 と .NET Framework 3.5 SP1 間の変更点。
 
 - 「[.NET Framework 4 への移行に関する問題](net-framework-4-migration-issues.md)」に記載されている .NET Framework 3.5 SP1 と .NET Framework 4 間の変更点。
 

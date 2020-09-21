@@ -3,12 +3,12 @@ title: .NET 用 Azure ライブラリの認証を理解する
 description: Azure SDK for .NET を利用したさまざまな認証について説明します。
 ms.date: 06/19/2020
 ms.custom: azure-sdk-dotnet
-ms.openlocfilehash: bc2fce919d88a528f21df9f561cbe33e1119762a
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: dbae72eb9e80801d7338b210f9664f1c4e318ae0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811380"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539178"
 ---
 # <a name="authenticate-with-the-azure-sdk-for-net"></a>Azure SDK for .NET を使用した認証
 
@@ -25,7 +25,7 @@ Azure.Identity をサポートしないライブラリで認証するには、�
 
 ## <a name="access-azure-resources"></a>Azure リソースにアクセスする
 
-Key Vault からシークレットを取得したり、Storage に BLOB を保管したりするなど、Azure リソースの操作には、さまざまな Azure サービス ライブラリで認証のための接続文字列やキーが必要になります。 たとえば、SQL Database では[標準の SQL 接続文字列](https://docs.microsoft.com/azure/azure-sql/database/connect-query-dotnet-core)が使用されます。 [CosmosDB](/azure/cosmos-db/)、[Azure Cache for Redis](/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)、および [Service Bus](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues) などの他の Azure サービスでは、サービス接続文字列が使用されます。 これらの文字列は、Azure portal、CLI、または PowerShell を使用して取得できます。 また、コード内から .NET 用 Azure 管理ライブラリを使い、リソースを照会することによって接続文字列を作成することもできます。
+Key Vault からシークレットを取得したり、Storage に BLOB を保管したりするなど、Azure リソースの操作には、さまざまな Azure サービス ライブラリで認証のための接続文字列やキーが必要になります。 たとえば、SQL Database では[標準の SQL 接続文字列](/azure/azure-sql/database/connect-query-dotnet-core)が使用されます。 [CosmosDB](/azure/cosmos-db/)、[Azure Cache for Redis](/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)、および [Service Bus](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues) などの他の Azure サービスでは、サービス接続文字列が使用されます。 これらの文字列は、Azure portal、CLI、または PowerShell を使用して取得できます。 また、コード内から .NET 用 Azure 管理ライブラリを使い、リソースを照会することによって接続文字列を作成することもできます。
 
 接続文字列の使用方法は製品によって異なります。 [こちらの Azure 製品ドキュメントをご覧ください](/azure/?product=featured)。
 

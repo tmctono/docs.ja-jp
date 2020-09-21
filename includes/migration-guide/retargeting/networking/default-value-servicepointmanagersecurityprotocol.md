@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 5c86be598ab6196ecf4da05451c7f22d2be52c12
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 8aff4b1aa329d6fdfebf3b62e9279e9dfe5de0a4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614697"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606839"
 ---
 ### <a name="default-value-of-servicepointmanagersecurityprotocol-is-securityprotocoltypesystemdefault"></a>ServicePointManager.SecurityProtocol の既定値は SecurityProtocolType.System.Default
 
 #### <a name="details"></a>説明
 
-.NET Framework 4.7 を対象とするアプリから、<xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType> プロパティの既定値が <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType> になります。 この変更により、SslStream をベースとする NET Framework ネットワーク API (FTP、HTTPS、SMTP など) は、.NET Framework によって定義されるハード コーディングされた値を使用する代わりに、オペレーティング システムから既定のセキュリティ プロトコルを継承できます。 既定値はオペレーティング システムと、システム管理者が実行するカスタム構成によって異なります。 Windows オペレーティング システムの各バージョンにおける既定の SChannel プロトコルについては、「[Protocols in TLS/SSL (Schannel SSP)](https://docs.microsoft.com/windows/desktop/SecAuthN/protocols-in-tls-ssl--schannel-ssp-)」 (TLS/SSL のプロトコル (Schannel SSP)) を参照してください。</p>以前のバージョンの .NET Framework を対象とするアプリケーションの場合、<xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType> プロパティの既定値は、対象となる .NET Framework のバージョンに依存します。 詳細については、「.NET Framework 4.5.2 から 4.6 への移行に関する変更の再ターゲット」の「[ネットワーキング](~/docs/framework/migration-guide/retargeting/4.5.2-4.6.md#networking)」セクションを参照してください。
+.NET Framework 4.7 を対象とするアプリから、<xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType> プロパティの既定値が <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType> になります。 この変更により、SslStream をベースとする NET Framework ネットワーク API (FTP、HTTPS、SMTP など) は、.NET Framework によって定義されるハード コーディングされた値を使用する代わりに、オペレーティング システムから既定のセキュリティ プロトコルを継承できます。 既定値はオペレーティング システムと、システム管理者が実行するカスタム構成によって異なります。 Windows オペレーティング システムの各バージョンにおける既定の SChannel プロトコルについては、「[Protocols in TLS/SSL (Schannel SSP)](/windows/desktop/SecAuthN/protocols-in-tls-ssl--schannel-ssp-)」 (TLS/SSL のプロトコル (Schannel SSP)) を参照してください。</p>以前のバージョンの .NET Framework を対象とするアプリケーションの場合、<xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType> プロパティの既定値は、対象となる .NET Framework のバージョンに依存します。 詳細については、「.NET Framework 4.5.2 から 4.6 への移行に関する変更の再ターゲット」の「[ネットワーキング](~/docs/framework/migration-guide/retargeting/4.5.2-4.6.md#networking)」セクションを参照してください。
 
 #### <a name="suggestion"></a>提案される解決策
 

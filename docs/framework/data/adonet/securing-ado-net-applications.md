@@ -2,12 +2,12 @@
 title: アプリケーションの保護
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 1e08bb2386dff5d824d46aba652609ec5a373008
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: af184f64b43c2d3dc39f8c0add08940d3b002c24
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374521"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550756"
 ---
 # <a name="securing-adonet-applications"></a>ADO.NET アプリケーションのセキュリティ保護
 
@@ -48,10 +48,10 @@ ms.locfileid: "86374521"
  [セキュリティ](../../../standard/security/index.md)  
  .NET のセキュリティをあらゆる観点から説明した記事へのリンクが含まれています。  
   
- [セキュリティ ツール](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  
+ [セキュリティ ツール](/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  
  セキュリティ保護およびセキュリティ ポリシーの管理に使用する .NET Framework ツールについて説明します。  
   
- [セキュリティで保護されたアプリケーションを作成するためのリソース](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
+ [セキュリティで保護されたアプリケーションを作成するためのリソース](/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
  安全なアプリケーションを作成するための記事へのリンク集です。  
   
  [セキュリティ参考文献](/visualstudio/ide/securing-applications)  

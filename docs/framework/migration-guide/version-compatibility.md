@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: 92cfdc1a2a530f9790a693d0aa1ca5f65ff1af9f
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 824765e1f3ecfd1381f9c5f8b144b7b11aee8f0b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558765"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550385"
 ---
 # <a name="version-compatibility"></a>バージョンの互換性
 
@@ -53,9 +53,9 @@ ms.locfileid: "88558765"
 
 - .NET Framework 3.5 のアプリがある場合、「[.NET Framework 4 の移行に関する問題](net-framework-4-migration-issues.md)」も参照してください。
 
-- .NET Framework 2.0 のアプリがある場合、「[.NET Framework 3.5 SP1 の変更点](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10))」も参照してください。
+- .NET Framework 2.0 のアプリがある場合、「[.NET Framework 3.5 SP1 の変更点](/previous-versions/dotnet/articles/dd310284(v=msdn.10))」も参照してください。
 
-- .NET Framework 1.1 アプリがある場合、「[.NET Framework 2.0 の互換性に影響する変更点](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10))」も参照してください。
+- .NET Framework 1.1 アプリがある場合、「[.NET Framework 2.0 の互換性に影響する変更点](/previous-versions/aa570326(v=msdn.10))」も参照してください。
 
 - .NET Framework 4.5 またはそのポイント リリース上で実行するために既存のソース コードを再コンパイルする場合、あるいは、.NET Framework 4.5 またはそのポイント リリースをターゲットとするアプリまたはコンポーネントの新しいバージョンを既存のソース コード ベースから開発する場合は、「[クラス ライブラリの互換性のために残されている機能](../whats-new/whats-obsolete.md)」で、古い型とメンバーを確認し、説明されている回避策を適用してください。 (コンパイル済みのコードは、互換性のために残されている旧式の型とメンバーに対して引き続き実行されます)。
 

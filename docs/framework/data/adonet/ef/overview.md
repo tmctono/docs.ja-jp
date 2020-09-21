@@ -3,12 +3,12 @@ title: Entity Framework の概要
 description: ADO.NET の Entity Framework では、従来のアプリケーションよりも高度なレベルの抽象化を使用して動作する、データ指向アプリケーションの開発がサポートされています。
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: 1f1ab5d44c2d6c7e1f54a761dbc706d537664ef6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e6b7a605f88aecc76cb182473d9dd9f925a4d5a9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286806"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557984"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework の概要
 
@@ -48,7 +48,7 @@ Entity Framework は単なるオブジェクト リレーショナル マッピ�
 
 - LINQ to Entities。 概念モデルで定義されているエンティティ型に対してクエリを実行するための LINQ (統合言語クエリ) がサポートされています。 詳しくは、「[LINQ to Entities](./language-reference/linq-to-entities.md)」をご覧ください。
 
-- [!INCLUDE[esql](../../../../../includes/esql-md.md)]。 ストレージに依存しない SQL 言語。概念モデルのエンティティを直接操作し、Entity Data Model の概念がサポートされています。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] は、オブジェクト クエリと、EntityClient プロバイダーを使用して実行されるクエリの両方で使用されます。 詳しくは、「[Entity SQL の概要](./language-reference/entity-sql-overview.md)」をご覧ください。
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. ストレージに依存しない SQL 言語。概念モデルのエンティティを直接操作し、Entity Data Model の概念がサポートされています。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] は、オブジェクト クエリと、EntityClient プロバイダーを使用して実行されるクエリの両方で使用されます。 詳しくは、「[Entity SQL の概要](./language-reference/entity-sql-overview.md)」をご覧ください。
 
 Entity Framework には、EntityClient データ プロバイダーが含まれています。 このプロバイダーでは、接続が管理され、エンティティ クエリがデータ ソース固有のクエリに変換されて、Entity Framework がエンティティ データをオブジェクトに具体化するために使用するデータ リーダーが返されます。 オブジェクトの具体化が不要であれば、アプリケーションで [!INCLUDE[esql](../../../../../includes/esql-md.md)] クエリを実行して返された読み取り専用のデータ リーダーを使用できるようにすることで、EntityClient プロバイダーを標準の ADO.NET データ プロバイダーと同様に使用することもできます。 詳細については、「 [Entity Framework 用の EntityClient プロバイダー](entityclient-provider-for-the-entity-framework.md)」を参照してください。
 
@@ -72,7 +72,7 @@ Entity Framework ランタイムに加えて、Visual Studio にはマッピン�
 
 Entity Framework について詳しくは、以下をご覧ください。
 
-「[はじめに](getting-started.md)」 - 簡単な Entity Framework アプリケーションの作成方法を示す[クイックスタート](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100))を使用して、簡単に使い始める方法について説明します。
+「[はじめに](getting-started.md)」 - 簡単な Entity Framework アプリケーションの作成方法を示す[クイックスタート](/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100))を使用して、簡単に使い始める方法について説明します。
 
 「[Entity Framework の用語](terminology.md)」 -Entity Data Model と Entity Framework で使用されている用語や Entity Framework のドキュメントで使用されている多くの用語が定義されています。
 

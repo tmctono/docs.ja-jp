@@ -3,12 +3,12 @@ title: 区切りファイルのフィールドの順序を変更する方法 (LI
 description: C# の LINQ で .csv ファイルのフィールドを再配置する方法について学習します。 この例では、列の順序を変更し、列にマージして、列の値で行を並べ替えます。
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
-ms.openlocfilehash: 3ebc56b418d2732a296896a19d770136a56e2fbb
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: a3bbc2690ded24629b313b24ee7a604bcacce850
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103409"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547298"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>区切りファイルのフィールドの順序を変更する方法 (LINQ) (C#)
 コンマ区切り (CSV) ファイルは、テキスト ファイルです。多くの場合、行と列で表されるスプレッドシート データや他の表形式データの格納に使用されます。 <xref:System.String.Split%2A> メソッドを使用してフィールドを区切ると、LINQ を使用した CSV ファイルのクエリと操作がとても簡単になります。 この手法は、CSV ファイルに限らず、行が構造化されているテキストの一部を並べ替えるときに利用できます。  
@@ -83,4 +83,4 @@ System.Linq 名前空間と System.IO 名前空間に `using` ディレクティ
 
 - [LINQ と文字列 (C#)](./linq-and-strings.md)
 - [LINQ とファイル ディレクトリ (C#)](./linq-and-file-directories.md)
-- [CSV ファイルから XML を生成する方法 (C#)](./how-to-generate-xml-from-csv-files.md)
+- [CSV ファイルから XML を生成する方法 (C#)](../../../../standard/linq/generate-xml-csv-files.md)

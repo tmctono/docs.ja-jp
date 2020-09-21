@@ -3,12 +3,12 @@ title: ネットワークの構成設定
 description: .NET Core アプリのネットワークを構成するランタイム設定について説明します。
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 6b5e03b127f95911b712b66c0be8a4f5a2929fc2
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: d43b68206cc82f4a41df02bd5998702b4f5d0590
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761942"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538134"
 ---
 # <a name="run-time-configuration-options-for-networking"></a>ネットワークのランタイム構成オプション
 
@@ -30,7 +30,7 @@ ms.locfileid: "83761942"
 - <xref:System.Net.Http.HttpClientHandler?displayProperty=nameWithType> が <xref:System.Net.Http.SocketsHttpHandler?displayProperty=nameWithType> 以前の HTTP プロトコル スタック (Windows と `CurlHandler` では <xref:System.Net.Http.WinHttpHandler>、Linux では [libcurl](https://curl.haxx.se/libcurl/) の上位に実装された内部クラス) を使用するかどうかを構成します。
 
   > [!NOTE]
-  > <xref:System.Net.Http.HttpClientHandler> クラスを直接インスタンス化するのではなく、高レベルのネットワーク API を使用している可能性があります。 この設定は、<xref:System.Net.Http.HttpClient> や [HttpClientFactory](https://docs.microsoft.com/previous-versions/aspnet/hh995280(v%3dvs.118)) などの高レベル ネットワーク API で使用される HTTP プロトコル スタックにも影響します。
+  > <xref:System.Net.Http.HttpClientHandler> クラスを直接インスタンス化するのではなく、高レベルのネットワーク API を使用している可能性があります。 この設定は、<xref:System.Net.Http.HttpClient> や [HttpClientFactory](/previous-versions/aspnet/hh995280(v=vs.118)) などの高レベル ネットワーク API で使用される HTTP プロトコル スタックにも影響します。
 
 - この設定を省略した場合、<xref:System.Net.Http.HttpClientHandler> では <xref:System.Net.Http.SocketsHttpHandler> が使用されます。 これは、値を `true` に設定した場合と同じです。
 

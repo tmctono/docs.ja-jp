@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-ms.openlocfilehash: f3177ab98382506770c4655c62573da5c1d96c69
-ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
+ms.openlocfilehash: 9879803c970b7965bf152c216367b216e201af38
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78848757"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540309"
 ---
 # <a name="how-to-call-custom-database-functions"></a>方法: カスタム データベース関数を呼び出す
 
@@ -36,7 +36,7 @@ LINQ to Entities クエリから呼び出されるデータベース関数は、
 
 ## <a name="example"></a>例
 
-次の例は、カスタム データベース関数を LINQ to Entities クエリから呼び出す方法について説明します。 この例では、School モデルを使用します。 School モデルの詳細については、「[School サンプル データベースの作成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))」と「[School .edmx ファイルの生成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100))」を参照してください。
+次の例は、カスタム データベース関数を LINQ to Entities クエリから呼び出す方法について説明します。 この例では、School モデルを使用します。 School モデルの詳細については、「[School サンプル データベースの作成](/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))」と「[School .edmx ファイルの生成](/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100))」を参照してください。
 
 次のコードは、`AvgStudentGrade` 関数を School のサンプル データベースに追加しています。
 
@@ -67,5 +67,5 @@ LINQ to Entities クエリから呼び出されるデータベース関数は、
 
 ## <a name="see-also"></a>関連項目
 
-- [.edmx ファイルの概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [.edmx ファイルの概要](/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [LINQ to Entities でのクエリ](queries-in-linq-to-entities.md)

@@ -5,11 +5,12 @@ ms.date: 09/07/2017
 helpviewer_keywords:
 - COM interop, data marshaling
 - marshaling data, COM interop
-ms.openlocfilehash: eedfb60a75e2fe5fafdaa786dbb54adddf28400e
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 94149e0c444cad7e32f959eaedd55bf14acb1ecb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621510"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547845"
 ---
 # <a name="marshaling-data-with-com-interop"></a>COM 相互運用機能によるデータのマーシャリング
 COM 相互運用は、マネージド コードから COM オブジェクトを使用すること、およびマネージド オブジェクトを COM に公開することの、両方の操作をサポートします。 COM との間でデータをマーシャリングする操作のサポートは広範で、ほとんどの場合、正しいマーシャリング動作が提供されます。  
@@ -29,23 +30,23 @@ COM 相互運用は、マネージド コードから COM オブジェクトを�
  最も安全なソリューションのために、マネージド DCOM コードを WCF に移行する方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
- [COM のデータ型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))  
+ [COM のデータ型](/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))  
  対応するマネージドとアンマネージドのデータ型を提供します。  
   
- [COM 呼び出し可能ラッパーのカスタマイズ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3bwc828w(v=vs.100))  
+ [COM 呼び出し可能ラッパーのカスタマイズ](/previous-versions/dotnet/netframework-4.0/3bwc828w(v=vs.100))  
  デザイン時に <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性を使用して、データ型を明示的にマーシャリングする方法について説明します。  
   
- [ランタイム呼び出し可能ラッパーのカスタマイズ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))  
+ [ランタイム呼び出し可能ラッパーのカスタマイズ](/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))  
  相互運用アセンブリで型のマーシャリング動作を調整する方法、および COM 型を手動で定義する方法について説明します。  
   
- [高度な COM 相互運用性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
+ [高度な COM 相互運用性](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
  .NET Framework アプリケーションに COM コンポーネントを組み込む方法についての詳細情報へのリンクを示します。  
   
- [アセンブリからタイプ ライブラリへの変換の要約](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))  
+ [アセンブリからタイプ ライブラリへの変換の要約](/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))  
  アセンブリからタイプ ライブラリにエクスポート変換するプロセスについて説明します。  
   
- [タイプ ライブラリからアセンブリへの変換の要約](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))  
+ [タイプ ライブラリからアセンブリへの変換の要約](/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))  
  タイプ ライブラリからアセンブリにインポート変換するプロセスについて説明します。  
   
- [ジェネリック型を使用する相互運用](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))  
+ [ジェネリック型を使用する相互運用](/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))  
  COM 相互運用性のジェネリック型を使用するとき、どのアクションがサポートされるかについて説明します。

@@ -17,11 +17,12 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - Reqasm.exe
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
-ms.openlocfilehash: 4963892419fd1caec4483123f820d62967a87dd6
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 5fde7f7f00aadf4d941d4ffe522453970b67e9e2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620834"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554131"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>COM 向け .NET Framework アセンブリのパッケージ化
 
@@ -59,7 +60,7 @@ COM 開発者がアプリケーションに組み込むときに役立つ、マ�
 
   どの機構を選択した場合でも、提供するアセンブリ内で定義されたパブリック型だけが、生成されるタイプ ライブラリに含まれます。
 
-手順については、「[方法:タイプ ライブラリを Win32 リソースとして .NET ベースのアプリケーションに埋め込む](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))」を参照してください。
+手順については、「[方法:タイプ ライブラリを Win32 リソースとして .NET ベースのアプリケーションに埋め込む](/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))」を参照してください。
 
 <a name="cpconpackagingassemblyforcomanchor1"></a>
 
@@ -97,4 +98,4 @@ COM 開発者がアプリケーションに組み込むときに役立つ、マ�
 - [アセンブリのセキュリティに関する考慮事項](../../standard/assembly/security-considerations.md)
 - [Tlbexp.exe (タイプ ライブラリ エクスポーター)](../tools/tlbexp-exe-type-library-exporter.md)
 - [COM へのアセンブリの登録](registering-assemblies-with-com.md)
-- [方法: タイプ ライブラリを Win32 リソースとしてアプリケーションに埋め込む](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))
+- [方法: タイプ ライブラリを Win32 リソースとしてアプリケーションに埋め込む](/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

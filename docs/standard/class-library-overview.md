@@ -38,12 +38,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: 7eb9aa9714dcb920118a6422b9f6c78775bf1a5c
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: cf2137c2ebd2f4901401ed25746febaa440a08f5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662928"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554763"
 ---
 # <a name="net-class-library-overview"></a>.NET クラス ライブラリの概要
 
@@ -107,7 +107,7 @@ ms.locfileid: "84662928"
   
  基本データ型に加えて、<xref:System> 名前空間には、例外を処理するクラスから、核となるランタイム概念 (アプリケーション ドメインやガベージ コレクターなど) を扱うクラスまで、100 以上のクラスが含まれます。 <xref:System> 名前空間には、2 次レベルの名前空間も数多く含まれています。  
   
- 名前空間の詳細については、「[.NET API ブラウザー](https://docs.microsoft.com/dotnet/api)」を使用して .NET クラス ライブラリを参照してください。 API リファレンス ドキュメントでは、各名前空間、その種類、および各メンバーに関するドキュメントが提供されます。  
+ 名前空間の詳細については、「[.NET API ブラウザー](../../api/index.md)」を使用して .NET クラス ライブラリを参照してください。 API リファレンス ドキュメントでは、各名前空間、その種類、および各メンバーに関するドキュメントが提供されます。  
   
 ## <a name="see-also"></a>関連項目
 

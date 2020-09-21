@@ -2,15 +2,15 @@
 title: LINQ to Entities クエリの標準クエリ演算子
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: 76d32db5c81d88db28194da19e722b1a80c1a870
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a61296d924ab1ff32b5bee523d6f0a06dda95db3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249141"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557776"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities クエリの標準クエリ演算子
-クエリでは、データ ソースから取得する情報を指定できます。 また、並べ替え、グループ化、整形方法を指定して情報を取得することもできます。 LINQ には、クエリで使用できる一連の標準クエリ メソッドが用意されています。 これらのメソッドの大部分はシーケンスに対して機能します。この文脈でのシーケンスとは、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスまたは <xref:System.Linq.IQueryable%601> インターフェイスを実装している型のオブジェクトのことです。 標準クエリ演算子のクエリ機能には、フィルター処理、投影、集計、並べ替え、グループ化、ページングなどがあります。 よく使用される標準クエリ演算子の中には、クエリ式構文を使用することで呼び出しが可能になるように、専用のキーワード構文のあるものもあります。 クエリ式はメソッド ベースの方法とは異なり、読み取りやすくクエリを表現できます。 クエリ式の句は、コンパイル時にクエリ メソッドへの呼び出しに変換されます。 同等なクエリ式の句がある標準クエリ演算子の一覧については、「[標準クエリ演算子の概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))」を参照してください。  
+クエリでは、データ ソースから取得する情報を指定できます。 また、並べ替え、グループ化、整形方法を指定して情報を取得することもできます。 LINQ には、クエリで使用できる一連の標準クエリ メソッドが用意されています。 これらのメソッドの大部分はシーケンスに対して機能します。この文脈でのシーケンスとは、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスまたは <xref:System.Linq.IQueryable%601> インターフェイスを実装している型のオブジェクトのことです。 標準クエリ演算子のクエリ機能には、フィルター処理、投影、集計、並べ替え、グループ化、ページングなどがあります。 よく使用される標準クエリ演算子の中には、クエリ式構文を使用することで呼び出しが可能になるように、専用のキーワード構文のあるものもあります。 クエリ式はメソッド ベースの方法とは異なり、読み取りやすくクエリを表現できます。 クエリ式の句は、コンパイル時にクエリ メソッドへの呼び出しに変換されます。 同等なクエリ式の句がある標準クエリ演算子の一覧については、「[標準クエリ演算子の概要](/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))」を参照してください。  
   
  標準クエリ演算子のすべてが LINQ to Entities クエリでサポートされるわけではありません。 詳細については、「[サポート対象の LINQ メソッドとサポート非対象の LINQ メソッド (LINQ to Entities)](supported-and-unsupported-linq-methods-linq-to-entities.md)」を参照してください。 このトピックでは、LINQ to Entities に固有の標準クエリ演算子について説明します。 LINQ to Entities クエリの既知の問題の詳細については、「[LINQ to Entities の既知の問題および注意点](known-issues-and-considerations-in-linq-to-entities.md)」を参照してください。  
   
@@ -79,4 +79,4 @@ ms.locfileid: "70249141"
 ## <a name="see-also"></a>関連項目
 
 - [サポート対象の LINQ メソッドとサポート非対象の LINQ メソッド (LINQ to Entities) ](supported-and-unsupported-linq-methods-linq-to-entities.md)
-- [標準クエリ演算子の概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))
+- [標準クエリ演算子の概要](/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))

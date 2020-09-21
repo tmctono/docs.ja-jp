@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: 4606ecb370b7e85cf5ebd92754471f5253321251
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0da74b4896ad5434e46df336183db89054198134
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149662"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540967"
 ---
 # <a name="establishing-the-connection"></a>接続の確立
 Microsoft SQL Server に接続する場合は、.NET Framework Data Provider for SQL Server の <xref:System.Data.SqlClient.SqlConnection> オブジェクトを使用します。 OLE DB データ ソースに接続する場合は、.NET Framework Data Provider for OLE DB の <xref:System.Data.OleDb.OleDbConnection> オブジェクトを使用します。 ODBC データ ソースに接続する場合は、.NET Framework Data Provider for ODBC の <xref:System.Data.Odbc.OdbcConnection> オブジェクトを使用します。 Oracle データ ソースに接続する場合は、.NET Framework Data Provider for Oracle の <xref:System.Data.OracleClient.OracleConnection> オブジェクトを使用します。 安全な接続文字列の格納および取得については、「[接続情報の保護](protecting-connection-information.md)」を参照してください。  
@@ -51,7 +51,7 @@ using (SqlConnection connection = new SqlConnection(connectionString))
 ### <a name="integrated-security-and-aspnet"></a>統合セキュリティと ASP.NET  
  SQL Server 統合セキュリティ (信頼関係接続とも呼ばれます) は、SQL Server への接続を保護します。接続文字列でユーザー ID とパスワードを公開することがなく、接続の認証用に推奨されている方法でもあるためです。 統合セキュリティでは、実行中のプロセスの現在のセキュリティ ID またはトークンを使用します。 これは、デスクトップ アプリケーションでは通常、現在ログオンしているユーザーの ID です。  
   
- ASP.NET アプリケーションのセキュリティ ID は、他のオプションのうちのいずれかに設定することもできます。 SQL Server に接続するときに ASP.NET アプリケーションが使用するセキュリティ ID の詳細については、「[ASP.NET の偽装](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100))」、「[ASP.NET の認証](https://docs.microsoft.com/previous-versions/aspnet/eeyk640h(v=vs.100))」、および「[方法: Windows 統合セキュリティを使用して SQL Server にアクセスする](https://docs.microsoft.com/previous-versions/aspnet/bsz5788z(v=vs.100))」を参照してください。  
+ ASP.NET アプリケーションのセキュリティ ID は、他のオプションのうちのいずれかに設定することもできます。 SQL Server に接続するときに ASP.NET アプリケーションが使用するセキュリティ ID の詳細については、「[ASP.NET の偽装](/previous-versions/aspnet/xh507fc5(v=vs.100))」、「[ASP.NET の認証](/previous-versions/aspnet/eeyk640h(v=vs.100))」、および「[方法: Windows 統合セキュリティを使用して SQL Server にアクセスする](/previous-versions/aspnet/bsz5788z(v=vs.100))」を参照してください。  
   
 ## <a name="connecting-to-an-ole-db-data-source"></a>OLE DB データ ソースへの接続  
  .NET Framework Data Provider for OLE DB では、**OleDbConnection** オブジェクトを使用して、OLE DB によって公開されているデータ ソースへの接続が (SQLOLEDB: OLE DB Provider for SQL Server を通じて) 提供されます。  

@@ -4,12 +4,12 @@ description: spark-submit と Set Jar を使用して、.NET for Apache Spark �
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: bebd170a689d8ae56aa6c55486d70354da2437ea
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 88dc321a08f805ef8c3bf8d4d01d32dd890548d2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617770"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557178"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>.NET for Apache Spark ジョブを Databricks に送信する
 
@@ -36,7 +36,7 @@ ms.locfileid: "85617770"
 
 ## <a name="deploy-using-set-jar"></a>Set Jar を使用してデプロイする
 
-別の方法として、Databricks ワークスペースで [Set Jar](https://docs.microsoft.com/azure/databricks/jobs#--create-a-job) を使用して、.NET for Apache Spark ジョブを Databricks に送信できます。 *Set Jar* を使用すると、既存のアクティブなクラスターにジョブを送信できます。
+別の方法として、Databricks ワークスペースで [Set Jar](/azure/databricks/jobs#--create-a-job) を使用して、.NET for Apache Spark ジョブを Databricks に送信できます。 *Set Jar* を使用すると、既存のアクティブなクラスターにジョブを送信できます。
 
 ### <a name="one-time-setup"></a>1 回限りのセットアップ
 
@@ -57,7 +57,7 @@ ms.locfileid: "85617770"
 
 1. アプリを発行したこと、およびアプリケーション コードで `SparkSession.Stop()` が使用されていないことを確認します。
 
-2. [Databricks CLI](https://docs.microsoft.com/azure/databricks/dev-tools/databricks-cli) を使用して、アプリケーションを Databricks クラスターにアップロードします。 たとえば、発行済みのアプリをクラスターにアップロードするには、次のコマンドを使用します。
+2. [Databricks CLI](/azure/databricks/dev-tools/databricks-cli) を使用して、アプリケーションを Databricks クラスターにアップロードします。 たとえば、発行済みのアプリをクラスターにアップロードするには、次のコマンドを使用します。
 
     ```console
     cd <path-to-your-app-publish-directory>
@@ -86,4 +86,4 @@ ms.locfileid: "85617770"
 
 * [.NET for Apache Spark の概要](../tutorials/get-started.md)
 * [.NET for Apache Spark アプリケーションを Databricks にデプロイする](../tutorials/databricks-deployment.md)
-* [Azure Databricks のドキュメント](https://docs.microsoft.com/azure/azure-databricks/)
+* [Azure Databricks のドキュメント](/azure/azure-databricks/)

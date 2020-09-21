@@ -4,12 +4,12 @@ description: C# の Null 許容値型とその使用方法について説明し�
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: fcd49d7d25b0ad23363db8cb61596004b2e87a8d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 8c3a8b997fbb8154f79dff04018cf3ea76f85d7a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738999"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537354"
 ---
 # <a name="nullable-value-types-c-reference"></a>null 許容値型 (C# リファレンス)
 
@@ -135,7 +135,7 @@ null 許容値型のインスタンス `T?` は、次のように[ボックス�
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [What Exactly Does 'Lifted' mean? ('Lifted' の正確な意味)](https://docs.microsoft.com/archive/blogs/ericlippert/what-exactly-does-lifted-mean)
+- [What Exactly Does 'Lifted' mean? ('Lifted' の正確な意味)](/archive/blogs/ericlippert/what-exactly-does-lifted-mean)
 - <xref:System.Nullable%601?displayProperty=nameWithType>
 - <xref:System.Nullable?displayProperty=nameWithType>
 - <xref:System.Nullable.GetUnderlyingType%2A?displayProperty=nameWithType>

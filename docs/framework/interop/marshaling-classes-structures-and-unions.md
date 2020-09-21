@@ -19,11 +19,12 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-ms.openlocfilehash: 5e616b5bb513939cadd8fe5c72675ba0b6e070a3
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 25de633faabb1424bcf5e618cc5ca129e61c5fca
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621523"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547871"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>クラス、構造体、および共用体のマーシャリング
 
@@ -35,7 +36,7 @@ ms.locfileid: "85621523"
 |----------|-----------------|------------|
 |値によるクラス。|整数のメンバーを含むクラスは、管理対象クラスと同じように、In/Out パラメーターとして渡します。|[SysTime サンプル](#systime-sample)|
 |値による構造体。|In パラメーターとして構造体を渡します。|[構造体サンプル](#structures-sample)|
-|参照による構造体|In/Out パラメーターとして構造体を渡します。|[OSInfo サンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|
+|参照による構造体|In/Out パラメーターとして構造体を渡します。|[OSInfo サンプル](/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|
 |入れ子になった構造体を含む構造体 (フラット化)。|アンマネージ関数で入れ子になった構造体を含む構造体を表すクラスを渡します。 マネージド プロトタイプで構造体は 1 つの大きな構造体にフラット化されます。|[FindFile サンプル](#findfile-sample)|
 |別の構造体へのポインターを持つ構造体。|2 番目の構造体へのポインターをメンバーとして含む構造体を渡します。|[構造体サンプル](#structures-sample)|
 |値による整数のある構造体の配列。|In/Out パラメーターとして整数のみを含む構造体の配列を渡します。 配列のメンバーを変更することができます。|[配列サンプル](marshaling-different-types-of-arrays.md)|
@@ -43,7 +44,7 @@ ms.locfileid: "85621523"
 |値型の共用体。|値型 (整数および倍精度) の共用体を渡します。|[Unions サンプル](#unions-sample)|
 |混合型の共用体。|混合型 (整数および文字列) の共用体を渡します。|[Unions サンプル](#unions-sample)|
 |プラットフォーム固有のレイアウトを持つ構造体。|ネイティブ パッキング定義を持つ型を渡します。|[プラットフォームのサンプル](#platform-sample)|
-|構造体の null 値。|値型への参照の代わりに null 参照 (Visual Basic では **Nothing**) を渡します。|[HandleRef サンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/hc662t8k(v=vs.85))|
+|構造体の null 値。|値型への参照の代わりに null 参照 (Visual Basic では **Nothing**) を渡します。|[HandleRef サンプル](/previous-versions/dotnet/netframework-3.0/hc662t8k(v=vs.85))|
 
 ## <a name="structures-sample"></a>構造体のサンプル
 
@@ -133,7 +134,7 @@ typedef struct _MYARRAYSTRUCT
 
 ## <a name="findfile-sample"></a>FindFile サンプル
 
-このサンプルでは、2 番目の埋め込み構造体を含む構造体をアンマネージ関数に渡す方法を示します。 また、<xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性を使用して構造体内に固定長配列を宣言する方法も示します。 このサンプルでは、埋め込み構造体の要素が親の構造体に追加されます。 フラット化しない埋め込み構造体のサンプルについては、「[構造体のサンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100))」を参照してください。
+このサンプルでは、2 番目の埋め込み構造体を含む構造体をアンマネージ関数に渡す方法を示します。 また、<xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性を使用して構造体内に固定長配列を宣言する方法も示します。 このサンプルでは、埋め込み構造体の要素が親の構造体に追加されます。 フラット化しない埋め込み構造体のサンプルについては、「[構造体のサンプル](/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100))」を参照してください。
 
 FindFile のサンプルで使用するアンマネージ関数とその元の関数宣言を次に示します。
 
@@ -290,7 +291,7 @@ public struct STRRET_64
 
 次のコード スニペットは、実行時に 32 ビットと 64 ビットの定義をどのようにして選択するかの例を示しています。
 
-```CSharp
+```csharp
 if (IntPtr.Size == 8)
 {
     // Use the STRRET_64 definition
@@ -331,7 +332,7 @@ typedef struct _SYSTEMTIME {
 
 このサンプルでは、`SystemTime` クラスの中には、クラス メンバーとして表される、元の構造体の要素が含まれます。 各メンバーが出現する順番でメモリ内に順次配列されることを保証するために、 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性を設定します。
 
-`NativeMethods` クラスには `GetSystemTime` メソッドのマネージド プロトタイプが含まれます。このメソッドは既定では `SystemTime` クラスを In/Out パラメーターとして渡します。 参照型のクラスは既定では In パラメーターとして渡されるため、パラメーターは <xref:System.Runtime.InteropServices.InAttribute> と <xref:System.Runtime.InteropServices.OutAttribute> の属性で宣言する必要があります。 呼び出し元が結果を受け取るには、これらの[方向属性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))を明示的に適用する必要があります。 `App` クラスは、`SystemTime` クラスの新しいインスタンスを作成して、そのデータ フィールドにアクセスします。
+`NativeMethods` クラスには `GetSystemTime` メソッドのマネージド プロトタイプが含まれます。このメソッドは既定では `SystemTime` クラスを In/Out パラメーターとして渡します。 参照型のクラスは既定では In パラメーターとして渡されるため、パラメーターは <xref:System.Runtime.InteropServices.InAttribute> と <xref:System.Runtime.InteropServices.OutAttribute> の属性で宣言する必要があります。 呼び出し元が結果を受け取るには、これらの[方向属性](/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))を明示的に適用する必要があります。 `App` クラスは、`SystemTime` クラスの新しいインスタンスを作成して、そのデータ フィールドにアクセスします。
 
 ### <a name="code-samples"></a>コード サンプル
 

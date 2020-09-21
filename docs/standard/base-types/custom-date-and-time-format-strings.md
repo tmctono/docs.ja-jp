@@ -16,19 +16,19 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: 48e1b40ddd4bc7fae7d65660adf216756d7c83f7
-ms.sourcegitcommit: 2987e241e2f76c9248d2146bf2761a33e2c7a882
+ms.openlocfilehash: b6197acf9ceee5862cf13eceab178df513eb91d7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88228745"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541670"
 ---
 # <a name="custom-date-and-time-format-strings"></a>カスタム日時形式文字列
 
 日時書式指定文字列は、<xref:System.DateTime> 値または <xref:System.DateTimeOffset> 値の書式設定操作によって生成されるテキスト表現を定義します。 また、文字列を日時に正常に変換するために解析操作で必要となる日時値の表現も定義します。 カスタム書式指定文字列は、1 つ以上のカスタム日時書式指定子で構成されます。 [標準の日時書式指定文字列](standard-date-and-time-format-strings.md)以外の文字列は、すべてカスタム日時書式指定文字列として解釈されます。
 
 > [!TIP]
-> **書式指定ユーティリティ**である .NET Core Windows Forms をダウンロードできます。このアプリケーションを使用すると、書式指定文字列を数値または日付と時刻の値に適用して、結果の文字列を表示できます。 ソース コードは [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) と [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb) で利用できます。
+> **書式指定ユーティリティ**である .NET Core Windows Forms をダウンロードできます。このアプリケーションを使用すると、書式指定文字列を数値または日付と時刻の値に適用して、結果の文字列を表示できます。 ソース コードは [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) と [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb) で利用できます。
 
 カスタム日時書式指定文字列は、<xref:System.DateTime> 値で使用することも、<xref:System.DateTimeOffset> 値で使用することもできます。
 
@@ -728,5 +728,5 @@ AM と PM を区別する必要のある言語の場合、必ず "tt" 指定子�
 - <xref:System.IFormatProvider?displayProperty=nameWithType>
 - [型の書式設定](formatting-types.md)
 - [標準の日時書式文字列](standard-date-and-time-format-strings.md)
-- [サンプル: .NET Core WinForms 書式設定ユーティリティ (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
-- [サンプル: .NET Core WinForms 書式設定ユーティリティ (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)
+- [サンプル: .NET Core WinForms 書式設定ユーティリティ (C#)](/samples/dotnet/samples/windowsforms-formatting-utility-cs)
+- [サンプル: .NET Core WinForms 書式設定ユーティリティ (Visual Basic)](/samples/dotnet/samples/windowsforms-formatting-utility-vb)

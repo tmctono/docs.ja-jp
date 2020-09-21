@@ -4,18 +4,18 @@ description: 実際のデータ型をいじらずにタイプ セーフなデー
 author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
-ms.openlocfilehash: 99e3b589cd67c9d7026966d3d48d0e06a91fcc86
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5f6e84e23b5bcdcb3dcd742823d83728fb43d195
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287546"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557945"
 ---
 # <a name="generic-types-overview"></a>ジェネリック型の概要
 
 開発者は、暗黙的か明示的かに関わらず、.NET では常にジェネリックを使用します。 .NET で LINQ を使用していると、<xref:System.Collections.Generic.IEnumerable%601> を操作することがあります。 または、Entity Framework を使用してデータベースと通信するための "汎用リポジトリ" のオンライン サンプルをこれまでに目にしたことがある場合、ほとんどのメソッドが `IQueryable<T>` を返すことに気付きます。 これらの例の **T** とは何で、なぜそこにあるのでしょうか。
 
-ジェネリックは、.NET Framework 2.0 で最初に導入され、本質的に "コード テンプレート" であり、開発者は実際のデータ型を触ることなく、[タイプ セーフな](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100))データ構造を定義できます。 たとえば、<xref:System.Collections.Generic.List%601> は[ジェネリック コレクション](xref:System.Collections.Generic)であり、`List<int>`、`List<string>`、`List<Person>` などの任意の型で宣言および使用できます。
+ジェネリックは、.NET Framework 2.0 で最初に導入され、本質的に "コード テンプレート" であり、開発者は実際のデータ型を触ることなく、[タイプ セーフな](/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100))データ構造を定義できます。 たとえば、<xref:System.Collections.Generic.List%601> は[ジェネリック コレクション](xref:System.Collections.Generic)であり、`List<int>`、`List<string>`、`List<Person>` などの任意の型で宣言および使用できます。
 
 ジェネリックが便利な理由を理解するために、ジェネリックを追加する前と後の特定のクラス <xref:System.Collections.ArrayList> を見てみましょう。 .NET Framework 1.0 で、`ArrayList` 要素の型は <xref:System.Object> です。 コレクションに追加されたすべての要素は `Object` に自動変換されます。 リストから要素を読み取るときも同じことが起こります。 このプロセスは[ボックス化とボックス化解除](../csharp/programming-guide/types/boxing-and-unboxing.md)と呼ばれ、パフォーマンスに影響します。 しかし、パフォーマンスとは別に、コンパイル時にリスト内のデータの型を判断する方法がないため、脆弱なコードが発生する可能性があります。 ジェネリックは、リストの各インスタンスに含まれるデータの型を定義することで、この問題を解決します。 たとえば、`List<int>` には整数だけを追加でき、`List<Person>` には Persons だけを追加できます。
 

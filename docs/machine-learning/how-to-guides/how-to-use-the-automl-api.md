@@ -3,12 +3,12 @@ title: ML.NET の自動 ML API を使用する方法
 description: ML.NET の自動 ML API によって、モデル構築プロセスが自動化され、展開できる状態のモデルが生成されます。 自動機械学習タスクの構成に使用できるオプションについて説明します。
 ms.date: 12/18/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: b322c484282d025033d747d2093f7b5b4d216fde
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b1ef526301e01e1e75e71e0646f4d11e68215d69
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75636563"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540733"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>ML.NET の自動機械学習 API を使用する方法
 
@@ -70,7 +70,7 @@ using Microsoft.ML.AutoML;
 
 ## <a name="configure-experiment-settings"></a>実験設定を構成する
 
-実験は高度な構成が可能です。 構成設定の詳細な一覧については、[AutoML API ドキュメント](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview)を参照してください。
+実験は高度な構成が可能です。 構成設定の詳細な一覧については、[AutoML API ドキュメント](/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview)を参照してください。
 
 次に、それらの例の一部を示します。
 

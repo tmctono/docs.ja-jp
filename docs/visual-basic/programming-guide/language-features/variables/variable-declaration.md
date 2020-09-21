@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: 587cb84faa09b686361c255c413ad852780b8971
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e3e2b6173a36490328801afd7fe711f1a003e2ae
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410297"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557477"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic での変数宣言
 変数を宣言して、その名前と特性を指定します。 変数の宣言ステートメントは、[Dim ステートメント](../../../language-reference/statements/dim-statement.md)です。 その場所と内容によって、変数の特性が決まります。  
@@ -61,7 +61,7 @@ Dim l, m As Long, x, y As Single
 ' In the preceding statement, l and m are Long, x and y are Single.  
 ```  
   
- データ型について詳しくは、[データ型](../data-types/index.md)に関するページをご覧ください。 オブジェクトについて詳しくは、「[オブジェクトとクラス](../objects-and-classes/index.md)」および「[コンポーネントによるプログラミング](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120))」をご覧ください。  
+ データ型について詳しくは、[データ型](../data-types/index.md)に関するページをご覧ください。 オブジェクトについて詳しくは、「[オブジェクトとクラス](../objects-and-classes/index.md)」および「[コンポーネントによるプログラミング](/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120))」をご覧ください。  
   
 ## <a name="local-type-inference"></a>ローカル型の推論  
  `As` 句を使用しないでローカル変数を宣言すると、"*型の推定*" を使用してそのデータ型が決定されます。 コンパイラでは、初期化式の型から変数の型が推定されます。 これにより、型を明示的に指定せずに変数を宣言できます。 次の例では、`num1` と `num2` はどちらも整数として厳密に型指定されます。  

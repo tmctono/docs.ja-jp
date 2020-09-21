@@ -7,11 +7,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
-ms.openlocfilehash: 918c90f6741047f7d3cdf89a9b182700ecb2ed93
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: dc808f3e8d6bd89ba979d43e5b4ec9d787bd09b1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617459"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545260"
 ---
 # <a name="exposing-net-components-to-com"></a>COM への .NET コンポーネントの公開
 
@@ -41,11 +42,11 @@ ms.locfileid: "85617459"
 
      COM 開発者は、現在使用しているのと同じツールと手法を使用して、アセンブリ内の型を参照できます。
 
-3. [.NET オブジェクトを呼び出す](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))。
+3. [.NET オブジェクトを呼び出す](/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))。
 
      COM 開発者は、アンマネージ型でメソッドを呼び出すのと同じ方法で、.NET オブジェクトでメソッドを呼び出すことができます。 たとえば、COM **CoCreateInstance** API は、.NET オブジェクトをアクティブにします。
 
-4. [COM アクセスに対してアプリケーションを展開する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))。
+4. [COM アクセスに対してアプリケーションを展開する](/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))。
 
      厳格な名前付きのアセンブリは、グローバル アセンブリ キャッシュにインストールすることができ、発行元からの署名が必要です。 厳密な名前のないアセンブリは、クライアントのアプリケーション ディレクトリにインストールする必要があります。
 

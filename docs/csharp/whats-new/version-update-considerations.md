@@ -3,12 +3,12 @@ title: C# 開発者向けのバージョンと更新に関する考慮事項
 description: 新しい言語機能をライブラリに導入すると、それを使用するコードに影響が出る可能性があります。
 ms.topic: reference
 ms.date: 09/19/2018
-ms.openlocfilehash: f7db7c79792d04bcf592bc1858e1f0f05cb34402
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 6de0e3ba33af34edba73819dcb9268f40f8a5ea4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88268128"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552428"
 ---
 # <a name="version-and-update-considerations-for-c-developers"></a>C# 開発者向けのバージョンと更新に関する考慮事項
 
@@ -63,4 +63,4 @@ public double CalculateSquare(double value) => value * value;
 public double CalculateSquare(in double value) => value * value;
 ```
 
-[新機能](index.md)に関する記事に、public 宣言に影響する機能の導入がソース互換であるかバイナリ互換であるかについての注が含まれています。
+[新機能](./csharp-9.md)に関する記事に、public 宣言に影響する機能の導入がソース互換であるかバイナリ互換であるかについての注が含まれています。

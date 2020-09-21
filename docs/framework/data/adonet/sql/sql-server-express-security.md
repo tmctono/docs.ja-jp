@@ -2,12 +2,12 @@
 title: SQL Server Express のセキュリティ
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: 55f1d141e50ed7afd851d7330cfaf2e3b6380f18
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 503b23602752375006b1a32a342af8a7789596b2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791694"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552727"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express のセキュリティ
 Microsoft SQL Server Express Edition (SQL Server Express) は Microsoft SQL Server をベースとしており、同データベース エンジンの多くの機能をサポートしています。 これは、重要ではない機能とネットワーク接続が既定でオフになるように設計されています。 これにより、悪意のあるユーザー攻撃に利用できる領域が小さくなります。  
@@ -31,8 +31,8 @@ Microsoft SQL Server Express Edition (SQL Server Express) は Microsoft SQL Serv
   
 |||  
 |-|-|  
-|[Microsoft SQL Server 2005 Express Edition オンライン ブック](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|SQL Server 2005 Express Edition に関する詳細なドキュメント。|  
-|「[管理者以外のユーザーのためのユーザー インスタンス](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100))」 (SQL Server オンライン ブック)|ユーザー インスタンスの作成方法および配置方法について説明します。|  
+|[Microsoft SQL Server 2005 Express Edition オンライン ブック](/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|SQL Server 2005 Express Edition に関する詳細なドキュメント。|  
+|「[管理者以外のユーザーのためのユーザー インスタンス](/previous-versions/sql/sql-server-2008/ms143684(v=sql.100))」 (SQL Server オンライン ブック)|ユーザー インスタンスの作成方法および配置方法について説明します。|  
 |[SQL Server Express ユーザー インスタンス](sql-server-express-user-instances.md)|ADO.NET アプリケーションにおけるユーザー インスタンスの機能について説明します。 ユーザー インスタンスを有効にする方法、<xref:System.Data.SqlClient.SqlConnection> を使ってユーザー インスタンスに接続する方法、ユーザー インスタンスの有効期間、ユーザー インスタンスのシナリオについて情報を提供します。|  
   
 ## <a name="see-also"></a>関連項目

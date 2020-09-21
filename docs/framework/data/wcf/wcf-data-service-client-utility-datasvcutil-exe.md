@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-ms.openlocfilehash: 1348ba73eb87a140b42e3565b4388a70f1f47ca1
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 600cb9a4f91ff2051f60ee86d4cb80cc5b404c61
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802007"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544298"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF Data Service クライアント ユーティリティ (DataSvcUtil.exe)
 
@@ -19,9 +19,9 @@ DataSvcUtil.exe は、WCF Data Services に付属するコマンドライン ツ
 
 - データ サービスのルート URI。 ユーティリティは、データ サービスによって公開されるデータ モデルが記述されたサービス メタデータ ドキュメントを要求します。 詳細については、[AtomPub (RFC5023)](https://tools.ietf.org/html/rfc5023#section-8) に関するページをご覧ください。
 
-- 概念スキーマ定義言語 (CSDL) を使用して定義されるデータ モデル ファイル (.csdl)。「[\[MC-CSDL\]: 概念スキーマ定義ファイル形式](https://docs.microsoft.com/openspecs/windows_protocols/mc-csdl/c03ad8c3-e8b7-4306-af96-a9e52bb3df12)」の仕様で定義されています。
+- 概念スキーマ定義言語 (CSDL) を使用して定義されるデータ モデル ファイル (.csdl)。「[\[MC-CSDL\]: 概念スキーマ定義ファイル形式](/openspecs/windows_protocols/mc-csdl/c03ad8c3-e8b7-4306-af96-a9e52bb3df12)」の仕様で定義されています。
 
-- Entity Framework に付属する Entity Data Model ツールを使用して作成された .edmx ファイル。 詳細については、「[\[MC-EDMX\]: データ サービス パッケージング形式の Entity Data Model](https://docs.microsoft.com/openspecs/windows_protocols/mc-edmx/5dff5e25-56a1-408b-9d44-bff6634c7d16)」の仕様を参照してください。
+- Entity Framework に付属する Entity Data Model ツールを使用して作成された .edmx ファイル。 詳細については、「[\[MC-EDMX\]: データ サービス パッケージング形式の Entity Data Model](/openspecs/windows_protocols/mc-edmx/5dff5e25-56a1-408b-9d44-bff6634c7d16)」の仕様を参照してください。
 
 詳細については、[クライアント データ サービス クラスを手動で生成する](how-to-manually-generate-client-data-service-classes-wcf-data-services.md)」を参照してください。
 

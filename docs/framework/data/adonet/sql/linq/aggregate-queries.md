@@ -2,12 +2,12 @@
 title: 集計クエリ
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
-ms.openlocfilehash: 8defefb39974bea150fed84b0e7404b43882c41c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 2085808d631d1d9f97573c557e9e66e07113df52
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634743"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554222"
 ---
 # <a name="aggregate-queries"></a>集計クエリ
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、`Average`、`Count`、`Max`、`Min`、および `Sum` の各集計演算子をサポートしています。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の集計演算子には、次の特性があります。  
@@ -18,7 +18,7 @@ ms.locfileid: "75634743"
   
 - 通常、集計クエリはコレクションではなく 1 つの数値を返します。  
   
-     詳しくは、「[集計操作](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120))」をご覧ください。  
+     詳しくは、「[集計操作](/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120))」をご覧ください。  
   
 - 匿名型に対して集計を呼び出すことはできません。  
   

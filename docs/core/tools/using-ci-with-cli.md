@@ -2,12 +2,12 @@
 title: .NET Core SDK とツールを使用した継続的インテグレーション (CI)
 description: 継続的インテグレーションで .NET Core SDK とそのツールをビルド サーバー上で使用する方法について説明します。
 ms.date: 05/18/2017
-ms.openlocfilehash: ddccb477bc112157a155e2217e04c329e7ab51c5
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 724cc639a2588b085b31ff4590acce34d2380655
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86415996"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537718"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>継続的インテグレーション (CI) で .NET Core SDK とツールを使用する
 
@@ -36,7 +36,7 @@ macOS をご利用の場合、PKG インストーラーをお使いください�
 
 ## <a name="ci-setup-examples"></a>CI セットアップ例
 
-このセクションでは、PowerShell またはバッシュ スクリプトを利用した手動セットアップについて説明し、SaaS (サービスとしてのソフトウェア) CI (継続的インテグレーション) ソリューションをいくつか紹介します。 対象となる SaaS CI ソリューションは [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/)、および [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index) です。
+このセクションでは、PowerShell またはバッシュ スクリプトを利用した手動セットアップについて説明し、SaaS (サービスとしてのソフトウェア) CI (継続的インテグレーション) ソリューションをいくつか紹介します。 対象となる SaaS CI ソリューションは [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/)、および [Azure Pipelines](/azure/devops/pipelines/index) です。
 
 ### <a name="manual-setup"></a>手動セットアップ
 
@@ -147,7 +147,7 @@ install:
 1. コマンドを利用し、[手動セットアップ手順](#manual-setup)からスクリプトを実行します。
 1. .NET Core ツールを使用するように構成されたいくつかの Azure DevOps Services 組み込みビルド タスクで構成されるビルドを作成します。
 
-いずれのソリューションも有効です。 ツールはビルドの一部としてダウンロードしているので、手動セットアップ スクリプトを使用し、取得したツールのバージョンを管理します。 ビルドはスクリプトから実行されます。そのスクリプトを作成する必要があります。 この記事では、手動オプションについてのみ説明します。 Azure DevOps Services ビルド タスクを使用したビルドの構築の詳細については、[Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index) のドキュメントを参照してください。
+いずれのソリューションも有効です。 ツールはビルドの一部としてダウンロードしているので、手動セットアップ スクリプトを使用し、取得したツールのバージョンを管理します。 ビルドはスクリプトから実行されます。そのスクリプトを作成する必要があります。 この記事では、手動オプションについてのみ説明します。 Azure DevOps Services ビルド タスクを使用したビルドの構築の詳細については、[Azure Pipelines](/azure/devops/pipelines/index) のドキュメントを参照してください。
 
 Azure DevOps Services で手動セットアップ スクリプトを使用するには、新しいビルド定義を作成し、ビルド手順で実行するスクリプトを指定します。 これは Azure DevOps Services ユーザー インターフェイスを使用して実行できます。
 
@@ -169,7 +169,7 @@ Azure DevOps Services で手動セットアップ スクリプトを使用する
 
 ## <a name="orchestrating-the-build"></a>ビルドの調整
 
-この文書はその大半で .NET Core ツールの取得方法とさまざまな CI サービスの構成方法について説明しています。 .NET Core でコードを調整する (*実際にビルドする*) 方法に関する情報はありません。 ビルド プロセスの構造化方法の選択肢は、ここでは取り上げることができないさまざまな要因に依存します。 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/)、[Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index) でビルドを調整する方法については、それぞれの文書に記載されている資料とサンプルを参照してください。
+この文書はその大半で .NET Core ツールの取得方法とさまざまな CI サービスの構成方法について説明しています。 .NET Core でコードを調整する (*実際にビルドする*) 方法に関する情報はありません。 ビルド プロセスの構造化方法の選択肢は、ここでは取り上げることができないさまざまな要因に依存します。 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/)、[Azure Pipelines](/azure/devops/pipelines/index) でビルドを調整する方法については、それぞれの文書に記載されている資料とサンプルを参照してください。
 
 .NET Core ツールを利用して .NET Core コードのビルド プロセスを構造化するとき、通常、2 つの手法があります。MSBuild を直接利用するか、.NET Core コマンドライン コマンドを利用します。 いずれの手法を採用するかは、手法と複雑性との兼ね合いで使いやすいものを選択してください。 MSBuild を利用すれば、タスクやターゲットとしてビルド プロセスを表現できますが、MSBuild プロジェクト ファイルの構文は複雑で、学習の難易度が上がります。 .NET Core コマンドライン ツールはおそらく、使い方がより単純です。ただし、`bash` や PowerShell のようなスクリプト記述言語でオーケストレーション ロジックを記述する必要があります。
 

@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 1883662f736361a947cbad440aeefda839265251
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 8497892b88c313cde0a604ad3967507300e5154a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465638"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539244"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC アプリのテスト
 
@@ -257,7 +257,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web
 
 テストでは、クライアントを作成するために使用し、このクライアント インスタンスを使用してアプリケーションに要求を出すことによって、このカスタム WebApplicationFactory を活用できます。 アプリケーションには、テストのアサーションの一部として使用できる、シードされたデータがあります。 次のテストは、eShopOnWeb アプリケーションのホーム ページが正しく読み込まれることを検証し、シード データの一部としてアプリケーションに追加された製品の一覧が含まれます。
 
-```cs
+```csharp
 using Microsoft.eShopWeb.FunctionalTests.Web;
 using System.Net.Http;
 using System.Threading.Tasks;

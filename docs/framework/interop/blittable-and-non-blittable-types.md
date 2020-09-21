@@ -6,11 +6,12 @@ helpviewer_keywords:
 - interop marshaling, blittable types
 - blittable types, interop marshaling
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
-ms.openlocfilehash: 68f4197a2710b6825c83bbc51daaf8f6b5a2c81f
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 8bbf9c72143033cec22b38cc26cbe8ceb44f790b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621536"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556272"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blittable 型と非 Blittable 型
 ほとんどのデータ型の表現はマネージド メモリとアンマネージド メモリの両方で共通しているため、相互運用マーシャラーによる特別な処理は必要ありません。 これらの型は、マネージド コードとアンマネージド コード間での受け渡しの際に変換が必要でないため、*blittable 型*と呼ばれます。  
@@ -60,13 +61,13 @@ ms.locfileid: "85621536"
 |非 blittable 型|説明|  
 |-------------------------|-----------------|  
 |[System.Array](default-marshaling-for-arrays.md)|C スタイルの配列または `SAFEARRAY` に変換されます。|  
-|[System.Boolean](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|1、2、または 4 バイトの値に変換されます。`true` の場合は 1 または -1 になります。|  
-|[System.Char](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/6tyybbf2(v=vs.100))|Unicode 文字または ANSI 文字に変換されます。|  
-|[System.Class](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/s0968xy8(v=vs.100))|クラス インターフェイスに変換されます。|  
+|[System.Boolean](/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|1、2、または 4 バイトの値に変換されます。`true` の場合は 1 または -1 になります。|  
+|[System.Char](/previous-versions/dotnet/netframework-4.0/6tyybbf2(v=vs.100))|Unicode 文字または ANSI 文字に変換されます。|  
+|[System.Class](/previous-versions/dotnet/netframework-4.0/s0968xy8(v=vs.100))|クラス インターフェイスに変換されます。|  
 |[System.Object](default-marshaling-for-objects.md)|バリアントまたはインターフェイスに変換されます。|  
 |[System.Mdarray](default-marshaling-for-arrays.md)|C スタイルの配列または `SAFEARRAY` に変換されます。|  
 |[System.String](default-marshaling-for-strings.md)|null 参照で終わる文字列または BSTR に変換されます。|  
-|[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|固定メモリ レイアウトを持つ構造体に変換されます。|  
+|[System.Valuetype](/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|固定メモリ レイアウトを持つ構造体に変換されます。|  
 |[System.Szarray](default-marshaling-for-arrays.md)|C スタイルの配列または `SAFEARRAY` に変換されます。|  
   
  クラス型とオブジェクト型は COM 相互運用でのみサポートされます。 Visual Basic、C#、および C++ の対応する型については、[クラス ライブラリの概要](../../standard/class-library-overview.md)に関する記事を参照してください。  

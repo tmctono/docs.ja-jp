@@ -21,12 +21,12 @@ helpviewer_keywords:
 - code generators
 - CodeDOM, graphs
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
-ms.openlocfilehash: 476d8c18f386f889855c664147b1ee20995dc6f9
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 7a730a828488fd3ca04419588b3f32703dfda1c9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865217"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541735"
 ---
 # <a name="using-the-codedom"></a>CodeDOM の使用方法
 CodeDOM には一般的なさまざま種類のソース コード要素を表す型が用意されています。 オブジェクト グラフをアセンブルする CodeDOM 要素を使用すると、ソース コード モデルを構築するプログラムをデザインできます。 このオブジェクト グラフは、サポートされているプログラミング言語用の CodeDOM コード ジェネレーターを使用して、ソース コードとしてレンダリングできます。 また、CodeDOM を使用して、ソース コードをバイナリ アセンブリにコンパイルすることもできます。  
@@ -126,4 +126,4 @@ CodeDOM には一般的なさまざま種類のソース コード要素を表�
   
  CodeDOM のそれぞれの型については、<xref:System.CodeDom> 名前空間の説明を参照してください。  
   
- 特定の種類のコード要素を表す CodeDOM 要素を探すための一覧については、「[CodeDOM Quick Reference](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))」(CodeDOM クイック リファレンス) を参照してください。
+ 特定の種類のコード要素を表す CodeDOM 要素を探すための一覧については、「[CodeDOM Quick Reference](/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))」(CodeDOM クイック リファレンス) を参照してください。

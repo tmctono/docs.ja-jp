@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: aef2471a375469f7cd4dff27084b305ef9394d5e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b2fd5ac6f03c0c66c05117a882d53af37e3f8665
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291969"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555934"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>\<msxsl:script> を使用した XSLT スタイルシートのスクリプト
 <xref:System.Xml.Xsl.XslTransform> クラスは、`script` 要素を使用した埋め込みスクリプトをサポートしています。  
@@ -43,7 +43,7 @@ ms.locfileid: "84291969"
   
  アセンブリから証拠を取得するには、`this.GetType().Assembly.Evidence` を使用します。 URI (Uniform Resource Identifier) から証拠を取得するには、`Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)` を使用します。  
   
- <xref:System.Xml.Xsl.XslTransform.Load%2A> を受け取り、<xref:System.Xml.XmlResolver> を受け取らない `Evidence` メソッドを使う場合、アセンブリのセキュリティ ゾーンは既定で Full Trust に設定されます。 詳しくは、「<xref:System.Security.SecurityZone>」および「[名前付き権限セット](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100))」をご覧ください。  
+ <xref:System.Xml.Xsl.XslTransform.Load%2A> を受け取り、<xref:System.Xml.XmlResolver> を受け取らない `Evidence` メソッドを使う場合、アセンブリのセキュリティ ゾーンは既定で Full Trust に設定されます。 詳しくは、「<xref:System.Security.SecurityZone>」および「[名前付き権限セット](/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100))」をご覧ください。  
   
  関数は、`msxsl:script` 要素内で宣言できます。 既定でサポートされる名前空間を次の表に示します。 表に示す名前空間の外側でもクラスを使用できます。 ただし、これらのクラスには、完全修飾名が指定されている必要があります。  
   

@@ -8,12 +8,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 359b10eb-ec05-4cc6-ac96-c2b060afc4de
-ms.openlocfilehash: 995323d1882da13d45cdac516518d5b67845715a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5963ba1b382740b1774c944b74c6a54b13db4f76
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594505"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554516"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemaset"></a>XmlSchemaSet による XML スキーマ (XSD) 検証
 
@@ -23,7 +23,7 @@ XML ドキュメントは、<xref:System.Xml.Schema.XmlSchemaSet> の XML スキ
  XML ドキュメントは、<xref:System.Xml.XmlReader.Create%2A> クラスの <xref:System.Xml.XmlReader> メソッドを使用して検証します。 XML ドキュメントを検証するには、XML ドキュメントの検証に使用する XML スキーマ定義言語 (XSD) スキーマを持つ <xref:System.Xml.XmlReaderSettings> オブジェクトを作成します。  
   
 > [!NOTE]
-> <xref:System.Xml.Schema> 名前空間には、[LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) や [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) を使用しているときに XSD ファイルに対する XML ツリーの検証を容易にする拡張メソッドが含まれています。 LINQ to XML を使用した XML ドキュメントの検証に関する詳細については、「[XSD を使用して検証する方法 (LINQ to XML) (C#)](../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)」および「[方法: XSD を使用して検証する (LINQ to XML) (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)」を参照してください。
+> <xref:System.Xml.Schema> 名前空間には、[LINQ to XML (C#)](../../linq/linq-xml-overview.md) や [LINQ to XML (Visual Basic)](../../linq/linq-xml-overview.md) を使用しているときに XSD ファイルに対する XML ツリーの検証を容易にする拡張メソッドが含まれています。 LINQ to XML を使用した XML ドキュメントの検証に関する詳細については、「[XSD を使用して検証する方法 (LINQ to XML) (C#)](../../linq/validate-xsd.md)」および「[方法: XSD を使用して検証する (LINQ to XML) (Visual Basic)](../../linq/validate-xsd.md)」を参照してください。
   
  独立したスキーマまたはスキーマのセット (<xref:System.Xml.Schema.XmlSchemaSet> を使用) を <xref:System.Xml.Schema.XmlSchemaSet> に追加するには、そのどちらかを <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> の <xref:System.Xml.Schema.XmlSchemaSet> メソッドにパラメーターとして渡します。 ドキュメントを検証する際には、ドキュメントの対象名前空間がスキーマ セット内のスキーマの対象名前空間と一致している必要があります。  
   

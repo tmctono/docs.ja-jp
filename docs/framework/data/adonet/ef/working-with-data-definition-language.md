@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: 83d6fc1294f6aa37389db9e517b02866ef000b50
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 040ecc1473a4674ab0bb26ad0081563f55a726ea
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854230"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553871"
 ---
 # <a name="working-with-data-definition-language"></a>データ定義言語の操作
 .NET Framework バージョン 4 以降の Entity Framework では、データ定義言語 (DDL) がサポートされています。 これにより、接続文字列、およびストレージ (SSDL) モデルのメターデータに基づいて、データベース インスタンスを作成または削除できます。  
@@ -40,11 +40,11 @@ ms.locfileid: "70854230"
   
 2. 既存のモデルをアプリケーションに追加します。  
   
-    1. `SchoolModel` という名前の空のモデルを追加します。 空のモデルを作成する方法については、「[方法: 新しい .edmx ファイルを作成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))」トピックをご覧ください。  
+    1. `SchoolModel` という名前の空のモデルを追加します。 空のモデルを作成する方法については、「[方法: 新しい .edmx ファイルを作成する](/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))」トピックをご覧ください。  
   
      SchoolModel.edmx ファイルがプロジェクトに追加されます。  
   
-    1. 「[School モデル](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))」から、School モデルの概念、ストレージ、マッピングの内容をコピーします。  
+    1. 「[School モデル](/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))」から、School モデルの概念、ストレージ、マッピングの内容をコピーします。  
   
     2. SchoolModel.edmx ファイルを開き、`edmx:Runtime` タグ内にその内容を貼り付けます。  
   

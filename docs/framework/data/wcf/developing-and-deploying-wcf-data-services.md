@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 7519dce8ed17bc623173f30222296ffaa42b4341
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 484505406701b52a2b80b95b718a23a2156aa22c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416074"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556090"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>WCF Data Services の開発と配置
 
@@ -55,7 +55,7 @@ Visual Studio 2015 を使用して WCF Data Services を ASP.NET アプリケー
 
     - このサーバーにはローカル コンピューター上でしかアクセスできません。
 
-    - このサーバーは、HTTP メッセージの既定のポートであるポート 80 ではなく、 `localhost` および特定のポートでリッスンします。 詳細については、「 [ASP.NET Web プロジェクト用の Visual Studio の Web サーバー](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120))」を参照してください。
+    - このサーバーは、HTTP メッセージの既定のポートであるポート 80 ではなく、 `localhost` および特定のポートでリッスンします。 詳細については、「 [ASP.NET Web プロジェクト用の Visual Studio の Web サーバー](/previous-versions/aspnet/58wxa9w5(v=vs.120))」を参照してください。
 
     - このサーバーでは、現在のユーザー アカウントのコンテキストでデータ サービスが実行されます。 たとえば、管理者レベルのユーザーとして実行する場合、Visual Studio 開発サーバーで実行されるデータ サービスには、管理者レベルの特権があります。 そのため、データ サービスは、IIS サーバーに配置されたときにはアクセスする権限を持たないリソースにも、アクセスできることになります。
 
@@ -70,7 +70,7 @@ Visual Studio 2015 を使用して WCF Data Services を ASP.NET アプリケー
 
 3. **Azure 開発環境**
 
-     Azure Tools for Visual Studio には、Visual Studio 内で Azure サービスを開発するためのツールの統合セットが含まれています。 これらのツールでは、Azure に配置できるデータ サービスを開発し、配置前にローカル コンピューター上でデータ サービスをテストすることができます。 Visual Studio を使用して Azure プラットフォーム上で実行されるデータ サービスを開発する場合は、これらのツールを使用してください。 ツールのインストールの詳細については、「[Azure tools for Visual Studio 2015](../../../azure/vs2015-install.md)」を参照してください。 Azure 上で実行されるデータ サービスの開発の詳細については、「[Azure での OData サービスの配置](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)」の記事を参照してください。
+     Azure Tools for Visual Studio には、Visual Studio 内で Azure サービスを開発するためのツールの統合セットが含まれています。 これらのツールでは、Azure に配置できるデータ サービスを開発し、配置前にローカル コンピューター上でデータ サービスをテストすることができます。 Visual Studio を使用して Azure プラットフォーム上で実行されるデータ サービスを開発する場合は、これらのツールを使用してください。 ツールのインストールの詳細については、「[Azure tools for Visual Studio 2015](../../../azure/vs2015-install.md)」を参照してください。 Azure 上で実行されるデータ サービスの開発の詳細については、「[Azure での OData サービスの配置](/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)」の記事を参照してください。
 
 ### <a name="development-tips"></a>開発のヒント
 
@@ -80,9 +80,9 @@ Visual Studio 2015 を使用して WCF Data Services を ASP.NET アプリケー
 
 - データ サービスをデバッグするときは、HTTP 検査プログラムを使用すると、要求メッセージおよび応答メッセージの内容を検査できるので便利です。 生のパケットを表示できるネットワーク パケット アナライザーを使用すると、データ サービスの HTTP 要求および HTTP 応答を検査できます。
 
-- データ サービスのデバッグ時は、通常の操作時以上に、データ サービスの詳細なエラー情報が必要になることがあります。 データ サービスから詳細なエラー情報を取得するには、 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> の <xref:System.Data.Services.DataServiceConfiguration> プロパティを `true` に設定し、データ サービス クラスの <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 属性の <xref:System.ServiceModel.Description.ServiceDebugBehavior> プロパティを `true`に設定します。 詳細については、「[WCF Data Services のデバッグ](https://docs.microsoft.com/archive/blogs/phaniraj/debugging-wcf-data-services)」の記事を参照してください。 また、WCF でトレースを有効にして、HTTP メッセージング レイヤーで発生した例外を表示することもできます。 詳細については、「 [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md)」を参照してください。
+- データ サービスのデバッグ時は、通常の操作時以上に、データ サービスの詳細なエラー情報が必要になることがあります。 データ サービスから詳細なエラー情報を取得するには、 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> の <xref:System.Data.Services.DataServiceConfiguration> プロパティを `true` に設定し、データ サービス クラスの <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 属性の <xref:System.ServiceModel.Description.ServiceDebugBehavior> プロパティを `true`に設定します。 詳細については、「[WCF Data Services のデバッグ](/archive/blogs/phaniraj/debugging-wcf-data-services)」の記事を参照してください。 また、WCF でトレースを有効にして、HTTP メッセージング レイヤーで発生した例外を表示することもできます。 詳細については、「 [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md)」を参照してください。
 
-- データ サービスは、通常、ASP.NET アプリケーション プロジェクトとして開発されますが、Visual Studio の ASP.NET Web サイト プロジェクトとしてデータ サービスを作成することもできます。 この 2 種類のプロジェクトの違いについては、「[Visual Studio での Web アプリケーション プロジェクトと Web サイト プロジェクト](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110))」を参照してください。
+- データ サービスは、通常、ASP.NET アプリケーション プロジェクトとして開発されますが、Visual Studio の ASP.NET Web サイト プロジェクトとしてデータ サービスを作成することもできます。 この 2 種類のプロジェクトの違いについては、「[Visual Studio での Web アプリケーション プロジェクトと Web サイト プロジェクト](/previous-versions/aspnet/dd547590(v=vs.110))」を参照してください。
 
 - Visual Studioの **[新しい項目の追加]** ダイアログ ボックスを使用してデータ サービスを作成すると、そのデータ サービスは IIS 内の ASP.NET によってホストされます。 ASP.NET と IIS がデータ サービスの既定のホストですが、その他のホスティング オプションもサポートされています。 詳細については、「[データ サービスのホスティング](hosting-the-data-service-wcf-data-services.md)」を参照してください。
 
@@ -96,34 +96,34 @@ WCF Data Services では、データ サービスをホストするプロセス�
 
   - **ASP.NET Web アプリケーション用の配置テクノロジ**
 
-    - [方法: Visual Studio で Web 配置パッケージを作成する](https://docs.microsoft.com/previous-versions/aspnet/dd465323(v=vs.110))
+    - [方法: Visual Studio で Web 配置パッケージを作成する](/previous-versions/aspnet/dd465323(v=vs.110))
 
-    - [方法: Visual Studio でワンクリック発行を使用して Web プロジェクトを配置する](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
+    - [方法: Visual Studio でワンクリック発行を使用して Web プロジェクトを配置する](/previous-versions/aspnet/dd465337(v=vs.110))
 
   - **ASP.NET Web サイト用の配置テクノロジ**
 
-    - [方法: Web サイトのコピー ツールを使用して Web サイト ファイルをコピーする](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
+    - [方法: Web サイトのコピー ツールを使用して Web サイト ファイルをコピーする](/previous-versions/aspnet/c95809c0(v=vs.100))
 
-    - [方法: Web サイトを公開する](https://docs.microsoft.com/previous-versions/aspnet/20yh9f1b(v=vs.100))
+    - [方法: Web サイトを公開する](/previous-versions/aspnet/20yh9f1b(v=vs.100))
 
-    - [チュートリアル: XCOPY を使用して ASP.NET Web アプリケーションを配置する](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
+    - [チュートリアル: XCOPY を使用して ASP.NET Web アプリケーションを配置する](/previous-versions/aspnet/f735abw9(v=vs.100))
 
-     ASP.NET アプリケーションの配置オプションの詳細については、「[Visual Studio および ASP.NET の Web の配置の概要](https://docs.microsoft.com/previous-versions/aspnet/dd394698(v=vs.110))」を参照してください。
+     ASP.NET アプリケーションの配置オプションの詳細については、「[Visual Studio および ASP.NET の Web の配置の概要](/previous-versions/aspnet/dd394698(v=vs.110))」を参照してください。
 
     > [!TIP]
     > データ サービスを IIS に配置する前に、IIS を実行している Web サーバーへの配置をテストしておく必要があります。 詳細については、[IIS 上で実行する WCF Data Service を開発する](how-to-develop-a-wcf-data-service-running-on-iis.md)」を参照してください。
 
 - **Azure**
 
-     [Azure Tools for Visual Studio](../../../azure/vs2015-install.md) を使用して、データ サービスを Azure に配置できます。 Azure へのデータ サービスの配置の詳細については、「[Azure での OData サービスの配置](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)」を参照してください。
+     [Azure Tools for Visual Studio](../../../azure/vs2015-install.md) を使用して、データ サービスを Azure に配置できます。 Azure へのデータ サービスの配置の詳細については、「[Azure での OData サービスの配置](/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)」を参照してください。
 
 ### <a name="deployment-considerations"></a>配置に関する注意事項
 
 データ サービスを配置する際は、次の点を考慮してください。
 
-- Entity Framework プロバイダーを使用して SQL Server データベースにアクセスするデータ サービスを配置する場合、データ サービスの配置でのデータ構造、データ、またはその両方の反映も必要になることがあります。 Visual Studio では対象データベースでこの操作を行うスクリプト (.sql ファイル) を自動的に作成することができ、これらのスクリプトを ASP.NET アプリケーションの Web 配置パッケージに含めることができます。 詳細については、[Web アプリケーション プロジェクトと共にデータベースを配置する](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))」を参照してください。 ASP.NET Web サイトの場合は、Visual Studio の**データベースの発行ウィザード**を使用してこの操作を実行できます。 詳細については、「[SQL Database の発行](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))」をご覧ください。
+- Entity Framework プロバイダーを使用して SQL Server データベースにアクセスするデータ サービスを配置する場合、データ サービスの配置でのデータ構造、データ、またはその両方の反映も必要になることがあります。 Visual Studio では対象データベースでこの操作を行うスクリプト (.sql ファイル) を自動的に作成することができ、これらのスクリプトを ASP.NET アプリケーションの Web 配置パッケージに含めることができます。 詳細については、[Web アプリケーション プロジェクトと共にデータベースを配置する](/previous-versions/dd465343(v=vs.100))」を参照してください。 ASP.NET Web サイトの場合は、Visual Studio の**データベースの発行ウィザード**を使用してこの操作を実行できます。 詳細については、「[SQL Database の発行](/previous-versions/aspnet/bb907585(v=vs.100))」をご覧ください。
 
-- WCF Data Services には基本的な WCF の実装が含まれているので、Windows Server AppFabric を使用して、Windows Server 上で実行されている IIS に配置されたデータ サービスを監視できます。 Server AppFabric を使用したデータ サービスの監視の詳細については、「[Windows Server AppFabric による WCF Data Services の追跡](https://docs.microsoft.com/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric)」の記事を参照してください。
+- WCF Data Services には基本的な WCF の実装が含まれているので、Windows Server AppFabric を使用して、Windows Server 上で実行されている IIS に配置されたデータ サービスを監視できます。 Server AppFabric を使用したデータ サービスの監視の詳細については、「[Windows Server AppFabric による WCF Data Services の追跡](/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric)」の記事を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

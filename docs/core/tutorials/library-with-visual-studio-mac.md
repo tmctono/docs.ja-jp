@@ -2,12 +2,12 @@
 title: Visual Studio for Mac を使用して .NET Standard クラス ライブラリを作成する
 description: Visual Studio for Mac を使用して .NET Standard クラス ライブラリを作成する方法について説明します。
 ms.date: 06/08/2020
-ms.openlocfilehash: 8e1e4ca3bc1b12d889b847d80318f3d6cd1bbe46
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 433f6e0e2d784878c9a1616139b39ec56d695bcf
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416001"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537640"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-for-mac"></a>チュートリアル: Visual Studio for Mac を使用して .NET Standard ライブラリを作成する
 
@@ -26,7 +26,7 @@ ms.locfileid: "86416001"
 * [Visual Studio for Mac バージョン 8.6 以降をインストールします](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)。 .NET Core をインストールするオプションを選択します。 .NET Core 開発の場合、Xamarin のインストールは省略可能です。 詳細については、次のリソースを参照してください。
 
   * [チュートリアル: Visual Studio for Mac をインストールする](/visualstudio/mac/installation)。
-  * [サポート対象の macOS のバージョン](../install/dependencies.md?pivots=os-macos)。
+  * [サポート対象の macOS のバージョン](../install/macos.md)。
   * [Visual Studio for Mac でサポートされている .NET Core のバージョン](/visualstudio/mac/net-core-support)。
 
 ## <a name="create-a-solution-with-a-class-library-project"></a>クラス ライブラリ プロジェクトを含むソリューションの作成

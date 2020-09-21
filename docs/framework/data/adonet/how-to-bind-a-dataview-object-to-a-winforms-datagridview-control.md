@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b73d60a-6049-446a-85a7-3e5a68b183e2
-ms.openlocfilehash: 3a3089073cdc5afb4ee51caca9114b401c740b45
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cbae5453be485896e27a5039ece20bb3bcec9913
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795007"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556981"
 ---
 # <a name="how-to-bind-a-dataview-object-to-a-windows-forms-datagridview-control"></a>方法: DataView オブジェクトを Windows フォーム DataGridView コントロールにバインドする
 <xref:System.Windows.Forms.DataGridView> コントロールには、データを表形式で表示するための強力で柔軟な機能が用意されています。 <xref:System.Windows.Forms.DataGridView> コントロールは、標準 Windows フォーム データ バインディング モデルをサポートするため、<xref:System.Data.DataView> およびその他の各種のデータ ソースにバインドします。 ただし、ほとんどの状況では、データ ソースとの対話の詳細を管理する <xref:System.Windows.Forms.BindingSource> コンポーネントにバインドします。  
   
- <xref:System.Windows.Forms.DataGridView> コントロールについて詳しくは、「[DataGridView コントロールの概要](../../winforms/controls/datagridview-control-overview-windows-forms.md)」をご覧ください。  
+ <xref:System.Windows.Forms.DataGridView> コントロールについて詳しくは、「[DataGridView コントロールの概要](/dotnet/desktop/winforms/controls/datagridview-control-overview-windows-forms)」をご覧ください。  
   
 ### <a name="to-connect-a-datagridview-control-to-a-dataview"></a>DataGridView コントロールを DataView に接続するには  
   

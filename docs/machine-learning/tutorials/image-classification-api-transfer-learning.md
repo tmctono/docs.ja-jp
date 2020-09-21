@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a2ebad329f583d35f110c5db053eebfa80ace6e2
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 8f0a9e7f2cc55ed649ee9569e945ed99671295fc
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359325"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679443"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>チュートリアル: 転移学習と ML.NET Image Classification API を利用した自動ビジュアル検査
 
@@ -116,7 +116,7 @@ SDNET2018 は、ひび割れあり/ひび割れなしのコンクリート構造
 
 このチュートリアルでは、橋床の画像のみ使用します。
 
-1. [データセット](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/assets.zip)をダウンロードし、解凍します。
+1. [データセット](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/assets.zip)をダウンロードし、解凍します。
 1. データ セット ファイルを保存するために、プロジェクトに "assets" という名前のディレクトリを作成します。
 1. 先ほど解凍したディレクトリから *assets* ディレクトリに *CD* サブディレクトリと *UD* サブディレクトリをコピーします。
 
@@ -224,19 +224,19 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
     [!code-csharp [LoadImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L22)]
 
-1. 次に、[`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) メソッドを利用して [`IDataView`](xref:Microsoft.ML.IDataView) に画像を読み込みます。
+1. 次に、[`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable%2A) メソッドを利用して [`IDataView`](xref:Microsoft.ML.IDataView) に画像を読み込みます。
 
     [!code-csharp [CreateIDataView](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L24)]
 
-1. データはディレクトリから読み取られた順序で読み込まれます。 データのバランスを維持するために、[`ShuffleRows`](xref:Microsoft.ML.DataOperationsCatalog.ShuffleRows*) メソッドを利用してシャッフルします。
+1. データはディレクトリから読み取られた順序で読み込まれます。 データのバランスを維持するために、[`ShuffleRows`](xref:Microsoft.ML.DataOperationsCatalog.ShuffleRows%2A) メソッドを利用してシャッフルします。
 
     [!code-csharp [ShuffleRows](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L26)]
 
-1. 機械学習モデルでは、数値形式で入力する必要があります。 そのため、トレーニングの前にデータでいくつかの処理を行う必要があります。 [`MapValueToKey`](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey*) 変換と `LoadRawImageBytes` 変換から構成される [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) を作成します。 `MapValueToKey` 変換では、`Label` 列のカテゴリ値を受け取り、それを数値 `KeyType` に変換し、`LabelAsKey` という名前の新しい列に保存します。 `LoadImages` では、`imageFolder` パラメーターと共に `ImagePath` から値を取得し、トレーニングのために画像を読み込みます。
+1. 機械学習モデルでは、数値形式で入力する必要があります。 そのため、トレーニングの前にデータでいくつかの処理を行う必要があります。 [`MapValueToKey`](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) 変換と `LoadRawImageBytes` 変換から構成される [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) を作成します。 `MapValueToKey` 変換では、`Label` 列のカテゴリ値を受け取り、それを数値 `KeyType` に変換し、`LabelAsKey` という名前の新しい列に保存します。 `LoadImages` では、`imageFolder` パラメーターと共に `ImagePath` から値を取得し、トレーニングのために画像を読み込みます。
 
     [!code-csharp [PreprocessingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L28-L34)]
 
-1. データを `preprocessingPipeline` [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) に適用する [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit*) メソッドを使用し、事前処理済みのデータが含まれる [`IDataView`](xref:Microsoft.ML.IDataView) メソッドを返す [`Transform`](xref:Microsoft.ML.Data.TransformerChain`1.Transform*) メソッドを続けます。
+1. データを `preprocessingPipeline` [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) に適用する [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A) メソッドを使用し、事前処理済みのデータが含まれる [`IDataView`](xref:Microsoft.ML.IDataView) メソッドを返す [`Transform`](xref:Microsoft.ML.Data.TransformerChain%601.Transform%2A) メソッドを続けます。
 
     [!code-csharp [PreprocessData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L36-L38)]
 
@@ -276,7 +276,7 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
     [!code-csharp [TrainingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L60-L61)]
 
-1. [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit*) メソッドを利用してモデルをトレーニングします。
+1. [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A) メソッドを利用してモデルをトレーニングします。
 
     [!code-csharp [TrainModel](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L63)]
 
@@ -303,11 +303,11 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
     [!code-csharp [CreatePredictionEngine](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L74)]
 
-1. 1 つの `ModelInput` インスタンスにアクセスするには、[`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) メソッドを利用して `data` [`IDataView`](xref:Microsoft.ML.IDataView) を [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) に変換し、最初の観察を取得します。
+1. 1 つの `ModelInput` インスタンスにアクセスするには、[`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) メソッドを利用して `data` [`IDataView`](xref:Microsoft.ML.IDataView) を [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) に変換し、最初の観察を取得します。
 
     [!code-csharp [GetTestInputData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L76)]
 
-1. [`Predict`](xref:Microsoft.ML.PredictionEngine%602.Predict*) メソッドを使用し、画像を分類します。
+1. [`Predict`](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) メソッドを使用し、画像を分類します。
 
     [!code-csharp [MakeSinglePrediction](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L78)]
 
@@ -330,11 +330,11 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
     }
     ```
 
-1. [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) メソッドを利用し、予測を含む [`IDataView`](xref:Microsoft.ML.IDataView) を作成します。 `ClassifyImages` メソッド内に次のコードを追加します。
+1. [`Transform`](xref:Microsoft.ML.ITransformer.Transform%2A) メソッドを利用し、予測を含む [`IDataView`](xref:Microsoft.ML.IDataView) を作成します。 `ClassifyImages` メソッド内に次のコードを追加します。
 
     [!code-csharp [MakeMultiplePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L86)]
 
-1. 予測を反復処理するには、[`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) メソッドを利用して `predictionData` [`IDataView`](xref:Microsoft.ML.IDataView) を [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) に変換し、最初の 10 件の観察を取得します。
+1. 予測を反復処理するには、[`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) メソッドを利用して `predictionData` [`IDataView`](xref:Microsoft.ML.IDataView) を [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) に変換し、最初の 10 件の観察を取得します。
 
     [!code-csharp [IEnumerablePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L88)]
 

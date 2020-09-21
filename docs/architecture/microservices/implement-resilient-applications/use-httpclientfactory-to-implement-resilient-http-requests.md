@@ -2,12 +2,12 @@
 title: IHttpClientFactory を使用して回復力の高い HTTP 要求を実装する
 description: .NET Core 2.1 以降で使用できる IHttpClientFactory を使用して、`HttpClient` インスタンスを作成し、それをアプリケーションで簡単に使用できるようにする方法について説明します。
 ms.date: 08/31/2020
-ms.openlocfilehash: 1df5432f215371b60722212cf706c28a4a5bb5f6
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: c54965a9bbb700cfb1f14150773c2df45d109c39
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271829"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678817"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>IHttpClientFactory を使用して回復力の高い HTTP 要求を実装する
 
@@ -65,9 +65,9 @@ ms.locfileid: "89271829"
 
 **図 8-4** 型指定されたクライアント クラスで `IHttpClientFactory` を使用する
 
-上の図では、(コントローラーまたはクライアント コードによって使用される) `ClientService` によって、登録済みの `IHttpClientFactory` によって作成された `HttpClient` が使用されます。 このファクトリでは、プールからの `HttpClient` が `HttpMessageHandler` に割り当てられます。 拡張メソッド <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient*> を使用して `IHttpClientFactory` を DI コンテナーに登録するときに、Polly のポリシーを使用して `HttpClient` を構成できます。
+上の図では、(コントローラーまたはクライアント コードによって使用される) `ClientService` によって、登録済みの `IHttpClientFactory` によって作成された `HttpClient` が使用されます。 このファクトリでは、プールからの `HttpClient` が `HttpMessageHandler` に割り当てられます。 拡張メソッド <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient%2A> を使用して `IHttpClientFactory` を DI コンテナーに登録するときに、Polly のポリシーを使用して `HttpClient` を構成できます。
 
-上の構造を構成するには、<xref:Microsoft.Extensions.DependencyInjection.IServiceCollection> に対する <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient*> 拡張メソッドを含む `Microsoft.Extensions.Http` NuGet パッケージをインストールすることで、アプリケーションに <xref:System.Net.Http.IHttpClientFactory> を追加します。 この拡張メソッドでは、インターフェイス `IHttpClientFactory` のシングルトンとして使用される内部 `DefaultHttpClientFactory` クラスが登録されます。 これは <xref:Microsoft.Extensions.Http.HttpMessageHandlerBuilder> の一時的な構成を定義します。 プールから取得されたこのメッセージ ハンドラー (<xref:System.Net.Http.HttpMessageHandler> オブジェクト) は、ファクトリから返された `HttpClient` によって使用されます。
+上の構造を構成するには、<xref:Microsoft.Extensions.DependencyInjection.IServiceCollection> に対する <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient%2A> 拡張メソッドを含む `Microsoft.Extensions.Http` NuGet パッケージをインストールすることで、アプリケーションに <xref:System.Net.Http.IHttpClientFactory> を追加します。 この拡張メソッドでは、インターフェイス `IHttpClientFactory` のシングルトンとして使用される内部 `DefaultHttpClientFactory` クラスが登録されます。 これは <xref:Microsoft.Extensions.Http.HttpMessageHandlerBuilder> の一時的な構成を定義します。 プールから取得されたこのメッセージ ハンドラー (<xref:System.Net.Http.HttpMessageHandler> オブジェクト) は、ファクトリから返された `HttpClient` によって使用されます。
 
 次のコードで、`AddHttpClient()` を使用して、`HttpClient` を使用する必要がある型指定されたクライアント (エージェント サービス) を登録する方法を確認できます。
 

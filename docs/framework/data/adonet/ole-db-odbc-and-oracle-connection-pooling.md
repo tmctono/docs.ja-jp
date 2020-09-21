@@ -2,12 +2,12 @@
 title: OLE DB、ODBC、および Oracle 接続プール
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 58ea5aa54a0f6acbc8d2400dd04eeba9ff498055
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: c19f341d869ee983531fa5c90c0d7c94978dadb1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545043"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535372"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB、ODBC、および Oracle 接続プール
 
@@ -23,7 +23,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 
  接続がプールに返されるようにするために、接続を使い終えたら必ず接続を終了または破棄することをお勧めします。 明示的に終了されていない接続は、プールに返されない場合があります。 たとえば、スコープ外に出ても、明示的に終了されていない接続は、最大プール サイズに達した時点でその接続がまだ有効である場合にだけ接続プールに返されます。
 
- OLE DB セッション プール機能とリソース プール機能の説明、および OLE DB プロバイダー サービスの既定値をオーバーライドしてプール機能を無効にする方法については、「[OLE DB プログラマー ガイド](https://docs.microsoft.com/previous-versions/windows/desktop/ms713643(v=vs.85))」を参照してください。
+ OLE DB セッション プール機能とリソース プール機能の説明、および OLE DB プロバイダー サービスの既定値をオーバーライドしてプール機能を無効にする方法については、「[OLE DB プログラマー ガイド](/previous-versions/windows/desktop/ms713643(v=vs.85))」を参照してください。
 
 ## <a name="odbc"></a>ODBC
  .NET Framework Data Provider for ODBC の接続プールは、接続に使用される ODBC ドライバー マネージャーによって管理されるため、.NET Framework Data Provider for ODBC の影響は受けません。

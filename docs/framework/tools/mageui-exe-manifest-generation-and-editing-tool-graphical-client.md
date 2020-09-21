@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 1ff7c10a478f0f0f53d7b00f34b228b9070f798d
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 59f2d3dbf09beacb62042b8195bba23f345fba02
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87516724"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557438"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)
 
@@ -67,7 +67,7 @@ MageUI.exe でサポートされている機能は、コマンド ライン ツ�
 |**新規**|証明機関 (CA: Certificate Authority) によって証明できない、.pfx ファイルを新規作成します。 ClickOnce の配置に署名するために使用する証明書の種類の詳細については、「[信頼されたアプリケーションの配置の概要](/visualstudio/deployment/trusted-application-deployment-overview)」を参照してください。|  
 |**パスワード**|この証明書で署名するために使用するパスワードの入力欄です。 該当しない場合は、空白にできます。|  
 |**保存された証明書で署名する**|使用しているコンピューターの証明書ストアに格納されている、選択可能なデジタル署名が一覧表示されます。|  
-|**タイムスタンプ URI**|デジタル タイムスタンプ サービスの URI (Uniform Resource Locator) が表示されます。 次のバージョンのアプリケーションを配置する前にデジタル証明書の有効期限が切れる場合、マニフェストにタイムスタンプを設定すると、マニフェストに再署名する必要がなくなります。 詳細については、[Windows ルート証明書プログラムのメンバー](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11))に関するページと「[ClickOnce and Authenticode](/visualstudio/deployment/clickonce-and-authenticode)」 (ClickOnce と Authenticode)を参照してください。|  
+|**タイムスタンプ URI**|デジタル タイムスタンプ サービスの URI (Uniform Resource Locator) が表示されます。 次のバージョンのアプリケーションを配置する前にデジタル証明書の有効期限が切れる場合、マニフェストにタイムスタンプを設定すると、マニフェストに再署名する必要がなくなります。 詳細については、[Windows ルート証明書プログラムのメンバー](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11))に関するページと「[ClickOnce and Authenticode](/visualstudio/deployment/clickonce-and-authenticode)」 (ClickOnce と Authenticode)を参照してください。|  
 |**署名しない**|デジタル証明書から署名を追加せずにマニフェストを保存できます。|  
   
 ## <a name="tab-and-panel-descriptions"></a>タブおよびパネルの説明  
@@ -129,7 +129,7 @@ MageUI.exe でサポートされている機能は、コマンド ライン ツ�
   
 |UI 要素|説明|  
 |----------------|-----------------|  
-|**アクセス許可セットの種類**|‏このアプリケーションをクライアントで実行するために必要な、最小のアクセス許可セットです。 これらのアクセス許可セットおよび必要なアクセス許可については、「[名前付きアクセス許可セット](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100))」を参照してください。|  
+|**アクセス許可セットの種類**|‏このアプリケーションをクライアントで実行するために必要な、最小のアクセス許可セットです。 これらのアクセス許可セットおよび必要なアクセス許可については、「[名前付きアクセス許可セット](/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100))」を参照してください。|  
 |**詳細**|アクセス許可セットを表すために作成された、アプリケーション マニフェスト用の XML です。 アプリケーション マニフェストの XML 形式に精通している場合を除き、この XML を手動で編集しないでください。 詳細については、「[ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)」を参照してください。|  
   
 ### <a name="deployment-manifest-tab"></a>[配置マニフェスト] タブ  

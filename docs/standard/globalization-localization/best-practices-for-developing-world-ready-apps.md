@@ -8,12 +8,12 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-ms.openlocfilehash: f0e5ccf999b6aa96b6317b88e25f3cd9d9fbc899
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9d9f6b3540bb04dd4af154fce2f91a3a7b6395ba
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279881"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555537"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>推奨される国際対応アプリケーション開発手順
 
@@ -91,7 +91,7 @@ ms.locfileid: "84279881"
 
 4. ASP.NET アプリケーション内の次の 3 か所で、requestEncoding、responseEncoding、fileEncoding、culture、uiCulture の各属性の値を指定します。
 
-    - Web.config ファイルのグローバリゼーション セクション。 Web.config ファイルは、ASP.NET アプリケーションの外部ファイルです。 詳細については、[\<globalization> 要素](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100))に関するページを参照してください。
+    - Web.config ファイルのグローバリゼーション セクション。 Web.config ファイルは、ASP.NET アプリケーションの外部ファイルです。 詳細については、[\<globalization> 要素](/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100))に関するページを参照してください。
 
     - ページ ディレクティブ。 アプリケーションがページを処理している時点では、ファイルは既に読み取られています。 そのため、fileEncoding と requestEncoding を指定するには遅すぎます。 ページ ディレクティブでは uiCulture、Culture、および responseEncoding だけを指定できます。
 

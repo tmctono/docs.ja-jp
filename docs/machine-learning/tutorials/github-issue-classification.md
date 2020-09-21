@@ -4,12 +4,12 @@ description: GitHub の問題を分類し、それを特定の領域に割り当
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 48f5f213802b09168cbc21da1b22e84ec53756fe
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: fa00306e80046097c1269533d3a3ca1e85f10288
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282074"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679496"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>チュートリアル: ML.NET での多クラス分類を使用したサポートの問題の分類
 
@@ -302,7 +302,7 @@ private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingD
 }
 ```
 
-次のコードを `SaveModelAsFile` メソッドに追加します。 このコードでは [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) メソッドを使用して、トレーニング済みのモデルを zip ファイルとしてシリアル化し、格納します。
+次のコードを `SaveModelAsFile` メソッドに追加します。 このコードでは [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save%2A) メソッドを使用して、トレーニング済みのモデルを zip ファイルとしてシリアル化し、格納します。
 
 [!code-csharp[SnippetSaveModel](./snippets/github-issue-classification/csharp/Program.cs#SnippetSaveModel)]
 

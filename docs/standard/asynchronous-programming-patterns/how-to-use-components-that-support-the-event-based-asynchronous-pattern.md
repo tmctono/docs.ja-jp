@@ -18,19 +18,19 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: e23a9b28cff9428cbc8896515ce71db85c832243
-ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
+ms.openlocfilehash: c41a695226068615efca5132985e50503060148b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89379149"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555667"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>方法 : イベントベースの非同期パターンをサポートするコンポーネントを使用する
 多くのコンポーネントでは、非同期的に作業を実行するオプションが提供されます。 たとえば、<xref:System.Media.SoundPlayer> と <xref:System.Windows.Forms.PictureBox> コンポーネントでは、メイン スレッドが中断されることなく、実行され続ける間に、"バックグラウンドで" 音声とイメージを読み込むことができます。  
   
  [イベントベースの非同期パターンの概要](event-based-asynchronous-pattern-overview.md)をサポートするクラスで非同期メソッドを使用することは、別のイベントに対して行うように、イベント ハンドラーをコンポーネントの _MethodName_**Completed** イベントにアタッチするのと同じくらい単純です。 _MethodName_**Async** メソッドを呼び出すと、_MethodName_**Completed** イベントが発生するまで、アプリケーションは中断されることなく実行され続けます。 イベント ハンドラーで、非同期操作が正常に完了するか、キャンセルされたかどうかを判断するには、<xref:System.ComponentModel.AsyncCompletedEventArgs> パラメーターを調べることができます。  
   
- イベント ハンドラーの使用に関する詳細については、「[イベント ハンドラーの概要](../../framework/winforms/event-handlers-overview-windows-forms.md)」を参照してください。  
+ イベント ハンドラーの使用に関する詳細については、「[イベント ハンドラーの概要](/dotnet/desktop/winforms/event-handlers-overview-windows-forms)」を参照してください。  
   
  次の手順は、<xref:System.Windows.Forms.PictureBox> コントロールの非同期イメージ読み込み機能を使用する方法について示しています。  
   
@@ -62,5 +62,5 @@ ms.locfileid: "89379149"
   
 ## <a name="see-also"></a>参照
 
-- [方法: バックグラウンドで操作を実行する](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [方法: バックグラウンドで操作を実行する](/dotnet/desktop/winforms/controls/how-to-run-an-operation-in-the-background)
 - [イベントベースの非同期パターンの概要](event-based-asynchronous-pattern-overview.md)

@@ -3,12 +3,12 @@ title: 接続情報の保護
 description: 接続文字列のセキュリティの脆弱性について説明します。これは、接続文字列の構築方法と保持方法、および認証の種類が原因で生じる場合があります。
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-ms.openlocfilehash: 0e693fd99384a2808a621b358f8e70c6777c3930
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 76b182a3d14be08d956f8ffb95dd2ae05245c003
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286651"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557893"
 ---
 # <a name="protecting-connection-information"></a>接続情報の保護
 アプリケーションのセキュリティを実現するうえで、データ ソースへのアクセスを保護することは、最も重要な目標の 1 つです。 保護されていない接続文字列は脆弱性を招く原因になります。 接続情報をテキスト形式で保存したり、メモリ内に保持したりすると、システム全体のセキュリティが損なわれる可能性があります。 ソース コードに組み込まれた接続文字列は、[Ildasm.exe (IL Disassembler)](../../tools/ildasm-exe-il-disassembler.md) を使って、コンパイル済みアセンブリの Microsoft Intermediate Language (MSIL) を表示することで読み取ることができます。  
@@ -43,6 +43,6 @@ ms.locfileid: "84286651"
 ## <a name="see-also"></a>関連項目
 
 - [ADO.NET アプリケーションのセキュリティ保護](securing-ado-net-applications.md)
-- [保護された構成を使用した構成情報の暗号化](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))
+- [保護された構成を使用した構成情報の暗号化](/previous-versions/aspnet/53tyfkaw(v=vs.100))
 - [.NET でのセキュリティ](../../../standard/security/index.md)
 - [ADO.NET の概要](ado-net-overview.md)

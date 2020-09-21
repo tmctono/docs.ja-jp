@@ -5,12 +5,12 @@ author: adegeo
 ms.author: adegeo
 ms.date: 12/03/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 56eebc0fc5bad6f57d93358cbbef389d6355d66b
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 6106f66dfbbe382ee9f61eb8b7bda70ab9b72d0b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656691"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538550"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core の概要
 
@@ -54,7 +54,7 @@ Hello World!
 | ![ビデオのムービー カメラ アイコン](./media/video-icon.png "ビデオを見る") | Channel 9 で [Visual Studio Code と .NET Core をインストールして使用する方法](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/)についてのビデオを見る。 |
 | ![ビデオのムービー カメラ アイコン](./media/video-icon.png "ビデオを見る") | YouTube で [.NET Core 101](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oWoazjhXQzBKMrFuArxpW80) に関するビデオを見る。 |
 
-サポートされている Windows バージョンの一覧については、[.NET Core の依存関係と要件](install/dependencies.md?pivots=os-windows)に関する記事を参加してください。
+サポートされている Windows バージョンの一覧については、[.NET Core の依存関係と要件](./install/windows.md)に関する記事を参加してください。
 
 # <a name="linux"></a>[Linux](#tab/linux)
 
@@ -66,7 +66,7 @@ Hello World!
 |---|---|
 | ![ビデオのムービー カメラ アイコン](./media/video-icon.png "ビデオを見る") | [Ubuntu 上の Visual Studio Code での C# と .NET Core の使用に関する概要](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)のビデオを見る。 |
 
-サポートされている Linux のディストリビューションとバージョンの一覧については、[.NET Core の依存関係と要件](install/dependencies.md?pivots=os-linux)に関する記事を参加してください。
+サポートされている Linux のディストリビューションとバージョンの一覧については、[.NET Core の依存関係と要件](./install/linux.md)に関する記事を参加してください。
 
 # <a name="macos"></a>[macOS](#tab/macos)
 
@@ -80,6 +80,6 @@ Hello World!
 |---|---|
 | ![ビデオのムービー カメラ アイコン](media/video-icon.png "ビデオを見る") | [macOS 上の Visual Studio Code での C# と .NET Core の使用に関する概要](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac)のビデオを見る。 |
 
-サポートされている OS X / macOS バージョンの一覧については、[.NET Core の依存関係と要件](install/dependencies.md?pivots=os-macos)に関する記事を参加してください。
+サポートされている OS X / macOS バージョンの一覧については、[.NET Core の依存関係と要件](./install/macos.md)に関する記事を参加してください。
 
 ---

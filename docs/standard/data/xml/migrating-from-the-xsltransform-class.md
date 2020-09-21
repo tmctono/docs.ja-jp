@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
-ms.openlocfilehash: d18cf72f0629d347fb5f55ad7332e6046614c01b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 32fac1b5ab339dd4c71d761cf07fcde99ce1f2fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282390"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550164"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>XslTransform クラスからの移行
 
@@ -26,7 +26,7 @@ XSLT アーキテクチャは、Visual Studio 2005 リリースで設計が変�
 <xref:System.Xml.Xsl.XslCompiledTransform> クラスには、このクラスを <xref:System.Xml.Xsl.XslTransform> クラスよりも大幅に高速化する他の最適化も含まれています。
 
 > [!NOTE]
-> 全体的なパフォーマンスは <xref:System.Xml.Xsl.XslCompiledTransform> クラスの方が <xref:System.Xml.Xsl.XslTransform> クラスより優れていますが、<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> クラスの <xref:System.Xml.Xsl.XslCompiledTransform> メソッドが変換で初めて呼び出されたときは、<xref:System.Xml.Xsl.XslTransform.Load%2A> クラスの <xref:System.Xml.Xsl.XslTransform> メソッドよりパフォーマンスが劣る場合があります。 これは、XSLT ファイルを読み込む前にコンパイルする必要があるためです。 詳細については、ブログ記事「[XslCompiledTransform Slower than XslTransform?](https://docs.microsoft.com/archive/blogs/antosha/xslcompiledtransform-slower-than-xsltransform)」(XslCompiledTransform は XslTransform より遅いか?) というブログ記事をお読みください。
+> 全体的なパフォーマンスは <xref:System.Xml.Xsl.XslCompiledTransform> クラスの方が <xref:System.Xml.Xsl.XslTransform> クラスより優れていますが、<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> クラスの <xref:System.Xml.Xsl.XslCompiledTransform> メソッドが変換で初めて呼び出されたときは、<xref:System.Xml.Xsl.XslTransform.Load%2A> クラスの <xref:System.Xml.Xsl.XslTransform> メソッドよりパフォーマンスが劣る場合があります。 これは、XSLT ファイルを読み込む前にコンパイルする必要があるためです。 詳細については、ブログ記事「[XslCompiledTransform Slower than XslTransform?](/archive/blogs/antosha/xslcompiledtransform-slower-than-xsltransform)」(XslCompiledTransform は XslTransform より遅いか?) というブログ記事をお読みください。
 
 ## <a name="security"></a>セキュリティ
 
@@ -117,11 +117,11 @@ W3C 勧告『XSL Transformations (XSLT) Version 1.0』には、対処方法を�
 
 <xref:System.Xml.Xsl.XslCompiledTransform> クラスでは、新しい MSXML 関数のサポートが追加されました。 新しい関数または強化された関数は次のとおりです。
 
-- msxsl:node-set: <xref:System.Xml.Xsl.XslTransform> では、[node-set 関数](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256197(v=vs.100))の引数を結果ツリー フラグメントにする必要がありました。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスでは、この要件がありません。
+- msxsl:node-set: <xref:System.Xml.Xsl.XslTransform> では、[node-set 関数](/previous-versions/dotnet/netframework-4.0/ms256197(v=vs.100))の引数を結果ツリー フラグメントにする必要がありました。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスでは、この要件がありません。
 
 - msxsl:version:この関数は、<xref:System.Xml.Xsl.XslCompiledTransform> でサポートされます。
 
-- XPath 拡張関数:[ms:string-compare 関数](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256114(v=vs.100))、[ms:utc 関数](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256474(v=vs.100))、[ms:namespace-uri 関数](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256231(v=vs.100))、[ms:local-name 関数](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256055(v=vs.100))、[ms:number 関数](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256155(v=vs.100))、[ms:format-date 関数](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256099(v=vs.100))、[ms:format-time 関数](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256467(v=vs.100))がサポートされるようになりました。
+- XPath 拡張関数:[ms:string-compare 関数](/previous-versions/dotnet/netframework-4.0/ms256114(v=vs.100))、[ms:utc 関数](/previous-versions/dotnet/netframework-4.0/ms256474(v=vs.100))、[ms:namespace-uri 関数](/previous-versions/dotnet/netframework-4.0/ms256231(v=vs.100))、[ms:local-name 関数](/previous-versions/dotnet/netframework-4.0/ms256055(v=vs.100))、[ms:number 関数](/previous-versions/dotnet/netframework-4.0/ms256155(v=vs.100))、[ms:format-date 関数](/previous-versions/dotnet/netframework-4.0/ms256099(v=vs.100))、[ms:format-time 関数](/previous-versions/dotnet/netframework-4.0/ms256467(v=vs.100))がサポートされるようになりました。
 
 - スキーマ関連 XPath 拡張機能:これらの関数は <xref:System.Xml.Xsl.XslCompiledTransform> でネイティブ サポートされません。 ただし、拡張関数として実装することはできます。
 

@@ -2,12 +2,12 @@
 title: Windows ストア アプリのネットワーク分離
 ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-ms.openlocfilehash: 390a0281f03b08322cc1bee469b601fd5a1547c4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0f9288b53b969838cac64c24d3c9861a0f841aca
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74802167"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558460"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Windows ストア アプリのネットワーク分離
 
@@ -25,13 +25,13 @@ Windows ストア アプリに対してネットワークの分離が適切に�
   
 4. アプリを展開して実行し、トラブルシューティングのためのネットワーク分離ツールを使用してテストします。  
   
-ネットワーク機能の構成と、ネットワーク分離のトラブルシューティングに使用する分離ツールの詳細については、Windows 8.x Store 開発者向けドキュメントで、[ネットワーク分離の機能を構成する方法](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))に関するページを参照してください。
+ネットワーク機能の構成と、ネットワーク分離のトラブルシューティングに使用する分離ツールの詳細については、Windows 8.x Store 開発者向けドキュメントで、[ネットワーク分離の機能を構成する方法](/previous-versions/windows/apps/hh770532(v=win.10))に関するページを参照してください。
   
 ## <a name="see-also"></a>参照
 
-- [Web サービスへの接続](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
-- [ネットワーク分離のガイドラインとチェックリスト](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
-- [クイック スタート: HttpClient を使って接続する](https://docs.microsoft.com/previous-versions/windows/apps/hh781239(v=win.10))
-- [HttpClient ハンドラーを使う方法](https://docs.microsoft.com/previous-versions/windows/apps/hh781241(v=win.10))
-- [HttpClient の接続をセキュリティで保護する方法](https://docs.microsoft.com/previous-versions/windows/apps/hh781240(v=win.10))
+- [Web サービスへの接続](/previous-versions/windows/apps/hh761504(v=win.10))
+- [ネットワーク分離のガイドラインとチェックリスト](/previous-versions/windows/apps/hh770532(v=win.10))
+- [クイック スタート: HttpClient を使って接続する](/previous-versions/windows/apps/hh781239(v=win.10))
+- [HttpClient ハンドラーを使う方法](/previous-versions/windows/apps/hh781241(v=win.10))
+- [HttpClient の接続をセキュリティで保護する方法](/previous-versions/windows/apps/hh781240(v=win.10))
 - [HttpClient のサンプル](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)

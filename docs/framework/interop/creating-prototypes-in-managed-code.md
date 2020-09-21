@@ -18,11 +18,12 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-ms.openlocfilehash: 76b1a87c4513fdee21c5c3d5eba533b11e022e3a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: e83979e5843c52fc3a446a5b669ae8822b32ddad
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622160"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555589"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>マネージド コードでのプロトタイプの作成
 このトピックは、アンマネージド 関数にアクセスする方法について説明し、マネージド コードでメソッドの定義の注釈を設定するいくつかの属性フィールドを紹介しています。 プラットフォーム呼び出しで使用する .NET ベースの宣言を作成する方法を示す例については、「[プラットフォーム呼び出しによるデータのマーシャリング](marshaling-data-with-platform-invoke.md)」を参照してください。  
@@ -235,7 +236,7 @@ interface IDemandStubsItf
 - [エントリ ポイントの指定](specifying-an-entry-point.md)
 - [文字セットの指定](specifying-a-character-set.md)
 - [プラットフォーム呼び出しの例](platform-invoke-examples.md)
-- [プラットフォーム呼び出しのセキュリティに関する考慮事項](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
+- [プラットフォーム呼び出しのセキュリティに関する考慮事項](/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
 - [DLL 内の関数の識別](identifying-functions-in-dlls.md)
 - [DLL 関数を保持するクラスの作成](creating-a-class-to-hold-dll-functions.md)
 - [DLL 関数の呼び出し](calling-a-dll-function.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 0aea4c21b5ea34cb0e8d944d37c879e918d6b27e
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 1e559488a3260fafe6c211ff47226a258fc1289a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800593"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557698"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>方法: ADO.NET Entity Framework データ ソースを使用してデータ サービスを作成する (WCF Data Services)
 
@@ -45,7 +45,7 @@ Entity Framework は、Visual Studio プロジェクトの外部に Entity Frame
 
 9. **[完了]** をクリックしてウィザードを終了します。
 
-     特定のデータベースに基づく既定のデータ モデルが作成されます。 Entity Framework では、データ モデルをカスタマイズできます。 詳しくは、「[Entity Data Model ツールのタスク](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100))」をご覧ください。
+     特定のデータベースに基づく既定のデータ モデルが作成されます。 Entity Framework では、データ モデルをカスタマイズできます。 詳しくは、「[Entity Data Model ツールのタスク](/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100))」をご覧ください。
 
 ## <a name="to-create-the-data-service-by-using-the-new-data-model"></a>新しいデータ モデルを使用してデータ サービスを作成するには
 

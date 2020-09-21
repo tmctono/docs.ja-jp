@@ -3,18 +3,18 @@ title: LINQ と文字列 (C#)
 description: LINQ によって、文字列やそのコレクションのクエリを実行したり、変換したりすることができます。 LINQ クエリは、C# の文字列関数や正規表現と組み合わせることができます。
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: c515a0c56ad6473f93c6339540e4ed0245bb5bd2
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 0500d821335659fa29dd4809513f38dac0a8b193
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165609"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556721"
 ---
 # <a name="linq-and-strings-c"></a>LINQ と文字列 (C#)
 
 文字列やそのコレクションは、LINQ を使って照会したり変換したりすることができます。 特に、テキスト ファイル内の半構造化されたデータでその利便性が発揮されます。 LINQ クエリは、従来の文字列関数や正規表現と組み合わせることができます。 たとえば、<xref:System.String.Split%2A?displayProperty=nameWithType> または <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> メソッドを使用して、文字列の配列を作成し、その後で LINQ を使用してクエリを実行したり変更したりすることができます。 LINQ クエリの `where` 句で <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> メソッドを使用できます。 LINQ を使用して、正規表現によって返される <xref:System.Text.RegularExpressions.MatchCollection> の結果に対してクエリを実行したり変更したりすることができます。
 
-このセクションで説明する手法を使えば、半構造化されたテキスト データを XML に変換することもできます。 詳細については、「[CSV ファイルから XML を生成する方法](how-to-generate-xml-from-csv-files.md)」を参照してください。
+このセクションで説明する手法を使えば、半構造化されたテキスト データを XML に変換することもできます。 詳細については、「[CSV ファイルから XML を生成する方法](../../../../standard/linq/generate-xml-csv-files.md)」を参照してください。
 
 このセクションの例は、次の 2 つのカテゴリに分かれています。
 
@@ -76,4 +76,4 @@ ms.locfileid: "87165609"
 ## <a name="see-also"></a>関連項目
 
 - [統合言語クエリ (LINQ) (C#)](index.md)
-- [CSV ファイルから XML を生成する方法](how-to-generate-xml-from-csv-files.md)
+- [CSV ファイルから XML を生成する方法](../../../../standard/linq/generate-xml-csv-files.md)

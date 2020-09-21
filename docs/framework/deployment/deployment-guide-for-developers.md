@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 47946121334fe45132a7469894f30081045e3a68
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 5b9d22062d273404c7451beb44e56d3fa5c4aa1d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558830"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558746"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 配置ガイド (開発者向け)
 このトピックでは、.NET Framework 4.5 から [!INCLUDE[net_current](../../../includes/net-current-version.md)] までの任意のバージョンの .NET Framework を、それぞれのアプリと共にインストールする開発者向けの情報を提供します。
@@ -43,9 +43,9 @@ ms.locfileid: "88558830"
 
 - .NET Framework 4.5 以降では、ユーザーはセットアップ中に、実行されている .NET Framework アプリケーションの一覧を表示し、簡単に終了できます。 これにより、.NET Framework のインストールによるシステムの再起動を回避できます。 「 [システム再起動の削減](reducing-system-restarts.md)」を参照してください。
 
-- .NET Framework 4.5 以降のバージョンをアンインストールすると、前に存在していた .NET Framework 4 ファイルも削除されます。 .NET Framework 4 に戻る場合は、そのバージョンとすべての更新プログラムを再インストールする必要があります。 「[.NET Framework 4 のインストール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))」を参照してください。
+- .NET Framework 4.5 以降のバージョンをアンインストールすると、前に存在していた .NET Framework 4 ファイルも削除されます。 .NET Framework 4 に戻る場合は、そのバージョンとすべての更新プログラムを再インストールする必要があります。 「[.NET Framework 4 のインストール](/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))」を参照してください。
 
-- .NET Framework 4.5 再頒布可能パッケージは、2012 年 10 月 9 に更新されています。この更新により、Microsoft によって生成および署名されたファイルへのデジタル署名が途中で有効期限切れになるという、デジタル証明書の不適切なタイムスタンプに関連する問題が解決しました。 2012 年 8 月 16 日付けの .NET Framework 4.5 再頒布可能パッケージを以前にインストールしていた場合は、[.NET Framework ダウンロード ページ](https://dotnet.microsoft.com/download/dotnet-framework/net45)から最新の再頒布可能パッケージを入手して更新することをお勧めします。 この問題について詳しくは、「 [マイクロソフト セキュリティ アドバイザリ (2749655)](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655)」をご覧ください。
+- .NET Framework 4.5 再頒布可能パッケージは、2012 年 10 月 9 に更新されています。この更新により、Microsoft によって生成および署名されたファイルへのデジタル署名が途中で有効期限切れになるという、デジタル証明書の不適切なタイムスタンプに関連する問題が解決しました。 2012 年 8 月 16 日付けの .NET Framework 4.5 再頒布可能パッケージを以前にインストールしていた場合は、[.NET Framework ダウンロード ページ](https://dotnet.microsoft.com/download/dotnet-framework/net45)から最新の再頒布可能パッケージを入手して更新することをお勧めします。 この問題について詳しくは、「 [マイクロソフト セキュリティ アドバイザリ (2749655)](/security-updates/SecurityAdvisories/2012/2749655)」をご覧ください。
 
 システム管理者が .NET Framework とそのシステムの依存関係をネットワーク経由で配置する方法については、[管理者向け配置ガイド](guide-for-administrators.md)に関するページを参照してください。
 
@@ -345,11 +345,11 @@ Windows 8 以降、コントロール パネルの **[Windows の機能の有効
 |オプション|説明|
 |------------|-----------------|
 |**/CEIPConsent**|既定の動作を上書きし、今後の配置操作を改良するための匿名のフィードバックを Microsoft に送信します。 このオプションは、セットアップ プログラムで同意メッセージが表示され、ユーザーが匿名のフィードバックを Microsoft に送信することを許可した場合のみ使用できます。|
-|**/chainingpackage** `packageName`|チェーンを行っている実行可能ファイルの名前を指定します。 この情報は、今後の配置操作を改良するための匿名のフィードバックとして Microsoft に送信されます。<br /><br /> パッケージ名にスペースが含まれている場合は、区切り記号として二重引用符を使用します (例: **/chainingpackage "Lucerne Publishing"** )。 チェーン パッケージの例については、「[インストール パッケージから進行状況の情報を取得する](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))」をご覧ください。|
+|**/chainingpackage** `packageName`|チェーンを行っている実行可能ファイルの名前を指定します。 この情報は、今後の配置操作を改良するための匿名のフィードバックとして Microsoft に送信されます。<br /><br /> パッケージ名にスペースが含まれている場合は、区切り記号として二重引用符を使用します (例: **/chainingpackage "Lucerne Publishing"** )。 チェーン パッケージの例については、「[インストール パッケージから進行状況の情報を取得する](/previous-versions/cc825975(v=vs.100))」をご覧ください。|
 |**/LCID**  `LCID`<br /><br /> `LCID` はロケール識別子を指定します (「 [サポートされる言語](#supported-languages)」を参照してください)。|`LCID` によって指定された言語パックをインストールし、クワイエット モードが設定されていない限り表示される UI をその言語で表示します。<br /><br /> Web インストーラーでは、このオプションは、Web から言語パッケージをチェーンしてインストールします。 **注:** このオプションは Web インストーラーだけに使用します。|
 |**/log** `file` &#124; `folder`|ログ ファイルの場所を指定します。 既定ではプロセスの一時フォルダーになっており、既定のファイル名はパッケージに基づきます。 ファイル拡張子が .txt の場合、テキスト ログが生成されます。 他の拡張子を指定するか、拡張子がないと、HTML ログが作成されます。|
 |**/msioptions**|.msi と .msp の項目に渡されるオプションを指定します。例: `/msioptions "PROPERTY1='Value'"`|
-|**/norestart**|セットアップ プログラムが自動的に再起動しないようにします。 このオプションを使用する場合、チェーン アプリでリターン コードをキャプチャし、再起動を処理する必要があります (「[インストール パッケージから進行状況の情報を取得する](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))」をご覧ください)。|
+|**/norestart**|セットアップ プログラムが自動的に再起動しないようにします。 このオプションを使用する場合、チェーン アプリでリターン コードをキャプチャし、再起動を処理する必要があります (「[インストール パッケージから進行状況の情報を取得する](/previous-versions/cc825975(v=vs.100))」をご覧ください)。|
 |**/passive**|受動モードを設定します。 インストールが進行中であることを示す進行状況バーを表示しますが、ユーザーに対してプロンプトやエラー メッセージは表示しません。 このモードでは、セットアップ プログラムによってチェーンされたときに、チェーン パッケージが [リターン コード](#return-codes)を処理する必要があります。|
 |**/pipe**|チェーン パッケージが進行状況を取得できるように通信チャネルを作成します。|
 |**/promptrestart**|受動モードのみ、セットアップ プログラムの再起動が必要な場合は、ユーザーに対してメッセージが表示されます。 このオプションでは、再起動が必要な場合はユーザーの操作を必要とします。|

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - 64-bit applications [C++]
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
-ms.openlocfilehash: 4589d7a070a477dcb229fbaea686f6c6ff7d7e08
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 49feb664531db4955a99324851aef5b49032be71
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84989982"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555511"
 ---
 # <a name="64-bit-applications"></a>64 ビット アプリケーション
 アプリケーションをコンパイルするときに、Windows 64 ビット オペレーティング システム上で、ネイティブ アプリケーションとして実行するか、WOW64 (Windows 64 ビット上の Windows 32 ビット) の制御下で実行するかを指定できます。 WOW64 は互換環境であり、32 ビット アプリケーションを 64 ビット オペレーティング システム上で実行できるようにします。 WOW64 は、Windows オペレーティング システムのすべての 64 ビット バージョンに含まれています。  
@@ -37,7 +37,7 @@ ms.locfileid: "84989982"
   
 - `IntPtr` を `Int32` にキャストするコード  
   
- 32 ビット アプリケーションを 64 ビットの CLR に移行して実行する方法の詳細については、「[32 ビット マネージド コードを 64 ビットに移行する](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973190(v=msdn.10))」を参照してください。  
+ 32 ビット アプリケーションを 64 ビットの CLR に移行して実行する方法の詳細については、「[32 ビット マネージド コードを 64 ビットに移行する](/previous-versions/dotnet/articles/ms973190(v=msdn.10))」を参照してください。  
   
 ## <a name="general-64-bit-programming-information"></a>一般的な 64 ビット プログラミングについて  
  64 ビット プログラミングの一般的な問題については、次のドキュメントを参照してください。  

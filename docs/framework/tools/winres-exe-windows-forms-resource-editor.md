@@ -12,12 +12,12 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-ms.openlocfilehash: 8393eb44246ed1bbc0e4e6acc84ad7bd57041ec0
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 35d1324d5ea7a72ffd5ea594530d1312e717cd7c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87516906"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543226"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows Resource Localization Editor)
 
@@ -52,7 +52,7 @@ Windows フォーム プロジェクトのフォームの UI 要素の状態は�
 
 - カルチャ リソース ファイルを別のカルチャのリソース ファイルとして保存できます。 たとえば、英語 (U.S.) のリソース ファイルを、ポーランド語のリソース ファイルとして保存できます。 通常は、新しいファイルを引き続き編集して、新しいカルチャに対応させます。
 
-「[ローカリゼーション用リソースの階層編成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110))」または「[ローカリゼーション用リソースの階層編成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120))」も参照してください。
+「[ローカリゼーション用リソースの階層編成](/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110))」または「[ローカリゼーション用リソースの階層編成](/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120))」も参照してください。
 
 Winres.exe では、対応する .resources ファイルに .resx ファイルを変換できません。この場合は Resgen.exe ツールを使用してください。 Resgen.exe について詳しくは、「[Resgen.exe (リソース ファイル ジェネレーター)](resgen-exe-resource-file-generator.md)」を参照してください。
 

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 2d4c513b7a4b0e111f2b7e7384c6ee4970d5665f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2be58251c767c937e817edf1ba19309f0c62ac33
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287000"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554737"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework データ プロバイダー
 .NET Framework データ プロバイダーは、データベースに接続して、コマンドを実行したり、結果を取得したりする目的で使用されます。 その結果は、直接処理されるか、必要に応じてユーザーに公開されるように <xref:System.Data.DataSet> に格納されるか、取得したデータセットを複数のソースからのデータと組み合わせるか、または、層間でリモート処理されます。 軽量な .NET Framework データ プロバイダーでは、データ ソースとコード間に形成される層が最小限で済むため、機能を犠牲にすることなく、パフォーマンスを高めることができます。  
@@ -25,7 +25,7 @@ ms.locfileid: "84287000"
 |.NET Framework Data Provider for ODBC|ODBC を使用して公開されるデータ ソースに対応。 <xref:System.Data.Odbc> 名前空間を使用してください。|  
 |.NET Framework Oracle 用データ プロバイダー|Oracle データ ソースに対応。 .NET Framework Data Provider for Oracle では、Oracle クライアント ソフトウェア バージョン 8.1.7 以降がサポートされており、<xref:System.Data.OracleClient> 名前空間が使用されます。|  
 |EntityClient プロバイダー|エンティティ データ モデル (EDM) アプリケーションにデータ アクセスを提供します。 <xref:System.Data.EntityClient> 名前空間を使用してください。|  
-|.NET Framework Data Provider for SQL Server Compact 4.0。|Microsoft SQL Server Compact 4.0 へのデータ アクセスが提供されます。 [System.Data.SqlServerCe](https://docs.microsoft.com/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) 名前空間を使用します。|  
+|.NET Framework Data Provider for SQL Server Compact 4.0。|Microsoft SQL Server Compact 4.0 へのデータ アクセスが提供されます。 [System.Data.SqlServerCe](/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) 名前空間を使用します。|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>.NET Framework Data Providers の核となるオブジェクト  
  .NET Framework データ プロバイダーを構成する核となる 4 つのオブジェクトの概要を、次の表に示します。  

@@ -4,16 +4,16 @@ description: 分析のために使用状況の情報を収集する ML.NET CLI �
 ms.topic: conceptual
 ms.date: 06/03/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 833ee2ae54cf3a52adaf070837a33e00267d25dc
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 753361abdac5a2e979873003f419232a069b2015
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599840"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546433"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLI によるテレメトリ収集
 
-[ML.NET CLI](https://aka.ms/mlnet-cli) には、Microsoft が利用するために集計している匿名の使用状況データを収集するテレメトリ機能があります。
+[ML.NET CLI](../automate-training-with-cli.md) には、Microsoft が利用するために集計している匿名の使用状況データを収集するテレメトリ機能があります。
 
 ## <a name="how-microsoft-uses-the-data"></a>Microsoft によるデータの使用方法
 

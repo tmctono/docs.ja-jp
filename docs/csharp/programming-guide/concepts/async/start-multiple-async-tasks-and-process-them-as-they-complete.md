@@ -3,12 +3,12 @@ title: 完了時の非同期タスクの処理
 description: この例では、C# で Task.WhenAny を使用して複数のタスクを開始し、その結果を開始の順番で処理するのではなく、完了時に処理する方法を示します。
 ms.date: 08/19/2020
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: c2fe66e865a2c88f4cae50b816f9326614fcbb89
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 520953eaf851dc82440e39b348aa4b246255e126
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812030"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557308"
 ---
 # <a name="process-asynchronous-tasks-as-they-complete-c"></a>完了時の非同期タスクの処理 (C#)
 
@@ -117,7 +117,7 @@ IEnumerable<Task<int>> downloadTasksQuery =
     select ProcessUrlAsync(url, s_client);
 ```
 
-LINQ での[遅延実行](../linq/deferred-execution-example.md)のため、各タスクを開始するには <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> を呼び出します。
+LINQ での[遅延実行](../../../../standard/linq/deferred-execution-example.md)のため、各タスクを開始するには <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> を呼び出します。
 
 ```csharp
 List<Task<int>> downloadTasks = downloadTasksQuery.ToList();

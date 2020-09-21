@@ -3,12 +3,12 @@ title: ADO.NET Entity Framework での接続文字列
 description: Entity Framework での接続文字列について説明します。これには、ADO.NET データ プロバイダーに接続するための情報と、モデル ファイルとマッピング ファイルに関する情報が含まれています。
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 2ae25f5881c033a84d65f5b0b4ed14b4866dbcb3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 36b7724bc8dbb8f427f4bbf748b7b7801adea8db
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286871"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542758"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>ADO.NET Entity Framework での接続文字列
 
@@ -16,7 +16,7 @@ ms.locfileid: "84286871"
 
 接続文字列は、モデル メタデータおよびマッピング メタデータにアクセスしてデータ ソースに接続する際に EntityClient プロバイダーによって使用されます。 接続文字列へのアクセスや接続文字列の設定は、<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> の <xref:System.Data.EntityClient.EntityConnection> プロパティを使用して行います。 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> クラスを使用すると、接続文字列内のパラメーターの構築やこれらへのアクセスをプログラムで行えます。 詳細については、[EntityConnection の接続文字列を作成する](how-to-build-an-entityconnection-connection-string.md)」を参照してください。
 
-[Entity Data Model ツール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))では、アプリケーションの構成ファイルに保存される接続文字列が生成されます。 <xref:System.Data.Objects.ObjectContext> は、オブジェクト クエリの作成時に自動的にこの接続情報を取得します。 <xref:System.Data.EntityClient.EntityConnection> インスタンスで使用される <xref:System.Data.Objects.ObjectContext> には、<xref:System.Data.Objects.ObjectContext.Connection%2A> プロパティからアクセスできます。 詳しくは、「[接続とトランザクションの管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))」をご覧ください。
+[Entity Data Model ツール](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))では、アプリケーションの構成ファイルに保存される接続文字列が生成されます。 <xref:System.Data.Objects.ObjectContext> は、オブジェクト クエリの作成時に自動的にこの接続情報を取得します。 <xref:System.Data.EntityClient.EntityConnection> インスタンスで使用される <xref:System.Data.Objects.ObjectContext> には、<xref:System.Data.Objects.ObjectContext.Connection%2A> プロパティからアクセスできます。 詳しくは、「[接続とトランザクションの管理](/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))」をご覧ください。
 
 ## <a name="connection-string-syntax"></a>接続文字列の構文
 
@@ -112,5 +112,5 @@ Metadata=.\
 
 - [データ プロバイダーの操作](working-with-data-providers.md)
 - [配置に関する注意事項](deployment-considerations.md)
-- [接続とトランザクションの管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
+- [接続とトランザクションの管理](/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
 - [接続文字列](../connection-strings.md)

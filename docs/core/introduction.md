@@ -4,16 +4,16 @@ description: .NET Core は、Windows、Linux、macOS アプリを作成するた
 author: richlander
 ms.date: 03/26/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: b28ad965e54680e2e1134c389266741ade28084f
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: 350fd50bee3403a05d1c19c9a692535613b17498
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226583"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538277"
 ---
 # <a name="introduction-to-net-core"></a>.NET Core の概要
 
-[.NET Core](about.md) は、[オープンソース](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)の汎用開発プラットフォームです。 複数のプログラミング言語を使用して、x64、x86、ARM32、および ARM64 の各プロセッサ用に Windows、macOS、および Linux 用 .NET Core アプリを作成できます。 フレームワークと API は、[クラウド](/aspnet/core/)、[IoT](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0)、[クライアント UI](../desktop-wpf/overview/index.md)、[機械学習](/dotnet/machine-learning/)用に提供されています。
+[.NET Core](about.md) は、[オープンソース](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)の汎用開発プラットフォームです。 複数のプログラミング言語を使用して、x64、x86、ARM32、および ARM64 の各プロセッサ用に Windows、macOS、および Linux 用 .NET Core アプリを作成できます。 フレームワークと API は、[クラウド](/aspnet/core/)、[IoT](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0)、[クライアント UI](../desktop-wpf/overview/index.md)、[機械学習](../machine-learning/index.yml)用に提供されています。
 
 [.NET Core SDK をダウンロード](https://dotnet.microsoft.com/download)して、お使いのマシンで .NET Core を試してください。 最新バージョンは [.NET Core 3.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/) です。
 
@@ -22,7 +22,7 @@ ms.locfileid: "86226583"
 .NET Core は、次の方法で入手できます。
 
 * [Windows および macOS 用のインストーラー](https://dotnet.microsoft.com/download)
-* [Linux パッケージ](https://docs.microsoft.com/dotnet/core/install/linux-package-managers)
+* [Linux パッケージ](./install/linux.md)
 * [Docker コンテナー](https://hub.docker.com/_/microsoft-dotnet-core/)
 * [zip と tar ボール](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 * [スクリプトのインストール](https://dotnet.microsoft.com/download/dotnet-core/scripts)
