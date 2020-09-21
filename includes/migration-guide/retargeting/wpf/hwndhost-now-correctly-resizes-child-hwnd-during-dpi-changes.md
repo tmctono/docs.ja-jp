@@ -1,25 +1,25 @@
 ---
-ms.openlocfilehash: 3d1dc8dec18212afd815aa3de7fc82c8a1f680dc
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 77e231f8ef1dde8a263b8622311099a4a404062d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85616275"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606218"
 ---
-### <a name="hwndhost-now-correctly-resizes-child-hwnd-during-dpi-changes"></a><span data-ttu-id="21bb0-101">HwndHost で DPI 変更中に子の HWND のサイズが正しく変更されるようになった</span><span class="sxs-lookup"><span data-stu-id="21bb0-101">HwndHost now correctly resizes child-HWND during DPI changes</span></span>
+### <a name="hwndhost-now-correctly-resizes-child-hwnd-during-dpi-changes"></a><span data-ttu-id="0960d-101">HwndHost で DPI 変更中に子の HWND のサイズが正しく変更されるようになった</span><span class="sxs-lookup"><span data-stu-id="0960d-101">HwndHost now correctly resizes child-HWND during DPI changes</span></span>
 
-#### <a name="details"></a><span data-ttu-id="21bb0-102">説明</span><span class="sxs-lookup"><span data-stu-id="21bb0-102">Details</span></span>
+#### <a name="details"></a><span data-ttu-id="0960d-102">説明</span><span class="sxs-lookup"><span data-stu-id="0960d-102">Details</span></span>
 
-<span data-ttu-id="21bb0-103">.NET Framework 4.7.2 以前のバージョンでは、WPF がモニターごとの認識モードで実行されていた場合、モニター間でアプリケーションを移動するときなど、DPI の変更後に、<xref:System.Windows.Interop.HwndHost> 内でホストされていたコントロールのサイズが正しく変更されませんでした。</span><span class="sxs-lookup"><span data-stu-id="21bb0-103">In .NET Framework 4.7.2 and earlier versions, when WPF was run in Per-Monitor Aware mode, controls hosted within <xref:System.Windows.Interop.HwndHost> were not sized correctly after DPI changes, such as when moving applications from one monitor to another.</span></span> <span data-ttu-id="21bb0-104">この修正により、確実に、ホストされるコントロールのサイズが適切に変更されるようになります。</span><span class="sxs-lookup"><span data-stu-id="21bb0-104">This fix ensures that hosted controls are sized appropriately.</span></span>
+<span data-ttu-id="0960d-103">.NET Framework 4.7.2 以前のバージョンでは、WPF がモニターごとの認識モードで実行されていた場合、モニター間でアプリケーションを移動するときなど、DPI の変更後に、<xref:System.Windows.Interop.HwndHost> 内でホストされていたコントロールのサイズが正しく変更されませんでした。</span><span class="sxs-lookup"><span data-stu-id="0960d-103">In .NET Framework 4.7.2 and earlier versions, when WPF was run in Per-Monitor Aware mode, controls hosted within <xref:System.Windows.Interop.HwndHost> were not sized correctly after DPI changes, such as when moving applications from one monitor to another.</span></span> <span data-ttu-id="0960d-104">この修正により、確実に、ホストされるコントロールのサイズが適切に変更されるようになります。</span><span class="sxs-lookup"><span data-stu-id="0960d-104">This fix ensures that hosted controls are sized appropriately.</span></span>
 
-#### <a name="suggestion"></a><span data-ttu-id="21bb0-105">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="21bb0-105">Suggestion</span></span>
+#### <a name="suggestion"></a><span data-ttu-id="0960d-105">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="0960d-105">Suggestion</span></span>
 
-<span data-ttu-id="21bb0-106">アプリケーションでこれらの変更を利用するには、.NET Framework 4.7.2 以降で実行する必要があり、以下の例のように、アプリ構成ファイルの `<runtime>` セクションの次の [AppContext スイッチ](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element)を `false` に設定し、この動作を選択する必要があります。</span><span class="sxs-lookup"><span data-stu-id="21bb0-106">In order for the application to benefit from these changes, it must run on the .NET Framework 4.7.2 or later, and it must opt-in to this behavior by setting the following [AppContext Switch](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element) in the `<runtime>` section of the app config file to `false`, as the following example shows.</span></span>
+<span data-ttu-id="0960d-106">アプリケーションでこれらの変更を利用するには、.NET Framework 4.7.2 以降で実行する必要があり、以下の例のように、アプリ構成ファイルの `<runtime>` セクションの次の [AppContext スイッチ](../../../../docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)を `false` に設定し、この動作を選択する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0960d-106">In order for the application to benefit from these changes, it must run on the .NET Framework 4.7.2 or later, and it must opt-in to this behavior by setting the following [AppContext Switch](../../../../docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) in the `<runtime>` section of the app config file to `false`, as the following example shows.</span></span>
 
 <pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#13;&#10;&lt;configuration&gt;&#13;&#10;&lt;startup&gt;&#13;&#10;&lt;supportedRuntime version=&quot;v4.0&quot; sku=&quot;.NETFramework,Version=v4.7&quot;/&gt;&#13;&#10;&lt;/startup&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;!-- AppContextSwitchOverrides value attribute is in the form of &#39;key1=true/false;key2=true/false  --&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.DoNotUsePresentationDpiCapabilityTier2OrGreater=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
 
-| <span data-ttu-id="21bb0-107">名前</span><span class="sxs-lookup"><span data-stu-id="21bb0-107">Name</span></span>    | <span data-ttu-id="21bb0-108">値</span><span class="sxs-lookup"><span data-stu-id="21bb0-108">Value</span></span>       |
+| <span data-ttu-id="0960d-107">名前</span><span class="sxs-lookup"><span data-stu-id="0960d-107">Name</span></span>    | <span data-ttu-id="0960d-108">値</span><span class="sxs-lookup"><span data-stu-id="0960d-108">Value</span></span>       |
 |:--------|:------------|
-| <span data-ttu-id="21bb0-109">スコープ</span><span class="sxs-lookup"><span data-stu-id="21bb0-109">Scope</span></span>   | <span data-ttu-id="21bb0-110">Major</span><span class="sxs-lookup"><span data-stu-id="21bb0-110">Major</span></span>       |
-| <span data-ttu-id="21bb0-111">バージョン</span><span class="sxs-lookup"><span data-stu-id="21bb0-111">Version</span></span> | <span data-ttu-id="21bb0-112">4.8</span><span class="sxs-lookup"><span data-stu-id="21bb0-112">4.8</span></span>         |
-| <span data-ttu-id="21bb0-113">種類</span><span class="sxs-lookup"><span data-stu-id="21bb0-113">Type</span></span>    | <span data-ttu-id="21bb0-114">再ターゲット中</span><span class="sxs-lookup"><span data-stu-id="21bb0-114">Retargeting</span></span> |
+| <span data-ttu-id="0960d-109">スコープ</span><span class="sxs-lookup"><span data-stu-id="0960d-109">Scope</span></span>   | <span data-ttu-id="0960d-110">Major</span><span class="sxs-lookup"><span data-stu-id="0960d-110">Major</span></span>       |
+| <span data-ttu-id="0960d-111">バージョン</span><span class="sxs-lookup"><span data-stu-id="0960d-111">Version</span></span> | <span data-ttu-id="0960d-112">4.8</span><span class="sxs-lookup"><span data-stu-id="0960d-112">4.8</span></span>         |
+| <span data-ttu-id="0960d-113">種類</span><span class="sxs-lookup"><span data-stu-id="0960d-113">Type</span></span>    | <span data-ttu-id="0960d-114">再ターゲット中</span><span class="sxs-lookup"><span data-stu-id="0960d-114">Retargeting</span></span> |

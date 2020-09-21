@@ -3,21 +3,21 @@ title: 区切りファイルのフィールドの順序を変更する方法 (LI
 description: C# の LINQ で .csv ファイルのフィールドを再配置する方法について学習します。 この例では、列の順序を変更し、列にマージして、列の値で行を並べ替えます。
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
-ms.openlocfilehash: 3ebc56b418d2732a296896a19d770136a56e2fbb
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: a3bbc2690ded24629b313b24ee7a604bcacce850
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103409"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547298"
 ---
-# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a><span data-ttu-id="31ae7-104">区切りファイルのフィールドの順序を変更する方法 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="31ae7-104">How to reorder the fields of a delimited file (LINQ) (C#)</span></span>
-<span data-ttu-id="31ae7-105">コンマ区切り (CSV) ファイルは、テキスト ファイルです。多くの場合、行と列で表されるスプレッドシート データや他の表形式データの格納に使用されます。</span><span class="sxs-lookup"><span data-stu-id="31ae7-105">A comma-separated value (CSV) file is a text file that is often used to store spreadsheet data or other tabular data that is represented by rows and columns.</span></span> <span data-ttu-id="31ae7-106"><xref:System.String.Split%2A> メソッドを使用してフィールドを区切ると、LINQ を使用した CSV ファイルのクエリと操作がとても簡単になります。</span><span class="sxs-lookup"><span data-stu-id="31ae7-106">By using the <xref:System.String.Split%2A> method to separate the fields, it is very easy to query and manipulate CSV files by using LINQ.</span></span> <span data-ttu-id="31ae7-107">この手法は、CSV ファイルに限らず、行が構造化されているテキストの一部を並べ替えるときに利用できます。</span><span class="sxs-lookup"><span data-stu-id="31ae7-107">In fact, the same technique can be used to reorder the parts of any structured line of text; it is not limited to CSV files.</span></span>  
+# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a><span data-ttu-id="b0ded-104">区切りファイルのフィールドの順序を変更する方法 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="b0ded-104">How to reorder the fields of a delimited file (LINQ) (C#)</span></span>
+<span data-ttu-id="b0ded-105">コンマ区切り (CSV) ファイルは、テキスト ファイルです。多くの場合、行と列で表されるスプレッドシート データや他の表形式データの格納に使用されます。</span><span class="sxs-lookup"><span data-stu-id="b0ded-105">A comma-separated value (CSV) file is a text file that is often used to store spreadsheet data or other tabular data that is represented by rows and columns.</span></span> <span data-ttu-id="b0ded-106"><xref:System.String.Split%2A> メソッドを使用してフィールドを区切ると、LINQ を使用した CSV ファイルのクエリと操作がとても簡単になります。</span><span class="sxs-lookup"><span data-stu-id="b0ded-106">By using the <xref:System.String.Split%2A> method to separate the fields, it is very easy to query and manipulate CSV files by using LINQ.</span></span> <span data-ttu-id="b0ded-107">この手法は、CSV ファイルに限らず、行が構造化されているテキストの一部を並べ替えるときに利用できます。</span><span class="sxs-lookup"><span data-stu-id="b0ded-107">In fact, the same technique can be used to reorder the parts of any structured line of text; it is not limited to CSV files.</span></span>  
   
- <span data-ttu-id="31ae7-108">次の例では、学生の "名"、"姓"、"ID" を表す 3 つの列があります。</span><span class="sxs-lookup"><span data-stu-id="31ae7-108">In the following example, assume that the three columns represent students' "last name," "first name", and "ID."</span></span> <span data-ttu-id="31ae7-109">これらのフィールドは、学生の姓に基づいてアルファベット順に並べられています。</span><span class="sxs-lookup"><span data-stu-id="31ae7-109">The fields are in alphabetical order based on the students' last names.</span></span> <span data-ttu-id="31ae7-110">クエリによって、ID 列が最初に表示され、学生の姓と名を結合して 2 列目に表示されるように列順を変えます。</span><span class="sxs-lookup"><span data-stu-id="31ae7-110">The query produces a new sequence in which the ID column appears first, followed by a second column that combines the student's first name and last name.</span></span> <span data-ttu-id="31ae7-111">行は ID フィールドの順に並べ替えられます。</span><span class="sxs-lookup"><span data-stu-id="31ae7-111">The lines are reordered according to the ID field.</span></span> <span data-ttu-id="31ae7-112">結果は新しいファイルに保存され、元のデータは変更されません。</span><span class="sxs-lookup"><span data-stu-id="31ae7-112">The results are saved into a new file and the original data is not modified.</span></span>  
+ <span data-ttu-id="b0ded-108">次の例では、学生の "名"、"姓"、"ID" を表す 3 つの列があります。</span><span class="sxs-lookup"><span data-stu-id="b0ded-108">In the following example, assume that the three columns represent students' "last name," "first name", and "ID."</span></span> <span data-ttu-id="b0ded-109">これらのフィールドは、学生の姓に基づいてアルファベット順に並べられています。</span><span class="sxs-lookup"><span data-stu-id="b0ded-109">The fields are in alphabetical order based on the students' last names.</span></span> <span data-ttu-id="b0ded-110">クエリによって、ID 列が最初に表示され、学生の姓と名を結合して 2 列目に表示されるように列順を変えます。</span><span class="sxs-lookup"><span data-stu-id="b0ded-110">The query produces a new sequence in which the ID column appears first, followed by a second column that combines the student's first name and last name.</span></span> <span data-ttu-id="b0ded-111">行は ID フィールドの順に並べ替えられます。</span><span class="sxs-lookup"><span data-stu-id="b0ded-111">The lines are reordered according to the ID field.</span></span> <span data-ttu-id="b0ded-112">結果は新しいファイルに保存され、元のデータは変更されません。</span><span class="sxs-lookup"><span data-stu-id="b0ded-112">The results are saved into a new file and the original data is not modified.</span></span>  
   
-### <a name="to-create-the-data-file"></a><span data-ttu-id="31ae7-113">データ ファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="31ae7-113">To create the data file</span></span>  
+### <a name="to-create-the-data-file"></a><span data-ttu-id="b0ded-113">データ ファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="b0ded-113">To create the data file</span></span>  
   
-1. <span data-ttu-id="31ae7-114">次の行を、spreadsheet1.csv というプレーン テキスト ファイルにコピーします。</span><span class="sxs-lookup"><span data-stu-id="31ae7-114">Copy the following lines into a plain text file that is named spreadsheet1.csv.</span></span> <span data-ttu-id="31ae7-115">プロジェクト フォルダーにファイルを保存します。</span><span class="sxs-lookup"><span data-stu-id="31ae7-115">Save the file in your project folder.</span></span>  
+1. <span data-ttu-id="b0ded-114">次の行を、spreadsheet1.csv というプレーン テキスト ファイルにコピーします。</span><span class="sxs-lookup"><span data-stu-id="b0ded-114">Copy the following lines into a plain text file that is named spreadsheet1.csv.</span></span> <span data-ttu-id="b0ded-115">プロジェクト フォルダーにファイルを保存します。</span><span class="sxs-lookup"><span data-stu-id="b0ded-115">Save the file in your project folder.</span></span>  
   
     ```csv  
     Adams,Terry,120  
@@ -34,7 +34,7 @@ ms.locfileid: "87103409"
     Zabokritski,Eugene,121  
     ```  
   
-## <a name="example"></a><span data-ttu-id="31ae7-116">例</span><span class="sxs-lookup"><span data-stu-id="31ae7-116">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b0ded-116">例</span><span class="sxs-lookup"><span data-stu-id="b0ded-116">Example</span></span>  
   
 ```csharp  
 class CSVFiles  
@@ -76,11 +76,11 @@ class CSVFiles
  */  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="31ae7-117">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="31ae7-117">Compiling the Code</span></span>  
-<span data-ttu-id="31ae7-118">System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="31ae7-118">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="b0ded-117">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="b0ded-117">Compiling the Code</span></span>  
+<span data-ttu-id="b0ded-118">System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="b0ded-118">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="31ae7-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="31ae7-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b0ded-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="b0ded-119">See also</span></span>
 
-- [<span data-ttu-id="31ae7-120">LINQ と文字列 (C#)</span><span class="sxs-lookup"><span data-stu-id="31ae7-120">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
-- [<span data-ttu-id="31ae7-121">LINQ とファイル ディレクトリ (C#)</span><span class="sxs-lookup"><span data-stu-id="31ae7-121">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
-- [<span data-ttu-id="31ae7-122">CSV ファイルから XML を生成する方法 (C#)</span><span class="sxs-lookup"><span data-stu-id="31ae7-122">How to generate XML from CSV files (C#)</span></span>](./how-to-generate-xml-from-csv-files.md)
+- [<span data-ttu-id="b0ded-120">LINQ と文字列 (C#)</span><span class="sxs-lookup"><span data-stu-id="b0ded-120">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="b0ded-121">LINQ とファイル ディレクトリ (C#)</span><span class="sxs-lookup"><span data-stu-id="b0ded-121">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+- [<span data-ttu-id="b0ded-122">CSV ファイルから XML を生成する方法 (C#)</span><span class="sxs-lookup"><span data-stu-id="b0ded-122">How to generate XML from CSV files (C#)</span></span>](../../../../standard/linq/generate-xml-csv-files.md)
