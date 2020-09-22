@@ -1,33 +1,33 @@
 ---
-title: 使用を開始するF#
-description: プログラミング言語の概要についてはF# 、こちらを参照してください。
-ms.date: 12/08/2018
-ms.openlocfilehash: 2b4baa5c948800389c171a5d9f9cd157a903063e
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
-ms.translationtype: MT
+title: F# の使用を開始する
+description: F# プログラミング言語の使用を開始する方法について確認します。
+ms.date: 09/12/2020
+ms.openlocfilehash: aeaa655e2af52a134dc70298375903c24d251079
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204896"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738789"
 ---
-# <a name="get-started-with-f"></a>F\# を使ってみる
+# <a name="get-started-with-f"></a>F\# の使用を開始する
 
-F# はご自分のマシン、またはオンラインで始めることができます。
+ご利用のコンピューターまたはオンラインで F# の使用を開始することができます。
 
-## <a name="get-started-on-your-machine"></a>コンピューターの使用を開始する
+## <a name="get-started-on-your-machine"></a>コンピューターで使用を開始する
 
-コンピューターに初めてをインストールして使用F#する方法については、複数のガイドがあります。  次の表を参考にして、決定を行うことができます。
+コンピューターに初めて F# をインストールして使用する方法については、複数のガイドがあります。  次の表を使用して、適切な判断を行ってください。
 
-| OS | Visual Studio を優先する | 優先 Visual Studio Code | コマンドラインを優先する |
+| OS | Visual Studio を使用 | Visual Studio Code を使用 | コマンド ラインを使用 |
 | -- |------------------------|--------------------------|-----------------------------|-------------------------|
-| Windows | [Visual Studio を使ってみる](get-started-visual-studio.md) | [Visual Studio Code の使用を開始する](get-started-vscode.md) | [.NET Core CLI を使ってみる](get-started-command-line.md) |
-| macOS | [VS for Mac を使ってみる](get-started-with-visual-studio-for-mac.md) | [Visual Studio Code の使用を開始する](get-started-vscode.md) | [.NET Core CLI を使ってみる](get-started-command-line.md) |
-| Linux | N/A | [Visual Studio Code の使用を開始する](get-started-vscode.md) | [.NET Core CLI を使ってみる](get-started-command-line.md) |
+| Windows | [Visual Studio 入門](get-started-visual-studio.md) | [Visual Studio Code の作業を開始する](get-started-vscode.md) | [.NET Core CLI の概要](get-started-command-line.md) |
+| macOS | [VS for Mac の使用を開始する](get-started-with-visual-studio-for-mac.md) | [Visual Studio Code の作業を開始する](get-started-vscode.md) | [.NET Core CLI の概要](get-started-command-line.md) |
+| Linux | N/A | [Visual Studio Code の作業を開始する](get-started-vscode.md) | [.NET Core CLI の概要](get-started-command-line.md) |
 
-一般に、rest よりも適切な特定の機能はありません。 コンピューターでを使用F#して最適な方法を確認することをお勧めします。
+一般に、他よりも優れた特別なことはありません。 ご利用のコンピューターで F# を使用してあらゆる点を試し、最適な内容を確認することをお勧めします。
 
-## <a name="get-started-online"></a>オンラインで開始する
+## <a name="get-started-online"></a>オンラインで使用を開始する
 
-コンピューターにと .NET をインストールF#しない場合は、ブラウザーでを使用F#することもできます。
+コンピューターに F# および .NET をインストールしない場合は、ブラウザーで F# の使用を開始することもできます。
 
-* [バインダー F#でのの概要](https://mybinder.org/v2/gh/dotnet/try/master?urlpath=lab)は、無料の[バインダー](https://mybinder.org/)サービスを使用してホストされている[jupyter notebook](https://jupyter.org/)です。 サインアップは必要ありません。
-* [FABLE repl](https://fable.io/repl/)は、 [Fable](https://fable.io/)を使用してコードを JavaScript に変換F#する、対話型のブラウザー内 repl です。 多くのサンプルは、お使いのF#ブラウザーで実行されているすべての基本的なビデオゲームを対象としています。
+* [Binder での F# の概要](https://mybinder.org/v2/gh/dotnet/interactive/main?urlpath=lab)は、無料の [Binder](https://mybinder.org/) サービスを介してホストされている [Jupyter ノートブック](https://jupyter.org/)です。 サインアップの必要はありません。
+* [Fable REPL](https://fable.io/repl/) は、[Fable](https://fable.io/) を使用して F# コードを JavaScript に変換する、対話型のブラウザー内 REPL です。 F# の基本から、お使いのブラウザーですべてが実行される完全なビデオ ゲームまでを対象とする、多くのサンプルを確認してください。

@@ -696,11 +696,24 @@ items:
   - name: Microsoft 拡張機能
     items:
       - name: 構成
-        href: /aspnet/core/fundamentals/configuration/
+        items:
+          - name: 概要
+            href: ../core/extensions/configuration.md
+            displayName: 'configuration,config,configuration sources,config sources'
+          - name: 構成プロバイダー
+            href: ../core/extensions/configuration-providers.md
+            displayName: 'configuration providers,config providers'
+          - name: カスタム構成プロバイダーを実装する
+            href: ../core/extensions/custom-configuration-provider.md
+            displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
       - name: 依存関係の挿入
-        href: /aspnet/core/fundamentals/dependency-injection/
+        href: /aspnet/core/fundamentals/dependency-injection
+      - name: 汎用ホスト
+        href: /aspnet/core/fundamentals/host/generic-host
       - name: ログの記録
-        href: /aspnet/core/fundamentals/logging/
+        href: /aspnet/core/fundamentals/logging
+      - name: オプションのパターン
+        href: /aspnet/core/fundamentals/configuration/options
   - name: データ アクセス
     items:
       - name: LINQ
