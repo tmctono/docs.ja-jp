@@ -4,28 +4,28 @@ description: spark-submit と Apache Livy を使用して、.NET for Apache Spar
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 50611b1f62934a446e5b80a8c53698efe23cd1fc
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 560822783b57b2419595cb15efa097591db8d600
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617692"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557165"
 ---
-# <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a><span data-ttu-id="153a6-103">.NET for Apache Spark ジョブを Azure HDInsight に送信する</span><span class="sxs-lookup"><span data-stu-id="153a6-103">Submit a .NET for Apache Spark job to Azure HDInsight</span></span>
+# <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a><span data-ttu-id="c554c-103">.NET for Apache Spark ジョブを Azure HDInsight に送信する</span><span class="sxs-lookup"><span data-stu-id="c554c-103">Submit a .NET for Apache Spark job to Azure HDInsight</span></span>
 
-<span data-ttu-id="153a6-104">.NET for Apache Spark ジョブを HDInsight に展開するには、`spark-submit` と Apache Livy の 2 つの方法があります。</span><span class="sxs-lookup"><span data-stu-id="153a6-104">There are two ways to deploy your .NET for Apache Spark job to HDInsight: `spark-submit` and Apache Livy.</span></span>
+<span data-ttu-id="c554c-104">.NET for Apache Spark ジョブを HDInsight に展開するには、`spark-submit` と Apache Livy の 2 つの方法があります。</span><span class="sxs-lookup"><span data-stu-id="c554c-104">There are two ways to deploy your .NET for Apache Spark job to HDInsight: `spark-submit` and Apache Livy.</span></span>
 
 [!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
-## <a name="deploy-using-spark-submit"></a><span data-ttu-id="153a6-105">spark-submit を使用して展開する</span><span class="sxs-lookup"><span data-stu-id="153a6-105">Deploy using spark-submit</span></span>
+## <a name="deploy-using-spark-submit"></a><span data-ttu-id="c554c-105">spark-submit を使用して展開する</span><span class="sxs-lookup"><span data-stu-id="c554c-105">Deploy using spark-submit</span></span>
 
-<span data-ttu-id="153a6-106">[spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) コマンドを使用して、.NET for Apache Spark ジョブを Azure HDInsight に送信できます。</span><span class="sxs-lookup"><span data-stu-id="153a6-106">You can use the [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) command to submit .NET for Apache Spark jobs to Azure HDInsight.</span></span>
+<span data-ttu-id="c554c-106">[spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) コマンドを使用して、.NET for Apache Spark ジョブを Azure HDInsight に送信できます。</span><span class="sxs-lookup"><span data-stu-id="c554c-106">You can use the [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) command to submit .NET for Apache Spark jobs to Azure HDInsight.</span></span>
 
-1. <span data-ttu-id="153a6-107">Azure portal の HDInsight Spark クラスターに移動し、 **[SSH およびクラスターのログイン]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="153a6-107">Navigate to your HDInsight Spark cluster in Azure portal, and then select **SSH + Cluster login**.</span></span>
+1. <span data-ttu-id="c554c-107">Azure portal の HDInsight Spark クラスターに移動し、 **[SSH およびクラスターのログイン]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="c554c-107">Navigate to your HDInsight Spark cluster in Azure portal, and then select **SSH + Cluster login**.</span></span>
 
-2. <span data-ttu-id="153a6-108">ssh ログイン情報をコピーし、ログインをターミナルに貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="153a6-108">Copy the ssh login information and paste the login into a terminal.</span></span> <span data-ttu-id="153a6-109">クラスターの作成時に設定したパスワードを使用してクラスターにサインインします。</span><span class="sxs-lookup"><span data-stu-id="153a6-109">Sign in to your cluster using the password you set during cluster creation.</span></span> <span data-ttu-id="153a6-110">Ubuntu および Spark のウェルカム メッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="153a6-110">You should see messages welcoming you to Ubuntu and Spark.</span></span>
+2. <span data-ttu-id="c554c-108">ssh ログイン情報をコピーし、ログインをターミナルに貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="c554c-108">Copy the ssh login information and paste the login into a terminal.</span></span> <span data-ttu-id="c554c-109">クラスターの作成時に設定したパスワードを使用してクラスターにサインインします。</span><span class="sxs-lookup"><span data-stu-id="c554c-109">Sign in to your cluster using the password you set during cluster creation.</span></span> <span data-ttu-id="c554c-110">Ubuntu および Spark のウェルカム メッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="c554c-110">You should see messages welcoming you to Ubuntu and Spark.</span></span>
 
-3. <span data-ttu-id="153a6-111">**spark-submit** コマンドを使用して、HDInsight クラスターでアプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="153a6-111">Use the **spark-submit** command to run your app on your HDInsight cluster.</span></span> <span data-ttu-id="153a6-112">このスクリプト例の **mycontainer** と **mystorageaccount** を、実際の BLOB コンテナーの名前とストレージ アカウントに置き換えることを忘れないでください。</span><span class="sxs-lookup"><span data-stu-id="153a6-112">Remember to replace **mycontainer** and **mystorageaccount** in the example script with the actual names of your blob container and storage account.</span></span> <span data-ttu-id="153a6-113">また、`microsoft-spark-2.3.x-0.6.0.jar` は、展開に使用している適切な jar ファイルに置き換えてください。</span><span class="sxs-lookup"><span data-stu-id="153a6-113">Also, be sure to replace `microsoft-spark-2.3.x-0.6.0.jar` with the appropriate jar file you're using for deployment.</span></span> <span data-ttu-id="153a6-114">`2.3.x` は Apache Spark のバージョンを表し、`0.6.0` は [.NET for Apache Spark worker](https://github.com/dotnet/spark/releases) のバージョンを表します。</span><span class="sxs-lookup"><span data-stu-id="153a6-114">`2.3.x` represents the version of Apache Spark, and `0.6.0` represents the version of the [.NET for Apache Spark worker](https://github.com/dotnet/spark/releases).</span></span>
+3. <span data-ttu-id="c554c-111">**spark-submit** コマンドを使用して、HDInsight クラスターでアプリケーションを実行します。</span><span class="sxs-lookup"><span data-stu-id="c554c-111">Use the **spark-submit** command to run your app on your HDInsight cluster.</span></span> <span data-ttu-id="c554c-112">このスクリプト例の **mycontainer** と **mystorageaccount** を、実際の BLOB コンテナーの名前とストレージ アカウントに置き換えることを忘れないでください。</span><span class="sxs-lookup"><span data-stu-id="c554c-112">Remember to replace **mycontainer** and **mystorageaccount** in the example script with the actual names of your blob container and storage account.</span></span> <span data-ttu-id="c554c-113">また、`microsoft-spark-2.3.x-0.6.0.jar` は、展開に使用している適切な jar ファイルに置き換えてください。</span><span class="sxs-lookup"><span data-stu-id="c554c-113">Also, be sure to replace `microsoft-spark-2.3.x-0.6.0.jar` with the appropriate jar file you're using for deployment.</span></span> <span data-ttu-id="c554c-114">`2.3.x` は Apache Spark のバージョンを表し、`0.6.0` は [.NET for Apache Spark worker](https://github.com/dotnet/spark/releases) のバージョンを表します。</span><span class="sxs-lookup"><span data-stu-id="c554c-114">`2.3.x` represents the version of Apache Spark, and `0.6.0` represents the version of the [.NET for Apache Spark worker](https://github.com/dotnet/spark/releases).</span></span>
 
    ```bash
    $SPARK_HOME/bin/spark-submit \
@@ -35,11 +35,11 @@ ms.locfileid: "85617692"
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```
 
-## <a name="deploy-using-apache-livy"></a><span data-ttu-id="153a6-115">Apache Livy を使用して展開する</span><span class="sxs-lookup"><span data-stu-id="153a6-115">Deploy using Apache Livy</span></span>
+## <a name="deploy-using-apache-livy"></a><span data-ttu-id="c554c-115">Apache Livy を使用して展開する</span><span class="sxs-lookup"><span data-stu-id="c554c-115">Deploy using Apache Livy</span></span>
 
-<span data-ttu-id="153a6-116">[Apache Livy](https://livy.incubator.apache.org/) (Apache Spark REST API) を使用して、.NET for Apache Spark ジョブを Azure HDInsight Spark クラスターに送信することができます。</span><span class="sxs-lookup"><span data-stu-id="153a6-116">You can use [Apache Livy](https://livy.incubator.apache.org/), the Apache Spark REST API, to submit .NET for Apache Spark jobs to an Azure HDInsight Spark cluster.</span></span> <span data-ttu-id="153a6-117">詳細については、[Apache Livy を使用したリモート ジョブ](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-livy-rest-interface) に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="153a6-117">For more information, see [Remote jobs with Apache Livy](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-livy-rest-interface).</span></span>
+<span data-ttu-id="c554c-116">[Apache Livy](https://livy.incubator.apache.org/) (Apache Spark REST API) を使用して、.NET for Apache Spark ジョブを Azure HDInsight Spark クラスターに送信することができます。</span><span class="sxs-lookup"><span data-stu-id="c554c-116">You can use [Apache Livy](https://livy.incubator.apache.org/), the Apache Spark REST API, to submit .NET for Apache Spark jobs to an Azure HDInsight Spark cluster.</span></span> <span data-ttu-id="c554c-117">詳細については、[Apache Livy を使用したリモート ジョブ](/azure/hdinsight/spark/apache-spark-livy-rest-interface) に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c554c-117">For more information, see [Remote jobs with Apache Livy](/azure/hdinsight/spark/apache-spark-livy-rest-interface).</span></span>
 
-<span data-ttu-id="153a6-118">Linux では、`curl` を使用して次のコマンドを実行できます。</span><span class="sxs-lookup"><span data-stu-id="153a6-118">You can run the following command on Linux using `curl`:</span></span>
+<span data-ttu-id="c554c-118">Linux では、`curl` を使用して次のコマンドを実行できます。</span><span class="sxs-lookup"><span data-stu-id="c554c-118">You can run the following command on Linux using `curl`:</span></span>
 
 ```bash
 curl -k -v -X POST "https://<your spark cluster>.azurehdinsight.net/livy/batches" \
@@ -56,8 +56,8 @@ curl -k -v -X POST "https://<your spark cluster>.azurehdinsight.net/livy/batches
 EOF
 ```
 
-## <a name="next-steps"></a><span data-ttu-id="153a6-119">次のステップ</span><span class="sxs-lookup"><span data-stu-id="153a6-119">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="c554c-119">次のステップ</span><span class="sxs-lookup"><span data-stu-id="c554c-119">Next steps</span></span>
 
-* [<span data-ttu-id="153a6-120">.NET for Apache Spark の概要</span><span class="sxs-lookup"><span data-stu-id="153a6-120">Get started with .NET for Apache Spark</span></span>](../tutorials/get-started.md)
-* [<span data-ttu-id="153a6-121">.NET for Apache Spark アプリケーションを Azure HDInsight にデプロイする</span><span class="sxs-lookup"><span data-stu-id="153a6-121">Deploy a .NET for Apache Spark application to Azure HDInsight</span></span>](../tutorials/hdinsight-deployment.md)
-* [<span data-ttu-id="153a6-122">HDInsight のドキュメント</span><span class="sxs-lookup"><span data-stu-id="153a6-122">HDInsight Documentation</span></span>](https://docs.microsoft.com/azure/hdinsight/)
+* [<span data-ttu-id="c554c-120">.NET for Apache Spark の概要</span><span class="sxs-lookup"><span data-stu-id="c554c-120">Get started with .NET for Apache Spark</span></span>](../tutorials/get-started.md)
+* [<span data-ttu-id="c554c-121">.NET for Apache Spark アプリケーションを Azure HDInsight にデプロイする</span><span class="sxs-lookup"><span data-stu-id="c554c-121">Deploy a .NET for Apache Spark application to Azure HDInsight</span></span>](../tutorials/hdinsight-deployment.md)
+* [<span data-ttu-id="c554c-122">HDInsight のドキュメント</span><span class="sxs-lookup"><span data-stu-id="c554c-122">HDInsight Documentation</span></span>](/azure/hdinsight/)

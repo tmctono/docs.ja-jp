@@ -1,35 +1,35 @@
 ---
-ms.openlocfilehash: 4b5c886ad35afbbf0a68e03b3174ab9ea1f5524f
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 12ba3bd3c9e9e00b88cab0e568a1ce0f4f8bbb05
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614768"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606752"
 ---
-### <a name="cspparametersparentwindowhandle-now-expects-hwnd-value"></a><span data-ttu-id="d3747-101">CspParameters.ParentWindowHandle が HWND 値を受け取るようになる</span><span class="sxs-lookup"><span data-stu-id="d3747-101">CspParameters.ParentWindowHandle now expects HWND value</span></span>
+### <a name="cspparametersparentwindowhandle-now-expects-hwnd-value"></a><span data-ttu-id="58d3d-101">CspParameters.ParentWindowHandle が HWND 値を受け取るようになる</span><span class="sxs-lookup"><span data-stu-id="58d3d-101">CspParameters.ParentWindowHandle now expects HWND value</span></span>
 
-#### <a name="details"></a><span data-ttu-id="d3747-102">説明</span><span class="sxs-lookup"><span data-stu-id="d3747-102">Details</span></span>
+#### <a name="details"></a><span data-ttu-id="58d3d-102">説明</span><span class="sxs-lookup"><span data-stu-id="58d3d-102">Details</span></span>
 
-<span data-ttu-id="d3747-103">.NET Framework 2.0 で導入された <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle> 値をアプリケーションに使用すると、親ウィンドウのハンドル値を登録できます。これを利用して、キーにアクセスする必要がある UI (PIN プロンプトや同意を求めるダイアログなど) を、指定したウィンドウの子のモーダルとして開くことができます。 .NET Framework 4.7 を対象とするアプリ以降では、Windows フォーム アプリケーションは、次のようなコードを使用して、<xref:System.Security.Cryptography.CspParameters.ParentWindowHandle> プロパティを設定できます。</span><span class="sxs-lookup"><span data-stu-id="d3747-103">The <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle> value, introduced in .NET Framework 2.0, allows an application to register a parent window handle value such that any UI required to access the key (such as a PIN prompt or consent dialog) opens as a modal child to the specified window.Starting with apps that target the .NET Framework 4.7, a Windows Forms application can set the <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle> property with code like the following:</span></span>
-
-```csharp
-cspParameters.ParentWindowHandle = form.Handle;
-```
-
-<span data-ttu-id="d3747-104">以前のバージョンの .NET Framework では、[HWND](https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types#HWND) 値が置かれているメモリ内の場所を表す <xref:System.IntPtr?displayProperty=fullName> が値として必要でした。</span><span class="sxs-lookup"><span data-stu-id="d3747-104">In previous versions of the .NET Framework, the value was expected to be an <xref:System.IntPtr?displayProperty=fullName> representing a location in memory where the [HWND](https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types#HWND) value resided.</span></span> <span data-ttu-id="d3747-105">Windows 7 以前のバージョンでこのプロパティを form.Handle に設定しても影響はありませんでしたが、Windows 8 以降のバージョンでは、&quot;<xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName>:パラメーターが正しくありません&quot; が表示されます。</span><span class="sxs-lookup"><span data-stu-id="d3747-105">Setting the property to form.Handle on Windows 7 and earlier versions had no effect, but on Windows 8 and later versions, it results in a &quot;<xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName>: The parameter is incorrect.&quot;</span></span>
-
-#### <a name="suggestion"></a><span data-ttu-id="d3747-106">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="d3747-106">Suggestion</span></span>
-
-<span data-ttu-id="d3747-107">.NET Framework 4.7 以降をターゲットとするアプリケーションで親ウィンドウの関係を登録する場合、次のように単純な形式を使用することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="d3747-107">Applications targeting .NET Framework 4.7 or higher wishing to register a parent window relationship are encouraged to use the simplified form:</span></span>
+<span data-ttu-id="58d3d-103">.NET Framework 2.0 で導入された <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle> 値をアプリケーションに使用すると、親ウィンドウのハンドル値を登録できます。これを利用して、キーにアクセスする必要がある UI (PIN プロンプトや同意を求めるダイアログなど) を、指定したウィンドウの子のモーダルとして開くことができます。 .NET Framework 4.7 を対象とするアプリ以降では、Windows フォーム アプリケーションは、次のようなコードを使用して、<xref:System.Security.Cryptography.CspParameters.ParentWindowHandle> プロパティを設定できます。</span><span class="sxs-lookup"><span data-stu-id="58d3d-103">The <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle> value, introduced in .NET Framework 2.0, allows an application to register a parent window handle value such that any UI required to access the key (such as a PIN prompt or consent dialog) opens as a modal child to the specified window.Starting with apps that target the .NET Framework 4.7, a Windows Forms application can set the <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle> property with code like the following:</span></span>
 
 ```csharp
 cspParameters.ParentWindowHandle = form.Handle;
 ```
 
-<span data-ttu-id="d3747-108">渡すべき正しい値は、値 `form.Handle` が保持されているメモリ内の場所のアドレスであることがわかっていた場合は、AppContext スイッチ `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` を `true` に設定して、動作変更を無効にできます。</span><span class="sxs-lookup"><span data-stu-id="d3747-108">Users who had identified that the correct value to pass was the address of a memory location which held the value `form.Handle` can opt out of the behavior change by setting the AppContext switch `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` to `true`:</span></span>
+<span data-ttu-id="58d3d-104">以前のバージョンの .NET Framework では、[HWND](/windows/desktop/WinProg/windows-data-types#HWND) 値が置かれているメモリ内の場所を表す <xref:System.IntPtr?displayProperty=fullName> が値として必要でした。</span><span class="sxs-lookup"><span data-stu-id="58d3d-104">In previous versions of the .NET Framework, the value was expected to be an <xref:System.IntPtr?displayProperty=fullName> representing a location in memory where the [HWND](/windows/desktop/WinProg/windows-data-types#HWND) value resided.</span></span> <span data-ttu-id="58d3d-105">Windows 7 以前のバージョンでこのプロパティを form.Handle に設定しても影響はありませんでしたが、Windows 8 以降のバージョンでは、&quot;<xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName>:パラメーターが正しくありません&quot; が表示されます。</span><span class="sxs-lookup"><span data-stu-id="58d3d-105">Setting the property to form.Handle on Windows 7 and earlier versions had no effect, but on Windows 8 and later versions, it results in a &quot;<xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName>: The parameter is incorrect.&quot;</span></span>
 
-- <span data-ttu-id="d3747-109">プログラムで AppContext の互換性スイッチを設定する (説明は[こちらに](https://devblogs.microsoft.com/dotnet/net-announcements-at-build-2015/#dotnet46)あります)。</span><span class="sxs-lookup"><span data-stu-id="d3747-109">By programmatically setting compat switches on the AppContext, as explained [here](https://devblogs.microsoft.com/dotnet/net-announcements-at-build-2015/#dotnet46).</span></span>
-- <span data-ttu-id="d3747-110">app.config ファイルの `<runtime>` セクションに以下の行を追加する:</span><span class="sxs-lookup"><span data-stu-id="d3747-110">By adding the following line to the `<runtime>` section of the app.config file:</span></span>
+#### <a name="suggestion"></a><span data-ttu-id="58d3d-106">提案される解決策</span><span class="sxs-lookup"><span data-stu-id="58d3d-106">Suggestion</span></span>
+
+<span data-ttu-id="58d3d-107">.NET Framework 4.7 以降をターゲットとするアプリケーションで親ウィンドウの関係を登録する場合、次のように単純な形式を使用することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="58d3d-107">Applications targeting .NET Framework 4.7 or higher wishing to register a parent window relationship are encouraged to use the simplified form:</span></span>
+
+```csharp
+cspParameters.ParentWindowHandle = form.Handle;
+```
+
+<span data-ttu-id="58d3d-108">渡すべき正しい値は、値 `form.Handle` が保持されているメモリ内の場所のアドレスであることがわかっていた場合は、AppContext スイッチ `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` を `true` に設定して、動作変更を無効にできます。</span><span class="sxs-lookup"><span data-stu-id="58d3d-108">Users who had identified that the correct value to pass was the address of a memory location which held the value `form.Handle` can opt out of the behavior change by setting the AppContext switch `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` to `true`:</span></span>
+
+- <span data-ttu-id="58d3d-109">プログラムで AppContext の互換性スイッチを設定する (説明は[こちらに](https://devblogs.microsoft.com/dotnet/net-announcements-at-build-2015/#dotnet46)あります)。</span><span class="sxs-lookup"><span data-stu-id="58d3d-109">By programmatically setting compat switches on the AppContext, as explained [here](https://devblogs.microsoft.com/dotnet/net-announcements-at-build-2015/#dotnet46).</span></span>
+- <span data-ttu-id="58d3d-110">app.config ファイルの `<runtime>` セクションに以下の行を追加する:</span><span class="sxs-lookup"><span data-stu-id="58d3d-110">By adding the following line to the `<runtime>` section of the app.config file:</span></span>
 
 ```xml
 <runtime>
@@ -37,14 +37,14 @@ cspParameters.ParentWindowHandle = form.Handle;
 </runtime>
 ```
 
-<span data-ttu-id="d3747-111">逆に、アプリケーションが以前のバージョンの .NET Framework の下で読み込むとき、.NET Framework 4.7 ランタイムで新しい動作を選択する場合、AppContext スイッチを `false` に設定できます。</span><span class="sxs-lookup"><span data-stu-id="d3747-111">Conversely, users who wish to opt in to the new behavior on the .NET Framework 4.7 runtime when the application loads under older .NET Framework versions can set the AppContext switch to `false`.</span></span>
+<span data-ttu-id="58d3d-111">逆に、アプリケーションが以前のバージョンの .NET Framework の下で読み込むとき、.NET Framework 4.7 ランタイムで新しい動作を選択する場合、AppContext スイッチを `false` に設定できます。</span><span class="sxs-lookup"><span data-stu-id="58d3d-111">Conversely, users who wish to opt in to the new behavior on the .NET Framework 4.7 runtime when the application loads under older .NET Framework versions can set the AppContext switch to `false`.</span></span>
 
-| <span data-ttu-id="d3747-112">名前</span><span class="sxs-lookup"><span data-stu-id="d3747-112">Name</span></span>    | <span data-ttu-id="d3747-113">値</span><span class="sxs-lookup"><span data-stu-id="d3747-113">Value</span></span>       |
+| <span data-ttu-id="58d3d-112">名前</span><span class="sxs-lookup"><span data-stu-id="58d3d-112">Name</span></span>    | <span data-ttu-id="58d3d-113">値</span><span class="sxs-lookup"><span data-stu-id="58d3d-113">Value</span></span>       |
 |:--------|:------------|
-| <span data-ttu-id="d3747-114">スコープ</span><span class="sxs-lookup"><span data-stu-id="d3747-114">Scope</span></span>   | <span data-ttu-id="d3747-115">マイナー</span><span class="sxs-lookup"><span data-stu-id="d3747-115">Minor</span></span>       |
-| <span data-ttu-id="d3747-116">バージョン</span><span class="sxs-lookup"><span data-stu-id="d3747-116">Version</span></span> | <span data-ttu-id="d3747-117">4.7</span><span class="sxs-lookup"><span data-stu-id="d3747-117">4.7</span></span>         |
-| <span data-ttu-id="d3747-118">種類</span><span class="sxs-lookup"><span data-stu-id="d3747-118">Type</span></span>    | <span data-ttu-id="d3747-119">再ターゲット中</span><span class="sxs-lookup"><span data-stu-id="d3747-119">Retargeting</span></span> |
+| <span data-ttu-id="58d3d-114">スコープ</span><span class="sxs-lookup"><span data-stu-id="58d3d-114">Scope</span></span>   | <span data-ttu-id="58d3d-115">マイナー</span><span class="sxs-lookup"><span data-stu-id="58d3d-115">Minor</span></span>       |
+| <span data-ttu-id="58d3d-116">バージョン</span><span class="sxs-lookup"><span data-stu-id="58d3d-116">Version</span></span> | <span data-ttu-id="58d3d-117">4.7</span><span class="sxs-lookup"><span data-stu-id="58d3d-117">4.7</span></span>         |
+| <span data-ttu-id="58d3d-118">種類</span><span class="sxs-lookup"><span data-stu-id="58d3d-118">Type</span></span>    | <span data-ttu-id="58d3d-119">再ターゲット中</span><span class="sxs-lookup"><span data-stu-id="58d3d-119">Retargeting</span></span> |
 
-#### <a name="affected-apis"></a><span data-ttu-id="d3747-120">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="d3747-120">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="58d3d-120">影響を受ける API</span><span class="sxs-lookup"><span data-stu-id="58d3d-120">Affected APIs</span></span>
 
 - <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle?displayProperty=nameWithType>

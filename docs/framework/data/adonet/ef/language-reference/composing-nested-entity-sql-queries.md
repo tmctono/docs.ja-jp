@@ -2,18 +2,18 @@
 title: 入れ子になった Entity SQL クエリの作成
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: 6b2fc9a32fc30d205b9c33257bf98781cfa07499
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b28c46ba9a89ffffe8cd95ad55eb502eb8ea48a6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150390"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541097"
 ---
-# <a name="composing-nested-entity-sql-queries"></a><span data-ttu-id="77f18-102">入れ子になった Entity SQL クエリの作成</span><span class="sxs-lookup"><span data-stu-id="77f18-102">Composing Nested Entity SQL Queries</span></span>
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] <span data-ttu-id="77f18-103">は、機能の豊富な関数言語です。</span><span class="sxs-lookup"><span data-stu-id="77f18-103">is a rich functional language.</span></span> <span data-ttu-id="77f18-104">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] の構成要素は式です。</span><span class="sxs-lookup"><span data-stu-id="77f18-104">The building block of [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is an expression.</span></span> <span data-ttu-id="77f18-105">従来の SQL と異なり、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] では結果セットは表形式に限定されません。[!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、リテラル、パラメーター、入れ子になった式などが含まれた複雑な式を作成できます。</span><span class="sxs-lookup"><span data-stu-id="77f18-105">Unlike conventional SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is not limited to a tabular result set: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supports composing complex expressions that can have literals, parameters, or nested expressions.</span></span> <span data-ttu-id="77f18-106">式の値は、パラメーター化されている場合、つまり他の式で構成される場合があります。</span><span class="sxs-lookup"><span data-stu-id="77f18-106">A value in the expression can be parameterized or composed of some other expression.</span></span>  
+# <a name="composing-nested-entity-sql-queries"></a><span data-ttu-id="f7b35-102">入れ子になった Entity SQL クエリの作成</span><span class="sxs-lookup"><span data-stu-id="f7b35-102">Composing Nested Entity SQL Queries</span></span>
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] <span data-ttu-id="f7b35-103">は、機能の豊富な関数言語です。</span><span class="sxs-lookup"><span data-stu-id="f7b35-103">is a rich functional language.</span></span> <span data-ttu-id="f7b35-104">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] の構成要素は式です。</span><span class="sxs-lookup"><span data-stu-id="f7b35-104">The building block of [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is an expression.</span></span> <span data-ttu-id="f7b35-105">従来の SQL と異なり、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] では結果セットは表形式に限定されません。[!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、リテラル、パラメーター、入れ子になった式などが含まれた複雑な式を作成できます。</span><span class="sxs-lookup"><span data-stu-id="f7b35-105">Unlike conventional SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is not limited to a tabular result set: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supports composing complex expressions that can have literals, parameters, or nested expressions.</span></span> <span data-ttu-id="f7b35-106">式の値は、パラメーター化されている場合、つまり他の式で構成される場合があります。</span><span class="sxs-lookup"><span data-stu-id="f7b35-106">A value in the expression can be parameterized or composed of some other expression.</span></span>  
   
-## <a name="nested-expressions"></a><span data-ttu-id="77f18-107">入れ子になった式</span><span class="sxs-lookup"><span data-stu-id="77f18-107">Nested Expressions</span></span>  
- <span data-ttu-id="77f18-108">入れ子になった式は、その式によって返される型の値が受け入れられる場所であればどこにでも配置できます。</span><span class="sxs-lookup"><span data-stu-id="77f18-108">A nested expression can be placed anywhere a value of the type it returns is accepted.</span></span> <span data-ttu-id="77f18-109">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="77f18-109">For example:</span></span>  
+## <a name="nested-expressions"></a><span data-ttu-id="f7b35-107">入れ子になった式</span><span class="sxs-lookup"><span data-stu-id="f7b35-107">Nested Expressions</span></span>  
+ <span data-ttu-id="f7b35-108">入れ子になった式は、その式によって返される型の値が受け入れられる場所であればどこにでも配置できます。</span><span class="sxs-lookup"><span data-stu-id="f7b35-108">A nested expression can be placed anywhere a value of the type it returns is accepted.</span></span> <span data-ttu-id="f7b35-109">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="f7b35-109">For example:</span></span>  
   
 ```sql  
 -- Returns a hierarchical collection of three elements at top-level.
@@ -25,7 +25,7 @@ ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})
 {{{@x}}};  
 ```  
   
- <span data-ttu-id="77f18-110">入れ子になったクエリは、projection 句に配置できます。</span><span class="sxs-lookup"><span data-stu-id="77f18-110">A nested query can be placed in a projection clause.</span></span> <span data-ttu-id="77f18-111">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="77f18-111">For example:</span></span>  
+ <span data-ttu-id="f7b35-110">入れ子になったクエリは、projection 句に配置できます。</span><span class="sxs-lookup"><span data-stu-id="f7b35-110">A nested query can be placed in a projection clause.</span></span> <span data-ttu-id="f7b35-111">次に例を示します。</span><span class="sxs-lookup"><span data-stu-id="f7b35-111">For example:</span></span>  
   
 ```sql  
 -- Returns a collection of rows where each row contains an Address entity.  
@@ -35,7 +35,7 @@ SELECT address, (SELECT DEREF(soh)
                     AS salesOrderHeader FROM AdventureWorksEntities.Address AS address  
 ```  
   
- <span data-ttu-id="77f18-112">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、入れ子になったクエリを次のようにかっこで囲む必要があります。</span><span class="sxs-lookup"><span data-stu-id="77f18-112">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)], nested queries must always be enclosed in parentheses:</span></span>  
+ <span data-ttu-id="f7b35-112">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、入れ子になったクエリを次のようにかっこで囲む必要があります。</span><span class="sxs-lookup"><span data-stu-id="f7b35-112">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)], nested queries must always be enclosed in parentheses:</span></span>  
   
 ```sql  
 -- Pseudo-Entity SQL  
@@ -46,19 +46,19 @@ UNION ALL
 FROM … );  
 ```  
   
- <span data-ttu-id="77f18-113">次の例では、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] で式を正しく入れ子にする方法を示します。[方法:2 つのクエリの結合を並べ替える](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="77f18-113">The following example demonstrates how to properly nest expressions in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to: Order the Union of Two Queries](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).</span></span>  
+ <span data-ttu-id="f7b35-113">次の例では、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] で式を正しく入れ子にする方法を示します。[方法:2 つのクエリの結合を並べ替える](/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="f7b35-113">The following example demonstrates how to properly nest expressions in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to: Order the Union of Two Queries](/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).</span></span>  
   
-## <a name="nested-queries-in-projection"></a><span data-ttu-id="77f18-114">投影内の入れ子になったクエリ</span><span class="sxs-lookup"><span data-stu-id="77f18-114">Nested Queries in Projection</span></span>  
- <span data-ttu-id="77f18-115">project 句内の入れ子になったクエリは、サーバーでデカルト積に変換されないことがあります。</span><span class="sxs-lookup"><span data-stu-id="77f18-115">Nested queries in the project clause might get translated into Cartesian product queries on the server.</span></span> <span data-ttu-id="77f18-116">SQL Server などの一部のバックエンド サーバーでは、これによって TempDB テーブルのサイズが非常に大きくなり、サーバーのパフォーマンスに悪影響を及ぼす場合があります。</span><span class="sxs-lookup"><span data-stu-id="77f18-116">In some backend servers, including SQL Server, this can cause the TempDB table to get very large, which can adversely affect server performance.</span></span>  
+## <a name="nested-queries-in-projection"></a><span data-ttu-id="f7b35-114">投影内の入れ子になったクエリ</span><span class="sxs-lookup"><span data-stu-id="f7b35-114">Nested Queries in Projection</span></span>  
+ <span data-ttu-id="f7b35-115">project 句内の入れ子になったクエリは、サーバーでデカルト積に変換されないことがあります。</span><span class="sxs-lookup"><span data-stu-id="f7b35-115">Nested queries in the project clause might get translated into Cartesian product queries on the server.</span></span> <span data-ttu-id="f7b35-116">SQL Server などの一部のバックエンド サーバーでは、これによって TempDB テーブルのサイズが非常に大きくなり、サーバーのパフォーマンスに悪影響を及ぼす場合があります。</span><span class="sxs-lookup"><span data-stu-id="f7b35-116">In some backend servers, including SQL Server, this can cause the TempDB table to get very large, which can adversely affect server performance.</span></span>  
   
- <span data-ttu-id="77f18-117">以下は、このようなクエリの例です。</span><span class="sxs-lookup"><span data-stu-id="77f18-117">The following is an example of such a query:</span></span>  
+ <span data-ttu-id="f7b35-117">以下は、このようなクエリの例です。</span><span class="sxs-lookup"><span data-stu-id="f7b35-117">The following is an example of such a query:</span></span>  
   
 ```sql  
 SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2 FROM AdventureWorksModel.JobCandidate AS c  ) As Inner1 FROM AdventureWorksModel.EmployeeDepartmentHistory AS c  
 ```  
   
-## <a name="ordering-nested-queries"></a><span data-ttu-id="77f18-118">入れ子になったクエリの順序</span><span class="sxs-lookup"><span data-stu-id="77f18-118">Ordering Nested Queries</span></span>  
- <span data-ttu-id="77f18-119">Entity Framework では、入れ子になった式をクエリ内の任意の場所に配置できます。</span><span class="sxs-lookup"><span data-stu-id="77f18-119">In the Entity Framework, a nested expression can be placed anywhere in the query.</span></span> <span data-ttu-id="77f18-120">Entity SQL ではクエリを柔軟に作成できるので、入れ子になったクエリの順序を含むクエリを記述できます。</span><span class="sxs-lookup"><span data-stu-id="77f18-120">Because Entity SQL allows great flexibility in writing queries, it is possible to write a query that contains an ordering of nested queries.</span></span> <span data-ttu-id="77f18-121">ただし、入れ子になったクエリの順序は維持されません。</span><span class="sxs-lookup"><span data-stu-id="77f18-121">However, the order of a nested query is not preserved.</span></span>  
+## <a name="ordering-nested-queries"></a><span data-ttu-id="f7b35-118">入れ子になったクエリの順序</span><span class="sxs-lookup"><span data-stu-id="f7b35-118">Ordering Nested Queries</span></span>  
+ <span data-ttu-id="f7b35-119">Entity Framework では、入れ子になった式をクエリ内の任意の場所に配置できます。</span><span class="sxs-lookup"><span data-stu-id="f7b35-119">In the Entity Framework, a nested expression can be placed anywhere in the query.</span></span> <span data-ttu-id="f7b35-120">Entity SQL ではクエリを柔軟に作成できるので、入れ子になったクエリの順序を含むクエリを記述できます。</span><span class="sxs-lookup"><span data-stu-id="f7b35-120">Because Entity SQL allows great flexibility in writing queries, it is possible to write a query that contains an ordering of nested queries.</span></span> <span data-ttu-id="f7b35-121">ただし、入れ子になったクエリの順序は維持されません。</span><span class="sxs-lookup"><span data-stu-id="f7b35-121">However, the order of a nested query is not preserved.</span></span>  
   
 ```sql  
 -- The following query will order the results by last name.  
@@ -75,6 +75,6 @@ SELECT C2.FirstName, C2.LastName
         ORDER BY C1.LastName) as C2  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="77f18-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="77f18-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f7b35-122">関連項目</span><span class="sxs-lookup"><span data-stu-id="f7b35-122">See also</span></span>
 
-- [<span data-ttu-id="77f18-123">Entity SQL の概要</span><span class="sxs-lookup"><span data-stu-id="77f18-123">Entity SQL Overview</span></span>](entity-sql-overview.md)
+- [<span data-ttu-id="f7b35-123">Entity SQL の概要</span><span class="sxs-lookup"><span data-stu-id="f7b35-123">Entity SQL Overview</span></span>](entity-sql-overview.md)
