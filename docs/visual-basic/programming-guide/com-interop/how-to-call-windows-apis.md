@@ -7,12 +7,12 @@ helpviewer_keywords:
 - API calls [Visual Basic], platform invoke
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-ms.openlocfilehash: 2c3bb599b79575180eb2b0ec89453f01901f94c0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 863986e94855e02e9fd04685f7dc3e8e7f7b1cc3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396844"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90548066"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>方法: Windows API を呼び出す (Visual Basic)
 この例では、`MessageBox` 関数を user32.dll に定義して呼び出し、文字列を関数に渡します。  
@@ -39,6 +39,6 @@ ms.locfileid: "84396844"
 - [プラットフォーム呼び出しの詳細](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
 - [プラットフォーム呼び出しの例](../../../framework/interop/platform-invoke-examples.md)
 - [アンマネージ DLL 関数の処理](../../../framework/interop/consuming-unmanaged-dll-functions.md)
-- [リフレクション出力によるメソッドの定義](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w63y4d4f(v=vs.100))
+- [リフレクション出力によるメソッドの定義](/previous-versions/dotnet/netframework-4.0/w63y4d4f(v=vs.100))
 - [チュートリアル: Windows API の呼び出し](walkthrough-calling-windows-apis.md)
 - [COM 相互運用](index.md)

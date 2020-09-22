@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: 739cb6971209792724a2e939ca4f4821d5879c8c
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: f6e95ce58e055f0c745b781c664309e4ef91ffc6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247792"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554014"
 ---
 # <a name="create-the-data-service"></a>データ サービスを作成する
 
@@ -53,7 +53,7 @@ ms.locfileid: "85247792"
 
 5. 次のいずれかの手順を実行してデータ モデルをデータベースに接続してから **[次へ]** をクリックします。
 
-    - データベース接続がまだ構成されていない場合は、 **[新しい接続]** をクリックして新しい接続を作成します。 詳細については、「[方法:SQL Server データベースへの接続を作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))」を参照してください。 この SQL Server インスタンスには、Northwind サンプル データベースがアタッチされている必要があります。
+    - データベース接続がまだ構成されていない場合は、 **[新しい接続]** をクリックして新しい接続を作成します。 詳細については、「[方法:SQL Server データベースへの接続を作成する](/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))」を参照してください。 この SQL Server インスタンスには、Northwind サンプル データベースがアタッチされている必要があります。
 
          \- または
 
@@ -104,4 +104,4 @@ ms.locfileid: "85247792"
 
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET Entity Data Model ツール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [ADO.NET Entity Data Model ツール](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

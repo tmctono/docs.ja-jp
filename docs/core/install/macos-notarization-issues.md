@@ -4,12 +4,12 @@ description: macOS で、.NET Core ランタイム、SDK、および .Net Core �
 author: adegeo
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: a7741727ad46216ebd9936515d8af29b6d7049c2
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 616f163856cca48ccc6d1a14e0c6e68d56379c0c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656528"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538303"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>macOS Catalina の公証と、.NET Core のダウンロードおよびプロジェクトへの影響
 
@@ -17,7 +17,7 @@ macOS Catalina (バージョン 10.15) 以降では、2019 年 6 月 1 日より
 
 ## <a name="installing-net-core"></a>.NET Core のインストール
 
-.NET Core (ランタイムと SDK の両方) バージョン 3.1、3.0、2.1 のインストーラーは、2020 年 2 月 18 日から公証されています。 それより前にリリースされたバージョンは、公証されていません。 公証されていないバージョンの .NET Core は、最初にインストーラーをダウンロードしてから、`sudo installer` コマンドを使用することにより、手動でインストールできます。 詳しくは、[macOS でのダウンロードと手動インストール](sdk.md?pivots=os-macos#download-and-manually-install)に関する記事をご覧ください。
+.NET Core (ランタイムと SDK の両方) バージョン 3.1、3.0、2.1 のインストーラーは、2020 年 2 月 18 日から公証されています。 それより前にリリースされたバージョンは、公証されていません。 公証されていないバージョンの .NET Core は、最初にインストーラーをダウンロードしてから、`sudo installer` コマンドを使用することにより、手動でインストールできます。 詳しくは、[macOS でのダウンロードと手動インストール](./macos.md#download-and-manually-install)に関する記事をご覧ください。
 
 次のバージョン以降では、.NET Core インストーラーは公証されるようになっています。
 

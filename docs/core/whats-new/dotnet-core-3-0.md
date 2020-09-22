@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: bf712e88d96a5c2c80c3ff50283d44e9c7717abb
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: ac2b4193849c56002c5bba35932f2882b987a0d6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608216"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537497"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 の新機能
 
@@ -136,7 +136,7 @@ dotnet publish -r <rid> -c Release
 
 何よりも、必ずトリミング後のアプリをテストしてください。
 
-IL リンカー ツールについて詳しくは、[ドキュメント](https://aka.ms/dotnet-illink)または [mono/linker]( https://github.com/mono/linker) リポジトリをご覧ください。
+IL リンカー ツールについて詳しくは、[ドキュメント](../deploying/trim-self-contained.md)または [mono/linker]( https://github.com/mono/linker) リポジトリをご覧ください。
 
 ### <a name="tiered-compilation"></a>階層型コンパイル
 
@@ -329,9 +329,9 @@ Windows では、フラット C API、COM、および WinRT の形式で、質�
 
 ### <a name="msix-deployment"></a>MSIX のデプロイ
 
-[MSIX](https://docs.microsoft.com/windows/msix/) は新しい Windows アプリケーション パッケージ形式です。 これは、Windows 10 に .NET Core 3.0 のデスクトップ アプリケーションを展開するために使用できます。
+[MSIX](/windows/msix/) は新しい Windows アプリケーション パッケージ形式です。 これは、Windows 10 に .NET Core 3.0 のデスクトップ アプリケーションを展開するために使用できます。
 
-[Windows アプリケーション パッケージ プロジェクト](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)は、Visual Studio 2019 で使用でき、[自己完結型](../deploying/index.md#publish-self-contained)の .NET Core アプリケーションを使用して、MSIX パッケージを作成することができます。
+[Windows アプリケーション パッケージ プロジェクト](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)は、Visual Studio 2019 で使用でき、[自己完結型](../deploying/index.md#publish-self-contained)の .NET Core アプリケーションを使用して、MSIX パッケージを作成することができます。
 
 .NET Core プロジェクト ファイルの `<RuntimeIdentifiers>` プロパティで、サポートされているランタイムを指定する必要があります。
 

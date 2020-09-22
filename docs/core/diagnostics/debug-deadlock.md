@@ -3,18 +3,18 @@ title: デッドロックのデバッグ - .NET Core
 description: .NET Core でのロックに関する問題のデバッグについて説明するチュートリアルです。
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 6f060e1ae801eb4eacbbd1fb67110f827c37f597
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: d9a9328b376de5886d22ca7315f6d7d9d73fd2c2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557881"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538697"
 ---
 # <a name="debug-a-deadlock-in-net-core"></a>.NET Core でデッドロックをデバッグする
 
 **この記事の対象: ✔️** .NET Core 3.1 SDK 以降のバージョン
 
-このチュートリアルでは、デッドロック シナリオをデバッグする方法について説明します。 示されている例の [ASP.NET Core Web アプリ](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) ソース コード リポジトリを使用して、デッドロックを意図的に発生させることができます。 エンドポイントでは、ハングとスレッドが蓄積します。 コア ダンプ、コア ダンプ分析、プロセス トレースなど、さまざまなツールを使用して問題を分析する方法についても説明します。
+このチュートリアルでは、デッドロック シナリオをデバッグする方法について説明します。 示されている例の [ASP.NET Core Web アプリ](/samples/dotnet/samples/diagnostic-scenarios) ソース コード リポジトリを使用して、デッドロックを意図的に発生させることができます。 エンドポイントでは、ハングとスレッドが蓄積します。 コア ダンプ、コア ダンプ分析、プロセス トレースなど、さまざまなツールを使用して問題を分析する方法についても説明します。
 
 このチュートリアルでは、次の作業を行います。
 
@@ -31,13 +31,13 @@ ms.locfileid: "88557881"
 このチュートリアルでは次のものを使用します。
 
 - [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) 以降のバージョン
-- シナリオをトリガーするための[サンプル デバッグ ターゲット - Web アプリ](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)
+- シナリオをトリガーするための[サンプル デバッグ ターゲット - Web アプリ](/samples/dotnet/samples/diagnostic-scenarios)
 - [dotnet-trace](dotnet-trace.md) を使ってプロセスを一覧表示する
 - [dotnet-dump](dotnet-dump.md) を使ってダンプ ファイルを収集して分析する
 
 ## <a name="core-dump-generation"></a>コア ダンプ生成
 
-アプリケーション無応答を調査するために、コア ダンプまたはメモリ ダンプを使用すると、そのスレッドの状態と、競合の問題が発生している可能性のあるすべてのロックを調べることができます。 サンプルのルート ディレクトリから次のコマンドを使用して、[サンプル デバッグ](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) アプリケーションを実行します。
+アプリケーション無応答を調査するために、コア ダンプまたはメモリ ダンプを使用すると、そのスレッドの状態と、競合の問題が発生している可能性のあるすべてのロックを調べることができます。 サンプルのルート ディレクトリから次のコマンドを使用して、[サンプル デバッグ](/samples/dotnet/samples/diagnostic-scenarios) アプリケーションを実行します。
 
 ```dotnetcli
 dotnet run

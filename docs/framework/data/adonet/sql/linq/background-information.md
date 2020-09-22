@@ -2,12 +2,12 @@
 title: 背景情報
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: 3aa0cd4eaae38121cbb8c04c1c917f51dfbb0de1
-ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
+ms.openlocfilehash: fc7c68fe2dba266e056feb459038a060a055e175
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78848328"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542112"
 ---
 # <a name="background-information"></a>背景情報
 このセクションのトピックでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の使用に関する基本事項の範囲を超えた概念と手順について説明します。  
@@ -18,7 +18,7 @@ ms.locfileid: "78848328"
   
 - [LINQ フォーラム](https://social.msdn.microsoft.com/forums/home?forum=linqtosql)に参加して、複雑なトピックについて専門家と検討することができます。  
   
-- Visual Basic と C# のコード例が含まれる、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のテクノロジについて詳しく説明されているホワイト ペーパーを参照します。 詳細については、「[LINQ to SQL: .NET Language-Integrated Query for Relational Data](https://docs.microsoft.com/previous-versions/dotnet/articles/bb425822(v=msdn.10))」を参照してください。  
+- Visual Basic と C# のコード例が含まれる、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のテクノロジについて詳しく説明されているホワイト ペーパーを参照します。 詳細については、「[LINQ to SQL: .NET Language-Integrated Query for Relational Data](/previous-versions/dotnet/articles/bb425822(v=msdn.10))」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ADO.NET および LINQ to SQL](ado-net-and-linq-to-sql.md)  

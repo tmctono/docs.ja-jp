@@ -6,15 +6,15 @@ helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-ms.openlocfilehash: 4ea66ba26595c5bae2e579d1cc85c4b0d58616df
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: d49d391f5ea7717e0c36782be65cfb2ae154b843
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303037"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542797"
 ---
 # <a name="example-com-class-c-programming-guide"></a>COM クラスの例 (C# プログラミング ガイド)
-ここでは、COM オブジェクトとして公開されるクラスの例を紹介します。 このコードを .cs ファイルに保存して、プロジェクトに追加したあと、 **[COM の相互運用機能に登録]** プロパティを **[True]** に設定します。 詳細については、[コンポーネントを COM 相互運用機能に登録する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100))」をご覧ください。
+ここでは、COM オブジェクトとして公開されるクラスの例を紹介します。 このコードを .cs ファイルに保存して、プロジェクトに追加したあと、 **[COM の相互運用機能に登録]** プロパティを **[True]** に設定します。 詳細については、[コンポーネントを COM 相互運用機能に登録する](/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100))」をご覧ください。
   
  Visual C# オブジェクトを COM に公開するには、クラス インターフェイス、イベント インターフェイス (必要な場合)、クラス自体を宣言する必要があります。 クラスのメンバーを COM で参照するには、次の規則に従う必要があります。  
   

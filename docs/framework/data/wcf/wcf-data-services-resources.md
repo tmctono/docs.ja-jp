@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: 8b86944808aa7a35341f4fdafb3a92c6d9d127ec
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 9b0534c2d11b723458b52e219ba1ce2de4b3c550
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900853"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541527"
 ---
 # <a name="wcf-data-services-resources"></a>WCF Data Services リソース
 WCF Data Services の概要に関するトピックは次の場所にあります。 これらのトピックの多くには、詳細情報が記載された関連トピックへのリンクも含まれています。  
@@ -32,7 +32,7 @@ WCF Data Services の概要に関するトピックは次の場所にありま�
  [WCF Data Services フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataservices)  
  WCF Data Services 開発者向けのデータ プログラミング サポート。  
   
- [WCF Data Services チームのブログ](https://docs.microsoft.com/archive/blogs/astoriateam/)  
+ [WCF Data Services チームのブログ](/archive/blogs/astoriateam/)  
  WCF Data Services の機能の最新情報と説明が記載されているブログ。  
   
  [OData Web サイト](https://www.odata.org/)  
@@ -44,10 +44,10 @@ WCF Data Services の概要に関するトピックは次の場所にありま�
  [OData ブログ](https://www.odata.org/blog/)  
  OData プログラミングに関する議論が記載されているブログ。  
   
- [概要:WCF Data Services](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cc956153(v=msdn.10))  
+ [概要:WCF Data Services](/previous-versions/visualstudio/visual-studio-2008/cc956153(v=msdn.10))  
  WCF Data Services の利点に関する概要が記載されたホワイト ペーパー。  
   
- [Microsoft WCF Data Services の使用](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cc907912(v=msdn.10))  
+ [Microsoft WCF Data Services の使用](/previous-versions/visualstudio/visual-studio-2008/cc907912(v=msdn.10))  
  追加情報およびクライアント アプリケーションのデータ サービスの作成とデータ サービスへのアクセスの例が記載されたホワイト ペーパー。  
   
  [エンティティ リレーションシップ モデル: データの統合ビューに向けて](https://dl.acm.org/doi/10.1145/320434.320440) (マサチューセッツ工科大学、Peter Pin-Shan Chen)  

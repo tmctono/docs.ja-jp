@@ -5,12 +5,12 @@ ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: 83aaae2d2e75b3076841750bf5d505390a538bc0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: edcb1c4d00a09ba8404b08ddc3ca3447a52a81b6
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74344754"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679587"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>ファイルとその他のソースからデータを読み込む
 
@@ -66,7 +66,7 @@ ML.NET は列名を介して動作します。 列の名前をプロパティ名
 
 ## <a name="load-data-from-a-single-file"></a>1 つのファイルからデータを読み込む
 
-ファイルからデータを読み込むには、読み込むデータのデータ モデルと共に [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile*) メソッドを使用します。 `separatorChar` パラメーターは既定でタブ区切りなので、必要に応じてデータ ファイルに合わせて変更します。 ファイルにヘッダーがある場合は、ファイルの最初の行を無視して 2 行目からデータの読み込みを開始するように、`hasHeader` パラメーターを `true` に設定します。
+ファイルからデータを読み込むには、読み込むデータのデータ モデルと共に [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A) メソッドを使用します。 `separatorChar` パラメーターは既定でタブ区切りなので、必要に応じてデータ ファイルに合わせて変更します。 ファイルにヘッダーがある場合は、ファイルの最初の行を無視して 2 行目からデータの読み込みを開始するように、`hasHeader` パラメーターを `true` に設定します。
 
 ```csharp
 //Create MLContext
@@ -82,7 +82,7 @@ IDataView data = mlContext.Data.LoadFromTextFile<HousingData>("my-data-file.csv"
 
 ### <a name="load-from-files-in-a-single-directory"></a>1 つのディレクトリ内のファイルから読み込む
 
-すべてのデータ ファイルが同じディレクトリ内にある場合は、[`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile*) メソッドでワイルドカードを使用します。
+すべてのデータ ファイルが同じディレクトリ内にある場合は、[`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A) メソッドでワイルドカードを使用します。
 
 ```csharp
 //Create MLContext
@@ -94,7 +94,7 @@ IDataView data = mlContext.Data.LoadFromTextFile<HousingData>("Data/*", separato
 
 ### <a name="load-from-files-in-multiple-directories"></a>複数のディレクトリ内にあるファイルから読み込む
 
-複数のディレクトリからデータを読み込むには、[`CreateTextLoader`](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader*) メソッドを使用して [`TextLoader`](xref:Microsoft.ML.Data.TextLoader) を作成します。 次に、[`TextLoader.Load`](xref:Microsoft.ML.DataLoaderExtensions.Load*) メソッドを使用して個々のファイル パスを指定します (ワイルドカードは使用できません)。
+複数のディレクトリからデータを読み込むには、[`CreateTextLoader`](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader%2A) メソッドを使用して [`TextLoader`](xref:Microsoft.ML.Data.TextLoader) を作成します。 次に、[`TextLoader.Load`](xref:Microsoft.ML.DataLoaderExtensions.Load%2A) メソッドを使用して個々のファイル パスを指定します (ワイルドカードは使用できません)。
 
 ```csharp
 //Create MLContext
@@ -116,7 +116,7 @@ ML.NET では、SQL Server、Azure SQL Database、Oracle、SQLite、PostgreSQL�
 
 `House` という名前のテーブルと、次のスキーマが指定されたデータベースがあるとします。
 
-```SQL
+```sql
 CREATE TABLE [House] (
     [HouseId] INT NOT NULL IDENTITY,
     [Size] INT NOT NULL,
@@ -200,10 +200,10 @@ HousingData[] inMemoryCollection = new HousingData[]
 };
 ```
 
-[`IDataView`](xref:Microsoft.ML.IDataView) メソッドを使用してメモリ内コレクションを [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) に読み込みます。
+[`IDataView`](xref:Microsoft.ML.IDataView) メソッドを使用してメモリ内コレクションを [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable%2A) に読み込みます。
 
 > [!IMPORTANT]
-> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) では、この読み込み元の [`IEnumerable`](xref:System.Collections.IEnumerable) がスレッドセーフであると想定されています。
+> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable%2A) では、この読み込み元の [`IEnumerable`](xref:System.Collections.IEnumerable) がスレッドセーフであると想定されています。
 
 ```csharp
 // Create MLContext

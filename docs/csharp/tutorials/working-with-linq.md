@@ -4,12 +4,12 @@ description: このチュートリアルでは、LINQ を使用してシーケ�
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 9bc17700e22ea29b1861945a220e397a90b9a7c1
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 59e86d6412e16728fb03d05f7f4e221a26ec1bb1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656997"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536237"
 ---
 # <a name="work-with-language-integrated-query-linq"></a>統合言語クエリ (LINQ) を使用する
 
@@ -259,7 +259,7 @@ shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
 
 プログラムを再実行すると、デッキが元の順序に戻るのに反復が 52 回行われることがわかります。 プログラムを実行し続けると、著しくパフォーマンスが低下することがわかります。
 
-これには多くの理由があります。 このパフォーマンスの低下の主な原因の 1 つを説明できます。それは、"[*遅延評価*](../programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)" の非効率的な使用です。
+これには多くの理由があります。 このパフォーマンスの低下の主な原因の 1 つを説明できます。それは、"[*遅延評価*](../../standard/linq/deferred-execution-lazy-evaluation.md)" の非効率的な使用です。
 
 手短に言えば、遅延評価とは、ステートメントの値が必要になるまで、その評価が実行されないことです。 遅延して評価されているステートメントは LINQ クエリです。 シーケンスは、要素が要求された場合にのみ生成されます。 通常、これは LINQ の利点です。 しかし、このプログラムのような使い方をする場合、実行時間が急激に増加する要因となります。
 

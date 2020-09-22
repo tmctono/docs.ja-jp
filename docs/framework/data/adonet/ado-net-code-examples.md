@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 54df0e253716c970cf23446434d96b104b8e9b03
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9d12c7c7dcbc3a24cf51ade5481f59715c4c4d88
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287169"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555108"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET のコード例
 
@@ -138,7 +138,7 @@ End Class
 ```
 
 ### <a name="typed-objectquery"></a>型指定された ObjectQuery
-この例のコードは <xref:System.Data.Objects.ObjectQuery%601> を使用し、カテゴリ オブジェクトとしてデータを返します。 詳しくは、「[オブジェクト クエリ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))」をご覧ください。
+この例のコードは <xref:System.Data.Objects.ObjectQuery%601> を使用し、カテゴリ オブジェクトとしてデータを返します。 詳しくは、「[オブジェクト クエリ](/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))」をご覧ください。
 
 ```csharp
 using System;
@@ -345,6 +345,6 @@ End Class
 
 - [ADO.NET の概要](ado-net-overview.md)
 - [ADO.NET でのデータの取得および変更](retrieving-and-modifying-data.md)
-- [データ アプリケーションの作成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
-- [Entity Data Model のクエリ (Entity Framework タスク)](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
-- [方法: 匿名型のコレクションを返すクエリを実行する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))
+- [データ アプリケーションの作成](/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
+- [Entity Data Model のクエリ (Entity Framework タスク)](/previous-versions/bb738455(v=vs.90))
+- [方法: 匿名型のコレクションを返すクエリを実行する](/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))

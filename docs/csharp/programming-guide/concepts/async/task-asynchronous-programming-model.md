@@ -3,12 +3,12 @@ title: async および await を使用したタスク非同期プログラミン
 description: タスク ベースの非同期プログラミングを使用するタイミングと方法を学習します。これは、C# で非同期プログラミングを実行する簡単な方法です。
 ms.date: 08/19/2020
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 5e85b99025b31e205c66468d4bd886701cbaea17
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 1014e38dcb3e2c4f56c8b3f3dade9bdbff3abd27
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812090"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556038"
 ---
 # <a name="task-asynchronous-programming-model"></a>非同期プログラミング モデル
 
@@ -43,7 +43,7 @@ C# の [async](../../../language-reference/keywords/async.md) キーワードと
 
 async メソッドの例を次に示します。 コードのほとんどは、見たことのあるものと思います。
 
-ダウンロードできる Windows Presentation Foundation (WPF) の完全な例については、「[C# の async および await を使用した非同期プログラミング](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-cs)」を参照してください。
+ダウンロードできる Windows Presentation Foundation (WPF) の完全な例については、「[C# の async および await を使用した非同期プログラミング](/samples/dotnet/samples/async-and-await-cs)」を参照してください。
 
 :::code language="csharp" source="snippets/access-web/Program.cs" id="ControlFlow":::
 
@@ -121,7 +121,7 @@ string contents = await client.GetStringAsync("https://docs.microsoft.com/dotnet
 
 非同期のプログラミングをサポートする `GetStringAsync` などのメソッドがどこにあるのかということです。 .NET Framework 4.5 以降および .NET Core には、`async` および `await` で使用する多くのメンバーが含まれています。 メンバー名に付記されている "Async" というサフィックスと、その戻り値の型である <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> から識別できます。 たとえば、`System.IO.Stream` のクラスには、同期メソッドの <xref:System.IO.Stream.CopyTo%2A>、<xref:System.IO.Stream.Read%2A>、および <xref:System.IO.Stream.Write%2A> と共に、<xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.ReadAsync%2A> および <xref:System.IO.Stream.WriteAsync%2A> という同期メソッドが含まれています。
 
-Windows ランタイムにも、Windows アプリの `async` と `await` で使用できる多くのメソッドが含まれています。 詳しくは、UWP 開発について「[Threading and async programming](/windows/uwp/threading-async/)」(スレッドと非同期プログラミング) を、以前のバージョンの Windows ランタイムを使用している場合は「[非同期プログラミング (Windows ストア アプリ)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10))」と「[クイック スタート: C# または Visual Basic での非同期 API の呼び出し](https://docs.microsoft.com/previous-versions/windows/apps/hh452713(v=win.10))」をご覧ください。
+Windows ランタイムにも、Windows アプリの `async` と `await` で使用できる多くのメソッドが含まれています。 詳しくは、UWP 開発について「[Threading and async programming](/windows/uwp/threading-async/)」(スレッドと非同期プログラミング) を、以前のバージョンの Windows ランタイムを使用している場合は「[非同期プログラミング (Windows ストア アプリ)](/previous-versions/windows/apps/hh464924(v=win.10))」と「[クイック スタート: C# または Visual Basic での非同期 API の呼び出し](/previous-versions/windows/apps/hh452713(v=win.10))」をご覧ください。
 
 ## <a name="threads"></a><a name="BKMK_Threads"></a>スレッド
 
@@ -214,7 +214,7 @@ Windows ランタイム プログラミングの非同期 API には、タスク
 
 | Title | 説明 | サンプル |
 |--|--|--|
-| [async と await を使用して複数の Web 要求を並列実行する方法 (C#)](how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) | 複数のタスクを同時に開始する方法を示します。 | [Async Sample:Make Multiple Web Requests in Parallel (非同期のサンプル: 複数の Web 要求を並行して作成する)](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e) |
+| [async と await を使用して複数の Web 要求を並列実行する方法 (C#)](./index.md) | 複数のタスクを同時に開始する方法を示します。 | [Async Sample:Make Multiple Web Requests in Parallel (非同期のサンプル: 複数の Web 要求を並行して作成する)](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e) |
 | [非同期の戻り値の型 (C#)](async-return-types.md) | 非同期のメソッドが戻す型、および各型の適切な使用方法を説明します。 |  |
 | シグナル化メカニズムとしてキャンセル トークンを使用して、タスクをキャンセルします。 | 非同期のソリューションに次の機能を追加する方法を示します:<br><br> - [タスクの一覧をキャンセルする (C#)](cancel-an-async-task-or-a-list-of-tasks.md)<br>- [一定時間後にタスクをキャンセルする (C#)](cancel-async-tasks-after-a-period-of-time.md)<br>- [完了時に非同期タスクを処理する (C#)](start-multiple-async-tasks-and-process-them-as-they-complete.md) |  |
 | [ファイル アクセスに非同期を使用する (C#)](using-async-for-file-access.md) | async および await を使用してファイルにアクセスすることの利点の一覧と紹介です。 |  |

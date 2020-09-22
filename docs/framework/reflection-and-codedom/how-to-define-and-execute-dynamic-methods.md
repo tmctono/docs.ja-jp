@@ -10,15 +10,15 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
-ms.openlocfilehash: 7c68be91deb59ea9439e81561f50b7cc40766a45
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: d1ccf3d3ac966e35e1708f0639785a2760eb8287
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865113"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559188"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>方法: 動的メソッドを定義および実行する
-ここでは、単純な動的メソッドと、クラスのインスタンスにバインドされた動的メソッドを定義し、実行する手順について説明します。 動的メソッドの詳細については、<xref:System.Reflection.Emit.DynamicMethod> クラスに関するトピックと「[Reflection Emit Dynamic Method Scenarios](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))」(リフレクション出力による動的メソッドのシナリオ) を参照してください。  
+ここでは、単純な動的メソッドと、クラスのインスタンスにバインドされた動的メソッドを定義し、実行する手順について説明します。 動的メソッドの詳細については、<xref:System.Reflection.Emit.DynamicMethod> クラスに関するトピックと「[Reflection Emit Dynamic Method Scenarios](/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))」(リフレクション出力による動的メソッドのシナリオ) を参照してください。  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>動的メソッドを定義および実行するには  
   
@@ -116,5 +116,5 @@ ms.locfileid: "86865113"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Reflection.Emit.DynamicMethod>
-- [リフレクション出力の使用](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
-- [リフレクション出力による動的メソッドのシナリオ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))
+- [リフレクション出力の使用](/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
+- [リフレクション出力による動的メソッドのシナリオ](/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))

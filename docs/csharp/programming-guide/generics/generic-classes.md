@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 308f4328540e1001018942738d931be3d8be53ed
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: a885ae042eef939021d3a9b75616505c289bd43c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301919"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558088"
 ---
 # <a name="generic-classes-c-programming-guide"></a>ジェネリック クラス (C# プログラミング ガイド)
 ジェネリック クラスは、特定のデータ型に固有ではない操作をカプセル化します。 ジェネリック クラスは最も一般的に、リンク リスト、ハッシュ テーブル、スタック、キュー、ツリーなどのコレクションと共に使用されます。 コレクションの項目を追加または削除するなどの操作は、保存されているデータの型に関係なく、基本的に同じように実行されます。  
@@ -71,5 +71,5 @@ ms.locfileid: "87301919"
 - <xref:System.Collections.Generic>
 - [C# プログラミング ガイド](../index.md)
 - [ジェネリック](./index.md)
-- [列挙子の状態を保存する](https://docs.microsoft.com/archive/blogs/wesdyer/saving-the-state-of-enumerators)
-- [継承パズル、パート 1](https://docs.microsoft.com/archive/blogs/ericlippert/an-inheritance-puzzle-part-one)
+- [列挙子の状態を保存する](/archive/blogs/wesdyer/saving-the-state-of-enumerators)
+- [継承パズル、パート 1](/archive/blogs/ericlippert/an-inheritance-puzzle-part-one)

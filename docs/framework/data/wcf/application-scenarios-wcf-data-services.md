@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 8eb1e6e2a9338230520ebf3aec1c9ba50aa15ed9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 842f560df5229fc8a2249e1317cb348b7ed3361a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346195"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556890"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>アプリケーション シナリオ (WCF Data Services)
 
@@ -42,11 +42,11 @@ WCF Data Services では、データを Open Data Protocol (OData) フィード�
 
 Silverlight ベースのクライアント アプリケーションの OData フィードを使用する。
 
-- [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))
+- [WCF Data Services (Silverlight)](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))
 
 - [非同期操作](asynchronous-operations-wcf-data-services.md)
 
-- [方法: データ サービスのデータのコントロールへのバインド (Silverlight クライアント)](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee681614(v=vs.103))
+- [方法: データ サービスのデータのコントロールへのバインド (Silverlight クライアント)](/previous-versions/dotnet/wcf-data-services/ee681614(v=vs.103))
 
 AJAX ベースのクライアント アプリケーションの OData フィードを使用する。
 
@@ -70,7 +70,7 @@ OData を使用してクライアントとサーバーの間のデータ送信�
 
 - [非同期操作](asynchronous-operations-wcf-data-services.md)
 
-- [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))
+- [WCF Data Services (Silverlight)](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))
 
 ストリームとしてアクセスおよび変更されるバイナリ ラージ オブジェクトで OData フィードを公開して使用する。
 

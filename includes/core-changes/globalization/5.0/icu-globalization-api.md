@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 74c3d3247912dcd638a9379d54e682967c5e400b
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 18718ebc934e0175c20411055b8c0a90ef6b175f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302714"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539490"
 ---
 ### <a name="globalization-apis-use-icu-libraries-on-windows"></a>グローバリゼーション API では Windows 上の ICU ライブラリが使用される
 
@@ -27,7 +27,7 @@ ms.locfileid: "87302714"
 
 #### <a name="recommended-action"></a>推奨アクション
 
-開発者側では、何も行う必要はありません。 ただし、NLS グローバリゼーション API を引き続き使いたい場合は、[ランタイム スイッチ](../../../../docs/core/run-time-config/globalization.md#nls)を設定して、その動作に戻すことができます。 使用可能なスイッチの詳細については、「[.NET グローバリゼーションと ICU](/dotnet/standard/globalization-localization/globalization-icu)」の記事をご覧ください。
+開発者側では、何も行う必要はありません。 ただし、NLS グローバリゼーション API を引き続き使いたい場合は、[ランタイム スイッチ](../../../../docs/core/run-time-config/globalization.md#nls)を設定して、その動作に戻すことができます。 使用可能なスイッチの詳細については、「[.NET グローバリゼーションと ICU](../../../../docs/standard/globalization-localization/globalization-icu.md)」の記事をご覧ください。
 
 #### <a name="category"></a>カテゴリ
 

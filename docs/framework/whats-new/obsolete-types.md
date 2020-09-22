@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-ms.openlocfilehash: 29df80fcefc2565850b026bebd30802dc77e1896
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 795735b66c7568dada0196a6426a0a9aaf52398a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925814"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558538"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>旧版の .NET Framework の型
 
@@ -658,7 +658,7 @@ IEHost.dll および IEExec.exe アセンブリは .NET Framework から削除�
 
 ### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>アセンブリ:Microsoft.VisualBasic.Compatibility.dll
 
-Visual Basic 6 から移行する方法については、「[Visual Basic 6.0 リソース センター](https://docs.microsoft.com/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation)」を参照してください。
+Visual Basic 6 から移行する方法については、「[Visual Basic 6.0 リソース センター](/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation)」を参照してください。
 
 |種類|メッセージ|
 |----------|-------------|

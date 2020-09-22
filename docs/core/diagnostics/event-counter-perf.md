@@ -3,12 +3,12 @@ title: .NET Core で EventCounters を使用してパフォーマンスを測定
 description: このチュートリアルでは、EventCounters を使用してパフォーマンスを測定する方法について説明します。
 ms.date: 08/07/2020
 ms.topic: tutorial
-ms.openlocfilehash: 7b4940e17d01e7ec5a50d11e3c818ecdec2d48cf
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: db9a0889d46cc4db02baac60cbed6f6e0ba6856b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024973"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538567"
 ---
 # <a name="tutorial-measure-performance-using-eventcounters-in-net-core"></a>チュートリアル: .NET Core で EventCounters を使用してパフォーマンスを測定する
 
@@ -29,11 +29,11 @@ ms.locfileid: "88024973"
 
 - [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) 以降のバージョン。
 - イベント カウンターを監視するための [dotnet-counters](dotnet-counters.md)。
-- 診断する[サンプル デバッグ ターゲット](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) アプリ。
+- 診断する[サンプル デバッグ ターゲット](/samples/dotnet/samples/diagnostic-scenarios) アプリ。
 
 ## <a name="get-the-source"></a>ソースを入手する
 
-監視のための基礎としてサンプル アプリケーションを使用します。 [サンプルの ASP.NET Core リポジトリ](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)をサンプル ブラウザーから利用できます。 zip ファイルをダウンロードし、ダウンロード後に展開して、普段使用している IDE で開きます。 アプリケーションをビルドして実行し、正常に動作することを確実にしてから、アプリケーションを停止します。
+監視のための基礎としてサンプル アプリケーションを使用します。 [サンプルの ASP.NET Core リポジトリ](/samples/dotnet/samples/diagnostic-scenarios)をサンプル ブラウザーから利用できます。 zip ファイルをダウンロードし、ダウンロード後に展開して、普段使用している IDE で開きます。 アプリケーションをビルドして実行し、正常に動作することを確実にしてから、アプリケーションを停止します。
 
 ## <a name="implement-an-eventsource"></a>EventSource を実装する
 

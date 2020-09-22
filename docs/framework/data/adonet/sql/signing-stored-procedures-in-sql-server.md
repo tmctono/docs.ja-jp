@@ -2,12 +2,12 @@
 title: SQL Server でのストアド プロシージャの署名
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 0131655d06a6ef543ea460d04739401538cac04b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 3f33af0238781407dd845a823ff28d87af48feb2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452358"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558551"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>SQL Server でのストアド プロシージャの署名
 
@@ -54,7 +54,7 @@ ms.locfileid: "77452358"
 
 |リソース|説明|
 |--------------|-----------------|
-|[モジュール署名](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms345102(v=sql.100))|モジュールの署名について説明し、サンプル シナリオと、関連する Transact-SQL の記事へのリンクを示します。|
+|[モジュール署名](/previous-versions/sql/sql-server-2008/ms345102(v=sql.100))|モジュールの署名について説明し、サンプル シナリオと、関連する Transact-SQL の記事へのリンクを示します。|
 |[証明書を使用したストアド プロシージャへの署名](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate)|証明書を使用したストアド プロシージャの署名のチュートリアルです。|
 
 ## <a name="see-also"></a>関連項目

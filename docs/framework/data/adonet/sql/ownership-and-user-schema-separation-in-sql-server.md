@@ -3,12 +3,12 @@ title: SQL Server における所有権とユーザーとスキーマの分離
 description: ユーザーとスキーマの分離により、SQL Server データベース オブジェクトのアクセス許可を柔軟に管理できるようになるしくみについて説明します。 スキーマは、複数のオブジェクトを個別の名前空間にグループ化します。
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 97e742979785fedd922dc887295b63e2d93bd147
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 27c37816353ca47c3f96867adc6186b0162feb20
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286263"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558837"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>SQL Server における所有権とユーザーとスキーマの分離
 オブジェクトの所有者は、それを管理するための取り消し不可能な権限を持ちます。これは SQL Server のセキュリティの核となる概念です。 オブジェクトの所有者から権限を削除することはできません。また、特定のユーザーがデータベース内のオブジェクトを所有しているときに、そのユーザーをデータベースから削除することもできません。  
@@ -56,7 +56,7 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[ユーザーとスキーマの分離](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|ユーザーとスキーマの分離によって導入された変更について説明します。 新しい動作とそれが所有権、カタログ ビュー、および権限に与える影響を取り上げています。|  
+|[ユーザーとスキーマの分離](/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|ユーザーとスキーマの分離によって導入された変更について説明します。 新しい動作とそれが所有権、カタログ ビュー、および権限に与える影響を取り上げています。|  
   
 ## <a name="see-also"></a>関連項目
 

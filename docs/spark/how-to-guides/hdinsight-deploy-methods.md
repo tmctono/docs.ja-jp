@@ -4,12 +4,12 @@ description: spark-submit と Apache Livy を使用して、.NET for Apache Spar
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 50611b1f62934a446e5b80a8c53698efe23cd1fc
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 560822783b57b2419595cb15efa097591db8d600
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617692"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557165"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a>.NET for Apache Spark ジョブを Azure HDInsight に送信する
 
@@ -37,7 +37,7 @@ ms.locfileid: "85617692"
 
 ## <a name="deploy-using-apache-livy"></a>Apache Livy を使用して展開する
 
-[Apache Livy](https://livy.incubator.apache.org/) (Apache Spark REST API) を使用して、.NET for Apache Spark ジョブを Azure HDInsight Spark クラスターに送信することができます。 詳細については、[Apache Livy を使用したリモート ジョブ](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-livy-rest-interface) に関するページを参照してください。
+[Apache Livy](https://livy.incubator.apache.org/) (Apache Spark REST API) を使用して、.NET for Apache Spark ジョブを Azure HDInsight Spark クラスターに送信することができます。 詳細については、[Apache Livy を使用したリモート ジョブ](/azure/hdinsight/spark/apache-spark-livy-rest-interface) に関するページを参照してください。
 
 Linux では、`curl` を使用して次のコマンドを実行できます。
 
@@ -60,4 +60,4 @@ EOF
 
 * [.NET for Apache Spark の概要](../tutorials/get-started.md)
 * [.NET for Apache Spark アプリケーションを Azure HDInsight にデプロイする](../tutorials/hdinsight-deployment.md)
-* [HDInsight のドキュメント](https://docs.microsoft.com/azure/hdinsight/)
+* [HDInsight のドキュメント](/azure/hdinsight/)

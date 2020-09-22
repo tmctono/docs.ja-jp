@@ -10,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
-ms.openlocfilehash: f1cf84b8f15de1e3bd19a391767f5573f01ff806
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: cde574be6d4fadb78805548cff1b42ee354bf36f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420514"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558954"
 ---
 # <a name="com-wrappers"></a>COM ラッパー
 COM は、次のいくつかの重要な点で、.NET ランタイム オブジェクト モデルとは異なります。  
@@ -34,8 +34,8 @@ COM は、次のいくつかの重要な点で、.NET ランタイム オブジ�
   
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework における高度な COM 相互運用性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+- [.NET Framework における高度な COM 相互運用性](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [ランタイム呼び出し可能ラッパー](runtime-callable-wrapper.md)
 - [COM 呼び出し可能ラッパー](com-callable-wrapper.md)
-- [.NET Framework 内で標準ラッパーをカスタマイズする](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
-- [方法: .NET Framework 内でランタイム呼び出し可能ラッパーをカスタマイズする](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/56kh4hy7(v=vs.100))
+- [.NET Framework 内で標準ラッパーをカスタマイズする](/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
+- [方法: .NET Framework 内でランタイム呼び出し可能ラッパーをカスタマイズする](/previous-versions/dotnet/netframework-4.0/56kh4hy7(v=vs.100))

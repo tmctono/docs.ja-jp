@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 9dde2d7305a1176dadba3802fc5335c0c95bfbbb
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4c1da6041b2343565bdaeb53e586c893bd85c922
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286677"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557906"
 ---
 # <a name="performance-counters-in-adonet"></a>ADO.NET でのパフォーマンス カウンター
 ADO.NET 2.0 では、<xref:System.Data.SqlClient> と <xref:System.Data.OracleClient> の両方をサポートする新しいパフォーマンス カウンターが導入されました。 以前のバージョンの ADO.NET で利用されていた <xref:System.Data.SqlClient> のパフォーマンス カウンターは非推奨とされ、このトピックで説明する新しいパフォーマンス カウンターに置き換えられました。 ADO.NET のパフォーマンス カウンターを使用することで、アプリケーションやそれによって使用される接続リソースのステータスを監視できます。 パフォーマンス カウンターは、Windows パフォーマンス モニターを使って監視できるほか、<xref:System.Diagnostics.PerformanceCounter> 名前空間の <xref:System.Diagnostics> クラスを使用することでプログラムから監視することもできます。  
@@ -399,7 +399,7 @@ class Program
 
 - [データ ソースへの接続](connecting-to-a-data-source.md)
 - [OLE DB、ODBC、および Oracle 接続プール](ole-db-odbc-and-oracle-connection-pooling.md)
-- [ASP.NET 用のパフォーマンス カウンター](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
+- [ASP.NET 用のパフォーマンス カウンター](/previous-versions/aspnet/fxk122b4(v=vs.100))
 - [ランタイム プロファイリング](../../debug-trace-profile/runtime-profiling.md)
-- [パフォーマンスしきい値の監視の概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
+- [パフォーマンスしきい値の監視の概要](/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
 - [ADO.NET の概要](ado-net-overview.md)

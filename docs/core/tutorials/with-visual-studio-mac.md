@@ -2,12 +2,12 @@
 title: Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを作成する
 description: Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを作成する方法について説明します。
 ms.date: 06/02/2020
-ms.openlocfilehash: 8ffcb05ad85f53180ca1aaefbd2dfc7496946142
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: ca933bc9322109ba7d1f808fcc44696a9766a6d4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867660"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537601"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>チュートリアル: Visual Studio for Mac を使用して .NET Core コンソール アプリケーションを作成する
 
@@ -24,7 +24,7 @@ ms.locfileid: "88867660"
 * [Visual Studio for Mac バージョン 8.6 以降](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)。 .NET Core をインストールするオプションを選択します。 .NET Core 開発の場合、Xamarin のインストールは省略可能です。 詳細については、次のリソースを参照してください。
 
   * [チュートリアル: Visual Studio for Mac をインストールする](/visualstudio/mac/installation)。
-  * [サポート対象の macOS のバージョン](../install/dependencies.md?pivots=os-macos)。
+  * [サポート対象の macOS のバージョン](../install/windows.md)。
   * [Visual Studio for Mac でサポートされている .NET Core のバージョン](/visualstudio/mac/net-core-support)。
 
 ## <a name="create-the-app"></a>アプリを作成する

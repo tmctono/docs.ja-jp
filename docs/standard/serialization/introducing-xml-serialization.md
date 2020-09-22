@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: d9b71b7530debde7708ee107c990541e2b97cd44
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 334cb3fe40c310189018d924aef552ecd87e9a65
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84277961"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535411"
 ---
 # <a name="xml-serialization"></a>XML シリアル化
 
@@ -39,7 +39,7 @@ ms.locfileid: "84277961"
 
  さらに、**XmlSerializer** クラスでは、オブジェクトをシリアル化し、エンコードされた SOAP XML ストリームを生成することができます。 このようにして生成される XML は、W3C のドキュメント『Simple Object Access Protocol (SOAP) 1.1』のセクション 5 に準拠します。 このプロセスの詳細については、「[方法:オブジェクトを SOAP エンコード済み XML ストリームとしてシリアル化する](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)」を参照してください。 生成される XML を制御する属性の一覧については、「[エンコード済み SOAP シリアル化を制御する属性](attributes-that-control-encoded-soap-serialization.md)」を参照してください。
 
- **XmlSerializer** クラスは、XML Web サービスによって作成され、XML Web サービスに渡される SOAP メッセージを生成します。 この SOAP メッセージを制御するには、XML Web サービス ファイル (.asmx) 内のクラス、戻り値、パラメーター、およびフィールドに属性を適用します。 XML Web サービスでは、リテラルまたはエンコード済みのいずれの SOAP スタイルも使用できるため、「XML シリアル化を制御する属性」と「エンコード済み SOAP シリアル化を制御する属性」の両方に示されている属性を使用できます。 XML Web サービスによって生成された XML を属性を使用して制御する方法については、「[XML Web サービスを使用した XML シリアル化](xml-serialization-with-xml-web-services.md)」を参照してください。 SOAP と XML Web サービスの詳細については、「[SOAP メッセージの書式のカスタマイズ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))」を参照してください。
+ **XmlSerializer** クラスは、XML Web サービスによって作成され、XML Web サービスに渡される SOAP メッセージを生成します。 この SOAP メッセージを制御するには、XML Web サービス ファイル (.asmx) 内のクラス、戻り値、パラメーター、およびフィールドに属性を適用します。 XML Web サービスでは、リテラルまたはエンコード済みのいずれの SOAP スタイルも使用できるため、「XML シリアル化を制御する属性」と「エンコード済み SOAP シリアル化を制御する属性」の両方に示されている属性を使用できます。 XML Web サービスによって生成された XML を属性を使用して制御する方法については、「[XML Web サービスを使用した XML シリアル化](xml-serialization-with-xml-web-services.md)」を参照してください。 SOAP と XML Web サービスの詳細については、「[SOAP メッセージの書式のカスタマイズ](/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))」を参照してください。
 
 ## <a name="security-considerations-for-xmlserializer-applications"></a>XmlSerializer アプリケーションのセキュリティに関する考慮事項
 

@@ -2,12 +2,12 @@
 title: Docker アプリの内部ループ開発ワークフロー
 description: Docker アプリケーションの "内部ループ" 開発ワークフローについて説明します。
 ms.date: 08/06/2020
-ms.openlocfilehash: bf837ab53fff2b53cf141b2e621d484cff9b6889
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 071e16afede91f4cfd6cbe8662fa68814ffdcdd7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916147"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539763"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker アプリの内部ループ開発ワークフロー
 
@@ -118,7 +118,7 @@ DockerFile を追加するとき、(`FROM mcr.microsoft.com/dotnet/core/aspnet` 
 
 次は .NET Core コンテナー向けサンプル DockerFile です。
 
-```Dockerfile
+```dockerfile
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80

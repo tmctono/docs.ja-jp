@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
-ms.openlocfilehash: 5639f4bdb83906273b60ed20494c288286f32560
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b14191d798baf458bd860c00913683f53d0a1fd8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288200"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555654"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>方法: Parallel クラスを使用してファイル ディレクトリを反復処理する
 多くの場合、ファイル反復処理は簡単に並列化できる操作です。 「[方法: PLINQ を使用してファイル ディレクトリを反復処理する](how-to-iterate-file-directories-with-plinq.md)」のトピックは、多くのシナリオでこのタスクを実行するための簡単な方法を示しています。 ただし、ファイル システムへのアクセス時に発生する可能性のある多くの種類の例外をコードで処理する必要がある場合は、複雑さが生じることがあります。 次の例は、この問題への対処方法の 1 つを示しています。 この例では、スタック ベースの反復処理を使用して、指定されたディレクトリにあるすべてのファイルとフォルダーを走査し、コードで各種例外をキャッチして処理できるようにしています。 例外を処理する方法は開発者に委ねられています。  
@@ -28,7 +28,7 @@ ms.locfileid: "84288200"
   
  この例では、ローカル変数 `fileCount` を使用して、処理済みファイルの合計数を示すカウントを管理します。 この変数は複数のタスクから同時にアクセスされる可能性があるため、この変数へのアクセスは <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> メソッドの呼び出しによって同期されています。  
   
- メイン スレッドで例外がスローされた場合、<xref:System.Threading.Tasks.Parallel.ForEach%2A> メソッドによって開始されたスレッドが引き続き実行されることがあります。 これらのスレッドを停止するには、例外ハンドラーで Boolean 変数を設定し、並列ループを反復処理するたびに値をチェックします。 例外がスローされたことを値が示している場合は、<xref:System.Threading.Tasks.ParallelLoopState> 変数を使用してループを停止または中断します。 詳細については、「[方法: Parallel.For ループを停止または中断する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100))」を参照してください。  
+ メイン スレッドで例外がスローされた場合、<xref:System.Threading.Tasks.Parallel.ForEach%2A> メソッドによって開始されたスレッドが引き続き実行されることがあります。 これらのスレッドを停止するには、例外ハンドラーで Boolean 変数を設定し、並列ループを反復処理するたびに値をチェックします。 例外がスローされたことを値が示している場合は、<xref:System.Threading.Tasks.ParallelLoopState> 変数を使用してループを停止または中断します。 詳細については、「[方法: Parallel.For ループを停止または中断する](/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100))」を参照してください。  
   
 ## <a name="see-also"></a>参照
 

@@ -3,12 +3,12 @@ title: メモリ リークのデバッグ チュートリアル
 description: .NET Core でメモリ リークをデバッグする方法について説明します。
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: ff684f9b9402cb8b7b648e792a1d37ddcc96b399
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 7fa87a411606e81ffe91348c3cbce5f258a6e4e2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924891"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538593"
 ---
 # <a name="debug-a-memory-leak-in-net-core"></a>.NET Core でメモリ リークをデバッグする
 
@@ -34,7 +34,7 @@ ms.locfileid: "86924891"
 - プロセスを一覧表示するための [dotnet-trace](dotnet-trace.md)。
 - マネージド メモリ使用量を確認するための [dotnet-counters](dotnet-counters.md)。
 - ダンプ ファイルを収集して分析するための [dotnet-dump](dotnet-dump.md)。
-- 診断する[サンプル デバッグ ターゲット](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) アプリ。
+- 診断する[サンプル デバッグ ターゲット](/samples/dotnet/samples/diagnostic-scenarios/) アプリ。
 
 このチュートリアルでは、サンプルとツールがインストールされ、使用できる状態であることを前提としています。
 
@@ -42,7 +42,7 @@ ms.locfileid: "86924891"
 
 このシナリオの根本原因を突き止めるのに役立つ診断データの収集を開始する前に、メモリ リーク (メモリの増加) が実際に発生していることを確認する必要があります。 それを確認するには、[dotnet-counters](dotnet-counters.md) ツールを使用できます。
 
-コンソール ウィンドウを開き、[サンプル デバッグ ターゲット](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/)をダウンロードして解凍したディレクトリに移動します。 ターゲットを実行します。
+コンソール ウィンドウを開き、[サンプル デバッグ ターゲット](/samples/dotnet/samples/diagnostic-scenarios/)をダウンロードして解凍したディレクトリに移動します。 ターゲットを実行します。
 
 ```dotnetcli
 dotnet run
@@ -116,7 +116,7 @@ Press p to pause, r to resume, q to quit.
 
 メモリ リークの可能性について分析するときは、アプリのメモリ ヒープにアクセスする必要があります。 その後、メモリーの内容を分析できます。 オブジェクト間の関係を確認して、メモリが解放されない理由についての理論を作成します。 一般的な診断データのソースは、Windows 上のメモリ ダンプ、または Linux 上の同等のコア ダンプです。 .NET Core アプリケーションのダンプを生成するには、[dotnet-dump](dotnet-dump.md) ツールを使用できます。
 
-前に開始した[サンプル デバッグ ターゲット](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/)を使用して、次のコマンドを実行し、Linux コア ダンプを生成します。
+前に開始した[サンプル デバッグ ターゲット](/samples/dotnet/samples/diagnostic-scenarios/)を使用して、次のコマンドを実行し、Linux コア ダンプを生成します。
 
 ```dotnetcli
 dotnet-dump collect -p 4807
@@ -133,7 +133,7 @@ Complete
 
 ダンプが収集されると、失敗したプロセスを診断するのに十分な情報が得られます。 失敗したプロセスが運用サーバーで実行されている場合は、今が、そのプロセスを再起動して短期的な修復を行うのに最適なタイミングです。
 
-このチュートリアルでは、[サンプル デバッグ ターゲット](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/)を終了したので、閉じることができます。 サーバーを起動したターミナルに移動して、<kbd>Ctrl + C</kbd> を押します。
+このチュートリアルでは、[サンプル デバッグ ターゲット](/samples/dotnet/samples/diagnostic-scenarios/)を終了したので、閉じることができます。 サーバーを起動したターミナルに移動して、<kbd>Ctrl + C</kbd> を押します。
 
 ### <a name="analyze-the-core-dump"></a>コア ダンプを分析する
 
@@ -146,7 +146,7 @@ dotnet-dump analyze core_20190430_185145
 ここで、`core_20190430_185145` は、分析するコア ダンプの名前です。
 
 > [!NOTE]
-> *libdl.so* が見つからないことを示すエラーが表示された場合は、*libc6-dev* パッケージのインストールが必要な可能性があります。 詳細については、「[Linux における .NET Core の前提条件](../install/dependencies.md?pivots=os-linux)」を参照してください。
+> *libdl.so* が見つからないことを示すエラーが表示された場合は、*libc6-dev* パッケージのインストールが必要な可能性があります。 詳細については、「[Linux における .NET Core の前提条件](../install/linux.md)」を参照してください。
 
 SOS コマンドを入力できるプロンプトが表示されます。 一般的に、最初に調べる必要があるのは、マネージド ヒープの全体的な状態です。
 

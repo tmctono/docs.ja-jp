@@ -3,12 +3,12 @@ title: .NET Web アプリまたはサービスを Azure App Service に移行す
 description: .NET Web アプリまたはサービスをオンプレミスから Azure App Service に移行する方法について説明します。
 ms.topic: conceptual
 ms.date: 07/08/2020
-ms.openlocfilehash: d208865942b49ae2d5437b8f2fcff294933af21b
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: a5e193b2dbaedb86ff0e24bc8b70043896bbeea3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174310"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539087"
 ---
 # <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>.NET Web アプリまたはサービスを Azure App Service に移行する
 
@@ -37,9 +37,9 @@ WCF では、次のバインドがサポートされています。
 |--|--|
 | `BasicHttp` |  |
 | `WSHttp` |  |
-| `WSDualHttpBinding` | [Web ソケットのサポート](https://docs.microsoft.com/azure/app-service/web-sites-configure)を有効にする必要があります。 | [Web ソケットのサポート](/azure/app-service/web-sites-configure)を有効にする必要があります。 |
-| `NetHttpBinding` | 双方向コントラクトに対して、[Web ソケットのサポート](https://docs.microsoft.com/azure/app-service/web-sites-configure)を有効にする必要があります。 | 双方向コントラクトに対して、[Web ソケットのサポート](/azure/app-service/web-sites-configure)を有効にする必要があります。 |
-| `NetHttpsBinding` | 双方向コントラクトに対して、[Web ソケットのサポート](https://docs.microsoft.com/azure/app-service/web-sites-configure)を有効にする必要があります。 | 双方向コントラクトに対して、[Web ソケットのサポート](/azure/app-service/web-sites-configure)を有効にする必要があります。 |
+| `WSDualHttpBinding` | [Web ソケットのサポート](/azure/app-service/web-sites-configure)を有効にする必要があります。 | [Web ソケットのサポート](/azure/app-service/web-sites-configure)を有効にする必要があります。 |
+| `NetHttpBinding` | 双方向コントラクトに対して、[Web ソケットのサポート](/azure/app-service/web-sites-configure)を有効にする必要があります。 | 双方向コントラクトに対して、[Web ソケットのサポート](/azure/app-service/web-sites-configure)を有効にする必要があります。 |
+| `NetHttpsBinding` | 双方向コントラクトに対して、[Web ソケットのサポート](/azure/app-service/web-sites-configure)を有効にする必要があります。 | 双方向コントラクトに対して、[Web ソケットのサポート](/azure/app-service/web-sites-configure)を有効にする必要があります。 |
 | `BasicHttpContextBinding` |  |
 | `WebHttpBinding` |  |
 | `WSHttpContextBinding` |  |
@@ -62,7 +62,7 @@ IIS5 互換モードはサポートされていません。 Azure App Service �
 
 #### <a name="iis7-schema-compliance"></a>IIS7+ スキーマ準拠
 
-Azure App Service IIS スキーマで定義されていない要素と属性があります。 問題が発生した場合は、[XDT 変換](https://azure.microsoft.com/documentation/articles/web-sites-transform-extend/)を使用することを検討してください。
+Azure App Service IIS スキーマで定義されていない要素と属性があります。 問題が発生した場合は、[XDT 変換](/azure/app-service/configure-common)を使用することを検討してください。
 
 #### <a name="single-application-pool-per-site"></a>サイトごとに 1 つのアプリケーション プール
 

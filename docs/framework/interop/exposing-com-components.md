@@ -7,14 +7,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing COM components
 - COM interop, exposing COM components
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
-ms.openlocfilehash: 459ba7ffed2e4f6c458f89a63b2baa37180d270d
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 34dda58d9513874169927164706fafdd95e8ed84
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620847"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554183"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>.NET Framework への COM コンポーネントの公開
-このセクションでは、既存の COM コンポーネントをマネージド コードに公開するために必要なプロセスをまとめています。 .NET Framework と緊密に統合される COM サーバーの詳細については、「[Design Considerations for Interoperation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))」(相互運用のためのデザインの考慮事項) を参照してください。
+このセクションでは、既存の COM コンポーネントをマネージド コードに公開するために必要なプロセスをまとめています。 .NET Framework と緊密に統合される COM サーバーの詳細については、「[Design Considerations for Interoperation](/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))」(相互運用のためのデザインの考慮事項) を参照してください。
   
  既存の COM コンポーネントは、中間層のビジネス アプリケーション、または独立した機能として、マネージド コードでの貴重なリソースです。 理想的なコンポーネントは、プライマリ相互運用機能アセンブリがあり、COM で課せられるプログラミング標準に厳密に準拠しています。  
   
@@ -24,7 +25,7 @@ ms.locfileid: "85620847"
   
      共通言語ランタイムでは、COM 型を含め、すべてのタイプにメタデータが必要です。 メタデータとしてインポートされた COM 型を含むアセンブリを取得するには、複数の方法があります。  
   
-2. [マネージド コード内で COM 型を使用する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))。  
+2. [マネージド コード内で COM 型を使用する](/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))。  
   
      任意のマネージド型で行うのと同じ方法で、COM オブジェクトで COM 型の検査、インスタンスのアクティブ化、およびメソッドの呼び出しができます。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "85620847"
 ## <a name="see-also"></a>関連項目
 
 - [アンマネージ コードとの相互運用](index.md)
-- [相互運用のためのデザインの考慮事項](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))
+- [相互運用のためのデザインの考慮事項](/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))
 - [COM 相互運用機能のサンプル: .NET クライアントおよび COM サーバー](com-interop-sample-net-client-and-com-server.md)
 - [言語への非依存性、および言語非依存コンポーネント](../../standard/language-independence-and-language-independent-components.md)
 - [Gacutil.exe (グローバル アセンブリ キャッシュ ツール)](../tools/gacutil-exe-gac-tool.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-ms.openlocfilehash: 4dbfe286099ebd0da269ca7ec6e4587d0d8b2e03
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 097e387fa8f79345e4f0b64f1368435fddc3417f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200068"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543421"
 ---
 # <a name="securing-wcf-data-services"></a>WCF Data Services のセキュリティ保護
 
@@ -30,9 +30,9 @@ WCF Data Services は、認証を独自に実装する代わりにデータ サ�
 |認証オプション|説明|  
 |----------------------------|-----------------|  
 |匿名認証|匿名 HTTP 認証が有効になっている場合は、すべてのプリンシパルがデータ サービスに接続できます。 匿名アクセスには資格情報は必要ありません。 このオプションは、だれでもデータ サービスにアクセスできるようにする場合にのみ使用します。|  
-|基本認証とダイジェスト認証|ユーザー名とパスワードで構成される資格情報が認証に必要です。 Windows 以外のクライアントの認証がサポートされます。 **セキュリティに関するメモ:** 基本認証の資格情報 (ユーザー名とパスワード) はクリア テキストで送信されるので、傍受される可能性があります。 ダイジェスト認証では、指定された資格情報に基づくハッシュが送信されるため、基本認証に比べて安全です。 ただし、どちらの方法も man-in-the-middle 攻撃を受ける可能性があります。 これらの認証方法を使用する場合は、SSL (Secure Sockets Layer) を使用してクライアントとデータ サービスの間の通信を暗号化することを検討してください。 <br /><br /> Microsoft インターネット インフォメーション サービス (IIS) には、ASP.NET アプリケーションの HTTP 要求に対する基本認証とダイジェスト認証の実装が用意されています。 この Windows 認証プロバイダーの実装を使用すると、.NET Framework クライアント アプリケーションで、資格情報を要求の HTTP ヘッダーでデータ サービスに渡して Windows ユーザーの認証をシームレスにネゴシエートできます。 詳細については、「[ダイジェスト認証のテクニカル リファレンス](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782794(v=ws.10))」を参照してください。<br /><br /> データ サービスで Windows 資格情報以外のカスタム認証サービスに基づく基本認証を使用する場合は、認証用のカスタム ADP.NET HTTP モジュールを実装する必要があります。<br /><br /> WCF Data Services でカスタム基本認証スキームを使用する方法の例については、ブログ記事「[OData と認証の – パート 6 – カスタム基本認証](https://devblogs.microsoft.com/odata/odata-and-authentication-part-6-custom-basic-authentication/)」を参照してください。|  
-|Windows 認証|Windows ベースの資格情報の交換には、NTLM または Kerberos が使用されます。 このメカニズムは基本認証やダイジェスト認証より安全ですが、クライアントが Windows ベースのアプリケーションである必要があります。 IIS には、ASP.NET アプリケーションの HTTP 要求に対する Windows 認証の実装も用意されています。 詳細については、「 [ASP.NET フォーム認証の概要](https://docs.microsoft.com/previous-versions/aspnet/7t6b43z4(v=vs.100))」を参照してください。<br /><br /> WCF Data Services で Windows 認証スキームを使用する方法の例については、ブログ記事「[OData と認証の – パート 2 – Windows 認証](https://devblogs.microsoft.com/odata/odata-and-authentication-part-2-windows-authentication/)」を参照してください。|  
-|ASP.NET フォーム認証|フォーム認証では、独自のコードを使用してユーザーを認証し、認証トークンをクッキーまたはページ URL に保存できます。 作成したログイン フォームを使用してユーザーのユーザー名とパスワードを認証します。 認証されない要求はログイン ページにリダイレクトされ、ここでユーザーが資格情報を入力してフォームを送信します。 アプリケーションで要求を認証する場合、後続の要求で使用する ID を再確立するためのキーが含まれたチケットをシステムが発行します。 詳細については、「[フォーム認証プロバイダー](https://docs.microsoft.com/previous-versions/aspnet/9wff0kyh(v=vs.100))」を参照してください。 **セキュリティに関するメモ:** ASP.NET Web アプリケーションでフォーム認証を使用する場合、既定では、フォーム認証チケットを含むクッキーはセキュリティで保護されません。 認証チケットと最初のログイン資格情報の両方を保護するには、SSL を要求することを検討してください。 <br /><br /> WCF Data Services でフォーム認証を使用する方法の例については、ブログ記事「[OData と認証の – パート 7 – フォーム認証](https://devblogs.microsoft.com/odata/odata-and-authentication-part-7-forms-authentication/)」を参照してください。|  
+|基本認証とダイジェスト認証|ユーザー名とパスワードで構成される資格情報が認証に必要です。 Windows 以外のクライアントの認証がサポートされます。 **セキュリティに関するメモ:** 基本認証の資格情報 (ユーザー名とパスワード) はクリア テキストで送信されるので、傍受される可能性があります。 ダイジェスト認証では、指定された資格情報に基づくハッシュが送信されるため、基本認証に比べて安全です。 ただし、どちらの方法も man-in-the-middle 攻撃を受ける可能性があります。 これらの認証方法を使用する場合は、SSL (Secure Sockets Layer) を使用してクライアントとデータ サービスの間の通信を暗号化することを検討してください。 <br /><br /> Microsoft インターネット インフォメーション サービス (IIS) には、ASP.NET アプリケーションの HTTP 要求に対する基本認証とダイジェスト認証の実装が用意されています。 この Windows 認証プロバイダーの実装を使用すると、.NET Framework クライアント アプリケーションで、資格情報を要求の HTTP ヘッダーでデータ サービスに渡して Windows ユーザーの認証をシームレスにネゴシエートできます。 詳細については、「[ダイジェスト認証のテクニカル リファレンス](/previous-versions/windows/it-pro/windows-server-2003/cc782794(v=ws.10))」を参照してください。<br /><br /> データ サービスで Windows 資格情報以外のカスタム認証サービスに基づく基本認証を使用する場合は、認証用のカスタム ADP.NET HTTP モジュールを実装する必要があります。<br /><br /> WCF Data Services でカスタム基本認証スキームを使用する方法の例については、ブログ記事「[OData と認証の – パート 6 – カスタム基本認証](https://devblogs.microsoft.com/odata/odata-and-authentication-part-6-custom-basic-authentication/)」を参照してください。|  
+|Windows 認証|Windows ベースの資格情報の交換には、NTLM または Kerberos が使用されます。 このメカニズムは基本認証やダイジェスト認証より安全ですが、クライアントが Windows ベースのアプリケーションである必要があります。 IIS には、ASP.NET アプリケーションの HTTP 要求に対する Windows 認証の実装も用意されています。 詳細については、「 [ASP.NET フォーム認証の概要](/previous-versions/aspnet/7t6b43z4(v=vs.100))」を参照してください。<br /><br /> WCF Data Services で Windows 認証スキームを使用する方法の例については、ブログ記事「[OData と認証の – パート 2 – Windows 認証](https://devblogs.microsoft.com/odata/odata-and-authentication-part-2-windows-authentication/)」を参照してください。|  
+|ASP.NET フォーム認証|フォーム認証では、独自のコードを使用してユーザーを認証し、認証トークンをクッキーまたはページ URL に保存できます。 作成したログイン フォームを使用してユーザーのユーザー名とパスワードを認証します。 認証されない要求はログイン ページにリダイレクトされ、ここでユーザーが資格情報を入力してフォームを送信します。 アプリケーションで要求を認証する場合、後続の要求で使用する ID を再確立するためのキーが含まれたチケットをシステムが発行します。 詳細については、「[フォーム認証プロバイダー](/previous-versions/aspnet/9wff0kyh(v=vs.100))」を参照してください。 **セキュリティに関するメモ:** ASP.NET Web アプリケーションでフォーム認証を使用する場合、既定では、フォーム認証チケットを含むクッキーはセキュリティで保護されません。 認証チケットと最初のログイン資格情報の両方を保護するには、SSL を要求することを検討してください。 <br /><br /> WCF Data Services でフォーム認証を使用する方法の例については、ブログ記事「[OData と認証の – パート 7 – フォーム認証](https://devblogs.microsoft.com/odata/odata-and-authentication-part-7-forms-authentication/)」を参照してください。|  
 |クレーム ベースの認証|クレーム ベースの認証では、データ サービスはユーザー認証を "サードパーティ" の信頼された ID プロバイダー サービスに依存します。 ID プロバイダーは、データ サービス リソースへのアクセスを要求しているユーザーを確実に認証し、要求されたリソースへのアクセスを許可するトークンを発行します。 このトークンがデータ サービスに提示され、そのアクセス トークンを発行した識別情報サービスとの信頼関係に基づいてユーザーのアクセスが許可されます。<br /><br /> クレーム ベースの認証プロバイダーの利点は、信頼ドメイン間でさまざまな種類のクライアントの認証に使用できることです。 このようなサードパーティ プロバイダーを使用することにより、ユーザーの管理と認証の要件をデータ サービスからオフロードできます。 OAuth 2.0 は、サービスとしてのフェデレーション認証のために Azure AppFabric アクセス制御によってサポートされているクレーム ベースの認証プロトコルであり、 REST ベースのサービスをサポートします。 WCF Data Services で OAuth 2.0 を使用する方法の例については、ブログ記事「[OData と認証の – パート 8 – OAuth WRAP](https://devblogs.microsoft.com/odata/odata-and-authentication-part-8-oauth-wrap/)」を参照してください。|  
   
 <a name="clientAuthentication"></a>
@@ -56,7 +56,7 @@ context.Credentials = _
  クレーム ベースのトークンやクッキーなど、<xref:System.Net.NetworkCredential> オブジェクトでは指定できないログイン資格情報がデータ サービスで要求されている場合は、手動で HTTP 要求のヘッダー (通常は `Authorization` と `Cookie`) を設定する必要があります。 このような認証シナリオの詳細については、ブログ記事「[OData と認証の – パート 3 – クライアント側フック](https://devblogs.microsoft.com/odata/odata-and-authentication-part-3-clientside-hooks/)」を参照してください。 要求メッセージの HTTP ヘッダーを設定する方法の例については、「[方法: クライアント要求のヘッダーを設定する](how-to-set-headers-in-the-client-request-wcf-data-services.md)」を参照してください。  
   
 ## <a name="impersonation"></a>偽装  
- データ サービスは通常、データ サービスをホストしているワーカー プロセスの資格情報を使用して、要求されたリソース (サーバー上のファイル、データベースなど) にアクセスします。 偽装を使用しているときは、要求を出しているユーザーの Window ID (ユーザー アカウント) で ASP.NET アプリケーションを実行できます。 偽装は、IIS を使用してユーザーを認証するアプリケーションで使用されるのが一般的です。この場合、要求されたリソースへのアクセスにそのプリンシパルの資格情報が使用されます。 詳細については、「[ASP.NET の偽装](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100))」参照してください。  
+ データ サービスは通常、データ サービスをホストしているワーカー プロセスの資格情報を使用して、要求されたリソース (サーバー上のファイル、データベースなど) にアクセスします。 偽装を使用しているときは、要求を出しているユーザーの Window ID (ユーザー アカウント) で ASP.NET アプリケーションを実行できます。 偽装は、IIS を使用してユーザーを認証するアプリケーションで使用されるのが一般的です。この場合、要求されたリソースへのアクセスにそのプリンシパルの資格情報が使用されます。 詳細については、「[ASP.NET の偽装](/previous-versions/aspnet/xh507fc5(v=vs.100))」参照してください。  
   
 ## <a name="configuring-data-service-authorization"></a>データ サービスの承認の構成  
  承認とは、事前に行われた認証に基づいて識別されるプリンシパルまたはプロセスにアプリケーション リソースへのアクセスを許可することです。 一般に、データ サービスのユーザーには、クライアント アプリケーションで必要とされている操作を実行するのに十分な権限のみを与えるようにします。  

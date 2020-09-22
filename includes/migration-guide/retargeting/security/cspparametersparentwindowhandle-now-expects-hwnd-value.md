@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4b5c886ad35afbbf0a68e03b3174ab9ea1f5524f
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 12ba3bd3c9e9e00b88cab0e568a1ce0f4f8bbb05
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614768"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606752"
 ---
 ### <a name="cspparametersparentwindowhandle-now-expects-hwnd-value"></a>CspParameters.ParentWindowHandle が HWND 値を受け取るようになる
 
@@ -16,7 +16,7 @@ ms.locfileid: "85614768"
 cspParameters.ParentWindowHandle = form.Handle;
 ```
 
-以前のバージョンの .NET Framework では、[HWND](https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types#HWND) 値が置かれているメモリ内の場所を表す <xref:System.IntPtr?displayProperty=fullName> が値として必要でした。 Windows 7 以前のバージョンでこのプロパティを form.Handle に設定しても影響はありませんでしたが、Windows 8 以降のバージョンでは、&quot;<xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName>:パラメーターが正しくありません&quot; が表示されます。
+以前のバージョンの .NET Framework では、[HWND](/windows/desktop/WinProg/windows-data-types#HWND) 値が置かれているメモリ内の場所を表す <xref:System.IntPtr?displayProperty=fullName> が値として必要でした。 Windows 7 以前のバージョンでこのプロパティを form.Handle に設定しても影響はありませんでしたが、Windows 8 以降のバージョンでは、&quot;<xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName>:パラメーターが正しくありません&quot; が表示されます。
 
 #### <a name="suggestion"></a>提案される解決策
 

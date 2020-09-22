@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e528a41748d9353c96d443f68e15e7a98ee7f4ae
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 882c4c0455b7df538079ffe1b7d1d7ca8af1904a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85616273"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606787"
 ---
 ### <a name="accessibility-improvements-in-windows-forms-controls-for-net-48"></a>.NET 4.8 の Windows フォーム コントロールでのアクセシビリティの改善
 
@@ -21,7 +21,7 @@ Windows フォーム フレームワークでは引き続き、アクセシビ�
 **これらの変更を選択する方法と選択しない方法** アプリケーションでこれらの変更を利用するには、.NET Framework 4.8 で実行する必要があります。 アプリケーションでは、次のいずれかの方法でこれらの変更を選択できます。
 
 - .NET Framework 4.8 をターゲットとして再コンパイルします。 .NET Framework 4.8 をターゲットとする Windows フォーム アプリケーションでは、これらのアクセシビリティの変更が既定で有効になります。
-- .NET Framework 4.7.2 以前のバージョンをターゲットとし、下の例のように、アプリ構成ファイルの `<runtime>` セクションに次の [AppContext スイッチ](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element)を追加し、それを `false` に設定することで、以前のアクセシビリティ動作を選択しないようにします。
+- .NET Framework 4.7.2 以前のバージョンをターゲットとし、下の例のように、アプリ構成ファイルの `<runtime>` セクションに次の [AppContext スイッチ](../../../../docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)を追加し、それを `false` に設定することで、以前のアクセシビリティ動作を選択しないようにします。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -72,7 +72,7 @@ Windows フォーム フレームワークでは引き続き、アクセシビ�
 **ProgressBar アクセシビリティ サポートの改善**
 
 - UI オートメーション通知やその他の UI オートメーション機能を使用できる、<xref:System.Windows.Forms.ProgressBar> コントロールの UI オートメーション サポートが有効になりました。 開発者は、進行状況を示すためにナレーターで読み上げることができる、UI オートメーション通知を使用できるようになりました。
-UI オートメーション通知イベントを含む、UI オートメーション イベントの概要については、「[UI オートメーション イベントの概要](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-eventsoverview)」を参照してください。
+UI オートメーション通知イベントを含む、UI オートメーション イベントの概要については、「[UI オートメーション イベントの概要](/windows/desktop/WinAuto/uiauto-eventsoverview)」を参照してください。
 
 **PropertyGrid アクセシビリティ サポートの改善**
 
@@ -89,7 +89,7 @@ UI オートメーション通知イベントを含む、UI オートメーシ�
 **視覚的な手掛かりの向上**
 
 - 空の <xref:System.Windows.Forms.CheckedListBox> コントロールでは、フォーカスを受け取ったときに、フォーカス インジケーターが表示されるようになりました。
-メモ:UI オートメーション サポートは、実行時のコントロールでは有効になりますが、設計時には使用されません。 UI オートメーションの概要については、「[UI オートメーションの概要](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-overview)」を参照してください。
+メモ:UI オートメーション サポートは、実行時のコントロールでは有効になりますが、設計時には使用されません。 UI オートメーションの概要については、「[UI オートメーションの概要](../../../../docs/framework/ui-automation/ui-automation-overview.md)」を参照してください。
 
 **キーボードでのコントロールのツールヒントの呼び出し**
 

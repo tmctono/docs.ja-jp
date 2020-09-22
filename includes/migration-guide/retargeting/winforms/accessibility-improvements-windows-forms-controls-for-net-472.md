@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cc3c2c2be179842f87be8892d057a6c4138086cb
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: a21824862d6cad046b5d6186f9d6db9c20438304
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614877"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606475"
 ---
 ### <a name="accessibility-improvements-in-windows-forms-controls-for-net-472"></a>.NET 4.7.2 の Windows フォーム コントロールでのアクセシビリティの向上
 
@@ -21,7 +21,7 @@ Windows フォーム フレームワークは、アクセシビリティ テク�
 **これらの変更を選択する方法と選択しない方法** アプリケーションでこれらの変更を利用するには、.NET Framework 4.7.2 以降で実行する必要があります。 アプリケーションは、次のいずれかの方法でこれらの変更を利用できます。
 
 - .NET Framework 4.7.2 を対象にして再コンパイルします。 .NET Framework 4.7.2 以降を対象とする Windows フォーム アプリケーションでは、これらのアクセシビリティの変更が既定で有効になります。
-- .NET Framework 4.7.1 以前を対象にして、下の例のように、app.config ファイルの `<runtime>` セクションに次の [AppContext スイッチ](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element)を追加し、それを `false` に設定することで、以前のアクセシビリティ動作を無効にします。
+- .NET Framework 4.7.1 以前を対象にして、下の例のように、app.config ファイルの `<runtime>` セクションに次の [AppContext スイッチ](../../../../docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)を追加し、それを `false` に設定することで、以前のアクセシビリティ動作を無効にします。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -73,7 +73,7 @@ Windows フォーム フレームワークは、アクセシビリティ テク�
 
 - <xref:System.Windows.Forms.PropertyGrid> コントロールの子要素は、PropertyGrid 要素が有効になっている場合にのみ、<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> プロパティに対して `true` を返すようになりました。
 - <xref:System.Windows.Forms.PropertyGrid> コントロールの子要素は、PropertyGrid 要素をユーザーが変更できる場合にのみ、<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> プロパティに対して `false` を返すようになりました。
-UI オートメーションの概要については、「[UI オートメーションの概要](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-overview)」を参照してください。</p>**キーボード ナビゲーションの向上**
+UI オートメーションの概要については、「[UI オートメーションの概要](../../../../docs/framework/ui-automation/ui-automation-overview.md)」を参照してください。</p>**キーボード ナビゲーションの向上**
 
 - <xref:System.Windows.Forms.ToolStripButton> は、<xref:System.Windows.Forms.ToolStripPanel.TabStop> プロパティが `true` に設定された <xref:System.Windows.Forms.ToolStripPanel> 内に含まれているときに、フォーカスできるようになりました。
 

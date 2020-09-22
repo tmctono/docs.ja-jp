@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 9345e995dcb1179e7d0a86f62737f9fda5889f42
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 43b3349b2a35385dcc49d0866e0695b08eac2d2e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286495"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551492"
 ---
 # <a name="date-and-time-data"></a>日付と時刻のデータ
 SQL Server 2008 では、日付と時刻の情報を扱うための新しいデータ型が導入されました。 新しいデータ型には、日付と時刻の別個のデータ型と、範囲、有効桁数、タイム ゾーン処理が向上した拡張データ型が含まれています。 .NET Framework 3.5 Service Pack (SP) 1 以降では、.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) が SQL Server 2008 データベース エンジンの新機能すべてをサポートします。 SqlClient でこれらの新機能を使用するには、.NET Framework 3.5 SP1 以降をインストールする必要があります。  
@@ -22,7 +22,7 @@ SQL Server 2008 では、日付と時刻の情報を扱うための新しいデ�
   
  **SQL Server のドキュメント**  
   
-1. [日時データの使用](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))  
+1. [日時データの使用](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>SQL Server 2008 で導入された日付/時刻データ型  
  次の表は、新しい日付と時刻のデータ型の説明です。  
@@ -47,7 +47,7 @@ SQL Server 2008 では、日付と時刻の情報を扱うための新しいデ�
 > [!NOTE]
 > YDM 日付書式は、文字列形式から `date`、`time`、`datetime2`、または `datetimeoffset` に変換する場合にはサポートされません。  
   
- SQL Server による日付と時刻のデータの解釈方法について詳しくは、「[日時データの使用](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))」をご覧ください。  
+ SQL Server による日付と時刻のデータの解釈方法について詳しくは、「[日時データの使用](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))」をご覧ください。  
   
 ## <a name="datetime-data-types-and-parameters"></a>Date/Time データ型とパラメーター  
  新しい日付型と時刻型をサポートするために、<xref:System.Data.SqlDbType> には、次の列挙値が追加されています。  
@@ -237,7 +237,7 @@ command.Parameters.AddWithValue( _
 |トピック|説明|  
 |-----------|-----------------|  
 |[日付と時刻のデータ型および関数 (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|Transact-SQL の日付と時刻のデータ型および関数の概要について説明します。|  
-|[日時データの使用](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))|日付と時刻のデータ型と関数の情報、および使用例を示します。|  
+|[日時データの使用](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))|日付と時刻のデータ型と関数の情報、および使用例を示します。|  
 |[データ型 (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)|SQL Server でのシステム データ型について説明します。|  
   
 ## <a name="see-also"></a>関連項目

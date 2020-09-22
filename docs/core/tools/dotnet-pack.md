@@ -2,12 +2,12 @@
 title: dotnet pack コマンド
 description: dotnet pack コマンドでは、.NET Core プロジェクトの NuGet パッケージを作成します。
 ms.date: 04/28/2020
-ms.openlocfilehash: 00cda2c52a12a7a3aef5f61291120f522536131d
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 409b946d93cf73fec38941740a446c3ee3402490
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442229"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537831"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -186,6 +186,6 @@ Web プロジェクトは既定でパッケージ化可能ではありません�
 
   `NuspecFile`、`NuspecBasePath`、`NuspecProperties` の詳細については、次のリソースを参照してください。
   
-  - [.nuspec を使用したパック](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)
-  - [カスタマイズされたパッケージを作成するための高度な拡張ポイント](https://docs.microsoft.com/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
-  - [グローバル プロパティ](https://docs.microsoft.com/visualstudio/msbuild/msbuild-properties?view=vs-2019#global-properties)
+  - [.nuspec を使用したパック](/nuget/reference/msbuild-targets#packing-using-a-nuspec)
+  - [カスタマイズされたパッケージを作成するための高度な拡張ポイント](/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
+  - [グローバル プロパティ](/visualstudio/msbuild/msbuild-properties?view=vs-2019#global-properties)

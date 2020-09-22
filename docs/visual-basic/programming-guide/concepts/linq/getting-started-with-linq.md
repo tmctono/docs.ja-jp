@@ -8,12 +8,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic]
 - LINQ, Visual Basic
 ms.assetid: 53c66373-ff43-431f-b4bb-f98362830279
-ms.openlocfilehash: 97db059c33e8c5603c2bf54bbcf128612a0d028f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cea6a5973104d34c058a51c404c13d26dd1aab14
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398397"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554385"
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>Visual Basic の LINQ の概要
 このセクションでは、Visual Basic と統合言語クエリ (LINQ) を理解して使用するのに役立つ概要、例、および背景情報を示します。  
@@ -53,7 +53,7 @@ ms.locfileid: "84398397"
  [LINQ to Objects (Visual Basic)](linq-to-objects.md)  
  LINQ とメモリ内コレクションの使用方法に関する一連のトピックを紹介しています。  
   
- [LINQ to XML (Visual Basic)](linq-to-xml.md)  
+ [LINQ to XML (Visual Basic)](../../../../standard/linq/linq-xml-overview.md)  
  LINQ to XML の使い方を説明するトピックへのリンクがあります。これは、ドキュメント オブジェクト モデル (DOM) のインメモリ ドキュメント変更機能を提供し、LINQ クエリ式をサポートします。  
   
  [統合言語クエリ (LINQ) (Visual Basic)](index.md)  

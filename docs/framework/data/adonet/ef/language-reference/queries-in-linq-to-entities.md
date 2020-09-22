@@ -3,12 +3,12 @@ title: LINQ to Entities でのクエリ
 description: LINQ が、さまざまな種類のデータ ソースやデータ形式のデータを操作するためのシンプルで一貫性のあるモデルを、プログラミング オブジェクトを使用して提供するしくみについて説明します。
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: 908a4a601c075e0845ba6d1eeeaa0f4dbaa3b53d
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5a10aadd3f21086b2b04dc5e77e40f35655f905b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89129141"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554255"
 ---
 # <a name="queries-in-linq-to-entities"></a>LINQ to Entities でのクエリ
 クエリは、データ ソースからデータを取得する式です。 一般に、クエリは専用のクエリ言語で表現されます。たとえば、リレーショナル データベースであれば SQL、XML であれば XQuery が使用されます。 そのため、開発者はクエリの対象となるデータ ソースやデータ形式ごとに新しいクエリ言語を習得する必要があります。 統合言語クエリ (LINQ) は、データ ソースや形式の違いを意識することなくデータを扱うことのできる、より簡素化された一貫したモデルを提供します。 LINQ クエリでは、常にプログラミング オブジェクトを操作することになります。  
@@ -71,4 +71,4 @@ ms.locfileid: "89129141"
 - [LINQ to Entities](linq-to-entities.md)
 - [C# の LINQ の概要](../../../../../csharp/programming-guide/concepts/linq/index.md)
 - [Visual Basic の LINQ の概要](../../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [EF マージ オプションとコンパイル済みクエリ](https://docs.microsoft.com/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)
+- [EF マージ オプションとコンパイル済みクエリ](/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)

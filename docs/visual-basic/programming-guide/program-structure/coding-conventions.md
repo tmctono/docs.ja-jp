@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: 36cd3a927d2fdf197e6b496d9308fc43a555d59b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b71c1eeaa136d01c701191f1bb145674efccbc56
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346153"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551042"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic のコーディング規則
 Microsoft は、ここで示すガイドラインに従ってサンプルおよびドキュメントを開発しています。 同じコーディング規則に従うと、次のような利点があります。  
@@ -75,7 +75,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
 ### <a name="string-data-type"></a>文字列型 (String)  
   
-- 次のコードに示すように、短い文字列を連結するときは[文字列補間](https://docs.microsoft.com/dotnet/visual-basic/programming-guide/language-features/strings/interpolated-strings)を使用します。
+- 次のコードに示すように、短い文字列を連結するときは[文字列補間](../language-features/strings/interpolated-strings.md)を使用します。
   
      ```vb
      MsgBox($"hello{vbCrLf}goodbye")

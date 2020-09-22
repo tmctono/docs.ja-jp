@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 51b92549a40d0e5121cc390f5dbdf726cc06404b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a8be0bd542c76e732d47c19f1d3b578884e2b5ff
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174551"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558928"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>ビジネス ロジックの実装 (LINQ to SQL)
 このトピックの「ビジネス ロジック」とは、データベースでデータを挿入、更新、または削除される前にデータに適用されるカスタム規則または検証テストのことです。 ビジネス ロジックは、「ビジネス ルール」または「ドメイン ロジック」とも呼ばれます。 n 層アプリケーションでは、通常、論理層として設計されるため、プレゼンテーション層やデータ アクセス層から独立して変更できます。 データベースのデータを更新、挿入、または削除する前または後に、データ アクセス層によってビジネス ロジックを呼び出すことができます。  
@@ -181,7 +181,7 @@ partial class Customer
   
  [チュートリアル: エンティティ クラスの挿入、更新、および削除の動作のカスタマイズ](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
- [チュートリアル: エンティティ クラスに検証を追加する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb629301(v=vs.120))  
+ [チュートリアル: エンティティ クラスに検証を追加する](/previous-versions/visualstudio/visual-studio-2013/bb629301(v=vs.120))  
   
 ## <a name="see-also"></a>関連項目
 

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7dbbfbcd-93f5-4546-9dbf-e5fa290b69fa
-ms.openlocfilehash: c9f3b7e19770c89bbb200913bf7fcf44f901ea99
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 88cdb29d8b2bc56929108da738747f4e21cded4c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854576"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546784"
 ---
 # <a name="how-to-execute-a-query-that-returns-reftype-results"></a>方法: RefType 結果を返すクエリを実行する
 このトピックでは、<xref:System.Data.EntityClient.EntityCommand> オブジェクトを使用して概念モデルに対してコマンドを実行する方法と、<xref:System.Data.Metadata.Edm.RefType> を使用して <xref:System.Data.EntityClient.EntityDataReader> の結果を取得する方法を示します。  
   
 ### <a name="to-run-the-code-in-this-example"></a>この例のコードを実行するには  
   
-1. [AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) をプロジェクトに追加し、Entity Framework が使用されるようにプロジェクトを構成します。 詳細については、[Entity Data Model ウィザードを使用する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))」を参照してください。  
+1. [AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) をプロジェクトに追加し、Entity Framework が使用されるようにプロジェクトを構成します。 詳細については、[Entity Data Model ウィザードを使用する](/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))」を参照してください。  
   
 2. アプリケーションのコード ページで、次の `using` ステートメント (Visual Basic の場合は `Imports`) を追加します。  
   

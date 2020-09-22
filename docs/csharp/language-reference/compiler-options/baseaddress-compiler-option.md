@@ -9,15 +9,15 @@ helpviewer_keywords:
 - -baseaddress compiler option [C#]
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
-ms.openlocfilehash: f79ee449eafd04906dab49700a1af6441d54cece
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 17bca4f03c75f7d617e4e99ebab4d1602bb3214e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89464884"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537250"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-baseaddress (C# コンパイラ オプション)
-**-baseaddress** オプションを使用すると、DLL を読み込む位置に推奨されるベース アドレスを指定できます。 このオプションを使用するタイミングと理由の詳細については、[Larry Osterman のブログ](https://docs.microsoft.com/archive/blogs/larryosterman/why-should-i-even-bother-to-use-dlls-in-my-system)を参照してください。  
+**-baseaddress** オプションを使用すると、DLL を読み込む位置に推奨されるベース アドレスを指定できます。 このオプションを使用するタイミングと理由の詳細については、[Larry Osterman のブログ](/archive/blogs/larryosterman/why-should-i-even-bother-to-use-dlls-in-my-system)を参照してください。  
   
 ## <a name="syntax"></a>構文  
   

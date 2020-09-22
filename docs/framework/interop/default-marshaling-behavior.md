@@ -10,11 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-ms.openlocfilehash: 0469874d016725eb6423bb8453e9657b2be923d4
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: f2a508b87d2f4a9ad92bc0f27fc44d74d8e916d3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618572"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555277"
 ---
 # <a name="default-marshaling-behavior"></a>既定のマーシャリングの動作
 相互運用マーシャリングは、メソッドのパラメーターに関連付けられたデータが、マネージド メモリとアンマネージド メモリの間で渡されるときに、どのように動作するかを指示する規則に従って機能します。 これらの組み込みの規則は、データ型の変換などのマーシャリング動作、呼び出し先が渡されたデータを変更してその変更を呼び出し元にこ返すことが可能かどうか、およびどのような状況のときにマーシャラーがパフォーマンスの最適化を実現するかを制御します。  
@@ -22,7 +23,7 @@ ms.locfileid: "85618572"
  このセクションでは、相互運用マーシャリング サービスの既定の動作特性を示します。 ここでは、配列、ブール型、char 型、デリゲート、クラス、オブジェクト、文字列、および構造体のマーシャリングに関する詳細情報を示します。  
   
 > [!NOTE]
-> ジェネリック型のマーシャリングはサポートされていません。 詳しくは、「[ジェネリック型を使用する相互運用](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))」を参照してください。  
+> ジェネリック型のマーシャリングはサポートされていません。 詳しくは、「[ジェネリック型を使用する相互運用](/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))」を参照してください。  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>相互運用マーシャラーによるメモリ管理  
  相互運用マーシャラーは、アンマネージ コードによって割り当てられたメモリを常に解放しようとします。 この動作は、COM メモリの管理規則に準拠していますが、ネイティブ C++ を制御する規則とは異なります。  
@@ -39,7 +40,7 @@ BSTR MethodOne (BSTR b) {
   
  ただし、メソッドをプラットフォーム呼び出しのプロトタイプとして定義する場合は、各 **BSTR** 型を <xref:System.String> 型に置き換えて、`MethodOne` を呼び出します。共通言語ランタイムは、`b` の解放を 2 回試行します。 **String** 型ではなく <xref:System.IntPtr> 型を使用することにより、マーシャリングの動作を変更できます。  
   
- ランタイムは、常に **CoTaskMemFree** メソッドを使用してメモリを解放します。 使用しているメモリが **CoTaskMemAlloc** メソッドで割り当てられていない場合、**IntPtr** を使用し、適切なメソッドを使用して手動でメモリを解放する必要があります。 同様に、カーネル メモリへのポインターを返す **GetCommandLine** 関数を Kernel32.dll から使用するときなど、メモリを解放してはいけない状況のときには、自動的なメモリの解放を防止できます。 手動でメモリを解放する方法について詳しくは、「[Buffers サンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))」を参照してください。  
+ ランタイムは、常に **CoTaskMemFree** メソッドを使用してメモリを解放します。 使用しているメモリが **CoTaskMemAlloc** メソッドで割り当てられていない場合、**IntPtr** を使用し、適切なメソッドを使用して手動でメモリを解放する必要があります。 同様に、カーネル メモリへのポインターを返す **GetCommandLine** 関数を Kernel32.dll から使用するときなど、メモリを解放してはいけない状況のときには、自動的なメモリの解放を防止できます。 手動でメモリを解放する方法について詳しくは、「[Buffers サンプル](/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))」を参照してください。  
   
 ## <a name="default-marshaling-for-classes"></a>クラスに対する既定のマーシャリング  
  クラスは、COM 相互運用でのみマーシャリングすることができ、常にインターフェイスとしてマーシャリングされます。 クラスをマーシャリングするために使用されるインターフェイスが、クラス インターフェイスと呼ばれる場合があります。 クラス インターフェイスを任意のインターフェイスでオーバーライドする方法について詳しくは、「[クラス インターフェイスの概要](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)」をご覧ください。  

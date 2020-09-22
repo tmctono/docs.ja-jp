@@ -2,17 +2,17 @@
 title: LINQ と文字列
 ms.date: 07/20/2015
 ms.assetid: 75ddb201-d97a-4f98-8cdf-4ad51714529a
-ms.openlocfilehash: 73ce4bf5586f1f9ff4995ea6f425b90744b7e333
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ee2a44175e8546f879473a3af6bf1a2de92d2501
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353281"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549850"
 ---
 # <a name="linq-and-strings-visual-basic"></a>LINQ と文字列 (Visual Basic)
 文字列やそのコレクションは、LINQ を使って照会したり変換したりすることができます。 特に、テキスト ファイル内の半構造化されたデータでその利便性が発揮されます。 LINQ クエリは、従来の文字列関数や正規表現と組み合わせることができます。 たとえば、<xref:System.String.Split%2A> または <xref:System.Text.RegularExpressions.Regex.Split%2A> メソッドを使用して、文字列の配列を作成し、その後で LINQ を使用してクエリを実行したり変更したりすることができます。 LINQ クエリの `where` 句で <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> メソッドを使用できます。 LINQ を使用して、正規表現によって返される <xref:System.Text.RegularExpressions.MatchCollection> の結果に対してクエリを実行したり変更したりすることができます。  
   
- このセクションで説明する手法を使えば、半構造化されたテキスト データを XML に変換することもできます。 詳細については、[CSV ファイルから XML を生成する (C#)](how-to-generate-xml-from-csv-files.md)」を参照してください。  
+ このセクションで説明する手法を使えば、半構造化されたテキスト データを XML に変換することもできます。 詳細については、[CSV ファイルから XML を生成する (C#)](../../../../standard/linq/generate-xml-csv-files.md)」を参照してください。  
   
  このセクションの例は、次の 2 つのカテゴリに分かれています。  
   
@@ -62,4 +62,4 @@ ms.locfileid: "74353281"
 ## <a name="see-also"></a>関連項目
 
 - [統合言語クエリ (LINQ) (Visual Basic)](index.md)
-- [方法: CSV ファイルから XML を生成する](how-to-generate-xml-from-csv-files.md)
+- [方法: CSV ファイルから XML を生成する](../../../../standard/linq/generate-xml-csv-files.md)

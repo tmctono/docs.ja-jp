@@ -6,16 +6,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-ms.openlocfilehash: 7413c3fae7d7189ec8dca43b0c77f6b56158f416
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 037ae0dff80c96d08d8778146b5683454b1f80b1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159469"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543687"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>方法: .NET Framework ストリームと Windows ランタイム ストリームの間で変換を行う (Windows のみ)
 
-UWP アプリ用 .NET Framework は、完全な .NET Framework のサブセットです。 UWP アプリのセキュリティおよびその他の要件のために、ファイルを開いたり読み取ったりするために使用する .NET Framework API の完全なセットを使用できません。 詳細については、「[.NET for UWP apps overview](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))」(UWP アプリ用 .NET の概要) を参照してください。 ただし、他のストリームの処理操作のために .NET Framework API を使用することもできます。 これらのストリームを操作するには、<xref:System.IO.MemoryStream> や <xref:System.IO.FileStream> などの .NET Framework ストリーム型と、<xref:Windows.Storage.Streams.IInputStream>、<xref:Windows.Storage.Streams.IOutputStream>、<xref:Windows.Storage.Streams.IRandomAccessStream> などの Windows ランタイム ストリームの間で変換できます。
+UWP アプリ用 .NET Framework は、完全な .NET Framework のサブセットです。 UWP アプリのセキュリティおよびその他の要件のために、ファイルを開いたり読み取ったりするために使用する .NET Framework API の完全なセットを使用できません。 詳細については、「[.NET for UWP apps overview](/previous-versions/windows/apps/br230302(v=vs.140))」(UWP アプリ用 .NET の概要) を参照してください。 ただし、他のストリームの処理操作のために .NET Framework API を使用することもできます。 これらのストリームを操作するには、<xref:System.IO.MemoryStream> や <xref:System.IO.FileStream> などの .NET Framework ストリーム型と、<xref:Windows.Storage.Streams.IInputStream>、<xref:Windows.Storage.Streams.IOutputStream>、<xref:Windows.Storage.Streams.IRandomAccessStream> などの Windows ランタイム ストリームの間で変換できます。
 
 <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType> クラスには、これらの変換を容易にするメソッドが含まれています。 ただし、次のセクションで説明するように、.NET Framework と Windows ランタイムのストリームの間にある根本的な違いにより、これらのメソッドの使用結果に影響があります。
 
@@ -69,6 +69,6 @@ Windows ランタイム ランダム アクセス ストリームから .NET Fra
 
 ## <a name="see-also"></a>関連項目
 
-- [クイック スタート:ファイルの読み取りと書き込みを行う (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh464978(v=win.10))  
-- [Windows ストア アプリ用 .NET の概要](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))  
-- [Windows ストア アプリ用 .NET の API](https://docs.microsoft.com/previous-versions/br230232(v=vs.120))  
+- [クイック スタート:ファイルの読み取りと書き込みを行う (Windows)](/previous-versions/windows/apps/hh464978(v=win.10))  
+- [Windows ストア アプリ用 .NET の概要](/previous-versions/windows/apps/br230302(v=vs.140))  
+- [Windows ストア アプリ用 .NET の API](/previous-versions/br230232(v=vs.120))

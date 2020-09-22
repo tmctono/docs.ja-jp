@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 7b1f0a6c416f660f06cea099197ba136f84407f9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0d62c8d3c4669673d26f2d5535d7940fce702f66
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286198"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547448"
 ---
 # <a name="table-valued-parameters"></a>テーブル値パラメーター
 テーブル値パラメーターを使用すると、ラウンド トリップを何度も繰り返したり、サーバー側にデータを処理するための特殊なロジックを組み込んだりすることなく、複数行のデータをクライアント アプリケーションから SQL Server へと簡単にマーシャリングできます。 テーブル値パラメーターを使用すると、クライアント アプリケーションのデータ行をカプセル化して単一のパラメーター化コマンドでサーバーに送ることができます。 受信データ行はテーブル変数に格納され、Transact-SQL によって操作できるようになります。  
@@ -26,7 +26,7 @@ ms.locfileid: "84286198"
 |リソース|説明|  
 |--------------|-----------------|  
 |[テーブル値パラメーターの使用 (データベース エンジン)](/sql/relational-databases/tables/use-table-valued-parameters-database-engine)|テーブル値パラメーターの作成方法および使用方法について説明します。|  
-|[ユーザー定義テーブル型](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|テーブル値パラメーターを宣言する際に使用するユーザー定義テーブル型について説明します。|  
+|[ユーザー定義テーブル型](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|テーブル値パラメーターを宣言する際に使用するユーザー定義テーブル型について説明します。|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>旧バージョンの SQL Server での複数行の受け渡し  
  SQL Server 2008 にテーブル値パラメーターが導入されるまでは、複数行データをストアド プロシージャまたはパラメーター化 SQL コマンドに渡す方法は限られていました。 開発者が選択できる複数の行をサーバーに渡すためのオプションを次に示します。  
@@ -40,7 +40,7 @@ ms.locfileid: "84286198"
 - `bcp` ユーティリティ プログラムまたは <xref:System.Data.SqlClient.SqlBulkCopy> オブジェクトを使用して、多数のデータ行をテーブルに読み込みます。 この方法は効率的ですが、データが一時テーブルまたはテーブル変数に読み込まれなければ、サーバー側での処理がサポートされません。  
   
 ## <a name="creating-table-valued-parameter-types"></a>テーブル値パラメーター型の作成  
- テーブル値パラメーターは、Transact-SQL の CREATE TYPE ステートメントを使用して定義された厳密に型指定されたテーブルの構造に基づいています。 クライアント アプリケーションでテーブル値パラメーターを使用するには、まず SQL Server でテーブル型を作成し、その構造を定義する必要があります。 テーブル型の作成の詳細については、「[ユーザー定義テーブル型](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))」を参照してください。  
+ テーブル値パラメーターは、Transact-SQL の CREATE TYPE ステートメントを使用して定義された厳密に型指定されたテーブルの構造に基づいています。 クライアント アプリケーションでテーブル値パラメーターを使用するには、まず SQL Server でテーブル型を作成し、その構造を定義する必要があります。 テーブル型の作成の詳細については、「[ユーザー定義テーブル型](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))」を参照してください。  
   
  次のステートメントは、CategoryID と CategoryName 列から成る CategoryTableType というテーブル型を作成します。  
   

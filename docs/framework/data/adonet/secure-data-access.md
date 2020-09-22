@@ -2,12 +2,12 @@
 title: 安全なデータ アクセス
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: ede8b1a2e840b56d6e7f45e6d26e09fa5e8bcc25
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 28d3a7d8ccfe2aeafbea0930b8655e41bc45c1a2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337523"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550782"
 ---
 # <a name="secure-data-access"></a>安全なデータ アクセス
 セキュリティで保護された ADO.NET コードを作成するには、基になるデータ ストア、つまりデータベースで利用可能なセキュリティ機構を理解しておく必要があります。 さらに、アプリケーションに含まれる他の機能またはコンポーネントのセキュリティへの影響も考慮する必要があります。  
@@ -24,7 +24,7 @@ ms.locfileid: "75337523"
 |リソース|説明|  
 |--------------|-----------------|  
 |[接続情報の保護](protecting-connection-information.md)|保護構成を使用して接続文字列を暗号化する方法など、セキュリティのベスト プラクティスと接続情報を保護する手法について説明します。|  
-|[データ アクセス戦略に関する推奨事項](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|データへのアクセスおよびデータベース操作の実行に関連した推奨事項について説明します。|  
+|[データ アクセス戦略に関する推奨事項](/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|データへのアクセスおよびデータベース操作の実行に関連した推奨事項について説明します。|  
 |[接続文字列ビルダー](connection-string-builders.md)|実行時にユーザー入力から接続文字列を構築する方法について説明します。|  
 |[SQL Server セキュリティの概要](./sql/overview-of-sql-server-security.md)|SQL Server のセキュリティ アーキテクチャについて説明します。|  
   
@@ -46,7 +46,7 @@ ms.locfileid: "75337523"
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[スクリプト攻略の概要](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|スクリプトによる攻略および SQL ステートメントによる攻略から保護する方法について説明します。|  
+|[スクリプト攻略の概要](/previous-versions/aspnet/w1sw53ds(v=vs.100))|スクリプトによる攻略および SQL ステートメントによる攻略から保護する方法について説明します。|  
   
 ## <a name="probing-attacks"></a>プローブ攻撃  
  攻撃者は、システムを攻撃するときに、サーバー、データベース、テーブルなどの名前を例外情報から取得して使用することがよくあります。 例外には、アプリケーションやデータ ソースに関する具体的な情報が含まれている場合があるので、アプリケーションとデータ ソースの保護を強化するには、クライアント側に不可欠な情報だけを公開するようにします。  
@@ -65,7 +65,7 @@ ms.locfileid: "75337523"
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[Access 2007 のセキュリティの考慮事項と指針](https://docs.microsoft.com/previous-versions/office/developer/office-2007/bb421308(v=office.12))|Access 2007 のセキュリティ手法 (ファイルの暗号化、パスワードの管理、新しい ACCDB 形式および ACCDE 形式へのデータベースの変換、他のセキュリティ オプションの使用など) について説明します。|  
+|[Access 2007 のセキュリティの考慮事項と指針](/previous-versions/office/developer/office-2007/bb421308(v=office.12))|Access 2007 のセキュリティ手法 (ファイルの暗号化、パスワードの管理、新しい ACCDB 形式および ACCDE 形式へのデータベースの変換、他のセキュリティ オプションの使用など) について説明します。|  
 |[Access 2010 のセキュリティの概要](https://support.office.com/article/Introduction-to-Access-2010-security-CAE6D764-0318-4622-955F-68D9F186D6CA)|Access 2010 によって提供されるセキュリティ機能の概要について説明します。|  
 ## <a name="enterprise-services"></a>Enterprise Services  
  COM+ は、Windows NT アカウントおよびプロセスやスレッドの偽装に基づく独自のセキュリティ モデルを備えています。 <xref:System.EnterpriseServices> 名前空間は、.NET アプリケーションが、<xref:System.EnterpriseServices.ServicedComponent> クラスを使用して、マネージド コードと COM+ セキュリティ サービスを統合できるようにするラッパーを提供します。  
@@ -74,7 +74,7 @@ ms.locfileid: "75337523"
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[ロール ベースのセキュリティ](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/s6y8k15h(v=vs.71))|マネージド コードを COM+ セキュリティ サービスに統合する方法について説明します。|  
+|[ロール ベースのセキュリティ](/previous-versions/dotnet/netframework-1.1/s6y8k15h(v=vs.71))|マネージド コードを COM+ セキュリティ サービスに統合する方法について説明します。|  
   
 ## <a name="interoperating-with-unmanaged-code"></a>アンマネージ コードとの相互運用  
  .NET Framework は、COM コンポーネント、COM+ サービス、外部のタイプ ライブラリ、各種のオペレーティング システム サービスなど、アンマネージ コードとの相互運用性をサポートします。 アンマネージド コードを使用することは、マネージド コードのセキュリティ境界の外に出ることを意味します。 作成するコード、およびそれを呼び出すコードのどちらにも、アンマネージ コード権限 (<xref:System.Security.Permissions.SecurityPermission> フラグが指定された <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>) が必要です。 アンマネージ コードは、意図しないセキュリティ上の脆弱性をアプリケーションにもたらす可能性があります。 どうしても必要な場合を除き、アンマネージ コードとの相互運用は避けてください。  
@@ -84,13 +84,13 @@ ms.locfileid: "75337523"
 |リソース|説明|  
 |--------------|-----------------|  
 |[アンマネージ コードとの相互運用](../../interop/index.md)|COM コンポーネントを .NET Framework に公開する方法、および .NET Framework コンポーネントを COM に公開する方法について説明します。|
-|[高度な COM 相互運用性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|プライマリ相互運用機能アセンブリ、スレッド処理、カスタム マーシャリングなど高度なトピックが含まれています。|
+|[高度な COM 相互運用性](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|プライマリ相互運用機能アセンブリ、スレッド処理、カスタム マーシャリングなど高度なトピックが含まれています。|
 
 ## <a name="see-also"></a>関連項目
 
 - [ADO.NET アプリケーションのセキュリティ保護](securing-ado-net-applications.md)
 - [SQL Server のセキュリティ](./sql/sql-server-security.md)
-- [データ アクセス戦略に関する推奨事項](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
+- [データ アクセス戦略に関する推奨事項](/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [接続情報の保護](protecting-connection-information.md)
 - [接続文字列ビルダー](connection-string-builders.md)
 - [ADO.NET の概要](ado-net-overview.md)

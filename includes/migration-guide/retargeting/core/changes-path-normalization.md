@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 04c4fb4c8e9da8c58a5e26f78a7b13aa6a0df4a0
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 7c4b9faf25853c1c7a546f06c329f6f153eef904
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614685"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606384"
 ---
 ### <a name="changes-in-path-normalization"></a>パスの正規化の変更
 
@@ -17,7 +17,7 @@ ms.locfileid: "85614685"
 - パスの相対ディレクトリ (.) または親ディレクトリ (..) を評価する。
 - 指定した文字をトリミングする。
 .NET Framework 4.6.2 を対象とするアプリより、パス正規化の次の変更が既定で有効になっています。
-  - ランタイムはオペレーティング システムの [GetFullPathName](https://docs.microsoft.com/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamew) 関数に従って、パスを正規化します。
+  - ランタイムはオペレーティング システムの [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamew) 関数に従って、パスを正規化します。
 - 正規化では、ディレクトリ セグメントの末尾 (ディレクトリ名の末尾のスペースなど) がトリミングされなくなりました。
 - `\\.\` や `\\?\` (mscorlib.dll のファイル I/O API の場合) を含む、完全に信頼できるデバイス パス構文がサポートされます。
 - ランタイムではデバイス構文パスは検証されません。

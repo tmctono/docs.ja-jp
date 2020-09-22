@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: 92cc95f80d18251314db8d953520732841b0274c
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 6c14c94c0a2f88f28ec327a3463a6b525ef80ff6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557335"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557750"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework のシステム要件
 
@@ -99,7 +99,7 @@ ms.locfileid: "88557335"
 
 - Windows Server 2012 には .NET Framework 4.5 が含まれているため、これを個別にインストールする必要はありません。 同様に、Windows Server 2012 R2 には .NET Framework 4.5.1 が含まれています。
 
-- .NET Framework は、Windows Server 2008 R2 SP1 以降の Server Core ロールを限定付きでサポートしています。 サポートされない API の一覧については、「[Server Core .NET Functionality](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85))」 (Server Core .NET 機能) を参照してください。
+- .NET Framework は、Windows Server 2008 R2 SP1 以降の Server Core ロールを限定付きでサポートしています。 サポートされない API の一覧については、「[Server Core .NET Functionality](/previous-versions//dd745015(v=vs.85))」 (Server Core .NET 機能) を参照してください。
 
 - .NET Framework は、Itanium ベース システムの Windows Server 2008 R2 ではサポートされていません。
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: b4594932b6ed21de98faab57d80404a7b763067d
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: f3270147f0cf38a646efac603f058173daa78547
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207913"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541136"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>コンパイル済みクエリ (LINQ to Entities)
 
@@ -18,7 +18,7 @@ ms.locfileid: "83207913"
   
  .NET Framework 4.5 以降では、LINQ クエリは自動的にキャッシュされます。 ただし、引き続きコンパイル済み LINQ クエリを使用して後続の実行でさらにコストを削減できます。コンパイル済みクエリは、自動的にキャッシュされる LINQ クエリよりも効率的である場合があります。 メモリ内コレクションへ `Enumerable.Contains` 演算子を追加する LINQ to Entities クエリは自動的にキャッシュされません。 また、コンパイル済み LINQ クエリのメモリ内コレクションをパラメーターで表すことは許可されていません。  
   
- <xref:System.Data.Objects.CompiledQuery> クラスは、クエリをコンパイルおよびキャッシュして、再利用できるようにします。 このクラスには、概念上、<xref:System.Data.Objects.CompiledQuery> の `Compile` メソッドとその複数のオーバーロードが存在します。 `Compile` メソッドを呼び出すと、コンパイル済みクエリを表す新しいデリゲートを作成できます。 `Compile` およびパラメーター値が指定された <xref:System.Data.Objects.ObjectContext> メソッドは、なんらかの結果 (<xref:System.Linq.IQueryable%601> インスタンスなど) をもたらすデリゲートを返します。 クエリは、初回実行時に 1 回だけコンパイルされます。 コンパイル時にクエリに対して設定したマージ オプションは、後から変更できません。 一度クエリがコンパイルされると、プリミティブ型のパラメーターを指定することだけはできますが、生成された SQL を変更するクエリの部分を置き換えることはできません。 詳しくは、「[EF マージ オプションとコンパイル済みクエリ](https://docs.microsoft.com/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)」をご覧ください。
+ <xref:System.Data.Objects.CompiledQuery> クラスは、クエリをコンパイルおよびキャッシュして、再利用できるようにします。 このクラスには、概念上、<xref:System.Data.Objects.CompiledQuery> の `Compile` メソッドとその複数のオーバーロードが存在します。 `Compile` メソッドを呼び出すと、コンパイル済みクエリを表す新しいデリゲートを作成できます。 `Compile` およびパラメーター値が指定された <xref:System.Data.Objects.ObjectContext> メソッドは、なんらかの結果 (<xref:System.Linq.IQueryable%601> インスタンスなど) をもたらすデリゲートを返します。 クエリは、初回実行時に 1 回だけコンパイルされます。 コンパイル時にクエリに対して設定したマージ オプションは、後から変更できません。 一度クエリがコンパイルされると、プリミティブ型のパラメーターを指定することだけはできますが、生成された SQL を変更するクエリの部分を置き換えることはできません。 詳しくは、「[EF マージ オプションとコンパイル済みクエリ](/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)」をご覧ください。
   
  <xref:System.Data.Objects.CompiledQuery> の `Compile` メソッドによってコンパイルされる LINQ to Entities クエリの式は、<xref:System.Func%605> などのジェネリック `Func` デリゲートのいずれかによって表されます。 クエリ式は、最大で、`ObjectContext` パラメーター、戻りパラメーター、および 16 個のクエリ パラメーターをカプセル化できます。 17 個以上のクエリ パラメーターが必要な場合は、クエリ パラメーターを表すプロパティを持つ構造体を作成できます。 次に、その構造体のプロパティを設定した後、それらのプロパティをクエリ式で使用できます。  
   
@@ -73,4 +73,4 @@ ms.locfileid: "83207913"
 
 - [ADO.NET Entity Framework](../index.md)
 - [LINQ to Entities](linq-to-entities.md)
-- [EF マージ オプションとコンパイル済みクエリ](https://docs.microsoft.com/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)
+- [EF マージ オプションとコンパイル済みクエリ](/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)

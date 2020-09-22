@@ -2,12 +2,12 @@
 title: dotnet nuget disable source コマンド
 description: dotnet nuget disable source コマンドを使うと、NuGet 構成ファイルの既存のソースを無効にできます。
 ms.date: 03/20/2020
-ms.openlocfilehash: 54acb40b1944eaff347107e8f3439578ec8e0f3c
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: af37a6589cebaf0501ee5647ebadb83125d0f56e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463569"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537952"
 ---
 # <a name="dotnet-nuget-disable-source"></a>dotnet nuget disable source
 
@@ -39,7 +39,7 @@ dotnet nuget disable source -h|--help
 
 - **`--configfile <FILE>`**
 
-  NuGet 構成ファイル。 指定した場合、このファイルの設定のみが使用されます。 指定しない場合、現在のディレクトリからの構成ファイルの階層が使用されます。 詳細については、「[一般的な NuGet 構成](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior)」をご覧ください。
+  NuGet 構成ファイル。 指定した場合、このファイルの設定のみが使用されます。 指定しない場合、現在のディレクトリからの構成ファイルの階層が使用されます。 詳細については、「[一般的な NuGet 構成](/nuget/consume-packages/configuring-nuget-behavior)」をご覧ください。
 
 ## <a name="examples"></a>使用例
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: 41d3af831ff3c99e7f3000593db52d307d37ac38
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 49e5ad2e6ae3dc50a0f48fcc3df2f7ec49ed7f88
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900901"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544402"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>クライアント アプリケーションでのデータ サービスの使用 (WCF Data Services)
 Web ブラウザーに URI を入力することで、Open Data Protocol (OData) フィードを公開するサービスにアクセスできます。 URI はリソースのアドレスを提供し、要求メッセージがこれらのアドレスに送信されてリソースが表す基になるデータのアクセスまたは変更を行います。 ブラウザーは HTTP GET コマンドを発行して、要求されたリソースを OData フィードとして返します。 詳細については、「[Web ブラウザーからサービスへのアクセス](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)」を参照してください。  
@@ -45,7 +45,7 @@ Web ブラウザーに URI を入力することで、Open Data Protocol (OData)
  ペイロードのメッセージ形式は、HTTP 要求メッセージのヘッダーで要求されます。 詳細については、[OData の操作](https://www.odata.org/documentation/odata-version-2-0/operations/)に関するページを参照してください。
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>クライアント ライブラリを使用したデータのアクセスおよび変更  
- WCF Data Services には、.NET Framework ベースのクライアント アプリケーションおよび Silverlight ベースのクライアント アプリケーションから OData フィードを簡単に使用できるクライアント ライブラリが含まれています。 これらのライブラリは、HTTP メッセージの送受信を簡略化します。 また、メッセージ ペイロードをエンティティ データを表す CLR オブジェクトに変換します。 クライアント ライブラリには、 <xref:System.Data.Services.Client.DataServiceContext> および <xref:System.Data.Services.Client.DataServiceQuery%601>という 2 つのコア クラスがあります。 これらのクラスを使用すると、データ サービスをクエリして、返されるエンティティ データを CLR オブジェクトとして処理できます。 詳細については、「[WCF Data Services クライアント ライブラリ](wcf-data-services-client-library.md)」および「[WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))」を参照してください。  
+ WCF Data Services には、.NET Framework ベースのクライアント アプリケーションおよび Silverlight ベースのクライアント アプリケーションから OData フィードを簡単に使用できるクライアント ライブラリが含まれています。 これらのライブラリは、HTTP メッセージの送受信を簡略化します。 また、メッセージ ペイロードをエンティティ データを表す CLR オブジェクトに変換します。 クライアント ライブラリには、 <xref:System.Data.Services.Client.DataServiceContext> および <xref:System.Data.Services.Client.DataServiceQuery%601>という 2 つのコア クラスがあります。 これらのクラスを使用すると、データ サービスをクエリして、返されるエンティティ データを CLR オブジェクトとして処理できます。 詳細については、「[WCF Data Services クライアント ライブラリ](wcf-data-services-client-library.md)」および「[WCF Data Services (Silverlight)](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))」を参照してください。  
   
  Visual Studio の **[サービス参照の追加]** ダイアログを使用して、参照をデータ サービスに追加できます。 このツールは、参照されたデータ サービスからサービス メタデータを要求し、データ サービスを表す <xref:System.Data.Services.Client.DataServiceContext> を生成します。また、エンティティを表すクライアント データ サービス クラスも生成します。 詳しくは、「[データ サービス クライアント ライブラリの生成](generating-the-data-service-client-library-wcf-data-services.md)」をご覧ください。  
   

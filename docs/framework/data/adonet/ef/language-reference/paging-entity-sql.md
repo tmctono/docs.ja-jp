@@ -2,12 +2,12 @@
 title: ページング (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ba4f334d-03e5-4a7b-9d42-628f4639b9a2
-ms.openlocfilehash: 25d52734c30e087629be9923a43e720f94c96d04
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7148d693041968acb543a3d659caf05820f2aff8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249573"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553637"
 ---
 # <a name="paging-entity-sql"></a>ページング (Entity SQL)
 物理的なページングは、[ORDER BY](order-by-entity-sql.md) 句の [SKIP](skip-entity-sql.md) サブ句および [LIMIT](limit-entity-sql.md) サブ句を使用して実行できます。 物理的ページングを決定的に実行するには、SKIP と LIMIT を使用する必要があります。 非決定的な方法で結果の行の数を制限するには、[TOP](top-entity-sql.md) を使用する必要があります。 TOP および SKIP/LIMIT は、同時には指定できません。  
@@ -28,4 +28,4 @@ ms.locfileid: "70249573"
 
 - [Entity SQL リファレンス](entity-sql-reference.md)
 - [Entity SQL の概要](entity-sql-overview.md)
-- [方法: クエリの結果をページングする](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
+- [方法: クエリの結果をページングする](/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))

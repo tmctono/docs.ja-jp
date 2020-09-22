@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 79996d2d-9b03-4a9d-82cc-7c5e7c2ad93d
-ms.openlocfilehash: dca8c25babcbc1676552af8ef49b7a7e71cd6136
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: c51b093c1b74157b957566c4c67712278e50b9e3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854531"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546667"
 ---
 # <a name="how-to-navigate-relationships-with-the-navigate-operator"></a>方法: Navigate 演算子でリレーションシップをナビゲートする
 このトピックでは、<xref:System.Data.EntityClient.EntityCommand> オブジェクトを使用して概念モデルに対してコマンドを実行する方法と、<xref:System.Data.Metadata.Edm.RefType> を使用して <xref:System.Data.EntityClient.EntityDataReader> の結果を取得する方法を示します。  
   
 ### <a name="to-run-the-code-in-this-example"></a>この例のコードを実行するには  
   
-1. [AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) をプロジェクトに追加し、Entity Framework が使用されるようにプロジェクトを構成します。 詳細については、[Entity Data Model ウィザードを使用する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))」を参照してください。  
+1. [AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) をプロジェクトに追加し、Entity Framework が使用されるようにプロジェクトを構成します。 詳細については、[Entity Data Model ウィザードを使用する](/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))」を参照してください。  
   
 2. アプリケーションのコード ページで、次の `using` ステートメント (Visual Basic の場合は `Imports`) を追加します。  
   

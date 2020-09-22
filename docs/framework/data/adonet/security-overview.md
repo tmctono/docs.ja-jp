@@ -2,12 +2,12 @@
 title: セキュリティの概要
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 8a036a40d2b1728f39037018c3672551b8b67bd9
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 4222dd36fe2f693bb16216e01d5e06a8176a7801
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545030"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550691"
 ---
 # <a name="security-overview"></a>セキュリティの概要
 
@@ -92,7 +92,7 @@ ms.locfileid: "75545030"
 |リソース|説明|
 |--------------|-----------------|
 |[SQL Server のセキュリティ](./sql/sql-server-security.md)|SQL Server のセキュリティの概要を説明します。アプリケーションのシナリオを交えながら、SQL Server を対象とした安全な ADO.NET アプリケーションを作成するための指針を提供します。|
-|[データ アクセス戦略に関する推奨事項](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|データへのアクセスおよびデータベース操作の実行に関連した推奨事項について説明します。|
+|[データ アクセス戦略に関する推奨事項](/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|データへのアクセスおよびデータベース操作の実行に関連した推奨事項について説明します。|
 
 ## <a name="security-policy-and-administration"></a>セキュリティ ポリシーと管理
 
@@ -102,8 +102,8 @@ ms.locfileid: "75545030"
 
 |リソース|説明|
 |--------------|-----------------|
-|[セキュリティ ポリシーの管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|セキュリティ ポリシーの作成と管理について説明します。|
-|[セキュリティ ポリシーのベスト プラクティス](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|セキュリティ ポリシーの管理方法について説明したトピックへのリンクを提供します。|
+|[セキュリティ ポリシーの管理](/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|セキュリティ ポリシーの作成と管理について説明します。|
+|[セキュリティ ポリシーのベスト プラクティス](/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|セキュリティ ポリシーの管理方法について説明したトピックへのリンクを提供します。|
 
 ## <a name="see-also"></a>関連項目
 

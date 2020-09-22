@@ -5,12 +5,12 @@ ms.date: 09/18/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 182350cc5143155133385c6fd77986b271f6db91
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2e8263db289bed50e7437b695134458b8c07e0e5
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73977040"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679574"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>トレーニング済みモデルを使用して予測する
 
@@ -72,7 +72,7 @@ ITransformer predictionPipeline = mlContext.Model.Load("model.zip", out predicti
 PredictionEngine<HousingData, HousingPrediction> predictionEngine = mlContext.Model.CreatePredictionEngine<HousingData, HousingPrediction>(predictionPipeline);
 ```
 
-次に、[`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) メソッドを使用して、入力データをパラメーターとして渡します。 [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) メソッドを使用する場合、入力が [`IDataView`](xref:Microsoft.ML.IDataView) である必要はない点に注意してください。 これは、入力データ型のオブジェクトを渡すことができるように、入力データ型の操作を簡単に内部化できるためです。 さらに、`CurrentPrice` は新しいデータを使用して予測しようとしているターゲットまたはラベルなので、この時点では値がないと見なされます。
+次に、[`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict%2A) メソッドを使用して、入力データをパラメーターとして渡します。 [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict%2A) メソッドを使用する場合、入力が [`IDataView`](xref:Microsoft.ML.IDataView) である必要はない点に注意してください。 これは、入力データ型のオブジェクトを渡すことができるように、入力データ型の操作を簡単に内部化できるためです。 さらに、`CurrentPrice` は新しいデータを使用して予測しようとしているターゲットまたはラベルなので、この時点では値がないと見なされます。
 
 ```csharp
 // Input Data
@@ -114,14 +114,14 @@ HousingData[] housingData = new HousingData[]
 };
 ```
 
-次に、[`Transform`](xref:Microsoft.ML.ITransformer.Transform*) メソッドを使用してデータ変換を適用し、予測を生成します。
+次に、[`Transform`](xref:Microsoft.ML.ITransformer.Transform%2A) メソッドを使用してデータ変換を適用し、予測を生成します。
 
 ```csharp
 // Predicted Data
 IDataView predictions = predictionPipeline.Transform(inputData);
 ```
 
-[`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) メソッドを使用して予測値を調べます。
+[`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn%2A) メソッドを使用して予測値を調べます。
 
 ```csharp
 // Get Predictions

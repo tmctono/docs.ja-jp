@@ -11,12 +11,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 6844cf2aa589f7516a9e40bc604c5f907ec6d311
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: af08938b6b8f169ded2180529c2b4aadebefef55
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104017"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558811"
 ---
 # <a name="data-transformations-with-linq-c"></a>LINQ によるデータ変換 (C#)
 統合言語クエリ (LINQ) で行うことができるのは、データの取得だけではありません。 データ変換のための強力なツールとしても使用できます。 LINQ クエリを使用することにより、ソース シーケンスを入力として使用し、さまざまな方法で加工して新しい出力シーケンスを作成できます。 要素自体を変更せずに、並べ替えやグループ化してシーケンス自体を変更できます。 しかし、LINQ クエリの最も強力な機能は、新しい型を作成する機能です。 この操作は [select](../../../language-reference/keywords/select-clause.md) 句内で行います。 たとえば、次のタスクを実行できます。  
@@ -88,7 +88,7 @@ ms.locfileid: "87104017"
 </Root>  
 ```  
   
- 詳細については、「[C# での XML ツリーの作成 (LINQ to XML)](./creating-xml-trees-linq-to-xml-2.md)」を参照してください。  
+ 詳細については、「[C# での XML ツリーの作成 (LINQ to XML)](../../../../standard/linq/create-xml-trees.md)」を参照してください。  
   
 ## <a name="performing-operations-on-source-elements"></a>ソース要素に対して操作を実行する  
  出力シーケンスには、ソース シーケンスの要素または要素のプロパティが 1 つも含まれない場合があります。 代わりに、ソース要素を入力引数として使用することで計算された値のシーケンスを出力として生成できます。
@@ -107,6 +107,6 @@ ms.locfileid: "87104017"
 - [統合言語クエリ (LINQ) (C#)](./index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
-- [LINQ to XML (C#)](./linq-to-xml-overview.md)
+- [LINQ to XML (C#)](../../../../standard/linq/linq-xml-overview.md)
 - [LINQ クエリ式](../../../linq/index.md)
 - [select 句](../../../language-reference/keywords/select-clause.md)

@@ -4,12 +4,12 @@ description: .NET Core をインストールできる Windows のバージョン
 author: adegeo
 ms.author: adegeo
 ms.date: 06/22/2020
-ms.openlocfilehash: 97f67d00b3eb4dafc55256aea51f4295bb0ef06a
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 12cffb78de803845a4b18adc70289993e67f64f1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308950"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538290"
 ---
 # <a name="install-net-core-on-windows"></a>Windows に .NET Core をインストールする
 
@@ -96,7 +96,7 @@ SDK は、.NET Core アプリとライブラリを作成して公開するため
 
 | OS                            | バージョン                        | アーキテクチャ   |
 | ----------------------------- | ------------------------------ | --------------- |
-| Windows クライアント                | 8.1                            | x64、x86        |
+| Windows クライアント                | 7 SP1+、8.1                    | x64、x86        |
 | Windows 10 クライアント             | バージョン 1609+                  | x64、x86        |
 | Windows Server                | 2012 R2+                       | x64、x86        |
 | Nano Server                   | バージョン 1803+                  | x64、ARM32      |
@@ -190,7 +190,7 @@ SDK は、.NET Core アプリとライブラリを作成して公開するため
 
 [dotnet-install スクリプト](../tools/dotnet-install-script.md)は、ランタイムの CI 自動化および管理者以外によるインストールに使用されます。 スクリプトは、[dotnet-install スクリプト参照ページ](../tools/dotnet-install-script.md)からダウンロードできます。
 
-スクリプトでは、既定で最新の [長期サポート (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) バージョン (.NET Core 3.1) がインストールされます。 `Channel` スイッチを指定することで、特定のリリースを選択できます。 ランタイムをインストールするには、`Runtime` スイッチを含めます。 それ以外の場合は、スクリプトによって [SDK](sdk.md) がインストールされます。
+スクリプトでは、既定で最新の [長期サポート (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) バージョン (.NET Core 3.1) がインストールされます。 `Channel` スイッチを指定することで、特定のリリースを選択できます。 ランタイムをインストールするには、`Runtime` スイッチを含めます。 それ以外の場合は、スクリプトによって SDK がインストールされます。
 
 ```powershell
 dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore

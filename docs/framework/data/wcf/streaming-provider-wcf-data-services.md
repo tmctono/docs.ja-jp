@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 83f28c50c53281692e1c3c6d55cc55e8d9304ad9
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 9ed728fa8d1d56c835aa27645a28921aa4f641e9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116601"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544454"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>ストリーミング プロバイダー (WCF Data Services)
 
@@ -39,7 +39,7 @@ WCF Data Services では、ストリーミング データ プロバイダーを
 
 5. サーバー上またはデータ ソース内のバイナリ リソースへのアクセスを有効にします。
 
-このトピックの例はサンプルのストリーミング フォト サービスに基づいています。詳細については、ブログの記事「[Data Services ストリーミング プロバイダー シリーズ: ストリーミング プロバイダーの実装 (パート 1)](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1)」を参照してください。 Streaming Photo Data Service サンプルのソース コードは、[GitHub](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample) で入手できます。
+このトピックの例はサンプルのストリーミング フォト サービスに基づいています。詳細については、ブログの記事「[Data Services ストリーミング プロバイダー シリーズ: ストリーミング プロバイダーの実装 (パート 1)](/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1)」を参照してください。 Streaming Photo Data Service サンプルのソース コードは、[GitHub](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample) で入手できます。
 
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>データ モデル内のメディア リンク エントリの定義
 
@@ -53,7 +53,7 @@ WCF Data Services では、ストリーミング データ プロバイダーを
 
 また、エンティティまたはデータ モデルを定義する .edmx ファイルまたは .csdl ファイルのルートに名前空間 `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` を追加する必要があります。
 
-Entity Framework プロバイダーを使用してメディア リソースを公開するデータ サービスの例については、ブログの記事「[Data Services ストリーミング プロバイダー シリーズ: ストリーミング プロバイダーの実装 (パート 1)](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1)」を参照してください。
+Entity Framework プロバイダーを使用してメディア リソースを公開するデータ サービスの例については、ブログの記事「[Data Services ストリーミング プロバイダー シリーズ: ストリーミング プロバイダーの実装 (パート 1)](/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1)」を参照してください。
 
 **リフレクション プロバイダー**
 
@@ -95,7 +95,7 @@ ASP.NET Web アプリケーションでデータ サービスを作成する場�
 
 詳細については、「[メッセージ転送ストリーミング](../../wcf/feature-details/streaming-message-transfer.md)」および「[トランスポート クォータ](../../wcf/feature-details/transport-quotas.md)」を参照してください。
 
-また、既定では、インターネット インフォメーション サービス (IIS) でも要求のサイズが 4 MB に制限されます。 IIS 上で実行時にデータ サービスが 4 MB を超えるストリームを受信できるようにするには、次の例で示すように、`<system.web />` 構成セクション内の [httpRuntime 要素 (ASP.NET 設定スキーマ)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) の `maxRequestLength` 属性も設定する必要があります。
+また、既定では、インターネット インフォメーション サービス (IIS) でも要求のサイズが 4 MB に制限されます。 IIS 上で実行時にデータ サービスが 4 MB を超えるストリームを受信できるようにするには、次の例で示すように、`<system.web />` 構成セクション内の [httpRuntime 要素 (ASP.NET 設定スキーマ)](/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) の `maxRequestLength` 属性も設定する必要があります。
 
 ## <a name="using-data-streams-in-a-client-application"></a>クライアント アプリケーションでのデータ ストリームの使用
 
@@ -125,7 +125,7 @@ WCF Data Services クライアント ライブラリを使用すると、クラ�
 
 - <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A> メソッド、<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> メソッド、または <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> メソッドを実装する場合は、メソッドのパラメーターとして指定される eTag 値および Content-Type 値を使用する必要があります。 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> プロバイダーの実装には、eTag ヘッダーまたは Content-Type ヘッダーを設定しないでください。
 
-- 既定では、クライアントはチャンクされた HTTP Transfer-Encoding を使用して、大きなバイナリ ストリームを送信します。 ASP.NET 開発サーバーではこの種類のエンコードがサポートされていないので、この Web サーバーを使用して大きなバイナリ ストリームを受け取る必要があるストリーミング データ サービスをホストすることはできません。 ASP.NET 開発サーバーの詳細については、「 [ASP.NET Web プロジェクト用の Visual Studio の Web サーバー](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120))」を参照してください。
+- 既定では、クライアントはチャンクされた HTTP Transfer-Encoding を使用して、大きなバイナリ ストリームを送信します。 ASP.NET 開発サーバーではこの種類のエンコードがサポートされていないので、この Web サーバーを使用して大きなバイナリ ストリームを受け取る必要があるストリーミング データ サービスをホストすることはできません。 ASP.NET 開発サーバーの詳細については、「 [ASP.NET Web プロジェクト用の Visual Studio の Web サーバー](/previous-versions/aspnet/58wxa9w5(v=vs.120))」を参照してください。
 
 <a name="versioning"></a>
 

@@ -3,12 +3,12 @@ title: グループ結合の実行 (C# での LINQ)
 description: C# で LINQ を使用して、グループ結合を実行する方法について説明します。
 ms.date: 04/22/2020
 ms.assetid: 9667daf9-a5fd-4b43-a5c4-a9c2b744000e
-ms.openlocfilehash: 740a861da7dfb9653a874d5baf67eeb2030555b4
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 6411479c5fe6cb0ee79a0cd3df6de2f4d42c26a2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135751"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542810"
 ---
 # <a name="perform-grouped-joins"></a>グループ結合の実行
 
@@ -20,7 +20,7 @@ ms.locfileid: "82135751"
 > 最初のコレクションの各要素は、2 番目のコレクションに相関関係を持つ要素があるかどうかにかかわらず、グループ結合の結果セットに表示されます。 相関関係を持つ要素が見つからない場合、その要素の相関関係を持つ要素のシーケンスは空です。 そのため、結果セレクターは最初のコレクションのすべての要素にアクセスできます。 これは、非グループ結合の結果セレクターとは異なります。非グループ結合の結果セレクターは、2 番目のコレクションに一致するものがない最初のコレクションの要素にアクセスすることはできません。
 
 > [!WARNING]
-> <xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType> には、従来のリレーショナル データベースの用語に直接相当するものはありません。 ただし、このメソッドでは内部結合と左外部結合のスーパーセットが実装されます。 これらの操作はどちらも、グループ化結合の観点から記述できます。 詳細については、「[結合操作](../programming-guide/concepts/linq/join-operations.md)」と[「Entity Framework Core」の「GroupJoin」](https://docs.microsoft.com/ef/core/querying/complex-query-operators#groupjoin)を参照してください。
+> <xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType> には、従来のリレーショナル データベースの用語に直接相当するものはありません。 ただし、このメソッドでは内部結合と左外部結合のスーパーセットが実装されます。 これらの操作はどちらも、グループ化結合の観点から記述できます。 詳細については、「[結合操作](../programming-guide/concepts/linq/join-operations.md)」と[「Entity Framework Core」の「GroupJoin」](/ef/core/querying/complex-query-operators#groupjoin)を参照してください。
 
 この記事の最初の例では、グループ結合を実行する方法を示します。 2 つ目の例では、グループ結合を使用して XML 要素を作成する方法を示します。
 

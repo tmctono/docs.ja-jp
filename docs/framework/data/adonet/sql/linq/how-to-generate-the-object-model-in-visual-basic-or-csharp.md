@@ -2,17 +2,17 @@
 title: '方法: Visual Basic または C# でオブジェクト モデルを生成する'
 ms.date: 03/30/2017
 ms.assetid: a0c73b33-5650-420c-b9dc-f49310c201ee
-ms.openlocfilehash: 7d2c0600534c93f5884eec48a4bdaa3ce99945e9
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: e2491cf18be556cb26f084a178b7bf09448c6904
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002805"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546615"
 ---
 # <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>方法: Visual Basic または C\# でオブジェクト モデルを生成する
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、使用しているプログラミング言語のオブジェクト モデルが、リレーショナル データベースに対応付けられています。 既存のデータベースのメタデータから Visual Basic または C# のモデルを自動的に生成するには、2 つのツールを使用できます。  
   
-- Visual Studio を使用している場合は、オブジェクト リレーショナル デザイナーを使用して、オブジェクト モデルを生成できます。 O/R デザイナーでは、機能が豊富なユーザー インターフェイスを使用して、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のオブジェクト モデルを生成できます。 詳しくは、「[Visual Studio の LINQ to SQL ツール](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)」をご覧ください。
+- Visual Studio を使用している場合は、オブジェクト リレーショナル デザイナーを使用して、オブジェクト モデルを生成できます。 O/R デザイナーでは、機能が豊富なユーザー インターフェイスを使用して、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のオブジェクト モデルを生成できます。 詳しくは、「[Visual Studio の LINQ to SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)」をご覧ください。
   
 - SQLMetal コマンド ライン ツール。 詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 25905d7ac3ca4bb66a22ad1df421b400eaa6b08f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c2abca183f1241cff314a4367c7bd9f1b9f239ea
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413272"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554594"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>チュートリアル: Visual Basic でのクエリの作成
 
@@ -145,7 +145,7 @@ ms.locfileid: "84413272"
 
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 
-- [LINQ to XML](linq-to-xml.md)
+- [LINQ to XML](../../../../standard/linq/linq-xml-overview.md)
 
 - [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
 

@@ -4,12 +4,12 @@ description: XML の処理オプションについて確認します。これに
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
-ms.openlocfilehash: c41b3dd99264b9043c5914b84bbb76ac02b317ac
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 707ac1e4c8e16e701faed8476f0e773270dc1174
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767768"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554529"
 ---
 # <a name="xml-processing-options"></a>XML の処理オプション
 XML データの処理に使用できる Microsoft テクノロジの一覧については、次の表を参照してください。  
@@ -18,7 +18,7 @@ XML データの処理に使用できる Microsoft テクノロジの一覧に�
   
 |**オプション**|**処理の種類**|**説明**|  
 |----------------|-------------------------|---------------------|  
-|[LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) <br/> [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) <br />(<xref:System.Xml.Linq> 名前空間)|メモリ内|- .NET Framework の統合言語クエリ (LINQ) テクノロジに基づいています。<br />- オブジェクト、リレーショナル データ、XML データに対して SQL と同じようにクエリを利用できます。<br />- 直感的なドキュメント作成および変換機能を提供します。<br />- このオプションは、新しいコードを記述する場合に使用します。|  
+|[LINQ to XML (C#)](../../linq/linq-xml-overview.md) <br/> [LINQ to XML (Visual Basic)](../../linq/linq-xml-overview.md) <br />(<xref:System.Xml.Linq> 名前空間)|メモリ内|- .NET Framework の統合言語クエリ (LINQ) テクノロジに基づいています。<br />- オブジェクト、リレーショナル データ、XML データに対して SQL と同じようにクエリを利用できます。<br />- 直感的なドキュメント作成および変換機能を提供します。<br />- このオプションは、新しいコードを記述する場合に使用します。|  
 |<xref:System.Xml.XmlReader?displayProperty=nameWithType>|ストリーム ベース|- 高速、非キャッシュ、前方参照専用の XML データ アクセス手段を提供します。<br />- <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> メソッドを使用してオブジェクトを作成し、<xref:System.Xml.XmlReaderSettings> クラスを使用して、そのオブジェクトで有効にする一連の機能を指定できます。|  
 |<xref:System.Xml.XmlWriter?displayProperty=nameWithType>|ストリーム ベース|- 高速、非キャッシュ、前方参照専用の XML データ生成手段を提供します。<br />- <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> メソッドを使用してオブジェクトを作成し、<xref:System.Xml.XmlWriterSettings> クラスを使用して、そのオブジェクトで有効にする一連の機能を指定できます。|  
 |<xref:System.Xml.XmlDocument?displayProperty=nameWithType>|メモリ内|- [W3C ドキュメント オブジェクト モデル (DOM) 勧告の DOM Level 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) および [DOM Level 2 Core](https://www.w3.org/TR/DOM-Level-2-Core/) を実装します。<br />- 使い慣れた DOM モデルに基づくメソッドとプロパティを使用して、ノードを作成、挿入、削除、変更することができます。<br />- このオプションは、W3C DOM を利用する既存のコードを変更する場合に使用します。|  
@@ -29,8 +29,8 @@ XML データの処理に使用できる Microsoft テクノロジの一覧に�
   
 |**オプション**|**説明**|  
 |----------------|---------------------|  
-|[XmlLite](https://docs.microsoft.com/previous-versions/windows/desktop/ms752872(v=vs.85))|- 高性能 XML アプリの構築に役立つ高速、安全、非キャッシュ、前方参照専用の XML パーサー。<br />- ダイナミック リンク ライブラリ (DLL) を使用できる任意の言語で動作します。C++ の使用をお勧めします。|  
-|[MSXML](https://docs.microsoft.com/previous-versions/windows/desktop/ms763742(v=vs.85))|- Windows オペレーティング システムに付属する、XML 処理のための COM ベース テクノロジ。<br />- DOM をネイティブで実装し、XPath と XSLT をサポートしています。<br />- SAX2 イベントベース パーサーが含まれます。|  
+|[XmlLite](/previous-versions/windows/desktop/ms752872(v=vs.85))|- 高性能 XML アプリの構築に役立つ高速、安全、非キャッシュ、前方参照専用の XML パーサー。<br />- ダイナミック リンク ライブラリ (DLL) を使用できる任意の言語で動作します。C++ の使用をお勧めします。|  
+|[MSXML](/previous-versions/windows/desktop/ms763742(v=vs.85))|- Windows オペレーティング システムに付属する、XML 処理のための COM ベース テクノロジ。<br />- DOM をネイティブで実装し、XPath と XSLT をサポートしています。<br />- SAX2 イベントベース パーサーが含まれます。|  
   
 ## <a name="see-also"></a>関連項目
 

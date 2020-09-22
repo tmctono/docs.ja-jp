@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: b50e76b8f832c3a214ca54f97bab8b0b6789ac25
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9f9174896181e427c73936a1bb91fa13235e70be
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403318"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550990"
 ---
 # <a name="comments-in-code-visual-basic"></a>コード内のコメント (Visual Basic)
 コード例にはコメント記号 (`'`) がしばしば見られます。 この記号は、後続のテキスト ("*コメント*") を無視するように Visual Basic コンパイラに指示します。 コメントは、コードを読むユーザーに役立つように追加される簡単な説明です。  
@@ -61,7 +61,7 @@ ms.locfileid: "84403318"
   
 ## <a name="see-also"></a>関連項目
 
-- [基本的な機能 - XML コメントによるコードの文書化](https://docs.microsoft.com/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
+- [基本的な機能 - XML コメントによるコードの文書化](/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
 - [方法: XML ドキュメントを作成する](how-to-create-xml-documentation.md)
 - [XML のコメント用タグ](../../language-reference/xmldoc/index.md)
 - [プログラム構造とコード規則](program-structure-and-code-conventions.md)

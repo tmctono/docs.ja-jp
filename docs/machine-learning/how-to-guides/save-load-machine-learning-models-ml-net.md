@@ -5,12 +5,12 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: e3cebe979b5c279ce8cb90db5510f8758c24c2b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 681a35956a8959e2f1cbb5a7023e0ef29b67097e
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73977005"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679535"
 ---
 # <a name="save-and-load-trained-models"></a>トレーニング済みモデルの保存と読み込み
 
@@ -69,7 +69,7 @@ mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 1. モデルの [`ITransformer`](xref:Microsoft.ML.ITransformer)。
 2. [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema) の想定される入力の [`ITransformer`](xref:Microsoft.ML.ITransformer)。
 
-モデルのトレーニング後、[`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) メソッドを使用し、入力データの `DataViewSchema` を使用してトレーニング済みモデルを `model.zip` というファイルに保存します。
+モデルのトレーニング後、[`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save%2A) メソッドを使用し、入力データの `DataViewSchema` を使用してトレーニング済みモデルを `model.zip` というファイルに保存します。
 
 ```csharp
 // Save Trained Model
@@ -80,7 +80,7 @@ mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 
 ローカルに保存されたモデルは、他のプロセスやアプリケーション (`ASP.NET Core`、`Serverless Web Applications` など) で使用できます。 詳細については、[Web API での ML.NET の使用](./serve-model-web-api-ml-net.md)と [ML.NET サーバーレス Web アプリの展開](./serve-model-serverless-azure-functions-ml-net.md)に関するハウツー記事を参照してください。
 
-個別のアプリケーションまたはプロセスでは、ファイル パスと共に [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) メソッドを使用して、トレーニング済みモデルをアプリケーションに取り込みます。
+個別のアプリケーションまたはプロセスでは、ファイル パスと共に [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load%2A) メソッドを使用して、トレーニング済みモデルをアプリケーションに取り込みます。
 
 ```csharp
 //Define DataViewSchema for data preparation pipeline and trained model
@@ -92,7 +92,7 @@ ITransformer trainedModel = mlContext.Model.Load("model.zip", out modelSchema);
 
 ## <a name="load-a-model-stored-remotely"></a>リモートに保存されているモデルを読み込む
 
-リモートの場所に保存されているデータ準備パイプラインとモデルをアプリケーションに読み込むには、[`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) メソッドでファイル パスではなく [`Stream`](xref:System.IO.Stream) を使用します。
+リモートの場所に保存されているデータ準備パイプラインとモデルをアプリケーションに読み込むには、[`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load%2A) メソッドでファイル パスではなく [`Stream`](xref:System.IO.Stream) を使用します。
 
 ```csharp
 // Create MLContext

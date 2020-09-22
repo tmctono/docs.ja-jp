@@ -2,12 +2,12 @@
 title: DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: 1b202af052c05ed9dc671fa20c9c366f280ec5c7
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: fe6adac35c157b454f5e33d3526196d4f408fd89
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774166"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546869"
 ---
 # <a name="dataviews"></a>DataView
 <xref:System.Data.DataView> では、<xref:System.Data.DataTable> に格納されているデータのさまざまなビューを作成できます。この機能は、データ連結アプリケーションで頻繁に使用されます。 **DataView** を使用すると、さまざまな並べ替え順序を使用してテーブルのデータを公開したり、行の状態やフィルター式に基づいてデータをフィルター処理したりできます。
@@ -36,9 +36,9 @@ ms.locfileid: "72774166"
  「[DataViews の管理](managing-dataviews.md)」では、**DataViewManager** を使用して **DataSet** の各テーブルの **DataView** 設定を管理する方法について説明します。
 
 ## <a name="related-sections"></a>関連項目
- [ASP.NET Web アプリケーション](https://docs.microsoft.com/previous-versions/655cec97(v=vs.100))に関する記事では、ASP.NET アプリケーション、Web Forms、および Web サービスを作成する場合の概要と詳細なステップごとの手順を示します。
+ [ASP.NET Web アプリケーション](/previous-versions/655cec97(v=vs.100))に関する記事では、ASP.NET アプリケーション、Web Forms、および Web サービスを作成する場合の概要と詳細なステップごとの手順を示します。
 
- [Windows アプリケーション](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))に関する記事では、Windows フォームおよびコンソール アプリケーションの操作に関する詳細情報を提供します。
+ [Windows アプリケーション](/previous-versions/ms184421(v=vs.100))に関する記事では、Windows フォームおよびコンソール アプリケーションの操作に関する詳細情報を提供します。
 
  「[DataSet、DataTable、および DataView](index.md)」では、**DataSet** オブジェクトと、それを使用してアプリケーション データを管理する方法について説明します。
 

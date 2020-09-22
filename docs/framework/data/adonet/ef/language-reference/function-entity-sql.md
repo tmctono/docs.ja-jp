@@ -2,12 +2,12 @@
 title: FUNCTION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: fd7f484733e7135d2d6c8094b6527d672a988088
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3cc843c7f16f667508aeaea65879de6842478bc
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150299"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544493"
 ---
 # <a name="function-entity-sql"></a>FUNCTION (Entity SQL)
 Entity SQL クエリ コマンドのスコープに関数を定義します。  
@@ -61,7 +61,7 @@ FUNCTION function-name
   
  `A()`  
   
- 詳細については、[ユーザー定義関数を呼び出す](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))」を参照してください。  
+ 詳細については、[ユーザー定義関数を呼び出す](/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))」を参照してください。  
   
  関数をモデル自体で宣言することもできます。 モデルで宣言された関数は、コマンドでインラインで宣言された関数と同じように実行されます。 詳しくは、「[ユーザー定義関数](user-defined-functions-entity-sql.md)」をご覧ください。  
   

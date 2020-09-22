@@ -7,11 +7,12 @@ helpviewer_keywords:
 - interop marshaling
 - interop marshaling, about interop marshaling
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
-ms.openlocfilehash: ca733d59abc4ca3d9d470b054ee9e34b5084ae38
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: bd618714a9bd27bc309b7933b656de6bd139cfe7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618975"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554893"
 ---
 # <a name="interop-marshaling"></a>相互運用マーシャリング
 
@@ -78,7 +79,7 @@ COM には、COM アパートメント間や異なる COM プロセス間でデ�
     > [!NOTE]
     > C# クライアントのスレッドを STA に設定すると、MTA COM コンポーネントへの呼び出しにはアパートメント間のマーシャリングが必要となります。
 
-アパートメント モデルを明示的に選択する方法については、「[マネージドとアンマネージド スレッド](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))」を参照してください。
+アパートメント モデルを明示的に選択する方法については、「[マネージドとアンマネージド スレッド](/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))」を参照してください。
 
 ## <a name="marshaling-remote-calls"></a>リモートの呼び出しのマーシャリング
 
@@ -124,10 +125,10 @@ COM には、COM アパートメント間や異なる COM プロセス間でデ�
 |[COM 相互運用機能によるデータのマーシャリング](marshaling-data-with-com-interop.md)|COM ラッパーをカスタマイズしてマーシャリング動作を変更する方法について説明します。|
 |[方法: マネージド コード DCOM を WCF に移行する](how-to-migrate-managed-code-dcom-to-wcf.md)|DCOM から WCF に移行する方法について説明します。|
 |[方法: HRESULT に例外を割り当てる](how-to-map-hresults-and-exceptions.md)|HRESULT にカスタム例外をマップする方法について説明し、各 HRESULT から .NET Framework での同等の例外クラスへの完全なマッピングを示します。|
-|[ジェネリック型を使用する相互運用](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|COM 相互運用性のジェネリック型を使用するとき、どのアクションがサポートされるかについて説明します。|
+|[ジェネリック型を使用する相互運用](/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|COM 相互運用性のジェネリック型を使用するとき、どのアクションがサポートされるかについて説明します。|
 |[アンマネージ コードとの相互運用](index.md)|共通言語ランタイムが提供する相互運用サービスについて説明します。|
-|[高度な COM 相互運用性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|.NET Framework アプリケーションに COM コンポーネントを組み込む方法についての詳細情報へのリンクを示します。|
-|[相互運用のためのデザインの考慮事項](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|統合 COM コンポーネントを記述するためのヒントを示します。|
+|[高度な COM 相互運用性](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|.NET Framework アプリケーションに COM コンポーネントを組み込む方法についての詳細情報へのリンクを示します。|
+|[相互運用のためのデザインの考慮事項](/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|統合 COM コンポーネントを記述するためのヒントを示します。|
 
 ## <a name="reference"></a>関連項目
 

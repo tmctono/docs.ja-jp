@@ -3,12 +3,12 @@ title: DataSet と DataTable のセキュリティ ガイダンス
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: 4fe8a062c762cc70d33243e3443aa9bf55635f98
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: e9973df02ff478eedc932099fb8be0526a97b899
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89137618"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679456"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>DataSet と DataTable のセキュリティ ガイダンス
 
@@ -18,9 +18,9 @@ ms.locfileid: "89137618"
 * .NET Core 以降
 * .NET 5.0 以降
 
-[DataSet](/dotnet/api/system.data.dataset) 型と [DataTable](/dotnet/api/system.data.datatable) 型は .NET のレガシ コンポーネントであり、マネージド オブジェクトとしてデータ セットを表すことができます。 これらのコンポーネントは、元の [ADO.NET インフラストラクチャ](/dotnet/framework/data/adonet/dataset-datatable-dataview/)の一部として .NET 1.0 で導入されました。 それらの目標は、リレーショナル データ セットに対するマネージド ビューを提供し、基になるデータのソースが XML、SQL、または他のテクノロジであるかどうかを抽象化することでした。
+[DataSet](/dotnet/api/system.data.dataset) 型と [DataTable](/dotnet/api/system.data.datatable) 型は .NET のレガシ コンポーネントであり、マネージド オブジェクトとしてデータ セットを表すことができます。 これらのコンポーネントは、元の [ADO.NET インフラストラクチャ](./index.md)の一部として .NET 1.0 で導入されました。 それらの目標は、リレーショナル データ セットに対するマネージド ビューを提供し、基になるデータのソースが XML、SQL、または他のテクノロジであるかどうかを抽象化することでした。
 
-最新のデータ ビュー パラダイムを含め、ADO.NET の詳細については、[ADO.NET のドキュメント](/dotnet/framework/data/adonet/)を参照してください。
+最新のデータ ビュー パラダイムを含め、ADO.NET の詳細については、[ADO.NET のドキュメント](../index.md)を参照してください。
 
 ## <a name="default-restrictions-when-deserializing-a-dataset-or-datatable-from-xml"></a>XML から DataSet または DataTable を逆シリアル化するときの既定の制限
 
@@ -49,7 +49,7 @@ at System.Data.DataColumn.set_DataType(Type value)
 > [!NOTE]
 > 列を `DataTable` に追加すると、`ReadXml` は XML からスキーマを読み取らず、スキーマが一致しない場合は、レコードも読み取りません。そのため、このメソッドを使用するには、すべての列を手動で追加する必要があります。
 
-```cs
+```csharp
 XmlReader xmlReader = GetXmlReader();
 
 // Assume the XML blob contains data for type MyCustomClass.
@@ -105,7 +105,7 @@ _App.config_ を使用して、許可される型のリストを拡張できま�
 
 型のアセンブリ修飾名を取得するには、次のコードで示すように、[Type.AssemblyQualifiedName](/dotnet/api/system.type.assemblyqualifiedname) プロパティを使用します。
 
-```cs
+```csharp
 string assemblyQualifiedName = typeof(Fabrikam.CustomType).AssemblyQualifiedName;
 ```
 
@@ -136,7 +136,7 @@ string assemblyQualifiedName = typeof(Fabrikam.CustomType).AssemblyQualifiedName
 
 許可される型のリストは、次のコードで示すように、[AppDomain.SetData](/dotnet/api/system.appdomain.setdata) と既知のキー _System.Data.DataSetDefaultAllowedTypes_ を使用することにより、プログラムで拡張することもできます。
 
-```cs
+```csharp
 Type[] extraAllowedTypes = new Type[]
 {
     typeof(Fabrikam.CustomType),
@@ -260,11 +260,11 @@ ASP.NET では、`<AppContextSwitchOverrides>` 要素は使用できません。
 }
 ```
 
-詳細については、「[.NET Core ランタイム構成設定](/dotnet/core/run-time-config/)」を参照してください。
+詳細については、「[.NET Core ランタイム構成設定](../../../../core/run-time-config/index.md)」を参照してください。
 
 `AllowArbitraryDataSetTypeInstantiation` は、構成ファイルを使用する代わりに、次のコードで示すように、[AppContext.SetSwitch](/dotnet/api/system.appcontext.setswitch) を使用してプログラムで設定することもできます。
 
-```cs
+```csharp
 // Warning: setting the following switch can introduce a security problem.
 AppContext.SetSwitch("Switch.System.Data.AllowArbitraryDataSetTypeInstantiation", true);
 ```
@@ -308,13 +308,13 @@ AppContext.SetSwitch("Switch.System.Data.AllowArbitraryDataSetTypeInstantiation"
 
 次の例で示すように、[`DataAdapter.Fill` メソッド](/dotnet/api/system.data.common.dataadapter.fill)を使用して `DataAdapter` から `DataSet` インスタンスを設定できます。
 
-```cs
-// Assumes that connection is a valid SqlConnection object.  
+```csharp
+// Assumes that connection is a valid SqlConnection object.
 string queryString =
-  "SELECT CustomerID, CompanyName FROM dbo.Customers";  
-SqlDataAdapter adapter = new SqlDataAdapter(queryString, connection);  
-  
-DataSet customers = new DataSet();  
+  "SELECT CustomerID, CompanyName FROM dbo.Customers";
+SqlDataAdapter adapter = new SqlDataAdapter(queryString, connection);
+
+DataSet customers = new DataSet();
 adapter.Fill(customers, "Customers");
 ```
 
@@ -355,7 +355,7 @@ adapter.Fill(customers, "Customers");
 
 次のコードで示すように、ASP.NET (SOAP) Web サービスで `DataSet` または `DataTable` のインスタンスを受け入れることができます。
 
-```cs
+```csharp
 using System.Data;
 using System.Web.Services;
 
@@ -372,7 +372,7 @@ public class MyService : WebService
 
 これのバリエーションとしては、`DataSet` または `DataTable` をパラメーターとして直接受け入れるのではなく、次のコードで示すように、SOAP でシリアル化されたオブジェクト グラフ全体の一部として受け入れます。
 
-```cs
+```csharp
 using System.Data;
 using System.Web.Services;
 
@@ -396,7 +396,7 @@ public class MyClass
 
 または、ASP.NET Web サービスの代わりに WCF を使用します。
 
-```cs
+```csharp
 using System.Data;
 using System.ServiceModel;
 
@@ -423,7 +423,7 @@ public class MyClass
 
 開発者は、次のコードで示すように、`XmlSerializer` を使用して `DataSet` や `DataTable` のインスタンスを逆シリアル化できます。
 
-```cs
+```csharp
 using System.Data;
 using System.IO;
 using System.Xml.Serialization;
@@ -452,16 +452,16 @@ public class MyClass
 
 一般的なサードパーティの Newtonsoft ライブラリ [JSON.NET](https://www.newtonsoft.com/json) を使用すると、次のコードで示すように、`DataSet` および `DataTable` のインスタンスを逆シリアル化できます。
 
-```cs
+```csharp
 using System.Data;
 using Newtonsoft.Json;
 
 public DataSet PerformDeserialization1(string json) {
-    return JsonConvert.DeserializeObect<DataSet>(data);
+    return JsonConvert.DeserializeObject<DataSet>(data);
 }
 
 public MyClass PerformDeserialization2(string json) {
-    return JsonConvert.DeserializeObect<MyClass>(data);
+    return JsonConvert.DeserializeObject<MyClass>(data);
 }
 
 public class MyClass
@@ -497,27 +497,27 @@ public class MyClass
 * データベース プロバイダーの[さまざまなエコシステム](/ef/core/providers/)を使用して、Entity Framework オブジェクト モデルによるデータベース クエリを簡単に射影できます。
 * 信頼されていないソースからデータを逆シリアル化するときに、組み込みの保護が提供されます。
 
-`.aspx` SOAP エンドポイントを使用するアプリの場合、[WCF](/dotnet/framework/wcf/) を使用するようにそれらのエンドポイントを変更することを検討してください。 WCF は、`.asmx` Web サービスに対する、より完全な機能を備えた代替手段です。 既存の呼び出し元との互換性のため、WCF エンドポイントは [SOAP 経由で公開できます](../../../wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)。
+`.aspx` SOAP エンドポイントを使用するアプリの場合、[WCF](../../../wcf/index.md) を使用するようにそれらのエンドポイントを変更することを検討してください。 WCF は、`.asmx` Web サービスに対する、より完全な機能を備えた代替手段です。 既存の呼び出し元との互換性のため、WCF エンドポイントは [SOAP 経由で公開できます](../../../wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)。
 
 ## <a name="code-analyzers"></a>コード アナライザー
 
 自分のソース コードをコンパイルするときに実行されるコード アナライザーのセキュリティ規則は、C# および Visual Basic コードで、このセキュリティの問題に関連する脆弱性を検出するのに役立ちます。 Microsoft.CodeAnalysis.FxCopAnalyzers は、[nuget.org](https://www.nuget.org/) で配布されるコード アナライザーの NuGet パッケージです。
 
-コード アナライザーの概要については、「[ソース コード アナライザーの概要](https://docs.microsoft.com/visualstudio/code-quality/roslyn-analyzers-overview)」を参照してください。
+コード アナライザーの概要については、「[ソース コード アナライザーの概要](/visualstudio/code-quality/roslyn-analyzers-overview)」を参照してください。
 
 次の Microsoft.CodeAnalysis.FxCopAnalyzers 規則を有効にします。
 
-- [CA2350](https://docs.microsoft.com/visualstudio/code-quality/ca2350):信頼されていないデータで DataTable.ReadXml() を使用しない
-- [CA2351](https://docs.microsoft.com/visualstudio/code-quality/ca2351):信頼されていないデータで DataSet.ReadXml() を使用しない
-- [CA2352](https://docs.microsoft.com/visualstudio/code-quality/ca2352):シリアル化可能な型の安全でない DataSet または DataTable は、リモート コード実行攻撃に対して脆弱になる可能性があります
-- [CA2353](https://docs.microsoft.com/visualstudio/code-quality/ca2353):シリアル化可能な型の安全でない DataSet または DataTable
-- [CA2354](https://docs.microsoft.com/visualstudio/code-quality/ca2354):逆シリアル化されたオブジェクト グラフの安全でない DataSet または DataTable が、リモート コード実行攻撃に対して脆弱になる可能性があります
-- [CA2355](https://docs.microsoft.com/visualstudio/code-quality/ca2355):逆シリアル化可能なオブジェクト グラフに、安全でない DataSet または DataTable 型が見つかりました
-- [CA2356](https://docs.microsoft.com/visualstudio/code-quality/ca2356):Web の逆シリアル化可能なオブジェクト グラフに含まれる安全でない DataSet または DataTable 型
-- [CA2361](https://docs.microsoft.com/visualstudio/code-quality/ca2361):DataSet.ReadXml() を含む自動生成クラスが信頼されていないデータで使用されていないことを確認してください
-- [CA2362](https://docs.microsoft.com/visualstudio/code-quality/ca2362):シリアル化可能な自動生成型の安全でない DataSet または DataTable は、リモート コード実行攻撃に対して脆弱になる可能性があります
+- [CA2350](/visualstudio/code-quality/ca2350):信頼されていないデータで DataTable.ReadXml() を使用しない
+- [CA2351](/visualstudio/code-quality/ca2351):信頼されていないデータで DataSet.ReadXml() を使用しない
+- [CA2352](/visualstudio/code-quality/ca2352):シリアル化可能な型の安全でない DataSet または DataTable は、リモート コード実行攻撃に対して脆弱になる可能性があります
+- [CA2353](/visualstudio/code-quality/ca2353):シリアル化可能な型の安全でない DataSet または DataTable
+- [CA2354](/visualstudio/code-quality/ca2354):逆シリアル化されたオブジェクト グラフの安全でない DataSet または DataTable が、リモート コード実行攻撃に対して脆弱になる可能性があります
+- [CA2355](/visualstudio/code-quality/ca2355):逆シリアル化可能なオブジェクト グラフに、安全でない DataSet または DataTable 型が見つかりました
+- [CA2356](/visualstudio/code-quality/ca2356):Web の逆シリアル化可能なオブジェクト グラフに含まれる安全でない DataSet または DataTable 型
+- [CA2361](/visualstudio/code-quality/ca2361):DataSet.ReadXml() を含む自動生成クラスが信頼されていないデータで使用されていないことを確認してください
+- [CA2362](/visualstudio/code-quality/ca2362):シリアル化可能な自動生成型の安全でない DataSet または DataTable は、リモート コード実行攻撃に対して脆弱になる可能性があります
 
-ルールの構成の詳細については、「[コード アナライザーを使用する](https://docs.microsoft.com/visualstudio/code-quality/use-roslyn-analyzers)」を参照してください。
+ルールの構成の詳細については、「[コード アナライザーを使用する](/visualstudio/code-quality/use-roslyn-analyzers)」を参照してください。
 
 この新しいルールは、次の NuGet パッケージで入手できます。
 

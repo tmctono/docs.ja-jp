@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c8e1c91f4fee8aa896b6617c815fe2a4b6d22f2a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: fa24c664e9f7cf6da78d0703c7ebb52c8ebbec20
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614891"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606920"
 ---
 ### <a name="accessibility-improvements-in-windows-forms-controls"></a>Windows フォーム コントロールでのアクセシビリティの向上
 
@@ -40,7 +40,7 @@ Windows フォームはアクセシビリティ テクノロジによってユ�
 </configuration>
 ```
 
-.NET Framework 4.7.1 以降を対象とするアプリケーションで以前のアクセシビリティ動作を残す場合、この AppContext スイッチを明示的に `true` に設定することで以前のアクセシビリティ機能を選択できます。<p/>UI オートメーションの概要については、「[UI オートメーションの概要](~/docs/framework/ui-automation/ui-automation-overview.md)」を参照してください。<p/>**UI オートメーション パターンとプロパティに対して追加されたサポート**<br/>アクセシビリティ クライアントは、一般的なパブリックに記述された呼び出しパターンを使って、新しい WinForms アクセシビリティ機能を利用できます。 これらのパターンは、WinForms に固有ではありません。 たとえば、アクセシビリティ クライアントは、IAccessible インターフェイス (MAAS) の QueryInterface メソッドを呼び出して、IServiceProvider インターフェイスを取得することができます。 このインターフェイスを使用できる場合、クライアントはその QueryService メソッドを使って、IAccessibleEx インターフェイスを要求できます。 詳しくは、「[Using IAccessibleEx from a Client](https://docs.microsoft.com/windows/desktop/WinAuto/using-iaccessibleex-from-a-client)」(クライアントからの IAccessibleEx の使用) をご覧ください。 .NET Framework 4.7.1 以降では、IServiceProvider と [IAccessibleEx](https://docs.microsoft.com/windows/desktop/WinAuto/iaccessibleex) (該当する場合) を WinForms ユーザー補助オブジェクトで使用できます。<p/>.NET Framework 4.7.1 では、次の UI オートメーション パターンやプロパティのサポートが追加されます。
+.NET Framework 4.7.1 以降を対象とするアプリケーションで以前のアクセシビリティ動作を残す場合、この AppContext スイッチを明示的に `true` に設定することで以前のアクセシビリティ機能を選択できます。<p/>UI オートメーションの概要については、「[UI オートメーションの概要](~/docs/framework/ui-automation/ui-automation-overview.md)」を参照してください。<p/>**UI オートメーション パターンとプロパティに対して追加されたサポート**<br/>アクセシビリティ クライアントは、一般的なパブリックに記述された呼び出しパターンを使って、新しい WinForms アクセシビリティ機能を利用できます。 これらのパターンは、WinForms に固有ではありません。 たとえば、アクセシビリティ クライアントは、IAccessible インターフェイス (MAAS) の QueryInterface メソッドを呼び出して、IServiceProvider インターフェイスを取得することができます。 このインターフェイスを使用できる場合、クライアントはその QueryService メソッドを使って、IAccessibleEx インターフェイスを要求できます。 詳しくは、「[Using IAccessibleEx from a Client](/windows/desktop/WinAuto/using-iaccessibleex-from-a-client)」(クライアントからの IAccessibleEx の使用) をご覧ください。 .NET Framework 4.7.1 以降では、IServiceProvider と [IAccessibleEx](/windows/desktop/WinAuto/iaccessibleex) (該当する場合) を WinForms ユーザー補助オブジェクトで使用できます。<p/>.NET Framework 4.7.1 では、次の UI オートメーション パターンやプロパティのサポートが追加されます。
 
 - <xref:System.Windows.Forms.ToolStripSplitButton> および <xref:System.Windows.Forms.ComboBox> コントロールは、[展開/折りたたみパターン](~/docs/framework/ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)をサポートします。
 - <xref:System.Windows.Forms.ToolStripMenuItem> コントロールの [ControlType](~/docs/framework/ui-automation/ui-automation-support-for-the-menubar-control-type.md) プロパティの値は <xref:System.Windows.Automation.ControlType.MenuItem?displayProperty=nameWithType> です。

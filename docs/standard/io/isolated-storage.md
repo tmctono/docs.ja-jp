@@ -19,19 +19,19 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 0de0c7e9843ca8a97392733a68367b1dae8de232
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 4ad7779b9810954d110af576dd834daf61888d59
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416379"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555921"
 ---
 # <a name="isolated-storage"></a>分離ストレージ
 
 デスクトップ アプリでは、分離ストレージは、コードと保存データを関連付ける標準化された方法を定義することにより、分離性と安全性を提供するデータ ストレージ機構です。 標準化には、ほかにも利点があります。 管理者は分離ストレージの操作用にデザインされたツールを使用して、ファイルのストレージ領域の構成、セキュリティ ポリシーの設定、および不要なデータの削除を行うことができます。 分離ストレージを使用すると、ファイル システムの安全な場所を指定するための固有のパスを指定する必要がなくなり、分離ストレージのアクセス権限を持たない他のアプリケーションからデータを保護できます。 アプリケーションのストレージ領域の場所を示すハードコーディングされた情報は不要になります。
 
 > [!IMPORTANT]
-> 分離ストレージは Windows 8.x Store アプリでは使用できません。 代わりに、Windows ランタイム API に含まれる `Windows.Storage` 名前空間内のアプリケーション データ クラスを使用して、ローカル データとローカル ファイルを格納します。 詳細については、Windows デベロッパー センターの [アプリケーション データ](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) に関する説明を参照してください。
+> 分離ストレージは Windows 8.x Store アプリでは使用できません。 代わりに、Windows ランタイム API に含まれる `Windows.Storage` 名前空間内のアプリケーション データ クラスを使用して、ローカル データとローカル ファイルを格納します。 詳細については、Windows デベロッパー センターの [アプリケーション データ](/previous-versions/windows/apps/hh464917(v=win.10)) に関する説明を参照してください。
 
 <a name="data_compartments_and_stores"></a>
 

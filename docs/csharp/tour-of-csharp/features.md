@@ -2,12 +2,12 @@
 title: C# のツアー - 主要な言語分野
 description: C# を始めてお使いの方のために、 この言語の基本を説明します。
 ms.date: 08/06/2020
-ms.openlocfilehash: e1e533982757c10085f0444197ff97ee7487391f
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 9069bb194169a7743f12d998b2842186ed0ef404
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414904"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558176"
 ---
 # <a name="major-language-areas"></a>主な言語の領域
 
@@ -86,7 +86,7 @@ C# 言語には、オブジェクトの状態を照会し、その状態に基�
 
 ## <a name="async--await"></a>async / await
 
-C# では、`async` と `await` の 2 つのキーワードを使用した非同期プログラムがサポートされます。 メソッドが非同期であることを宣言するには、メソッド宣言に `async` 修飾子を追加します。 `await` 演算子からは、結果が完了するまで非同期に待機するようにコンパイラに対して指示が出されます。 制御が呼び出し元に返されます。そして、メソッドから、非同期処理の状態を管理する構造体が返されます。 構造体は通常は <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> ですが、awaiter パターンをサポートする任意の型とすることができます。 これらの機能を使用すると、その同期相手として読み取られるが非同期で実行されるコードを記述できます。 たとえば、次のコードでは [Microsoft Docs](https://docs.microsoft.com) のホームページがダウンロードされます。
+C# では、`async` と `await` の 2 つのキーワードを使用した非同期プログラムがサポートされます。 メソッドが非同期であることを宣言するには、メソッド宣言に `async` 修飾子を追加します。 `await` 演算子からは、結果が完了するまで非同期に待機するようにコンパイラに対して指示が出されます。 制御が呼び出し元に返されます。そして、メソッドから、非同期処理の状態を管理する構造体が返されます。 構造体は通常は <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> ですが、awaiter パターンをサポートする任意の型とすることができます。 これらの機能を使用すると、その同期相手として読み取られるが非同期で実行されるコードを記述できます。 たとえば、次のコードでは [Microsoft Docs](/) のホームページがダウンロードされます。
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="AsyncExample":::
 

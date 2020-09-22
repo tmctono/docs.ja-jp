@@ -2,12 +2,12 @@
 title: メッセージベースの非同期通信
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | メッセージベースの非同期通信はマイクロサービスにとって極めて重要な概念です。マイクロサービス間の独立性を維持し、同時に、最終的には同期させる最良の方法であるためです。'
 ms.date: 09/20/2018
-ms.openlocfilehash: a8af94540a7906c474b9b784c28aa60ebae0a6e3
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 2bd79935cad3d62e488a57da6b40a0c87349960b
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306969"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679176"
 ---
 # <a name="asynchronous-message-based-communication"></a>メッセージベースの非同期通信
 
@@ -84,7 +84,7 @@ ms.locfileid: "84306969"
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **イベント駆動型メッセージング** \
-  <https://soapatterns.org/design_patterns/event_driven_messaging>
+  <https://patterns.arcitura.com/soa-patterns/design_patterns/event_driven_messaging>
 
 - **発行/サブスクライブ チャネル** \
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>

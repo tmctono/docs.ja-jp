@@ -3,12 +3,12 @@ title: エンティティ データ モデル
 description: Entity Data Model では、格納される形式に関係なくデータ構造が記述されます。これにより、さまざまな形式でデータを格納することが原因で生じる問題に対処できます。
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-ms.openlocfilehash: c98b1f4559ef297f8b11051940fd91f5f6fa06fd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d32207e3a9dd35d2d8f8990bcbbd35e38d21d8bb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286741"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557620"
 ---
 # <a name="entity-data-model"></a>エンティティ データ モデル
 Entity Data Model (EDM) は、格納される形式に関係なく、データ構造を記述する一連の概念です。 EDM は、1976 年に Peter Chen により記述されたエンティティ リレーションシップ モデルを取り入れていますが、これを土台にして利用法が拡張されています。  
@@ -64,6 +64,6 @@ Entity Data Model (EDM) は、格納される形式に関係なく、データ�
   
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET Entity Data Model ツール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [.edmx ファイルの概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [ADO.NET Entity Data Model ツール](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [.edmx ファイルの概要](/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [CSDL 仕様](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 8cbb687b0c7cfb69d3f3807c083f1c25e9d39594
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: 36ecbe763ed47e95d9339d1d748b3faab100c15e
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271790"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679600"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows システムのファイル パス形式
 
@@ -43,7 +43,7 @@ ms.locfileid: "89271790"
 > [!IMPORTANT]
 > 最後の 2 つのパスの違いにご注意ください。 いずれも任意のボリューム指定子を指定しますが (いずれの場合も `C:`)、最後から 2 番目のパスが指定ボリュームのルートから始まるのに対し、最後のパスは指定ボリュームのルートから始まりません。 結果として、最後から 2 番目のパスがドライブ `C:` のルート ディレクトリからの絶対パスであるのに対し、最後のパスはドライブ `C:` の現在のディレクトリからの相対パスになります。 最後から 2 番目のパス形式を意図しているときに最後のパス形式を使用することが、Windows ファイル パス関連のバグの共通の源になっています。
 
-<xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType> メソッドを呼び出すことで、ファイルが完全修飾であるかどうかを判断できます。完全修飾の場合、パスが現在のディレクトリに依存せず、現在のディレクトリが変更されても完全修飾のパスは変わりません。 そのようなパスには相対ディレクトリのセグメント (`.` や `..`) が含まれている可能性があり、解決後のパスが常に同じ場所を指す場合、完全修飾できることにご留意ください。
+<xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWithType> メソッドを呼び出すことで、ファイルが完全修飾であるかどうかを判断できます。完全修飾の場合、パスが現在のディレクトリに依存せず、現在のディレクトリが変更されても完全修飾のパスは変わりません。 そのようなパスには相対ディレクトリのセグメント (`.` や `..`) が含まれている可能性があり、解決後のパスが常に同じ場所を指す場合、完全修飾できることにご留意ください。
 
 次の例では、絶対パスと相対パスの違いを示します。 ディレクトリ `D:\FY2018\` が存在すること、この例を実行する前に、コマンド プロンプトから `D:\` に現在のディレクトリを設定していないことを想定しています。
 

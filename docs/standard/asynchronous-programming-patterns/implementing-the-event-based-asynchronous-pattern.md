@@ -18,12 +18,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: e36ae21e1e03c8c5c688b7446f660ab1bb666a94
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 466a0dd8a827cd869894106a0901bdab89601e25
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904378"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559097"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>イベントベースの非同期パターンの実装
 
@@ -33,7 +33,7 @@ ms.locfileid: "84904378"
 
 イベント ベースの非同期パターンを実装する例については、「[方法:イベントベースの非同期パターンをサポートするコンポーネントを実装する](component-that-supports-the-event-based-asynchronous-pattern.md)」を参照してください。
 
-単純な非同期操作の場合は、<xref:System.ComponentModel.BackgroundWorker> コンポーネントが適切である可能性があります。 <xref:System.ComponentModel.BackgroundWorker> の詳細については、「[方法:バックグラウンドで操作を実行する](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)」を参照してください。
+単純な非同期操作の場合は、<xref:System.ComponentModel.BackgroundWorker> コンポーネントが適切である可能性があります。 <xref:System.ComponentModel.BackgroundWorker> の詳細については、「[方法:バックグラウンドで操作を実行する](/dotnet/desktop/winforms/controls/how-to-run-an-operation-in-the-background)」を参照してください。
 
 次の一覧は、このトピックで説明するイベント ベースの非同期パターンの機能を示しています。
 
@@ -263,8 +263,8 @@ public class MethodNameCompletedEventArgs : System.ComponentModel.AsyncCompleted
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
 - [方法: イベントベースの非同期パターンをサポートするコンポーネントを実装する](component-that-supports-the-event-based-asynchronous-pattern.md)
-- [方法: バックグラウンドで操作を実行する](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [方法: バックグラウンド操作を使用するフォームを実装する](../../framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [方法: バックグラウンドで操作を実行する](/dotnet/desktop/winforms/controls/how-to-run-an-operation-in-the-background)
+- [方法: バックグラウンド操作を使用するフォームを実装する](/dotnet/desktop/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation)
 - [イベントベースの非同期パターンをいつ実装するかの決定](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
 - [イベントベースの非同期パターンを実装するための推奨される手順](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
 - [イベント ベースの非同期パターン (EAP)](event-based-asynchronous-pattern-eap.md)

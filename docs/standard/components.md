@@ -4,12 +4,12 @@ description: .NET Standard、.NET 実装、.NET ランタイム、ツールな�
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2fc8bcea59cd2ba652b88644677f077d62994ca4
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: fc34cf35e82e3a401f32561aa239996c7697aa03
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414735"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547676"
 ---
 # <a name="net-architectural-components"></a>.NET アーキテクチャ コンポーネント
 
@@ -29,14 +29,14 @@ ms.locfileid: "89414735"
 
 - 1 つまたは複数のランタイム。 次に例を示します。 CLR for .NET Framework、CoreCLR、CoreRT for .NET Core などです。
 - .NET Standard を実装し、他の API も実装する可能性があるクラス ライブラリ。 たとえば、.NET Framework 基本クラス ライブラリや .NET Core 基本クラス ライブラリなどです。
-- 必要に応じて、1 つまたは複数のアプリケーション フレームワーク。 次に例を示します。 .NET Framework と .NET Core には、[ASP.NET](https://www.asp.net/)、[Windows フォーム](../framework/winforms/windows-forms-overview.md)、[Windows Presentation Foundation (WPF)](../framework/wpf/index.md) が含まれます。
+- 必要に応じて、1 つまたは複数のアプリケーション フレームワーク。 次に例を示します。 .NET Framework と .NET Core には、[ASP.NET](https://www.asp.net/)、[Windows フォーム](/dotnet/desktop/winforms/windows-forms-overview)、[Windows Presentation Foundation (WPF)](/dotnet/desktop/wpf/) が含まれます。
 - 必要に応じて、開発ツール。 一部の開発ツールは、複数の実装間で共有されます。
 
 Microsoft が積極的に開発し保守している主要な .NET 実装としては、.NET Core、.NET Framework、Mono、UWP の 4 つがあります。
 
 ### <a name="net-core"></a>.NET Core
 
-.NET Core は .NET のクラスプラットフォーム実装であり、サーバーとクラウドのワークロードをその規模に応じて処理するように設計されています。 Windows、macOS、および Linux で実行されます。 .NET Standard を実装しているので、.NET Standard をターゲットとするすべてのコードを .NET Core 上で実行できます。 [ASP.NET](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core)、[Windows フォーム](../framework/winforms/windows-forms-overview.md)、[Windows Presentation Foundation (WPF)](../framework/wpf/index.md) はすべて、.NET Core で実行されます。
+.NET Core は .NET のクラスプラットフォーム実装であり、サーバーとクラウドのワークロードをその規模に応じて処理するように設計されています。 Windows、macOS、および Linux で実行されます。 .NET Standard を実装しているので、.NET Standard をターゲットとするすべてのコードを .NET Core 上で実行できます。 [ASP.NET](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core)、[Windows フォーム](/dotnet/desktop/winforms/windows-forms-overview)、[Windows Presentation Foundation (WPF)](/dotnet/desktop/wpf/) はすべて、.NET Core で実行されます。
 
 .NET Core の詳細については、[.NET Core の概要](../core/introduction.md)に関するページと、[サーバー アプリに .NET Core か .NET Framework を選択する](choosing-core-framework-server.md)方法に関するページを参照してください。
 

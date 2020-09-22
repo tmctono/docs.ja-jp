@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-ms.openlocfilehash: 84048a3fba2b32b1ae745160e2b405c04b738c65
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 693e67b4d369eb69b8e0a9dded6decb2d3928459
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040235"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554880"
 ---
 # <a name="enabling-query-notifications"></a>クエリ通知の有効化
 クエリ通知を使用するアプリケーションには、いくつか共通する要件があります。 SQL クエリ通知をサポートするには、データ ソースが正しく設定され、ユーザーがクライアント側およびサーバー側の正しい権限を所有している必要があります。  
@@ -30,23 +30,23 @@ ms.locfileid: "73040235"
   
  **SQL Server のドキュメント**  
   
-- [通知のためのクエリの作成](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+- [通知のためのクエリの作成](/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
-- [Service Broker のセキュリティに関する注意点](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
+- [Service Broker のセキュリティに関する注意点](/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
   
-- [セキュリティと保護 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
+- [セキュリティと保護 (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
   
-- [Notification Services のセキュリティに関する注意点](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
+- [Notification Services のセキュリティに関する注意点](/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
   
-- [クエリ通知の権限](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
+- [クエリ通知の権限](/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
   
-- [Service Broker の国際化に関する注意点](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
+- [Service Broker の国際化に関する注意点](/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
   
-- [ソリューション設計に関する考慮事項 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
+- [ソリューション設計に関する考慮事項 (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
   
-- [Service Broker 開発者向けの情報](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
+- [Service Broker 開発者向けの情報](/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
-- [開発者ガイド (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+- [開発者ガイド (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="enabling-query-notifications-to-run-sample-code"></a>サンプル コードを実行するためのクエリ通知の有効化  
  **AdventureWorks** データベースで Service Broker を有効にするには、SQL Server Management Studio を通じて、次の Transact-SQL ステートメントを実行します。  

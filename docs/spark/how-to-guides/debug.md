@@ -4,12 +4,12 @@ description: Windows で .NET for Apache Spark アプリケーションをデバ
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 9209d5bdec6dd85f6d21a502fb07204effef1934
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 249b4bccbf1378d8ef8c824f39151c33fb9f875a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617757"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557152"
 ---
 # <a name="debug-a-net-for-apache-spark-application"></a>.NET for Apache Spark アプリケーションをデバッグする
 
@@ -61,7 +61,7 @@ if (EnvironmentUtils.GetEnvironmentVariableAsBool("DOTNET_WORKER_DEBUG"))
 }
 ```
 
-デバッグする予定の UDF が含まれている *.cs* ファイルに移動し、[ブレークポイントを設定します](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints?view=vs-2019)。 UDF を含むアセンブリがまだワーカーに読み込まれていないため、このブレークポイントでは `The breakpoint will not currently be hit` と表示されます。
+デバッグする予定の UDF が含まれている *.cs* ファイルに移動し、[ブレークポイントを設定します](/visualstudio/debugger/using-breakpoints?view=vs-2019)。 UDF を含むアセンブリがまだワーカーに読み込まれていないため、このブレークポイントでは `The breakpoint will not currently be hit` と表示されます。
 
 `F5` キーを押してアプリケーションを続行すれば、最終的にこのブレークポイントはヒットするようになります。
 

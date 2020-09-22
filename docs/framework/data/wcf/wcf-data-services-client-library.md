@@ -7,19 +7,19 @@ helpviewer_keywords:
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-ms.openlocfilehash: 58d038d5c2ac4973c2b41f4d49c1746f48f2a2fb
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 2ff3f63d406a260f83eaba4f2e7a8419046e1931
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247741"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559032"
 ---
 # <a name="wcf-data-services-client-library"></a>WCF Data Services クライアント ライブラリ
 HTTP 要求を送信し、データ サービスが返す Open Data Protocol (OData) フィードを処理できるのであれば、どのようなアプリケーションでも OData ベースのデータ サービスと対話できます。 この相互運用性によって、広範な Web 対応アプリケーションから OData ベースのサービスにアクセスすることが可能になります。 WCF Data Services には、.NET Framework ベースのアプリケーションまたは Silverlight ベースのアプリケーションから OData フィードを使用する際のプログラミング エクスペリエンスを向上させるクライアント ライブラリが含まれています。  
   
  クライアント ライブラリの 2 つの主要なクラスは、<xref:System.Data.Services.Client.DataServiceContext> クラスと <xref:System.Data.Services.Client.DataServiceQuery%601> クラスです。 <xref:System.Data.Services.Client.DataServiceContext> クラスは、特定のデータ サービスに対してサポートされている操作をカプセル化します。 OData サービスはステートレスですが、コンテキストはステートレスではありません。 このため <xref:System.Data.Services.Client.DataServiceContext> クラスを使用すると、変更管理などの機能をサポートするためにデータ サービスとの対話操作間におけるクライアントの状態を保持できます。 このクラスは、ID の管理と変更の追跡も行います。 <xref:System.Data.Services.Client.DataServiceQuery%601> クラスは、特定のエンティティ セットに対するクエリを表します。  
   
- このセクションでは、クライアント ライブラリを使用して .NET Framework クライアント アプリケーションからデータにアクセスしてデータを変更する方法について説明します。 Silverlight ベースのアプリケーションで WCF Data Services クライアント ライブラリを使用する方法については、「[WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v%3dvs.95))」を参照してください。 その他の種類のアプリケーションで OData フィードを使用する場合は、それぞれに対応したクライアント ライブラリが用意されています。 OData SDK の詳細については、[OData SDK のサンプルコード](https://www.odata.org/ecosystem/#sdk)を参照してください。
+ このセクションでは、クライアント ライブラリを使用して .NET Framework クライアント アプリケーションからデータにアクセスしてデータを変更する方法について説明します。 Silverlight ベースのアプリケーションで WCF Data Services クライアント ライブラリを使用する方法については、「[WCF Data Services (Silverlight)](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))」を参照してください。 その他の種類のアプリケーションで OData フィードを使用する場合は、それぞれに対応したクライアント ライブラリが用意されています。 OData SDK の詳細については、[OData SDK のサンプルコード](https://www.odata.org/ecosystem/#sdk)を参照してください。
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [データ サービス クライアント ライブラリの生成](generating-the-data-service-client-library-wcf-data-services.md)  

@@ -3,12 +3,12 @@ title: ML.NET アルゴリズムの選び方
 description: 機械学習モデルに適した ML.NET アルゴリズムの選び方について説明します
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: 0fed33203c02303e37e47f548e08ec131eeb1c77
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8af89800485f8f8ac35ee17df10a5e3c039da42d
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75739994"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679639"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>ML.NET アルゴリズムの選び方
 
@@ -34,7 +34,7 @@ ML.NET には、各アルゴリズムとタスクの組み合わせに対して�
 
 一般に、線形アルゴリズムはスケーラブルで高速であり、トレーニング コストが低コストで、予測も低コストです。 これらは、特徴の数と、おおよそのトレーニング データ セットのサイズによってスケールします。
 
-線形アルゴリズムは、トレーニング データに対して複数回実行されます。 データセットがメモリに収まる場合は、トレーナーを追加する前に ML.NET パイプラインに[キャッシュ チェックポイント](xref:Microsoft.ML.LearningPipelineExtensions.AppendCacheCheckpoint*)を追加すると、トレーニングが高速になります。
+線形アルゴリズムは、トレーニング データに対して複数回実行されます。 データセットがメモリに収まる場合は、トレーナーを追加する前に ML.NET パイプラインに[キャッシュ チェックポイント](xref:Microsoft.ML.LearningPipelineExtensions.AppendCacheCheckpoint%2A)を追加すると、トレーニングが高速になります。
 
 **線形トレーナー**
 

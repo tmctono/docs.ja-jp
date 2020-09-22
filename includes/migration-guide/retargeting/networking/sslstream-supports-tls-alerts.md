@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 0024b2a53444319788b8cdd312d537f994070b5e
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 5b566dd89801caff7a253abc2fb62c5fd79591f7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614757"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606774"
 ---
 ### <a name="sslstream-supports-tls-alerts"></a>SslStream で TLS アラートに対応
 
 #### <a name="details"></a>説明
 
-TLS ハンドシェイクに失敗すると、最初の I/O 読み取り/書き込み操作によって <xref:System.IO.IOException?displayProperty=fullName> と内部例外 <xref:System.ComponentModel.Win32Exception?displayProperty=fullName> がスローされます。 [TLS および SSL アラートの Schannel エラー コード](https://docs.microsoft.com/windows/desktop/SecAuthN/schannel-error-codes-for-tls-and-ssl-alerts)を使用して、<xref:System.ComponentModel.Win32Exception?displayProperty=fullName> の <xref:System.ComponentModel.Win32Exception.NativeErrorCode?displayProperty=fullName> コードをリモート パーティからの TLS アラートにマップすることができます。詳しくは、[RFC 2246: セクション 7.2.2「Error alerts (エラー アラート)」](https://tools.ietf.org/html/rfc2246#section-7.2.2)を参照してください。 <br/>.NET Framework 4.6.2 およびそれより前のバージョンでの動作では、他のパーティがハンドシェイクに失敗してそのすぐ後に接続を拒否した場合、トランスポート チャネル (通常は TCP 接続) は書き込みまたは読み取り中にタイムアウトします。
+TLS ハンドシェイクに失敗すると、最初の I/O 読み取り/書き込み操作によって <xref:System.IO.IOException?displayProperty=fullName> と内部例外 <xref:System.ComponentModel.Win32Exception?displayProperty=fullName> がスローされます。 [TLS および SSL アラートの Schannel エラー コード](/windows/desktop/SecAuthN/schannel-error-codes-for-tls-and-ssl-alerts)を使用して、<xref:System.ComponentModel.Win32Exception?displayProperty=fullName> の <xref:System.ComponentModel.Win32Exception.NativeErrorCode?displayProperty=fullName> コードをリモート パーティからの TLS アラートにマップすることができます。詳しくは、[RFC 2246: セクション 7.2.2「Error alerts (エラー アラート)」](https://tools.ietf.org/html/rfc2246#section-7.2.2)を参照してください。 <br/>.NET Framework 4.6.2 およびそれより前のバージョンでの動作では、他のパーティがハンドシェイクに失敗してそのすぐ後に接続を拒否した場合、トランスポート チャネル (通常は TCP 接続) は書き込みまたは読み取り中にタイムアウトします。
 
 #### <a name="suggestion"></a>提案される解決策
 

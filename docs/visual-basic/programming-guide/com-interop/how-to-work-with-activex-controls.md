@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Toolbox, adding controls
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
-ms.openlocfilehash: 9590088272a630b50d953d1832200bacf3fc13fb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 11b8eb446395b4d35b9b7b689e30549b2b00f94a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396818"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90548040"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>方法: ActiveX コントロールを操作する (Visual Basic)
 ActiveX コントロールとは、他のユーザーがプログラミングしたパッケージ機能を再利用するために、Web ページまたは他のアプリケーションに挿入できる COM コンポーネントまたはオブジェクトです。 Visual Basic 6.0 以前のバージョン用に開発された ActiveX コントロールを使用して、Visual Studio の**ツールボックス**に機能を追加できます。  
@@ -33,7 +33,7 @@ ActiveX コントロールとは、他のユーザーがプログラミングし
 ## <a name="see-also"></a>関連項目
 
 - [COM 相互運用](index.md)
-- [方法: Windows フォームに ActiveX コントロールを追加する](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
+- [方法: Windows フォームに ActiveX コントロールを追加する](/dotnet/desktop/winforms/controls/how-to-add-activex-controls-to-windows-forms)
 - [Aximp.exe (Windows フォーム ActiveX コントロール インポーター)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)
-- [Windows フォームで ActiveX コントロールをホストする場合の考慮事項](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)
+- [Windows フォームで ActiveX コントロールをホストする場合の考慮事項](/dotnet/desktop/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form)
 - [相互運用性のトラブルシューティング](troubleshooting-interoperability.md)

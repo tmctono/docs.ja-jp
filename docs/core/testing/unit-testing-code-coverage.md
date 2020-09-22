@@ -4,11 +4,12 @@ description: .NET の単体テストでコードカバレッジ機能を使用�
 author: IEvangelist
 ms.author: dapine
 ms.date: 07/01/2020
-ms.openlocfilehash: af64116e86c3f46f37c8d5d079b9c86084095485
-ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
+ms.openlocfilehash: 4d2c8f3db26eaabcb973378a349ef57912e92bfa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853905"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538148"
 ---
 # <a name="use-code-coverage-for-unit-testing"></a>単体テストにコードカバレッジを使用する
 
@@ -18,7 +19,7 @@ ms.locfileid: "85853905"
 
 この記事では、Coverlet のテストの実行から収集したコードカバレッジ情報を使用して、レポートを生成する方法についても詳しく説明します。 レポートは、別の [GitHub 上のオープンソース プロジェクトである ReportGenerator](https://github.com/danielpalme/ReportGenerator) を使用して生成できます。 ReportGenerator では、Cobertura などから生成されたカバレッジレポートを、人間が判読できるさまざまな形式のレポートに変換します。
 
-この記事は、サンプル ブラウザーで使用できる、[サンプル ソース コード プロジェクト](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs)に基づいています。
+この記事は、サンプル ブラウザーで使用できる、[サンプル ソース コード プロジェクト](/samples/dotnet/samples/unit-testing-code-coverage-cs)に基づいています。
 
 ## <a name="system-under-test"></a>テスト対象のシステム
 
@@ -301,7 +302,7 @@ reportgenerator
 - [GitHub - ReportGenerator リポジトリ](https://github.com/danielpalme/ReportGenerator)
 - [ReportGenerator プロジェクト サイト](https://danielpalme.github.io/ReportGenerator)
 - [.NET Core CLI テスト コマンド](../tools/dotnet-test.md)
-- [サンプル ソース コード](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs)
+- [サンプル ソース コード](/samples/dotnet/samples/unit-testing-code-coverage-cs)
 
 ## <a name="next-steps"></a>次の手順
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 2998de7dee34f9b5410bfe53988e0b7cfa797784
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 010da284268fb30763efd5a720dc80d50981d323
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634756"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552220"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>DataView による並べ替え (LINQ to DataSet)
 特定の条件に基づいてデータを並べ替え、UI コントロールを介してそのデータをクライアントに提供する機能は、データ バインディングの重要な特徴です。 <xref:System.Data.DataView> には、データを並べ替え、特定の並べ替え条件に従って並べ替えられたデータ行を返す方法がいくつか用意されています。 文字列ベースの並べ替え機能に加え、<xref:System.Data.DataView> では、並べ替え条件として LINQ (統合言語クエリ) の式を使用できます。 LINQ 式を使用すると、文字列ベースの並べ替え処理よりもはるかに複雑で強力な並べ替え処理を実行できます。 このトピックでは、<xref:System.Data.DataView> を使用して並べ替えを行うこの 2 つの方法について説明します。  
@@ -85,4 +85,4 @@ ms.locfileid: "75634756"
 
 - [データ バインディングと LINQ to DataSet](data-binding-and-linq-to-dataset.md)
 - [DataView によるフィルター処理](filtering-with-dataview-linq-to-dataset.md)
-- [データの並べ替え](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546145(v=vs.120))
+- [データの並べ替え](/previous-versions/visualstudio/visual-studio-2013/bb546145(v=vs.120))

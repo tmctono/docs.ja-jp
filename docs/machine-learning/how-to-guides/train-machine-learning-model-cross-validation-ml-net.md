@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to,title-hack-0625
-ms.openlocfilehash: 87eae789478752423f3e682d4db6cead0391aa6e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 02cec3d22588d8f10d36216422bc19faafffe94b
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73976925"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679522"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation"></a>クロス検証を使って機械学習モデルをトレーニングする
 
@@ -50,9 +50,9 @@ public class HousingData
 
 ## <a name="prepare-the-data"></a>データを準備する
 
-機械学習モデルの構築に使用する前に、データを前処理します。 このサンプルでは、`Size` 列と `HistoricalPrices` 列が 1 つの特徴ベクターに結合されます。これは、[`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) メソッドを使用して `Features` という新しい列に出力されます。 データを ML.NET アルゴリズムで想定されている形式にすることに加え、列を連結すると、個別の列ではなく、連結した列に対して 1 回操作を適用されるので、パイプライン内の後続の操作が最適化されます。
+機械学習モデルの構築に使用する前に、データを前処理します。 このサンプルでは、`Size` 列と `HistoricalPrices` 列が 1 つの特徴ベクターに結合されます。これは、[`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A) メソッドを使用して `Features` という新しい列に出力されます。 データを ML.NET アルゴリズムで想定されている形式にすることに加え、列を連結すると、個別の列ではなく、連結した列に対して 1 回操作を適用されるので、パイプライン内の後続の操作が最適化されます。
 
-列が 1 つのベクターに結合されると、[`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) が `Features` 列に適用され、0 - 1 という同じ範囲の `Size` と `HistoricalPrices` が得られます。
+列が 1 つのベクターに結合されると、[`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax%2A) が `Features` 列に適用され、0 - 1 という同じ範囲の `Size` と `HistoricalPrices` が得られます。
 
 ```csharp
 // Define data prep estimator
@@ -69,7 +69,7 @@ IDataView transformedData = dataPrepTransformer.Transform(data);
 
 ## <a name="train-model-with-cross-validation"></a>クロス検証を使用してモデルをトレーニングする
 
-データの前処理が完了したら、次はモデルのトレーニングです。 まず、実行する機械学習タスクと最も密接に連携するアルゴリズムを選択します。 予測値は数値的に連続した値なので、このタスクは回帰です。 ML.NET で実装されている回帰アルゴリズムの 1 つは [`StochasticDualCoordinateAscentCoordinator`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) アルゴリズムです。 クロス検証を使用してモデルをトレーニングするには、[`CrossValidate`](xref:Microsoft.ML.RegressionCatalog.CrossValidate*) メソッドを使用します。
+データの前処理が完了したら、次はモデルのトレーニングです。 まず、実行する機械学習タスクと最も密接に連携するアルゴリズムを選択します。 予測値は数値的に連続した値なので、このタスクは回帰です。 ML.NET で実装されている回帰アルゴリズムの 1 つは [`StochasticDualCoordinateAscentCoordinator`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) アルゴリズムです。 クロス検証を使用してモデルをトレーニングするには、[`CrossValidate`](xref:Microsoft.ML.RegressionCatalog.CrossValidate%2A) メソッドを使用します。
 
 > [!NOTE]
 > このサンプルでは線形回帰モデルを使用しますが、CrossValidate は、異常検出を除く ML.NET の他のすべての機械学習タスクに適用できます。
@@ -82,11 +82,11 @@ IEstimator<ITransformer> sdcaEstimator = mlContext.Regression.Trainers.Sdca();
 var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimator, numberOfFolds: 5);
 ```
 
-[`CrossValidate`](xref:Microsoft.ML.RegressionCatalog.CrossValidate*) によって次の操作が実行されます。
+[`CrossValidate`](xref:Microsoft.ML.RegressionCatalog.CrossValidate%2A) によって次の操作が実行されます。
 
 1. `numberOfFolds` パラメーターに指定された値と等しい数のパーティションにデータを分割します。 各パーティションの結果は [`TrainTestData`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) オブジェクトです。
 1. 各パーティションでは、トレーニング データ セットに対して指定した機械学習アルゴリズム エスティメーターを使用してモデルがトレーニングされます。
-1. 各モデルのパフォーマンスは、テスト データ セットに対して [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*) メソッドを使用して評価されます。
+1. 各モデルのパフォーマンスは、テスト データ セットに対して [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate%2A) メソッドを使用して評価されます。
 1. 各モデルについて、モデルとそのメトリックが返されます。
 
 `cvResults` に格納される結果は、[`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) オブジェクトのコレクションです。 このオブジェクトには、トレーニング済みモデルだけでなく、[`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) プロパティと [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics) プロパティの両方からそれぞれアクセスできるメトリックが含まれています。 このサンプルでは、`Model` プロパティは [`ITransformer`](xref:Microsoft.ML.ITransformer) 型であり、`Metrics` プロパティは [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) 型です。

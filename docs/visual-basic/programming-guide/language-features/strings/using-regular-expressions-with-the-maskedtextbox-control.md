@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: efda70be0ccdbc1f4b59d548e50f743f6c493b19
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1bb5ac5381dc85f598ef46638fbc8cd1a8643825
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363715"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555745"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Visual Basic の MaskedTextBox コントロールによる正規表現を使用する
 この例では、単純な正規表現を変換して、<xref:System.Windows.Forms.MaskedTextBox> コントロールで使用する方法を示します。  
@@ -60,4 +60,4 @@ ms.locfileid: "84363715"
 - <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
 - <xref:System.Windows.Forms.MaskedTextBox>
 - [Visual Basic における文字列の検証](validating-strings.md)
-- [MaskedTextBox コントロール](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)
+- [MaskedTextBox コントロール](/dotnet/desktop/winforms/controls/maskedtextbox-control-windows-forms)

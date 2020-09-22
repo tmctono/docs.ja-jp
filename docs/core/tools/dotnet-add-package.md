@@ -2,12 +2,12 @@
 title: dotnet add package コマンド
 description: "'dotnet add package' コマンドは、NuGet パッケージ参照をプロジェクトに追加する便利なオプションを提供します。"
 ms.date: 02/14/2020
-ms.openlocfilehash: bc79fe8adf5f775ddce62f3877a8de945c6a18ab
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 1bdda241c1301b926ba2fd322f969407038b7b62
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83840898"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538069"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -87,7 +87,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 - **`--package-directory <PACKAGE_DIRECTORY>`**
 
-  パッケージの復元先となるディレクトリ。 既定のパッケージ復元場所は、Windows の場合は `%userprofile%\.nuget\packages`、macOS と Linux の場合は `~/.nuget/packages` です。 詳細については、[NuGet でのグローバル パッケージ、キャッシュ、および一時フォルダーの管理](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)に関する記事を参照してください。
+  パッケージの復元先となるディレクトリ。 既定のパッケージ復元場所は、Windows の場合は `%userprofile%\.nuget\packages`、macOS と Linux の場合は `~/.nuget/packages` です。 詳細については、[NuGet でのグローバル パッケージ、キャッシュ、および一時フォルダーの管理](/nuget/consume-packages/managing-the-global-packages-and-cache-folders)に関する記事を参照してください。
 
 - **`-s|--source <SOURCE>`**
 
@@ -95,7 +95,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 - **`-v|--version <VERSION>`**
 
-  パッケージのバージョン。 [NuGet パッケージのバージョン管理](https://docs.microsoft.com/nuget/reference/package-versioning)に関するページを参照してください。
+  パッケージのバージョン。 [NuGet パッケージのバージョン管理](/nuget/reference/package-versioning)に関するページを参照してください。
 
 ## <a name="examples"></a>使用例
 
@@ -119,5 +119,5 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 ## <a name="see-also"></a>関連項目
 
-- [NuGet でグローバル パッケージ、キャッシュ、および一時フォルダーを管理する](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
-- [NuGet パッケージのバージョン管理](https://docs.microsoft.com/nuget/reference/package-versioning)
+- [NuGet でグローバル パッケージ、キャッシュ、および一時フォルダーを管理する](/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
+- [NuGet パッケージのバージョン管理](/nuget/reference/package-versioning)

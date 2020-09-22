@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 273c688d7e9d3fb86d4baece75193ce6d112b62f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 97602b7341636219382b6a405c678bc458ef146a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404915"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556747"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic における LINQ の概要
 統合言語クエリ (LINQ) は、Visual Basic にクエリ機能を追加します。この単純かつ強力な機能を使用して、あらゆる種類のデータを操作できます。 処理の対象であるデータベースにクエリを送信したり、検索するデータの種類ごとに異なるクエリ構文を使用したりする代わりに、LINQ では、Visual Basic 言語の一部としてのクエリを採用しています。 LINQ では、データの型に関係なく、統一された構文を使用します。  
@@ -221,7 +221,7 @@ LINQ によって提供される列挙可能でクエリ可能な型のメンバ
 |[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)|LINQ to SQL の概要、プログラミング ガイド、およびサンプルを示します。|  
 |[LINQ to Objects](../../concepts/linq/linq-to-objects.md)|LINQ to Objects の概要、プログラミング ガイド、およびサンプルを示します。|  
 |[LINQ to ADO.NET (ポータル ページ)](../../concepts/linq/linq-to-adonet-portal-page.md)|LINQ to ADO.NET の概要、プログラミング ガイド、およびサンプルへのリンクを示します。|  
-|[LINQ to XML](../../concepts/linq/linq-to-xml.md)|LINQ to XML の概要、プログラミング ガイド、およびサンプルを示します。|  
+|[LINQ to XML](../../../../standard/linq/linq-xml-overview.md)|LINQ to XML の概要、プログラミング ガイド、およびサンプルを示します。|  
   
 ## <a name="how-to-and-walkthrough-topics"></a>方法とチュートリアルのトピック
  [方法: データベースに対してクエリを実行する](how-to-query-a-database-by-using-linq.md)  
@@ -243,7 +243,7 @@ LINQ によって提供される列挙可能でクエリ可能な型のメンバ
  [方法: 更新、挿入、および削除を実行するストアド プロシージャを割り当てる (O/R デザイナー)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)  
   
 ## <a name="featured-book-chapters"></a>参考書籍の該当する章  
- 「[第 17 章: LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10))」 (『[Programming Visual Basic 2008](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))』)  
+ 「[第 17 章: LINQ](/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10))」 (『[Programming Visual Basic 2008](/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))』)  
   
 ## <a name="see-also"></a>関連項目
 

@@ -3,12 +3,12 @@ title: モデル ビルダーの概要としくみ
 description: ML.NET モデル ビルダーを使用し、機械学習モデルを自動的にトレーニングする方法
 ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: 2ed4a0c3c94ae9f46bb1cf6ddb1e9774baf82367
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 80f5f5d064c4e0c4097dacc6022d4624c1516ab9
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289500"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679678"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>モデル ビルダーの概要としくみ
 
@@ -111,7 +111,7 @@ Azure トレーニングは、イメージ分類でサポートされていま�
 |-|-|-|-|-|
 |分類|売上の異常を予測する|[製品の売上データ](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|製品の売上|月|
 ||Web サイトのコメントのセンチメントを予測する|[Web サイトのコメント データ](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|ラベル (否定的なセンチメントのときは 0、肯定的なセンチメントのときは 1)|コメント、年度|
-||クレジット カード取引の詐欺を予測する|[クレジット カードのデータ](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|クラス (詐欺の場合は 1、それ以外の場合 0)|金額、V1-V28 (匿名化された特徴)|
+||クレジット カード取引の詐欺を予測する|[クレジット カードのデータ](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CCFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|クラス (詐欺の場合は 1、それ以外の場合 0)|金額、V1-V28 (匿名化された特徴)|
 ||GitHub リポジトリでのイシューの種類を予測する|[GitHub 問題のデータ](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|区分|タイトル、説明|
 |値の予測|タクシー料金を予測する|[タクシーの料金データ](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|料金|乗車時間、距離|
 |イメージ分類|花の種類を予測する |[花の画像](http://download.tensorflow.org/example_images/flower_photos.tgz)|花の種類: デイジー、タンポポ、バラ、ヒマワリ、チューリップ|イメージ データ自体|

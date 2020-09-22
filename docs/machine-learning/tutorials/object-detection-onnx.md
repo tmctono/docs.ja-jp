@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4759a661646b08ea6a93cab030a19af2cfeaca16
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 49817f9ad712e50669bab958296946c06d5c19eb
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803405"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679417"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>チュートリアル: ML.NET で ONNX を使用してオブジェクトを検出する
 
@@ -492,22 +492,22 @@ for (var j = i + 1; j < boxes.Count; j++)
 
     [!code-csharp [LoadModelLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L47-L49)]
 
-    [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) メソッドが呼び出されたときに操作されるデータ スキーマが ML.NET パイプラインで認識されている必要があります。 この場合、トレーニングに似たプロセスが使用されます。 ただし、実際のトレーニングは行われないため、空の [`IDataView`](xref:Microsoft.ML.IDataView) を使用することができます。 空のリストから、パイプラインの新しい [`IDataView`](xref:Microsoft.ML.IDataView) を作成します。
+    [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit%2A) メソッドが呼び出されたときに操作されるデータ スキーマが ML.NET パイプラインで認識されている必要があります。 この場合、トレーニングに似たプロセスが使用されます。 ただし、実際のトレーニングは行われないため、空の [`IDataView`](xref:Microsoft.ML.IDataView) を使用することができます。 空のリストから、パイプラインの新しい [`IDataView`](xref:Microsoft.ML.IDataView) を作成します。
 
     [!code-csharp [LoadEmptyIDV](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L52)]
 
     その下にパイプラインを定義します。 パイプラインは、4 つの変換で構成されます。
 
-    - [`LoadImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages*) で、画像がビットマップとして読み込まれます。
-    - [`ResizeImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages*) で、指定されたサイズ (この場合は `416 x 416`) に画像の再スケーリングが行われます。
-    - [`ExtractPixels`](xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels*) で、画像のピクセル表現がビットマップから数値ベクターに変更されます。
-    - [`ApplyOnnxModel`](xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel*) で、ONNX モデルが読み込まれ、それを使用して、指定されたデータでスコアリングされます。
+    - [`LoadImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages%2A) で、画像がビットマップとして読み込まれます。
+    - [`ResizeImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages%2A) で、指定されたサイズ (この場合は `416 x 416`) に画像の再スケーリングが行われます。
+    - [`ExtractPixels`](xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels%2A) で、画像のピクセル表現がビットマップから数値ベクターに変更されます。
+    - [`ApplyOnnxModel`](xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel%2A) で、ONNX モデルが読み込まれ、それを使用して、指定されたデータでスコアリングされます。
 
     `LoadModel` メソッドで、`data` 変数の下にパイプラインを定義します。
 
     [!code-csharp [ScoringPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L55-L58)]
 
-    次に、スコアリングできるようにモデルをインスタンス化します。 パイプラインの [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) メソッドを呼び出し、後続の処理のためにそれを返します。
+    次に、スコアリングできるようにモデルをインスタンス化します。 パイプラインの [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit%2A) メソッドを呼び出し、後続の処理のためにそれを返します。
 
     [!code-csharp [FitReturnModel](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L61-L63)]
 
@@ -524,7 +524,7 @@ private IEnumerable<float[]> PredictDataUsingModel(IDataView testData, ITransfor
 
 [!code-csharp [PredictDataLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L68-L71)]
 
-次に、[`Transform`](xref:Microsoft.ML.ITransformer.Transform*) メソッドを使用してデータをスコアリングします。
+次に、[`Transform`](xref:Microsoft.ML.ITransformer.Transform%2A) メソッドを使用してデータをスコアリングします。
 
 [!code-csharp [ScoreImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L73)]
 
@@ -626,11 +626,11 @@ using (Graphics thumbnailGraphic = Graphics.FromImage(image))
 
 [!code-csharp [SetColorOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L106-L114)]
 
-[`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*) メソッドを使用してテキストを含めるために、境界ボックスの上に四角形を作成して塗りつぶします。 これにより、テキストにコントラストを付け、読みやすさを向上させることができます。
+[`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle%2A) メソッドを使用してテキストを含めるために、境界ボックスの上に四角形を作成して塗りつぶします。 これにより、テキストにコントラストを付け、読みやすさを向上させることができます。
 
 [!code-csharp [DrawTextBackground](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L117)]
 
-次に、[`DrawString`](xref:System.Drawing.Graphics.DrawString*) メソッドと [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle*) メソッドを使用して、画像の上にテキストと境界ボックスを描画します。
+次に、[`DrawString`](xref:System.Drawing.Graphics.DrawString%2A) メソッドと [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle%2A) メソッドを使用して、画像の上にテキストと境界ボックスを描画します。
 
 [!code-csharp [DrawClassAndBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L118-L121)]
 

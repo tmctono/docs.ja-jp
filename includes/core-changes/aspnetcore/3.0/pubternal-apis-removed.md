@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b1fb9647091cecb80b9c2f04ec9b6bb156eb39ba
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 224cd3c7897c64ef05baba7d3d31dbe5ac0dd610
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84466841"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606755"
 ---
 ### <a name="pubternal-apis-removed"></a>"Pubternal" API の削除
 
@@ -22,7 +22,7 @@ ASP.NET Core のパブリック API サーフェイスを管理しやすくす�
 
 #### <a name="new-behavior"></a>新しい動作
 
-影響を受ける API は、[internal](/dotnet/csharp/language-reference/keywords/internal) アクセス修飾子でマークされ、そのアセンブリ外のコードでは使用できなくなります。
+影響を受ける API は、[internal](../../../../docs/csharp/language-reference/keywords/internal.md) アクセス修飾子でマークされ、そのアセンブリ外のコードでは使用できなくなります。
 
 #### <a name="reason-for-change"></a>変更理由
 

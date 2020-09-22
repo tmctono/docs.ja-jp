@@ -2,12 +2,12 @@
 title: LIMIT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c22ffede-0a52-44d1-99b9-4a91e651e1b9
-ms.openlocfilehash: 275b22686c6c932b2a9e4b20973ac07e99d47e14
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 98e44110e604c6d893734869871d72f1d021775d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319631"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556285"
 ---
 # <a name="limit-entity-sql"></a>LIMIT (Entity SQL)
 物理的なページングは、ORDER BY 句の LIMIT サブ句を使用して実行できます。 LIMIT は ORDER BY 句と切り離して使用することはできません。  
@@ -39,6 +39,6 @@ ms.locfileid: "72319631"
 ## <a name="see-also"></a>関連項目
 
 - [ORDER BY](order-by-entity-sql.md)
-- [方法: クエリの結果をページングする](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
+- [方法: クエリの結果をページングする](/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
 - [ページング](paging-entity-sql.md)
 - [TOP](top-entity-sql.md)

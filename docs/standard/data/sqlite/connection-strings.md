@@ -2,12 +2,12 @@
 title: 接続文字列
 ms.date: 12/13/2019
 description: 接続文字列でサポートされているキーワードと値です。
-ms.openlocfilehash: bb54d152bac62a86c2a49192cf678a745159164e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3c50b31689abf6d47aa8f83a6f6f755bcfec0ea3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401197"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555394"
 ---
 # <a name="connection-strings"></a>接続文字列
 
@@ -92,7 +92,7 @@ e_sqlite3 の場合のように、ネイティブ SQLite ライブラリをコ�
 
 コンカレンシーを向上させるために共有キャッシュを使用する基本的な接続文字列。
 
-```ConnectionString
+```connectionstring
 Data Source=Application.db;Cache=Shared
 ```
 
@@ -100,7 +100,7 @@ Data Source=Application.db;Cache=Shared
 
 暗号化されたデータベース。
 
-```ConnectionString
+```connectionstring
 Data Source=Encrypted.db;Password=MyEncryptionKey
 ```
 
@@ -108,7 +108,7 @@ Data Source=Encrypted.db;Password=MyEncryptionKey
 
 アプリによって変更できない読み取り専用のデータベース。
 
-```ConnectionString
+```connectionstring
 Data Source=Reference.db;Mode=ReadOnly
 ```
 
@@ -116,7 +116,7 @@ Data Source=Reference.db;Mode=ReadOnly
 
 非公開のインメモリ データベース。
 
-```ConnectionString
+```connectionstring
 Data Source=:memory:
 ```
 
@@ -124,7 +124,7 @@ Data Source=:memory:
 
 *Sharable* という名前で識別される、共有可能なインメモリ データベース。
 
-```ConnectionString
+```connectionstring
 Data Source=Sharable;Mode=Memory;Cache=Shared
 ```
 

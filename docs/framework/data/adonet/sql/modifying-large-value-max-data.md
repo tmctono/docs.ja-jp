@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 00a4ae83270bb74e9703faebfc93e26b5c069478
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a077c56f4de5a88e9c2a6f932c9a8b5ffc6b974
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174278"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556968"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET での大きい値 (max) データの変更
 ラージ オブジェクト (LOB) データ型は、最大行サイズが 8 KB を超えるデータ型です。 SQL Server では、`max`、`varchar`、および `nvarchar` の各データ型に `varbinary` 指定子が用意されており、2^32 バイトの値を格納できます。 テーブル列および Transact-SQL 変数により、`varchar(max)`、`nvarchar(max)`、または `varbinary(max)` データ型を指定できます。 ADO.NET では、`max` データ型は、`DataReader` によってフェッチすることができ、特殊な処理を行うことなく入力パラメーターと出力パラメーター両方の値として指定することもできます。 サイズの大きい `varchar` データ型の場合は、データを段階的に取得および更新できます。  
@@ -21,7 +21,7 @@ ms.locfileid: "79174278"
   
  **SQL Server のドキュメント**  
   
-1. [大きな値のデータ型の使用](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms178158(v=sql.100))  
+1. [大きな値のデータ型の使用](/previous-versions/sql/sql-server-2008/ms178158(v=sql.100))  
   
 ## <a name="large-value-type-restrictions"></a>大きい値型の制限事項  
  `max` データ型には、小さいデータ型にはない、次の制限事項が適用されます。  

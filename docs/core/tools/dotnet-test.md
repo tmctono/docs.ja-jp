@@ -2,12 +2,12 @@
 title: dotnet test コマンド
 description: dotnet test コマンドは、指定されたプロジェクトで単体テストを実行する場合に使用されます。
 ms.date: 04/29/2020
-ms.openlocfilehash: d67521084330b206afca89baf59228b99ca799a1
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 5ecfa24905537a663cd967142b765c258495fb22
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656756"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537739"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -77,7 +77,7 @@ dotnet test -h|--help
 
 - **`--blame-crash`** (.NET 5.0 プレビュー SDK 以降で利用可能)
 
-  テスト ホストが予期せずに終了した場合に、変更履歴モードでテストを実行して、クラッシュ ダンプを収集します。 このオプションは、Windows 上でのみサポートされます。 *procdump.exe* および *procdump64.exe* を含むディレクトリが、PATH または PROCDUMP_PATH 環境変数に指定されている必要があります。 [ツールをダウンロード](https://docs.microsoft.com/sysinternals/downloads/procdump)します。 `--blame` を意味します。
+  テスト ホストが予期せずに終了した場合に、変更履歴モードでテストを実行して、クラッシュ ダンプを収集します。 このオプションは、Windows 上でのみサポートされます。 *procdump.exe* および *procdump64.exe* を含むディレクトリが、PATH または PROCDUMP_PATH 環境変数に指定されている必要があります。 [ツールをダウンロード](/sysinternals/downloads/procdump)します。 `--blame` を意味します。
 
 - **`--blame-crash-dump-type <DUMP_TYPE>`** (.NET 5.0 プレビュー SDK 以降で利用可能)
 

@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 021805508a8a053ccc8fab6f1013109bece4b6f2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8a5802583db53bfd0444ec9df0de9a0b9346d424
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404772"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545520"
 ---
 # <a name="declare-statement"></a>Declare Statement
 
@@ -129,7 +129,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 - **メカニズム。** Visual Basic は、.NET Framework の*プラットフォーム呼び出し* (PInvoke) メカニズムを使用して、外部プロシージャを解決し、アクセスします。 `Declare` ステートメントと <xref:System.Runtime.InteropServices.DllImportAttribute> クラスでは、このメカニズムが自動的に使用されため、PInvoke に関する知識は必要ありません。 詳細については、「[チュートリアル:Windows API の呼び出し](../../programming-guide/com-interop/walkthrough-calling-windows-apis.md)」を参照してください。
 
 > [!IMPORTANT]
-> 外部プロシージャが共通言語ランタイム (CLR) の外部で実行されている場合は、*アンマネージド コード*となります。 このようなプロシージャ (Windows API 関数や COM メソッドなど) を呼び出すと、アプリケーションがセキュリティ上のリスクにさらされる可能性があります。 詳細については、[アンマネージド コードの安全なコーディングのガイドライン](https://docs.microsoft.com/previous-versions/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code)に関するページを参照してください。
+> 外部プロシージャが共通言語ランタイム (CLR) の外部で実行されている場合は、*アンマネージド コード*となります。 このようなプロシージャ (Windows API 関数や COM メソッドなど) を呼び出すと、アプリケーションがセキュリティ上のリスクにさらされる可能性があります。 詳細については、[アンマネージド コードの安全なコーディングのガイドライン](/previous-versions/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code)に関するページを参照してください。
 
 ## <a name="example"></a>例
 

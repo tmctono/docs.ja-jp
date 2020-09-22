@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serialization, cross-framework
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
-ms.openlocfilehash: c735d30920fd3c8cd13243b4a5a29489ce05b262
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2ede74dd8a48735a7ded450d1da6d9cda8fc5ae6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289695"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554496"
 ---
 # <a name="binary-serialization"></a>バイナリ シリアル化
 
@@ -350,8 +350,8 @@ ms.locfileid: "84289695"
 - [セキュリティとシリアル化](../../framework/misc/security-and-serialization.md)\
 シリアル化を実行するコードを記述する際に従う必要がある、安全なコーディングのガイドラインについて説明します。
 
-- [.NET リモート処理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
+- [.NET リモート処理](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
 .NET Framework で開始されたリモート通信のためのさまざまな方法について説明します。
 
-- [ASP.NET と XML Web サービス クライアントを使用して作成した XML Web サービス](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
+- [ASP.NET と XML Web サービス クライアントを使用して作成した XML Web サービス](/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
 ASP.NET を使用して作成する XML Web サービスのプログラミング方法について説明した記事です。

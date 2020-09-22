@@ -2,12 +2,12 @@
 title: Entity SQL リファレンス
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-ms.openlocfilehash: 9b666b83674cb2374409e321a2b715e9910bdd0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 987aa5c05b88d684e050721077d704b29e546aab
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034269"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542125"
 ---
 # <a name="entity-sql-reference"></a>Entity SQL リファレンス
 
@@ -67,7 +67,7 @@ ms.locfileid: "62034269"
 |[\! (論理 NOT)](not-entity-sql.md)|論理 NOT。|
 |[&#124;&#124; (論理 OR)](or-entity-sql.md)|論理 OR。|
 |[CASE](case-entity-sql.md)|一連のブール式を評価して結果を決定します。|
-|[THEN](then-entity-sql.md)|[WHEN](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb387119(v=vs.100)) 句が true に評価された場合の結果です。|
+|[THEN](then-entity-sql.md)|[WHEN](/previous-versions/dotnet/netframework-4.0/bb387119(v=vs.100)) 句が true に評価された場合の結果です。|
 
 ## <a name="query-operators"></a>クエリ演算子
 

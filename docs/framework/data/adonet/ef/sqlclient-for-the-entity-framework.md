@@ -2,12 +2,12 @@
 title: Entity Framework 用 SqlClient
 ms.date: 03/30/2017
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
-ms.openlocfilehash: f7077cf9c9b8eb8a86b01e8b38431d1b9a87a80c
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e9bf1014bdbc14b854d3b37d488d75878d1a3473
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248362"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552246"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>Entity Framework 用 SqlClient
 このセクションでは、.NET Framework Data Provider for SQL Server (SqlClient) について説明します。これによって、Microsoft SQL Server 上で Entity Framework が機能できるようになります。  
@@ -29,7 +29,7 @@ ms.locfileid: "70248362"
 |2000|2005|2008|  
   
 > [!NOTE]
-> Visual Studio 2010 以降では、[ADO.NET Entity Data Model ツール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))によって SQL Server 2000 がサポートされません。  
+> Visual Studio 2010 以降では、[ADO.NET Entity Data Model ツール](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))によって SQL Server 2000 がサポートされません。  
   
 ## <a name="provider-namespace-name"></a>プロバイダーの名前空間名  
  すべてのプロバイダーで名前空間を指定する必要があります。 このプロパティによって、型や関数など、プロバイダーが特定のコンストラクターに使用するプレフィックスを Entity Framework に通知できます。 SqlClient プロバイダー マニフェストの名前空間は `SqlServer` です。 名前空間の詳細については、「[名前空間](./language-reference/namespaces-entity-sql.md)」を参照してください。  
