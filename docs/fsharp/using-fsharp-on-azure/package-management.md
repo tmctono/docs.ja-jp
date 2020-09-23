@@ -1,14 +1,15 @@
 ---
-title: For Azure でF#の Package Management の使用
-description: パケットまたは Nuget を使用F#して Azure の依存関係を管理する
+title: 'Azure での F # での Package Management の使用'
+description: 'パケットまたは Nuget を使用して F # Azure の依存関係を管理する'
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 4aa32ace91f30d0e43b9c40067f5f0f456cc4069
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: 011a363b264079599e8b7d402fe9896045b1fe04
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214227"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100114"
 ---
 # <a name="package-management-for-f-azure-dependencies"></a>F# の Azure の依存関係のためのパッケージ管理
 
@@ -16,19 +17,19 @@ ms.locfileid: "71214227"
 
 ## <a name="using-paket"></a>パケットの使用
 
-[パケット](https://fsprojects.github.io/Paket/)を dependency manager として使用している場合は、 `paket.exe`ツールを使用して Azure の依存関係を追加できます。 次に例を示します。
+[パケット](https://fsprojects.github.io/Paket/)を dependency manager として使用している場合は、ツールを使用して `paket.exe` Azure の依存関係を追加できます。 次に例を示します。
 
 ```console
 > paket add nuget WindowsAzure.Storage
 ```
 
-または、クロスプラットフォームの .NET 開発に[Mono](https://www.mono-project.com/)を使用している場合は、次のようにします。
+または、クロスプラットフォームの .NET 開発に [Mono](https://www.mono-project.com/) を使用している場合は、次のようにします。
 
 ```console
 > mono paket.exe add nuget WindowsAzure.Storage
 ```
 
-これにより`WindowsAzure.Storage` 、現在のディレクトリ内のプロジェクトに対するパッケージの依存関係のセットが`paket.dependencies`追加され、ファイルが変更され、パッケージがダウンロードされます。 以前に依存関係を設定している場合、または他の開発者によって依存関係が設定されているプロジェクトを操作している場合は、次のようにローカルに依存関係を解決してインストールすることができます。
+これにより、 `WindowsAzure.Storage` 現在のディレクトリ内のプロジェクトに対するパッケージの依存関係のセットが追加され、ファイルが変更され、 `paket.dependencies` パッケージがダウンロードされます。 以前に依存関係を設定している場合、または他の開発者によって依存関係が設定されているプロジェクトを操作している場合は、次のようにローカルに依存関係を解決してインストールすることができます。
 
 ```console
 > paket install
@@ -54,7 +55,7 @@ ms.locfileid: "71214227"
 
 ## <a name="using-nuget"></a>Nuget の使用
 
-依存関係マネージャーとして[NuGet](https://www.nuget.org/)を使用している場合は`nuget.exe` 、ツールを使用して Azure の依存関係を追加できます。 次に例を示します。
+依存関係マネージャーとして [NuGet](https://www.nuget.org/) を使用している場合は、ツールを使用して `nuget.exe` Azure の依存関係を追加できます。 次に例を示します。
 
 ```console
 > nuget install WindowsAzure.Storage -ExcludeVersion
@@ -66,7 +67,7 @@ ms.locfileid: "71214227"
 > mono nuget.exe install WindowsAzure.Storage -ExcludeVersion
 ```
 
-これにより`WindowsAzure.Storage` 、現在のディレクトリ内のプロジェクトに対するパッケージの依存関係のセットが追加され、パッケージがダウンロードされます。 以前に依存関係を設定している場合、または他の開発者によって依存関係が設定されているプロジェクトを操作している場合は、次のようにローカルに依存関係を解決してインストールすることができます。
+これにより、 `WindowsAzure.Storage` 現在のディレクトリ内のプロジェクトに対するパッケージの依存関係のセットが追加され、パッケージがダウンロードされます。 以前に依存関係を設定している場合、または他の開発者によって依存関係が設定されているプロジェクトを操作している場合は、次のようにローカルに依存関係を解決してインストールすることができます。
 
 ```console
 > nuget restore
@@ -92,7 +93,7 @@ ms.locfileid: "71214227"
 
 ## <a name="referencing-assemblies"></a>参照元のアセンブリ
 
-F#スクリプトでパッケージを使用するには、 `#r`ディレクティブを使用して、パッケージに含まれているアセンブリを参照する必要があります。 次に例を示します。
+F # スクリプトでパッケージを使用するには、ディレクティブを使用して、パッケージに含まれているアセンブリを参照する必要があり `#r` ます。 次に例を示します。
 
 ```fsharp
 > #r "packages/WindowsAzure.Storage/lib/net40/Microsoft.WindowsAzure.Storage.dll"

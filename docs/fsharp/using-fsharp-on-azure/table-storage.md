@@ -3,12 +3,13 @@ title: F# を使用した Azure Table Storage の概要
 description: Azure Table Storage または Azure Cosmos DB を使用して、構造化データをクラウドに格納します。
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: eb25fda0bb3c658eed2f675d6ba79c689a9080a9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: f4a22ec14de6c92414fbcf3cca435e2b5c0805f1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548352"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100101"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>F を使用して Azure Table storage と Azure Cosmos DB Table API を開始する\#
 
@@ -32,7 +33,7 @@ Azure Table Storage 用に作成されたアプリケーションについては
 
 このチュートリアルでは、Azure Table storage または Azure Cosmos DB Table API を使用して、テーブルの作成と削除、テーブルデータの挿入、更新、削除、クエリなど、いくつかの一般的なタスクを実行する F # コードを記述する方法について説明します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 このガイドを使用するには、最初に [Azure ストレージアカウント](/azure/storage/storage-create-storage-account) または [Azure Cosmos DB アカウント](https://azure.microsoft.com/try/cosmosdb/)を作成する必要があります。
 
@@ -187,7 +188,7 @@ Azure Configuration Manager の使用はオプションです。 .NET Framework 
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L193-L193)]
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 これで、Table storage の基本を学習できました。さらに複雑なストレージタスクと Azure Cosmos DB Table API については、次のリンク先を参照してください。
 

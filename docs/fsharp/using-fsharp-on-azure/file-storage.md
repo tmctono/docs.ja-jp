@@ -3,12 +3,13 @@ title: F# を使用した Azure File Storage の概要
 description: Azure File Storage を使用してクラウドにファイル データを格納し、Azure 仮想マシン (VM) から、または Windows を実行しているオンプレミスのアプリケーションからクラウド ファイル共有をマウントします。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 04bee82fd9d3c652cd99b9c951880f6ba89610ee
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: dd19b156e73774f4eca63afd3f4c10a4a7b8d46c
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548463"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100127"
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>F を使用して Azure File storage を使ってみる\#
 
@@ -16,7 +17,7 @@ Azure File Storage は、標準の [サーバー メッセージ ブロック (S
 
 ファイルストレージの概念の概要については、「 [.net ガイド](/azure/storage/storage-dotnet-how-to-use-files)」を参照してください。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 このガイドを使用するには、最初に [Azure ストレージアカウントを作成](/azure/storage/storage-create-storage-account)する必要があります。
 また、このアカウントのストレージアクセスキーも必要になります。
@@ -131,7 +132,7 @@ Azure Storage Analytics は、ファイルストレージのメトリックを�
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L126-L140)]
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Azure File storage の詳細については、次のリンクを参照してください。
 
@@ -146,7 +147,7 @@ Azure File storage の詳細については、次のリンクを参照してく�
 - [Microsoft Azure Storage で AzCopy を使用する方法](/azure/storage/storage-use-azcopy)
 - [Azure CLI を使用して BLOB を作成、ダウンロード、一覧表示する](/azure/storage/blobs/storage-quickstart-blobs-cli#create-and-manage-file-shares)
 
-### <a name="reference"></a>参照先
+### <a name="reference"></a>リファレンス
 
 - [.NET 用ストレージ クライアント ライブラリ リファレンス](/dotnet/api/overview/azure/storage)
 - [File サービスの REST API リファレンス](/rest/api/storageservices/fileservices/File-Service-REST-API)

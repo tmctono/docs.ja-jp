@@ -3,12 +3,13 @@ title: F# を使用した Azure Blob Storage の概要
 description: Azure Blob storage を使用して、非構造化データをクラウドに格納します。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 0dda2e04f0052823e9ea35051855d677cd19ea92
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: d9c587cdd21a1b81205d182652b3690b976687c0
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548476"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100153"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>F を使用して Azure Blob storage を使ってみる\#
 
@@ -18,7 +19,7 @@ Azure Blob Storage は、非構造化データをクラウド内にオブジェ�
 
 Blob storage の概念の概要については、「 [.net ガイド](/azure/storage/blobs/storage-quickstart-blobs-dotnet)」を参照してください。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 このガイドを使用するには、最初に [Azure ストレージアカウントを作成](/azure/storage/common/storage-account-create)する必要があります。 また、このアカウントのストレージアクセスキーも必要です。
 
@@ -220,7 +221,7 @@ Azure Storage のどの BLOB もコンテナーに格納する必要がありま
 
 Azure Storage は、クライアントとサーバーの両方で blob データの暗号化をサポートしています。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 これで、Blob Storage の基本を学習できました。さらに詳細な情報が必要な場合は、次のリンク先を参照してください。
 

@@ -3,12 +3,13 @@ title: F# を使用した Azure Queue Storage の概要
 description: Azure Queue は、アプリケーション コンポーネント間の信頼性の高い非同期メッセージングを提供します。 クラウド メッセージングにより、アプリケーション コンポーネントのスケールを個別に変更できます。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 0b360348ce6966ce49a2ac0abd839844bdbe55f2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: 5d6074751f226f0587c4c73bfa9ff56d9aca2bc1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548365"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100088"
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>F を使用して Azure Queue storage の使用を開始する\#
 
@@ -20,7 +21,7 @@ Azure Queue Storage は、アプリケーション コンポーネント間の�
 
 Queue storage の概念の概要については、「 [.net のキューストレージに関するガイド](/azure/storage/storage-dotnet-how-to-use-queues)」を参照してください。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 このガイドを使用するには、最初に [Azure ストレージアカウントを作成](/azure/storage/storage-create-storage-account)する必要があります。
 また、このアカウントのストレージアクセスキーも必要になります。
