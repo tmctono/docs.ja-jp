@@ -7,14 +7,15 @@ helpviewer_keywords:
 - XML axis [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 7e400e20-5d1e-4d22-a65c-9df79d5c1621
-ms.openlocfilehash: bac71138723826137f4c9f22a4acc1a81dfb5afd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5766d1f2a0b306374a33844e9e66d161badeb683
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "85503771"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866487"
 ---
 # <a name="xml-axis-properties-visual-basic"></a>XML 軸プロパティ (Visual Basic)
+
 このセクションのトピックでは、Visual Basic の XML 軸プロパティを文書化します。 XML 軸プロパティを使用すると、コード内で直接 XML に簡単にアクセスできるようになります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

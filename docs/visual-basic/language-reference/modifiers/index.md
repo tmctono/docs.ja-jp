@@ -2,17 +2,19 @@
 title: 修飾子
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-ms.openlocfilehash: 80adc4521dcb1bb0c65981dae6f842168194eae7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6ee477e8d09ea7c8ea559ff8245784b2d0123141
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "85503775"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875448"
 ---
 # <a name="modifiers-visual-basic"></a>修飾子 (Visual Basic)
+
 このセクションのトピックでは、Visual Basic ランタイム修飾子を示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [Ansi](ansi.md)  
   
  [Assembly](assembly.md)  
@@ -88,4 +90,5 @@ ms.locfileid: "85503775"
  [WriteOnly](writeonly.md)  
   
 ## <a name="related-sections"></a>関連項目  
+
  [Visual Basic の言語リファレンス](../index.md)  
