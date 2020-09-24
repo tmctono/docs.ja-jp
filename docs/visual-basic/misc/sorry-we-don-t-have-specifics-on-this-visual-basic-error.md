@@ -3044,35 +3044,36 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 12af447d053e84347ddc3a2c1ecad1cde4ff3428
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d96f2512e2fae038853baedfb78fcf2feb84542b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357805"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059640"
 ---
-# <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a><span data-ttu-id="deaf1-102">申し訳ありませんが、Visual Basic エラーに関する特定の情報はありません</span><span class="sxs-lookup"><span data-stu-id="deaf1-102">Sorry, we don't have specifics on this Visual Basic error</span></span>
-<span data-ttu-id="deaf1-103">申し訳ありませんが、このエラーに関する特定の情報はありません。</span><span class="sxs-lookup"><span data-stu-id="deaf1-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="deaf1-104">Web でエラー番号とメッセージ テキストを検索して情報を探すことができます。</span><span class="sxs-lookup"><span data-stu-id="deaf1-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="deaf1-105">または、次のフォーラムのいずれかを使用して他の開発者に尋ねることができます。</span><span class="sxs-lookup"><span data-stu-id="deaf1-105">Or, you can ask other developers using one of these forums:</span></span>  
-  
- [<span data-ttu-id="deaf1-106">Visual Basic 言語</span><span class="sxs-lookup"><span data-stu-id="deaf1-106">Visual Basic Language</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vblanguage)  
- <span data-ttu-id="deaf1-107">Visual Basic 言語の構文とコンパイラに関する質問や一般的な議論のためのフォーラムを提供します。</span><span class="sxs-lookup"><span data-stu-id="deaf1-107">Provides a forum for questions about and general discussions of the Visual Basic language syntax and compiler.</span></span>  
-  
- [<span data-ttu-id="deaf1-108">Visual Basic の相互運用とアップグレード</span><span class="sxs-lookup"><span data-stu-id="deaf1-108">Visual Basic Interop and Upgrade</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vbinterop)  
- <span data-ttu-id="deaf1-109">Visual Basic へのアップグレードと、相互運用性機能の使用に関する質問や問題のためのフォーラムを提供します。</span><span class="sxs-lookup"><span data-stu-id="deaf1-109">Provides a forum for questions about and issues with upgrading to Visual Basic and working with interoperability features.</span></span>  
-  
- [<span data-ttu-id="deaf1-110">Visual Basic IDE</span><span class="sxs-lookup"><span data-stu-id="deaf1-110">Visual Basic IDE</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vbide)  
- <span data-ttu-id="deaf1-111">Visual Studio 環境での作業方法に関する質問のためのフォーラムを提供します。</span><span class="sxs-lookup"><span data-stu-id="deaf1-111">Provides a forum for questions about how to work in the Visual Studio environment.</span></span>  
-  
- [<span data-ttu-id="deaf1-112">Visual Basic 全般</span><span class="sxs-lookup"><span data-stu-id="deaf1-112">Visual Basic General</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)  
- <span data-ttu-id="deaf1-113">他のフォーラムでは説明されていない Visual Basic に関する質問や問題についてのフォーラムを提供します。</span><span class="sxs-lookup"><span data-stu-id="deaf1-113">Provides a forum for questions about and issues with Visual Basic that are not discussed in other forums.</span></span>  
-  
- [<span data-ttu-id="deaf1-114">StackOverflow</span><span class="sxs-lookup"><span data-stu-id="deaf1-114">StackOverflow</span></span>](https://stackoverflow.com/questions/tagged/vb.net)  
- <span data-ttu-id="deaf1-115">Visual Basic に関する質問や問題のあるフォーラムを提供します。</span><span class="sxs-lookup"><span data-stu-id="deaf1-115">Provides a forum for questions about and issues with Visual Basic.</span></span>  
-  
- <span data-ttu-id="deaf1-116">こちらもご覧ください。</span><span class="sxs-lookup"><span data-stu-id="deaf1-116">Also see:</span></span>  
- [<span data-ttu-id="deaf1-117">Visual Basic プログラマー向けのその他のリソース</span><span class="sxs-lookup"><span data-stu-id="deaf1-117">Additional Resources for Visual Basic Programmers</span></span>](../getting-started/additional-resources.md)  
-  
-## <a name="see-also"></a><span data-ttu-id="deaf1-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="deaf1-118">See also</span></span>
+# <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a><span data-ttu-id="92c6e-102">申し訳ありませんが、Visual Basic エラーに関する特定の情報はありません</span><span class="sxs-lookup"><span data-stu-id="92c6e-102">Sorry, we don't have specifics on this Visual Basic error</span></span>
 
-- [<span data-ttu-id="deaf1-119">Visual Basic プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="deaf1-119">Visual Basic Programming Guide</span></span>](../programming-guide/index.md)
-- [<span data-ttu-id="deaf1-120">Visual Basic リファレンス</span><span class="sxs-lookup"><span data-stu-id="deaf1-120">Visual Basic Reference</span></span>](../reference/index.md)
+<span data-ttu-id="92c6e-103">申し訳ありませんが、このエラーに関する特定の情報はありません。</span><span class="sxs-lookup"><span data-stu-id="92c6e-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="92c6e-104">Web でエラー番号とメッセージ テキストを検索して情報を探すことができます。</span><span class="sxs-lookup"><span data-stu-id="92c6e-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="92c6e-105">または、次のフォーラムのいずれかを使用して他の開発者に尋ねることができます。</span><span class="sxs-lookup"><span data-stu-id="92c6e-105">Or, you can ask other developers using one of these forums:</span></span>  
+  
+ [<span data-ttu-id="92c6e-106">Visual Basic 言語</span><span class="sxs-lookup"><span data-stu-id="92c6e-106">Visual Basic Language</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vblanguage)  
+ <span data-ttu-id="92c6e-107">Visual Basic 言語の構文とコンパイラに関する質問や一般的な議論のためのフォーラムを提供します。</span><span class="sxs-lookup"><span data-stu-id="92c6e-107">Provides a forum for questions about and general discussions of the Visual Basic language syntax and compiler.</span></span>  
+  
+ [<span data-ttu-id="92c6e-108">Visual Basic の相互運用とアップグレード</span><span class="sxs-lookup"><span data-stu-id="92c6e-108">Visual Basic Interop and Upgrade</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vbinterop)  
+ <span data-ttu-id="92c6e-109">Visual Basic へのアップグレードと、相互運用性機能の使用に関する質問や問題のためのフォーラムを提供します。</span><span class="sxs-lookup"><span data-stu-id="92c6e-109">Provides a forum for questions about and issues with upgrading to Visual Basic and working with interoperability features.</span></span>  
+  
+ [<span data-ttu-id="92c6e-110">Visual Basic IDE</span><span class="sxs-lookup"><span data-stu-id="92c6e-110">Visual Basic IDE</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=vbide)  
+ <span data-ttu-id="92c6e-111">Visual Studio 環境での作業方法に関する質問のためのフォーラムを提供します。</span><span class="sxs-lookup"><span data-stu-id="92c6e-111">Provides a forum for questions about how to work in the Visual Studio environment.</span></span>  
+  
+ [<span data-ttu-id="92c6e-112">Visual Basic 全般</span><span class="sxs-lookup"><span data-stu-id="92c6e-112">Visual Basic General</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)  
+ <span data-ttu-id="92c6e-113">他のフォーラムでは説明されていない Visual Basic に関する質問や問題についてのフォーラムを提供します。</span><span class="sxs-lookup"><span data-stu-id="92c6e-113">Provides a forum for questions about and issues with Visual Basic that are not discussed in other forums.</span></span>  
+  
+ [<span data-ttu-id="92c6e-114">StackOverflow</span><span class="sxs-lookup"><span data-stu-id="92c6e-114">StackOverflow</span></span>](https://stackoverflow.com/questions/tagged/vb.net)  
+ <span data-ttu-id="92c6e-115">Visual Basic に関する質問や問題のあるフォーラムを提供します。</span><span class="sxs-lookup"><span data-stu-id="92c6e-115">Provides a forum for questions about and issues with Visual Basic.</span></span>  
+  
+ <span data-ttu-id="92c6e-116">関連項目:</span><span class="sxs-lookup"><span data-stu-id="92c6e-116">Also see:</span></span>  
+ [<span data-ttu-id="92c6e-117">Visual Basic プログラマのための追加リソース</span><span class="sxs-lookup"><span data-stu-id="92c6e-117">Additional Resources for Visual Basic Programmers</span></span>](../getting-started/additional-resources.md)  
+  
+## <a name="see-also"></a><span data-ttu-id="92c6e-118">関連項目</span><span class="sxs-lookup"><span data-stu-id="92c6e-118">See also</span></span>
+
+- [<span data-ttu-id="92c6e-119">Visual Basic プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="92c6e-119">Visual Basic Programming Guide</span></span>](../programming-guide/index.md)
+- [<span data-ttu-id="92c6e-120">Visual Basic リファレンス</span><span class="sxs-lookup"><span data-stu-id="92c6e-120">Visual Basic Reference</span></span>](../reference/index.md)
