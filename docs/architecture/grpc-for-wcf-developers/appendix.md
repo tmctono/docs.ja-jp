@@ -2,16 +2,16 @@
 title: WCF 開発者向けの付録-gRPC
 description: 最新のマイクロサービスアーキテクチャにおける分散トランザクションとその実装について説明します。
 ms.date: 09/02/2019
-ms.openlocfilehash: 9931681727f921e007c2f80852ad0e69cd7288de
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: f60899463a13e9f740f6ae63150d18eab3069124
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711468"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165859"
 ---
 # <a name="appendix-a---transactions"></a>付録 A-トランザクション
 
-Windows Communication Foundation (WCF) では分散トランザクションがサポートされているため、複数のサービスにまたがるアトミック操作を実行できます。 この機能は、 [Microsoft 分散トランザクションコーディネーター](https://docs.microsoft.com/previous-versions/windows/desktop/ms684146(v=vs.85))に基づいています。
+Windows Communication Foundation (WCF) では分散トランザクションがサポートされているため、複数のサービスにまたがるアトミック操作を実行できます。 この機能は、 [Microsoft 分散トランザクションコーディネーター](/previous-versions/windows/desktop/ms684146(v=vs.85))に基づいています。
 
 新しいマイクロサービスのランドスケープでは、この種類の自動化された分散トランザクション処理はできません。 リレーショナルデータベース、NoSQL データストア、メッセージングシステムなど、さまざまなテクノロジが関係しています。 また、1つの環境で使用されているオペレーティングシステム、プログラミング言語、フレームワークが混在している場合もあります。
 
@@ -21,7 +21,7 @@ WCF 分散トランザクションは、 [2 フェーズコミット (2pc)](http
 
 これが不可能な場合は、別の方法として、 [Saga パターン](https://microservices.io/patterns/data/saga.html)を使用する方法があります。 Saga では、更新は順番に処理されます。各更新が成功すると、次の更新がトリガーされます。 これらのトリガーは、サービスからサービスに伝達することも、saga コーディネーターまたは orchestrator で管理することもできます。 プロセスのどの時点でも更新が失敗した場合、更新を既に完了しているサービスでは、元に戻すための特定のロジックが適用されます。
 
-また、「 [.Net マイクロサービスの電子書籍](https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/)」で説明されているように、ドメイン駆動設計 (DDD) とコマンド/クエリ責務分離 (CQRS) を使用する方法もあります。 特に、ドメインイベントまたは[イベントソーシング](https://martinfowler.com/eaaDev/EventSourcing.html)を使用すると、直ちに更新が適用されることを保証するのに役立ちます。
+また、「 [.Net マイクロサービスの電子書籍](../microservices/microservice-ddd-cqrs-patterns/index.md)」で説明されているように、ドメイン駆動設計 (DDD) とコマンド/クエリ責務分離 (CQRS) を使用する方法もあります。 特に、ドメインイベントまたは [イベントソーシング](https://martinfowler.com/eaaDev/EventSourcing.html) を使用すると、直ちに更新が適用されることを保証するのに役立ちます。
 
 >[!div class="step-by-step"]
->[前へ](application-performance-management.md)
+>[[戻る]](application-performance-management.md)

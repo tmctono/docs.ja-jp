@@ -2,12 +2,12 @@
 title: Azure Kubernetes Services での監視
 description: Azure Kubernetes Services での監視
 ms.date: 05/13/2020
-ms.openlocfilehash: 138acf9d27fb4a676ec422c848097a6bea98fa42
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 3900f169b9be4f807e72392da38a1224d6ce28e3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613825"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163701"
 ---
 # <a name="monitoring-in-azure-kubernetes-services"></a>Azure Kubernetes Services での監視
 
@@ -15,16 +15,16 @@ Kubernetes の組み込みログはプリミティブです。 ただし、Kuber
 
 ## <a name="azure-monitor-for-containers"></a>Azure Monitor for Containers
 
-[コンテナーの Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview)は、Kubernetes だけでなく、DC/OS、Docker の群れ、Red Hat openshift などの他のオーケストレーションエンジンからのログの使用もサポートしています。
+[コンテナーの Azure Monitor](/azure/azure-monitor/insights/container-insights-overview) は、Kubernetes だけでなく、DC/OS、Docker の群れ、Red Hat openshift などの他のオーケストレーションエンジンからのログの使用もサポートしています。
 
 ![さまざまなコンテナーからのログの消費 ](./media/containers-diagram.png)
  **図 7-10**。 さまざまなコンテナーからのログの使用
 
-[Prometheus](https://prometheus.io/)は、広く普及しているオープンソースのメトリック監視ソリューションです。 クラウドネイティブコンピューティングファンデーションの一部です。 通常、Prometheus を使用するには、独自のストアで Prometheus サーバーを管理する必要があります。 ただし、[コンテナーの Azure Monitor は、Prometheus メトリックエンドポイントと直接統合](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-prometheus-integration)できるため、個別のサーバーは必要ありません。
+[Prometheus](https://prometheus.io/) は、広く普及しているオープンソースのメトリック監視ソリューションです。 クラウドネイティブコンピューティングファンデーションの一部です。 通常、Prometheus を使用するには、独自のストアで Prometheus サーバーを管理する必要があります。 ただし、 [コンテナーの Azure Monitor は、Prometheus メトリックエンドポイントと直接統合](/azure/azure-monitor/insights/container-insights-prometheus-integration)できるため、個別のサーバーは必要ありません。
 
 ログとメトリックの情報は、クラスターで実行されているコンテナーだけでなく、クラスターからも収集されます。 これにより、2つのログ情報を相互に関連付けることができるため、エラーをより簡単に追跡できます。
 
-ログコレクターのインストールは、 [Windows](https://docs.microsoft.com/azure/azure-monitor/insights/containers#configure-a-log-analytics-windows-agent-for-kubernetes)クラスターと[Linux](https://docs.microsoft.com/azure/azure-monitor/insights/containers#configure-a-log-analytics-linux-agent-for-kubernetes)クラスターで異なります。 ただし、どちらの場合も、ログの収集は Kubernetes [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)として実装されます。つまり、ログコレクターは各ノード上のコンテナーとして実行されます。
+ログコレクターのインストールは、 [Windows](/azure/azure-monitor/insights/containers#configure-a-log-analytics-windows-agent-for-kubernetes) クラスターと [Linux](/azure/azure-monitor/insights/containers#configure-a-log-analytics-linux-agent-for-kubernetes) クラスターで異なります。 ただし、どちらの場合も、ログの収集は Kubernetes [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)として実装されます。つまり、ログコレクターは各ノード上のコンテナーとして実行されます。
 
 Azure Monitor デーモンを実行している orchestrator またはオペレーティングシステムにかかわらず、ログ情報は、ユーザーが使い慣れているのと同じ Azure Monitor ツールに転送されます。 これにより、ハイブリッド Kubernetes/Azure Functions 環境などのさまざまなログソースが混在する環境での並行操作が可能になります。
 

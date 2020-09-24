@@ -3,12 +3,12 @@ title: サービス メッシュ通信インフラストラクチャ
 description: サービスメッシュテクノロジがクラウドネイティブマイクロサービス通信を効率化するしくみについて説明します
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 1b11024cd029433c756812850e2665b7836a13d3
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 39dc1ded06eb0b92a2a1b40cfe981d9bd49bf381
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613689"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165950"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>サービス メッシュ通信インフラストラクチャ
 
@@ -18,7 +18,7 @@ ms.locfileid: "83613689"
 
 *サービスメッシュ*を利用して、新しい急速に進化するテクノロジを中心としたマイクロサービス通信センターのより新しいアプローチ。 [サービスメッシュ](https://www.nginx.com/blog/what-is-a-service-mesh/)は、サービス間の通信、回復性、およびさまざまな横断的懸念を処理する組み込みの機能を備えた、構成可能なインフラストラクチャレイヤーです。 これらの懸念事項については、マイクロサービスからサービスメッシュレイヤーに移行します。 マイクロサービスからは、通信が抽象化されます。
 
-サービスメッシュの重要なコンポーネントはプロキシです。 クラウドネイティブアプリケーションでは、通常、プロキシのインスタンスは各マイクロサービスと共存します。 異なるプロセスで実行されますが、2つは密接にリンクされ、同じライフサイクルを共有します。 このパターンは、サイドカー[パターン](https://docs.microsoft.com/azure/architecture/patterns/sidecar)として知られており、図4-24 に示しています。
+サービスメッシュの重要なコンポーネントはプロキシです。 クラウドネイティブアプリケーションでは、通常、プロキシのインスタンスは各マイクロサービスと共存します。 異なるプロセスで実行されますが、2つは密接にリンクされ、同じライフサイクルを共有します。 このパターンは、サイドカー [パターン](/azure/architecture/patterns/sidecar)として知られており、図4-24 に示しています。
 
 ![サイドカーを使用したサービスメッシュ](./media/service-mesh-with-side-car.png)
 
@@ -34,18 +34,18 @@ ms.locfileid: "83613689"
 
 6章では、アーキテクチャと使用可能なオープンソースの実装に関する議論など、サービスメッシュテクノロジについて詳しく説明します。
 
-## <a name="summary"></a>要約
+## <a name="summary"></a>まとめ
 
 この章では、クラウドネイティブの通信パターンについて説明しました。 まず、フロントエンドクライアントがバックエンドマイクロサービスと通信する方法について説明します。 その過程で、API ゲートウェイのプラットフォームとリアルタイム通信について説明します。 次に、マイクロサービスが他のバックエンドサービスと通信する方法について見ていきます。 サービス間の同期 HTTP 通信と非同期メッセージングの両方を検討しました。 GRPC は、クラウドネイティブ環境における今後のテクノロジです。 最後に、マイクロサービスの通信を効率化することができる、サービスメッシュを持つ、急速に進化する新しいテクノロジが導入されました。
 
 クラウドネイティブシステムでの通信の実装に役立つ、管理された Azure サービスに特に重点を置いていました。
 
-- [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway/overview)
+- [Azure Application Gateway](/azure/application-gateway/overview)
 - [Azure API Management](https://azure.microsoft.com/services/api-management/)
 - [Azure SignalR Service](https://azure.microsoft.com/services/signalr-service/)
-- [Azure Storage キュー](https://docs.microsoft.com/azure/storage/queues/storage-queues-introduction)
-- [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)
-- [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
+- [Azure Storage キュー](/azure/storage/queues/storage-queues-introduction)
+- [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview)
+- [Azure Event Grid](/azure/event-grid/overview)
 - [Azure Event Hub](https://azure.microsoft.com/services/event-hubs/)
 
 次に、クラウドネイティブシステムの分散データと、それが提示する利点と課題に移ります。
@@ -54,7 +54,7 @@ ms.locfileid: "83613689"
 
 - [.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
 
-- [マイクロサービスのサービス間通信の設計](https://docs.microsoft.com/azure/architecture/microservices/design/interservice-communication)
+- [マイクロサービスのサービス間通信の設計](/azure/architecture/microservices/design/interservice-communication)
 
 - [リアルタイム機能を追加するための完全に管理されたサービスである Azure SignalR サービス](https://azure.microsoft.com/blog/azure-signalr-service-a-fully-managed-service-to-add-real-time-functionality/)
 
@@ -64,9 +64,9 @@ ms.locfileid: "83613689"
 
 - [gRPC のドキュメント](https://grpc.io/docs/guides/)
 
-- [WCF 開発者向け gRPC](https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers/)
+- [WCF 開発者向け gRPC](../grpc-for-wcf-developers/index.md)
 
-- [GRPC サービスと HTTP Api の比較](https://docs.microsoft.com/aspnet/core/grpc/comparison?view=aspnetcore-3.0)
+- [GRPC サービスと HTTP Api の比較](/aspnet/core/grpc/comparison?view=aspnetcore-3.0)
 
 - [.NET ビデオを使用した gRPC サービスのビルド](https://channel9.msdn.com/Shows/The-Cloud-Native-Show/Building-Microservices-with-gRPC-and-NET)
 

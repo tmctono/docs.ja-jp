@@ -2,14 +2,15 @@
 title: WCF 構成スキーマ
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-ms.openlocfilehash: 160be2ea43d1530cdb2ccd3de1f9e6a2e4d0aca3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ab64b41e6e79c934ac0145dd7eec0a943f5dc473
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536393"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165131"
 ---
 # <a name="wcf-configuration-schema"></a>WCF 構成スキーマ
+
 Windows Communication Foundation (WCF) 構成要素を使用すると、WCF サービスとクライアントアプリケーションを構成できます。 [ 構成エディター ツール (SvcConfigEditor.exe)](../../../wcf/configuration-editor-tool-svcconfigeditor-exe.md) を使用して、クライアントとサービスの構成ファイルを作成および変更できます。 構成ファイルは XML として書式設定されているので、テキスト エディターを使用して手動で編集する場合は、XML について理解している必要があります。 理解しないで編集すると、XML 要素タグや属性が見つからないなどの問題が発生する可能性があります。 問題の原因は、XML 要素タグと属性が大文字と小文字を区別することによります。  
   
  WCF 構成システムは、名前空間に基づいてい <xref:System.Configuration> ます。 したがって、<xref:System.Configuration> 名前空間によって提供される、構成ロック、暗号化、マージなどのすべての標準機能を使用して、アプリケーションとその構成のセキュリティを強化できます。 これらの概念の詳細については、次のトピックを参照してください。  
@@ -26,6 +27,7 @@ Windows Communication Foundation (WCF) 構成要素を使用すると、WCF サ�
 > アプリケーション構成ファイル (app.config) の WCF 構成セクションは、適切な Access Control リスト (ACL) を使用して保護し、潜在的なセキュリティ上の脅威を防ぐ必要があります。  たとえば、適切なユーザーだけが、アプリケーション バインドのセキュリティ設定、またはサービスの構成ファイルのサービス モデル セクションにアクセスまたは変更できるようにする必要があります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [\<system.serviceModel>](system-servicemodel.md)  
  `ServiceModel` 要素について説明します。  
   
@@ -36,5 +38,6 @@ Windows Communication Foundation (WCF) 構成要素を使用すると、WCF サ�
  <xref:System.Runtime.Serialization.DataContractSerializer> などのシリアライザーの使用時にオプションを設定するための最上位の要素。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [Configuring Windows Communication Foundation Applications](../../../wcf/configuring-services.md)  
  WCF サービスとクライアントを構成する方法について説明します。

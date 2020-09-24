@@ -2,12 +2,12 @@
 title: DevOps
 description: クラウドネイティブアプリケーションの DevOps に関する考慮事項
 ms.date: 05/13/2020
-ms.openlocfilehash: ce814595245d49e409e780cb0f63c436299c2e4e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e6e093a1847d3aec37ac5d4ca56f64e0091a9b6b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614119"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164000"
 ---
 # <a name="devops"></a>DevOps
 
@@ -63,7 +63,7 @@ Azure DevOps の最上位レベルの組織単位は、プロジェクトと呼�
 
 GitHub の進化に伴って、DevOps 機能が追加されています。 たとえば、GitHub には、と呼ばれる独自の継続的インテグレーション/継続的デリバリー (CI/CD) パイプラインがあり `GitHub Actions` ます。 GitHub アクションは、コミュニティを利用したワークフロー自動化ツールです。 これにより、DevOps チームは既存のツールと統合し、新しい製品を組み合わせて照合し、既存の CI/CD パートナーを含むソフトウェアライフサイクルにフックすることができます。 "
 
-GitHub には4000万を超えるユーザーがいるため、世界中のソースコードの最大のホストになります。 2018年10月に、Microsoft は GitHub を購入しています。 Microsoft は、開発者がプラグインおよび拡張できる[オープンプラットフォーム](https://techcrunch.com/2018/06/04/microsoft-promises-to-keep-github-independent-and-open/)で GitHub を pledged ことができました。 これは、独立した企業として動作し続けます。 GitHub には、enterprise、team、professional、および free アカウントのプランが用意されています。
+GitHub には4000万を超えるユーザーがいるため、世界中のソースコードの最大のホストになります。 2018年10月に、Microsoft は GitHub を購入しています。 Microsoft は、開発者がプラグインおよび拡張できる [オープンプラットフォーム](https://techcrunch.com/2018/06/04/microsoft-promises-to-keep-github-independent-and-open/) で GitHub を pledged ことができました。 これは、独立した企業として動作し続けます。 GitHub には、enterprise、team、professional、および free アカウントのプランが用意されています。
 
 ## <a name="source-control"></a>ソース管理
 
@@ -154,7 +154,7 @@ Azure DevOps には、多くの一般的なテンプレートが事前構成さ�
 
 [説明] フィールドでは、期待される標準スタイル (太字、斜体のアンダースコア、取り消し線)、およびイメージを挿入する機能がサポートされます。 これにより、作業またはバグを指定するときに使用できる強力なツールになります。
 
-タスクは、より大きな作業単位を定義する機能にロールアップできます。 さらに、機能は[エピックにロールアップ](https://docs.microsoft.com/azure/devops/boards/backlogs/define-features-epics?view=azure-devops)できます。 この階層でタスクを分類することで、大きな機能をロールアウトする方法を理解しやすくなります。
+タスクは、より大きな作業単位を定義する機能にロールアップできます。 さらに、機能は [エピックにロールアップ](/azure/devops/boards/backlogs/define-features-epics?view=azure-devops)できます。 この階層でタスクを分類することで、大きな機能をロールアウトする方法を理解しやすくなります。
 
 ![図10-6 基本プロセステンプレートで既定で構成されている作業項目の種類](./media/board-issue-types.png)
 
@@ -274,7 +274,7 @@ steps:
 
 ### <a name="versioning-releases"></a>バージョン管理のリリース
 
-リリース機能を使用する場合の欠点の1つは、チェックインされたファイルで定義できないことです `azure-pipelines.yml` 。 ブランチごとのリリース定義をプロジェクトテンプレートにリリーススケルトンを含めることによって、さまざまな理由が考えられます。 幸いにも、いくつかの段階のサポートをビルドコンポーネントに移行する作業は進行中です。 これは、マルチステージビルドとして知られており、[最初のバージョンが利用可能になりました](https://devblogs.microsoft.com/devops/whats-new-with-azure-pipelines/)。
+リリース機能を使用する場合の欠点の1つは、チェックインされたファイルで定義できないことです `azure-pipelines.yml` 。 ブランチごとのリリース定義をプロジェクトテンプレートにリリーススケルトンを含めることによって、さまざまな理由が考えられます。 幸いにも、いくつかの段階のサポートをビルドコンポーネントに移行する作業は進行中です。 これは、マルチステージビルドとして知られており、 [最初のバージョンが利用可能になりました](https://devblogs.microsoft.com/devops/whats-new-with-azure-pipelines/)。
 
 >[!div class="step-by-step"]
 >[前へ](azure-security.md)

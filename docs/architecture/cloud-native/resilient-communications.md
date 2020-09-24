@@ -3,12 +3,12 @@ title: 回復性のある通信
 description: Azure 向けのクラウドネイティブ .NET アプリの設計 |回復力のある通信
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 33e4c03c1f3d8c01f72c588326fbb0bdfa512cdd
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 18b26223634efc5c05f680d0cbb7c8cbc2490a59
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613747"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166041"
 ---
 # <a name="resilient-communications"></a>回復力のある通信
 
@@ -30,7 +30,7 @@ ms.locfileid: "83613747"
 
 ## <a name="service-mesh"></a>サービスメッシュ
 
-より優れたアプローチは、*サービスメッシュ*を利用する進化テクノロジです。 [サービスメッシュ](https://www.nginx.com/blog/what-is-a-service-mesh/)は、構成可能なインフラストラクチャレイヤーであり、サービスの通信と上記の他の課題に対処するための組み込みの機能を備えています。 これらの問題は、サービスプロキシに移動することで分離されます。 プロキシは、ビジネスコードから分離するために、別のプロセス (サイド[カーと呼ばれます) に](https://docs.microsoft.com/azure/architecture/patterns/sidecar)展開されます。 ただし、サイドカーはサービスにリンクされており、それを使用して作成され、ライフサイクルを共有します。 図6-7 はこのシナリオを示しています。
+より優れたアプローチは、 *サービスメッシュ*を利用する進化テクノロジです。 [サービスメッシュ](https://www.nginx.com/blog/what-is-a-service-mesh/)は、構成可能なインフラストラクチャレイヤーであり、サービスの通信と上記の他の課題に対処するための組み込みの機能を備えています。 これらの問題は、サービスプロキシに移動することで分離されます。 プロキシは、ビジネスコードから分離するために、別のプロセス (サイド [カーと呼ばれます) に](/azure/architecture/patterns/sidecar)展開されます。 ただし、サイドカーはサービスにリンクされており、それを使用して作成され、ライフサイクルを共有します。 図6-7 はこのシナリオを示しています。
 
 ![サイドカーを使用したサービスメッシュ](./media/service-mesh-with-side-car.png)
 
@@ -38,7 +38,7 @@ ms.locfileid: "83613747"
 
 前の図では、プロキシがマイクロサービスとクラスター間の通信を傍受して管理する方法に注意してください。
 
-サービスメッシュは、[データプレーン](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc)と[コントロールプレーン](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc)の2つの異なるコンポーネントに論理的に分割されます。 図6-8 は、これらのコンポーネントとその役割を示しています。
+サービスメッシュは、 [データプレーン](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc) と [コントロールプレーン](https://blog.envoyproxy.io/service-mesh-data-plane-vs-control-plane-2774e720f7fc)の2つの異なるコンポーネントに論理的に分割されます。 図6-8 は、これらのコンポーネントとその役割を示しています。
 
 ![サービスメッシュ制御とデータプレーン](./media/istio-control-and-data-plane.png)
 
@@ -50,7 +50,7 @@ ms.locfileid: "83613747"
 
 ## <a name="istio-and-envoy"></a>Iとエンボイ
 
-現在、いくつかのサービスメッシュオプションが存在しますが、このドキュメントの執筆時点では、 [iws-at o](https://istio.io/docs/concepts/what-is-istio/)が最も人気です。 Iフェロー o は、IBM、Google、およびその他の顧客との共同事業です。 これは、新規または既存の分散アプリケーションに統合できるオープンソースのオファリングです。 このテクノロジは、マイクロサービスのセキュリティ保護、接続、監視を行うための一貫した完全なソリューションを提供します。 その特徴は次のとおりです。
+現在、いくつかのサービスメッシュオプションが存在しますが、このドキュメントの執筆時点では、 [iws-at o](https://istio.io/docs/concepts/what-is-istio/) が最も人気です。 Iフェロー o は、IBM、Google、およびその他の顧客との共同事業です。 これは、新規または既存の分散アプリケーションに統合できるオープンソースのオファリングです。 このテクノロジは、マイクロサービスのセキュリティ保護、接続、監視を行うための一貫した完全なソリューションを提供します。 次のような機能があります。
 
 - 強力な id ベースの認証と承認を使用して、クラスター内のサービス間通信をセキュリティで保護します。
 - HTTP、 [Grpc](https://grpc.io/)、WEBSOCKET、TCP トラフィックの自動負荷分散。
@@ -58,7 +58,7 @@ ms.locfileid: "83613747"
 - アクセス制御、レート制限、クォータをサポートするプラグ可能なポリシーレイヤーと構成 API。
 - クラスター内のすべてのトラフィック (クラスターの受信と送信を含む) の自動メトリック、ログ、およびトレース。
 
-Iの実装の主要なコンポーネントは、[エンボイプロキシ](https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy)を持つプロキシサービスです。 各サービスと共に実行され、次の機能のためのプラットフォームに依存しない基盤を提供します。
+Iの実装の主要なコンポーネントは、 [エンボイプロキシ](https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy)を持つプロキシサービスです。 各サービスと共に実行され、次の機能のためのプラットフォームに依存しない基盤を提供します。
 
 - 動的サービスの検出。
 - 負荷分散。
@@ -74,28 +74,28 @@ Iの実装の主要なコンポーネントは、[エンボイプロキシ](http
 
 Azure クラウドは、azure Kubernetes Services 内での直接サポートを提供します。 次のリンクを使用して作業を開始できます。
 
-- [AKS での Ip のインストール](https://docs.microsoft.com/azure/aks/istio-install)
-- [AKS と Iを使用する](https://docs.microsoft.com/azure/aks/istio-scenario-routing)
+- [AKS での Ip のインストール](/azure/aks/istio-install)
+- [AKS と Iを使用する](/azure/aks/istio-scenario-routing)
 
 ### <a name="references"></a>References
 
 - [Polly](http://www.thepollyproject.org/)
 
-- [再試行パターン](https://docs.microsoft.com/azure/architecture/patterns/retry)
+- [再試行パターン](/azure/architecture/patterns/retry)
 
-- [サーキット ブレーカー パターン](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
+- [サーキット ブレーカー パターン](/azure/architecture/patterns/circuit-breaker)
 
 - [Azure での復元に関するホワイトペーパー](https://azure.microsoft.com/mediahandler/files/resourcefiles/resilience-in-azure-whitepaper/Resilience%20in%20Azure.pdf)
 
 - [ネットワーク待機時間](https://www.techopedia.com/definition/8553/network-latency)
 
-- [冗長性](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy)
+- [冗長性](/azure/architecture/guide/design-principles/redundancy)
 
-- [geo レプリケーション](https://docs.microsoft.com/azure/sql-database/sql-database-active-geo-replication)
+- [geo レプリケーション](/azure/sql-database/sql-database-active-geo-replication)
 
-- [Azure の Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)
+- [Azure の Traffic Manager](/azure/traffic-manager/traffic-manager-overview)
 
-- [自動スケール ガイダンス](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling)
+- [自動スケール ガイダンス](/azure/architecture/best-practices/auto-scaling)
 
 - [Istio](https://istio.io/docs/concepts/what-is-istio/)
 

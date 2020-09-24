@@ -3,12 +3,12 @@ title: サービス間の通信
 description: バックエンドクラウドネイティブマイクロサービスが他のバックエンドマイクロサービスと通信する方法について説明します。
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 88d7dfabee14419978889f5d9ea30b12f36837de
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9761b99cd9ad076eb82a23a00ec3099e8913168b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539809"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166080"
 ---
 # <a name="service-to-service-communication"></a>サービス間の通信
 
@@ -54,7 +54,7 @@ ms.locfileid: "90539809"
 
 ### <a name="materialized-view-pattern"></a>具体化されたビュー パターン
 
-マイクロサービスの結合を削除するための一般的なオプションは、具体化された [ビューパターン](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)です。 このパターンでは、マイクロサービスは、他のサービスによって所有されている独自のローカルの非正規化されたデータのコピーを格納します。 製品カタログと料金マイクロサービスを照会するショッピングバスケットマイクロサービスではなく、そのデータのローカルコピーを保持します。 このパターンは、不要な結合を排除し、信頼性と応答時間を向上させます。 操作全体が1つのプロセス内で実行されます。 このパターンと、5章のその他のデータの問題について説明します。
+マイクロサービスの結合を削除するための一般的なオプションは、具体化された [ビューパターン](/azure/architecture/patterns/materialized-view)です。 このパターンでは、マイクロサービスは、他のサービスによって所有されている独自のローカルの非正規化されたデータのコピーを格納します。 製品カタログと料金マイクロサービスを照会するショッピングバスケットマイクロサービスではなく、そのデータのローカルコピーを保持します。 このパターンは、不要な結合を排除し、信頼性と応答時間を向上させます。 操作全体が1つのプロセス内で実行されます。 このパターンと、5章のその他のデータの問題について説明します。
 
 ### <a name="service-aggregator-pattern"></a>サービスアグリゲーターパターン
 
@@ -94,7 +94,7 @@ ms.locfileid: "90539809"
 
 Azure storage キューは、Azure ストレージアカウントによってサポートされる、高速で手頃な価格の単純なキューインフラストラクチャを提供します。
 
-[Azure Storage キュー](https://docs.microsoft.com/azure/storage/queues/storage-queues-introduction) は、信頼性の高い永続的なメッセージング機能を備えた REST ベースのキューメカニズムを備えています。 これらは最小限の機能セットを提供しますが、安価で、数百万のメッセージを格納します。 容量の範囲は最大 500 TB です。 1つのメッセージのサイズは最大 64 KB です。
+[Azure Storage キュー](/azure/storage/queues/storage-queues-introduction) は、信頼性の高い永続的なメッセージング機能を備えた REST ベースのキューメカニズムを備えています。 これらは最小限の機能セットを提供しますが、安価で、数百万のメッセージを格納します。 容量の範囲は最大 500 TB です。 1つのメッセージのサイズは最大 64 KB です。
 
 HTTP または HTTPS を使用した認証された呼び出しを介して、世界中のどこからでもメッセージにアクセスできます。 ストレージキューは、多数の同時実行クライアントにスケールアウトして、トラフィックの急増に対応できます。
 
@@ -122,13 +122,13 @@ Azure Storage キューは、クラウドネイティブアプリケーション
 
 より複雑なメッセージング要件については、Azure Service Bus キューを検討してください。
 
-[Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)は、堅牢なメッセージインフラストラクチャを構築しています。*仲介型メッセージングモデル*がサポートされています。 メッセージは、コンシューマーによって受信されるまで、ブローカー (キュー) に確実に格納されます。 キューは、メッセージがキューに追加された順序に従って、先入れ先出し (FIFO) のメッセージ配信を保証します。
+[Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview)は、堅牢なメッセージインフラストラクチャを構築しています。*仲介型メッセージングモデル*がサポートされています。 メッセージは、コンシューマーによって受信されるまで、ブローカー (キュー) に確実に格納されます。 キューは、メッセージがキューに追加された順序に従って、先入れ先出し (FIFO) のメッセージ配信を保証します。
 
-メッセージのサイズは、最大 256 KB まで、非常に大きくなる可能性があります。 メッセージは、無期限にキューに保持されます。 Service Bus は、HTTP ベースの呼び出しだけでなく、 [Amqp プロトコル](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-amqp-overview)の完全なサポートも提供します。 AMQP は、バイナリプロトコルと高い信頼性をサポートするベンダー全体のオープン標準です。
+メッセージのサイズは、最大 256 KB まで、非常に大きくなる可能性があります。 メッセージは、無期限にキューに保持されます。 Service Bus は、HTTP ベースの呼び出しだけでなく、 [Amqp プロトコル](/azure/service-bus-messaging/service-bus-amqp-overview)の完全なサポートも提供します。 AMQP は、バイナリプロトコルと高い信頼性をサポートするベンダー全体のオープン標準です。
 
-Service Bus には、 [トランザクションのサポート](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions) や [重複検出機能](https://docs.microsoft.com/azure/service-bus-messaging/duplicate-detection)など、豊富な機能セットが用意されています。 キューは、メッセージごとに "最大で1回の配信" を保証します。 既に送信済みのメッセージは自動的に破棄されます。 プロデューサーが不明な場合は、同じメッセージを再送信し、1つのコピーのみが処理されることを保証 Service Bus ます。 重複検出を使用すると、インフラストラクチャの追加の組み込みを構築する必要がなくなります。
+Service Bus には、 [トランザクションのサポート](/azure/service-bus-messaging/service-bus-transactions) や [重複検出機能](/azure/service-bus-messaging/duplicate-detection)など、豊富な機能セットが用意されています。 キューは、メッセージごとに "最大で1回の配信" を保証します。 既に送信済みのメッセージは自動的に破棄されます。 プロデューサーが不明な場合は、同じメッセージを再送信し、1つのコピーのみが処理されることを保証 Service Bus ます。 重複検出を使用すると、インフラストラクチャの追加の組み込みを構築する必要がなくなります。
 
-さらに、パーティション分割とセッションという2つのエンタープライズ機能があります。 従来の Service Bus キューは、1つのメッセージブローカーによって処理され、1つのメッセージストアに格納されます。 ただし、 [Service Bus パーティション分割](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning) では、複数のメッセージブローカーとメッセージストアにキューを分散します。 全体のスループットは、1つのメッセージブローカーまたはメッセージングストアのパフォーマンスによって制限されなくなりました。 メッセージングストアが一時的に停止しても、パーティション分割されたキューは表示されません。
+さらに、パーティション分割とセッションという2つのエンタープライズ機能があります。 従来の Service Bus キューは、1つのメッセージブローカーによって処理され、1つのメッセージストアに格納されます。 ただし、 [Service Bus パーティション分割](/azure/service-bus-messaging/service-bus-partitioning) では、複数のメッセージブローカーとメッセージストアにキューを分散します。 全体のスループットは、1つのメッセージブローカーまたはメッセージングストアのパフォーマンスによって制限されなくなりました。 メッセージングストアが一時的に停止しても、パーティション分割されたキューは表示されません。
 
 [Service Bus セッション](https://codingcanvas.com/azure-service-bus-sessions/) は、グループに関連するメッセージの方法を提供します。 メッセージをまとめて処理し、最後に操作を完了するワークフローシナリオを想像してみてください。 利用するには、キューに対してセッションを明示的に有効にする必要があります。また、関連する各メッセージに同じセッション ID が含まれている必要があります。
 
@@ -142,13 +142,13 @@ Service Bus には、 [トランザクションのサポート](https://docs.mic
 
 前の図では、ポイントツーポイントの関係に注意してください。 同じプロバイダーの2つのインスタンスは、メッセージを1つの Service Bus キューにエンキューします。 各メッセージは、右側にある3つのコンシューマーインスタンスのうちの1つのみによって使用されます。 次に、さまざまなコンシューマーが同じメッセージに関心を持つ可能性があるメッセージングを実装する方法について説明します。
 
-## <a name="events"></a>events
+## <a name="events"></a>イベント
 
 メッセージキューは、プロデューサーがコンシューマーにメッセージを非同期に送信できる通信を実装するための効果的な方法です。 しかし、同じメッセージに *多くの異なるコンシューマー* が関心を持っている場合はどうなるでしょうか。 コンシューマーごとに専用のメッセージキューが拡張されることはなく、管理が困難になります。
 
 このシナリオに対処するために、メッセージの相互作用 ( *イベント*) の3番目の種類に移ります。 1つのマイクロサービスによってアクションが発生したことが通知されます。 他のマイクロサービス (関心がある場合) は、アクションまたはイベントに反応します。
 
-イベント処理は2段階のプロセスです。 特定の状態の変更に対して、マイクロサービスはイベントをメッセージブローカに発行し、他の任意のマイクロサービスで使用できるようにします。 関心のあるマイクロサービスは、メッセージブローカーでイベントをサブスクライブすることによって通知されます。 [イベントベースの通信](https://docs.microsoft.com/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/integration-event-based-microservice-communications)を実装するには、[発行/サブスクライブ](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber)パターンを使用します。
+イベント処理は2段階のプロセスです。 特定の状態の変更に対して、マイクロサービスはイベントをメッセージブローカに発行し、他の任意のマイクロサービスで使用できるようにします。 関心のあるマイクロサービスは、メッセージブローカーでイベントをサブスクライブすることによって通知されます。 [イベントベースの通信](/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/integration-event-based-microservice-communications)を実装するには、[発行/サブスクライブ](/azure/architecture/patterns/publisher-subscriber)パターンを使用します。
 
 図4-15 は、2つの他のマイクロサービスがサブスクライブしているイベントを発行する買い物かごマイクロサービスを示しています。
 
@@ -158,7 +158,7 @@ Service Bus には、 [トランザクションのサポート](https://docs.mic
 
 通信チャネルの中央にある *イベントバス* コンポーネントに注意してください。 これは、メッセージブローカーをカプセル化し、基になるアプリケーションから分離するカスタムクラスです。 注文とインベントリのマイクロサービスは、個別にイベントを操作します。また、ショッピングカートマイクロサービスについての知識も不要です。 登録されたイベントは、イベントバスに発行されると、動作します。
 
-イベントによって、キューテクノロジから *トピック*に移動します。 [トピック](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)はキューに似ていますが、1対多のメッセージングパターンをサポートしています。 1つのマイクロサービスがメッセージを公開します。 複数のサブスクライブマイクロサービスは、そのメッセージの受信と操作を選択できます。 図4-16 に、トピックアーキテクチャを示します。
+イベントによって、キューテクノロジから *トピック*に移動します。 [トピック](/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)はキューに似ていますが、1対多のメッセージングパターンをサポートしています。 1つのマイクロサービスがメッセージを公開します。 複数のサブスクライブマイクロサービスは、そのメッセージの受信と操作を選択できます。 図4-16 に、トピックアーキテクチャを示します。
 
 ![トピックのアーキテクチャ](./media/topic-architecture.png)
 
@@ -170,17 +170,17 @@ Azure クラウドでは、Azure Service Bus トピックと Azure EventGrid と
 
 ### <a name="azure-service-bus-topics"></a>Azure Service Bus トピック
 
-Azure Service Bus キューの堅牢な仲介型メッセージモデルと同じように、 [Azure Service Bus のトピック](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)もあります。 トピックは、複数の独立したパブリッシャーからメッセージを受信し、最大2000のサブスクライバーにメッセージを送信できます。 実行時にサブスクリプションを動的に追加または削除するには、システムを停止するか、トピックを再作成します。
+Azure Service Bus キューの堅牢な仲介型メッセージモデルと同じように、 [Azure Service Bus のトピック](/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)もあります。 トピックは、複数の独立したパブリッシャーからメッセージを受信し、最大2000のサブスクライバーにメッセージを送信できます。 実行時にサブスクリプションを動的に追加または削除するには、システムを停止するか、トピックを再作成します。
 
-Azure Service Bus キューの多くの高度な機能は、 [重複の検出](https://docs.microsoft.com/azure/service-bus-messaging/duplicate-detection) やトランザクションの [サポート](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions)などのトピックでも使用できます。 既定では、Service Bus のトピックは1つのメッセージブローカーによって処理され、1つのメッセージストアに格納されます。 ただし、 [Service Bus パーティション分割](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning) では、多数のメッセージブローカーとメッセージストアに分散することによってトピックをスケーリングします。
+Azure Service Bus キューの多くの高度な機能は、 [重複の検出](/azure/service-bus-messaging/duplicate-detection) やトランザクションの [サポート](/azure/service-bus-messaging/service-bus-transactions)などのトピックでも使用できます。 既定では、Service Bus のトピックは1つのメッセージブローカーによって処理され、1つのメッセージストアに格納されます。 ただし、 [Service Bus パーティション分割](/azure/service-bus-messaging/service-bus-partitioning) では、多数のメッセージブローカーとメッセージストアに分散することによってトピックをスケーリングします。
 
-[スケジュール](https://docs.microsoft.com/azure/service-bus-messaging/message-sequencing) されたメッセージの配信では、特定の処理時間のメッセージにタグが付けられます。 このメッセージは、その時点より前のトピックには表示されません。 [メッセージの遅延](https://docs.microsoft.com/azure/service-bus-messaging/message-deferral) により、メッセージの取得を後で遅らせることができます。 どちらも、操作が特定の順序で処理されるワークフロー処理のシナリオでよく使用されます。 前の作業が完了するまで、受信したメッセージの処理を延期することができます。
+[スケジュール](/azure/service-bus-messaging/message-sequencing) されたメッセージの配信では、特定の処理時間のメッセージにタグが付けられます。 このメッセージは、その時点より前のトピックには表示されません。 [メッセージの遅延](/azure/service-bus-messaging/message-deferral) により、メッセージの取得を後で遅らせることができます。 どちらも、操作が特定の順序で処理されるワークフロー処理のシナリオでよく使用されます。 前の作業が完了するまで、受信したメッセージの処理を延期することができます。
 
 Service Bus トピックは、クラウドネイティブシステムで公開/サブスクライブ通信を有効にするための堅牢で実証されたテクノロジです。
 
 ### <a name="azure-event-grid"></a>Azure Event Grid
 
-Azure Service Bus は、エンタープライズ機能の完全なセットを備えた、徹底的にテストされたメッセージングブローカーですが、 [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview) はブロックの新しい kid です。
+Azure Service Bus は、エンタープライズ機能の完全なセットを備えた、徹底的にテストされたメッセージングブローカーですが、 [Azure Event Grid](/azure/event-grid/overview) はブロックの新しい kid です。
 
 一見すると、Event Grid は別のトピックベースのメッセージングシステムのように見えます。 ただし、多くの点で異なります。 イベントドリブンなワークロードに重点を置いて、サーバーレスインフラストラクチャでのリアルタイムイベント処理、ディープ Azure 統合、オープンプラットフォームのすべての機能を実現します。 最新のクラウドネイティブアプリケーションとサーバーレスアプリケーション向けに設計されています。
 
@@ -206,9 +206,9 @@ Event Grid は、完全に管理されたサーバーレスクラウドサービ
 
 ### <a name="streaming-messages-in-the-azure-cloud"></a>Azure クラウドでのメッセージのストリーミング
 
-Azure Service Bus と Event Grid は、新しいドキュメントのような単一の独立したイベントを公開するアプリケーションに対して、Cosmos DB に挿入された優れたサポートを提供します。 しかし、クラウドネイティブシステムで *関連イベントのストリーム*を処理する必要がある場合はどうでしょうか。 [イベントストリーム](https://docs.microsoft.com/archive/msdn-magazine/2015/february/microsoft-azure-the-rise-of-event-stream-oriented-systems) はより複雑です。 通常は、時間順で相互関係があり、グループとして処理する必要があります。
+Azure Service Bus と Event Grid は、新しいドキュメントのような単一の独立したイベントを公開するアプリケーションに対して、Cosmos DB に挿入された優れたサポートを提供します。 しかし、クラウドネイティブシステムで *関連イベントのストリーム*を処理する必要がある場合はどうでしょうか。 [イベントストリーム](/archive/msdn-magazine/2015/february/microsoft-azure-the-rise-of-event-stream-oriented-systems) はより複雑です。 通常は、時間順で相互関係があり、グループとして処理する必要があります。
 
-[Azure Event Hub](https://azure.microsoft.com/services/event-hubs/) は、イベントを収集、変換、および格納するデータストリーミングプラットフォームおよびイベントインジェストサービスです。 テレメトリコンテキストから生成された継続的なイベント通知など、ストリーミングデータをキャプチャするために微調整されています。 このサービスは、拡張性が高く、 [1 秒あたり何百万ものイベント](https://docs.microsoft.com/azure/event-hubs/event-hubs-about)を格納および処理できます。 図4-18 に示すように、多くの場合、イベントパイプラインのフロントドアとして、取り込みストリームをイベントの消費から切り離します。
+[Azure Event Hub](https://azure.microsoft.com/services/event-hubs/) は、イベントを収集、変換、および格納するデータストリーミングプラットフォームおよびイベントインジェストサービスです。 テレメトリコンテキストから生成された継続的なイベント通知など、ストリーミングデータをキャプチャするために微調整されています。 このサービスは、拡張性が高く、 [1 秒あたり何百万ものイベント](/azure/event-hubs/event-hubs-about)を格納および処理できます。 図4-18 に示すように、多くの場合、イベントパイプラインのフロントドアとして、取り込みストリームをイベントの消費から切り離します。
 
 ![Azure Event Hub](./media/azure-event-hub.png)
 
@@ -216,9 +216,9 @@ Azure Service Bus と Event Grid は、新しいドキュメントのような�
 
 イベントハブでは、短い待機時間と構成可能な時間のリテンション期間がサポートされます。 キューやトピックとは異なり、コンシューマーによって読み取られた後にイベントデータを保持 Event Hubs ます。 この機能により、内部および外部の他のデータ分析サービスは、データを再生してさらに分析することができます。 イベントハブに格納されているイベントは、保有期間の有効期限が切れたときにのみ削除されます。既定では1日ですが、構成することができます。
 
-イベントハブでは、HTTPS や AMQP などの一般的なイベント発行プロトコルがサポートされています。 Kafka 1.0 もサポートしています。 [既存の kafka アプリケーションは](https://docs.microsoft.com/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) 、大規模な kafka クラスターを管理する代わりに、kafka プロトコルを使用して Event Hub と通信できます。 オープンソースのクラウドネイティブシステムの多くは、Kafka を採用しています。
+イベントハブでは、HTTPS や AMQP などの一般的なイベント発行プロトコルがサポートされています。 Kafka 1.0 もサポートしています。 [既存の kafka アプリケーションは](/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) 、大規模な kafka クラスターを管理する代わりに、kafka プロトコルを使用して Event Hub と通信できます。 オープンソースのクラウドネイティブシステムの多くは、Kafka を採用しています。
 
-Event Hubs は、メッセージストリームの特定のサブセット (パーティション) のみを読み取る、パーティション分割された [コンシューマーモデル](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) を介してメッセージストリーミングを実装します。 このパターンでは、イベント処理の横の倍率を大きくすることができ、キューおよびトピックで使用できないその他のストリームに重点を置いた機能を提供します。 パーティションは、イベント ハブで保持される順序付けされた一連のイベントです。 新しいイベントが到着すると、このシーケンスの末尾に追加されます。図4-19 は、イベントハブでのパーティション分割を示しています。
+Event Hubs は、メッセージストリームの特定のサブセット (パーティション) のみを読み取る、パーティション分割された [コンシューマーモデル](/azure/event-hubs/event-hubs-features) を介してメッセージストリーミングを実装します。 このパターンでは、イベント処理の横の倍率を大きくすることができ、キューおよびトピックで使用できないその他のストリームに重点を置いた機能を提供します。 パーティションは、イベント ハブで保持される順序付けされた一連のイベントです。 新しいイベントが到着すると、このシーケンスの末尾に追加されます。図4-19 は、イベントハブでのパーティション分割を示しています。
 
 ![イベントハブのパーティション分割](./media/event-hub-partitioning.png)
 
