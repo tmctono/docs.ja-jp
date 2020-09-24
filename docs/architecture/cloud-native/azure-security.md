@@ -2,12 +2,12 @@
 title: クラウドネイティブアプリ向けの Azure セキュリティ
 description: Azure 向けのクラウドネイティブ .NET アプリの設計 |クラウドネイティブアプリ向けの Azure セキュリティ
 ms.date: 05/13/2020
-ms.openlocfilehash: 7780b005d84124f202049deeb5be876364e6c5fa
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: e6f91cc4c240dd3349faed2f87db1ba99b2780a9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89358974"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160997"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>クラウドネイティブアプリ向けの Azure セキュリティ
 
@@ -24,7 +24,7 @@ ms.locfileid: "89358974"
 - 誰がこのデータにアクセスできる必要がありますか。
 - 開発プロセスとリリースプロセスに関して、監査ポリシーは適用されていますか。
 
-これらの質問はすべて、 [脅威のモデル](https://docs.microsoft.com/azure/security/azure-security-threat-modeling-tool)化と呼ばれるプロセスに含まれています。 このプロセスでは、システムに対して発生した脅威、脅威の可能性、およびそれらの潜在的な損害についての質問に回答しようとします。
+これらの質問はすべて、 [脅威のモデル](/azure/security/azure-security-threat-modeling-tool)化と呼ばれるプロセスに含まれています。 このプロセスでは、システムに対して発生した脅威、脅威の可能性、およびそれらの潜在的な損害についての質問に回答しようとします。
 
 脅威の一覧が確立されたら、軽減する価値があるかどうかを判断する必要があります。 場合によっては、脅威が非常に低く、コストをかける価値がないということを計画するとコストがかかります。 たとえば、一部の状態レベルのアクターは、何百万ものデバイスによって使用されるプロセスの設計に変更を注入する場合があります。 ここで、 [リング 3](https://en.wikipedia.org/wiki/Protection_ring)で特定のコードを実行する代わりに、そのコードはリング0で実行されます。 これにより、ハイパーバイザーをバイパスし、ベアメタルコンピューターで攻撃コードを実行して、そのハードウェアで実行されているすべての仮想マシンに対する攻撃を防ぐことができます。
 
@@ -94,11 +94,11 @@ Azure portal において、 [Azure Advisor](https://azure.microsoft.com/service
 
 Azure Kubernetes クラスター内のノードは、Azure に対してネイティブな他のリソースと同じように、仮想ネットワークに参加できます。 この機能は、 [Azure Container Network インターフェイス](https://github.com/Azure/azure-container-networking/blob/master/docs/cni.md)と呼ばれます。 実質的には、仮想マシンとコンテナーイメージが割り当てられている仮想ネットワーク内にサブネットを割り当てます。
 
-最小限の特権の原則を示すパスを続行すると、Virtual Network 内のすべてのリソースが他のすべてのリソースと通信する必要がなくなります。 たとえば、ストレージアカウントと SQL データベースに対して web API を提供するアプリケーションでは、データベースとストレージアカウントが相互に通信する必要はほとんどありません。 これらの間でデータを共有すると、web アプリケーションが実行されます。 そのため、 [ネットワークセキュリティグループ (NSG)](https://docs.microsoft.com/azure/virtual-network/security-overview) を使用して、2つのサービス間のトラフィックを拒否することができます。
+最小限の特権の原則を示すパスを続行すると、Virtual Network 内のすべてのリソースが他のすべてのリソースと通信する必要がなくなります。 たとえば、ストレージアカウントと SQL データベースに対して web API を提供するアプリケーションでは、データベースとストレージアカウントが相互に通信する必要はほとんどありません。 これらの間でデータを共有すると、web アプリケーションが実行されます。 そのため、 [ネットワークセキュリティグループ (NSG)](/azure/virtual-network/security-overview) を使用して、2つのサービス間のトラフィックを拒否することができます。
 
 リソース間の通信を拒否するポリシーは、特にトラフィック制限なしで Azure を使用することによって、実装するのが面倒な場合があります。 その他のクラウドでは、ネットワークセキュリティグループの概念がより一般的になっています。 たとえば、AWS の既定のポリシーは、NSG 内のルールによって有効になるまで、リソースが自身の間で通信できないということです。 この開発には時間がかかりますが、より制限の厳しい環境では、より安全な既定値が提供されます。 適切な DevOps プラクティス (特に、 [Azure Resource Manager または Terraform](infrastructure-as-code.md) を使用してアクセス許可を管理する) を使用すると、規則を簡単に制御できるようになります。
 
-仮想ネットワークは、オンプレミスとクラウドのリソース間の通信を設定するときにも役立ちます。 仮想プライベートネットワークを使用して、2つのネットワークをシームレスに接続することができます。 これにより、すべてのユーザーがオンサイトに配置されているシナリオで、任意の種類のゲートウェイを使用せずに仮想ネットワークを実行できます。 このネットワークの確立に使用できるテクノロジは多数あります。 最も簡単なのは、多数のルーターと Azure の間に確立できる [サイト間 VPN](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%2fazure%2fvirtual-network%2ftoc.json#s2smulti) を使用することです。 トラフィックは、他のトラフィックと同じように、1バイトあたり同じコストで暗号化され、インターネット経由でトンネリングされます。 より多くの帯域幅またはセキュリティが望ましいシナリオでは、Azure は、オンプレミスネットワークと Azure の間でプライベート回線を使用する [expressroute](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%2fazure%2fvirtual-network%2ftoc.json#ExpressRoute) と呼ばれるサービスを提供します。 コストが高く、より安全に確立することも困難です。
+仮想ネットワークは、オンプレミスとクラウドのリソース間の通信を設定するときにも役立ちます。 仮想プライベートネットワークを使用して、2つのネットワークをシームレスに接続することができます。 これにより、すべてのユーザーがオンサイトに配置されているシナリオで、任意の種類のゲートウェイを使用せずに仮想ネットワークを実行できます。 このネットワークの確立に使用できるテクノロジは多数あります。 最も簡単なのは、多数のルーターと Azure の間に確立できる [サイト間 VPN](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#s2smulti) を使用することです。 トラフィックは、他のトラフィックと同じように、1バイトあたり同じコストで暗号化され、インターネット経由でトンネリングされます。 より多くの帯域幅またはセキュリティが望ましいシナリオでは、Azure は、オンプレミスネットワークと Azure の間でプライベート回線を使用する [expressroute](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#ExpressRoute) と呼ばれるサービスを提供します。 コストが高く、より安全に確立することも困難です。
 
 ## <a name="role-based-access-control-for-restricting-access-to-azure-resources"></a>Azure リソースへのアクセスを制限するためのロールベースのアクセス制御
 
@@ -129,7 +129,7 @@ RBAC の最初のコンポーネントはセキュリティプリンシパルで
 
 Azure には、所有者、共同作成者、閲覧者、ユーザーアカウント管理者などの高度なロールも多数あります。 所有者ロールを使用すると、セキュリティプリンシパルはすべてのリソースにアクセスし、他のユーザーにアクセス許可を割り当てることができます。 共同作成者は、すべてのリソースに対して同じレベルのアクセス権を持ちますが、アクセス許可を割り当てることはできません。 閲覧者は、既存の Azure リソースのみを表示できます。また、ユーザーアカウント管理者は、Azure リソースへのアクセスを管理できます。
 
-[DNS ゾーンの共同作成者](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#dns-zone-contributor)などのより詳細な組み込みロールは、1つのサービスに限定されています。 セキュリティプリンシパルは、任意の数のロールに対して実行できます。
+[DNS ゾーンの共同作成者](/azure/role-based-access-control/built-in-roles#dns-zone-contributor)などのより詳細な組み込みロールは、1つのサービスに限定されています。 セキュリティプリンシパルは、任意の数のロールに対して実行できます。
 
 ## <a name="scopes"></a>スコープ
 
@@ -139,7 +139,7 @@ Azure には、所有者、共同作成者、閲覧者、ユーザーアカウ�
 
 セキュリティプリンシパルに特定のアクセス許可があるかどうかをテストする場合、ロールとスコープの組み合わせが考慮されます。 この組み合わせにより、強力な承認メカニズムが提供されます。
 
-## <a name="deny"></a>Deny
+## <a name="deny"></a>拒否
 
 以前は、RBAC で許可されているのは "許可" 規則のみでした。 この動作により、いくつかのスコープが構築に複雑になりました。 たとえば、セキュリティプリンシパルがすべてのストレージアカウントにアクセスできるようにするには、必要なストレージアカウントの一覧に対して明示的なアクセス許可を付与する必要があります。 新しいストレージアカウントが作成されるたびに、このアカウントの一覧に追加される必要があります。 これにより、管理オーバーヘッドが追加されました。
 
@@ -147,7 +147,7 @@ Azure には、所有者、共同作成者、閲覧者、ユーザーアカウ�
 
 ## <a name="checking-access"></a>アクセスの確認
 
-ご想像のとおり、多数のロールとスコープがあると、サービスプリンシパルの有効な権限が非常に困難になる可能性があります。 積み上がり始まっは、その上に拒否ルールを適用し、複雑さを増加させるためだけに機能します。 幸い、どのサービスプリンシパルに対しても有効な権限を表示できる [アクセス許可電卓](https://docs.microsoft.com/azure/role-based-access-control/check-access) があります。 通常は、図10-3 に示すように、ポータルの [IAM] タブの下にあります。
+ご想像のとおり、多数のロールとスコープがあると、サービスプリンシパルの有効な権限が非常に困難になる可能性があります。 積み上がり始まっは、その上に拒否ルールを適用し、複雑さを増加させるためだけに機能します。 幸い、どのサービスプリンシパルに対しても有効な権限を表示できる [アクセス許可電卓](/azure/role-based-access-control/check-access) があります。 通常は、図10-3 に示すように、ポータルの [IAM] タブの下にあります。
 
 ![図 9-4 app service のアクセス許可の計算](./media/check-rbac.png)
 
@@ -231,9 +231,9 @@ Azure SQL データベースなどのサービスでも、データを非表示�
 
 Azure の中核的土台の多くは、Azure Storage エンジンです。 仮想マシンのディスクは Azure Storage 上にマウントされます。 Azure Kubernetes サービスは、それ自体が Azure Storage でホストされる仮想マシン上で実行されます。 Azure Functions アプリや Azure Container Instances などのサーバーレステクノロジでも、Azure Storage に含まれるディスクが不足しています。
 
-Azure Storage が適切に暗号化されている場合は、他のほとんどすべてのものを暗号化するための基盤が提供されます。 Azure Storage は、 [FIPS 140-2](https://en.wikipedia.org/wiki/FIPS_140)準拠の[256 ビット AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)で[暗号化さ](https://docs.microsoft.com/azure/storage/common/storage-service-encryption)れます。 これは、過去20年間にわたるさまざまな教育機関の審査の対象となっている、よく考えられる暗号化テクノロジです。 現時点では、キーに関する知識のないユーザーが AES によって暗号化されたデータを読み取ることを可能にする既知の実用的な攻撃はありません。
+Azure Storage が適切に暗号化されている場合は、他のほとんどすべてのものを暗号化するための基盤が提供されます。 Azure Storage は、 [FIPS 140-2](https://en.wikipedia.org/wiki/FIPS_140)準拠の[256 ビット AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)で[暗号化さ](/azure/storage/common/storage-service-encryption)れます。 これは、過去20年間にわたるさまざまな教育機関の審査の対象となっている、よく考えられる暗号化テクノロジです。 現時点では、キーに関する知識のないユーザーが AES によって暗号化されたデータを読み取ることを可能にする既知の実用的な攻撃はありません。
 
-既定では、Azure Storage の暗号化に使用されるキーは、Microsoft によって管理されます。 これらのキーへの悪意のあるアクセスを防ぐために、広範な保護が実施されています。 ただし、特定の暗号化要件を持つユーザーは、Azure Key Vault で管理されている [独自のストレージキーを提供](https://docs.microsoft.com/azure/storage/common/storage-encryption-keys-powershell) することもできます。 これらのキーはいつでも取り消すことができます。これにより、ストレージアカウントの内容がアクセス不可能な状態で実質的に表示されます。
+既定では、Azure Storage の暗号化に使用されるキーは、Microsoft によって管理されます。 これらのキーへの悪意のあるアクセスを防ぐために、広範な保護が実施されています。 ただし、特定の暗号化要件を持つユーザーは、Azure Key Vault で管理されている [独自のストレージキーを提供](/azure/storage/common/storage-encryption-keys-powershell) することもできます。 これらのキーはいつでも取り消すことができます。これにより、ストレージアカウントの内容がアクセス不可能な状態で実質的に表示されます。
 
 仮想マシンは暗号化された記憶域を使用しますが、Windows の BitLocker や Linux 上の DM-Crypt などのテクノロジを使用して、別の暗号化レイヤーを提供することもできます。 これらのテクノロジは、ディスクイメージが記憶域からリークされた場合でも、それを読み取ることができない状態を維持することを意味します。
 
@@ -243,7 +243,7 @@ Azure SQL でホストされているデータベースは、データを暗号�
 
 暗号化パラメーターはデータベースに格納され、 `master` 起動時に残りの操作のためにメモリに読み込まれます。 つまり、データベースは `master` 暗号化されずに保持される必要があります。 実際のキーは、Microsoft によって管理されています。 ただし、厳しいセキュリティ要件を持つユーザーは、Azure Storage の場合とほぼ同じ方法で Key Vault で独自のキーを提供できます。 Key Vault は、キーのローテーションや失効などのサービスを提供します。
 
-TDS の "透過的な" 部分は、暗号化されたデータベースを使用するためにクライアントの変更が必要ないという事実に由来します。 この方法では優れたセキュリティを実現できますが、データベースのパスワードをリークすると、ユーザーがデータを復号化できるようになります。 データベース内の個々の列またはテーブルを暗号化する別の方法もあります。 [Always Encrypted](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault) は、暗号化されたデータがデータベース内にプレーンテキストで表示されることを保証します。
+TDS の "透過的な" 部分は、暗号化されたデータベースを使用するためにクライアントの変更が必要ないという事実に由来します。 この方法では優れたセキュリティを実現できますが、データベースのパスワードをリークすると、ユーザーがデータを復号化できるようになります。 データベース内の個々の列またはテーブルを暗号化する別の方法もあります。 [Always Encrypted](/azure/sql-database/sql-database-always-encrypted-azure-key-vault) は、暗号化されたデータがデータベース内にプレーンテキストで表示されることを保証します。
 
 この暗号化レベルを設定するには、SQL Server Management Studio のウィザードを使用して、暗号化の種類と、関連付けられているキーを格納する Key Vault の場所を選択する必要があります。
 

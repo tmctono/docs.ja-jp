@@ -2,14 +2,15 @@
 title: <transport> の <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: 0cd20c607b0c4ddd3ecfd806d38ba63b4a5c5a25
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 60e8758d653848176ca3f287e253bd7990e78470
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732766"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162050"
 ---
 # <a name="transport-of-ws2007httpbinding"></a>\<transport> の \<ws2007HttpBinding>
+
 HTTP トランスポートの認証設定を定義します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,15 +29,17 @@ HTTP トランスポートの認証設定を定義します。
            realm="string" />
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>種類  
+
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |`clientCredentialType`|サービスに対するクライアントの認証に使用される資格情報を指定します。 この属性は <xref:System.ServiceModel.HttpClientCredentialType> 型です。|  
 |`proxyCredentialType`|ドメイン プロキシに対するクライアントの認証に使用される資格情報を指定します。 この属性は <xref:System.ServiceModel.HttpProxyCredentialType> 型です。|  
@@ -46,7 +49,7 @@ HTTP トランスポートの認証設定を定義します。
   
 |値|説明|  
 |-----------|-----------------|  
-|なし|セキュリティを無効にします。|  
+|None|セキュリティを無効にします。|  
 |Basic|基本認証を使用します。|  
 |ダイジェスト|ダイジェスト認証を使用します。|  
 |Ntlm|Windows ドメインのフォールバックとして NTLM 認証を使用します。|  
@@ -57,7 +60,7 @@ HTTP トランスポートの認証設定を定義します。
   
 |値|説明|  
 |-----------|-----------------|  
-|なし|セキュリティを無効にします。|  
+|None|セキュリティを無効にします。|  
 |Basic|基本認証を使用します。|  
 |ダイジェスト|ダイジェスト認証を使用します。|  
 |Ntlm|Windows ドメインのフォールバックとして NTLM を使用します。|  
@@ -65,11 +68,12 @@ HTTP トランスポートの認証設定を定義します。
 |Certificate|X.509 証明書を使用して、クライアントを認証します。|  
   
 ### <a name="child-elements"></a>子要素  
- なし  
+
+ None  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<security>](security-of-ws2007httpbinding.md)|要素のセキュリティ機能を表し [\<ws2007HttpBinding>](ws2007httpbinding.md) ます。|  
   

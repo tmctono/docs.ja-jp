@@ -2,14 +2,15 @@
 title: <transport> の <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
-ms.openlocfilehash: e8016eb9058f132722587368f1f8c7c03220af4a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b9efc732832a8862373b14f657796a59fb52c1a1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732791"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162115"
 ---
 # <a name="transport-of-webhttpbinding"></a>\<transport> の \<webHttpBinding>
+
 HTTP 要求を受信するように構成されたサービス エンドポイントのトランスポート レベルのセキュリティ設定を定義します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -40,15 +41,17 @@ HTTP 要求を受信するように構成されたサービス エンドポイ�
 </webHttpBinding>
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>種類  
+
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |`clientCredentialType`|サービスに対するクライアントの認証に使用される資格情報を指定します。 この属性は <xref:System.ServiceModel.HttpClientCredentialType> 型です。|  
 |`proxyCredentialType`|ドメイン プロキシに対するクライアントの認証に使用される資格情報を指定します。 この属性は <xref:System.ServiceModel.HttpProxyCredentialType> 型です。|  
@@ -57,7 +60,7 @@ HTTP 要求を受信するように構成されたサービス エンドポイ�
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 属性  
   
-|値|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
 |`None`|セキュリティを無効にします。|  
 |`Basic`|基本認証を使用します。|  
@@ -68,7 +71,7 @@ HTTP 要求を受信するように構成されたサービス エンドポイ�
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType 属性  
   
-|値|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
 |`None`|セキュリティを無効にします。|  
 |`Basic`|基本認証を使用します。|  
@@ -77,11 +80,12 @@ HTTP 要求を受信するように構成されたサービス エンドポイ�
 |`Windows`|統合 Windows 認証を使用します。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<security>](security-of-webhttpbinding.md)|要素のセキュリティ機能を表し [\<wsHttpBinding>](wshttpbinding.md) ます。|  
   

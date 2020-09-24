@@ -6,14 +6,14 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 09/11/2019
-ms.openlocfilehash: 1cc82b14a940465c26377f9181a2e20b46b0783f
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 690e559617e4961c3cf3262a6d2d48a6bfac67cd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267847"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161296"
 ---
-# <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-no-locblazor"></a>セキュリティ: ASP.NET Web フォームおよびでの認証と承認 Blazor
+# <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-no-locblazor"></a>セキュリティ:ASP.NET Web Forms および Blazor  での認証と承認
 
 ASP.NET の Web フォームアプリケーションからに移行する Blazor 場合、アプリケーションで認証が構成されていることを前提として、ほとんどの場合、認証と承認の実行方法を更新する必要があります。 この章では、ASP.NET Web フォームユニバーサルプロバイダーモデル (メンバーシップ、ロール、およびユーザープロファイルの場合) から移行する方法と、アプリから ASP.NET Core Id を使用する方法について説明し Blazor ます。 この章では、大まかな手順と考慮事項について説明しますが、詳細な手順とスクリプトについては、参照されているドキュメントを参照してください。
 
@@ -21,7 +21,7 @@ ASP.NET の Web フォームアプリケーションからに移行する Blazor
 
 ASP.NET 2.0 以降、ASP.NET Web Forms platform は、メンバーシップなどのさまざまな機能のプロバイダーモデルをサポートしています。 ユニバーサルメンバーシッププロバイダーは、オプションのロールプロバイダーと共に、ASP.NET Web フォームアプリケーションと共に一般的にデプロイされます。 現在も引き続き正常に機能する認証と承認を管理するための、堅牢で安全な方法を提供します。 これらのユニバーサルプロバイダーの最新のオファリングは、NuGet パッケージである、 [Microsoft](https://www.nuget.org/packages/Microsoft.AspNet.Providers)で提供されています。
 
-ユニバーサルプロバイダーは、、、、などのテーブルを含む SQL データベーススキーマを操作し `aspnet_Applications` `aspnet_Membership` `aspnet_Roles` `aspnet_Users` ます。 [aspnet_regsql.exe コマンド](https://docs.microsoft.com/previous-versions/ms229862(v=vs.140))を実行して構成すると、基になるデータを操作するために必要なすべてのクエリとコマンドを提供するテーブルとストアドプロシージャがプロバイダーによってインストールされます。 データベーススキーマとこれらのストアドプロシージャは、新しい ASP.NET Identity および ASP.NET Core Id システムと互換性がないため、既存のデータを新しいシステムに移行する必要があります。 図1は、ユニバーサルプロバイダー用に構成されたテーブルスキーマの例を示しています。
+ユニバーサルプロバイダーは、、、、などのテーブルを含む SQL データベーススキーマを操作し `aspnet_Applications` `aspnet_Membership` `aspnet_Roles` `aspnet_Users` ます。 [aspnet_regsql.exe コマンド](/previous-versions/ms229862(v=vs.140))を実行して構成すると、基になるデータを操作するために必要なすべてのクエリとコマンドを提供するテーブルとストアドプロシージャがプロバイダーによってインストールされます。 データベーススキーマとこれらのストアドプロシージャは、新しい ASP.NET Identity および ASP.NET Core Id システムと互換性がないため、既存のデータを新しいシステムに移行する必要があります。 図1は、ユニバーサルプロバイダー用に構成されたテーブルスキーマの例を示しています。
 
 ![ユニバーサルプロバイダースキーマ](./media/security/membership-tables.png)
 
@@ -111,7 +111,7 @@ protected void Page_Load(object sender, EventArgs e)
 
 ## <a name="aspnet-core-identity"></a>ASP.NET Core ID
 
-認証と承認を行っていても、ASP.NET Core Id では、ユニバーサルプロバイダーと比較して、異なる抽象化と仮定を使用します。 たとえば、新しい Id モデルはサードパーティの認証をサポートしているため、ユーザーはソーシャルメディアアカウントまたは他の信頼された認証プロバイダーを使用して認証を行うことができます。 ASP.NET Core Id は、ログイン、ログアウト、登録など、一般的に必要なページの UI をサポートします。 データアクセスには EF Core を利用し、EF Core の移行を使用して、そのデータモデルをサポートするために必要なスキーマを生成します。 [ASP.NET Core での id](https://docs.microsoft.com/aspnet/core/security/authentication/identity)の概要では、ASP.NET Core id に含まれるものの概要と、その使用方法について説明します。 アプリケーションとそのデータベースに ASP.NET Core Id をまだ設定していない場合は、開始するのに役立ちます。
+認証と承認を行っていても、ASP.NET Core Id では、ユニバーサルプロバイダーと比較して、異なる抽象化と仮定を使用します。 たとえば、新しい Id モデルはサードパーティの認証をサポートしているため、ユーザーはソーシャルメディアアカウントまたは他の信頼された認証プロバイダーを使用して認証を行うことができます。 ASP.NET Core Id は、ログイン、ログアウト、登録など、一般的に必要なページの UI をサポートします。 データアクセスには EF Core を利用し、EF Core の移行を使用して、そのデータモデルをサポートするために必要なスキーマを生成します。 [ASP.NET Core での id](/aspnet/core/security/authentication/identity)の概要では、ASP.NET Core id に含まれるものの概要と、その使用方法について説明します。 アプリケーションとそのデータベースに ASP.NET Core Id をまだ設定していない場合は、開始するのに役立ちます。
 
 ### <a name="roles-claims-and-policies"></a>役割、要求、およびポリシー
 
@@ -130,7 +130,7 @@ services.AddAuthorization(options =>
 });
 ```
 
-[カスタムポリシーの作成方法の詳細については、ドキュメントを参照して](https://docs.microsoft.com/aspnet/core/security/authorization/policies)ください。
+[カスタムポリシーの作成方法の詳細については、ドキュメントを参照して](/aspnet/core/security/authorization/policies)ください。
 
 ポリシーまたはロールを使用しているかどうかにかかわらず、アプリケーションの特定のページで、 Blazor 属性を持つロールまたはポリシーが `[Authorize]` ディレクティブで適用されている必要があることを指定でき `@attribute` ます。
 
@@ -146,7 +146,7 @@ services.AddAuthorization(options =>
 @attribute [Authorize(Policy ="CanadiansOnly")]
 ```
 
-コード内のユーザーの認証状態、ロール、または要求にアクセスする必要がある場合、これを実現するには主に2つの方法があります。 1つ目は、認証状態をカスケード型パラメーターとして受け取ることです。 2つ目は、挿入されたを使用して状態にアクセスすることです `AuthenticationStateProvider` 。 これらの各方法の詳細については、 [ Blazor セキュリティのドキュメント](https://docs.microsoft.com/aspnet/core/blazor/security/)を参照してください。
+コード内のユーザーの認証状態、ロール、または要求にアクセスする必要がある場合、これを実現するには主に2つの方法があります。 1つ目は、認証状態をカスケード型パラメーターとして受け取ることです。 2つ目は、挿入されたを使用して状態にアクセスすることです `AuthenticationStateProvider` 。 これらの各方法の詳細については、 [ Blazor セキュリティのドキュメント](/aspnet/core/blazor/security/)を参照してください。
 
 次のコードは、をカスケード型 `AuthenticationState` パラメーターとして受け取る方法を示しています。
 
@@ -252,7 +252,7 @@ dotnet ef database update
 dotnet ef migrations script -o auth.sql
 ```
 
-これにより、出力ファイルに SQL スクリプトが生成され、 `auth.sql` 任意のデータベースに対して実行できるようになります。 コマンドの実行で問題が発生した場合は、 `dotnet ef` [EF Core ツールがシステムにインストールされ](https://docs.microsoft.com/ef/core/miscellaneous/cli/dotnet)ていることを確認してください。
+これにより、出力ファイルに SQL スクリプトが生成され、 `auth.sql` 任意のデータベースに対して実行できるようになります。 コマンドの実行で問題が発生した場合は、 `dotnet ef` [EF Core ツールがシステムにインストールされ](/ef/core/miscellaneous/cli/dotnet)ていることを確認してください。
 
 ソーステーブルに列が追加されている場合は、新しいスキーマでこれらの列の最適な場所を特定する必要があります。 一般に、テーブルで見つかった列は `aspnet_Membership` テーブルにマップする必要があり `AspNetUsers` ます。 の列 `aspnet_Roles` をにマップする必要があり `AspNetRoles` ます。 テーブルのその他の列 `aspnet_UsersInRoles` がテーブルに追加され `AspNetUserRoles` ます。
 
@@ -260,9 +260,9 @@ dotnet ef migrations script -o auth.sql
 
 ### <a name="migrating-data-from-universal-providers-to-aspnet-core-identity"></a>ユニバーサルプロバイダーから ASP.NET Core Id へのデータの移行
 
-変換先テーブルスキーマを配置したら、次の手順では、ユーザーとロールのレコードを新しいスキーマに移行します。 スキーマの相違点 (どの列がどの新しい列にマップされているかなど) の完全な一覧については、 [こちら](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/membership-to-core-identity)を参照してください。
+変換先テーブルスキーマを配置したら、次の手順では、ユーザーとロールのレコードを新しいスキーマに移行します。 スキーマの相違点 (どの列がどの新しい列にマップされているかなど) の完全な一覧については、 [こちら](/aspnet/core/migration/proper-to-2x/membership-to-core-identity)を参照してください。
 
-メンバーシップから新しい id テーブルにユーザーを移行するには、 [ドキュメントに記載](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/membership-to-core-identity)されている手順に従う必要があります。 次の手順とスクリプトを実行した後、ユーザーは次回ログインするときにパスワードを変更する必要があります。
+メンバーシップから新しい id テーブルにユーザーを移行するには、 [ドキュメントに記載](/aspnet/core/migration/proper-to-2x/membership-to-core-identity)されている手順に従う必要があります。 次の手順とスクリプトを実行した後、ユーザーは次回ログインするときにパスワードを変更する必要があります。
 
 ユーザーのパスワードを移行することはできますが、プロセスはさらに複雑になります。 移行プロセスの一環としてユーザーがパスワードを更新する必要があり、新しい一意のパスワードを使用するように勧めることは、アプリケーションの全体的なセキュリティを強化することです。
 
@@ -341,7 +341,7 @@ ASP.NET Web フォームアプリケーションで、匿名ユーザーに特�
 
 属性は、 `[Authorize]` `@page` ルーター経由で到達したコンポーネントでのみ機能することに注意して Blazor ください。 属性は子コンポーネントでは使用できませんが、代わりにを使用する必要があり `AuthorizeView` ます。
 
-特定のユーザーにコードを表示するかどうかを判断するためのロジックがページマークアップ内にある場合は、これをコンポーネントで置き換えることができ `AuthorizeView` ます。 [Authorizeview コンポーネント](https://docs.microsoft.com/aspnet/core/blazor/security#authorizeview-component)は、ユーザーが表示を許可されているかどうかに応じて、UI を選択的に表示します。 また、 `context` ユーザー情報へのアクセスに使用できる変数も公開されています。
+特定のユーザーにコードを表示するかどうかを判断するためのロジックがページマークアップ内にある場合は、これをコンポーネントで置き換えることができ `AuthorizeView` ます。 [Authorizeview コンポーネント](/aspnet/core/blazor/security#authorizeview-component)は、ユーザーが表示を許可されているかどうかに応じて、UI を選択的に表示します。 また、 `context` ユーザー情報へのアクセスに使用できる変数も公開されています。
 
 ```razor
 <AuthorizeView>
@@ -416,10 +416,10 @@ Blazor では、ASP.NET Core Id である ASP.NET Core と同じセキュリテ�
 
 ## <a name="references"></a>References
 
-- [ASP.NET Core での Id の概要](https://docs.microsoft.com/aspnet/core/security/authentication/identity)
-- [ASP.NET メンバーシップ認証から ASP.NET Core 2.0 Id に移行する](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/membership-to-core-identity)
-- [認証と Id を ASP.NET Core に移行する](https://docs.microsoft.com/aspnet/core/migration/identity)
-- [Blazor認証と承認の ASP.NET Core](https://docs.microsoft.com/aspnet/core/blazor/security/)
+- [ASP.NET Core での Id の概要](/aspnet/core/security/authentication/identity)
+- [ASP.NET メンバーシップ認証から ASP.NET Core 2.0 Id に移行する](/aspnet/core/migration/proper-to-2x/membership-to-core-identity)
+- [認証と Id を ASP.NET Core に移行する](/aspnet/core/migration/identity)
+- [Blazor認証と承認の ASP.NET Core](/aspnet/core/blazor/security/)
 
 >[!div class="step-by-step"]
 >[前へ](config.md)

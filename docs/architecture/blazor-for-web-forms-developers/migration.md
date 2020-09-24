@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: ba6dbfdf9a4fa9973dfe84cf5d58f1300f5d0cb4
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 853358fbf534ee7501412259c61efe054b4757a7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557543"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161205"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>ASP.NET Web フォームからへの移行 Blazor
 
@@ -636,7 +636,7 @@ Blazorは .Net core 上に構築されているため、.Net core でのサポ�
 - コード アクセス セキュリティ (CAS)
 - セキュリティ透過性
 
-.NET Core での実行をサポートするために必要な変更を識別する方法の詳細については、「 [.NET Framework から .Net core へのコードの移植](/dotnet/core/porting)」を参照してください。
+.NET Core での実行をサポートするために必要な変更を識別する方法の詳細については、「 [.NET Framework から .Net core へのコードの移植](../../core/porting/index.md)」を参照してください。
 
 ASP.NET Core は ASP.NET の再想像されたバージョンであり、初期に明らかでないと思われる変更がいくつかあります。 主な変更点は次のとおりです。
 

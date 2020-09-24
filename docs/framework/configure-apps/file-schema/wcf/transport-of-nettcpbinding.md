@@ -2,14 +2,15 @@
 title: <transport> の <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 4ef08ad73a03dea21d27217364a7bacb46a3848e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8f752373c51992c51b747f5f4dc4a63910a387c6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73735935"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162193"
 ---
 # <a name="transport-of-nettcpbinding"></a>\<transport> の \<netTcpBinding>
+
 で構成されるエンドポイントのメッセージレベルのセキュリティ要件の種類を定義し [\<netTcpBinding>](nettcpbinding.md) ます。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -41,11 +42,12 @@ ms.locfileid: "73735935"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |clientCredentialType|省略可能。 トランスポート セキュリティを使用してクライアント認証を実行するときに使用される資格情報の種類を指定します。<br /><br /> -既定値は `Windows` です。<br />-この属性の型は <xref:System.ServiceModel.TcpClientCredentialType> です。|  
 |protectionLevel|省略可能。 TCP トランスポートのレベルでセキュリティを定義します。 メッセージに署名を付けることで、メッセージの転送中に第三者によって改ざんされるリスクが軽減されます。 暗号化によって、トランスポート中にデータ レベルのプライバシーが提供されます。<br /><br /> 既定値は `EncryptAndSign` です。|  
@@ -56,7 +58,7 @@ ms.locfileid: "73735935"
   
 |値|説明|  
 |-----------|-----------------|  
-|なし|クライアントは匿名です。 これには、サービスの証明書が必要です。|  
+|None|クライアントは匿名です。 これには、サービスの証明書が必要です。|  
 |Windows|SP ネゴシエーション (Kerberos ネゴシエーション) を使用して、クライアントの Windows 認証を指定します。|  
 |Certificate|クライアントは、証明書を使用して認証されます。 これは SSL ネゴシエーションを使用し、サービスの証明書が必要です。|  
   
@@ -64,20 +66,22 @@ ms.locfileid: "73735935"
   
 |値|説明|  
 |-----------|-----------------|  
-|なし|保護されません。|  
-|Sign|メッセージは署名されます。|  
+|None|保護されません。|  
+|署名|メッセージは署名されます。|  
 |EncryptAndSign|-メッセージは暗号化され、署名されます。|  
   
 ### <a name="child-elements"></a>子要素  
- なし  
+
+ None  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<security>](security-of-nettcpbinding.md)|のセキュリティ機能を指定し [\<netTcpBinding>](nettcpbinding.md) ます。|  
   
 ## <a name="remarks"></a>解説  
+
  トランスポート セキュリティは、SOAP メッセージの整合性と機密性の保護、および相互認証に使用します。 このセキュリティ モードがバインディング上で選択された場合、チャネル スタックはセキュリティ トランスポートを使用して構成され、SOAP メッセージは Windows (ネゴシエート) や TCP 上の SSL などのトランスポート セキュリティを使用して保護されます。  
   
 ## <a name="see-also"></a>関連項目

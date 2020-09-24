@@ -2,12 +2,12 @@
 title: Azure でコンテナーをデプロイする
 description: Azure Container Registry、Azure Kubernetes Service、Azure Dev Spaces を使用した Azure でのコンテナーのデプロイ。
 ms.date: 04/13/2020
-ms.openlocfilehash: ba2854323ee0f1394a3cff0dd3756cb3c7c32d5b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d848a146a2bdb5d8d02543f57f19d6a39c9699e6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614150"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160776"
 ---
 # <a name="deploying-containers-in-azure"></a>Azure でコンテナーをデプロイする
 
@@ -23,7 +23,7 @@ ms.locfileid: "83614150"
 
 作成されると、コンテナーイメージはコンテナーレジストリに格納されます。 コンテナーイメージを作成、保存、および管理することができます。 パブリックとプライベートの両方で、使用可能なレジストリが多数あります。 Azure Container Registry (ACR) は、Azure クラウドで完全に管理されたコンテナーレジストリサービスです。 Azure ネットワーク内にイメージが保持されるため、Azure container hosts にデプロイする時間が短縮されます。 また、他の Azure リソースに使用するのと同じセキュリティと id の手順を使用してセキュリティを保護することもできます。
 
-Azure Container Registry を作成するには、 [Azure portal](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-portal)、 [Azure CLI](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli)、または[PowerShell ツール](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell)を使用します。 Azure でのレジストリの作成は簡単です。 これには、Azure サブスクリプション、リソースグループ、および一意の名前が必要です。 図3-11 は、でホストされるレジストリを作成するための基本的なオプションを示して `registryname.azurecr.io` います。
+Azure Container Registry を作成するには、 [Azure portal](/azure/container-registry/container-registry-get-started-portal)、 [Azure CLI](/azure/container-registry/container-registry-get-started-azure-cli)、または [PowerShell ツール](/azure/container-registry/container-registry-get-started-powershell)を使用します。 Azure でのレジストリの作成は簡単です。 これには、Azure サブスクリプション、リソースグループ、および一意の名前が必要です。 図3-11 は、でホストされるレジストリを作成するための基本的なオプションを示して `registryname.azurecr.io` います。
 
 ![コンテナー レジストリを作成する](./media/create-container-registry.png)
 
@@ -53,11 +53,11 @@ docker push myregistry.azurecr.io/mycontainer:v1
 docker rmi myregistry.azurecr.io/mycontainer:v1
 ```
 
-ベストプラクティスとして、開発者はイメージをコンテナーレジストリに手動でプッシュしないようにすることをお勧めします。 代わりに、GitHub や Azure DevOps などのツールで定義されたビルドパイプラインをこのプロセスに対して行う必要があります。 詳細については、「[クラウド-ネイティブ DevOps](devops.md)」を参照してください。
+ベストプラクティスとして、開発者はイメージをコンテナーレジストリに手動でプッシュしないようにすることをお勧めします。 代わりに、GitHub や Azure DevOps などのツールで定義されたビルドパイプラインをこのプロセスに対して行う必要があります。 詳細については、「 [クラウド-ネイティブ DevOps](devops.md)」を参照してください。
 
 ## <a name="acr-tasks"></a>ACR タスク
 
-[ACR タスク](https://docs.microsoft.com/azure/container-registry/container-registry-tasks-overview)は、Azure Container Registry から使用できる一連の機能です。 Azure クラウドでコンテナーイメージを構築および管理することによって、[内部ループの開発サイクル](https://docs.microsoft.com/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow)を拡張します。 開発用コンピューター上でを呼び出すのではなく、 `docker build` `docker push` クラウド内の ACR タスクによって自動的に処理されます。
+[ACR タスク](/azure/container-registry/container-registry-tasks-overview) は、Azure Container Registry から使用できる一連の機能です。 Azure クラウドでコンテナーイメージを構築および管理することによって、 [内部ループの開発サイクル](../containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow.md) を拡張します。 開発用コンピューター上でを呼び出すのではなく、 `docker build` `docker push` クラウド内の ACR タスクによって自動的に処理されます。
 
 次の AZ CLI コマンドは、両方ともコンテナーイメージを構築し、ACR にプッシュします。
 
@@ -75,14 +75,14 @@ az acr build --image sample/hello-world:v1  --registry myContainerRegistry008 --
 
 この章では、Azure Kubernetes Service (AKS) について説明しました。 コンテナー化されたクラウドネイティブアプリケーションを管理する事実上のコンテナー orchestrator であることがわかりました。
 
-ACR などのレジストリにイメージをデプロイしたら、自動的にプルおよびデプロイされるように AKS を構成できます。 CI/CD パイプラインが配置されている場合は、更新プログラムを迅速に展開するときのリスクを最小限に抑えるために、[カナリアリリース](https://martinfowler.com/bliki/CanaryRelease.html)戦略を構成することができます。 アプリの新しいバージョンは、最初に運用環境で構成され、トラフィックはルーティングされません。 その後、システムは、新しく展開されたバージョンにユーザーの小さな割合をルーティングします。 新しいバージョンではチームが自信を持っているため、より多くのインスタンスをロールアウトし、古いものを削除することができます。 AKS は、このスタイルのデプロイを簡単にサポートします。
+ACR などのレジストリにイメージをデプロイしたら、自動的にプルおよびデプロイされるように AKS を構成できます。 CI/CD パイプラインが配置されている場合は、更新プログラムを迅速に展開するときのリスクを最小限に抑えるために、  [カナリアリリース](https://martinfowler.com/bliki/CanaryRelease.html) 戦略を構成することができます。 アプリの新しいバージョンは、最初に運用環境で構成され、トラフィックはルーティングされません。 その後、システムは、新しく展開されたバージョンにユーザーの小さな割合をルーティングします。 新しいバージョンではチームが自信を持っているため、より多くのインスタンスをロールアウトし、古いものを削除することができます。 AKS は、このスタイルのデプロイを簡単にサポートします。
 
 Azure のほとんどのリソースと同様に、ポータル、コマンドライン、または、ヘルムや Terraform などの自動化ツールを使用して、Azure Kubernetes サービスクラスターを作成できます。 新しいクラスターの使用を開始するには、次の情報を提供する必要があります。
 
 - Azure サブスクリプション
 - Resource group
 - Kubernetes クラスター名
-- リージョン
+- Region
 - Kubernetes バージョン
 - DNS 名プレフィックス
 - ノード サイズ
@@ -94,9 +94,9 @@ Azure のほとんどのリソースと同様に、ポータル、コマンド�
 - 認証
 - ネットワーク
 - 監視
-- タグ
+- Tags
 
-この[クイックスタートでは、Azure portal を使用して AKS クラスターをデプロイ](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)する手順について説明します。
+この [クイックスタートでは、Azure portal を使用して AKS クラスターをデプロイ](/azure/aks/kubernetes-walkthrough-portal)する手順について説明します。
 
 ## <a name="azure-dev-spaces"></a>Azure Dev Spaces
 
@@ -116,7 +116,7 @@ Azure Dev Spaces を操作するプロセスには、次の手順が含まれま
 3. (独自のバージョンのシステムの) 子の開発領域を構成します。
 4. Dev 空間に接続します。
 
-これらの手順はすべて、Azure CLI と新しいコマンドラインツールを使用して実行でき `azds` ます。 たとえば、特定の Kubernetes クラスター用に新しい Azure Dev Space を作成するには、次のようなコマンドを使用します。
+これらの手順はすべて、Azure CLI と新しいコマンドラインツールを使用して実行でき  `azds` ます。 たとえば、特定の Kubernetes クラスター用に新しい Azure Dev Space を作成するには、次のようなコマンドを使用します。
 
 ```azurecli
 az aks use-dev-spaces -g my-aks-resource-group -n MyAKSCluster

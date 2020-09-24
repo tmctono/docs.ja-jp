@@ -2,12 +2,12 @@
 title: Azure Monitor
 description: Azure Monitor を使用すると、システムが実行されていることを確認できます。
 ms.date: 07/05/2020
-ms.openlocfilehash: 342d54292736622f6546768e039ca244a69b020e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 65e17740dba49c3ac3f6e13462897b5342da6710
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540200"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160971"
 ---
 # <a name="azure-monitor"></a>Azure Monitor
 
@@ -20,9 +20,9 @@ ms.locfileid: "90540200"
 
 監視ソリューションの最初の手順は、可能な限り多くのデータを収集することです。 収集されるデータが多いほど、詳細な洞察が得られます。 従来、システムのインストルメント化は困難でした。 Simple Network Management Protocol (SNMP) は、マシンレベル情報を収集するための gold 標準プロトコルでしたが、多くの知識と構成を必要としていました。 幸いにも、最も一般的なメトリックは Azure Monitor によって自動的に収集されるため、このようなハード作業の大部分は排除されています。
 
-アプリケーションレベルのメトリックとイベントは、デプロイされるアプリケーションに固有のものであるため、自動的にインストルメント化することはできません。 これらのメトリックを収集するために、顧客が注文にサインアップまたは完了したときなど、このような情報を直接報告するための [sdk と api](https://docs.microsoft.com/azure/azure-monitor/app/api-custom-events-metrics) が用意されています。 例外をキャプチャして、Application Insights 経由で Azure Monitor に返すこともできます。 Sdk は、ゴー、Python、JavaScript、.NET 言語などのクラウドネイティブアプリケーションで検出されたほとんどすべての言語をサポートしています。
+アプリケーションレベルのメトリックとイベントは、デプロイされるアプリケーションに固有のものであるため、自動的にインストルメント化することはできません。 これらのメトリックを収集するために、顧客が注文にサインアップまたは完了したときなど、このような情報を直接報告するための [sdk と api](/azure/azure-monitor/app/api-custom-events-metrics) が用意されています。 例外をキャプチャして、Application Insights 経由で Azure Monitor に返すこともできます。 Sdk は、ゴー、Python、JavaScript、.NET 言語などのクラウドネイティブアプリケーションで検出されたほとんどすべての言語をサポートしています。
 
-アプリケーションの状態に関する情報を収集する最終的な目標は、エンドユーザーのエクスペリエンスを向上させることです。 ユーザーが [外部の web テストを](https://docs.microsoft.com/azure/azure-monitor/app/monitor-web-app-availability)実行する場合よりも問題が発生しているかどうかを確認するには、どうすればよいでしょうか。 これらのテストは、世界中の場所から web サイトに ping を実行したり、エージェントがサイトにログインしてユーザーの操作をシミュレートしたりするのと同じように簡単に行うことができます。
+アプリケーションの状態に関する情報を収集する最終的な目標は、エンドユーザーのエクスペリエンスを向上させることです。 ユーザーが [外部の web テストを](/azure/azure-monitor/app/monitor-web-app-availability)実行する場合よりも問題が発生しているかどうかを確認するには、どうすればよいでしょうか。 これらのテストは、世界中の場所から web サイトに ping を実行したり、エージェントがサイトにログインしてユーザーの操作をシミュレートしたりするのと同じように簡単に行うことができます。
 
 ## <a name="reporting-data"></a>レポートデータ
 
@@ -45,11 +45,11 @@ StormEvents
 ![クエリ結果の Application Insights ](./media/application_insights_example.png)
  **図 7-13**。 クエリ結果を Application Insights します。
 
-[Kusto クエリを試すためのプレイグラウンド](https://dataexplorer.azure.com/clusters/help/databases/Samples)があります。 [サンプルクエリ](https://docs.microsoft.com/azure/kusto/query/samples)の読み取りも参考になる場合があります。
+[Kusto クエリを試すためのプレイグラウンド](https://dataexplorer.azure.com/clusters/help/databases/Samples)があります。 [サンプルクエリ](/azure/kusto/query/samples)の読み取りも参考になる場合があります。
 
 ## <a name="dashboards"></a>ダッシュボード
 
-Azure Monitor から情報を表示するために使用できる、いくつかの異なるダッシュボードテクノロジがあります。 単純に、Application Insights でクエリを実行し、 [データをグラフにプロット](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards)するだけです。
+Azure Monitor から情報を表示するために使用できる、いくつかの異なるダッシュボードテクノロジがあります。 単純に、Application Insights でクエリを実行し、 [データをグラフにプロット](/azure/azure-monitor/learn/tutorial-app-dashboards)するだけです。
 
 ![メインの Azure ダッシュボード図7-14 に埋め込まれている Application Insights のグラフの例を次に示し ](./media/azure_dashboard.png)
  **Figure 7-14**ます。 メインの Azure ダッシュボードに埋め込まれている Application Insights グラフの例を示します。
@@ -62,7 +62,7 @@ Azure Monitor から情報を表示するために使用できる、いくつか
 
 ## <a name="alerts"></a>警告
 
-データダッシュボードが不十分な場合もあります。 ダッシュボードの監視が開始されていない場合でも、問題が解決されるまで、または検出されるまでに数時間かかることがあります。 このため、Azure Monitor には、上位ノッチの [アラートソリューション](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-overview)も用意されています。 アラートは、次のような幅広い条件によってトリガーできます。
+データダッシュボードが不十分な場合もあります。 ダッシュボードの監視が開始されていない場合でも、問題が解決されるまで、または検出されるまでに数時間かかることがあります。 このため、Azure Monitor には、上位ノッチの [アラートソリューション](/azure/azure-monitor/platform/alerts-overview)も用意されています。 アラートは、次のような幅広い条件によってトリガーできます。
 
 - メトリックの値
 - ログの検索クエリ
@@ -74,11 +74,11 @@ Azure Monitor から情報を表示するために使用できる、いくつか
 
 アラートの一般的な原因を特定すると、アラートの原因と解決方法についての詳細情報を使用してアラートを強化できます。 クラウドネイティブアプリケーションの高成熟した展開では、障害が発生したノードをスケールセットから削除する、または自動スケールアクティビティをトリガーするなどの操作を実行する自己復旧タスクを開始することを選択できます。 最終的には、午前2時に勤務先の担当者をウェイクアップして、ライブサイトの問題を解決する必要がなくなる可能性があります。システムは、翌朝に仕事が到着するまで、補償または少なくとも limp を調整できるようにするためです。
 
-Azure Monitor は、自動的に機械学習を活用して、デプロイされたアプリケーションの通常の動作パラメーターを把握します。 これにより、通常のパラメーターの外部で動作しているサービスを検出できます。 たとえば、サイトでの一般的な平日のトラフィックは、1分あたり1万の要求になることがあります。 その後、特定の週に、要求の数が突然、1分あたりの非常に異常な2万要求に達します。 [スマート検出](https://docs.microsoft.com/azure/azure-monitor/app/proactive-diagnostics) では、この偏差が基準からのものであることがわかり、アラートがトリガーされます。 同時に、傾向分析は、トラフィックの負荷が予想されるときに偽陽性が発生しないようにするのに十分なスマートです。
+Azure Monitor は、自動的に機械学習を活用して、デプロイされたアプリケーションの通常の動作パラメーターを把握します。 これにより、通常のパラメーターの外部で動作しているサービスを検出できます。 たとえば、サイトでの一般的な平日のトラフィックは、1分あたり1万の要求になることがあります。 その後、特定の週に、要求の数が突然、1分あたりの非常に異常な2万要求に達します。 [スマート検出](/azure/azure-monitor/app/proactive-diagnostics) では、この偏差が基準からのものであることがわかり、アラートがトリガーされます。 同時に、傾向分析は、トラフィックの負荷が予想されるときに偽陽性が発生しないようにするのに十分なスマートです。
 
 ## <a name="references"></a>References
 
-- [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview)
+- [Azure Monitor](/azure/azure-monitor/overview)
 
 >[!div class="step-by-step"]
 >[前へ](monitoring-azure-kubernetes.md)

@@ -10,19 +10,20 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
-ms.openlocfilehash: 50b61eedddabd660b1834565a61738f460ae9ff9
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 8ae807e46b11d2adb06d6af0c86e1c7297caa0c0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105372"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161985"
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>方法: DEVPATH を使用してアセンブリを指定する
+
 開発者は、ビルドしている共有アセンブリが複数のアプリケーションで正しく動作することを確認したい場合があります。 開発サイクル中にアセンブリをグローバルアセンブリキャッシュに継続的に配置するのではなく、開発者はアセンブリのビルド出力ディレクトリを指す DEVPATH 環境変数を作成できます。  
   
  たとえば、MySharedAssembly という名前の共有アセンブリを作成し、出力ディレクトリを C:\MySharedAssembly\Debug. にするとします。 C:\MySharedAssembly\Debug を DEVPATH 変数に配置できます。 次 [\<developmentMode>](./file-schema/runtime/developmentmode-element.md) に、マシン構成ファイルで要素を指定する必要があります。 この要素は、アセンブリを検索するために DEVPATH を使用するように共通言語ランタイムに指示します。  
   
- 共有アセンブリは、ランタイムによって検出可能である必要があります。  アセンブリ参照を解決するためのプライベートディレクトリを指定するには、「[アセンブリの場所の指定](specify-assembly-location.md)」で説明されているように、構成ファイル内の[ \<codeBase> 要素](./file-schema/runtime/codebase-element.md)または[ \<probing> 要素](./file-schema/runtime/probing-element.md)を使用します。  また、アセンブリをアプリケーションディレクトリのサブディレクトリに配置することもできます。 詳細については、「[ランタイムがアセンブリを検索する方法](../deployment/how-the-runtime-locates-assemblies.md)」を参照してください。  
+ 共有アセンブリは、ランタイムによって検出可能である必要があります。  アセンブリ参照を解決するためのプライベートディレクトリを指定するには、「[アセンブリの場所の指定](specify-assembly-location.md)」で説明されているように、構成ファイル内の[ \<codeBase> 要素](./file-schema/runtime/codebase-element.md)または[ \<probing> 要素](./file-schema/runtime/probing-element.md)を使用します。  また、アセンブリをアプリケーションディレクトリのサブディレクトリに配置することもできます。 詳細については、「 [ランタイムがアセンブリを検索する方法](../deployment/how-the-runtime-locates-assemblies.md)」を参照してください。  
   
 > [!NOTE]
 > これは高度な機能であり、開発のみを目的としています。  

@@ -2,12 +2,12 @@
 title: 集中管理構成
 description: Azure アプリ構成と AzureKey Vault を使用して、クラウドネイティブアプリケーションの構成を一元化します。
 ms.date: 05/13/2020
-ms.openlocfilehash: d389d29dcdb1db5162d95370d181ab5a85d72dc8
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 0d40c5b2d70f30beb17489dfd55900f7c5fc1a75
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614228"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160880"
 ---
 # <a name="centralized-configuration"></a>集中管理構成
 
@@ -19,7 +19,7 @@ Azure クラウドには、いくつかの優れたオプションが用意さ�
 
 ## <a name="azure-app-configuration"></a>Azure App Configuration
 
-[Azure アプリ構成](https://docs.microsoft.com/azure/azure-app-configuration/overview)は、セキュリティで保護された一元化された場所に機密以外の構成設定を格納する、完全に管理された Azure サービスです。 格納されている値は、複数のサービスとアプリケーションの間で共有できます。
+[Azure アプリ構成](/azure/azure-app-configuration/overview) は、セキュリティで保護された一元化された場所に機密以外の構成設定を格納する、完全に管理された Azure サービスです。 格納されている値は、複数のサービスとアプリケーションの間で共有できます。
 
 このサービスは簡単に使用でき、いくつかの利点があります。
 
@@ -35,7 +35,7 @@ Azure アプリ構成では、キー値の設定に対して行われた変更�
 
 アプリの構成では、転送中および保存中のすべての構成値が暗号化されます。 キー名とラベルは、構成データを取得するためのインデックスとして使用され、暗号化されません。
 
-アプリ構成ではセキュリティが強化されていますが、アプリケーションシークレットを格納するための最適な場所は Azure Key Vault です。 Key Vault には、ハードウェアレベルの暗号化、きめ細かいアクセスポリシー、および証明書のローテーションなどの管理操作が用意されています。 Key Vault に格納されているシークレットを参照するアプリ構成値を作成できます。
+アプリ構成ではセキュリティが強化されていますが、アプリケーションシークレットを格納するための最適な場所は Azure Key Vault です。 Key Vault では、ハードウェアレベルの暗号化、粒度の細かいアクセス ポリシー、管理操作 (証明書のローテーションなど) が利用できます。 Key Vault に格納されているシークレットを参照するアプリ構成値を作成できます。
 
 ## <a name="azure-key-vault"></a>Azure Key Vault
 
@@ -54,16 +54,16 @@ EShopOnContainers アプリケーションには、各マイクロサービス�
 ## <a name="references"></a>References
 
 - [EShopOnContainers アーキテクチャ](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Architecture)
-- [高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する](https://docs.microsoft.com/dotnet/architecture/microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications)
-- [Azure API Management](https://docs.microsoft.com/azure/api-management/api-management-key-concepts)
-- [Azure SQL Database の概要](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)
+- [高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する](../microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md)
+- [Azure API Management](/azure/api-management/api-management-key-concepts)
+- [Azure SQL Database の概要](/azure/sql-database/sql-database-technical-overview)
 - [Azure Cache for Redis](https://azure.microsoft.com/services/cache/)
-- [Azure Cosmos DB の MongoDB 用 API](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
-- [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)
-- [Azure Monitor の概要](https://docs.microsoft.com/azure/azure-monitor/overview)
+- [Azure Cosmos DB の MongoDB 用 API](/azure/cosmos-db/mongodb-introduction)
+- [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview)
+- [Azure Monitor の概要](/azure/azure-monitor/overview)
 - [eShopOnContainers: AKS で Kubernetes クラスターを作成する](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)#create-kubernetes-cluster-in-aks)
 - [eShopOnContainers: Azure Dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)
-- [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/about)
+- [Azure Dev Spaces](/azure/dev-spaces/about)
 
 >[!div class="step-by-step"]
 >[前へ](deploy-eshoponcontainers-azure.md)
