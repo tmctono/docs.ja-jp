@@ -2,14 +2,15 @@
 title: <sslStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
-ms.openlocfilehash: c5c7ec2b18143ff4d71540a60e24b8225ca4db16
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: aa6bc7f5a94afc8a190d3d9d2d71ea8b38d8c25b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738591"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153574"
 ---
 # \<sslStreamSecurity>
+
 SSL ストリームを使用するチャネル セキュリティをサポートするカスタム バインディング要素を表します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,21 +28,23 @@ SSL ストリームを使用するチャネル セキュリティをサポート
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
-|requireClientCertificate|クライアント証明書がこのバインディングに必要かどうかを指定するブール値。 既定値は、`false` です。|  
+|requireClientCertificate|クライアント証明書がこのバインディングに必要かどうかを指定するブール値。 既定では、 `false`です。|  
 |sslProtocols|どの SslProtocols がサポートされているのかを指定する SslProtocols 列挙型フラグの値。 既定値は、Ssl3&#124;Tls&#124;Tls11&#124;Tls12 です。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|カスタム バインドのすべてのバインド機能を定義します。|  
   

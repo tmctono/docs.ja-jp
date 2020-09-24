@@ -11,14 +11,15 @@ helpviewer_keywords:
 - language providers, settings schema
 - compiler configuration settings
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
-ms.openlocfilehash: 5b1f9684ad26d4a03769af287fc8b0c0c7c4cc1a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 457e90c92530e04070575e42e3fc282ce45b3d03
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088682"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153951"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>コンパイラおよび言語プロバイダー設定のスキーマ
+
 コンパイラおよび言語プロバイダー設定は、使用可能な言語プロバイダーのコンパイラ構成要素を指定します。 各コンパイラ構成要素は、コード プロバイダーの型名、コンパイラ パラメーター、サポートされる言語名、およびサポートされるファイル拡張子を指定します。  
   
 .NET Framework は、マシン構成ファイル (Machine.config) 内でコンパイラの初期設定を定義します。 開発者やコンパイラ ベンダーは、新しい <xref:System.CodeDom.Compiler.CodeDomProvider> の実装のために構成設定を追加することができます。 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> メソッドを使用して、プログラムによってコンピューターの言語プロバイダーとコンパイラ構成の設定を列挙します。  
@@ -35,6 +36,7 @@ ms.locfileid: "74088682"
 |[\<compiler>](compiler-element.md)|言語プロバイダーのコンパイラ構成属性を指定します。|  
   
 ## <a name="example"></a>例  
+
  次の例は、一般的なコンパイラ構成要素を示しています。  
   
 ```xml  
@@ -58,4 +60,4 @@ ms.locfileid: "74088682"
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [構成ファイル スキーマ](../index.md)
-- [\<compiler>Element](compiler-element.md)
+- [\<compiler> 要素](compiler-element.md)

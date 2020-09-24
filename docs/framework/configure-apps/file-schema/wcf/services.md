@@ -2,14 +2,15 @@
 title: <services>
 ms.date: 03/30/2017
 ms.assetid: 80d76ba9-2058-48ad-9b91-5e4be7e5c113
-ms.openlocfilehash: 02d1d530f37f5082153c9aa6b9993fc4009917f5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b8cb5075ba41bed5a22b152a231c7213b326a62f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854978"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153717"
 ---
 # \<services>
+
 サービスは、設定ファイルの `services` セクションで定義されます。 各サービスには、独自の `service` 設定セクションがあります。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,10 +29,12 @@ ms.locfileid: "70854978"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
- なし  
+
+ None  
   
 ### <a name="child-elements"></a>子要素  
   

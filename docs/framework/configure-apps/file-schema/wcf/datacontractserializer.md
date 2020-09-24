@@ -2,14 +2,15 @@
 title: dataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
-ms.openlocfilehash: e6524c18780c062c3b5b7dfc2509449cb208e270
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0e4cbc50c25d4fa1f67f283f2b52d4b174428cd3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400432"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153925"
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
+
 <xref:System.Runtime.Serialization.DataContractSerializer> 用の設定データが含まれています。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,6 +28,7 @@ ms.locfileid: "70400432"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -37,6 +39,7 @@ ms.locfileid: "70400432"
 |maxItemsInObjectGraph|シリアル化または逆シリアル化する項目の最大数を指定する整数。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -46,6 +49,7 @@ ms.locfileid: "70400432"
 |[\<behavior>](behavior-of-endpointbehaviors.md)|エンドポイントの動作を指定します。|  
   
 ## <a name="remarks"></a>解説  
+
  既知の型の詳細については、<xref:System.Runtime.Serialization.DataContractSerializer> のドキュメントを参照してください。  
   
 > [!CAUTION]

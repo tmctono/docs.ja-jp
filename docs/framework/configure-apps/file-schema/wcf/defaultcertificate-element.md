@@ -2,14 +2,15 @@
 title: <defaultCertificate> 要素
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: cce236bf80fa00f01a3b5f4680d975f83fde0c16
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2eaec4f4296f90579ca32d817f0a20da4ccc9a37
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400428"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153899"
 ---
 # <a name="defaultcertificate-element"></a>\<defaultCertificate> 要素
+
 ネゴシエーション プロトコル経由でサービスまたは STS が証明書を提供しないときに使用される X.509 証明書を指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,11 +32,12 @@ ms.locfileid: "70400428"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |findValue|文字列。 検索する値。|  
 |x509FindType|列挙値。 検索する証明書フィールドのいずれかです。|  
@@ -50,35 +52,38 @@ ms.locfileid: "70400428"
   
 ## <a name="x509findtype-attribute"></a>x509FindType 属性  
   
-|値|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
-|Enumeration|値は、FindByThumbprint、FindBySubjectName、FindBySubjectDistinguishedName、FindByIssuerName、FindByIssuerDistinguishedName、FindBySerialNumber、FindByTimeValid、FindByTimeNotYetValid、FindBySerialNumber、FindByTimeExpired、FindByTemplateName、FindByApplicationPolicy、FindByCertificatePolicy、FindByExtension、FindByKeyUsage、FindBySubjectKeyIdentifier です。|  
+|列挙|値は、FindByThumbprint、FindBySubjectName、FindBySubjectDistinguishedName、FindByIssuerName、FindByIssuerDistinguishedName、FindBySerialNumber、FindByTimeValid、FindByTimeNotYetValid、FindBySerialNumber、FindByTimeExpired、FindByTemplateName、FindByApplicationPolicy、FindByCertificatePolicy、FindByExtension、FindByKeyUsage、FindBySubjectKeyIdentifier です。|  
   
 ## <a name="storelocation-attribute"></a>storeLocation 属性  
   
-|値|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
-|Enumeration|CurrentUser または LocalMachine です。|  
+|列挙|CurrentUser または LocalMachine です。|  
   
 ## <a name="storename-attribute"></a>storeName 属性  
   
-|値|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
-|Enumeration|値は、AddressBook、AuthRoot、CertificateAuthority、Disallowed、My、Root、TrustedPeople、および TrustedPublisher です。|  
+|列挙|値は、AddressBook、AuthRoot、CertificateAuthority、Disallowed、My、Root、TrustedPeople、および TrustedPublisher です。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<serviceCertificate>](servicecertificate-of-clientcredentials-element.md)|クライアントに対してサービスを認証する際に使用される証明書を指定します。|  
   
 ## <a name="remarks"></a>解説  
+
  証明書ベースのメッセージ セキュリティを使用するバインディングでは、この構成要素で指定された証明書を使用して、サービスへのメッセージが暗号化されます。この証明書は、サービスがクライアントへの応答に署名するためにも使用されます。 この要素には、サービスで証明書が指定されていないときに使用する証明書を 1 つ格納できます。  
   
 ## <a name="example"></a>例  
+
  次の例では、URI がで始まるエンドポイントに使用する証明書 `http://www.contoso.com` と、証明書ネゴシエーションを実行しない他のすべてのエンドポイントに使用する証明書を指定します。  
   
 ```xml  
