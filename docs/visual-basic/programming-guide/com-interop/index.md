@@ -5,17 +5,19 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: 2b70a7fa72b09401e0e78f693e4efc9bf0871771
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 66762d4551e458b36b70fb0831bf17ade70aa8cb
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "85503783"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91083229"
 ---
 # <a name="com-interop-visual-basic"></a>COM 相互運用 (Visual Basic)
+
 コンポーネント オブジェクト モデル (COM) では、オブジェクトがその機能を他のコンポーネントに公開し、アプリケーションをホストすることを許可します。 今日のソフトウェアのほとんどに、COM オブジェクトが含まれています。 .NET アセンブリは新しいアプリケーションに最適ですが、時には COM オブジェクトを使用する必要があります。 このセクションには、Visual Basic での COM オブジェクトの作成と使用に関連するいくつかの問題も含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [COM 相互運用の概要](introduction-to-com-interop.md)  
  COM 相互運用の概要を示します。  
   
@@ -47,6 +49,7 @@ ms.locfileid: "85503783"
  新しいオブジェクトの基本として既存の COM オブジェクトを使用する方法を説明します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [アンマネージ コードとの相互運用](../../../framework/interop/index.md)  
  共通言語ランタイムが提供する相互運用サービスについて説明します。  
   

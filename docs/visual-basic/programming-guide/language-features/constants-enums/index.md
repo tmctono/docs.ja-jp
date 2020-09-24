@@ -11,14 +11,15 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], constants
 - Visual Basic code, improving readability with constants
 ms.assetid: c8aba36e-fa47-4a33-8b68-cb2009218270
-ms.openlocfilehash: 7d15c46c0f6bb00c23dd98e464f61a5f94b0773a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: aad4f8b24a43ecc51c372916b438daee72adc405
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "85503837"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058691"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Visual Basic の定数と列挙体
+
 定数は、変化しない値の代わりにわかりやすい名前を使用するための方法です。 定数に格納された値は、その名が示すとおり、アプリケーションの実行中に変わることはありません。 定数を使用すると、数値の代わりにわかりやすい名前を指定できるので、コードが読みやすくなります。  
   
  一連の関連する定数を操作する場合や、定数値に名前を関連付ける場合は、列挙型を使うと便利です。 たとえば、一連の整数型の定数を曜日に関連付けて列挙型として宣言すると、コードで整数値ではなく曜日名を使用することができます。  

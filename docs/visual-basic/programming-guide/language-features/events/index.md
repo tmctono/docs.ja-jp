@@ -5,27 +5,31 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: 264c639656b592c0cc660d3745528df7cc89c851
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 15ab02c20c1baf0fbc9087bfe2e75ec97acd0734
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559338"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91057937"
 ---
 # <a name="events-visual-basic"></a>イベント (Visual Basic)
+
 Visual Studio プロジェクトとは、順に実行される一連のプロシージャと思っているかもしれませんが、実際には、ほとんどのプログラムはイベント ドリブン型です。つまり、実行の流れは、外部で発生する "*イベント*" と呼ばれる事象によって決まります。  
   
  イベントは、何らかの重要な出来事が発生したことをアプリケーションに通知するシグナルです。 たとえば、ユーザーがフォーム上のコントロールをクリックすると、フォームは、`Click` イベントを発生させて、そのイベントを処理するプロシージャを呼び出すことができます。 イベントは、複数のタスク間の通信を可能にすることもできます。 たとえば、メインのアプリケーションとは別のアプリケーションで並べ替えタスクを実行するとします。 ユーザーが並べ替えを取り消した場合、アプリケーションは並べ替え処理の停止を指示するキャンセル イベントを送信できます。  
   
 ## <a name="event-terms-and-concepts"></a>イベントの用語と概念  
+
  このセクションでは、Visual Studio で使用される用語と概念について説明します。  
   
 ### <a name="declaring-events"></a>イベントの宣言  
+
  イベントは、次の例に示すように、`Event` キーワードを使用して、クラス、構造体、モジュール、およびインターフェイス内で宣言します。  
   
  [!code-vb[VbVbalrEvents#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#24)]  
   
 ### <a name="raising-events"></a>イベントの発生  
+
  イベントは、重要な出来事が発生したことを通知するメッセージに似ています。 メッセージをブロードキャストする動作は、"*イベントの発生*" と呼ばれます。 Visual Studio では、次の例に示すように、`RaiseEvent` ステートメントを使用してイベントを発生させます。  
   
  [!code-vb[VbVbalrEvents#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#25)]  
@@ -33,9 +37,11 @@ Visual Studio プロジェクトとは、順に実行される一連のプロシ
  イベントは、イベントを宣言しているクラス、モジュール、または構造体のスコープ内で発生させる必要があります。 たとえば、基本クラスから継承された派生クラスでイベントを発生させることはできません。  
   
 ### <a name="event-senders"></a>イベントの送信元  
+
  イベントを発生させる機能を持つオブジェクトが "*イベントの送信元*" になります。これは "*イベント ソース*" とも呼ばれます。 イベントの送信元の例として、フォーム、コントロール、およびユーザー定義オブジェクトがあります。  
   
 ### <a name="event-handlers"></a>イベント ハンドラー  
+
  "*イベント ハンドラー*" は、対応するイベントが発生したときに呼び出されるプロシージャです。 イベント ハンドラーと一致するシグネチャを持つ任意の有効なサブルーチンを使用できます。 ただし、関数はイベント ソースに値を返すことができないため、イベント ハンドラーとして使用することはできません。  
   
  Visual Studio では、イベント ハンドラーの標準的な名前付け規則である、イベントの送信元、アンダースコア、およびイベントの名前の組み合わせを使用しています。 たとえば、`button1` という名前のボタンの `Click` イベントには、`Sub button1_Click` という名前が付けられます。  
@@ -44,9 +50,11 @@ Visual Studio プロジェクトとは、順に実行される一連のプロシ
 > 独自のイベントに対するイベント ハンドラーを定義するときは、この名前付け規則を使用することをお勧めしますが、使用は必須ではありません。任意の有効なサブルーチン名を付けることができます。  
   
 ## <a name="associating-events-with-event-handlers"></a>イベントとイベント ハンドラーの関連付け  
+
  イベント ハンドラーを使用する前に、`Handles` ステートメントまたは `AddHandler` ステートメントを使用して、イベントをイベント ハンドラーに関連付けておく必要があります。  
   
 ### <a name="withevents-and-the-handles-clause"></a>WithEvents と Handles 句  
+
  `WithEvents` ステートメントと `Handles` 句を使用して、指定するイベント ハンドラーを宣言できます。 `WithEvents` キーワードを使用して宣言されたオブジェクトによって発生したイベントは、次の例に示すように、そのイベント用の `Handles` ステートメントがある任意のプロシージャで処理できます。  
   
  [!code-vb[VbVbalrEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#1)]  
@@ -68,6 +76,7 @@ Visual Studio プロジェクトとは、順に実行される一連のプロシ
  [!code-vb[VbVbalrEvents#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#26)]  
   
 ### <a name="addhandler-and-removehandler"></a>AddHandler と RemoveHandler  
+
  `AddHandler` ステートメントは、イベント ハンドラーを指定できるという点で `Handles` 句に似ています。 ただし、`AddHandler` を `RemoveHandler` と一緒に使用すると、`Handles` 句よりも柔軟性が増し、イベントに関連付けられたイベント ハンドラーを動的に追加、削除、変更することができます。 共有イベントまたは構造体からのイベントを処理する場合は、`AddHandler` を使用する必要があります。  
   
  `AddHandler` は 2 つの引数 (コントロールなどのイベントの送信元から渡されるイベント名と、デリゲートを評価する式) を使用します。 `AddHandler` を使用する場合はデリゲート クラスを明示的に指定する必要がありません。これは、`AddressOf` ステートメントが常にデリゲートへの参照を返すためです。 次の例では、オブジェクトによって発生するイベントにイベント ハンドラーを関連付けます。  
@@ -87,6 +96,7 @@ Visual Studio プロジェクトとは、順に実行される一連のプロシ
  [!code-vb[VbVbalrEvents#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class2.vb#38)]  
   
 ## <a name="handling-events-inherited-from-a-base-class"></a>基本クラスから継承されたイベントの処理  
+
  "*派生クラス*" は基本クラスから特性を継承したクラスであり、基本クラスによって発生したイベントを `Handles MyBase` ステートメントを使用して処理できます。  
   
 ### <a name="to-handle-events-from-a-base-class"></a>基本クラスのイベントを処理するには  

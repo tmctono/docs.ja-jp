@@ -664,7 +664,7 @@ items:
                     href: ../standard/base-types/compilation-and-reuse-in-regular-expressions.md
                   - name: スレッド セーフ
                     href: ../standard/base-types/thread-safety-in-regular-expressions.md
-              - name: 例
+              - name: 使用例
                 items:
                   - name: HREF のスキャン
                     href: ../standard/base-types/regular-expression-example-scanning-for-hrefs.md
@@ -715,7 +715,7 @@ items:
       - name: 依存関係の挿入
         href: /aspnet/core/fundamentals/dependency-injection
       - name: 汎用ホスト
-        href: /aspnet/core/fundamentals/host/generic-host
+        href: ../core/extensions/generic-host.md
       - name: ログの記録
         href: /aspnet/core/fundamentals/logging
       - name: オプションのパターン
@@ -929,7 +929,7 @@ items:
             href: ../standard/serialization/xml-and-soap-serialization.md
           - name: XML シリアル化の詳細
             href: ../standard/serialization/introducing-xml-serialization.md
-          - name: 例
+          - name: 使用例
             href: ../standard/serialization/examples-of-xml-serialization.md
           - name: XML スキーマ定義ツール
             href: ../standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md
@@ -1092,7 +1092,7 @@ items:
         href: ../core/testing/unit-testing-published-output.md
       - name: Visual Studio での .NET Core プロジェクトのライブ単体テスト
         href: /visualstudio/test/live-unit-testing-start
-  - name: セキュリティ
+  - name: Security
     href: ../standard/security/
   - name: 高度なトピック
     items:

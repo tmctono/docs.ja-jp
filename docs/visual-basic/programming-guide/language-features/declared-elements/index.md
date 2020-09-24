@@ -2,14 +2,15 @@
 title: 宣言された要素
 ms.date: 07/20/2015
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
-ms.openlocfilehash: f7fedc58ec061ddb133eb94ee3b3b7a7b49083cd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9359c8df60d7fdc06e7c8dfa1df82f1b277d7339
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "85503765"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075162"
 ---
 # <a name="declared-elements-in-visual-basic"></a>Visual Basic における宣言された要素
+
 *宣言された要素*は、宣言ステートメントで定義されているプログラミング要素です。 宣言された要素には、変数、定数、列挙型、クラス、構造体、モジュール、インターフェイス、プロシージャ、プロシージャ パラメーター、関数の戻り値、外部プロシージャの参照、演算子、プロパティ、イベント、およびデリゲートが含まれます。  
   
  宣言ステートメントは次のとおりです。  
@@ -43,6 +44,7 @@ ms.locfileid: "85503765"
 - [Delegate ステートメント](../../../language-reference/statements/delegate-statement.md)  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [宣言された要素の名前](declared-element-names.md)  
  要素の名前を指定し、英字の大文字と小文字を使用する方法を説明します。  
   
@@ -53,6 +55,7 @@ ms.locfileid: "85503765"
  コンパイラが宣言への参照を一致させる方法と、名前を修飾する方法を説明します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [プログラム構造とコード規則](../../program-structure/program-structure-and-code-conventions.md)  
  コードの読み取り、理解、保守を容易にするためのガイドラインを示します。  
   

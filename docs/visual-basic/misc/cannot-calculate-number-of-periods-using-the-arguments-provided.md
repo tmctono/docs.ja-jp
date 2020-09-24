@@ -4,15 +4,16 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrFinancial_CannotCalculateNPer
 ms.assetid: a96fed1c-73e6-4a2b-9906-0190bc3d4c3c
-ms.openlocfilehash: 2cb7cec91a39cfa886fdcf09f6457882f1811afb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: aaf272dcad8fc5398f538d1dcb39db4d37ac435e
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642109"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059861"
 ---
 # <a name="cannot-calculate-number-of-periods-using-the-arguments-provided"></a>指定された引数を使って期間を計算することはできません
-呼び出し、`NPer`関数はすべての必須の引数は含まれません。  
+
+関数の呼び出しに `NPer` 必要な引数がすべて含まれていません。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   

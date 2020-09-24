@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID735
 ms.assetid: 1055fc15-9641-43b2-a40c-a0a9fbbb34b2
-ms.openlocfilehash: 3d643d0a333e60954e3baeceda996138f6870621
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c17e4ba30a06866b4ae034094c8f53619c1123bb
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84365151"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91076307"
 ---
 # <a name="cannot-save-file-to-temp"></a>ファイルを TEMP に保存できません
+
 コンポーネントが TEMP という名前のディレクトリを見つけられないか、または TEMP ディレクトリが含まれているドライブまたはパーティションには情報を保存するための十分な領域が不足しています。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  

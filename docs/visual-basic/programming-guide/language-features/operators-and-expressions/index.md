@@ -10,19 +10,21 @@ helpviewer_keywords:
 - operands
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: dcf52c6200193f81070f323c8037ad82d747942d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 01e3a53e998774caee8863675b9151a140606852
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "85503799"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071678"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic の演算子および式
+
 *演算子*は、値が格納されている 1 つ以上のコード要素に対して演算を実行するコード要素です。 値要素は、変数、定数、リテラル、プロパティ、`Function` プロシージャおよび `Operator` プロシージャからの戻り値、式などです。  
   
  *式*は、演算子で結合され、新しい値を生成する一連の値要素です。 演算子は、値要素に対して、計算、比較、またはその他の演算を実行します。  
   
 ## <a name="types-of-operators"></a>演算子の種類  
+
  Visual Basic には、次のような種類の演算子があります。  
   
 - [算術演算子](arithmetic-operators.md)は、数値に対して一般的な計算を実行します (ビット パターンのシフトも含まれます)。  
@@ -36,6 +38,7 @@ ms.locfileid: "85503799"
  演算子で結合される値要素は、演算子の*オペランド*と呼ばれます。 演算子は値要素と結合されると*式*になります。ただし、代入演算子は例外で、これはステートメントになります。 詳細については、「[ステートメント](../statements.md)」を参照してください。  
   
 ## <a name="evaluation-of-expressions"></a>式の評価  
+
  式の最終的な結果は、通常、`Boolean`、`String`、または数値型などの一般的なデータ型で表されます。  
   
  次に式の例をいくつか示します。  

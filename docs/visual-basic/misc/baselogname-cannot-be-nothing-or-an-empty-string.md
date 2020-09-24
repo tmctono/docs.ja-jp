@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrApplicationLogBaseNameNull
 ms.assetid: 8e7665e3-5343-45fa-bc79-64e235a0477f
-ms.openlocfilehash: 32f7e149c4d93235725dd124099cd99c74e98ada
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a0e46eccb29d1ced1a979f86f96f761141720174
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64658956"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91083138"
 ---
 # <a name="baselogname-cannot-be-nothing-or-an-empty-string"></a>BaseLogName は、Nothing または空文字列にできません
+
 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.BaseFileName%2A> プロパティの値を `Nothing` または空の文字列にすることはできません。  
   
  <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.BaseFileName%2A> プロパティは、ログ ファイルのベース名を指定します。  
@@ -20,8 +21,8 @@ ms.locfileid: "64658956"
   
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.BaseFileName%2A> プロパティを、少なくとも 1 つの文字を含む文字列に設定します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.BaseFileName%2A>
-- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
-- [My.Application.Info.DirectoryPath](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [[DirectoryPath]](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)

@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrDiagnosticInfo_FullOSName
 ms.assetid: f69da02b-eb9a-4284-bb9e-3025517ae6c1
-ms.openlocfilehash: 67e8fb5e906800d28bf15714463b7ff6ae585693
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 744d549b9313727af2feb82e45c24b729cae7262
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402279"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91079088"
 ---
 # <a name="could-not-obtain-full-operation-system-name-due-to-internal-error"></a>内部エラーのために完全な運用システム名を取得できませんでした
+
 内部エラーのために完全な運用システム名を取得できませんでした。 これは、現在のコンピューターに WMI が存在しないことが原因である場合があります。  
   
  `My.Computer.Info.OSFullName` プロパティの呼び出しに失敗しました。 このエラーの考えられる原因は、Windows Management Instrumentation (WMI) が、現在のコンピューターにインストールされていないことです。  
@@ -22,7 +23,7 @@ ms.locfileid: "84402279"
   
 2. WMI とそのインストール方法の詳細については、「」にアクセスし、「Windows Management Instrumentation Core」を検索してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 - [マイ. Computer. Info. OSFullName](xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName)
 - [.NET での例外の処理とスロー](../../standard/exceptions/index.md)

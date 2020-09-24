@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidDateValue1
 ms.assetid: 928b8d75-f523-40c3-819a-03a1eb596ccc
-ms.openlocfilehash: 05767ac3ea15c83b044ed7bc50fbf417b199c1f9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 910fb209fefa0f735bf66ce801c27274f5ba37fe
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411396"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91065503"
 ---
 # <a name="argument-argumentname-cannot-be-converted-to-type-date"></a>引数 '\<argumentname>' は、型 'Date' には変換できません。
+
 変数を型を `Date`に変更する変換が試みられましたが、値が有効な日付として認識されません。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  

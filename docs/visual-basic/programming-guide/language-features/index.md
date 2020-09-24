@@ -5,14 +5,15 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 2a2e8d0a08fda5783fa20e7403ea215133d0514e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ae226520ecd7dff09023bcc88e610ff400c4019d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "85503806"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91057859"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic 言語の機能
+
 次のトピックでは、オブジェクト指向プログラミング言語である Visual Basic の必須コンポーネントを紹介して説明します。 フォームとコントロールを使用してアプリケーションのユーザー インターフェイスを作成した後、アプリケーションの動作を定義するコードを作成する必要があります。 他の最新のプログラミング言語と同じように、Visual Basic は、多数の一般的なプログラミング構成要素と言語要素をサポートしています。  
   
  他の言語でプログラミングしたことがある場合、このセクションで説明されている内容の大半はすでに知っている可能性があります。 Visual Basic の構造体の大部分は他の言語の構造体と似ていますが、イベント ドリブン型という性質のため、いくつかの微妙な違いが発生しています。  
@@ -20,6 +21,7 @@ ms.locfileid: "85503806"
  プログラミングの経験がない場合、このセクションの説明は、コードを記述するための基礎を紹介するものになります。 基礎を理解したら、Visual Basic を使用して強力なアプリケーションを作成することができます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [配列](arrays/index.md)  
  複数の関連する値を格納する配列を宣言して使用することで、コードをよりコンパクトで強力にする方法について説明します。  
   

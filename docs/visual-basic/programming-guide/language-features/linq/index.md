@@ -4,17 +4,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
-ms.openlocfilehash: 3e76434b66f15ad29f18b981acf4e48e6f17f431
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 25e118f7c2e08420326783b788df480373ba4270
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "85503803"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085764"
 ---
 # <a name="linq-in-visual-basic"></a>LINQ (Visual Basic における)
+
 このセクションでは、Visual Basic と統合言語クエリ (LINQ) を理解して使用するのに役立つ概要、例、および背景情報を示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [Visual Basic における LINQ の概要](introduction-to-linq.md)  
  LINQ のプロバイダー、演算子、クエリ構造、言語機能の概要について説明します。  
   
