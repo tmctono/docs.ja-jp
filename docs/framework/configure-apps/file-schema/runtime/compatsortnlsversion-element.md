@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <CompatSortNLSVersion> element
 - CompatSortNLSVersion element
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
-ms.openlocfilehash: 30afeb2ab9380db75cbeb723ea15a23e4313c9e8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 27d532633f08a5a560da61e904917c1faa35126c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154271"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91151364"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion> 要素
+
 文字列比較の実行時に、ランタイムがレガシ並べ替え順序を使用するように指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,6 +31,7 @@ ms.locfileid: "79154271"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -40,21 +42,23 @@ ms.locfileid: "79154271"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
 |4096|代替の並べ替え順序を表すロケール ID。 この場合、4096は .NET Framework 3.5 以前のバージョンの並べ替え順序を表します。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|  
   
 ## <a name="remarks"></a>解説  
+
  .NET Framework 4 のクラスによって実行される文字列比較、並べ替え、および大文字と小文字の区別の操作は、 <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> Unicode 5.1 標準に準拠しているため、やなどの文字列比較メソッドの結果は、 <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> 以前のバージョンの .NET Framework とは異なる場合があります。 アプリケーションが従来の動作に依存している場合は、 `<CompatSortNLSVersion>` アプリケーションの構成ファイルに要素を含めることによって、.NET Framework 3.5 以前のバージョンで使用されている文字列比較規則および並べ替え規則を復元できます。  
   
 > [!IMPORTANT]
@@ -63,6 +67,7 @@ ms.locfileid: "79154271"
  アプリケーション ドメインを作成するときに、文字列 "NetFx40_Legacy20SortingBehavior" を <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> メソッドに渡すことで、文字列の比較および並べ替えのレガシ規則を特定のアプリケーション ドメインで使用することもできます。  
   
 ## <a name="example"></a>例  
+
  次の例では、2 つの <xref:System.String> オブジェクトをインスタンス化して、<xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> メソッドを呼び出し、現在のカルチャの規則を使用してそれらのオブジェクトを比較する方法を示します。  
   
  [!code-csharp[String.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/string.breakingchanges/cs/example1.cs#1)]

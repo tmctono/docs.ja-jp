@@ -1,15 +1,16 @@
 ---
-title: <activityScheduledQueries>WCF の
+title: <activityScheduledQueries> WCF の
 ms.date: 03/30/2017
 ms.assetid: e351329f-9676-4f11-9b19-f4bac82f36fc
-ms.openlocfilehash: c2281a9027aabfc5255ef7b09176f60d1725b522
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 86f196437b2230d6541570aa8994d99e7b340f66
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850498"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91151195"
 ---
-# <a name="activityscheduledqueries-of-wcf"></a>\<activityScheduledQueries>WCF の
+# <a name="activityscheduledqueries-of-wcf"></a>\<activityScheduledQueries> WCF の
+
 親アクティビティによる実行がスケジュールされているアクティビティを追跡するために使用する、クエリのコレクションを表します。 アクティビティがスケジュールされたレコードを追跡参加要素が定期受信するには、このクエリが必要です。  
   
 追跡プロファイルのクエリの詳細については、「[追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)」を参照してください。  

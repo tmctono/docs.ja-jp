@@ -5,14 +5,15 @@ helpviewer_keywords:
 - <legacyCorruptedStateExceptionsPolicy> element
 - legacyCorruptedStateExceptionsPolicy element
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
-ms.openlocfilehash: d1d29a37999a01f3e370897a1052f4f94435a218
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f36e27a1b85cff2ba8c7e838bace37890a5aa760
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73116459"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91151208"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy> 要素
+
 共通言語ランタイムで、マネージコードがアクセス違反とその他の破損状態例外をキャッチできるようにするかどうかを指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -26,6 +27,7 @@ ms.locfileid: "73116459"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -36,35 +38,38 @@ ms.locfileid: "73116459"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
-|`false`|アプリケーションでは、アクセス違反などの破損状態の例外エラーはキャッチされません。 既定値です。|  
+|`false`|アプリケーションでは、アクセス違反などの破損状態の例外エラーはキャッチされません。 これは既定値です。|  
 |`true`|アプリケーションは、アクセス違反などの破損状態の例外エラーをキャッチします。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>解説  
+
  .NET Framework バージョン3.5 以前では、共通言語ランタイムは、破損したプロセス状態によって発生した例外をキャッチするために、マネージコードを許可しました。 この種類の例外の例として、アクセス違反があります。  
   
  .NET Framework 4 以降では、マネージコードはブロック内のこれらの種類の例外をキャッチしなくなりました `catch` 。 ただし、次の2つの方法で、この変更をオーバーライドし、破損状態例外の処理を維持することができます。  
   
 - `<legacyCorruptedStateExceptionsPolicy>`要素の `enabled` 属性をに設定 `true` します。 この構成設定は、プロセス全体に適用され、すべてのメソッドに影響します。  
   
- または  
+ - または -  
   
 - <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType>例外ブロックを含むメソッドに属性を適用 `catch` します。  
   
  この構成要素は、.NET Framework 4 以降でのみ使用できます。  
   
 ## <a name="example"></a>例  
+
  次の例では、アプリケーションが .NET Framework 4 より前の動作に戻し、すべての破損状態の例外エラーをキャッチするように指定する方法を示します。  
   
 ```xml  

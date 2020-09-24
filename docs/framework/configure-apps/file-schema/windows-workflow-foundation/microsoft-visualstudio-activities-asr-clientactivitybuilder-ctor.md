@@ -9,14 +9,15 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6b44b13c-7a23-4df2-8f9f-45e2b1430002
-ms.openlocfilehash: 99f2eb9447bdf43cb57cfe86f35d2c09044ed470
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4e7595efd3037a525d272dbcd60243db29f2efa6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69947627"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150831"
 ---
 # <a name="microsoftvisualstudioactivitiesasrclientactivitybuilderctor"></a>Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor
+
 [VisualStudio](microsoft-visualstudio-activities-asr-clientactivitybuilder.md)クラスのインスタンスを作成します。このクラスのインスタンスを作成します。  
   
 ## <a name="syntax"></a>構文  
@@ -28,17 +29,18 @@ public ClientActivityBuilder(OperationDescription operationDescription, string c
 ## <a name="parameters"></a>パラメーター  
   
 ## <a name="parameter-values"></a>パラメーター値  
+
  *operationDescription*  
   
- 操作名、戻り値の型、パラメーター情報など、生成されるワークフロー アクティビティで実行される操作を記述します。 このパラメーターの値を**null**にすることはできません。 これは、メッセージ コントラクトを使用し、1 つのメッセージと共に引数を受け取る同期操作を示す必要があります。 これらの条件が満たされていない場合、このクラスのコンストラクターと他のメソッドを使用したランタイムの結果は未定義です。  
+ 操作名、戻り値の型、パラメーター情報など、生成されるワークフロー アクティビティで実行される操作を記述します。 このパラメーターの値を **null**にすることはできません。 これは、メッセージ コントラクトを使用し、1 つのメッセージと共に引数を受け取る同期操作を示す必要があります。 これらの条件が満たされていない場合、このクラスのコンストラクターと他のメソッドを使用したランタイムの結果は未定義です。  
   
  *configurationName*  
   
- エンドポイント構成名を指定します。 このパラメーターの値を**null**または空にすることはできません。 これらの条件が満たされていない場合、このクラスのコンストラクターと他のメソッドを使用したランタイムの結果は未定義です。  
+ エンドポイント構成名を指定します。 このパラメーターの値を **null** または空にすることはできません。 これらの条件が満たされていない場合、このクラスのコンストラクターと他のメソッドを使用したランタイムの結果は未定義です。  
   
  *proxyNamespace*  
   
- 操作のサービスの名前空間を指定します。 このパラメーターの値を**null**または空にすることはできません。 これらの条件が満たされていない場合、このクラスのコンストラクターと他のメソッドを使用したランタイムの結果は未定義です。  
+ 操作のサービスの名前空間を指定します。 このパラメーターの値を **null** または空にすることはできません。 これらの条件が満たされていない場合、このクラスのコンストラクターと他のメソッドを使用したランタイムの結果は未定義です。  
   
 ## <a name="see-also"></a>関連項目
 

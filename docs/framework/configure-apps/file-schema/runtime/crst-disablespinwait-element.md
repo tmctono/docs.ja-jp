@@ -5,12 +5,12 @@ f1_keywords:
 - Crst_DisableSpinWait
 helpviewer_keywords:
 - Crst_DisableSpinWait element
-ms.openlocfilehash: 0683081183081e249b2a9c89e1a6a15f638fb339
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 45052d99bb297ac39d058fa405fe57a7c991f738
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73117635"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91151351"
 ---
 # <a name="crst_disablespinwait-element"></a>\<Crst_DisableSpinWait> 要素
 
@@ -32,23 +32,24 @@ ms.locfileid: "73117635"
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
-|**enabled**|重要なセクションが競合している場合は、スピンを待機するかどうかを指定します。|  
+|**有効**|重要なセクションが競合している場合は、スピンを待機するかどうかを指定します。|  
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |1|クリティカルセクションを取得できないときに、スピン待機を無効にします。|  
 |0|クリティカルセクションを取得できない場合は、スピン待機を無効にしないでください。 これが既定値です。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|さまざまなランタイム構成設定に関する情報が含まれています。|  
