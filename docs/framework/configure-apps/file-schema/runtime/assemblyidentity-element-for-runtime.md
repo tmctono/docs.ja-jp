@@ -9,15 +9,16 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-ms.openlocfilehash: b026dafbde796bbd8726de56b532ed6710ba2290
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f3e74b05ac0fd7c57963f2aad047ba3f2d63a10a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154310"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170182"
 ---
-# <a name="assemblyidentity-element-for-runtime"></a><span data-ttu-id="46104-102">\<runtime> の \<assemblyIdentity> 要素</span><span class="sxs-lookup"><span data-stu-id="46104-102">\<assemblyIdentity> Element for \<runtime></span></span>
-<span data-ttu-id="46104-103">アセンブリに関する識別情報を格納します。</span><span class="sxs-lookup"><span data-stu-id="46104-103">Contains identifying information about the assembly.</span></span>  
+# <a name="assemblyidentity-element-for-runtime"></a><span data-ttu-id="3a2b1-102">\<runtime> の \<assemblyIdentity> 要素</span><span class="sxs-lookup"><span data-stu-id="3a2b1-102">\<assemblyIdentity> Element for \<runtime></span></span>
+
+<span data-ttu-id="3a2b1-103">アセンブリに関する識別情報を格納します。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-103">Contains identifying information about the assembly.</span></span>  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
@@ -25,7 +26,7 @@ ms.locfileid: "79154310"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<dependentAssembly>**](dependentassembly-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<assemblyIdentity>**  
   
-## <a name="syntax"></a><span data-ttu-id="46104-104">構文</span><span class="sxs-lookup"><span data-stu-id="46104-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3a2b1-104">構文</span><span class="sxs-lookup"><span data-stu-id="3a2b1-104">Syntax</span></span>  
   
 ```xml  
    <assemblyIdentity
@@ -34,45 +35,48 @@ publicKeyToken="public key token"
 culture="assembly culture"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="46104-105">属性および要素</span><span class="sxs-lookup"><span data-stu-id="46104-105">Attributes and Elements</span></span>  
- <span data-ttu-id="46104-106">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="46104-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="3a2b1-105">属性および要素</span><span class="sxs-lookup"><span data-stu-id="3a2b1-105">Attributes and Elements</span></span>  
+
+ <span data-ttu-id="3a2b1-106">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="46104-107">属性</span><span class="sxs-lookup"><span data-stu-id="46104-107">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="3a2b1-107">属性</span><span class="sxs-lookup"><span data-stu-id="3a2b1-107">Attributes</span></span>  
   
-|<span data-ttu-id="46104-108">属性</span><span class="sxs-lookup"><span data-stu-id="46104-108">Attribute</span></span>|<span data-ttu-id="46104-109">説明</span><span class="sxs-lookup"><span data-stu-id="46104-109">Description</span></span>|  
+|<span data-ttu-id="3a2b1-108">属性</span><span class="sxs-lookup"><span data-stu-id="3a2b1-108">Attribute</span></span>|<span data-ttu-id="3a2b1-109">説明</span><span class="sxs-lookup"><span data-stu-id="3a2b1-109">Description</span></span>|  
 |---------------|-----------------|  
-|`name`|<span data-ttu-id="46104-110">必須の属性です。</span><span class="sxs-lookup"><span data-stu-id="46104-110">Required attribute.</span></span><br /><br /> <span data-ttu-id="46104-111">アセンブリの名前</span><span class="sxs-lookup"><span data-stu-id="46104-111">The name of the assembly</span></span>|  
-|`culture`|<span data-ttu-id="46104-112">省略可能な属性です。</span><span class="sxs-lookup"><span data-stu-id="46104-112">Optional attribute.</span></span><br /><br /> <span data-ttu-id="46104-113">アセンブリの言語と国/地域を指定する文字列。</span><span class="sxs-lookup"><span data-stu-id="46104-113">A string that specifies the language and country/region of the assembly.</span></span>|  
-|`publicKeyToken`|<span data-ttu-id="46104-114">省略可能な属性です。</span><span class="sxs-lookup"><span data-stu-id="46104-114">Optional attribute.</span></span><br /><br /> <span data-ttu-id="46104-115">アセンブリの厳密な名前を指定する16進値。</span><span class="sxs-lookup"><span data-stu-id="46104-115">A hexadecimal value that specifies the strong name of the assembly.</span></span>|  
-|`processorArchitecture`|<span data-ttu-id="46104-116">省略可能な属性です。</span><span class="sxs-lookup"><span data-stu-id="46104-116">Optional attribute.</span></span><br /><br /> <span data-ttu-id="46104-117">プロセッサ固有のコードを含むアセンブリのプロセッサアーキテクチャを指定する、"x86"、"amd64"、"msil"、または "ia64" のいずれかの値。</span><span class="sxs-lookup"><span data-stu-id="46104-117">One of the values "x86", "amd64", "msil", or "ia64", specifying the processor architecture for an assembly that contains processor-specific code.</span></span> <span data-ttu-id="46104-118">値の大文字と小文字は区別されません。</span><span class="sxs-lookup"><span data-stu-id="46104-118">The values are not case-sensitive.</span></span> <span data-ttu-id="46104-119">属性に他の値が割り当てられている場合は、 `<assemblyIdentity>` 要素全体が無視されます。</span><span class="sxs-lookup"><span data-stu-id="46104-119">If the attribute is assigned any other value, the entire `<assemblyIdentity>` element is ignored.</span></span> <span data-ttu-id="46104-120">以下を参照してください。<xref:System.Reflection.ProcessorArchitecture></span><span class="sxs-lookup"><span data-stu-id="46104-120">See <xref:System.Reflection.ProcessorArchitecture>.</span></span>|  
+|`name`|<span data-ttu-id="3a2b1-110">必須の属性です。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-110">Required attribute.</span></span><br /><br /> <span data-ttu-id="3a2b1-111">アセンブリの名前</span><span class="sxs-lookup"><span data-stu-id="3a2b1-111">The name of the assembly</span></span>|  
+|`culture`|<span data-ttu-id="3a2b1-112">省略可能な属性です。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-112">Optional attribute.</span></span><br /><br /> <span data-ttu-id="3a2b1-113">アセンブリの言語と国/地域を指定する文字列。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-113">A string that specifies the language and country/region of the assembly.</span></span>|  
+|`publicKeyToken`|<span data-ttu-id="3a2b1-114">省略可能な属性です。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-114">Optional attribute.</span></span><br /><br /> <span data-ttu-id="3a2b1-115">アセンブリの厳密な名前を指定する16進値。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-115">A hexadecimal value that specifies the strong name of the assembly.</span></span>|  
+|`processorArchitecture`|<span data-ttu-id="3a2b1-116">省略可能な属性です。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-116">Optional attribute.</span></span><br /><br /> <span data-ttu-id="3a2b1-117">プロセッサ固有のコードを含むアセンブリのプロセッサアーキテクチャを指定する、"x86"、"amd64"、"msil"、または "ia64" のいずれかの値。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-117">One of the values "x86", "amd64", "msil", or "ia64", specifying the processor architecture for an assembly that contains processor-specific code.</span></span> <span data-ttu-id="3a2b1-118">値の大文字と小文字は区別されません。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-118">The values are not case-sensitive.</span></span> <span data-ttu-id="3a2b1-119">属性に他の値が割り当てられている場合は、 `<assemblyIdentity>` 要素全体が無視されます。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-119">If the attribute is assigned any other value, the entire `<assemblyIdentity>` element is ignored.</span></span> <span data-ttu-id="3a2b1-120">以下を参照してください。<xref:System.Reflection.ProcessorArchitecture></span><span class="sxs-lookup"><span data-stu-id="3a2b1-120">See <xref:System.Reflection.ProcessorArchitecture>.</span></span>|  
   
-## <a name="processorarchitecture-attribute"></a><span data-ttu-id="46104-121">processorArchitecture 属性</span><span class="sxs-lookup"><span data-stu-id="46104-121">processorArchitecture Attribute</span></span>  
+## <a name="processorarchitecture-attribute"></a><span data-ttu-id="3a2b1-121">processorArchitecture 属性</span><span class="sxs-lookup"><span data-stu-id="3a2b1-121">processorArchitecture Attribute</span></span>  
   
-|<span data-ttu-id="46104-122">値</span><span class="sxs-lookup"><span data-stu-id="46104-122">Value</span></span>|<span data-ttu-id="46104-123">Description</span><span class="sxs-lookup"><span data-stu-id="46104-123">Description</span></span>|  
+|<span data-ttu-id="3a2b1-122">値</span><span class="sxs-lookup"><span data-stu-id="3a2b1-122">Value</span></span>|<span data-ttu-id="3a2b1-123">[説明]</span><span class="sxs-lookup"><span data-stu-id="3a2b1-123">Description</span></span>|  
 |-----------|-----------------|  
-|`amd64`|<span data-ttu-id="46104-124">AMD x86-64 アーキテクチャのみ。</span><span class="sxs-lookup"><span data-stu-id="46104-124">AMD x86-64 architecture only.</span></span>|  
-|`ia64`|<span data-ttu-id="46104-125">Intel Itanium アーキテクチャのみ。</span><span class="sxs-lookup"><span data-stu-id="46104-125">Intel Itanium architecture only.</span></span>|  
-|`msil`|<span data-ttu-id="46104-126">プロセッサおよびワードあたりのビット数に関して中立</span><span class="sxs-lookup"><span data-stu-id="46104-126">Neutral with respect to processor and bits-per-word.</span></span>|  
-|`x86`|<span data-ttu-id="46104-127">64ビットプラットフォーム上のネイティブまたは Windows on Windows (WOW) 環境の32ビット x86 プロセッサ。</span><span class="sxs-lookup"><span data-stu-id="46104-127">A 32-bit x86 processor, either native or in the Windows on Windows (WOW) environment on a 64-bit platform.</span></span>|  
+|`amd64`|<span data-ttu-id="3a2b1-124">AMD x86-64 アーキテクチャのみ。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-124">AMD x86-64 architecture only.</span></span>|  
+|`ia64`|<span data-ttu-id="3a2b1-125">Intel Itanium アーキテクチャのみ。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-125">Intel Itanium architecture only.</span></span>|  
+|`msil`|<span data-ttu-id="3a2b1-126">プロセッサおよびワードあたりのビット数に関して中立</span><span class="sxs-lookup"><span data-stu-id="3a2b1-126">Neutral with respect to processor and bits-per-word.</span></span>|  
+|`x86`|<span data-ttu-id="3a2b1-127">64ビットプラットフォーム上のネイティブまたは Windows on Windows (WOW) 環境の32ビット x86 プロセッサ。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-127">A 32-bit x86 processor, either native or in the Windows on Windows (WOW) environment on a 64-bit platform.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="46104-128">子要素</span><span class="sxs-lookup"><span data-stu-id="46104-128">Child Elements</span></span>  
- <span data-ttu-id="46104-129">なし。</span><span class="sxs-lookup"><span data-stu-id="46104-129">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="3a2b1-128">子要素</span><span class="sxs-lookup"><span data-stu-id="3a2b1-128">Child Elements</span></span>  
+
+ <span data-ttu-id="3a2b1-129">なし。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-129">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="46104-130">親要素</span><span class="sxs-lookup"><span data-stu-id="46104-130">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="3a2b1-130">親要素</span><span class="sxs-lookup"><span data-stu-id="3a2b1-130">Parent Elements</span></span>  
   
-|<span data-ttu-id="46104-131">要素</span><span class="sxs-lookup"><span data-stu-id="46104-131">Element</span></span>|<span data-ttu-id="46104-132">Description</span><span class="sxs-lookup"><span data-stu-id="46104-132">Description</span></span>|  
+|<span data-ttu-id="3a2b1-131">要素</span><span class="sxs-lookup"><span data-stu-id="3a2b1-131">Element</span></span>|<span data-ttu-id="3a2b1-132">説明</span><span class="sxs-lookup"><span data-stu-id="3a2b1-132">Description</span></span>|  
 |-------------|-----------------|  
-|`assemblyBinding`|<span data-ttu-id="46104-133">アセンブリ バージョンのリダイレクトおよびアセンブリの位置に関する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="46104-133">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
-|`configuration`|<span data-ttu-id="46104-134">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="46104-134">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`dependentAssembly`|<span data-ttu-id="46104-135">各アセンブリのバインディング ポリシーとアセンブリの場所をカプセル化します。</span><span class="sxs-lookup"><span data-stu-id="46104-135">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="46104-136">`<dependentAssembly>`アセンブリごとに1つの要素を使用します。</span><span class="sxs-lookup"><span data-stu-id="46104-136">Use one `<dependentAssembly>` element for each assembly.</span></span>|  
-|`runtime`|<span data-ttu-id="46104-137">アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。</span><span class="sxs-lookup"><span data-stu-id="46104-137">Contains information about assembly binding and garbage collection.</span></span>|  
+|`assemblyBinding`|<span data-ttu-id="3a2b1-133">アセンブリ バージョンのリダイレクトおよびアセンブリの位置に関する情報が含まれます。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-133">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|`configuration`|<span data-ttu-id="3a2b1-134">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-134">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`dependentAssembly`|<span data-ttu-id="3a2b1-135">各アセンブリのバインディング ポリシーとアセンブリの場所をカプセル化します。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-135">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="3a2b1-136">`<dependentAssembly>`アセンブリごとに1つの要素を使用します。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-136">Use one `<dependentAssembly>` element for each assembly.</span></span>|  
+|`runtime`|<span data-ttu-id="3a2b1-137">アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-137">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="46104-138">解説</span><span class="sxs-lookup"><span data-stu-id="46104-138">Remarks</span></span>  
- <span data-ttu-id="46104-139">すべて **\<dependentAssembly>** の要素には1つ **\<assemblyIdentity>** の子要素が必要です。</span><span class="sxs-lookup"><span data-stu-id="46104-139">Every **\<dependentAssembly>** element must have one **\<assemblyIdentity>** child element.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3a2b1-138">解説</span><span class="sxs-lookup"><span data-stu-id="3a2b1-138">Remarks</span></span>  
+
+ <span data-ttu-id="3a2b1-139">すべて **\<dependentAssembly>** の要素には1つ **\<assemblyIdentity>** の子要素が必要です。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-139">Every **\<dependentAssembly>** element must have one **\<assemblyIdentity>** child element.</span></span>  
   
- <span data-ttu-id="46104-140">`processorArchitecture`属性が存在する場合、要素は、 `<assemblyIdentity>` 対応するプロセッサアーキテクチャを持つアセンブリにのみ適用されます。</span><span class="sxs-lookup"><span data-stu-id="46104-140">If the `processorArchitecture` attribute is present, the `<assemblyIdentity>` element applies only to the assembly with the corresponding processor architecture.</span></span> <span data-ttu-id="46104-141">`processorArchitecture`属性が存在しない場合、要素は、 `<assemblyIdentity>` 任意のプロセッサアーキテクチャを持つアセンブリに適用できます。</span><span class="sxs-lookup"><span data-stu-id="46104-141">If the `processorArchitecture` attribute is not present, the `<assemblyIdentity>` element can apply to an assembly with any processor architecture.</span></span>  
+ <span data-ttu-id="3a2b1-140">`processorArchitecture`属性が存在する場合、要素は、 `<assemblyIdentity>` 対応するプロセッサアーキテクチャを持つアセンブリにのみ適用されます。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-140">If the `processorArchitecture` attribute is present, the `<assemblyIdentity>` element applies only to the assembly with the corresponding processor architecture.</span></span> <span data-ttu-id="3a2b1-141">`processorArchitecture`属性が存在しない場合、要素は、 `<assemblyIdentity>` 任意のプロセッサアーキテクチャを持つアセンブリに適用できます。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-141">If the `processorArchitecture` attribute is not present, the `<assemblyIdentity>` element can apply to an assembly with any processor architecture.</span></span>  
   
- <span data-ttu-id="46104-142">次の例では、2つの異なる2つのプロセッサアーキテクチャを対象とする同じ名前の2つのアセンブリの構成ファイルを示しています。これらのバージョンは、同期中に保持されていません。X86 プラットフォームでアプリケーションを実行すると、最初の `<assemblyIdentity>` 要素が適用され、もう一方の要素は無視されます。</span><span class="sxs-lookup"><span data-stu-id="46104-142">The following example shows a configuration file for two assemblies with the same name that target two different two processor architectures, and whose versions have not been maintained in synch. When the application executes on the x86 platform the first `<assemblyIdentity>` element applies and the other is ignored.</span></span> <span data-ttu-id="46104-143">アプリケーションが x86 または ia64 以外のプラットフォームで実行されている場合は、両方とも無視されます。</span><span class="sxs-lookup"><span data-stu-id="46104-143">If the application executes on a platform other than x86 or ia64, both are ignored.</span></span>  
+ <span data-ttu-id="3a2b1-142">次の例では、2つの異なる2つのプロセッサアーキテクチャを対象とする同じ名前の2つのアセンブリの構成ファイルを示しています。これらのバージョンは、同期中に保持されていません。X86 プラットフォームでアプリケーションを実行すると、最初の `<assemblyIdentity>` 要素が適用され、もう一方の要素は無視されます。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-142">The following example shows a configuration file for two assemblies with the same name that target two different two processor architectures, and whose versions have not been maintained in synch. When the application executes on the x86 platform the first `<assemblyIdentity>` element applies and the other is ignored.</span></span> <span data-ttu-id="3a2b1-143">アプリケーションが x86 または ia64 以外のプラットフォームで実行されている場合は、両方とも無視されます。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-143">If the application executes on a platform other than x86 or ia64, both are ignored.</span></span>  
   
 ```xml  
 <configuration>  
@@ -99,10 +103,11 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
- <span data-ttu-id="46104-144">属性のない要素が構成ファイルに含まれて `<assemblyIdentity>` `processorArchitecture` おり、プラットフォームに一致する要素が含まれていない場合、属性のない要素 `processorArchitecture` が使用されます。</span><span class="sxs-lookup"><span data-stu-id="46104-144">If a configuration file contains an `<assemblyIdentity>` element with no `processorArchitecture` attribute, and does not contain an element that matches the platform, the element without the `processorArchitecture` attribute is used.</span></span>  
+ <span data-ttu-id="3a2b1-144">属性のない要素が構成ファイルに含まれて `<assemblyIdentity>` `processorArchitecture` おり、プラットフォームに一致する要素が含まれていない場合、属性のない要素 `processorArchitecture` が使用されます。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-144">If a configuration file contains an `<assemblyIdentity>` element with no `processorArchitecture` attribute, and does not contain an element that matches the platform, the element without the `processorArchitecture` attribute is used.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="46104-145">例</span><span class="sxs-lookup"><span data-stu-id="46104-145">Example</span></span>  
- <span data-ttu-id="46104-146">次の例は、アセンブリに関する情報を提供する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="46104-146">The following example shows how to provide information about an assembly.</span></span>  
+## <a name="example"></a><span data-ttu-id="3a2b1-145">例</span><span class="sxs-lookup"><span data-stu-id="3a2b1-145">Example</span></span>  
+
+ <span data-ttu-id="3a2b1-146">次の例は、アセンブリに関する情報を提供する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="3a2b1-146">The following example shows how to provide information about an assembly.</span></span>  
   
 ```xml  
 <configuration>  
@@ -119,8 +124,8 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="46104-147">関連項目</span><span class="sxs-lookup"><span data-stu-id="46104-147">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3a2b1-147">関連項目</span><span class="sxs-lookup"><span data-stu-id="3a2b1-147">See also</span></span>
 
-- [<span data-ttu-id="46104-148">ランタイム設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="46104-148">Runtime Settings Schema</span></span>](index.md)
-- [<span data-ttu-id="46104-149">構成ファイル スキーマ</span><span class="sxs-lookup"><span data-stu-id="46104-149">Configuration File Schema</span></span>](../index.md)
-- [<span data-ttu-id="46104-150">アセンブリ バージョンのリダイレクト</span><span class="sxs-lookup"><span data-stu-id="46104-150">Redirecting Assembly Versions</span></span>](../../redirect-assembly-versions.md)
+- [<span data-ttu-id="3a2b1-148">ランタイム設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="3a2b1-148">Runtime Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="3a2b1-149">構成ファイル スキーマ</span><span class="sxs-lookup"><span data-stu-id="3a2b1-149">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="3a2b1-150">アセンブリ バージョンのリダイレクト</span><span class="sxs-lookup"><span data-stu-id="3a2b1-150">Redirecting Assembly Versions</span></span>](../../redirect-assembly-versions.md)
