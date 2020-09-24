@@ -2,12 +2,12 @@
 title: コンテナーとコンテナー オーケストレーターの活用
 description: Azure での Docker コンテナーと Kubernetes Orchestrators 活用
 ms.date: 05/31/2020
-ms.openlocfilehash: f9e8672b742217388bd719262ffdfee63618fd14
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4d1dfa17fe9b4a683ab71ef2c9f97373579197af
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540544"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155550"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>コンテナーとコンテナー オーケストレーターの活用
 
@@ -27,7 +27,7 @@ ms.locfileid: "90540544"
 
 モノリシックアプリケーションでは、わずかな変更しか加えられていない場合でも、アプリケーション全体を完全に展開する必要があります。 完全な展開はコストが高く、エラーが発生しやすい場合があります。 また、アプリケーションを再起動する必要があり、一時的に使用不可に影響します。
 
-### <a name="scaling"></a>Scaling
+### <a name="scaling"></a>スケーリング
 
 モノリシックアプリケーションは、1台のコンピューターインスタンスで完全にホストされ、多くの場合、高い機能を備えたハードウェアを必要とします。 モノリスのいずれかの部分にスケーリングが必要な場合は、アプリケーション全体の別のコピーを別のコンピューターに配置する必要があります。 モノリスを使用すると、アプリケーションコンポーネントを個別に拡張することはできません。 スケーリングを必要としないコンポーネントをスケーリングすると、効率が高く、コストがかかるリソースが使用されます。
 
@@ -214,7 +214,7 @@ ENTRYPOINT ["dotnet", "eShopWeb.dll"]
 
 **図 3-7**. Visual Studio Docker の実行オプション
 
-[Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/)には、ローカル開発に加えて、複数の開発者が Azure 内で独自の Kubernetes 構成を操作するための便利な方法が用意されています。 図3-7 に示すように、Azure Dev Spaces でアプリケーションを実行することもできます。
+[Azure Dev Spaces](/azure/dev-spaces/)には、ローカル開発に加えて、複数の開発者が Azure 内で独自の Kubernetes 構成を操作するための便利な方法が用意されています。 図3-7 に示すように、Azure Dev Spaces でアプリケーションを実行することもできます。
 
 また、いつでも既存の ASP.NET Core アプリケーションに Docker サポートを追加できます。 図3-8 に示すように、Visual Studio ソリューションエクスプローラーからプロジェクト**Add**を右クリックし、  >  **Docker サポート**を追加します。
 

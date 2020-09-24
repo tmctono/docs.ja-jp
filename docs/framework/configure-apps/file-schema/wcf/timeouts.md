@@ -2,14 +2,15 @@
 title: <timeOuts>
 ms.date: 03/30/2017
 ms.assetid: 7fccd436-b326-48ec-8de1-c16817a09e0d
-ms.openlocfilehash: b9c67ac03f0eb73a2a4cdd43ab48fe12871a1cc3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f7e513bb5c486fa5f7c39c9b2e3cfcd26bd7c219
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854969"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157097"
 ---
 # \<timeOuts>
+
 サービス ホストを開くまたは閉じるまでに待機できる期間を指定する構成要素を表します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,21 +28,23 @@ ms.locfileid: "70854969"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |`closeTimeout`|サービス ホストを閉じるまでに待機できる期間を指定する <xref:System.TimeSpan> 値。|  
 |`openTimeout`|サービス ホストを開くまでに待機できる期間を指定する <xref:System.TimeSpan> 値。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<host>](host.md)|サービス ホストの設定を指定する構成要素です。|  
   

@@ -2,15 +2,16 @@
 title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 15c9e38a141fc294c47863b1a932711444ac079a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bb9468b6005361a2a480f7c0ebfb2cbb9e9199c2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855156"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157383"
 ---
 # \<identity>
-ID 要素を使用すると、クライアント開発者は予想されるサービスの ID をデザイン時に指定できます。 クライアントとサービスの間のハンドシェイクプロセスでは、Windows Communication Foundation (WCF) インフラストラクチャによって、予期されるサービスの id がこの要素の値と一致することが保証されるため、認証することができます。 詳細については、「[サービス id と認証](../../../wcf/feature-details/service-identity-and-authentication.md)」を参照してください。  
+
+ID 要素を使用すると、クライアント開発者は予想されるサービスの ID をデザイン時に指定できます。 クライアントとサービスの間のハンドシェイクプロセスでは、Windows Communication Foundation (WCF) インフラストラクチャによって、予期されるサービスの id がこの要素の値と一致することが保証されるため、認証することができます。 詳細については、「 [サービス id と認証](../../../wcf/feature-details/service-identity-and-authentication.md)」を参照してください。  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
@@ -36,9 +37,11 @@ ID 要素を使用すると、クライアント開発者は予想されるサ�
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
@@ -58,7 +61,7 @@ ID 要素を使用すると、クライアント開発者は予想されるサ�
 |-------------|-----------------|  
 |[\<custom>](custom.md)|netPeerTcpBinding のカスタム ピア リゾルバーを指定します。|  
 |[\<endpoint>](endpoint-element.md)|サービスエンドポイントを構成します。|  
-|[\<endpoint>の\<client>](endpoint-of-client.md)|チャネルエンドポイントを構成します。|  
+|[\<client> の \<endpoint>](endpoint-of-client.md)|チャネルエンドポイントを構成します。|  
 |[\<issuer>](issuer.md)|フェデレーション サービスのセキュリティ トークン サービス (STS) を指定します。|  
 |[\<issuerMetadata>](issuermetadata.md)|フェデレーション サービスのセキュリティ トークン サービス (STS) のメタデータ エンドポイントを指定します。|  
 |[\<issuedTokenParameters>](issuedtokenparameters.md)|カスタム バインドで発行済みトークンのパラメーターを定義します。|  

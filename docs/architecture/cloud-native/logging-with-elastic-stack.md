@@ -2,12 +2,12 @@
 title: エラスティック スタックを使用したログ記録
 description: エラスティックスタック、Logstash、および Kibana を使用したログ記録
 ms.date: 05/13/2020
-ms.openlocfilehash: 32d9d0dae175d8d45d48b56d17f133b4cc432363
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 3f10b0d06c87b7bed6d3e302742b1dc52e2c9d3b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811172"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155342"
 ---
 # <a name="logging-with-elastic-stack"></a>エラスティック スタックを使用したログ記録
 
@@ -105,7 +105,7 @@ output {
 
 ## <a name="installing-elastic-stack-on-azure"></a>Azure でのエラスティックスタックのインストール
 
-エラスティックスタックは、さまざまな方法で Azure にインストールできます。 常に、 [仮想マシンをプロビジョニングし、エラスティックスタックを直接インストール](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)することができます。 経験豊富なユーザーは、このオプションを使用することをお勧めします。 サービスとしてのインフラストラクチャにを展開すると、管理オーバーヘッドが大きくなります。これにより、コンピューターのセキュリティ保護や修正プログラムによる最新情報の保持など、サービスとしてのインフラストラクチャに関連するすべてのタスクの所有権を取得する必要があります。
+エラスティックスタックは、さまざまな方法で Azure にインストールできます。 常に、 [仮想マシンをプロビジョニングし、エラスティックスタックを直接インストール](/azure/virtual-machines/linux/tutorial-elasticsearch)することができます。 経験豊富なユーザーは、このオプションを使用することをお勧めします。 サービスとしてのインフラストラクチャにを展開すると、管理オーバーヘッドが大きくなります。これにより、コンピューターのセキュリティ保護や修正プログラムによる最新情報の保持など、サービスとしてのインフラストラクチャに関連するすべてのタスクの所有権を取得する必要があります。
 
 オーバーヘッドが少ないオプションは、エラスティックスタックが既に構成されている多くの Docker コンテナーの1つを使用することです。 これらのコンテナーは、既存の Kubernetes クラスターにドロップして、アプリケーションコードと共に実行できます。 [Sebp/elk](https://elk-docker.readthedocs.io/)コンテナーは、適切にドキュメント化され、テストされたエラスティックスタックコンテナーです。
 
@@ -113,7 +113,7 @@ output {
 
 ## <a name="references"></a>References
 
-- [エラスティックスタックを Azure にインストールする](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)
+- [エラスティックスタックを Azure にインストールする](/azure/virtual-machines/linux/tutorial-elasticsearch)
 
 >[!div class="step-by-step"]
 >[前へ](observability-patterns.md)

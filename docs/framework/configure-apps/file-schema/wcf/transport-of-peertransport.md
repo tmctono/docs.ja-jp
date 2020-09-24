@@ -2,14 +2,15 @@
 title: <transport> の <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: 3b2c7716727f58abb81bf4d58b13189ac170cf7c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7328d67c4649010dce3e1c866238d1e0067e4990
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399289"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157071"
 ---
 # <a name="transport-of-peertransport"></a>\<transport> の \<peerTransport>
+
 このバインドで構成されたピアが送信する、セキュリティで保護されたメッセージのトランスポートの型を指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,31 +31,34 @@ ms.locfileid: "70399289"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |credentialType|省略可能。 ピア トランスポートにより送信されるメッセージの検証に使用される資格情報の種類を指定します。 この属性は <xref:System.ServiceModel.PeerTransportCredentialType> 型です。|  
   
 ## <a name="credentialtype-attribute"></a>credentialType 属性  
   
-|値|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
 |Certificate|ピア チャネル トランスポートの認証には X 509 証明書が必要です。|  
 |Password|ピア チャネル トランスポートの認証には正しいパスワードが必要です。|  
   
 ### <a name="child-elements"></a>子要素  
- なし  
+
+ None  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<security>](security-of-peertransport.md)|ピア トランスポートのセキュリティ設定を定義します。|  
   
 ## <a name="remarks"></a>解説  
+
  この要素は、の mode 属性 [\<security>](security-of-peertransport.md) がまたはに設定されている場合にのみ設定され `Transport` `TransportWithMessageCredential` ます。  
   
 ## <a name="see-also"></a>関連項目
