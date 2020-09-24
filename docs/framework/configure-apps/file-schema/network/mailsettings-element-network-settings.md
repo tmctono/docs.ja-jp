@@ -9,14 +9,15 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: ce7b8564e4ee5ea73d42259612c077420d36645b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a146874acc21f52507b37b1751c648792e23c8bb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504564"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158852"
 ---
 # <a name="mailsettings-element-network-settings"></a>\<mailSettings> 要素 (ネットワーク設定)
+
 電子メールの送信オプションを設定します。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -32,24 +33,27 @@ ms.locfileid: "84504564"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
-|[\<smtp>要素 (ネットワーク設定)](smtp-element-network-settings.md)|簡易メール転送プロトコルのオプションを構成します。|  
+|[\<smtp> 要素 (ネットワーク設定)](smtp-element-network-settings.md)|簡易メール転送プロトコルのオプションを構成します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[\<system.Net>要素 (ネットワーク設定)](system-net-element-network-settings.md)|.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。|  
+|[\<system.Net> 要素 (ネットワーク設定)](system-net-element-network-settings.md)|.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。|  
   
 ## <a name="example"></a>例  
+
  次の例では、既定のネットワーク資格情報を使用して電子メールを送信するための適切な SMTP パラメーターを指定しています。  
   
 ```xml  

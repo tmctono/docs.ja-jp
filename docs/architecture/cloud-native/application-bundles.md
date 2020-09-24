@@ -2,12 +2,12 @@
 title: クラウド ネイティブ アプリケーション バンドル
 description: Azure 向けのクラウドネイティブ .NET アプリの設計 |クラウドネイティブアプリケーションバンドル
 ms.date: 05/13/2020
-ms.openlocfilehash: fc6ee96078650dccd2ebeb3e65a0a00c4e05ecdb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7f1fcd448f3299a31043bf269717f7b777329c62
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614345"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158124"
 ---
 # <a name="cloud-native-application-bundles"></a>クラウド ネイティブ アプリケーション バンドル
 
@@ -17,11 +17,11 @@ Docker コンテナーは、配置のためのヘルムグラフを使用して�
 
 クラウドネイティブアプリケーションバンドル (CNABs) は、分散アプリケーションをパッケージ化するための仕様を開発するために、Microsoft、Docker、HashiCorp などの多数のコミュニティ志向企業による共同作業です。
 
-この作業は2018年12月に発表されました。そのため、より大きなコミュニティに労力を公開するために、かなりの作業が必要になります。 ただし、既に開いている[仕様](https://github.com/deislabs/cnab-spec)と、[ダッフル](https://duffle.sh/)と呼ばれる参照実装があります。 このツールは、外出先で作成されたもので、Docker と Microsoft の間の共同作業です。
+この作業は2018年12月に発表されました。そのため、より大きなコミュニティに労力を公開するために、かなりの作業が必要になります。 ただし、既に開いている [仕様](https://github.com/deislabs/cnab-spec) と、 [ダッフル](https://duffle.sh/)と呼ばれる参照実装があります。 このツールは、外出先で作成されたもので、Docker と Microsoft の間の共同作業です。
 
 CNABs には、さまざまな種類のインストールテクノロジを含めることができます。 これにより、ヘルムグラフ、Terraform テンプレート、およびその他のプレイブックのようなものを同じパッケージに共存させることができます。 ビルドされると、パッケージは自己完結型でポータブルになります。USB スティックからインストールできます。  パッケージは、要求されたパーティからのものであることを確認するために、暗号署名が行われます。
 
-CNAB の中核となるのは、という名前のファイルです `bundle.json` 。 このファイルでは、バンドルの内容を定義します。このファイルは、Terraform や images などです。 図11-9 では、Terraform を呼び出す CNAB を定義しています。 ただし、Terraform を呼び出すために使用される呼び出しイメージを実際に定義することに注意してください。 パッケージ化されると、 *cnab*ディレクトリに配置されている docker ファイルは、バンドルに含まれる docker イメージに組み込まれます。 バンドル内の Docker コンテナー内に Terraform をインストールすると、バンドルを実行するためにユーザーのコンピューターに Terraform をインストールする必要がなくなります。
+CNAB の中核となるのは、という名前のファイルです `bundle.json` 。 このファイルでは、バンドルの内容を定義します。このファイルは、Terraform や images などです。 図11-9 では、Terraform を呼び出す CNAB を定義しています。 ただし、Terraform を呼び出すために使用される呼び出しイメージを実際に定義することに注意してください。 パッケージ化されると、 *cnab* ディレクトリに配置されている docker ファイルは、バンドルに含まれる docker イメージに組み込まれます。 バンドル内の Docker コンテナー内に Terraform をインストールすると、バンドルを実行するためにユーザーのコンピューターに Terraform をインストールする必要がなくなります。
 
 ```json
 {
@@ -76,14 +76,14 @@ CNAB の中核となるのは、という名前のファイルです `bundle.jso
 
 ## <a name="devops-decisions"></a>DevOps の意思決定
 
-これらの日の DevOps 領域には多くの優れたツールがあり、これを成功させる方法についてはもっとすばらしい書籍や論文もあります。 DevOps の旅を始めるためのお気に入りの書籍は、架空の企業を NoOps から DevOps に変換する、[フェニックスのプロジェクト](https://www.oreilly.com/library/view/the-phoenix-project/9781457191350/)です。 1つは、複雑なクラウドネイティブアプリケーションをデプロイするときに、DevOps が "優れた" ということです。 これは要件であり、プロジェクトの開始時に、およびに対して計画を行う必要があります。
+これらの日の DevOps 領域には多くの優れたツールがあり、これを成功させる方法についてはもっとすばらしい書籍や論文もあります。 DevOps の旅を始めるためのお気に入りの書籍は、架空の企業を NoOps から DevOps に変換する、 [フェニックスのプロジェクト](https://www.oreilly.com/library/view/the-phoenix-project/9781457191350/)です。 1つは、複雑なクラウドネイティブアプリケーションをデプロイするときに、DevOps が "優れた" ということです。 これは要件であり、プロジェクトの開始時に、およびに対して計画を行う必要があります。
 
 ## <a name="references"></a>References
 
 - [Azure DevOps](https://azure.microsoft.com/services/devops/)
-- [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/)
+- [Azure Resource Manager](/azure/azure-resource-manager/management/overview)
 - [Terraform](https://www.terraform.io/)
-- [Azure CLI](https://docs.microsoft.com/cli/azure/)
+- [Azure CLI](/cli/azure/)
 
 >[!div class="step-by-step"]
 >[前へ](infrastructure-as-code.md)

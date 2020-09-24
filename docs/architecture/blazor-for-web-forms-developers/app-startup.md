@@ -4,12 +4,12 @@ description: アプリのスタートアップロジックを定義する方法�
 author: csharpfritz
 ms.author: jefritz
 ms.date: 02/25/2020
-ms.openlocfilehash: ea2ea458011d8351a834aa12db02e5d2bac2dc65
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 883f9a3fbe2d52cb7d0fbc5dfc94ce829a5d2bf3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267699"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158189"
 ---
 # <a name="app-startup"></a>アプリの起動
 
@@ -79,7 +79,7 @@ public class Startup
 
 ASP.NET Core の他の部分と同様に、Startup クラスは依存関係の挿入の原則によって作成されます。  は、 `IConfiguration` 構成時に後でアクセスできるように、パブリックプロパティのコンストラクターと格納されに提供されます。
 
-`ConfigureServices`ASP.NET Core で導入されたメソッドを使用すると、フレームワークの組み込み依存関係挿入コンテナー用にさまざまな ASP.NET Core フレームワークサービスを構成できます。  さまざまな `services.Add*` 方法により、認証、razor ページ、MVC コントローラーのルーティング、SignalR、Blazor などの機能を他の多くのユーザー間で利用できるようにするサービスが追加されます。  このメソッドは web フォームでは必要ありませんでした。 ASPX、.ASCX、.ASHX、ASMX ファイルの解析と処理は、web.config 構成ファイルの ASP.NET を参照することによって定義されています。  ASP.NET Core での依存関係の挿入の詳細については、 [オンラインドキュメント](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)を参照してください。
+`ConfigureServices`ASP.NET Core で導入されたメソッドを使用すると、フレームワークの組み込み依存関係挿入コンテナー用にさまざまな ASP.NET Core フレームワークサービスを構成できます。  さまざまな `services.Add*` 方法により、認証、razor ページ、MVC コントローラーのルーティング、SignalR、Blazor などの機能を他の多くのユーザー間で利用できるようにするサービスが追加されます。  このメソッドは web フォームでは必要ありませんでした。 ASPX、.ASCX、.ASHX、ASMX ファイルの解析と処理は、web.config 構成ファイルの ASP.NET を参照することによって定義されています。  ASP.NET Core での依存関係の挿入の詳細については、 [オンラインドキュメント](/aspnet/core/fundamentals/dependency-injection)を参照してください。
 
 `Configure`メソッドには、ASP.NET Core する HTTP パイプラインの概念が導入されています。  このメソッドでは、アプリケーションに送信されたすべての要求を処理する [ミドルウェア](middleware.md) を上から下に宣言します。 既定の構成では、これらの機能のほとんどが web フォーム構成ファイルに分散されており、参照しやすいように1か所にまとめられています。
 
@@ -103,7 +103,7 @@ Grunt、Gulp、および WebPack のコマンドラインツールとそれに�
 </Target>
 ```
 
-CSS ファイルと JavaScript ファイルを管理するための両方の方法の詳細については、 [ASP.NET Core のドキュメントでバンドルと、静的なアセット](https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification) の縮小に関するドキュメントを参照してください。
+CSS ファイルと JavaScript ファイルを管理するための両方の方法の詳細については、 [ASP.NET Core のドキュメントでバンドルと、静的なアセット](/aspnet/core/client-side/bundling-and-minification) の縮小に関するドキュメントを参照してください。
 
 >[!div class="step-by-step"]
 >[前へ](project-structure.md)

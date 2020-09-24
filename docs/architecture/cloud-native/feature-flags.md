@@ -3,12 +3,12 @@ title: 機能フラグ
 description: Azure アプリ構成を利用するクラウドネイティブアプリケーションで機能フラグを実装する
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: be4ab307069065975dc22d6bd984e12a2ea1457d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ee45c9f187b056887ea6dd3a08da508afca51987
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540466"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158098"
 ---
 # <a name="feature-flags"></a>機能フラグ
 
@@ -43,9 +43,9 @@ if (featureFlag) {
 
 第1章では、「」について説明しました `Twelve-Factor App` 。 構成設定をアプリケーションの実行可能コードから外部に保持することを推奨するガイダンスです。 必要に応じて、外部ソースから設定を読み取ることができます。 機能フラグの構成値は、コードベースから独立している必要もあります。 別のリポジトリに外部化するフラグを設定することにより、アプリケーションを変更して再デプロイしなくてもフラグの状態を変更できます。
 
-[Azure アプリ構成](https://docs.microsoft.com/azure/azure-app-configuration/overview) では、機能フラグの一元的なリポジトリが提供されます。 この機能を使用すると、さまざまな種類の特徴フラグを定義し、その状態を迅速かつ自信を持って操作できます。 アプリ構成クライアントライブラリをアプリケーションに追加して、機能フラグの機能を有効にします。 さまざまなプログラミング言語フレームワークがサポートされています。
+[Azure アプリ構成](/azure/azure-app-configuration/overview) では、機能フラグの一元的なリポジトリが提供されます。 この機能を使用すると、さまざまな種類の特徴フラグを定義し、その状態を迅速かつ自信を持って操作できます。 アプリ構成クライアントライブラリをアプリケーションに追加して、機能フラグの機能を有効にします。 さまざまなプログラミング言語フレームワークがサポートされています。
 
-機能フラグは、 [ASP.NET Core サービス](https://docs.microsoft.com/azure/azure-app-configuration/use-feature-flags-dotnet-core)に簡単に実装できます。 .NET 機能管理ライブラリとアプリ構成プロバイダーをインストールすると、宣言によって機能フラグをコードに追加できます。 属性を有効にすると、 `FeatureGate` コードベースで if ステートメントを手動で作成する必要がなくなります。
+機能フラグは、 [ASP.NET Core サービス](/azure/azure-app-configuration/use-feature-flags-dotnet-core)に簡単に実装できます。 .NET 機能管理ライブラリとアプリ構成プロバイダーをインストールすると、宣言によって機能フラグをコードに追加できます。 属性を有効にすると、 `FeatureGate` コードベースで if ステートメントを手動で作成する必要がなくなります。
 
 Startup クラスで構成すると、コントローラー、アクション、またはミドルウェアレベルで機能フラグ機能を追加できます。 図10-12 は、コントローラーとアクションの実装を示しています。
 

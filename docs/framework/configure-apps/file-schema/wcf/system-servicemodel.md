@@ -9,14 +9,15 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: 567cbd2cc07ee82e795daa067b9034b2b8dc1974
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 44966ed9ee3abb3d1babdf09dd44f087376ada55
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85243959"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158683"
 ---
 # \<system.serviceModel>
+
 この構成セクションには、すべての Windows Communication Foundation (WCF) ServiceModel 構成要素が含まれています。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -56,9 +57,11 @@ ms.locfileid: "85243959"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  None  
   
 ### <a name="child-elements"></a>子要素  
@@ -85,7 +88,8 @@ ms.locfileid: "85243959"
 |-------------|-----------------|  
 |\<configuration>|.NET 構成ファイルのすべての構成要素のルート要素。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
+
  WCF では、他の製品の構成セクションに要素を追加しません。  
   
  WCF サービスは、構成ファイルのセクションで定義されてい `services` ます。 アセンブリには、任意の数のサービスを含めることができます。 各サービスには、独自の `service` 設定セクションがあります。 セクションとその内容は、サービス コントラクト、動作、および特定のサービスのエンドポイントを定義します。  
@@ -99,6 +103,7 @@ ms.locfileid: "85243959"
  バインディングは、`name` 属性と `bindingConfiguration` 属性の組み合わせによってエンドポイントにリンクされます。 `binding` 属性は、バインディングが定義されているセクションで定義します。 `bindingConfiguration` 属性は、バインディング セクション内で使用される構成済みバインディングを定義します。 バインディング セクションでは、複数の構成済みバインディングを定義できます。  
   
 ## <a name="example"></a>例  
+
  これは、WCF 構成ファイルの例です。  
   
 ```xml  

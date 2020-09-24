@@ -5,14 +5,15 @@ helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-ms.openlocfilehash: 11592b055641c0fa2d2b968547dcc5aa40c94600
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 506e7873fab8e41fce121587c22d85600a8b1760
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541785"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158774"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence> 要素
+
 ランタイムが <xref:System.Security.Policy.Publisher> コードアクセスセキュリティ (CAS) の証拠を作成するかどうかを指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,6 +28,7 @@ ms.locfileid: "90541785"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -37,12 +39,13 @@ ms.locfileid: "90541785"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|[値]|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |`false`|は <xref:System.Security.Policy.Publisher> 証拠を作成しません。|  
 |`true`|<xref:System.Security.Policy.Publisher>証拠を作成します。 これは既定値です。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -52,7 +55,7 @@ ms.locfileid: "90541785"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > .NET Framework 4 以降では、この要素はアセンブリの読み込み時間に影響しません。 詳細については、「セキュリティの [変更](/previous-versions/dotnet/framework/security/security-changes)」の「セキュリティポリシーの簡略化」を参照してください。  
@@ -63,9 +66,11 @@ ms.locfileid: "90541785"
 > サービスでは、要素を使用して起動時のパフォーマンスを向上させることをお勧めし `<generatePublisherEvidence>` ます。  また、この要素を使用すると、タイムアウトを発生させたり、サービスの開始をキャンセルしたりする可能性がある遅延を回避することもできます。  
   
 ## <a name="configuration-file"></a>構成ファイル  
+
  この要素は、アプリケーション構成ファイルでのみ使用できます。  
   
 ## <a name="example"></a>例  
+
  次の例は、要素を使用して、 `<generatePublisherEvidence>` アプリケーションの CAS 発行者ポリシーのチェックを無効にする方法を示しています。  
   
 ```xml  

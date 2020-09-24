@@ -2,14 +2,15 @@
 title: <privacyNoticeAt>
 ms.date: 03/30/2017
 ms.assetid: 4cc96942-4eb9-4241-b2fd-45aa239915e8
-ms.openlocfilehash: 2ff70d3a8636970434582e417e4549ab6b433fc1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5e772e23b21c566c906be854e33b924698dcf3e0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738764"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158709"
 ---
 # \<privacyNoticeAt>
+
 `wsFederationHttp` バインディングで使用されるプライバシーに関する声明を指定する構成要素を表します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -26,25 +27,28 @@ ms.locfileid: "73738764"
                version="Integer" />
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>種類  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |`url`|プライバシーに関する声明の場所を示す URI を指定する文字列。|  
 |`version`|このプライバシーに関する声明のバージョンを指定する整数。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|カスタム バインドのすべてのバインド機能を定義します。|  
   

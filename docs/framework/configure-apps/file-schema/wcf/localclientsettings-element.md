@@ -2,14 +2,15 @@
 title: <localClientSettings> 要素
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
-ms.openlocfilehash: 3ec0394943c030a8866087c98a912682a2a2112e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 19eaea71fdaad1b945524cca5cf15634e0b0fa14
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400321"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158735"
 ---
 # <a name="localclientsettings-element"></a>\<localClientSettings> 要素
+
 このバインディングのローカル クライアントのセキュリティ設定を指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -39,15 +40,16 @@ ms.locfileid: "70400321"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
-|`cacheCookies`|クッキーのキャッシュが有効かどうかを示すブール値。 既定値は、`false` です。|  
+|`cacheCookies`|クッキーのキャッシュが有効かどうかを示すブール値。 既定では、 `false`です。|  
 |`cookieRenewalThresholdPercentage`|更新できるクッキーの最大パーセンテージを指定する整数。 この値は、0 ～ 100 (0 と 100を含む) のいずれかです。 既定値は 90 です。|  
-|`detectReplays`|チャネルに対するリプレイ攻撃を検出し、自動的に処理するかどうかを指定するブール値です。 既定値は、`false` です。|  
+|`detectReplays`|チャネルに対するリプレイ攻撃を検出し、自動的に処理するかどうかを指定するブール値です。 既定では、 `false`です。|  
 |`maxClockSkew`|通信している双方の 2 つのシステム クロックのずれの最長時間を指定する <xref:System.TimeSpan>。 既定値は、"00:05:00" です。<br /><br /> この値が既定値に設定されている場合、受信側はメッセージが受信された時間より前後最大 5 分間の送信時間タイム スタンプを持つメッセージを受け入れます。 送信時間テストにパスしないメッセージは拒否されます。 この設定は、`replayWindow` 属性と組み合わせて使用します。|  
 |`maxCookieCachingTime`|クッキーの最長有効期間を指定する <xref:System.TimeSpan>。 デフォルト値は "10675199.02:48:05.4775807" です。|  
 |`reconnectTransportOnFailure`|WS-ReliableMessaging を使用した接続が、トランスポート エラーの後再接続を試みるかどうかを指定するブール値です。 既定値は `true` です。これは、再接続の試行が無限に行われることを意味します。 循環は非アクティブ タイムアウトにより破棄され、再接続できない場合はチャネルが例外をスローします。|  
@@ -58,16 +60,18 @@ ms.locfileid: "70400321"
 |`timestampValidityDuration`|タイムスタンプの有効期間を指定する正の <xref:System.TimeSpan>。 既定値は "00:15:00" です。|  
   
 ### <a name="child-elements"></a>子要素  
- なし  
+
+ None  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<security>](security-of-custombinding.md)|カスタム バインドのセキュリティ オプションを指定します。|  
 |[\<secureConversationBootstrap>](secureconversationbootstrap.md)|セキュリティで保護されたメッセージ交換サービスの開始に使用される既定値を指定します。|  
   
 ## <a name="remarks"></a>解説  
+
  この設定は、サービスのセキュリティ ポリシーから派生する設定ではないという点でローカルです。  
   
 ## <a name="see-also"></a>関連項目

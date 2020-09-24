@@ -2,14 +2,15 @@
 title: <security> の <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
-ms.openlocfilehash: b66b5228cab9dbc35502a13a2d0fe56ce4c6a18d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9f984759fb52242bf8030a101b567c14627dd314
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738585"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158696"
 ---
 # <a name="security-of-wshttpbinding"></a>\<security> の \<wsHttpBinding>
+
 のセキュリティ機能を表し [\<wsHttpBinding>](wshttpbinding.md) ます。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,37 +38,39 @@ ms.locfileid: "73738585"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
-|mode|Optional. 適用するセキュリティの種類を指定します。 既定値は、`Message` です。<br />-この属性の型は <xref:System.ServiceModel.SecurityMode> です。|  
+|mode|Optional. 適用するセキュリティの種類を指定します。 既定では、 `Message`です。<br />-この属性の型は <xref:System.ServiceModel.SecurityMode> です。|  
   
 ## <a name="mode-attribute"></a>Mode 属性  
   
 |値|説明|  
 |-----------|-----------------|  
-|なし|セキュリティを無効にします。|  
+|None|セキュリティを無効にします。|  
 |トランスポート|セキュリティは、HTTPS を使用して確保されます。 サービスは、SSL 証明書を使用して構成する必要があります。 メッセージは、HTTPS を使用して完全にセキュリティで保護され、サービスの SSL 証明書を使用するクライアントによって認証されます。 クライアント認証は、`ClientCredentials` 属性を使用して制御されます。 の [\<transport>](transport-of-wshttpbinding.md) 。|  
 |Message|セキュリティは、SOAP メッセージ セキュリティを使用して確保されます。 既定では、SOAP 本文は暗号化および署名されます。 このモードは、サービス資格情報をクライアントの帯域外で使用可能にするかどうか、使用するアルゴリズム スイート、Security.Message プロパティを使用してメッセージ本文に適用する保護レベルなど、さまざまな機能を提供します。 クライアント認証はセッションごとに 1 回実行され、認証の結果はセッションの存続中にキャッシュされます。|  
 |TransportWithMessageCredential|このモードでは、HTTPS は、整合性、機密性、およびサーバー認証を提供し、SOAP メッセージ セキュリティはクライアント認証を提供します。 既定では、クライアント認証はセッションごとに 1 回実行され、認証の結果はセッションの存続中にキャッシュされます。|  
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<transport>](transport-of-wshttpbinding.md)|トランスポートのセキュリティ設定を定義します。 この要素は、<xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> 型に対応しています。|  
 |[\<message>](message-of-wshttpbinding.md)|メッセージのセキュリティ設定を定義します。 この要素は、<xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement> 型に対応しています。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<wsHttpBinding>](wshttpbinding.md)|HTTP トランスポート アプリケーションのセキュリティで保護されたバインド。|  
   
 ## <a name="remarks"></a>解説  
+
  WSHttpBinding クラスは、WS-* 仕様を実装するサービスと相互運用するようにデザインされています。 このバインディングのトランスポート セキュリティは、SSL (Secure Sockets Layer) over HTTP または HTTPS です。  
   
 ## <a name="see-also"></a>関連項目
