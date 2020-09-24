@@ -2,14 +2,15 @@
 title: <endpoint> 要素
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: fb9d3bf9b5f1a742abcc70d78af026c179ec4c4d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: befebc090900576b1e0f7ca679e1f5f5cd15af9a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855383"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183807"
 ---
 # <a name="endpoint-element"></a>\<endpoint> 要素
+
 サービスの公開に使用されるサービス エンドポイントのバインディング、コントラクト、およびアドレスのプロパティを指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,6 +38,7 @@ ms.locfileid: "70855383"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -52,25 +54,26 @@ ms.locfileid: "70855383"
 |コントラクト (contract)|このエンドポイントが公開するコントラクトを示す文字列。 アセンブリは、コントラクト型を実装する必要があります。 サービス実装が単一のコントラクトの型を実装する場合は、このプロパティを省略できます。 既定値は空の文字列です。|  
 |endpointConfiguration|この標準エンドポイントの追加の構成情報を参照する `kind` 属性によって設定される標準エンドポイントの名前を指定する文字列。 同じ名前を `<standardEndpoints>` セクションに定義する必要があります。|  
 |isSystemEndpoint|インフラストラクチャ エンドポイントであるかどうかを指定するブール値。|  
-|kind|適用する標準エンドポイントの種類を指定する文字列。 この型は、セクションまたは machine.config に登録する必要があり `<extensions>` ます。何も指定されていない場合は、共通のサービスエンドポイントが作成されます。|  
+|kind|適用する標準エンドポイントの種類を指定する文字列。 `<extensions>` セクションまたは machine.config に種類を登録する必要があります。何も指定していない場合は、共通のサービス エンドポイントが作成されます。|  
 |listenUriMode|リッスンするサービスに提供される `ListenUri` をトランスポートが処理する方法を指定します。 有効な値は、次のとおりです。<br /><br /> -Explicit<br />-一意<br /><br /> 既定値は Explicit です。|  
 |listenUri|サービス エンドポイントがリッスンする URI を指定する文字列。 既定値は空の文字列です。|  
 |name|省略可能な属性です。 サービス エンドポイントの名前を指定する文字列。 既定値は、バインディング名とコントラクトの説明の名前を連結した値です。 サービスには複数のエンドポイントが存在する場合があるため、エンドポイントの `name` 属性はサービスの名前とは異なります。|  
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<headers>](headers.md)|アドレス ヘッダーのコレクション。|  
 |[\<identity>](identity.md)|メッセージを交換する他のエンドポイントによるエンドポイントの認証を可能にする ID です。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<service>](service.md)|クライアントが接続可能なエンドポイントの一覧を定義する設定セクションです。|  
   
 ## <a name="example"></a>例  
+
  これはサービス エンドポイントの構成の例です。  
   
 ```xml  

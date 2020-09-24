@@ -2,12 +2,12 @@
 title: クラウドネイティブアプリ用のサーバー
 description: Azure 向けのクラウドネイティブ .NET アプリの設計 |IdentityServer
 ms.date: 05/13/2020
-ms.openlocfilehash: 2128001f0d25b1edd795dd9676e0d76018c1fa3a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: bdf193aac348b54f2ebf5b537beef5d61a1d5a1e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144371"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163831"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>クラウドネイティブアプリケーション用のサーバー
 
@@ -29,7 +29,7 @@ ms.locfileid: "84144371"
 
 これらの各シナリオでは、公開されている機能を承認されていない使用から保護する必要があります。 これは、少なくとも、リソースの要求を行うユーザーまたはプリンシパルを認証する必要があります。 この認証では、SAML2p、WS-ATOMICTRANSACTION、OpenID Connect など、いくつかの一般的なプロトコルのいずれかを使用できます。 Api との通信は、通常、OAuth2 プロトコルとセキュリティトークンのサポートを使用します。 これらの重要なクロスカットセキュリティの問題とその実装の詳細をアプリケーション自体から分離することで、一貫性が確保され、セキュリティと保守性が向上します。 このような懸念を、独自の製品にアウトソーシングすると、すべてのアプリケーションがこれらの問題を解決するのに役立ちます。
 
-サーバーは、ASP.NET Core アプリケーション内で実行されるミドルウェアを提供し、OpenID Connect と OAuth2 のサポートを追加します (「[サポートされる仕様](https://docs.identityserver.io/en/latest/intro/specs.html)」を参照してください)。 組織は、すべてのトークンベースのセキュリティプロトコルの STS として機能するために、ユーザーが独自の ASP.NET Core アプリを作成します。 サーバーミドルウェアは、次のような標準的な機能をサポートするためにエンドポイントを公開します。
+サーバーは、ASP.NET Core アプリケーション内で実行されるミドルウェアを提供し、OpenID Connect と OAuth2 のサポートを追加します (「 [サポートされる仕様](https://docs.identityserver.io/en/latest/intro/specs.html)」を参照してください)。 組織は、すべてのトークンベースのセキュリティプロトコルの STS として機能するために、ユーザーが独自の ASP.NET Core アプリを作成します。 サーバーミドルウェアは、次のような標準的な機能をサポートするためにエンドポイントを公開します。
 
 - 承認 (エンドユーザーの認証)
 - Token (プログラムによるトークンの要求)
@@ -40,9 +40,9 @@ ms.locfileid: "84144371"
 - 失効 (トークンの失効)
 - セッションの終了 (すべてのアプリでのシングルサインアウトのトリガー)
 
-## <a name="getting-started"></a>はじめに
+## <a name="getting-started"></a>作業の開始
 
-IdentityServer4 はオープンソースであり、自由に使用できます。 NuGet パッケージを使用して、アプリケーションに追加することができます。 メインパッケージは、400万回以上ダウンロードされた[IdentityServer4](https://www.nuget.org/packages/IdentityServer4/)です。 基本パッケージには、ユーザーインターフェイスコードは含まれず、メモリ構成でのみサポートされます。 データベースで使用するには、Entity Framework Core を使用して、ユーザーの構成データとオペレーションデータを格納する[IdentityServer4](https://www.nuget.org/packages/IdentityServer4.EntityFramework)のようなデータプロバイダーも必要になります。 ユーザーインターフェイスでは、[クイックスタート UI リポジトリ](https://github.com/IdentityServer/IdentityServer4.Quickstart.UI)から ASP.NET Core MVC アプリケーションにファイルをコピーして、ユーザーのサインインとサインアウトのサポートを追加することができます。
+IdentityServer4 はオープンソースであり、自由に使用できます。 NuGet パッケージを使用して、アプリケーションに追加することができます。 メインパッケージは、400万回以上ダウンロードされた [IdentityServer4](https://www.nuget.org/packages/IdentityServer4/) です。 基本パッケージには、ユーザーインターフェイスコードは含まれず、メモリ構成でのみサポートされます。 データベースで使用するには、Entity Framework Core を使用して、ユーザーの構成データとオペレーションデータを格納する [IdentityServer4](https://www.nuget.org/packages/IdentityServer4.EntityFramework) のようなデータプロバイダーも必要になります。 ユーザーインターフェイスでは、 [クイックスタート UI リポジトリ](https://github.com/IdentityServer/IdentityServer4.Quickstart.UI) から ASP.NET Core MVC アプリケーションにファイルをコピーして、ユーザーのサインインとサインアウトのサポートを追加することができます。
 
 ## <a name="configuration"></a>構成
 
@@ -95,12 +95,12 @@ public class Startup
 
 ## <a name="javascript-clients"></a>JavaScript クライアント
 
-多くのクラウドネイティブアプリケーションでは、フロントエンドでサーバー側 Api とリッチクライアントシングルページアプリケーション (spa) を利用しています。 ユーザーは、NPM を使用して[JavaScript クライアント](https://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)() を提供し `oidc-client.js` ます。これを spas に追加することで、web api のサインイン、サインアウト、トークンベースの認証に使用できるようになります。
+多くのクラウドネイティブアプリケーションでは、フロントエンドでサーバー側 Api とリッチクライアントシングルページアプリケーション (spa) を利用しています。 ユーザーは、NPM を使用して [JavaScript クライアント](https://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html) () を提供し `oidc-client.js` ます。これを spas に追加することで、web api のサインイン、サインアウト、トークンベースの認証に使用できるようになります。
 
-## <a name="references"></a>リファレンス
+## <a name="references"></a>References
 
 - [サーバーのドキュメント](https://docs.identityserver.io/en/latest/)
-- [アプリケーションの種類](https://docs.microsoft.com/azure/active-directory/develop/app-types)
+- [アプリケーションの種類](/azure/active-directory/develop/app-types)
 - [JavaScript OIDC クライアント](https://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
 
 >[!div class="step-by-step"]

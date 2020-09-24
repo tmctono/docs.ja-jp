@@ -3,12 +3,12 @@ title: クラウドネイティブアプリケーションの Elasticsearch
 description: クラウドネイティブアプリケーションにエラスティック検索機能を追加する方法について説明します。
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 70d1925d6b8c7bbe515ee4f178513dc61212ebce
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: fa46f3387eecb3fccd63fdea10c11e92923ae862
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271803"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155381"
 ---
 # <a name="elasticsearch-in-a-cloud-native-app"></a>クラウドネイティブアプリでの Elasticsearch
 
@@ -36,25 +36,25 @@ Microsoft Azure Marketplace から、開発者は、Azure で Elasticsearch ク�
 
 この章では、クラウドネイティブシステムのデータについて詳しく説明します。 クラウドネイティブシステムのデータストレージパターンを使用してモノリシックアプリケーションのデータストレージを比較することから始めました。 クラウドネイティブシステムに実装されているデータパターンを見てきました。これには、クロスサービスクエリ、分散トランザクション、および大量システムを扱うためのパターンが含まれます。 NoSQL データを使用して SQL を比較しています。 Microsoft の中心とオープンソースの両方のオプションを含む、Azure で利用可能なデータストレージオプションについて説明しました。 最後に、クラウドネイティブアプリケーションでのキャッシュと Elasticsearch について説明しました。
 
-### <a name="references"></a>参考資料
+### <a name="references"></a>References
 
-- [コマンドクエリ責務分離 (CQRS) パターン](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
+- [コマンドクエリ責務分離 (CQRS) パターン](/azure/architecture/patterns/cqrs)
 
-- [イベント ソーシング パターン](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
+- [イベント ソーシング パターン](/azure/architecture/patterns/event-sourcing)
 
 - [定理で RDBMS パーティショントレラントが使用できないのはなぜですか。](https://stackoverflow.com/questions/36404765/why-isnt-rdbms-partition-tolerant-in-cap-theorem-and-why-is-it-available)
 
-- [具体化されたビュー](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
+- [具体化されたビュー](/azure/architecture/patterns/materialized-view)
 
 - [オープンソースデータベースについて理解しておく必要があること](https://www.ibm.com/blogs/systems/all-you-really-need-to-know-about-open-source-databases/)
 
-- [補正トランザクション パターン](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
+- [補正トランザクション パターン](/azure/architecture/patterns/compensating-transaction)
 
 - [Saga パターン](https://microservices.io/patterns/data/saga.html)
 
 - [Saga Patterns |マイクロサービスを使用してビジネストランザクションを実装する方法](https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/)
 
-- [補正トランザクション パターン](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
+- [補正トランザクション パターン](/azure/architecture/patterns/compensating-transaction)
 
 - [9 ~ ボールの背後: Cosmos DB の一貫性レベルについて説明します。](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)
 

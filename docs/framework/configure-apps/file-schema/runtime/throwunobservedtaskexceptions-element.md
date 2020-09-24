@@ -8,14 +8,15 @@ helpviewer_keywords:
 - ThrowUnobservedTaskExceptions element
 - <ThrowUnobservedTaskExceptions> element
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
-ms.openlocfilehash: de5a686bcbd88fc52173b488103f033575623d62
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 012c2e70e66015bc317606a7eea07812b5df26e7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153816"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183924"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions> 要素
+
 タスクがハンドルされない例外によって実行中のプロセスを終了するかどうかを指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,6 +31,7 @@ ms.locfileid: "79153816"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -40,23 +42,25 @@ ms.locfileid: "79153816"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
-|`false`|は、未処理のタスク例外の実行中のプロセスを終了しません。 既定値です。|  
+|`false`|は、未処理のタスク例外の実行中のプロセスを終了しません。 これは既定値です。|  
 |`true`|未処理のタスク例外の実行中のプロセスを終了します。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|  
 |||  
   
 ## <a name="remarks"></a>解説  
+
  に関連付けられている例外がまだ <xref:System.Threading.Tasks.Task> 確認されていない場合、操作がなく、親がアタッチされておらず、プロパティが読み取られていない場合 <xref:System.Threading.Tasks.Task.Wait%2A> <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> 、タスクの例外は監視されと見なされます。  
   
  .NET Framework 4 では、監視され例外が発生したが <xref:System.Threading.Tasks.Task> ガベージコレクションされた場合、ファイナライザーは例外をスローしてプロセスを終了します。 プロセスの終了は、ガベージコレクションと終了処理のタイミングによって決まります。  
@@ -72,6 +76,7 @@ ms.locfileid: "79153816"
 - レジストリの DWORD 値 ThrowUnobservedTaskExceptions = 1 を HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft に設定し \\ ます。NETFramework キー。  
   
 ## <a name="example"></a>例  
+
  次の例では、アプリケーション構成ファイルを使用して、タスクで例外のスローを有効にする方法を示します。  
   
 ```xml  
@@ -83,6 +88,7 @@ ms.locfileid: "79153816"
 ```  
   
 ## <a name="example"></a>例  
+
  次の例では、タスクから監視され例外がスローされる方法を示します。 コードを正常に動作させるには、リリースされたプログラムとして実行する必要があります。  
   
  [!code-csharp[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/throwunobservedtaskexceptions/cs/program.cs#1)]
