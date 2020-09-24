@@ -2,14 +2,15 @@
 title: <security> の <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
-ms.openlocfilehash: 4969c041678bbf3490975bc0ec53507b6cf762bb
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7398cd538bb240e78413575f7c28abe7f797d05c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738608"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162206"
 ---
 # <a name="security-of-wsdualhttpbinding"></a>\<security> の \<wsDualHttpBinding>
+
 のセキュリティ機能を定義 [\<wsDualHttpBinding>](wsdualhttpbinding.md) します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,11 +31,12 @@ ms.locfileid: "73738608"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |mode|Optional. 適用するセキュリティの種類を指定します。 既定値は `Message` です。 この属性は <xref:System.ServiceModel.WSDualHttpSecurityMode> 型です。|  
   
@@ -42,22 +44,23 @@ ms.locfileid: "73738608"
   
 |値|説明|  
 |-----------|-----------------|  
-|なし|セキュリティを無効にします。|  
+|None|セキュリティを無効にします。|  
 |Message|セキュリティは、SOAP メッセージ セキュリティを使用して確保されます。|  
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<message>](message-of-wsdualhttpbinding.md)|メッセージ レベル セキュリティの設定を定義します。 この要素は <xref:System.ServiceModel.MessageSecurityOverHttp> 型です。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|のすべてのバインディング機能を定義 [\<wsDualHttpBinding>](wsdualhttpbinding.md) します。|  
   
 ## <a name="remarks"></a>解説  
+
  二重バインディングでは、クライアントの IP アドレスをサービスに公開します。 クライアントは、セキュリティを使用して信頼するサービスに対して接続のみを可能にする必要があります。  
   
 ## <a name="see-also"></a>関連項目
