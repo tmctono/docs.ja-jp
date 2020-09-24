@@ -2,12 +2,12 @@
 title: Docker アプリの開発ワークフロー
 description: Docker ベースのアプリケーションを開発するためのワークフローの詳細を理解します。 まず、段階的に見ていき、Dockerfile の最適化について詳しく確認し、最終的には Visual Studio を使用する際に利用できる簡略化されたワークフローを理解します。
 ms.date: 01/30/2020
-ms.openlocfilehash: 98dc931e10d5e1a3265ebd6f4e1919a6416e9b27
-ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
+ms.openlocfilehash: d32134a10fb9b56e874bbc6218ca2c4d822adb90
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90022936"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678850"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker アプリの開発ワークフロー
 
@@ -103,7 +103,7 @@ Visual Studio と Docker 用のツールでは、このタスクはマウスを�
 
 次の例では、ASP.NET Core コンテナー用のサンプルの Dockerfile を示しています。
 
-```Dockerfile
+```dockerfile
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 ARG source
 WORKDIR /app
@@ -173,7 +173,7 @@ Dockerfile はバッチ スクリプトに似ています。 コマンド ライ
 
 初期の Dockerfile は、次のようになります。
 
-```Dockerfile
+```dockerfile
  1  FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
  2  WORKDIR /app
  3  EXPOSE 80
@@ -244,7 +244,7 @@ Dockerfile はバッチ スクリプトに似ています。 コマンド ライ
 
 次は、**ビルド** ステージについて詳しく見ていきます。5 行目から 6 行目まではほとんど同じですが、eShopOnContainers からのすべてのサービスについては、7 行目から 17 行目までが異なります。したがって、毎回実行する必要があります。しかし、7 行目から 16 行目を次のように変更したとします。
 
-```Dockerfile
+```dockerfile
 COPY . .
 ```
 
@@ -256,7 +256,7 @@ COPY . .
 
 次の大幅な最適化は、17 行目で実行される `restore` コマンドに関係します。これも、eShopOnContainers のすべてサービスについて異なります。 その行を次のように変更したとします。
 
-```Dockerfile
+```dockerfile
 RUN dotnet restore
 ```
 
@@ -276,7 +276,7 @@ RUN dotnet restore
 
 結果のファイルは次のようになります。
 
-```Dockerfile
+```dockerfile
  1  FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
  2  WORKDIR /app
  3  EXPOSE 80
@@ -496,7 +496,7 @@ Visual Studio 2019 を使用したマルチコンテナー アプリケーショ
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **リモート Docker ホストに ASP.NET コンテナーを配置する** \
-  <https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
+  <https://docs.microsoft.com/visualstudio/containers/hosting-web-apps-in-docker>
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>オーケストレーターを使用したテストと展開に関する注意事項
 
@@ -559,7 +559,7 @@ Docker アプリの開発プロセス:1 - アプリをコーディングする�
 
 [Windows コンテナー](https://docs.microsoft.com/virtualization/windowscontainers/about/index)は、既存の Windows アプリケーションを Docker イメージに変換して、Docker エコシステムの残りと同じツールで展開できます。 Windows コンテナーを使用するには、次の例のように、Dockerfile で PowerShell コマンドを実行します。
 
-```Dockerfile
+```dockerfile
 FROM mcr.microsoft.com/windows/servercore
 LABEL Description="IIS" Vendor="Microsoft" Version="10"
 RUN powershell -Command Add-WindowsFeature Web-Server
@@ -568,7 +568,7 @@ CMD [ "ping", "localhost", "-t" ]
 
 この場合は、Windows Server Core 基本イメージ (FROM 設定) を使用して、PowerShell コマンド (RUN 設定) で IIS をインストールしています。 同様に、PowerShell コマンドを使用して、ASP.NET 4.x、.NET 4.6、またはその他の任意の Windows ソフトウェアなどの追加コンポーネントを設定することもできます。 たとえば、Dockerfile の次のコマンドでは、ASP.NET 4.5 が設定されます。
 
-```Dockerfile
+```dockerfile
 RUN powershell add-windowsfeature web-asp-net45
 ```
 

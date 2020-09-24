@@ -4,12 +4,12 @@ description: Fedora に .NET Core SDK と .NET Core ランタイムをインス�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: c90c08eefa074fa139642a268f879af79d7280da
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 89a55ad2e9fd66d277d0c3eb6a07bd402574bd0a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619482"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538515"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-fedora"></a>Fedora に .NET Core SDK または .NET Core ランタイムをインストールする
 
@@ -118,6 +118,10 @@ sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com
 ## <a name="troubleshoot-the-package-manager"></a>パッケージ マネージャーのトラブルシューティング
 
 このセクションでは、パッケージ マネージャーを使用して .NET Core をインストールするときに発生する可能性のある一般的なエラーについて説明します。
+
+### <a name="unable-to-find-package"></a>パッケージが見つからない
+
+[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
 ### <a name="failed-to-fetch"></a>フェッチできない
 

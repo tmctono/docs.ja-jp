@@ -2,12 +2,12 @@
 title: CQRS マイクロサービスに読み取り/クエリを実装する
 description: コンテナー化された .NET アプリケーション用の .NET マイクロサービス アーキテクチャ | Dapper を使用した eShopOnContainers でのオーダリング マイクロサービスの CQRS のクエリ側の実装を理解する。
 ms.date: 10/08/2018
-ms.openlocfilehash: 41932122326cf4c49b9c9e2c344d2ac17da7466b
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: e6ea7b4b7b37df9ee972319f597ab045bf3bd215
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89358896"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678804"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>CQRS マイクロサービスに読み取り/クエリを実装する
 
@@ -173,7 +173,7 @@ public class OrderSummary
 }
 ```
 
-これが、長期的に見ると、明示的な戻り値の型が動的な型より適しているもう 1 つの理由です。 `ProducesResponseType` 属性を使用する場合、200、400 などの考えられる HTTP エラー/コードで予期できる結果を指定することもできます。
+これが、長期的に見ると、明示的な戻り値の型が動的な型より適しているもう 1 つの理由です。 `ProducesResponseType` 属性を使用する場合は、200、400 などの考えられる HTTP エラー/コードで予期できる結果を指定することもできます。
 
 次のイメージで、Swagger UI にどのように ResponseType 情報が表示されるかを確認できます。
 

@@ -3,25 +3,25 @@ title: DisposeAsync メソッドの実装
 description: DisposeAsync メソッドと DisposeAsyncCore メソッドを実装し、非同期リソース クリーンアップを実行する方法について説明します。
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/10/2020
+ms.date: 09/16/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 88adf9e484baa0e65e2ff093b4649cf35b8c86dc
-ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
+ms.openlocfilehash: 6ddfd860571d883e20fdb18985fe2bc2d9477dec
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90022910"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720284"
 ---
 # <a name="implement-a-disposeasync-method"></a>DisposeAsync メソッドの実装
 
 <xref:System.IAsyncDisposable?displayProperty=nameWithType> インターフェイスが、C# 8.0 の一部として導入されました。 <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> メソッドは、[Dispose メソッドの実装](implementing-dispose.md)と同様、リソースのクリーンアップを実行する必要がある場合に実装します。 両者の重要な違いの 1 つは、この実装により、非同期のクリーンアップ操作が可能になることです。 <xref:System.IAsyncDisposable.DisposeAsync> は、非同期の破棄操作を表す <xref:System.Threading.Tasks.ValueTask> を返します。
 
-通常、<xref:System.IAsyncDisposable> インターフェイスを実装するとき、そのクラスでは <xref:System.IDisposable> インターフェイスも実装します。 推奨される <xref:System.IAsyncDisposable> インターフェイスの実装パターンは、同期の破棄か非同期の破棄のために準備をすることです。 破棄パターンの実装に関するガイダンスのすべての説明は、非同期の実装にも適用されます。 この記事では、読者が [Dispose メソッドの実装](implementing-dispose.md)方法について既に理解していることを前提としています。
+通常、<xref:System.IAsyncDisposable> インターフェイスを実装するとき、そのクラスでは <xref:System.IDisposable> インターフェイスも実装します。 <xref:System.IAsyncDisposable> インターフェイスの推奨される実装パターンは、同期の破棄か非同期の破棄のために準備をすることです。 破棄パターンの実装に関するガイダンスのすべての説明は、非同期の実装にも適用されます。 この記事では、読者が [Dispose メソッドの実装](implementing-dispose.md)方法について既に理解していることを前提としています。
 
 ## <a name="disposeasync-and-disposeasynccore"></a>DisposeAsync() および DisposeAsyncCore()
 
@@ -54,7 +54,7 @@ public async ValueTask DisposeAsync()
 ```
 
 > [!NOTE]
-> 非同期の破棄パターンでの、その破棄パターンとの主な違いの 1 つは、<xref:System.IAsyncDisposable.DisposeAsync> から `Dispose(bool)` オーバーロード メソッドへの呼び出しで、`false` が引数として渡されることです。 一方、<xref:System.IDisposable.Dispose?displayProperty=nameWithType> メソッドを実装する場合は、`true` が渡されます。 これにより、同期の破棄パターンとの機能の等価性が確保されるほか、ファイナライザーのコード パスが引き続き呼び出されるようにできます。 言い換えると、`DisposeAsyncCore()` メソッドでは管理対象リソースが非同期的に破棄されるため、同期的にも破棄される必要はありません。 したがって、`Dispose(true)` ではなく `Dispose(false)` を呼び出します。
+> 非同期の破棄パターンでの、その破棄パターンとの主な違いの 1 つは、<xref:System.IAsyncDisposable.DisposeAsync> から `Dispose(bool)` オーバーロード メソッドへの呼び出しで、`false` が引数として渡されることです。 一方、<xref:System.IDisposable.Dispose?displayProperty=nameWithType> メソッドを実装する場合は、代わりに `true` が渡されます。 これにより、同期の破棄パターンとの機能の等価性が確保されるほか、ファイナライザーのコード パスが引き続き呼び出されるようにできます。 言い換えると、`DisposeAsyncCore()` メソッドでは管理対象リソースが非同期的に破棄されるため、同期的にも破棄される必要はありません。 したがって、`Dispose(true)` ではなく `Dispose(false)` を呼び出します。
 
 ### <a name="the-disposeasynccore-method"></a>DisposeAsyncCore() メソッド
 
@@ -77,7 +77,7 @@ public async ValueTask DisposeAsync()
 
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/dispose-and-disposeasync.cs":::
 
-<xref:System.IDisposable.Dispose?displayProperty=nameWithType> と <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> の実装は、どちらも単純な定型コードです。 `Dispose(bool)` メソッドと `DisposeAsyncCore()` メソッドは、`_disposed` が `true` かどうかの確認から始まり、`false` の場合にのみ実行されます。
+<xref:System.IDisposable.Dispose?displayProperty=nameWithType> と <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> の実装は、どちらも単純な定型コードです。
 
 `Dispose(bool)` オーバーロード メソッドでは、<xref:System.IDisposable> インスタンスは、`null` でない場合に条件により破棄されます。 <xref:System.IAsyncDisposable> インスタンスは <xref:System.IDisposable> としてキャストされ、これも `null` でない場合は破棄されます。 その後、両方のインスタンスは `null` に割り当てられます。
 

@@ -1,22 +1,22 @@
 ---
-ms.openlocfilehash: e3c9f23ca73ed9b85d09680ec15251ebe02c7f8e
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: cd7860a5dfff1eb595625665382689733cffc94a
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065220"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90721249"
 ---
 ### <a name="ca1416-platform-compatibility"></a>CA1416: プラットフォームの互換性
 
-.NET コード アナライザー ルール CA1416 は、.NET 5.0 以降では既定で有効になっています。 オペレーティング システムが検証されていない呼び出しサイトからのプラットフォーム固有の API への呼び出しに対し、ビルドの警告が生成されます。
+.NET コード アナライザー ルール [CA1416](/visualstudio/code-quality/ca1416) は、.NET 5.0 以降では既定で有効になっています。 オペレーティング システムが検証されていない呼び出しサイトからのプラットフォーム固有の API への呼び出しに対し、ビルドの警告が生成されます。
 
 #### <a name="change-description"></a>変更内容
 
-.NET 5.0 以降、.NET SDK には [.NET ソース コード アナライザー](../../../../docs/fundamentals/productivity/code-analysis.md)が含まれています。 これらのルールのいくつかは、CA1416 を含め、既定で有効になっています。 このルールに違反し、警告をエラーとして扱うように構成されているコードがプロジェクトに含まれている場合、この変更によってビルドが破損する可能性があります。 ルール CA1416 では、プラットフォームのコンテキストが検証されていない場所からプラットフォーム固有の API を使用していることが通知されます。
+.NET 5.0 以降、.NET SDK には [.NET ソース コード アナライザー](../../../../docs/fundamentals/productivity/code-analysis.md)が含まれています。 これらのルールのいくつかは、[CA1416](/visualstudio/code-quality/ca1416) を含め、既定で有効になっています。 このルールに違反し、警告をエラーとして扱うように構成されているコードがプロジェクトに含まれている場合、この変更によってビルドが破損する可能性があります。 ルール CA1416 では、プラットフォームのコンテキストが検証されていない場所からプラットフォーム固有の API を使用していることが通知されます。
 
-ルール CA1416 のプラットフォーム互換性アナライザーは、.NET 5.0 の他の新機能の一部と連携して動作します。 .NET 5.0 において導入された `SupportedOSPlatformAttribute` 属性と `UnsupportedOSPlatformAttribute` 属性 (以前のプレビュー リリースでの名前は <xref:System.Runtime.Versioning.MinimumOSPlatformAttribute> および <xref:System.Runtime.Versioning.RemovedInOSPlatformAttribute>) を使用すると、API がサポートされて "*いる*"、またはサポートされて "*いない*" プラットフォームを指定できます。 これらの属性が存在しない場合、API はすべてのプラットフォームでサポートされているものと見なされます。 これらの属性は、Core .NET ライブラリ内のプラットフォーム固有の API に適用されています。
+ルール [CA1416](/visualstudio/code-quality/ca1416) のプラットフォーム互換性アナライザーは、.NET 5.0 の他の新機能の一部と連携して動作します。 .NET 5.0 において導入された <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> と <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute> では、API がサポートされて "*いる*"、またはサポートされて "*いない*" プラットフォームを指定できます。 これらの属性が存在しない場合、API はすべてのプラットフォームでサポートされているものと見なされます。 これらの属性は、Core .NET ライブラリ内のプラットフォーム固有の API に適用されています。
 
-プロジェクトで使用されている API が、プロジェクトのターゲット プラットフォームでは使用できないものである場合、ルール CA1416 により、プラットフォームのコンテキストが検証されないプラットフォーム固有のすべての API 呼び出しに、フラグが設定されます。 `SupportedOSPlatformAttribute` 属性および `UnsupportedOSPlatformAttribute` 属性で装飾されている API のほとんどでは、サポートされていないオペレーティング システムで呼び出されると、<xref:System.PlatformNotSupportedException> 例外がスローされます。 これらの API はプラットフォーム固有としてマークされるようになったので、ルール CA1416 は、OS のチェックを呼び出しサイトに追加することで、実行時の <xref:System.PlatformNotSupportedException> 例外を回避するのに役立ちます。
+プロジェクトで使用されている API が、プロジェクトのターゲット プラットフォームでは使用できないものである場合、ルール [CA1416](/visualstudio/code-quality/ca1416) により、プラットフォームのコンテキストが検証されないプラットフォーム固有のすべての API 呼び出しに、フラグが設定されます。 <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> 属性および <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute> 属性で装飾されている API のほとんどでは、サポートされていないオペレーティング システムで呼び出されると、<xref:System.PlatformNotSupportedException> 例外がスローされます。 これらの API はプラットフォーム固有としてマークされるようになったので、ルール [CA1416](/visualstudio/code-quality/ca1416) は、OS のチェックを呼び出しサイトに追加することで、実行時の <xref:System.PlatformNotSupportedException> 例外を回避するのに役立ちます。
 
 #### <a name="examples"></a>例
 
@@ -44,7 +44,7 @@ ms.locfileid: "90065220"
 
 #### <a name="recommended-action"></a>推奨アクション
 
-コードが適切なプラットフォームで実行されている場合にのみ、プラットフォーム固有の API を呼び出すようにします。 プラットフォーム固有の API を呼び出す前に、<xref:System.OperatingSystem?displayProperty=nameWithType> クラスの `Is<Platform>` メソッドのいずれか (`System.OperatingSystem.IsWindows()` など) を使用して、現在のオペレーティング システムを調べることができます。
+コードが適切なプラットフォームで実行されている場合にのみ、プラットフォーム固有の API を呼び出すようにします。 プラットフォーム固有の API を呼び出す前に、<xref:System.OperatingSystem?displayProperty=nameWithType> クラスの `Is<Platform>` メソッドのいずれか (<xref:System.OperatingSystem.IsWindows?displayProperty=nameWithType> など) を使用して、現在のオペレーティング システムを調べることができます。
 
 `if` ステートメントの条件内で、`Is<Platform>` メソッドのいずれかを使用できます。
 
@@ -122,4 +122,5 @@ Blazor WebAssembly の場合:
 
 #### <a name="see-also"></a>関連項目
 
+- [CA1416:プラットフォームの互換性を検証する](/visualstudio/code-quality/ca1416)
 - [.NET API アナライザー](../../../../docs/standard/analyzers/api-analyzer.md)

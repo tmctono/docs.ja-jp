@@ -2,12 +2,12 @@
 title: マイクロサービス間でイベント ベースの通信を実装する (統合イベント)
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービス間でイベント ベースの通信を実装する統合イベントを理解する
 ms.date: 10/02/2018
-ms.openlocfilehash: 8a1d4950247d63e5684c85c029efccf8269e7435
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: cbc9d28f9fbcaea528eabc4930476545cb919bb4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988324"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539347"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>マイクロサービス間でイベント ベースの通信を実装する (統合イベント)
 

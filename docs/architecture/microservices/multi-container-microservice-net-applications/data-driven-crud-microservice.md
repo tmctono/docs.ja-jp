@@ -2,12 +2,12 @@
 title: 単純なデータ ドリブン CRUD マイクロサービスの作成
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービス アプリケーションのコンテキストでの単純な CRUD (データ ドリブン) マイクロサービスの作成を理解する。
 ms.date: 08/14/2020
-ms.openlocfilehash: 4d475ba42cb0f86b57b2467549635556cab1136d
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 46654b9e6283d913910b62621d056e034c18870e
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267959"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679150"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>単純なデータ ドリブン CRUD マイクロサービスの作成
 
@@ -288,7 +288,7 @@ Azure Key Vault を利用することで、誰にも知らせる必要なく、�
 
 - ヘッダー バージョン管理
 
-クエリ文字列および URI バージョン管理は、実装するのが最も簡単です。 ヘッダー バージョン管理は適切なアプローチです。 ただし、ヘッダー バージョン管理は URI バージョン管理ほど明示的でも簡単でもありません。 URL バージョン管理は最も単純で最も明示的なので、eShopOnContainers サンプル アプリケーションでは URI バージョン管理を使用します。
+クエリ文字列および URI バージョン管理は、実装するのが最も簡単です。 ヘッダー バージョン管理は適切なアプローチです。 ただし、ヘッダー バージョン管理は、URI バージョン管理ほど明示的で簡単ではありません。 URL バージョン管理は最も単純で最も明示的なので、eShopOnContainers サンプル アプリケーションでは URI バージョン管理を使用します。
 
 eShopOnContainers サンプル アプリケーションのように、URI バージョン管理では、Web API を変更したりリソースのスキーマを変更したりするたびに、各リソースの URI にバージョン番号が追加されます。 既存の URI はそれまでと同様に動作を続け、要求されたバージョンに対応するスキーマに準拠したリソースを返します。
 

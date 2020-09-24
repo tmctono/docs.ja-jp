@@ -1,7 +1,7 @@
 ---
 description: foreach、in (C# リファレンス)
 title: C# foreach ステートメント
-ms.date: 07/22/2020
+ms.date: 09/18/2020
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 2ed89fa52b2d3d369d668bf79ab32eaf7be18a8a
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: ea8a6f86595348a32b707caf9782f84147fefc87
+ms.sourcegitcommit: 43ed174f085840ca18a791dc89fe833174da766d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89142077"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90828891"
 ---
 # <a name="foreach-in-c-reference"></a>foreach、in (C# リファレンス)
 
@@ -25,8 +25,8 @@ ms.locfileid: "89142077"
 
 `foreach` ステートメントは、これらの型に制限されません。 これは次の条件を満たす任意の型のインスタンスと共に使用できます。
 
-- 戻り値の型がクラス、構造体、インターフェイス型のいずれかである、パラメーターなしのパブリック メソッド `GetEnumerator` がある型。
-- `GetEnumerator` メソッドの戻り値の型が、パブリック プロパティ `Current` と、戻り値の型が <xref:System.Boolean> であるパラメーターなしのパブリック メソッド `MoveNext` を持っている。
+- 戻り値の型がクラス、構造体、インターフェイス型のいずれかである、パラメーターなしのパブリック メソッド `GetEnumerator` がある型。 C# 9.0 以降では、`GetEnumerator` メソッドを型の[拡張メソッド](../../programming-guide/classes-and-structs/extension-methods.md)にすることができます。
+- `GetEnumerator` メソッドの戻り値の型に、パブリック プロパティ `Current` と、戻り値の型が <xref:System.Boolean> であるパラメーターなしのパブリック メソッド `MoveNext` がある。
 
 次の例では、何のインターフェイスも実装していない <xref:System.Span%601?displayProperty=nameWithType> 型のインスタンスを使用して、`foreach` ステートメントを使用します。
 
@@ -66,6 +66,11 @@ foreach (V item in collection) { }
 ## <a name="c-language-specification"></a>C# 言語仕様
 
 詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の [foreach ステートメント](~/_csharplang/spec/statements.md#the-foreach-statement)に関するセクションを参照してください。
+
+C# 8.0 以降に追加された機能の詳細については、機能の提案に関する次の記述を参照してください。
+
+- [非同期ストリーム (C# 8.0)](~/_csharplang/proposals/csharp-8.0/async-streams.md)
+- [`foreach` ループに対する拡張機能 `GetEnumerator` のサポート (C# 9.0)](~/_csharplang/proposals/csharp-9.0/extension-getenumerator.md)
 
 ## <a name="see-also"></a>関連項目
 

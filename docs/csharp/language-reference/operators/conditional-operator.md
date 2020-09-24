@@ -1,7 +1,7 @@
 ---
 description: '?: 演算子 - C# リファレンス'
 title: '?: 演算子 - C# リファレンス'
-ms.date: 03/06/2020
+ms.date: 09/17/2020
 f1_keywords:
 - ?:_CSharpKeyword
 - ?_CSharpKeyword
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 0efa6de2b537fd3af76807938ac2b50a2716561f
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: b6add045983619169bed0cd9f32eb27dba0a0338
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89122356"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738880"
 ---
 # <a name="-operator-c-reference"></a>?: 演算子 (C# リファレンス)
 
@@ -29,7 +29,13 @@ condition ? consequent : alternative
 
 `condition` 式は `true` または `false` と評価する必要があります。 `condition` が `true` と評価された場合は、`consequent` 式が評価され、その結果が演算の結果になります。 `condition` が `false` と評価された場合は、`alternative` 式が評価され、その結果が演算の結果になります。 `consequent` または `alternative` のみが評価されます。
 
-`consequent` の型と `alternative` の型は同じ型であるか、一方の型から他方の型への暗黙の型変換が存在している必要があります。
+C# 9.0 以降、条件式はターゲット型になっています。 つまり、条件式のターゲット型がわかっている場合、次の例に示すように、`consequent` と `alternative` の型は、暗黙的にターゲット型に変換できる必要があります。
+
+[!code-csharp[target-typed conditional](snippets/shared/ConditionalOperator.cs#TargetTyped)]
+
+条件式のターゲット型が不明な場合 (たとえば、[`var`](../keywords/var.md) キーワードを使用する場合) または C# 8.0 以前の場合、`consequent` と `alternative` の型は同じであるか、またはある型から別の型に暗黙的に変換される必要があります。
+
+[!code-csharp[not target-typed conditional](snippets/shared/ConditionalOperator.cs#NotTargetTyped)]
 
 条件演算子は右結合です。つまり、次の形式の式があるとします。
 
@@ -56,7 +62,7 @@ a ? b : (c ? d : e)
 
 ## <a name="conditional-ref-expression"></a>ref 条件式
 
-C# 7.2 以降、[ref ローカル](../keywords/ref.md#ref-locals)または [ref readonly ローカル](../keywords/ref.md#ref-readonly-locals)変数は、条件付き参照式で条件付きで割り当てることができます。 条件付き参照式を[参照戻り値](../keywords/ref.md#reference-return-values)または [`ref` メソッドの引数](../keywords/ref.md#passing-an-argument-by-reference)として使用することもできます。
+C# 7.2 以降、ref 条件式は、[ref ローカル](../keywords/ref.md#ref-locals)または [ref readonly ローカル](../keywords/ref.md#ref-readonly-locals)変数を使用して条件付きで割り当てることができます。 ref 条件式を[参照戻り値](../keywords/ref.md#reference-return-values)または [`ref` メソッドの引数](../keywords/ref.md#passing-an-argument-by-reference)として使用することもできます。
 
 ref 条件式の構文は次のとおりです。
 
@@ -64,9 +70,9 @@ ref 条件式の構文は次のとおりです。
 condition ? ref consequent : ref alternative
 ```
 
-元の条件演算子と同じように、ref 条件式は、2 つの式 (`consequent` または `alternative`) のいずれかのみを評価します。
+ref 条件式では、元の条件演算子と同じように、2 つの式 (`consequent` または `alternative`) のいずれかのみが評価されます。
 
-ref 条件式の場合、`consequent` と`alternative` の型は同じである必要があります。
+ref 条件式の場合、`consequent` と `alternative` の型は同じである必要があります。 ref 条件式は、ターゲット型ではありません。
 
 ref 条件演算子の使用例を次に示します。
 
@@ -86,7 +92,10 @@ ref 条件演算子の使用例を次に示します。
 
 詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の「[条件演算子](~/_csharplang/spec/expressions.md#conditional-operator)」セクションを参照してください。
 
-ref 条件式について詳しくは、[機能提案メモ](~/_csharplang/proposals/csharp-7.2/conditional-ref.md)をご覧ください。
+C# 7.2 以降に追加された機能の詳細については、機能の提案に関する次の記述を参照してください。
+
+- [ref 条件式 (C# 7.2)](~/_csharplang/proposals/csharp-7.2/conditional-ref.md)
+- [ターゲット型の条件式 (C# 9.0)](~/_csharplang/proposals/csharp-9.0/target-typed-conditional-expression.md)
 
 ## <a name="see-also"></a>関連項目
 

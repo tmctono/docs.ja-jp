@@ -2,12 +2,12 @@
 title: EDM ジェネレーター (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: 858525a81e7779e7631ee8ac959110ba946cf652
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: da5b87fa76cbc8e44f6ed60b047e5a185c2aa603
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738535"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542556"
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM ジェネレーター (EdmGen.exe)
 
@@ -19,7 +19,7 @@ EdmGen.exe は、Entity Framework モデルとマッピング ファイルを操
 
 - 概念モデル (.csdl) ファイルから生成されたオブジェクト クラスを含む C# コード ファイルまたは Visual Basic コード ファイルを生成する。 詳細については、[EdmGen.exe を使用してオブジェクトレイヤー コードを生成する](how-to-use-edmgen-exe-to-generate-object-layer-code.md)」を参照してください。
 
-- 事前に生成した既存のモデルのビューを含む C# コード ファイルまたは Visual Basic コード ファイルを生成する。 詳細については、「[ビューを事前に生成してクエリ パフォーマンスを向上させる](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))」を参照してください。
+- 事前に生成した既存のモデルのビューを含む C# コード ファイルまたは Visual Basic コード ファイルを生成する。 詳細については、「[ビューを事前に生成してクエリ パフォーマンスを向上させる](/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))」を参照してください。
 
 EdmGen.exe ツールは、.NET Framework のディレクトリにインストールされます。 多くの場合、C:\windows\Microsoft.NET\Framework\v4.0 にあります。 64 ビット システムの場合は、C:\windows\Microsoft.NET\Framework64\v4.0 にあります。 Visual Studio のコマンド プロンプトから EdmGen.exe ツールにアクセスすることもできます ( **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft Visual Studio 2010]** 、 **[Visual Studio Tools]** の順にポイントして、 **[Visual Studio 2010 コマンド プロンプト]** をクリックします)。
 
@@ -45,7 +45,7 @@ EdmGen.exe ツールを使用する場合、次のいずれかのモードを指
 
 |オプション|説明|
 |------------|-----------------|
-|`/p[roject]:`\<string>|使用するプロジェクト名を指定します。 このプロジェクト名は、名前空間の設定の既定値、モデル ファイルとマッピング ファイルの名前、オブジェクト ソース ファイルの名前、およびビュー生成のソース ファイルの名前として使用されます。 エンティティのコンテナー名が \<project>Context に設定されています。|
+|`/p[roject]:`\<string>|使用するプロジェクト名を指定します。 このプロジェクト名は、名前空間の設定の既定値、モデル ファイルとマッピング ファイルの名前、オブジェクト ソース ファイルの名前、およびビュー生成のソース ファイルの名前として使用されます。 エンティティのコンテナ名が \<project>Context に設定されています。|
 |`/prov[ider]:`\<string>|ストレージ モデル (.ssdl) ファイルの生成に使用する .NET Framework データ プロバイダーの名前です。 既定のプロバイダーは .NET Framework SQL Server 用データ プロバイダー (<xref:System.Data.SqlClient?displayProperty=nameWithType>) です。|
 |`/c[onnectionstring]:`\<connection string>|データ ソースへの接続に使用する文字列を指定します。|
 |`/incsdl:`\<file>|.csdl ファイル、または .csdl ファイルがあるディレクトリを指定します。 この引数は複数回指定できるので、複数のディレクトリまたは .csdl ファイルを指定できます。 概念モデルが複数のファイルに分割されている場合にクラスの生成 (`/mode:EntityClassGeneration`) またはビューの生成 (`/mode:ViewGeneration`) を行うときは、複数のディレクトリを指定すると便利です。 また、複数のモデルを検証する (`/mode:ValidateArtifacts`) 場合にも役立ちます。|
@@ -76,6 +76,6 @@ EdmGen.exe ツールを使用する場合、次のいずれかのモードを指
 
 ## <a name="see-also"></a>関連項目
 
-- [ADO.NET Entity Data Model ツール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [ADO.NET Entity Data Model ツール](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
 - [Entity Data Model](../entity-data-model.md)
 - [CSDL、SSDL、および MSL 仕様](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)

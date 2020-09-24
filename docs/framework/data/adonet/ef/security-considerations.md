@@ -2,12 +2,12 @@
 title: セキュリティに関する注意事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: e2e1fc75049d41b50aa59092fe1aa21e8cdab659
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 90422ebd0f313bfa64b446159d27bcf44024f247
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452488"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552272"
 ---
 # <a name="security-considerations-entity-framework"></a>セキュリティに関する注意事項 (Entity Framework)
 このトピックでは、Entity Framework アプリケーションの開発、配置、および実行に固有のセキュリティの注意点について説明します。 安全な .NET Framework アプリケーションの作成に関する推奨事項にも従う必要があります。 詳細については、[セキュリティの概要](../security-overview.md)に関するページを参照してください。  
@@ -27,7 +27,7 @@ ms.locfileid: "77452488"
  ログオン操作の際には、ユーザーのパスワードに基づく情報が、基になるデータ ソースのネットワーク ライブラリを通じてサーバーに渡されます。 悪質なプロバイダーを使用すると、ユーザーの資格情報を盗まれたり、悪質なクエリを生成されたり、結果セットを改ざんされたりする可能性があります。  
   
 #### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>接続を暗号化して機密データを保護する  
- データの暗号化は Entity Framework では直接処理されません。 ユーザーがパブリック ネットワーク経由でデータにアクセスする場合は、セキュリティを強化するためにアプリケーションでデータ ソースへの暗号化接続を確立する必要があります。 詳細については、データ ソースのセキュリティ関連のドキュメントを参照してください。 SQL Server データ ソースの場合は、「[SQL Server への接続の暗号化](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105))」を参照してください。  
+ データの暗号化は Entity Framework では直接処理されません。 ユーザーがパブリック ネットワーク経由でデータにアクセスする場合は、セキュリティを強化するためにアプリケーションでデータ ソースへの暗号化接続を確立する必要があります。 詳細については、データ ソースのセキュリティ関連のドキュメントを参照してください。 SQL Server データ ソースの場合は、「[SQL Server への接続の暗号化](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105))」を参照してください。  
   
 #### <a name="secure-the-connection-string"></a>接続文字列を保護する  
  アプリケーションのセキュリティを実現するうえで、データ ソースへのアクセスを保護することは、最も重要な目標の 1 つです。 保護されていない接続文字列や適切に作成されていない接続文字列は脆弱性を招く原因になります。 接続情報をテキスト形式で保存したり、メモリ内に保持したりすると、システム全体のセキュリティが損なわれる可能性があります。 接続文字列を保護するための推奨事項を以下に示します。  
@@ -38,7 +38,7 @@ ms.locfileid: "77452488"
   
 - 保護構成を使用して構成ファイル セクションを暗号化する。  
   
-     ASP.NET には、保護構成と呼ばれる、構成ファイルの機密情報を暗号化するための機能が用意されています。 保護構成は、主に ASP.NET を想定して設計されたものですが、Windows アプリケーションの構成ファイル セクションを暗号化する目的でも使用できます。 新しい保護構成機能の詳細については、「[保護された構成を使用した構成情報の暗号化](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))」を参照してください。  
+     ASP.NET には、保護構成と呼ばれる、構成ファイルの機密情報を暗号化するための機能が用意されています。 保護構成は、主に ASP.NET を想定して設計されたものですが、Windows アプリケーションの構成ファイル セクションを暗号化する目的でも使用できます。 新しい保護構成機能の詳細については、「[保護された構成を使用した構成情報の暗号化](/previous-versions/aspnet/53tyfkaw(v=vs.100))」を参照してください。  
   
 - セキュリティで保護された構成ファイルに接続文字列を格納する。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "77452488"
  Entity Framework ではセキュリティのアクセス許可が適用されません。ユーザーが指定したデータ オブジェクト コードは、信頼されているかどうかに関係なくインプロセスで呼び出されます。 データ ストアとアプリケーションでクライアントの認証および承認が行われるようにしてください。  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>すべての構成ファイルへのアクセスを制限する  
- 管理者は、アプリケーションの構成を指定するすべてのファイル (enterprisesec.config、security.config、machine.conf、アプリケーション構成ファイル \<*アプリケーション名*>.exe.config など) への書き込みアクセスを制限する必要があります。  
+ 管理者は、アプリケーションの構成を指定するすべてのファイル (enterprisesec.config、security.config、machine.conf、アプリケーション構成ファイル (\<*application*>.exe.config) など) への書き込みアクセスを制限する必要があります。  
   
  app.config ではプロバイダーの不変名を変更できます。クライアント アプリケーションは、強力な名前を使用して標準のプロバイダー ファクトリ モデルを通じて基になるプロバイダーにアクセスする責任を負う必要があります。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "77452488"
   
      [!INCLUDE[esql](../../../../../includes/esql-md.md)] では、クエリ述語やパラメーター名で使用される値に悪質な入力を渡すことによって SQL インジェクション攻撃が行われる可能性があります。 SQL インジェクションが行われないようにするため、ユーザー入力を [!INCLUDE[esql](../../../../../includes/esql-md.md)] コマンド テキストと組み合わせないようにしてください。  
   
-     [!INCLUDE[esql](../../../../../includes/esql-md.md)] クエリでは、リテラルを渡すことのできる場所であればどこででもパラメーターを渡すことができます。 外部エージェントから受け取ったリテラルを直接クエリに挿入することは避け、パラメーター化クエリを使用するようにしてください。 また、Entity SQL を安全に作成するには、[クエリ ビルダー メソッド](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100))の使用を検討してください。  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)] クエリでは、リテラルを渡すことのできる場所であればどこででもパラメーターを渡すことができます。 外部エージェントから受け取ったリテラルを直接クエリに挿入することは避け、パラメーター化クエリを使用するようにしてください。 また、Entity SQL を安全に作成するには、[クエリ ビルダー メソッド](/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100))の使用を検討してください。  
   
 - LINQ to Entities インジェクション攻撃:  
   
@@ -132,7 +132,7 @@ ms.locfileid: "77452488"
  エンティティ型を生成したり操作したりする際には次の点に注意する必要があります。  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>ObjectContext を複数のアプリケーション ドメインで共有しない  
- <xref:System.Data.Objects.ObjectContext> を複数のアプリケーション ドメインで共有すると接続文字列の情報が漏洩する可能性があります。 代わりに、シリアル化したオブジェクトやオブジェクト グラフをもう一方のアプリケーション ドメインに転送して、そのアプリケーション ドメインでそれらのオブジェクトを <xref:System.Data.Objects.ObjectContext> にアタッチするようにしてください。 詳しくは、「[オブジェクトのシリアル化](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100))」をご覧ください。  
+ <xref:System.Data.Objects.ObjectContext> を複数のアプリケーション ドメインで共有すると接続文字列の情報が漏洩する可能性があります。 代わりに、シリアル化したオブジェクトやオブジェクト グラフをもう一方のアプリケーション ドメインに転送して、そのアプリケーション ドメインでそれらのオブジェクトを <xref:System.Data.Objects.ObjectContext> にアタッチするようにしてください。 詳しくは、「[オブジェクトのシリアル化](/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100))」をご覧ください。  
   
 #### <a name="prevent-type-safety-violations"></a>型の安全性違反を防止する  
  型の安全性違反が発生すると、Entity Framework でオブジェクトのデータの整合性が保証されなくなります。 型の安全性違反は、信頼できないアプリケーションを完全信頼のコード アクセス セキュリティで実行できるようにすると発生する可能性があります。  

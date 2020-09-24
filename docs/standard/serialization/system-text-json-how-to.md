@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 7ad2721f12c5d14b61b35ecf7696ff0d6a6f27da
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 72ba79784d3eb1beb43eab8db0a448a7e3b18eb6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289513"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557841"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET 内で JSON のシリアル化と逆シリアル化 (マーシャリングとマーシャリングの解除) を行う方法
 
@@ -118,7 +118,7 @@ UTF-8 へのシリアル化は、文字列ベースのメソッドを使用す�
 * 既定では、JSON は縮小されます。 [JSON を整形](#serialize-to-formatted-json)することができます。
 * 既定では、JSON 名の大文字と小文字の区別は .NET 名と一致します。 [JSON 名の大文字と小文字の区別をカスタマイズ](#customize-json-names-and-values)することができます。
 * 循環参照が検出され、例外がスローされます。
-* 現在、フィールドは除外されています。
+* 現在、[フィールド](../../csharp/programming-guide/classes-and-structs/fields.md)は除外されています。
 
 サポートされる型には次のようなものがあります。
 

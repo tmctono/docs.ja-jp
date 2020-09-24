@@ -2,12 +2,12 @@
 title: CLR ストアド プロシージャ
 ms.date: 03/30/2017
 ms.assetid: fd7eea9b-218a-4988-8c9a-8abcc6031c66
-ms.openlocfilehash: ca0fd2d33f0ad56c96fb63530e6ba3f7f7890f81
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 736020695ae40a8884057ddee8aac8abe6e8c1fd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450363"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554196"
 ---
 # <a name="clr-stored-procedures"></a>CLR ストアド プロシージャ
 ストアド プロシージャは、スカラー式では使用できないルーチンです。 ストアド プロシージャは、表形式の結果とメッセージをクライアントに返したり、データ定義言語 (DDL) ステートメントおよびデータ操作言語 (DML) ステートメントを呼び出したり、出力パラメーターを返したりすることができます。  
@@ -23,9 +23,9 @@ Public Shared Sub ExecuteToClient( <Out()> ByRef number As Integer)
   
  **SQL Server のドキュメント**
 
-1. [CLR ストアド プロシージャ](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms131094(v=sql.100))  
+1. [CLR ストアド プロシージャ](/previous-versions/sql/sql-server-2008/ms131094(v=sql.100))  
   
 ## <a name="see-also"></a>関連項目
 
-- [マネージ コードでの SQL Server 2005 オブジェクトの作成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6s0s2at1(v=vs.90))
+- [マネージ コードでの SQL Server 2005 オブジェクトの作成](/previous-versions/visualstudio/visual-studio-2008/6s0s2at1(v=vs.90))
 - [ADO.NET の概要](../ado-net-overview.md)

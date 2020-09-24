@@ -1,15 +1,15 @@
 ---
 title: インデックスと範囲を使用してデータの範囲を調べる
-description: この高度なチュートリアルでは、インデックスと範囲を使用してデータを調べ、シーケンシャル データ セットのスライスを調べる方法について説明します。
-ms.date: 03/11/2020
+description: この詳細なチュートリアルでは、一連の連続するデータ セットの範囲を、インデックスと範囲を使用して調べる方法について説明します。
+ms.date: 09/11/2020
 ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: 82aad968e2efc437c82a7c8250bcd108b60b09e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cf6c83484332ed517b2326b3fd9d7458f191227e
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156495"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738867"
 ---
 # <a name="indices-and-ranges"></a>インデックスと範囲
 
@@ -60,7 +60,7 @@ string[] words = new string[]
 
 [!code-csharp[Range](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Range)]
 
-次のコードでは、"lazy" と "dog" の部分範囲が作成されます。 それには、`words[^2]` と `words[^1]` が含まれます。 末尾インデックス `words[^0]` は含まれません。 次のコードも追加します。
+次のコードでは、"lazy" と "dog" の範囲が返されます。 それには、`words[^2]` と `words[^1]` が含まれます。 末尾インデックス `words[^0]` は含まれません。 次のコードも追加します。
 
 [!code-csharp[LastRange](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastRange)]
 
@@ -78,9 +78,16 @@ string[] words = new string[]
 
 ## <a name="type-support-for-indices-and-ranges"></a>インデックスと範囲の型のサポート
 
-インデックスと範囲は明確かつ簡潔な構文を提供することで、シーケンス内で 1 つの要素または要素のサブ範囲にアクセスします。 インデックス式は、一般的に、シーケンスの要素の型を返します。 範囲式は、一般的に、ソース シーケンスと同じシーケンス型を返します。
+インデックスと範囲を使用すると、シーケンス内の 1 つの要素または要素の範囲にアクセスする構文を明確かつ簡潔に指定できます。 インデックス式は、一般的に、シーケンスの要素の型を返します。 範囲式は、一般的に、ソース シーケンスと同じシーケンス型を返します。
 
 <xref:System.Index> または <xref:System.Range> パラメーターを持つ[インデクサー](../programming-guide/indexers/index.md)が用意されている型では、インデックスまたは範囲がそれぞれ明示的にサポートされます。 1 つの <xref:System.Range> パラメーターをとるインデクサーからは、<xref:System.Span%601?displayProperty=nameWithType> などの別のシーケンス型が返される場合があります。
+
+> [!IMPORTANT]
+> 範囲演算子を使用したコードのパフォーマンスは、シーケンス オペランドの型によって異なります。
+>
+> 範囲演算子の時間計算量は、シーケンスの種類によって異なります。 たとえば、シーケンスが `string` または配列の場合、指定したセクションの入力のコピーが結果として返されるため、時間計算量は *O(N)* になります (ここで N は範囲の長さです)。 一方、<xref:System.Span%601?displayProperty=nameWithType> または <xref:System.Memory%601?displayProperty=nameWithType> の場合、結果で同じバッキング ストアが参照されます。つまり、コピーは行われず、操作は *O(1)* になります。
+>
+> これでは時間計算量以外に、パフォーマンスに影響する割り当てとコピーも追加で発生します。 パフォーマンスが重視されるコードでは、シーケンス型として範囲演算子が割り当てられない `Span<T>` または `Memory<T>` を使用することを検討してください。
 
 アクセス可能なゲッターと戻り値の型 `int` を持つ `Length` または `Count` という名前のプロパティがある場合、型は**可算**です。 インデックスまたは範囲を明示的にサポートしていない可算型は、それらを暗黙的にサポートしている可能性があります。 詳細については、[機能の提案に関する注記](~/_csharplang/proposals/csharp-8.0/ranges.md)の「[暗黙的なインデックスのサポート](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support)」と「[暗黙的な範囲のサポート](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support)」のセクションを参照してください。 暗黙的な範囲のサポートを使用している範囲によって返されるのは、ソース シーケンスと同じシーケンス型です。
 
@@ -90,8 +97,10 @@ string[] words = new string[]
 
 [!code-csharp[JaggedArrays](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_JaggedArrays)]
 
+いずれの場合も、<xref:System.Array> の範囲演算子では、返される要素を格納する配列が割り当てられます。
+
 ## <a name="scenarios-for-indices-and-ranges"></a>インデックスと範囲のシナリオ
 
-大きなシーケンスのサブ範囲を分析するときは、多くの場合、範囲とインデックスを使用します。 どの部分の範囲が関係しているかを正確に読み取る場合に、この新しい構文の方が明確です。 ローカル関数 `MovingAverage` は、引数として <xref:System.Range> を受け取ります。 このメソッドでは、最小値、最大値、および平均値を計算するときに、その範囲のみが列挙されます。 プロジェクトで次のコードを試してみてください。
+長いシーケンスの部分を分析するときは、多くの場合、範囲とインデックスを使用します。 新しい構文では、シーケンスのどの部分が関係しているかをより正確に読み取ることができます。 ローカル関数 `MovingAverage` は、引数として <xref:System.Range> を受け取ります。 このメソッドでは、最小値、最大値、および平均値を計算するときに、その範囲のみが列挙されます。 プロジェクトで次のコードを試してみてください。
 
 [!code-csharp[MovingAverages](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_MovingAverage)]

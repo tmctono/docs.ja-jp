@@ -1,13 +1,13 @@
 ---
 title: トランザクション
-ms.date: 12/13/2019
+ms.date: 09/08/2020
 description: トランザクションの使用方法について説明します。
-ms.openlocfilehash: 4b72a1573a560ffd1bfd0f54d46ab3b135280976
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 50c4cd1023eac892cafc3ae4395e9168bd8e9f36
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450382"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678863"
 ---
 # <a name="transactions"></a>トランザクション
 
@@ -36,3 +36,12 @@ Microsoft.Data.Sqlite では、<xref:Microsoft.Data.Sqlite.SqliteConnection.Begi
 次のコードは、ダーティ リードをシミュレートしています。 接続文字列には `Cache=Shared` を含める必要があるので注意してください。
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DirtyReadSample/Program.cs?name=snippet_DirtyRead)]
+
+## <a name="deferred-transactions"></a>遅延トランザクション
+
+Microsoft. Data. Sqlite バージョン 5.0 以降では、トランザクションを遅延させることができます。 これにより、最初のコマンドが実行されるまで、データベース内の実際のトランザクションの作成が遅延されます。 また、必要に応じて、トランザクションがそのコマンドによって、読み取りトランザクションから書き込みトランザクションに徐々にアップグレードされるようにします。 これは、トランザクション中にデータベースへの同時アクセスを有効にする場合に便利です。
+
+[!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DeferredTransactionSample/Program.cs?name=snippet_DeferredTransaction)]
+
+> [!WARNING]
+> データベースがロックされているときに、遅延トランザクション内のコマンドによって、トランザクションが読み取りトランザクションから書き込みトランザクションにアップグレードされると、そのコマンドは失敗することがあります。 この場合、アプリケーションで、トランザクション全体の再試行を行う必要があります。

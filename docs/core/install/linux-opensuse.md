@@ -4,11 +4,12 @@ description: openSUSE に .NET Core SDK と .NET Core ランタイムをイン�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 24f0a5b5278d038c2f941b0984efcacd91dcbe31
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: ccdb23ca1838d2c15c9a95b45c8505efe7a6df0e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619469"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539231"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-opensuse"></a>openSUSE に .NET Core SDK または .NET Core ランタイムをインストールする
 
@@ -57,6 +58,10 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 ## <a name="troubleshoot-the-package-manager"></a>パッケージ マネージャーのトラブルシューティング
 
 このセクションでは、パッケージ マネージャーを使用して .NET Core をインストールするときに発生する可能性のある一般的なエラーについて説明します。
+
+### <a name="unable-to-find-package"></a>パッケージが見つからない
+
+[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
 ### <a name="failed-to-fetch"></a>フェッチできない
 

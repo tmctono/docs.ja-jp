@@ -5,12 +5,12 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 735782a4a0877a917b6e1885f009aa49d834170f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 50f35e3511acc344339b1e150b47d7ce6de94254
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73976964"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679561"
 ---
 # <a name="re-train-a-model"></a>モデルを再トレーニングする
 
@@ -51,7 +51,7 @@ ITransformer trainedModel = mlContext.Model.Load("ogd_model.zip", out modelSchem
 
 ## <a name="extract-pre-trained-model-parameters"></a>トレーニング済みモデルのパラメーターを抽出する
 
-モデルが読み込まれたら、トレーニング済みモデルの [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) プロパティにアクセスして、学習済みモデルのパラメーターを抽出します。 トレーニング済みモデルは、[`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) を出力する [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601) を作成する線形回帰モデル [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) を使用して学習されています。 これらの線形回帰モデルのパラメーターには、学習済みのバイアスと、モデルの重みまたは係数が含まれています。 これらの値は、新しい再トレーニング済みモデルの出発点として使用されます。
+モデルが読み込まれたら、トレーニング済みモデルの [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase%601.Model%2A) プロパティにアクセスして、学習済みモデルのパラメーターを抽出します。 トレーニング済みモデルは、[`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) を出力する [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601) を作成する線形回帰モデル [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) を使用して学習されています。 これらの線形回帰モデルのパラメーターには、学習済みのバイアスと、モデルの重みまたは係数が含まれています。 これらの値は、新しい再トレーニング済みモデルの出発点として使用されます。
 
 ```csharp
 // Extract trained model parameters
@@ -61,7 +61,7 @@ LinearRegressionModelParameters originalModelParameters =
 
 ## <a name="re-train-model"></a>モデルを再トレーニングする
 
-モデルを再トレーニングするプロセスは、モデルをトレーニングするプロセスと同じです。 唯一の違いは、データに加えて [`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer`2.Fit*) メソッドも元の学習済みモデル パラメーターを入力として受け取り、それらを再トレーニング プロセスの開始点として使用することです。
+モデルを再トレーニングするプロセスは、モデルをトレーニングするプロセスと同じです。 唯一の違いは、データに加えて [`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer%602.Fit%2A) メソッドも元の学習済みモデル パラメーターを入力として受け取り、それらを再トレーニング プロセスの開始点として使用することです。
 
 ```csharp
 // New Data

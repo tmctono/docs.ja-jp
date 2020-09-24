@@ -2,12 +2,12 @@
 title: 永続インフラストラクチャとして NoSQL データベースを使用する
 description: 永続性実装のオプションとしての NoSql データベースの一般的な使用と、特に Azure Cosmos DB の使用について理解します。
 ms.date: 01/30/2020
-ms.openlocfilehash: a478809895b0c20824f08f20558f2d47e10223d0
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: c4f9199b9e88a39581437eca340e92f4fd450003
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100809"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738802"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>永続インフラストラクチャとして NoSQL データベースを使用する
 
@@ -156,7 +156,7 @@ MongoDB API を使用することの明らかな利点は、MongoDB と Azure Co
 
 Microsoft では、根本的に、Azure Cosmos DB でも動作する NoSQL データベースを使用して一貫性のある開発/テスト環境を持つことを優先したため、eShopOnContainers では MongoDB API を使用しています。
 
-ただし、MongoDB API を使用して、実稼働アプリケーションの Azure で Azure Cosmos DB にアクセスするように計画している場合は、ネイティブ Azure Cosmos DB API を使用した場合と比較して、MongoDB API を使用して Azure Cosmos DB データベースにアクセスした場合の機能とパフォーマンスの違いを分析する必要があります。 同様の場合は、MongoDB API を使用でき、同時に 2 つの NoSQL データベース エンジンをサポートするという利点が得られます。
+ただし、MongoDB API を使用して実稼働アプリケーションの Azure で Azure Cosmos DB にアクセスすることを計画している場合は、Azure Cosmos DB データベースにアクセスするために MongoDB API を使用した場合とネイティブ Azure Cosmos DB API を使用した場合とを比較して、機能とパフォーマンスの違いを分析する必要があります。 同様の場合は、MongoDB API を使用でき、同時に 2 つの NoSQL データベース エンジンをサポートするという利点が得られます。
 
 また、[MongoDB Azure Service](https://www.mongodb.com/scale/mongodb-azure-service) を使用して、MongoDB クラスターを Azure のクラウドで運用データベースとして使用することもできます。 ただしこれは、Microsoft が提供している PaaS サービスではありません。 このケースでは、Azure は MongoDB からのそのソリューションをホスティングしているだけです。
 

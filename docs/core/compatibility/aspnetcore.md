@@ -2,15 +2,15 @@
 title: ASP.NET Core の破壊的変更
 titleSuffix: ''
 description: ASP.NET Core における破壊的変更をリストアップします。
-ms.date: 09/09/2020
+ms.date: 09/11/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 2af0cc6721b66b1d07b196e4ba330f8425c14752
-ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
+ms.openlocfilehash: 4c3167e9cad193b6a5a11be399e8be529df3be55
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90022988"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539596"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core の破壊的変更
 
@@ -25,6 +25,7 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 ASP.NET Core 3.0、3.1、5.0 の次の破壊的変更はこのページに記録されています。
 
 - [Antiforgery、CORS、Diagnostics、MVC、Routing の古い API の削除](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
+- [認証:AzureAD.UI および AzureADB2C.UI の API とパッケージが非推奨としてマークされる](#authentication-azureadui-and-azureadb2cui-apis-and-packages-marked-obsolete)
 - [認証:Google+ の非推奨](#authentication-google-deprecated-and-replaced)
 - [認証:HttpContext.Authentication プロパティの削除](#authentication-httpcontextauthentication-property-removed)
 - [認証:Newtonsoft.Json 型の置き換え](#authentication-newtonsoftjson-types-replaced)
@@ -36,6 +37,7 @@ ASP.NET Core 3.0、3.1、5.0 の次の破壊的変更はこのページに記録
 - [Azure:Microsoft というプレフィックスが付いた Azure 統合パッケージが削除された](#azure-microsoft-prefixed-azure-integration-packages-removed)
 - [BinaryFormatter シリアル化メソッドが古い形式になり、ASP.NET アプリでは使用不可に](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)
 - [Blazor:コンパイル時にコンポーネントからトリミングされる無意味な空白文字](#blazor-insignificant-whitespace-trimmed-from-components-at-compile-time)
+- [Blazor:RenderTreeFrame の readonly のパブリック フィールドのプロパティ化](#blazor-rendertreeframe-readonly-public-fields-have-become-properties)
 - [Blazor:NuGet パッケージのターゲット フレームワークを変更](#blazor-target-framework-of-nuget-packages-changed)
 - [キャッシュ:CompactOnMemoryPressure プロパティの削除](#caching-compactonmemorypressure-property-removed)
 - [キャッシュ:Microsoft.Extensions.Caching.SqlServer で新しい SqlClient パッケージを使用](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
@@ -104,6 +106,10 @@ ASP.NET Core 3.0、3.1、5.0 の次の破壊的変更はこのページに記録
 
 ## <a name="aspnet-core-50"></a>ASP.NET Core 5.0
 
+[!INCLUDE[Authentication: AzureAD.UI and AzureADB2C.UI APIs and packages marked obsolete](~/includes/core-changes/aspnetcore/5.0/authentication-aad-packages-obsolete.md)]
+
+***
+
 [!INCLUDE[Authorization: Resource in endpoint routing is HttpContext](~/includes/core-changes/aspnetcore/5.0/authorization-resource-in-endpoint-routing.md)]
 
 ***
@@ -117,6 +123,10 @@ ASP.NET Core 3.0、3.1、5.0 の次の破壊的変更はこのページに記録
 ***
 
 [!INCLUDE[Blazor: Insignificant whitespace trimmed from components at compile time](~/includes/core-changes/aspnetcore/5.0/blazor-components-trim-insignificant-whitespace.md)]
+
+***
+
+[!INCLUDE[Blazor: RenderTreeFrame readonly public fields have become properties](~/includes/core-changes/aspnetcore/5.0/blazor-rendertreeframe-fields-become-properties.md)]
 
 ***
 

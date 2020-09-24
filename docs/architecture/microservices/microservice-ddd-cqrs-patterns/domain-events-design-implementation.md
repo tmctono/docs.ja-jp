@@ -2,12 +2,12 @@
 title: 'ドメイン イベント: 設計と実装'
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 集約間の通信を確立するための重要な概念であるドメイン イベントの詳細を表示する。
 ms.date: 10/08/2018
-ms.openlocfilehash: 0cc2072408e110d94b47bd47a9c337a604d4c1a3
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: e786af9b5cd005573dcc9d08a3ccd19f25f13813
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271777"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738776"
 ---
 # <a name="domain-events-design-and-implementation"></a>ドメイン イベント: 設計と実装
 
@@ -132,7 +132,7 @@ public class OrderStartedDomainEvent : INotification
 
 Udi Dahan がもともと提案しているのは (たとえば、「[Domain Events – Take 2](https://udidahan.com/2008/08/25/domain-events-take-2/)」(ドメイン イベント – テイク 2 などの複数の関連する投稿を参照))、イベントの管理と生成に静的クラスを使う方法です。 これには、`DomainEvents.Raise(Event myEvent)` のような構文を使用し、呼び出されるとすぐにドメイン イベントを生成する DomainEvents という名前の静的クラスが含まれる場合があります。 Jimmy Bogard も、ブログ投稿「[Strengthening your domain:Domain Events](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)」(ドメインの強化: ドメイン イベント) で同様のアプローチを推奨しています。
 
-ただし、ドメイン イベント クラスが静的である場合は、ハンドラーにもすぐにディスパッチにします。 これにより、副作用のロジックを含むイベント ハンドラーがイベント生成直後に実行されるため、テストとデバッグが難しくなります。 テストとデバッグを行うときは、現在の集約クラスで発生していることだけに注目する必要があります。他の集約やアプリケーション ロジックに関連する副作用に対する他のイベント ハンドラーに突然リダイレクトされるのは困ります。 このような理由から、次のセクションで説明する他のアプローチが考案されています。
+ただし、ドメイン イベント クラスが静的である場合は、ハンドラーにもすぐにディスパッチにします。 これにより、副作用のロジックを含むイベント ハンドラーがイベント生成直後に実行されるため、テストとデバッグが難しくなります。 テストとデバッグを行うときは、現在の集約クラスで発生していることだけに注目する必要があります。他の集約やアプリケーション ロジックに関連する副作用に対する他のイベント ハンドラーに突然リダイレクトされることを避けたいからです。 このような理由から、次のセクションで説明する他のアプローチが考案されています。
 
 #### <a name="the-deferred-approach-to-raise-and-dispatch-events"></a>イベントを生成し、ディスパッチする遅延アプローチ
 

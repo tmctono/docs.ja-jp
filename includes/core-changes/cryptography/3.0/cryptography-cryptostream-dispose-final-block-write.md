@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7766a59131fffe2b436c15a5ff58e67001be7941
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: 6ffd4147a99a59d0a2e50d3f88279608e286aed1
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065105"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90680057"
 ---
 ### <a name="cryptostreamdispose-transforms-final-block-only-when-writing"></a>CryptoStream.Dispose は書き込み時にのみ最後のブロックを変換する
 
@@ -18,7 +18,7 @@ ms.locfileid: "90065105"
 
 #### <a name="reason-for-change"></a>変更理由
 
-この変更により、ネットワーク操作がキャンセルされたときに、例外をキャッチする必要なく、暗号化ストリームからの不完全な読み取りが可能になります。
+この変更により、ネットワーク操作がキャンセルされたときに、例外をキャッチする必要なしに、暗号化ストリームからの不完全な読み取りが可能になります。
 
 #### <a name="version-introduced"></a>導入されたバージョン
 
