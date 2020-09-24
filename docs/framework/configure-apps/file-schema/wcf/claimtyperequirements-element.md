@@ -2,14 +2,15 @@
 title: <claimTypeRequirements> 要素
 ms.date: 03/30/2017
 ms.assetid: a26efe73-4bad-4731-8cad-27f00d54354b
-ms.openlocfilehash: b4d8479dd9a24774afbd0549caf9e261f55fa147
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6a4e5da3bd3ef6977d6258190d397130b33eb56c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69926147"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148972"
 ---
 # <a name="claimtyperequirements-element"></a>\<claimTypeRequirements> 要素
+
 必須のクレームの種類のコレクションを指定します。  
   
  フェデレーション シナリオでは、サービスが受信資格情報についての要件を記述します。 たとえば、受信資格情報は、特定のクレーム タイプのセットを処理する必要があります。 このコレクションの子要素はそれぞれ、フェデレーション資格情報に表示されると予想される必須のクレームおよび省略可能なクレームの種類を指定します。  

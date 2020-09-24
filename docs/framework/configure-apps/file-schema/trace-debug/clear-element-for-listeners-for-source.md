@@ -1,5 +1,5 @@
 ---
-title: <clear>のの <listeners> 要素<source>
+title: <clear> のの <listeners> 要素 <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: 7f9ddd93d27c3619119702c82c9e8752dab1af7b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d3e76496c82b508feabf8a46cf7bce7e3d54e8cf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153582"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149284"
 ---
-# <a name="clear-element-for-listeners-for-source"></a>\<clear>のの \<listeners> 要素\<source>
+# <a name="clear-element-for-listeners-for-source"></a>\<clear> のの \<listeners> 要素 \<source>
+
 トレース ソースの `Listeners` コレクションを消去します。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -31,13 +32,16 @@ ms.locfileid: "79153582"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
- [なし] :  
+
+ なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -50,12 +54,15 @@ ms.locfileid: "79153582"
 |`listeners`|メッセージを収集、格納、およびルーティングするリスナーを指定します。|  
   
 ## <a name="remarks"></a>解説  
+
  `<clear>`要素は、を含む、 `Listeners` トレースソースのコレクションからすべてのリスナーを削除し <xref:System.Diagnostics.DefaultTraceListener> ます。 要素を使用 `<clear>` して、 `<add>` コレクション内に他のアクティブなリスナーが存在しないことを特定することができます。  
   
 ## <a name="configuration-file"></a>構成ファイル  
- この要素は、コンピューターの構成ファイル (machine.config) とアプリケーション構成ファイルで使用できます。  
+
+ この要素は、マシン構成ファイル (Machine.config) とアプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
+
  次の例では、要素を使用し `<clear>` てリスナーを追加してから、 `<add>` `console` `textListener` `Listeners` トレースソースのコレクションに追加 `TraceSourceApp` する方法を示します。  
   
 ```xml  

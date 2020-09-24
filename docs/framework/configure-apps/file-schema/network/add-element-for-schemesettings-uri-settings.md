@@ -2,14 +2,15 @@
 title: schemeSettings の <add> 要素 (Uri 設定)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: ed40098e8d4c2d1298771e67a618b8d04f59c912
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 55fcba41d4dabf8937ebaa11235e9309bcb57952
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74087714"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149462"
 ---
 # <a name="add-element-for-schemesettings-uri-settings"></a>schemeSettings の \<add> 要素 (Uri 設定)
+
 スキーム名のスキーム設定を追加します。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -27,6 +28,7 @@ ms.locfileid: "74087714"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -37,20 +39,22 @@ ms.locfileid: "74087714"
   
 ## <a name="attribute-name-attribute"></a>{属性名}属性  
   
-|値|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
 |genericUriParserOptions|このスキームのパーサーオプション。 サポートされている値は、genericUriParserOptions = "DontUnescapePathDotsAndSlashes" だけです。|  
   
 ### <a name="child-elements"></a>子要素  
- なし  
+
+ None  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
-|[\<schemeSettings>要素 (Uri 設定)](schemesettings-element-uri-settings.md)|<xref:System.Uri> が特定のスキームに解析される方法を指定します。|  
+|[\<schemeSettings> 要素 (Uri 設定)](schemesettings-element-uri-settings.md)|<xref:System.Uri> が特定のスキームに解析される方法を指定します。|  
   
 ## <a name="remarks"></a>解説  
+
  既定では、 <xref:System.Uri?displayProperty=nameWithType> クラスは、パスの圧縮を実行する前に、エンコードされたパス区切り記号のエスケープを解除します。 これは、次のような攻撃に対するセキュリティメカニズムとして実装されています。  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
@@ -66,9 +70,11 @@ ms.locfileid: "74087714"
  この既定の動作は、特定のスキームの schemeSettings 構成オプションを使用して、パーセントエンコードされたパス区切り記号のエスケープを解除しないように変更できます。  
   
 ## <a name="configuration-files"></a>構成ファイル  
+
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
+
  次の例は、 <xref:System.Uri> http スキームに対してパーセントでエンコードされたパス区切り記号をエスケープしないようにするために、クラスによって使用される構成を示しています。  
   
 ```xml  

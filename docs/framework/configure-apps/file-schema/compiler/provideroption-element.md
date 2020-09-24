@@ -8,14 +8,15 @@ helpviewer_keywords:
 - providerOptions
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
-ms.openlocfilehash: 7e006adb86886d22ec08dc61fa092bf677b4da96
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9374fbaf7ceb61e5b72335417d32a08525477e0d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544740"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149635"
 ---
 # <a name="provideroption-element"></a>\<providerOption> 要素
+
 言語プロバイダーのコンパイラバージョン属性を指定します。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -34,6 +35,7 @@ ms.locfileid: "90544740"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -44,6 +46,7 @@ ms.locfileid: "90544740"
 |`value`|必須の属性です。<br /><br /> オプションの値を指定します。たとえば、"v 3.5" のようになります。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -55,7 +58,8 @@ ms.locfileid: "90544740"
 |[\<compilers> 要素](compilers-element.md)|コンパイラ構成要素のコンテナー。0個以上の要素が含まれてい `<compiler>` ます。|  
 |[\<compiler> 要素](compiler-element.md)|言語プロバイダーのコンパイラ構成属性を指定します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
+
  .NET Framework バージョン3.5 では、Code Document Object Model (CodeDOM) コードプロバイダーは、要素を使用してプロバイダー固有のオプションをサポートでき `<providerOption>` ます。  
   
  .NET Framework 3.5 には、更新された .NET Framework 2.0 アセンブリが含まれており、新しい型を含む新しいバージョンの3.5 アセンブリが用意されています。 Microsoft C# および Visual Basic コードプロバイダーは .NET Framework 2.0 アセンブリに含まれていますが、バージョン3.5 コンパイラをサポートするように更新されています。 既定では、更新されたコードプロバイダーはバージョン2.0 コンパイラのコードを生成します。 要素を使用し `<providerOption>` て、ターゲットコンパイラのバージョンを3.5 に変更できます。 これを行うには、属性に "CompilerVersion" を指定し、 `name` 属性に「v 3.5」を指定し `value` ます。 バージョン番号の前には、小文字の "v" を使用する必要があります。  
@@ -65,6 +69,7 @@ ms.locfileid: "90544740"
  CodeDOM コードプロバイダーの実装者は、型のパラメーターを受け取るコンストラクターを指定することによって、カスタムオプションを処理でき `providerOptions` <xref:System.Collections.Generic.IDictionary%602> ます。  
   
 ## <a name="example"></a>例  
+
  次の例は、C# コードプロバイダーのバージョン3.5 を使用するように指定する方法を示しています。  
   
 ```xml  

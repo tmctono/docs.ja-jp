@@ -1,5 +1,5 @@
 ---
-title: <clear>のの <listeners> 要素<trace>
+title: <clear> のの <listeners> 要素 <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/clear
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - clear element for <listeners> for <trace>
 - <clear> element for <listeners> for <trace>
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
-ms.openlocfilehash: 905dad8274fede80f4809ff3c7a014049f9df450
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2d301d588e33b0eea4164a6bf62dedd7b0c450ec
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153543"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149271"
 ---
-# <a name="clear-element-for-listeners-for-trace"></a>\<clear>のの \<listeners> 要素\<trace>
+# <a name="clear-element-for-listeners-for-trace"></a>\<clear> のの \<listeners> 要素 \<trace>
+
 トレースの `Listeners` コレクションを削除します。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -30,13 +31,16 @@ ms.locfileid: "79153543"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
- [なし] :  
+
+ なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -48,16 +52,18 @@ ms.locfileid: "79153543"
 |`listeners`|メッセージを収集、格納、およびルーティングするリスナーを格納します。 リスナーは、適切なターゲットにトレース出力を送信します。|  
   
 ## <a name="remarks"></a>解説  
+
  要素は、 `<clear>` トレースのコレクションからすべてのリスナーを削除し `Listeners` ます。 要素を使用 `<clear>` して、 `<add>` コレクション内に他のアクティブなリスナーが存在しないことを特定することができます。  
   
  コレクションは、 `Listeners` <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> プロパティ () でメソッドを呼び出すことで、プログラムによって消去でき <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> `System.Diagnostics.Trace.Listeners.Clear()` ます。  
   
- この要素は、コンピューターの構成ファイル (machine.config) とアプリケーション構成ファイルで使用できます。  
+ この要素は、マシン構成ファイル (Machine.config) とアプリケーション構成ファイルで使用できます。  
   
 > [!NOTE]
 > 要素は、、、 `<clear>` <xref:System.Diagnostics.DefaultTraceListener> `Listeners` 、およびの各メソッドの動作を変更して、をコレクションから削除し <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> ます。 通常、 `Assert` メソッドまたはメソッドを呼び出すと `Fail` 、メッセージボックスが表示されます。 ただし、 <xref:System.Diagnostics.DefaultTraceListener> がコレクションに含まれていない場合、メッセージボックスは表示されません `Listeners` 。  
   
 ## <a name="example"></a>例  
+
  次の例では、要素を使用し `<clear>` て、 `<add>` `console` `Listeners` トレースのコレクションにリスナーを追加する前に、要素を使用する方法を示します。  
   
 ```xml  

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <assert> element
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
-ms.openlocfilehash: f3c1a1670139a8262dea449bfff99c7c1c19f088
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: eb29701912a45a484b1716195b449e8a97d1d4b5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088949"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149297"
 ---
 # <a name="assert-element"></a>\<assert> 要素
+
 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> メソッドの呼び出し時にメッセージ ボックスを表示するかどうかを指定し、メッセージの書き込み先のファイルの名前も指定します。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -29,6 +30,7 @@ ms.locfileid: "74088949"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -40,26 +42,29 @@ ms.locfileid: "74088949"
   
 ## <a name="assertuienabled-attribute"></a>assertuienabled 属性  
   
-|値|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
-|`true`|メッセージボックスを表示します。 既定値です。|  
+|`true`|メッセージボックスを表示します。 これは既定値です。|  
 |`false`|では、メッセージボックスは表示されません。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
   
 ## <a name="remarks"></a>解説  
+
  要素の両方の属性 **\<assert>** は省略可能です。 メッセージを書き込むファイルを指定せずにメッセージボックスを無効にすることも、メッセージを有効にしたままメッセージを書き込むファイルを指定することもできます。  
   
 ## <a name="example"></a>例  
- 次の例は、 **Assert**を呼び出し、メッセージをに書き込むときに、メッセージボックスの表示を無効にする方法を示して `c:\log.txt` います。  
+
+ 次の例は、 **Assert** を呼び出し、メッセージをに書き込むときに、メッセージボックスの表示を無効にする方法を示して `c:\log.txt` います。  
   
 ```xml  
 <configuration>  

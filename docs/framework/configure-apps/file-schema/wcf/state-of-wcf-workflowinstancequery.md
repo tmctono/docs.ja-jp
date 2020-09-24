@@ -1,15 +1,16 @@
 ---
-title: <state>WCF の<workflowInstanceQuery>
+title: <state> WCF の <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
-ms.openlocfilehash: 80f7532f3c51680a2e34713b526dc43822db61b9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c323f7dba265e7fbcb09482115694088e761af0e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854954"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148894"
 ---
-# <a name="state-of-wcf-workflowinstancequery"></a>\<state>WCF の\<workflowInstanceQuery>
+# <a name="state-of-wcf-workflowinstancequery"></a>\<state> WCF の \<workflowInstanceQuery>
+
 追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態のコレクションを表します。  
   
  追跡プロファイルのクエリの詳細については、「[追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)」を参照してください。  
@@ -61,7 +62,7 @@ ms.locfileid: "70854954"
 
 ### <a name="parent-elements"></a>親要素
 
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<states>](states-of-wcf-workflowinstancequery.md)|追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態のコレクション。|  
   
@@ -71,11 +72,11 @@ ms.locfileid: "70854954"
   
 次の表で、使用可能な状態の値について説明します。
   
-|州|Description|  
+|状態|説明|  
 |-----------|-----------------|  
 |Aborted|ワークフロー インスタンスは中止されました。|  
 |完了|ワークフロー インスタンスは完了しました。|  
-|削除済み|ワークフロー インスタンスは削除されました。|  
+|Deleted|ワークフロー インスタンスは削除されました。|  
 |アイドル|ワークフロー インスタンスはアイドル状態です。|  
 |Persisted|ワークフロー インスタンスは永続化されました。|  
 |Resumed|ワークフロー インスタンスが再開されました。|  
@@ -84,7 +85,7 @@ ms.locfileid: "70854954"
 |アンロードされました|ワークフロー インスタンスはアンロードされました。|  
 |Canceled|ワークフロー インスタンスは取り消されました。|  
 |Suspended|ワークフロー インスタンスが中断されています。|  
-|Terminated|ワークフロー インスタンスは終了しました。|  
+|終了|ワークフロー インスタンスは終了しました。|  
 |Unsuspended|ワークフロー インスタンスの中断が解除されました。|  
   
 ## <a name="example"></a>例

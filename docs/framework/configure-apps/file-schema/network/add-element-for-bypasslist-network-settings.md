@@ -10,14 +10,15 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: 652b8738a201aaa98fa2c5c435fee1a6da91673b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 927a43f352fd776d9e6ba52ebea6ba2a1ccd4d48
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155078"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149492"
 ---
 # <a name="add-element-for-bypasslist-network-settings"></a>bypasslist の \<add> 要素 (ネットワーク設定)
+
 プロキシバイパス一覧に IP アドレスまたは DNS 名を追加します。  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -35,6 +36,7 @@ ms.locfileid: "79155078"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -44,6 +46,7 @@ ms.locfileid: "79155078"
 |**address**|IP アドレスまたは DNS 名を記述する正規表現。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -53,6 +56,7 @@ ms.locfileid: "79155078"
 |[bypasslist](bypasslist-element-network-settings.md)|プロキシを使用しないアドレスを記述する一連の正規表現を提供します。|  
   
 ## <a name="remarks"></a>解説  
+
  要素は、 `add` IP アドレスまたは DNS サーバー名を記述する正規表現を、プロキシサーバーをバイパスするアドレスの一覧に挿入します。  
   
  属性の値は、 `address` 一連の IP アドレスまたはホスト名を表す正規表現である必要があります。  
@@ -62,9 +66,11 @@ ms.locfileid: "79155078"
  正規表現の詳細については、「」を参照してください。[正規表現を .NET Framework](../../../../standard/base-types/regular-expressions.md)します。  
   
 ## <a name="configuration-files"></a>構成ファイル  
+
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
+
  次の例では、バイパスリストに2つのアドレスを追加します。 最初のは、contoso.com ドメイン内のすべてのサーバーのプロキシをバイパスします。2つ目は、IP アドレスが192.168 で始まるすべてのサーバーのプロキシをバイパスします。  
   
 ```xml  

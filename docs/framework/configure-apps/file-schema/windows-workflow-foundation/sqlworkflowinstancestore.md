@@ -3,14 +3,15 @@ title: <sqlWorkflowInstanceStore>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 8a4e4214-fc51-4f4d-b968-0427c37a9520
-ms.openlocfilehash: 56a44fdb62062903ca3ad00f8105a66ccab02cca
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d6c86d02e14a38c2a35ba4858c4abfea73268fd8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79151963"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148712"
 ---
 # \<sqlWorkflowInstanceStore>
+
 ワークフロー サービス インスタンスの状態情報の永続化を SQL Server 2005 または SQL Server 2008 データベースでサポートする <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 機能を構成するためのサービス動作。 この機能の詳細については、「 [SQL Workflow Instance Store](../../../windows-workflow-foundation/sql-workflow-instance-store.md)」を参照してください。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -38,11 +39,12 @@ ms.locfileid: "79151963"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |connectionString|基になる永続性データベースへの接続に使用する接続文字列を含む文字列。|  
 |connectionStringName|データベース サーバーへの名前付き接続文字列を含む文字列。 名前付き接続文字列の例としては、"DefaultConnectionString" などがあります。|  
@@ -53,13 +55,14 @@ ms.locfileid: "79151963"
 |runnableInstancesDetectionPeriod||  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
-|[\<behavior>の\<serviceBehaviors>](behavior-of-servicebehaviors-of-workflow.md)|動作の要素を指定します。|  
+|[\<serviceBehaviors> の \<behavior>](behavior-of-servicebehaviors-of-workflow.md)|動作の要素を指定します。|  
   
 ## <a name="see-also"></a>関連項目
 

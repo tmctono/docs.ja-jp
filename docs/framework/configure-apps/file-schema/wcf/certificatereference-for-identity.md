@@ -2,14 +2,15 @@
 title: <identity> の <certificateReference>
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
-ms.openlocfilehash: 93a6290d780ff61756f7315cd0c32f0e199ca00f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f3daa2dcdf9b464b51cfb9c883cbb828bccb42df
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70849983"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148998"
 ---
 # <a name="certificatereference-for-identity"></a>\<identity> の \<certificateReference>
+
 X.509 証明書検証の設定を指定します。 この id を持つエンドポイントに接続するセキュリティで保護された Windows Communication Foundation (WCF) クライアントは、サーバーによって提示されるクレームに、この id の構築に使用される id 要求が含まれていることを確認します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,11 +32,12 @@ X.509 証明書検証の設定を指定します。 この id を持つエンド
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |findValue|X.509 証明書ストアで検索する値を指定します。 この属性に格納されている型は、指定された `X509FindType` 値の要件を満たす必要があります。 既定値は空の文字列です。|  
 |isChainIncluded|証明書チェーンを使用して検証を行うかどうかを指定するブール値です。|  
@@ -44,11 +46,12 @@ X.509 証明書検証の設定を指定します。 この id を持つエンド
 |X509FindType|実行する X.509 検索の種類を指定します。 `findValue` 属性に含まれている型は、指定された X509FindType の要件を満たしている必要があります。<br /><br /> 有効な値は次のとおりです。<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />-Findbysubjectdistinguishedname です<br />- FindByIssuerName<br />- FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />- FindByTimeValid<br />- FindByTimeNotYetValid<br />- FindByTemplateName<br />- FindByApplicationPolicy<br />- FindByCertificatePolicy<br />- FindByExtension<br />- FindByKeyUsage<br />- FindBySubjectKeyIdentifier<br /><br /> 既定値は FindBySubjectDistinguishedName です。<br /><br /> この属性は <xref:System.Security.Cryptography.X509Certificates.X509FindType> 型です。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<identity>](identity.md)|メッセージを交換する他のエンドポイントによるエンドポイントの認証を可能にする設定を指定します。|  
   

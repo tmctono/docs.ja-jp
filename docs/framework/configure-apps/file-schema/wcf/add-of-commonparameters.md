@@ -2,14 +2,15 @@
 title: <add> の <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
-ms.openlocfilehash: 8328b6d08c1b57ad7a899c8cb489e07037e5af09
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 11be233d846f9025f041a26174e5b3bd2abdab55
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558162"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149193"
 ---
 # <a name="add-of-commonparameters"></a>\<add> の \<commonParameters>
+
 複数のサービスでグローバルに使用されるパラメーターの名前と値のペアを指定します。 このパラメーターには通常、永続性サービスによって共有されるデータベース接続文字列が格納されます。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -32,6 +33,7 @@ ms.locfileid: "90558162"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -42,6 +44,7 @@ ms.locfileid: "90558162"
 |値|サービスに対して指定されたパラメーターの値。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -50,7 +53,8 @@ ms.locfileid: "90558162"
 |-------------|-----------------|  
 |[\<commonParameters>](commonparameters.md)|サービスによって使用される共通パラメーターのコレクション。 このコレクションには通常、永続性サービスによって共有されるデータベース接続文字列が格納されます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
+
  最初の要素 `<commonParameters>` は、複数のサービスでグローバルに使用されるパラメーターを定義します (たとえば `ConnectionString` を使用する場合の <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>)。  
   
  <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> や <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService> など、作業バッチを永続的ストアにコミットするサービスでは、`EnableRetries` パラメーターを次の例のように使用することで、トランザクションの再試行を有効にできます。  

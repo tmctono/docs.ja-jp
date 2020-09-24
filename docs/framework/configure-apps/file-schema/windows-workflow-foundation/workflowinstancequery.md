@@ -3,14 +3,15 @@ title: <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 9096e812-626a-409a-9eda-c31a60b84c55
-ms.openlocfilehash: 68e44584858e55c136bc3c3dc5f1fb333485fa17
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6d8859db5faf84698b8984341dfff1444e7fc0ed
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70397511"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148558"
 ---
 # \<workflowInstanceQuery>
+
 開始したイベントや完了したイベントなど、ワークフロー インスタンスのライフサイクルの変化を追跡するクエリを表します。  
   
  追跡プロファイルのクエリの詳細については、「[追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)」を参照してください。  
@@ -42,9 +43,11 @@ ms.locfileid: "70397511"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
@@ -60,6 +63,7 @@ ms.locfileid: "70397511"
 |[\<workflowInstanceQueries>](workflowinstancequeries.md)|開始したイベントや完了したイベントなど、ワークフロー インスタンスのライフサイクルの変化を追跡する構成要素のコレクションを表します。|  
   
 ## <a name="remarks"></a>解説  
+
  <xref:System.Activities.Tracking.WorkflowInstanceQuery> は、次の <xref:System.Activities.Tracking.TrackingRecord> オブジェクトの定期受信に使用されます。  
   
 - <xref:System.Activities.Tracking.WorkflowInstanceRecord>  
@@ -73,6 +77,7 @@ ms.locfileid: "70397511"
 - <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>  
   
 ## <a name="example"></a>例  
+
  次の構成は、このクエリを使用して、`Started` インスタンス状態のワークフロー インスタンス レベルの追跡レコードを定期受信します。  
   
 ```xml  

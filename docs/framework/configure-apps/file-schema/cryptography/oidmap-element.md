@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: a28eaf68fe1e6ab3f26592eee5ae2d0f2e7a3256
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6c57810389acbd58e6d2e05277a6f26fa0aac8c6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155168"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149518"
 ---
 # <a name="oidmap-element"></a>\<oidMap> 要素
+
 クラスに対する asn.1 オブジェクト識別子 (OID) マッピングが含まれています。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -31,9 +32,11 @@ ms.locfileid: "79155168"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
@@ -51,6 +54,7 @@ ms.locfileid: "79155168"
 |`mscorlib`|要素が含まれてい `cryptographySettings` ます。|  
   
 ## <a name="example"></a>例  
+
  次の例は、要素を使用して、 **\<oidMap>** RIPEMD-160 ハッシュアルゴリズムの OID とそのハッシュアルゴリズムの実装とのマッピングを格納する方法を示しています。  
   
 ```xml  
@@ -76,7 +80,7 @@ ms.locfileid: "79155168"
 ## <a name="see-also"></a>関連項目
 
 - [構成ファイル スキーマ](../index.md)
-- [暗号設定スキーマ](index.md)
-- [暗号化サービス](../../../../standard/security/cryptographic-services.md)
+- [暗号化設定スキーマ](index.md)
+- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
 - [暗号化クラスの設定](../../configure-cryptography-classes.md)
 - [暗号化アルゴリズムへのオブジェクト ID の割り当て](../../map-object-identifiers-to-cryptography-algorithms.md)
