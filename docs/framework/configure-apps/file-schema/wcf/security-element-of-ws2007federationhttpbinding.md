@@ -1,15 +1,16 @@
 ---
-title: <security>の要素<ws2007FederationHttpBinding>
+title: <security> の要素 <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 826219b4-3a16-45fc-832d-0cd7cbbd3b84
-ms.openlocfilehash: b85c54c6507313522286e0c66504cfd0c8afb2b0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 943ccc241aef15b58661699408b085d98cf86c3b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738725"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183703"
 ---
-# <a name="security-element-of-ws2007federationhttpbinding"></a>\<security>の要素\<ws2007FederationHttpBinding>
+# <a name="security-element-of-ws2007federationhttpbinding"></a>\<security> の要素 \<ws2007FederationHttpBinding>
+
 要素のセキュリティ設定を定義し [\<ws2007FederationHttpBinding>](ws2007federationhttpbinding.md) ます。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,6 +38,7 @@ ms.locfileid: "73738725"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -47,21 +49,21 @@ ms.locfileid: "73738725"
   
 ## <a name="mode-attribute"></a>mode 属性  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
-|なし|SOAP メッセージは、転送中はセキュリティで保護されません。|  
+|None|SOAP メッセージは、転送中はセキュリティで保護されません。|  
 |Message|SOAP メッセージ セキュリティを使用して、整合性、機密性、サーバー認証、およびクライアント認証を提供します。 既定では、本文は暗号化および署名されます。 サービスは、証明書を使用して構成する必要があります。 クライアント認証は、セキュリティ トークン サービスによってクライアントに発行されるトークンに基づいています。|  
 |TransportWithMessageCredential|整合性、機密性、およびサーバー認証は、HTTPS によって提供されます。 サービスは、証明書を使用して構成する必要があります。 クライアント認証は、SOAP メッセージ セキュリティによって提供され、セキュリティ トークン サービスによってクライアントに発行されるトークンに基づいています。|  
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<message>](message-of-ws2007httpbinding.md)|メッセージ レベル セキュリティの設定を定義します。 この要素は <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement> 型です。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|のすべてのバインディング機能を定義 [\<wsDualHttpBinding>](wsdualhttpbinding.md) します。|  
   

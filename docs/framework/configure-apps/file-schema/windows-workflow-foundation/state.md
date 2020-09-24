@@ -3,14 +3,15 @@ title: <state>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 619414f2-61c2-4427-9977-d05009e343db
-ms.openlocfilehash: 7af75182cf38a6acb8a31b71e8b7b42103f8046b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 169fa900b5be9a9577818b68b540184afd4a6681
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398648"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169727"
 ---
 # \<state>
+
 追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態のコレクションを表します。  
   
  追跡プロファイルのクエリの詳細については、「[追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)」を参照してください。  
@@ -44,6 +45,7 @@ ms.locfileid: "70398648"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -53,24 +55,26 @@ ms.locfileid: "70398648"
 |name|追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態を指定する文字列。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<states>](states.md)|追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態のコレクション。|  
   
 ## <a name="remarks"></a>解説  
+
  返されたレコードは、このコレクションの状態でフィルター処理されます。  
   
  次の表に、有効な状態の値を示します。  
   
-|州|Description|  
+|状態|説明|  
 |-----------|-----------------|  
 |Aborted|ワークフロー インスタンスは中止されました。|  
 |完了|ワークフロー インスタンスは完了しました。|  
-|削除済み|ワークフロー インスタンスは削除されました。|  
+|Deleted|ワークフロー インスタンスは削除されました。|  
 |アイドル|ワークフロー インスタンスはアイドル状態です。|  
 |Persisted|ワークフロー インスタンスは永続化されました。|  
 |Resumed|ワークフロー インスタンスが再開されました。|  
@@ -79,10 +83,11 @@ ms.locfileid: "70398648"
 |アンロードされました|ワークフロー インスタンスはアンロードされました。|  
 |Canceled|ワークフロー インスタンスは取り消されました。|  
 |Suspended|ワークフロー インスタンスが中断されています。|  
-|Terminated|ワークフロー インスタンスは終了しました。|  
+|終了|ワークフロー インスタンスは終了しました。|  
 |Unsuspended|ワークフロー インスタンスの中断が解除されました。|  
   
 ## <a name="example"></a>例  
+
  次の構成は、このクエリを使用して、`Started` インスタンス状態のワークフロー インスタンス レベルの追跡レコードを定期受信します。  
   
 ```xml  

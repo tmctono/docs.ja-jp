@@ -2,14 +2,15 @@
 title: <peer> の <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: b134e21d-e5b5-458e-9309-626dbf8db4ed
-ms.openlocfilehash: 50db8eb381249c3b880c4b1dd96ec3813d51ce67
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7f6669d3f53a6ee0d189786fa9ca3625fdedd127
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556116"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162479"
 ---
 # <a name="peer-of-servicecredentials"></a>\<peer> の \<serviceCredentials>
+
 ピア ノードの現在の資格情報を指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,9 +32,11 @@ ms.locfileid: "90556116"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
