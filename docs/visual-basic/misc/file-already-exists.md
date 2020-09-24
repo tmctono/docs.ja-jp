@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID58
 ms.assetid: 04c2811f-b164-4e46-b4f0-ee9c948adade
-ms.openlocfilehash: 1e0e16aef9a3dce9759e4c400b80b1388c088fa7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1517dd658fa8469faef112683e85f230afb13d60
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411058"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91091042"
 ---
 # <a name="file-already-exists"></a>ファイルは既に存在します
+
 このエラーは、新しいファイルに既存のファイルの名前を付けたか、または **[名前を付けて保存]** コマンドを使用して、現在読み込まれているプロジェクトを既に存在する名前で保存した結果として発生します。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  

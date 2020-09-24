@@ -2,17 +2,19 @@
 title: '統合言語クエリ (LINQ: Language-Integrated Query)'
 ms.date: 07/20/2015
 ms.assetid: a99371f7-097c-49a0-b62b-0e31c34aad0e
-ms.openlocfilehash: 53c4033c4626fd34c3cd8752e74af3f8e9b481c3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c34145a0b7ff5cf97f5efd6ff7b49381af80bd93
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90549943"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098256"
 ---
 # <a name="language-integrated-query-linq-visual-basic"></a>統合言語クエリ (LINQ) (Visual Basic)
+
 LINQ は、強力なクエリ機能を Visual Basic の言語構文に拡張する機能のセットです。 LINQ には、データを照会したり、更新したりするための、容易に覚えることのできる標準的なパターンが採用されており、あらゆる種類のデータ ストアをサポートするようにテクノロジを拡張できます。  .NET Framework には LINQ プロバイダー アセンブリが含まれているため、.NET Framework コレクション、SQL Server データベース、ADO.NET データセット、および XML ドキュメントで LINQ を使用できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [LINQ の概要 (Visual Basic)](introduction-to-linq.md)  
  作成できるアプリケーションの種類と、LINQ クエリを使用して解決できる問題の種類の概要について説明します。  
   

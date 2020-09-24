@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MalFormedDelimitedLine
 ms.assetid: 1f8d4c2d-0334-4da8-acff-5460159835b3
-ms.openlocfilehash: 756fdc628badebd648dbf2a45df57173e6fc7640
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0f8a60f698ef19c1b039544cb085d757e26d4024
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402162"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090600"
 ---
 # <a name="line-number-cannot-be-parsed-using-the-current-delimiters"></a>現在の区切り記号を使用して、行 \<number> を解析できません。
+
 指定したもの以外の区切り記号を使用しているために、指定した行を解析できません。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
