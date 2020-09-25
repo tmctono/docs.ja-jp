@@ -3,14 +3,15 @@ title: LINQ to SQL
 description: LINQ to SQL は .NET Framework のコンポーネントであり、リレーショナル データをオブジェクトとして管理するためのランタイム インフラストラクチャを提供します。
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: d6fadecf17cae21527cec2180b6d6c5b5e85d0cc
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 961e0713de714d0e75417f93e84e0ab748fd9a42
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551315"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158319"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
+
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は .NET Framework バージョン 3.5 のコンポーネントであり、リレーショナル データをオブジェクトとして管理するためのランタイム インフラストラクチャを提供します。  
   
 > [!NOTE]
@@ -23,6 +24,7 @@ ms.locfileid: "90551315"
  このリリースの [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] に含まれているドキュメントでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] アプリケーションを構築するのに必要な基本的なビルド ブロック、プロセス、および手法について説明します。 特定の問題について Microsoft Docs を検索したり、[LINQ フォーラム](https://social.msdn.microsoft.com/forums/home?forum=linqtosql)に参加して、複雑なトピックについて専門家と検討したりすることもできます。 最後に、「[LINQ to SQL: リレーショナル データ用 .NET 統合言語クエリ](/previous-versions/dotnet/articles/bb425822(v=msdn.10))」ホワイト ペーパーには、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] テクノロジの詳細と、Visual Basic および C# のコード例が記載されています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [はじめに](getting-started.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の簡単な概要と、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] を使用して作業を始める方法を示します。  
   
@@ -36,6 +38,7 @@ ms.locfileid: "90551315"
  Visual Basic および C# のサンプルへのリンクを示します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [統合言語クエリ (LINQ) - C#](../../../../../csharp/programming-guide/concepts/linq/index.md)\
  C# での LINQ テクノロジの概要を提供します。
 

@@ -4,12 +4,12 @@ description: サーバーレス アーキテクチャについて説明します
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/22/2020
-ms.openlocfilehash: 16e658a99feda6537189a45b53da514e67766999
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 867765d29a7c50694a5de7b1de56346d86600a83
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135693"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171820"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>サーバーレス アプリ: アーキテクチャ、パターン、および Azure の実装
 
@@ -74,7 +74,7 @@ Mac および macOS は Apple Inc. の商標です。
 
 このガイドでは、サーバーレスを使用するアプリケーションをクラウド ネイティブで開発することに焦点を当てています。 このブックでは、サーバーレス アプリの開発の利点と、可能性のある欠点を明らかにし、サーバーレス アーキテクチャについて概説します。 サーバーレスの多くの使用例は、さまざまなサーバーレスの設計パターンを使用して示しています。
 
-このガイドでは、Azure のサーバーレス プラットフォームの構成要素について説明しますが、特に [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview) を使用したサーバーレス実装について説明しています。 トリガー、バインド方法、および Durable Functions を使用した状態に依存するサーバーレス アプリの実装方法について説明します。 最後に、プロジェクトにとってサーバーレスが正しいアプローチであるかどうかを判断するために、ビジネス例およびケース スタディで状況や視点を示しています。
+このガイドでは、Azure のサーバーレス プラットフォームの構成要素について説明しますが、特に [Azure Functions](/azure/azure-functions/functions-overview) を使用したサーバーレス実装について説明しています。 トリガー、バインド方法、および Durable Functions を使用した状態に依存するサーバーレス アプリの実装方法について説明します。 最後に、プロジェクトにとってサーバーレスが正しいアプローチであるかどうかを判断するために、ビジネス例およびケース スタディで状況や視点を示しています。
 
 ## <a name="evolution-of-cloud-platforms"></a>クラウド プラットフォームの進化
 
@@ -116,12 +116,12 @@ Mac および macOS は Apple Inc. の商標です。
 
 ## <a name="what-this-guide-doesnt-cover"></a>このガイドに含まれないもの
 
-このガイドでは、特にアーキテクチャでのアプローチおよび設計パターンについて説明しており、Azure Functions、[Logic Apps](https://docs.microsoft.com/azure/logic-apps/logic-apps-what-are-logic-apps) またはその他のサーバーレス プラットフォームについては詳しくは説明していません。 このガイドでは、たとえば、Logic Apps が使用された高度なワークフローや、クロス オリジン リソース共有 (CORS) の構成などの Azure Functions の機能、カスタム ドメインの適用または SSL 証明書のアップロードについては説明していません。 これらについては、オンラインの [Azure Functions のドキュメント](https://docs.microsoft.com/azure/azure-functions/functions-reference)で説明しています。
+このガイドでは、特にアーキテクチャでのアプローチおよび設計パターンについて説明しており、Azure Functions、[Logic Apps](/azure/logic-apps/logic-apps-what-are-logic-apps) またはその他のサーバーレス プラットフォームについては詳しくは説明していません。 このガイドでは、たとえば、Logic Apps が使用された高度なワークフローや、クロス オリジン リソース共有 (CORS) の構成などの Azure Functions の機能、カスタム ドメインの適用または SSL 証明書のアップロードについては説明していません。 これらについては、オンラインの [Azure Functions のドキュメント](/azure/azure-functions/functions-reference)で説明しています。
 
 ### <a name="additional-resources"></a>その他の技術情報
 
-- [Azure アーキテクチャ センター](https://docs.microsoft.com/azure/architecture/)
-- [クラウド アプリケーションのベスト プラクティス](https://docs.microsoft.com/azure/architecture/best-practices/api-design)
+- [Azure アーキテクチャ センター](/azure/architecture/)
+- [クラウド アプリケーションのベスト プラクティス](/azure/architecture/best-practices/api-design)
 
 ## <a name="who-should-use-the-guide"></a>対象読者
 

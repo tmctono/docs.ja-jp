@@ -4,18 +4,19 @@ description: .NET Framework プログラマー用のデータ アクセス サ�
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 4f9b2ca42a2c25c1463b7d1ca38b4b8920b2dafd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 503977ab2bef6f03ab13fab168319d350aad9471
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "85503761"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194571"
 ---
 # <a name="adonet"></a>ADO.NET
 
 ADO.NET は、.NET Framework のプログラミングでデータ アクセス サービスを使用できるようにするためのクラスの集合です。 ADO.NET は、分散型データ共有アプリケーションを作成する、さまざまなコンポーネントのセットを提供します。 ADO.NET は .NET Framework の不可欠な部分であり、リレーショナル データ、XML データ、およびアプリケーション データへのアクセス機能を提供します。 ADO.NET は、アプリケーション、ツール、言語、またはインターネット ブラウザーが使用するフロントエンド データベース クライアントや中間層ビジネス オブジェクトの作成を含む、各種の開発ニーズをサポートします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [ADO.NET の新機能](whats-new.md)  
  ADO.NET の新機能について説明します。  
   
@@ -47,6 +48,7 @@ ADO.NET は、.NET Framework のプログラミングでデータ アクセス �
  .NET Framework Data Provider for Oracle 固有の機能および動作について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [統合言語クエリ (LINQ) - C#](../../../csharp/programming-guide/concepts/linq/index.md)  
  C# を使用する LINQ に関連したトピックおよびサンプルへのリンクを提供します。  
   

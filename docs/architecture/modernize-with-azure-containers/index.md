@@ -2,12 +2,12 @@
 title: Azure クラウドおよび Windows コンテナーを使用して既存の .NET アプリケーションを最新化する (第 2 版)
 description: この電子書籍では、既存のアプリケーションを Azure クラウドおよびコンテナーへとリフト アンド シフトして最新化する方法について説明します。
 ms.date: 04/28/2018
-ms.openlocfilehash: 95a5870254481a4c6c9eed82b5be5e1eb10be346
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 74359b526bead85788a6ddc8039ef05b4c475d5e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987947"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172264"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure クラウドおよび Windows コンテナーを使用して既存の .NET アプリケーションを最新化する (第 2 版)
 
@@ -119,10 +119,10 @@ Web アプリケーションまたはサービスを最新化し、クラウド�
 
 - **クラウド インフラストラクチャ対応** (再ホストまたは基本的なリフト アンド シフト):多くの組織では、最初の手順としてクラウド移行戦略を迅速に実行するだけです。 この場合、アプリケーションは再ホストされます。 [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)、[Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/) などのクラウドツールを基にした Azure への移行を支援するために必要なガイダンス、洞察、メカニズムを提供するサービスである [Azure Migrate](https://aka.ms/azuremigrate) を使用することで、ほとんどの再ホストは自動化することができます。 レガシ アプリケーションをクラウドに移動するときに、資産についてインフラストラクチャの詳細を確認することができるように、再ホストを手動で変更を設定することもできます。 たとえば、ほとんど変更せずに (おそらく少しの構成変更だけで) Azure の VM にアプリケーションを移動することができます。 特に Azure で仮想ネットワークを作成する場合、このケースでのネットワークは、オンプレミス環境に似ています。
 
-- **クラウド最適化** (マネージド サービスおよび Windows コンテナー):このモデルでは、アプリケーションの主要なアーキテクチャを変更することなく、クラウドからのいくつかの重要な利点を取得するために、いくつかの重要な展開の最適化を行います。 ここでの基本的な手順は、[Windows コンテナー](https://docs.microsoft.com/virtualization/windowscontainers/about/) サポートを既存の .NET Framework アプリケーションに追加することです。 この重要な手順 (コンテナー化) は、コードを操作しないので、全体的なリフト アンド シフトの作業が少なくなります。 [Image2Docker](https://github.com/docker/communitytools-image2docker-win) や Visual Studio などのツールと、[Docker](https://www.docker.com/) 用のツールを使用できます。 Visual Studio は、ASP.NET アプリケーションおよび Windows コンテナー イメージ用のスマート有効な既定値を自動的に選択します。 これらのツールは、迅速な内側のループと Azure へのコンテナーを取得する高速なパスの両方を提供します。 複数の環境に展開するときの機敏性が向上します。
+- **クラウド最適化** (マネージド サービスおよび Windows コンテナー):このモデルでは、アプリケーションの主要なアーキテクチャを変更することなく、クラウドからのいくつかの重要な利点を取得するために、いくつかの重要な展開の最適化を行います。 ここでの基本的な手順は、[Windows コンテナー](/virtualization/windowscontainers/about/) サポートを既存の .NET Framework アプリケーションに追加することです。 この重要な手順 (コンテナー化) は、コードを操作しないので、全体的なリフト アンド シフトの作業が少なくなります。 [Image2Docker](https://github.com/docker/communitytools-image2docker-win) や Visual Studio などのツールと、[Docker](https://www.docker.com/) 用のツールを使用できます。 Visual Studio は、ASP.NET アプリケーションおよび Windows コンテナー イメージ用のスマート有効な既定値を自動的に選択します。 これらのツールは、迅速な内側のループと Azure へのコンテナーを取得する高速なパスの両方を提供します。 複数の環境に展開するときの機敏性が向上します。
 これで、運用環境に移行すると、[Azure Web App for Containers](https://azure.microsoft.com/services/app-service/containers/)、[Azure Container Instances (ACI)](https://azure.microsoft.com/services/container-instances/) と、IaaS アプローチが好みの場合は Windows Server 2016 とコンテナーを備えた Azure VM に Windows コンテナーをデプロイできるようになります。 より複雑なマルチコンテナー アプリケーションの場合は、[Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/) などのオーケストレーター使用することを検討してください。
 
-この初期最新化中に、[Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview) などのツールによる監視、[Azure DevOps Services](https://azure.microsoft.com/services/devops/) を使用したアプリ ライフサイクルの CI/CD パイプライン、および Azure で使用可能な多数のデータ リソース サービスなどのクラウドの資産を追加することもできます。 たとえば、従来の [ASP.NET Web Forms](https://www.asp.net/web-forms) や [ASP.NET MVC](https://www.asp.net/mvc) を使用して最初に開発され、しかし現在は Windows コンテナーを使用して展開されるモノリシック Web アプリを変更することができます。 Windows コンテナーを使用するときには、データも [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/) のデータベースに移行する必要があります。アプリケーションの主要なアーキテクチャを変更せずにすべてを移行できます。
+この初期最新化中に、[Azure Application Insights](/azure/application-insights/app-insights-overview) などのツールによる監視、[Azure DevOps Services](https://azure.microsoft.com/services/devops/) を使用したアプリ ライフサイクルの CI/CD パイプライン、および Azure で使用可能な多数のデータ リソース サービスなどのクラウドの資産を追加することもできます。 たとえば、従来の [ASP.NET Web Forms](https://www.asp.net/web-forms) や [ASP.NET MVC](https://www.asp.net/mvc) を使用して最初に開発され、しかし現在は Windows コンテナーを使用して展開されるモノリシック Web アプリを変更することができます。 Windows コンテナーを使用するときには、データも [Azure SQL Database Managed Instance](/azure/sql-database/) のデータベースに移行する必要があります。アプリケーションの主要なアーキテクチャを変更せずにすべてを移行できます。
 
 - **クラウドネイティブ**:紹介したように、自律的に開発およびデプロイできるさまざまなマイクロサービスに取り組む複数の独立した開発チームを擁して、大規模で複雑なアプリケーションを対象としている場合は、[クラウドネイティブ](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) アプリケーションの設計を検討する必要があります。 また、マイクロサービスごとの細粒度で独立したスケーラビリティのためでもあります。 これらのアーキテクチャのアプローチでは、非常に重要な課題と複雑さに直面しますが、クラウド PaaS や、サーバーレス アプローチの [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/) (マネージド Kubernetes)、[Azure Functions](https://azure.microsoft.com/services/functions/) のようなオーケストレーターを使用することで、大幅に簡素化できます。 これらのすべてのアプローチ (マイクロサービスとサーバーレスなど) は、一般的に、クラウドに合わせて設計し、新しいコードを作成する必要があります。つまり、特定の PaaS プラットフォームに適応したコード、またはマイクロサービスなどの特定のアーキテクチャに適応したコードです。
 

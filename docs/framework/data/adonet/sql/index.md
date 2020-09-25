@@ -4,14 +4,15 @@ description: データベース固有のプロトコルをカプセル化する 
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: eeb0ab69a68dfc2fc0faa1b4e833f80b307fffe5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a517bccd9b60d00f6c6c636c9164d63fb5966de3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "85503759"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197392"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server と ADO.NET
+
 このセクションでは、.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) 固有の機能および動作について説明します。  
   
  <xref:System.Data.SqlClient> は SQL Server のバージョンへのアクセスを提供し、データベース固有のプロトコルをカプセル化します。 このデータ プロバイダーの機能は、OLE DB、ODBC、および Oracle に対する .NET Framework データ プロバイダーの機能と同等になるように設計されています。 <xref:System.Data.SqlClient> には、SQL Server と直接通信するための表形式データ ストリーム (TDS) パーサーが含まれています。  
@@ -20,6 +21,7 @@ ms.locfileid: "85503759"
 > .NET Framework Data Provider for SQL Server を使用するには、アプリケーションで <xref:System.Data.SqlClient> 名前空間を参照する必要があります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [SQL Server のセキュリティ](sql-server-security.md)  
  SQL Server のセキュリティの概要を説明し、アプリケーションのシナリオを交えながら、SQL Server を対象とした安全な ADO.NET アプリケーションを作成するための指針を提供します。  
   

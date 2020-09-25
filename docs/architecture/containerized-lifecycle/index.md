@@ -2,12 +2,12 @@
 title: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
 description: Docker および Microsoft のプラットフォームとツールでコンテナー化されたアプリケーションを開発およびデプロイするための、開発とデプロイのプロセスの概要を説明します。
 ms.date: 07/30/2020
-ms.openlocfilehash: d8055315b25f73d7b0b355026ab6b2c4767f9d89
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: c506a3423ac4511f23452192e361e88dce6efec4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915151"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160698"
 ---
 # <a name="containerized-docker-application-lifecycle-with-microsoft-platform-and-tools"></a>Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
 
@@ -17,7 +17,7 @@ ms.locfileid: "87915151"
 
 このガイドは、Microsoft のプラットフォームとツールを使用して、コンテナー化された ASP.NET Core アプリケーションを Docker で開発およびデプロイするための一般的な概要です。 このガイドには、CI/CD パイプラインを実装するための Azure DevOps の概要、Azure Container Registry (ACR)、デプロイ用の Azure Kubernetes Services AKS が含まれています。
 
-開発に関連した低レベルの詳細については、『[.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ](https://docs.microsoft.com/dotnet/architecture/microservices/)』 ガイドと IT 関連の参照アプリケーション [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) をご覧ください。
+開発に関連した低レベルの詳細については、『[.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ](../microservices/index.md)』 ガイドと IT 関連の参照アプリケーション [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) をご覧ください。
 
 ## <a name="send-us-your-feedback"></a>フィードバックをお寄せください。
 

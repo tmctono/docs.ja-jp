@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/11/2019
-ms.openlocfilehash: 1c869cce6ab8a0ab7c4b83817fe1afc3d6a4a7fd
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 3ac9a02a2f5c93cbfd9377a9f6fff4b6c5f45e93
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267472"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158176"
 ---
 # <a name="no-locblazor-for-aspnet-web-forms-developers"></a>ASP.NET Web Forms 開発者向け Blazor
 
@@ -74,7 +74,7 @@ Mac および macOS は Apple Inc. の商標です。
 
 ## <a name="what-this-book-doesnt-cover"></a>本書で取り上げないもの
 
-本書は Blazor の紹介文であり、包括的な移行ガイドではありません。 ASP.NET Web Forms から Blazor にプロジェクトを移行する方法に関するガイダンスが含まれていますが、微妙な違いや詳細をあらゆる点で説明する試みはありません。 ASP.NET から ASP.NET Core に移行する一般的な手順については、ASP.NET Core ドキュメントの[移行ガイダンス](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/)を参照してください。
+本書は Blazor の紹介文であり、包括的な移行ガイドではありません。 ASP.NET Web Forms から Blazor にプロジェクトを移行する方法に関するガイダンスが含まれていますが、微妙な違いや詳細をあらゆる点で説明する試みはありません。 ASP.NET から ASP.NET Core に移行する一般的な手順については、ASP.NET Core ドキュメントの[移行ガイダンス](/aspnet/core/migration/proper-to-2x/)を参照してください。
 
 ### <a name="additional-resources"></a>その他の技術情報
 

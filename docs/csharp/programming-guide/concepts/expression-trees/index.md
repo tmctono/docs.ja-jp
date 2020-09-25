@@ -3,14 +3,15 @@ title: 式ツリー (C#)
 description: 式ツリーについて説明します。 各ノードが式である、これらのデータ構造体によって表されるコードをコンパイルして実行する方法をご覧ください。
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: a5c84673f0b45b92be18b955a6d1e7268bb73c26
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 04b5486b6d3c54f0dfd3914eacbda5cffe15890a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063316"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167640"
 ---
 # <a name="expression-trees-c"></a>式ツリー (C#)
+
 式ツリーでは、コードがツリー状のデータ構造で表示されます。各ノードは 1 つの式に対応しています。たとえば、メソッドの呼び出しや `x < y` のような二項演算などです。  
   
  式ツリーで表されるコードはコンパイルおよび実行できます。 これによって、実行可能なコードの動的な変更、さまざまなデータベースでの LINQ クエリの実行、および動的クエリの作成が可能になります。 LINQ の式ツリーの詳細については、「[式ツリーを使用して動的クエリを作成する方法 (C#)](./how-to-use-expression-trees-to-build-dynamic-queries.md)」をご覧ください。
@@ -20,6 +21,7 @@ ms.locfileid: "88063316"
  匿名のラムダ式に基づいて、C# と Visual Basic コンパイラで式ツリーを作成できます。または、<xref:System.Linq.Expressions> 名前空間を使用して手動で式ツリーを作成できます。  
   
 ## <a name="creating-expression-trees-from-lambda-expressions"></a>ラムダ式からの式ツリーの作成  
+
  ラムダ式が <xref:System.Linq.Expressions.Expression%601> 型の変数に割り当てられている場合、コンパイラはラムダ式を表す式ツリーを構築するコードを出力します。  
   
  C# コンパイラは、式形式のラムダ (つまり単一行のラムダ) からのみ式ツリーを生成できます。 ステートメント形式のラムダ (つまり複数行のラムダ) は解析できません。 C# のラムダ式の詳細については、「[ラムダ式](../../../language-reference/operators/lambda-expressions.md)」を参照してください。  
@@ -31,6 +33,7 @@ Expression<Func<int, bool>> lambda = num => num < 5;
 ```  
   
 ## <a name="creating-expression-trees-by-using-the-api"></a>API を使用した式ツリーの作成  
+
  API を使用して式ツリーを作成するには、<xref:System.Linq.Expressions.Expression> クラスを使用します。 このクラスには、特定の型を持つ式ツリー ノードを作成する静的ファクトリ メソッドが含まれます。たとえば、変数またはパラメーターを表す <xref:System.Linq.Expressions.ParameterExpression> や、メソッドの呼び出しを表す <xref:System.Linq.Expressions.MethodCallExpression> などです。 <xref:System.Linq.Expressions.ParameterExpression>、<xref:System.Linq.Expressions.MethodCallExpression> などの式固有の型も、<xref:System.Linq.Expressions> 名前空間で定義されます。 これらの型は、<xref:System.Linq.Expressions.Expression> 抽象型から派生したものです。  
   
  次のコード例は、API を使用して、ラムダ式 `num => num < 5` を表す式ツリーを作成する方法を示しています。  
@@ -95,6 +98,7 @@ Console.WriteLine(factorial);
 詳細については、「[Generating Dynamic Methods with Expression Trees in Visual Studio 2010](https://devblogs.microsoft.com/csharpfaq/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010/) (Visual Studio 2010 での式ツリーによる動的メソッドの生成)」を参照し、Visual Studio 2010 以降のバージョンについても同じ方法を適用してください。
   
 ## <a name="parsing-expression-trees"></a>式ツリーの解析  
+
  次のコード例は、ラムダ式 `num => num < 5` を表す式ツリーを各部分に分解する方法を示しています。  
   
 ```csharp  
@@ -119,9 +123,11 @@ Console.WriteLine("Decomposed expression: {0} => {1} {2} {3}",
 ```  
   
 ## <a name="immutability-of-expression-trees"></a>式ツリーの不変性  
+
  式ツリーは変更できません。 つまり、式ツリーを変更するには、既存の式ツリーをコピーしてツリー内のノードを置き換えることで、新しい式ツリーを作成する必要があります。 式ツリー ビジターを使用して、既存の式ツリーを走査することができます。 詳細については、「[式ツリーを変更する方法 (C#)](./how-to-modify-expression-trees.md)」を参照してください。
   
 ## <a name="compiling-expression-trees"></a>式ツリーのコンパイル  
+
  <xref:System.Linq.Expressions.Expression%601> 型に含まれる <xref:System.Linq.Expressions.Expression%601.Compile%2A> メソッドにより、式ツリーが表すコードを実行可能なデリゲートにコンパイルします。  
   
  次のコード例は、式ツリーをコンパイルして結果のコードを実行する方法を示しています。  
