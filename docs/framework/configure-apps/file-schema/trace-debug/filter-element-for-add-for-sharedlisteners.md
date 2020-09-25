@@ -1,5 +1,5 @@
 ---
-title: <filter>のの <add> 要素<sharedListeners>
+title: <filter> のの <add> 要素 <sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,15 +10,16 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: 6fb52cdfa5792ab6059b60d8dbb91c107cd666ca
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e140148a342e31d6ade7def8849d8a7738301704
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153454"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173927"
 ---
-# <a name="filter-element-for-add-for-sharedlisteners"></a><span data-ttu-id="02ab4-102">\<filter>のの \<add> 要素\<sharedListeners></span><span class="sxs-lookup"><span data-stu-id="02ab4-102">\<filter> Element for \<add> for \<sharedListeners></span></span>
-<span data-ttu-id="02ab4-103">`sharedListeners` コレクションのリスナーにフィルターを追加します。</span><span class="sxs-lookup"><span data-stu-id="02ab4-103">Adds a filter to a listener in the `sharedListeners` collection.</span></span>  
+# <a name="filter-element-for-add-for-sharedlisteners"></a><span data-ttu-id="43774-102">\<filter> のの \<add> 要素 \<sharedListeners></span><span class="sxs-lookup"><span data-stu-id="43774-102">\<filter> Element for \<add> for \<sharedListeners></span></span>
+
+<span data-ttu-id="43774-103">`sharedListeners` コレクションのリスナーにフィルターを追加します。</span><span class="sxs-lookup"><span data-stu-id="43774-103">Adds a filter to a listener in the `sharedListeners` collection.</span></span>  
 
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
@@ -26,42 +27,46 @@ ms.locfileid: "79153454"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](add-element-for-sharedlisteners.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<filter>**
 
-## <a name="syntax"></a><span data-ttu-id="02ab4-104">構文</span><span class="sxs-lookup"><span data-stu-id="02ab4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="43774-104">構文</span><span class="sxs-lookup"><span data-stu-id="43774-104">Syntax</span></span>  
   
 ```xml  
 <filter type="System.Diagnostics.EventTypeFilter"
   initializeData="Warning" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="02ab4-105">属性および要素</span><span class="sxs-lookup"><span data-stu-id="02ab4-105">Attributes and Elements</span></span>  
- <span data-ttu-id="02ab4-106">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="02ab4-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="43774-105">属性および要素</span><span class="sxs-lookup"><span data-stu-id="43774-105">Attributes and Elements</span></span>  
+
+ <span data-ttu-id="43774-106">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="43774-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="02ab4-107">属性</span><span class="sxs-lookup"><span data-stu-id="02ab4-107">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="43774-107">属性</span><span class="sxs-lookup"><span data-stu-id="43774-107">Attributes</span></span>  
   
-|<span data-ttu-id="02ab4-108">属性</span><span class="sxs-lookup"><span data-stu-id="02ab4-108">Attribute</span></span>|<span data-ttu-id="02ab4-109">説明</span><span class="sxs-lookup"><span data-stu-id="02ab4-109">Description</span></span>|  
+|<span data-ttu-id="43774-108">属性</span><span class="sxs-lookup"><span data-stu-id="43774-108">Attribute</span></span>|<span data-ttu-id="43774-109">説明</span><span class="sxs-lookup"><span data-stu-id="43774-109">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="02ab4-110">**type**</span><span class="sxs-lookup"><span data-stu-id="02ab4-110">**type**</span></span>|<span data-ttu-id="02ab4-111">必須の属性です。</span><span class="sxs-lookup"><span data-stu-id="02ab4-111">Required attribute.</span></span><br /><br /> <span data-ttu-id="02ab4-112">フィルターの種類を指定します。</span><span class="sxs-lookup"><span data-stu-id="02ab4-112">Specifies the type of the filter.</span></span> <span data-ttu-id="02ab4-113">型の完全な名前 (プロパティの形式) のみを使用することも、 <xref:System.Type.FullName%2A?displayProperty=nameWithType> アセンブリ情報を含む完全修飾型名 (プロパティの形式) を使用することもでき <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> ます。</span><span class="sxs-lookup"><span data-stu-id="02ab4-113">You can use only the full name of the type (in the format of the <xref:System.Type.FullName%2A?displayProperty=nameWithType> property), or you can use the fully qualified type name including the assembly information (in the format of the <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> property).</span></span> <span data-ttu-id="02ab4-114">完全修飾型名の作成の詳細については、「[完全修飾型名の指定](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="02ab4-114">For information on creating a fully qualified type name, see [Specifying Fully Qualified Type Names](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
-|<span data-ttu-id="02ab4-115">**initializeData**</span><span class="sxs-lookup"><span data-stu-id="02ab4-115">**initializeData**</span></span>|<span data-ttu-id="02ab4-116">省略可能な属性です。</span><span class="sxs-lookup"><span data-stu-id="02ab4-116">Optional attribute.</span></span><br /><br /> <span data-ttu-id="02ab4-117">指定したクラスのコンストラクターに渡される文字列。</span><span class="sxs-lookup"><span data-stu-id="02ab4-117">The string passed to the constructor for the specified class.</span></span>|  
+|<span data-ttu-id="43774-110">**type**</span><span class="sxs-lookup"><span data-stu-id="43774-110">**type**</span></span>|<span data-ttu-id="43774-111">必須の属性です。</span><span class="sxs-lookup"><span data-stu-id="43774-111">Required attribute.</span></span><br /><br /> <span data-ttu-id="43774-112">フィルターの種類を指定します。</span><span class="sxs-lookup"><span data-stu-id="43774-112">Specifies the type of the filter.</span></span> <span data-ttu-id="43774-113">型の完全な名前 (プロパティの形式) のみを使用することも、 <xref:System.Type.FullName%2A?displayProperty=nameWithType> アセンブリ情報を含む完全修飾型名 (プロパティの形式) を使用することもでき <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> ます。</span><span class="sxs-lookup"><span data-stu-id="43774-113">You can use only the full name of the type (in the format of the <xref:System.Type.FullName%2A?displayProperty=nameWithType> property), or you can use the fully qualified type name including the assembly information (in the format of the <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> property).</span></span> <span data-ttu-id="43774-114">完全修飾型名の作成の詳細については、「 [完全修飾型名の指定](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="43774-114">For information on creating a fully qualified type name, see [Specifying Fully Qualified Type Names](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
+|<span data-ttu-id="43774-115">**initializeData**</span><span class="sxs-lookup"><span data-stu-id="43774-115">**initializeData**</span></span>|<span data-ttu-id="43774-116">省略可能な属性です。</span><span class="sxs-lookup"><span data-stu-id="43774-116">Optional attribute.</span></span><br /><br /> <span data-ttu-id="43774-117">指定したクラスのコンストラクターに渡される文字列。</span><span class="sxs-lookup"><span data-stu-id="43774-117">The string passed to the constructor for the specified class.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="02ab4-118">子要素</span><span class="sxs-lookup"><span data-stu-id="02ab4-118">Child Elements</span></span>  
- <span data-ttu-id="02ab4-119">なし。</span><span class="sxs-lookup"><span data-stu-id="02ab4-119">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="43774-118">子要素</span><span class="sxs-lookup"><span data-stu-id="43774-118">Child Elements</span></span>  
+
+ <span data-ttu-id="43774-119">なし。</span><span class="sxs-lookup"><span data-stu-id="43774-119">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="02ab4-120">親要素</span><span class="sxs-lookup"><span data-stu-id="02ab4-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="43774-120">親要素</span><span class="sxs-lookup"><span data-stu-id="43774-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="02ab4-121">要素</span><span class="sxs-lookup"><span data-stu-id="02ab4-121">Element</span></span>|<span data-ttu-id="02ab4-122">Description</span><span class="sxs-lookup"><span data-stu-id="02ab4-122">Description</span></span>|  
+|<span data-ttu-id="43774-121">要素</span><span class="sxs-lookup"><span data-stu-id="43774-121">Element</span></span>|<span data-ttu-id="43774-122">説明</span><span class="sxs-lookup"><span data-stu-id="43774-122">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="02ab4-123">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="02ab4-123">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="02ab4-124">メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。</span><span class="sxs-lookup"><span data-stu-id="02ab4-124">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
-|`sharedListeners`|<span data-ttu-id="02ab4-125">任意のソースまたはトレース要素が参照できるリスナーのコレクション。</span><span class="sxs-lookup"><span data-stu-id="02ab4-125">A collection of listeners that any source or trace element can reference.</span></span>|  
-|`add`|<span data-ttu-id="02ab4-126">リスナーを**sharedListeners**コレクションに追加します。</span><span class="sxs-lookup"><span data-stu-id="02ab4-126">Adds a listener to the **sharedListeners** collection.</span></span>|  
+|`configuration`|<span data-ttu-id="43774-123">共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。</span><span class="sxs-lookup"><span data-stu-id="43774-123">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="43774-124">メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。</span><span class="sxs-lookup"><span data-stu-id="43774-124">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`sharedListeners`|<span data-ttu-id="43774-125">任意のソースまたはトレース要素が参照できるリスナーのコレクション。</span><span class="sxs-lookup"><span data-stu-id="43774-125">A collection of listeners that any source or trace element can reference.</span></span>|  
+|`add`|<span data-ttu-id="43774-126">リスナーを **sharedListeners** コレクションに追加します。</span><span class="sxs-lookup"><span data-stu-id="43774-126">Adds a listener to the **sharedListeners** collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="02ab4-127">解説</span><span class="sxs-lookup"><span data-stu-id="02ab4-127">Remarks</span></span>  
- <span data-ttu-id="02ab4-128">リスナーが要素の要素で定義されている場合 `<add>` `<sharedListeners>` 、そのリスナーのフィルターは、要素の子である要素で定義されている必要があり `<filter>` `<add>` ます。</span><span class="sxs-lookup"><span data-stu-id="02ab4-128">If a listener is defined in an `<add>` element of the `<sharedListeners>` element, the filter for that listener should be defined in a `<filter>` element that is a child of the `<add>` element.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="43774-127">解説</span><span class="sxs-lookup"><span data-stu-id="43774-127">Remarks</span></span>  
+
+ <span data-ttu-id="43774-128">リスナーが要素の要素で定義されている場合 `<add>` `<sharedListeners>` 、そのリスナーのフィルターは、要素の子である要素で定義されている必要があり `<filter>` `<add>` ます。</span><span class="sxs-lookup"><span data-stu-id="43774-128">If a listener is defined in an `<add>` element of the `<sharedListeners>` element, the filter for that listener should be defined in a `<filter>` element that is a child of the `<add>` element.</span></span>  
   
- <span data-ttu-id="02ab4-129">この要素は、コンピューターの構成ファイル (machine.config) とアプリケーション構成ファイルで使用できます。</span><span class="sxs-lookup"><span data-stu-id="02ab4-129">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
+ <span data-ttu-id="43774-129">この要素は、マシン構成ファイル (Machine.config) とアプリケーション構成ファイルで使用できます。</span><span class="sxs-lookup"><span data-stu-id="43774-129">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="02ab4-130">例</span><span class="sxs-lookup"><span data-stu-id="02ab4-130">Example</span></span>  
- <span data-ttu-id="02ab4-131">次の例は、要素を使用して、 `<filter>` コレクション内のトレースリスナーにフィルターを追加する方法を示して `console` `sharedListeners` います。</span><span class="sxs-lookup"><span data-stu-id="02ab4-131">The following example shows how to use the `<filter>` element to add a filter to the trace listener `console` in the `sharedListeners` collection.</span></span>  
+## <a name="example"></a><span data-ttu-id="43774-130">例</span><span class="sxs-lookup"><span data-stu-id="43774-130">Example</span></span>  
+
+ <span data-ttu-id="43774-131">次の例は、要素を使用して、 `<filter>` コレクション内のトレースリスナーにフィルターを追加する方法を示して `console` `sharedListeners` います。</span><span class="sxs-lookup"><span data-stu-id="43774-131">The following example shows how to use the `<filter>` element to add a filter to the trace listener `console` in the `sharedListeners` collection.</span></span>  
   
 ```xml  
 <configuration>  
@@ -85,9 +90,9 @@ ms.locfileid: "79153454"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="02ab4-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="02ab4-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="43774-132">関連項目</span><span class="sxs-lookup"><span data-stu-id="43774-132">See also</span></span>
 
 - <xref:System.Diagnostics.TraceFilter>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceSource>
-- [<span data-ttu-id="02ab4-133">トレースおよびデバッグ設定のスキーマ</span><span class="sxs-lookup"><span data-stu-id="02ab4-133">Trace and Debug Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="43774-133">トレースおよびデバッグ設定のスキーマ</span><span class="sxs-lookup"><span data-stu-id="43774-133">Trace and Debug Settings Schema</span></span>](index.md)
