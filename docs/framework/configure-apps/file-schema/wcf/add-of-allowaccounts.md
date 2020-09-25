@@ -2,14 +2,15 @@
 title: <add> の <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 763c7b1f-e7b0-4d99-a42c-4506fcb8da00
-ms.openlocfilehash: 02654b8ab198a2b161b3044c1f3aa452761a6a4c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: cd4b9fd02eee2de1d0e8be185ffb69c0eae1cd58
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398386"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181727"
 ---
 # <a name="add-of-allowaccounts"></a>\<add> の \<allowAccounts>
+
 WCF サービスをホストし、共有サービスへの接続アクセスが許可されているプロセスのユーザーアカウントを指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,24 +28,27 @@ WCF サービスをホストし、共有サービスへの接続アクセスが�
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |securityIdentifier|ユーザー アカウントの識別に使用される一意の識別子を指定する文字列。 既定値は LocalSystem、Administrators、NS、LS、および IIS_USRS です。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<allowAccounts>](allowaccounts.md)|`securityIdentifier`WCF サービスをホストするプロセスのユーザーアカウントを指定する属性を含む構成要素のコレクション。共有サービスへの接続アクセス権が付与されます。|  
   
 ## <a name="example"></a>例  
+
  次の構成例は、このコレクションにユーザー アカウントの 5 つの既定の識別子を追加します。  
   
 ```xml  

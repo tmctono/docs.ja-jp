@@ -2,14 +2,15 @@
 title: <add> の <baseAddressPrefixFilter>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: 2572a6ee6763ae26fe5c56669e10f8c9aef8a280
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: fefe85381aec113da123e6f2246aee340b0cf97a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811796"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181597"
 ---
 # <a name="add-of-baseaddressprefixfilter"></a>\<add> の \<baseAddressPrefixFilter>
+
 IIS で Windows Communication Foundation (WCF) アプリケーションをホストするときに適切なインターネットインフォメーションサービス (IIS) バインドを選択するメカニズムを提供する、パススルーフィルターを指定する構成要素を表します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -29,15 +30,17 @@ IIS で Windows Communication Foundation (WCF) アプリケーションをホス
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |prefix|ベース アドレスの一部の一致に使用される URI。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -46,7 +49,8 @@ IIS で Windows Communication Foundation (WCF) アプリケーションをホス
 |-------------|-----------------|  
 |[\<baseAddressPrefixFilters>](baseaddressprefixfilters.md)|パススルーフィルターを指定する構成要素のコレクション。これは、IIS で Windows Communication Foundation (WCF) アプリケーションをホストするときに適切な IIS バインディングを選択する機構を提供します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
+
  プレフィックス フィルターは、サービスによって使用される URI を、共有ホスティング プロバイダーが指定できるようにする手段を提供します。 これにより、共有ホストは、同じサイト上の同じスキームに対して、別々のベース アドレスを使用して複数のアプリケーションをホストできるようになります。  
   
  IIS Web サイトは、仮想ディレクトリを含む仮想アプリケーションのコンテナーです。 サイト内のアプリケーションに、1 つ以上の IIS バインディングからアクセスできます。 IIS バインディングは、バインディング プロトコルとバインディング情報という 2 つの情報を提供します。 バインディング プロトコル (HTTP など) は通信を行うスキームを定義し、バインディング情報 (IP アドレス、ポート、ホスト ヘッダーなど) にはサイトにアクセスするために使用するデータが含まれます。  

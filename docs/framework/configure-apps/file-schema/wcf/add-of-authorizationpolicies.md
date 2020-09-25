@@ -2,14 +2,15 @@
 title: <add> の <authorizationPolicies>
 ms.date: 03/30/2017
 ms.assetid: 613a03d8-4384-4556-bce2-8c23286c0bb0
-ms.openlocfilehash: e2597bc51e788c919bfe3ce3422ae2911cc6b33b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 39cb89340907743c727a425bb2f140ac34842e3b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400696"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181675"
 ---
 # <a name="add-of-authorizationpolicies"></a>\<add> の \<authorizationPolicies>
+
 クレームの変換の承認ポリシーを指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -29,29 +30,33 @@ ms.locfileid: "70400696"
 </authorizationPolicies>
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>種類  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |`policyType`|必須の文字列属性。<br /><br /> Windows Communication Foundation (WCF) アクセス制御モデルは、一連の承認ポリシーを型としてプロビジョニングすることをサポートしています。 この属性は、入力クレームのセットをクレームの別のセットに変換することを可能にする承認ポリシーを指定します。 アクセス制御は、それに基づいて許可または拒否されます。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<authorizationPolicies>](authorizationpolicies.md)|承認ポリシーの種類のコレクションを指定します。|  
   
 ## <a name="remarks"></a>解説  
- 各承認ポリシーは、文字列の単一の必須属性 `policyType` を含みます。 この属性は、入力クレームのセットをクレームの別のセットに変換することを可能にする承認ポリシーを指定します。 アクセス制御は、それに基づいて許可または拒否されます。 承認ポリシーのしくみの詳細については、「」 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> および「[承認ポリシー](../../../wcf/samples/authorization-policy.md)」を参照してください。  
+
+ 各承認ポリシーは、文字列の単一の必須属性 `policyType` を含みます。 この属性は、入力クレームのセットをクレームの別のセットに変換することを可能にする承認ポリシーを指定します。 アクセス制御は、それに基づいて許可または拒否されます。 承認ポリシーのしくみの詳細については、「」 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> および「 [承認ポリシー](../../../wcf/samples/authorization-policy.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -25,14 +25,15 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 92ecc4a430aa3c238a7cd8705dc0cec5a9d0cb11
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e40744c9c73e02fe96864d6b1320eb3dde4d1144
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559292"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183456"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>構成ファイルを使用してアプリを構成する方法
+
 .NET Framework を使用すると、開発者および管理者は、構成ファイルを使用することにより、アプリケーションの実行方法を制御し、アプリケーションの実行に柔軟性を持たせることができます。 構成ファイルは XML ファイルで、必要に応じて変更できます。 管理者は、アプリケーションからアクセスできるプロテクト リソース、アプリケーションが使用するアセンブリのバージョン、およびリモート アプリケーションやオブジェクトの配置場所を制御できます。 開発者は、構成ファイル内に設定を格納できます。これにより、設定変更のたびにアプリケーションを再コンパイルする必要がなくなります。 このセクションでは、設定できる内容と、アプリケーションを設定することが有益である理由を説明します。  
   
 > [!NOTE]
@@ -41,6 +42,7 @@ ms.locfileid: "90559292"
  ここでは、構成ファイルの構文を説明し、3 種類の構成ファイル (マシン構成ファイル、アプリケーション構成ファイル、およびセキュリティ構成ファイル) について情報を提供します。  
   
 ## <a name="configuration-file-format"></a>構成ファイルの形式  
+
  構成ファイルには、構成情報を設定する論理データ構造体である要素が含まれます。 構成ファイル内では、タグを使用して、それらの要素の先頭と末尾を示します。 たとえば、要素は `<runtime>` `<runtime>` *子要素*で構成さ `</runtime>` れます。 空の要素は `<runtime/>` または `<runtime></runtime>` として書き込まれます。  
   
  XML ファイルと同様に、構成ファイル内の構文では、大文字と小文字が区別されます。  
@@ -53,6 +55,7 @@ ms.locfileid: "90559292"
 ```  
   
 ## <a name="machine-configuration-files"></a>マシン構成ファイル  
+
  マシン構成ファイル Machine.config には、コンピューター全体に適用する設定を含めます。 このファイルは、%*runtime install path*%\Config ディレクトリに含まれています。 Machine.config には、マシン全体のアセンブリ バインディング、組み込みの[リモート処理チャネル](/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100))、および ASP.NET に関する構成設定が含まれます。  
   
  構成システムは、まず、開発者が定義する[ **\<appSettings>** 要素](./file-schema/appsettings/index.md)とその他の構成セクションのマシン構成ファイルを検索します。 次に、アプリケーション構成ファイルを調べます。 マシン構成ファイルを管理しやすくするには、これらの設定をアプリケーション構成ファイルに配置するのが最適です。 しかし、それらの設定をマシン構成ファイル内に配置した方が、システムの保守が簡単になります。 たとえば、クライアント アプリケーションとサーバー アプリケーションの両方で使用されるサードパーティ コンポーネントがある場合、そのコンポーネントの設定を 1 か所に設まとめた方が簡単です。 この場合、同じ設定を 2 つのファイルに配置する必要がなくなるという点から、設定を格納するのに適した場所はマシン構成ファイルになります。  
@@ -63,6 +66,7 @@ ms.locfileid: "90559292"
  共通言語ランタイムがアセンブリ バインディングに関してマシン構成ファイルを使用する方法の詳細については、「[ランタイムがアセンブリを検索する方法](../deployment/how-the-runtime-locates-assemblies.md)」を参照してください。  
   
 ## <a name="application-configuration-files"></a>アプリケーション構成ファイル  
+
  アプリケーション構成ファイルは、アプリケーション固有の設定を含みます。 このファイルには、アセンブリ バインディング ポリシー、リモート処理オブジェクトなど、共通言語ランタイムが読み取る構成設定と、アプリケーションが読み取ることのできる設定を含めます。  
   
  アプリケーション構成ファイルの名前と場所は、アプリケーションのホストによって異なり、次のいずれかの場合が考えられます。  
@@ -88,6 +92,7 @@ ms.locfileid: "90559292"
      このタグ内の `location` は、構成ファイルの場所を示す URL です。 これにより、アプリケーション ベースが設定されます。 構成ファイルは、アプリケーションと同じ Web サイトに配置する必要があります。  
   
 ## <a name="security-configuration-files"></a>セキュリティ構成ファイル  
+
  セキュリティ構成ファイルには、コード グループ階層構造に関する情報と、ポリシー レベルに関連付けたアクセス許可セットを含めます。 セキュリティ ポリシーを変更するときは、ポリシーの変更によってセキュリティ構成ファイルが破損しないように、[コード アクセス セキュリティ ポリシー ツール (Caspol.exe)](../tools/caspol-exe-code-access-security-policy-tool.md) を使用することを強くお勧めします。  
   
 > [!NOTE]
@@ -102,6 +107,7 @@ ms.locfileid: "90559292"
 - ユーザー ポリシー構成ファイル: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [方法: DEVPATH を使用してアセンブリを指定する](how-to-locate-assemblies-by-using-devpath.md)  
  アセンブリ検索のときに DEVPATH 環境変数を使用するようにランタイムに指示する方法を説明します。  
   

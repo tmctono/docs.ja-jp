@@ -8,14 +8,15 @@ helpviewer_keywords:
 - cryptoClass element
 - <cryptoClass> element
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
-ms.openlocfilehash: 4872fbd6fa043902e8c69f158bee5d0c915ec83a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f7fe6d02b4697af3a1d0d04471a2736045fc9ecc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088656"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181805"
 ---
 # <a name="cryptoclass-element"></a>\<cryptoClass> 要素
+
 要素内のフレンドリ名へのマッピングを持つ暗号化クラスを格納 [\<nameEntry>](nameentry-element.md) します。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -32,6 +33,7 @@ ms.locfileid: "74088656"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -41,11 +43,12 @@ ms.locfileid: "74088656"
 |`customClassName`|必須の属性です。<br /><br /> 暗号化クラスの情報を格納します。 この属性を使用して、クラスの短い名前を指定します。 [「完全修飾型名の指定](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)」で指定した要件を満たす文字列を指定する必要があります。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`cryptoClasses`|要素内の表示名へのマッピングを持つ暗号化クラスの一覧が含まれてい [\<nameEntry>](nameentry-element.md) ます。|  
@@ -54,6 +57,7 @@ ms.locfileid: "74088656"
 |`mscorlib`|要素が含まれてい [\<cryptographySettings>](cryptographysettings-element.md) ます。|  
   
 ## <a name="example"></a>例  
+
  次の例は、要素を使用して暗号化クラスを参照し、ランタイムを構成する方法を示して **\<cryptoClass>** います。 その後、文字列 "RSA" をメソッドに渡し <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 、メソッドを使用して <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> オブジェクトを返すことができ `MyCryptoRSAClass` ます。  
   
 ```xml  
@@ -78,6 +82,6 @@ ms.locfileid: "74088656"
 ## <a name="see-also"></a>関連項目
 
 - [構成ファイル スキーマ](../index.md)
-- [暗号設定スキーマ](index.md)
-- [暗号化サービス](../../../../standard/security/cryptographic-services.md)
+- [暗号化設定スキーマ](index.md)
+- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
 - [暗号化クラスの設定](../../configure-cryptography-classes.md)

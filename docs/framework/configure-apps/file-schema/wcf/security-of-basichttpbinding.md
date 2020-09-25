@@ -2,14 +2,15 @@
 title: <security> の <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-ms.openlocfilehash: c8e4f2d000a155eecd2a6c7faaaf4af525b24ca3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6144e5448526d7f2a7c89693f70f71a7f26c4a22
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738709"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183664"
 ---
 # <a name="security-of-basichttpbinding"></a>\<security> の \<basicHttpBinding>
+
 のセキュリティ機能を定義 [\<basicHttpBinding>](basichttpbinding.md) します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -32,19 +33,20 @@ ms.locfileid: "73738709"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
-|mode|省略可能。 使用されるセキュリティの種類を指定します。 既定値は、`None` です。 この属性は <xref:System.ServiceModel.BasicHttpSecurityMode> 型です。|  
+|mode|省略可能。 使用されるセキュリティの種類を指定します。 既定では、 `None`です。 この属性は <xref:System.ServiceModel.BasicHttpSecurityMode> 型です。|  
   
 ## <a name="mode-attribute"></a>mode 属性  
   
 |値|説明|  
 |-----------|-----------------|  
-|なし|-メッセージは、転送中にセキュリティ保護されません。|  
+|None|-メッセージは、転送中にセキュリティ保護されません。|  
 |トランスポート|セキュリティは、HTTPS トランスポートを使用して提供されます。 SOAP メッセージは、HTTPS を使用してセキュリティ保護されます。 サービスは、サービスの X.509 証明書を使用してクライアントに認証されます。 クライアントは、提供される ClientCredentialType を使用して認証されます。 「」を参照してください [\<transport>](transport-of-basichttpbinding.md) 。|  
 |Message|セキュリティは、SOAP メッセージ セキュリティを使用して確保されます。 既定では、本文は暗号化および署名されます。 このバインディングの場合、サーバー証明書をクライアントの帯域外で提供するように要求されます。 このバインディングの唯一の有効な `ClientCredentialType` は、`Certificate` です。|  
 |TransportWithMessageCredential|整合性、機密性、およびサーバー認証は、トランスポート セキュリティによって提供されます。 クライアント認証は、SOAP メッセージ セキュリティで提供されます。 このモードは、ユーザーがユーザー名およびパスワードを使用して認証し、メッセージ転送をセキュリティで保護するために既存の HTTP が配置されている場合に関連します。|  
@@ -52,18 +54,19 @@ ms.locfileid: "73738709"
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<transport>](transport-of-basichttpbinding.md)|基本 HTTP サービスのトランスポート セキュリティ設定を定義します。 この要素は、<xref:System.ServiceModel.HttpTransportSecurity> に対応しています。|  
 |[\<message>](message-of-basichttpbinding.md)|基本 HTTP サービスのメッセージ セキュリティ設定を定義します。 この要素は、<xref:System.ServiceModel.BasicHttpMessageSecurity> に対応しています。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |binding|のバインディング要素 [\<basicHttpBinding>](basichttpbinding.md) 。|  
   
 ## <a name="remarks"></a>解説  
+
  既定では、SOAP メッセージはセキュリティで保護されず、クライアントは認証されません。 この要素を使用すると、`basicHttpBinding` 要素に追加のセキュリティ設定を構成できます。  
   
 ## <a name="see-also"></a>関連項目

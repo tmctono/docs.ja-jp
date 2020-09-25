@@ -2,14 +2,15 @@
 title: <udpBinding>
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-ms.openlocfilehash: b2ff39e1292cfaad1165e14e693acda2518477a6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 730a051e6823a89c05f8eb894b261e93c0511dcc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559045"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183638"
 ---
 # \<udpBinding>
+
 <xref:System.ServiceModel.UdpBinding> バインディングの構成に使用する構成要素です。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -45,11 +46,12 @@ ms.locfileid: "90559045"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |`closeTimeout`|クローズ操作が完了するまでの期間を指定する <xref:System.TimeSpan> 値。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
 |`duplicateMessageHistoryLength`|重複するメッセージの履歴の長さを指定する整数値。|  
@@ -78,10 +80,12 @@ ms.locfileid: "90559045"
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|この要素には、標準バインディングおよびカスタム バインドのコレクションが保持されます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
+
  UdpBinding により、WCF サービスが UDP トランスポートを介して通信することができます。 これにより、クライアントがメッセージをサービスに送信し、応答が返されないというメッセージ交換が可能になります。  
   
 ## <a name="example"></a>例  
+
  次の例は、<> 要素を使用してを構成する方法を示して <xref:System.ServiceModel.UdpBinding> `udpBinding` います。  
   
 ```xml  
