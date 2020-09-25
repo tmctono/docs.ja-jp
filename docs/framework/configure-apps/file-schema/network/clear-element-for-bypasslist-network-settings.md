@@ -10,14 +10,15 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: c25477c2c99be66b34b07e1f7e50115bfa8d14e9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 96cef2dff3156e49a93be818230c83370dab5264
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154934"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185862"
 ---
 # <a name="clear-element-for-bypasslist-network-settings"></a>bypasslist の \<clear> 要素 (ネットワーク設定)
+
 プロキシバイパスリストをクリアします。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,13 +34,16 @@ ms.locfileid: "79154934"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
- [なし] :  
+
+ なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -48,12 +52,15 @@ ms.locfileid: "79154934"
 |[bypasslist](bypasslist-element-network-settings.md)|プロキシを使用しないアドレスを記述する一連の正規表現を提供します。|  
   
 ## <a name="remarks"></a>解説  
+
  要素は、 `clear` バイパスリストからすべてのエントリを削除します。  
   
 ## <a name="configuration-files"></a>構成ファイル  
+
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
+
  次の例では、バイパスリストをクリアし、2つのアドレスをバイパスリストに追加します。 最初のは、contoso.com ドメイン内のすべてのサーバーのプロキシをバイパスします。2つ目は、IP アドレスが192.168 で始まるすべてのサーバーのプロキシをバイパスします。  
   
 ```xml  
