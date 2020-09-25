@@ -10,14 +10,15 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-ms.openlocfilehash: afa1aef8ea71f43a136987ec5b6e1925c6d9fb40
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 65e8b1f2088015b86d4f981f07875d236a11a617
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154726"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176189"
 ---
 # <a name="remove-element-for-webrequestmodules-network-settings"></a>webRequestModules の \<remove> 要素 (ネットワーク設定)
+
 アプリケーションからカスタム Web 要求モジュールを削除します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -34,6 +35,7 @@ ms.locfileid: "79154726"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -43,6 +45,7 @@ ms.locfileid: "79154726"
 |`prefix`|この Web 要求モジュールによって処理される要求の URI プレフィックス。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -52,11 +55,13 @@ ms.locfileid: "79154726"
 |[webRequestModules](webrequestmodules-element-network-settings.md)|ネットワークホストから情報を要求するために使用するモジュールを指定します。|  
   
 ## <a name="remarks"></a>解説  
+
  要素は、 `remove` 指定された URI プレフィックスの登録済み Web 要求モジュールを削除します。  
   
  属性の値は、 `prefix` 有効な URI の先頭の文字 (""、"" など) にする必要があり `http` `http://www.contoso.com` ます。  
   
 ## <a name="configuration-files"></a>構成ファイル  
+
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  

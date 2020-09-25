@@ -2,14 +2,15 @@
 title: <channelPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-ms.openlocfilehash: 26537980a6be5c0fe12661d93a6ba5fe862ceb4e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8638d56ccb4aaa1c5ac735aa268823af2b1fbc6d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398157"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176072"
 ---
 # \<channelPoolSettings>
+
 カスタム バインディングのチャネル プール設定を指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -29,26 +30,29 @@ ms.locfileid: "70398157"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |`idleTimeout`|プール内のチャネルの接続が切断されるまでの最大アイドル時間を指定する正の <xref:System.TimeSpan>。 既定値は 00:02:00 です。|  
 |`leaseTimeout`|プールに返されたチャネルが閉じられるまでの時間を指定する <xref:System.TimeSpan>。 既定値は 00:10:00 です。|  
 |`maxOutboundChannelsPerEndpoint`|各リモート エンドポイントのプール内に格納できるチャネルの最大数を指定する正の整数。 既定値は 10 です。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<oneWay>](oneway.md)|カスタム バインドでパケット ルーティングを有効にします。|  
   
 ## <a name="remarks"></a>解説  
+
  クォータは、リソースの過剰な消費を防ぐためのポリシー メカニズムとして使用されます。 クォータは、悪質な、または意図的でないサービス拒否 (DOS) 攻撃を防ぎます。 カスタム チャネルにチャネル クォータを設定するには、この要素を使用します。  
   
  `ChannelPoolSettings` では、次の 3 つのクォータを指定します。  

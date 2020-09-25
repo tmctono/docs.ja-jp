@@ -10,14 +10,15 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: 39ce85c3c15a2d4bdfce801a35e9ca088bd5091b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 46157482d7ceb42b352c68dc9b0eab4f7688bc5c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154739"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176176"
 ---
 # <a name="remove-element-for-connectionmanagement-network-settings"></a>connectionManagement の \<remove> 要素 (ネットワーク設定)
+
 接続管理リストから IP アドレスまたは DNS 名を削除します。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -34,6 +35,7 @@ ms.locfileid: "79154739"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -43,6 +45,7 @@ ms.locfileid: "79154739"
 |`address`|IP アドレスまたは DNS 名。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -52,14 +55,17 @@ ms.locfileid: "79154739"
 |[connectionManagement](connectionmanagement-element-network-settings.md)|ネットワーク ホストへの接続の最大数を指定します。|  
   
 ## <a name="remarks"></a>解説  
+
  要素は、 `remove` 指定されたサーバーの接続管理リストのエントリを削除します。  
   
  属性の値は、 `address` 有効な IP アドレスまたはホスト名である必要があります。  
   
 ## <a name="configuration-files"></a>構成ファイル  
+
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
+
  次の例では、サーバーに対する接続管理の一覧のエントリをすべて削除し、 `www.adventure-works.com` サーバーへの接続を4つ、 `www.contoso.com` 他のすべてのサーバーへの接続を2つ使用するようにアプリケーションを構成します。  
   
 ```xml  

@@ -5,14 +5,15 @@ helpviewer_keywords:
 - <appDomainManagerAssembly> element
 - appDomainManagerAssembly element
 ms.assetid: c7c56e39-a700-44f5-b94e-411bfce339d9
-ms.openlocfilehash: 4c4ea35bff17a0e5188f26884e93cf77173a7df8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1716b11106775bed2c0d6ccb62e8d5b032b6e8be
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154429"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176137"
 ---
 # <a name="appdomainmanagerassembly-element"></a>\<appDomainManagerAssembly> 要素
+
 プロセスにおける既定のアプリケーション ドメインのアプリケーション ドメイン マネージャーを提供するアセンブリを指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,6 +28,7 @@ ms.locfileid: "79154429"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -36,16 +38,18 @@ ms.locfileid: "79154429"
 |`value`|必須の属性です。 プロセスの既定のアプリケーションドメインのアプリケーションドメインマネージャーを提供するアセンブリの表示名を指定します。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>解説  
+
  アプリケーションドメインマネージャーの種類を指定するには、この要素と要素の両方を指定する必要があり [\<appDomainManagerType>](appdomainmanagertype-element.md) ます。 これらの要素のいずれかが指定されていない場合、もう一方は無視されます。  
   
  既定のアプリケーションドメインが読み込まれると、 <xref:System.TypeLoadException> 指定したアセンブリが存在しない場合、またはアセンブリに要素によって指定された型が含まれていない場合にがスローされ、 [\<appDomainManagerType>](appdomainmanagertype-element.md) プロセスの開始に失敗します。 アセンブリが見つかってもバージョン情報が一致しない場合は、 <xref:System.IO.FileLoadException> がスローされます。  
@@ -59,6 +63,7 @@ ms.locfileid: "79154429"
  この構成要素は、.NET Framework 4 以降でのみ使用できます。  
   
 ## <a name="example"></a>例  
+
  次の例は、プロセスの既定のアプリケーションドメインのアプリケーションドメインマネージャーがアセンブリ内の型であることを指定する方法を示してい `MyMgr` `AdMgrExample` ます。  
   
 ```xml  
@@ -75,7 +80,7 @@ ms.locfileid: "79154429"
 
 - <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
-- [\<appDomainManagerType>Element](appdomainmanagertype-element.md)
+- [\<appDomainManagerType> 要素](appdomainmanagertype-element.md)
 - [ランタイム設定スキーマ](index.md)
 - [構成ファイル スキーマ](../index.md)
 - [SetAppDomainManagerType メソッド](../../../unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

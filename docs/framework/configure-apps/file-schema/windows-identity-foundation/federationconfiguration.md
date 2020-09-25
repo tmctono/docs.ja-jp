@@ -3,14 +3,15 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: bcd8e00b770517e3faff011b4acee08ebdc5a0df
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 39e96a161a2e75d5f00b73f6b08b1e4a0c109aee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152737"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201357"
 ---
 # \<federationConfiguration>
+
 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> <xref:System.IdentityModel.Services.SessionAuthenticationModule> Ws-federation プロトコルを介してフェデレーション認証を使用する場合、(wsfam) と (SAM) を構成します。 <xref:System.Security.Claims.ClaimsAuthorizationManager> <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> またはクラスを使用して <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> クレームベースのアクセス制御を提供するときに、を構成します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,6 +28,7 @@ ms.locfileid: "79152737"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -38,7 +40,7 @@ ms.locfileid: "79152737"
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<cookieHandler>](cookiehandler.md)|SAM によって使用されるクッキーハンドラーを構成します。 省略可能。|  
 |[\<serviceCertificate>](servicecertificate.md)|トークンの暗号化と復号化に使用される証明書を構成します。 省略可能。|  
@@ -46,11 +48,12 @@ ms.locfileid: "79152737"
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<system.identityModel.services>](system-identitymodel-services.md)|WS-FEDERATION プロトコルを使用した認証の構成セクション。|  
   
 ## <a name="remarks"></a>解説  
+
  要素は、 \<federationConfiguration> 2 つの異なるシナリオで設定を提供します。  
   
 - パッシブ Web アプリケーションで WS-FEDERATION を使用する場合、要素には、 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (wsfam) と (SAM) を構成する設定が含まれ <xref:System.IdentityModel.Services.SessionAuthenticationModule> ます。 また、セキュリティトークンハンドラーと証明書の構成に使用される id 構成と、要求承認マネージャーや要求認証マネージャーなどのコンポーネントも参照しています。  
@@ -67,11 +70,12 @@ ms.locfileid: "79152737"
   
 4. 複数の名前付き `<federationConfiguration>` 要素が存在し、名前のない要素が存在しない場合は `<federationConfiguration>` 、例外がスローされます。  
   
- 通常、1つの `<federationConfiguration>` セクションのみが定義されます。 このセクションは、既定のフェデレーション構成です。 一意の名前を持つ複数の要素を指定することもできます `<federationConfiguration>` 。ただし、この場合は、名前のないフェデレーション構成を読み込む場合は、のハンドラーを指定する必要があります。 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated>イベントを発生さ <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> せると共に、ハンドラー内のプロパティを、 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 構成ファイル内の適切な要素の値で初期化されたオブジェクトに設定し `<federationConfiguration>` ます。  
+ 通常、1つの `<federationConfiguration>` セクションのみが定義されます。 このセクションは、既定のフェデレーション構成です。 一意の名前を持つ複数の要素を指定することもできます `<federationConfiguration>` 。ただし、この場合は、名前のないフェデレーション構成を読み込む場合は、のハンドラーを指定する必要があります。 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated> イベントを発生さ <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> せると共に、ハンドラー内のプロパティを、 <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> 構成ファイル内の適切な要素の値で初期化されたオブジェクトに設定し `<federationConfiguration>` ます。  
   
  `<federationConfiguration>`要素は、クラスによって表され <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElement> ます。 構成オブジェクト自体は、クラスによって表され <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> ます。 1つの <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> インスタンスがプロパティに設定され、 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> アプリケーションのフェデレーション構成が提供されます。  
   
 ## <a name="example"></a>例  
+
  次の XML は、 `<federationConfiguration>` WSFAM の設定を指定する要素を示し、既定の cookie ハンドラー (クラスのインスタンス <xref:System.IdentityModel.Services.ChunkedCookieHandler> ) が SAM によって使用されることを指定します。  
   
 > [!WARNING]

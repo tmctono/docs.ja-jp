@@ -8,14 +8,15 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-ms.openlocfilehash: 7f2805283f89e6165d336b3e593d34054e02115d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9396ca393523dce5593531f332e5c07241987947
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154544"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91187005"
 ---
 # <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules> 要素 (ネットワーク設定)
+
 ネットワークホストから情報を要求するために使用するモジュールを指定します。  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -30,9 +31,11 @@ ms.locfileid: "79154544"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
@@ -50,14 +53,17 @@ ms.locfileid: "79154544"
 |[system.net](system-net-element-network-settings.md)|.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。|  
   
 ## <a name="remarks"></a>解説  
+
  要素は、 `webRequestModules` <xref:System.Net.WebRequest> ネットワークホストに対する情報要求を処理するために、クラスの子孫を登録します。 Web 要求モジュールは、インターフェイスを実装する必要があり <xref:System.Net.IWebRequestCreate> ます。  
   
  .NET Framework には、、、およびで始まる Uri の Web 要求モジュールが含まれてい `http://` `https://` `file://` ます。 既定のモジュールをオーバーライドするには、構成ファイルにカスタムモジュールを登録する必要があります。  
   
 ## <a name="configuration-files"></a>構成ファイル  
+
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
+
  次の例では、既定の HTTP モジュールを登録します。 Version および PublicKeyToken の値は、指定されたモジュールの正しい値に置き換える必要があります。  
   
 ```xml  

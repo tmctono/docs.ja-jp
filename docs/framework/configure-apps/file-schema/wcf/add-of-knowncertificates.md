@@ -2,14 +2,15 @@
 title: <add> の <knownCertificates>
 ms.date: 03/30/2017
 ms.assetid: 128aaabe-3f1a-4c3b-b59f-898d0f02910f
-ms.openlocfilehash: 29b067e6ec20992084f9ab3bab087222bdd56da2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 453593918de15613edb801cca8a16c9dbf71aa90
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400621"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176085"
 ---
 # <a name="add-of-knowncertificates"></a>\<add> の \<knownCertificates>
+
 既知の証明書のコレクションに X.509 証明書を追加します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -34,11 +35,12 @@ ms.locfileid: "70400621"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |findValue|文字列。 検索する値。|  
 |storeLocation|列挙値。 検索する 2 つの格納場所のいずれかです。|  
@@ -53,33 +55,35 @@ ms.locfileid: "70400621"
   
 ## <a name="x509findtype-attribute"></a>x509FindType 属性  
   
-|値|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
-|Enumeration|値は、FindByThumbprint、FindBySubjectName、FindBySubjectDistinguishedName、FindByIssuerName、FindByIssuerDistinguishedName、FindBySerialNumber、FindByTimeValid、FindByTimeNotYetValid、FindBySerialNumber、FindByTimeExpired、FindByTemplateName、FindByApplicationPolicy、FindByCertificatePolicy、FindByExtension、FindByKeyUsage、FindBySubjectKeyIdentifier です。|  
+|列挙|値は、FindByThumbprint、FindBySubjectName、FindBySubjectDistinguishedName、FindByIssuerName、FindByIssuerDistinguishedName、FindBySerialNumber、FindByTimeValid、FindByTimeNotYetValid、FindBySerialNumber、FindByTimeExpired、FindByTemplateName、FindByApplicationPolicy、FindByCertificatePolicy、FindByExtension、FindByKeyUsage、FindBySubjectKeyIdentifier です。|  
   
 ## <a name="storelocation-attribute"></a>storeLocation 属性  
   
-|値|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
-|Enumeration|CurrentUser または LocalMachine です。|  
+|列挙|CurrentUser または LocalMachine です。|  
   
 ## <a name="storename-attribute"></a>storeName 属性  
   
-|値|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
-|Enumeration|値は、AddressBook、AuthRoot、CertificateAuthority、Disallowed、My、Root、TrustedPeople、および TrustedPublisher です。|  
+|列挙|値は、AddressBook、AuthRoot、CertificateAuthority、Disallowed、My、Root、TrustedPeople、および TrustedPublisher です。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<knownCertificates>](knowncertificates.md)|セキュリティ トークンを検証するためのセキュリティ トークン サービス (STS) によって提供される X.509 証明書のコレクションを表します。|  
   
 ## <a name="remarks"></a>解説  
- 発行されるトークンのシナリオには、3 つの段階があります。 最初の段階では、サービスにアクセスしようとしているクライアントは、*セキュリティで保護されたトークンサービス*と呼ばれます。 次に、セキュリティ トークン サービスがクライアントを認証し、その後、クライアントにトークン (通常は、SAML (Security Assertions Markup Language) トークン) を発行します。 最後に、クライアントがトークンを持ってサービスに戻ります。 サービスはトークンを調べ、トークンを認証することでクライアントの認証を可能にするデータを確認します。 トークンを認証するには、セキュリティ トークン サービスで使用される証明書がサービスによって認識されている必要があります。  
+
+ 発行されるトークンのシナリオには、3 つの段階があります。 最初の段階では、サービスにアクセスしようとしているクライアントは、 *セキュリティで保護されたトークンサービス*と呼ばれます。 次に、セキュリティ トークン サービスがクライアントを認証し、その後、クライアントにトークン (通常は、SAML (Security Assertions Markup Language) トークン) を発行します。 最後に、クライアントがトークンを持ってサービスに戻ります。 サービスはトークンを調べ、トークンを認証することでクライアントの認証を可能にするデータを確認します。 トークンを認証するには、セキュリティ トークン サービスで使用される証明書がサービスによって認識されている必要があります。  
   
  要素は、 [\<issuedTokenAuthentication>](issuedtokenauthentication-of-servicecredentials.md) このようなセキュリティトークンサービス証明書のリポジトリです。 証明書を追加するには、を使用し [\<knownCertificates>](knowncertificates.md) ます。 次の例に示すように、各証明書の[ \<add> 要素 \<knownCertificates> 要素](add-of-knowncertificates.md)を挿入します。  
   
@@ -96,9 +100,10 @@ ms.locfileid: "70400621"
   
  既定では、証明書はセキュリティ トークン サービスから取得する必要があります。 このような "既知" の証明書により、正当なクライアントのみがサービスにアクセスできるようになります。  
   
- フェデレーションサービスによってクライアントが認証されるために必要な条件を確認するには、「[方法: フェデレーションサービスで資格情報を構成](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)する」を参照してください。 フェデレーションシナリオの詳細については、「[フェデレーションと発行済みトークン](../../../wcf/feature-details/federation-and-issued-tokens.md)」を参照してください。  
+ フェデレーションサービスによってクライアントが認証されるために必要な条件を確認するには、「 [方法: フェデレーションサービスで資格情報を構成](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)する」を参照してください。 フェデレーションシナリオの詳細については、「 [フェデレーションと発行済みトークン](../../../wcf/feature-details/federation-and-issued-tokens.md)」を参照してください。  
   
 ## <a name="example"></a>例  
+
  以下の例では、STS 証明書のリポジトリに証明書を追加します。  
   
 ```xml  

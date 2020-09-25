@@ -10,14 +10,15 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: f4edce948033478aab59a2aff61abadc55a327ce
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8d792b967d967540469dca7c090e0f905ecb2e6b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155025"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201760"
 ---
 # <a name="add-element-for-webrequestmodules-network-settings"></a>webRequestModules の \<add> 要素 (ネットワーク設定)
+
 アプリケーションにカスタム Web 要求モジュールを追加します。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -35,6 +36,7 @@ ms.locfileid: "79155025"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -45,6 +47,7 @@ ms.locfileid: "79155025"
 |`type`|<xref:System.Type.FullName%2A> <xref:System.Reflection.Assembly.FullName%2A> この Web 要求モジュールを実装するコンマで区切られた、完全修飾型名 (プロパティによって示されます) とアセンブリ名 (プロパティによって示されます)。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -54,6 +57,7 @@ ms.locfileid: "79155025"
 |[webRequestModules](webrequestmodules-element-network-settings.md)|ネットワークホストから情報を要求するために使用するモジュールを指定します。|  
   
 ## <a name="remarks"></a>解説  
+
  属性は、 `prefix` 指定された Web 要求モジュールを使用する URI プレフィックスを定義します。 通常、Web 要求モジュールは、HTTP や FTP などの特定のプロトコルを処理するように登録されますが、サーバー上の特定のサーバーまたはパスへの要求を処理するように登録できます。  
   
  Web 要求モジュールは、URI 照合プレフィックスがメソッドに渡されたときに作成され <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> ます。  
@@ -63,9 +67,11 @@ ms.locfileid: "79155025"
  属性の値は、 `type` 有効な型名と、それに対応するアセンブリ名をコンマで区切って指定する必要があります。
   
 ## <a name="configuration-files"></a>構成ファイル  
+
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
+
  次の例では、HTTP 用のカスタム Web 要求モジュールを登録します。 Version および PublicKeyToken の値は、指定されたモジュールの正しい値に置き換える必要があります。  
   
 ```xml  
