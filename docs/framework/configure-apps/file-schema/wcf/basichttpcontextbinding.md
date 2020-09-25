@@ -2,14 +2,15 @@
 title: <basicHttpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 39b16b82-4ec6-4eff-8031-67e026870961
-ms.openlocfilehash: d7d825e4fb17c3d864f0ac40daaee9d492c7f8e8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 038841c2710466e8cddd0909804b01af6f03b2c1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557659"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201513"
 ---
 # \<basicHttpContextBinding>
+
 HTTP クッキーを交換機構として有効にすることにより、交換する <xref:System.ServiceModel.BasicHttpBinding> のコンテキストを提供するバインディングを指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -54,6 +55,7 @@ HTTP クッキーを交換機構として有効にすることにより、交換
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -61,7 +63,7 @@ HTTP クッキーを交換機構として有効にすることにより、交換
 |属性|[説明]|  
 |---------------|-----------------|  
 |`allowCookies`|クライアントがクッキーを受け入れて、それらを今後の要求に反映させるかどうかを指定するブール値です。 既定値は、`false` です。<br /><br /> クッキーを使用する ASMX Web サービスと対話する場合にこのプロパティを使用できます。 この方法で、サーバーから返されるクッキーを、それ以降のサービスに対するすべてのクライアント要求に自動的にコピーできます。|  
-|`bypassProxyOnLocal`|ローカル アドレスでプロキシ サーバーをバイパスするかどうかを示すブール値。 既定値は、`false` です。<br /><br /> インターネット リソースは、ローカル アドレスを持つ場合ローカルです。 ローカルアドレスは、同じコンピューター、ローカル LAN、またはイントラネット上にあり、構文的には、Uri とのようにピリオド (.) がないことで識別され `http://webserver/` `http://localhost/` ます。<br /><br /> この属性の設定は、BasicHttpBinding で構成されたエンドポイントがローカル リソースへのアクセス時にプロキシ サーバーを使用するかどうかを示します。 この属性が `true` の場合、ローカル インターネット リソースへの要求はプロキシ サーバーを使用しません。 この属性を `true` に設定した場合で、同じコンピューター上のサービスと対話するクライアントがプロキシを経由するときは、(localhost ではなく) ホスト名を使用します。<br /><br /> この属性が `false` の場合、すべてのインターネット要求はプロキシ サーバー経由で行われます。|  
+|`bypassProxyOnLocal`|ローカル アドレスでプロキシ サーバーをバイパスするかどうかを示すブール値。 既定では、 `false`です。<br /><br /> インターネット リソースは、ローカル アドレスを持つ場合ローカルです。 ローカルアドレスは、同じコンピューター、ローカル LAN、またはイントラネット上にあり、構文的には、Uri とのようにピリオド (.) がないことで識別され `http://webserver/` `http://localhost/` ます。<br /><br /> この属性の設定は、BasicHttpBinding で構成されたエンドポイントがローカル リソースへのアクセス時にプロキシ サーバーを使用するかどうかを示します。 この属性が `true` の場合、ローカル インターネット リソースへの要求はプロキシ サーバーを使用しません。 この属性を `true` に設定した場合で、同じコンピューター上のサービスと対話するクライアントがプロキシを経由するときは、(localhost ではなく) ホスト名を使用します。<br /><br /> この属性が `false` の場合、すべてのインターネット要求はプロキシ サーバー経由で行われます。|  
 |`closeTimeout`|クローズ操作が完了するまでの期間を指定する <xref:System.TimeSpan> 値。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
 |`hostNameComparisonMode`|URI の解析に使用する HTTP ホスト名比較モードを指定します。 この属性は <xref:System.ServiceModel.HostNameComparisonMode> 型で、URI が一致したときにサービスへのアクセスにホスト名を使用するかどうかを指定します。 既定値は <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard> で、一致しているホスト名を無視します。|  
 |`maxBufferPoolSize`|チャネルからメッセージを受け取るメッセージ バッファーのマネージャーが使用するために割り当てられる、最大メモリ量を指定する整数値。 既定値は 524288 (0x80000) バイトです。<br /><br /> バッファー マネージャーは、バッファー プールを使用することで、バッファーの使用コストを最小化します。 バッファーは、チャネルから出てくるメッセージをサービスが処理するときに必要です。 メッセージの読み込み処理に十分なメモリがバッファー プールにない場合、バッファー マネージャーは、CLR ヒープから追加のメモリを割り当てる必要があります。これにより、ガベージ コレクションのオーバーヘッドが増加します。 CLR ガベージ ヒープから多大な割り当てが行われることは、バッファー プール サイズが小さすぎること、およびこの属性で指定される制限を緩めて割り当てを増やすとパフォーマンスが向上する可能性があることを示します。|  
@@ -71,12 +73,12 @@ HTTP クッキーを交換機構として有効にすることにより、交換
 |`messageVersion`|バインディングで構成されるクライアントとサービスが使用するメッセージ バージョンを指定します。 この属性は <xref:System.ServiceModel.Channels.MessageVersion> 型です。|  
 |`name`|バインディングの構成名を格納する文字列です。 この値は、バインディングの ID として使用されるため、一意にする必要があります。 .NET Framework 4 以降では、バインドと動作に名前を付ける必要はありません。 既定の構成と無名のバインドおよび動作の詳細については、「 [WCF サービスの](../../../wcf/samples/simplified-configuration-for-wcf-services.md)構成と簡略化された構成の[簡略化](../../../wcf/simplified-configuration.md)」を参照してください。|  
 |`openTimeout`|実行中の操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
-|`proxyAddress`|HTTP プロキシのアドレスを格納する URI。 `useSystemWebProxy` が `true` に設定されている場合、この設定は `null` である必要があります。 既定値は、`null` です。|  
+|`proxyAddress`|HTTP プロキシのアドレスを格納する URI。 `useSystemWebProxy` が `true` に設定されている場合、この設定は `null` である必要があります。 既定では、 `null`です。|  
 |`receiveTimeout`|受信操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:10:00 です。|  
 |`sendTimeout`|送信操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
 |`textEncoding`|バインディングでメッセージの発行に使用される文字セット エンコーディングを設定します。 有効な値は次のとおりです。<br /><br /> -BigEndianUnicode: Unicode BigEndian エンコード。<br />-Unicode:16 ビットエンコード。<br />-UTF8: 8 ビットエンコーディング<br /><br /> 既定値は UTF8 です。 この属性は <xref:System.Text.Encoding> 型です。|  
 |`transferMode`|要求または応答に対してメッセージがバッファーされるか、ストリーム配信されるかを指定する有効な <xref:System.ServiceModel.TransferMode> 値。|  
-|`useDefaultWebProxy`|使用できる場合にシステムの自動設定 HTTP プロキシを使用するかどうかを指定するブール値。 既定値は、`true` です。|  
+|`useDefaultWebProxy`|使用できる場合にシステムの自動設定 HTTP プロキシを使用するかどうかを指定するブール値。 既定では、 `true`です。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -91,7 +93,8 @@ HTTP クッキーを交換機構として有効にすることにより、交換
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|この要素には、標準バインディングおよびカスタム バインドのコレクションが保持されます。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
+
  このバインド要素は、`BasicHttpBinding` のコンテキストの一部として保護レベルと交換機構を提供します。  
   
 ## <a name="see-also"></a>関連項目

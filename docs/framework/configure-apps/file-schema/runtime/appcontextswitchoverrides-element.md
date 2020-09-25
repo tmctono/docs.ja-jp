@@ -7,12 +7,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 0ead35559a17eb06304e6c251d2fe388ca178a30
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ab74886edcc86c900c56017867a3b81c9cb7886e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552285"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176150"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides> 要素
 
@@ -29,6 +29,7 @@ ms.locfileid: "90552285"
 ```
 
 ## <a name="attributes-and-elements"></a>属性および要素
+
  以降のセクションでは、属性、子要素、および親要素について説明します。
 
 ### <a name="attributes"></a>属性
@@ -39,11 +40,12 @@ ms.locfileid: "90552285"
 
 ### <a name="value-attribute"></a>value 属性
 
-|[値]|説明|
+|値|[説明]|
 |-----------|-----------------|
 |"name = value"|定義済みのスイッチ名とその値 ( `true` または `false` )。 複数のスイッチの名前と値のペアは、セミコロン (";") で区切られます。 .NET Framework でサポートされている定義済みスイッチ名の一覧については、「解説」を参照してください。|
 
 ### <a name="child-elements"></a>子要素
+
  なし。
 
 ### <a name="parent-elements"></a>親要素
@@ -53,14 +55,15 @@ ms.locfileid: "90552285"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
+
  .NET Framework 4.6 以降では、 `<AppContextSwitchOverrides>` API の呼び出し元は、アプリが新しい機能を利用できるか、ライブラリの以前のバージョンとの互換性を維持できるかを判断するために、API の呼び出し元によって、API の呼び出し元に許可されます。 たとえば、API の動作がライブラリの2つのバージョン間で変更されている場合、要素を使用すると、 `<AppContextSwitchOverrides>` その api の呼び出し元は、新しい機能をサポートするライブラリのバージョンで新しい動作を無効にすることができます。 .NET Framework で Api を呼び出すアプリの場合、要素は、アプリ `<AppContextSwitchOverrides>` がその機能を含むバージョンの .NET Framework で実行されている場合に、アプリが以前のバージョンの .NET Framework をターゲットにして新しい機能をオプトインできるようにすることもできます。
 
  `value`要素の属性は、 `<AppContextSwitchOverrides>` セミコロンで区切られた1つ以上の名前と値のペアで構成される1つの文字列で構成されます。  各名前は互換性スイッチを識別し、対応する値は、 `true` `false` スイッチが設定されているかどうかを示すブール値 (または) です。 既定では、スイッチは `false` で、ライブラリは新しい機能を提供します。 スイッチが設定されている場合 (つまり、値がである場合) にのみ、以前の機能が提供され `true` ます。 これにより、ライブラリは既存の API に新しい動作を提供できるようになり、以前の動作に依存する呼び出し元は新しい機能を無効にすることができます。
 
 .NET Framework では、次のスイッチがサポートされています。
 
-|スイッチ名|説明|導入時期|
+|スイッチ名|[説明]|導入時期|
 |-----------------|-----------------|----------------|
 |`Switch.MS.Internal.`<br/>`DoNotApplyLayoutRoundingToMarginsAndBorderThickness`|コントロールレイアウトのために Windows Presentation Foundation レガシアルゴリズムを使用するかどうかを制御します。 詳細については、「[軽減策: WPF レイアウト](../../../migration-guide/mitigation-wpf-layout.md)」を参照してください。|.NET Framework 4.6|
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|PackageDigitalSignatureManager によってパッケージの部分に署名するために使用される既定のアルゴリズムが SHA1 と SHA256 のどちらであるかを制御します。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。|.NET Framework 4.7.1|

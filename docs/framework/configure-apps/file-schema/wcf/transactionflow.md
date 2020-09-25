@@ -2,14 +2,15 @@
 title: <transactionFlow>
 ms.date: 03/30/2017
 ms.assetid: 8c7b4c5b-ace3-4fe3-89ff-7b13c9aacd13
-ms.openlocfilehash: f5bcd142fb2b032ea179bcbba68fee53b98d2d77
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c4e5cbac24e2c72791c2f5c0faed0703363c99e1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73736316"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201422"
 ---
 # \<transactionFlow>
+
 カスタム バインドのトランザクション フロー サポートを指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -26,25 +27,28 @@ ms.locfileid: "73736316"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |transactionProtocol|使用されるトランザクション プロトコルを指定します。 有効な値は次のとおりです。<br /><br /> -OleTransactions<br />-WSAtomicTransactionOctober2004<br /><br /> 既定値は OleTransactions です。<br /><br /> この属性は <xref:System.ServiceModel.TransactionProtocol> 型です。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|カスタム バインドのすべてのバインド機能を定義します。|  
   
 ## <a name="remarks"></a>解説  
- この要素により、受信トランザクションの目的のプロトコル形式を指定できるだけでなく、エンドポイントのバインディング設定で受信トランザクション フローを有効または無効にできます。 この構成要素の使用方法の詳細については、「 [ServiceModel トランザクション構成](../../../wcf/feature-details/servicemodel-transaction-configuration.md)」および「[トランザクションフローの有効化](../../../wcf/feature-details/enabling-transaction-flow.md)」を参照してください。  
+
+ この要素により、受信トランザクションの目的のプロトコル形式を指定できるだけでなく、エンドポイントのバインディング設定で受信トランザクション フローを有効または無効にできます。 この構成要素の使用方法の詳細については、「 [ServiceModel トランザクション構成](../../../wcf/feature-details/servicemodel-transaction-configuration.md) 」および「 [トランザクションフローの有効化](../../../wcf/feature-details/enabling-transaction-flow.md)」を参照してください。  
   
 > [!CAUTION]
 > `OleTransactions` プロトコルを使用してエンドポイント間でトランザクションをフローさせるとき、フロー先のエンドポイントが `OleTransactions` 以外のプロトコルを使用して再びフローを試みると、トランザクション タイムアウトが失われる場合があります。 その結果、OleTransactions ホップより後のすべてのダウンレベル ノードが、予想より遅くタイムアウトする可能性があります。  

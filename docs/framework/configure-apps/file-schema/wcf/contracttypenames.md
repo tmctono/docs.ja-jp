@@ -2,14 +2,15 @@
 title: <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 5ec5efc6-87f8-4160-9be0-dcd2e01df3df
-ms.openlocfilehash: c67e5b9e82b96e27ce73512680bd4236b26ef4dd
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f1626983d34a7b66ee23c3a2d9a3c2107812e136
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855452"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91175981"
 ---
 # \<contractTypeNames>
+
 検索対象サービスのコントラクト名であるコントラクト型名のリストと、サービスを検索するときに一般的に使用される条件を指定する構成セクション。 複数のコントラクト名が指定されると、すべてのコントラクトに一致するサービス エンドポイントのみが適用されます。 Windows Communication Foundation (WCF) では、エンドポイントでサポートされるコントラクトは1つだけであることに注意してください。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -49,9 +50,11 @@ ms.locfileid: "70855452"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  

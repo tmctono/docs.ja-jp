@@ -2,17 +2,19 @@
 title: <comContracts>
 ms.date: 03/30/2017
 ms.assetid: 42e74148-223d-4888-a8ed-1d928527eb09
-ms.openlocfilehash: d061d48374a8745dc61e1ca156e4fcbbccee5ef7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 404cc66ce423ba947c2817b56bebb4daf341ef0b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69919476"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176046"
 ---
 # \<comContracts>
+
 `comContracts` 構成セクションには、COM+ 統合サービス コントラクトのさまざまなプロパティを指定できる要素が含まれます。  
   
 ## <a name="specifying-namespace-and-contract"></a>名前空間およびコントラクトの指定  
+
  現在、COM + 統合サービスコントラクトは名前空間に限定され `http://tempuri.org` ており、コントラクト名はサポートする COM インターフェイスから派生します。 ただし、構成ファイルの `comContracts` セクションを使用して候補を指定することができます。  
   
  たとえば、次の構成を使用して、サービス コントラクトの名前空間とコントラクト名、およびセッションの多いバインディングで使用させるオプションを指定できます。  
