@@ -3,14 +3,15 @@ title: <trustedIssuers>
 ms.date: 03/30/2017
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
 author: BrucePerlerMS
-ms.openlocfilehash: 50fc7194823fb0c5c426fb54ffd50b17c3714ed9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 08cddd19f40f039f86e100cc7ee6a78633502eb2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70251756"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185562"
 ---
 # \<trustedIssuers>
+
 構成ベースの発行者名レジストリ () によって使用される、信頼された発行者の証明書の一覧を構成し <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> ます。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -42,10 +43,12 @@ ms.locfileid: "70251756"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
- なし  
+
+ None  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -59,14 +62,16 @@ ms.locfileid: "70251756"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<issuerNameRegistry>](issuernameregistry.md)|発行者名レジストリを構成します。 **重要:** 要素 `type` の属性は、 `<issuerNameRegistry>` 要素を有効にするためにクラスを参照する必要があり <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> `<trustedIssuers>` ます。|  
+|[\<issuerNameRegistry>](issuernameregistry.md)|発行者名レジストリを構成します。 **重要:**  要素 `type` の属性は、 `<issuerNameRegistry>` 要素を有効にするためにクラスを参照する必要があり <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> `<trustedIssuers>` ます。|  
   
 ## <a name="remarks"></a>解説  
+
  Windows Identity Foundation (WIF) は、クラスの1つの実装を、クラスのすぐに使用できるようにし <xref:System.IdentityModel.Tokens.IssuerNameRegistry> <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> ます。 構成発行者名レジストリは、構成から読み込まれる信頼された発行者の一覧を保持します。 リストでは、発行者によって生成されたトークンの署名を検証するために必要な x.509 証明書に各発行者名が関連付けられます。 信頼された発行者の証明書の一覧は、要素の下で指定され `<trustedIssuers>` ます。 リスト内の各要素は、ニーモニック発行者名と、その発行者によって生成されるトークンの署名を検証するために必要な x.509 証明書を関連付けます。 信頼された証明書は、asn.1 エンコード形式の証明書の拇印を使用して指定され、要素を使用してコレクションに追加され `<add>` ます。 要素と要素を使用して、一覧から発行者 (証明書) を消去または削除でき `<clear>` `<remove>` ます。  
   
  要素 `type` の属性は、 `<issuerNameRegistry>` 要素を有効にするためにクラスを参照する必要があり <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> `<trustedIssuers>` ます。  
   
 ## <a name="example"></a>例  
+
  次の XML は、構成ベースの発行者名レジストリを指定する方法を示しています。  
   
 ```xml  

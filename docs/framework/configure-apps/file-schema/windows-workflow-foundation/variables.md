@@ -3,17 +3,18 @@ title: <variables>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: da0fd144-dda9-4613-b650-fe6325076513
-ms.openlocfilehash: 3e48256ab1127d45e95c557aa9c2434419d9ea59
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b0e6a7712d31a7d4ef64ca61a0a71df9095e8a46
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70397591"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185341"
 ---
 # \<variables>
+
 このアクティビティ クエリに関連付けられている変数のコレクションを表します。  
   
- 追跡プロファイルのクエリの詳細については、「[追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)」を参照してください。  
+ 追跡プロファイルのクエリの詳細については、「 [追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)」を参照してください。  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)\
@@ -42,9 +43,11 @@ ms.locfileid: "70397591"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
@@ -60,6 +63,7 @@ ms.locfileid: "70397591"
 |[\<activityStateQuery>](activitystatequery.md)|親アクティビティが子アクティビティを取り消すための要求を追跡するのに使用する構成要素を表します。 追跡参加要素がキャンセル要求レコード オブジェクトを定期受信するには、このクエリが必要です。|  
   
 ## <a name="remarks"></a>解説  
+
  ActivityStateQuery の固有の機能の 1 つは、ワークフローの実行を追跡するときにデータを抽出する機能です。 これにより、実行後に追跡レコードにアクセスするときにコンテキストが追加されます。 、、およびの各要素を使用して、 [\<arguments>](arguments.md) [\<states>](states.md) [\<states>](states.md) ワークフロー内の任意のアクティビティから任意の変数または引数を抽出できます。 次の例は、アクティビティの `Closed` 追跡レコードが生成されたときに変数と引数を抽出するアクティビティ状態クエリを示しています。 変数と引数は、ActivityStateRecord でのみ抽出できるため、を使用して追跡プロファイル内でサブスクライブされ [\<activityStateQuery>](activitystatequery.md) ます。  
   
 ```xml  
