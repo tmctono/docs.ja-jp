@@ -10,14 +10,15 @@ helpviewer_keywords:
 - <disableCachingBindingFailures> element
 - disableCachingBindingFailures element
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
-ms.openlocfilehash: 23633cb282b8e59b4df4bcc2cd38717d805a207e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c9e608bfd54b641564a9095076455e10dd8653fb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73117498"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176124"
 ---
 # <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures> 要素
+
 プローブによってアセンブリが見つからなかったために発生するバインドエラーのキャッシュを無効にするかどうかを指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,6 +32,7 @@ ms.locfileid: "73117498"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -41,22 +43,24 @@ ms.locfileid: "73117498"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |0|プローブによってアセンブリが見つからなかったために発生するバインドエラーのキャッシュを無効にしないでください。 これは .NET Framework バージョン2.0 以降の既定のバインディング動作です。|  
 |1|プローブによってアセンブリが見つからなかったために発生するバインドエラーのキャッシュを無効にします。 この設定は、.NET Framework バージョン1.1 のバインド動作に戻ります。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>解説  
+
  .NET Framework バージョン2.0 以降では、アセンブリを読み込む既定の動作では、すべてのバインドおよび読み込みエラーがキャッシュされます。 つまり、アセンブリの読み込みに失敗した場合、同じアセンブリを読み込むための後続の要求は、アセンブリを特定しなくてもすぐに失敗します。 この要素は、プローブパスにアセンブリが見つからなかったために発生するバインディングエラーの既定の動作を無効にします。 これらのエラーはスロー <xref:System.IO.FileNotFoundException> します。  
   
  この要素の影響を受けないバインドと読み込みのエラーもあります。この要素は常にキャッシュされます。 これらのエラーは、アセンブリが見つかりましたが、読み込むことができなかったことが原因で発生します。 <xref:System.BadImageFormatException>または <xref:System.IO.FileLoadException> をスローします。 このようなエラーの例を次に示します。  
@@ -68,6 +72,7 @@ ms.locfileid: "73117498"
 - 読み込もうとしているアセンブリの1つまたは複数のバージョンがプローブパスに存在するが、要求している特定のバージョンがそれらの中にない場合は、正しいバージョンがプローブパスに移動されても、そのバージョンを読み込もうとすると失敗します。  
   
 ## <a name="example"></a>例  
+
  次の例では、プローブによってアセンブリが見つからなかったために発生したアセンブリバインディングエラーのキャッシュを無効にする方法を示します。  
   
 ```xml  

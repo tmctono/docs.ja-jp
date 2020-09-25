@@ -3,14 +3,15 @@ title: ワークフローの System.servicemodel> を <する
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: 9aa2bf0fdfd6fe4528a3fda4d05b3ba8f23637d3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c18cc4886d3e7a19b750a005b27d00a841b9fc5d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79151950"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194857"
 ---
-# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel>ワークフローの
+# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel> ワークフローの
+
 この構成セクションには、すべてのワークフロー構成要素が含まれます。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -95,17 +96,19 @@ ms.locfileid: "79151950"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
- なし  
+
+ None  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<behaviors>](behaviors-of-workflow.md)|このセクションでは、 **Servicebehaviors**コレクションを定義します。  各コレクション内の要素は、サービスによって使用されるそれぞれの動作要素を定義します。 各動作要素は、一意の**name**属性によって識別されます。|  
-|[\<tracking>](tracking.md)|ワークフロー サービスの追跡設定を定義する構成セクションを表します。<br /><br /> ワークフロー追跡とその構成の詳細については、「ワークフローの[追跡とトレース](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)」と「ワークフロー[の追跡の構成](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)」を参照してください。|  
+|[\<behaviors>](behaviors-of-workflow.md)|このセクションでは、 **Servicebehaviors** コレクションを定義します。  各コレクション内の要素は、サービスによって使用されるそれぞれの動作要素を定義します。 各動作要素は、一意の **name** 属性によって識別されます。|  
+|[\<tracking>](tracking.md)|ワークフロー サービスの追跡設定を定義する構成セクションを表します。<br /><br /> ワークフロー追跡とその構成の詳細については、「ワークフローの [追跡とトレース](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) 」と「ワークフロー [の追跡の構成](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)」を参照してください。|  
   
 ### <a name="parent-elements"></a>親要素  
   

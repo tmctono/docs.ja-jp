@@ -8,14 +8,15 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: fe6de09213c6f980e8eb205a318aae50033b2a84
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3c3513c05485550202f2fc5bcae1faabb0e75d47
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155233"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201812"
 ---
 # <a name="cryptographysettings-element"></a>\<cryptographySettings> 要素
+
 暗号設定を含みます。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -30,9 +31,11 @@ ms.locfileid: "79155233"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
@@ -50,6 +53,7 @@ ms.locfileid: "79155233"
 |`mscorlib`|要素が含まれてい `cryptographySettings` ます。|  
   
 ## <a name="example"></a>例  
+
  次の例では、要素を使用して、 **\<cryptographySettings>** 暗号化名マッピングと OID マッピングを格納する方法を示します。 この例では、がオブジェクトを返すようにランタイムを構成 <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> `MyHashClass` し、クラスを `MyCryptoClass` オブジェクト識別子1.3.36.2.1 にマップします。  
   
 ```xml  
@@ -79,5 +83,5 @@ ms.locfileid: "79155233"
 ## <a name="see-also"></a>関連項目
 
 - [構成ファイル スキーマ](../index.md)
-- [暗号設定スキーマ](index.md)
-- [暗号化サービス](../../../../standard/security/cryptographic-services.md)
+- [暗号化設定スキーマ](index.md)
+- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)

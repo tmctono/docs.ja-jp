@@ -2,14 +2,15 @@
 title: <schemeSettings> 要素 (Uri 設定)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
-ms.openlocfilehash: c745c90bb61b9ee393687d7f6db4fd11565c7dc7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5a146b854239fd516125e66e05312e27b90c73ec
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154648"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91187018"
 ---
 # <a name="schemesettings-element-uri-settings"></a>\<schemeSettings> 要素 (Uri 設定)
+
 <xref:System.Uri> が特定のスキームに解析される方法を指定します。  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -24,10 +25,12 @@ ms.locfileid: "79154648"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
- なし  
+
+ None  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -44,6 +47,7 @@ ms.locfileid: "79154648"
 |[uri](uri-element-uri-settings.md)|.NET Framework が、uniform resource identifier (Uri) を使用して表された web アドレスを処理する方法を指定する設定が含まれます。|  
   
 ## <a name="remarks"></a>解説  
+
  既定では、 <xref:System.Uri?displayProperty=nameWithType> クラスは、パスの圧縮を実行する前に、エンコードされたパス区切り記号のエスケープを解除します。 これは、次のような攻撃に対するセキュリティメカニズムとして実装されています。  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
@@ -59,9 +63,11 @@ ms.locfileid: "79154648"
  この既定の動作は、特定のスキームの schemeSettings 構成オプションを使用して、パーセントエンコードされたパス区切り記号のエスケープを解除しないように変更できます。  
   
 ## <a name="configuration-files"></a>構成ファイル  
+
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
+
  次の例は、 <xref:System.Uri> http スキームに対してパーセントでエンコードされたパス区切り記号をエスケープしないようにするために、クラスによって使用される構成を示しています。  
   
 ```xml  
@@ -78,7 +84,7 @@ ms.locfileid: "79154648"
   
 |||
 |-|-|  
-|名前空間|System|  
+|名前空間|システム|  
 |スキーマ名||  
 |検証ファイル||  
 |空にすることができます||  
