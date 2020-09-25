@@ -2,14 +2,15 @@
 title: <security> の <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-ms.openlocfilehash: 7877fd59aff581eee5b62a1ca224dbf51c956069
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 32b066fdf4d8edbbd36fdff7b14bdec87ddc970d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738667"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170078"
 ---
 # <a name="security-of-netmsmqbinding"></a>\<security> の \<netMsmqBinding>
+
 MSMQ バインディングのセキュリティ設定を定義します。 トランスポートまたは SOAP セキュリティが有効であるかどうか、および有効である場合は、どの認証モードと保護レベルを使用するかを指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,26 +34,27 @@ MSMQ バインディングのセキュリティ設定を定義します。 ト�
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |mode|整合性、機密性、および認証を制御するセキュリティの種類を指定します。 有効な値は次のとおりです。<br /><br /> -None: セキュリティを無効にします。<br />-Transport: 保護と認証はトランスポートによって提供されます。 これは、2 つのキュー マネージャー間のメッセージ セキュリティに適用されます。 アプリケーションとキュー マネージャーとの間にセキュリティは提供されません。 既存の Msmq アプリケーションは、この種類のセキュリティ モードと機能的に等価です。<br />-Message: エンドツーエンドアプリケーションのセキュリティを指定します。 トランスポート層で提供されるセキュリティありません。 これは、他の標準バインディングによって提供されたセキュリティと同様です。<br />-Both: トランスポートと SOAP メッセージング層の両方でセキュリティを提供します。 同じ資格情報が、両方のレベルで要求されます。<br /><br /> 既定値は、Transport です。 この属性は <xref:System.ServiceModel.NetMsmqSecurityMode> 型です。|  
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<message>](message-of-netmsmqbinding.md)|SOAP メッセージのセキュリティ設定を定義します。 この要素は <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement> 型です。|  
 |[\<transport>](transport-of-netmsmqbinding.md)|MSMQ トランスポートのセキュリティ設定を定義します。 この要素は <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement> 型です。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
-|binding|のバインド要素[\<netMsmqBinding>](netmsmqbinding.md)|  
+|binding|のバインド要素 [\<netMsmqBinding>](netmsmqbinding.md)|  
   
 ## <a name="see-also"></a>関連項目
 

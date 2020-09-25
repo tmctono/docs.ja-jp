@@ -5,14 +5,15 @@ helpviewer_keywords:
 - appDomainResourceMonitoring element
 - <appDomainResourceMonitoring> element
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
-ms.openlocfilehash: 3c6092b6c34bb13c0ad0e66df2d3b7e65ac3de7e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9ecf2e382b5d483377df871835793219b3f74760
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154377"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170273"
 ---
 # <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring> 要素
+
 プロセスのライフサイクルにおいて、プロセスのすべてのアプリケーション ドメインの統計を収集するようにランタイムに指示します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,6 +28,7 @@ ms.locfileid: "79154377"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -37,29 +39,32 @@ ms.locfileid: "79154377"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
 |`true`|アプリケーションドメインのリソース監視の統計情報が収集されます。|  
 |`false`|アプリケーションドメインのリソース監視の統計情報は収集されません。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>解説  
- アプリケーションドメインのリソース監視は、マネージアプリケーションドメインクラス、ホスティング[ICLRAppDomainResourceMonitor](../../../unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)インターフェイス、および Windows イベントトレーシング (ETW) を介して使用できます。 監視が有効になっている場合、プロセス内のすべてのアプリケーションドメインについて、プロセスの実行中に統計が収集されます。  
+
+ アプリケーションドメインのリソース監視は、マネージアプリケーションドメインクラス、ホスティング [ICLRAppDomainResourceMonitor](../../../unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) インターフェイス、および Windows イベントトレーシング (ETW) を介して使用できます。 監視が有効になっている場合、プロセス内のすべてのアプリケーションドメインについて、プロセスの実行中に統計が収集されます。  
   
  マネージコードからの監視を有効にするには、プロパティを使用し <xref:System.AppDomain.MonitoringIsEnabled%2A> ます。  
   
  この構成要素は、.NET Framework 4 以降でのみ使用できます。  
   
 ## <a name="example"></a>例  
+
  次の例は、アプリケーションドメインのリソース監視を有効にする方法を示しています。  
   
 ```xml  

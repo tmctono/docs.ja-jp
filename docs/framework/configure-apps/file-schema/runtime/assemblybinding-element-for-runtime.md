@@ -8,14 +8,15 @@ helpviewer_keywords:
 - assemblyBinding element
 - container tags, <assemblyBinding> element
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
-ms.openlocfilehash: 202b063ad3f0f9696cdc12aff434d61fe5a813e6
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b6a39bcecfd2485481677496adcf026d986c283b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154323"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170247"
 ---
 # <a name="assemblybinding-element-for-runtime"></a>\<runtime> の \<assemblyBinding> 要素
+
 アセンブリ バージョンのリダイレクトおよびアセンブリの位置に関する情報が含まれます。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,18 +32,19 @@ ms.locfileid: "79154323"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |**xmlns**|必須の属性です。<br /><br /> アセンブリのバインディングに必要な XML 名前空間を指定します。 値として、文字列 "urn:schemas-microsoft-com:asm.v1" を使用します。|  
-|**appliesTo**|.NET Framework アセンブリのリダイレクトを適用するランタイムのバージョンを指定します。 このオプションの属性では、.NET Framework バージョン番号を使用して、適用するバージョンを指定します。 **AppliesTo**属性が指定されていない場合、 **\<assemblyBinding>** 要素は .NET Framework のすべてのバージョンに適用されます。 **AppliesTo**属性は .NET Framework バージョン1.1 で導入されました。.NET Framework バージョン1.0 では無視されます。 これは **\<assemblyBinding>** 、 **appliesTo**属性が指定されている場合でも、.NET Framework バージョン1.0 を使用すると、すべての要素が適用されることを意味します。|  
+|**appliesTo**|.NET Framework アセンブリのリダイレクトを適用するランタイムのバージョンを指定します。 このオプションの属性では、.NET Framework バージョン番号を使用して、適用するバージョンを指定します。 **appliesTo** 属性が指定されていない場合、 **\<assemblyBinding>** 要素は、すべてのバージョンの .NET Framework に適用されます。 **AppliesTo**属性は .NET Framework バージョン1.1 で導入されました。.NET Framework バージョン1.0 では無視されます。 つまり、**appliesTo** 属性が指定されている場合でも、.NET Framework バージョン1.0 を使用しているときは、すべての **\<assemblyBinding>** 要素が適用されます。|  
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<dependentAssembly>](dependentassembly-element.md)|アセンブリのバインディング ポリシーとアセンブリの場所をカプセル化します。 **\<dependentAssembly>** アセンブリごとに1つのタグを使用します。|  
 |[\<probing>](probing-element.md)|アセンブリの読み込み時に共通言語ランタイムが検索するサブディレクトリを指定します。|  
@@ -51,12 +53,13 @@ ms.locfileid: "79154323"
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="example"></a>例  
+
  あるアセンブリ バージョンを別のバージョンにリダイレクトし、コードベースを提供する例を示します。  
   
 ```xml  
@@ -77,7 +80,7 @@ ms.locfileid: "79154323"
 </configuration>  
 ```  
   
- 次の例は、 **appliesTo**属性を使用して .NET Framework アセンブリのバインドをリダイレクトする方法を示しています。  
+ 次の例は、 **appliesTo** 属性を使用して .NET Framework アセンブリのバインドをリダイレクトする方法を示しています。  
   
 ```xml  
 <runtime>  
