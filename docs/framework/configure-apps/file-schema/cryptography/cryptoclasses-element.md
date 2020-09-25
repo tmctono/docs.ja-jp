@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <cryptoClasses> element
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
-ms.openlocfilehash: c93fadf51297d59ab499e25de283700364903049
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 89b96edcf1da20698cd203e78fa27e644fa69cc3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155247"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201825"
 ---
 # <a name="cryptoclasses-element"></a>\<cryptoClasses> 要素
+
 要素内の表示名へのマッピングを持つ暗号化クラスの一覧が含まれてい [\<nameEntry>](nameentry-element.md) ます。  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -32,9 +33,11 @@ ms.locfileid: "79155247"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
@@ -53,6 +56,7 @@ ms.locfileid: "79155247"
 |`mscorlib`|要素が含まれてい `cryptographySettings` ます。|  
   
 ## <a name="example"></a>例  
+
  次の例は、要素を使用して暗号化クラスを参照し、ランタイムを構成する方法を示して **\<cryptoClass>** います。 その後、文字列 "RSA" をメソッドに渡し <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 、メソッドを使用して <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> オブジェクトを返すことができ `MyCryptoRSAClass` ます。  
   
 ```xml  
@@ -80,7 +84,7 @@ ms.locfileid: "79155247"
 
 - <xref:System.Security.Cryptography>
 - [構成ファイル スキーマ](../index.md)
-- [暗号設定スキーマ](index.md)
-- [暗号化サービス](../../../../standard/security/cryptographic-services.md)
+- [暗号化設定スキーマ](index.md)
+- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
 - [CryptoConfig. CreateFromName のようになります。](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
 - [暗号化クラスの設定](../../configure-cryptography-classes.md)

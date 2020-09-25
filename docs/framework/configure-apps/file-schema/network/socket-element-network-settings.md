@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: 0e2b369eccfbc658a790ef61a961315a88361669
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b8df32745007b2a145d35b8cfcc4cbd2bd17eb33
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74089087"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201734"
 ---
 # <a name="socket-element-network-settings"></a>\<socket> 要素 (ネットワーク設定)
+
 ソケット操作が完了ポートを使用するかどうかを指定します。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -34,6 +35,7 @@ ms.locfileid: "74089087"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -45,6 +47,7 @@ ms.locfileid: "74089087"
 |`ipProtectionLevel`|ソケットに使用する既定のを指定し <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> ます。 既定値は、Windows のバージョンによって異なります。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -54,6 +57,7 @@ ms.locfileid: "74089087"
 |[設定](settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
   
 ## <a name="remarks"></a>解説  
+
  `alwaysUseCompletionPortsForAccept`属性と `alwaysUseCompletionPortsForConnect` 属性は、名前空間のクラスによる完了ポートの使用に関する既定の動作を指定するために使用されます。 <xref:System.Net.Sockets?displayProperty=nameWithType> ハイパフォーマンスサーバーアプリケーションでは、完了ポートをお勧めします。  
   
  `alwaysUseCompletionPortsForAccept`属性と属性の既定値 `alwaysUseCompletionPortsForConnect` は**false**です。  
@@ -79,14 +83,16 @@ ms.locfileid: "74089087"
 |無制限|IP 保護レベルは無制限です。 この値は、Windows に組み込まれている IPv6 NAT Traversal 機能 (たとえば、Teredo) を使用するアプリケーションを含む、インターネット経由で動作するように設計されているアプリケーションによって使用されます。 これらのアプリケーションは、IPv4 のファイアウォールをバイパスすることがあるため、開いているポートを対象としたインターネットからの攻撃に対して堅牢である必要があります。 Windows Server 2008 R2 と Windows Vista では、ソケットの IP 保護レベルの既定値は無制限です。|  
 |指定されていません。|IP 保護レベルは未指定です。 Windows 7 と Windows Server 2008 R2 では、ソケットの IP 保護レベルの既定値は未指定です。|  
   
- 属性の既定値 `ipProtectionLevel` は**指定**されていません。  
+ 属性の既定値 `ipProtectionLevel` は **指定**されていません。  
   
  プロパティは、 <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> `ipProtectionLevel` 適用可能な構成ファイルから属性の現在の値を取得するために使用できます。  
   
 ## <a name="configuration-files"></a>構成ファイル  
+
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
+
  次の例では、完了ポートを使用するように指定する方法と、既定値を無制限にすることを指定する方法を示し <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> ます。  
   
 ```xml  

@@ -2,12 +2,12 @@
 title: <idn> 要素 (Uri 設定)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 533b2562f6e5c8d6c2bf452e56dff9a8bf8ab376
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f45922ecd5f7476362aab5348d91415d8e31c53f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71698171"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195403"
 ---
 # <a name="idn-element-uri-settings"></a>\<idn> 要素 (Uri 設定)
 
@@ -26,6 +26,7 @@ ms.locfileid: "71698171"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -50,7 +51,7 @@ ms.locfileid: "71698171"
 
 IRI のサポートを有効にするには、次の2つの変更が必要です。
 
-1. Machine.config ファイルの .NET Framework 2.0 ディレクトリの下に次の行を追加します。
+1. 次の行を、.NET Framework 2.0 ディレクトリの下の machine.config ファイルに追加します。
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  

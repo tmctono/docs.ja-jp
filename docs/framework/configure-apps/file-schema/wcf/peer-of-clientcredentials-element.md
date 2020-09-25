@@ -2,14 +2,15 @@
 title: <peer><clientCredentials>要素の
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-ms.openlocfilehash: a8144ca7bad5654bf8f77259ea1717442665fc81
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 75d8543d7db5eee1345d54f934fc89c9593b85ac
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555459"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186992"
 ---
 # <a name="peer-of-clientcredentials-element"></a>\<peer>\<clientCredentials>要素の
+
 ピアツーピア クライアントの認証時に使用される資格情報を指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,9 +32,11 @@ ms.locfileid: "90555459"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
@@ -50,7 +53,8 @@ ms.locfileid: "90555459"
 |-------------|-----------------|  
 |[\<clientCredentials>](clientcredentials.md)|サービスに対するクライアントの認証に使用される資格情報を指定します。|  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
+
  この構成要素は、ピア ノードがメッシュ内の他のノードに対して自身を認証するために使用する資格情報と、ピア ノードが他のピア ノードを認証するために使用する認証設定を指定します。 詳細については、「 [ピアチャネルメッセージ認証](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90)) 」および「 [ピアチャネルアプリケーションのセキュリティ保護](../../../wcf/feature-details/securing-peer-channel-applications.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目

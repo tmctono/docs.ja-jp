@@ -2,14 +2,15 @@
 title: <add> の <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: 280c516b17a133930bc4b6621a8c9bc7f4781085
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c1de0605bc8afc502a85d9b2917b975ee45a3d26
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850566"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201656"
 ---
 # <a name="add-of-filters"></a>\<add> の \<filters>
+
 ログに記録するメッセージの種類を指定する XPath フィルター。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,24 +29,27 @@ ms.locfileid: "70850566"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |filter|XPath 1.0 の式によって定義される、XML ドキュメントのクエリを指定する文字列。 詳細については、「<xref:System.ServiceModel.Dispatcher.XPathMessageFilter>」を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<filters>](filters.md)|ログに記録されるメッセージの種類を制御する XPath フィルターのコレクションを格納します。|  
   
 ## <a name="remarks"></a>解説  
+
  フィルターは、`logMessagesAtTransportLevel` を `true` に設定することによって指定されるトランスポート層でのみ適用されます。 サービス レベルおよび形式が正しくないメッセージ ログ記録は、フィルターの影響を受けません。  
   
  コレクションにフィルターを追加するには、`add` を使用します。 1 つ以上のフィルターを定義した場合は、少なくとも 1 つのフィルターと一致するメッセージだけが記録されます。 フィルターを定義しなかった場合は、すべてのメッセージが通過します。  
@@ -55,6 +59,7 @@ ms.locfileid: "70850566"
  SOAP ヘッダー セクションがあるメッセージだけを記録するフィルターの設定方法の例を次に示します。  
   
 ## <a name="example"></a>例  
+
  SOAP ヘッダー セクションがあるメッセージだけを記録するフィルターの設定方法の例を次に示します。  
   
 ```xml  

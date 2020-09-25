@@ -2,14 +2,15 @@
 title: <baseAddresses>
 ms.date: 03/30/2017
 ms.assetid: 78918102-2898-46e0-9ea8-6b8afe65603e
-ms.openlocfilehash: 9b3ed6b39f1743249925d5b6d9a47845c87983bc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3b6cebd178ac5cd30fa034bd961d2d08075771d2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850208"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201539"
 ---
 # \<baseAddresses>
+
 自己ホスト環境でのサービス ホストのベース アドレスである `baseAddress` 要素のコレクションを表します。 ベース アドレスが存在すると、そのベース アドレスに関連したアドレスを使用してエンドポイントを構成できます。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,13 +28,16 @@ ms.locfileid: "70850208"
 </baseAddresses>
 ```  
   
-## <a name="type"></a>Type  
+## <a name="type"></a>種類  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  

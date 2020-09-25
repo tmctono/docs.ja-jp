@@ -1,5 +1,5 @@
 ---
-title: <add>のの <listeners> 要素<source>
+title: <add> のの <listeners> 要素 <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add
@@ -8,14 +8,15 @@ helpviewer_keywords:
 - add element for <listeners> for <source>
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-ms.openlocfilehash: 883eef32172c5a7f900197995b4c57c3d5a84e19
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a5abaffbad986785b8879297883da9614f0a8103
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153686"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201695"
 ---
-# <a name="add-element-for-listeners-for-source"></a>\<add>のの \<listeners> 要素\<source>
+# <a name="add-element-for-listeners-for-source"></a>\<add> のの \<listeners> 要素 \<source>
+
 トレース ソースの `Listeners` コレクションにリスナーを追加します。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -34,27 +35,28 @@ ms.locfileid: "79153686"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
-|`type`|必須属性。コレクション内のリスナーを参照している場合を除き、 `sharedListeners` 名前で参照する必要があります ([例](#example)を参照)。<br /><br /> リスナーの種類を指定します。 [「完全修飾型名の指定](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)」で指定した要件を満たす文字列を使用する必要があります。|  
+|`type`|必須属性。コレクション内のリスナーを参照している場合を除き、 `sharedListeners` 名前で参照する必要があります ( [例](#example)を参照)。<br /><br /> リスナーの種類を指定します。 [「完全修飾型名の指定](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)」で指定した要件を満たす文字列を使用する必要があります。|  
 |`initializeData`|省略可能な属性です。<br /><br /> 指定したクラスのコンストラクターに渡される文字列。 <xref:System.Configuration.ConfigurationException>クラスに文字列を受け取るコンストラクターがない場合は、がスローされます。|  
 |`name`|省略可能な属性です。<br /><br /> リスナーの名前を指定します。|  
 |`traceOutputOptions`|省略可能な属性です。<br /><br /> <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A>トレースリスナーのプロパティ値を指定します。|  
-|[カスタム属性]|省略可能な属性。<br /><br /> リスナーのメソッドによって識別されるリスナー固有の属性の値を指定し <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> ます。 <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>は、クラスに固有の追加属性の例です <xref:System.Diagnostics.DelimitedListTraceListener> 。|  
+|[カスタム属性]|省略可能な属性。<br /><br /> リスナーのメソッドによって識別されるリスナー固有の属性の値を指定し <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> ます。 <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> は、クラスに固有の追加属性の例です <xref:System.Diagnostics.DelimitedListTraceListener> 。|  
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<filter>](filter-element-for-add-for-listeners-for-source.md)|トレース ソースの `Listeners` コレクション内のリスナーにフィルターを追加します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
@@ -63,6 +65,7 @@ ms.locfileid: "79153686"
 |`listeners`|メッセージを収集、格納、およびルーティングするリスナーを指定します。|  
   
 ## <a name="remarks"></a>解説  
+
  .NET Framework に付属しているリスナークラスは、クラスから派生し <xref:System.Diagnostics.TraceListener> ます。  
   
  トレースリスナーの属性を指定しない場合 `name` 、 <xref:System.Diagnostics.TraceListener.Name%2A> トレースリスナーのプロパティの既定値は空の文字列 ("") になります。 アプリケーションにリスナーが1つしかない場合は、名前を指定せずに追加することができます。名前に空の文字列を指定することで削除できます。 ただし、アプリケーションに複数のリスナーがある場合は、各トレースリスナーに対して一意の名前を指定する必要があります。これにより、コレクション内の個々のトレースリスナーを識別して管理することができ <xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=nameWithType> ます。  
@@ -87,9 +90,11 @@ ms.locfileid: "79153686"
 |<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|が書き込み先となるファイルの名前 <xref:System.Diagnostics.XmlWriterTraceListener> 。|  
   
 ## <a name="configuration-file"></a>構成ファイル  
- この要素は、コンピューターの構成ファイル (machine.config) とアプリケーション構成ファイルで使用できます。  
+
+ この要素は、マシン構成ファイル (Machine.config) とアプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
+
  次の例では、要素を使用して、 `<add>` リスナー `console` およびを `textListener` `Listeners` トレースソースのコレクションに追加する方法を示し `TraceSourceApp` ます。 リスナーは、 `textListener` トレース出力をファイル myListener .log に書き込みます。  
   
 ```xml  

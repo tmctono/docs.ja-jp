@@ -8,12 +8,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: 4517aab98235ec2172da355ad0e05d95ebee46c5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 79b49cbc9b122e6591d07643a341841b262edff4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554040"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201708"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime> 要素
 
@@ -31,12 +31,12 @@ ms.locfileid: "90554040"
 
 ## <a name="attributes"></a>属性
 
-|属性|説明|
+|属性|[説明]|
 |---------------|-----------------|
 |**version**|省略可能な属性です。<br /><br /> このアプリケーションがサポートする共通言語ランタイム (CLR: Common Language Runtime) のバージョンを指定する文字列値。 属性の有効な値については、「 `version` [ランタイムバージョン」の値](#version) に関するセクションを参照してください。 **注:**  .NET Framework 3.5 では、"*runtime version*" の値は *major*という形式になります。*minor*。*ビルド*。 .NET Framework 4 以降では、メジャーバージョン番号とマイナーバージョン番号 ("v v4.0.30319" の代わりに "v4.0") のみが必要です。 短い文字列を使用することをお勧めします。|
 |**sku**|省略可能な属性です。<br /><br /> 在庫管理単位 (SKU) を指定する文字列の値。SKU はこのアプリケーションがサポートする .NET Framework リリースを指定します。<br /><br /> .NET Framework 4.0 以降では、`sku` 属性の使用が推奨されます。  この属性が指定される場合は、アプリケーションが対象とする .NET Framework のバージョンを示します。<br /><br /> Sku 属性の有効な値については、「 [sku id」の値](#sku) に関するセクションを参照してください。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **\<supportedRuntime>** アプリケーション構成ファイルに要素が存在しない場合は、アプリケーションのビルドに使用されるランタイムのバージョンが使用されます。
 
@@ -55,7 +55,9 @@ NET Framework 1.1 から 3.5 までのランタイムの複数のバージョン
 アプリケーションは、そのアプリケーションを実行できる .NET Framework のすべてのバージョンでテストすることをお勧めします。
 
 <a name="version"></a>
+
 ## <a name="runtime-version-values"></a>"ランタイム バージョン" の値
+
 属性は、 `runtime` 特定のアプリケーションに必要な共通言語ランタイム (CLR) のバージョンを指定します。 すべての .NET Framework v4. x バージョンで CLR が指定されていることに注意してください `v4.0` 。 次の表に、属性の *ランタイムバージョン* の値の有効な値を示し `version` ます。
 
 |.NET Framework のバージョン|`version` 属性|

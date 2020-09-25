@@ -2,14 +2,15 @@
 title: <oneWay>
 ms.date: 03/30/2017
 ms.assetid: 00e67e0e-77c0-4695-9138-c0997b0e5f3c
-ms.openlocfilehash: a5c773ea91de882920775ac8dc0ecc1da68a6c9f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 92cd6b280305c223ee125a45724691c5205ce3c1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738792"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195013"
 ---
 # \<oneWay>
+
 カスタム バインドのパケット ルーティングを有効にし、一方向メソッドを使用できるようにします。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,28 +31,30 @@ ms.locfileid: "73738792"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
-|`packetRoutable`|パケット ルーティングが有効かどうかを示すブール値。 既定値は、`false` です。|  
+|`packetRoutable`|パケット ルーティングが有効かどうかを示すブール値。 既定では、 `false`です。|  
 |`MaxAcceptedChannels`|許容できるチャネルの最大数を指定する整数。|  
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<channelPoolSettings>](channelpoolsettings.md)|現在のチャネルのチャネル プールのプロパティを格納する <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement> オブジェクト。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|カスタム バインドのすべてのバインド機能を定義します。|  
   
 ## <a name="remarks"></a>解説  
+
  パケット ルーティングを有効にするには、この要素が提供する "一方向の変換" 層が必要です。 カスタム バインドを作成し、このバインディングをセッション対応または要求応答のトランスポートの上に重ねて、パケット ルーティング可能にすることができます。 この要素は、一方向メソッドをよりネイティブな形式で公開するときにも役に立ちます。 複合二重や信頼できるメッセージ機能などのさらに大きい変換は、この層に対して適用できます。  
   
 ## <a name="see-also"></a>関連項目
