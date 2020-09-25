@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <requiredRuntime> element
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-ms.openlocfilehash: fe96673b95f48cb75d36662a680bf56a59363f9f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 19fa1561ca3acd845918d952379c5227121465b4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71697495"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174070"
 ---
 # <a name="requiredruntime-element"></a>\<requiredRuntime> 要素
 
@@ -45,7 +45,7 @@ safemode="true|false"/>
 
 ## <a name="safemode-attribute"></a>セーフ属性
 
-|値|Description|
+|値|[説明]|
 |-----------|-----------------|
 |`false`|ランタイムスタートアップコードによって、レジストリが検索されます。 これが既定値です。|
 |`true`|ランタイムスタートアップコードでは、レジストリが検索されません。|
@@ -56,12 +56,13 @@ safemode="true|false"/>
 
 ### <a name="parent-elements"></a>親要素
 
-|要素|Description|
+|要素|説明|
 |-------------|-----------------|
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|
 |`startup`|要素が含まれてい `<requiredRuntime>` ます。|
 
 ## <a name="remarks"></a>解説
+
  ランタイムのバージョン1.0 のみをサポートするようにビルドされたアプリケーションでは、要素を使用する必要があり `<requiredRuntime>` ます。 ランタイムのバージョン1.1 以降を使用してビルドされたアプリケーションでは、要素を使用する必要があり `<supportedRuntime>` ます。
 
 > [!NOTE]

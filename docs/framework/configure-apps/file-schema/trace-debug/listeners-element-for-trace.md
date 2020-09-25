@@ -7,14 +7,15 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-ms.openlocfilehash: fd12be1b775d7611ef3f16d23147470313bf9866
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 59d078f8dc573a1ce949d225f497dd4500fe808f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153374"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173862"
 ---
 # <a name="listeners-element-for-trace"></a>\<trace> の \<listeners> 要素
+
 メッセージを収集、格納、およびルーティングするリスナーを指定します。 リスナーは、適切なターゲットにトレース出力を送信します。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -33,9 +34,11 @@ ms.locfileid: "79153374"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
@@ -55,13 +58,16 @@ ms.locfileid: "79153374"
 |`trace`|トレース メッセージを収集、格納、およびルーティングするリスナーを保持します。|  
   
 ## <a name="remarks"></a>解説  
+
  <xref:System.Diagnostics.Debug>クラスと <xref:System.Diagnostics.Trace> クラスは、同じ**Listeners**コレクションを共有します。 これらのクラスのいずれかのコレクションにリスナーオブジェクトを追加すると、他のクラスは同じリスナーを使用します。 .NET Framework に付属しているリスナークラスは、クラスから派生し <xref:System.Diagnostics.TraceListener> ます。  
   
 ## <a name="configuration-file"></a>構成ファイル  
- この要素は、コンピューターの構成ファイル (machine.config) とアプリケーション構成ファイルで使用できます。  
+
+ この要素は、マシン構成ファイル (Machine.config) とアプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
- 次の例は、要素を使用して **\<listeners>** リスナー `MyListener` および `MyEventListener` **リスナー**コレクションに追加する方法を示しています。 `MyListener`という名前のファイルを作成し、その `MyListener.log` 出力をファイルに書き込みます。 `MyEventListener`イベントログにエントリを作成します。  
+
+ 次の例は、要素を使用して **\<listeners>** リスナー `MyListener` および `MyEventListener` **リスナー** コレクションに追加する方法を示しています。 `MyListener` という名前のファイルを作成し、その `MyListener.log` 出力をファイルに書き込みます。 `MyEventListener` イベントログにエントリを作成します。  
   
 ```xml  
 <configuration>  

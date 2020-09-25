@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <add> element for <sharedListeners>
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
-ms.openlocfilehash: 5588892ec75a791eda1eb043936c0af95e79354e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f0ede5f9dc19e9589afc888e7fcd01785bc1840c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153608"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174031"
 ---
 # <a name="add-element-for-sharedlisteners"></a>\<sharedListeners> の \<add> 要素
+
 `sharedListeners` コレクションにリスナーを追加します。 `sharedListeners`[\<source>](source-element.md)またはが参照できるリスナーのコレクションです [\<trace>](trace-element.md) 。  既定では、コレクション内のリスナー `sharedListeners` はコレクション内に配置されません `Listeners` 。 これらは、またはに名前で追加する必要があり [\<source>](source-element.md) [\<trace>](trace-element.md) ます。 実行時にコードでコレクション内のリスナーを取得することはできません `sharedListeners` 。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -34,6 +35,7 @@ ms.locfileid: "79153608"
 ```
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -47,19 +49,20 @@ ms.locfileid: "79153608"
 
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<filter>](filter-element-for-add-for-sharedlisteners.md)|`sharedListeners` コレクションのリスナーにフィルターを追加します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
 |`sharedListeners`|任意のソースまたはトレース要素が参照できるリスナーのコレクション。|  
   
 ## <a name="remarks"></a>解説  
+
  .NET Framework に付属しているリスナークラスは、クラスから派生し <xref:System.Diagnostics.TraceListener> ます。 属性の値 `name` は、 `Listeners` トレースまたはトレースソースのコレクションに共有リスナーを追加するために使用されます。 属性の値は、 `initializeData` 作成するリスナーの種類によって異なります。 すべてのトレースリスナーでを指定する必要はありません `initializeData` 。  
   
 > [!NOTE]
@@ -77,10 +80,12 @@ ms.locfileid: "79153608"
 |<xref:System.Diagnostics.XmlWriterTraceListener>|が書き込み先となるファイルの名前 <xref:System.Diagnostics.XmlWriterTraceListener> 。|  
   
 ## <a name="configuration-file"></a>構成ファイル  
- この要素は、コンピューターの構成ファイル (machine.config) とアプリケーション構成ファイルで使用できます。  
+
+ この要素は、マシン構成ファイル (Machine.config) とアプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
- 次の例は、要素を使用してをコレクションに追加する方法を示して `<add>` <xref:System.Diagnostics.TextWriterTraceListener> `textListener` `sharedListeners` います。   `textListener`は、トレースソースのコレクションに名前によって追加され `Listeners` `TraceSourceApp` ます。 リスナーは、 `textListener` トレース出力をファイル myListener .log に書き込みます。  
+
+ 次の例は、要素を使用してをコレクションに追加する方法を示して `<add>` <xref:System.Diagnostics.TextWriterTraceListener> `textListener` `sharedListeners` います。   `textListener` は、トレースソースのコレクションに名前によって追加され `Listeners` `TraceSourceApp` ます。 リスナーは、 `textListener` トレース出力をファイル myListener .log に書き込みます。  
   
 ```xml  
 <configuration>  

@@ -1,5 +1,5 @@
 ---
-title: <remove>のの <listeners> 要素<trace>
+title: <remove> のの <listeners> 要素 <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: f06973ec30d5061e4a200d6bf7e68adcf6302018
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 01b797e1fb62d32e9f0d44c54b803dd969615361
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088845"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173836"
 ---
-# <a name="remove-element-for-listeners-for-trace"></a>\<remove>のの \<listeners> 要素\<trace>
+# <a name="remove-element-for-listeners-for-trace"></a>\<remove> のの \<listeners> 要素 \<trace>
+
 **リスナーコレクションから**リスナーを削除します。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -30,6 +31,7 @@ ms.locfileid: "74088845"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -39,11 +41,12 @@ ms.locfileid: "74088845"
 |**name**|必須の属性です。<br /><br /> **リスナー**コレクションから削除するリスナーの名前。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`listeners`|メッセージを収集、格納、およびルーティングするリスナーを指定します。 リスナーは、適切なターゲットにトレース出力を送信します。|  
@@ -56,7 +59,8 @@ ms.locfileid: "74088845"
 > コレクションからを削除する <xref:System.Diagnostics.DefaultTraceListener> `Listeners` と、、、、およびの各メソッドの動作が変更され <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> ます。 通常、 `Assert` メソッドまたはメソッドを呼び出すと、 `Fail` メッセージボックスが表示されますが、 <xref:System.Diagnostics.DefaultTraceListener> がコレクションに含まれていない場合は、メッセージボックスは表示されません `Listeners` 。  
   
 ## <a name="example"></a>例  
- 次の例は、トレース**リスナー**コレクションから既定のトレースリスナーを削除する方法を示しています。  
+
+ 次の例は、トレース **リスナー** コレクションから既定のトレースリスナーを削除する方法を示しています。  
   
 ```xml  
 <configuration>  

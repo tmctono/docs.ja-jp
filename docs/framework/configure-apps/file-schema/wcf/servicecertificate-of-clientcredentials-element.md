@@ -2,14 +2,15 @@
 title: <serviceCertificate><clientCredentials>要素の
 ms.date: 03/30/2017
 ms.assetid: e50c0ac5-f0df-4c90-b54b-fc602c1f84ea
-ms.openlocfilehash: 4c7489a171bdd5cb4b747ca99f1b7ff6dd65517b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 502452c664f2dcb0856f72e25ff8b1517f432919
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399681"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172893"
 ---
 # <a name="servicecertificate-of-clientcredentials-element"></a>\<serviceCertificate>\<clientCredentials>要素の
+
 クライアントに対してサービスを認証する際に使用される証明書を指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,9 +28,11 @@ ms.locfileid: "70399681"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
@@ -47,6 +50,7 @@ ms.locfileid: "70399681"
 |[\<clientCredentials>](clientcredentials.md)|サービスに対するクライアント自身の認証のためにクライアントによって使用される資格情報を指定します。|  
   
 ## <a name="remarks"></a>解説  
+
  この構成要素は、SSL 認証を使用してサービスから提示された証明書を検証するためにクライアントが使用する設定を指定します。 また、このクラスには、メッセージ セキュリティを使用してサービスへのメッセージを暗号化するためにクライアントで明示的に構成される、サービスの証明書も含まれます。  
   
  要素の属性 `serviceCertificate` は、の属性と同じです [\<clientCertificate>](clientcertificate-of-clientcredentials-element.md) 。  

@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-ms.openlocfilehash: 417722ce2f3865350158413307495e3ab435d386
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e9c6a06ca9e481ecc2277e1d1ea76a0b99edb158
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153296"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173823"
 ---
 # <a name="source-element"></a>\<source> 要素
+
 トレース メッセージを開始するトレース ソースを指定します。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -31,6 +32,7 @@ ms.locfileid: "79153296"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -44,22 +46,24 @@ ms.locfileid: "79153296"
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<listeners>](listeners-element-for-source.md)|メッセージを収集、格納、およびルーティングするリスナーを格納します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
 |`sources`|トレース メッセージを開始するトレース ソースを保持します。|  
   
 ## <a name="remarks"></a>解説  
- この要素は、コンピューターの構成ファイル (machine.config) とアプリケーション構成ファイルで使用できます。  
+
+ この要素は、マシン構成ファイル (Machine.config) とアプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
+
  次の例では、要素を使用してトレースソースを追加し、と `<source>` `mySource` いう名前のソーススイッチのレベルを設定する方法を示し `sourceSwitch` ます。 トレース情報をコンソールに書き込むコンソールトレースリスナーが追加されます。  
   
 ```xml  

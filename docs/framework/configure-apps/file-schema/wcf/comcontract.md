@@ -2,14 +2,15 @@
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: b499294af71ba230dcf985d4af1d013b1ca260cf
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 35596f32bf0e0de9081bc0d4c33fb370c7ab708b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850030"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173784"
 ---
 # \<comContract>
+
 COM+ 統合サービス コントラクトを指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -45,11 +46,12 @@ COM+ 統合サービス コントラクトを指定します。
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |コントラクト (contract)|コントラクトの種類を含む文字列。|  
 |name|コントラクト名を含む文字列。|  
@@ -58,7 +60,7 @@ COM+ 統合サービス コントラクトを指定します。
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |persistableTypes|すべての永続型。|  
 |userDefinedTypes|サービス コントラクトに含まれるユーザー定義型 (UDT) のコレクション。|  
@@ -66,11 +68,12 @@ COM+ 統合サービス コントラクトを指定します。
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |comContracts|`comContract` 要素のコレクションを含みます。|  
   
 ## <a name="remarks"></a>解説  
+
  現在、COM + 統合サービスコントラクトは名前空間に限定され `http://tempuri.org` ており、コントラクト名はサポートする COM インターフェイスから派生します。 ただし、構成ファイルの `comContracts` セクションと `comContract` 要素を使用して代替を指定することができます。 たとえば、次の構成を使用して、名前空間、コントラクト名、組み込まれるユーザー定義型、およびサービス コントラクトのその他の設定を指定できます。  
   
 ```xml  

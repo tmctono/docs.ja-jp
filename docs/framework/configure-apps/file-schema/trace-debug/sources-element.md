@@ -9,14 +9,15 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: 2a76816ee73f516b3c7544877a77531acaa8e09c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 670fb359f892d83feac56c849361c4b980d9a922
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153270"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173810"
 ---
 # <a name="sources-element"></a>\<sources> 要素
+
 トレースメッセージを開始するトレースソースを指定します。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -32,9 +33,11 @@ ms.locfileid: "79153270"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
@@ -51,9 +54,11 @@ ms.locfileid: "79153270"
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
   
 ## <a name="remarks"></a>解説  
- この要素は、コンピューターの構成ファイル (machine.config) とアプリケーション構成ファイルで使用できます。  
+
+ この要素は、マシン構成ファイル (Machine.config) とアプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
+
  次の例では、要素を使用してトレースソースを追加し、と `<sources>` `mySource` いう名前のソーススイッチのレベルを設定する方法を示し `sourceSwitch` ます。 トレース情報をコンソールに書き込むコンソールトレースリスナーが追加されます。  
   
 ```xml  

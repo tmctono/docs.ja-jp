@@ -9,14 +9,15 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-ms.openlocfilehash: eb27716ec7c2936f32a7e4d4c983d1e175c4d044
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a6678a8fe7c6f962529f9d946b103b6224d58602
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504525"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174109"
 ---
 # <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager> 要素 (ネットワーク設定)
+
 ネットワークリソースへの接続を構成します。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -39,6 +40,7 @@ ms.locfileid: "84504525"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -54,6 +56,7 @@ ms.locfileid: "84504525"
 |`useNagleAlgorithm`|サービスポイントマネージャーによって制御される接続が Nagle アルゴリズムを使用するかどうかを指定します。 既定値は `true` です。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -65,6 +68,7 @@ ms.locfileid: "84504525"
 ## <a name="remarks"></a>解説  
   
 ## <a name="configuration-files"></a>構成ファイル  
+
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="see-also"></a>関連項目

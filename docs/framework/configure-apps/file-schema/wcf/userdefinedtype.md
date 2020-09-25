@@ -2,14 +2,15 @@
 title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: 7a76e5a90fe3218bc0302501b71daa9de0b098bc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a4bbd677aba27d93389f8d2f99aadd801c86b65f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854832"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172841"
 ---
 # \<userDefinedType>
+
 サービス コントラクトに含まれるユーザー定義型 (UDT) を表します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -36,11 +37,12 @@ ms.locfileid: "70854832"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |`name`|判読可能な型名を提供する文字列を含む省略可能な属性。 これは、ランタイムでは使用されませんが、リーダーが型を区別するのに役立ちます。|  
 |`TypeDefID`|登録されているタイプ ライブラリ内の特定の UDT 型を識別する GUID 文字列。|  
@@ -48,15 +50,17 @@ ms.locfileid: "70854832"
 |`TypeLibVersion`|型を定義するタイプ ライブラリ バージョンを識別する文字列。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |`userDefinedTypes`|`userDefinedType` 要素のコレクション。|  
   
 ## <a name="remarks"></a>解説  
+
  COM+ 統合ランタイムは、タイプ ライブラリを調べることによってサービスを作成します。 COM+ コンポーネントに VARIANT を渡すメソッドが含まれている場合、システムでは、渡される実際の型を実行前に判断することはできません。 したがって、VARIANT としてユーザー定義型 (UDT) を渡そうとしても、シリアル化で認識できる型ではないので失敗します。  
   
  この問題を回避するには、UDT を構成ファイルに追加して、適切なサービス コントラクトで既知の型として含まれるようにすることができます。 このためには、UDT およびコントラクト、つまりそれを使用する元の COM インターフェイスを一意に識別する必要があります。  

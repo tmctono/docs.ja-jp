@@ -7,14 +7,15 @@ helpviewer_keywords:
 - <add> element for <switches>
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
-ms.openlocfilehash: db2de681227dfdb7420808963219b9f52381f8fe
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5be39425363cb6d2a0eca6a0fa3f4154ce857bb5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088956"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173940"
 ---
 # <a name="add-element-for-switches"></a>\<switches> の \<add> 要素
+
 トレース スイッチを設定するレベルを指定します。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -30,30 +31,34 @@ ms.locfileid: "74088956"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
 |属性|説明|  
 |---------------|-----------------|  
-|**name**|必須の属性です。<br /><br /> スイッチの名前を指定します。 この属性の値は、スイッチコンストラクターに渡される*displayName*パラメーターに対応します。|  
+|**name**|必須の属性です。<br /><br /> スイッチの名前を指定します。 この属性の値は、スイッチコンストラクターに渡される *displayName* パラメーターに対応します。|  
 |**value**|必須の属性です。<br /><br /> スイッチのレベルを指定します。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`switches`|トレース スイッチと、トレース スイッチを設定するレベルを保持します。|  
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
   
 ## <a name="remarks"></a>解説  
+
  トレーススイッチのレベルは、構成ファイルに配置することによって変更できます。 スイッチがの場合は <xref:System.Diagnostics.BooleanSwitch> 、オンまたはオフにすることができます。 スイッチがの場合は <xref:System.Diagnostics.TraceSwitch> 、別のレベルを割り当てて、アプリケーションが出力するトレースメッセージまたはデバッグメッセージの種類を指定できます。  
   
 ## <a name="example"></a>例  
+
  次の例では、要素を使用して **\<add>** `General` トレーススイッチをレベルに設定 <xref:System.Diagnostics.TraceLevel> し、ブール型のトレーススイッチを有効にする方法を示し `Data` ます。  
   
 ```xml  
