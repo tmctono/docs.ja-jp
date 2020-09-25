@@ -9,14 +9,15 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: 59ab425dcef8ac5283035910a9d78a89a16be8b1
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 86960a33d0924013e2bfbfa743eab372181033b5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504590"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195429"
 ---
 # <a name="httpwebrequest-element-network-settings"></a>\<httpWebRequest> 要素 (ネットワーク設定)
+
 Web 要求パラメーターをカスタマイズします。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -36,6 +37,7 @@ Web 要求パラメーターをカスタマイズします。
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -48,6 +50,7 @@ Web 要求パラメーターをカスタマイズします。
 |`useUnsafeHeaderParsing`|Unsafe ヘッダーの解析が有効かどうかを指定します。 既定値は `false` です。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -57,12 +60,15 @@ Web 要求パラメーターをカスタマイズします。
 |[設定](settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
   
 ## <a name="remarks"></a>解説  
+
  既定では、.NET Framework は URI 解析に RFC 2616 を厳密に適用します。 一部のサーバー応答には、禁止されたフィールドの制御文字が含まれる場合があります。これにより、 <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> メソッドはをスローし <xref:System.Net.WebException> ます。 **Useunsafeheaderparsing**が**true**に設定されている場合、 <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> はこの場合にをスローしません。ただし、アプリケーションは、いくつかの形式の URI 解析攻撃に対して脆弱になります。 最適な解決策は、応答に制御文字が含まれないようにサーバーを変更することです。  
   
 ## <a name="configuration-files"></a>構成ファイル  
+
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
+
  次の例は、通常の最大ヘッダー長より大きいを指定する方法を示しています。  
   
 ```xml  

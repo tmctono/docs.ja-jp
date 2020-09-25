@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-ms.openlocfilehash: 4f831592d7d178276b1625e1ef7d8512085342af
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: aff324ac9952c95c78d7ca15572651dba23b79b7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153208"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195169"
 ---
 # <a name="systemdiagnostics-element"></a>\<system.diagnostics> 要素
+
 メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -29,9 +30,11 @@ ms.locfileid: "79153208"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
@@ -52,6 +55,7 @@ ms.locfileid: "79153208"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
   
 ## <a name="example"></a>例  
+
  次の例は、トレーススイッチとトレースリスナーを要素内に埋め込む方法を示して **\<system.diagnostics>** います。 `General`トレーススイッチがレベルに設定されてい <xref:System.Diagnostics.TraceLevel> ます。 トレースリスナーは、と `myListener` いうファイルを作成 `MyListener.log` し、ファイルに出力を書き込みます。  
   
 > [!NOTE]

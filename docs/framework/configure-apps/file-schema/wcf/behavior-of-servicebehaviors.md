@@ -2,14 +2,15 @@
 title: <behavior> の <serviceBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 78fc0a08-55de-416a-ac12-a5e6ffc9a987
-ms.openlocfilehash: 115f94fc3f17dc5b4dd1ee3a090f2c9d121f810b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 739f95f527fd73062c8cec43efc6777efeb077f3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74139735"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195156"
 ---
 # <a name="behavior-of-servicebehaviors"></a>\<behavior> の \<serviceBehaviors>
+
 `behavior` 要素には、サービスの動作設定のコレクションが含まれます。 各動作には、それぞれの `name` によってインデックスが付けられます。 サービスは、要素の属性を使用して、この名前を使用して各動作にリンクでき `behaviorConfiguration` [\<endpoint>](endpoint-element.md) ます。 これにより、設定を再定義することなく、エンドポイント間で共通の動作構成を共有できます。 .NET Framework 4 以降では、バインドと動作に名前を付ける必要はありません。 既定の構成と無名のバインドおよび動作の詳細については、「 [WCF サービスの](../../../wcf/samples/simplified-configuration-for-wcf-services.md)構成と簡略化された構成の[簡略化](../../../wcf/simplified-configuration.md)」を参照してください。  
   
 > [!NOTE]
@@ -34,6 +35,7 @@ ms.locfileid: "74139735"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -44,7 +46,7 @@ ms.locfileid: "74139735"
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<dataContractSerializer>](datacontractserializer-element.md)|DataContractSerializer 用の構成データが含まれています。|  
 |[\<persistenceProvider>](persistenceprovider.md)|使用する永続化プロバイダーの実装の型と、永続化操作に使用するタイムアウトを指定します。|  
@@ -63,6 +65,6 @@ ms.locfileid: "74139735"
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<serviceBehaviors>](servicebehaviors.md)|サービス動作要素のコレクション。|
