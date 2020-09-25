@@ -2,14 +2,15 @@
 title: <EnableAmPmParseAdjustment> 要素
 ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
-ms.openlocfilehash: 8920e51fcaaca5cb78b80a99ea321163c9b5240f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f935f213e1bca8dac7a5401970bc6183575e2301
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73117366"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167230"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment> 要素
+
 日付と時刻の解析メソッドが、日、月、時、および午前/午後の指定子を含む日付文字列を解析するために調整されたルールセットを使用するかどうかを決定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -23,6 +24,7 @@ ms.locfileid: "73117366"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -33,22 +35,24 @@ ms.locfileid: "73117366"
   
 ### <a name="enabled-attribute"></a>enabled 属性  
   
-|値|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |0|日付と時刻の解析メソッドでは、日、月、時、および AM/PM 指定子のみを含む日付文字列を解析するために調整された規則は使用されません。|  
 |1|日付と時刻の解析メソッドでは、日、月、時、および AM/PM 指定子のみを含む日付文字列を解析するための調整された規則が使用されます。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|  
   
 ## <a name="remarks"></a>解説  
+
  要素は、 `<EnableAmPmParseAdjustment>` 次のメソッドが日付文字列を解析する方法を制御します。これには、数字と月の後に1時間と AM/PM 指定子 ("4/10 6 am" など) が含まれます。  
   
 - <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
@@ -81,5 +85,5 @@ ms.locfileid: "73117366"
   
 ## <a name="see-also"></a>関連項目
 
-- [\<runtime>Element](runtime-element.md)
-- [\<configuration>Element](../configuration-element.md)
+- [\<runtime> 要素](runtime-element.md)
+- [\<configuration> 要素](../configuration-element.md)

@@ -9,19 +9,21 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: 4cfd4336fb9999c996bea28eb86f1143932d4c51
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: f0db5c32ba12b8e5313ca363e82260d66a7c010f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141735"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166899"
 ---
 # <a name="redirecting-assembly-versions"></a>アセンブリ バージョンのリダイレクト
 
 コンパイル時のバインド参照のリダイレクト先として、.NET Framework アセンブリ、サードパーティ製のアセンブリ、または独自のアプリのアセンブリを指定できます。 アプリで別のバージョンのアセンブリを使用するようにリダイレクトするには、発行者ポリシーを使用する、アプリ構成ファイルを使用する、コンピューター構成ファイルを使用するなど、さまざまな方法があります。 ここでは、.NET Framework でのアセンブリ バインドの動作の仕組みと、構成方法について説明します。
 
 <a name="BKMK_Assemblyunificationanddefaultbinding"></a>
+
 ## <a name="assembly-unification-and-default-binding"></a>アセンブリの統一と既定のバインド
+
  .NET Framework アセンブリへのバインドは、 *アセンブリの統一*というプロセスによってリダイレクトされる場合があります。 .NET Framework は、1 つのバージョンの共通言語ランタイムと、型ライブラリを構成する 24 個前後の .NET Framework アセンブリで構成されています。 これらの .NET Framework アセンブリは、ランタイムによって単一のユニットとして扱われます。 既定では、アプリを起動するとき、ランタイムによって実行されるコード内の型のすべての参照が、プロセスに読み込まれたランタイムと同じバージョン番号を持つ .NET Framework アセンブリにリダイレクトされます。 このモデルで発生するリダイレクトは、ランタイムの既定の動作となります。
 
  たとえば、アプリが System.XML 名前空間の型を参照し、.NET Framework 4.5 を使用してビルドされた場合、ランタイムバージョン4.5 に付属している System.XML アセンブリへの静的参照が含まれています。 ここで、.NET Framework 4 と共に出荷された System.XML アセンブリを指すようにバインド参照をリダイレクトする場合は、リダイレクト情報をアプリ構成ファイルに追加します。 構成ファイルで、統一された .NET Framework アセンブリに対するバインド リダイレクトを設定すると、このアセンブリの統一が取り消されます。
@@ -29,7 +31,9 @@ ms.locfileid: "85141735"
  また、使用できる複数のバージョンがある場合は、サードパーティ アセンブリのアセンブリ バインドを手動でリダイレクトすることもできます。
 
 <a name="BKMK_Redirectingassemblyversionsbyusingpublisherpolicy"></a>
+
 ## <a name="redirecting-assembly-versions-by-using-publisher-policy"></a>発行者ポリシーを使用したアセンブリ バージョンのリダイレクト
+
  アセンブリの販売元は、新しいアセンブリに発行者ポリシー ファイルを含めることにより、より新しいバージョンのアセンブリにアプリをリダイレクトできます。 発行者ポリシー ファイルは、グローバル アセンブリ キャッシュに配置され、アセンブリ リダイレクトの設定が格納されます。
 
  アセンブリの *major*.*minor* バージョンごとに、独自の発行者ポリシー ファイルが割り当てられます。 たとえば、バージョン 2.0.2.222 から 2.0.3.000 へのリダイレクトと、バージョン 2.0.2.321 から 2.0.3.000 へのリダイレクトは、いずれもバージョン 2.0 に関連付けられているため、両方とも同じファイルに記述します。 ただし、バージョン 3.0.0.999 から 4.0.0.000 へのリダイレクトは、バージョン 3.0.999 のファイルに記述します。 .NET Framework のメジャー バージョンごとに、独自の発行者ポリシー ファイルが割り当てられます。
@@ -39,10 +43,13 @@ ms.locfileid: "85141735"
  「 [発行者ポリシーの省略](#bypass_PP)」で説明するように、アプリ構成ファイルで設定を指定することによって、アプリの発行者ポリシーを省略することができます。
 
 <a name="BKMK_Redirectingassemblyversionsattheapplevel"></a>
+
 ## <a name="redirecting-assembly-versions-at-the-app-level"></a>アプリ レベルでのアセンブリ バージョンのリダイレクト
+
  アプリ構成ファイルを通じてアプリのバインド動作を変更するには、いくつかの手法があります。手動でのファイルの編集、自動バインド リダイレクトの利用、発行者ポリシーの省略によるバインド動作の指定を行うことができます。
 
 ### <a name="manually-editing-the-app-config-file"></a>手動でのアプリ構成ファイルの編集
+
  手動でアプリ構成ファイルを編集して、アセンブリの問題を解決できます。 たとえば、販売元が、アプリで使用しているアセンブリの新しいバージョンをリリースしたが、下位互換性を保証していないために、発行者ポリシーを提供しない場合でも、次のように、アプリ構成ファイルにアセンブリ バインド情報を記述することによって、アプリで新しいバージョンのアセンブリを使用するように指示できます。
 
 ```xml
@@ -66,27 +73,33 @@ ms.locfileid: "85141735"
 
 `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`
 
-アプリが古いバージョンの .NET Framework を対象としている場合は、自動バインドリダイレクトを有効にすることができます。 この既定の動作をオーバーライドするには、任意のアセンブリの app.config ファイルにバインドリダイレクト情報を指定するか、バインドリダイレクト機能をオフにします。 この機能を有効または無効にする方法については、「[方法: 自動バインドリダイレクトを有効](how-to-enable-and-disable-automatic-binding-redirection.md)または無効にする」を参照してください。
+アプリが古いバージョンの .NET Framework を対象としている場合は、自動バインドリダイレクトを有効にすることができます。 この既定の動作をオーバーライドするには、任意のアセンブリの app.config ファイルにバインドリダイレクト情報を指定するか、バインドリダイレクト機能をオフにします。 この機能を有効または無効にする方法については、「 [方法: 自動バインドリダイレクトを有効](how-to-enable-and-disable-automatic-binding-redirection.md)または無効にする」を参照してください。
 
 <a name="bypass_PP"></a>
+
 ### <a name="bypassing-publisher-policy"></a>発行者ポリシーの省略
- アプリの構成ファイルの発行者ポリシーを必要に応じてオーバーライドできます。 たとえば、下位互換性を維持しているとされる新しいアセンブリ バージョンでも、アプリを破壊する可能性があります。 発行者ポリシーを省略する場合は、 [\<publisherPolicy>](./file-schema/runtime/publisherpolicy-element.md) アプリ構成ファイルの要素に要素を追加 [\<dependentAssembly>](./file-schema/runtime/dependentassembly-element.md) し、 **apply**属性を**no**に設定します。これにより、前の **[はい]** 設定が上書きされます。
+
+ アプリの構成ファイルの発行者ポリシーを必要に応じてオーバーライドできます。 たとえば、下位互換性を維持しているとされる新しいアセンブリ バージョンでも、アプリを破壊する可能性があります。 発行者ポリシーを省略する場合は、 [\<publisherPolicy>](./file-schema/runtime/publisherpolicy-element.md) アプリ構成ファイルの要素に要素を追加 [\<dependentAssembly>](./file-schema/runtime/dependentassembly-element.md) し、 **apply** 属性を **no**に設定します。これにより、前の **[はい]** 設定が上書きされます。
 
  `<publisherPolicy apply="no" />`
 
  発行者ポリシーを省略することにより、アプリの実行を続行できますが、必ず、問題点をアセンブリの販売元に報告してください。 アセンブリに発行者ポリシー ファイルを提供した場合、販売元はそのアセンブリが下位互換性を維持していること、およびクライアントが可能な限り新バージョンを使用できることを確認する必要があります。
 
 <a name="BKMK_Redirectingassemblyversionsatthemachinelevel"></a>
+
 ## <a name="redirecting-assembly-versions-at-the-machine-level"></a>コンピューター レベルでのアセンブリ バージョンのリダイレクト
+
  コンピューター管理者が 1 台のコンピューター上のすべてのアプリで特定のアセンブリ バージョンを使用する場合も、まれにあります。 たとえば、セキュリティ ホールを修復するために、すべてのアプリで特定のアセンブリ バージョンを使用する場合があります。 コンピューターの構成ファイル内でアセンブリをリダイレクトした場合は、そのコンピューターで旧バージョンを使用しているすべてのアプリが新バージョンを使用するようになります。 コンピューター構成ファイルは、アプリ構成ファイルおよび発行者ポリシー ファイルよりもオーバーライドされます。 このファイルは、%*runtime install path*%\Config ディレクトリに含まれています。 通常、.NET Framework は %drive%\Windows\Microsoft.NET\Framework ディレクトリにインストールされます。
 
 <a name="BKMK_Specifyingassemblybindinginconfigurationfiles"></a>
+
 ## <a name="specifying-assembly-binding-in-configuration-files"></a>構成ファイル内でのアセンブリ バインドの指定
+
  アプリ構成ファイル、コンピューター構成ファイル、発行者ポリシー ファイルのいずれの場合も、同じ XML 形式を使用してバインド リダイレクトを指定できます。 あるアセンブリバージョンを別のバージョンにリダイレクトするには、要素を使用し [\<bindingRedirect>](./file-schema/runtime/bindingredirect-element.md) ます。 **oldVersion** 属性では、1 つのアセンブリ バージョンまたはバージョンの範囲を指定できます。 `newVersion` 属性では、1 つのバージョンを指定する必要があります。  たとえば、 `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` は、アセンブリ バージョン 1.1.0.0 ～ 1.2.0.0 の代わりにバージョン 2.0.0.0 を使用するようにランタイムに指示します。
 
  次のコード例は、さまざまなバインディング リダイレクトのシナリオを示しています。 この例では、 `myAssembly`のバージョンの範囲に対するリダイレクトと、 `mySecondAssembly`の単一のバインド リダイレクトを指定します。 この例では、発行者ポリシー ファイルによって `myThirdAssembly`のバインド リダイレクトがオーバーライドされないことも指定しています。
 
- アセンブリをバインドするには、タグに**xmlns**属性を指定して文字列 "urn: schema-microsoft-com: asm: v1" を指定する必要があり [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) ます。
+ アセンブリをバインドするには、タグに **xmlns** 属性を指定して文字列 "urn: schema-microsoft-com: asm: v1" を指定する必要があり [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) ます。
 
 ```xml
 <configuration>
@@ -120,7 +133,8 @@ ms.locfileid: "85141735"
 ```
 
 ### <a name="limiting-assembly--bindings-to-a-specific-version"></a>特定のバージョンへのアセンブリ バインドの制限
- アプリ構成ファイルの要素で**appliesTo**属性を使用して [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) 、アセンブリバインディング参照を特定のバージョンの .NET Framework にリダイレクトできます。 このオプションの属性では、.NET Framework バージョン番号を使用して、適用するバージョンを指定します。 **AppliesTo**属性が指定されていない場合、 [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) 要素は .NET Framework のすべてのバージョンに適用されます。
+
+ アプリ構成ファイルの要素で **appliesTo** 属性を使用して [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) 、アセンブリバインディング参照を特定のバージョンの .NET Framework にリダイレクトできます。 このオプションの属性では、.NET Framework バージョン番号を使用して、適用するバージョンを指定します。 **appliesTo** 属性が指定されていない場合、 [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) 要素は、すべてのバージョンの .NET Framework に適用されます。
 
  たとえば、.NET Framework 3.5 アセンブリのアセンブリ バインドをリダイレクトするには、アプリ構成ファイルに次の XML コードを追加します。
 

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: d510c445c585a36005ed415b14188efc4be03984
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c5fe0b9eccd1c429c0041fcfab06b0cc20a20aa2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74089119"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167276"
 ---
 # <a name="settings-element-network-settings"></a>\<settings> 要素 (ネットワーク設定)
+
 <xref:System.Net?displayProperty=nameWithType> 名前空間の基本的なネットワーク オプションを構成します。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -37,9 +38,11 @@ ms.locfileid: "74089119"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
@@ -49,10 +52,10 @@ ms.locfileid: "74089119"
 |[httpListener](httplistener-element-network-settings.md)|クラスによって使用されるパラメーターをカスタマイズ <xref:System.Net.HttpListener> します。|  
 |[httpWebRequest](httpwebrequest-element-network-settings.md)|Web 要求パラメーターをカスタマイズします。|  
 |[ipv6](ipv6-element-network-settings.md)|インターネットプロトコルバージョン 6 (IPv6) のサポートを有効にします。|  
-|[\<performanceCounter>要素 (ネットワーク設定)](performancecounter-element-network-settings.md)|ネットワークパフォーマンスカウンターを有効にします。|  
+|[\<performanceCounter> 要素 (ネットワーク設定)](performancecounter-element-network-settings.md)|ネットワークパフォーマンスカウンターを有効にします。|  
 |[servicePointManager](servicepointmanager-element-network-settings.md)|ネットワークリソースへの接続を構成します。|  
 |[socket](socket-element-network-settings.md)|ソケット操作が完了ポートを使用するかどうかを指定します。|  
-|[\<webProxyScript>要素 (ネットワーク設定)](webproxyscript-element-network-settings.md)|Web プロキシを検出するために使用するスクリプトの特性を構成します。|  
+|[\<webProxyScript> 要素 (ネットワーク設定)](webproxyscript-element-network-settings.md)|Web プロキシを検出するために使用するスクリプトの特性を構成します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -63,6 +66,7 @@ ms.locfileid: "74089119"
 ## <a name="remarks"></a>解説  
   
 ## <a name="configuration-files"></a>構成ファイル  
+
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="see-also"></a>関連項目
