@@ -7,14 +7,15 @@ helpviewer_keywords:
 - DataContractSerializer
 - KnownTypes
 ms.assetid: f41fb4d5-24e7-4059-8010-286a30bfea93
-ms.openlocfilehash: e24dae47171f741af064ca2eaa822928690acf6e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2a994a8ba97d4c65fdaba5a85e779dd9935e3074
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400451"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195035"
 ---
 # \<dataContractSerializer>
+
 <xref:System.Runtime.Serialization.DataContractSerializer> 用の設定データが含まれています。 この要素は、2 つの異なる階層で使用されます。 1 つは以下の「スキーマの階層」に示したもので、もう 1 つは「解説」に記載しています。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -32,6 +33,7 @@ ms.locfileid: "70400451"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -42,6 +44,7 @@ ms.locfileid: "70400451"
 |maxItemsInObjectGraph|シリアル化または逆シリアル化する項目の最大数を指定する整数。 この属性は 65536 です。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -52,6 +55,7 @@ ms.locfileid: "70400451"
 |[\<system.runtime.serialization>](system-runtime-serialization.md)|<xref:System.Runtime.Serialization> 名前空間セクションのルート要素を表し、<xref:System.Runtime.Serialization.DataContractSerializer> のオプションを設定するための要素を含みます。|  
   
 ## <a name="remarks"></a>解説  
+
  このトピックの冒頭で述べたように、これは要素が存在する2番目の階層です \<X509Extension> 。  
   
  [\<system.runtime.serialization>](system-runtime-serialization.md)  

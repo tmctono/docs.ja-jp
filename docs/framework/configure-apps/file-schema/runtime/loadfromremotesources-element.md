@@ -5,14 +5,15 @@ helpviewer_keywords:
 - loadFromRemoteSources element
 - <loadFromRemoteSources> element
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
-ms.openlocfilehash: 48da852bd1e209aed5ed5e75d8e510027a96d6d7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 568c0c814dcc57be0f5be435bb7750c970ffec19
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558010"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91192452"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources> 要素
+
 リモートソースから読み込まれたアセンブリに .NET Framework 4 以降で完全信頼を付与するかどうかを指定します。
   
 > [!NOTE]
@@ -30,6 +31,7 @@ ms.locfileid: "90558010"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性と要素
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -40,12 +42,13 @@ ms.locfileid: "90558010"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|[値]|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |`false`|リモートソースからアプリケーションへの完全な信頼を付与しないでください。 これは既定値です。|  
 |`true`|リモートソースからアプリケーションへの完全な信頼を付与します。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -55,7 +58,7 @@ ms.locfileid: "90558010"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 .NET Framework 3.5 以前のバージョンでは、リモートの場所からアセンブリを読み込む場合、アセンブリ内のコードは、読み込み元のゾーンに依存する許可セットを使用して部分信頼で実行されます。 たとえば、web サイトからアセンブリを読み込むと、インターネットゾーンに読み込まれ、インターネットのアクセス許可セットが付与されます。 つまり、インターネットサンドボックスで実行されます。
 
