@@ -10,22 +10,23 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: f4edce948033478aab59a2aff61abadc55a327ce
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8d792b967d967540469dca7c090e0f905ecb2e6b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155025"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201760"
 ---
-# <a name="add-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="1ea6d-102">webRequestModules の \<add> 要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="1ea6d-102">\<add> Element for webRequestModules (Network Settings)</span></span>
-<span data-ttu-id="1ea6d-103">アプリケーションにカスタム Web 要求モジュールを追加します。</span><span class="sxs-lookup"><span data-stu-id="1ea6d-103">Adds a custom Web request module to the application.</span></span>  
+# <a name="add-element-for-webrequestmodules-network-settings"></a><span data-ttu-id="e6388-102">webRequestModules の \<add> 要素 (ネットワーク設定)</span><span class="sxs-lookup"><span data-stu-id="e6388-102">\<add> Element for webRequestModules (Network Settings)</span></span>
+
+<span data-ttu-id="e6388-103">アプリケーションにカスタム Web 要求モジュールを追加します。</span><span class="sxs-lookup"><span data-stu-id="e6388-103">Adds a custom Web request module to the application.</span></span>  
 
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<webRequestModules>**](webrequestmodules-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
-## <a name="syntax"></a><span data-ttu-id="1ea6d-104">構文</span><span class="sxs-lookup"><span data-stu-id="1ea6d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e6388-104">構文</span><span class="sxs-lookup"><span data-stu-id="e6388-104">Syntax</span></span>  
   
 ```xml  
 <add
@@ -34,39 +35,44 @@ ms.locfileid: "79155025"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="1ea6d-105">属性および要素</span><span class="sxs-lookup"><span data-stu-id="1ea6d-105">Attributes and Elements</span></span>  
- <span data-ttu-id="1ea6d-106">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="1ea6d-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e6388-105">属性および要素</span><span class="sxs-lookup"><span data-stu-id="e6388-105">Attributes and Elements</span></span>  
+
+ <span data-ttu-id="e6388-106">以降のセクションでは、属性、子要素、および親要素について説明します。</span><span class="sxs-lookup"><span data-stu-id="e6388-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="1ea6d-107">属性</span><span class="sxs-lookup"><span data-stu-id="1ea6d-107">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="e6388-107">属性</span><span class="sxs-lookup"><span data-stu-id="e6388-107">Attributes</span></span>  
   
-|<span data-ttu-id="1ea6d-108">**属性**</span><span class="sxs-lookup"><span data-stu-id="1ea6d-108">**Attribute**</span></span>|<span data-ttu-id="1ea6d-109">**説明**</span><span class="sxs-lookup"><span data-stu-id="1ea6d-109">**Description**</span></span>|  
+|<span data-ttu-id="e6388-108">**属性**</span><span class="sxs-lookup"><span data-stu-id="e6388-108">**Attribute**</span></span>|<span data-ttu-id="e6388-109">**説明**</span><span class="sxs-lookup"><span data-stu-id="e6388-109">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`prefix`|<span data-ttu-id="1ea6d-110">この Web 要求モジュールによって処理される要求の URI プレフィックス。</span><span class="sxs-lookup"><span data-stu-id="1ea6d-110">The URI prefix for requests handled by this Web request module.</span></span>|  
-|`type`|<span data-ttu-id="1ea6d-111"><xref:System.Type.FullName%2A> <xref:System.Reflection.Assembly.FullName%2A> この Web 要求モジュールを実装するコンマで区切られた、完全修飾型名 (プロパティによって示されます) とアセンブリ名 (プロパティによって示されます)。</span><span class="sxs-lookup"><span data-stu-id="1ea6d-111">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma, that implements this Web request module.</span></span>|  
+|`prefix`|<span data-ttu-id="e6388-110">この Web 要求モジュールによって処理される要求の URI プレフィックス。</span><span class="sxs-lookup"><span data-stu-id="e6388-110">The URI prefix for requests handled by this Web request module.</span></span>|  
+|`type`|<span data-ttu-id="e6388-111"><xref:System.Type.FullName%2A> <xref:System.Reflection.Assembly.FullName%2A> この Web 要求モジュールを実装するコンマで区切られた、完全修飾型名 (プロパティによって示されます) とアセンブリ名 (プロパティによって示されます)。</span><span class="sxs-lookup"><span data-stu-id="e6388-111">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma, that implements this Web request module.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="1ea6d-112">子要素</span><span class="sxs-lookup"><span data-stu-id="1ea6d-112">Child Elements</span></span>  
- <span data-ttu-id="1ea6d-113">なし。</span><span class="sxs-lookup"><span data-stu-id="1ea6d-113">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="e6388-112">子要素</span><span class="sxs-lookup"><span data-stu-id="e6388-112">Child Elements</span></span>  
+
+ <span data-ttu-id="e6388-113">なし。</span><span class="sxs-lookup"><span data-stu-id="e6388-113">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="1ea6d-114">親要素</span><span class="sxs-lookup"><span data-stu-id="1ea6d-114">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="e6388-114">親要素</span><span class="sxs-lookup"><span data-stu-id="e6388-114">Parent Elements</span></span>  
   
-|<span data-ttu-id="1ea6d-115">**要素**</span><span class="sxs-lookup"><span data-stu-id="1ea6d-115">**Element**</span></span>|<span data-ttu-id="1ea6d-116">**説明**</span><span class="sxs-lookup"><span data-stu-id="1ea6d-116">**Description**</span></span>|  
+|<span data-ttu-id="e6388-115">**要素**</span><span class="sxs-lookup"><span data-stu-id="e6388-115">**Element**</span></span>|<span data-ttu-id="e6388-116">**説明**</span><span class="sxs-lookup"><span data-stu-id="e6388-116">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="1ea6d-117">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="1ea6d-117">webRequestModules</span></span>](webrequestmodules-element-network-settings.md)|<span data-ttu-id="1ea6d-118">ネットワークホストから情報を要求するために使用するモジュールを指定します。</span><span class="sxs-lookup"><span data-stu-id="1ea6d-118">Specifies modules to use to request information from network hosts.</span></span>|  
+|[<span data-ttu-id="e6388-117">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="e6388-117">webRequestModules</span></span>](webrequestmodules-element-network-settings.md)|<span data-ttu-id="e6388-118">ネットワークホストから情報を要求するために使用するモジュールを指定します。</span><span class="sxs-lookup"><span data-stu-id="e6388-118">Specifies modules to use to request information from network hosts.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="1ea6d-119">解説</span><span class="sxs-lookup"><span data-stu-id="1ea6d-119">Remarks</span></span>  
- <span data-ttu-id="1ea6d-120">属性は、 `prefix` 指定された Web 要求モジュールを使用する URI プレフィックスを定義します。</span><span class="sxs-lookup"><span data-stu-id="1ea6d-120">The `prefix` attribute defines the URI prefix that uses the specified Web request module.</span></span> <span data-ttu-id="1ea6d-121">通常、Web 要求モジュールは、HTTP や FTP などの特定のプロトコルを処理するように登録されますが、サーバー上の特定のサーバーまたはパスへの要求を処理するように登録できます。</span><span class="sxs-lookup"><span data-stu-id="1ea6d-121">Web request modules are typically registered to handle a specific protocol, such as HTTP or FTP, but can be registered to handle a request to a specific server or path on a server.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e6388-119">解説</span><span class="sxs-lookup"><span data-stu-id="e6388-119">Remarks</span></span>  
+
+ <span data-ttu-id="e6388-120">属性は、 `prefix` 指定された Web 要求モジュールを使用する URI プレフィックスを定義します。</span><span class="sxs-lookup"><span data-stu-id="e6388-120">The `prefix` attribute defines the URI prefix that uses the specified Web request module.</span></span> <span data-ttu-id="e6388-121">通常、Web 要求モジュールは、HTTP や FTP などの特定のプロトコルを処理するように登録されますが、サーバー上の特定のサーバーまたはパスへの要求を処理するように登録できます。</span><span class="sxs-lookup"><span data-stu-id="e6388-121">Web request modules are typically registered to handle a specific protocol, such as HTTP or FTP, but can be registered to handle a request to a specific server or path on a server.</span></span>  
   
- <span data-ttu-id="1ea6d-122">Web 要求モジュールは、URI 照合プレフィックスがメソッドに渡されたときに作成され <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> ます。</span><span class="sxs-lookup"><span data-stu-id="1ea6d-122">The Web request module is created when a URI matching prefix is passed to the <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> method.</span></span>  
+ <span data-ttu-id="e6388-122">Web 要求モジュールは、URI 照合プレフィックスがメソッドに渡されたときに作成され <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> ます。</span><span class="sxs-lookup"><span data-stu-id="e6388-122">The Web request module is created when a URI matching prefix is passed to the <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> method.</span></span>  
   
- <span data-ttu-id="1ea6d-123">属性の値は、 `prefix` 有効な URI の先頭の文字である必要があります。</span><span class="sxs-lookup"><span data-stu-id="1ea6d-123">The value for the `prefix` attribute should be the leading characters of a valid URI.</span></span> <span data-ttu-id="1ea6d-124">たとえば、`http` または `http://www.contoso.com` です。</span><span class="sxs-lookup"><span data-stu-id="1ea6d-124">For example, `http` or `http://www.contoso.com`.</span></span>
+ <span data-ttu-id="e6388-123">属性の値は、 `prefix` 有効な URI の先頭の文字である必要があります。</span><span class="sxs-lookup"><span data-stu-id="e6388-123">The value for the `prefix` attribute should be the leading characters of a valid URI.</span></span> <span data-ttu-id="e6388-124">たとえば、`http` または `http://www.contoso.com` です。</span><span class="sxs-lookup"><span data-stu-id="e6388-124">For example, `http` or `http://www.contoso.com`.</span></span>
   
- <span data-ttu-id="1ea6d-125">属性の値は、 `type` 有効な型名と、それに対応するアセンブリ名をコンマで区切って指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="1ea6d-125">The value for the `type` attribute should be a valid type name and corresponding assembly name, separated by a comma.</span></span>
+ <span data-ttu-id="e6388-125">属性の値は、 `type` 有効な型名と、それに対応するアセンブリ名をコンマで区切って指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e6388-125">The value for the `type` attribute should be a valid type name and corresponding assembly name, separated by a comma.</span></span>
   
-## <a name="configuration-files"></a><span data-ttu-id="1ea6d-126">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="1ea6d-126">Configuration Files</span></span>  
- <span data-ttu-id="1ea6d-127">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="1ea6d-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="e6388-126">構成ファイル</span><span class="sxs-lookup"><span data-stu-id="e6388-126">Configuration Files</span></span>  
+
+ <span data-ttu-id="e6388-127">この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。</span><span class="sxs-lookup"><span data-stu-id="e6388-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1ea6d-128">例</span><span class="sxs-lookup"><span data-stu-id="1ea6d-128">Example</span></span>  
- <span data-ttu-id="1ea6d-129">次の例では、HTTP 用のカスタム Web 要求モジュールを登録します。</span><span class="sxs-lookup"><span data-stu-id="1ea6d-129">The following example registers a custom Web request module for HTTP.</span></span> <span data-ttu-id="1ea6d-130">Version および PublicKeyToken の値は、指定されたモジュールの正しい値に置き換える必要があります。</span><span class="sxs-lookup"><span data-stu-id="1ea6d-130">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
+## <a name="example"></a><span data-ttu-id="e6388-128">例</span><span class="sxs-lookup"><span data-stu-id="e6388-128">Example</span></span>  
+
+ <span data-ttu-id="e6388-129">次の例では、HTTP 用のカスタム Web 要求モジュールを登録します。</span><span class="sxs-lookup"><span data-stu-id="e6388-129">The following example registers a custom Web request module for HTTP.</span></span> <span data-ttu-id="e6388-130">Version および PublicKeyToken の値は、指定されたモジュールの正しい値に置き換える必要があります。</span><span class="sxs-lookup"><span data-stu-id="e6388-130">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
   
 ```xml  
 <configuration>  
@@ -81,7 +87,7 @@ ms.locfileid: "79155025"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1ea6d-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="1ea6d-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e6388-131">関連項目</span><span class="sxs-lookup"><span data-stu-id="e6388-131">See also</span></span>
 
 - <xref:System.Net.WebRequest>
-- [<span data-ttu-id="1ea6d-132">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="1ea6d-132">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="e6388-132">ネットワーク設定スキーマ</span><span class="sxs-lookup"><span data-stu-id="e6388-132">Network Settings Schema</span></span>](index.md)
