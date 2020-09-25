@@ -3,14 +3,15 @@ title: <cookieHandler>
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 853dc9817d080e59ac7a792576eda862bd0b1f1d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5f5b432830a61adab324b2b6cd2ebe6eeccca7f0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70252025"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189839"
 ---
 # \<cookieHandler>
+
 <xref:System.IdentityModel.Services.CookieHandler> <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) が cookie の読み取りと書き込みに使用するを構成します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -38,6 +39,7 @@ ms.locfileid: "70252025"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -54,18 +56,19 @@ ms.locfileid: "70252025"
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<chunkedCookieHandler>](chunkedcookiehandler.md)|を構成 <xref:System.IdentityModel.Services.ChunkedCookieHandler> します。 この要素は `mode` 、要素の属性 `<cookieHandler>` が "Default" または "Chunked" の場合にのみ存在する可能性があります。|  
 |[\<customCookieHandler>](customcookiehandler.md)|カスタムクッキーハンドラーの種類を設定します。 `mode`要素の属性 `<cookieHandler>` が "Custom" の場合、この要素は存在する必要があります。 属性の他の値には存在できません `mode` 。 カスタム型は、クラスから派生する必要があり <xref:System.IdentityModel.Services.CookieHandler> ます。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<federationConfiguration>](federationconfiguration.md)|<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(Wsfam) と (SAM) を構成する設定が含まれてい <xref:System.IdentityModel.Services.SessionAuthenticationModule> ます。|  
   
 ## <a name="remarks"></a>解説  
+
  <xref:System.IdentityModel.Services.CookieHandler>は、HTTP プロトコルレベルでの未加工の cookie の読み取りと書き込みを行います。 <xref:System.IdentityModel.Services.ChunkedCookieHandler>またはクラスから派生したカスタム cookie ハンドラーを構成でき <xref:System.IdentityModel.Services.CookieHandler> ます。  
   
  チャンク cookie ハンドラーを構成するには、mode 属性を "Chunked" または "Default" に設定します。 既定のチャンクサイズは2000バイトですが、必要に応じて、子要素を含めることによって別のチャンクサイズを指定することもでき `<chunkedCookieHandler>` ます。  
@@ -75,6 +78,7 @@ ms.locfileid: "70252025"
  `<cookieHandler>`要素は、クラスによって表され <xref:System.IdentityModel.Services.CookieHandlerElement> ます。 構成で指定されたクッキーハンドラーは、プロパティに設定されている <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.CookieHandler%2A> オブジェクトのプロパティから取得でき <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> ます。  
   
 ## <a name="example"></a>例  
+
  次の XML は、要素を示して `<cookieHandler>` います。 この例では、 `mode` 属性が指定されていないため、既定の cookie ハンドラーが SAM によって使用されます。 これはクラスのインスタンスです <xref:System.IdentityModel.Services.ChunkedCookieHandler> 。 `<chunkedCookieHandler>`子要素が指定されていないため、既定のチャンクサイズが使用されます。 属性が設定されているため、HTTPS は必要ありません `requireSsl` `false` 。  
   
 > [!WARNING]

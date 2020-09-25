@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: 9261a430642cb4d5ac4507835bd0fd3561bd8c02
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e081882aa8df89c0a1bf5d4c60f1395a3319c417
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088428"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190372"
 ---
 # <a name="defaultftpcachepolicy-element-network-settings"></a>\<defaultFtpCachePolicy> 要素 (ネットワーク設定)
+
 FTP キャッシュがアクティブかどうか、および既定のキャッシュポリシーについて説明します。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -32,17 +33,18 @@ FTP キャッシュがアクティブかどうか、および既定のキャッ�
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |`policyLevel`|FTP キャッシュポリシーを指定します。 既定値は `Default` です。|  
   
 ## <a name="policylevel-attribute"></a>policyLevel 属性  
   
-|値|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
 |`Default`|リソースが最新で、コンテンツの長さが正確で、有効期限、変更、およびコンテンツの長さの属性が存在する場合、キャッシュされたリソースを返します。|  
 |`BypassCache`|サーバーからリソースを返します。|  
@@ -54,17 +56,19 @@ FTP キャッシュがアクティブかどうか、および既定のキャッ�
 |`Revalidate`|タイムスタンプがサーバーのリソースのタイムスタンプと同じ場合は、キャッシュされたリソースのコピーを使用して要求に応じます。それ以外の場合は、リソースがサーバーからダウンロードされ、呼び出し元に提示され、キャッシュに格納されます。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[Requestcaching>](requestcaching-element-network-settings.md)|ネットワーク要求のキャッシュメカニズムを制御します。|  
   
 ## <a name="remarks"></a>解説  
   
 ## <a name="example"></a>例  
+
  次の例は、の FTP キャッシュポリシーを指定する方法を示して `NoCacheNoStore` います。  
   
 ```xml  

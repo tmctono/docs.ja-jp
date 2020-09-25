@@ -2,14 +2,15 @@
 title: <uri> 要素 (Uri 設定)
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
-ms.openlocfilehash: a492baf9951466383ca0277a2927b8554e5bb332
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2f22d70407d10dbb38f0cb8d3a8ac74ff3fe8763
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71697438"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190203"
 ---
 # <a name="uri-element-uri-settings"></a>\<uri> 要素 (Uri 設定)
+
 .NET Framework が、uniform resource identifier (Uri) を使用して表された web アドレスを処理する方法を指定する設定が含まれます。  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -23,9 +24,11 @@ ms.locfileid: "71697438"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
@@ -43,11 +46,13 @@ ms.locfileid: "71697438"
 |[configuration](../configuration-element.md)|すべての名前空間の設定が含まれます。|  
   
 ## <a name="remarks"></a>解説  
+
  要素には、 `uri` <xref:System.Uri> 名前空間のクラスによって使用されるクラスのメンバーの設定が含まれ <xref:System.Net> ます。 この設定により、IRI と IDN のサポートが構成されます。  
   
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
+
  次の例は、 <xref:System.Uri> IRI 解析と IDN 名をサポートするためにクラスによって使用される構成を示しています。 また、この例では、すべてのスキーム設定をクリアした後、http スキームに対してパーセントでエンコードされたパス区切り記号をエスケープしないためのサポートを追加します。  
   
 ### <a name="code"></a>コード  

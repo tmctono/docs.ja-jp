@@ -9,14 +9,15 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: 36857e63871b4672df349934594f0887a042609e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: cd142febc0b3aacf1be7978178a6a05d9b9aebbf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504551"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190281"
 ---
 # <a name="network-element-network-settings"></a>\<network> 要素 (ネットワーク設定)
+
 外部の簡易メール転送プロトコル (SMTP) サーバーのネットワークオプションを構成します。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -41,11 +42,12 @@ ms.locfileid: "84504551"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |`clientDomain`|SMTP メールサーバーに接続するための最初の SMTP プロトコル要求で使用するクライアントドメイン名を指定します。 既定値は、要求を送信しているローカルコンピューターの localhost 名です。|  
 |`defaultCredentials`|Smtp トランザクションの SMTP メールサーバーへのアクセスに、既定のユーザー資格情報を使用するかどうかを指定します。 既定値は `false` です。|  
@@ -57,15 +59,17 @@ ms.locfileid: "84504551"
 |`userName`|SMTP メールサーバーへの認証に使用するユーザー名を指定します。 この属性には既定値はありません。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<smtp>要素 (ネットワーク設定)](smtp-element-network-settings.md)|SMTP (Simple Mail Transport Protocol) メール送信オプションを構成します。|  
+|[\<smtp> 要素 (ネットワーク設定)](smtp-element-network-settings.md)|SMTP (Simple Mail Transport Protocol) メール送信オプションを構成します。|  
   
 ## <a name="remarks"></a>解説  
+
  一部の SMTP サーバーでは、使用する前にサーバーに対して認証を行う必要があります。 ホストで既定のネットワーク資格情報を使用して認証する場合は、 `defaultCredentials` 属性をに設定 `true` します。 プロパティは、 <xref:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials%2A?displayProperty=nameWithType> `defaultCredentials` 適用可能な構成ファイルから属性の現在の値を取得するために使用できます。  
   
  基本認証 (ユーザー名とパスワード) を使用して、SMTP サーバーに対する認証を行うこともできます。 このオプションを使用するには、指定した SMTP サーバーの有効なユーザー名とパスワードを指定する必要があります。  
@@ -73,7 +77,7 @@ ms.locfileid: "84504551"
 > [!NOTE]
 > 基本認証は、 `userName` およびの `password` 値を暗号化せずにサーバーに送信します。 ネットワークトラフィックを監視するすべてのユーザーは、資格情報を表示し、それらを使用してサーバーに接続できます。 Kerberos や NT LAN Manager (NTLM) など、より安全な認証メカニズムの使用を検討する必要があります。がの場合 `defaultCredentials` `true` 、サーバーがこれらのプロトコルをサポートする場合、Kerberos または NTLM が使用されます。  
   
- 基本認証および既定のネットワーク資格情報オプションは、同時には指定できません。`defaultCredentials`をに設定 `true` し、ユーザー名とパスワードを指定した場合、既定のネットワーク資格情報が使用され、基本認証データは無視されます。  
+ 基本認証および既定のネットワーク資格情報オプションは、同時には指定できません。 `defaultCredentials` をに設定 `true` し、ユーザー名とパスワードを指定した場合、既定のネットワーク資格情報が使用され、基本認証データは無視されます。  
   
  基本認証でを指定する場合は、 `userName` メールサーバーに対して自分で認証を行うようにを指定する必要もあり `password` ます。  
   
@@ -90,6 +94,7 @@ ms.locfileid: "84504551"
  プロパティは、 <xref:System.Net.Configuration.SmtpNetworkElement.EnableSsl%2A?displayProperty=nameWithType> `enableSsl` 適用可能な構成ファイルから属性の現在の値を取得するために使用できます。  
   
 ## <a name="example"></a>例  
+
  次の例では、既定のネットワーク資格情報を使用して電子メールを送信するための適切な SMTP パラメーターを指定しています。  
   
 ```xml  

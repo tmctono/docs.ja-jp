@@ -8,14 +8,15 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: c5029a7d1e53c28d0abb232efdc3e0bd2c9658d4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4120c57fbb65da1c124414cbe9cfba7ae64388f8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088418"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190320"
 ---
 # <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy> 要素 (ネットワーク設定)
+
 HTTP キャッシュがアクティブかどうか、および既定のキャッシュポリシーについて説明します。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -35,11 +36,12 @@ HTTP キャッシュがアクティブかどうか、および既定のキャッ
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |`maximumAge`|キャッシュされたオブジェクトを期限切れとしてマークするまでの最大時間間隔を指定します。|  
 |`maximumStale`|キャッシュされたオブジェクトを期限切れとしてマークするまでの、計算された鮮度時間を超える最大時間を指定します。|  
@@ -47,23 +49,27 @@ HTTP キャッシュがアクティブかどうか、および既定のキャッ
 |`policyLevel`|キャッシュポリシーが自動であるかどうか、またはキャッシュをバイパスするかどうかを指定します。 既定値は `BypassCache` です。|  
   
 ### <a name="child-elements"></a>子要素  
- なし  
+
+ None  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[Requestcaching>](requestcaching-element-network-settings.md)|ネットワーク要求のキャッシュメカニズムを制御します。|  
   
 ## <a name="remarks"></a>解説  
+
  属性の値 `policyLevel` がまたはのいずれか `BypassCache` `Default` です。  
   
  `maximumAge`、、およびの各要素の値 `maximumStale` は、明示的な時間間隔であり、形式は `minimumFresh` *d*です。*hh*:*mm*:*ss* (日数、時間、分、秒)、または必要に応じ `minValue` て定数または `maxValue` 。  
   
 ## <a name="configuration-files"></a>構成ファイル  
+
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
+
  次の例では、6時間、最長有効期間、および最大4時間の最長時間を指定する方法を示します。  
   
 ```xml  

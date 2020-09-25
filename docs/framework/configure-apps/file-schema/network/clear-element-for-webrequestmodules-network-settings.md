@@ -10,14 +10,15 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: 5832d120824df75d374fc94cb0aa4e08189cb965
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 892058dd8af8a38bd7bde868b34a2c6899d9a989
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088501"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91184041"
 ---
 # <a name="clear-element-for-webrequestmodules-network-settings"></a>webRequestModules の \<clear> 要素 (ネットワーク設定)
+
 アプリケーションから、登録されているすべての Web 要求モジュールを削除します。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -32,13 +33,16 @@ ms.locfileid: "74088501"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
- [なし] :  
+
+ なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -47,12 +51,15 @@ ms.locfileid: "74088501"
 |[webRequestModules](webrequestmodules-element-network-settings.md)|ネットワークホストから情報を要求するために使用するモジュールを指定します。|  
   
 ## <a name="remarks"></a>解説  
+
  要素は、構成 `clear` ファイルで既に定義されている、または構成階層の上位レベルに定義されている、登録済みのすべての Web 要求モジュールを削除します。  
   
 ## <a name="configuration-files"></a>構成ファイル  
+
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
+
  次の例では、すべての Web 要求モジュールをクリアし、Web 要求モジュールを HTTP に登録します。  
   
 ```xml  

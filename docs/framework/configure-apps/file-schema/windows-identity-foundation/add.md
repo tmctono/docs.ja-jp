@@ -3,14 +3,15 @@ title: <add>
 ms.date: 03/30/2017
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
 author: BrucePerlerMS
-ms.openlocfilehash: 7c2b6bdc62da63905d7ff33a9984808e7b7d114f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2f37019fa0787f5c5553dbd3debc173ec0a047ee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544541"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189956"
 ---
 # \<add>
+
 指定されたセキュリティトークンハンドラーをトークンハンドラーコレクションに追加します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -35,11 +36,12 @@ ms.locfileid: "90544541"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |type|追加するトークンハンドラーの CLR 型名。 属性を指定する方法の詳細については `type` 、「 [カスタム型参照](/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references)」を参照してください。|  
   
@@ -58,7 +60,8 @@ ms.locfileid: "90544541"
 |-------------|-----------------|  
 |[\<securityTokenHandlers>](securitytokenhandlers.md)|エンドポイントに登録されているセキュリティトークンハンドラーのコレクションを指定します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
+
  要素は、 `<add>` トークンハンドラーの構成を指定する1つの子要素を受け取ることができます。 これは、要素の属性を通じて参照されるハンドラークラスが `type` この機能をサポートするかどうかによって異なり `<add>` ます。 この機能を提供するトークンハンドラークラスは、オブジェクトを受け取るコンストラクターを公開する必要があり <xref:System.Xml.XmlElement> ます。  
 
 ```csharp  
@@ -78,6 +81,7 @@ public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHa
  ハンドラーに指定された設定は、要素の下のトークンハンドラーコレクションで指定された同等 [\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md) の設定をオーバーライドし、要素の下のサービスレベルで指定され [\<identityConfiguration>](identityconfiguration.md) ます。  
   
 ## <a name="example"></a>例  
+
  次の XML は、および要素を使用して、 `<add>` `<remove>` 既定のセッショントークンハンドラーをカスタムセッショントークンハンドラーに置き換える方法を示しています。 XML は、「」のサンプルから抜粋したものです `ClaimsAwareWebFarm` 。  
   
 ```xml  

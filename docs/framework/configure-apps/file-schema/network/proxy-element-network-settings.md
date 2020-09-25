@@ -9,14 +9,15 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: 8ae30b8c29dcf3aaa183ff295c7ee8592322797f
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 54b324dcd27d5827159bc2d773365e388a367d26
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141782"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190216"
 ---
 # <a name="proxy-element-network-settings"></a>\<proxy> 要素 (ネットワーク設定)
+
 プロキシ サーバーを定義します。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -37,6 +38,7 @@ ms.locfileid: "85141782"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -50,6 +52,7 @@ ms.locfileid: "85141782"
 |`usesystemdefault`|Internet Explorer のプロキシ設定を使用するかどうかを指定します。 に設定する `True` と、それ以降の属性は Internet Explorer のプロキシ設定よりも優先されます。 既定値は `Unspecified` です。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -60,7 +63,8 @@ ms.locfileid: "85141782"
   
 ## <a name="text-value"></a>テキスト値  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
+
  要素は、 `proxy` アプリケーションのプロキシサーバーを定義します。 この要素が構成ファイルにない場合、.NET Framework は Internet Explorer のプロキシ設定を使用します。  
   
  属性の値は、整形 `proxyaddress` 式の Uniform Resource Indicator (URI) である必要があります。  
@@ -72,9 +76,11 @@ ms.locfileid: "85141782"
  `proxyaddress`属性が無効な既定のプロキシを指定している場合は、例外がスローされます。 例外の <xref:System.Exception.InnerException%2A> プロパティに、このエラーの根本原因に関する詳細情報が含まれています。  
   
 ## <a name="configuration-files"></a>構成ファイル  
+
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
+
  次の例では、Internet Explorer プロキシの既定値を使用して、プロキシアドレスを指定し、ローカルアクセスのためにプロキシをバイパスします。  
   
 ```xml  

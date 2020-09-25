@@ -9,14 +9,15 @@ helpviewer_keywords:
 - mapping object identifiers
 - cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
-ms.openlocfilehash: e22510014071455b83ba28cd82690b5ecdce9bc9
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 5416ddbb766dfde56fa28a3853ed448cc73f25a2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85142005"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189384"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>暗号化アルゴリズムへのオブジェクト ID の割り当て
+
 デジタル署名は、あるプログラムから別のプログラムに送信されるときに、データが改ざんされないようにします。 通常、デジタル署名は、署名されるデータのハッシュに数学関数を適用することによって計算されます。 署名するハッシュ値の書式を設定すると、一部のデジタル署名アルゴリズムでは、書式設定操作の一部として asn.1 オブジェクト識別子 (OID) が追加されます。 OID は、ハッシュの計算に使用されたアルゴリズムを識別します。 アルゴリズムをオブジェクト識別子にマップして、カスタムアルゴリズムを使用するように暗号化メカニズムを拡張することができます。 次の例では、オブジェクト識別子を新しいハッシュアルゴリズムにマップする方法を示します。  
   
 ```xml  

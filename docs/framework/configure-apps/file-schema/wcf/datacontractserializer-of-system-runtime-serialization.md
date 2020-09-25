@@ -1,15 +1,16 @@
 ---
-title: <dataContractSerializer><の> の。
+title: <dataContractSerializer> <の> の。
 ms.date: 03/30/2017
 ms.assetid: d9b3d625-be3f-4768-8e0d-1b7e6929f6a8
-ms.openlocfilehash: eb556f533af1f99049382e9a2e34465f88d563db
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a8d379e7a37bca0cdb58836a6afdf814320e2411
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398079"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190190"
 ---
 # <a name="datacontractserializer-of-systemruntimeserialization"></a>\<dataContractSerializer> の \<system.runtime.serialization>
+
 <xref:System.Runtime.Serialization.DataContractSerializer> 用の設定データが含まれています。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,6 +38,7 @@ ms.locfileid: "70398079"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -50,7 +52,7 @@ ms.locfileid: "70398079"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<declaredTypes>](declaredtypes.md)|逆シリアル化時に <xref:System.Runtime.Serialization.DataContractSerializer> が使用する既知の型が含まれています。<br /><br /> データコントラクトと既知の型の詳細については、「[データコントラクトの既知の型](../../../wcf/feature-details/data-contract-known-types.md)」を参照してください。|  
+|[\<declaredTypes>](declaredtypes.md)|逆シリアル化時に <xref:System.Runtime.Serialization.DataContractSerializer> が使用する既知の型が含まれています。<br /><br /> データコントラクトと既知の型の詳細については、「 [データコントラクトの既知の型](../../../wcf/feature-details/data-contract-known-types.md)」を参照してください。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -59,7 +61,8 @@ ms.locfileid: "70398079"
 |[\<system.runtime.serialization>](system-runtime-serialization.md)|<xref:System.Runtime.Serialization> 名前空間セクションのルート要素を表し、<xref:System.Runtime.Serialization.DataContractSerializer> のオプションを設定するための要素を含みます。|  
   
 ## <a name="remarks"></a>解説  
- 既知の型の詳細については、「」 <xref:System.Runtime.Serialization.DataContractSerializer> および「[データコントラクトの既知の型](../../../wcf/feature-details/data-contract-known-types.md)」を参照してください。  
+
+ 既知の型の詳細については、「」 <xref:System.Runtime.Serialization.DataContractSerializer> および「 [データコントラクトの既知の型](../../../wcf/feature-details/data-contract-known-types.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
