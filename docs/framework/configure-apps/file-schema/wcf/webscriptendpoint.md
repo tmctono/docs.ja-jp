@@ -2,14 +2,15 @@
 title: <webScriptEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 85cb5ecf-351b-45f3-aa29-aa2e4b64bcdd
-ms.openlocfilehash: b4bc33cf8ff4e703973efe7df49e9f1d2189302e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5e3ca9c4a43432d7f5da6d8816b6a2b984851050
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854815"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177841"
 ---
 # \<webScriptEndpoint>
+
 この構成要素は、 [\<webHttpBinding>](webhttpbinding.md) 動作を自動的に追加する固定バインドを持つ標準エンドポイントを定義し [\<enableWebScript>](enablewebscript.md) ます。 このエンドポイントは、ASP.NET AJAX アプリケーションから呼び出されるサービスを作成する場合に使用します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,20 +31,22 @@ ms.locfileid: "70854815"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |webEndpointType|エンドポイントの種類を指定する文字列。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<standardEndpoints>](standardendpoints.md)|1 つ以上のプロパティ (アドレス、バインディング、コントラクト) が固定されている、あらかじめ定義されたエンドポイントである標準エンドポイントのコレクション。|  
   

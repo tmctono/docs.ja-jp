@@ -2,14 +2,15 @@
 title: <findCriteria>
 ms.date: 03/30/2017
 ms.assetid: 5454cd19-6bf5-4ba8-94d1-f58d10dc1917
-ms.openlocfilehash: 44e068ee205bc5e04382164e7ab00716b2c07dcf
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ce2b1fdd85e0454f901bac393e2f44ae0c6da43f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855160"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178148"
 ---
 # \<findCriteria>
+
 探索サービスの検索にクライアント アプリケーションによって使用される基準を提供する構成要素。 基準は、(探しているサービスを指定する) 検索条件と (検索をどのくらい続けるかを指定する) 検索終了条件にグループ化できます。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -48,11 +49,12 @@ ms.locfileid: "70855160"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |duration|ネットワーク上でサービスからの応答を待機する最長時間を指定する Timespan 値。 既定の時間は 20 秒です。|  
 |maxResults|ネットワークまたはインターネット上で待機する、サービスから応答の最大数を指定する整数。 `duration` 属性に指定した時間が経過する前に応答の最大数に達した場合、検索操作は終了します。|  
@@ -60,7 +62,7 @@ ms.locfileid: "70855160"
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<contractTypeNames>](contracttypenames.md)|ワークフローサービスコントラクト型の名前を含む構成要素のコレクション。|  
 |\<extensions> の \<findCriteria>|拡張を提供する XML 要素オブジェクトのコレクション。|  
@@ -68,7 +70,7 @@ ms.locfileid: "70855160"
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<standardEndpoints>](standardendpoints.md)|サービス探索プロセスにクライアントとして参加するためにアプリケーションが必要とする設定を格納します。|  
   

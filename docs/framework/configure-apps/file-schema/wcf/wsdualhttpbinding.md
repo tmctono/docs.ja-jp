@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
-ms.openlocfilehash: 3e32539900893297d2bac232138f9940a8ab100b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 114543e43306e4195f92ca625e894a532084be6b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557646"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177775"
 ---
 # \<wsDualHttpBinding>
+
 双方向サービス コントラクト、または SOAP 中継局を介しての通信に適した、セキュリティで保護されて信頼できる相互操作可能なバインディングを定義します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -55,14 +56,15 @@ ms.locfileid: "90557646"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
-|bypassProxyOnLocal|ローカル アドレスでプロキシ サーバーをバイパスするかどうかを示すブール値。 既定値は、`false` です。|  
-|clientBaseAddress|サービスからの応答メッセージをクライアントがリッスンするベース アドレスを設定する URI。 指定されている場合は、このアドレス (およびチャネルごとの GUID) がリッスンに使用されます。 値が指定されていない場合は、クライアント ベース アドレスは、トランスポートに固有の方法で生成されます。 既定値は、`null` です。|  
+|bypassProxyOnLocal|ローカル アドレスでプロキシ サーバーをバイパスするかどうかを示すブール値。 既定では、 `false`です。|  
+|clientBaseAddress|サービスからの応答メッセージをクライアントがリッスンするベース アドレスを設定する URI。 指定されている場合は、このアドレス (およびチャネルごとの GUID) がリッスンに使用されます。 値が指定されていない場合は、クライアント ベース アドレスは、トランスポートに固有の方法で生成されます。 既定では、 `null`です。|  
 |closeTimeout|クローズ操作が完了するまでの期間を指定する <xref:System.TimeSpan> 値。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
 |hostnameComparisonMode|URI の解析に使用する HTTP ホスト名比較モードを指定します。 この属性は <xref:System.ServiceModel.HostNameComparisonMode> 型で、URI が一致したときにサービスへのアクセスにホスト名を使用するかどうかを指定します。 既定値は <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard> で、一致しているホスト名を無視します。|  
 |maxBufferPoolSize|このバインディングに使用するバッファー プール サイズの上限を指定する整数。 既定は 524,288 バイト (512 * 1024) です。 Windows Communication Foundation (WCF) では、多くの部分でバッファーを使用します。 使用するたびに毎回バッファーを作成および破壊すると負荷が高くなります。バッファーのガベージ コレクションも同様です。 バッファー プールを使用すると、バッファーをプールから取得して使用し、作業が終わったらプールに戻すことができます。 これで、バッファーの作成と破棄のオーバーヘッドを回避できます。|  
@@ -70,12 +72,12 @@ ms.locfileid: "90557646"
 |messageEncoding|メッセージのエンコードに使用されるエンコーダーを定義します。 有効な値は次のとおりです。<br /><br /> -Text: テキストメッセージエンコーダーを使用します。<br />-Mtom: メッセージ伝送組織機構 1.0 (MTOM) エンコーダーを使用します。<br />-既定値は Text です。<br /><br /> この属性は <xref:System.ServiceModel.WSMessageEncoding> 型です。|  
 |name|バインディングの構成名を格納する文字列です。 この値は、バインディングの ID として使用されるため、一意にする必要があります。 .NET Framework 4 以降では、バインドと動作に名前を付ける必要はありません。 既定の構成と無名のバインドおよび動作の詳細については、「 [WCF サービスの](../../../wcf/samples/simplified-configuration-for-wcf-services.md)構成と簡略化された構成の[簡略化](../../../wcf/simplified-configuration.md)」を参照してください。|  
 |openTimeout|実行中の操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
-|proxyAddress|HTTP プロキシのアドレスを指定する URI。 `useDefaultWebProxy` が `true` の場合、この設定を `null` にする必要があります。 既定値は、`null` です。|  
+|proxyAddress|HTTP プロキシのアドレスを指定する URI。 `useDefaultWebProxy` が `true` の場合、この設定を `null` にする必要があります。 既定では、 `null`です。|  
 |receiveTimeout|受信操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
 |sendTimeout|送信操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
 |textEncoding|バインディングでメッセージの発行に使用される文字セット エンコーディングを設定します。 有効な値は次のとおりです。<br /><br /> -BigEndianUnicode: Unicode BigEndian エンコード。<br />-Unicode:16 ビットエンコード。<br />-UTF8: 8 ビットエンコーディング<br /><br /> 既定値は UTF8 です。 この属性は <xref:System.Text.Encoding> 型です。|  
-|transactionFlow|バインディングが WS-Transactions のフローをサポートするかどうかを指定するブール値です。 既定値は、`false` です。|  
-|useDefaultWebProxy|システムの自動設定 HTTP プロキシを使用するかどうかを示すブール値。 この属性が `null` の場合、プロキシ アドレスを `true` (つまり、設定しない) にする必要があります。 既定値は、`true` です。|  
+|transactionFlow|バインディングが WS-Transactions のフローをサポートするかどうかを指定するブール値です。 既定では、 `false`です。|  
+|useDefaultWebProxy|システムの自動設定 HTTP プロキシを使用するかどうかを示すブール値。 この属性が `null` の場合、プロキシ アドレスを `true` (つまり、設定しない) にする必要があります。 既定では、 `true`です。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -91,7 +93,8 @@ ms.locfileid: "90557646"
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|この要素には、標準バインディングおよびカスタム バインドのコレクションが保持されます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
+
  `WSDualHttpBinding` は、`WSHttpBinding` と同じ Web サービス プロトコルをサポートしますが、双方向コントラクトでの使用を想定しています。 `WSDualHttpBinding` は SOAP セキュリティのみをサポートし、信頼できるメッセージングを要求します。 このバインディングでは、クライアントが、サービスのコールバック エンドポイントを提供するパブリック URI を保持していることが必要です。 これは `clientBaseAddress` 属性によって提供されます。 二重バインディングでは、クライアントの IP アドレスをサービスに公開します。 クライアントは、セキュリティを使用して信頼するサービスに対して接続のみを可能にする必要があります。  
   
  このバインディングは、1 つ以上の SOAP 中継局を通じて信頼できる方法で通信するために使用できます。  

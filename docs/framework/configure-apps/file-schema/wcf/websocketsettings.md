@@ -2,14 +2,15 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: fa87a1b0961425d6a9bc84769bef6e87cbc2ce96
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6cfddfb9ebfc7c3447af977e14738baabebc8fe9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732561"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177852"
 ---
 # \<webSocketSettings>
+
 Web ソケット設定を指定するために使用される構成要素。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,11 +38,12 @@ Web ソケット設定を指定するために使用される構成要素。
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |createNotificationOnConnection|通知を接続時に送信するかどうかを指定します。|  
 |disablePayloadMasking|Web ソケットのマスクが無効であるかどうかを指定します。|  
@@ -54,22 +56,24 @@ Web ソケット設定を指定するために使用される構成要素。
   
 ## <a name="transportusage-attribute"></a>transportUsage 属性  
   
-|値|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
 |WhenDuplex|コントラクトが双方向の場合に、Web ソケット プロトコルを使用します。|  
 |Always (常に)|コントラクトにかかわらず、常にWeb ソケット プロトコルを使用します。|  
 |行わない|Web ソケット プロトコルを使用しません。|  
   
 ### <a name="child-elements"></a>子要素  
- なし  
+
+ None  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |\<netHttpBinding>|NetHttpBinding を指定します。|  
   
 ## <a name="example"></a>例  
+
  \<webSocketSettings> 要素を使用する方法を次の例に示します。  
   
 ```xml  

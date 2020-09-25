@@ -2,14 +2,15 @@
 title: <transport> の <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: d40178e59b89c2912123e1927e9e960f6d880871
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 81c52405478d4c1ab5c65aab73f7feff61b879d0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73735962"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178022"
 ---
 # <a name="transport-of-netnamedpipebinding"></a>\<transport> の \<netNamedPipeBinding>
+
 名前付きパイプのトランスポート セキュリティ設定を定義します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,20 +34,22 @@ ms.locfileid: "73735962"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |protectionLevel|名前付きパイプの保護レベルを定義します。 メッセージに署名を付けることで、メッセージの転送中に第三者によって改ざんされるリスクが軽減されます。 暗号化によって、トランスポート中にデータ レベルのプライバシーが提供されます。 有効な値は次のとおりです。<br /><br /> -None: 保護がありません。<br />-Sign: メッセージは署名されています。<br />-EncryptAndSign: メッセージは暗号化され、署名されます。<br /><br /> 既定値は EncryptAndSign です。|  
   
 ### <a name="child-elements"></a>子要素  
- なし  
+
+ None  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<security>](security-of-netnamedpipebinding.md)|バインディングのセキュリティ設定を定義します。|  
   

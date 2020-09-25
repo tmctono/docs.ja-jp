@@ -2,14 +2,15 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: 1cdce48f51b25732c256d3c867f1bba801ec4d8c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b250b64e1f073e00e4047ab6931a00d0b93b55b5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545455"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177879"
 ---
 # \<webMessageEncoding>
+
 Windows Communication Foundation (WCF) での使用時に、プレーンテキストの XML、JavaScript Object Notation (JSON) メッセージ エンコード、および "無変換の" バイナリ コンテンツの読み取りおよび書き込みを有効にします。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,11 +29,12 @@ Windows Communication Foundation (WCF) での使用時に、プレーンテキ�
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |`maxReadPoolSize`|新しいリーダーを割り当てずに同時に読み取ることができるメッセージの数。 プール サイズを大きくすると、システムでは、比較的大きい作業セットで、アクティビティの急増に対する許容度が高まります。 既定値は、内部エンコーダー (Text、JSON、および raw (生)) ごとに 64 リーダーです。<br /><br /> この数を増やすとメモリの消費量が増えますが、受信メッセージ数の急激な増加にエンコーダーが対処できるようになります。これは、作成済みのリーダーをプールから使用でき、新しいリーダーを作成する必要がないためです。|  
 |`maxWritePoolSize`|新しいライターを割り当てずに同時に送信できるメッセージの数。 プール サイズを大きくすると、システムでは、比較的大きい作業セットで、アクティビティの急増に対する許容度が高まります。 既定値は、内部エンコーダー (Text、JSON、および raw (生)) ごとに 64 リーダーです。<br /><br /> この数を増やすとメモリの消費が増えますが、送信メッセージ数の急激な増加にエンコーダーが対処できるようになります。これは、作成済みのライターをプールから使用でき、新しいライターを作成する必要がないためです。|  
@@ -50,7 +52,8 @@ Windows Communication Foundation (WCF) での使用時に、プレーンテキ�
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|カスタム バインドのすべてのバインド機能を定義します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
+
  エンコーディングは、メッセージをバイト シーケンスに変換するプロセスです。 デコードは、その逆のプロセスです。 これらのプロセスでは、文字エンコーディングの指定が必要です。  
   
  `webMessageEncoding` 要素は、プレーンテキストの XML と JSON エンコーディング、および "生" のバイナリ データの処理を、一連の内部エンコーダーに代行させることで機能します。 この委任は、複合メッセージ エンコーダーによって実行されます。  
