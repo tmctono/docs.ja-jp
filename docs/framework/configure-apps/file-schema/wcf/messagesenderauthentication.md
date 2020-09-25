@@ -2,14 +2,15 @@
 title: <messageSenderAuthentication>
 ms.date: 03/30/2017
 ms.assetid: ea62fc06-55fb-42e0-aa2b-8867bdf4b415
-ms.openlocfilehash: 035f3c95fc876f0d451e6b2146e754cfe0959a85
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e7888d01838312aa51397ca39133edb9318fac80
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546986"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204776"
 ---
 # \<messageSenderAuthentication>
+
 メッセージ送信者により使用されるピア証明書の認証設定を指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,11 +32,12 @@ ms.locfileid: "90546986"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |`certificateValidationMode`|省略可能な列挙体です。 資格情報の検証に使用される 5 つのモードのいずれかを指定します。 この属性は <xref:System.ServiceModel.Security.X509CertificateValidationMode> 型です。 `Custom` に設定されている場合、`customCertificateValidator` も指定する必要があります。|  
 |`customCertificateValidatorType`|省略可能な文字列。 ユーザー設定タイプの検証に使用されるタイプおよびアセンブリを指定します。 `certificateValidationMode` が `Custom` に設定されている場合は、この属性を設定する必要があります。 この属性は <xref:System.IdentityModel.Selectors.X509CertificateValidator> 型です。 Windows Communication Foundation (WCF) は、信頼された people ストアに対してピア証明書を検証する既定のピア証明書検証コントロールを提供します。 証明書が有効なルートまでつながっていることを検証します。 カスタム検証を実装して別の動作を指定したり、この属性を使用してカスタム検証を指定することができます。|  
@@ -43,6 +45,7 @@ ms.locfileid: "90546986"
 |`trustedStoreLocation`|省略可能な列挙体です。 WCF セキュリティシステムによってピア証明書が検証される、信頼されたストアの場所を指定します。 この属性は <xref:System.Security.Cryptography.X509Certificates.StoreLocation> 型です。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -51,7 +54,8 @@ ms.locfileid: "90546986"
 |-------------|-----------------|  
 |[\<peer>](peer-of-servicecredentials.md)|ピア ノードの現在の資格情報を指定します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
+
  メッセージ認証を選択した場合は、この要素を構成する必要があります。 出力チャネルの場合、各メッセージはによって提供される証明書を使用して署名され [\<certificate>](certificate-element.md) ます。 すべてのメッセージは、アプリケーションに配信される前に、この要素の `customCertificateValidatorType` 属性で指定した検証を使用してメッセージ資格情報がチェックされます。 検証は、資格情報を受け入れることも拒否することもできます。  
   
 ## <a name="see-also"></a>関連項目

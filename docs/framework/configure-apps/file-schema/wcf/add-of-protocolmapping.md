@@ -2,14 +2,15 @@
 title: <add> の <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-ms.openlocfilehash: 6197d01665d49a7c97ac9e44251abf15faf80a8f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 46ba21b65f524f88bfce81739f0cd73040a2ad45
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850385"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91205010"
 ---
 # <a name="add-of-protocolmapping"></a>\<add> の \<protocolMapping>
+
 トランスポートプロトコルスキーム (http、net.tcp、net.pipe など) と Windows Communication Foundation (WCF) バインドとの間の既定のプロトコルマッピングを表します。 実行時に既定のエンドポイントを作成する場合、WCF は構成されたマッピングを調べ、特定のベースアドレスに使用するバインドを決定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,6 +29,7 @@ ms.locfileid: "70850385"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -39,6 +41,7 @@ ms.locfileid: "70850385"
 |scheme|既定のエンドポイントに使用されるトランスポート プロトコル スキーム。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -48,6 +51,7 @@ ms.locfileid: "70850385"
 |[\<protocolMapping>](protocolmapping.md)|トランスポートプロトコルスキーム (http、net.tcp、net.pipe など) と Windows Communication Foundation (WCF) バインド間の既定のプロトコルマッピングを定義するための構成セクションを表します。|  
   
 ## <a name="example"></a>例  
+
  次の構成例は、machine.config ファイル内の既定のプロトコル マッピングを示しています。 machine.config ファイルを変更することで、既定のマッピングをコンピューター レベルでオーバーライドできます。 または、アプリケーションのスコープ内だけでオーバーライドする場合は、アプリケーション構成ファイルのこのセクションをオーバーライドし、各プロトコル スキームのマッピングを変更できます。  
   
 ```xml  

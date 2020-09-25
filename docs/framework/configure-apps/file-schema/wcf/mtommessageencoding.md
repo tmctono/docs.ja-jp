@@ -2,14 +2,15 @@
 title: <mtomMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 7865d171-cd1e-430a-8421-39cc13541d1b
-ms.openlocfilehash: cffde19c8fd06836eaaedb5c4fc8687b97ae0afe
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 76b83381849b8519c1b758ef52c6d5c3f682f9b7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556181"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204633"
 ---
 # \<mtomMessageEncoding>
+
 SOAP Message Transmission Optimization Mechanism (MTOM) ベースのメッセージに使用されるエンコーディングおよびメッセージ バージョン管理を指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,11 +31,12 @@ SOAP Message Transmission Optimization Mechanism (MTOM) ベースのメッセー
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |maxBufferSize|使用できるバッファーの最大サイズを指定する整数。|  
 |maxReadPoolSize|新しいリーダーを割り当てずに同時に読み取り可能なメッセージの数を指定する整数です。 プール サイズを大きくすると、システムでは、比較的大きい作業セットで、アクティビティの急増に対する許容度が高まります。 既定値は、64 です。|  
@@ -54,7 +56,8 @@ SOAP Message Transmission Optimization Mechanism (MTOM) ベースのメッセー
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|カスタム バインドのすべてのバインド機能を定義します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
+
  エンコーディングは、メッセージをバイト シーケンスに変換するプロセスです。 デコードは、その逆のプロセスです。 WCF (Windows Communication Foundation) には、SOAP メッセージのエンコードとして、テキスト、バイナリ、および MTOM (Message Transmission Optimization Mechanism) の 3 種類があります。  
   
  `MtomMessageEncoding` 要素は、MTOM (Message Transmission Optimization Mechanism) エンコーディングを使用するメッセージの文字エンコーディング、メッセージのバージョン管理、およびその他の設定を指定します。 MTOM は、WCF メッセージでバイナリ データを転送するための効率的なテクノロジです。 MTOM エンコーダーは、効率と相互運用性のバランスをとろうとします。 MTOM エンコーディングは、ほとんどの XML をテキスト形式で転送しますが、大きいサイズのバイナリ データ ブロックは、base64 でエンコードされた形式に変換せずに、そのまま転送することによって最適化します。  

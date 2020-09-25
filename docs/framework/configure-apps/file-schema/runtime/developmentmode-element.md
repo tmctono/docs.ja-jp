@@ -9,14 +9,15 @@ helpviewer_keywords:
 - container tags, <developmentMode> element
 - <developmentMode> element
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
-ms.openlocfilehash: 4a062da31740edb8f0c7a4f4db8b09800c687587
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ddcabb831193baee30016f663f32d8562283d936
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73117633"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91205023"
 ---
 # <a name="developmentmode-element"></a>\<developmentMode> 要素
+
 DEVPATH 環境変数によって指定されたディレクトリで、ランタイムがアセンブリの検索を行うかどうかを指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,35 +31,39 @@ DEVPATH 環境変数によって指定されたディレクトリで、ランタ
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |**developerInstallation**|DEVPATH 環境変数によって指定されたディレクトリで、ランタイムがアセンブリの検索を行うかどうかを指定します。|  
   
 ## <a name="developerinstallation-attribute"></a>developerInstallation 属性  
   
-|値|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**true**|DEVPATH 環境変数によって指定されたディレクトリ内のアセンブリを検索します。|  
 |**false**|は、DEVPATH 環境変数によって指定されたディレクトリ内のアセンブリを検索しません。 これは既定値です。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>解説  
+
  この設定は、開発時にのみ使用してください。 ランタイムは、DEVPATH で見つかった厳密な名前のアセンブリのバージョンをチェックしません。 単純に、最初に見つかったアセンブリを使用します。  
   
 ## <a name="example"></a>例  
+
  次の例は、DEVPATH 環境変数によって指定されたディレクトリ内のアセンブリをランタイムが検索する方法を示しています。  
   
 ```xml  

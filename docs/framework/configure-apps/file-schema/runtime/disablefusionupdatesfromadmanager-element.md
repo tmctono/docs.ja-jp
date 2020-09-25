@@ -5,14 +5,15 @@ helpviewer_keywords:
 - disableFusionUpdatesFromADManager element
 - <disableFusionUpdatesFromADManager> element
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
-ms.openlocfilehash: 4e7375fddaa98b45766b29d911d555f773edcafa
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c3971379b358ae16fc463df2b8d6288cf8881391
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73117446"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91205036"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager> 要素
+
 アプリケーション ドメインの構成設定をランタイム ホストがオーバーライドする既定の動作を無効化するかどうかを指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -26,6 +27,7 @@ ms.locfileid: "73117446"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -36,22 +38,24 @@ ms.locfileid: "73117446"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |0|Fusion の設定をオーバーライドする機能を無効にしないでください。 これは、.NET Framework 4 から始まる既定の動作です。|  
 |1|Fusion の設定をオーバーライドする機能を無効にします。 これにより、.NET Framework の以前のバージョンの動作に戻ります。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>解説  
+
  .NET Framework 4 以降の既定の動作では、 <xref:System.AppDomainManager> <xref:System.AppDomainSetup.ConfigurationFile%2A> <xref:System.AppDomainSetup.SetConfigurationBytes%2A> <xref:System.AppDomainSetup> <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> のサブクラスで、メソッドの実装に渡されるオブジェクトのプロパティまたはメソッドを使用して、オブジェクトが構成設定をオーバーライドできるようにし <xref:System.AppDomainManager> ます。 既定のアプリケーションドメインでは、変更した設定によって、アプリケーション構成ファイルで指定された設定が上書きされます。 他のアプリケーションドメインで <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> は、メソッドまたはメソッドに渡された構成設定がオーバーライドされ <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> ます。  
   
  新しい構成情報を渡すか、null ( `Nothing` Visual Basic) を渡して、渡された構成情報を削除することができます。  
@@ -63,6 +67,7 @@ ms.locfileid: "73117446"
  要素を使用する代わりに `<disableFusionUpdatesFromADManager>` 、レジストリ設定を作成するか、環境変数を設定することによって、既定の動作を無効にすることができます。 レジストリで、またはの下にという名前の DWORD 値を作成 `COMPLUS_disableFusionUpdatesFromADManager` `HKCU\Software\Microsoft\.NETFramework` し、値を `HKLM\Software\Microsoft\.NETFramework` 1 に設定します。 コマンドラインで、環境変数を `COMPLUS_disableFusionUpdatesFromADManager` 1 に設定します。  
   
 ## <a name="example"></a>例  
+
  要素を使用して Fusion 設定をオーバーライドする機能を無効にする方法を次の例に示し `<disableFusionUpdatesFromADManager>` ます。  
   
 ```xml  

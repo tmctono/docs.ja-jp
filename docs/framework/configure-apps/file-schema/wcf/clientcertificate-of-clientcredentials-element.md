@@ -2,14 +2,15 @@
 title: <clientCertificate><clientCredentials>要素の
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-ms.openlocfilehash: fb95ef3168378227e41e55c6fd5e5b772cb7ad0f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 74209c43dcafb1e27bb1d7943ee7832eaea0ef57
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400514"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204945"
 ---
 # <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate>\<clientCredentials>要素の
+
 サービスに対するクライアントの認証に使用する X.509 証明書を定義します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,11 +31,12 @@ ms.locfileid: "70400514"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |`findValue`|X.509 証明書ストアで検索する値を含む文字列。 属性に格納されている型は、`X509FindType` 属性値の要件を満たす必要があります。 既定値は空の文字列です。|  
 |`storeLocation`|クライアントがサービスに対して自身を認証するために使用する X.509 証明書の場所を指定します。 有効な値は次のとおりです。<br /><br /> -LocalMachine: ローカルコンピューターに割り当てられた証明書ストア。<br />-CurrentUser: 現在のユーザーに割り当てられている証明書ストア。<br /><br /> 既定値は LocalMachine です。 この属性は <xref:System.Security.Cryptography.X509Certificates.StoreLocation> 型です。|  
@@ -42,16 +44,18 @@ ms.locfileid: "70400514"
 |X509FindType|実行する X.509 検索の種類を定義します。 `findValue` 属性に格納されている型は、この属性の要件を満たす必要があります。 有効な値は次のとおりです。<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />-Findbysubjectdistinguishedname です<br />- FindByIssuerName<br />- FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />- FindByTimeValid<br />- FindByTimeNotYetValid<br />- FindByTemplateName<br />- FindByApplicationPolicy<br />- FindByCertificatePolicy<br />- FindByExtension<br />- FindByKeyUsage<br />- FindBySubjectKeyIdentifier<br /><br /> 既定値は FindBySubjectDistinguishedName です。 この属性は <xref:System.Security.Cryptography.X509Certificates.X509FindType> 型です。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<clientCredentials>](clientcredentials.md)|サービスに対するクライアントの認証に使用される資格情報を指定します。|  
   
 ## <a name="remarks"></a>解説  
- この構成要素は、この要素によるクライアントの認証に使用する証明書を指定します。 詳細については、「[方法: クライアント資格情報の値を指定する](../../../wcf/how-to-specify-client-credential-values.md)」を参照してください。  
+
+ この構成要素は、この要素によるクライアントの認証に使用する証明書を指定します。 詳細については、「 [方法: クライアント資格情報の値を指定する](../../../wcf/how-to-specify-client-credential-values.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

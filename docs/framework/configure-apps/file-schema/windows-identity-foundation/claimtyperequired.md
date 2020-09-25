@@ -3,14 +3,15 @@ title: <claimTypeRequired>
 ms.date: 03/30/2017
 ms.assetid: c469d71f-6c77-4a24-97aa-53efa126ceef
 author: BrucePerlerMS
-ms.openlocfilehash: 1c40c5e4b4a24a3c1bbd6e096f12b7b044331c88
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a86265ba3963ebc8bea880befbcf80345529116d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70252060"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203853"
 ---
 # \<claimTypeRequired>
+
 受信セキュリティトークンに必要な要求のセットを指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,10 +31,12 @@ ms.locfileid: "70252060"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
- なし  
+
+ None  
   
 ### <a name="child-elements"></a>子要素  
   

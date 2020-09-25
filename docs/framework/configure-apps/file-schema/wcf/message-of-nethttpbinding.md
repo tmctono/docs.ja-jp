@@ -2,14 +2,15 @@
 title: <message> の <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: 62b1793d18ddc8edc1f55b02137c4e0a9f7327d2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b37d6b1bd8f5372c230acbc2ada299415b2e40b3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738961"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204854"
 ---
 # <a name="message-of-nethttpbinding"></a>\<message> の \<netHttpBinding>
+
 のメッセージレベルのセキュリティの設定を定義し [\<netHttpBinding>](nethttpbinding.md) ます。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,32 +29,35 @@ ms.locfileid: "73738961"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |algorithmSuite|メッセージの暗号化とキー ラップ アルゴリズムを設定します。 この属性は、アルゴリズムとキー サイズを指定する <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 型です。 これらのアルゴリズムは、セキュリティ ポリシー言語 (WS-SecurityPolicy) 仕様で指定されたアルゴリズムにマップされます。<br /><br /> 既定値は `Basic256` です。|  
-|clientCredentialType|メッセージ ベースのセキュリティを使用してクライアント認証を実行するときに使用される資格情報の種類を指定します。 既定値は、`UserName` です。|  
+|clientCredentialType|メッセージ ベースのセキュリティを使用してクライアント認証を実行するときに使用される資格情報の種類を指定します。 既定では、 `UserName`です。|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 属性  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |UserName|-クライアントがユーザー名資格情報を使用してサーバーに対して認証される必要があります。 この資格情報は、<> 要素を使用して指定する必要があり `clientCredentials` ます。<br />-WCF では、パスワードダイジェストの送信や、パスワードを使用したキーの派生、およびメッセージセキュリティのためのこのようなキーの使用はサポートされていません。 そのため、ユーザー名の資格情報を使用する場合、WCF はトランスポートをセキュリティで保護するように強制します。 `basicHttpBinding` の場合は、SSL チャネルの設定が必要です。|  
 |Certificate|証明書を使用してクライアントをサーバーに認証するように要求します。 この場合のクライアント資格情報は、<> と <> を使用して指定する必要があり `clientCredentials` `clientCertificate` ます。 さらに、メッセージのセキュリティ モードを使用する場合は、クライアントにサービス証明書を準備する必要があります。 この場合のサービス資格情報は、 <xref:System.ServiceModel.Description.ClientCredentials> クラスまたは動作要素を使用して指定 `ClientCredentials` し、serviceCredentials の要素を使用してサービス証明書を指定する必要があり \<serviceCertificate> ます。|  
   
 ### <a name="child-elements"></a>子要素  
- なし  
+
+ None  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
-|<`security`<の> 要素`netHttpBinding`>|<> 要素のセキュリティ機能を定義 `netHttpBinding` します。|  
+|<`security` <の> 要素 `netHttpBinding`>|<> 要素のセキュリティ機能を定義 `netHttpBinding` します。|  
   
 ## <a name="example"></a>例  
+
  このサンプルでは、basicHttpBinding とメッセージ セキュリティを使用するアプリケーションを実装する方法を示します。 サービスの次の構成例では、エンドポイント定義によって basicHttpBinding が指定され、`Binding1` という名前のバインディング構成が参照されます。 サービスがクライアントに対してサービス自体を認証するために使用する証明書は、`behaviors` 要素の下にある構成ファイルの `serviceCredentials` セクションで設定されます。 クライアントがサービスに対してクライアント自体を認証するために使用する証明書に適用される検証モードも、`behaviors` 要素の下にある `clientCertificate` セクションで設定されます。  
   
  同じバインディングとセキュリティの詳細が、クライアントの構成ファイルで指定されます。  

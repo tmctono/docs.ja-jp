@@ -2,14 +2,15 @@
 title: <metadata>
 ms.date: 03/30/2017
 ms.assetid: d09653eb-e355-4c73-b87b-28f93d56480d
-ms.openlocfilehash: 028e4d3fbe7bce06caa7497c8f95f3b293a4b068
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: aad0bbde964644448fbafc6c628c00c9faaad497
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855230"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204763"
 ---
 # \<metadata>
+
 サービス メタデータを処理する方法を指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -35,9 +36,11 @@ ms.locfileid: "70855230"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
