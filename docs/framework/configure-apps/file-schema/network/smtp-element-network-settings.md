@@ -9,14 +9,15 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: b30b82922a69ea660f4c4abfd808e89fa9945183
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 58f496b4a07f7d5531df897dd54bb6176111f1c4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504512"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178321"
 ---
 # <a name="smtp-element-network-settings"></a>\<smtp> 要素 (ネットワーク設定)
+
 電子メールの送信に使用する配信形式、配信方法、差出人アドレスを構成します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,11 +38,12 @@ ms.locfileid: "84504512"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |`deliveryFormat`|送信電子メールの配信形式を指定します。 指定できる値は SevenBit および International です。|  
 |`deliveryMethod`|電子メールの配信方法を指定します。 使用可能な値は、Network、ピックアップディレクトリ Fromiis、および指定された指定された Updirectory です。|  
@@ -49,7 +51,7 @@ ms.locfileid: "84504512"
   
 ### <a name="child-elements"></a>子要素  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |`specifiedPickupDirectory`|SMTP (Simple Mail Transport Protocol) サーバー用のローカル ディレクトリを設定します。|  
 |`network`|外部 SMTP サーバー用のネットワーク オプションを設定します。|  
@@ -58,9 +60,10 @@ ms.locfileid: "84504512"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[\<mailSettings>要素 (ネットワーク設定)](mailsettings-element-network-settings.md)|電子メールの送信オプションを設定します。|  
+|[\<mailSettings> 要素 (ネットワーク設定)](mailsettings-element-network-settings.md)|電子メールの送信オプションを設定します。|  
   
 ## <a name="example"></a>例  
+
  次の例では、既定のネットワーク資格情報を使用して電子メールを送信するための適切な SMTP パラメーターを指定しています。  
   
 ```xml  

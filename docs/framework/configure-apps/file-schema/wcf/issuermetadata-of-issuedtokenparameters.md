@@ -2,12 +2,12 @@
 title: <issuerMetadata> の <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 1a85ca37-496d-4fa3-8d44-d6c9383d735c
-ms.openlocfilehash: fcdd66ecd162dff5be86a1d4ab1b196f50dbd445
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 389ac9e96c1462f59bc42b2e20cb511acdefda00
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400340"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185666"
 ---
 # <a name="issuermetadata-of-issuedtokenparameters"></a>\<issuerMetadata> の \<issuedTokenParameters>
 
@@ -27,6 +27,7 @@ ms.locfileid: "70400340"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -37,14 +38,14 @@ ms.locfileid: "70400340"
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<headers>](headers-element.md)|アドレス ヘッダーのコレクション。|  
 |[\<identity>](identity.md)|メッセージを交換する他のエンドポイントによるエンドポイントの認証を可能にする ID です。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<issuedTokenParameters>](issuedtokenparameters.md)|フェデレーション セキュリティのシナリオで発行されるセキュリティ トークンのパラメーターを指定します。|  
   

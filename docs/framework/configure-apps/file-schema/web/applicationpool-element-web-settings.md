@@ -5,14 +5,15 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: ca474cdcaeaac7b1c32efa5c58f4b5bb5b7f7895
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 963b25e57ae8c2cc59dcc3e50ae2a52cc04f54a8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557243"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185640"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool> 要素 (Web 設定)
+
 ASP.NET アプリケーションが IIS 7.0 以降のバージョンで統合モードで実行されている場合に、プロセス全体の動作を管理するために ASP.NET によって使用される構成設定を指定します。  
   
 > [!IMPORTANT]
@@ -37,13 +38,14 @@ ASP.NET アプリケーションが IIS 7.0 以降のバージョンで統合モ
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |`maxConcurrentRequestsPerCPU`|CPU ごとに ASP.NET が許可する同時要求の数を指定します。|  
 |`maxConcurrentThreadsPerCPU`|CPU ごとにアプリケーションプールに対して同時に実行できるスレッドの数を指定します。 これにより、要求を処理するために CPU ごとに使用できるマネージスレッドの数を制限できるため、ASP.NET concurrency を制御する別の方法が提供されます。 既定では、この設定は0です。これは、ASP.NET が CPU ごとに作成できるスレッドの数を制限しないことを意味します。ただし、CLR スレッドプールでは、作成可能なスレッドの数も制限されます。|  
 |`requestQueueLimit`|1つのプロセスで ASP.NET のキューに入れることができる要求の最大数を指定します。 複数の ASP.NET アプリケーションが1つのアプリケーションプールで実行される場合、アプリケーションプール内のアプリケーションに対して行われる要求の累積セットは、この設定の対象となります。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
@@ -52,7 +54,7 @@ ASP.NET アプリケーションが IIS 7.0 以降のバージョンで統合モ
 |-------------|-----------------|  
 |[\<system.web>](system-web-element-web-settings.md)|ASP.NET がホストアプリケーションと対話する方法について説明します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 
 IIS 7.0 以降のバージョンを統合モードで実行する場合、この要素の組み合わせを使用して、アプリケーションが IIS アプリケーションプールでホストされている場合に、ASP.NET がスレッドを管理し、要求をキューに配置する方法を構成できます。 IIS 6 を実行した場合、またはクラシックモードまたは ISAPI モードで IIS 7.0 を実行している場合、これらの設定は無視されます。  
   
