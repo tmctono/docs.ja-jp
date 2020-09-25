@@ -9,14 +9,15 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 9f18c7a3586948c03391d609f437e216a91bc27f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 80d54df40c6798e146013b4f2d867386ae35169c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504486"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201721"
 ---
 # <a name="systemnet-element-network-settings"></a>\<system.Net> 要素 (ネットワーク設定)
+
 .NET Framework がネットワークに接続する方法を指定するための設定が含まれています。  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -30,9 +31,11 @@ ms.locfileid: "84504486"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
@@ -54,9 +57,11 @@ ms.locfileid: "84504486"
 |[configuration](../configuration-element.md)|すべての名前空間の設定が含まれます。|  
   
 ## <a name="remarks"></a>解説  
+
  [\<system.net>](system-net-element-network-settings.md)要素には、 <xref:System.Net> および関連する子名前空間のクラスの設定が含まれます。 この設定では、インターネットホストから情報を受信するための認証モジュール、接続管理、メール設定、プロキシサーバー、およびインターネット要求モジュールを構成します。  
   
 ## <a name="example"></a>例  
+
  次の例は、クラスによって使用される一般的な構成を示して <xref:System.Net> います。  
   
 ```xml  

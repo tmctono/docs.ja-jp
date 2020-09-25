@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <disableCommitThreadStack> element
 - disableCommitThreadStack element
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
-ms.openlocfilehash: 8aefb8a20d6a95c5b8062d0c03dcb28a3557ca3d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f717f57fe8670b126ed1468713a2114aaa772762
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73117474"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198991"
 ---
 # <a name="disablecommitthreadstack-element"></a>\<disableCommitThreadStack> 要素
+
 スレッドの起動時にスレッド スタック全体をコミットするかどうかを指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -29,6 +30,7 @@ ms.locfileid: "73117474"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
@@ -39,28 +41,31 @@ ms.locfileid: "73117474"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |0|共通言語ランタイムの既定の動作 (スレッドの起動時にスレッド スタック全体をコミット) を無効にしません。|  
 |1|共通言語ランタイムの既定の動作 (スレッドの起動時にスレッド スタック全体をコミット) を無効にします。|  
   
 ### <a name="child-elements"></a>子要素  
+
  なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>解説  
+
  共通言語ランタイムの既定の動作では、スレッドの起動時にスレッド スタック全体がコミットされます。 メモリが限られているサーバーで多数のスレッドが作成する必要があり、それらのスレッドのほとんどがごくわずかのスタック スペースしか使用しない場合は、スレッドの起動時に共通言語ランタイムが直ちにスレッド スタック全体をコミットしなければ、サーバーのパフォーマンスが向上する可能性があります。  
   
 > [!NOTE]
 > アンマネージ ホストは、 `STARTUP_DISABLE_COMMITTHREADSTACK` STARTUP_FLAGS [列挙体の](../../../unmanaged-api/hosting/startup-flags-enumeration.md) 起動フラグを使用することにより、同じ結果を得ることができます。  
   
 ## <a name="example"></a>例  
+
  次の例は、共通言語ランタイムの既定の動作 (スレッド起動時にスレッド スタック全体をコミット) を無効にする方法を示しています。  
   
 ```xml  

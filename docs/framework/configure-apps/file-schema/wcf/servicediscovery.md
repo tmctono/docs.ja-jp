@@ -2,14 +2,15 @@
 title: <serviceDiscovery>
 ms.date: 03/30/2017
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
-ms.openlocfilehash: 7ac067e84f2a4d2724e3d8f2d0af9b220fd15538
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b38496b77d80fcb66b1b48485a9eef6abfd72299
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399648"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198822"
 ---
 # \<serviceDiscovery>
+
 サービス エンドポイントの探索可能性を指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -41,9 +42,11 @@ ms.locfileid: "70399648"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
@@ -60,9 +63,11 @@ ms.locfileid: "70399648"
 |[\<behavior>](behavior-of-endpointbehaviors.md)|動作の要素を指定します。|  
   
 ## <a name="remarks"></a>解説  
+
  サービスの動作構成に追加すると、この構成要素により、サービスの探索可能性はすべてのエンドポイントで有効になります。 または子要素を使用して、このようなエンドポイントの探索機能をさらに構成でき [\<discoveryEndpoint>](discoveryendpoint.md) [\<announcementEndpoint>](announcementendpoint.md) ます。 [\<announcementEndpoint>](announcementendpoint.md)サービスのお知らせを送信するために使用するエンドポイント構成 (オンライン/Hello およびオフライン/Bye) を指定することにより、セクションを使用してアナウンスを構成します。 [\<discoveryEndpoint>](discoveryendpoint.md)探索メッセージをリッスンするエンドポイントを手動で指定するには、「」セクションを使用します。  
   
 ## <a name="example"></a>例  
+
  次の構成例では、CalculatorService を探索可能に指定しています。また、オプションで、使用するアナウンス エンドポイントを指定しています。  
   
 ```xml  

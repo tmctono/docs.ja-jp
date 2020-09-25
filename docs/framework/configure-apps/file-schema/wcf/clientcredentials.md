@@ -2,14 +2,15 @@
 title: <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 1e6eef0d-a34e-4d74-b0f7-f65d2181858d
-ms.openlocfilehash: f295fe48e194611c80b78c0c23ab3e66ea1c0b64
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6094006df24ee824c419a783ab29d7604757577c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400496"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201461"
 ---
 # \<clientCredentials>
+
 サービスに対するクライアントの認証に使用される資格情報を指定します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -40,18 +41,19 @@ ms.locfileid: "70400496"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
-|属性|説明|  
+|属性|[説明]|  
 |---------------|-----------------|  
 |`supportInteractive`|実行時にクライアントの資格情報を選択する際に、対話型ユーザーを含めるかどうかを指定するブール値。 既定値は `true` です。|  
 |`type`|この設定要素の種類を指定する文字列です。|  
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<clientCertificate>](clientcertificate-of-clientcredentials-element.md)|サービスに対するクライアントの認証に使用される証明書を指定します。 この要素は <xref:System.ServiceModel.Configuration.X509InitiatorCertificateClientElement> 型です。|  
 |[\<httpDigest>](httpdigest-element.md)|サービスに対するクライアントの認証に使用されるダイジェストを指定します。 この要素は <xref:System.ServiceModel.Configuration.HttpDigestClientElement> 型です。|  
@@ -62,11 +64,12 @@ ms.locfileid: "70400496"
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|エンドポイントの動作を指定します。|  
   
 ## <a name="remarks"></a>解説  
+
  クライアント資格情報は、相互認証が必要な場合にサービスに対するクライアントの認証に使用されます。 また、この構成セクションを使用して、クライアントがサービスの証明書によってサービスへのメッセージをセキュリティで保護する必要がある場合に使用するサービス証明書を指定することもできます。  
   
 ## <a name="see-also"></a>関連項目

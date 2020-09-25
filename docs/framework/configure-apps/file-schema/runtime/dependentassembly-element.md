@@ -9,14 +9,15 @@ helpviewer_keywords:
 - dependentAssembly element
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
-ms.openlocfilehash: 2de8c752867d00708173d11d1851f415a2e8518d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6a924b1998651c923c64429029a118dd1e9ede69
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154206"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91199004"
 ---
 # <a name="dependentassembly-element"></a>\<dependentAssembly> 要素
+
 各アセンブリのバインディング ポリシーとアセンブリの場所をカプセル化します。 `dependentAssembly`アセンブリごとに1つの要素を使用します。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -32,9 +33,11 @@ ms.locfileid: "79154206"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
+
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
+
  なし。  
   
 ### <a name="child-elements"></a>子要素  
@@ -55,6 +58,7 @@ ms.locfileid: "79154206"
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="example"></a>例  
+
  次の例は、2つのアセンブリのアセンブリ情報をカプセル化する方法を示しています。  
   
 ```xml  
