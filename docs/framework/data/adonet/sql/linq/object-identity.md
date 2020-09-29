@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
-ms.openlocfilehash: 053c861bae951f044d30d048951aa072b3d85a42
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1a1617b4fb15a6adf94c0241c3ba577308c51a8b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792947"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169428"
 ---
 # <a name="object-identity"></a>オブジェクト ID
+
 実行時のオブジェクトは、一意の ID を持ちます。 2 つの変数が同じオブジェクトを参照している場合、実際それらの変数は、そのオブジェクトの同じインスタンスを参照しています。 したがって、一方の変数から加えた変更は、もう一方の変数から直ちに参照できます。  
   
  リレーショナル データベースのテーブルの行は、一意の ID を持ちません。 それぞれの行は一意の主キーを持つので、同じキー値を持つ行が存在することはありません。 しかしこれは、データベース テーブルの中だけでの制限です。  
@@ -31,12 +32,14 @@ ms.locfileid: "70792947"
 ## <a name="examples"></a>使用例  
   
 ### <a name="object-caching-example-1"></a>オブジェクトのキャッシュの例 1  
+
  この例では、同じクエリを 2 回実行した場合、メモリ内にある同じオブジェクトへの参照をそのつど受け取ります。  
   
  [!code-csharp[DLinqObjectIdentity#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectIdentity/cs/Program.cs#1)]
  [!code-vb[DLinqObjectIdentity#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectIdentity/vb/Module1.vb#1)]  
   
 ### <a name="object-caching-example-2"></a>オブジェクトのキャッシュの例 2  
+
  この例では、データベースの同じ行を返す、異なるクエリを実行した場合、メモリ内にある同じオブジェクトへの参照をそのつど受け取ります。  
   
  [!code-csharp[DLinqObjectIdentity#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectIdentity/cs/Program.cs#2)]

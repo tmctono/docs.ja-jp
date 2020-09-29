@@ -3,12 +3,12 @@ title: ADO.NET コード サンプル用のサンプル SQL Server データベ�
 description: ADO.NET のドキュメントのコード サンプルで使用されているサンプル SQL Server データベースと、SQL Server および管理ツールをダウンロードします。
 ms.date: 01/11/2019
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 3449f502834f449f5023bd52457d45ffaf9b0fa1
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: f7c0d1eb0089a6bfabc92e1deecf563c3e59cc6a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607985"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156057"
 ---
 # <a name="get-the-sample-databases-for-adonet-code-samples"></a>ADO.NET コード サンプル用のサンプル データベースを入手する
 
@@ -50,6 +50,7 @@ Microsoft Access 用の Northwind サンプル データベースは、Microsoft
 データベース バックアップ (\*.bak) ファイルの 1 つをダウンロードした後、SQL Server Management Studio (SSMS) を使用して、SQL Server のインスタンスにバックアップを復元します。 「[SQL Server Management Studio を入手する](#get_ssms)」をご覧ください。
 
 ## <a name="get-sql-server-management-studio"></a><a name="get_ssms"></a> SQL Server Management Studio を入手する
+
 ダウンロードしたデータベースを表示または変更する場合は、SQL Server Management Studio (SSMS) を使用できます。 次のページから SSMS をダウンロードします。
 
 [SQL Server Management Studio (SSMS) のダウンロード](/sql/ssms/download-sql-server-management-studio-ssms)

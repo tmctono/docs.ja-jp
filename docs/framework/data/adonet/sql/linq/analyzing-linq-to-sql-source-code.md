@@ -2,14 +2,15 @@
 title: LINQ to SQL のソース コードの分析
 ms.date: 03/30/2017
 ms.assetid: cba3eef8-e108-4478-b588-ad59580e133e
-ms.openlocfilehash: dda19800a9aea0d644740c5378f6d5065181993e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e39b1686269442044beb73bb7e572738832bec27
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248077"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164585"
 ---
 # <a name="analyzing-linq-to-sql-source-code"></a>LINQ to SQL のソース コードの分析
+
 以下の手順を実行すると、Northwind サンプル データベースから [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のソース コードを作成できます。 オブジェクト モデルの要素とデータベースの要素を比較対照することで、個別の項目がどのように対応付けられているかがわかります。  
   
 > [!NOTE]

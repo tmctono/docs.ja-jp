@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5ad12f94-7459-4a93-a421-4160d1a90715
-ms.openlocfilehash: 838f56311f165c99c71cc734576bbdb53a946b7c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d447f09fcbfe108346b81a2bced44cf305e2844b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792069"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172672"
 ---
 # <a name="multiple-bulk-copy-operations"></a>バルク コピー操作の複数実行
+
 <xref:System.Data.SqlClient.SqlBulkCopy> クラスのインスタンスを 1 つ使用すると、バルク コピー操作を複数回実行できます。 コピー元とコピー先で操作パラメーターが変わる場合 (たとえば、コピー先のテーブル名など)、**WriteToServer** メソッドを続けて呼び出す前に、次の例で示すようにパラメーターを更新する必要があります。 明示的に変更されている場合を除き、すべてのプロパティ値は、任意のインスタンスに対する前回のバルク コピー操作の状態のまま残っています。  
   
 > [!NOTE]

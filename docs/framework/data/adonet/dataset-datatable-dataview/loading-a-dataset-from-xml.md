@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 77715913c24423c1dc95478977f4e3821e4c247b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0920acac2c82677cfce37703b7027dedce91a535
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545312"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166808"
 ---
 # <a name="loading-a-dataset-from-xml"></a>XML からの DataSet の読み込み
+
 ADO.NET では、XML ストリームまたは XML ドキュメントから <xref:System.Data.DataSet> の内容を作成できます。 また、.NET Framework では、XML から読み込まれる情報と <xref:System.Data.DataSet> のスキーマまたはリレーショナル構造の作成方法を柔軟に変更できます。  
   
  <xref:System.Data.DataSet> に XML のデータを格納するには、<xref:System.Data.DataSet> オブジェクトの **ReadXml** メソッドを使用します。 **ReadXml** メソッドは、ファイル、ストリーム、または **XmlReader** からデータを読み取り、XML のソースを引数として受け取ります。また、**XmlReadMode** 引数を受け取ることもあります。 **XmlReader** の詳細については、「[XmlTextReader による XML データの読み取り](/previous-versions/dotnet/netframework-4.0/tfz3cz6w(v=vs.100))」を参照してください。 **ReadXml** メソッドは、XML ストリームまたは XML ドキュメントの内容を読み取り、<xref:System.Data.DataSet> にデータを読み込みます。 また、指定されている **XmlReadMode** と、リレーショナル スキーマが既に存在しているかどうかに応じて、<xref:System.Data.DataSet> のリレーショナル スキーマも作成します。  
@@ -33,6 +34,7 @@ ADO.NET では、XML ストリームまたは XML ドキュメントから <xref
 > XML ドキュメントにアクセスするためのオブジェクトである **ReadXml** に **XmlReader** を渡すと、**ReadXml** では次の要素ノードを読み取り、このノードをルート要素として処理し、このノードの終わりに到達するまで読み取ります。 **XmlReadMode.Fragment** を指定した場合は、このようになりません。  
   
 ## <a name="dtd-entities"></a>DTD エンティティ  
+
  ドキュメント型定義 (DTD) スキーマで定義されているエンティティが、XML に含まれている場合に、ファイル名、ストリーム、または非検証 **XmlReader** を **ReadXml** に渡して <xref:System.Data.DataSet> を読み込むと、例外がスローされます。 代わりに、**EntityHandling** を **EntityHandling.ExpandEntities** に設定して **XmlValidatingReader** を作成し、**XmlValidatingReader** を **ReadXml** に渡す必要があります。 **XmlValidatingReader** によってエンティティが展開された後で、<xref:System.Data.DataSet> がこのエンティティを読み取ります。  
   
  XML ストリームから <xref:System.Data.DataSet> を読み込むコード サンプルを次に示します。 1 番目の例では、ファイル名が **ReadXml** メソッドに渡されます。 2 番目の例では、XML が含まれている文字列が <xref:System.IO.StringReader> によって読み込まれます。  
@@ -114,6 +116,7 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 ## <a name="merging-data-from-xml"></a>XML のデータの結合  
+
  既に、<xref:System.Data.DataSet> にデータが含まれている場合には、<xref:System.Data.DataSet> の既存のデータに XML の新しいデータが追加されます。 **ReadXml** では、XML の中で主キーが一致する行情報を <xref:System.Data.DataSet> に結合しません。 既存の行情報を XML の新しい情報で上書きするには、**ReadXml** を使用して新しい <xref:System.Data.DataSet> を作成してから、新しい <xref:System.Data.DataSet> を既存の <xref:System.Data.DataSet> に結合 (<xref:System.Data.DataSet.Merge%2A>) します。 **XmlReadMode** が **DiffGram** の **ReadXML** を使用して DiffGram を読み込むと、同一の一意の識別子を持つ行が結合されます。  
   
 ## <a name="see-also"></a>関連項目

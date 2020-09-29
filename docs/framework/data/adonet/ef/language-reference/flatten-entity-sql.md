@@ -2,14 +2,15 @@
 title: FLATTEN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 1a670c63-0a29-4738-80e6-101f66af05c3
-ms.openlocfilehash: 84b846e3db86c664bc42363f3d983a1001f5c318
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 36ae2b2b1264150bc66d09366ee33723ed7b28a8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833804"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166706"
 ---
 # <a name="flatten-entity-sql"></a>FLATTEN (Entity SQL)
+
 コレクションのコレクションをフラット化して単一のコレクションに変換します。 変換後のコレクションは、入れ子構造が失われるだけで、変換前のコレクションとまったく同じ要素を格納します。  
   
 ## <a name="syntax"></a>構文  
@@ -19,13 +20,16 @@ FLATTEN ( collection )
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `collection`  
  値のコレクションのコレクションをフラット化して単一のコレクションとして返す有効な任意の式。  
   
 ## <a name="remarks"></a>Remarks  
+
  `FLATTEN` は、 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] の集合演算子の 1 つです。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] のすべての集合演算子は左から右に評価されます。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] の集合演算子の優先順位に関する情報については、「[EXCEPT](except-entity-sql.md)」をご覧ください。  
   
 ## <a name="example"></a>例  
+
  次の Entity SQL クエリでは、 `FLATTEN` 演算子を使用して、コレクションのコレクションをフラット化されたコレクションに変換します。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
 1. 「[方法: StructuralType 結果を返すクエリを実行する](../how-to-execute-a-query-that-returns-structuraltype-results.md)」の手順に従います。  

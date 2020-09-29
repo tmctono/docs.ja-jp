@@ -3,14 +3,15 @@ title: 文字列での単語の出現回数をカウントする方法 (LINQ) (C
 description: この例では、C# で LINQ クエリを使用して、指定された単語が文字列内に出現する回数をカウントします。 Split メソッドを使用して単語の配列が作成されます。
 ms.date: 07/20/2015
 ms.assetid: f8e6f546-7c14-4aa1-8a75-e8d09f3b8ccd
-ms.openlocfilehash: e0ac7b338706c3f363fb21284e895bd1c7c48b6c
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: b354947c59747e49b5f3d099ebc3ea891fb4af90
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89466119"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159073"
 ---
 # <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a>文字列での単語の出現回数をカウントする方法 (LINQ) (C#)
+
 この例では、LINQ クエリを使用して、指定された単語が文字列内に出現する回数をカウントする方法を示します。 カウントを実行するには、まず <xref:System.String.Split%2A> メソッドを呼び出して単語の配列を作成します。 <xref:System.String.Split%2A> メソッドを呼び出すと、パフォーマンスが低下します。 文字列に対する操作が単語のカウントのみである場合は、<xref:System.Text.RegularExpressions.Regex.Matches%2A> または <xref:System.String.IndexOf%2A> メソッドの使用を検討してください。 ただし、パフォーマンスが重要でない場合や、他の種類のクエリを実行する目的で事前に文章を分割している場合は、LINQ を使用して単語や語句をカウントすることにも意味があります。  
   
 ## <a name="example"></a>例  
@@ -56,6 +57,7 @@ class CountWords
 ```  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
+
  System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。  
   
 ## <a name="see-also"></a>関連項目

@@ -2,12 +2,12 @@
 title: 監視と製品利用統計情報でアプリを最新化する
 description: Azure クラウドおよび Windows コンテナーを使用して既存の .NET アプリケーションを最新化する | 監視と製品利用統計情報でアプリを最新化する
 ms.date: 04/30/2018
-ms.openlocfilehash: a5101f150d6548406db8638904fb4ab6375edf9c
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: a6094435eece661d99904876ac49b3ca85ec45a7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739178"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172002"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>監視と製品利用統計情報でアプリを最新化する
 
@@ -25,13 +25,13 @@ Application Insights は、複数のプラットフォームで作業する Web 
 
 ## <a name="monitor-your-docker-infrastructure-with-log-analytics-and-its-container-monitoring-solution"></a>Log Analytics とそのコンテナー監視ソリューションを使用して Docker インフラストラクチャを監視する
 
-[Azure Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview) は、[Microsoft Azure の全体監視ソリューション](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)に含まれています。 また、[Operations Management Suite (OMS)](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview) のサービスでもあります。 Log Analytics では、可用性とパフォーマンスを維持できるように、クラウド環境とオンプレミス環境 (オンプレミスの場合は OMS) を監視します。 Log Analytics を使用すると、クラウドおよびオンプレミスの環境内にあるリソースによって生成されたデータや、他の監視ツールのデータを収集し、複数のソースにわたる分析を行えます。
+[Azure Log Analytics](/azure/log-analytics/log-analytics-overview) は、[Microsoft Azure の全体監視ソリューション](/azure/monitoring-and-diagnostics/monitoring-overview)に含まれています。 また、[Operations Management Suite (OMS)](/azure/operations-management-suite/operations-management-suite-overview) のサービスでもあります。 Log Analytics では、可用性とパフォーマンスを維持できるように、クラウド環境とオンプレミス環境 (オンプレミスの場合は OMS) を監視します。 Log Analytics を使用すると、クラウドおよびオンプレミスの環境内にあるリソースによって生成されたデータや、他の監視ツールのデータを収集し、複数のソースにわたる分析を行えます。
 
-Azure インフラストラクチャ ログに関して、Log Analytics は、Azure サービスとして、他の Azure サービス ([Azure Monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor) を使用)、Azure VM、Docker コンテナー、オンプレミスまたはその他のクラウド インフラストラクチャのログとメトリック データが取り込まれます。 Log Analytics では、このデータに加えて、柔軟なログ検索と、すぐに利用できる分析機能が提供されます。 複数のソースのデータ分析に使用できる豊富なツールが提供され、すべてのログに対して複雑なクエリを実行でき、指定した条件に基づいて事前に通知することができます。 さらにカスタム データを Log Analytics の中央リポジトリに収集して、照会および視覚化することができます。 また、Log Analytics の組み込みソリューションを活用して、インフラストラクチャのセキュリティと機能の分析情報をすぐに得ることもできます。
+Azure インフラストラクチャ ログに関して、Log Analytics は、Azure サービスとして、他の Azure サービス ([Azure Monitor](/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor) を使用)、Azure VM、Docker コンテナー、オンプレミスまたはその他のクラウド インフラストラクチャのログとメトリック データが取り込まれます。 Log Analytics では、このデータに加えて、柔軟なログ検索と、すぐに利用できる分析機能が提供されます。 複数のソースのデータ分析に使用できる豊富なツールが提供され、すべてのログに対して複雑なクエリを実行でき、指定した条件に基づいて事前に通知することができます。 さらにカスタム データを Log Analytics の中央リポジトリに収集して、照会および視覚化することができます。 また、Log Analytics の組み込みソリューションを活用して、インフラストラクチャのセキュリティと機能の分析情報をすぐに得ることもできます。
 
 Log Analytics には、任意のブラウザーで稼働する OMS ポータルまたは Azure portal を使用してアクセスでき、構成設定と複数のツールを使用して、収集されたデータの分析と操作を行うことができます。
 
-Log Analytics の[コンテナー監視ソリューション](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)を使用すると、Docker と Windows のコンテナー ホストを 1 か所に表示して管理できます。 このソリューションは、どのコンテナーが実行中か、何のコンテナー イメージを実行中か、コンテナーがどこで実行中かを表示します。 コンテナーで使用されているコマンドなど、詳細な監査情報を確認できます。 また、Docker または Windows ホストをリモートで確認しなくても、一元化されたログを表示および検索して、コンテナーのトラブルシューティングを行うこともできます。 ノイジー ネイバーで、ホストで過剰なリソースを使用している可能性のあるコンテナーを特定できます。 さらに、コンテナーについて、CPU、メモリ、ストレージ、ネットワークの使用量と、パフォーマンスに関する情報を一元的に確認できます。 Windows を実行しているコンピューターでは、Windows Server、Hyper-V、Docker の各コンテナーのログを一元化して比較できます。 このソリューションは、次のコンテナー オーケストレーターをサポートしています。
+Log Analytics の[コンテナー監視ソリューション](/azure/log-analytics/log-analytics-containers)を使用すると、Docker と Windows のコンテナー ホストを 1 か所に表示して管理できます。 このソリューションは、どのコンテナーが実行中か、何のコンテナー イメージを実行中か、コンテナーがどこで実行中かを表示します。 コンテナーで使用されているコマンドなど、詳細な監査情報を確認できます。 また、Docker または Windows ホストをリモートで確認しなくても、一元化されたログを表示および検索して、コンテナーのトラブルシューティングを行うこともできます。 ノイジー ネイバーで、ホストで過剰なリソースを使用している可能性のあるコンテナーを特定できます。 さらに、コンテナーについて、CPU、メモリ、ストレージ、ネットワークの使用量と、パフォーマンスに関する情報を一元的に確認できます。 Windows を実行しているコンピューターでは、Windows Server、Hyper-V、Docker の各コンテナーのログを一元化して比較できます。 このソリューションは、次のコンテナー オーケストレーターをサポートしています。
 
 - Docker Swarm
 

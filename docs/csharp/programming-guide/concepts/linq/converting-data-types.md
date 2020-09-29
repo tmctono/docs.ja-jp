@@ -3,14 +3,15 @@ title: データ型の変換 (C#)
 description: 変換メソッドは、入力オブジェクトの型を変更します。 Enumerable.AsEnumerable や Enumerable.OfType など、C# での LINQ クエリの変換操作について確認します。
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
-ms.openlocfilehash: 3291690f9aaee945ca7feb04ebbc676db2612894
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: f9e3b354fd6eeba6564067550ea3821e4946d92f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105483"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159138"
 ---
 # <a name="converting-data-types-c"></a>データ型の変換 (C#)
+
 変換メソッドは、入力オブジェクトの型を変更します。
 
  LINQ クエリの変換操作は、さまざまなアプリケーションで役に立ちます。 次にいくつかの例を示します。
@@ -22,6 +23,7 @@ ms.locfileid: "87105483"
 - <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>、<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>、<xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>、および <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType> メソッドを使用すると、クエリが列挙されるまで延期させるのではなく、即時のクエリ実行を強制することができます。
 
 ## <a name="methods"></a>メソッド
+
  次の表には、データ型の変換を実行する標準クエリ演算子メソッドの一覧が示されています。
 
  名前が "As" で始まるこの表の変換メソッドは、ソース コレクションの静的型を変更しますが、ソース コレクションを列挙しません。 名前が "To" で始まるメソッドは、ソース コレクションを列挙し、各項目を対応するコレクション型に変換します。

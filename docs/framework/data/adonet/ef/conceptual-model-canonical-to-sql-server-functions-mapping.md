@@ -2,17 +2,19 @@
 title: 概念モデル正規関数と SQL Server 関数とのマッピング
 ms.date: 03/30/2017
 ms.assetid: 1a2631bc-a426-4c0a-ba8d-26d9c80d39e2
-ms.openlocfilehash: f997fbf39f3dee07cc0d58a39fca779f55236606
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 495a662cbab84c2686e4c31945c30d6f82d117cb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251675"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153119"
 ---
 # <a name="conceptual-model-canonical-to-sql-server-functions-mapping"></a>概念モデル正規関数と SQL Server 関数とのマッピング
+
 このトピックでは、概念モデル正規関数を対応する SQL Server 関数にマップする方法について説明します。  
   
 ## <a name="date-and-time-functions"></a>日付と時刻関数  
+
  日付と時刻の関数のマッピングを次の表に示します。  
   
 |正規関数|SQL Server 関数|  
@@ -52,6 +54,7 @@ ms.locfileid: "70251675"
 |[Year(expression)](./language-reference/date-and-time-canonical-functions.md)|`DatePart(YEAR, expression)`|  
   
 ## <a name="aggregate-functions"></a>集計関数  
+
  集計関数のマッピングを次の表に示します。  
   
 |正規関数|SQL Server 関数|  
@@ -68,6 +71,7 @@ ms.locfileid: "70251675"
 |[VarP(expression)](./language-reference/aggregate-canonical-functions.md)|`VARP(expression)`|  
   
 ## <a name="math-functions"></a>数学関数  
+
  数学関数のマッピングを次の表に示します。  
   
 |正規関数|SQL Server 関数|  
@@ -80,6 +84,7 @@ ms.locfileid: "70251675"
 |[Truncate](./language-reference/math-canonical-functions.md)|`ROUND(value , digits, 1)`|  
   
 ## <a name="string-functions"></a>文字列関数  
+
  文字列関数のマッピングを次の表に示します。  
   
 |正規関数|SQL Server 関数|  
@@ -102,6 +107,7 @@ ms.locfileid: "70251675"
 |[ToUpper(string)](./language-reference/string-canonical-functions.md)|`UPPER(string)`|  
   
 ## <a name="bitwise-functions"></a>ビット単位の関数  
+
  ビット単位の関数のマッピングを次の表に示します。  
   
 |正規関数|SQL Server 関数|  

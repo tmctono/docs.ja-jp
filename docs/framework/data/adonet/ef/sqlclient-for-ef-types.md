@@ -2,14 +2,15 @@
 title: Entity Framework 用 SqlClient の型
 ms.date: 03/30/2017
 ms.assetid: f2a95ead-c845-4e97-9fb3-04b444f7ed81
-ms.openlocfilehash: d132583bba2520d37693be6c4b085cfa514003e0
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: bca2cc0e0d9f43c51c66080f3bd38c245ce94381
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737845"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156590"
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>Entity Framework 用 SqlClient の型
+
 .NET Framework Data Provider for SQL Server (SqlClient) プロバイダー マニフェスト ファイルには、プロバイダー プリミティブ型のリスト、それぞれの型のファセット、概念モデルとストレージ モデルのプリミティブ型とのマッピング、および概念モデルとストレージ モデルのプリミティブ型間での昇格と変換の規則が含まれています。  
   
  次の表では、SQL Server 2008、SQL Server 2005、SQL Server 2000 データベースの型と、これらの型が概念モデル型にどのようにマップされるかを示します。 いくつかの新しい型が SQL Server の新しいバージョンで導入されており、これらの型は SQL Server の古いバージョンではサポートされていません。 これらの型については次の表で説明します。  

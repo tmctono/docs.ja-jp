@@ -8,17 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 095c4dea838aff4f14833d78fb10a2f831cf5173
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 276e3f6ab50a069e3852c529c13eaad3c64e42ad
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89127205"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91168882"
 ---
 # <a name="abstract-c-reference"></a>abstract (C# リファレンス)
+
 `abstract` 修飾子は、その修飾対象の実装が不足しているか、不完全であることを示します。 クラスやメソッド、プロパティ、インデクサー、イベントと組み合わせて abstract 修飾子を使用することができます。 クラス宣言に `abstract` 修飾子を使用して、クラスは他のクラスの基底クラスとしてのみ使用することを意図し、それ自体ではインスタンス化されないことを示します。 abstract としてマークされたメンバーは、その抽象クラスから派生した非抽象クラスによって実装される必要があります。
   
 ## <a name="example"></a>例  
+
  この例で、`GetArea` の機能は、`Shape` から派生している `Square` クラスで実装する必要があります。  
   
  [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
@@ -66,6 +68,7 @@ ms.locfileid: "89127205"
 [!code-csharp[csrefKeywordsModifiers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#2)]
   
 ## <a name="example"></a>例  
+
  この例の `DerivedClass` クラスは、抽象クラス `BaseClass` から派生しています。 この抽象クラスには、`AbstractMethod` という抽象メソッドのほか、`X` と `Y` の 2 つの抽象プロパティが存在します。  
   
 [!code-csharp[csrefKeywordsModifiers#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#3)]
@@ -79,6 +82,7 @@ BaseClass bc = new BaseClass();   // Error
 このように、抽象クラス 'BaseClass' のインスタンスをコンパイラが作成できないことを伝えるエラーが発生します。  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
+
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>関連項目

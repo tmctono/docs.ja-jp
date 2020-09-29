@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 43b3349b2a35385dcc49d0866e0695b08eac2d2e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6fe047fc672a2b42f886e81dcace91042a552932
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551492"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156317"
 ---
 # <a name="date-and-time-data"></a>日付と時刻のデータ
+
 SQL Server 2008 では、日付と時刻の情報を扱うための新しいデータ型が導入されました。 新しいデータ型には、日付と時刻の別個のデータ型と、範囲、有効桁数、タイム ゾーン処理が向上した拡張データ型が含まれています。 .NET Framework 3.5 Service Pack (SP) 1 以降では、.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) が SQL Server 2008 データベース エンジンの新機能すべてをサポートします。 SqlClient でこれらの新機能を使用するには、.NET Framework 3.5 SP1 以降をインストールする必要があります。  
   
  SQL Server 2008 より前のバージョンの SQL Server では、日付と時刻に使用できるデータ型には `datetime` と `smalldatetime` の 2 つしかありませんでした。 どちらのデータ型も日付値と時刻値の両方を保持するため、日付と時刻のどちらか一方の値のみを使用するのが困難でした。 さらに、これらのデータ型では、1753 年に英国でグレゴリオ暦が導入された後の日付のみがサポートされます。 もう 1 つの制限事項は、これらの古いデータ型がタイムゾーンに対応していないことです。これにより、複数のタイムゾーンからのデータの操作が困難になります。  
@@ -25,6 +26,7 @@ SQL Server 2008 では、日付と時刻の情報を扱うための新しいデ�
 1. [日時データの使用](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>SQL Server 2008 で導入された日付/時刻データ型  
+
  次の表は、新しい日付と時刻のデータ型の説明です。  
   
 |SQL Server のデータ型|説明|  
@@ -38,6 +40,7 @@ SQL Server 2008 では、日付と時刻の情報を扱うための新しいデ�
 > `Type System Version` キーワードの使用方法の詳細については、「<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>」を参照してください。  
   
 ## <a name="date-format-and-date-order"></a>日付書式と表記順序  
+
  SQL Server が日付と時刻の値をどのように処理するかは、型システムのバージョンとサーバーのバージョンだけでなく、サーバーの既定の言語と書式設定にも左右されます。 ある言語の日付形式に対して機能する日付文字列は、別の言語および日付形式の設定を使用する接続によってクエリが実行された場合に認識されない可能性があります。  
   
  Transact-SQL SET LANGUAGE ステートメントでは、日付部分の順序を決定する DATEFORMAT を暗黙的に設定します。 接続に対して SET DATEFORMAT Transact-SQL ステートメントを使用して、MDY、DMY、YMD、YDM、MYD、DYM の順序で日付部分を並べ替えることにより、日付値を明確にすることができます。  
@@ -50,6 +53,7 @@ SQL Server 2008 では、日付と時刻の情報を扱うための新しいデ�
  SQL Server による日付と時刻のデータの解釈方法について詳しくは、「[日時データの使用](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))」をご覧ください。  
   
 ## <a name="datetime-data-types-and-parameters"></a>Date/Time データ型とパラメーター  
+
  新しい日付型と時刻型をサポートするために、<xref:System.Data.SqlDbType> には、次の列挙値が追加されています。  
   
 - `SqlDbType.Date`  
@@ -85,6 +89,7 @@ SQL Server 2008 では、日付と時刻の情報を扱うための新しいデ�
 |smalldatetime|System.DateTime|DateTime|DateTime|  
   
 ### <a name="sqlparameter-properties"></a>SqlParameter プロパティ  
+
  次の表は、日付と時刻のデータ型に関係する `SqlParameter` プロパティの説明です。  
   
 |プロパティ|説明|  
@@ -100,11 +105,13 @@ SQL Server 2008 では、日付と時刻の情報を扱うための新しいデ�
 > 時刻の値が 0 と 24 の間にない場合は、<xref:System.ArgumentException> がスローされます。  
   
 ### <a name="creating-parameters"></a>パラメーターの作成  
+
  <xref:System.Data.SqlClient.SqlParameter> オブジェクトは、そのコンストラクターを使って作成できるほか、<xref:System.Data.SqlClient.SqlCommand> の <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> メソッドを呼び出して、`Add`<xref:System.Data.SqlClient.SqlParameterCollection> コレクションにそれを追加することによって作成することもできます。 `Add` メソッドは、入力としてコンストラクター引数または既存のパラメーター オブジェクトを受け取ります。  
   
  このトピックの次のセクションでは、日付と時刻のパラメーターを指定する方法の例を示します。 パラメーターの使用に関するその他の例については、「[パラメーターおよびパラメーター データ型の構成](../configuring-parameters-and-parameter-data-types.md)」および「[DataAdapter パラメーター](../dataadapter-parameters.md)」をご覧ください。  
   
 ### <a name="date-example"></a>Date の例  
+
  次のコード フラグメントは、`date` パラメーターの指定方法を示しています。  
   
 ```csharp  
@@ -122,6 +129,7 @@ parameter.Value = "2007/12/1"
 ```  
   
 ### <a name="time-example"></a>Time の例  
+
  次のコード フラグメントは、`time` パラメーターの指定方法を示しています。  
   
 ```csharp  
@@ -139,6 +147,7 @@ parameter.Value = DateTime.Parse("23:59:59").TimeOfDay;
 ```  
   
 ### <a name="datetime2-example"></a>Datetime2 の例  
+
  次のコード フラグメントは、`datetime2` パラメーターの日付と時刻の指定方法を示しています。  
   
 ```csharp  
@@ -156,6 +165,7 @@ parameter.Value = DateTime.Parse("1666-09-02 1:00:00");
 ```  
   
 ### <a name="datetimeoffset-example"></a>DateTimeOffSet の例  
+
  次のコード フラグメントは、`DateTimeOffSet` パラメーターの日付と時刻、およびタイム ゾーン オフセット 0 を指定する方法を示しています。  
   
 ```csharp  
@@ -173,6 +183,7 @@ parameter.Value = DateTimeOffset.Parse("1666-09-02 1:00:00+0");
 ```  
   
 ### <a name="addwithvalue"></a>AddWithValue  
+
  次のコード フラグメントに示すように、<xref:System.Data.SqlClient.SqlCommand> の `AddWithValue` メソッドを使用してパラメーターを指定することもできます。 ただし、`AddWithValue` メソッドでは、パラメーターの <xref:System.Data.SqlClient.SqlParameter.DbType%2A> または <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> を指定することはできません。  
   
 ```csharp  
@@ -196,6 +207,7 @@ command.Parameters.AddWithValue( _
 |DateTimeOffset|SqlDbType.DateTimeOffset|  
   
 ## <a name="retrieving-date-and-time-data"></a>日付と時刻データの取得  
+
  SQL Server 2008 の日付値および時刻値を取得するためのメソッドを次の表に示します。  
   
 |SqlClient のメソッド|説明|  
@@ -218,6 +230,7 @@ command.Parameters.AddWithValue( _
 > 新しい日付と時刻の `SqlDbTypes` は、SQL Server でインプロセスで実行されているコードではサポートされていません。 そのような型の 1 つがサーバーに渡されると、例外が発生します。  
   
 ## <a name="specifying-date-and-time-values-as-literals"></a>日付値と時刻値のリテラル指定  
+
  日付と時刻のデータ型は、さまざまなリテラル文字列形式を使用して指定できます。SQL Server は、実行時にそれらを内部の日付/時刻構造体に変換します。 SQL Server では、一重引用符 (') で囲まれた日付と時刻のデータが認識されます。 次の例に、いくつかの形式を示します。  
   
 - アルファベットの日付形式 (`'October 15, 2006'` など)。  
@@ -232,6 +245,7 @@ command.Parameters.AddWithValue( _
  時刻の値が 0 と 24 の間にない場合は、<xref:System.ArgumentException> がスローされます。  
   
 ## <a name="resources-in-sql-server-books-online"></a>SQL Server オンライン ブックの関連トピック  
+
  SQL Server での日付値と時刻値の使用方法の詳細については、SQL Server オンライン ブックで以下のリソースを参照してください。  
   
 |トピック|説明|  

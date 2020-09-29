@@ -3,17 +3,19 @@ title: 文字列内の文字を照会する方法 (LINQ) (C#)
 description: LINQ では、文字列を一連の文字として照会することができます。 この C# の例では、文字列を照会して、その文字列に含まれる数字の数を特定します。
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: 3512be7c30843fcd8e881eab59761706a84a3ac8
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 73288924d057e720a744b853998a52437b9db481
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104556"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153938"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-c"></a>文字列内の文字を照会する方法 (LINQ) (C#)
+
 <xref:System.String> クラスはジェネリック <xref:System.Collections.Generic.IEnumerable%601> インターフェイスを実装しているため、任意の文字列を文字のシーケンスとしてクエリできます。 ただし、これは LINQ の一般的な使用方法ではありません。 複雑なパターン一致操作には、<xref:System.Text.RegularExpressions.Regex> クラスを使用してください。  
   
 ## <a name="example"></a>例  
+
  次の例では、文字列を対象にクエリを実行して、その文字列に含まれる数字の数を特定します。 クエリは、最初に使用された後も "再利用" されます。 これができるのは、クエリ自体には実際の結果が格納されないためです。  
   
 ```csharp  
@@ -56,6 +58,7 @@ class QueryAString
 ```  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
+
  System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。  
   
 ## <a name="see-also"></a>関連項目

@@ -2,14 +2,15 @@
 title: '方法: 主キーを表す'
 ms.date: 03/30/2017
 ms.assetid: 63c65289-6539-42b2-8493-891c232018fa
-ms.openlocfilehash: 5df82292f000d7f5e61cab699237b86de30bda70
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 02570176c8aef5cfdc7ba09fd6976f430900e8df
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793432"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166236"
 ---
 # <a name="how-to-represent-primary-keys"></a>方法: 主キーを表す
+
 データベース列の主キーを表すプロパティまたはフィールドを指定するには、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の <xref:System.Data.Linq.Mapping.ColumnAttribute> 属性の <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> プロパティを使用します。  
   
  コード例については、「<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>」を参照してください。  

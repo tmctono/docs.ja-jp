@@ -5,19 +5,21 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
-ms.openlocfilehash: 1d7662d18acee60050800eaf3873cd1c11ef5157
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: bd1eafa2f695522aaa92d6a5341580cfc3887f9c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301841"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170377"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>C# プログラムの一般構造 (C# プログラミング ガイド)
+
 C# プログラムは、1 つ以上のファイルで構成できます。 各ファイルには、0 個以上の名前空間を含めることができます。 名前空間には、その他の名前空間以外に、クラス、構造体、インターフェイス、列挙型、デリゲートなどの型を含めることができます。 次に示すのは、これら要素をすべて含む C# プログラムのスケルトンです。  
   
  [!code-csharp[csProgGuide#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/class2.cs#34)]  
   
 ## <a name="related-sections"></a>関連項目  
+
  詳細情報  
   
 - [クラス](../classes-and-structs/classes.md)  

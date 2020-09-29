@@ -2,12 +2,12 @@
 title: マイクロサービス指向アプリケーションの設計
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 十分な情報を得たうえでの決定を行うことができるように、マイクロサービス指向アプリケーションの利点と欠点を理解する。
 ms.date: 10/02/2018
-ms.openlocfilehash: 619440c02c1a82e05adb2cec9ddba933cd3e0a65
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 11aa6327a8d870a1ff6356b88695b693c27f99a9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76965764"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172340"
 ---
 # <a name="design-a-microservice-oriented-application"></a>マイクロサービス指向アプリケーションを設計する
 
@@ -158,7 +158,7 @@ ms.locfileid: "76965764"
 
 - 単純な CRUD、単一階層、単一レイヤー。
 
-- [従来の N レイヤー](https://docs.microsoft.com/previous-versions/msp-n-p/ee658109(v=pandp.10))。
+- [従来の N レイヤー](/previous-versions/msp-n-p/ee658109(v=pandp.10))。
 
 - [ドメイン駆動設計の N レイヤー](https://devblogs.microsoft.com/cesardelatorre/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/)。
 

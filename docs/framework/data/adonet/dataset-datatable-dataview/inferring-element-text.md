@@ -2,14 +2,15 @@
 title: 要素のテキストの推論
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: 3fdd110a14ddfd6065ed552171a8d76ef64e2fb5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7389e24f39902edf041c3cd3502303b17fd008ba
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784539"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164689"
 ---
 # <a name="inferring-element-text"></a>要素のテキストの推論
+
 要素にテキストは含まれているが、テーブルとして推論される (属性を持つ要素または繰り返し出現する要素などの) 子の要素がない場合は、**TableName_Text** という名前の新しい列が、要素に対して推論されるテーブルに追加されます。 要素に含まれているテキストはテーブルの行に追加され、新しい列に格納されます。 新しい列の **ColumnMapping** プロパティは、**MappingType.SimpleContent** に設定されます。  
   
  たとえば、次のような XML があるとします。  

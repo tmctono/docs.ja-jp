@@ -2,17 +2,19 @@
 title: 入れ子になった Entity SQL クエリの作成
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: b28c46ba9a89ffffe8cd95ad55eb502eb8ea48a6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0c9a6a99ff49cfa847f4c1e7ea693fbb2611debd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541097"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153067"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>入れ子になった Entity SQL クエリの作成
+
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] は、機能の豊富な関数言語です。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] の構成要素は式です。 従来の SQL と異なり、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] では結果セットは表形式に限定されません。[!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、リテラル、パラメーター、入れ子になった式などが含まれた複雑な式を作成できます。 式の値は、パラメーター化されている場合、つまり他の式で構成される場合があります。  
   
 ## <a name="nested-expressions"></a>入れ子になった式  
+
  入れ子になった式は、その式によって返される型の値が受け入れられる場所であればどこにでも配置できます。 次に例を示します。  
   
 ```sql  
@@ -49,6 +51,7 @@ FROM … );
  次の例では、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] で式を正しく入れ子にする方法を示します。[方法:2 つのクエリの結合を並べ替える](/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))。  
   
 ## <a name="nested-queries-in-projection"></a>投影内の入れ子になったクエリ  
+
  project 句内の入れ子になったクエリは、サーバーでデカルト積に変換されないことがあります。 SQL Server などの一部のバックエンド サーバーでは、これによって TempDB テーブルのサイズが非常に大きくなり、サーバーのパフォーマンスに悪影響を及ぼす場合があります。  
   
  以下は、このようなクエリの例です。  
@@ -58,6 +61,7 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ```  
   
 ## <a name="ordering-nested-queries"></a>入れ子になったクエリの順序  
+
  Entity Framework では、入れ子になった式をクエリ内の任意の場所に配置できます。 Entity SQL ではクエリを柔軟に作成できるので、入れ子になったクエリの順序を含むクエリを記述できます。 ただし、入れ子になったクエリの順序は維持されません。  
   
 ```sql  

@@ -2,14 +2,15 @@
 title: オプティミスティック コンカレンシー:概要
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-ms.openlocfilehash: fa7d423c0abc07e0d97f7d0d4d557aa11d675ee4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7a1bc23d9f012b2f3541c1411a25b7527e696873
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792928"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169395"
 ---
 # <a name="optimistic-concurrency-overview"></a>オプティミスティック コンカレンシー:概要
+
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] はオプティミスティック コンカレンシーをサポートします。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のドキュメントでオプティミスティック コンカレンシーの説明に使用されている用語を次の表に示します。  
   
 |用語|説明|  
@@ -32,6 +33,7 @@ ms.locfileid: "70792928"
 > オプティミスティック コンカレンシーのチェックに関与するのは、<xref:System.Data.Linq.Mapping.UpdateCheck.Always> または <xref:System.Data.Linq.Mapping.UpdateCheck.WhenChanged> として割り当てられているメンバーのみです。 <xref:System.Data.Linq.Mapping.UpdateCheck.Never> と指定されているメンバーには、チェックは実行されません。 詳細については、「<xref:System.Data.Linq.Mapping.UpdateCheck>」を参照してください。  
   
 ## <a name="example"></a>例  
+
  次のシナリオは、ユーザー 1 が、更新の手始めとして、データベースの行をクエリした状況です。 ユーザー 1 が取得した行には、Alfreds、Maria、および Sales という値が入っています。  
   
  ユーザー 1 は、Manager 列の値を Alfred に、また Department 列の値を Marketing に、それぞれ変更しようと考えています。 しかし、ユーザー 1 がその変更を発行する前に、ユーザー 2 がデータベースに変更を送信しました。 その結果、Assistant 列の値は Mary に、また Department 列の値は Service に、それぞれ変更されました。  
@@ -47,6 +49,7 @@ ms.locfileid: "70792928"
  このような競合は、いくつかの方法で解決できます。 詳細については、[変更の競合を管理する](how-to-manage-change-conflicts.md)」を参照してください。  
   
 ## <a name="conflict-detection-and-resolution-checklist"></a>競合の検出と解決のチェック リスト  
+
  競合の検出と解決は、さまざまな詳細レベルで行うことができます。 極端な方法としては、すべての競合を 3 つの方法 (<xref:System.Data.Linq.RefreshMode> を参照) のいずれかで 1 つで解決し、それ以外の考慮を一切加えないという方法もあります。 正反対の方法としては、競合している各メンバーについて、それぞれの競合の種類ごとに、特定の処理を指定するという方法もあります。  
   
 - オブジェクト モデルの <xref:System.Data.Linq.Mapping.UpdateCheck> オプションを指定または変更します。  
@@ -66,6 +69,7 @@ ms.locfileid: "70792928"
      詳細については、[データベース値を維持することで競合を解決する](how-to-resolve-conflicts-by-retaining-database-values.md)」、「[方法: データベース値を上書きすることで競合を解決する](how-to-resolve-conflicts-by-overwriting-database-values.md)」、「[方法: データベース値とマージすることで競合を解決する](how-to-resolve-conflicts-by-merging-with-database-values.md)」を参照してください。  
   
 ## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a>競合の発見と解決をサポートする LINQ to SQL の型  
+
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] で、オプティミスティック コンカレンシーの競合の解決をサポートするクラスと機能を以下に示します。  
   
 - <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=nameWithType>  

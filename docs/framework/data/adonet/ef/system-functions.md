@@ -2,14 +2,15 @@
 title: システム関数
 ms.date: 03/30/2017
 ms.assetid: b7c71b58-09e6-44ce-a3e5-a0fdb892fb86
-ms.openlocfilehash: 9b5455d63dca40834515b14bae2f35d3b54d2aee
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 0d46429ac958e6f5db4d51947669784303af783b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452436"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156499"
 ---
 # <a name="system-functions"></a>システム関数
+
 .NET Framework Data Provider for SQL Server (SqlClient) には、次のシステム関数が用意されています。  
   
 |関数|説明|  

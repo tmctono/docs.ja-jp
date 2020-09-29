@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 9d12c7c7dcbc3a24cf51ade5481f59715c4c4d88
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 920912591b20102f81e1fed2f4ffbe51df8015fb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555108"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153535"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET のコード例
 
@@ -38,36 +38,43 @@ ms.locfileid: "90555108"
 - [LINQ to SQL](#linq-to-sql)
 
 ## <a name="adonet-data-provider-examples"></a>ADO.NET データ プロバイダーの例
+
 以下に示した各コードは、ADO.NET データ プロバイダーを使用してデータベースからデータを取得する方法を示しています。 データは `DataReader` で返されます。 詳しくは、「[DataReader によるデータの取得](retrieving-data-using-a-datareader.md)」をご覧ください。
 
 ### <a name="sqlclient"></a>SqlClient
+
 このコード例では、Microsoft SQL Server の `Northwind` サンプル データベースに接続できることを前提としています。 このコードは <xref:System.Data.SqlClient.SqlCommand> を作成してProducts テーブルから行を選択し、<xref:System.Data.SqlClient.SqlParameter> を追加して、結果を指定したパラメーター値 (この場合は 5) よりも大きな UnitPrice を持つ行に制限します。 <xref:System.Data.SqlClient.SqlConnection> は `using` ブロック内で開かれ、これによってコードが終了したときにリソースが閉じられ破棄されます。 コードは <xref:System.Data.SqlClient.SqlDataReader> を使用してコマンドを実行し、コンソール ウィンドウに結果を表示します。
 
  [!code-csharp[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/VB/source.vb#1)]
 
 ### <a name="oledb"></a>OleDb
+
 このコード例は、Microsoft Access の Northwind サンプル データベースに接続できることを前提としています。 このコードは <xref:System.Data.OleDb.OleDbCommand> を作成してProducts テーブルから行を選択し、<xref:System.Data.OleDb.OleDbParameter> を追加して、結果を指定したパラメーター値 (この場合は 5) よりも大きな UnitPrice を持つ行に制限します。 <xref:System.Data.OleDb.OleDbConnection> は `using` ブロック内に開かれ、これによってコードが終了したときにリソースが閉じられ破棄されます。 コードは <xref:System.Data.OleDb.OleDbDataReader> を使用してコマンドを実行し、コンソール ウィンドウに結果を表示します。
 
  [!code-csharp[DataWorks SampleApp.OleDb#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.OleDb/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.OleDb#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.OleDb/VB/source.vb#1)]
 
 ### <a name="odbc"></a>Odbc
+
 このコード例は、Microsoft Access の Northwind サンプル データベースに接続できることを前提としています。 このコードは <xref:System.Data.Odbc.OdbcCommand> を作成してProducts テーブルから行を選択し、<xref:System.Data.Odbc.OdbcParameter> を追加して、結果を指定したパラメーター値 (この場合は 5) よりも大きな UnitPrice を持つ行に制限します。 <xref:System.Data.Odbc.OdbcConnection> は `using` ブロック内で開かれ、これによってコードが終了したときにリソースが閉じられ破棄されます。 コードは <xref:System.Data.Odbc.OdbcDataReader> を使用してコマンドを実行し、コンソール ウィンドウに結果を表示します。
 
 [!code-csharp[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/CS/source.cs#1)]
 [!code-vb[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/VB/source.vb#1)]
 
 ### <a name="oracleclient"></a>OracleClient
+
 このコード例では、Oracle サーバー上の DEMO.CUSTOMER との接続を前提としています。 また、System.Data.OracleClient.dll への参照を追加する必要があります。 このコードは、データを <xref:System.Data.OracleClient.OracleDataReader> で返します。
 
  [!code-csharp[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/VB/source.vb#1)]
 
 ## <a name="entity-framework-examples"></a>Entity Framework の例
+
 以下に示した各コードは、エンティティ データ モデル (EDM) のエンティティを照会して、データ ソースからデータを取得する方法を示しています。 これらの例では、Northwind サンプル データベースに基づくモデルが使用されています。 Entity Framework について詳しくは、「[Entity Framework の概要](./ef/overview.md)」をご覧ください。
 
 ### <a name="linq-to-entities"></a>LINQ to Entities
+
 この例のコードは LINQ クエリを使用してデータをカテゴリ オブジェクトとして返します。これは、CategoryID および CategoryName プロパティのみを含んでいる匿名型として射影されます。 詳しくは、「[LINQ to Entities の概要](./ef/language-reference/linq-to-entities.md)」をご覧ください。
 
 ```csharp
@@ -138,6 +145,7 @@ End Class
 ```
 
 ### <a name="typed-objectquery"></a>型指定された ObjectQuery
+
 この例のコードは <xref:System.Data.Objects.ObjectQuery%601> を使用し、カテゴリ オブジェクトとしてデータを返します。 詳しくは、「[オブジェクト クエリ](/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))」をご覧ください。
 
 ```csharp
@@ -187,6 +195,7 @@ End Class
 ```
 
 ### <a name="entityclient"></a>EntityClient
+
 この例のコードは <xref:System.Data.EntityClient.EntityCommand> を使用し、Entity SQL クエリを実行します。 このクエリは、カテゴリ エンティティ型のインスタンスを示すレコードのリストを返します。 <xref:System.Data.EntityClient.EntityDataReader> を使用して、結果セットのデータ レコードにアクセスします。 詳細については、「 [Entity Framework 用の EntityClient プロバイダー](./ef/entityclient-provider-for-the-entity-framework.md)」を参照してください。
 
 ```csharp
@@ -270,6 +279,7 @@ End Class
 ```
 
 ## <a name="linq-to-sql"></a>LINQ to SQL
+
 この例のコードは LINQ クエリを使用してデータをカテゴリ オブジェクトとして返します。これは、CategoryID および CategoryName プロパティのみを含んでいる匿名型として射影されます。 この例は Northwind データ コンテキストを基にしています。 詳細については、[概要](./sql/linq/getting-started.md)に関するページを参照してください。
 
 ```csharp

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
-ms.openlocfilehash: c89fb3e11ae8e0f8ea37727446cdf65db9499a1d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f612877f5e7da6442c242aa0d56d811c0aa7cf8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148375"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166457"
 ---
 # <a name="how-to-map-database-relationships"></a>方法: データベース リレーションシップを割り当てる
+
 データ リレーションシップが常に同じ場合は、これをエンティティ クラス内のプロパティ参照としてエンコードできます。 たとえば、Northwind サンプル データベースでは、通常は顧客が注文を発注するため、モデルには、顧客と注文のリレーションシップが常に存在します。  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、そのようなリレーションシップを表すのに役立つ <xref:System.Data.Linq.Mapping.AssociationAttribute> 属性が定義されています。 この属性を、<xref:System.Data.Linq.EntitySet%601> 型および <xref:System.Data.Linq.EntityRef%601> 型と共に使用することで、データベース内の外部キー リレーションシップが表されます。 詳しくは、「[属性ベースの対応付け](attribute-based-mapping.md)」の関連付け属性のセクションをご覧ください。  
@@ -36,6 +37,7 @@ ms.locfileid: "79148375"
     >  これに対し、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 内のオブジェクトは、"*ドット*" 表記を使用してナビゲートするプロパティ参照または参照のコレクションを使用して、互いを参照します。  
   
 ## <a name="example"></a>例  
+
  次の一対多の例では、`Customer` クラスは、顧客とその注文のリレーションシップを宣言するプロパティを持ちます。  `Orders` プロパティは <xref:System.Data.Linq.EntitySet%601> 型です。 この型は、このリレーションシップが一対多 (1 人の顧客対多くの注文) であることを意味します。 <xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A> プロパティを使用して、この関連付けを実現する方法を記述します。つまり、これと比較する、関連クラス内のプロパティの名前を指定します。 この例では、データベース "*結合*" でその列の値が比較されるときに、`CustomerID` プロパティが比較されます。  
   
 > [!NOTE]
@@ -45,6 +47,7 @@ ms.locfileid: "79148375"
  [!code-vb[DlinqCustomize#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#3)]  
   
 ## <a name="example"></a>例  
+
  逆の場合も可能です。 `Customer` クラスを使用して顧客と注文の関連付けを記述するのではなく、`Order` クラスを使用できます。 `Order` クラスは、<xref:System.Data.Linq.EntityRef%601> 型を使用して、次のコード例に示すように、顧客へのリレーションシップを記述できます。  
   
 > [!NOTE]

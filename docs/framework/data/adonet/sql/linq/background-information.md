@@ -2,14 +2,15 @@
 title: 背景情報
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: fc7c68fe2dba266e056feb459038a060a055e175
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 56ba323aee3b559fbb8afd506be4c23595df6d2d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542112"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156096"
 ---
 # <a name="background-information"></a>背景情報
+
 このセクションのトピックでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の使用に関する基本事項の範囲を超えた概念と手順について説明します。  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] コードおよびアプリケーションの他の例を参照するには、次の手順に従います。  
@@ -21,6 +22,7 @@ ms.locfileid: "90542112"
 - Visual Basic と C# のコード例が含まれる、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のテクノロジについて詳しく説明されているホワイト ペーパーを参照します。 詳細については、「[LINQ to SQL: .NET Language-Integrated Query for Relational Data](/previous-versions/dotnet/articles/bb425822(v=msdn.10))」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [ADO.NET および LINQ to SQL](ado-net-and-linq-to-sql.md)  
  ADO.NET と [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の関係について説明します。  
   
@@ -82,5 +84,6 @@ ms.locfileid: "90542112"
  デザイン時にユーザー定義関数を対応付ける方法、およびアプリケーションからこれらを呼び出す方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [プログラミング ガイド](programming-guide.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のさまざまな要素について説明するセクションへのリンクを示します。

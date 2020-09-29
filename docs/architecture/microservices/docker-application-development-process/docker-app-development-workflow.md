@@ -2,12 +2,12 @@
 title: Docker アプリの開発ワークフロー
 description: Docker ベースのアプリケーションを開発するためのワークフローの詳細を理解します。 まず、段階的に見ていき、Dockerfile の最適化について詳しく確認し、最終的には Visual Studio を使用する際に利用できる簡略化されたワークフローを理解します。
 ms.date: 01/30/2020
-ms.openlocfilehash: d32134a10fb9b56e874bbc6218ca2c4d822adb90
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 04b59a6c30b4fb8f34fe1d0e5cd5328ac77ecb4e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90678850"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172555"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker アプリの開発ワークフロー
 
@@ -557,7 +557,7 @@ Docker アプリの開発プロセス:1 - アプリをコーディングする�
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Windows コンテナーを設定するための PowerShell コマンドの使用
 
-[Windows コンテナー](https://docs.microsoft.com/virtualization/windowscontainers/about/index)は、既存の Windows アプリケーションを Docker イメージに変換して、Docker エコシステムの残りと同じツールで展開できます。 Windows コンテナーを使用するには、次の例のように、Dockerfile で PowerShell コマンドを実行します。
+[Windows コンテナー](/virtualization/windowscontainers/about/index)は、既存の Windows アプリケーションを Docker イメージに変換して、Docker エコシステムの残りと同じツールで展開できます。 Windows コンテナーを使用するには、次の例のように、Dockerfile で PowerShell コマンドを実行します。
 
 ```dockerfile
 FROM mcr.microsoft.com/windows/servercore

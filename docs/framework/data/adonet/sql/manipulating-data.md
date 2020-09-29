@@ -5,20 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: 70ee6041b14feb298d93ab452e16ee23607b3fcc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b5f649f0247c150ebc2f0e7e54c3fc8c0b607c5c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174291"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172711"
 ---
 # <a name="manipulating-data"></a>データの操作
+
 複数のアクティブな結果セット (MARS : Multiple Active Result Set) の導入前は、開発者は複数の接続またはサーバー側のカーソルのいずれかを使用して特定のシナリオを解決しなければなりませんでした。 さらに、トランザクションの状況で複数の接続を使用するときは、接続をバインド (**sp_getbindtoken** と **sp_bindsession**) する必要がありました。 以下のシナリオでは、複数の接続の代わりに MARS の有効な接続の使い方について説明します。  
   
 ## <a name="using-multiple-commands-with-mars"></a>MARS で複数のコマンドを使用する  
+
  次のコンソール アプリケーションでは、2 つの <xref:System.Data.SqlClient.SqlDataReader> オブジェクトを 2 つの <xref:System.Data.SqlClient.SqlCommand> オブジェクトと使用する方法、および 1 つの <xref:System.Data.SqlClient.SqlConnection> オブジェクトを MARS を有効にして使用する方法について示します。  
   
 ### <a name="example"></a>例  
+
  この例では、**AdventureWorks** データベースへの 1 つの接続を開きます。 <xref:System.Data.SqlClient.SqlCommand> オブジェクトを使用することで、<xref:System.Data.SqlClient.SqlDataReader> が作成されます。 そのリーダーが使用されるとき、最初の <xref:System.Data.SqlClient.SqlDataReader> のデータが 2 番目のリーダーの WHERE 句への入力として使用され、2 番目の <xref:System.Data.SqlClient.SqlDataReader> が開きます。  
   
 > [!NOTE]
@@ -164,9 +167,11 @@ static void Main()
 ```  
   
 ## <a name="reading-and-updating-data-with-mars"></a>MARS によるデータの読み取りと更新  
+
  MARS を使用すると、複数の保留中の操作について、読み取り操作と DML (データ操作言語) 操作の両方で 1 つの接続を使用することができます。 この機能により、アプリケーションで接続ビジー エラーを処理する必要がなくなります。 さらに、MARS ではサーバー側カーソルの使用を置き換えることができます。通常、この処理は多くのリソースを消費します。 最後に、複数の操作を単一の接続で実行できるので、同じトランザクション コンテキストを共有することにより、システムのストアド プロシージャである **sp_getbindtoken** と **sp_bindsession** を使用する必要がなくなります。  
   
 ### <a name="example"></a>例  
+
  次のコンソール アプリケーションは、MARS を有効にして、3 つの <xref:System.Data.SqlClient.SqlCommand> オブジェクトと 1 つの <xref:System.Data.SqlClient.SqlConnection> オブジェクトを使って、2 つの <xref:System.Data.SqlClient.SqlDataReader> オブジェクトを使用する方法を示しています。 最初のコマンド オブジェクトは、信用格付けの評価が 5 であるベンダーの一覧を取得します。 2 番目のコマンド オブジェクトは、<xref:System.Data.SqlClient.SqlDataReader> から提供されているベンダー ID を使用して、特定のベンダーの全製品を含む 2 番目の <xref:System.Data.SqlClient.SqlDataReader> を読み込みます。 各製品レコードには、2 番目の <xref:System.Data.SqlClient.SqlDataReader> によってアクセスされます。 計算が実行され、新規 **OnOrderQty** を判定します。 3 番目のコマンド オブジェクトでは、**ProductVendor** テーブルを新しい値で更新します。 このプロセスはすべて 1 つのトランザクション内で実行され、最後にロールバックされます。  
   
 > [!NOTE]

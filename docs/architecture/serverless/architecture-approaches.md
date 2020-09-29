@@ -4,12 +4,12 @@ description: N 層アーキテクチャからサーバーレスへ、クラウ�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 74de96bef48f16ced4adf82855a740aa0afcdf1d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ab84d1f3425c1fda787756b73fd8315fe6d4231
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522901"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171976"
 ---
 # <a name="architecture-approaches"></a>アーキテクチャのアプローチ
 
@@ -21,7 +21,7 @@ ms.locfileid: "72522901"
 
 最新のビジネス アプリケーションは、さまざまなアーキテクチャ パターンに従います。 このセクションでは、一般的なパターンの調査について説明します。 ここに記載されているパターンは、必ずしもすべてがベスト プラクティスではありませんが、さまざまなアプローチを示しています。
 
-詳細については、「[Azure アプリケーション アーキテクチャ ガイド](https://docs.microsoft.com/azure/architecture/guide/)」を参照してください。
+詳細については、「[Azure アプリケーション アーキテクチャ ガイド](/azure/architecture/guide/)」を参照してください。
 
 ## <a name="monoliths"></a>モノリス
 
@@ -65,7 +65,7 @@ N 層アプローチには、次のようないくつかの利点があります
 
 ## <a name="microservices"></a>マイクロサービス
 
-**[マイクロサービス](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)** アーキテクチャには、次のような一般的な特性があります。
+**[マイクロサービス](/azure/architecture/guide/architecture-styles/microservices)** アーキテクチャには、次のような一般的な特性があります。
 
 - アプリケーションは複数の小さいサービスで構成されています。
 - 各サービスは独自のプロセスで実行されます。

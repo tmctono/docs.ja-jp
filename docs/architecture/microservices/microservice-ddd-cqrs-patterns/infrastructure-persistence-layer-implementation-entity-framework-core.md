@@ -2,12 +2,12 @@
 title: Entity Framework Core でインフラストラクチャの永続レイヤーを実装する
 description: コンテナー化された .NET アプリケーション向け .NET マイクロサービス アーキテクチャ | Entity Framework Core を使用してインフラストラクチャの永続レイヤーを実装する方法の詳細を確認します。
 ms.date: 01/30/2020
-ms.openlocfilehash: f9d97319d378b6fd3eb681fd2873e5fbeead787f
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: 878d4d64e92ca92fd2393d60d496f1c5671e7029
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100978"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172353"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Core でインフラストラクチャの永続レイヤーを実装する
 
@@ -367,7 +367,7 @@ EF Core 1.1 以降で利用可能になったこの機能では、列をフィ�
 
 ### <a name="use-shadow-properties-in-ef-core-hidden-at-the-infrastructure-level"></a>インフラストラクチャ レベルでは非表示のシャドウ プロパティを EF Core で使用する
 
-EF Core のシャドウ プロパティは、エンティティ クラス モデルに存在しないプロパティです。 これらのプロパティの値と状態は、インフラストラクチャ レベルの [ChangeTracker](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.changetracking.changetracker) で汚染されないように保守管理されます。
+EF Core のシャドウ プロパティは、エンティティ クラス モデルに存在しないプロパティです。 これらのプロパティの値と状態は、インフラストラクチャ レベルの [ChangeTracker](/ef/core/api/microsoft.entityframeworkcore.changetracking.changetracker) で汚染されないように保守管理されます。
 
 ## <a name="implement-the-query-specification-pattern"></a>クエリ仕様パターンを実装する
 

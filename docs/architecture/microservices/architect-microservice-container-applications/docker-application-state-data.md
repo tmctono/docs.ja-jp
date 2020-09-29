@@ -2,12 +2,12 @@
 title: Docker アプリケーションの状態とデータ
 description: Docker アプリケーションでの状態とデータの管理。 マイクロサービスのインスタンスは再利用できませんが、データはそうではありません。マイクロ サービスでこれを処理する方法。
 ms.date: 09/20/2018
-ms.openlocfilehash: 1157ea3c4ca8fc389769308cc0a1141b5f92bb88
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 10271d41dcd0574cd212663c2ee22ae06c2c1269
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72771440"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152625"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker アプリケーションの状態とデータ
 
@@ -27,7 +27,7 @@ Docker ホストから、[Docker ボリューム](https://docs.docker.com/engine
 
 - [Azure Storage](https://azure.microsoft.com/documentation/services/storage/)。地理的に分散可能なストレージを提供し、コンテナーに適した長期的で持続性の高いソリューションを提供します。
 
-- [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) のようなリモート リレーショナル データベース、[Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) のような NoSQL データベース、[Redis](https://redis.io/) のようなキャッシュ サービス。
+- [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) のようなリモート リレーショナル データベース、[Azure Cosmos DB](/azure/cosmos-db/introduction) のような NoSQL データベース、[Redis](https://redis.io/) のようなキャッシュ サービス。
 
 Docker コンテナーから:
 

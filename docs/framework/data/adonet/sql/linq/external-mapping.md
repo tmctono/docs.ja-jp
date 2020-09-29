@@ -2,14 +2,15 @@
 title: 外部マップ
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: ba5af75ae34b233354fec6e9074f3cc96d924c7f
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 79427cde0784746480e851cf1be56c8bce854919
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003045"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161387"
 ---
 # <a name="external-mapping"></a>外部マップ
+
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、"*外部マッピング*" がサポートされています。これは、個別の XML ファイルを使用して、データベースのデータ モデルとオブジェクト モデルの間のマッピングを指定するプロセスです。 外部マッピング ファイルを使用すると、次のような利点があります。  
   
 - マッピング コードをアプリケーション コードから分離できます。 この方法により、アプリケーション コードの煩雑さが軽減されます。  
@@ -17,6 +18,7 @@ ms.locfileid: "72003045"
 - 外部マッピング ファイルは、構成ファイルのような方法で扱うことができます。 たとえば、バイナリを配布した後、外部マッピング ファイルを交換するだけでアプリケーションの動作を更新できます。  
   
 ## <a name="requirements"></a>必要条件  
+
  マッピング ファイルは XML ファイルである必要があります。また、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のスキーマ定義 (.xsd) ファイルに対して有効である必要があります。  
   
  次の規則が適用されます。  
@@ -30,6 +32,7 @@ ms.locfileid: "72003045"
 - [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、2 つのマッピング方法 (属性ベースと外部) を組み合わせて使用することはできません。  
   
 ## <a name="xml-schema-definition-file"></a>XML スキーマ定義ファイル  
+
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の外部マッピングは、以下のような XML スキーマ定義に対して有効である必要があります。  
   
  このスキーマ定義ファイルを、DBML ファイルの検証に使われるスキーマ定義ファイルと区別してください。 詳しくは、「[LINQ to SQL でのコード生成](code-generation-in-linq-to-sql.md)」をご覧ください。  

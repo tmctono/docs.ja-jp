@@ -3,14 +3,15 @@ description: -target:winmdobj (C# コンパイラ オプション)
 title: -target:winmdobj (C# コンパイラ オプション)
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: 66a4bddb34832705ad4779829e561afd9442be8f
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: a13e2da02698209a514e716d65c1df3508cf1508
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89139087"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171404"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (C# コンパイラ オプション)
+
 **-target:winmdobj** コンパイラ オプションを使用すると、コンパイラは、Windows ランタイム バイナリ (.winmd) ファイルに変換できる .winmdobj 中間ファイルを作成します。 .winmd ファイルは、マネージド言語プログラムだけでなく JavaScript および C++ プログラムでも使用できます。  
   
 ## <a name="syntax"></a>構文  
@@ -20,6 +21,7 @@ ms.locfileid: "89139087"
 ```  
   
 ## <a name="remarks"></a>解説  
+
  **winmdobj** 設定は、中間モジュールが必要であることをコンパイラに通知します。 これに対し、Visual Studio が C# クラス ライブラリを .winmdobj ファイルとしてコンパイルします。 .winmdobj ファイルは <xref:Microsoft.Build.Tasks.WinMDExp> エクスポート ツールで送信され、Windows メタデータ ファイル (.winmd) が生成されます。 .winmd ファイルには、元のライブラリのコードと WinMD メタデータの両方が含まれています。メタデータは、JavaScript または C++、および Windows ランタイムで使用されます。  
   
  **-target:winmdobj** コンパイラ オプションを使用してコンパイルされたファイルの出力は、WimMDExp エクスポート ツール用の入力としてのみ使用するように設計されています。 .winmdobj ファイル自体は直接参照されません。  
@@ -41,6 +43,7 @@ ms.locfileid: "89139087"
  このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.ProjectProperties3.OutputType%2A>」を参照してください。  
   
 ## <a name="example"></a>例  
+
  次のコマンドは .winmdobj 中間ファイルに `filename.cs` をコンパイルします。  
   
 ```console  

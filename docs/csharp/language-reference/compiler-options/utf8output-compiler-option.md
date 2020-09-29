@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /utf8output compiler option [C#]
 - -utf8output compiler option [C#]
 ms.assetid: 27ff7381-c281-45d7-b2eb-1ad644b1354e
-ms.openlocfilehash: e0e3a1eb437fb24adec277c527f768548e8937ca
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 675782ffef9768e57397e765538924b78a2abcaa
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89127374"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171365"
 ---
 # <a name="-utf8output-c-compiler-options"></a>-utf8output (C# コンパイラ オプション)
+
 **-utf8output** オプションは UTF-8 エンコードを使用してコンパイラ出力を表示します。  
   
 ## <a name="syntax"></a>構文  
@@ -26,6 +27,7 @@ ms.locfileid: "89127374"
 ```  
   
 ## <a name="remarks"></a>解説  
+
  国際化の設定によっては、コンパイラの出力が正しくコンソールに表示できない場合があります。 これらの設定では、**-utf8output** を使用してコンパイラ出力をファイルにリダイレクトします。  
   
  このコンパイラ オプションは Visual Studio では使用できず、プログラムで変更することはできません。  

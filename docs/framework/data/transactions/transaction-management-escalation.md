@@ -3,14 +3,15 @@ title: トランザクション管理のエスカレーション
 description: トランザクション マネージャーのいずれかのコンポーネントから別のコンポーネントにトランザクションを移行するプロセスである、.NET のトランザクション管理エスカレーションについて説明します。
 ms.date: 03/30/2017
 ms.assetid: 1e96331e-31b6-4272-bbbd-29ed1e110460
-ms.openlocfilehash: a0b70f4be0f041be95b02537e06f9ec19a9b6183
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 83abca2e2c9acf53ce3f72d6bc55a82964b99cb5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141658"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155442"
 ---
 # <a name="transaction-management-escalation"></a>トランザクション管理のエスカレーション
+
 Windows は、トランザクション マネージャーを構成する一連のサービスとモジュールをホストします。 トランザクション管理のエスカレーションとは、トランザクション マネージャーのいずれかのコンポーネントから別のコンポーネントにトランザクションを移行するプロセスを表します。  
   
  <xref:System.Transactions> には、最大で 1 つの永続的なリソースまたは複数の揮発性リソースに関連するトランザクションを調整するトランザクション マネージャー コンポーネントが含まれています。 トランザクション マネージャーは、アプリケーション内ドメインの呼び出しのみを使用するため、最良のパフォーマンスを得られます。 開発者は、トランザクション マネージャーを直接操作する必要はありません。 その代わり、インターフェイス、共通する動作、およびヘルパー クラスを定義する共通インフラストラクチャが、<xref:System.Transactions> 名前空間によって用意されています。  
@@ -20,6 +21,7 @@ Windows は、トランザクション マネージャーを構成する一連�
  <xref:System.Transactions> トランザクションと MSDTC トランザクションの間には、PSPE (Promotable Single Phase Enlistment) を介して利用できる中間タイプのトランザクションがあります。 PSPE は、<xref:System.Transactions> でパフォーマンスを最適化するための重要なメカニズムです。 PSPE を使用すると、異なるアプリケーション ドメイン、プロセス、コンピューターにあるリモート永続リソースが、MSDTC トランザクションにエスカレートされることなく、<xref:System.Transactions> トランザクションに参加できるようになります。 PSPE の詳細については、「[トランザクションの参加要素としてのリソースの参加](enlisting-resources-as-participants-in-a-transaction.md)」を参照してください。  
   
 ## <a name="how-escalation-is-initiated"></a>エスカレーションの開始方法  
+
  トランザクションのエスカレーションが行われると、パフォーマンスが低下します。MSDTC は別のプロセスにあるため、トランザクションを MSDTC にエスカレートすると、プロセス間でメッセージが送信されることになるからです。 パフォーマンスを向上させるには、MSDTC へのエスカレーションを遅延または回避します。このため、エスカレーションが開始される方法とその条件を知る必要があります。  
   
  <xref:System.Transactions> インフラストラクチャが揮発性リソースと、単一フェーズの通知をサポートする最大 1 つの永続リソースを処理している限り、トランザクションは、<xref:System.Transactions> インフラストラクチャが所有し続けます。 トランザクション マネージャーが有効であるのは、同じアプリケーション ドメインに存在し、ログ (トランザクション結果のディスクへの書き込み) が必要ないリソースに対してのみです。 次の場合には、<xref:System.Transactions> インフラストラクチャにより、トランザクションの所有権が MSDTC に移されます。  

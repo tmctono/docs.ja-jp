@@ -2,12 +2,12 @@
 title: 値オブジェクトの実装
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 新しい Entity Framework 機能を使用し、値オブジェクトを実装する方法の詳細とオプション。
 ms.date: 08/21/2020
-ms.openlocfilehash: 02eed7baaa364c62aa2df599f1d8b0e700dd215f
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 1cb7ce04b3ab2f6da25f398e016baf60b863fb6b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811120"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169207"
 ---
 # <a name="implement-value-objects"></a>値オブジェクトを実装する
 
@@ -126,7 +126,7 @@ Entity Framework (EF) で使用するクラスに ID フィールドを置かな
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>EF Core 1.1 を使用する背景と以前のアプローチ
 
-背景として、EF Core 1.0 と 1.1 を使用する場合、従来の .NET Framework で EF 6.x で定義されているような[複合型](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute)を使用できないという制限がありました。 そのため、EF Core 1.0 または 1.1 を使用する場合、値オブジェクトを ID フィールドを持つ EF エンティティとして格納する必要がありました。 そこで、ID を持たない値オブジェクトのように見えるように、ID を非表示にすることがありました。これで、値オブジェクトの ID がドメイン モデルで重要ではないことがはっきりします。 この ID を非表示にするには、[シャドウ プロパティ](https://docs.microsoft.com/ef/core/modeling/shadow-properties )として ID を使用します。 モデル内の ID を非表示にする構成は EF インフラストラクチャ レベルで設定されるため、ドメイン モデルでも透過的になります。
+背景として、EF Core 1.0 と 1.1 を使用する場合、従来の .NET Framework で EF 6.x で定義されているような[複合型](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute)を使用できないという制限がありました。 そのため、EF Core 1.0 または 1.1 を使用する場合、値オブジェクトを ID フィールドを持つ EF エンティティとして格納する必要がありました。 そこで、ID を持たない値オブジェクトのように見えるように、ID を非表示にすることがありました。これで、値オブジェクトの ID がドメイン モデルで重要ではないことがはっきりします。 この ID を非表示にするには、[シャドウ プロパティ](/ef/core/modeling/shadow-properties)として ID を使用します。 モデル内の ID を非表示にする構成は EF インフラストラクチャ レベルで設定されるため、ドメイン モデルでも透過的になります。
 
 eShopOnContainers の初期バージョン (.NET Core 1.1) では、EF Core インフラストラクチャに必要な非表示の ID は、次のように、インフラストラクチャ プロジェクトで Fluent API を使用して DbContext レベルで実装されていました。 そのため、ID はドメイン モデルの観点からは非表示でしたが、インフラストラクチャには存在していました。
 

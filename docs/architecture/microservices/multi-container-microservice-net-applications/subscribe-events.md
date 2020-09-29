@@ -2,12 +2,12 @@
 title: イベントへのサブスクライブ
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 統合イベントの発行とサブスクライブについて。
 ms.date: 01/30/2020
-ms.openlocfilehash: 426dcebe175e9db9a02bcdb2f21ad039154a7bda
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 838aaebbd390a66142c2bcdfa2f3b0ee4c32b7f0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888216"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172210"
 ---
 # <a name="subscribing-to-events"></a>イベントへのサブスクライブ
 
@@ -91,17 +91,17 @@ CQRS アプローチを使用する場合など、より高度なマイクロサ
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>イベント バスに発行するときの原子性と回復性の設計
 
-イベント バスのような分散メッセージング システムを通じて統合イベントを発行するときは、元のデータベースの更新とイベントの発行のアトミックな実行という問題が生じます (つまり、両方の操作が完了するか、いずれも完了しない)。 たとえば、先ほどの単純化された例では、コードは商品価格が変更されたときにデータベースにデータをコミットし、その後に ProductPriceChangedIntegrationEvent メッセージを発行します。 一見すると、これらの 2 つの操作がアトミックに実行されることは不可欠のように思われます。 しかし、[Microsoft Message Queuing (MSMQ)](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx) などの以前のシステムを使用している場合と同じく、データベースとメッセージ ブローカーが関与する分散トランザクションを使用している場合には、これは [CAP 定理](https://www.quora.com/What-Is-CAP-Theorem-1)で説明されている理由によって推奨されません。
+イベント バスのような分散メッセージング システムを通じて統合イベントを発行するときは、元のデータベースの更新とイベントの発行のアトミックな実行という問題が生じます (つまり、両方の操作が完了するか、いずれも完了しない)。 たとえば、先ほどの単純化された例では、コードは商品価格が変更されたときにデータベースにデータをコミットし、その後に ProductPriceChangedIntegrationEvent メッセージを発行します。 一見すると、これらの 2 つの操作がアトミックに実行されることは不可欠のように思われます。 しかし、[Microsoft Message Queuing (MSMQ)](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85)) などの以前のシステムを使用している場合と同じく、データベースとメッセージ ブローカーが関与する分散トランザクションを使用している場合には、これは [CAP 定理](https://www.quora.com/What-Is-CAP-Theorem-1)で説明されている理由によって推奨されません。
 
 基本的に、マイクロサービスは、スケーラブルで可用性の高いシステムを構築するために使用します。 簡単に言えば、CAP 定理は、継続的な可用性、強い一貫性、*かつ*分断への耐性を備えた (分散) データベース (またはそのモデルを持つマイクロサービス) を構築することは不可能であると述べています。 これらの 3 つの特性のうち、2 つを選択しなければなりません。
 
-マイクロサービス ベースのアーキテクチャでは、可用性と耐性を選択して、厳密な一貫性は重視しないようにする必要があります。 したがって、最近のほとんどのマイクロサービス ベースのアプリケーションでは、[MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx) を使用して Windows の分散トランザクション コーディネーター (DTC) に基づく[分散トランザクション](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85))を実装する場合と同じく、メッセージングに分散トランザクションを使用しないのが普通です。
+マイクロサービス ベースのアーキテクチャでは、可用性と耐性を選択して、厳密な一貫性は重視しないようにする必要があります。 したがって、最近のほとんどのマイクロサービス ベースのアプリケーションでは、[MSMQ](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85)) を使用して Windows の分散トランザクション コーディネーター (DTC) に基づく[分散トランザクション](/previous-versions/windows/desktop/ms681205(v=vs.85))を実装する場合と同じく、メッセージングに分散トランザクションを使用しないのが普通です。
 
 最初の問題とその例に話を戻しましょう。 データベースが更新された後 (このケースでは、`_context.SaveChangesAsync()` を含むコード行の直後) で、統合イベントが発行される前にサービスがクラッシュした場合、システム全体の一貫性が失われる可能性があります。 これは、処理しているビジネス操作によっては、ビジネスに重大な問題を生じさせるおそれがあります。
 
 前のアーキテクチャのセクションで説明したように、この問題に対処するためのアプローチはいくつかあります。
 
-- 完全な[イベント ソーシング パターン](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)を使用する。
+- 完全な[イベント ソーシング パターン](/azure/architecture/patterns/event-sourcing)を使用する。
 
 - [トランザクション ログ マイニング](https://www.scoop.it/t/sql-server-transaction-log-mining)を使用する。
 

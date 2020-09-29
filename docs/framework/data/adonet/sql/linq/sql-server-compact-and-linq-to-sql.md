@@ -2,19 +2,21 @@
 title: SQL Server Compact および LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 59022359-a5a2-4c42-9a6a-5c0259c3ad17
-ms.openlocfilehash: bdd1237a8eac1c278e7704f3fbf0ae8b1deeff42
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7963db9e05eca7a7a148228c6d2fbca0221ca870
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541364"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155680"
 ---
 # <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact および LINQ to SQL
+
 SQL Server Compact は、Visual Studio と共にインストールされる既定のデータベースです。 詳しくは、「[SQL Server Compact の使用 (Visual Studio)](/previous-versions/visualstudio/visual-studio-2012/aa983321(v=vs.110))」をご覧ください。  
   
  このトピックでは、使用法、構成、機能セット、および [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のサポートのスコープに関する主要な相違を示します。  
   
 ## <a name="characteristics-of-sql-server-compact-in-relation-to-linq-to-sql"></a>LINQ to SQL との関係における SQL Server Compact の特徴  
+
  既定では、SQL Server Compact はすべての Visual Studio エディションでインストールされるため、開発コンピューター上の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] で使用できます。 ただし、SQL Server Compact と [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] を使用するアプリケーションの配置は、SQL Server アプリケーションの場合とは異なります。 SQL Server Compact は .NET Framework の一部ではないため、アプリケーションにパッケージ化するか、Microsoft サイトから個別にダウンロードする必要があります。  
   
  これには、次のような特徴があります。  
@@ -30,6 +32,7 @@ SQL Server Compact は、Visual Studio と共にインストールされる既�
 - オブジェクト リレーショナル デザイナーでは SQL Server Compact はサポートされていません。  
   
 ## <a name="feature-set"></a>機能セット  
+
  SQL Server Compact の機能セットは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] アプリケーションに影響を及ぼす次の点で、SQL Server の機能セットより単純です。  
   
 - SQL Server Compact は、ストアド プロシージャまたはビューをサポートしません。  

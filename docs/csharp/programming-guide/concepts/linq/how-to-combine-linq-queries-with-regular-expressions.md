@@ -3,14 +3,15 @@ title: LINQ クエリと正規表現を組み合わせる方法 (C#)
 description: この例では、C# で Regex クラスを使用して正規表現を作成し、テキスト文字列内の一致を取得します。
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
-ms.openlocfilehash: af63d096e3c2f19ed557180d82d606989a016120
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: e423261961c25c6aae62483d332ce053d7b6f963
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105348"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157500"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>LINQ クエリと正規表現を組み合わせる方法 (C#)
+
 この例では、<xref:System.Text.RegularExpressions.Regex> クラスを使用して正規表現を作成し、テキスト文字列内の複雑な一致を取得する方法を示します。 LINQ クエリを使用すると、正規表現で検索する必要のあるファイルだけをフィルターで抽出したり、結果の形式を指定したりするのが簡単になります。  
   
 ## <a name="example"></a>例  
@@ -97,6 +98,7 @@ class QueryWithRegEx
  `RegEx` 検索で返された <xref:System.Text.RegularExpressions.MatchCollection> オブジェクトのクエリを実行することも可能です。 この例では、一致した各文字列の値のみが結果として生成されています。 しかし、LINQ を使用して、各種のフィルター処理、並べ替え、グループ化をそのコレクションに対して実行することもできます。 <xref:System.Text.RegularExpressions.MatchCollection> が非ジェネリック <xref:System.Collections.IEnumerable> コレクションなので、クエリで範囲変数の型を明示的に記述する必要があります。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
+
  System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。  
   
 ## <a name="see-also"></a>関連項目

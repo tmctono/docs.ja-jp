@@ -2,14 +2,15 @@
 title: 集計クエリ
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
-ms.openlocfilehash: 2085808d631d1d9f97573c557e9e66e07113df52
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8dfe24a84c707b6d21afb7ccfc57ac7b0423942f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554222"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161543"
 ---
 # <a name="aggregate-queries"></a>集計クエリ
+
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、`Average`、`Count`、`Max`、`Min`、および `Sum` の各集計演算子をサポートしています。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の集計演算子には、次の特性があります。  
   
 - 集計クエリは直ちに実行されます。  
@@ -25,6 +26,7 @@ ms.locfileid: "90554222"
  以下のトピックの例は、Northwind サンプル データベースから派生しています。 詳細については、「[サンプル データベースのダウンロード](downloading-sample-databases.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [一連の数値の平均値の取得](return-the-average-value-from-a-numeric-sequence.md)  
  <xref:System.Linq.Enumerable.Average%2A> 演算子を使用する方法を示します。  
   
@@ -41,6 +43,7 @@ ms.locfileid: "90554222"
  <xref:System.Linq.Enumerable.Sum%2A> 演算子を使用する方法を示します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [クエリの例](query-examples.md)  
  Visual Basic および C# の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] クエリに関するトピックへのリンクを示します。  
   

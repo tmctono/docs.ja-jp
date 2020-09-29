@@ -4,12 +4,12 @@ description: Azure Durable Functions
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 2bd81c29e727254af6c8ecf39ee4bfef1f39d009
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6c5f6aaedbc13c47289e102bb59f7b066525b107
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522638"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171664"
 ---
 # <a name="orchestration-patterns"></a>オーケストレーションのパターン
 
@@ -153,7 +153,7 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 
 ## <a name="recommended-resources"></a>推奨リソース
 
-- [Azure Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
+- [Azure Durable Functions](/azure/azure-functions/durable-functions-overview)
 - [.NET Core と .NET Standard の単体テスト](../../core/testing/index.md)
 
 >[!div class="step-by-step"]

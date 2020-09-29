@@ -9,14 +9,15 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: 5b3143f4da81ac693626778263c277e3a484c45e
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 6238ac392ff99d18d9cc7ea07e23b08ff235c14f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125723"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173231"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (C# コンパイラ オプション)
+
 このオプションは、C# 内部コンパイラ エラーを Microsoft に報告する方法として便利です。
 
 > [!NOTE]
@@ -29,6 +30,7 @@ ms.locfileid: "89125723"
 ```
 
 ## <a name="arguments"></a>引数
+
  "**なし**"  
  内部コンパイラ エラーに関するレポートは、収集されず、マイクロソフトに送信されません。
 
@@ -38,7 +40,8 @@ ms.locfileid: "89125723"
 
  **send** 内部コンパイラ エラーのレポートを Microsoft に自動的に送信します。 このオプションを有効にするには、まずマイクロソフトのデータ収集ポリシーに同意する必要があります。 コンピューターで **-errorreport:send** を初めて指定すると、マイクロソフトのデータ収集ポリシーが記載されている Web サイトが表示されます。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
+
  コンパイラがソース コード ファイルを処理できないと、内部コンパイラ エラー (ICE: Internal Compiler Error) が発生します。 ICE が発生した場合、コードの修正に利用できる出力ファイルや診断は生成されません。
 
  以前のリリースでは、ICE が発生した場合、マイクロソフト製品サポート サービスに連絡して問題を報告することを推奨していました。 **-errorreport** を使用すると、ICE 情報を Visual C# チームに提供できます。 エラー レポートは、今後リリースされるコンパイラの機能向上に役立ちます。

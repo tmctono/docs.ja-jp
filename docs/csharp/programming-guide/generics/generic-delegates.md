@@ -6,14 +6,15 @@ helpviewer_keywords:
 - generics [C#], delegates
 - delegates [C#], generic
 ms.assetid: bdea509c-44c1-4309-aaa9-15c7aee009df
-ms.openlocfilehash: d99271ca9f12e95743d633caac16aaa4151e9c41
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: df417701feb77dc47cff1cdd68eb4c7405d15beb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301906"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157409"
 ---
 # <a name="generic-delegates-c-programming-guide"></a>汎用デリゲート (C# プログラミング ガイド)
+
 [デリゲート](../../language-reference/builtin-types/reference-types.md)はその独自の型パラメーターを定義できます。 ジェネリック デリゲートを参照するコードは、次の例に示すように、ジェネリック クラスをインスタンス化したり、ジェネリック メソッドを呼び出したりするときのように、型引数を指定し、構築されたクローズ型を作成できます。  
   
  [!code-csharp[csProgGuideGenerics#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#36)]  

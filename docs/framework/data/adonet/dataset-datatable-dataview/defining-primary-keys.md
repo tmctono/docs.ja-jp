@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2ea85959-e763-4669-8bd9-46a9dab894bd
-ms.openlocfilehash: 159b23eb4ef5ca38ebce6e488080d315ec3be081
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 94b033d58061e3d2e48a352d782eec7c4202fa43
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151183"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166834"
 ---
 # <a name="defining-primary-keys"></a>主キーの定義
+
 通常、データベース テーブルには、テーブル内の各行を一意に識別する単一の列または複数の列があります。 行を識別するこのような列を、主キーと呼びます。  
   
  1 つの <xref:System.Data.DataColumn> を <xref:System.Data.DataTable> の <xref:System.Data.DataTable.PrimaryKey%2A> として指定すると、テーブルによってその列の <xref:System.Data.DataColumn.AllowDBNull%2A> プロパティが **false** に、<xref:System.Data.DataColumn.Unique%2A> プロパティが **true** に自動的に設定されます。 複数列の主キーの場合は、**AllowDBNull** プロパティだけが自動的に **false** に設定されます。  

@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 801dff0f-2508-45aa-9416-f45d6887740c
-ms.openlocfilehash: 3622e21978377aed42958e2dc96ef9aa5a872d00
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 32285c78bfe8e8c24e70109cbf82a63a4d42848e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782914"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166470"
 ---
 # <a name="ref-cursor-parameters-in-an-oracledatareader"></a>OracleDataReader の REF CURSOR パラメーター
+
 この Microsoft Visual Basic の例では、REF CURSOR パラメーターを返し、<xref:System.Data.OracleClient.OracleDataReader> を使用して値を読み取る、PL/SQL ストアド プロシージャを実行します。  
   
 ```vb  

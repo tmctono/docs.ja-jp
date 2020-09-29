@@ -2,17 +2,19 @@
 title: System.String メソッド
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: 583c0d58562c1605f24b61489d481e19248ebed4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 44d32ed1000ca49d9fc29ffcde4506b44fc975b6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792496"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155667"
 ---
 # <a name="systemstring-methods"></a>System.String メソッド
+
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、次の <xref:System.String> メソッドをサポートしていません。  
   
 ## <a name="unsupported-systemstring-methods-in-general"></a>サポートされていない一般的な System.String メソッド  
+
  サポートされていない一般的な <xref:System.String> メソッドは次のとおりです。  
   
 - カルチャを認識するオーバーロード (`CultureInfo`、`StringComparison`、`IFormatProvider` を受け取るメソッド)  

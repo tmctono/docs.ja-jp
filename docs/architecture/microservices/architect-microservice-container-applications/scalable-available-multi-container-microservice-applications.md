@@ -2,12 +2,12 @@
 title: 高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 description: Kubernetes アプリケーション ライフサイクルを開発しながら、高いスケーラビリティおよび可用性と Azure Dev Spaces の可能性のためにマイクロサービスと複数のコンテナー アプリケーションを調整するオプションについて説明します。
 ms.date: 01/30/2020
-ms.openlocfilehash: 8a67235109bed806caa7d9caa2bc26fd4fe9daca
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: a61e883ab0d27300e00b177c2621c6521e85ac84
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988909"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172503"
 ---
 # <a name="orchestrate-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 
@@ -68,7 +68,7 @@ Azure Kubernetes Service によって、一般的な Docker クラスタリン�
 
 ## <a name="getting-started-with-azure-kubernetes-service-aks"></a>Azure Kubernetes Service (AKS) の使用の開始
 
-AKS の使用を開始するには、Azure portal から、または CLI を使用して AKS クラスターをデプロイします。 Azure の Kubernetes クラスター デプロイの詳細については、[Azure Kubernetes Service (AKS) クラスターのデプロイ](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)に関するページを参照してください。
+AKS の使用を開始するには、Azure portal から、または CLI を使用して AKS クラスターをデプロイします。 Azure の Kubernetes クラスター デプロイの詳細については、[Azure Kubernetes Service (AKS) クラスターのデプロイ](/azure/aks/kubernetes-walkthrough-portal)に関するページを参照してください。
 
 AKS の一部として既定でインストールされるソフトウェアはいずれも無料です。 既定のすべてのオプションはオープン ソース ソフトウェアと共に実装されます。 AKS は Azure 内の複数の仮想マシンで使用できます。 選択したコンピューティング インスタンスと、ストレージやネットワーキングなどの利用された他の基になるインフラストラクチャ リソースにのみ課金されます。 AKS 自体に従量課金はありません。
 
@@ -80,7 +80,7 @@ Kubernetes クラスターにアプリケーションをデプロイする場合
 
 Helm Chart を使用すると、非常に複雑な Kubernetes アプリケーションについても、その定義、バージョン管理、インストール、共有、アップグレード、またはロールバックを容易に行うことができます。
 
-さらに述べると、Azure におけるその他の Kubernetes 環境 ([Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces) など) も Helm Chart に基づいているので、Helm の使用が推奨されます。
+さらに述べると、Azure におけるその他の Kubernetes 環境 ([Azure Dev Spaces](/azure/dev-spaces/azure-dev-spaces) など) も Helm Chart に基づいているので、Helm の使用が推奨されます。
 
 Helm は、[Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) が維持しています (Microsoft、Google、Bitnami、および Helm の共同作成者コミュニティとの協力で)。
 
@@ -88,7 +88,7 @@ Helm Chart および Kubernetes の実装の詳細については、[Helm Chart 
 
 ## <a name="use-azure-dev-spaces-for-your-kubernetes-application-lifecycle"></a>ご利用の Kubernetes アプリケーション ライフ サイクルに対して Azure Dev Spaces を使用する
 
-[Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces) には、チーム向けの迅速で反復的な Kubernetes 開発エクスペリエンスが用意されています。 開発マシンのセットアップ最小限にして、Azure Kubernetes Service (AKS) で直接、コンテナーの実行およびデバッグを反復的に実行することができます。 Visual Studio、Visual Studio Code、またはコマンド ラインなどの使い慣れたツールを使用して、Windows、Mac、または Linux 上で開発します。
+[Azure Dev Spaces](/azure/dev-spaces/azure-dev-spaces) には、チーム向けの迅速で反復的な Kubernetes 開発エクスペリエンスが用意されています。 開発マシンのセットアップ最小限にして、Azure Kubernetes Service (AKS) で直接、コンテナーの実行およびデバッグを反復的に実行することができます。 Visual Studio、Visual Studio Code、またはコマンド ラインなどの使い慣れたツールを使用して、Windows、Mac、または Linux 上で開発します。
 
 前述のように、Azure Dev Spaces では、コンテナー ベースのアプリケーションのデプロイ時に Helm Chart が使用されます。
 
@@ -108,7 +108,7 @@ Azure Dev Spaces ではスペースの概念が提供されます。これによ
 
 実際のビューの具体的な例を確認するには、[Azure Dev Spaces に関する eShopOnContainers Wiki ページ](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)を参照してください。
 
-詳細については、「[Azure Dev Spaces を使用したチーム開発](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore)」を参照してください。
+詳細については、「[Azure Dev Spaces を使用したチーム開発](/azure/dev-spaces/team-development-netcore)」を参照してください。
 
 ## <a name="additional-resources"></a>その他の技術情報
 

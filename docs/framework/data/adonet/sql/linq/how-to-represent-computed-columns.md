@@ -2,14 +2,15 @@
 title: '方法: 計算列を表す'
 ms.date: 03/30/2017
 ms.assetid: 4025f1fd-9dfa-46c0-b04f-34e8bc7957a2
-ms.openlocfilehash: 7b37e698419fae7590ac1853309a7f394917f6a0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d952a6c22cd96bbc89aeebfa4b13e9727a363c73
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781729"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166327"
 ---
 # <a name="how-to-represent-computed-columns"></a>方法: 計算列を表す
+
 計算の結果が格納される列を表すには、<xref:System.Data.Linq.Mapping.ColumnAttribute> 属性の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> プロパティを使用します。  
   
  コード例については、「<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>」を参照してください。  

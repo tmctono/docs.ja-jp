@@ -4,12 +4,12 @@ description: Azure Event Grid は、イベント単位の従量課金モデル�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/06/2020
-ms.openlocfilehash: 408e1b9cd1b1e5316c7c6a17bb1b0c76a38f9e11
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 30937bafd8069eb4508dce18351964103421373a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135712"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171885"
 ---
 # <a name="event-grid"></a>Event Grid
 
@@ -31,7 +31,7 @@ Event Grid では、いくつかの異なるシナリオに対処できます。
 
 ![操作の自動化](./media/ops-automation.png)
 
-Event Grid を使用すると、インフラストラクチャがプロビジョニングされたときに [Azure Automation](https://docs.microsoft.com/azure/automation) に通知することで、自動化を高速化し、ポリシーの適用を簡素化できます。
+Event Grid を使用すると、インフラストラクチャがプロビジョニングされたときに [Azure Automation](/azure/automation) に通知することで、自動化を高速化し、ポリシーの適用を簡素化できます。
 
 ### <a name="application-integration"></a>アプリケーションの統合
 
@@ -47,11 +47,11 @@ Event Grid により、Azure Functions、Logic Apps、または独自のカス�
 
 ## <a name="event-grid-vs-other-azure-messaging-services"></a>Event Grid と他の Azure メッセージング サービス
 
-Azure には、[Event Hubs](https://docs.microsoft.com/azure/event-hubs) や [Service Bus](https://docs.microsoft.com/azure/service-bus-messaging) など、いくつかのメッセージング サービスが用意されています。 それぞれのサービスは、特定のユース ケース セットに対処するように設計されています。 次の図は、サービス間の相違点の概要を示しています。
+Azure には、[Event Hubs](/azure/event-hubs) や [Service Bus](/azure/service-bus-messaging) など、いくつかのメッセージング サービスが用意されています。 それぞれのサービスは、特定のユース ケース セットに対処するように設計されています。 次の図は、サービス間の相違点の概要を示しています。
 
 ![Azure メッセージングの比較](./media/azure-messaging-services.png)
 
-詳細な比較については、[メッセージング サービスの比較](https://docs.microsoft.com/azure/event-grid/compare-messaging-services)に関するページを参照してください。
+詳細な比較については、[メッセージング サービスの比較](/azure/event-grid/compare-messaging-services)に関するページを参照してください。
 
 ## <a name="performance-targets"></a>パフォーマンスの目標
 
@@ -110,34 +110,34 @@ Event Grid を使用する主な利点は、Azure によって生成される自
 | | Microsoft.Resources.ResourceDeleteFailure | リソースの削除操作が失敗したときに発生します。 |
 | | Microsoft.Resources.ResourceDeleteCancel | リソースの削除操作が取り消されたときに発生します。 このイベントは、テンプレートのデプロイが取り消された場合に発生します。 |
 
-詳細については、「[Azure Event Grid イベント スキーマ](https://docs.microsoft.com/azure/event-grid/event-schema)」を参照してください。
+詳細については、「[Azure Event Grid イベント スキーマ](/azure/event-grid/event-schema)」を参照してください。
 
 オンプレミスで実行されているアプリケーションも含め、任意の種類のアプリケーションから Event Grid にアクセスできます。
 
 ## <a name="conclusion"></a>まとめ
 
-この章では、Azure Functions、Logic Apps、および Event Grid で構成される Azure サーバーレス プラットフォームについて学習しました。 これらのリソースを使用して、完全なサーバーレス アプリ アーキテクチャを構築したり、他のクラウド リソースやオンプレミス サーバーと対話するハイブリッド ソリューションを作成したりできます。 [Azure SQL](https://docs.microsoft.com/azure/sql-database) や [CosmosDB](https://docs.microsoft.com/azure/cosmos-db/introduction) などのサーバーレス データ プラットフォームと組み合わせることで、完全に管理されたクラウド ネイティブ アプリケーションをビルドできます。
+この章では、Azure Functions、Logic Apps、および Event Grid で構成される Azure サーバーレス プラットフォームについて学習しました。 これらのリソースを使用して、完全なサーバーレス アプリ アーキテクチャを構築したり、他のクラウド リソースやオンプレミス サーバーと対話するハイブリッド ソリューションを作成したりできます。 [Azure SQL](/azure/sql-database) や [CosmosDB](/azure/cosmos-db/introduction) などのサーバーレス データ プラットフォームと組み合わせることで、完全に管理されたクラウド ネイティブ アプリケーションをビルドできます。
 
 ## <a name="recommended-resources"></a>推奨リソース
 
-- [App Service のプラン](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
-- [Application Insights](https://docs.microsoft.com/azure/application-insights)
-- [Application Insights Analytics](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
+- [App Service のプラン](/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
+- [Application Insights](/azure/application-insights)
+- [Application Insights Analytics](/azure/application-insights/app-insights-analytics)
 - [Azure:サーバーレスの Azure Functions を使用してアプリをクラウドに持ち込む](https://channel9.msdn.com/events/Connect/2017/E102)
-- [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-- [Azure Event Grid イベント スキーマ](https://docs.microsoft.com/azure/event-grid/event-schema)
-- [Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs)
-- [Azure Functions のドキュメント](https://docs.microsoft.com/azure/azure-functions)
-- [Azure Functions でのトリガーとバインドの概念](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)
-- [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps)
-- [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging)
-- [Azure Table Storage](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
-- [Azure のオンプレミス データ ゲートウェイを使用してオンプレミスのデータ ソースに接続する](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)
-- [Azure portal で初めての関数を作成する](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)
-- [Azure CLI での初めての関数の作成](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli)
-- [Visual Studio での初めての関数の作成](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)
-- [Functions でサポートされる言語](https://docs.microsoft.com/azure/azure-functions/supported-languages)
-- [Azure Functions の監視](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)
+- [Azure Event Grid](/azure/event-grid/overview)
+- [Azure Event Grid イベント スキーマ](/azure/event-grid/event-schema)
+- [Azure Event Hubs](/azure/event-hubs)
+- [Azure Functions のドキュメント](/azure/azure-functions)
+- [Azure Functions でのトリガーとバインドの概念](/azure/azure-functions/functions-triggers-bindings)
+- [Azure Logic Apps](/azure/logic-apps)
+- [Azure Service Bus](/azure/service-bus-messaging)
+- [Azure Table Storage](/azure/cosmos-db/table-storage-overview)
+- [Azure のオンプレミス データ ゲートウェイを使用してオンプレミスのデータ ソースに接続する](/azure/analysis-services/analysis-services-gateway)
+- [Azure portal で初めての関数を作成する](/azure/azure-functions/functions-create-first-azure-function)
+- [Azure CLI での初めての関数の作成](/azure/azure-functions/functions-create-first-azure-function-azure-cli)
+- [Visual Studio での初めての関数の作成](/azure/azure-functions/functions-create-your-first-function-visual-studio)
+- [Functions でサポートされる言語](/azure/azure-functions/supported-languages)
+- [Azure Functions の監視](/azure/azure-functions/functions-monitoring)
 
 >[!div class="step-by-step"]
 >[前へ](logic-apps.md)

@@ -3,14 +3,15 @@ title: デリゲートの変性 (C#)
 description: .NET での変性のサポートによって、メソッド シグネチャをすべてのデリゲートのデリゲート型に一致させる方法について説明します。
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 02b59dd97cedc6ab35c3122912ee528f7ca29238
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 359f7051aa2eeb5d2dc9fef3d9ccb1e4aaebfb5c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89466132"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167744"
 ---
 # <a name="variance-in-delegates-c"></a>デリゲートの変性 (C#)
+
 .NET Framework 3.5 では、C# のすべてのデリゲートで、メソッド シグネチャとデリゲート型を一致させるために変性 (共変性と反変性) のサポートが導入されました。 つまり、シグネチャが一致するメソッドだけでなく、デリゲート型で指定された型よりも強い派生型を返す (共変性) メソッドや、弱い派生型のパラメーターを受け取る (反変性) メソッドを、デリゲートに割り当てることができます。 これには、汎用デリゲートと非汎用デリゲートの両方が含まれます。  
   
  たとえば、次のコードについて考えます。このコードには、2 つのクラスと、汎用と非汎用の 2 つのデリゲートが含まれています。  
@@ -66,6 +67,7 @@ SampleGenericDelegate<Second, First> dGenericConversion = AFirstRSecond;
  その他の例については、「[デリゲートの変性の使用 (C#)](./using-variance-in-delegates.md)」および「[Func および Action 汎用デリゲートでの変性の使用 (C#)](./using-variance-for-func-and-action-generic-delegates.md)」を参照してください。  
   
 ## <a name="variance-in-generic-type-parameters"></a>ジェネリック型パラメーターの変性  
+
  .NET Framework 4 以降では、デリゲート間の暗黙的な変換を有効にできるため、ジェネリック型パラメーターによって汎用デリゲートにさまざまな型が指定されていても、型が変性の要件を満たすように相互に継承されていれば、それらの汎用デリゲートは相互に割り当てることができます。  
   
  暗黙的な変換を有効にするには、`in` キーワードまたは `out` キーワードを使用して、デリゲートでジェネリック パラメーターを共変または反変として明示的に宣言する必要があります。  
@@ -127,6 +129,7 @@ public static void Test()
  使用例を含む詳細については、「[Func および Action 汎用デリゲートでの変性の使用 (C#)](./using-variance-for-func-and-action-generic-delegates.md)」を参照してください。  
   
 ### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>汎用デリゲートのバリアント型パラメーターの宣言  
+
  汎用デリゲートに共変または反変のジェネリック型パラメーターがある場合、そのデリゲートは "*バリアント汎用デリゲート*" と呼ばれます。  
   
  汎用デリゲートのジェネリック型パラメーターを共変として宣言するには、`out` キーワードを使用します。 共変の型は、メソッドの戻り値の型としてのみ使用できます。メソッド引数の型として使用することはできません。 共変の汎用デリゲートを宣言する方法を次のコード例に示します。  
@@ -151,6 +154,7 @@ public delegate R DVariant<in A, out R>(A a);
 ```  
   
 ### <a name="instantiating-and-invoking-variant-generic-delegates"></a>バリアント汎用デリゲートのインスタンス化と呼び出し  
+
  バリアント デリゲートのインスタンス化および呼び出しは、インバリアント デリゲートのインスタンス化および呼び出しと同様に行うことができます。 次の例では、ラムダ式によってデリゲートをインスタンス化します。  
   
 ```csharp  
@@ -172,6 +176,7 @@ Action<string> actStr = x => Console.WriteLine("string: {0}", x);
 ```  
   
 ## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a>値型と参照型でのジェネリック型パラメーターの変性  
+
  ジェネリック型パラメーターの変性がサポートされるのは参照型だけです。 たとえば、整数は値型であるため、`DVariant<int>` を `DVariant<Object>` または `DVariant<long>` に暗黙的に変換することはできません。  
   
  次の例は、値型ではジェネリック型パラメーターの変性がサポートされないことを示しています。  

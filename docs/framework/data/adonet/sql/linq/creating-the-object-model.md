@@ -2,19 +2,21 @@
 title: オブジェクト モデルの作成
 ms.date: 03/30/2017
 ms.assetid: 27afce86-9b1d-45fb-8e0b-636bf671a236
-ms.openlocfilehash: 68fb4ce79b5ee2277821e8a06ceab910cf35480a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 2191c29c0b2e56f9fdf7983bf96d2494867f318b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70247717"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164364"
 ---
 # <a name="creating-the-object-model"></a>オブジェクト モデルの作成
+
 既存のデータベースからオブジェクト モデルを作成し、このオブジェクト モデルを既定の状態で使用できます。 オブジェクト モデルの多くの側面と動作をカスタマイズできます。  
   
  Visual Studio を使用している場合は、オブジェクト リレーショナル デザイナーを使用して、オブジェクト モデルを作成できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [方法: Visual Basic または C# でオブジェクト モデルを生成する](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
  SQLMetal コマンド ライン ツールの使い方について説明します。 また、Visual Studio ユーザーにオブジェクト リレーショナル デザイナーへのリンクも提供します  
   
@@ -34,6 +36,7 @@ ms.locfileid: "70247717"
  コード エディターを使用して、独自のマッピング コードを書いたり、自動的に生成されたコードをカスタマイズしたりする方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [LINQ to SQL オブジェクト モデル](the-linq-to-sql-object-model.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] オブジェクト モデルについて詳しく説明します。  
   

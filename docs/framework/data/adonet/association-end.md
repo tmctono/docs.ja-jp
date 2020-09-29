@@ -2,14 +2,15 @@
 title: アソシエーション End
 ms.date: 03/30/2017
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
-ms.openlocfilehash: 489802ca18708e076c0cd5dd380ad1361916ad5f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 00e3a7d855957ae539ea652dc8cde3ed8841dda5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732357"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153444"
 ---
 # <a name="association-end"></a>アソシエーション End
+
 "*アソシエーション End*" では、[アソシエーション](association-type.md)の一方の End にある[エンティティ型](entity-type.md)と、アソシエーションのその End に存在できるエンティティ型のインスタンス数が示されます。 アソシエーション End はアソシエーションの一部として定義され、アソシエーションには必ず 2 つのアソシエーション End が必要です。 [ナビゲーション プロパティ](navigation-property.md)により、一方のアソシエーション End から他方のアソシエーション End へのナビゲーションが可能になります。  
   
  アソシエーション End の定義には、次の情報が含まれます。  
@@ -26,6 +27,7 @@ ms.locfileid: "73732357"
 - アソシエーション End に実行する CASCADE ON DELETE などの操作の情報。 (オプション)。  
   
 ## <a name="example"></a>例  
+
  下のダイアグラムは、`PublishedBy` および `WrittenBy` という 2 つのアソシエーションの概念モデルを示しています。 `PublishedBy` アソシエーションのアソシエーション End は `Book` および `Publisher` のエンティティ型です。 `Publisher` End の多重度は 1 で、`Book` End の多重度は多数 (\*) です。これは、出版社が多くの書籍を出版し、書籍は 1 社の出版社により出版されることを示します。  
   
  ![3 種類のエンティティを持つモデルの例](./media/association-end/example-model-three-entity-types.gif)  

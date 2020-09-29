@@ -2,12 +2,12 @@
 title: 既存の .NET アプリを Azure IaaS にリフトアンドシフトする (クラウド インフラストラクチャ対応)
 description: Azure Cloud および Windows コンテナーを使用して既存の .NET アプリケーションを最新化します。
 ms.date: 04/28/2018
-ms.openlocfilehash: c7638a034dbb27baea1b097bdb66175bfb5a71f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d610222aa6649c1b28e198c074794dd316f895ec
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73089630"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172171"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>既存の .NET アプリを Azure IaaS にリフトアンドシフトする (クラウド インフラストラクチャ対応)
 
@@ -69,7 +69,7 @@ Azure Migrate により、ビジネスへの影響を最小限に抑えてワー
 
 ## <a name="use-azure-site-recovery-to-migrate-your-existing-vms-to-azure-vms"></a>Azure Site Recovery を使用して既存の VM を Azure VM に移行する
 
-エンドツーエンドの [Azure Migrate](https://aka.ms/azuremigrate) に含まれている [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) は、Web アプリを Azure の VM に簡単に移行するために使用できるツールです。 Site Recovery を使用すると、オンプレミスの VM と物理サーバーを Azure にレプリケートすることも、オンプレミスのセカンダリ ロケーションにレプリケートすることもできます。 さらには、サポートされている Azure VM、オンプレミスの "*Hyper-V*" VM、"*VMware*" VM、Windows 物理サーバー、または Linux 物理サーバー上で実行されているワークロードをレプリケートすることもできます。 Azure へのレプリケートにより、セカンダリ データセンターの管理に伴うコストと手間が削減されます。
+エンドツーエンドの [Azure Migrate](https://aka.ms/azuremigrate) に含まれている [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) は、Web アプリを Azure の VM に簡単に移行するために使用できるツールです。 Site Recovery を使用すると、オンプレミスの VM と物理サーバーを Azure にレプリケートすることも、オンプレミスのセカンダリ ロケーションにレプリケートすることもできます。 さらには、サポートされている Azure VM、オンプレミスの "*Hyper-V*" VM、"*VMware*" VM、Windows 物理サーバー、または Linux 物理サーバー上で実行されているワークロードをレプリケートすることもできます。 Azure へのレプリケートにより、セカンダリ データセンターの管理に伴うコストと手間が削減されます。
 
 Site Recovery は、一部がオンプレミスで、一部が Azure 上にあるハイブリッド環境専用にも作成されています。 Site Recovery の利点は、サイトがダウンした場合でも VM やオンプレミスの物理サーバー上で実行されているアプリの可用性が維持されて、ビジネス継続性が確保されることです。 VM や物理サーバー上で実行されているワークロードは、プライマリ サイトが利用できなくなった場合でもセカンダリ ロケーションで利用できるようにレプリケートされます。 ワークロードは、プライマリ サイトが稼働状態に戻った時点でプライマリ サイトに復元されます。
 

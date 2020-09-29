@@ -2,12 +2,12 @@
 title: メッセージベースの非同期通信
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | メッセージベースの非同期通信はマイクロサービスにとって極めて重要な概念です。マイクロサービス間の独立性を維持し、同時に、最終的には同期させる最良の方法であるためです。'
 ms.date: 09/20/2018
-ms.openlocfilehash: 2bd79935cad3d62e488a57da6b40a0c87349960b
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 17b3fb3fe3f94d5387359061e3297ebfa6e5be7a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679176"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169246"
 ---
 # <a name="asynchronous-message-based-communication"></a>メッセージベースの非同期通信
 
@@ -59,7 +59,7 @@ ms.locfileid: "90679176"
 
 非同期イベントドリブン通信では、1 つのマイクロサービスがイベントをイベント バスに発行します。多くのマイクロサービスは、それにサブスクライブして、それに関する通知を受けたり、それを処理したりすることができます。 ご使用の実装によって、イベントドリブンのメッセージベース通信で使用されるプロトコルが決まります。 [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) は、キューにある通信の信頼性を向上できます。
 
-イベント バスを使用する場合は、関連する実装に基づき、クラスにおいて抽象化レベル (イベント バス インターフェイスなど) を使用することができます。[RabbitMQ](https://www.rabbitmq.com/) のようなメッセージ ブローカーまたは「[Azure Service Bus with Topics](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)」(Azure Service Bus トピック) で説明したサービス バスの API をコードで使用します。 または、NServiceBus、MassTransit、Brighter のような高レベルのサービス バスを使用して、イベント バスとパブリッシュ/サブスクライブ システムを統合することもできます。
+イベント バスを使用する場合は、関連する実装に基づき、クラスにおいて抽象化レベル (イベント バス インターフェイスなど) を使用することができます。[RabbitMQ](https://www.rabbitmq.com/) のようなメッセージ ブローカーまたは「[Azure Service Bus with Topics](/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)」(Azure Service Bus トピック) で説明したサービス バスの API をコードで使用します。 または、NServiceBus、MassTransit、Brighter のような高レベルのサービス バスを使用して、イベント バスとパブリッシュ/サブスクライブ システムを統合することもできます。
 
 ## <a name="a-note-about-messaging-technologies-for-production-systems"></a>運用システムでのメッセージング テクノロジに関する注意事項
 
@@ -75,7 +75,7 @@ ms.locfileid: "90679176"
 
 - [トランザクション ログ マイニング](https://www.scoop.it/t/sql-server-transaction-log-mining)を使用します。
 
-- 完全な[イベント ソーシング パターン](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)を使用します。
+- 完全な[イベント ソーシング パターン](/azure/architecture/patterns/event-sourcing)を使用します。
 
 - [送信トレイ パターン](https://www.kamilgrzybek.com/design/the-outbox-pattern/)を使用します。これは、イベントを作成してパブリッシュするイベントクリエーター コンポーネントの基盤となる、メッセージ キューとしてのトランザクション データベース テーブルです。
 

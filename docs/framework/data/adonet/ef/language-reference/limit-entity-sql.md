@@ -2,14 +2,15 @@
 title: LIMIT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c22ffede-0a52-44d1-99b9-4a91e651e1b9
-ms.openlocfilehash: 98e44110e604c6d893734869871d72f1d021775d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 81d135785e567d46a105adcafbf083f48cb4868e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556285"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161764"
 ---
 # <a name="limit-entity-sql"></a>LIMIT (Entity SQL)
+
 物理的なページングは、ORDER BY 句の LIMIT サブ句を使用して実行できます。 LIMIT は ORDER BY 句と切り離して使用することはできません。  
   
 ## <a name="syntax"></a>構文  
@@ -19,6 +20,7 @@ ms.locfileid: "90556285"
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `n`  
  選択する項目の数。  
   
@@ -28,6 +30,7 @@ ms.locfileid: "90556285"
 > TOP 修飾子と SKIP サブ句が同じクエリ式内に存在する場合には、Entity Sql クエリは無効と見なされます。 TOP 式を LIMIT 式に変更してクエリを記述し直す必要があります。  
   
 ## <a name="example"></a>例  
+
  次の Entity SQL クエリでは、SELECT ステートメントで返されたオブジェクトの並べ替え順序の指定に ORDER BY 演算子を LIMIT と共に使用します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
 1. 「[方法: StructuralType 結果を返すクエリを実行する](../how-to-execute-a-query-that-returns-structuraltype-results.md)」の手順に従います。  

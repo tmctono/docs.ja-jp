@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0af3bd64-92a2-4b47-ae62-f5df35f131a6
-ms.openlocfilehash: 1c4e0b368a8eb154207382ae70b9767f5a5fe64d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ad14e4d3d6a1107f994d9536485257f9dc1851f5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785439"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166847"
 ---
 # <a name="creating-expression-columns"></a>式列の作成
+
 列の式を定義すると、同じ行の他の列値またはテーブル内の複数の行の列値に基づいて計算した値を、その列に格納できます。 評価する式を定義するには、対象の列の <xref:System.Data.DataColumn.Expression%2A> プロパティを使用し、その式で <xref:System.Data.DataColumn.ColumnName%2A> プロパティを使用して他の列を参照します。 式列の <xref:System.Data.DataColumn.DataType%2A> は、その式が返す値に適した型であることが必要です。  
   
  テーブル内の式列で使用できるいくつかの式の種類を次の表に示します。  

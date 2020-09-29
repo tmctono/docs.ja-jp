@@ -2,14 +2,15 @@
 title: Oracle データ型のマッピング
 ms.date: 03/30/2017
 ms.assetid: ec34ae21-bbbb-4adb-b672-83865e2a8451
-ms.openlocfilehash: be478741069e9edd406d73c0b75d5960b9909896
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 71a85f82ea3535cf7aec8dd92fbda6726a36fb81
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783425"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166574"
 ---
 # <a name="oracle-data-type-mappings"></a>Oracle データ型のマッピング
+
 次の表に、Oracle データ型およびその <xref:System.Data.OracleClient.OracleDataReader> へのマップを示します。  
   
 |Oracle データ型|OracleDataReader.GetValue によって返される .NET Framework データ型|OracleDataReader.GetOracleValue によって返される OracleClient データ型|Remarks|  

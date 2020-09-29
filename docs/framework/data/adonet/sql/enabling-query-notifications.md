@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-ms.openlocfilehash: 693e67b4d369eb69b8e0a9dded6decb2d3928459
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4e9b3a2e1f176a9d01e983bc469cc4032fa5d730
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554880"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156174"
 ---
 # <a name="enabling-query-notifications"></a>クエリ通知の有効化
+
 クエリ通知を使用するアプリケーションには、いくつか共通する要件があります。 SQL クエリ通知をサポートするには、データ ソースが正しく設定され、ユーザーがクライアント側およびサーバー側の正しい権限を所有している必要があります。  
   
  クエリ通知を使用するためには、次のことが必要です。  
@@ -26,6 +27,7 @@ ms.locfileid: "90554880"
 - 監視対象のデータが変更された場合に通知を処理するコードを設定する  
   
 ## <a name="query-notifications-requirements"></a>クエリ通知の要件  
+
  クエリ通知は、特定の要件を満たす SELECT ステートメントでのみサポートされます。 次の表に、SQL Server オンライン ブックの Service Broker とクエリ通知のドキュメントへのリンクを示します。  
   
  **SQL Server のドキュメント**  
@@ -49,6 +51,7 @@ ms.locfileid: "90554880"
 - [開発者ガイド (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="enabling-query-notifications-to-run-sample-code"></a>サンプル コードを実行するためのクエリ通知の有効化  
+
  **AdventureWorks** データベースで Service Broker を有効にするには、SQL Server Management Studio を通じて、次の Transact-SQL ステートメントを実行します。  
   
  `ALTER DATABASE AdventureWorks SET ENABLE_BROKER;`  
@@ -64,6 +67,7 @@ CREATE SERVICE ContactChangeNotifications
 ```  
   
 ## <a name="query-notifications-permissions"></a>クエリ通知のアクセス許可  
+
  通知を要求するコマンドを実行するユーザーは、特定のサーバーに対する SUBSCRIBE QUERY NOTIFICATIONS データベース アクセス許可を必要とします。  
   
  部分的に信頼される状況で実行されるクライアント側のコードには <xref:System.Data.SqlClient.SqlClientPermission> が必要です。  
@@ -74,14 +78,17 @@ CREATE SERVICE ContactChangeNotifications
  [!code-vb[DataWorks SqlNotification.Perms#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlNotification.Perms/VB/source.vb#1)]  
   
 ## <a name="choosing-a-notification-object"></a>通知オブジェクトの選択  
+
  クエリ通知 API は、通知を処理するために <xref:System.Data.SqlClient.SqlDependency> と <xref:System.Data.Sql.SqlNotificationRequest> という 2 つのオブジェクトを提供します。 通常、ASP.NET 以外のほとんどのアプリケーションでは、<xref:System.Data.SqlClient.SqlDependency> オブジェクトを使用する必要があります。 ASP.NET アプリケーションは、高レベルの <xref:System.Web.Caching.SqlCacheDependency> を使用する必要があります。これは <xref:System.Data.SqlClient.SqlDependency> をラップし、通知オブジェクトとキャッシュ オブジェクトを管理するためのフレームワークになります。  
   
 ### <a name="using-sqldependency"></a>SqlDependency の使用  
+
  <xref:System.Data.SqlClient.SqlDependency> を使用するには、使用する SQL Server データベースに対して Service Broker を有効にし、通知を受け取るためのアクセス許可をユーザーに与える必要があります。 通知キューなどの Service Broker オブジェクトは事前に定義されています。  
   
  さらに、<xref:System.Data.SqlClient.SqlDependency> によってワーカー スレッドが自動的に起動し、キューにポストされた通知が処理されます。また、Service Broker メッセージも解析され、情報がイベント引数データとして公開されます。 <xref:System.Data.SqlClient.SqlDependency> は、`Start` メソッドを呼び出し、データベースに対する依存関係を確立して初期化する必要があります。 これは、必要となる各データベース接続に対するアプリケーションの初期化中に、1 回だけ呼び出す必要のある静的メソッドです。 `Stop` メソッドは、作成された依存関係の接続ごとにアプリケーションの終了時に呼び出す必要があります。  
   
 ### <a name="using-sqlnotificationrequest"></a>SqlNotificationRequest の使用  
+
  これに対して、<xref:System.Data.Sql.SqlNotificationRequest> では、リッスンしているインフラストラクチャ全体を自分で実装する必要があります。 さらに、キュー、サービス、およびキューでサポートされているメッセージの種類など、サポート対象となるすべての Service Broker オブジェクトを定義する必要があります。 手動によるこの方法は、使用しているアプリケーションで特殊な通知メッセージや通知動作が必要な場合、またはそのアプリケーションが Service Broker アプリケーションの一部である場合に使用すると便利です。  
   
 ## <a name="see-also"></a>関連項目

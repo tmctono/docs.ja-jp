@@ -5,20 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1988b79c-3bfc-4c5c-a08a-86cf638bbe17
-ms.openlocfilehash: 18a7eceeec63d9caadefab8d98942f10d82c99ca
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fb77c4a23a4c4fa93dc55e63858ee41783c197ee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793351"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166184"
 ---
 # <a name="how-to-resolve-conflicts-by-merging-with-database-values"></a>方法: データベース値とマージすることで競合を解決する
+
 変更内容を再送信する前に、データベース内の予期した値と実際の値の違いを調整するために、<xref:System.Data.Linq.RefreshMode.KeepChanges> を使用して、データベース内の値を現在のクライアント メンバー値とマージできます。 詳しくは、「[オプティミスティック コンカレンシー: 概要)](optimistic-concurrency-overview.md) の下のステートメントを右クリックします。  
   
 > [!NOTE]
 > どの場合も、データベースから最新のデータを取得することで、まずクライアントのレコードが更新されます。 この処理によって、次の更新処理が同じコンカレンシー チェックで失敗することを防止できます。  
   
 ## <a name="example"></a>例  
+
  このシナリオでは、ユーザー 1 が変更内容を送信しようとしたときに <xref:System.Data.Linq.ChangeConflictException> 例外がスローされます。途中でユーザー 2 が Assistant 列と Department  列を変更したためです。 次の表は、この状況を示しています。  
   
 ||管理者|Assistant|Department|  

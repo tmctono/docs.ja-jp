@@ -2,12 +2,12 @@
 title: クラウドの準備が整っている回復力のあるサービスを構築する。 クラウド内の一時的な障害を受け入れる
 description: Azure Cloud と Windows コンテナーを使って既存の .NET アプリケーションを最新化する | クラウドに対応する回復力のあるサービスを構築する。 クラウド内の一時的な障害を受け入れる
 ms.date: 04/30/2018
-ms.openlocfilehash: 899084ac00d9be0df47ef88c026f4e8c19722bb6
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 8e9f1eda71e4b98a56cbfc1c7a4ff34e67bee3f4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144253"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172158"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>クラウドの準備が整っている回復力のあるサービスの構築:クラウド内の一時的な障害を受け入れる
 
@@ -33,7 +33,7 @@ HTTP サービスを使用するアプリでも、同様のシナリオが発生
 
 これらの手法は、HTTP リソースとデータベース リソースの両方で使用できます。 図 4-9 では、アプリケーションは 3 層アーキテクチャに基づいているため、これらの手法はサービス レベル (HTTP) およびデータ層レベル (TCP) で必要です。 データベースに加えて 1 つのアプリ層のみを使用する (追加のサービスやマイクロサービスは使用しない) モノリシック アプリケーションでは、データベース接続レベルで一時的な障害を処理するだけで十分な場合があります。 このシナリオでは、データベース接続の特定の構成のみが必要です。
 
-データベースにアクセスする回復性がある通信を実装する場合、使用している .NET のバージョンによっては簡単な可能性があります (たとえば、[Entity Framework 6 以降](/ef/ef6/fundamentals/connection-resiliency/retry-logic)。 これは、データベース接続を構成するだけの問題です)。 または、[一時的エラー処理アプリケーション ブロック](https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)) (以前のバージョンの .NET の場合) などの追加のライブラリを使用したり、独自のライブラリを実装したりする必要がある場合があります。
+データベースにアクセスする回復性がある通信を実装する場合、使用している .NET のバージョンによっては簡単な可能性があります (たとえば、[Entity Framework 6 以降](/ef/ef6/fundamentals/connection-resiliency/retry-logic)。 これは、データベース接続を構成するだけの問題です)。 または、[一時的エラー処理アプリケーション ブロック](/previous-versions/msp-n-p/hh680934(v=pandp.50)) (以前のバージョンの .NET の場合) などの追加のライブラリを使用したり、独自のライブラリを実装したりする必要がある場合があります。
 
 HTTP 再試行とサーキット ブレーカーを実装する場合、.NET の推奨事項は、.NET Framework サポートを含む .NET Framework 4.0、.NET Framework 4.5、および .NET Standard 1.1 を対象とする [Polly](https://github.com/App-vNext/Polly) ライブラリを使用することです。
 

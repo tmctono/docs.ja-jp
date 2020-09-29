@@ -3,14 +3,15 @@ title: 連結演算 (C#)
 description: 連結について、および C# の LINQ で連結を実行する標準クエリ演算子メソッドについて説明します。
 ms.date: 07/20/2015
 ms.assetid: 890ee104-c590-457e-8a7f-b2b5da0fb417
-ms.openlocfilehash: aadfd2d9cf8b70130c0f67aa299e42982f144c38
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 2760ba0152ac93ba68a1e28f2e77fb88a7e35946
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105519"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159203"
 ---
 # <a name="concatenation-operations-c"></a>連結演算 (C#)
+
 連結とは、1 つのシーケンスを別のシーケンスに追加する演算を指します。  
   
  次の図は、2 つの文字シーケンスの連結演算を表しています。  

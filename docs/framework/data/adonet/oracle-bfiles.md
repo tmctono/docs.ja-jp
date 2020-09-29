@@ -2,14 +2,15 @@
 title: Oracle BFILE
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: 40060a7ea8576e08140d972072d086606d640366
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d43dfccd9735ce1ab822d7b14de2abaa0940c77b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149441"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166600"
 ---
 # <a name="oracle-bfiles"></a>Oracle BFILE
+
 .NET Framework Data Provider for Oracle には、<xref:System.Data.OracleClient.OracleBFile> クラスが含まれています。このクラスは、Oracle <xref:System.Data.OracleClient.OracleType.BFile> データ型で使用されます。  
   
  Oracle の **BFILE** データ型は、最大 4 GB までのバイナリ データへの参照を含む Oracle の **LOB** データ型です。 Oracle の **BFILE** は、データがサーバー上にではなくオペレーティング システムの物理ファイルに保存されるという点で、他の Oracle の **LOB** データ型と異なります。 **BFILE** データ型のデータ アクセスは読み取り専用であることに注意してください。  
@@ -31,6 +32,7 @@ ms.locfileid: "79149441"
 2. 基になる物理ファイルのファイル名。このファイルは、DIRECTORY オブジェクトに関連付けられたディレクトリに配置されています。  
   
 ## <a name="example"></a>例  
+
  次の C# の例では、Oracle テーブルに **BFILE** を作成し、**OracleBFile** オブジェクトの形式で取得する方法について説明します。 この例では、<xref:System.Data.OracleClient.OracleDataReader> オブジェクトと **OracleBFile** の **Seek** および **Read** メソッドを使用する方法について説明します。 このサンプルを使用するには、はじめに "c:\\\bfiles" というディレクトリと "MyFile.jpg" というファイルを Oracle サーバーに作成する必要があります。  
   
 ```csharp  

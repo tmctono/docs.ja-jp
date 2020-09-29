@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-ms.openlocfilehash: 9e8c4204b51121b147fc7614066d9b849a687574
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4fdb19e7fa014bf4a7c924b1fbae53fa44de6e3c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151261"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153262"
 ---
 # <a name="datatable-edits"></a>DataTable の編集
+
 <xref:System.Data.DataRow> 内の列値を変更すると、その変更はすぐに行の現在の状態に反映されます。 次に、<xref:System.Data.DataRowState> は **Modified** に設定され、**DataRow** の <xref:System.Data.DataRow.AcceptChanges%2A> または <xref:System.Data.DataRow.RejectChanges%2A> メソッドを使用して、変更が承認または拒否されます。 **DataRow** では、行の編集中に、その行の状態を保留にしておくために使用できる 3 つのメソッドも提供されます。 これらのメソッドとは、<xref:System.Data.DataRow.BeginEdit%2A>、<xref:System.Data.DataRow.EndEdit%2A> および <xref:System.Data.DataRow.CancelEdit%2A> です。  
   
  **DataRow** の列値が直接変更されると、**DataRow** によって、**Current**、**Default**、**Original** の各行バージョンを使用して列値が管理されます。 **BeginEdit**、**EndEdit**、**CancelEdit** の各メソッドでは、これらの行バージョンに加えて、4 番目の行バージョンが使用されます: **Proposed**。 行バージョンについて詳しくは、「[行の状態とバージョン](row-states-and-row-versions.md)」をご覧ください。  

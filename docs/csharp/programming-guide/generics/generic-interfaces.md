@@ -6,14 +6,15 @@ helpviewer_keywords:
 - C# language, generic interfaces
 - generics [C#], interfaces
 ms.assetid: a8fa49a1-6e78-4a09-87e5-84a0b9f5ffbe
-ms.openlocfilehash: b7225e295268a3e46e4e9bd446372ae87bbbbb10
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: ec86395a41baea75694572b59b2c76cbde24fedf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89466145"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170390"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>ジェネリック インターフェイス (C# プログラミング ガイド)
+
 ジェネリック コレクション クラスのインターフェイスか、コレクション内の項目を表すジェネリック クラスのインターフェイスを定義すると、多くの場合、便利です。 ジェネリック クラスの優先設定の意図は、値型に対するボックス化とボックス化解除を回避する目的で、<xref:System.IComparable> ではなく <xref:System.IComparable%601> など、ジェネリック インターフェイスを利用することにあります。 .NET クラス ライブラリにより、<xref:System.Collections.Generic> 名前空間のコレクション クラスと共に利用するためのジェネリック インターフェイスがいくつか定義されます。  
   
  インターフェイスが型パラメーターの制約として指定される場合、インターフェイスを実装する型のみを利用できます。 `GenericList<T>` クラスから派生する `SortedList<T>` クラスを示したのが次のコード サンプルです。 詳細については、「[ジェネリックの概要](./index.md)」を参照してください。 `SortedList<T>` により制約 `where T : IComparable<T>` が追加されます。 これにより、`SortedList<T>` の `BubbleSort` メソッドは、一覧要素でジェネリック <xref:System.IComparable%601.CompareTo%2A> メソッドを利用できます。 この例では、一覧要素は単純なクラスである `Person` です。これは `IComparable<Person>` を実装します。  

@@ -2,14 +2,15 @@
 title: ブール型
 ms.date: 03/30/2017
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
-ms.openlocfilehash: 9fa3327315593bd54fc51f67bf9964da8d683c5d
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e2175afc24cfc7db38c1b8e1dbb11757f633960a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248054"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156070"
 ---
 # <a name="boolean-data-types"></a>ブール型
+
 ブール演算子は、共通言語ランタイム (CLR) で正常に動作しますが、ショートサーキットの動作は変換されません。 たとえば、Visual Basic の `AndAlso` 演算子は `And` 演算子のように動作します。 C# の `&&` 演算子は `&` 演算子のように動作します。  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、次の演算子をサポートしています。  

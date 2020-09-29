@@ -2,22 +2,25 @@
 title: 典型的な LINQ to SQL の使用手順
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-ms.openlocfilehash: c7964c821a838e027302cddce704d86cc6a34f66
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dc8c4be1e895ee5c4c7947e6311e5bf71008490f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792347"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164261"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>典型的な LINQ to SQL の使用手順
+
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] アプリケーションを実装するには、このトピックで説明する手順に従います。 多くの手順は省略できます。 既定の状態でオブジェクト モデルを使用することもできます。  
   
  オブジェクト リレーショナル デザイナーを使用してオブジェクト モデルを作成し、クエリのコーディングを開始すると、非常に簡単です。  
   
 ## <a name="creating-the-object-model"></a>オブジェクト モデルの作成  
+
  最初に、既存のリレーショナル データベースのメタデータからオブジェクト モデルを作成します。 オブジェクト モデルは、開発者のプログラミング言語に従ってデータベースを表します。 詳しくは、「[LINQ to SQL オブジェクト モデル](the-linq-to-sql-object-model.md)」をご覧ください。  
   
 ### <a name="1-select-a-tool-to-create-the-model"></a>1.モデルを作成するツールを選択します。  
+
  モデルを作成するツールとして、3 つのツールを使用できます。  
   
 - オブジェクト リレーショナル デザイナー  
@@ -50,9 +53,11 @@ ms.locfileid: "70792347"
      これは高度な機能です。  
   
 ### <a name="3-refine-the-code-file-to-reflect-the-needs-of-your-application"></a>3.コード ファイルを調整して、アプリケーションのニーズを反映します。  
+
  この目的には、O/R デザイナーまたはコード エディターを使用できます。  
   
 ## <a name="using-the-object-model"></a>オブジェクト モデルの使用  
+
  2 層シナリオでの開発者とデータの関係を次の図に示します。 その他のシナリオについては、「[LINQ to SQL での N 層およびリモート アプリケーション](n-tier-and-remote-applications-with-linq-to-sql.md)」を参照してください。  
   
  ![Linq オブジェクト モデルを示すスクリーンショット。](./media/the-linq-to-sql-object-model/linq-object-model-two-tier.png)  
@@ -64,21 +69,27 @@ ms.locfileid: "70792347"
  作成したオブジェクト モデルの典型的な使用手順を次に示します。  
   
 ### <a name="1-create-queries-to-retrieve-information-from-the-database"></a>1.クエリを作成し、データベースから情報を取得します。  
+
  詳しくは、「[クエリの概念](query-concepts.md)」と「[クエリの例](query-examples.md)」をご覧ください。  
   
 ### <a name="2-override-default-behaviors-for-insert-update-and-delete"></a>2.挿入、更新、および削除の既定の動作をオーバーライドします。  
+
  この手順は省略できます。 詳細については、「[挿入、更新、および削除の各操作のカスタマイズ](customizing-insert-update-and-delete-operations.md)」を参照してください。  
   
 ### <a name="3-set-appropriate-options-to-detect-and-report-concurrency-conflicts"></a>3.適切なオプションを設定し、コンカレンシーの競合を検出およびレポートします。  
+
  コンカレンシーの競合の処理について、モデルの既定値をそのまま使用することも、目的に合わせて変更することもできます。 詳細については、[コンカレンシーの競合を検査するメンバーを指定する](how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)」および「[方法: コンカレンシー例外をいつスローするかを指定する](how-to-specify-when-concurrency-exceptions-are-thrown.md)」を参照してください。  
   
 ### <a name="4-establish-an-inheritance-hierarchy"></a>4.継承階層を確立します。  
+
  この手順は省略できます。 詳細については、「[継承のサポート](inheritance-support.md)」を参照してください。  
   
 ### <a name="5-provide-an-appropriate-user-interface"></a>5.適切なユーザー インターフェイスを提供します。  
+
  この手順は省略でき、アプリケーションの使用方法によって異なります。  
   
 ### <a name="6-debug-and-test-your-application"></a>6.アプリケーションをデバッグおよびテストします。  
+
  詳しくは、「[デバッグのサポート](debugging-support.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目

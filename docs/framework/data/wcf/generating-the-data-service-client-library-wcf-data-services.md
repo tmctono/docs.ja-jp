@@ -6,14 +6,15 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: a6a388f837d00d63a39212843c3fa88b28482b26
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 050a791736e90b5daf46fd272197ca21a220afb0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545808"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172620"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>データ サービス クライアント ライブラリの生成 (WCF Data Services)
+
 Open Data Protocol (OData) が実装されているデータ サービスでは、OData フィードによって公開されているデータ モデルが記述されたサービス メタデータ ドキュメントが返されることがあります。 詳細については、「サービス メタデータ ドキュメント」セクション ([OData の概要](https://www.odata.org/documentation/odata-version-2-0/overview/)に関する記事) を参照してください。 Visual Studio の **[サービス参照の追加]** ダイアログを使用して、参照を OData ベースのサービスに追加できます。 このツールを使用してクライアント プロジェクト内の OData によって返されるメタデータに参照を追加すると、次のアクションが実行されます。  
   
 - データ サービスからのサービス メタデータ ドキュメントが要求され、返されたメタデータが解釈されます。  
@@ -32,6 +33,7 @@ Open Data Protocol (OData) が実装されているデータ サービスでは�
  クライアント データ サービス クラスは、コマンド プロンプトで [DataSvcUtil.exe](wcf-data-service-client-utility-datasvcutil-exe.md) ツールを使用して生成することもできます。 詳細については、[クライアント データ サービス クラスを手動で生成する](how-to-manually-generate-client-data-service-classes-wcf-data-services.md)」を参照してください。  
   
 ## <a name="client-data-type-mapping"></a>クライアント データ型のマッピング  
+
  Visual Studio の **[サービス参照の追加]** ダイアログまたは `DataSvcUtil.exe` ツールを使用して、OData フィードに基づいてクライアント データ クラスを生成する場合、次のように .NET Framework データ型がデータ モデルのプリミティブ型にマップされます。  
   
 |データ モデル型|.NET Framework データ型|  

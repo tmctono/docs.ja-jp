@@ -3,17 +3,19 @@ title: サポート対象の LINQ メソッドとサポート非対象の LINQ �
 description: この記事では、LINQ to Entities クエリでサポートされている標準クエリ演算子とサポートされていない標準クエリ演算子をまとめます。
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: 0d01cc6ccecef0f10aed48fa7475ad1a16ad4ea1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7d8b4e733ab0a996dea9fab60432f5fe0fece8e3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286780"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161712"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>サポート対象の LINQ メソッドとサポート非対象の LINQ メソッド (LINQ to Entities)
+
 このセクションでは、LINQ to Entities クエリでサポート対象またはサポート非対象になっている統合言語クエリ (LINQ) 標準クエリ演算子について説明します。 LINQ 標準クエリ演算子の多くには、整数の引数を取るオーバーロード バージョンがあります。 整数の引数は、<xref:System.Collections.Generic.IEqualityComparer%601>または <xref:System.Collections.Generic.IComparer%601> で操作されるシーケンス内の 0 から始まるインデックスに対応しています。 特に指定がなければ、LINQ 標準クエリ演算子のオーバーロード バージョンはサポートされず、このバージョンを使用しようとすると例外がスローされます。  
   
 ## <a name="projection-and-restriction-methods"></a>投影メソッドと制限メソッド  
+
  ほとんどの LINQ 投影および制限メソッドは、位置引数を受け入れるメソッドを例外として、LINQ to Entities クエリでサポートされます。 詳細については、「[LINQ to Entities クエリの標準クエリ演算子](standard-query-operators-in-linq-to-entities-queries.md)」を参照してください。 次の表に、サポート対象およびサポート非対象の投影および制限メソッドを示します。  
   
 |メソッド|サポート|Visual Basic 関数シグネチャ|C# メソッド シグネチャ|  
@@ -28,6 +30,7 @@ ms.locfileid: "84286780"
 |<xref:System.Linq.Queryable.Where%2A>|サポートなし|`Function Where(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Where<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
   
 ## <a name="join-methods"></a>結合メソッド  
+
  LINQ 結合メソッドは、LINQ to Entities でサポートされていますが、Comparer はデータ ソースに変換できないため、`IEqualityComparer` を受け入れるものは例外です。 詳細については、「[LINQ to Entities クエリの標準クエリ演算子](standard-query-operators-in-linq-to-entities-queries.md)」を参照してください。 次の表に、サポート対象の結合メソッドとサポート非対象の結合メソッドを示します。  
   
 |メソッド|サポート|Visual Basic 関数シグネチャ|C# メソッド シグネチャ|  
@@ -38,6 +41,7 @@ ms.locfileid: "84286780"
 |<xref:System.Linq.Queryable.Join%2A>|サポート非対象|`Function Join(Of TOuter, TInner, TKey, TResult) ( _ outer As IQueryable(Of TOuter), _ inner As IEnumerable(Of TInner), _ outerKeySelector As Expression(Of Func(Of TOuter, TKey)), _ innerKeySelector As Expression(Of Func(Of TInner, TKey)), _ resultSelector As Expression(Of Func(Of TOuter, TInner, TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Join\<TOuter, TInner, TKey, TResult>( this IQueryable<TOuter> outer, IEnumerable<TInner> inner, Expression<Func\<TOuter, TKey>> outerKeySelector, Expression<Func\<TInner, TKey>> innerKeySelector, Expression<Func\<TOuter, TInner, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
   
 ## <a name="set-methods"></a>メソッドの設定  
+
  LINQ to Entities クエリでは、<xref:System.Collections.Generic.EqualityComparer%601> を使用するものを除くほとんどの LINQ セット メソッドがサポートされています。 詳細については、「[LINQ to Entities クエリの標準クエリ演算子](standard-query-operators-in-linq-to-entities-queries.md)」を参照してください。 次の表に、サポート対象のセット メソッドとサポート非対象のセット メソッドを示します。  
   
 |メソッド|サポート|Visual Basic 関数シグネチャ|C# メソッド シグネチャ|  
@@ -60,6 +64,7 @@ ms.locfileid: "84286780"
 |<xref:System.Linq.Queryable.Union%2A>|サポートなし|`Function Union(Of TSource) ( _ source1 As IQueryable(Of TSource), _ source2 As IEnumerable(Of TSource), _ comparer As IEqualityComparer(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Union<TSource>( this IQueryable<TSource> source1, IEnumerable<TSource> source2, IEqualityComparer<TSource> comparer )`|  
   
 ## <a name="ordering-methods"></a>並べ替えメソッド  
+
  ほとんどの LINQ 並べ替えメソッドは LINQ to Entities でサポートされていますが、Comparer はデータ ソースに変換できないため、<xref:System.Collections.Generic.IComparer%601> を受け入れるものは例外です。 詳細については、「[LINQ to Entities クエリの標準クエリ演算子](standard-query-operators-in-linq-to-entities-queries.md)」を参照してください。 次の表に、サポート対象の並べ替えメソッドとサポート非対象の並べ替えメソッドを示します。  
   
 |メソッド|サポート|Visual Basic 関数シグネチャ|C# メソッド シグネチャ|  
@@ -75,6 +80,7 @@ ms.locfileid: "84286780"
 |<xref:System.Linq.Queryable.Reverse%2A>|サポートなし|`Function Reverse(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Reverse<TSource>( this IQueryable<TSource> source )`|  
   
 ## <a name="grouping-methods"></a>グループ化メソッド  
+
  ほとんどの LINQ グループ化メソッドは LINQ to Entities でサポートされていますが、Comparer はデータ ソースに変換できないため、<xref:System.Collections.Generic.IEqualityComparer%601> を受け入れるものは例外です。 詳細については、「[LINQ to Entities クエリの標準クエリ演算子](standard-query-operators-in-linq-to-entities-queries.md)」を参照してください。 次の表に、サポート対象のグループ化メソッドとサポート非対象のグループ化メソッドを示します。  
   
 |メソッド|サポート|Visual Basic 関数シグネチャ|C# メソッド シグネチャ|  
@@ -89,6 +95,7 @@ ms.locfileid: "84286780"
 |<xref:System.Linq.Queryable.GroupBy%2A>|サポートなし|`Function GroupBy(Of TSource, TKey, TElement, TResult) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ elementSelector As Expression(Of Func(Of TSource, TElement)), _ resultSelector As Expression(Of Func(Of TKey, IEnumerable(Of TElement), TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> GroupBy<TSource, TKey, TElement, TResult>( this IQueryable<TSource> source, Expression<Func<TSource, TKey>> keySelector, Expression<Func<TSource, TElement>> elementSelector, Expression<Func<TKey, IEnumerable<TElement>, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
   
 ## <a name="aggregate-methods"></a>集計メソッド  
+
  プリミティブ データ型を受け入れる集計メソッドのほとんどが LINQ to Entities でサポートされています。 詳細については、「[LINQ to Entities クエリの標準クエリ演算子](standard-query-operators-in-linq-to-entities-queries.md)」を参照してください。 次の表に、サポート対象の集計メソッドとサポート非対象の集計メソッドを示します。  
   
 |メソッド|サポート|Visual Basic 関数シグネチャ|C# メソッド シグネチャ|  
@@ -146,6 +153,7 @@ ms.locfileid: "84286780"
 |<xref:System.Linq.Queryable.Sum%2A>|サポートなし|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Decimal))) _ ) As Nullable(Of Decimal)`|`Nullable<decimal> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<decimal>>> selector )`|  
   
 ## <a name="type-methods"></a>型メソッド  
+
  Entity Framework では、CLR 型変換とテストを処理する LINQ 標準クエリ演算子がサポートされています。 LINQ to Entities では、概念モデルの型にマップする CLR 型のみがサポートされています。 概念モデルの型の一覧については、「[概念モデルの型 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)」を参照してください。 次の表に、サポート対象の型メソッドとサポート非対象の型メソッドを示します。  
   
 |メソッド|サポート|Visual Basic 関数シグネチャ|C# メソッド シグネチャ|  
@@ -154,6 +162,7 @@ ms.locfileid: "84286780"
 |<xref:System.Linq.Queryable.OfType%2A>|<xref:System.Data.Metadata.Edm.EntityType> でサポート|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
   
 ## <a name="paging-methods"></a>ページング メソッド  
+
  LINQ ページング メソッドの多くは LINQ to Entities クエリでサポートされていません。 詳細については、「[LINQ to Entities クエリの標準クエリ演算子](standard-query-operators-in-linq-to-entities-queries.md)」を参照してください。 次の表に、サポート対象のページング メソッドとサポート非対象のページング メソッドを示します。  
   
 |メソッド|サポート|Visual Basic 関数シグネチャ|C# メソッド シグネチャ|  

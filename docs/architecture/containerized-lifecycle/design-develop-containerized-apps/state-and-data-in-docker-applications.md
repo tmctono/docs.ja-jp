@@ -2,12 +2,12 @@
 title: Docker アプリケーションの状態とデータ
 description: コンテナー化されたアプリケーションで状態を保存するために利用できる選択肢について説明します。
 ms.date: 08/06/2020
-ms.openlocfilehash: dc9a1a3eccb77e9fd67e69fd3295f3db1edf5e66
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: d55519e9340ec06588c2dae3e7363d03f263ce39
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915316"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163467"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker アプリケーションの状態とデータ
 
@@ -27,7 +27,7 @@ Docker ホストから、[Docker ボリューム](https://docs.docker.com/engine
 
 - [Azure Storage](https://azure.microsoft.com/documentation/services/storage/) には、地理的に分散可能なストレージを提供し、コンテナーに適した長期的で持続性の高いソリューションが用意されています。
 
-- [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) のようなリモート リレーショナル データベース、[Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) のような NoSQL データベース、[Redis](https://redis.io/) のようなキャッシュ サービス。
+- [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) のようなリモート リレーショナル データベース、[Azure Cosmos DB](/azure/cosmos-db/introduction) のような NoSQL データベース、[Redis](https://redis.io/) のようなキャッシュ サービス。
 
 Docker コンテナーから:
 

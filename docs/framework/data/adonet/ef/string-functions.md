@@ -2,14 +2,15 @@
 title: 文字列関数
 ms.date: 03/30/2017
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
-ms.openlocfilehash: 29e2d2ee852f47b42ac882bcbc459d2a6d732ece
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f5c9696da51591b7a44de14838313112bbc46c06
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149675"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156525"
 ---
 # <a name="string-functions"></a>文字列関数
+
 .NET Framework Data Provider for SQL Server (SqlClient) には、入力された `String` に対して操作を実行し、その結果を `String` または数値として返す `String` 関数が用意されています。 これらの関数は、SqlClient の SqlServer 名前空間に存在します。 Entity Framework は、プロバイダーの名前空間プロパティを使用することにより、型や関数など、特定のコンストラクターに対してこのプロバイダーによってどのプレフィックスが使用されているかを特定できます。  
   
  次の表に、SqlClient の `String` 関数を示します。  

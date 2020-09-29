@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 3edafa6c6a1bc3da2abc0598f329caf0e2f21e8b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c00e5e42508160a210d16f058c46afbf62ae0ee0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786252"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164728"
 ---
 # <a name="handling-datatable-events"></a>DataTable イベントの処理
+
 <xref:System.Data.DataTable> オブジェクトは、アプリケーションが処理できる一連のイベントを提供します。 `DataTable` のイベントを次の表に示します。  
   
 |event|説明|  
@@ -36,6 +37,7 @@ ms.locfileid: "70786252"
 > `DataSet` イベントの生成元の `RowChanged` でデータが変更されると、データが破損する可能性があります。 このようなデータの破損が起きた場合、例外は発生しません。  
   
 ## <a name="additional-related-events"></a>その他の関連イベント  
+
  <xref:System.Data.DataTable.Constraints%2A> プロパティは <xref:System.Data.ConstraintCollection> インスタンスを保持します。 <xref:System.Data.ConstraintCollection> クラスは、<xref:System.Data.ConstraintCollection.CollectionChanged> イベントを公開します。 このイベントは、`ConstraintCollection` に対して制約の追加、変更、または削除が実行されたときに発生します。  
   
  <xref:System.Data.DataTable.Columns%2A> プロパティは <xref:System.Data.DataColumnCollection> インスタンスを保持します。 `DataColumnCollection` クラスは、<xref:System.Data.DataColumnCollection.CollectionChanged> イベントを公開します。 このイベントは、`DataColumn` が追加、変更、または `DataColumnCollection` から削除されたときに発生します。 イベントの発生を伴う変更には、名前の変更、型の変更、式の変更、列の序数位置の変更などがあります。  
@@ -45,6 +47,7 @@ ms.locfileid: "70786252"
  `DataRows` への変更によって、関連する <xref:System.Data.DataView> のイベントがトリガーされる場合もあります。 `DataView` クラスは、<xref:System.Data.DataView.ListChanged> 値が変更されたとき、または、ビューの構成や並べ替え順が変更されたときに発生する `DataColumn` イベントを公開します。 <xref:System.Data.DataRowView> クラスは、関連する <xref:System.Data.DataRowView.PropertyChanged> 値が変更されたときに発生する `DataColumn` イベントを公開します。  
   
 ## <a name="sequence-of-operations"></a>操作の順序  
+
  `DataRow` が追加、変更、または削除されたときに発生する操作の順序について説明します。  
   
 1. 提示されたレコードを作成し、変更を適用します。  
@@ -74,6 +77,7 @@ ms.locfileid: "70786252"
 > <xref:System.NullReferenceException> を `RowChanged` イベント ハンドラー内でスローしないでください。 <xref:System.NullReferenceException> が `RowChanged` の `DataTable` イベント内でスローされると、`DataTable` が破損します。  
   
 ### <a name="example"></a>例  
+
  次の例では、`RowChanged`、`RowChanging`、`RowDeleted`、`RowDeleting`、`ColumnChanged`、`ColumnChanging`、`TableNewRow`、`TableCleared`、`TableClearing` の各イベントについてイベント ハンドラーを作成しています。 イベントが発生すると、各イベント ハンドラーによって、出力結果がコンソール ウィンドウに表示されます。  
   
  [!code-csharp[DataWorks DataTable.Events#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTable.Events/CS/source.cs#1)]

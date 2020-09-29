@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: 164530a5ec99e7d5b9f34dbcdfb18d80f3102308
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 77aa9bf0fc0911f441d00403d773ee5ae03ae99b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125918"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173296"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (C# コンパイラ オプション)
+
 **-debug** オプションを指定すると、コンパイラによってデバッグ情報が生成され、出力ファイルに格納されます。  
   
 ## <a name="syntax"></a>構文  
@@ -27,6 +28,7 @@ ms.locfileid: "89125918"
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `+` &#124; `-`  
  `+` を指定するか、または単に **-debug** と指定すると、コンパイラによってデバッグ情報が生成され、その情報がプログラム データベース (.pdb ファイル) に出力されます。 **-debug** を指定しない場合、`-` の指定が有効となります。これを指定した場合、デバッグ情報は作成されません。  
   
@@ -34,6 +36,7 @@ ms.locfileid: "89125918"
  コンパイラによって生成されるデバッグ情報の種類を指定します。 full 引数を使用すると (**-debug:pdbonly** を指定しない場合)、実行中のプログラムにデバッガーをアタッチできます。 pdbonly を指定すると、プログラムがデバッガーで開始されたときにはソース コードをデバッグできますが、実行中のプログラムをデバッガーにアタッチしたときはアセンブラーしか表示されません。  
   
 ## <a name="remarks"></a>Remarks  
+
  このオプションを使用してデバッグ ビルドを作成します。 **-debug**、**-debug+**、または **-debug:full** のいずれも指定しなかった場合、プログラムの出力ファイルをデバッグすることはできません。  
   
  **-debug:full** を使用する場合は、JIT によって最適化されるコードの速度とサイズに若干影響が生じる点に注意してください。また、**-debug:full** でデバッグした場合、わずかではありますが、コードの品質にも影響が生じます。 生成されるリリース コードには、**-debug:pdbonly** を使用するか、PDB を一切使用しないことをお勧めします。  
@@ -58,6 +61,7 @@ ms.locfileid: "89125918"
  このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>」を参照してください。  
   
 ## <a name="example"></a>例  
+
  デバッグ情報を出力ファイル `app.pdb` に出力します。  
   
 ```console  

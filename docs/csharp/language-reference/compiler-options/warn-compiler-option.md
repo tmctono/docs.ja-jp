@@ -14,14 +14,15 @@ helpviewer_keywords:
 - warn compiler option [C#]
 ms.custom: updateeachrelease
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-ms.openlocfilehash: 55e80d0bd05e2119154210503bb277d743050e18
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d59274423e6f9844d3ab22f3ac513ba1a05d7f07
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89139074"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171352"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (C# コンパイラ オプション)
+
 **-warn** オプションは、コンパイラが表示する警告レベルを指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -31,6 +32,7 @@ ms.locfileid: "89139074"
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `option`  
  コンパイルで表示する警告レベル: 数値が小さいほど重要度が高い警告のみが表示され、数値が大きいほど多くの警告が表示されます。 この値は、ゼロまたは正の整数である必要があります。
 
@@ -45,6 +47,7 @@ ms.locfileid: "89139074"
 |5 より大きい|5 より大きいすべての値は、5 として扱われます。 コンパイラが新しい警告レベルで更新された場合に、必ずすべての警告が使用されるように、一般に任意の大きな値 (`9999` など) を指定します。|
   
 ## <a name="remarks"></a>注釈  
+
  エラーまたは警告に関する情報を取得するには、ヘルプの索引でエラー コードを検索することができます。 エラーまたは警告に関する情報を取得する他の方法については、「[C# コンパイラ エラー](../compiler-messages/index.md)」を参照してください。  
   
  すべての警告をエラーとして扱う場合は [-warnaserror](./warnaserror-compiler-option.md) を使用します。 特定の警告を無効にするには、[-nowarn](./nowarn-compiler-option.md) を使用します。  
@@ -62,6 +65,7 @@ ms.locfileid: "89139074"
  このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>」を参照してください。  
   
 ## <a name="example"></a>例  
+
  `in.cs` をコンパイルして、コンパイラにレベル 1 の警告のみを表示させます。  
   
 ```console  

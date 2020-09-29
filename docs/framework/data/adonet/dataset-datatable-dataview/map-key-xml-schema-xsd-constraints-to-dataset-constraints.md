@@ -2,14 +2,15 @@
 title: XML スキーマ (XSD) のキー制約の DataSet 制約への割り当て
 ms.date: 03/30/2017
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-ms.openlocfilehash: 5ebf333b065157fa9497cc1471a45698663638e5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b55b232faa01bf36788276caaf8bc2e97dddf697
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150936"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172789"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>XML スキーマ (XSD) のキー制約の DataSet 制約への割り当て
+
 スキーマでは、**key** 要素を使用して要素または属性のキー制約を指定できます。 キー制約を指定する要素または属性の値は、スキーマ インスタンス内で一意になる必要があります。また、null 値にすることはできません。  
   
  キー制約を定義する列の値を null 値にできない点を除くと、キー制約は UNIQUE 制約と同じです。  

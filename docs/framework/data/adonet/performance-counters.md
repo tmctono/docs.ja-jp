@@ -6,17 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 4c1da6041b2343565bdaeb53e586c893bd85c922
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4f645a51996078f8dd80b6c455c420633db36155
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557906"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164601"
 ---
 # <a name="performance-counters-in-adonet"></a>ADO.NET でのパフォーマンス カウンター
+
 ADO.NET 2.0 では、<xref:System.Data.SqlClient> と <xref:System.Data.OracleClient> の両方をサポートする新しいパフォーマンス カウンターが導入されました。 以前のバージョンの ADO.NET で利用されていた <xref:System.Data.SqlClient> のパフォーマンス カウンターは非推奨とされ、このトピックで説明する新しいパフォーマンス カウンターに置き換えられました。 ADO.NET のパフォーマンス カウンターを使用することで、アプリケーションやそれによって使用される接続リソースのステータスを監視できます。 パフォーマンス カウンターは、Windows パフォーマンス モニターを使って監視できるほか、<xref:System.Diagnostics.PerformanceCounter> 名前空間の <xref:System.Diagnostics> クラスを使用することでプログラムから監視することもできます。  
   
 ## <a name="available-performance-counters"></a>利用可能なパフォーマンス カウンター  
+
  次の表に示したように、<xref:System.Data.SqlClient> および <xref:System.Data.OracleClient> には現在、14 種類のパフォーマンス カウンターが存在します。 個々のカウンターの名前は、Microsoft .NET Framework の地域別バージョン全体でローカライズされているわけではないことに注意してください。  
   
 |パフォーマンス カウンター|説明|  
@@ -37,10 +39,13 @@ ADO.NET 2.0 では、<xref:System.Data.SqlClient> と <xref:System.Data.OracleCl
 |`SoftDisconnectsPerSecond`|接続プールに戻されているアクティブな接続の数。 **注:** このパフォーマンス カウンターは、既定では無効にされています。 このパフォーマンス カウンターを有効にするには、「[既定ではオフになっているカウンターのアクティブ化](#ActivatingOffByDefault)」を参照してください。|  
   
 ### <a name="connection-pool-groups-and-connection-pools"></a>接続プール グループと接続プール  
+
  Windows 認証 (統合セキュリティ) を使用している場合、`NumberOfActiveConnectionPoolGroups` と `NumberOfActiveConnectionPools` の両方のパフォーマンス カウンターを監視する必要があります。 なぜなら、接続プール グループは接続文字列単位でマップされるためです。 統合セキュリティを使用した場合、接続文字列にマップされた接続プールの他に、個々の Windows ID 用に別々のプールが作成されます。 たとえば、同じ AppDomain に属する Fred と Julie が、どちらも `"Data Source=MySqlServer;Integrated Security=true"` という接続文字列を使用した場合、その接続文字列に対応した接続プール グループが作成され、それに加えて、2 つのプール (Fred 用と Julie 用) が作成されます。 John と Martha が同じ SQL Server ログインの接続文字列 `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"` を使用した場合は、**lowPrivUser** という ID に対してプールが 1 つだけ作成されます。  
   
 <a name="ActivatingOffByDefault"></a>
+
 ### <a name="activating-off-by-default-counters"></a>既定ではオフになっているカウンターのアクティブ化  
+
  `NumberOfFreeConnections`、`NumberOfActiveConnections`、`SoftDisconnectsPerSecond`、`SoftConnectsPerSecond` の各パフォーマンス カウンターは、既定ではオフになっています。 有効にするには、アプリケーションの構成ファイルに次の情報を追加します。  
   
 ```xml  
@@ -53,6 +58,7 @@ ADO.NET 2.0 では、<xref:System.Data.SqlClient> と <xref:System.Data.OracleCl
 ```  
   
 ## <a name="retrieving-performance-counter-values"></a>パフォーマンス カウンターの値の取得  
+
  次のコンソール アプリケーションは、アプリケーションでパフォーマンス カウンターの値を取得する方法を示しています。 すべての ADO.NET パフォーマンス カウンターの情報を取得できるように、接続を開いてアクティブにする必要があります。  
   
 > [!NOTE]

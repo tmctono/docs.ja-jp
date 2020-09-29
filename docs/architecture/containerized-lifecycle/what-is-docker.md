@@ -2,12 +2,12 @@
 title: Docker について
 description: Docker について、もう少し理解を深めます。ここに示す簡単な例えが役立つ場合があります。
 ms.date: 08/06/2020
-ms.openlocfilehash: 73b6032465583861169a8ac2bed81585027f42ec
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: b23a8719170deca706ee44d10337c340d72605fb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915062"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165924"
 ---
 # <a name="what-is-docker"></a>Docker について
 
@@ -29,7 +29,7 @@ ms.locfileid: "87915062"
 
 - **Hyper-V コンテナー**では、各コンテナーを高度に最適化された仮想マシンで実行することで、Windows Server コンテナーによって提供される分離を拡張します。 この構成では、コンテナー ホストのカーネルは Hyper-V コンテナーと共有されないため、分離性に優れています。
 
-これらのコンテナーのイメージは、まったく同じように作成され、機能します。 違いは、Hyper-V コンテナーを実行しているイメージからコンテナーを作成する方法で、追加のパラメーターが必要な点です。 詳細については、「[Hyper-V コンテナー](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/hyperv-container)」を参照してください。
+これらのコンテナーのイメージは、まったく同じように作成され、機能します。 違いは、Hyper-V コンテナーを実行しているイメージからコンテナーを作成する方法で、追加のパラメーターが必要な点です。 詳細については、「[Hyper-V コンテナー](/virtualization/windowscontainers/manage-containers/hyperv-container)」を参照してください。
 
 ## <a name="comparing-docker-containers-with-virtual-machines"></a>Docker コンテナーと仮想マシンの比較
 

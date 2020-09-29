@@ -5,14 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: f696cd90f197bede1a64949d211a563ce9a18376
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 7cbaea4dc5381a2ebeb97ce2797ffe850488e126
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299930"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170455"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>ファイル、フォルダー、およびドライブに関する情報を取得する方法 (C# プログラミング ガイド)
+
 .NET では、次のクラスを使用して、ファイル システム情報にアクセスできます。  
   
 - <xref:System.IO.FileInfo?displayProperty=nameWithType>  
@@ -36,11 +37,13 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
  <xref:System.IO.Directory?displayProperty=nameWithType> クラスと <xref:System.IO.File?displayProperty=nameWithType> クラスは、ディレクトリとファイルに関する情報を取得するための静的メソッドを提供します。  
   
 ## <a name="example"></a>例  
+
  次の例では、ファイルとフォルダーに関する情報にアクセスするさまざまな方法を示します。  
   
  [!code-csharp[csFilesandFolders#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#6)]  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
+
  ユーザー指定のパス文字列を処理する場合、次の条件の例外も処理する必要があります。  
   
 - ファイル名が不適切である。 たとえば、無効な文字が含まれている場合や、空白のみの場合です。  

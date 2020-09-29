@@ -7,17 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 7315c6d8-f452-4fb2-a0c1-76ab0593c146
-ms.openlocfilehash: cf20c1d27f22c0248217541763eaa617ed9493db
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 6bab9d9be484cf90cb85df63a1b237b5cc39a5e0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569290"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152768"
 ---
 # <a name="how-to-create-a-data-service-using-the-reflection-provider-wcf-data-services"></a>方法: リフレクション プロバイダーを使用してデータ サービスを作成する (WCF Data Services)
+
 WCF Data Services では、<xref:System.Linq.IQueryable%601> インターフェイスを実装するオブジェクトとして公開されているクラスに基づいてデータ モデルを定義できます。 詳細については、「[Data Services プロバイダー](data-services-providers-wcf-data-services.md)」を参照してください。  
   
 ## <a name="example"></a>例  
+
  次の例は、`Orders` および `Items` を含むデータ モデルを定義します。 エンティティ コンテナー クラス `OrderItemData` には、<xref:System.Linq.IQueryable%601> インターフェイスを返す 2 つのパブリック メソッドがあります。 これらのインターフェイスは、`Orders` エンティティ型と `Items` エンティティ型のエンティティ セットです。 `Order` には複数の `Items` を含めることができるので、`Orders` エンティティ型には `Items` オブジェクトのコレクションを返す `Items` ナビゲーション プロパティがあります。 `OrderItemData` エンティティ コンテナー クラスは、<xref:System.Data.Services.DataService%601> データ サービスが派生する `OrderItems` クラスのジェネリック型です。  
   
 > [!NOTE]

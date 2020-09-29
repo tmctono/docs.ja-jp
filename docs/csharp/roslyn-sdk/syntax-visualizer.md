@@ -3,12 +3,12 @@ title: Visual Studio で Roslyn Syntax Visualizer を使ってコードを調べ
 description: Syntax Visualizer は、.NET Compiler Platform SDK がコード用に生成したモデルを調べるためのビジュアル ツールを提供します。
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: c7a34fda909bd044a9e65a8353d5626b533730e3
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: a911a99e78ad5a5f4c6771b91a3c541b1812d67c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975928"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167575"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Visual Studio で Roslyn Syntax Visualizer を使ってコードを調べる
 
@@ -33,9 +33,11 @@ ms.locfileid: "82975928"
 <!-- markdownlint-disable MD025 -->
 
 # <a name="c"></a>[C#](#tab/csharp)
+
 ![C# 構文ツリーの視覚化](media/syntax-visualizer/visualize-csharp.png)
 
 # <a name="visual-basic"></a>[Visual Basic](#tab/vb)
+
 ![Visual Basic 構文ツリーの視覚化](media/syntax-visualizer/visualize-visual-basic.png)
 
 ---

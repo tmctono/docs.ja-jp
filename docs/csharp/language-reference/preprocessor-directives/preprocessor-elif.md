@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#elif directive [C#]'
 ms.assetid: 731d78df-08e0-4d51-b8c8-f193c27de13f
-ms.openlocfilehash: 3aa9082b392b352091b9fde74a85f9dd155ad7b1
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 383c143792a39bb3abcd255804360ad5e2f8ef74
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89132288"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91168700"
 ---
 # <a name="elif-c-reference"></a>#elif (C# リファレンス)
+
 `#elif` を使用すると、複合条件付きディレクティブを作成できます。 `#elif` 式が評価されるのは、先行するディレクティブ式 [#if](./preprocessor-if.md) および `#elif` (オプション) が `true` と評価されなかった場合です。 `#elif` 式が `true` と評価された場合は、`#elif` と次の条件付きディレクティブの間にあるすべてのコードが、コンパイラによって評価されます。 次に例を示します。  
   
 ```csharp
@@ -30,6 +31,7 @@ ms.locfileid: "89132288"
  複数のシンボルを評価するときには、`==` (等値)、`!=` (非等値)、`&&` (AND)、および `||` (OR) の演算子を使用できます。 シンボルと演算子は、かっこを使用してグループ化できます。  
   
 ## <a name="remarks"></a>注釈  
+
  `#elif` では、次のように記述した場合と同じ結果が得られます。  
   
 ```csharp

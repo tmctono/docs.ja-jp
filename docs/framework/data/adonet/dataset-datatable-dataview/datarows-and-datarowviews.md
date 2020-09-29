@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
-ms.openlocfilehash: 14e7e1ccb051410c351e49afee9f2d6809264833
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bce90c1d310178e66da7c758c6df2cd357199c8b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151300"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153288"
 ---
 # <a name="datarows-and-datarowviews"></a>DataRow および DataRowView
+
 <xref:System.Data.DataView> は、<xref:System.Data.DataRowView> オブジェクトの列挙可能なコレクションを公開します。 **DataRowView** オブジェクトは、基になるテーブルの列の名前または列の序数参照によってインデックスが設定されているオブジェクトの配列として値を公開します。 **DataRowView** の <xref:System.Data.DataRowView.Row%2A> プロパティを使用することによって、**DataRowView** で公開されている <xref:System.Data.DataRow> にアクセスできます。  
   
  **DataRowView** を使用して値を表示している場合は、**DataView** の <xref:System.Data.DataView.RowStateFilter%2A> プロパティによって、基になる **DataRow** から公開される行バージョンが決まります。 **DataRow** を使用してさまざまな行バージョンにアクセスする方法については、「[行の状態とバージョン](row-states-and-row-versions.md)」をご覧ください。  

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb09e298-0b53-47e5-97fb-ab318bcd4fad
-ms.openlocfilehash: 399bf44ef5536a9adebf1cad590439741df998f0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0a6853ef5d0b67e5efb95731adb5a106e8701e0f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793316"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155836"
 ---
 # <a name="how-to-retrieve-information-as-read-only"></a>方法: 情報を読み取り専用として取得する
+
 データを変更する予定がない場合は、読み取り専用の結果を取得することでクエリのパフォーマンスを向上させることができます。  
   
  読み取り専用の処理を実装するには、<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> を `false` に設定します。  
@@ -21,6 +22,7 @@ ms.locfileid: "70793316"
 > <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> を `false` に設定すると、<xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> が暗黙的に `false` に設定されます。  
   
 ## <a name="example"></a>例  
+
  次のコード例は、従業員の入社日の読み取り専用コレクションを取得します。  
   
  [!code-csharp[DLinqQuerying#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQuerying/cs/Program.cs#2)]

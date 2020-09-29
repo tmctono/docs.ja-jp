@@ -2,12 +2,12 @@
 title: 単純なデータ ドリブン CRUD マイクロサービスの作成
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービス アプリケーションのコンテキストでの単純な CRUD (データ ドリブン) マイクロサービスの作成を理解する。
 ms.date: 08/14/2020
-ms.openlocfilehash: 46654b9e6283d913910b62621d056e034c18870e
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 056ba37965cf831e0fb176eb585042c440530c6b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679150"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172366"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>単純なデータ ドリブン CRUD マイクロサービスの作成
 
@@ -27,7 +27,7 @@ ms.locfileid: "90679150"
 
 **図 6-5**。 単純なデータ ドリブン/CRUD マイクロサービスの設計
 
-前の図では、論理 Catalog マイクロサービスが示されています。そこには、その Catalog データベースが含まれており、Docker ホストは同じ場合もそうでない場合もあります。 同じ Docker ホストにデータベースを置くことは、開発には適しているかもしれませんが、運用の場合はお勧めしません。 この種のサービスを開発するときに必要なのは、[ASP.NET Core](https://docs.microsoft.com/aspnet/core/) と、データ アクセス API または [Entity Framework Core](https://docs.microsoft.com/ef/core/index) のような ORM だけです。 次のセクションで説明するように、[Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) を通じて [Swagger](https://swagger.io/) メタデータを自動的に生成して、サービスが提供する内容の説明を提供することもできます。
+前の図では、論理 Catalog マイクロサービスが示されています。そこには、その Catalog データベースが含まれており、Docker ホストは同じ場合もそうでない場合もあります。 同じ Docker ホストにデータベースを置くことは、開発には適しているかもしれませんが、運用の場合はお勧めしません。 この種のサービスを開発するときに必要なのは、[ASP.NET Core](/aspnet/core/) と、データ アクセス API または [Entity Framework Core](/ef/core/index) のような ORM だけです。 次のセクションで説明するように、[Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) を通じて [Swagger](https://swagger.io/) メタデータを自動的に生成して、サービスが提供する内容の説明を提供することもできます。
 
 クラウドまたはオンプレミスでデータベースをプロビジョニングしなくてもすべての依存関係を稼働させることができるので、Docker コンテナー内の SQL Server のようなデータベース サーバーの実行は開発環境に適しています。 これは、統合テストの実行時にとても便利です。 ただし運用環境では、コンテナーでデータベース サーバーを実行すると、通常は高可用性が実現されないため、このアプローチはお勧めしません。 Azure の運用環境では、Azure SQL DB、または高可用性と高スケーラビリティを提供できるその他のデータベース テクノロジを使用することをお勧めします。 たとえば、NoSQL アプローチでは、CosmosDB を選択できます。
 
@@ -301,7 +301,7 @@ public class CatalogController : ControllerBase
     // Implementation ...
 ```
 
-このバージョン管理メカニズムは単純で、要求を適切なエンドポイントにルーティングするサーバーに依存します。 ただし、より高度なバージョン管理と REST を使用するときに最適な方法としては、ハイパーメディアを使用し、[HATEOAS (Hypertext as the Engine of Application State)](https://docs.microsoft.com/azure/architecture/best-practices/api-design#use-hateoas-to-enable-navigation-to-related-resources) を実装する必要があります。
+このバージョン管理メカニズムは単純で、要求を適切なエンドポイントにルーティングするサーバーに依存します。 ただし、より高度なバージョン管理と REST を使用するときに最適な方法としては、ハイパーメディアを使用し、[HATEOAS (Hypertext as the Engine of Application State)](/azure/architecture/best-practices/api-design#use-hateoas-to-enable-navigation-to-related-resources) を実装する必要があります。
 
 ### <a name="additional-resources"></a>その他の技術情報
 
@@ -336,7 +336,7 @@ API 用の Swagger メタデータを生成する主な理由は次のとおり�
 
 - [Microsoft PowerApps](https://powerapps.microsoft.com/)。 [PowerApps Studio](https://powerapps.microsoft.com/build-powerapps/) で作成された [PowerApps モバイル アプリ](https://powerapps.microsoft.com/blog/register-and-use-custom-apis-in-powerapps/)から API を自動的に使用できます。プログラミング スキルは不要です。
 
-- [Azure App Service Logic Apps](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-what-are-logic-apps)。 自動的に [API を使用でき、Azure App Service Logic App に統合](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-custom-hosted-api)できます。プログラミング スキルは不要です。
+- [Azure App Service Logic Apps](/azure/app-service-logic/app-service-logic-what-are-logic-apps)。 自動的に [API を使用でき、Azure App Service Logic App に統合](/azure/app-service-logic/app-service-logic-custom-hosted-api)できます。プログラミング スキルは不要です。
 
 **API のドキュメントを自動的に生成できる**。 複雑なマイクロサービス ベースのアプリケーションなど、大規模な RESTful API を作成する場合は、要求と応答のペイロードで使用されるさまざまなデータ モデルで多数のエンドポイントを処理する必要があります。 Swagger で利用できるような適切なドキュメントと堅牢な API Explorer があることは、API の成功と開発者による採用の鍵となります。
 

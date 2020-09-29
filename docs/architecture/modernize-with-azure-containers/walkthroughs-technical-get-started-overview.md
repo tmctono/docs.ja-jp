@@ -2,12 +2,12 @@
 title: チュートリアルと技術的な概要
 description: Azure クラウドおよび Windows コンテナーを使用して既存の .NET アプリケーションを最新化する | チュートリアルと技術的な概要
 ms.date: 04/28/2018
-ms.openlocfilehash: 4db6d449d27dcd4316d61305c8c2a8c2aa0bc65b
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 98d33b13d2b28bfe1c35894df45e525cff0520c1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516126"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172145"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>チュートリアルと技術的な概要
 
@@ -190,7 +190,7 @@ Windows コンテナーはオンプレミスの Windows Server 2016 VM にもデ
 
 ### <a name="overview"></a>概要
 
-[Azure Container Instances (ACI)](https://docs.microsoft.com/azure/container-instances/) は、コンテナーの単一インスタンスをデプロイできるコンテナー開発/テスト/ステージング環境を作成する上で最も簡単な方法です。
+[Azure Container Instances (ACI)](/azure/container-instances/) は、コンテナーの単一インスタンスをデプロイできるコンテナー開発/テスト/ステージング環境を作成する上で最も簡単な方法です。
 
 ### <a name="goals"></a>目的
 

@@ -4,12 +4,12 @@ description: 式ツリーの構造を調べるためのコードの記述方法�
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: ea205d42b02ea7b38c04cb70d322329cf7c1d495
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 960d72384a7e5f570fc1f94200a7d3b2179343fd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004648"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173309"
 ---
 # <a name="interpreting-expressions"></a>式の解釈
 
@@ -22,6 +22,7 @@ ms.locfileid: "84004648"
 ノード型に子がある場合は、再帰的に子にアクセスします。 それぞれの子ノードで、ルート ノードで使用したプロセスを繰り返します。つまり、種類を確認し、型に子がある場合は、それぞれの子にアクセスします。
 
 ## <a name="examining-an-expression-with-no-children"></a>子を持たない式の確認
+
 まずは、単純な式ツリーの各ノードにアクセスしてみましょう。
 次に示すのは、定数式を作成し、次にそのプロパティを調べるコードです。
 

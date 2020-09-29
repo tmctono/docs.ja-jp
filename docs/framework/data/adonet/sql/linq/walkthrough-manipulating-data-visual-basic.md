@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: 7acce3f8483fab3c2978de7cbd1b9d875900f1d3
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: dbf18273e69ff0977f5d16ff179b8659865ef696
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003398"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164052"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>チュートリアル: データの操作 (Visual Basic)
+
 このチュートリアルでは、データベースに対してデータの追加、変更、および削除を行う、基本の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] シナリオ全体を示します。 顧客の追加、顧客名の変更、および注文の削除を行うため、サンプルの Northwind データベースのコピーを使用します。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -19,6 +20,7 @@ ms.locfileid: "72003398"
  このチュートリアルは、Visual Basic 開発設定を使用して記述されています。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
+
  このチュートリアルの前提条件は次のとおりです。  
   
 - このチュートリアルでは、専用フォルダー ("c:\linqtest2") を使用してファイルを保持します。 チュートリアルを開始する前に、このフォルダーを作成してください。  
@@ -36,6 +38,7 @@ ms.locfileid: "72003398"
      詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。  
   
 ## <a name="overview"></a>概要  
+
  このチュートリアルは、主に次の 6 つの手順で構成されています。  
   
 - Visual Studio で [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ソリューションを作成します。  
@@ -51,6 +54,7 @@ ms.locfileid: "72003398"
 - これらの変更を Northwind データベースに送信します。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>LINQ to SQL ソリューションを作成する  
+
  最初のタスクに、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] プロジェクトをビルドおよび実行するために必要な参照を含む Visual Studio ソリューションを作成します。  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL ソリューションを作成するには  
@@ -66,6 +70,7 @@ ms.locfileid: "72003398"
 5. **[OK]** をクリックします。  
   
 ## <a name="adding-linq-references-and-directives"></a>LINQ の参照とディレクティブを追加する  
+
  このチュートリアルで使用するアセンブリは、既定ではプロジェクトにインストールされていない場合があります。 `System.Data.Linq` がプロジェクトの参照 (**ソリューション エクスプローラー**で **[すべてのファイルを表示]** をクリックし、 **[参照設定]** ノードを展開) に表示されていない場合は、以下の手順に従って追加します。  
   
 #### <a name="to-add-systemdatalinq"></a>System.Data.Linq を追加するには  
@@ -81,6 +86,7 @@ ms.locfileid: "72003398"
      [!code-vb[DLinqWalk3VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#1)]  
   
 ## <a name="adding-the-northwind-code-file-to-the-project"></a>プロジェクトに Northwind コード ファイルを追加する  
+
  これらの手順では、SQLMetal ツールを使用して Northwind サンプル データベースからコード ファイルを生成していることが前提です。 詳細については、このチュートリアルの「前提条件」を参照してください。  
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>プロジェクトに Northwind コード ファイルを追加するには  
@@ -92,6 +98,7 @@ ms.locfileid: "72003398"
      プロジェクトに northwind.vb ファイルが追加されます。  
   
 ## <a name="setting-up-the-database-connection"></a>データベース接続の設定  
+
  最初に、データベースへの接続をテストします。 データベースの名前 Northwnd に i の文字が欠けていることに注意してください。 次の手順でエラーが生成された後で、northwind.vb ファイルを調べて、Northwind 部分クラスのスペルを確認します。  
   
 #### <a name="to-set-up-and-test-the-database-connection"></a>データベース接続を設定してテストするには  
@@ -107,6 +114,7 @@ ms.locfileid: "72003398"
      **コンソール** ウィンドウで Enter キーを押すか、Visual Studio の **[デバッグ]** メニューの **[デバッグの停止]** をクリックして、アプリケーションを閉じます。  
   
 ## <a name="creating-a-new-entity"></a>新しいエンティティの作成  
+
  新しいエンティティを作成する手順は簡単です。 `Customer` キーワードを使用してオブジェクト (`New` など) を作成できます。  
   
  以降のセクションでは、ローカル キャッシュのみに変更を加えます。 このチュートリアルの終盤で <xref:System.Data.Linq.DataContext.SubmitChanges%2A> を呼び出すまで、変更内容はデータベースに送信されません。  
@@ -132,6 +140,7 @@ ms.locfileid: "72003398"
 3. **コンソール** ウィンドウで Enter キーを押して、デバッグを停止します。  
   
 ## <a name="updating-an-entity"></a>エンティティの更新  
+
  以降の手順では、`Customer` オブジェクトを取得し、そのプロパティの 1 つを変更します。  
   
 #### <a name="to-change-the-name-of-a-customer"></a>顧客の名前を変更するには  
@@ -141,6 +150,7 @@ ms.locfileid: "72003398"
      [!code-vb[DLinqWalk3VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#4)]  
   
 ## <a name="deleting-an-entity"></a>エンティティの削除  
+
  同じ顧客オブジェクトを使用して、最初の注文を削除できます。  
   
  行間のリレーションシップを切断し、データベースから行を削除する方法を次のコードに示します。  
@@ -152,6 +162,7 @@ ms.locfileid: "72003398"
      [!code-vb[DLinqWalk3VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#5)]  
   
 ## <a name="submitting-changes-to-the-database"></a>変更内容のデータベースへの送信  
+
  最後の手順は、オブジェクトの作成、更新、および削除を実際にデータベースに送信するために必要です。 この手順を行わないと、変更はローカルのみに留まり、クエリの結果には反映されません。  
   
 #### <a name="to-submit-changes-to-the-database"></a>データベースに変更内容を送信するには  

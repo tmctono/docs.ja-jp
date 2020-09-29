@@ -6,17 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: 5e75a8aadf4631f0a6e50641db72ba7b83af41fe
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 81f6b9603cc7f8b7863f787272ce6a1af920fa75
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286379"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169493"
 ---
 # <a name="how-to-display-generated-sql"></a>方法: 生成された SQL を表示する
+
 <xref:System.Data.Linq.DataContext.Log%2A> プロパティを使用して、クエリに対して生成された SQL コードを表示し、処理を変更できます。 この方法は、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の機能を理解し、特定の問題をデバッグするのに役立ちます。  
   
 ## <a name="example"></a>例  
+
  <xref:System.Data.Linq.DataContext.Log%2A> プロパティを使用して、コードを実行する前にコンソール ウィンドウに SQL コードを表示するコード例を次に示します。  このプロパティは、query、insert、update、および delete の各コマンドで使用できます。  
   
  コンソール ウィンドウの行は、後の Visual Basic コードまたは C# コードを実行すると表示される内容です。  

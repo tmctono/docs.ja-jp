@@ -2,12 +2,12 @@
 title: クラウド向けに最適化されたアプリケーションにおけるマイクロソフト テクノロジ
 description: Azure Cloud および Windows コンテナーを使用して既存の .NET アプリケーションを最新化する | クラウド向けに最適化されたアプリケーションの Microsoft テクノロジ
 ms.date: 04/28/2018
-ms.openlocfilehash: c5222ba13258f9c8a40ca3b9ce240aeb9f41da63
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: b257497835638dd65c894998e95bd7e9d784b7bf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546511"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172015"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>クラウド向けに最適化されたアプリケーションにおける Microsoft テクノロジ
 
@@ -15,7 +15,7 @@ ms.locfileid: "79546511"
 
 - **クラウド インフラストラクチャ**:コンピューティング プラットフォーム、オペレーティング システム、ネットワーク、ストレージを提供するインフラストラクチャ。 Microsoft Azure のレベルはここです。
 
-- **ランタイム**:この層では、アプリケーションを実行するための環境が与えられます。 コンテナーを使用している場合、この層は通常、Linux ホストまたは Windows ホスト上で実行されている [Docker エンジン](https://docs.docker.com/engine/)を基盤とします。 ([Windows コンテナー](https://docs.microsoft.com/virtualization/windowscontainers/about/) は Windows Server 2016 以降でサポートされています。 Windows コンテナーは、Windows で実行される既存の .NET Framework アプリケーションに最適な選択肢です)
+- **ランタイム**:この層では、アプリケーションを実行するための環境が与えられます。 コンテナーを使用している場合、この層は通常、Linux ホストまたは Windows ホスト上で実行されている [Docker エンジン](https://docs.docker.com/engine/)を基盤とします。 ([Windows コンテナー](/virtualization/windowscontainers/about/) は Windows Server 2016 以降でサポートされています。 Windows コンテナーは、Windows で実行される既存の .NET Framework アプリケーションに最適な選択肢です)
 
 - **マネージド クラウド**:マネージド クラウドを選択すると、基礎インフラストラクチャ、VM、OS パッチ、ネットワーク設定の管理やサポートのための費用と複雑な作業がなくなります。 IaaS を使用して移行することを選択した場合、こうした作業をすべて行わなければならず、関連費用も発生します。 マネージド クラウド オプションでは、自分で開発したアプリケーションとサービスのみを管理します。 クラウド サービス プロバイダーは通常、他のすべてを管理します。 Azure のマネージド クラウド サービスの例には、[Azure SQL Database](https://azure.microsoft.com/services/sql-database)、[Azure Redis Cache](https://azure.microsoft.com/services/cache/)、[Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)、[Azure Storage](https://azure.microsoft.com/services/storage/)、[Azure Database for MySQL](https://azure.microsoft.com/services/mysql/)、[Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/)、[Azure Active Directory](https://azure.microsoft.com/services/active-directory/) に加え、[VM スケール セット](https://azure.microsoft.com/services/virtual-machine-scale-sets/)、[Azure App Service](https://azure.microsoft.com/services/app-service/)、[Azure Kubernetes Service](https://azure.microsoft.com/services/container-service/) などのマネージド コンピューティング サービスがあります。
 

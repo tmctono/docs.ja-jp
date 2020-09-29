@@ -4,12 +4,12 @@ description: エンタープライズ アーキテクチャがクラウドにデ
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: c745a4eb1c6f4a00bf139100b02f31cf3327d01e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e91412600e8e4e5a0dca2a454f1cb0680c881b2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522728"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173342"
 ---
 # <a name="architecture-deployment-approaches"></a>アーキテクチャのデプロイ方法
 
@@ -17,7 +17,7 @@ ms.locfileid: "72522728"
 
 ## <a name="n-tier-applications"></a>n 層アプリケーション
 
-[n 層アーキテクチャ パターン](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)は成熟したアーキテクチャであり、さまざまな論理層を別々の物理層に分けるアプリケーションを単に指します。 n 層アーキテクチャとは、n 階層のアーキテクチャを物理的に実装したものです。 このアーキテクチャの最も一般的な実装には、以下が含まれます。
+[n 層アーキテクチャ パターン](/azure/architecture/guide/architecture-styles/n-tier)は成熟したアーキテクチャであり、さまざまな論理層を別々の物理層に分けるアプリケーションを単に指します。 n 層アーキテクチャとは、n 階層のアーキテクチャを物理的に実装したものです。 このアーキテクチャの最も一般的な実装には、以下が含まれます。
 
 - プレゼンテーション層 (Web アプリなど)。
 - API またはデータ アクセス層 (REST API など)。
@@ -56,11 +56,11 @@ n 層ソリューションには、以下の特徴があります。
 
 "仮想マシン" により、ハードウェアを仮想化することで、サービスとしてのインフラストラクチャ (IaaS) が実現します。 ホスト マシンは、専用のメモリ、CPU、およびストレージの割り当てを含むインスタンスにリソースを提供できるように効果的にパーティション分割されます。 チームは必要な VM をプロビジョニングし、関連ネットワークとストレージへのアクセスを構成します。
 
-詳細については、[仮想マシンの n 層参照アーキテクチャ](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)に関するページを参照してください。
+詳細については、[仮想マシンの n 層参照アーキテクチャ](/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)に関するページを参照してください。
 
 仮想化とサービスとしてのインフラストラクチャ (IaaS) は多くの懸念事項に対応しますが、依然として多くの責任がインフラストラクチャ チームの管理下に残ります。 チームは、オペレーティング システムのバージョンを管理し、セキュリティ更新プログラムを適用し、ターゲット マシンにサードパーティの依存関係をインストールします。 多くの場合、アプリの動作は、テスト環境と比較して実稼働コンピューターでは異なります。 さまざまな依存関係のバージョンや OS SKU レベルによって問題が発生します。 多くの組織は n 層アプリケーションをこれらのターゲットにデプロイしますが、多くの企業は、[サービスとしてのプラットフォーム](#platform-as-a-service-paas)のような、よりクラウド ネイティブのモデルにデプロイすることでメリットが得られます。 拡張性と回復性のためにスケールアウトする必要があるため、マイクロサービスを使用したアーキテクチャはより困難になります。
 
-詳細については、[仮想マシン](https://docs.microsoft.com/azure/virtual-machines/)に関するページを参照してください。
+詳細については、[仮想マシン](/azure/virtual-machines/)に関するページを参照してください。
 
 ## <a name="platform-as-a-service-paas"></a>サービスとしてのプラットフォーム (PaaS)
 
@@ -81,7 +81,7 @@ PaaS は、IaaS に共通する課題に対処します。 PaaS を使用する�
 
 サービスとしてのソフトウェア (SaaS) は一元的にホストされ、ローカルのインストールやプロビジョニングなしで利用できます。 SaaS は、多くの場合、ソフトウェアをデプロイするためのプラットフォームとして PaaS の上にホストされます。 SaaS では、既存のソフトウェアを実行して接続するためのサービスを提供します。 SaaS は多くの場合、業界かつ垂直に固有です。 SaaS は多くの場合ライセンスされ、通常はクライアント/サーバー モデルが提供されます。 最新のほとんどの SaaS サービスでは、クライアントを対象とする Web ベースのアプリを使用します。 企業は通常、SaaS をライセンス オファリングのビジネス ソリューションとして検討します。 アプリケーションのスケーラビリティと保守性を目的とするアーキテクチャの考慮事項として実装されることは多くはありません。 実際、ほとんどの SaaS ソリューションは、IaaS、PaaS、サーバーレス バック エンド上に構築されます。
 
-SaaS の詳細については、[サンプル アプリケーション](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)を参照してください。
+SaaS の詳細については、[サンプル アプリケーション](/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)を参照してください。
 
 ## <a name="containers-and-functions-as-a-service-faas"></a>コンテナーとサービスとしての機能 (FaaS)
 
@@ -105,7 +105,7 @@ Docker コンテナーの詳細については、[Docker について](../micros
 
 ![Kubernetes](./media/kubernetes-example.png)
 
-オーケストレーションの詳細については、[Azure Kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes) に関するページを参照してください。
+オーケストレーションの詳細については、[Azure Kubernetes](/azure/aks/intro-kubernetes) に関するページを参照してください。
 
 サービスとしての機能 (FaaS) は、サーバーレスに似た専用のコンテナー サービスです。 [OpenFaaS](https://github.com/openfaas/faas) と呼ばれる FaaS の固有の実装は、サーバーレス機能を提供するためにコンテナーの上に配置されます。 OpenFaaS には、コードを実行するために必要なコンテナーの依存関係をすべてパッケージ化するテンプレートが用意されています。 テンプレートを使用すると、コードを機能単位としてデプロイするプロセスが簡単になります。 OpenFaaS は、既存のインフラストラクチャを使用できるため、既にコンテナーとオーケストレーターが含まれるアーキテクチャを対象としています。 サーバーレス機能が提供されますが、Docker とオーケストレーターを使用する必要があります。
 
@@ -130,7 +130,7 @@ Docker コンテナーの詳細については、[Docker について](../micros
 - **インスタント スケール。** サーバーレスは、ワークロードに合わせて自動的かつ迅速にスケーリングすることができます。
 - **市場への時間短縮。** 開発者はコードに注力して、サーバーレス プラットフォームに直接デプロイします。 コンポーネントは、互いに独立してリリースできます。
 
-サーバーレスは、ほとんどの場合、コンピューティングの観点で検討されますが、データにも適用できます。 たとえば、[Azure SQL](https://docs.microsoft.com/azure/sql-database) と [Cosmos DB](https://docs.microsoft.com/azure/cosmos-db) はどちらも、ホスト マシンまたはクラスターの構成を必要としないクラウド データベースが提供されます。 この書籍は、サーバーレス コンピューティングに焦点を当てています。
+サーバーレスは、ほとんどの場合、コンピューティングの観点で検討されますが、データにも適用できます。 たとえば、[Azure SQL](/azure/sql-database) と [Cosmos DB](/azure/cosmos-db) はどちらも、ホスト マシンまたはクラスターの構成を必要としないクラウド データベースが提供されます。 この書籍は、サーバーレス コンピューティングに焦点を当てています。
 
 ## <a name="summary"></a>まとめ
 
@@ -154,16 +154,16 @@ Docker コンテナーの詳細については、[Docker について](../micros
 
 ## <a name="recommended-resources"></a>推奨リソース
 
-- [Azure アプリケーション アーキテクチャ ガイド](https://docs.microsoft.com/azure/architecture/guide/)
-- [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
-- [Azure SQL](https://docs.microsoft.com/azure/sql-database)
-- [n 層アーキテクチャ パターン](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
-- [Azure における Kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes)
-- [マイクロサービス](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
-- [仮想マシンの n 層参照アーキテクチャ](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
-- [仮想マシン](https://docs.microsoft.com/azure/virtual-machines/)
+- [Azure アプリケーション アーキテクチャ ガイド](/azure/architecture/guide/)
+- [Azure Cosmos DB](/azure/cosmos-db)
+- [Azure SQL](/azure/sql-database)
+- [n 層アーキテクチャ パターン](/azure/architecture/guide/architecture-styles/n-tier)
+- [Azure における Kubernetes](/azure/aks/intro-kubernetes)
+- [マイクロサービス](/azure/architecture/guide/architecture-styles/microservices)
+- [仮想マシンの n 層参照アーキテクチャ](/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
+- [仮想マシン](/azure/virtual-machines/)
 - [Docker について](../microservices/container-docker-introduction/docker-defined.md)
-- [Wingtip Tickets SaaS アプリケーション](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
+- [Wingtip Tickets SaaS アプリケーション](/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
 
 >[!div class="step-by-step"]
 >[前へ](architecture-approaches.md)

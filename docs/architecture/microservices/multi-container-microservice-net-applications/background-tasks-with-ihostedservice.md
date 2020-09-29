@@ -2,12 +2,12 @@
 title: IHostedService と BackgroundService クラスを使ってマイクロサービスのバックグラウンド タスクを実装する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービスの .NET Core でバックグラウンド タスクを実装する IHostedService と BackgroundService を使用する新しいオプションについて理解します。
 ms.date: 08/14/2020
-ms.openlocfilehash: 4ab215f2196cd2e66b116465c3a582a9846c8066
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 279f9e0093deafab51e63d72dce233c8e9466a55
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267998"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173355"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>IHostedService と BackgroundService クラスを使ってマイクロサービスのバックグラウンド タスクを実装する
 
@@ -68,7 +68,7 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 
 ## <a name="the-ihostedservice-interface"></a>IHostedService インターフェイス
 
-`IHostedService` を登録すると、アプリケーションの起動時と停止時にそれぞれ、.NET Core によって `IHostedService` 型の `StartAsync()` メソッドと `StopAsync()` メソッドが呼び出されます。 詳細については、「[IHostedService インターフェイス](https://docs.microsoft.com/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-3.1&tabs=visual-studio#ihostedservice-interface)」を参照してください。
+`IHostedService` を登録すると、アプリケーションの起動時と停止時にそれぞれ、.NET Core によって `IHostedService` 型の `StartAsync()` メソッドと `StopAsync()` メソッドが呼び出されます。 詳細については、「[IHostedService インターフェイス](/aspnet/core/fundamentals/host/hosted-services?tabs=visual-studio&view=aspnetcore-3.1#ihostedservice-interface)」を参照してください。
 
 ご想像のとおり、以前に示したように、IHostedService の複数の実装を作成し、`ConfigureService()` メソッドでそれらを DI コンテナーに登録することができます。 これらすべてのホステッド サービスが、アプリケーション/マイクロサービスと共に開始および停止されます。
 

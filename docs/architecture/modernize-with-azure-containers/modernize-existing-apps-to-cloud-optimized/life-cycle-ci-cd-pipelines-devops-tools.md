@@ -2,12 +2,12 @@
 title: クラウドの CI/CD パイプラインや DevOps ツールでアプリのライフ サイクルを最新化する
 description: Azure クラウドおよび Windows コンテナーを使用して既存の .NET アプリケーションを最新化する | クラウドの CI/CD パイプラインと DevOps ツールを使用してアプリのライフサイクルを最新化する
 ms.date: 04/30/2018
-ms.openlocfilehash: afb7bae7780a766329ca604d192b2d7353e32bf5
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 98ebd29b8ab81c8fff6da546942825133f06f4de
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739170"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172054"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>クラウドの CI/CD パイプラインや DevOps ツールでアプリのライフ サイクルを最新化する
 
@@ -17,9 +17,9 @@ ms.locfileid: "81739170"
 
 Azure DevOps Services では、Azure DevOps Services の公式のデプロイ タスクにより、さまざまな環境への複数コンテナー アプリケーションの継続的インテグレーションとデプロイをサポートしています。
 
-- [Azure Web App for Containers にデプロイする](https://docs.microsoft.com/azure/devops/pipelines/apps/cd/deploy-docker-webapp?tabs=dotnet-core)
+- [Azure Web App for Containers にデプロイする](/azure/devops/pipelines/apps/cd/deploy-docker-webapp?tabs=dotnet-core)
 
-- [Azure Kubernetes Service にデプロイする](https://docs.microsoft.com/azure/devops/pipelines/apps/cd/deploy-aks?tabs=dotnet-core)
+- [Azure Kubernetes Service にデプロイする](/azure/devops/pipelines/apps/cd/deploy-aks?tabs=dotnet-core)
 
 ただし、Azure DevOps Services スクリプトベースのタスクを使用して、[Docker Swarm](https://blog.jcorioland.io/archives/2016/11/29/full-ci-cd-pipeline-to-deploy-multi-containers-application-on-azure-container-service-docker-swarm-using-visual-studio-team-services.html) または DC/OS にデプロイすることもできます。
 

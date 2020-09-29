@@ -4,12 +4,12 @@ description: スケジュール設定やイベントベースの処理からフ�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: b4e8fda0c1423c881c0807602e11f7c49ff7cfe4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3aa9b7951fd8f11a65a64c22443de7041aba7d94
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73093555"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171755"
 ---
 # <a name="serverless-design-examples"></a>サーバーレス設計の例
 
@@ -29,13 +29,13 @@ CQRS を使用すると、読み取りで、使用方法によってデータを
 
 ![CQRS の例](./media/cqrs-example.png)
 
-サーバーレスでは、分離されたエンドポイントを提供することで、CQRS パターンに対応できます。 あるサーバーレス関数がクエリまたは読み取りに対応し、別のサーバーレス関数または関数セットで更新操作を処理します。 また、サーバーレス関数は、読み取りモデルを最新の状態に保つ必要があり、データベースの[変更フィード](https://docs.microsoft.com/azure/cosmos-db/change-feed)によりトリガーできます。 フロントエンド開発は、必要なエンドポイントに接続するために簡略化されます。 イベントの処理はバックエンドで処理されます。 さまざまなチームが異なる操作を実行する可能性があるため、このモデルは大規模なプロジェクトにも適しています。
+サーバーレスでは、分離されたエンドポイントを提供することで、CQRS パターンに対応できます。 あるサーバーレス関数がクエリまたは読み取りに対応し、別のサーバーレス関数または関数セットで更新操作を処理します。 また、サーバーレス関数は、読み取りモデルを最新の状態に保つ必要があり、データベースの[変更フィード](/azure/cosmos-db/change-feed)によりトリガーできます。 フロントエンド開発は、必要なエンドポイントに接続するために簡略化されます。 イベントの処理はバックエンドで処理されます。 さまざまなチームが異なる操作を実行する可能性があるため、このモデルは大規模なプロジェクトにも適しています。
 
 ## <a name="event-based-processing"></a>イベントベースの処理
 
-メッセージベースのシステムでは、多くの場合、イベントはキューまたはパブリッシャー/サブスクライバーのトピックで収集され、処理されます。 これらのイベントでは、サーバーレス関数をトリガーしてビジネス ロジックを実行することができます。 イベントベースの処理の例としては、イベントソースのシステムがあります。 "イベント" が発生して、タスクを完了としてマークします。 1 つのサーバーレス関数がイベントによってトリガーされ、該当するデータベース ドキュメントが更新されます。 2 番目のサーバーレス関数で、イベントを使用してシステムの読み取りモデルを更新できます。 [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview) により、イベントをサブスクライバーとして関数に統合する方法が提供されます。
+メッセージベースのシステムでは、多くの場合、イベントはキューまたはパブリッシャー/サブスクライバーのトピックで収集され、処理されます。 これらのイベントでは、サーバーレス関数をトリガーしてビジネス ロジックを実行することができます。 イベントベースの処理の例としては、イベントソースのシステムがあります。 "イベント" が発生して、タスクを完了としてマークします。 1 つのサーバーレス関数がイベントによってトリガーされ、該当するデータベース ドキュメントが更新されます。 2 番目のサーバーレス関数で、イベントを使用してシステムの読み取りモデルを更新できます。 [Azure Event Grid](/azure/event-grid/overview) により、イベントをサブスクライバーとして関数に統合する方法が提供されます。
 
-> イベントは情報メッセージです。 詳細については、「[イベント ソーシング パターン](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)」を参照してください。
+> イベントは情報メッセージです。 詳細については、「[イベント ソーシング パターン](/azure/architecture/patterns/event-sourcing)」を参照してください。
 
 ## <a name="file-triggers-and-transformations"></a>ファイル トリガーと変換
 
@@ -43,7 +43,7 @@ CQRS を使用すると、読み取りで、使用方法によってデータを
 
 ![サーバーレスのファイル トリガーと変換](./media/serverless-file-triggers.png)
 
-図中の "クール ストレージ" により、[Azure Stream Analytics](https://docs.microsoft.com/azure/stream-analytics) で解析されるデータが提供されます。 データ ストリームで問題が発生すると、異常に対処する Azure 関数がトリガーされます。
+図中の "クール ストレージ" により、[Azure Stream Analytics](/azure/stream-analytics) で解析されるデータが提供されます。 データ ストリームで問題が発生すると、異常に対処する Azure 関数がトリガーされます。
 
 ## <a name="asynchronous-background-processing-and-messaging"></a>非同期のバックグラウンド処理とメッセージング
 
@@ -65,7 +65,7 @@ HTTP 呼び出しによってトリガーされるサーバーレス エンド�
 
 ## <a name="stream-processing"></a>ストリーム処理
 
-デバイスとセンサーでは、多くの場合、リアルタイムで処理する必要があるデータのストリームが生成されます。 [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs) と [IoT Hub](https://docs.microsoft.com/azure/iot-hub) から [Service Bus](https://docs.microsoft.com/azure/service-bus) にメッセージとストリームをキャプチャできるテクノロジが数多くあります。 サーバーレスは、トランスポートを問わず、メッセージとデータ ストリームを受信したときの処理に最適なメカニズムです。 サーバーレスは、大量のデータ需要に合わせて迅速にスケールできます。 サーバーレス コードで、ビジネス ロジックを適用してデータを解析し、アクションと分析用に構造化された形式で出力することができます。
+デバイスとセンサーでは、多くの場合、リアルタイムで処理する必要があるデータのストリームが生成されます。 [Event Hubs](/azure/event-hubs/event-hubs-what-is-event-hubs) と [IoT Hub](/azure/iot-hub) から [Service Bus](/azure/service-bus) にメッセージとストリームをキャプチャできるテクノロジが数多くあります。 サーバーレスは、トランスポートを問わず、メッセージとデータ ストリームを受信したときの処理に最適なメカニズムです。 サーバーレスは、大量のデータ需要に合わせて迅速にスケールできます。 サーバーレス コードで、ビジネス ロジックを適用してデータを解析し、アクションと分析用に構造化された形式で出力することができます。
 
 ![サーバーレス ストリーム処理](./media/serverless-stream-processing.png)
 
@@ -77,16 +77,16 @@ API ゲートウェイは、クライアントに対して単一のエントリ 
 
 ## <a name="recommended-resources"></a>推奨リソース
 
-- [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-- [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
+- [Azure Event Grid](/azure/event-grid/overview)
+- [Azure IoT Hub](/azure/iot-hub)
 - [分散データ管理に関する課題とソリューション](../microservices/architect-microservice-container-applications/distributed-data-management.md)
-- [マイクロサービスの設計: マイクロサービス境界の識別](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
-- [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
-- [イベント ソーシング パターン](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
+- [マイクロサービスの設計: マイクロサービス境界の識別](/azure/architecture/microservices/microservice-boundaries)
+- [Event Hubs](/azure/event-hubs/event-hubs-what-is-event-hubs)
+- [イベント ソーシング パターン](/azure/architecture/patterns/event-sourcing)
 - [直流高速度遮断器パターンの実装](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md)
-- [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
-- [Service Bus](https://docs.microsoft.com/azure/service-bus)
-- [Azure Cosmos DB での Change Feed サポートの使用](https://docs.microsoft.com/azure/cosmos-db/change-feed)
+- [IoT Hub](/azure/iot-hub)
+- [Service Bus](/azure/service-bus)
+- [Azure Cosmos DB での Change Feed サポートの使用](/azure/cosmos-db/change-feed)
 
 >[!div class="step-by-step"]
 >[前へ](serverless-architecture-considerations.md)

@@ -3,12 +3,12 @@ title: Azure VM に ASP.NET Web アプリを移行する
 description: ASP.NET Web アプリケーションをオンプレミスから Azure 仮想マシンに移行する方法について説明します。
 ms.topic: how-to
 ms.date: 06/20/2020
-ms.openlocfilehash: 5ef340d020b72bebe46fe598fe68e7d02d0c0363
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 940243310c5e6ed13d2a42c8d9d87244200479f5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174245"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171560"
 ---
 # <a name="migrate-an-aspnet-web-application-to-an-azure-virtual-machine"></a>Azure 仮想マシンへの ASP.NET Web アプリケーションの移行
 
@@ -60,6 +60,7 @@ Azure Virtual Network を使用すると、次のことが可能になります�
 作業を開始するには、「[Virtual Network のドキュメント](/azure/virtual-network/)」をご覧ください。
 
 ### <a name="active-directory"></a>Active Directory
+
 多くのアプリケーションでは、認証と ID 管理に Active Directory を使用しています。
 
 - Azure AD Connect を使用すると、オンプレミスのディレクトリを Azure Active Directory と統合できます。 作業を開始するには、「[オンプレミスのディレクトリと Azure Active Directory の統合](/azure/active-directory/connect/active-directory-aadconnect)」をご覧ください。
@@ -75,11 +76,13 @@ Azure Virtual Network を使用すると、次のことが可能になります�
 ### <a name="high-availability-and-scalability"></a>高可用性とスケーラビリティ
 
 #### <a name="virtual-machine-scale-sets"></a>Virtual Machine Scale Sets
+
 アプリケーションの高可用性とスケーラビリティを確保する場合、VM イメージを Azure 仮想マシン スケール セットに移行すると、アプリケーションの可用性とスケーラビリティが向上します。 VM Scale Sets では、構成済みの既存の VM を使用したり、アプリケーションでイメージをビルドするためのビルド パイプラインを設定したりできます。
 
 作業を開始するには、「[仮想マシン スケール セットへのアプリケーションのデプロイ](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app)」をご覧ください。
 
 #### <a name="centralized-logging"></a>ログの一元化
+
 複数のインスタンスでアプリケーションを実行する場合は、[Azure Storage](/azure/storage/) などの一元化された場所にログを保存することを検討します。
 
 ## <a name="next-steps"></a>次の手順

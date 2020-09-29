@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: 547654e77812481daffc9a03ccd28d3d2f6b5f09
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 19626aea07fb26222af575a709b54577ca12589b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164434"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169220"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Core Web アプリ用の Azure ホスティングの推奨事項
 
@@ -54,7 +54,7 @@ Azure App Service は、ほとんどの Web アプリに適しています。 �
 
 ![基本的な Azure アーキテクチャ](./media/image1-5.png)
 
-このようなアプリを管理するには、通常、1 つのリソース グループ内の少数のリソースで十分です。 多くの個々のプロセスで構成されるアプリではなく、通常、1 つのユニットとしてデプロイされるアプリがこの[基本的なアーキテクチャの手法](https://docs.microsoft.com/azure/architecture/reference-architectures/app-service-web-app/basic-web-app)に適しています。 アーキテクチャはシンプルですが、この手法では、ホストされたアプリで、増加する需要を満たすように、スケールアップ (ノードことにリソースの増加) とスケールアウト (ホストされるノードの増加) の両方を引き続き行うことができます。 自動スケーリングを使用して、必要に応じて、また、ノード全体での平均負荷に基づいて、アプリをホストするノード数を自動的に調整するようにアプリを構成できます。
+このようなアプリを管理するには、通常、1 つのリソース グループ内の少数のリソースで十分です。 多くの個々のプロセスで構成されるアプリではなく、通常、1 つのユニットとしてデプロイされるアプリがこの[基本的なアーキテクチャの手法](/azure/architecture/reference-architectures/app-service-web-app/basic-web-app)に適しています。 アーキテクチャはシンプルですが、この手法では、ホストされたアプリで、増加する需要を満たすように、スケールアップ (ノードことにリソースの増加) とスケールアウト (ホストされるノードの増加) の両方を引き続き行うことができます。 自動スケーリングを使用して、必要に応じて、また、ノード全体での平均負荷に基づいて、アプリをホストするノード数を自動的に調整するようにアプリを構成できます。
 
 ### <a name="app-service-web-apps-for-containers"></a>App Service Web Apps for Containers
 
@@ -74,7 +74,7 @@ Web Apps for Containers が最も役立つシナリオがいくつかありま�
 
 ![複数の一般的な設計パターンが示されたマイクロサービスのサンプル アーキテクチャ。](./media/image1-10.png)
 
-[マイクロサービス ベースのシステムをビルドするときに考慮する設計パターンを参照してください。](https://docs.microsoft.com/azure/architecture/microservices/design/patterns)
+[マイクロサービス ベースのシステムをビルドするときに考慮する設計パターンを参照してください。](/azure/architecture/microservices/design/patterns)
 
 ### <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
 
@@ -100,7 +100,7 @@ Azure Dev Spaces:
 - チームが必要とする統合環境の数を減らす
 - 開発/テスト時に分散システムで特定のサービスを模倣する必要性を取り除く
 
-[Azure Dev Spaces の詳細を参照してください](https://docs.microsoft.com/azure/dev-spaces/about)
+[Azure Dev Spaces の詳細を参照してください](/azure/dev-spaces/about)
 
 ### <a name="azure-virtual-machines"></a>Azure Virtual Machines
 

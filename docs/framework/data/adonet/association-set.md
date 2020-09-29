@@ -2,14 +2,15 @@
 title: 関連付けセット
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
-ms.openlocfilehash: e279322f9e950cd4359db8c6dce39bfc46d188f6
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 58d8794a21cc37ab84386c820b192fb29946095c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732371"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153431"
 ---
 # <a name="association-set"></a>関連付けセット
+
 "*アソシエーション セット*" は、同じ型の[アソシエーション](association-type.md) インスタンスの論理コンテナーです。 アソシエーション セットは、データ モデリング構造ではなく、データ構造やリレーションシップを表しません。 アソシエーション セットは、アソシエーション インスタンスをグループ化してデータ ストアにマップするための、ホスト環境またはストレージ環境 (共通言語ランタイムや SQL Server データベースなど) の構造を提供します。  
   
  アソシエーション セットは、[エンティティ セット](entity-set.md)とアソシエーション セットの論理グループである[エンティティ コンテナー](entity-container.md)内に定義されます。  
@@ -23,6 +24,7 @@ ms.locfileid: "73732371"
 - 2 つの[アソシエーション セット End](association-set-end.md)。  
   
 ## <a name="example"></a>例  
+
  下のダイアグラムは、`PublishedBy` および `WrittenBy` という 2 つのアソシエーションの概念モデルを示しています。 このダイアグラムにはアソシエーション セットに関する情報が示されていませんが、次のダイアグラムはこのモデルに基づくアソシエーション セットとエンティティ セットの例を示しています。  
   
  ![3 種類のエンティティを持つモデルの例](./media/association-set/example-model-three-entity-types.gif)  

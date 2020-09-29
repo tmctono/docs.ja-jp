@@ -2,12 +2,12 @@
 title: Docker の実稼働環境を管理する
 description: コンテナーベースの実稼働環境を管理する際に重要な点について説明します。
 ms.date: 08/06/2020
-ms.openlocfilehash: 11880a523d6ff79c9646fd1e174f380779d00dcc
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: dbc5f541478410060420f95f32e4ff5291354075
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87914931"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160646"
 ---
 # <a name="manage-production-docker-environments"></a>Docker の実稼働環境を管理する
 
@@ -25,10 +25,10 @@ ms.locfileid: "87914931"
 
 | 管理ツール | [説明] | 関連するオーケストレーター |
 |------------------|-------------|-----------------------|
-| [コンテナー用 Azure Monitor](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Azure 専用 Kubernetes 管理ツール | Azure Kubernetes Services (AKS) |
+| [コンテナー用 Azure Monitor](/azure/monitoring/monitoring-container-insights-overview) | Azure 専用 Kubernetes 管理ツール | Azure Kubernetes Services (AKS) |
 | [Kubernetes Web UI (ダッシュボード)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Kubernetes 管理ツールでは、ローカル Kubernetes クラスターを監視および管理できます | Azure Kubernetes Service (AKS)<br/>ローカルの Kubernetes |
-| [Azure portal for Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | Azure、オンプレミス、ローカル開発、およびその他のクラウド上で Service Fabric クラスターを管理するためのオンラインおよびデスクトップ バージョン | Azure Service Fabric |
-| [コンテナー監視 (Azure Monitor)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | 一般的なコンテナー管理および監視ソリューション。 [コンテナー用 Azure Monitor](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) を使用して Kubernetes クラスターを管理できます。 | Azure Service Fabric<br/>Azure Kubernetes Service (AKS)<br/>Mesosphere DC/OS など。 |
+| [Azure portal for Service Fabric](/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](/azure/service-fabric/service-fabric-visualizing-your-cluster) | Azure、オンプレミス、ローカル開発、およびその他のクラウド上で Service Fabric クラスターを管理するためのオンラインおよびデスクトップ バージョン | Azure Service Fabric |
+| [コンテナー監視 (Azure Monitor)](/azure/azure-monitor/insights/containers) | 一般的なコンテナー管理および監視ソリューション。 [コンテナー用 Azure Monitor](/azure/monitoring/monitoring-container-insights-overview) を使用して Kubernetes クラスターを管理できます。 | Azure Service Fabric<br/>Azure Kubernetes Service (AKS)<br/>Mesosphere DC/OS など。 |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 
@@ -36,9 +36,9 @@ ms.locfileid: "87914931"
 
 Service Fabric 管理ツールを次に示します。
 
-- [Service Fabric 用 Azure portal](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal) では、クラスター関連の操作 (作成/更新/削除) を行い、クラスターのインフラストラクチャ (VM、ロード バランサー、ネットワークなど) を構成します
+- [Service Fabric 用 Azure portal](/azure/service-fabric/service-fabric-cluster-creation-via-portal) では、クラスター関連の操作 (作成/更新/削除) を行い、クラスターのインフラストラクチャ (VM、ロード バランサー、ネットワークなど) を構成します
 
-- [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) は、ノード/VM の観点とアプリケーションとサービスの観点から Service Fabric クラスターに関する分析情報と特定の操作を提供する特殊な Web UI およびデスクトップ マルチプラットフォーム ツールです。
+- [Azure Service Fabric Explorer](/azure/service-fabric/service-fabric-visualizing-your-cluster) は、ノード/VM の観点とアプリケーションとサービスの観点から Service Fabric クラスターに関する分析情報と特定の操作を提供する特殊な Web UI およびデスクトップ マルチプラットフォーム ツールです。
 
 >[!div class="step-by-step"]
 >[前へ](run-microservices-based-applications-in-production.md)

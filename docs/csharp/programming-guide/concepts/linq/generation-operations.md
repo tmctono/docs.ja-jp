@@ -3,14 +3,15 @@ title: 生成操作 (C#)
 description: 生成によって、値のシーケンスが新しく作成されます。 生成を実行する C# での LINQ の標準クエリ演算子メソッドについて学習します。
 ms.date: 07/20/2015
 ms.assetid: 1c421b3a-5954-448c-bcac-a27798d1858f
-ms.openlocfilehash: 90b7913d60ced82c854f514d3644425f6ddd2571
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 07cb7dfc1cb5f06cc6e7800ec1e5e2dac015045b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103647"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165274"
 ---
 # <a name="generation-operations-c"></a>生成操作 (C#)
+
 生成とは、値のシーケンスを新しく作成することを意味します。  
   
  次のセクションでは、生成を実行する標準クエリ演算子メソッドの一覧を示します。  

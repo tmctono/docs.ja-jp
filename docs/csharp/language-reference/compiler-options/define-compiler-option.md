@@ -12,14 +12,15 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: 3b7a1c6e92d2c60ce289f29044774c3aa42ca84f
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 74c9a23cd1b3a691063c2976a593c9b3a63ca618
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125879"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173270"
 ---
 # <a name="-define-c-compiler-options"></a>-define (C# コンパイラ オプション)
+
 **-define** オプションは、`name` をプログラムのすべてのソース コード ファイル内のシンボルとして定義します。  
   
 ## <a name="syntax"></a>構文  
@@ -29,10 +30,12 @@ ms.locfileid: "89125879"
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `name`, `name2`  
  定義する 1 つまたは複数のシンボルの名前。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
+
  **-define** オプションには、[#define](../preprocessor-directives/preprocessor-define.md) プリプロセッサ ディレクティブを使うのと同じ効果があります。ただし、コンパイラ オプションはプロジェクト内のすべてのファイルに対して有効である点が異なります。 ソース ファイルの [#undef](../preprocessor-directives/preprocessor-undef.md) ディレクティブがこの定義を削除するまで、シンボルはソース ファイルで定義されたままになります。 -define オプションを使うと、あるファイルで指定されている `#undef` ディレクティブは、プロジェクト内の他のソース コード ファイルには影響しません。  
   
  このオプションで作成されるシンボルを [#if](../preprocessor-directives/preprocessor-if.md)、[#else](../preprocessor-directives/preprocessor-else.md)、[#elif](../preprocessor-directives/preprocessor-elif.md)、および [#endif](../preprocessor-directives/preprocessor-endif.md) で使う、ソース ファイルを条件付きでコンパイルできます。  

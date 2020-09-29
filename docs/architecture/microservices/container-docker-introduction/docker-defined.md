@@ -2,12 +2,12 @@
 title: Docker について
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | Docker について
 ms.date: 08/31/2018
-ms.openlocfilehash: a53845d3bbcf24f3eaeb98b9e08b6f35a023c30e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7d4b419f46f32fa4acdeb1ac7d5e0c2b2c199fc5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75337707"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172405"
 ---
 # <a name="what-is-docker"></a>Docker について
 
@@ -29,7 +29,7 @@ Docker コンテナーは、オンプレミスのカスタマー データセン
 
 - HYPER-V コンテナーは、各コンテナーを高度に最適化された仮想マシンで実行することで、Windows Server コンテナーによって提供される分離を拡張します。 この構成では、コンテナー ホストのカーネルは Hyper-V コンテナーと共有されないため、分離性に優れています。
 
-これらのコンテナーのイメージは、同じ方法で作成され、同じように機能します。 違いは、Hyper-V コンテナーを実行しているイメージからコンテナーを作成する方法に、追加のパラメーターが必要な点です。 詳細については、「[Hyper-V コンテナー](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/hyperv-container)」を参照してください。
+これらのコンテナーのイメージは、同じ方法で作成され、同じように機能します。 違いは、Hyper-V コンテナーを実行しているイメージからコンテナーを作成する方法に、追加のパラメーターが必要な点です。 詳細については、「[Hyper-V コンテナー](/virtualization/windowscontainers/manage-containers/hyperv-container)」を参照してください。
 
 ## <a name="comparing-docker-containers-with-virtual-machines"></a>Docker コンテナーと仮想マシンの比較
 

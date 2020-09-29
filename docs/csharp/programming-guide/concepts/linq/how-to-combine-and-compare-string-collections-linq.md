@@ -3,14 +3,15 @@ title: 文字列コレクションを結合および比較する方法 (LINQ) (C
 description: この例では、テキスト行を含むファイルをマージします。 C# での LINQ の一連の行で、単純な連結、和集合、および積集合を求める方法について説明します。
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: bfbdb9a0a3d531b56578b242c91596d9e41b6cd6
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 7bc2b2fbc6a6ce09305f870275f2f0ea5379d4fc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105358"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167601"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>文字列コレクションを結合および比較する方法 (LINQ) (C#)
+
 この例では、複数行のテキストが含まれるファイルをマージし、結果を並び替える方法を示します。 具体的には、複数のテキスト行からなる 2 つの集合の単純な連結、和集合、積集合を求める方法を示します。  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>プロジェクトとテキスト ファイルを設定するには  
@@ -170,6 +171,7 @@ class MergeStrings
 ```  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
+
  System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。  
   
 ## <a name="see-also"></a>関連項目

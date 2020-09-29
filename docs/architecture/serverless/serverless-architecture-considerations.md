@@ -4,12 +4,12 @@ description: 状態管理や永続的ストレージから、スケーリング�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/06/2020
-ms.openlocfilehash: 3c07e1149e6af41a6b9a9317238e5c71015d2c4e
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: fbbb0c38cea58902124743fb99f9ab31b3d09be9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135673"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171651"
 ---
 # <a name="serverless-architecture-considerations"></a>サーバーレス アーキテクチャの考慮事項
 
@@ -23,7 +23,7 @@ ms.locfileid: "82135673"
 
 - Redis などの一時的なデータ ストアまたは分散キャッシュを使用する
 - SQL や CosmosDB などのデータベースに状態を格納する
-- [Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview) のようなワークフロー エンジンを使用して状態を処理する
+- [Durable Functions](/azure/azure-functions/durable/durable-functions-overview) のようなワークフロー エンジンを使用して状態を処理する
 
 最後の行は、サーバーレスで実装することを検討しているプロセス内で、状態管理が必要であることを認識する必要があるということです。
 
@@ -63,7 +63,7 @@ ms.locfileid: "82135673"
 
 ## <a name="monitoring-tracing-and-logging"></a>監視、トレース、およびログ記録
 
-DevOps の見落としがちな側面に、展開されたアプリケーションの監視があります。 サーバーレス関数を監視するための戦略を用意することが重要です。 最大の課題は、多くの場合、ユーザーが同じ操作の一部として複数の関数を呼び出すときの、相関関係、または認識です。 ほとんどのサーバーレス プラットフォームでは、サードパーティ製ツールにインポートできるコンソールのログ記録を使用できます。 詳細な分析情報を提供するための、テレメトリの収集の自動化、関連付け ID の生成と追跡、および特定のアクションの監視オプションもあります。 Azure には、監視と分析のための高度な [Application Insights プラットフォーム](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)が用意されています。
+DevOps の見落としがちな側面に、展開されたアプリケーションの監視があります。 サーバーレス関数を監視するための戦略を用意することが重要です。 最大の課題は、多くの場合、ユーザーが同じ操作の一部として複数の関数を呼び出すときの、相関関係、または認識です。 ほとんどのサーバーレス プラットフォームでは、サードパーティ製ツールにインポートできるコンソールのログ記録を使用できます。 詳細な分析情報を提供するための、テレメトリの収集の自動化、関連付け ID の生成と追跡、および特定のアクションの監視オプションもあります。 Azure には、監視と分析のための高度な [Application Insights プラットフォーム](/azure/azure-functions/functions-monitoring)が用意されています。
 
 ## <a name="inter-service-dependencies"></a>サービス間の依存関係
 

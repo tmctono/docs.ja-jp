@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: e76e81153cb7d074fe975744c6b6041ee04be90f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2790f0a9edd5bfde96683e00725dd04555379adf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785430"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153301"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>DataSet と XmlDataDocument の同期
+
 ADO.NET の <xref:System.Data.DataSet> には、データのリレーショナル表現があります。 階層データにアクセスするには、.NET Framework で使用できる XML クラスを使用できます。 従来、この 2 つのデータ表現は個別に使用されていました。 .NET Framework では、データのリレーショナル表現と階層表現の両方へリアルタイムに同期的な方法でアクセスできます。リレーショナル表現にアクセスするには **DataSet** オブジェクトを使用します。階層表現にアクセスするには <xref:System.Xml.XmlDataDocument> オブジェクトを使用します。  
   
  **DataSet** が **XmlDataDocument** と同期されているときは、両方のオブジェクトが 1 つのデータ セットで動作しています。 つまり **DataSet** が変更されると、その変更内容が **XmlDataDocument** に反映されます。この逆の反映も行われます。 **DataSet** と **XmlDataDocument** の間のリレーションシップにより、1 つのアプリケーションから 1 つのデータ セットを使用して、**DataSet** の周囲に構築されたサービス スイート全体 (Web Forms、Windows フォーム コントロール、Visual Studio、.NET デザイナーなど) にアクセスしたり、XML サービス スイート (XSL (Extensible Stylesheet Language)、XSLT (XSL Transformations)、XPath (XML Path Language) など) にアクセスしたりできる優れた柔軟性が実現されます。 アプリケーションでアクセス対象とするサービス セットを選択する必要はありません。どちらのサービス セットにもアクセスできます。  
@@ -90,6 +91,7 @@ ADO.NET の <xref:System.Data.DataSet> には、データのリレーショナ�
  **DataSet** を **XmlDataDocument** と同期する場合、<xref:System.Data.DataRelation> オブジェクトが入れ子かどうかによって同期結果が異なります。 詳しくは、「[DataRelation の入れ子化](nesting-datarelations.md)」をご覧ください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [DataSet と XmlDataDocument の同期](synchronizing-a-dataset-with-an-xmldatadocument.md)  
  最小限のスキーマが含まれており、厳密に型指定された **DataSet** を **XmlDataDocument** と同期させる方法を示します。  
   
@@ -100,6 +102,7 @@ ADO.NET の <xref:System.Data.DataSet> には、データのリレーショナ�
  **DataSet** の内容に XSLT 変換を適用する方法を示します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [DataSet での XML の使用](using-xml-in-a-dataset.md)  
  **DataSet** の内容を XML データとして読み込んで永続化する方法など、**DataSet** でデータ ソースとして XML と対話する方法を説明します。  
   

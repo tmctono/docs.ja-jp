@@ -3,14 +3,15 @@ title: 2 つのフォルダーの内容を比較する方法 (LINQ) (C#)
 description: この例では、C# で LINQ クエリを使用してファイル リストを比較する 3 つの方法を示します。 任意の型のオブジェクトのシーケンスを比較するこれらの方法を適用します。
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: 3cdac57d3d746aa2290c51d1263a7d42dc3463e0
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 840fda1548f36d9b9ad39c2e0d1346dfc727b106
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105336"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165261"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>2 つのフォルダーの内容を比較する方法 (LINQ) (C#)
+
 この例では、2 つのファイル リストを比較する 3 つの方法を示します。  
   
 - 2 つのファイル リストが同一であるかどうかを指定するブール値をクエリする方法  
@@ -127,6 +128,7 @@ namespace QueryCompareTwoDirs
 ```  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
+
  System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。  
   
 ## <a name="see-also"></a>関連項目

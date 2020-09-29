@@ -8,14 +8,15 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: 14722d66a65eb5f96118acf017dc877e657b2dd9
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: c66f4ff578e9864ebaf2b89ec03ce95f3cb2ba91
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89134576"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91168739"
 ---
 # <a name="internal-c-reference"></a>internal (C# リファレンス)
+
 `internal` キーワードは、型と型のメンバーを示す[アクセス修飾子](./access-modifiers.md)です。
   
  > このページでは、`internal` アクセスについて説明します。 `internal` キーワードも [`protected internal`](./protected-internal.md) アクセス修飾子に含まれます。
@@ -39,6 +40,7 @@ public class BaseClass
  型またはメンバーが定義されているアセンブリの外側で、型またはメンバーを内部アクセスで参照するとエラーになります。  
   
 ## <a name="example"></a>例  
+
  この例には、2 つのファイル (`Assembly1.cs` と `Assembly1_a.cs`) が含まれています。 最初のファイルには、内部の基底クラス `BaseClass` が含まれています。 2 番目のファイルでは、`BaseClass` のインスタンス化を試行するとエラーが発生します。  
   
 ```csharp  
@@ -63,6 +65,7 @@ class TestAccess
 ```  
   
 ## <a name="example"></a>例  
+
  この例では、例 1 で使用したのと同じファイルを使用し、`BaseClass` のアクセシビリティ レベルを `public` に変更します。 また、メンバー `intM` のアクセシビリティ レベルを `internal` に変更します。 この場合、クラスのインスタンス化は可能ですが、内部メンバーへのアクセスはできません。  
   
 ```csharp  

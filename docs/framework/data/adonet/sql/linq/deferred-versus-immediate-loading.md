@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-ms.openlocfilehash: 2045cab19e7400f94888297571a172de1578094d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4e2cb7c90eb703985cbb1b8673522a9e253564d0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794130"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164299"
 ---
 # <a name="deferred-versus-immediate-loading"></a>遅延読み込みと即時読み込み
+
 オブジェクトに対してクエリを実行すると、要求したオブジェクトだけが実際に取得されます。 "*関連*" オブジェクトが同時に自動的にフェッチされることはありません。 (詳しくは、「[リレーションシップを介したクエリの実行](querying-across-relationships.md)」をご覧ください。)ただし、関連オブジェクトにアクセスしようとすると、それらを取得する要求が生成されるため、関連オブジェクトがまだ読み込まれていない状態を識別することはできません。  
   
  たとえば、特定の注文のセットを取得するクエリを実行し、そのうちの一部についてだけ特定の顧客にメール通知を送信するものとします。 最初から注文ごとにすべての顧客データを取得する必要はありません。 遅延読み込みを使用すると、関連情報が実際に必要になるまで、その情報の取得を遅らせることができます。 次に例を示します。  

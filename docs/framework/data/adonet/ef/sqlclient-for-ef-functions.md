@@ -2,14 +2,15 @@
 title: Entity Framework 用 SqlClient 関数
 ms.date: 03/30/2017
 ms.assetid: 71a3613c-b94e-494c-8ad8-90cf86ae0b87
-ms.openlocfilehash: 9fb495284108e97bd0cd8ce01b145c77c07c9939
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f8e8ce44c1516171926ec71227e316586d02cc14
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248394"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156655"
 ---
 # <a name="sqlclient-for-entity-framework-functions"></a>Entity Framework 用 SqlClient 関数
+
 Entity Framework 用の .NET Framework Data Provider for SQL Server (SqlClient) には、`System.DateTime` や `string` の操作を実行する関数の他に、数学計算および集計計算を実行する関数のセットが用意されています。 これらの関数は `SQLServer` 名前空間にあります。  
   
  どのプロバイダーでも動作する関数の一覧については、「[正規関数](./language-reference/canonical-functions.md)」を参照してください。  
@@ -17,6 +18,7 @@ Entity Framework 用の .NET Framework Data Provider for SQL Server (SqlClient) 
  正規関数を SQL Server 関数にマップする方法の詳細については、「[概念モデル正規関数と SQL Server 関数とのマッピング](conceptual-model-canonical-to-sql-server-functions-mapping.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [概念モデル正規関数と SQL Server 関数とのマッピング](conceptual-model-canonical-to-sql-server-functions-mapping.md)  
   
  [集計関数](aggregate-functions-sqlclient-for-entity-framework.md)  

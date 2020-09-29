@@ -2,14 +2,15 @@
 title: 推論の制限事項
 ms.date: 03/30/2017
 ms.assetid: 78517994-5d57-44f8-9d20-38812977de09
-ms.openlocfilehash: 10347abc5b01edb4ec6fbf97221d44f4bfb88f54
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9d8191be137661200e1a6b84d68328c1202880ca
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784581"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172776"
 ---
 # <a name="inference-limitations"></a>推論の制限事項
+
 各ドキュメントに含まれている XML 要素によっては、XML から <xref:System.Data.DataSet> のスキーマを推論するプロセスにより、異なるスキーマが生成される可能性があります。 たとえば、次のような XML ドキュメントがあるとします。  
   
  Document1:  

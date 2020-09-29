@@ -2,14 +2,15 @@
 title: facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
-ms.openlocfilehash: 0157105290a297eff2c1bf799a2065872082e40e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b9ef2276f988923fe83cefce910e8c3685cb9da9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73735638"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156447"
 ---
 # <a name="facet"></a>facet
+
 "*ファセット*" は、プリミティブ型のプロパティ定義の詳細を追加するために使用します。 [プロパティ](property.md)定義には、プロパティの型の情報が含まれますが、多くの場合、より詳しい情報が必要になります。 たとえば、概念モデルのエンティティ型に、値を null に設定できない `String` 型のプロパティが含まれる場合があります。 ファセットにより、このレベルの詳細を指定することができます。  
   
  下の表は、EDM でサポートされるファセットについて説明しています。  
@@ -30,6 +31,7 @@ ms.locfileid: "73735638"
 |`Unicode`|プロパティ値を Unicode として保存するかどうかを指定します。|`String`|  
   
 ## <a name="example"></a>例  
+
  [ADO.NET Entity Framework](./ef/index.md) では、概念スキーマ定義言語 ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) と呼ばれるドメイン固有言語 (DSL) を使用して概念モデルを定義します。 次の CSDL は `Book` エンティティ型を定義しています。 ファセットは XML 属性として実装されています。 ファセット値は、プロパティ値を null に設定できないことと、`Scale` プロパティの `Precision` と `Revision` がそれぞれ 29 に設定されることを示します。  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  

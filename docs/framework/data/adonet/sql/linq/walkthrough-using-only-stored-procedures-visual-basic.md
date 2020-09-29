@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: a1994d100c4d18d5fa3642e27d0dcb8823800549
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 57ae5dba89a299365e1ce3c2d54d844da0102f31
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780971"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163949"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>チュートリアル: ストアド プロシージャのみの使用 (Visual Basic)
+
 このチュートリアルでは、ストアド プロシージャのみを使用してデータにアクセスする、基本の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] シナリオ全体を示します。 この方法は、データ ストアへのアクセス方法を制限する目的で、データベース管理者によってよく使用されます。  
   
 > [!NOTE]
@@ -26,6 +27,7 @@ ms.locfileid: "70780971"
  このチュートリアルは、Visual Basic 開発設定を使用して記述されています。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
+
  このチュートリアルの前提条件は次のとおりです。  
   
 - このチュートリアルでは、専用フォルダー ("c:\linqtest3") を使用してファイルを保持します。 チュートリアルを開始する前に、このフォルダーを作成してください。  
@@ -43,6 +45,7 @@ ms.locfileid: "70780971"
      詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。  
   
 ## <a name="overview"></a>概要  
+
  このチュートリアルは、主に次の 6 つの手順で構成されています。  
   
 - Visual Studio で [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ソリューションを設定します。  
@@ -58,6 +61,7 @@ ms.locfileid: "70780971"
 - アプリケーションを実行およびテストします。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>LINQ to SQL ソリューションを作成する  
+
  最初のタスクに、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] プロジェクトをビルドおよび実行するために必要な参照を含む Visual Studio ソリューションを作成します。  
   
 ### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL ソリューションを作成するには  
@@ -75,6 +79,7 @@ ms.locfileid: "70780971"
      Windows フォーム デザイナーが開きます。  
   
 ## <a name="adding-the-linq-to-sql-assembly-reference"></a>LINQ to SQL アセンブリ参照を追加する  
+
  標準の Windows フォーム アプリケーション テンプレートには、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] アセンブリは含まれていません。 次の手順に従って、アセンブリを自分で追加する必要があります。  
   
 ### <a name="to-add-systemdatalinqdll"></a>System.Data.Linq.dll を追加するには  
@@ -88,6 +93,7 @@ ms.locfileid: "70780971"
      アセンブリがプロジェクトに追加されます。  
   
 ## <a name="adding-the-northwind-code-file-to-the-project"></a>プロジェクトに Northwind コード ファイルを追加する  
+
  この手順では、事前に SqlMetal ツールを使用して、Northwind サンプル データベースからコード ファイルを生成していることが前提となります。 詳細については、このチュートリアルの「前提条件」を参照してください。  
   
 ### <a name="to-add-the-northwind-code-file-to-the-project"></a>プロジェクトに Northwind コード ファイルを追加するには  
@@ -99,6 +105,7 @@ ms.locfileid: "70780971"
      プロジェクトに northwind.vb ファイルが追加されます。  
   
 ## <a name="creating-a-database-connection"></a>データベース接続を作成する  
+
  この手順では、Northwind サンプル データベースへの接続を定義します。 このチュートリアルでは、パスとして "c:\linqtest3\northwnd.mdf" を使用します。  
   
 ### <a name="to-create-the-database-connection"></a>データベース接続を作成するには  
@@ -112,6 +119,7 @@ ms.locfileid: "70780971"
      [!code-vb[DLinqWalk4VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#1)]  
   
 ## <a name="setting-up-the-user-interface"></a>ユーザー インターフェイスを設定する  
+
  このタスクでは、ユーザーがストアド プロシージャを実行してデータベース内のデータにアクセスできるように、インターフェイスを作成します。 このチュートリアルで作成するアプリケーションでは、ユーザーはアプリケーションに埋め込まれているストアド プロシージャを使用してのみ、データベース内のデータにアクセスできます。  
   
 ### <a name="to-set-up-the-user-interface"></a>ユーザー インターフェイスを設定するには  
@@ -156,6 +164,7 @@ ms.locfileid: "70780971"
      [!code-vb[DLinqWalk4VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#3)]  
   
 ## <a name="testing-the-application"></a>アプリケーションのテスト  
+
  次に、アプリケーションをテストします。 データ ストアに対する操作は、2 つのストアド プロシージャで実行できる処理に制限されることに注意してください。 つまり、入力した orderID に含まれている製品を返す処理と、入力した CustomerID の注文製品の履歴を返す処理のみを実行できます。  
   
 ### <a name="to-test-the-application"></a>アプリケーションをテストするには  
@@ -189,6 +198,7 @@ ms.locfileid: "70780971"
 6. 操作が終了したら、 **[ファイル]** メニューの **[プロジェクトを閉じる]** をクリックし、メッセージに従ってプロジェクトを保存します。  
   
 ## <a name="next-steps"></a>次の手順  
+
  いくつかの変更を加えることによって、このプロジェクトを強化できます。 たとえば、使用できるストアド プロシージャの一覧をリスト ボックスに表示し、実行するプロシージャをユーザーに選択させることができます。 レポートの出力をテキスト ファイルに送ることもできます。  
   
 ## <a name="see-also"></a>関連項目

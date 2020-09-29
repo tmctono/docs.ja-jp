@@ -3,14 +3,15 @@ title: SQL Server データ型と ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: f727c69b1dd5c23c6a89911005256de70255fd4c
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: db4618ac624ea8401cab682a8c21d8f23c253d05
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452332"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155459"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server データ型と ADO.NET
+
 SQL Server と .NET Framework は異なる型システムに基づいているので、両者間でデータ損失が発生する可能性があります。 データの整合性を維持するために、.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) では、SQL Server データを処理するための型指定されたアクセサー メソッドが提供されています。 <xref:System.Data.SqlDbType> クラスの列挙値を使用して、<xref:System.Data.SqlClient.SqlParameter> データ型を指定できます。  
   
  SQL Server と .NET Framework の間のデータ型マッピングがわかる詳細な説明と表については、「[SQL Server データ型のマッピング](../sql-server-data-type-mappings.md)」をご覧ください。  
@@ -24,6 +25,7 @@ SQL Server と .NET Framework は異なる型システムに基づいている�
 1. [データ型 (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [SqlTypes と DataSet](sqltypes-and-the-dataset.md)  
  `SqlTypes` 内の `DataSet` に対する型のサポートについて説明します。  
   
@@ -43,6 +45,7 @@ SQL Server と .NET Framework は異なる型システムに基づいている�
  SQL Server から取得した XML データを使用する方法について説明します。  
   
 ## <a name="reference"></a>関連項目  
+
  <xref:System.Data.DataSet>  
  `DataSet` クラスおよびそのすべてのメンバーについて説明します。  
   

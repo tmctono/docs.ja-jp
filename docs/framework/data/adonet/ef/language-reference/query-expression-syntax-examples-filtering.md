@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c27cb89c-1c1d-4988-9f38-950eda3cb275
-ms.openlocfilehash: 4ce4e28df3a09ddf718b000725afb0c9125bdd77
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: feb05c0813587f8801aadd8bf64c4700badb2330
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397114"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152976"
 ---
 # <a name="query-expression-syntax-examples-filtering"></a>クエリ式の構文例:フィルター処理
+
 このトピックでは、クエリ式構文で、`Where` メソッドおよび `Where…Contains` メソッドを使用して、[AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) を照会する例を取り上げます。 Where…`Contains` を[コンパイル済みクエリ](compiled-queries-linq-to-entities.md)の一部として使用することはできないことに注意してください。  
   
  これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
@@ -25,24 +26,28 @@ ms.locfileid: "70397114"
 ## <a name="where"></a>Where  
   
 ### <a name="example"></a>例  
+
  次の例では、すべてのオンライン注文が返されます。  
   
  [!code-csharp[DP L2E Examples#Where1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#where1)]
  [!code-vb[DP L2E Examples#Where1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#where1)]  
   
 ### <a name="example"></a>例  
+
  次の例では、注文数量が 3 個以上で 5 個以下の注文が返されます。  
   
  [!code-csharp[DP L2E Examples#Where2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#where2)]
  [!code-vb[DP L2E Examples#Where2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#where2)]  
   
 ### <a name="example"></a>例  
+
  次の例では、色が赤の製品がすべて返されます。  
   
  [!code-csharp[DP L2E Examples#Where3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#where3)]
  [!code-vb[DP L2E Examples#Where3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#where3)]  
   
 ### <a name="example"></a>例  
+
  次の例では、`Where` メソッドを使用して、2003 年 12 月 1 日以降に受けた注文を検索します。次に、`order.SalesOrderDetail` ナビゲーション プロパティを使用して、各注文の詳細を取得します。  
   
  [!code-csharp[DP L2E Examples#WhereNavProperty](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#wherenavproperty)]
@@ -51,6 +56,7 @@ ms.locfileid: "70397114"
 ## <a name="wherecontains"></a>Where…Contains  
   
 ### <a name="example"></a>例  
+
  次の例では、配列を `Where…Contains` 句の一部として使用し、その配列内の値と一致する `ProductModelID` を持つすべての製品を検出します。  
   
  [!code-csharp[DP L2E ArraysAndListsInQueries#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e arraysandlistsinqueries/cs/program.cs#1)]
@@ -60,6 +66,7 @@ ms.locfileid: "70397114"
 > `Where…Contains` 句の述語として、<xref:System.Array>、<xref:System.Collections.Generic.List%601>、または <xref:System.Collections.Generic.IEnumerable%601> インターフェイスを実装する任意の型のコレクションを使用できます。 さらに、LINQ to Entities クエリ内でコレクションを宣言および初期化できます。 詳細については、次の例を参照してください。  
   
 ### <a name="example"></a>例  
+
  次の例では、`Where…Contains` 句で配列を宣言および初期化し、その配列内の値と一致する `ProductModelID` または `Size` を持つすべての製品を検出します。  
   
  [!code-csharp[DP L2E ArraysAndListsInQueries#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e arraysandlistsinqueries/cs/program.cs#2)]

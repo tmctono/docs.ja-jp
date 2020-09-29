@@ -2,12 +2,12 @@
 title: モノリシック アプリケーション
 description: モノリシック アプリケーションのコンテナー化の中心概念を理解します。
 ms.date: 08/06/2020
-ms.openlocfilehash: f188a2ff576436d9378030e0a858ffb8110dad17
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: c9a5baf209a47f62f421a236c0b04fe5dae37e3a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915451"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163545"
 ---
 # <a name="monolithic-applications"></a>モノリシック アプリケーション
 
@@ -37,7 +37,7 @@ ms.locfileid: "87915451"
 
 最後に、可用性の観点から考えた場合、モノリシック アプリケーションをデプロイする場合、全体をデプロイする必要があります。つまり、デプロイ期間中に、*停止および起動*する必要がある場合、すべての機能とすべてのユーザーが影響を受けます。 図 4-3 のとおり、特定の状況では、Azure とコンテナーの使用でこれらの状況を最小限に抑えることができ、アプリケーションをダウンさせる可能性を減らすことができます。
 
-Azure にモノリシック アプリケーションをデプロイするには、各インスタンスに専用の VM を使用します。 [Azure Virtual Machine Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/) を使用すると、VM のスケーリングを簡単に行うことができます。
+Azure にモノリシック アプリケーションをデプロイするには、各インスタンスに専用の VM を使用します。 [Azure Virtual Machine Scale Sets](/azure/virtual-machine-scale-sets/) を使用すると、VM のスケーリングを簡単に行うことができます。
 
 また [Azure App Service](https://azure.microsoft.com/services/app-service/) では、VM の管理を必要とせずに、モノリシック アプリケーションを実行し、インスタンスを簡単にスケーリングすることができます。 Azure App Services では、Docker コンテナーの単一インスタンスも実行できるため、デプロイが簡単になります。
 

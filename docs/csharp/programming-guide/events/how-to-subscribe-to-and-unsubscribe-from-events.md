@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 4aecbbd58268e7b50a34f503160edd1eca4fe659
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 1e090301982a785fed2a8a6a95ee48bd1c7457ab
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063626"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167484"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>イベントのサブスクリプションとサブスクリプション解除を行う方法 (C# プログラミング ガイド)
+
 別のクラスによってパブリッシュされるイベントが発生したときに呼び出されるカスタム コードを作成するときは、そのイベントをサブスクライブします。 たとえば、ユーザーがボタンをクリックしたらアプリケーションで何かを行うには、ボタンの `click` イベントをサブスクライブします。  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Visual Studio IDE を使ってイベントをサブスクライブするには  
@@ -86,6 +87,7 @@ ms.locfileid: "88063626"
      匿名関数を使ってイベントをサブスクライブした場合、簡単にはイベントのサブスクリプションを解除できないことに注意することが重要です。 このシナリオでサブスクリプションを解除するには、イベントをサブスクライブするコードに戻り、匿名メソッドをデリゲート変数に格納して、イベントにデリゲートを追加する必要があります。 一般に、後のコードでイベントのサブスクリプションを解除する必要がある場合は、イベントのサブスクライブに匿名関数を使わないことをお勧めします。 匿名関数について詳しくは、「[匿名関数](../statements-expressions-operators/anonymous-functions.md)」をご覧ください。  
   
 ## <a name="unsubscribing"></a>サブスクリプションの解除  
+
  イベントが発生したときにイベント ハンドラーが呼び出されないようにするには、イベントからサブスクリプションを解除します。 リソースのリークを防ぐには、サブスクライバー オブジェクトを破棄する前に、イベントのサブスクリプションを解除する必要があります。 イベントのサブスクリプションを解除するまで、パブリッシュ側オブジェクトでイベントの基盤になっているマルチキャスト デリゲートは、サブスクライバーのイベント ハンドラーをカプセル化するデリゲートへの参照を保持しています。 パブリッシュ側オブジェクトがその参照を保持している限り、ガベージ コレクションはサブスクライバー オブジェクトを削除しません。  
   
 #### <a name="to-unsubscribe-from-an-event"></a>イベントのサブスクリプションを解除するには  

@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 99863e79-5b00-467e-a105-4ffa42de3ff7
-ms.openlocfilehash: b80edb522d26896d33cacff757390e5a7bf757e6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 744adb87bfc0919e861821c423a8e6a43ba7ed38
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783866"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156369"
 ---
 # <a name="filling-a-dataset-using-one-or-more-ref-cursors"></a>1 つまたは複数の REF CURSOR を使用した DataSet の値の設定
+
 この Microsoft Visual Basic の例では、2 つの REF CURSOR パラメーターを返し、返された行を <xref:System.Data.DataSet> に入力する、PL/SQL ストアド プロシージャを実行する方法について説明します。  
   
 ```vb  

@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 57830421eee3c94f9785a2c603eb31b96f99f4d5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a30a8c2c731e8c5cb2b22c8d7f34ec32d149803c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552844"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152794"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>データ サービスの構成 (WCF Data Services)
+
 WCF Data Services を使用すると、Open Data Protocol (OData) フィードを公開するデータ サービスを作成できます。 これらのフィードには、さまざまなデータ ソースからのデータが含まれることがあります。 WCF Data Services では、データ プロバイダーを使用して、このデータが OData フィードとして公開されます。 これらのプロバイダーには、Entity Framework プロバイダー、リフレクション プロバイダー、およびカスタム データ サービス プロバイダー インターフェイスのセットがあります。 プロバイダーの実装は、サービスのデータ モデルを定義します。 詳細については、「[Data Services プロバイダー](data-services-providers-wcf-data-services.md)」を参照してください。  
   
  WCF Data Services では、データ サービスは、データ サービスの種類がデータ モデルのエンティティ コンテナーである <xref:System.Data.Services.DataService%601> クラスから継承するクラスです。 このエンティティ コンテナーには、データ モデルのエンティティ セットにアクセスするために使用される <xref:System.Linq.IQueryable%601> を返す 1 つ以上のプロパティがあります。  
@@ -25,6 +26,7 @@ WCF Data Services を使用すると、Open Data Protocol (OData) フィード�
 [!code-vb[Astoria Northwind Service#DataServiceConfigComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind.svc.vb#dataserviceconfigcomplete)]  
   
 ## <a name="data-service-configuration-settings"></a>データ サービス構成設定  
+
  <xref:System.Data.Services.DataServiceConfiguration> クラスでは、以下のデータ サービスの動作を指定できます。  
   
 |メンバー|動作|  
@@ -48,7 +50,9 @@ WCF Data Services を使用すると、Open Data Protocol (OData) フィード�
 |<xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A>|この構成プロパティを使用すると、エラー応答メッセージで多くの情報を返すことによってデータ サービスのトラブルシューティングを容易にすることができます。 このオプションは、運用環境で使用することを目的としたものではありません。 詳細については、「[WCF Data Services の開発と配置](developing-and-deploying-wcf-data-services.md)」を参照してください。|  
   
 <a name="accessRequirements"></a>
+
 ## <a name="minimum-resource-access-requirements"></a>最小限のリソース アクセス要件  
+
  次の表に、特定の操作を実行するために付与されている必要があるエンティティ セットの最小限の権限を示します。 パスの例は、[クイックスタート](quickstart-wcf-data-services.md)の完了時に作成される Northwind データ サービスに基づいています。 <xref:System.Data.Services.EntitySetRights> 列挙体および <xref:System.Data.Services.ServiceOperationRights> 列挙体は <xref:System.FlagsAttribute> を使用して定義されているので、論理和演算子を使用して 1 つのエンティティ セットまたは操作に複数のアクセス許可を指定できます。 詳細については、[データ サービスへのアクセスを有効にする](how-to-enable-access-to-the-data-service-wcf-data-services.md)」を参照してください。  
   
 |パス/アクション|`GET`|`DELETE`|`MERGE`|`POST`|`PUT`|  
@@ -74,7 +78,9 @@ WCF Data Services を使用すると、Open Data Protocol (OData) フィード�
  <sup>2</sup> この URI は、バイナリ ラージ オブジェクト (BLOB) を返すプロパティがメディア リンク エントリであるエンティティ (この場合、`Customers`) に属するメディア リソースとして定義されている場合にサポートされます。 詳細については、「[ストリーミング プロバイダー](streaming-provider-wcf-data-services.md)」を参照してください。  
   
 <a name="versioning"></a>
+
 ## <a name="versioning-requirements"></a>バージョン管理の要件  
+
  次のデータ サービス構成の動作には、OData プロトコルのバージョン 2 またはそれ以降のバージョンが必要です。  
   
 - カウント要求のサポート。  

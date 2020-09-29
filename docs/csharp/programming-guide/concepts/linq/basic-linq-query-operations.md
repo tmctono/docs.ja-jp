@@ -18,14 +18,15 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: d9653be8b67ef4d971c157b8dd8d82b2ae3c2287
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 9f5d39e396e9be3e633326d4034a89d874373d75
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105526"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159294"
 ---
 # <a name="basic-linq-query-operations-c"></a>LINQ クエリの基本操作 (C#)
+
 このトピックでは、LINQ クエリ式とクエリで実行する一般的な操作について、簡単に説明します。 詳細については、以下のトピックを参照してください。  
   
  [LINQ クエリ式](../../../linq/index.md)  
@@ -38,6 +39,7 @@ ms.locfileid: "87105526"
 > 既に SQL や XQuery などのクエリ言語に精通している場合は、このトピックの大部分を省略できます。 LINQ クエリ式における句の順序について理解するには、次のセクションの "`from` 句" を参照してください。  
   
 ## <a name="obtaining-a-data-source"></a>データ ソースの取得  
+
  LINQ クエリで必要な最初の手順は、データ ソースを指定することです。 ほとんどのプログラミング言語と同じように、C# でも、変数を使用する前に宣言しておく必要があります。 LINQ クエリでは、データ ソース (`customers`) および "*範囲変数*" (`cust`) を導入するために `from` 句が最初に使用されます。  
   
  [!code-csharp[csLINQGettingStarted#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#23)]  
@@ -48,6 +50,7 @@ ms.locfileid: "87105526"
 > <xref:System.Collections.ArrayList> などの非ジェネリック データ ソースの場合は、範囲変数を明示的に型指定する必要があります。 詳細については、「[LINQ を使用して ArrayList にクエリを実行する方法 (C#)](./how-to-query-an-arraylist-with-linq.md)」および「[from 句](../../../language-reference/keywords/from-clause.md)」を参照してください。  
   
 ## <a name="filtering"></a>フィルター処理  
+
  最も一般的なクエリ操作は、ブール式の形式でフィルターを適用することです。 クエリにフィルターを使用すると、式の条件に該当する要素だけがクエリから返されます。 結果は、`where` 句を使って生成されます。 フィルターは、実質的にはソース シーケンスから除外する要素を指定します。 次の例では、住所がロンドンにある `customers` だけが返されます。  
   
  [!code-csharp[csLINQGettingStarted#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#24)]  
@@ -63,6 +66,7 @@ ms.locfileid: "87105526"
  詳しくは、「[where 句](../../../language-reference/keywords/where-clause.md)」をご覧ください。  
   
 ## <a name="ordering"></a>順序  
+
  返されたデータを並べ替えると便利なことがよくあります。 `orderby` 句を使用すると、並べ替える型の既定の比較子に従って、返されたシーケンスの要素が並べ替えられます。 たとえば、次のクエリは `Name` プロパティに基づいて結果を並び替えるように拡張できます。 `Name` は文字列であるため、既定の比較子によって、アルファベット順 (A から Z) で並べ替えられます。  
   
  [!code-csharp[csLINQGettingStarted#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#27)]  
@@ -72,6 +76,7 @@ ms.locfileid: "87105526"
  詳細については、「[orderby 句](../../../language-reference/keywords/orderby-clause.md)」を参照してください。  
   
 ## <a name="grouping"></a>グループ化  
+
  指定したキーに基づいて結果をグループ化するには、`group` 句を使用します。 たとえば、結果を `City` 別にグループ化するように指定して、住所がロンドンまたはパリにあるすべての顧客を個々のグループに分けることができます。 この場合は、`cust.City` がキーになります。  
   
  [!code-csharp[csLINQGettingStarted#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#28)]  
@@ -85,6 +90,7 @@ ms.locfileid: "87105526"
  詳しくは、「[group 句](../../../language-reference/keywords/group-clause.md)」をご覧ください。  
   
 ## <a name="joining"></a>結合  
+
  結合操作は、データ ソースで明示的にモデル化されていないシーケンス間に関連付けを作成します。 たとえば、結合を実行して、住所地が同じすべての顧客と販売業者を検索することができます。 LINQ では、`join` 句はデータベース テーブルを直接の対象とするのではなく、オブジェクトのコレクションを対象として機能します。  
   
  [!code-csharp[csLINQGettingStarted#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#36)]  
@@ -98,6 +104,7 @@ from order in Customer.Orders...
  詳細については、「[join 句](../../../language-reference/keywords/join-clause.md)」を参照してください。  
   
 ## <a name="selecting-projections"></a>選択 (投影)  
+
  `select` 句はクエリの結果を生成し、返される各要素の "シェイプ" つまり型を指定します。 たとえば、完全な `Customer` オブジェクト、１ つのメンバーのみ、メンバーのサブセット、または計算や新しいオブジェクトの作成に基づいた、まったく異なる種類の結果のいずれで結果が構成されるかを指定できます。 `select` 句でソース要素のコピー以外のものを生成する場合、その操作は*投影*と呼ばれます。 投影を使用したデータの変換は、LINQ クエリ式の強力な機能です。 詳細については、「[LINQ によるデータ変換 (C#)](./data-transformations-with-linq.md)」と「[select 句](../../../language-reference/keywords/select-clause.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目

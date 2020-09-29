@@ -7,12 +7,12 @@ ms.date: 08/12/2020
 no-loc:
 - Blazor
 - WebAssembly
-ms.openlocfilehash: 255a7f9b34752b3480ba5a8ffc5d506e6d7b05d3
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: e746362657a25487e98ddac09fa4337b00dfe805
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89515978"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169129"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC アプリを開発する
 
@@ -241,7 +241,7 @@ ASP.NET Core UI プロジェクトは、UI レベルの処理を行いますが�
 
 ### <a name="feature-organization"></a>機能の編成
 
-既定では、ASP.NET Core アプリケーションは、コントローラーとビューさらに多くの場合は ViewModels を含むように、フォルダー構造を編成します。 通常、これらのサーバー側構造をサポートするためのクライアント側のコードは、wwwroot フォルダーに個別に格納されます。 ただし、大規模なアプリケーションでは、特定の機能を使用するためにこれらのフォルダー間を移動する必要があるため、このような編成では問題が発生する可能性があります。 各フォルダー内のファイルとサブフォルダーの数が増えるとますます困難になり、ソリューション エクスプローラーのスクロール量が膨大になります。 この問題の 1 つの解決策は、アプリケーションのコードをファイルの種類別ではなく "_機能_" 別に整理することです。 この編成スタイルは、通常、機能フォルダーまたは[機能スライス](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc)と呼ばれます ([垂直スライス](https://deviq.com/vertical-slices/)も参照してください)。
+既定では、ASP.NET Core アプリケーションは、コントローラーとビューさらに多くの場合は ViewModels を含むように、フォルダー構造を編成します。 通常、これらのサーバー側構造をサポートするためのクライアント側のコードは、wwwroot フォルダーに個別に格納されます。 ただし、大規模なアプリケーションでは、特定の機能を使用するためにこれらのフォルダー間を移動する必要があるため、このような編成では問題が発生する可能性があります。 各フォルダー内のファイルとサブフォルダーの数が増えるとますます困難になり、ソリューション エクスプローラーのスクロール量が膨大になります。 この問題の 1 つの解決策は、アプリケーションのコードをファイルの種類別ではなく "_機能_" 別に整理することです。 この編成スタイルは、通常、機能フォルダーまたは[機能スライス](/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc)と呼ばれます ([垂直スライス](https://deviq.com/vertical-slices/)も参照してください)。
 
 ASP.NET Core MVC では、この目的のために区分 (Area) がサポートされています。 区分を使うと、各区分フォルダー内にコントローラー フォルダーとビュー フォルダー (および関連するすべてのモデル) のセットを個別に作成できます。 図 7-1 は、区分を使用したフォルダー構造の例です。
 
@@ -301,7 +301,7 @@ public class FeatureConvention : IControllerModelConvention
 services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 ```
 
-また、ASP.NET Core MVC はビューを配置する場合にも規則を使います。 これをカスタム規則でオーバーライドして、ビューが独自の機能フォルダーに配置されるようにすることができます (上の FeatureConvention によって提供される機能名を使用)。 この方法について詳しくは、MSDN Magazine の記事「[ASP.NET Core MVC 向け機能スライス](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc)」をご覧ください。実際に動くサンプルをダウンロードすることもできます。
+また、ASP.NET Core MVC はビューを配置する場合にも規則を使います。 これをカスタム規則でオーバーライドして、ビューが独自の機能フォルダーに配置されるようにすることができます (上の FeatureConvention によって提供される機能名を使用)。 この方法について詳しくは、MSDN Magazine の記事「[ASP.NET Core MVC 向け機能スライス](/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc)」をご覧ください。実際に動くサンプルをダウンロードすることもできます。
 
 ### <a name="apis-and-no-locblazor-applications"></a>API と Blazor アプリケーション
 
@@ -313,7 +313,7 @@ Blazor WebAssembly 管理インターフェイスを eShopOnWeb に追加する�
 
 `PublicApi` と `BlazorAdmin` の両方で必要とされる種類を共有するために使用できる共通の `ApplicationCore` プロジェクトが既にあるのに、なぜ別の `BlazorShared` プロジェクトを追加するか、と疑問に思う人もいるかもしれません。 その答えは、このプロジェクトには、アプリケーションのすべてのビジネス ロジックが含まれているため、必要以上に大きく、サーバー上でセキュリティを維持する必要がある可能性がはるかに高いということです。 Blazor アプリケーションが読み込まれると、`BlazorAdmin` で参照されるすべてのライブラリがユーザーのブラウザーにダウンロードされることにご注意ください。
 
-[フロント エンド用バックエンド (BFF) パターン](https://docs.microsoft.com/azure/architecture/patterns/backends-for-frontends)を使用しているかどうかによって、Blazor WebAssembly アプリで使用される API で、その種類を 100% Blazor と共有しない可能性があります。 特に、多くの異なるクライアントで使用することを目的としたパブリック API では、クライアント固有の共有プロジェクト内で共有するのではなく、独自の要求と結果の種類を定義することができます。 eShopOnWeb サンプルの場合、`PublicApi` プロジェクトによって、実際にはパブリック API がホストされていると想定されているため、その要求と応答の種類のすべてが `BlazorShared` プロジェクトから取得されるとは限りません。
+[フロント エンド用バックエンド (BFF) パターン](/azure/architecture/patterns/backends-for-frontends)を使用しているかどうかによって、Blazor WebAssembly アプリで使用される API で、その種類を 100% Blazor と共有しない可能性があります。 特に、多くの異なるクライアントで使用することを目的としたパブリック API では、クライアント固有の共有プロジェクト内で共有するのではなく、独自の要求と結果の種類を定義することができます。 eShopOnWeb サンプルの場合、`PublicApi` プロジェクトによって、実際にはパブリック API がホストされていると想定されているため、その要求と応答の種類のすべてが `BlazorShared` プロジェクトから取得されるとは限りません。
 
 ### <a name="cross-cutting-concerns"></a>横断的な問題
 
@@ -387,7 +387,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-フィルターの実装の詳細については、MSDN Magazine の記事「[実際の ASP.NET Core MVC フィルター](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters)」を参照してください。また、実際に動作するサンプルをダウンロードすることもできます。
+フィルターの実装の詳細については、MSDN Magazine の記事「[実際の ASP.NET Core MVC フィルター](/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters)」を参照してください。また、実際に動作するサンプルをダウンロードすることもできます。
 
 > ### <a name="references--structuring-applications"></a>参照 – アプリケーションの構成
 >

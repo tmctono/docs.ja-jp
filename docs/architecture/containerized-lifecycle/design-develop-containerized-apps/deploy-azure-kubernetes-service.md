@@ -2,16 +2,16 @@
 title: 高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 description: Azure Kubernetes Service を使用して、アプリケーションをデプロイする方法について説明します。
 ms.date: 08/06/2020
-ms.openlocfilehash: b4deb9906e0fece7fb611b6988df576e8b07fe46
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: ba9887c0a4837c16a60ebeb006416c0fa8c105e0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916112"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163597"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>Azure Kubernetes Service (AKS) へのデプロイ
 
-Azure コマンドライン インターフェイス (Azure CLI) がインストールされている任意のクライアント オペレーティング システム (Windows、macOS、または Linux) を使用して、AKS と対話することができます。 詳細については、使用可能な環境に関する [Azure CLI ドキュメント](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)と[インストール ガイド](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)を参照してください。
+Azure コマンドライン インターフェイス (Azure CLI) がインストールされている任意のクライアント オペレーティング システム (Windows、macOS、または Linux) を使用して、AKS と対話することができます。 詳細については、使用可能な環境に関する [Azure CLI ドキュメント](/cli/azure/?view=azure-cli-latest)と[インストール ガイド](/cli/azure/install-azure-cli?view=azure-cli-latest)を参照してください。
 
 ## <a name="create-the-aks-environment-in-azure"></a>Azure で AKS 環境を作成する
 

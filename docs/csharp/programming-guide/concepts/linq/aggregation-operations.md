@@ -3,14 +3,15 @@ title: 集計処理 (C#)
 description: 集計処理を実行するためのメソッドについて説明します。 集計の操作では、値の集合体から単一の値が計算されます。
 ms.date: 07/20/2015
 ms.assetid: 6fc035e5-7639-48b8-bc7f-b093dd31b039
-ms.openlocfilehash: 3d5a52249520478571db2fcfd7aa5d10fb013565
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: c302667ec7f1d4ed5acb98439ea9f8f80250077d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104306"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159385"
 ---
 # <a name="aggregation-operations-c"></a>集計処理 (C#)
+
 集計の操作では、値の集合体から単一の値が計算されます。 たとえば、1 か月分の毎日の気温値から 1 日あたりの平均の気温値を計算することが集計操作です。  
   
  次の図は、数値のシーケンスに対する 2 つの集計処理の結果を示しています。 最初の処理で数値が合計されます。 2 つ目の処理でシーケンスの最大値が返されます。  

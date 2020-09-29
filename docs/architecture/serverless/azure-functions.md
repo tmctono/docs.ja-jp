@@ -4,12 +4,12 @@ description: Azure Functions には、イベント ドリブンのインスタ�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/06/2020
-ms.openlocfilehash: 2dee60e3635be94a55ee26a7f04942bc59cb8dec
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 7625b2a0dafb90dc1bf2fb7fe680d53b20764c09
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135725"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171807"
 ---
 # <a name="azure-functions"></a>Azure Functions 
 
@@ -19,7 +19,7 @@ Azure Functions によってサーバーレスのコンピューティング エ
 
 現在のランタイム バージョン3.0 では、クロスプラットフォームの .NET Core 3.1 アプリケーションがサポートされています。 C# 以外に、JavaScript、F#、Java などのその他の言語がサポートされています。 ポータルで作成する関数には、豊富なスクリプト構文が用意されています。 スタンドアロン プロジェクトとして作成した関数を、完全なプラットフォームのサポートと機能を使用して展開できます。
 
-詳細については、「[Azure Functions のドキュメント](https://docs.microsoft.com/azure/azure-functions)」を参照してください。
+詳細については、「[Azure Functions のドキュメント](/azure/azure-functions)」を参照してください。
 
 ## <a name="programming-language-support"></a>プログラミング言語のサポート
 
@@ -35,15 +35,15 @@ Azure Functions によってサーバーレスのコンピューティング エ
 |**TypeScript**|Node 10、12 (JavaScript を使用)|
 |**PowerShell**|PowerShell Core 6|
 
-詳細については、[サポートされている言語](https://docs.microsoft.com/azure/azure-functions/supported-languages)に関するページを参照してください。
+詳細については、[サポートされている言語](/azure/azure-functions/supported-languages)に関するページを参照してください。
 
 ## <a name="app-service-plans"></a>App Service プラン
 
 Functions は "*App Service プラン*" によってサポートされています。 このプランでは、関数アプリによって使用されるリソースを定義します。 プランをリージョンに割り当て、使用される仮想マシンのサイズと数を決定し、価格レベルを選択することができます。 真のサーバーレス アプローチとして、関数アプリで**従量課金**プランを使用することができます。 従量課金プランでは、負荷に基づいてバックエンドが自動的にスケーリングされます。
 
-関数アプリのもう 1 つのホスティング オプションは、[Premium プラン](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan)です。 このプランでは、コールド スタートの必要がない "常時接続" インスタンスが提供され、VNet 接続などの高度な機能がサポートされて、Premium ハードウェアで実行されます。
+関数アプリのもう 1 つのホスティング オプションは、[Premium プラン](/azure/azure-functions/functions-premium-plan)です。 このプランでは、コールド スタートの必要がない "常時接続" インスタンスが提供され、VNet 接続などの高度な機能がサポートされて、Premium ハードウェアで実行されます。
 
-詳細については、[App Service プラン](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)に関するページを参照してください。
+詳細については、[App Service プラン](/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)に関するページを参照してください。
 
 ## <a name="create-your-first-function"></a>最初の関数を作成する
 
@@ -53,11 +53,11 @@ Functions は "*App Service プラン*" によってサポートされていま�
 - Azure CLI を使用して必要なリソースを作成します。
 - お気に入りの IDE を使用してローカルで関数をビルドし、Azure に発行します。
 
-スクリプト化された関数をポータル上で作成する方法の詳細については、「[Azure portal で初めての関数を作成する](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)」を参照してください。
+スクリプト化された関数をポータル上で作成する方法の詳細については、「[Azure portal で初めての関数を作成する](/azure/azure-functions/functions-create-first-azure-function)」を参照してください。
 
-Azure CLI からビルドするには、[Azure CLI を使用して初めての関数を作成する](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli)方法に関するページを参照してください。
+Azure CLI からビルドするには、[Azure CLI を使用して初めての関数を作成する](/azure/azure-functions/functions-create-first-azure-function-azure-cli)方法に関するページを参照してください。
 
-Visual Studio で関数を作成するには、「[Visual Studio を使用して初めての関数を作成する](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)」を参照してください。
+Visual Studio で関数を作成するには、「[Visual Studio を使用して初めての関数を作成する](/azure/azure-functions/functions-create-your-first-function-visual-studio)」を参照してください。
 
 ## <a name="understand-triggers-and-bindings"></a>トリガーとバインドについて
 
@@ -114,7 +114,7 @@ public static string Run(Stream myBlob, string name, TraceWriter log)
 
 この例は、BLOB ストレージ内の変更またはアップロードされたファイルの名前を取得し、後で処理するためにキューに配置する単純な関数です。
 
-トリガーとバインドの完全な一覧については、「[Azure Functions でのトリガーとバインドの概念](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)」を参照してください。
+トリガーとバインドの完全な一覧については、「[Azure Functions でのトリガーとバインドの概念](/azure/azure-functions/functions-triggers-bindings)」を参照してください。
 
 >[!div class="step-by-step"]
 >[前へ](azure-serverless-platform.md)

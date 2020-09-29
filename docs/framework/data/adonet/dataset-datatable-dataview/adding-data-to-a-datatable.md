@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: 94ebc97d5f90b5bb92186ba6f33015633bd01127
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: aac2d90cc57a4af823c42f8c7eb2adcd43c63caf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286935"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164819"
 ---
 # <a name="adding-data-to-a-datatable"></a>DataTable へのデータの追加
+
 <xref:System.Data.DataTable> を作成し、列と制約を使用してそのテーブルの構造を定義した後で、テーブルに新しいデータ行を追加できます。 新しい行を追加するには、新しい変数を <xref:System.Data.DataRow> 型として宣言します。 <xref:System.Data.DataTable.NewRow%2A> メソッドを呼び出すと、新しい **DataRow** オブジェクトが返されます。 次に、**DataTable** は、<xref:System.Data.DataColumnCollection> での定義に従って、テーブルの構造に基づいて **DataRow** オブジェクトを作成します。  
   
  **NewRow** メソッドを呼び出して新しい行を作成する例を次に示します。  

@@ -5,14 +5,15 @@ ms.assetid: b27c779b-9355-4dc7-b95f-7dfd504b6e48
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 737cb8743d8fd9c93cd46ebf50fba3fe554a35f2
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: c0709fde96a5d2f39f04a08ccd24ddf90c782f30
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634665"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166418"
 ---
 # <a name="how-to-map-inheritance-hierarchies"></a>方法: 継承階層を割り当てる
+
 LINQ で継承の割り当てを実装するには、以下の手順で示すように、継承階層のルート クラスで属性および属性プロパティを指定する必要があります。 Visual Studio を使用している開発者は、オブジェクト リレーショナル デザイナーを使用して継承改装をマップできます。 「[方法:O/R デザイナーを使用して継承を構成する](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)」を参照してください。  
   
 > [!NOTE]

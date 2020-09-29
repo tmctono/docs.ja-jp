@@ -9,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 5a70389c9c423300fad03123cfc4738dfe10e481
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 78079d9940ea5363215411acea6b9ca269ff3ae1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89118521"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160542"
 ---
 # <a name="async-c-reference"></a>async (C# リファレンス)
 
@@ -40,6 +40,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
  `async` は、メソッド、ラムダ式、または匿名メソッドを修飾する場合にのみキーワードとなるため、コンテキスト キーワードです。 それ以外の場合は、識別子として解釈されます。
 
 ## <a name="example"></a>例
+
 次の例は、非同期のイベント ハンドラー `StartButton_Click` と非同期メソッド `ExampleMethodAsync` との間の制御構造および制御フローを示しています。 非同期メソッドの結果は、Web ページの文字数です。 このコードは、Visual Studio で Windows Presentation Foundation (WPF) アプリまたは Windows ストア アプリを作成する場合に適しています。アプリの設定に関するコード内のコメントを参照してください。
 
 このコードは、Visual Studio で、Windows Presentation Foundation (WPF) アプリまたは Windows ストア アプリとして実行できます。 `StartButton` という名前のボタン コントロールと、`ResultsTextBox` という名前のテキストボックス コントロールが必要です。 次のように、名前とハンドラーを必ず設定してください。
@@ -68,6 +69,7 @@ Windows ストア アプリとしてコードを実行するには:
 > タスクの詳細およびタスクを待機している間に実行されるコードの詳細については、「[async および await を使用した非同期プログラミング](../../programming-guide/concepts/async/index.md)」を参照してください。 類似した要素を使用するフル コンソールの例については、「[完了時での複数の非同期タスクとプロセスの実行 (C#)](../../programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)」を参照してください。
 
 ## <a name="return-types"></a>戻り値の型
+
 非同期メソッドの戻り値の型を次に示します。
 
 - <xref:System.Threading.Tasks.Task>

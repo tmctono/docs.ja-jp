@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 9d6d21696acd7a6b63cfd6d2ea7e906ec2acd7c9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7f220f5d8cbc4b1c12dec018a4497c6bc492f3c1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286948"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164884"
 ---
 # <a name="adding-columns-to-a-datatable"></a>DataTable への列の追加
+
 <xref:System.Data.DataTable> には、テーブルの **Columns** プロパティによって参照される <xref:System.Data.DataColumn> オブジェクトのコレクションが格納されます。 この列のコレクションと制約によって、テーブルのスキーマ (構造) が定義されます。  
   
  テーブル内に **DataColumn** オブジェクトを作成するには、**DataColumn** コンストラクターを使用するか、または <xref:System.Data.DataColumnCollection> であるテーブルの **Columns** プロパティの **Add** メソッドを呼び出します。 **Add** メソッドは、オプションの **ColumnName**、**DataType**、**Expression** の各引数を受け取り、新しい **DataColumn** をコレクションのメンバーとして作成します。 また、このメソッドは既存の **DataColumn** オブジェクトを受け取り、それをコレクションに追加して、要求された場合は、追加された **DataColumn** への参照を返します。 **DataTable** オブジェクトはデータ ソースに固有ではないため、**DataColumn** のデータ型を指定するときには、.NET Framework 型が使用されます。  

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:winexe
 - target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
-ms.openlocfilehash: 5f8717115464ec3d9798228d7d50a8f08b2db300
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 6e14a2aac427c7adfd69f66eaf624816b75f6ea2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89466093"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91168934"
 ---
 # <a name="-targetwinexe-c-compiler-options"></a>-target:winexe (C# コンパイラ オプション)
+
 **-target:winexe** オプションを使用すると、実行可能な (EXE) Windows プログラムがコンパイラによって作成されます。  
   
 ## <a name="syntax"></a>構文  
@@ -26,6 +27,7 @@ ms.locfileid: "89466093"
 ```  
   
 ## <a name="remarks"></a>解説  
+
  実行可能ファイルは、.exe という拡張子で作成されます。 Windows プログラムは、.NET ライブラリまたは Windows API のユーザー インターフェイスを提供するプログラムです。  
   
  コンソール アプリケーションを作成するには、[-target:exe](./target-exe-compiler-option.md) を使用します。  
@@ -47,6 +49,7 @@ ms.locfileid: "89466093"
  このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.ProjectProperties3.OutputType%2A>」を参照してください。  
   
 ## <a name="example"></a>例  
+
  `in.cs` をコンパイルし、Windows プログラムを生成する例を次に示します。  
   
 ```console  

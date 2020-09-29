@@ -9,14 +9,15 @@ helpviewer_keywords:
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-ms.openlocfilehash: 4ce4033323eb938caff1d769198ca69782b470ab
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 1d2eefdab433f67e1cba5f709a2db8ec6b9a5dc7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89140829"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171313"
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest (C# コンパイラ オプション)
+
 **-win32manifest** オプションは、プロジェクトのポータブル実行可能 (PE) ファイルに埋め込まれる、ユーザー定義の Win32 アプリケーション マニフェスト ファイルを指定するために使用します。  
   
 ## <a name="syntax"></a>構文  
@@ -26,10 +27,12 @@ ms.locfileid: "89140829"
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `filename`  
  カスタム マニフェスト ファイルの名前と場所。  
   
 ## <a name="remarks"></a>注釈  
+
  既定では、Visual C# コンパイラは "asInvoker" の要求実行レベルを指定するアプリケーション マニフェストを埋め込みます。 マニフェストは、実行可能ファイルがビルドされたフォルダーと同じフォルダーに作成されます (Visual Studio を使用している場合、通常は bin\Debug または bin\Release フォルダー)。 カスタム マニフェストを指定する場合 (たとえば、"highestAvailable" または "requireAdministrator" の要求実行レベルを指定する場合) は、このオプションを使用してファイルの名前を指定します。  
   
 > [!NOTE]
@@ -48,6 +51,7 @@ ms.locfileid: "89140829"
  アプリケーション マニフェストは、カスタムのビルド後手順として提供するか、または [-nowin32manifest (C# コンパイラ オプション)](./nowin32manifest-compiler-option.md) オプションを使用して、Win32 リソース ファイルの一部として提供できます。 アプリケーションを Windows Vista でファイルまたはレジストリの仮想化の対象にする場合は、これと同じオプションを使用します。 これにより、コンパイラがポータブル実行可能 (PE) ファイル内に既定のマニフェストを作成し、埋め込むことを回避できます。  
   
 ## <a name="example"></a>例  
+
  次の例は、Visual C# コンパイラが PE に挿入する既定のマニフェストを示したものです。  
   
 > [!NOTE]

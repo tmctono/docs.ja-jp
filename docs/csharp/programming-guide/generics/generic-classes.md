@@ -6,14 +6,15 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: a885ae042eef939021d3a9b75616505c289bd43c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 62e6e7afe0e795819b82c6c7a4f99260a8080efb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558088"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157422"
 ---
 # <a name="generic-classes-c-programming-guide"></a>ジェネリック クラス (C# プログラミング ガイド)
+
 ジェネリック クラスは、特定のデータ型に固有ではない操作をカプセル化します。 ジェネリック クラスは最も一般的に、リンク リスト、ハッシュ テーブル、スタック、キュー、ツリーなどのコレクションと共に使用されます。 コレクションの項目を追加または削除するなどの操作は、保存されているデータの型に関係なく、基本的に同じように実行されます。  
   
  コレクション クラスを必要とするほとんどのシナリオで、.NET クラス ライブラリで提供されているものを使用するという方法が推奨されます。 これらのクラスの使用の詳細については、「[.NET のジェネリック コレクション](../../../standard/generics/collections.md)」を参照してください。  

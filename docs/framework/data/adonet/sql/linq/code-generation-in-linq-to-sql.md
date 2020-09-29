@@ -2,14 +2,15 @@
 title: LINQ to SQL でのコード生成
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 551322637e6e04b9be7d558c51e063fead7f84f4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f58448e0fc0c22795005b55a737b42374a750ec3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70247968"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161530"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL でのコード生成
+
 オブジェクト リレーショナル デザイナーまたは SQLMetal コマンドライン ツールを使用することにより、データベースを表すコードを生成できます。 どちらの場合も、エンド ツー エンドのコード生成が次の 3 段階で行われます。  
   
 1. *DBML Extractor* がスキーマ情報をデータベースから抽出して、XML 形式の DBML ファイルの中に情報を再アセンブルします。  
@@ -21,12 +22,15 @@ ms.locfileid: "70247968"
  詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。 Visual Studio を使用している開発者は、オブジェクト リレーショナル デザイナーを使用してコードを生成することもできます。 「[Visual Studio の LINQ to SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)」を参照してください。  
   
 ## <a name="dbml-extractor"></a>DBML Extractor  
+
  DBML Extractor は [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のコンポーネントの 1 つで、データベース メタデータを入力として受け入れ、DBML ファイルを出力として生成します。  
   
 ## <a name="code-generator"></a>コード ジェネレーター  
+
  コード ジェネレーターは [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のコンポーネントの 1 つで、DBML ファイルを Visual Basic、C#、または XML のマッピング ファイルに変換します。  
   
 ## <a name="xml-schema-definition-file"></a>XML スキーマ定義ファイル  
+
  DBML ファイルは、以下のような XSD ファイルのスキーマ定義に対して有効である必要があります。  
   
  このスキーマ定義ファイルを、外部マッピング ファイルの検証に使われるスキーマ定義ファイルと区別してください。 詳細については、「[外部マップ](external-mapping.md)」を参照してください。  
@@ -243,6 +247,7 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="sample-dbml-file"></a>サンプル DBML ファイル  
+
  次のコードは、Northwind サンプル データベースから作成された DBML ファイルの抜粋です。 SQLMetal で **/xml** オプションを使用することにより、ファイル全体を生成できます。 詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。  
   
 ```xml  

@@ -2,12 +2,12 @@
 title: マイクロサービス アーキテクチャでの通信
 description: 同期および非同期の方法による、マイクロサービス間のさまざまな通信方法について説明します。
 ms.date: 01/30/2020
-ms.openlocfilehash: f2d6e78966bb7d5f481de6db0ab1dcfe2812a1b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1a240609b898fe8f365c39ba0c95f486377c445
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401521"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169259"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>マイクロサービス アーキテクチャでの通信
 
@@ -35,7 +35,7 @@ ms.locfileid: "79401521"
 
 - 単一の受信者。 各要求は、単一の受信者またはサービスのみに処理される必要があります。 この通信の例は[コマンド パターン](https://en.wikipedia.org/wiki/Command_pattern)です。
 
-- 複数の受信者。 ゼロから複数の受信者が各要求を処理できます。 この種の通信は非同期である必要があります。 例として、[イベント ドリブン アーキテクチャ](https://microservices.io/patterns/data/event-driven-architecture.html)などのパターンで使用される[パブリッシュ/サブスクライブ](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) メカニズムがあります。 これは、イベントを介して複数のマイクロサービス間でデータ更新を伝搬する場合のイベント バス インターフェイスまたはメッセージ ブローカーに基づきます。通常は、サービス バスまたは[トピックとサブスクリプション](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)を使用する [Azure Service Bus](https://azure.microsoft.com/services/service-bus/) などの同様の成果物を介して実装されます。
+- 複数の受信者。 ゼロから複数の受信者が各要求を処理できます。 この種の通信は非同期である必要があります。 例として、[イベント ドリブン アーキテクチャ](https://microservices.io/patterns/data/event-driven-architecture.html)などのパターンで使用される[パブリッシュ/サブスクライブ](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) メカニズムがあります。 これは、イベントを介して複数のマイクロサービス間でデータ更新を伝搬する場合のイベント バス インターフェイスまたはメッセージ ブローカーに基づきます。通常は、サービス バスまたは[トピックとサブスクリプション](/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)を使用する [Azure Service Bus](https://azure.microsoft.com/services/service-bus/) などの同様の成果物を介して実装されます。
 
 マイクロサービス ベースのアプリケーションでは、多くの場合、これらの通信スタイルを組み合わせて使用します。 最も一般的な種類は、通常の Web API HTTP サービスを呼び出すときに HTTP/HTTPS などの同期プロトコルを使用する単一受信者通信です。 マイクロサービスでは、通常、マイクロサービス間の非同期通信でメッセージング プロトコルも使用します。
 
@@ -81,7 +81,7 @@ JSON や XML などの複数のメッセージ形式 (バイナリ形式でも) 
 
 **図 4-16**. HTTP 要求/応答通信 (同期または非同期) の使用
 
-クライアントが要求/応答通信を使用する場合、応答は短時間 (通常は 1 秒未満、または最大でも数秒) で到達することを前提とします。 応答が遅延する場合は、[メッセージング パターン](https://docs.microsoft.com/azure/architecture/patterns/category/messaging)と[メッセージング テクノロジ](https://en.wikipedia.org/wiki/Message-oriented_middleware) (次のセクションで説明しますが、これらは異なる方法です) に基づいて非同期通信を実装する必要があります。
+クライアントが要求/応答通信を使用する場合、応答は短時間 (通常は 1 秒未満、または最大でも数秒) で到達することを前提とします。 応答が遅延する場合は、[メッセージング パターン](/azure/architecture/patterns/category/messaging)と[メッセージング テクノロジ](https://en.wikipedia.org/wiki/Message-oriented_middleware) (次のセクションで説明しますが、これらは異なる方法です) に基づいて非同期通信を実装する必要があります。
 
 要求/応答通信で一般的に使用されるアーキテクチャ スタイルは [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) です。 これは、GET、POST、PUT などの HTTP 動詞を採用する、[HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) プロトコルに基づいており、また、密接に関連している方法です。 REST は、サービスの作成時に最もよく使用されるアーキテクチャ通信方法です。 ASP.NET Core Web API サービスの開発時に REST サービスを実装できます。
 

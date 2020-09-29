@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: dc907e57adba0dd81e5cf27c2798759cee12bed2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: dd9cdf3cdda0605d9454fe096be01655e67a0d0a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539360"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169298"
 ---
 # <a name="common-web-application-architectures"></a>一般的な Web アプリケーション アーキテクチャ
 
@@ -205,7 +205,7 @@ ASP.NET Core MVC アプリケーション内のユーザー インターフェ�
 
 ![図 5-14](./media/image5-14.png)
 
-Microsoft Azure のモノリシック アプリケーションは、各インスタンスに専用の VM を使用して展開できます。 [Azure Virtual Machine Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/) を使用すると、VM のスケーリングを簡単に行うことができます。 [Azure App Service](https://azure.microsoft.com/services/app-service/) では、VM の管理を必要とせずに、モノリシック アプリケーションを実行し、インスタンスを簡単にスケーリングすることができます。 Azure App Services では、Docker コンテナーの単一インスタンスも実行できるため、展開が簡単になります。 Docker を使用すれば、1 つの VM を Docker ホストとして展開し、複数のインスタンスを実行できます。 図 5-14 に示すように、Azure バランサーを使用してスケーリングを管理できます。
+Microsoft Azure のモノリシック アプリケーションは、各インスタンスに専用の VM を使用して展開できます。 [Azure Virtual Machine Scale Sets](/azure/virtual-machine-scale-sets/) を使用すると、VM のスケーリングを簡単に行うことができます。 [Azure App Service](https://azure.microsoft.com/services/app-service/) では、VM の管理を必要とせずに、モノリシック アプリケーションを実行し、インスタンスを簡単にスケーリングすることができます。 Azure App Services では、Docker コンテナーの単一インスタンスも実行できるため、展開が簡単になります。 Docker を使用すれば、1 つの VM を Docker ホストとして展開し、複数のインスタンスを実行できます。 図 5-14 に示すように、Azure バランサーを使用してスケーリングを管理できます。
 
 さまざまなホストへの展開は、従来の展開手法で管理できます。 Docker ホストは、**docker run** などのコマンドを使用して手動で管理するか、継続的デリバリー (CD) パイプラインなどのオートメーションによって管理できます。
 

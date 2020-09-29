@@ -2,12 +2,12 @@
 title: マイクロサービスの回復性と高可用性
 description: マイクロサービスの高可用性を実現するには、一時的なネットワークや依存関係のエラーに耐えるような設計が必要であり、回復性も求められます。
 ms.date: 09/20/2018
-ms.openlocfilehash: 28f8b124cd59b2c3d621267cb437872af42c9ea8
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 601255c1e6941b2de9fdb34098dea7edf6d8b987
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988922"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172451"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>マイクロサービスの回復性と高可用性
 
@@ -40,7 +40,7 @@ Beat Pulse と呼ばれる優れたオープン ソース ライブラリを使�
 
 モノリシック サーバー ベースのアプリケーションでは、単純にログをディスク上のファイルに書き込み (ログ ファイル)、後でツールを使用して分析します アプリケーションの実行は、固定サーバーまたは VM に制限されているため、イベントのフローの分析は一般的にそれほど複雑ではありません。 ただし、複数のサービスがオーケストレーター クラスタ内の多くのノードに渡って実行される分散アプリケーションでは、分散イベントを関連付けることは難しい課題です。
 
-マイクロサービスベースのアプリケーションは、イベントまたはログファイルの出力ストリームをアプリケーション自体で保存しないようにする必要があり、さらに中央の場所へのイベントのルーティングも管理しないようにする必要があります 透過的になっている必要があります。つまり、各プロセスは、標準出力にイベント ストリームを書き込むだけで、それが実行されている実行環境インフラストラクチャによって収集されるようにする必要があります。 これらのイベント ストリーム ルーターの例として、[Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow) は、複数のソースからイベント ストリームを収集し、出力システムに公開します。 これらには、開発環境や、[Azure Monitor](https://azure.microsoft.com/services/monitor//) や [Azure Diagnostics](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostics-extension-overview) などのクラウド システムに向けた、シンプルな標準出力を含めることができます。 ログの検索、アラート、レポート、監視を行うことができる優れたサードパーティ製のログ分析プラットフォームとツールもあり、[Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA) のようにリアルタイムで実行できるものもあります。
+マイクロサービスベースのアプリケーションは、イベントまたはログファイルの出力ストリームをアプリケーション自体で保存しないようにする必要があり、さらに中央の場所へのイベントのルーティングも管理しないようにする必要があります 透過的になっている必要があります。つまり、各プロセスは、標準出力にイベント ストリームを書き込むだけで、それが実行されている実行環境インフラストラクチャによって収集されるようにする必要があります。 これらのイベント ストリーム ルーターの例として、[Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow) は、複数のソースからイベント ストリームを収集し、出力システムに公開します。 これらには、開発環境や、[Azure Monitor](https://azure.microsoft.com/services/monitor//) や [Azure Diagnostics](/azure/azure-monitor/platform/diagnostics-extension-overview) などのクラウド システムに向けた、シンプルな標準出力を含めることができます。 ログの検索、アラート、レポート、監視を行うことができる優れたサードパーティ製のログ分析プラットフォームとツールもあり、[Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA) のようにリアルタイムで実行できるものもあります。
 
 ### <a name="orchestrators-managing-health-and-diagnostics-information"></a>正常性および診断情報を管理するオーケストレーター
 

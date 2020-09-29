@@ -2,14 +2,15 @@
 title: 属性ベースの対応付け
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: 1e11a2efc3d1afa56a27d6e2c60149a509511080
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 986a5022ea9e70868689c898649067135eac944b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248063"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156109"
 ---
 # <a name="attribute-based-mapping"></a>属性ベースの対応付け
+
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、属性を適用するか、または外部のマッピング ファイルを使用して、SQL Server データベースを [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] オブジェクト モデルに対応付けます。 このトピックでは、属性ベースの方法について説明します。  
   
  大部分の基本フォームでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、データベースと <xref:System.Data.Linq.DataContext>、テーブルとクラス、列およびリレーションシップとそのクラスのプロパティを、それぞれ対応付けています。 属性を使用して、オブジェクト モデル内の継承階層を対応付けることもできます。 詳細については、[Visual Basic または C# でオブジェクト モデルを生成する](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)」を参照してください。  
@@ -22,6 +23,7 @@ ms.locfileid: "70248063"
  以下のセクションでは、属性ベースの対応付けについて詳しく説明します。 詳細については、「<xref:System.Data.Linq.Mapping>」を参照してください。  
   
 ## <a name="databaseattribute-attribute"></a>DatabaseAttribute 属性  
+
  この属性は、接続によってデータベースの名前が提供されない場合に、データベースの既定の名前を指定するために使用します。 この属性は省略可能ですが、この属性を使用する場合は、次の表に示されているように、<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> プロパティを適用する必要があります。  
   
 |プロパティ|種類|Default|説明|  
@@ -31,6 +33,7 @@ ms.locfileid: "70248063"
  詳細については、「<xref:System.Data.Linq.Mapping.DatabaseAttribute>」を参照してください。  
   
 ## <a name="tableattribute-attribute"></a>TableAttribute 属性  
+
  この属性は、クラスを、データベース テーブルまたはビューに関連付けられたエンティティ クラスとして指定するために使用します。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、この属性を持つクラスを、永続的なクラスとして扱います。 次の表は、<xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> プロパティについての説明です。  
   
 |プロパティ|種類|Default|説明|  
@@ -40,6 +43,7 @@ ms.locfileid: "70248063"
  詳細については、「<xref:System.Data.Linq.Mapping.TableAttribute>」を参照してください。  
   
 ## <a name="columnattribute-attribute"></a>ColumnAttribute 属性  
+
  この属性は、データベース テーブルの列を表すエンティティ クラスのメンバーを指定するために使用します。 この属性は、フィールドまたはプロパティに適用できます。  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] がデータベースへの変更を保存すると、列として指定したメンバーのみが取得および保持されます。 この属性を持たないメンバーは非永続的であると見なされ、挿入や更新の場合に送信されません。  
@@ -64,6 +68,7 @@ ms.locfileid: "70248063"
 > AssociationAttribute プロパティ値と ColumnAttribute Storage プロパティ値では大文字と小文字が区別されます。 たとえば、AssociationAttribute.Storage  プロパティの属性に使用されている値は、コード内の別の場所で使用されている対応するプロパティ名と、大文字と小文字が一致するようにしてください。 これは、Visual Basic など、通常は大文字と小文字が区別されない言語を含むすべての .NET プログラミング言語に適用されます。 Storage プロパティの詳細については、「<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>」を参照してください。  
   
 ## <a name="associationattribute-attribute"></a>AssociationAttribute 属性  
+
  この属性は、外部キーと主キーのリレーションシップなど、データベース内の関連付けを表すプロパティを指定するために使用します。 リレーションシップの詳細については、「[方法:データベース リレーションシップを割り当てる](how-to-map-database-relationships.md)」をご覧ください。  
   
  この属性のプロパティを次の表に示します。  
@@ -83,6 +88,7 @@ ms.locfileid: "70248063"
 > AssociationAttribute プロパティ値と ColumnAttribute Storage プロパティ値では大文字と小文字が区別されます。 たとえば、AssociationAttribute.Storage  プロパティの属性に使用されている値は、コード内の別の場所で使用されている対応するプロパティ名と、大文字と小文字が一致するようにしてください。 これは、Visual Basic など、通常は大文字と小文字が区別されない言語を含むすべての .NET プログラミング言語に適用されます。 Storage プロパティの詳細については、「<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>」を参照してください。  
   
 ## <a name="inheritancemappingattribute-attribute"></a>InheritanceMappingAttribute 属性  
+
  この属性は、継承階層を対応付けるために使用します。  
   
  この属性のプロパティを次の表に示します。  
@@ -96,6 +102,7 @@ ms.locfileid: "70248063"
  詳細については、「<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>」を参照してください。  
   
 ## <a name="functionattribute-attribute"></a>FunctionAttribute 属性  
+
  この属性は、データベース内のストアド プロシージャまたはユーザー定義関数として表すメソッドを指定するために使用します。  
   
  この属性のプロパティを次の表に示します。  
@@ -108,6 +115,7 @@ ms.locfileid: "70248063"
  詳細については、「<xref:System.Data.Linq.Mapping.FunctionAttribute>」を参照してください。  
   
 ## <a name="parameterattribute-attribute"></a>ParameterAttribute 属性  
+
  この属性は、ストアド プロシージャ メソッドの入力パラメーターを対応付けるために使用します。  
   
  この属性のプロパティを次の表に示します。  
@@ -120,6 +128,7 @@ ms.locfileid: "70248063"
  詳細については、「<xref:System.Data.Linq.Mapping.ParameterAttribute>」を参照してください。  
   
 ## <a name="resulttypeattribute-attribute"></a>ResultTypeAttribute 属性  
+
  この属性は、結果の型を指定するために使用します。  
   
  この属性のプロパティを次の表に示します。  
@@ -131,6 +140,7 @@ ms.locfileid: "70248063"
  詳細については、「<xref:System.Data.Linq.Mapping.ResultTypeAttribute>」を参照してください。  
   
 ## <a name="dataattribute-attribute"></a>DataAttribute 属性  
+
  この属性は、名前およびプライベート ストレージ フィールドを指定するために使用します。  
   
  この属性のプロパティを次の表に示します。  
