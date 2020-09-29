@@ -2,12 +2,12 @@
 title: '再帰関数: rec キーワード'
 description: "再帰関数を定義するために、' let ' キーワードと共に F # ' rec ' キーワードを使用する方法について説明します。"
 ms.date: 08/12/2020
-ms.openlocfilehash: 389357bd13cef39b1d07972c1a3167320b61612b
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 1ab00ff9400129e531fd7320861b3d9625cad08c
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558713"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91438081"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>再帰関数: rec キーワード
 
@@ -36,7 +36,7 @@ and function2-nameparameter-list =
 次の例は、数学的定義を使用して *n*<sup>番目</sup> のフィボナッチ数を計算する再帰関数を示しています。
 
 ```fsharp
-let fib n =
+let rec fib n =
     match n with
     | 0 | 1 -> 1
     | n -> fib (n-1) + fib (n-2)
