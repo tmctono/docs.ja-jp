@@ -12,14 +12,15 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-ms.openlocfilehash: cd1150f3fa0dd0eca4e9352ce3809e73a15126c7
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 4efa0cbf286b40ad971bad66a7acce15e553eb39
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89466106"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194103"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (C# コンパイラ オプション)
+
 .NET のリソースへのリンクを出力ファイルに作成します。 リソース ファイルが出力ファイルに追加されることはありません。 これに対し、[-resource](./resource-compiler-option.md) オプションはリソース ファイルを出力ファイルに埋め込みます。  
   
 ## <a name="syntax"></a>構文  
@@ -29,6 +30,7 @@ ms.locfileid: "89466106"
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `filename`  
  アセンブリからリンクする .NET リソース ファイル。  
   
@@ -39,6 +41,7 @@ ms.locfileid: "89466106"
  リソースのアクセシビリティ。パブリックまたはプライベートです。 既定値はパブリックです。  
   
 ## <a name="remarks"></a>注釈  
+
  既定では、リンクされたリソースは、C# コンパイラで作成されるときにアセンブリ内でパブリックになります。 リソースをプライベートにするには、アクセシビリティ修飾子として `private` を指定します。 `public` または `private` 以外の他の修飾子は許可されません。  
   
  **-linkresource** には、**-target:module** 以外のいずれかの [-target](./target-compiler-option.md) オプションが必要です。  
@@ -52,6 +55,7 @@ ms.locfileid: "89466106"
  このコンパイラ オプションは Visual Studio では使用できず、プログラムで変更することはできません。  
   
 ## <a name="example"></a>例  
+
  `in.cs` をコンパイルして、リソース ファイル `rf.resource` にリンクします。  
   
 ```console  
@@ -59,6 +63,7 @@ csc -linkresource:rf.resource in.cs
 ```  
   
 ## <a name="example"></a>例  
+
  `A.cs` をコンパイルして DLL を作成し、ネイティブ DLL N.dll にリンクして、出力をグローバル アセンブリ キャッシュ (GAC) に配置します。 この例では、A.dll と N.dll の両方を GAC に置きます。  
   
 ```console  
@@ -67,6 +72,7 @@ gacutil -i A.dll
 ```  
   
 ## <a name="example"></a>例  
+
  この例では、前の例と同じことを行いますが、アセンブリ リンカー オプションを使います。  
   
 ```console  

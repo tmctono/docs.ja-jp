@@ -2,14 +2,15 @@
 title: SQL Server スキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 0f65bbf2534eb7167baacb1405a8ce6e9769c23f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ebb0cea20aede3d04e37536c7c615678e109337a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794335"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197665"
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server スキーマ コレクション
+
 Microsoft .NET Framework Data Provider for SQL Server は、共通のスキーマ コレクションに加えて追加のスキーマ コレクションをサポートしています。 スキーマ コレクションは、使用している SQL Server のバージョンによって多少異なります。 サポートされるスキーマ コレクションの一覧を確認するには、引数を指定しないで、またはスキーマ コレクション名に "MetaDataCollections" を指定して、**GetSchema** メソッドを呼び出します。 これにより、サポートされるスキーマ コレクションの一覧、それぞれがサポートする制限数、および使用する識別子部分の数と共に、<xref:System.Data.DataTable> が返されます。  
   
 ## <a name="databases"></a>データベース  
@@ -47,6 +48,7 @@ Microsoft .NET Framework Data Provider for SQL Server は、共通のスキー�
 |index_name|String|インデックス名。|  
   
 ### <a name="indexes-sql-server-2008"></a>Indexes (SQL Server 2008)  
+
  .NET Framework 3.5 SP1 および SQL Server 2008 以降では、新しい空間型、ファイルストリーム、およびスパース列をサポートするために、以下の列が Indexes スキーマ コレクションに追加されています。 これらの列は、以前のバージョンの .NET Framework および SQL Server ではサポートされません。  
   
 |ColumnName|DataType|説明|  
@@ -143,6 +145,7 @@ Microsoft .NET Framework Data Provider for SQL Server は、共通のスキー�
 |COLLATION_CATALOG|String|列が文字データ型またはテキスト データ型である場合は、照合順序が定義されているデータベースを示すマスターが返されます。 その他の場合、この列は NULL になります。|  
   
 ### <a name="columns-sql-server-2008"></a>Columns (SQL Server 2008)  
+
  .NET Framework version 3.5 SP1 および SQL Server 2008 以降では、新しい空間型、filestream、およびスパース列をサポートするために、以下の列が Columns スキーマ コレクションに追加されています。 これらの列は、以前のバージョンの .NET Framework および SQL Server ではサポートされません。  
   
 |ColumnName|DataType|説明|  
@@ -152,6 +155,7 @@ Microsoft .NET Framework Data Provider for SQL Server は、共通のスキー�
 |IS_COLUMN_SET|String|列が列セットの列である場合は YES。<br /><br /> 列が列セットの列でない場合は NO。|  
   
 ### <a name="allcolumns-sql-server-2008"></a>AllColumns (SQL Server 2008)  
+
  .NET Framework version 3.5 SP1 および SQL Server 2008 以降では、スパース列をサポートするために、AllColumns スキーマ コレクションが追加されています。 AllColumns は、以前のバージョンの .NET Framework および SQL Server ではサポートされません。  
   
  AllColumns の制限と生成される DataTable スキーマは、Columns スキーマ コレクションと同じです。 相違は、Columns スキーマ コレクションに含まれていない列セットの列が AllColumns に含まれている点のみです。 次の表では、それらの列について説明します。  
@@ -181,6 +185,7 @@ Microsoft .NET Framework Data Provider for SQL Server は、共通のスキー�
 |IS_COLUMN_SET|String|列が列セットの列である場合は YES。<br /><br /> 列が列セットの列でない場合は NO。|  
   
 ### <a name="columnsetcolumns-sql-server-2008"></a>ColumnSetColumns (SQL Server 2008)  
+
  .NET Framework version 3.5 SP1 および SQL Server 2008 以降では、スパース列をサポートするために、ColumnSetColumns スキーマ コレクションが追加されています。 ColumnSetColumns は、以前のバージョンの .NET Framework および SQL Server ではサポートされません。 ColumnSetColumns スキーマ コレクションは、列セット内のすべての列のスキーマを返します。 次の表では、それらの列について説明します。  
   
 |ColumnName|DataType|説明|  

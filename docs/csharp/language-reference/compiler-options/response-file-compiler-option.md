@@ -8,14 +8,15 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: 89a057cba6e0d23c15fc9b652e5bfbc89b6ecbaa
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 8f7e222e194fc4ba96159ecd792765f64b4d1c57
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89128648"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193754"
 ---
 # <a name="-c-compiler-options"></a>@ (C# コンパイラ オプション)
+
 @ オプションを使用すると、コンパイラ オプションおよびコンパイルするソース コード ファイルを含むファイルを指定できます。  
   
 ## <a name="syntax"></a>構文  
@@ -25,10 +26,12 @@ ms.locfileid: "89128648"
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `response_file`  
  コンパイラ オプションやコンパイルするソース コード ファイルの一覧を含むファイルです。  
   
 ## <a name="remarks"></a>注釈  
+
  コンパイラ オプションとソース コード ファイルは、コマンド ラインで指定した場合と同じように、コンパイラによって処理されます。  
   
  コンパイル時に複数の応答ファイルを指定するには、複数の応答ファイル オプションを指定します。 次に例を示します。  
@@ -49,6 +52,7 @@ ms.locfileid: "89128648"
  このコンパイラ オプションは、Visual Studio 開発環境で設定することはできません。また、プログラムで変更することもできません。  
   
 ## <a name="example"></a>例  
+
  サンプルの応答ファイルの一部を次に示します。  
   
 ```console  

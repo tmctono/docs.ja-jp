@@ -2,17 +2,19 @@
 title: System.DateTime メソッド
 ms.date: 03/30/2017
 ms.assetid: 4f80700c-e83f-4ab6-af0f-1c9a606e1133
-ms.openlocfilehash: fba695975645ecb86a06b17f0664fdf37f8866a0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e3bffb1f47c19ccf7ea59151cd3545a15d59f1f2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792421"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203489"
 ---
 # <a name="systemdatetime-methods"></a>System.DateTime メソッド
+
 LINQ to SQL でサポートされている以下のメソッド、演算子、およびプロパティは、LINQ to SQL のクエリで使用できます。 メソッド、演算子、またはプロパティがサポートされていない場合は、LINQ to SQL でメンバーを変換して SQL Server で実行することはできません。 これらのメンバーはコード内で使用できますが、クエリが Transact-SQL に変換される前、またはデータベースから結果が取得された後で評価する必要があります。  
   
 ## <a name="supported-systemdatetime-members"></a>サポートされている System.DateTime メンバー  
+
  オブジェクト モデルまたは外部マッピング ファイルにマッピングされると、LINQ to SQL クエリ内で次の <xref:System.DateTime?displayProperty=nameWithType> メンバーを呼び出すことができます。  
   
 |サポートされている <xref:System.DateTime> メソッド|サポートされている <xref:System.DateTime> 演算子|サポートされている <xref:System.DateTime> プロパティ|  
@@ -32,6 +34,7 @@ LINQ to SQL でサポートされている以下のメソッド、演算子、�
 |||<xref:System.DateTime.Year%2A>|  
   
 ## <a name="members-not-supported-by-linq-to-sql"></a>LINQ to SQL でサポートされていないメンバー  
+
  以下のメンバーは LINQ to SQL クエリ内でサポートされていません。  
   
 |||  
@@ -47,6 +50,7 @@ LINQ to SQL でサポートされている以下のメソッド、演算子、�
 |<xref:System.DateTime.FromOADate%2A>|<xref:System.DateTime.GetDateTimeFormats%2A>|  
   
 ## <a name="method-translation-example"></a>メソッドの変換例  
+
  LINQ to SQL でサポートされているメソッドはすべて、SQL Server に送信される前に Transact-SQL に変換されます。 たとえば、次のようなパターンを考えてみます。  
   
  `(dateTime1 – dateTime2).{Days, Hours, Milliseconds, Minutes, Months, Seconds, Years}`  
@@ -56,6 +60,7 @@ LINQ to SQL でサポートされている以下のメソッド、演算子、�
  `DATEDIFF({DatePart}, @dateTime1, @dateTime2)`  
   
 ## <a name="sqlmethods-date-and-time-methods"></a>SQLMethods の日付と時刻のメソッド  
+
  LINQ to SQL では、<xref:System.DateTime> 構造体で提供されるメソッドの他に、次の表に示すように、日付と時刻を操作する <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> クラスのメソッドも提供しています。  
   
 ||||  

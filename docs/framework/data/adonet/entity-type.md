@@ -2,14 +2,15 @@
 title: エンティティ型
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
-ms.openlocfilehash: 1dafce5f7f95ba6f391c8742944f40a9afa7dcf8
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3f99667a06d8aa439232802d4909290dfe9db97c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737807"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194779"
 ---
 # <a name="entity-type"></a>エンティティ型
+
 "*エンティティ型*" は、Entity Data Model (EDM) でデータ構造を記述するために不可欠な構成要素です。 概念モデルでのエンティティ型は、顧客や注文のように、トップレベル概念の構造を表します。 エンティティ型は、エンティティ型のインスタンスのテンプレートです。 各テンプレートには、次の情報が含まれています。  
   
 - 一意の名前  (必須)   
@@ -25,6 +26,7 @@ ms.locfileid: "73737807"
  2 つのエンティティ型のインスタンスは、型が同じであり、エンティティ キーの値が等しい場合にのみ、等価のインスタンスと見なされます。  
   
 ## <a name="example"></a>例  
+
  下のダイアグラムは、`Book`、`Publisher`、および `Author` という 3 つのエンティティ型の概念モデルを示しています。  
   
  ![3 種類のエンティティを持つモデルの例](./media/entity-type/example-model-three-entity-types.gif)  

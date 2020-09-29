@@ -2,14 +2,15 @@
 title: 入れ子になっているスキーマ要素間の暗黙的なリレーションの割り当て
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: dc5b81fd06f2860283c8c5fa028af4b945e2b1e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 32f8bf67242143098717b47c3b7aa175317ba274
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150964"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201318"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>入れ子になっているスキーマ要素間の暗黙的なリレーションの割り当て
+
 XML スキーマ言語定義 (XSD) スキーマでは、複数の複合型を入れ子にして指定できます。 この場合、割り当て処理には既定の割り当てが適用されます。その際、<xref:System.Data.DataSet> に作成される内容を次に示します。  
   
 - 複合型 (親および子) それぞれに対して 1 つのテーブル。  

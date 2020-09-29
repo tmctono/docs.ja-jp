@@ -2,14 +2,15 @@
 title: DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: fe6adac35c157b454f5e33d3526196d4f408fd89
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c5692fcfd1863642bcdf87cbd495d793bce0cbe4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546869"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203710"
 ---
 # <a name="dataviews"></a>DataView
+
 <xref:System.Data.DataView> では、<xref:System.Data.DataTable> に格納されているデータのさまざまなビューを作成できます。この機能は、データ連結アプリケーションで頻繁に使用されます。 **DataView** を使用すると、さまざまな並べ替え順序を使用してテーブルのデータを公開したり、行の状態やフィルター式に基づいてデータをフィルター処理したりできます。
 
  **DataView** では、基になる **DataTable** のデータの動的ビューが作成されます。ビューの内容、順序、メンバーシップには、変更が反映されます。 これは、**DataTable** の **Select** メソッドとは異なります。このメソッドでは、特定のフィルターまたは並べ替え順序ごとにテーブルから <xref:System.Data.DataRow> の配列が戻されます。戻される配列の内容には、基になるテーブルの変更内容が反映されていますが、メンバーシップと順序は静的です。 **DataView** は動的機能を備えているため、データ連結アプリケーションにとって理想的なオブジェクトです。
@@ -19,6 +20,7 @@ ms.locfileid: "90546869"
  **DataSet** のすべてのテーブルのビュー設定を管理するには、<xref:System.Data.DataView.DataViewManager%2A> を使用します。 **DataViewManager** を使用すると、各テーブルの既定のビュー設定を簡単に管理できます。 **DataSet** の複数のテーブルにコントロールをバインドするときは、**DataViewManager** にバインドするのが最善の方法です。
 
 ## <a name="in-this-section"></a>このセクションの内容
+
  「[DataView の作成](creating-a-dataview.md)」では、**DataTable** の **DataView** の作成方法について説明します。
 
  「[データの並べ替えとフィルター処理](sorting-and-filtering-data.md)」では、特定のフィルター条件を満たすデータ行のサブセットを返すか、または特定の並べ替え順序でデータを返すように、**DataView** のプロパティを設定する方法について説明します。
@@ -36,6 +38,7 @@ ms.locfileid: "90546869"
  「[DataViews の管理](managing-dataviews.md)」では、**DataViewManager** を使用して **DataSet** の各テーブルの **DataView** 設定を管理する方法について説明します。
 
 ## <a name="related-sections"></a>関連項目
+
  [ASP.NET Web アプリケーション](/previous-versions/655cec97(v=vs.100))に関する記事では、ASP.NET アプリケーション、Web Forms、および Web サービスを作成する場合の概要と詳細なステップごとの手順を示します。
 
  [Windows アプリケーション](/previous-versions/ms184421(v=vs.100))に関する記事では、Windows フォームおよびコンソール アプリケーションの操作に関する詳細情報を提供します。

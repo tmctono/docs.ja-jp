@@ -2,14 +2,15 @@
 title: Entity Framework の用語
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: ea889cfbc04e06e3308e31c6e282d8f2359ddeb9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: dbe03de44b8ae2a857b923cd9dc74c42ea18f4e8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556539"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200941"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework の用語
+
 このトピックでは、Entity Framework のドキュメントでよく使用される用語の定義について説明します。 追加情報を確認できる関連トピックへのリンクも示しています。  
   
 |用語|定義|  

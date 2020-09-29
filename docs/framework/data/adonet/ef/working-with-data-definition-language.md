@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: 040ecc1473a4674ab0bb26ad0081563f55a726ea
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c30cbbc1eae6d4cbcadb9bfe8d267fb428764971
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553871"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200889"
 ---
 # <a name="working-with-data-definition-language"></a>データ定義言語の操作
+
 .NET Framework バージョン 4 以降の Entity Framework では、データ定義言語 (DDL) がサポートされています。 これにより、接続文字列、およびストレージ (SSDL) モデルのメターデータに基づいて、データベース インスタンスを作成または削除できます。  
   
  <xref:System.Data.Objects.ObjectContext> の次のメソッドでは、接続文字列と SSDL の内容を使用して、データベースの作成と削除、データベースが存在するかどうかの確認、生成された DDL スクリプトの表示を実行します。  

@@ -4,12 +4,12 @@ description: ADO.NET で統合言語クエリ (LINQ) を使用することによ
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: a663d36f1e07c53d20e22d051e38123bd8873f06
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 50e048a67d4a9bf62b2224664acb654b96da0cb7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286754"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194688"
 ---
 # <a name="linq-and-adonet"></a>LINQ と ADO.NET
 
@@ -30,14 +30,17 @@ ms.locfileid: "84286754"
  以降のセクションでは、LINQ to DataSet、[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]、LINQ to Entities について詳しく説明します。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
+
  <xref:System.Data.DataSet> は、ADO.NET の基礎である非接続型プログラミング モデルの重要な要素であり、幅広く使用されています。 LINQ to DataSet により、開発者は、他の多くのデータ ソースで利用できる共通のクエリ作成メカニズムを使用しながら、より高度なクエリ機能を <xref:System.Data.DataSet> に組み込むことができます。 詳細については、「[LINQ to DataSet](linq-to-dataset.md)」を参照してください。  
   
 ## <a name="linq-to-sql"></a>LINQ to SQL  
+
  [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] は、概念モデルへのマッピングを必要としない開発者にとって有用なツールです。 [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] を使用することにより、LINQ プログラミング モデルを既存のデータベース スキーマ上で直接利用できるようになります。 開発者は、[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] を使用して、データを表す .NET Framework クラスを生成できます。 こうして生成されたクラスは、概念データ モデルではなく、直接データベースのテーブル、ビュー、ストアド プロシージャ、およびユーザー定義関数にマッピングされます。  
   
  [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] では、開発者が、XML などのデータ ソースに加え、インメモリ コレクションや <xref:System.Data.DataSet> と同じ LINQ プログラミング パターンを使用して、ストレージ スキーマに対して直接コードを記述できます。 詳細については、「[LINQ to SQL](./sql/linq/index.md)」を参照してください。  
   
 ## <a name="linq-to-entities"></a>LINQ to Entities  
+
  現在、多くのアプリケーションが、リレーショナル データベースを基にして作成されています。 ある時点で、これらのアプリケーションにはリレーショナル形式で表されるデータと対話する必要が生じます。 データベース スキーマはアプリケーションの構築に理想的であるとは限らず、アプリケーションの概念モデルはデータベースの論理モデルと同じではありません。 Entity Data Model は、アプリケーションがデータをオブジェクトとして操作するために特定のドメインのデータをモデル化するときに使用できる概念データ モデルです。 詳しくは、「[ADO.NET Entity Framework](./ef/index.md)」をご覧ください。  
   
  Entity Data Model では、リレーショナル データが .NET 環境にオブジェクトとして公開されます。 これにより、LINQ の利用に最適なオブジェクト レイヤーが実現されます。開発者は、ビジネス ロジックの構築に使用する言語で、データベースを照会するクエリを作成できます。 この機能は、LINQ to Entities と呼ばれます。 詳しくは、「[LINQ to Entities](./ef/language-reference/linq-to-entities.md)」をご覧ください。  

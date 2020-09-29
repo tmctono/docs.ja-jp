@@ -2,14 +2,15 @@
 title: アソシエーション セット End
 ms.date: 03/30/2017
 ms.assetid: fe4bf1d3-047a-4a37-98c5-a66e70811346
-ms.openlocfilehash: f7ec1ca6fcdf299b9fcfc78f299ea4c6c5267cd3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: bd104ffb46cbd02a886ce87822ddc37159961174
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738615"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198796"
 ---
 # <a name="association-set-end"></a>アソシエーション セット End
+
 "*アソシエーション セット End*" は、[アソシエーション セット](association-set.md)の End にある[エンティティ型](entity-type.md)と[エンティティ セット](entity-set.md)を識別します。 アソシエーション セット End はアソシエーション セットの一部として定義されます。アソシエーション セットには、アソシエーション セット End が 2 つ必要です。  
   
  アソシエーション セット End の定義には、次の情報が含まれます。  
@@ -19,6 +20,7 @@ ms.locfileid: "73738615"
 - アソシエーション セットに含まれるエンティティ型のエンティティ セット。 (必須)  
   
 ## <a name="example"></a>例  
+
  下のダイアグラムは、`WrittenBy` および `PublishedBy` という 2 つのアソシエーションの概念モデルを示しています。  
   
  ![3 種類のエンティティを持つモデルの例](./media/association-set-end/example-model-three-entity-types.gif)  

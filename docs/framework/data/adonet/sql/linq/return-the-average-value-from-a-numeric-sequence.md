@@ -5,20 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
-ms.openlocfilehash: 8d6f5f76787c1110e91b245a3dd2425450b4db7e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1f113a475bb350640aef7a6b4d7a70b32509d1e0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781390"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200408"
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a>一連の数値の平均値の取得
+
 <xref:System.Linq.Enumerable.Average%2A> 演算子は、一連の数値の平均値を計算します。  
   
 > [!NOTE]
 > [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] で整数値の `Average` が変換されるときには、倍精度浮動小数点数ではなく整数として計算されます。  
   
 ## <a name="example"></a>例  
+
  次の例は、`Freight` テーブルの `Orders` の平均値を返します。  
   
  Northwind サンプル データベースでは、結果は `78.2442` になります。  
@@ -27,6 +29,7 @@ ms.locfileid: "70781390"
  [!code-vb[DLinqQueryExamples#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#1)]  
   
 ## <a name="example"></a>例  
+
  次の例は、`Products` テーブルのすべての `Products` の単価の平均値を返します。  
   
  Northwind サンプル データベースでは、結果は `28.8663` になります。  
@@ -35,6 +38,7 @@ ms.locfileid: "70781390"
  [!code-vb[DLinqQueryExamples#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#2)]  
   
 ## <a name="example"></a>例  
+
  次の例は、`Average` 演算子を使用して、カテゴリ内の平均単価よりも単価が高い `Products` を見つけます。 その後、結果をグループ別に表示します。  
   
  この例の戻り値の型は匿名型なので、C# で `var` キーワードを使用する必要がある点に注意してください。  

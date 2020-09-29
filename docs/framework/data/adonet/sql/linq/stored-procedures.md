@@ -2,19 +2,21 @@
 title: ストアド プロシージャ
 ms.date: 03/30/2017
 ms.assetid: 4d23dd7a-a85f-44ff-a717-af7d0950c0fc
-ms.openlocfilehash: 80ea105eef33ebb2a0e52d91a631258400ea3dff
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 57420d95ec27af3b572940202fb6bc288c6888da
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792479"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203515"
 ---
 # <a name="stored-procedures"></a>ストアド プロシージャ
+
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、オブジェクト モデル内のメソッドを使用して、データベースのストアド プロシージャが表されます。 <xref:System.Data.Linq.Mapping.FunctionAttribute> 属性、および必要に応じて <xref:System.Data.Linq.Mapping.ParameterAttribute> 属性を適用することによって、メソッドをストアド プロシージャとして指定します。 詳しくは、「[LINQ to SQL オブジェクト モデル](the-linq-to-sql-object-model.md)」をご覧ください。  
   
  Visual Studio を使用している開発者は、通常、オブジェクト リレーショナル デザイナーを使用してストアド プロシージャを対応付けます。 このセクションのトピックでは、自分でコードを作成する場合に、アプリケーション内でこれらのメソッドを記述および呼び出す方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [方法: 行セットを返す](how-to-return-rowsets.md)  
  データ行を返す方法および入力パラメーターの使用方法について説明します。  
   
@@ -34,6 +36,7 @@ ms.locfileid: "70792479"
  ストアド プロシージャのみを使用して挿入、更新、および削除の操作を実装する方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [プログラミング ガイド](programming-guide.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] オブジェクト モデルを作成および使用する方法について説明します。  
   

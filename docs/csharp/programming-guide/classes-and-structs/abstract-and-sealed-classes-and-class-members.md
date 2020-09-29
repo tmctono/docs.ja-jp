@@ -8,19 +8,21 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: 391a8ccbb1fbe6626d1cd5a4b6fcfd9ace3506e6
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: ccbc6734d4e9bafe059dd45bfdf82af7c84438a2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474489"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204035"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>抽象クラスとシール クラス、およびクラス メンバー (C# プログラミング ガイド)
+
 [abstract](../../language-reference/keywords/abstract.md) キーワードを使用すると、派生クラスで実装する必要のある不完全な[クラス](../../language-reference/keywords/class.md) メンバーを作成できます。  
   
  また、[sealed](../../language-reference/keywords/sealed.md) キーワードを使用すると、既に [virtual](../../language-reference/keywords/virtual.md) とマークされているクラスや特定のクラス メンバーを継承しないようにできます。  
   
 ## <a name="abstract-classes-and-class-members"></a>抽象クラスと抽象クラス メンバー  
+
  クラス定義の前にキーワード `abstract` を指定することで、クラスを抽象として宣言できます。 次に例を示します。  
   
  [!code-csharp[csProgGuideInheritance#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#13)]  
@@ -38,6 +40,7 @@ ms.locfileid: "86474489"
  `virtual` メソッドが `abstract` として宣言されている場合、そのメソッドは、その抽象クラスを継承するどのクラスでも仮想になります。 抽象メソッドを継承するクラスでは、そのメソッドの元の実装にアクセスできません。上の例では、クラス F の `DoWork` は、クラス D の `DoWork` を呼び出すことができません。このようにして抽象クラスは、派生クラスに対し、仮想メソッドの新しいメソッド実装を強制的に提供させることができます。  
   
 ## <a name="sealed-classes-and-class-members"></a>シール クラスとシール クラス メンバー  
+
  クラス定義の前にキーワード `sealed` を指定することで、クラスを [sealed](../../language-reference/keywords/sealed.md) として宣言できます。 次に例を示します。  
   
  [!code-csharp[csProgGuideInheritance#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#16)]  

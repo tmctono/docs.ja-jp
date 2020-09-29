@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: d669a1687abe496b921d5670b9149b0e933b2d95
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 9131db17d767c76fe6a57f5d5353474153e0c269
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125255"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194090"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (C# コンパイラ オプション)
+
 .netmodule がアクセスできる非パブリック型のアセンブリを指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -26,10 +27,12 @@ ms.locfileid: "89125255"
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `assembly_name`  
  .netmodule がアクセスできる非パブリック型のアセンブリの名前です。  
   
 ## <a name="remarks"></a>注釈  
+
  **-moduleassemblyname** は、.netmodule をビルドする場合と、次の条件に当てはまる場合に使用する必要があります。  
   
 - .netmodule で、既存のアセンブリ内の非パブリック型へのアクセスが必要な場合。  
@@ -47,6 +50,7 @@ ms.locfileid: "89125255"
  このコンパイラ オプションは Visual Studio では使用できず、プログラムで変更することはできません。  
   
 ## <a name="example"></a>例  
+
  このサンプルは、csman_an_assembly というアセンブリへのフレンド アセンブリのアクセス権を付与する、プライベート型のアセンブリをビルドします。  
   
 ```csharp  
@@ -67,6 +71,7 @@ class An_Internal_Class
 ```  
   
 ## <a name="example"></a>例  
+
  このサンプルは、アセンブリ moduleassemblyname_1.dll 内の非パブリック型にアクセスする .netmodule をビルドします。 この .netmodule が csman_an_assembly というアセンブリにビルドされることがわかっていれば、 **-moduleassemblyname** を指定して、csman_an_assembly へのフレンド アセンブリのアクセス権が付与されているアセンブリ内の非パブリック型へのアクセスを .netmodule に許可することができます。  
   
 ```csharp  
@@ -81,6 +86,7 @@ class B {
 ```  
   
 ## <a name="example"></a>例  
+
  このコード サンプルは、既にビルドされたアセンブリと .netmodule を参照する、アセンブリ csman_an_assembly をビルドします。  
   
 ```csharp  

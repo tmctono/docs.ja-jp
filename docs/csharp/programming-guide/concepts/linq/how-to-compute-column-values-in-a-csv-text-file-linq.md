@@ -3,14 +3,15 @@ title: CSV テキスト ファイルの列値を計算する方法 (LINQ) (C#)
 description: この例では、C# の LINQ を使用した合計、平均、最小、最大などの集計計算を .csv ファイルの列に対して実行する方法について説明します。
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 9137779f9767c8a9531489f7894ba3e69eb1faee
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: a475de9c769a66fdded490a3f7eccdb74a434186
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105314"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195598"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>CSV テキスト ファイルの列値を計算する方法 (LINQ) (C#)
+
 この例では、合計、平均、最小、最大などの集計計算を .csv ファイルの列に対して実行する方法について説明します。 ここで説明する例の原則は、他の種類の構造化テキストにも適用できます。  
   
 ## <a name="to-create-the-source-file"></a>ソース ファイルを作成するには  
@@ -160,6 +161,7 @@ class SumColumns
  このクエリでは、<xref:System.String.Split%2A> メソッドを使用してテキストの各行が配列に変換されます。 各配列要素が列を表します。 最終的に、各列のテキストが数値表記に変換されます。 ファイルがタブ区切りファイルの場合、`Split` メソッドの引数を `\t` に変更します。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
+
  System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。  
   
 ## <a name="see-also"></a>関連項目

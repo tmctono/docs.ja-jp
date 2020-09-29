@@ -9,17 +9,19 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 6c0cd7dcebb46b5408079848862ef4da1bb7f0a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2523aac510516fdf19087425b10ab3f2296eb726
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174668"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194345"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ に関する留意点 (WCF Data Services)
+
 このトピックでは、WCF Data Services クライアントを使用しているときに LINQ クエリを作成および実行する方法と、Open Data Protocol (OData) を実装するデータ サービスを LINQ で照会する場合の制限について説明します。 OData ベースのデータサービスに対するクエリの作成と実行の詳細については、「[データ サービスに対するクエリ](querying-the-data-service-wcf-data-services.md)」を参照してください。  
   
 ## <a name="composing-linq-queries"></a>LINQ クエリの作成  
+
  LINQ を使用すると、<xref:System.Collections.Generic.IEnumerable%601> を実装するオブジェクトのコレクションに対するクエリを作成できます。 Visual Studio の **[サービス参照の追加]** ダイアログ ボックスと DataSvcUtil.exe ツールでは、<xref:System.Data.Services.Client.DataServiceContext> を継承するエンティティ コンテナー クラスとしての OData サービスの表現や、フィードで返されるエンティティを表すオブジェクトを生成できます。 これらのツールでは、サービスによってフィードとして公開されるコレクションに対応するエンティティ コンテナー クラスのプロパティも生成されます。 データ サービスをカプセル化するクラスのこれらのプロパティは、それぞれ <xref:System.Data.Services.Client.DataServiceQuery%601> を返します。 <xref:System.Data.Services.Client.DataServiceQuery%601> クラスは LINQ で定義された <xref:System.Linq.IQueryable%601> インターフェイスを実装するので、データ サービスによって公開されるフィードに対する LINQ クエリを作成できます。作成した LINQ クエリは、クライアント ライブラリにより、実行時にデータ サービスに送信されるクエリ要求 URI に変換されます。  
   
 > [!IMPORTANT]
@@ -46,6 +48,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  どちらの方法で作成したクエリも、WCF Data Services クライアントによってクエリ URI に変換されます。クエリ式にクエリ メソッドを追加して LINQ クエリを拡張することもできます。 クエリ式または <xref:System.Data.Services.Client.DataServiceQuery%601> にメソッド構文を追加して LINQ クエリを作成した場合は、メソッドが呼び出される順序で操作がクエリ URI に追加されます。 これは、<xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> メソッドを呼び出して各クエリ オプションをクエリ URI に追加するのと同じです。  
   
 ## <a name="executing-linq-queries"></a>LINQ クエリの実行  
+
  クエリに特定の LINQ クエリ メソッド (<xref:System.Linq.Enumerable.First%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>、<xref:System.Linq.Enumerable.Single%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> など) を追加するとクエリが実行されます。 クエリは、結果が暗黙的に列挙される場合 (`foreach` ループの間など) や、クエリが `List` コレクションに割り当てられている場合にも実行されます。 詳細については、「[データ サービスに対するクエリ](querying-the-data-service-wcf-data-services.md)」を参照してください。  
   
  クライアントによる LINQ クエリの実行は 2 つの部分に分かれています。 可能な限り、クエリ内の LINQ 式は最初にクライアントで評価されます。その後、URI ベースのクエリが生成され、データ サービスに送信されて、サービス内のデータに対して評価されます。 詳細については、「[データ サービスに対するクエリ](querying-the-data-service-wcf-data-services.md)」の「[クライアントでの実行とサーバーでの実行](querying-the-data-service-wcf-data-services.md#executingQueries)」セクションを参照してください。  
@@ -53,10 +56,13 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  OData 準拠のクエリ URI で LINQ クエリを変換できない場合は、クエリを実行しようとすると例外が発生します。 詳細については、「[データ サービスに対するクエリ](querying-the-data-service-wcf-data-services.md)」を参照してください。  
   
 ## <a name="linq-query-examples"></a>LINQ クエリの例  
+
  以下のセクションの各例は、OData サービスに対して実行できる LINQ クエリの種類を示しています。  
   
 <a name="filtering"></a>
+
 ### <a name="filtering"></a>フィルター処理  
+
  このセクションの LINQ クエリは、サービスによって返されるフィード内のデータをフィルター処理します。  
   
  以下の各例は、返された `Orders` エンティティをフィルター処理して、輸送費が 30 ドルを超える注文のみが返されるようにする同等のクエリを示しています。  
@@ -79,7 +85,9 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  上の例はすべて、`http://localhost:12345/northwind.svc/Orders()?$filter=Freight gt 30M` というクエリ URI に変換されます。  
   
 <a name="sorting"></a>
+
 ### <a name="sorting"></a>並べ替え  
+
  以下の各例は、返されたデータを会社名と郵便番号の降順で並べ替える同等のクエリを示しています。  
   
 - LINQ クエリ構文を使用する場合:  
@@ -100,7 +108,9 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  上の例はすべて、`http://localhost:12345/northwind.svc/Customers()?$orderby=CompanyName,PostalCode desc` というクエリ URI に変換されます。  
   
 <a name="projection"></a>
+
 ### <a name="projection"></a>射影  
+
  以下の各例は、返されたデータをより範囲の狭い `CustomerAddress` 型に射影する同等のクエリを示しています。  
   
 - LINQ クエリ構文を使用する場合:  
@@ -119,7 +129,9 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  上の例はいずれも、`"http://localhost:12345/northwind.svc/Customers()?$filter=Country eq 'GerGerm'&$select=CustomerID,Address,City,Region,PostalCode,Country"` というクエリ URI に変換されます。  
   
 <a name="paging"></a>
+
 ### <a name="client-paging"></a>クライアントのページング  
+
  以下の各例は、25 件の注文を含む並べ替え済みの注文エンティティのページを、最初の 50 件の注文をスキップして要求する同等のクエリを示しています。  
   
 - LINQ クエリにクエリ メソッドを適用する場合:  
@@ -135,7 +147,9 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  上の例はいずれも、`http://localhost:12345/northwind.svc/Orders()?$orderby=OrderDate desc&$skip=50&$top=25` というクエリ URI に変換されます。  
   
 <a name="expand"></a>
+
 ### <a name="expand"></a>Expand  
+
  OData データ サービスを照会するときに、返されるフィードにクエリの対象のエンティティに関連するエンティティを含めるように要求することができます。 そのためには、LINQ クエリの対象のエンティティ セットの <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> で <xref:System.Data.Services.Client.DataServiceQuery%601> メソッドを呼び出して、関連するエンティティ セットの名前を `path` パラメーターとして渡します。 詳しくは、「[遅延コンテンツの読み込み](loading-deferred-content-wcf-data-services.md)」をご覧ください。  
   
  以下の各例は、クエリで <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> メソッドを使用する同等の方法を示しています。  
@@ -153,7 +167,9 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  上の例はいずれも、`http://localhost:12345/northwind.svc/Orders()?$filter=CustomerID eq 'ALFKI'&$expand=Order_Details` というクエリ URI に変換されます。  
   
 <a name="unsupportedMethods"></a>
+
 ## <a name="unsupported-linq-methods"></a>サポートされていない LINQ メソッド  
+
  次の表に含まれている LINQ メソッドはサポートされていません。OData サービスに対して実行されるクエリにこれらのメソッドを含めることはできません。  
   
 |演算の種類|サポートされていないメソッド|  
@@ -167,7 +183,9 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |その他の演算子|以下の演算子も <xref:System.Data.Services.Client.DataServiceQuery%601> に対してサポートされていません。<br /><br /> - <xref:System.Linq.Enumerable.Empty%2A><br />- <xref:System.Linq.Enumerable.Range%2A><br />- <xref:System.Linq.Enumerable.Repeat%2A><br />- <xref:System.Linq.Enumerable.ToDictionary%2A><br />- <xref:System.Linq.Enumerable.ToLookup%2A>|  
   
 <a name="supportedExpressions"></a>
+
 ## <a name="supported-expression-functions"></a>サポートされている式の関数  
+
  共通言語ランタイム (CLR) の以下のメソッドおよびプロパティは、クエリ式で変換して OData サービスへの要求 URI に含めることができるため、サポートされています。  
   
 |<xref:System.String> メンバー|サポートされている OData 関数|  

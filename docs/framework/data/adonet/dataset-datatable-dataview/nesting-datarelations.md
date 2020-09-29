@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-ms.openlocfilehash: 971a1bddc40521dc7381ecb2e39709c0fed282ed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8db75f486c7c08b6a02401af35c9edf9969f9063
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785987"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201279"
 ---
 # <a name="nesting-datarelations"></a>DataRelation の入れ子化
+
 データのリレーショナル表現では、各テーブルに含まれている行が、列または列セットを使用して相互に関連付けられています。 ADO.NET の <xref:System.Data.DataSet> では、テーブル間のリレーションシップは <xref:System.Data.DataRelation> を使用して実装されます。 **DataRelation** を作成すると、列の親子リレーションシップはこのリレーションだけをとおして管理されます。 テーブルと列はそれぞれ別個のエンティティです。 XML のデータ階層表現では、子要素が入れ子の状態で含まれている親要素によって親子のリレーションシップが表現されます。  
   
  **DataSet** が <xref:System.Xml.XmlDataDocument> と同期されているとき、または **WriteXml** を使用して XML データとして書き込まれるときに、子オブジェクトの入れ子を容易にするため、**DataRelation** では **Nested** プロパティが公開されています。 **DataRelation** の **Nested** プロパティを **true** に設定すると、XML データとして書き込まれるとき、または **XmlDataDocument** と同期されるときに、リレーションの子の行が親の列に入れ子にされます。 **DataRelation** の **Nested** プロパティは、既定では **false** に設定されます。  

@@ -2,14 +2,15 @@
 title: '方法: データベース データ型を指定する'
 ms.date: 03/30/2017
 ms.assetid: 2228fdad-7e6a-4b1b-b4d1-79d0198b7c28
-ms.openlocfilehash: 09ca8dc6fa440138523bcd2905335a04517dd806
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f070ff718ac10b9681c5ab3c0f4b46547349101b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793271"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197236"
 ---
 # <a name="how-to-specify-database-data-types"></a>方法: データベース データ型を指定する
+
 T-SQL テーブル宣言の列を定義する正確なテキストを指定するには、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の <xref:System.Data.Linq.Mapping.ColumnAttribute> 属性の <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> プロパティを使用します。  
   
  <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> プロパティは、<xref:System.Data.Linq.DataContext.CreateDatabase%2A> を使用してデータベースのインスタンスを作成することを予定している場合のみ指定する必要があります。  

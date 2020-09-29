@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2209fdb-70ef-4dea-8bb8-097fe96f5563
-ms.openlocfilehash: 01958637cedcd6d502d51e9f0821ff3a9faae840
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e5358e3a1295b180356ed6c127111313b44de277
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545325"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198484"
 ---
 # <a name="how-to-execute-a-query-that-returns-complex-types"></a>方法: 複合型を返すクエリを実行する
+
 このトピックでは、複合型プロパティを含むエンティティ型オブジェクトを返す [!INCLUDE[esql](../../../../../includes/esql-md.md)] クエリを実行する方法について説明します。  
   
 ### <a name="to-run-the-code-in-this-example"></a>この例のコードを実行するには  
@@ -31,6 +32,7 @@ ms.locfileid: "90545325"
      Entity Data Model ウィザードを使用した複合型の作成と変更について詳しくは、「[方法: 既存のプロパティを複合型プロパティにリファクタリングする](/previous-versions/dotnet/netframework-4.0/dd456814(v=vs.100))」および「[方法: 複合型を作成および変更する](/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))」をご覧ください。  
   
 ## <a name="example"></a>例  
+
  次の例では、`Contact` オブジェクトのコレクションを返し、`Contact` オブジェクトの 2 つのプロパティである `ContactID` と `EmailPhoneComplexType` 複合型の値を表示するクエリを実行します。  
   
  [!code-csharp[DP EntityServices Concepts#ComplexTypeWithEntityCommand](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#complextypewithentitycommand)]

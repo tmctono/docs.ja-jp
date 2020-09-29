@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: bf303f9a79fbcab85d33fcb3ebb132d1d3e2041d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 778cc73575ffc7421854fd89592f1c4eaa284678
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781110"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203554"
 ---
 # <a name="serialization"></a>シリアル化
+
 このトピックでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のシリアル化機能について説明します。 デザイン時のコード生成でシリアル化を追加する方法と、実行時の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のクラスのシリアル化の動作について説明します。  
   
  デザイン時には、次のいずれかの方法でシリアル化のコードを追加できます。  
@@ -22,6 +23,7 @@ ms.locfileid: "70781110"
 - SQLMetal コマンド ラインに **/serialization** オプションを追加します。 詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。  
   
 ## <a name="overview"></a>概要  
+
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] が生成するコードには、遅延読み込み機能が既定で備わっています。 遅延読み込みは、中間層でデータを必要に応じて透過的に読み込むうえでは非常に便利です。 しかし、シリアル化のときには問題です。遅延読み込みが意図されているかどうかに関係なく、シリアライザーによって遅延読み込みが発生するためです。 具体的には、オブジェクトがシリアル化されるときには、遅延読み込みされるすべての外部参照の推移的閉包がシリアル化されます。  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のシリアル化機能では、この問題に対処しています。これには主に、次の 2 つの方法が使用されます。  
@@ -39,6 +41,7 @@ ms.locfileid: "70781110"
      [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、シリアル化の種類として、単方向シリアル化のみがサポートされています。  
   
 ## <a name="code-example"></a>コード例  
+
  次のコードは、Northwind サンプル データベースの典型的な `Customer` クラスおよび `Order` クラスを使用して、これらのクラスをシリアル化の属性で装飾するようすを示します。  
   
  [!code-csharp[DLinqSerialization#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#1)]
@@ -59,12 +62,14 @@ ms.locfileid: "70781110"
  [!code-vb[DLinqSerialization#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#5)]  
   
 ### <a name="how-to-serialize-the-entities"></a>エンティティをシリアル化する方法  
+
  前のセクションで示したコードのエンティティは次のようにシリアル化できます。  
   
  [!code-csharp[DLinqSerialization#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/Program.cs#6)]
  [!code-vb[DLinqSerialization#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/Module1.vb#6)]  
   
 ### <a name="self-recursive-relationships"></a>自己再帰的リレーションシップ  
+
  自己再帰的リレーションシップも同じパターンに従います。 外部キーに関する関連付けのプロパティには <xref:System.Runtime.Serialization.DataMemberAttribute> 属性がなく、親プロパティにはあります。  
   
  次のクラスには、自己再帰的リレーションシップが 2 つあります:Employee.Manager/Reports と Employee.Mentor/Mentees。  

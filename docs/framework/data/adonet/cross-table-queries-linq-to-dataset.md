@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6819a16f-8656-41af-a54d-dfec0cb66366
-ms.openlocfilehash: b62f5fbb6b964ed70f6bf7fc08b62a74a7c06c45
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a209cfe4142ad8ebdbce1d715a76ac27300f4e19
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554724"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202397"
 ---
 # <a name="cross-table-queries-linq-to-dataset"></a>複数テーブルにまたがるクエリ (LINQ to DataSet)
+
 LINQ to DataSet では、1 つのテーブルを対象とするクエリに加え、複数テーブルにまたがるクエリを実行できます。 これは、"*結合*" を使用することで実現されます。 結合とは、あるデータ ソース内のオブジェクトを、他方のデータ ソース内で共通の属性 (たとえば製品や連絡先 ID) を持つオブジェクトと関連付けることです。 オブジェクト指向プログラミングでは、それぞれのオブジェクトは別のオブジェクトを参照するメンバーを持つため、オブジェクト間のリレーションシップのナビゲーションは比較的簡単です。 ただし、外部データベース テーブル内でのリレーションシップのナビゲーションは単純ではありません。 データベース テーブルは、組み込みのリレーションシップを持ちません。 このようなケースでは、結合操作を使用して、互いのソースの要素を対応付けることができます。 たとえば、製品情報と売上情報が 2 つのテーブルに格納されている場合、結合操作を使用して、同じ販売注文の売上情報と製品を対応付けることができます。  
   
  LINQ (統合言語クエリ) フレームワークには、<xref:System.Linq.Enumerable.Join%2A> と <xref:System.Linq.Enumerable.GroupJoin%2A> の 2 つの結合演算子が用意されています。 これらの演算子では、キーが等しいときにだけ 2 つのデータ ソースを一致させる結合方法である "*等結合*" が実行されます。 (これに対し、Transact-SQL では、`equals` 以外に `less than` 演算子などの結合演算子がサポートされています)。  
@@ -24,6 +25,7 @@ LINQ to DataSet では、1 つのテーブルを対象とするクエリに加�
  結合について詳しくは、「[結合演算](/previous-versions/visualstudio/visual-studio-2013/bb397908(v=vs.120))」をご覧ください。  
   
 ## <a name="example"></a>例  
+
  次の例では、AdventureWorks サンプル データベースの `SalesOrderHeader` テーブルと `SalesOrderDetail` テーブルを従来の方法で結合し、8 月以降のオンラインでの注文を取得します。  
   
  [!code-csharp[DP LINQ to DataSet Examples#Join](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#join)]

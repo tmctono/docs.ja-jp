@@ -9,14 +9,15 @@ helpviewer_keywords:
 - recurse compiler option [C#]
 - -recurse compiler option [C#]
 ms.assetid: 4e8212e5-04e3-45b1-8a42-41bc50e683b0
-ms.openlocfilehash: 3edd7e23358bc0569dae6204d519209df1ade290
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 9e84ff95f7f0addac1c2c2d79af0ab53572da27f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89124826"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193804"
 ---
 # <a name="-recurse-c-compiler-options"></a>-recurse (C# コンパイラ オプション)
+
 -recurse オプションを使用すると、指定のディレクトリ (dir) またはプロジェクト ディレクトリのすべての子ディレクトリ内のソース コード ファイルをコンパイルできます。  
   
 ## <a name="syntax"></a>構文  
@@ -26,6 +27,7 @@ ms.locfileid: "89124826"
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `dir` (省略可)  
  検索を開始するディレクトリ。 指定しない場合は、プロジェクト ディレクトリから検索されます。  
   
@@ -33,6 +35,7 @@ ms.locfileid: "89124826"
  検索するファイル。 ワイルドカード文字を使用できます。  
   
 ## <a name="remarks"></a>Remarks  
+
  **-recurse** オプションを使用すると、指定のディレクトリ (`dir`) またはプロジェクト ディレクトリのすべての子ディレクトリ内のソース コード ファイルをコンパイルできます。  
   
  **-recurse** を使用しなくても、ファイル名にワイルドカードを使用すると、プロジェクト ディレクトリ内で一致するすべてのファイルをコンパイルできます。  
@@ -40,6 +43,7 @@ ms.locfileid: "89124826"
  このコンパイラ オプションは Visual Studio では使用できず、プログラムで変更することはできません。  
   
 ## <a name="example"></a>例  
+
  現在のディレクトリ内のすべての C# ファイルをコンパイルするには、次のコードを使用します。  
   
 ```console  

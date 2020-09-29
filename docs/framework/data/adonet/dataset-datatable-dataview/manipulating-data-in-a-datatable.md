@@ -2,17 +2,19 @@
 title: DataTable 内のデータの操作
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: 421680a4f39dd68c09dfe20e62f2eec86259b9f0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3f98832b4aa9361346d06830f2f004fa374222ee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786153"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201331"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>DataTable 内のデータの操作
+
 <xref:System.Data.DataTable> 内に <xref:System.Data.DataSet> を作成した後で、データベース内のテーブルを使用する場合と同じ操作を実行できます。 テーブル内のデータの追加、表示、編集、および削除を実行したり、エラーとイベントを監視したり、テーブル内のデータを照会したりできます。 **DataTable** 内のデータを変更するときに、変更が正確かどうかを検証したり、変更を受け入れるか拒否するかをプログラムによって決定したりすることもできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [DataTable へのデータの追加](adding-data-to-a-datatable.md)  
  新しい行を作成してテーブルに追加する方法について説明します。  
   

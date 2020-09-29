@@ -13,14 +13,15 @@ helpviewer_keywords:
 - compiler optimization [C#]
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
-ms.openlocfilehash: 6fd268414c4e54e7b4865733480f8917389015d0
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 1862794e4d823e38ce19780300a0b04f4e57dc44
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125034"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193986"
 ---
 # <a name="-optimize-c-compiler-options"></a>-optimize (C# コンパイラ オプション)
+
 **-optimize** オプションは、コンパイラで実行する最適化を有効または無効にします。最適化を実行すると、出力ファイルのサイズが小さくなり、速度と効率が向上します。  
   
 ## <a name="syntax"></a>構文  
@@ -30,6 +31,7 @@ ms.locfileid: "89125034"
 ```  
   
 ## <a name="remarks"></a>解説  
+
  **-optimize** は実行時にコードを最適化するように共通言語ランタイムに指示します。  
   
  既定では、最適化が無効になります。 **-optimize+** を指定して最適化を有効にします。  
@@ -51,6 +53,7 @@ ms.locfileid: "89125034"
  このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>」を参照してください。  
   
 ## <a name="example"></a>例  
+
  `t2.cs` をコンパイルしてコンパイラの最適化を有効にします。  
   
 ```console  

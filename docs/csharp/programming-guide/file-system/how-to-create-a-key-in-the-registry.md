@@ -7,14 +7,15 @@ helpviewer_keywords:
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: 6db076bc22e098c285b74a8c10e8b5f456c2c55e
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: c51fa61aa4c501921d5c7ace99a8c5aaf7b29f58
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299982"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203918"
 ---
 # <a name="how-to-create-a-key-in-the-registry-c-programming-guide"></a>レジストリにキーを作成する方法 (C# プログラミング ガイド)
+
 現在のユーザーのレジストリに存在する "Names" というキーの下に "Name" と "Isabella" という値のペアを追加する例を次に示します。  
   
 ## <a name="example"></a>例  
@@ -35,6 +36,7 @@ key.Close();
 - `Name` パラメーターを Names ノードの直下にある値の名前に置き換えます。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
+
  レジストリの構造を調べて、キーの適切な場所を見つけることができます。 たとえば、現在のユーザーの Software キーを開き、会社名のキーを作成できます。 その後で、会社名のキーにレジストリ値を追加します。  
   
  次の条件では例外が発生する可能性があります。  
@@ -50,6 +52,7 @@ key.Close();
 - レジストリ キーが読み取り専用の場合。  
   
 ## <a name="net-security"></a>.NET セキュリティ  
+
  ローカル コンピューター (`Microsoft.Win32.Registry.CurrentUser`) よりもユーザー フォルダー (`Microsoft.Win32.Registry.LocalMachine`) にデータを書き込む方が安全です。  
   
  レジストリの値を作成するときは、その値が既存の値である場合の処理を決めておく必要があります。 悪意のあるユーザーによって作成された別のプロセスが既に値を作成し、アクセス権を持っている可能性があります。 レジストリ値にデータを設定すると、そのデータを他のプロセスから利用できるようになります。 これを回避するには、`Overload:Microsoft.Win32.RegistryKey.GetValue` メソッドをオーバーライドします。 このメソッドは、キーがまだ存在しない場合、null を返します。  

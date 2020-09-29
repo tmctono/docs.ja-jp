@@ -3,14 +3,15 @@ title: リフレクションを使用した属性へのアクセス (C#)
 description: GetCustomAttributes メソッドを使用して、C# でカスタム属性を使用して定義された情報を取得するには、リフレクションを使用します。
 ms.date: 07/20/2015
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
-ms.openlocfilehash: 9425141d64fd061d0c1f628228693cce02f7bfa0
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 2ed4e844d1c98bcf265572f201bce6679fd642e9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925099"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202631"
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>リフレクションを使用した属性へのアクセス (C#)
+
 カスタム属性を定義し、それらをソース コード内に配置することができても、その情報を取得して操作する手段がなければ、ほとんど価値はありません。 リフレクションを使用すれば、カスタム属性を使用して定義された情報を取得することができます。 鍵となるメソッドは `GetCustomAttributes` です。このメソッドは、ソース コード属性の実行時の等価オブジェクトを配列で返します。 このメソッドには、いくつかのオーバー ロード バージョンがあります。 詳細については、「<xref:System.Attribute>」を参照してください。  
   
  次のような属性指定は、  
@@ -30,6 +31,7 @@ anonymousAuthorObject.version = 1.1;
  ただし、属性について `SampleClass` が照会されるまで、コードは実行されません。 `SampleClass` について `GetCustomAttributes` を呼び出すと、`Author` オブジェクトが作成され、上記のように初期化されます。 クラスに他の属性がある場合は、他の属性オブジェクトも同様に作成されます。 `GetCustomAttributes` はその後、`Author` オブジェクトと配列内の他の属性オブジェクトを返します。 その後、この配列を反復処理し、各配列要素の型に基づいてどの属性が適用されたかを確認して、属性オブジェクトから情報を抽出することができます。  
   
 ## <a name="example"></a>例  
+
  完全な例を次に示します。 カスタム属性が定義され、複数のエンティティに適用された後、リフレクションを使用して取得されています。  
   
 ```csharp  

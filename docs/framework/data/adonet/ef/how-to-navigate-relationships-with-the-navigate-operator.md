@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 79996d2d-9b03-4a9d-82cc-7c5e7c2ad93d
-ms.openlocfilehash: c51b093c1b74157b957566c4c67712278e50b9e3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7d0dbb590555f3e525cd328e4f4b0ad3584f108b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546667"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198250"
 ---
 # <a name="how-to-navigate-relationships-with-the-navigate-operator"></a>方法: Navigate 演算子でリレーションシップをナビゲートする
+
 このトピックでは、<xref:System.Data.EntityClient.EntityCommand> オブジェクトを使用して概念モデルに対してコマンドを実行する方法と、<xref:System.Data.Metadata.Edm.RefType> を使用して <xref:System.Data.EntityClient.EntityDataReader> の結果を取得する方法を示します。  
   
 ### <a name="to-run-the-code-in-this-example"></a>この例のコードを実行するには  
@@ -25,6 +26,7 @@ ms.locfileid: "90546667"
      [!code-vb[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#namespaces)]  
   
 ## <a name="example"></a>例  
+
  次の例では、[!INCLUDE[esql](../../../../../includes/esql-md.md)] で [NAVIGATE](./language-reference/navigate-entity-sql.md) 演算子を使用してリレーションシップをナビゲートする方法を示します。 `Navigate` 演算子は、エンティティのインスタンス、リレーションシップの種類、リレーションシップの終端エンティティ、および、リレーションシップの開始エンティティをパラメーターとして受け取ります。 必要に応じて、`Navigate` 演算子には、エンティティのインスタンスとリレーションシップの種類だけを渡すこともできます。  
   
  [!code-csharp[DP EntityServices Concepts#NavigateWithNavOperatorWithEntityCommand](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#navigatewithnavoperatorwithentitycommand)]

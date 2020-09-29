@@ -3,12 +3,12 @@ title: LINQ to Objects (C#)
 description: C# での LINQ to Objects について学習します。これは、中間 LINQ プロバイダーまたは API を使用せずに、任意の IEnumerable または IEnumerable<T> コレクションと共に LINQ クエリを使用します。
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: f8e65f129dc002d9615b01e3a3a123514754b886
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 575708f14487670a4371d470dcdcf650b03c3175
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557007"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202527"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
 
@@ -29,6 +29,7 @@ ms.locfileid: "90557007"
  このセクションでは、いくつか例を挙げながら、LINQ を使った方法を具体的に説明します。 すべてを網羅したものではありません。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [LINQ と文字列 (C#)](./linq-and-strings.md)  
  LINQ を使用して、文字列および文字列のコレクションの照会と変換を行う方法について説明します。 これらの基本原則を具体的に示す記事へのリンクも含まれます。  
   

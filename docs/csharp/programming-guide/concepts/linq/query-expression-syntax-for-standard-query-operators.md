@@ -3,17 +3,19 @@ title: 標準クエリ演算子のクエリ式構文 (C#)
 description: 標準クエリ演算子のクエリ式構文について説明します。 同等なクエリ式の句がある標準クエリ演算子の一覧を確認します。
 ms.date: 07/20/2015
 ms.assetid: e1e17ef2-68ff-4c26-b6e2-015668227fa5
-ms.openlocfilehash: b43d2095ee7d059be6f834b576ca0e6ab0a87585
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: f85563de496eaf423ea7a43c6d7100bb93eae5b1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299124"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195522"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-c"></a>標準クエリ演算子のクエリ式構文 (C#)
+
 頻繁に使用される標準クエリ演算子の中には、C# 言語専用のキーワード構文が使用されているものがあります。こうした構文では、標準クエリ演算子を、"*クエリ式*" の一部として呼び出すことができます。 クエリ式は*メソッド ベース*の方法とは異なり、より読み取りやすいクエリの表現形式です。 クエリ式の句は、コンパイル時にクエリ メソッドへの呼び出しに変換されます。  
   
 ## <a name="query-expression-syntax-table"></a>クエリ式の構文表  
+
  次の表は、同等なクエリ式の句がある標準クエリ演算子の一覧です。  
   
 |メソッド|C# のクエリ式の構文|  

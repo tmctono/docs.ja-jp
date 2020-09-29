@@ -2,14 +2,15 @@
 title: '方法: プライベート ストレージ フィールドを指定する'
 ms.date: 03/30/2017
 ms.assetid: 5a40e816-cc6e-43a0-b32a-9caaa0ab6912
-ms.openlocfilehash: e6e6a4e28fbfb327f25874844f28bcbafa6d2805
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7b47504e7dbad8a2d8414304ec19f2e9e2c06ef5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793209"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197171"
 ---
 # <a name="how-to-specify-private-storage-fields"></a>方法: プライベート ストレージ フィールドを指定する
+
 基になるストレージ フィールドの名前を指定するには、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の <xref:System.Data.Linq.Mapping.DataAttribute> 属性の <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> プロパティを使用します。  
   
  コード例については、「<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>」を参照してください。  

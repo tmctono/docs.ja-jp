@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /preferreduilang compiler option [C#]
 - -preferreduilang compiler option [C#]
 ms.assetid: 68b2462f-6778-48d7-8052-62805fe8e02c
-ms.openlocfilehash: f68652e910651ab5c4184376d9eb7729303382d9
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 490f5926fb50cfdae740b7749d72ea6c9a1f8cc9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89124852"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193817"
 ---
 # <a name="-preferreduilang-c-compiler-options"></a>-preferreduilang (C# コンパイラ オプション)
+
 `-preferreduilang` コンパイラ オプションを使うと、C# コンパイラがエラー メッセージなどの出力を表示する言語を指定できます。  
   
 ## <a name="syntax"></a>構文  
@@ -26,10 +27,12 @@ ms.locfileid: "89124852"
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `language`  
  コンパイラの出力に使う言語の[言語名](/windows/desktop/Intl/language-names)。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
+
  `-preferreduilang` コンパイラ オプションを使うと、C# コンパイラがエラー メッセージおよびその他のコマンドライン出力に使う言語を指定できます。 言語の言語パックがインストールされていない場合は、オペレーティング システムの言語設定が代わりに使われ、エラーは報告されません。  
   
 ```csharp  

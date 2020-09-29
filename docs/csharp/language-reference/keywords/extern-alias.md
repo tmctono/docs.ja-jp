@@ -9,14 +9,15 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: 301ae06ec02fa6f09257dc87383bc2ec7f589b6d
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5ecafa5a989bc183d7f52ac3d4b4d50a81b36014
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89139009"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203346"
 ---
 # <a name="extern-alias-c-reference"></a>extern alias (C# リファレンス)
+
 場合によっては、同じ完全修飾型名を持つ、2 つのバージョンのアセンブリを参照する必要が生じることもあります。 たとえば、同じアプリケーション内で、2 つ以上のバージョンのアセンブリを使用する必要が生じることもあるでしょう。 外部アセンブリ エイリアスを使用すれば、各アセンブリの名前空間を、エイリアスを付けたルート レベルの名前空間内でラップして、それらを同じファイル内で使用できるようにすることができます。  
   
 > [!NOTE]
@@ -61,6 +62,7 @@ using Class1V2 = GridV2::Namespace.Class1;
 ```
 
 ## <a name="c-language-specification"></a>C# 言語仕様  
+
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>関連項目

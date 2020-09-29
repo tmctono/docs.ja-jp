@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 757a87f92d8dc6049de1844fed892d95dc57c990
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 79d3913827d5df6f0ac4e77bfdb8f37b553a86d2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151521"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203749"
 ---
 # <a name="annotating-typed-datasets"></a>型指定された DataSet の注釈
+
 注釈を使用すると、基になるスキーマを変更せずに型指定された <xref:System.Data.DataSet> の要素の名前を変更できます。 基になるスキーマの要素の名前を変更すると、データ ソースにあるオブジェクトへの参照が失われるだけでなく、型指定された **DataSet** がデータ ソースにないオブジェクトを参照することになります。  
   
  注釈を使用すると、基になるスキーマを変更せずに、型指定された **DataSet** のオブジェクトをわかりやすい名前にカスタマイズできるため、コードが読みやすくなり、型指定された **DataSet** がクライアントで使用しやすくなります。 たとえば、次の **Northwind** データベースの **Customers** テーブルのスキーマ要素は、**CustomersRow** という名前の **DataRow** オブジェクト名および **Customers** という名前の <xref:System.Data.DataRowCollection> となります。  

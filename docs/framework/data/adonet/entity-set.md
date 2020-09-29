@@ -2,14 +2,15 @@
 title: エンティティ セット
 ms.date: 03/30/2017
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
-ms.openlocfilehash: 5a2465801c270813dd7bca2144d05fa202571153
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 6286d3707a8506e7a389359a5aa361c152e75212
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738424"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194793"
 ---
 # <a name="entity-set"></a>エンティティ セット
+
 "*エンティティ セット*" は、[エンティティ型](entity-type.md)のインスタンスと、そのエンティティ型から派生するあらゆる型のインスタンスの論理コンテナーです。 (派生型について詳しくは、「[Entity Data Model: 継承](entity-data-model-inheritance.md)」をご覧ください。)エンティティ型とエンティティ セットの間のリレーションシップは、リレーショナル データベースの行とテーブルの間のリレーションシップと似ています。エンティティ型では、行のようにデータの構造が記述され、エンティティ セットには、テーブルのように特定の構造のインスタンスが含まれます。 エンティティ セットは、データ モデリング構造ではなく、データ構造を表しません。 エンティティ セットは、エンティティ型のインスタンスをグループ化してデータ ストアにマップするための、ホスト環境またはストレージ環境 (共通言語ランタイムや SQL Server データベースなど) の構造を提供します。  
   
  エンティティ セットは、エンティティ セットと[アソシエーション セット](association-set.md)の論理グループである[エンティティ コンテナー](entity-container.md)内で定義されます。  
@@ -28,6 +29,7 @@ ms.locfileid: "73738424"
  概念モデルの各エンティティ型にはエンティティ セットを定義する必要がありません。  
   
 ## <a name="example"></a>例  
+
  下のダイアグラムは、`Book`、`Publisher`、および `Author` という 3 つのエンティティ型の概念モデルを示しています。  
   
  ![3 種類のエンティティを持つモデルの例](./media/entity-set/example-model-three-entity-types.gif)  

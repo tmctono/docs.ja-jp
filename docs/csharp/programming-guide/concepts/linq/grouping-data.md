@@ -3,14 +3,15 @@ title: データのグループ化 (C#)
 description: グループ化によって、属性を共有する要素のグループにデータが格納されます。 データ要素をグループ化する C# での LINQ の標準クエリ演算子メソッドについて学習します。
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: 5e1bca1d360b0f44a081cf2770118a0551629b5b
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 584d50fc15dd8b4ce1cfdf4766f3bc8b8383eb12
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103687"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202566"
 ---
 # <a name="grouping-data-c"></a>データのグループ化 (C#)
+
 グループ化とは、各グループの要素が共通の属性を持つようにデータをグループに分ける操作を指します。  
   
  次の図は、文字のシーケンスをグループ化した結果を示しています。 各グループのキーは文字です。  
@@ -27,6 +28,7 @@ ms.locfileid: "87103687"
 |ToLookup|キー セレクター関数に基づいて、<xref:System.Linq.Lookup%602> (一対多の辞書) に要素を挿入します。|該当なし。|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>クエリ式の構文例  
+
  次のコード例では、`group by` 句を使用して、偶数か奇数かによってリスト内の整数をグループ化します。  
   
 ```csharp  

@@ -2,14 +2,15 @@
 title: 集計関数 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
-ms.openlocfilehash: c79071e73763b56c0dde906499f3eef1d296ce0c
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 308670f04b9a04b1fff77ece08deb39c8c4081d1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251345"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198081"
 ---
 # <a name="aggregate-functions-entity-sql"></a>集計関数 (Entity SQL)
+
 集計は、コレクションをグループ操作の一部としてスカラーに圧縮する言語構成要素です。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 集計には次の 2 つの形式があります。  
   
 - 式内のあらゆる位置で使用できる [!INCLUDE[esql](../../../../../../includes/esql-md.md)] コレクション関数。 これには、コレクションに対して作用するプロジェクションおよび述語での集計関数の使用が含まれます。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] で集計を指定するには、コレクション関数を使用することをお勧めします。  
@@ -21,11 +22,13 @@ ms.locfileid: "70251345"
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、[GROUPPARTITION](grouppartition-entity-sql.md) という特殊な集計演算子が定義されます。 この演算子を使用すると、グループ化された入力セットへの参照を取得できます。 これにより、GROUP BY 句の結果をグループ集計関数やコレクション関数以外の場所で使用できる高度なグループ化クエリが可能になります。  
   
 ## <a name="collection-functions"></a>コレクション関数  
+
  コレクション関数はコレクションに対して実行され、スカラー値を返します。 たとえば、`orders` がすべての `orders` のコレクションである場合、次の式を使用して、最も早い出荷日を計算できます。  
   
  `min(select value o.ShipDate from LOB.Orders as o)`  
   
 ## <a name="group-aggregates"></a>グループ集計  
+
  グループ集計では、GROUP BY 句によって定義されたグループ結果ごとに計算が実行されます。 GROUP BY 句により、データがグループに分けられます。 分けられた各グループに集計関数が適用され、それぞれのグループ内の要素を集計計算の入力として使用して、各集計が計算されます。 SELECT 式で GROUP BY 句を使用した場合、プロジェクション、HAVING、または ORDER BY 句で使用できるのは、グループ化式の名前、集計式、または定数式だけです。  
   
  次の例では、製品ごとの平均発注数量を計算しています。  

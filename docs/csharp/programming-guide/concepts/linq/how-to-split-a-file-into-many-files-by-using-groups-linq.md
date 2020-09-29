@@ -3,14 +3,15 @@ title: グループを使用して 1 つのファイルを複数のファイル�
 description: グループを使用して 1 つのファイルを複数のファイルに分割する方法について説明します。 コード例を参照し、使用可能なその他のリソースを確認します。
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 1db16a48db257069eca83127c0b1fed7e49f19d6
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: b7be01be0f1539eb6ed4f4857af2625672319493
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301061"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203931"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>グループを使用して 1 つのファイルを複数のファイルに分割する方法 (LINQ) (C#)
+
 この例では、2 つのファイルの内容をマージし、新しい方法でデータを整理する一連の新しいファイルを作成するための、1 つの方法を示します。  
   
 ### <a name="to-create-the-data-files"></a>データ ファイルを作成するには  

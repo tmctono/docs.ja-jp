@@ -2,14 +2,15 @@
 title: 共通のスキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-ms.openlocfilehash: b6c2c89101f3304a0cab014de2def22195541471
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: f822de27e53554aba4011a701f59a8feda847c67
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249475"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203814"
 ---
 # <a name="common-schema-collections"></a>共通のスキーマ コレクション
+
 共通のスキーマ コレクションとは、それぞれの .NET Framework マネージド プロバイダーにより実装されるスキーマ コレクションのことです。 .NET Framework マネージド プロバイダーでは、引数を指定しないで、またはスキーマ コレクション名に "MetaDataCollections" を指定して **GetSchema** メソッドを呼び出すことにより、サポートされるスキーマ コレクションの一覧を決定します。 これにより、サポートされるスキーマ コレクションの一覧、それぞれがサポートする制限数、および使用する識別子部分の数と共に、<xref:System.Data.DataTable> が返されます。 これらのコレクションは、必要なすべての列を表現します。 プロバイダーでは、任意で列を追加できます。 たとえば、`SqlClient` と `OracleClient` は、ParameterName を制限のコレクションに追加します。  
   
  プロバイダーでは必要な列の値を特定できない場合、null を返します。  
@@ -17,6 +18,7 @@ ms.locfileid: "80249475"
  **GetSchema** メソッドの使用に関する詳細については、「[GetSchema およびスキーマ コレクション](getschema-and-schema-collections.md)」を参照してください。  
   
 ## <a name="metadatacollections"></a>MetaDataCollections  
+
  このスキーマ コレクションは、データベースに接続するために現在使用されている、.NET Framework マネージド プロバイダーによりサポートされるすべてのスキーマ コレクションに関する情報を公開します。  
   
 |ColumnName|DataType|説明|  
@@ -26,6 +28,7 @@ ms.locfileid: "80249475"
 |NumberOfIdentifierParts|int|複合識別子部分とデータベース オブジェクト名部分の数。 たとえば、SQL Server の場合は、テーブルに 3 つ、列に 4 つになります。 Oracle の場合は、テーブルに 2 つ、列に 3 つになります。|  
   
 ## <a name="datasourceinformation"></a>DataSourceInformation  
+
  このスキーマ コレクションは、.NET Framework マネージド プロバイダーが現在接続しているデータ ソースに関する情報を公開します。  
   
 |ColumnName|DataType|説明|  
@@ -49,6 +52,7 @@ ms.locfileid: "80249475"
 |SupportedJoinOperators|<xref:System.Data.Common.SupportedJoinOperators>|データ ソースでサポートされる SQL の JOIN ステートメントの種類を指定します。|  
   
 ## <a name="datatypes"></a>DataTypes  
+
  このスキーマ コレクションは、.NET Framework マネージド プロバイダーが現在接続されているデータベースでサポートされているデータ型に関する情報を公開します。  
   
 |ColumnName|DataType|説明|  
@@ -78,6 +82,7 @@ ms.locfileid: "80249475"
 |NativeDataType|String|NativeDataType は、データ型の OLE DB 型を公開するための OLE DB 固有の列です。|  
   
 ## <a name="restrictions"></a>制約  
+
  このスキーマ コレクションは、データベースへの接続に現在使用されている、.NET Framework マネージド プロバイダーでサポートされる制限に関する情報を公開します。  
   
 |ColumnName|DataType|説明|  
@@ -88,6 +93,7 @@ ms.locfileid: "80249475"
 |RestrictionNumber|int|この特定の制限が収まっているコレクションの制限内の実際の位置。|  
   
 ## <a name="reservedwords"></a>ReservedWords  
+
  このスキーマ コレクションは、.NET Framework マネージド プロバイダーが現在接続されているデータベースにより予約されている予約語に関する情報を公開します。  
   
 |ColumnName|DataType|説明|  

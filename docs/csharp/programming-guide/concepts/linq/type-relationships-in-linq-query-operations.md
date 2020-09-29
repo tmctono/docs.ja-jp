@@ -13,14 +13,15 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: 20f0b37a156e3b3f9c63f14cb83d678d26f685ee
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 78cdb550e59bc82386d34f0e2bf6b1cae11d72de
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302283"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203983"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>LINQ クエリ操作での型の関係 (C#)
+
 クエリを効果的に記述するには、クエリ操作全体における変数の型の相互関係を理解する必要があります。 これらの関係を理解しておくと、このドキュメント内の LINQ のサンプルやコード例を理解しやすくなります。 また、`var` を使用して変数を暗黙的に型指定した場合に、背後でどのような処理が行われるかを理解することもできます。  
   
  LINQ クエリ操作は、データ ソース、クエリ自体、およびクエリの実行において厳密に型指定されます。 クエリの変数の型には、データ ソース内の要素の型および `foreach` ステートメントの反復変数の型との互換性が必要です。 この厳密な型指定により、コンパイル時に型のエラーが検出され、実際にエラーが発生する前にそのエラーを修正できます。  
@@ -28,6 +29,7 @@ ms.locfileid: "87302283"
  これらの型の関係を示すために、後の例の大部分では、すべての変数に明示的な型指定を使用しています。 最後の例では、[var](../../../language-reference/keywords/var.md) を使用して暗黙的な型指定を行う場合でも、同じ基本原則が適用されることを示します。  
   
 ## <a name="queries-that-do-not-transform-the-source-data"></a>ソース データを変換しないクエリ  
+
  次の図は、データの変換を行わない LINQ to Objects クエリ操作を示しています。 ソースには文字列のシーケンスが含まれているので、クエリ出力も文字列のシーケンスです。  
   
  ![LINQ クエリ内のデータ型の関係を示す図。](./media/type-relationships-in-linq-query-operations/linq-query-data-type-relation.png)  
@@ -39,6 +41,7 @@ ms.locfileid: "87302283"
 3. クエリ変数は、`foreach` ステートメントで反復処理されます。 クエリ変数は文字列のシーケンスなので、反復変数も文字列です。  
   
 ## <a name="queries-that-transform-the-source-data"></a>ソース データを変換するクエリ  
+
  次の図は、単純なデータ変換を行う [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] クエリ操作を示しています。 このクエリは、`Customer` オブジェクトのシーケンスを入力として受け取り、`Name` プロパティのみを結果に選択します。 `Name` は文字列なので、クエリは出力として文字列のシーケンスを作成します。  
   
  ![データ型を変換するクエリを示す図。](./media/type-relationships-in-linq-query-operations/linq-query-transform-data-type.png)  
@@ -60,6 +63,7 @@ ms.locfileid: "87302283"
 3. クエリ変数の型が暗黙的なので、`foreach` ループの反復変数も暗黙的にする必要があります。  
   
 ## <a name="letting-the-compiler-infer-type-information"></a>コンパイラによる型情報の推論  
+
  クエリ操作における変数の関係を理解することは大切ですが、この処理をコンパイラで自動的に行う方法もあります。 [var](../../../language-reference/keywords/var.md) キーワードは、クエリ操作の任意のローカル変数に使用できます。 次の図は、前に説明した例 2 と類似しています。 ここでは、コンパイラがクエリ操作の各変数について、厳密な型を指定します。  
   
  ![暗黙的な入力による型フローを示す図。](./media/type-relationships-in-linq-query-operations/linq-type-flow-implicit-typing.png)  

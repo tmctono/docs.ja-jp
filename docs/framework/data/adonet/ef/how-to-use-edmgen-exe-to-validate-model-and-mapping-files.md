@@ -2,14 +2,15 @@
 title: '方法: EdmGen.exe を使用してモデル ファイルとマッピング ファイルを検証する'
 ms.date: 03/30/2017
 ms.assetid: 2641906a-971a-4d0b-8aee-13fabc02a1cc
-ms.openlocfilehash: a5e3124eb907b8077df7db4d71240f6e6b7bae63
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 62a3bde9d2431b9e9e86e2a8d8896520f3456590
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544506"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198120"
 ---
 # <a name="how-to-use-edmgenexe-to-validate-model-and-mapping-files"></a>方法: EdmGen.exe を使用してモデル ファイルとマッピング ファイルを検証する
+
 このトピックでは、[EDM ジェネレーター (EdmGen.exe)](edm-generator-edmgen-exe.md) ツールを使用してモデル ファイルとマッピング ファイルを検証する方法を示します。 詳細については、「[Entity Data Model](../entity-data-model.md)」を参照してください。  
   
 ### <a name="to-validate-the-school-model-using-edmgenexe"></a>EdmGen.exe を使用して School モデルを検証するには  

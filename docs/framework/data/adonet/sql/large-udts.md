@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: f55f6eccf3566a2391204e1ca4349ae5dff01954
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 032093244f51893cd3b0cf50ad81c79413aaa32e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148557"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194545"
 ---
 # <a name="large-udts"></a>大きな UDT
+
 開発者は、ユーザー定義型 (UDT) を使用すると、SQL Server データベースに共通言語ランタイム (CLR) オブジェクトを格納して、サーバーのスカラー型システムを拡張することができます。 UDT は複数の要素を持つことができ、動作を定義できます。この点は、1 つの SQL Server システム データ型から構成される従来の別名データ型と異なります。  
   
 > [!NOTE]
@@ -27,9 +28,11 @@ ms.locfileid: "79148557"
 1. [CLR ユーザー定義型](/sql/relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>GetSchema による UDT スキーマの取得  
+
  <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> の <xref:System.Data.SqlClient.SqlConnection> メソッドは、データベース スキーマ情報を <xref:System.Data.DataTable> に返します。 詳しくは、「[SQL Server スキーマ コレクション](../sql-server-schema-collections.md)」をご覧ください。  
   
 ### <a name="getschematable-column-values-for-udts"></a>UDT の GetSchemaTable 列値  
+
  <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> の <xref:System.Data.SqlClient.SqlDataReader> メソッドは、列メタデータを記述する <xref:System.Data.DataTable> を返します。 次の表では、SQL Server 2005 と SQL Server 2008 の間の大きな UDT に対する列メタデータの違いについて説明します。  
   
 |SqlDataReader 列|SQL Server 2005|SQL Server 2008 以降|  
@@ -45,6 +48,7 @@ ms.locfileid: "79148557"
 |`IsLong`|可変|可変|  
   
 ## <a name="sqldatareader-considerations"></a>SqlDataReader に関する注意点  
+
  SQL Server 2008 以降、<xref:System.Data.SqlClient.SqlDataReader> は大きな UDT 値を取得できるように拡張されました。 <xref:System.Data.SqlClient.SqlDataReader> によって処理される UDT 値の大きさは、使用している SQL Server のバージョンと、接続文字列で指定されている `Type System Version` によって異なります。 詳細については、「<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>」を参照してください。  
   
  <xref:System.Data.SqlClient.SqlDataReader> の次のメソッドは、`Type System Version` が SQL Server 2005 に設定されている場合、UDT ではなく <xref:System.Data.SqlTypes.SqlBinary> を返します。  
@@ -68,6 +72,7 @@ ms.locfileid: "79148557"
  現在のバージョンの ADO.NET については、変換が行われないことに注意してください。  
   
 ## <a name="specifying-sqlparameters"></a>SqlParameters パラメーターの指定  
+
  次の <xref:System.Data.SqlClient.SqlParameter> プロパティは、大きな UDT で動作するように拡張されています。  
   
 |SqlParameter プロパティ|説明|  
@@ -77,6 +82,7 @@ ms.locfileid: "79148557"
 |<xref:System.Data.SqlClient.SqlParameter.Size%2A>|解決するパラメーター値のサイズを取得または設定します。 既定値は 0 です。 プロパティには、パラメーター値のサイズを表す整数を指定できます。 大きな UDT の場合は UDT の実際のサイズに、不明な場合は -1 になります。|  
   
 ## <a name="retrieving-data-example"></a>データの取得例  
+
  次のコード フラグメントは、大きな UDT を取得する方法を示しています。 `connectionString` 変数は SQL Server データベースへの有効な接続を前提とし、`commandString` 変数は有効な SELECT ステートメントで主キー列が最初に記載されていることを前提とします。  
   
 ```csharp  

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: d1b79879639e1cbdc3dc040977d9fcd0c3a73602
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 409760ee0b147065a2128c62c304fb5d70cfcf42
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125021"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193882"
 ---
 # <a name="-out-c-compiler-options"></a>-out (C# コンパイラ オプション)
+
 **-out** オプションは、出力ファイルの名前を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -26,10 +27,12 @@ ms.locfileid: "89125021"
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `filename`  
  コンパイラによって作成された出力ファイルの名前です。  
   
 ## <a name="remarks"></a>注釈  
+
  コマンド ラインでは、コンパイル用に複数の出力ファイルを指定することができます。 コンパイラは、**-out** オプションの後に 1 つまたは複数のソース コード ファイルがあることを想定しています。 そしてすべてのソース コード ファイルがその **-out** オプションで指定された出力ファイルにコンパイルされます。  
   
  作成するファイルの完全な名前と拡張子を指定します。  
@@ -59,6 +62,7 @@ ms.locfileid: "89125021"
      このコンパイラ オプションをプログラムで設定するには: <xref:VSLangProj80.ProjectProperties3.OutputFileName%2A> は読み取り専用のプロパティで、プロジェクトの種類 (exe、ライブラリなど) と、アセンブリ名の組み合わせによって決まります。 これらのプロパティの一方または両方を変更するには、出力ファイル名を設定する必要があります。  
   
 ## <a name="example"></a>例  
+
  `t.cs` をコンパイルして出力ファイル `t.exe` とビルド `t2.cs` を作成し、モジュール出力ファイル `mymodule.netmodule` を作成します。  
   
 ```console  

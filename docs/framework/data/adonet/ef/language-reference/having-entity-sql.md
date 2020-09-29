@@ -2,14 +2,15 @@
 title: HAVING (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b5d52d97-8372-4335-beac-2d0b79dc3707
-ms.openlocfilehash: 97ed6e06241804bf2f576c910a2235b0cb570bbb
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: a117f377b3f03b6a1a12e39426a24f3141aa40ff
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833730"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204464"
 ---
 # <a name="having-entity-sql"></a>HAVING (Entity SQL)
+
 グループまたは集計の検索条件を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -19,10 +20,12 @@ ms.locfileid: "71833730"
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `search_condition`  
  グループまたは集計の検索条件を指定します。 HAVING 句を GROUP BY ALL と共に使用した場合、HAVING 句により ALL はオーバーライドされます。  
   
 ## <a name="remarks"></a>Remarks  
+
  HAVING 句は、グループ化の結果について追加的なフィルター処理条件を指定する場合に使用します。 クエリ式で GROUP BY 句が指定されていないと、暗黙的な単独セットのグループになります。  
   
 > [!NOTE]
@@ -38,6 +41,7 @@ HAVING SUM(o.Quantity) > 1
  前述のグループは、複数の製品を含むグループのみに制限されています。  
   
 ## <a name="example"></a>例  
+
  次の Entity SQL のクエリでは、HAVING および GROUP BY 操作を使用して、グループまたは集計の検索条件を指定します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
 1. 「[方法: PrimitiveType 結果を返すクエリを実行する](../how-to-execute-a-query-that-returns-primitivetype-results.md)」の手順に従います。  

@@ -2,14 +2,15 @@
 title: GROUPPARTITION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d0482e9b-086c-451c-9dfa-ccb024a9efb6
-ms.openlocfilehash: 19df566c254a3f3202eb3554ab43ee0d7c944181
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 11abebeac682fed9e3a007986bb2f5c7bdb80f16
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833763"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204477"
 ---
 # <a name="grouppartition-entity-sql"></a>GROUPPARTITION (Entity SQL)
+
 引数値のコレクションを返します。この値は、集計が関連する現在のグループ パーティションから投影されたものです。 `GroupPartition` 集計は、グループベースの集計であり、コレクションベースの形式ではありません。  
   
 ## <a name="syntax"></a>構文  
@@ -19,10 +20,12 @@ GROUPPARTITION( [ALL|DISTINCT] expression )
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `expression`  
  任意のブール型 ( [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ) の式を指定します。  
   
 ## <a name="remarks"></a>Remarks  
+
  次のクエリでは、製品の一覧と、製品ごとの注文明細の数量のコレクションが生成されます。  
   
 ```sql  
@@ -70,6 +73,7 @@ SELECT groupkey, GroupPartition(b > a) FROM {1,2,3} AS a INNER JOIN {4,5,6} AS b
 ```  
   
 ## <a name="example"></a>例  
+
  次の例では、GROUPPARTITION 句を GROUP BY 句と共に使用する方法を示します。 GROUP BY 句は `SalesOrderHeader` によって `Contact`エンティティをグループ化します。 続いて GROUPPARTITION 句は、各グループの `TotalDue` プロパティを投影し、その結果、10 進数のコレクションが生成されます。  
   
  [!code-sql[DP EntityServices Concepts#Collection_GroupPartition](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#collection_grouppartition)]

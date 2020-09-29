@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: d01198d158c4e1c64f12e8a0756c3d4e599fce74
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a2c2dc71cc9e5c445fd05534dad5ad47fd66f436
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149545"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194727"
 ---
 # <a name="handling-dataadapter-events"></a>DataAdapter のイベント処理
+
 ADO.NET <xref:System.Data.Common.DataAdapter> は、データ ソースのデータに対して行われた変更に応答するときに使用できる 3 つのイベントを公開します。 `DataAdapter` のイベントを次の表に示します。  
   
 |event|説明|  
@@ -22,6 +23,7 @@ ADO.NET <xref:System.Data.Common.DataAdapter> は、データ ソースのデー
 |`FillError`|`Fill` 操作中にエラーが発生しました。|  
   
 ## <a name="rowupdating-and-rowupdated"></a>RowUpdating と RowUpdated  
+
  `RowUpdating` は、<xref:System.Data.DataSet> 側で生じた行に対する更新が、データ ソース側で処理される前に発生します。 `RowUpdated` は、`DataSet` 側で生じた行に対する更新が、データ ソース側で処理された後で発生します。 したがって、更新が始まる前に `RowUpdating` を使用して更新の動作を変更することで、更新発生時に行う追加の処理の提供、更新行への参照の保存、現在の更新のキャンセル、後で処理するバッチ処理のための更新スケジュールなどを提供できます。 `RowUpdated` は、更新中に発生するエラーや例外の応答に便利です。 `DataSet` にエラー情報や再試行ロジックなどを追加できます。  
   
  `RowUpdating` イベントおよび `RowUpdated` イベントに渡される <xref:System.Data.Common.RowUpdatingEventArgs> 引数および <xref:System.Data.Common.RowUpdatedEventArgs> 引数には、更新を実行するために使用される `Command` オブジェクトを参照する `Command` プロパティ、更新情報を格納する `DataRow` オブジェクトを参照する `Row` プロパティ、どのタイプの更新を実行するかを示す `StatementType` プロパティ、適用可能な場合は `TableMapping`、および、操作の `Status` などがあります。  
@@ -125,6 +127,7 @@ protected static void OnRowUpdated(
 ```  
   
 ## <a name="fillerror"></a>FillError  
+
  `DataAdapter` は、`FillError` 操作中にエラーが発生すると `Fill` イベントを発行します。 このタイプのエラーは通常、追加する行のデータを .NET Framework 型に変換したときに、有効桁を消失してしまった場合に発生します。  
   
  `Fill` 操作中にエラーが発生した場合、現在の行は `DataTable` に追加されません。 `FillError` イベントを使用すると、エラーを解決してその行を追加するか、または除外された行を無視し、`Fill` 操作を続行できます。  

@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d09c344e-3548-4944-a3ed-051880e3f5b8
-ms.openlocfilehash: 944d0b2efe1e74f901a493d1c3202d0f180d599d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 421ec544345e41f910bf80c855a3a6b4de1c46a6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792707"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200226"
 ---
 # <a name="return-the-set-intersection-of-two-sequences"></a>2 つのシーケンスの積集合の取得
+
 2 つのシーケンスの積集合を返すには、<xref:System.Linq.Queryable.Intersect%2A> 演算子を使用します。  
   
 ## <a name="example"></a>例  
+
  この例では、<xref:System.Linq.Queryable.Intersect%2A> を使用して、`Customers` と `Employees` の両方が居住しているすべての国や地域のシーケンスが返されます。  
   
  [!code-csharp[DLinqQueryExamples#42](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#42)]

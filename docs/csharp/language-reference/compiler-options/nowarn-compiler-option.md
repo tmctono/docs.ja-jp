@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /nowarn compiler option [C#]
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
-ms.openlocfilehash: ab906912bc4bfab40e459c92a823b915240b8d55
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 31a7ee5eacb2e7cd6b24c4a2276ce6e07fcc67e1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125086"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194025"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn (C# コンパイラ オプション)
+
 **-nowarn** オプションを使用すると、コンパイラから警告が出力されないようにすることができます。 警告番号が複数ある場合は、コンマで区切ります。  
   
 ## <a name="syntax"></a>構文  
@@ -26,10 +27,12 @@ ms.locfileid: "89125086"
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `number1`, `number2`  
  コンパイラで表示しないようにする警告番号。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
+
  警告 ID の数値だけを指定します。 たとえば、CS0028 を抑制する場合は、`-nowarn:28` と指定します。  
   
  `-nowarn` に渡された警告番号が以前のリリースでは有効であったが、今はコンパイラから削除されている場合、コンパイラはその番号を自動的に無視します。 たとえば、CS0679 は Visual Studio .NET 2002 のコンパイラでは有効でしたが、その後削除されました。  

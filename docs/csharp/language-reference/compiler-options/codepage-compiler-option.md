@@ -9,14 +9,15 @@ helpviewer_keywords:
 - codepage compiler option [C#]
 - -codepage compiler option [C#]
 ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
-ms.openlocfilehash: 4c812314ed9c1abcd7d2f34b2281140175621312
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: eda4ce5604beb25ae2d72ac94fbbe7dde9695820
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125957"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91196807"
 ---
 # <a name="-codepage-c-compiler-options"></a>-codepage (C# コンパイラ オプション)
+
 このオプションでは、必要とするページが、システムで使用されている現在の既定のコードページでない場合に、コンパイル時に使用するコード ページを指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -26,10 +27,12 @@ ms.locfileid: "89125957"
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `id`  
  コンパイル時にすべてのソース コード ファイルで使うコード ページの ID です。  
   
-## <a name="remarks"></a>注釈  
+## <a name="remarks"></a>解説  
+
  コンパイラでは、まずすべてのソース ファイルを UTF-8 として解釈しようと試みられます。 ソース コード ファイルが UTF-8 以外のエンコーディングで、7 ビット ASCII 文字以外の文字が使われている場合は、**-codepage** オプションを使用して、使用する必要があるコード ページを指定できます。 **-codepage** は、コンパイル時にすべてのソース コード ファイルに適用されます。  
 
  使用しているシステムでサポートされているコード ページを確認する方法については、[GetCPInfo](/windows/desktop/api/winnls/nf-winnls-getcpinfo) に関するページをご覧ください。  

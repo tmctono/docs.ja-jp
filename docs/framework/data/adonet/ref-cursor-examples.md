@@ -2,14 +2,15 @@
 title: REF CURSOR の例
 ms.date: 03/30/2017
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
-ms.openlocfilehash: dc82648ff5a565c9b4d6fa593433ee1e22249d93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b45ef971ccb6b785988cc351d02be9e0844f6e11
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149136"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200538"
 ---
 # <a name="ref-cursor-examples"></a>REF CURSOR の例
+
 REF CURSOR の例は、REF CURSOR の使い方を説明する、次の 3 つの Microsoft Visual Basic の例によって構成されています。  
   
 |サンプル|説明|  
@@ -21,9 +22,11 @@ REF CURSOR の例は、REF CURSOR の使い方を説明する、次の 3 つの 
  これらの例を使用するには、必要に応じて Oracle テーブルを作成し、さらに PL/SQL パッケージとパッケージ本体を作成する必要があります。  
   
 ## <a name="creating-the-oracle-tables"></a>Oracle テーブルの作成  
+
  これらの例では、Oracle Scott/Tiger スキーマで定義されたテーブルを使用します。 Oracle Scott/Tiger スキーマは、ほとんどの Oracle のインストールに含まれています。 このスキーマが含まれていない場合は、{OracleHome}\rdbms\admin\scott.sql にある SQL コマンド ファイルを使用して、これらの例で使用されているテーブルとインデックスを作成します。  
   
 ## <a name="creating-the-oracle-package-and-package-body"></a>Oracle パッケージとパッケージ本体の作成  
+
  これらの例では、次の PL/SQL パッケージとパッケージ本体がサーバー上に必要になります。 次の Oracle パッケージを Oracle サーバー上に作成します。  
   
 ```sql

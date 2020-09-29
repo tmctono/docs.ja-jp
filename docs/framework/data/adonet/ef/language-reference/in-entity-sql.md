@@ -2,14 +2,15 @@
 title: IN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 51662950-ee01-4857-b7b9-311dd8515966
-ms.openlocfilehash: e46db63600b6baa03697615a2f5eb9240f55d15e
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 582a3b988247f1484197c0905fecf7f4407f88b0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833692"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203671"
 ---
 # <a name="in-entity-sql"></a>IN (Entity SQL)
+
 コレクション内に一致する値があるかどうかを調べます。  
   
 ## <a name="syntax"></a>構文  
@@ -19,6 +20,7 @@ value [ NOT ] IN expression
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `value`  
  照合する値を返す任意の有効な式。  
   
@@ -29,9 +31,11 @@ value [ NOT ] IN expression
  一致の判定対象のコレクションを返す任意の有効な式。 すべての式は、 `value`と同じ型であるか、共通の基本型または派生型である必要があります。  
   
 ## <a name="return-value"></a>戻り値  
+
  コレクションに値が見つかった場合は `true`、値が null またはコレクションが null の場合は null、それ以外の場合は `false` が返されます。 NOT IN を使用すると、IN の結果が否定されます。  
   
 ## <a name="example"></a>例  
+
  次の Entity SQL クエリでは、IN 演算子を使用して、コレクション内に一致する値があるかどうかを調べます。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
 1. 「[方法: StructuralType 結果を返すクエリを実行する](../how-to-execute-a-query-that-returns-structuraltype-results.md)」の手順に従います。  

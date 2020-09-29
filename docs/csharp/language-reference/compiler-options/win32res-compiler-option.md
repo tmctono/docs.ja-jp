@@ -10,14 +10,15 @@ helpviewer_keywords:
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-ms.openlocfilehash: c220c78a6d2c3109402a20f0de40fe9665d6c730
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 442c788595a01db9c0a1196d9e13b2a98963a38c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89140816"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204347"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res (C# コンパイラ オプション)
+
 **-win32res** オプションは、Win32 リソースを出力ファイルに挿入します。  
   
 ## <a name="syntax"></a>構文  
@@ -27,10 +28,12 @@ ms.locfileid: "89140816"
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `filename`  
  出力ファイルに追加するリソース ファイル。  
   
 ## <a name="remarks"></a>注釈  
+
  Win32 リソース ファイルは、[リソース コンパイラ](resource-compiler-option.md)を使用して作成できます。 リソース コンパイラは、Visual C++ プログラムをコンパイルするときに呼び出されます。 .res ファイルは .rc ファイルから作成されます。  
   
  Win32 リソースは、バージョンまたはビットマップ (アイコン) 情報を格納できます。エクスプローラーでアプリケーションを識別するのに役立ちます。 **-win32res** を指定しない場合、コンパイラはアセンブリ バージョンに基づいてバージョン情報を生成します。  
@@ -46,6 +49,7 @@ ms.locfileid: "89140816"
 3. **[リソース ファイル]** ボタンをクリックし、コンボ ボックスを利用してファイルを選択します。  
   
 ## <a name="example"></a>例  
+
  `in.cs` をコンパイルし、Win32 リソース ファイル `rf.res` をアタッチし、`in.exe` を作成します。  
   
 ```console  

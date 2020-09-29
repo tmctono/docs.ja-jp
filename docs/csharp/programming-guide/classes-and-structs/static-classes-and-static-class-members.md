@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 019b36a328d4e9fb01b112ec79d8d8e0548142f7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: cbfe4b63dc27cf0a0b6aad87c4f011151bacd4e5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541878"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91199017"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>静的クラスと静的クラス メンバー (C# プログラミング ガイド)
 
@@ -58,11 +58,13 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  静的クラスはシールされるため、継承できません。 <xref:System.Object> 以外のクラスから継承することはできません。 静的クラスには、インスタンス コンストラクターを含めることができません。 ただし、静的コンストラクターを含めることができます。 特別な初期化を必要とする静的メンバーがクラスに含まれている場合は、非静的クラスであっても静的コンストラクターを定義する必要があります。 詳細については、「[静的コンストラクター](./static-constructors.md)」を参照してください。  
   
 ## <a name="example"></a>例  
+
  次に、摂氏と華氏の間で温度を変換する 2 つのメソッドを含む静的クラスの例を示します。  
   
  [!code-csharp[csProgGuideObjects#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#31)]  
   
 ## <a name="static-members"></a>静的メンバー  
+
  非静的クラスには、静的メソッド、フィールド、プロパティ、またはイベントを含めることができます。 静的メンバーは、クラスのインスタンスが作成されていない場合でも、クラスで呼び出すことです。 静的メンバーには、必ずインスタンス名ではなくクラス名でアクセスします。 クラスのインスタンスの作成数に関係なく、静的メンバーのコピーは 1 つしか存在しません。 静的メソッドと静的プロパティは、それを含んでいる型の非静的フィールドや非静的イベントにはアクセスできません。また、メソッド パラメーターに明示的に渡されない限り、どのオブジェクトのインスタンス変数にもアクセスできません。  
   
  クラス全体を静的として宣言するよりも、非静的クラスを宣言して、いくつかの静的メンバーを含める方が一般的です。 静的フィールドの一般的な用途として、インスタンス化されたオブジェクトの数を保持することと、すべてのインスタンスで共有する必要のある値を格納することの 2 つがあります。  

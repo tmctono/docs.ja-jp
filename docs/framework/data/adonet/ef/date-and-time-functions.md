@@ -2,14 +2,15 @@
 title: 日付と時刻関数
 ms.date: 03/30/2017
 ms.assetid: 971762d0-663b-4b64-8c61-352a8e6d3949
-ms.openlocfilehash: 39bbc2bff378ff4434df6f33a1b175055f2e5800
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: aa024ad748db26cb75111984abdb61fdbd538ef9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452514"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198457"
 ---
 # <a name="date-and-time-functions"></a>日付と時刻関数
+
 .NET Framework Data Provider for SQL Server (SqlClient) には、`System.DateTime` 型の入力値に対して操作を実行し、`string`、数値、または `System.DateTime` 値の結果を返す日付と時刻関数が用意されています。 これらの関数は、SqlClient の SqlServer 名前空間に存在します。 Entity Framework は、プロバイダーの名前空間プロパティを使用することにより、型や関数など、特定のコンストラクターに対してこのプロバイダーによってどのプレフィックスが使用されているかを特定できます。 次の表に、SqlClient の日付と時刻の関数を示します。  
   
 |関数|説明|  

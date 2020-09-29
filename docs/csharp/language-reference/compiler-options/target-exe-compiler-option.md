@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:exe
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
-ms.openlocfilehash: 3cea52fe872fcb407206ee2063b93dc81447a3b2
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: ae1706f1ecdd396e24711070d19420faa6d34761
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89128505"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193764"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe (C# コンパイラ オプション)
+
 **-target:exe** オプションを指定した場合、コンパイラは実行可能な (EXE) コンソール アプリケーションを作成します。  
   
 ## <a name="syntax"></a>構文  
@@ -26,6 +27,7 @@ ms.locfileid: "89128505"
 ```  
   
 ## <a name="remarks"></a>解説  
+
  **-target:exe** オプションは既定で有効になっています。 実行可能ファイルは、.exe という拡張子で作成されます。  
   
  Windows プログラムの実行可能ファイルを作成する場合は、[-target:winexe](./target-winexe-compiler-option.md) を使用します。  
@@ -47,6 +49,7 @@ ms.locfileid: "89128505"
  このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.ProjectProperties3.OutputType%2A>」を参照してください。  
   
 ## <a name="example"></a>例  
+
  次のコマンド ラインのいずれかで `in.cs` がコンパイルされ、`in.exe` が作成されます。  
   
 ```console  

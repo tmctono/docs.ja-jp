@@ -2,14 +2,15 @@
 title: 入力文字セット (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
-ms.openlocfilehash: b1c6475704ec384800af0b678edd943246bf8044
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 94615a8f4aec51347f451d6f6a53b9d5b459a336
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250640"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203658"
 ---
 # <a name="input-character-set-entity-sql"></a>入力文字セット (Entity SQL)
+
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] は、UTF-16 でエンコードされた UNICODE 文字を受け取ります。  
   
  文字列リテラルには、単一引用符で囲んだ任意の UTF-16 文字を含めることができます  たとえば、N'リテラル文字列' のように記述します。 文字列リテラルが比較される際は、元の UTF-16 の値が使用されます。 たとえば、N'ABC' は、日本語とラテンのコードページでは異なります。  

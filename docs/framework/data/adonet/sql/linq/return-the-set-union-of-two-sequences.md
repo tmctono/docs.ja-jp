@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b8bd3cb-86d4-4a3b-9906-61f68726dd1f
-ms.openlocfilehash: 058856243b2a8daaecd653a9b5999013de5407a8
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 0fe32d8c3c37e99a50ca03262dc6184337b4450e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182528"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200205"
 ---
 # <a name="return-the-set-union-of-two-sequences"></a>2 つのシーケンスの和集合の取得
+
 2 つのシーケンスの和集合を返すには、<xref:System.Linq.Queryable.Union%2A> 演算子を使用します。  
   
 ## <a name="example"></a>例  
+
  この例では、<xref:System.Linq.Queryable.Union%2A> を使用して、`Customers` と `Employees` のいずれかが居住しているすべての国と地域のシーケンスを返します。  
   
  [!code-csharp[DLinqQueryExamples#43](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#43)]

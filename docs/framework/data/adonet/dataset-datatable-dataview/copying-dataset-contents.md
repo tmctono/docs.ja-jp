@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: de13e07eb5c19b8beffa724fec4a128c418a4fed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1cadcacab6084bbf3caaf61d98b78fe3067d92f7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151365"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202371"
 ---
 # <a name="copying-dataset-contents"></a>DataSet の内容のコピー
+
 <xref:System.Data.DataSet> のコピーを作成すると、元のデータに影響せずにデータを使用したり、**DataSet** のデータのサブセットを使用したりできます。 **DataSet** をコピーすると、次の操作を行うことができます。  
   
 - スキーマ、データ、行状態情報、行バージョンなどの **DataSet** の正確なコピーを作成できます。  

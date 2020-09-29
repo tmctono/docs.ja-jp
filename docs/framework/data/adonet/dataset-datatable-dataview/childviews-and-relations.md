@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: cf67304f564729172d1b7f3565d52abffeb90049
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 74b2de7a9ee62ae42a932c94261cf425d6a94808
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151482"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203736"
 ---
 # <a name="childviews-and-relations"></a>ChildView とリレーション
+
 <xref:System.Data.DataSet> 内のテーブル間にリレーションシップが存在する場合は、このリレーションシップの子テーブルの行が含まれている <xref:System.Data.DataView> を作成できます。このような DataView を作成するには、親テーブルの行に対して <xref:System.Data.DataRowView.CreateChildView%2A> の <xref:System.Data.DataRowView> メソッドを使用します。 たとえば、次のコードでは、**CategoryName** と **ProductName** によってデータをアルファベット順に並べ替えられた **Categories** およびこのテーブルに関連する **Products** が表示されます。  
   
 ```vb  

@@ -3,14 +3,15 @@ title: セット操作 (C#)
 description: セット操作について、および C# の LINQ でセット操作を実行する標準クエリ演算子メソッドについて説明します。
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: ab2608b267113ad5d47a33e64cd9a5e21496f668
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 8679f804adaaeada390206e3e1dd2a0711a2cbf6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302374"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195611"
 ---
 # <a name="set-operations-c"></a>セット操作 (C#)
+
 LINQ のセット操作は、同一または別個のコレクション (またはセット) に等しい要素があるかどうかに基づいて、結果を生成するクエリ操作です。  
   
  次のセクションでは、セット操作を実行する標準クエリ演算子のメソッドの一覧を示します。  
@@ -27,6 +28,7 @@ LINQ のセット操作は、同一または別個のコレクション (また�
 ## <a name="comparison-of-set-operations"></a>セット操作の比較  
   
 ### <a name="distinct"></a>Distinct  
+
  次の例は、文字のシーケンスに対する <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> メソッドの動作を示しています。 返されたシーケンスには、入力シーケンスからの一意の要素が格納されています。  
   
  ![Distinct&#40;&#41; の動作を示すグラフィック。](./media/set-operations/distinct-method-behavior.png)  
@@ -34,6 +36,7 @@ LINQ のセット操作は、同一または別個のコレクション (また�
  [!code-csharp-interactive[Distinct](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQSetOperation/CS/SetOperation.cs#1)]
   
 ### <a name="except"></a>除く  
+
  次の例で、<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType> の動作を説明します。 返されたシーケンスには、1 つ目の入力シーケンスのうち、2 つ目の入力シーケンスには存在しない要素が格納されています。  
   
  ![Except&#40;&#41; のアクションを示すグラフィック。](./media/set-operations/except-behavior-graphic.png "Except の動作を示します。")  
@@ -41,6 +44,7 @@ LINQ のセット操作は、同一または別個のコレクション (また�
 [!code-csharp-interactive[Except](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQSetOperation/CS/SetOperation.cs#2)]
 
 ### <a name="intersect"></a>交差  
+
  次の例で、<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType> の動作を説明します。 返されたシーケンスには、両方の入力シーケンスに共通する要素が格納されています。  
   
  ![2 つのシーケンスの交差部分を示すグラフィック。](./media/set-operations/intersection-two-sequences.png)  
@@ -48,6 +52,7 @@ LINQ のセット操作は、同一または別個のコレクション (また�
 [!code-csharp-interactive[Intersect](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQSetOperation/CS/SetOperation.cs#3)]
 
 ### <a name="union"></a>和集合  
+
  次の例は、2 つの文字シーケンスに対する和集合演算を示しています。 返されたシーケンスには、両方の入力シーケンスからの一意の要素が格納されています。  
   
  ![2 つのシーケンスの結合を示すグラフィック。](./media/set-operations/union-operation-two-sequences.png)  

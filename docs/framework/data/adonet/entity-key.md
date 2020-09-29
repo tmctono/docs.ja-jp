@@ -2,14 +2,15 @@
 title: エンティティ キー
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: 39a7500f088aa85baf0244005d6a804b3bf0b521
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b2692faf2f8bea27c8a5d6cdc52689ca186d3194
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737793"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200785"
 ---
 # <a name="entity-key"></a>エンティティ キー
+
 "*エンティティ キー*" とは、ID を決定するために使用される[エンティティ型](entity-type.md)の[プロパティ](property.md)または一連のプロパティです。 エンティティ キーを構成するプロパティは、デザイン時に選択されます。 エンティティ キー プロパティの値では、実行時の[エンティティ セット](entity-set.md)内のエンティティ型のインスタンスが一意に識別される必要があります。 エンティティ キーを構成するプロパティには、エンティティ セット内のインスタンスの一意性を保証するものを選択する必要があります。  
   
  エンティティ キーを構成する一連のプロパティには、次の要件があります。  
@@ -23,6 +24,7 @@ ms.locfileid: "73737793"
 - エンティティが継承階層に含まれる場合、ルート エンティティには、エンティティ キーを構成するすべてのプロパティを含める必要があり、そのエンティティ キーをルート エンティティ型に定義する必要があります。 詳しくは、「[Entity Data Model: 継承](entity-data-model-inheritance.md)」をご覧ください。  
   
 ## <a name="example"></a>例  
+
  下のダイアグラムは、`Book`、`Publisher`、および `Author` という 3 つのエンティティ型の概念モデルを示しています。 各エンティティ型のエンティティ キーを構成するプロパティには、"(キー)" と示されています。 `Author` エンティティ型には、`Name` と `Address` の 2 つのプロパティで構成されるエンティティ キーが含まれます。  
   
  ![3 種類のエンティティを持つモデルの例](./media/entity-key/example-model-three-entity-types.gif)  

@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 6e5161cc325bf0379bb9241b99c473c539ad1081
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 96cc6444b6e4dc2806abffd456d0c2f7533f0009
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286599"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204373"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>DataReader を使用してデータを取得する
+
 **DataReader** を使用してデータを取得するには、**Command** オブジェクトのインスタンスを作成した後、**Command.ExecuteReader** を呼び出して **DataReader** を作成し、データ ソースから行を取得します。 **DataReader** では、手続きロジックがデータ ソースからの結果を順番に効率的に処理できるようにするバッファリングされないデータ ストリームが提供されます。 **DataReader** はデータをメモリにキャッシュしないため、大量のデータを取得する場合に適しています。
 
 **DataReader** を使用する例を次に示します。ここで、`reader` は有効な DataReader を、`command` は有効な Command オブジェクトを表します。  
@@ -34,6 +35,7 @@ reader = command.ExecuteReader()
  [!code-vb[DataWorks SqlClient.HasRows#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.HasRows/VB/source.vb#1)]  
   
 ## <a name="closing-the-datareader"></a>DataReader の終了  
+
  **DataReader** オブジェクトを使い終えたら、**Close** メソッドを必ず呼び出します。  
   
  **Command** に出力パラメーターまたは戻り値が含まれている場合、**DataReader** が閉じられるまで、それらの値を使用することはできません。  
@@ -44,18 +46,21 @@ reader = command.ExecuteReader()
 > クラスの **Finalize** メソッド内では、**Connection**、**DataReader**、またはその他のマネージド オブジェクトに対して、**Close** または **Dispose** を呼び出さないでください。 終了処理では、クラスに直接所有されているアンマネージ リソースだけを解放してください。 クラスがアンマネージド リソースを所有していない場合は、クラス定義に **Finalize** メソッドを含めないでください。 詳しくは、「[ガベージ コレクション](../../../standard/garbage-collection/index.md)」をご覧ください。  
   
 ## <a name="retrieving-multiple-result-sets-using-nextresult"></a>NextResult による複数の結果セットの取得  
+
  **DataReader** から複数の結果セットが返される場合は、**NextResult** メソッドを呼び出して、結果セットを順番に反復処理します。 <xref:System.Data.SqlClient.SqlDataReader> メソッドを使用して、2 つの SELECT ステートメントの結果を処理する <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> の例を次に示します。  
   
  [!code-csharp[DataWorks SqlClient.NextResult#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.NextResult/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.NextResult#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.NextResult/VB/source.vb#1)]  
   
 ## <a name="getting-schema-information-from-the-datareader"></a>DataReader からのスキーマ情報の取得  
+
  **DataReader** が開かれている間に **GetSchemaTable** メソッドを使用して、現在の結果セットについてのスキーマ情報を取得できます。 **GetSchemaTable** は、現在の結果セットのスキーマ情報を含む行と列が設定されている <xref:System.Data.DataTable> オブジェクトを返します。 **DataTable** には結果セットの列ごとに 1 行が設定されます。 スキーマ テーブルの各列は、結果セットの行で返される列の 1 つのプロパティにマップされます。**ColumnName** はそのプロパティの名前であり、列の値はプロパティの値です。 **DataReader** のスキーマ情報を出力する例を次に示します。  
   
  [!code-csharp[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/VB/source.vb#1)]  
   
 ## <a name="working-with-ole-db-chapters"></a>OLE DB のチャプターの使用  
+
  階層構造の行セット、つまりチャプター (OLE DB では **DBTYPE_HCHAPTER** 型、ADO では **adChapter** 型) は、<xref:System.Data.OleDb.OleDbDataReader> を使用して取得できます。 チャプターを含むクエリが **DataReader** として返されるとき、チャプターはその **DataReader** の列として返され、**DataReader** オブジェクトとして公開されます。  
   
  ADO.NET の **DataSet** を使用することで、テーブル間の親子のリレーションシップを使用して階層構造の行セットを表すこともできます。 詳しくは、「[DataSet、DataTable、および DataView](./dataset-datatable-dataview/index.md)」をご覧ください。  
@@ -135,6 +140,7 @@ using (OleDbConnection connection = new OleDbConnection(
 ```  
   
 ## <a name="returning-results-with-oracle-ref-cursors"></a>Oracle REF CURSOR による結果の取得  
+
  .NET Framework Data Provider for Oracle は、クエリ結果を返すために、Oracle REF CURSOR の使用をサポートしています。 Oracle REF CURSOR は <xref:System.Data.OracleClient.OracleDataReader> として返されます。  
   
  <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A> メソッドを使用して、Oracle の REF CURSOR を表す <xref:System.Data.OracleClient.OracleDataReader> オブジェクトを取得できます。 <xref:System.Data.DataSet> を設定するために使用される <xref:System.Data.OracleClient.OracleDataAdapter> に対する **SelectCommand** として 1 つまたは複数の Oracle の REF CURSOR を返す <xref:System.Data.OracleClient.OracleCommand> を指定することもできます。  

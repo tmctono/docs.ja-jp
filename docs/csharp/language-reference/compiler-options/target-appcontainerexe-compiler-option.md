@@ -3,14 +3,15 @@ description: -target:appcontainerexe (C# コンパイラ オプション)
 title: -target:appcontainerexe (C# コンパイラ オプション)
 ms.date: 07/20/2015
 ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
-ms.openlocfilehash: 8c3b85c2f5a20788bd311e9bf3b300c32967da77
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: e4aa60ebc9dcc1a63b63863385b0ee9f13d6d78d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89128583"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193739"
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe (C# コンパイラ オプション)
+
 **-target:appcontainerexe** コンパイラ オプションを使用すると、アプリケーション コンテナーで実行する必要のある Windows 実行可能ファイル (.exe) がコンパイラによって作成されます。 このオプションは [-target:winexe](./target-winexe-compiler-option.md) に相当しますが、Windows 8.x Store アプリ用に設計されています。  
   
 ## <a name="syntax"></a>構文  
@@ -20,6 +21,7 @@ ms.locfileid: "89128583"
 ```  
   
 ## <a name="remarks"></a>解説  
+
  アプリケーション コンテナーでのアプリケーションの実行を要求するために、このオプションは、[Portable Executable](/windows/desktop/Debug/pe-format) (PE) ファイルでビットを設定します。 このビットが設定されている場合、CreateProcess メソッドがアプリケーション コンテナー外の実行可能ファイルを起動しようとすると、エラーが発生します。  
   
  [-out](./out-compiler-option.md) オプションを使用しない限り、出力ファイル名は [Main](../../programming-guide/main-and-command-args/index.md) メソッドを含む入力ファイルと同じになります。  
@@ -37,6 +39,7 @@ ms.locfileid: "89128583"
  このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.ProjectProperties3.OutputType%2A>」を参照してください。  
   
 ## <a name="example"></a>例  
+
  次のコマンドは、アプリケーション コンテナーでのみ実行できる Windows 実行可能ファイルに `filename.cs` をコンパイルします。  
   
 ```console  

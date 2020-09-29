@@ -12,14 +12,15 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: 1e2de095b460b684fb06faf46731283a1304906e
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 6f90ce6c1590784cefbd5f15ca8a36941aad77ed
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465690"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193778"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (C# コンパイラ オプション)
+
 指定されたリソースを出力ファイルに埋め込みます。  
   
 ## <a name="syntax"></a>構文  
@@ -29,6 +30,7 @@ ms.locfileid: "89465690"
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `filename`  
  出力ファイルに埋め込む .NET リソース ファイルです。  
   
@@ -39,6 +41,7 @@ ms.locfileid: "89465690"
  リソースのアクセシビリティ。パブリックまたはプライベートです。 既定値はパブリックです。  
   
 ## <a name="remarks"></a>注釈  
+
  [-linkresource](./linkresource-compiler-option.md) を使用すると、リソースがアセンブリにリンクされ、リソース ファイルは出力ファイルに追加されません。  
   
  既定では、リソースは、C# コンパイラを使用して作成されるときにアセンブリ内でパブリックになります。 リソースをプライベートにするには、アクセシビリティ修飾子として `private` を指定します。 `public` と `private` 以外のアクセシビリティは使用できません。  
@@ -62,6 +65,7 @@ ms.locfileid: "89465690"
  このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.FileProperties2.BuildAction%2A>」を参照してください。  
   
 ## <a name="example"></a>例  
+
  `in.cs` をコンパイルし、リソース ファイル `rf.resource` をアタッチします。  
   
 ```console  

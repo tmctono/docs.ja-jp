@@ -10,14 +10,15 @@ helpviewer_keywords:
 - -noconfig compiler option [C#]
 - noconfig compiler option [C#]
 ms.assetid: cd26967e-e494-4c8c-b5c9-af13b2f78b2e
-ms.openlocfilehash: 677b96df8c6686e46c0db93eabe72dd483b947e4
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: d62f16a3926aaa78e79c25b1c9b8d84e4401795a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89466067"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194077"
 ---
 # <a name="-noconfig-c-compiler-options"></a>-noconfig (C# コンパイラ オプション)
+
 **-noconfig** オプションは、csc.exe ファイルと同じディレクトリにあり、このディレクトリから読み込まれた csc.rsp ファイルでコンパイルしないようにコンパイラに指示します。  
   
 ## <a name="syntax"></a>構文  
@@ -27,6 +28,7 @@ ms.locfileid: "89466067"
 ```  
   
 ## <a name="remarks"></a>解説  
+
  csc.rsp ファイルは、.NET Framework に付属するすべてのアセンブリを参照します。 Visual Studio .NET 開発環境に含まれる実際の参照は、プロジェクトの種類によって異なります。  
   
  csc.rsp ファイルを変更し、csc.exe 使ってコマンドラインからすべてのコンパイルに含める必要がある追加のコンパイラ オプションを指定できます ( **-noconfig** オプションを除きます)。  

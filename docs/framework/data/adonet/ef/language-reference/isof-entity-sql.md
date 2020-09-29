@@ -2,14 +2,15 @@
 title: ISOF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b2b0d34-d0a7-4bcd-baf2-58aa8456d00b
-ms.openlocfilehash: a0294f425552df3329d158d69a6d503b2f008780
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3cbbc9b6feda1bde104ed2c95d4dca274b090028
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542334"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202280"
 ---
 # <a name="isof-entity-sql"></a>ISOF (Entity SQL)
+
 式の型が指定の型であるか、またはそのサブタイプであるかを判断します。  
   
 ## <a name="syntax"></a>構文  
@@ -19,6 +20,7 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `expression`  
  型を判断するための任意の有効なクエリ式。  
   
@@ -32,9 +34,11 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
  `expression` を判定するための型。 型は名前空間で修飾する必要があります。  
   
 ## <a name="return-value"></a>戻り値  
+
  `true` が型 T で、T が基本データ型または `expression` の派生型である場合は、`type` となります。`expression` が実行時に null である場合は null となり、それ以外の場合は `false` となります。  
   
 ## <a name="remarks"></a>Remarks  
+
  式 `expression IS NOT OF (type)` および `expression IS NOT OF (ONLY type)` は、構文的にはそれぞれ `NOT (expression IS OF (type))` および `NOT (expression IS OF (ONLY type))` に相当します。  
   
  次の表に、いくつかの通常およびコーナー パターンにおける `IS OF` 演算子の動作を示します。 すべての例外はクライアント側にスローされてから、プロバイダーが呼び出されます。  
@@ -52,6 +56,7 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
 |RowType IS OF (RowType)|スロー|  
   
 ## <a name="example"></a>例  
+
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] の次のクエリでは、IS OF 演算子を使用してクエリ式の型を判定し、次に TREAT 演算子を使用して Course 型のオブジェクトを OnsiteCourse 型のオブジェクトのコレクションに変換します。 このクエリは、 [School モデル](/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))に基づいています。  
   
  [!code-sql[DP EntityServices Concepts#TREAT_ISOF]~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#treat_isof)]  

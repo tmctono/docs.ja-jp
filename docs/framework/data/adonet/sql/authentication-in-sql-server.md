@@ -3,14 +3,15 @@ title: SQL Server での認証
 description: Windows 認証モードや混合モードなど、ADO.NET の SQL Server での認証について説明します。
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: e9915598acfbdefb59069d6a9c6ef4b7c824e4c6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2c4f62391a0d9b5ada27f56eef4c3467d99b4c6d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286547"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197532"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server での認証
+
 SQL Server は、Windows 認証モードと混合モードの 2 つの認証モードをサポートしています。  
   
 - Windows 認証は既定の認証モードです。この SQL Server セキュリティ モデルは、Windows と緊密に統合されていることから統合セキュリティと呼ばれることもあります。 特定の Windows ユーザー アカウントとグループ アカウントは、SQL Server へのログインが信頼されています。 すでに認証されている Windows ユーザーは、追加の資格情報を提示する必要はありません。  
@@ -30,6 +31,7 @@ SQL Server は、Windows 認証モードと混合モードの 2 つの認証モ�
 > ログインはデータベース ユーザーとは異なります。 ログインまたは Windows グループは、別の操作でデータベース ユーザーまたはロールにマップする必要があります。 その後、ユーザーまたはロールに対してデータベース オブジェクトにアクセスするための権限を付与することになります。  
   
 ## <a name="authentication-scenarios"></a>認証のシナリオ  
+
  通常、以下の状況では Windows 認証が最良の選択肢です。  
   
 - ドメイン コントローラーがある。  
@@ -50,6 +52,7 @@ SQL Server は、Windows 認証モードと混合モードの 2 つの認証モ�
 > Windows 認証を指定しても、SQL Server ログインは無効になりません。 高い権限を持つ SQL Server ログインを無効にするには、Transact-SQL ステートメント ALTER LOGIN DISABLE を使用します。  
   
 ## <a name="login-types"></a>ログインの種類  
+
  SQL Server では、次の 3 種類のログインがサポートされています。  
   
 - ローカル Windows ユーザー アカウントまたは信頼される側のドメイン アカウント。 SQL Server が Windows に依存する形で Windows ユーザー アカウントを認証します。  
@@ -62,6 +65,7 @@ SQL Server は、Windows 認証モードと混合モードの 2 つの認証モ�
 > SQL Server では、証明書または非対称キーから作成されたログインが提供されています。このログインはコード署名にのみ使用されます。 SQL Server への接続には使用できません。  
   
 ## <a name="mixed-mode-authentication"></a>混合モード認証  
+
  混合モード認証を使用する場合は、SQL Server に格納される SQL Server ログインを作成する必要があります。 さらに、SQL Server のユーザー名とパスワードを実行時に指定する必要があります。  
   
 > [!IMPORTANT]
@@ -73,6 +77,7 @@ SQL Server は、Windows 認証モードと混合モードの 2 つの認証モ�
 > ユーザー入力から文字列を連結することによって接続文字列を構築している場合、接続文字列のインジェクション攻撃に対して脆弱になります。 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> を使用すると、構文的に正しい接続文字列を実行時に作成できます。 詳細については、「[接続文字列ビルダー](../connection-string-builders.md)」をご覧ください。  
   
 ## <a name="external-resources"></a>外部リソース  
+
  詳細については、次のリソースを参照してください。  
   
 |リソース|説明|  

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 8ab10dbf686def8d169ef3239492e3b618e9d297
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 77a1e8eb4d442e66f8b9ed17a5881661a5990a35
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302049"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195494"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>例外の作成とスロー (C# プログラミング ガイド)
+
 例外は、プログラムの実行中にエラーが発生したことを示すために使われます。 エラーを説明する例外オブジェクトが作成された後、[throw](../../language-reference/keywords/throw.md) キーワードで "*スロー*" されます。 そのとき、ランタイムは最も互換性のある例外ハンドラーを検索します。  
   
  プログラマは、以下の条件が 1 つでも該当するときは、例外をスローする必要があります。  
@@ -45,6 +46,7 @@ ms.locfileid: "87302049"
  パブリックのプロテクト メンバーは、意図された機能を完了できない場合は常に例外をスローする必要があります。 スローされる例外クラスは、エラー状態に適合する使用可能な例外の中で最も具体的なものである必要があります。 これらの例外はクラスの機能の一部として文書化する必要があり、派生クラスまたは元のクラスの更新では、旧バージョンとの互換性のために同じ動作を維持する必要があります。  
   
 ## <a name="things-to-avoid-when-throwing-exceptions"></a>例外をスローするときに避ける必要があること  
+
  次の一覧は、例外をスローするときに避ける必要があることです。  
   
 - 通常の実行の一部として、例外を使ってプログラムのフローを変更しないでください。 例外は、エラー状態の報告と処理のためだけに使う必要があります。  
@@ -56,6 +58,7 @@ ms.locfileid: "87302049"
 - デバッグ モードではスローでき、リリース モードではスローできない例外は、作成しないでください。 開発フェーズ中に実行時エラーを識別するには、代わりにデバッグ アサートを使ってください。  
   
 ## <a name="defining-exception-classes"></a>例外クラスの定義  
+
  プログラムでは、<xref:System> 名前空間で事前定義された例外クラスをスローするか (上記の場合を除きます)、<xref:System.Exception> から派生することで独自の例外クラスを作成することができます。 派生クラスでは、少なくとも 4 つのコンストラクターを必ず定義します。パラメータ―なしのコンストラクター、メッセージ プロパティを設定するコンストラクター、<xref:System.Exception.Message%2A> プロパティと <xref:System.Exception.InnerException%2A> プロパティの両方を設定するコンストラクター、 そして 4 番目は例外のシリアル化に使われるコンストラクターです。 新しい例外クラスは、シリアル化可能にする必要があります。 次に例を示します。  
   
  [!code-csharp[csProgGuideExceptions#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#15)]  

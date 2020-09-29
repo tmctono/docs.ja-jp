@@ -2,14 +2,15 @@
 title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: b3fc2484e80b637ed5841375985f7bae476bbbf7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3360ad4ca7306a8cc1b7d6948204f825ff9a93c6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150201"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203619"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
+
 クエリ式が NULL かどうかを調べます。  
   
 ## <a name="syntax"></a>構文  
@@ -19,6 +20,7 @@ expression IS [ NOT ] NULL
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `expression`  
  任意の有効なクエリ式。 コレクションにすることはできません。また、コレクション メンバーや、コレクション型のプロパティを持つレコード型を含めることはできません。  
   
@@ -26,9 +28,11 @@ expression IS [ NOT ] NULL
  IS NULL の EDM.Boolean の結果を否定します。  
   
 ## <a name="return-value"></a>戻り値  
+
  `true` によって NULL が返される場合は `expression`、それ以外の場合は `false` です。  
   
 ## <a name="remarks"></a>Remarks  
+
  外部結合の要素が NULL かどうかを確認するには、`IS NULL` を使用します。  
   
 ```sql  
@@ -57,6 +61,7 @@ select c from LOB.Customer as c where c.DOB is not null
 |RowType IS NULL|エラーをスローします。|  
   
 ## <a name="example"></a>例  
+
  次の [!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリでは、IS NOT NULL 演算子を使用して、クエリ式が NULL でないかどうかを確認します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
 1. 「[方法: StructuralType 結果を返すクエリを実行する](../how-to-execute-a-query-that-returns-structuraltype-results.md)」の手順に従います。  

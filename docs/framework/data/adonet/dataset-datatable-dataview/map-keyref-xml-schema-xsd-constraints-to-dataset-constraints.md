@@ -2,14 +2,15 @@
 title: XML スキーマ (XSD) のキー参照制約の DataSet 制約への割り当て
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: 902b79b73f494ced0f54b29babff1b2e767bd47a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fe53232b6818b5bb28b433c4a473b6381b8e9083
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150884"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198562"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>XML スキーマ (XSD) のキー参照制約の DataSet 制約への割り当て
+
 **keyref** 要素を使用すると、ドキュメント内の要素間にリンクを確立できます。 これは、リレーショナル データベースの外部キーのリレーションシップと同様です。 スキーマに **keyref** 要素を指定すると、スキーマの割り当て処理時に keyref 要素がそれに対応する <xref:System.Data.DataSet> の列の外部キー制約に変換されます。 既定では、**keyref** 要素によってリレーションも生成され、リレーションに **ParentTable**、**ChildTable**、**ParentColumn**、**ChildColumn** プロパティが指定されます。  
   
  **keyref** 要素で指定できる **msdata** 属性を次の表に示します。  

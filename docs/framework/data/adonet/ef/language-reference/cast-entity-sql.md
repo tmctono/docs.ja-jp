@@ -2,14 +2,15 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: b7778d6a2e0b0dd15b2911f2d1cee36208e13328
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 5591f1947963dde45d34ad2342485af476765709
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738519"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198016"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
+
 あるデータ型の式を別のデータ型に変換します。  
   
 ## <a name="syntax"></a>構文  
@@ -19,6 +20,7 @@ CAST ( expression AS data_type )
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `expression`  
  `data_type`に変換できる任意の有効な式。  
   
@@ -26,9 +28,11 @@ CAST ( expression AS data_type )
  対象システムで提供されるデータ型。 プリミティブ (スカラー) 型でなければなりません。 使用される `data_type` は、クエリのスペースによって異なります。 クエリが <xref:System.Data.EntityClient.EntityCommand>で実行される場合、データ型は概念モデルで定義された型です。 詳細については、「 [CSDL Specification](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)」を参照してください。 クエリが <xref:System.Data.Objects.ObjectQuery%601>で実行される場合、データ型は共通言語ランタイム (CLR) 型です。  
   
 ## <a name="return-value"></a>戻り値  
+
  `data_type`と同じ値を返します。  
   
 ## <a name="remarks"></a>Remarks  
+
  キャスト式のセマンティクスは、Transact-SQL の CONVERT 式と似ています。 キャスト式は、ある型の値を別の型の値に変換する場合に使用します。  
   
 ```csharp
@@ -51,6 +55,7 @@ CAST( e as T )
 > CAST はプリミティブ型と列挙メンバー型のみでサポートされています。  
   
 ## <a name="example"></a>例  
+
  次の [!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリは CAST 演算子を使用して、あるデータ型の式を別のデータ型にキャストします。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
 1. 「[方法: PrimitiveType 結果を返すクエリを実行する](../how-to-execute-a-query-that-returns-primitivetype-results.md)」の手順に従います。  

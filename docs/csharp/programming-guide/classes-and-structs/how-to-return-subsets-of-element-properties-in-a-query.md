@@ -5,14 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 882d94bc82527c14bd6c038f4bf574c2211b9089
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 0ef68921b9d45e58024b37d559ee8291d8744af8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864372"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204022"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>クエリで要素のプロパティのサブセットを返す方法 (C# プログラミング ガイド)
+
 次の両方の条件に当てはまる場合は、クエリ式に匿名型を使用します。  
   
 - 各ソース要素のプロパティの一部のみを返したい。  
@@ -26,6 +27,7 @@ select student.ID;
 ```  
   
 ## <a name="example"></a>例  
+
  次に、匿名型を使用して、各ソース要素のプロパティのうち、指定した条件に一致するプロパティのみを返す例を示します。  
   
  [!code-csharp[csProgGuideLINQ#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#31)]  

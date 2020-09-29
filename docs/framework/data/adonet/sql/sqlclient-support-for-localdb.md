@@ -2,17 +2,19 @@
 title: SqlClient による LocalDB のサポート
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: d02524cd5901adeca7bc36d6fd13c7abdc46c69b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 841c455605b0b32668d26cab16a6207dc1c0f716
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894403"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203424"
 ---
 # <a name="sqlclient-support-for-localdb"></a>SqlClient による LocalDB のサポート
+
 SQL Server コード名 Denali 以降、SQL Server の簡易バージョンである LocalDB を使用できるようになります。 ここでは、LocalDB データベースに接続する方法について説明します。  
   
 ## <a name="remarks"></a>Remarks  
+
  LocalDB のインストール方法や LocalDB インスタンスの構成方法など、LocalDB の詳細については、SQL Server オンライン ブックを参照してください。  
   
  LocalDB で実行できる操作の概要を次に示します。  
@@ -32,6 +34,7 @@ SQL Server コード名 Denali 以降、SQL Server の簡易バージョンで�
  LocalDB は [Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=29065)からダウンロードできます。 sqlcmd.exe を使用し、LocalDB インスタンスのデータを変更する場合、SQL Server 2012 の sqlcmd が表になります。これは SQL Server 2012 Feature Pack からも入手できます。  
   
 ## <a name="programmatically-create-a-named-instance"></a>名前付きインスタンスをプログラムによって作成する  
+
  アプリケーションは、次のように名前付きインスタンスを作成してデータベースを指定できます。  
   
 - app.config ファイルに作成するための LocalDB インスタンスを次のように指定する。  インスタンスのバージョン番号は LocalDB インストールのバージョン番号と同じである必要があります。  

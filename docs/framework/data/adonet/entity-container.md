@@ -2,14 +2,15 @@
 title: エンティティ コンテナー
 ms.date: 03/30/2017
 ms.assetid: 16e80405-2c75-42fc-b0e4-b1df53b1c584
-ms.openlocfilehash: 0c194d86e6276c948a545f830e569cbc68f86a14
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 95fb59c86f951e75f0988f45219fd07cbb003c01
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737876"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200824"
 ---
 # <a name="entity-container"></a>エンティティ コンテナー
+
 "*エンティティ コンテナー*" は、[エンティティ セット](entity-set.md)、[アソシエーション セット](association-set.md)、および[関数インポート](model-declared-function.md)の論理グループです。  
   
  概念モデルで定義するエンティティ コンテナーは、次の条件を満たしている必要があります。  
@@ -21,6 +22,7 @@ ms.locfileid: "73737876"
  エンティティ コンテナーは、1 つ以上の名前空間に定義されたエンティティ型またはアソシエーションを使用するエンティティ セットまたはアソシエーション セットを定義できます。 詳しくは、「[Entity Data Model: 名前空間](entity-data-model-namespaces.md)」をご覧ください。  
   
 ## <a name="example"></a>例  
+
  下のダイアグラムは、`Book`、`Publisher`、および `Author` という 3 つのエンティティ型の概念モデルを示しています。  詳細については、次の例を参照してください。  
   
  ![3 種類のエンティティを持つモデルの例](./media/entity-container/example-model-three-entity-types.gif)  

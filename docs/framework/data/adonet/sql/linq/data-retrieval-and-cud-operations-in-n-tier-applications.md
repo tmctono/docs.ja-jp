@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: 5ab829993b8f8faa6dcb91d3f23e8442b8aa95bd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1bc97504b4dd053ce9ef747460a79865cbe836ee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148414"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197418"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>N 層アプリケーションでのデータ取得および CUD 操作 (LINQ to SQL)
+
 Customers または Orders のようなエンティティ オブジェクトをネットワークを介してクライアントにシリアル化すると、これらのエンティティはデータ コンテキストからデタッチされます。 変更内容、および他のオブジェクトとの関連付けはデータ コンテキストによって追跡されなくなります。 クライアントがデータを読み取るだけの場合は、これは問題にはなりません。 また、クライアントが新しい行をデータベースに追加できるようにすることも、ある程度簡単です。 しかし、アプリケーションでクライアントによるデータの更新または削除を可能にする必要がある場合には、<xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType> を呼び出す前に、新しいデータ コンテキストにエンティティをアタッチする必要があります。 さらに、元の値によるオプティミスティック コンカレンシーチェックを使用する場合には、何らかの方法で、元のエンティティと変更後のエンティティをデータベースに渡す必要もあります。 エンティティがデタッチされた後に新しいデータ コンテキストにエンティティを入れるために、`Attach` メソッドが用意されています。  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] エンティティの代わりにプロキシ オブジェクトをシリアル化する場合でも、データベースにデータを送るには、データ アクセス層 (DAL) 上にエンティティを構築して、新しい <xref:System.Data.Linq.DataContext?displayProperty=nameWithType> にそれをアタッチする必要があります。  
@@ -25,6 +26,7 @@ Customers または Orders のようなエンティティ オブジェクトを�
 ## <a name="retrieving-data"></a>データの取得  
   
 ### <a name="client-method-call"></a>クライアントのメソッド呼び出し  
+
  Windows フォーム クライアントから DAL に対するメソッド呼び出しの例を以下に示します。 この例では、DAL は Windows サービス ライブラリとして実装されています。  
   
 ```vb  
@@ -83,6 +85,7 @@ private void GetProdsByCat_Click(object sender, EventArgs e)
 ```  
   
 ### <a name="middle-tier-implementation"></a>中間層での実装  
+
  次の例は、中間層でのインターフェイス メソッドの実装を示しています。 ここでは、次の 2 つの点が重要です。  
   
 - <xref:System.Data.Linq.DataContext> はメソッドのスコープで宣言されます。  
@@ -124,9 +127,11 @@ public IEnumerable<Product> GetProductsByCategory(int categoryID)
  このメソッドは Product オブジェクトを返しますが、各 Product に関連付けられた Order_Detail オブジェクトのコレクションを返しません。 この既定の動作を変更するには、<xref:System.Data.Linq.DataLoadOptions> オブジェクトを使用します。 詳細については、[取得する関連データの量を制御する](how-to-control-how-much-related-data-is-retrieved.md)」をご覧ください。  
   
 ## <a name="inserting-data"></a>データの挿入  
+
  新しいオブジェクトを挿入するために、プレゼンテーション層は単に中間層インターフェイス上の関連するメソッドを呼び出して、挿入対象の新しいオブジェクトを渡します。 ただし、クライアントがいくつかの値だけを渡して、オブジェクト全体の構築を中間層に任せた方が効率的である場合もあります。  
   
 ### <a name="middle-tier-implementation"></a>中間層での実装  
+
  中間層で、新しい <xref:System.Data.Linq.DataContext> が作成され、<xref:System.Data.Linq.DataContext> メソッドを使ってオブジェクトが <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> にアタッチされて、<xref:System.Data.Linq.DataContext.SubmitChanges%2A> の呼び出し時にオブジェクトが挿入されます。 他の Web サービスのシナリオとまったく同じ方法で、例外、コールバック、エラー状態を処理できます。  
   
 ```vb  
@@ -155,6 +160,7 @@ End Sub
 ```  
   
 ## <a name="deleting-data"></a>データの削除  
+
  既存のオブジェクトをデータベースから削除するために、プレゼンテーション層は中間層インターフェイス上の関連するメソッドを呼び出して、削除対象のオブジェクトの元の値を含むコピーを渡します。  
   
  削除操作ではオプティミスティック コンカレンシー チェックが行われて、削除対象のオブジェクトを新しいデータ コンテキストに最初にアタッチする必要があります。 この例では、オブジェクトにタイムスタンプ (RowVersion) が含まれないことを示すために `Boolean` パラメーターが `false` に設定されます。 各レコードのタイムスタンプがデータベース テーブルで生成される場合には、コンカレンシー チェックは特にクライアントにとって非常に簡単です。 元のオブジェクトまたは変更後のオブジェクトを渡して、`Boolean` パラメーターを `true` に設定するだけです。 いずれの場合も、中間層では、通常、<xref:System.Data.Linq.ChangeConflictException> をキャッチする必要があります。 オプティミスティック コンカレンシーの競合を処理する方法について詳しくは、「[オプティミスティック コンカレンシー: 概要)](optimistic-concurrency-overview.md) の下のステートメントを右クリックします。  
@@ -208,6 +214,7 @@ public void DeleteOrder(Order order)
 ```  
   
 ## <a name="updating-data"></a>データの更新  
+
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、オプティミスティック コンカレンシーを行う次のようなシナリオでの更新をサポートします。  
   
 - タイムスタンプつまり RowVersion 番号に基づくオプティミスティック コンカレンシー。  
@@ -264,6 +271,7 @@ catch(ChangeConflictException e)
 ```  
   
 ### <a name="with-subset-of-original-values"></a>元の値のサブセットを使用した場合  
+
  この手法では、クライアントは変更対象の値と共に、シリアル化されたオブジェクト全体を返します。  
   
 ```vb  
@@ -377,6 +385,7 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
  コレクションを更新するには、<xref:System.Data.Linq.ITable.AttachAll%2A> ではなく `Attach` を呼び出します。  
   
 ### <a name="expected-entity-members"></a>必要なエンティティ メンバー  
+
  既に説明したように、`Attach` メソッドを呼び出す前に設定する必要があるのは、エンティティ オブジェクトのいくつかのメンバーだけです。 設定する必要のあるエンティティ メンバーは、次の条件を満たす必要があります。  
   
 - エンティティの ID の一部分である。  
@@ -392,6 +401,7 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
  これらの必要なメンバーのいずれかが欠落している場合、<xref:System.Data.Linq.ChangeConflictException> 中に <xref:System.Data.Linq.DataContext.SubmitChanges%2A> ("行が見つからないか変更されています") がスローされます。  
   
 ### <a name="state"></a>状態  
+
  エンティティ オブジェクトが <xref:System.Data.Linq.DataContext> インスタンスにアタッチされた後、そのオブジェクトは `PossiblyModified` 状態にあると見なされます。 アタッチされたオブジェクトを強制的に `Modified` 状態にする方法は、3 つあります。  
   
 1. 未変更としてアタッチした後、フィールドを直接変更する。  

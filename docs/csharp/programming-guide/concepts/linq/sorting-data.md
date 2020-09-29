@@ -3,14 +3,15 @@ title: データの並べ替え (C#)
 description: 並べ替え操作について、および C# の LINQ で並べ替え操作を実行する標準クエリ演算子メソッドについて説明します。
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: 5feeb0e2229fc370fdcb9608817f41832bffd7cc
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 0665e5dec95fd2929d24d82568de66597df1c0bd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302335"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195507"
 ---
 # <a name="sorting-data-c"></a>データの並べ替え (C#)
+
 並べ替え操作では、1 つ以上の属性に基づいてシーケンスの要素を並べ替えます。 並べ替えの第 1 条件で、要素に対して一回目の並べ替えが実行されます。 第 2 条件を指定すると、第 1 条件で並べ替えられた各グループ内の要素を並べ替えることができます。  
   
  次の図は、文字のシーケンスに対してアルファベット順の並べ替え操作を実行した結果を示しています。
@@ -34,6 +35,7 @@ ms.locfileid: "87302335"
 ### <a name="primary-sort-examples"></a>1 番目の並べ替えの例  
   
 #### <a name="primary-ascending-sort"></a>1 番目の並べ替え (昇順)  
+
  次の例は、LINQ クエリで `orderby` 句を使用して、配列内の文字列を文字列長に従って昇順に並べ替える方法を示しています。  
   
 ```csharp  
@@ -57,6 +59,7 @@ foreach (string str in query)
 ```  
   
 #### <a name="primary-descending-sort"></a>1 番目の並べ替え (降順)  
+
  次の例は、LINQ クエリで `orderby descending` 句を使用して、文字列を最初の文字に従って降順に並べ替える方法を示しています。  
   
 ```csharp  
@@ -82,6 +85,7 @@ foreach (string str in query)
 ### <a name="secondary-sort-examples"></a>2 番目の並べ替えの例  
   
 #### <a name="secondary-ascending-sort"></a>2 番目の並べ替え (昇順)  
+
  次の例は、LINQ クエリで `orderby` 句を使用して、配列内の文字列に対して 1 番目および 2 番目の並べ替えを実行する方法を示しています。 文字列は、最初に文字列長を基準として、次に文字列の最初の文字を基準として、どちらも昇順に並べ替えられます。  
   
 ```csharp  
@@ -105,6 +109,7 @@ foreach (string str in query)
 ```  
   
 #### <a name="secondary-descending-sort"></a>2 番目の並べ替え (降順)  
+
  次の例は、LINQ クエリで `orderby descending` 句を使用して、1 番目の並べ替えを昇順で実行し、2 番目の並べ替えを降順で実行する方法を示しています。 各文字列は、最初に文字列長を基準として、次に文字列の最初の文字を基準として並べ替えられます。  
   
 ```csharp  

@@ -2,14 +2,15 @@
 title: 既定の動作をオーバーライドするときの開発者の責任
 ms.date: 03/30/2017
 ms.assetid: c6909ddd-e053-46a8-980c-0e12a9797be1
-ms.openlocfilehash: 4bfb108e81f64ea368c6bcc846553eb1af5c23b1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 88a7076e12e39ed23aa6d661aa90f74258f3dded
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792728"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200434"
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>既定の動作をオーバーライドするときの開発者の責任
+
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、以下の要件を満たすことは強制ではないものの、これらの要件を満たさなかった場合の動作は未定義です。  
   
 - オーバーライドするメソッドでは、<xref:System.Data.Linq.DataContext.SubmitChanges%2A> も <xref:System.Data.Linq.Table%601.Attach%2A> も呼び出さないでください。 オーバーライド メソッドでこれらのメソッドを呼び出した場合、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] から例外がスローされます。  

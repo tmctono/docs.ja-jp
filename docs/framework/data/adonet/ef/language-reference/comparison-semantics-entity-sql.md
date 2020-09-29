@@ -2,17 +2,19 @@
 title: 比較セマンティクス (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
-ms.openlocfilehash: 57d81d4b581df76a4382ad5e1d72fe8250b10d43
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9a36fcc4476c25d64fed670e857f339fb20043d8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150455"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197834"
 ---
 # <a name="comparison-semantics-entity-sql"></a>比較セマンティクス (Entity SQL)
+
 次のいずれかの [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 演算子を実行すると、型インスタンスの比較が行われます。  
   
 ## <a name="explicit-comparison"></a>明示的な比較  
+
  等価演算  
   
 - =  
@@ -36,6 +38,7 @@ ms.locfileid: "79150455"
 - IS NOT NULL  
   
 ## <a name="explicit-distinction"></a>明示的な区別  
+
  等価区別  
   
 - DISTINCT  
@@ -47,6 +50,7 @@ ms.locfileid: "79150455"
 - ORDER BY  
   
 ## <a name="implicit-distinction"></a>暗黙的な区別  
+
  設定操作および述語 (等価)  
   
 - UNION  
@@ -64,6 +68,7 @@ ms.locfileid: "79150455"
 - IN  
   
 ## <a name="supported-combinations"></a>サポートされている組み合わせ  
+
  次の表は、各種類の型の比較演算子のサポートされているすべての組み合わせを示します。  
   
 |**Type**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**IS NULL**<br /><br /> **IS NOT NULL**|  

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: 70596d6acb62fa01092e5e55dd3b6c84eb162b5d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1b80ae78fad22989f99fb1e992d4978a192e0c66
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784328"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204529"
 ---
 # <a name="row-states-and-row-versions"></a>行の状態とバージョン
+
 ADO.NET は、行の状態とバージョンを使用してテーブル内の行を管理します。 行状態は、1 つの行のステータスを示します。行バージョンは、1 つの行の値が変更されるときに、変更に応じてその行に格納される現在の値、元の値、既定値などを維持します。 たとえば、ある行の 1 つの列を変更すると、この行の状態は `Modified` になり、次の 2 つの行バージョンが存在することになります。`Current` には現在の行値が格納され、`Original` にはその列が変更される前の行値が格納されます。  
   
  各 <xref:System.Data.DataRow> オブジェクトにある <xref:System.Data.DataRow.RowState%2A> プロパティを調べると、行の現在の状態を確認できます。 `RowState` 列挙値ごとの簡単な説明を次の表に示します。  

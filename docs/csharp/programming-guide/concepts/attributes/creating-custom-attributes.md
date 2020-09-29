@@ -3,14 +3,15 @@ title: カスタム属性の作成 (C#)
 description: 属性クラスから派生する属性クラスを定義することで、C# でカスタム属性を作成する方法について説明します。
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-ms.openlocfilehash: 7d6f98620388af8715652dcbcfe78366952b853d
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 6946b707134b2bdbc245b8786f144517a5870440
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925086"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202605"
 ---
 # <a name="creating-custom-attributes-c"></a>カスタム属性の作成 (C#)
+
 属性クラスを定義することで、独自のカスタム属性を作成できます。属性クラスは、<xref:System.Attribute> の直接的または間接的な派生クラスです。これにより、メタデータの中で属性の定義をすばやく簡単に特定できます。 型にそれを記述したプログラマーの名前でタグを付けるとします。 `Author` というカスタム属性クラスを定義します。  
   
 ```csharp  
