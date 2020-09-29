@@ -6,14 +6,15 @@ helpviewer_keywords:
 - generics [C#], attributes
 - attributes [C#], with generics
 ms.assetid: da9fc326-4648-454a-8e13-3911a2edefd7
-ms.openlocfilehash: 17556af2e1bc2963de953cea242d7000509acbcd
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 94378e44782169141314890bf90f050fdb6b5b79
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299878"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91184210"
 ---
 # <a name="generics-and-attributes-c-programming-guide"></a>ジェネリックと属性 (C# プログラミング ガイド)
+
 属性は、非ジェネリック型の場合と同様に、ジェネリック型に適用できます。 属性の適用については、「[属性](../concepts/attributes/index.md)」を参照してください。  
   
  カスタム属性は、型引数が与えられないオープン ジェネリック型と、すべての型パラメーターに引数が与えられる、構築クローズ ジェネリック型のみ参照が許可されます。  

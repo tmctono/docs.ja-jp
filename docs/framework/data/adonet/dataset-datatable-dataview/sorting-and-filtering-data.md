@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-ms.openlocfilehash: 09cee2f2b2c3288c835912c9f311bf2511c7b0d0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 89e2fdf656fb06ee545ba936f033646ad86182d4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785914"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183378"
 ---
 # <a name="sorting-and-filtering-data"></a>データの並べ替えとフィルター処理
+
 <xref:System.Data.DataView> には、<xref:System.Data.DataTable> のデータの並べ替えとフィルター処理を行うさまざまな方法が用意されています。  
   
 - <xref:System.Data.DataView.Sort%2A> プロパティを使用すれば、1 列または複数列の並べ替え順序を指定し、ASC (昇順) パラメーターと DESC (降順) パラメーターを含めることができます。  

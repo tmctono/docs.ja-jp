@@ -3,14 +3,15 @@ title: ディレクトリ ツリー内で最もサイズの大きいファイル
 description: この C# の例では、ファイル サイズ (バイト単位) に関連した 5 つの LINQ クエリを照会します。 これらを変更して、FileInfo オブジェクトが備えている他のいくつかのプロパティを照会することができます。
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: c06c6017d6fd1efd6412729c5df63a2b819908a6
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 049db9bf104af1593ba9807c307008e8e760da32
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104377"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176254"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>ディレクトリ ツリー内で最もサイズの大きいファイルを照会する方法 (LINQ) (C#)
+
 この例では、ファイル サイズ (バイト単位) に関連した 5 つのクエリを紹介しています。  
   
 - 最もサイズ (バイト単位) の大きいファイルを取得する方法。  
@@ -24,6 +25,7 @@ ms.locfileid: "87104377"
 - 指定サイズ未満のファイルを無視しながらバイト単位のサイズに基づいてファイルをグループ化する方法。  
   
 ## <a name="example"></a>例  
+
  以下のコードでは 5 つのクエリを使用して、バイト単位のサイズに基づいてファイルを照会し、グループ化しています。 サンプル コードを参考にして、<xref:System.IO.FileInfo> オブジェクトが備えている他のさまざまなプロパティを簡単に照会することができます。  
   
 ```csharp  
@@ -144,6 +146,7 @@ class QueryBySize
  このクエリでは、`GetFiles` の呼び出しで <xref:System.IO.FileInfo> オブジェクトが作成された後に別のスレッドでファイルが削除された場合に発生する例外の可能性に対処するために、別途設けられたメソッドを呼び出してファイル サイズ (バイト単位) を取得しています。 <xref:System.IO.FileInfo> オブジェクトの作成後であっても、例外は発生する可能性があります。<xref:System.IO.FileInfo> オブジェクトは、<xref:System.IO.FileInfo.Length%2A> プロパティが最初にアクセスされたときに最新のサイズ (バイト単位) に基づいてそのプロパティを更新しようと試みるためです。 この操作をクエリの外側の try-catch ブロックに置くことで、"副作用の原因となりうるような操作はクエリ内では行わない" という原則に従っているのです。 一般に、アプリケーションが不明な状態に陥ることのないよう、例外を処理する際には十分な注意が必要です。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
+
 System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。
 
 ## <a name="see-also"></a>関連項目

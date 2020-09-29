@@ -2,14 +2,15 @@
 title: OFTYPE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 6d259ca7-bbf0-40f8-a154-181d25c0d67e
-ms.openlocfilehash: 375fe9ce52ae290c175e42276b6b526766f6699c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b5600b4cee23945fe60142b370feb35ac1a2efa1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547513"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91175682"
 ---
 # <a name="oftype-entity-sql"></a>OFTYPE (Entity SQL)
+
 クエリ式を使用して、指定された型のオブジェクトのコレクションを返します。  
   
 ## <a name="syntax"></a>構文  
@@ -19,6 +20,7 @@ OFTYPE ( expression, [ONLY] test_type )
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `expression`  
  オブジェクトのコレクションを返す任意の有効なクエリ式。  
   
@@ -26,9 +28,11 @@ OFTYPE ( expression, [ONLY] test_type )
  `expression` から返される各オブジェクトを判定するための型。 型は名前空間で修飾する必要があります。  
   
 ## <a name="return-value"></a>戻り値  
+
  `test_type`型であるか、 `test_type`の基本データ型または派生型であるオブジェクトのコレクション。 ONLY を指定した場合、 `test_type` のインスタンスまたは空のコレクションのみ返されます。  
   
 ## <a name="remarks"></a>Remarks  
+
  `OFTYPE` 式は、コレクションの各要素の型を判定するための式です。  `OFTYPE` 式では、指定された型の新しいコレクションが生成されます。生成されたコレクションには、指定された型と同じか、そのサブタイプの要素だけが格納されます。  
   
  `OFTYPE` 式は、次のクエリ式の省略形です。  
@@ -60,6 +64,7 @@ OfType(executives, NamespaceName.Manager)
 |OFTYPE(Collection(RowType), RowType)|スロー|  
   
 ## <a name="example"></a>例  
+
  次の [!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリでは、OFTYPE 演算子を使用して、Course オブジェクトのコレクションから OnsiteCourse オブジェクトのコレクションを取得して返します。 このクエリは、 [School モデル](/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))に基づいています。  
   
  [!code-sql[DP EntityServices Concepts#OFTYPE](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#oftype)]  

@@ -3,14 +3,15 @@ title: SQL Server のクエリ通知
 description: SQL Server データベースのデータが変更された場合にアプリケーションに通知して、アプリケーションの表示の更新などを行うために、クエリ通知を使用する方法について説明します。
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 43b496db74f7e6fc9bc9f17d946bf34398b32312
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8001f75d7e278a965b6e8e00e4b9af7b770a8bb5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543986"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183092"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server のクエリ通知
+
 クエリ通知は Service Broker インフラストラクチャに基づいて構築されており、データが変更されたときにクエリ通知を使用してアプリケーションに通知できます。 この機能は、Web アプリケーションなど、データベースから情報のキャッシュを提供し、ソース データが変更された場合に通知を必要とするアプリケーションに特に役立ちます。  
   
  ADO.NET を使用してクエリ通知を実装する方法には、次の 3 つがあります。  
@@ -40,6 +41,7 @@ ms.locfileid: "90543986"
 - [開発者ガイド (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [クエリ通知の有効化](enabling-query-notifications.md)  
  クエリ通知を有効にするための要件を含め、クエリ通知の使用方法について説明します。  
   
@@ -53,6 +55,7 @@ ms.locfileid: "90543986"
  クエリ通知を使用する <xref:System.Data.SqlClient.SqlCommand> オブジェクトの構成例を示します。  
   
 ## <a name="reference"></a>関連項目  
+
  <xref:System.Data.Sql.SqlNotificationRequest>  
  <xref:System.Data.Sql.SqlNotificationRequest> クラスとそのすべてのメンバーについて説明します。  
   

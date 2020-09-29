@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: acb94efd8b6b6b66d0cc84309c2d68ad692b08d3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 20a573da0221704451f10138cb854523d5a17f17
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174499"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183053"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>パラメーターとしての XML 値の指定
+
 値が XML 文字列であるパラメーターがクエリに必要な場合、開発者はその値を **SqlXml** のインスタンスを使用して提供することができます。 特別な処理は必要ありません。SQL Server の XML 列は、他のデータ型と同じ方法でパラメーター値を受け入れます。  
   
 ## <a name="example"></a>例  
+
  次のコンソール アプリケーションでは、**AdventureWorks** データベースに新しいテーブルを作成します。 新しいテーブルには、**SalesID** という名前の列と、**SalesInfo** という名前の XML 列があります。  
   
 > [!NOTE]

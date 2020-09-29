@@ -3,14 +3,15 @@ title: XML ファイルからオブジェクト データを読み取る方法 (
 description: この C# の例では、XmlSerializer クラスを使用して、以前に XML ファイルに書き込まれたオブジェクト データを読み込みます。
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 525a93812279756b3802d43d85bb5e61d8f7415e
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 8d607424201cfad08df1c5ffbfb66a114b31886d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302790"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178763"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>XML ファイルからオブジェクト データを読み取る方法 (C#)
+
 次の例では、<xref:System.Xml.Serialization.XmlSerializer> クラスを使用して、XML ファイルに以前に書き込まれたオブジェクト データを読み込みます。  
   
 ## <a name="example"></a>例  
@@ -44,6 +45,7 @@ public void ReadXML()
 ```  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
+
 ファイル名 "c:\temp\SerializationOverview.xml" を、シリアル化されたデータを含むファイルの名前に置き換えます。 データのシリアル化の詳細については、「[XML ファイルにオブジェクト データを書き込む方法 (C#)](./how-to-write-object-data-to-an-xml-file.md)」を参照してください。
   
  クラスには、パラメーターのないパブリック コンストラクターが必要です。  
@@ -51,6 +53,7 @@ public void ReadXML()
  パブリック プロパティとパブリック フィールドだけが逆シリアル化されます。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
+
  次の条件を満たす場合は、例外が発生する可能性があります。  
   
 - シリアル化されるクラスにパブリックなパラメーターなしのコンストラクターがない場合  
@@ -60,6 +63,7 @@ public void ReadXML()
 - ファイルが存在しない (<xref:System.IO.IOException>)。  
   
 ## <a name="net-security"></a>.NET セキュリティ  
+
  入力を常に検証し、信頼できないソースから決してデータを逆シリアル化しないでください。 再作成されたオブジェクトは、そのオブジェクトを逆シリアル化したコードと同じアクセス許可を持つローカル コンピューターで実行されます。 アプリケーションでデータを使用する前に、入力をすべて検証してください。  
   
 ## <a name="see-also"></a>関連項目

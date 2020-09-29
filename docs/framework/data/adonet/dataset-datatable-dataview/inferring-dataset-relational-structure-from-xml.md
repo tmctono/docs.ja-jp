@@ -2,14 +2,15 @@
 title: XML からの DataSet リレーショナル構造の推論
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
-ms.openlocfilehash: 1c8325d7ed52fea7397a7b5aa8744bdfa90b2c6e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fca50491120346dea3e09c82324225f2114380fc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785318"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177580"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>XML からの DataSet リレーショナル構造の推論
+
 <xref:System.Data.DataSet> のリレーショナル構造 (スキーマ) は、テーブル、列、制約、およびリレーションで構成されます。 XML から <xref:System.Data.DataSet> を読み込むときには、事前定義されたスキーマを使用するか、または読み込む対象の XML から明示的にまたは推論によってスキーマを作成できます。 XML から <xref:System.Data.DataSet> のスキーマおよび内容を読み込む方法の詳細については、「[XML からの DataSet の読み込み](loading-a-dataset-from-xml.md)」および「[XML の DataSet スキーマ情報の読み込み](loading-dataset-schema-information-from-xml.md)」を参照してください。  
   
  <xref:System.Data.DataSet> のスキーマを XML から作成する場合は、XML スキーマ定義言語 (「[XML スキーマ (XSD) からの DataSet リレーショナル構造の派生](deriving-dataset-relational-structure-from-xml-schema-xsd.md)」を参照) または XDR (XML-Data Reduced) を使用して、スキーマを明示的に指定することをお勧めします。 XML で利用できる XML スキーマまたは XDR スキーマがない場合は、XML の要素および属性の構造から <xref:System.Data.DataSet> のスキーマを推論できます。  
@@ -19,6 +20,7 @@ ms.locfileid: "70785318"
  XML ドキュメント内のすべての属性を推論プロセスの対象には含めないでください。 名前空間で修飾された属性には、XML ドキュメントにとっては重要ですが、<xref:System.Data.DataSet> スキーマにとっては不要なメタデータが含まれていることがあります。 <xref:System.Data.DataSet.InferXmlSchema%2A> を使用して、推論プロセスの間に無視する特定の名前空間を指定できます。 詳しくは、「[XML の DataSet スキーマ情報の読み込み](loading-dataset-schema-information-from-xml.md)」をご覧ください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [DataSet スキーマの推論プロセスの概要](summary-of-the-dataset-schema-inference-process.md)  
  XML から <xref:System.Data.DataSet> のスキーマを推論するときの規則について概要を示します。  
   
@@ -38,6 +40,7 @@ ms.locfileid: "70785318"
  スキーマ推論の制限事項について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [DataSet での XML の使用](using-xml-in-a-dataset.md)  
  <xref:System.Data.DataSet> オブジェクトと XML データとの対話について説明します。  
   

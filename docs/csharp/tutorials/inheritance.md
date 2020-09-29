@@ -4,12 +4,12 @@ description: C# ライブラリやアプリケーションでの継承の使用�
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 70db8716bea84984ad56d79fa9e26aab3a8182fa
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: b0d6a4a3db4d6606375cc3364ee7abc3029f1d9b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063511"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190463"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# と .NET での継承
 
@@ -277,6 +277,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
 
 ## <a name="designing-abstract-base-classes-and-their-derived-classes"></a>抽象基底クラスとその派生クラスの設計
+
 <a name="abstract"></a>
 
 前述の例では、多くのメソッドの実装を提供する基底クラスを定義し、派生クラスがコードを共有できるようにしました。 しかし多くの場合、基底クラスが実装を提供する必要はありません。 むしろ基底クラスは、*抽象メソッド* を宣言する*抽象クラス* であり、各派生クラスで実装する必要があるメンバーを定義するテンプレートとして機能します。 通常、抽象基底クラスでは、派生型の実装はそれぞれその型に固有のものです。 クラスでは出版物に共通の機能の実装が提供されましたが、`Publication` オブジェクトをインスタンス化しても意味はないので、クラスは abstract キーワードでマークしました。

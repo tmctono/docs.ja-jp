@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: 6380dd0512bd7834f50b87f90f445cb01b7a8b95
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b979431836b55b23ac9ba6ec4535f33765dce555
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151560"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177736"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter DataTable と DataColumn のマップ
+
 **DataAdapter** の **TableMappings** プロパティには、0 個以上の <xref:System.Data.Common.DataTableMapping> オブジェクトのコレクションが含まれます。 **DataTableMapping** では、データ ソースに対するクエリで返されたデータと <xref:System.Data.DataTable> の間のマスター マッピングが提供されます。 **DataTableMapping** 名は、**DataAdapter** の **Fill** メソッドに **DataTable** 名の代わりとして渡すことができます。 **Authors** テーブルに対して **AuthorsMapping** という名前の **DataTableMapping** を作成する例を次に示します。  
   
 ```vb  
@@ -84,6 +85,7 @@ adapter.Fill(custDS, "Customers");
 > 列マップには、**SourceColumn***N* の命名規則を使用しないこと、また、テーブルの割り当てには **SourceTable***N* を使用しないことをお勧めします。これは、指定した名前が **ColumnMappingCollection** 内の既存する既定の列マップ名または **DataTableMappingCollection** 内のテーブル マップ名と競合しないようにするためです。 指定した名前が既に存在する場合は、例外がスローされます。  
   
 ## <a name="handling-multiple-result-sets"></a>複数の結果セットの処理  
+
  **SelectCommand** で複数のテーブルが返される場合、**Fill** では **DataSet** 内のテーブルに対する、インクリメント値を含むテーブル名が自動的に生成されます。これは、指定したテーブル名で開始し、**TableName***N* の形式で **TableName1** から数値を加算していく名前になります。 自動的に生成されたテーブル名は、テーブルの割り当てを使用して **DataSet** 内でテーブルに指定する名前に変換できます。 たとえば、**Customers** および **Orders** という 2 つのテーブルを返す **SelectCommand** に対して、次の **Fill** 呼び出しを実行します。  
   
 ```vb  

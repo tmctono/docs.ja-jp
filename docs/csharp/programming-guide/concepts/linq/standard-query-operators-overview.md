@@ -3,14 +3,15 @@ title: 標準クエリ演算子の概要 (C#)
 description: LINQ 標準クエリ演算子には、フィルター処理、プロジェクション、集計、C# の並べ替えなどのクエリ機能が用意されています。
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 8a399f52881e10f8d94263843b5992101f96a5ea
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 1ff98e47641dbe7a884b7d6c7758c1fe61b95091
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302322"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178776"
 ---
 # <a name="standard-query-operators-overview-c"></a>標準クエリ演算子の概要 (C#)
+
 "*標準クエリ演算子*" は、LINQ パターンを形成するメソッドです。 これらのメソッドの大部分はシーケンスに対して機能します。ここでシーケンスとは、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスまたは <xref:System.Linq.IQueryable%601> インターフェイスを実装している型のオブジェクトのことです。 標準クエリ演算子には、フィルター処理、プロジェクション、集計、並べ替えなどのクエリ機能が用意されています。  
   
  LINQ 標準クエリ演算子には 2 つのセットがあります。1 つは <xref:System.Collections.Generic.IEnumerable%601> 型のオブジェクトを操作する演算子、もう 1 つは <xref:System.Linq.IQueryable%601> 型のオブジェクトを操作する演算子です。 各セットを構成するメソッドは、それぞれ、<xref:System.Linq.Enumerable> および <xref:System.Linq.Queryable> クラスの静的メンバーです。 そのメソッドの操作対象である型の "*拡張メソッド*" として定義されています。 拡張メソッドは、静的メソッド構文またはインスタンス メソッド構文のいずれかを使用して呼び出すことができます。  
@@ -68,12 +69,15 @@ foreach (var obj in query)
 ```  
   
 ## <a name="query-expression-syntax"></a>クエリ式の構文  
+
  頻繁に使用される標準クエリ演算子の中には、C# および Visual Basic 言語専用のキーワード構文が使用されているものがあります。こうした構文では、標準クエリ演算子を、"*クエリ* *式*" の一部として呼び出すことができます。 専用キーワードおよびそれに対応する構文が使用されている標準クエリ演算子の詳細については、「[標準クエリ演算子のクエリ式構文 (C#)](./query-expression-syntax-for-standard-query-operators.md)」を参照してください。  
   
 ## <a name="extending-the-standard-query-operators"></a>標準クエリ演算子の拡張  
+
  標準クエリ演算子のセットを拡張するには、対象のドメインまたはテクノロジに適したドメイン固有のメソッドを作成します。 また、標準クエリ演算子を、リモート評価、クエリ変換、最適化などの追加サービスが用意されている独自の実装で置き換えることもできます。 例については、「<xref:System.Linq.Enumerable.AsEnumerable%2A>」を参照してください。  
   
 ## <a name="related-sections"></a>関連項目  
+
  次のリンクをクリックすると、さまざまな標準クエリ演算子に関する追加情報を機能別に提供する記事に移動します。  
   
  [データの並べ替え (C#)](./sorting-data.md)  

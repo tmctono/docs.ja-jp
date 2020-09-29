@@ -2,14 +2,15 @@
 title: ORDER BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: 1233971b172079aa48227d0ec520068afbdf0952
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e1c418a7f2bd40a42b259fb3784794b13098d7f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150070"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173680"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (Entity SQL)
+
 SELECT ステートメントで返されるオブジェクトで使用される並べ替え順を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -26,6 +27,7 @@ SELECT ステートメントで返されるオブジェクトで使用される�
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `order_by_expression`  
  並べ替えるプロパティを指定する有効なクエリ式。 並べ替えのキーとなる式を複数指定できます。 ORDER BY 句内に記述するキー式の並び順によって、並べ替えられた結果セットの構成が決まります。  
   
@@ -45,6 +47,7 @@ SELECT ステートメントで返されるオブジェクトで使用される�
  最初の `n` 個の項目をスキップします。  
   
 ## <a name="remarks"></a>Remarks  
+
  ORDER BY 句は、SELECT 句の結果に論理的に適用されます。 ORDER BY 句では、別名を使用して選択リストの項目を参照できます。 ORDER BY 句は、現在スコープ内にあるその他の変数も参照できます。 ただし、SELECT 句が DISTINCT 修飾子で指定されている場合は、ORDER BY 句は SELECT 句の別名のみを参照できます。  
   
  `SELECT c AS c1 FROM cs AS c ORDER BY c1.e1, c.e2`  
@@ -79,6 +82,7 @@ ORDER BY ...
 ```  
   
 ## <a name="restricted-keywords"></a>制限付きのキーワード  
+
  次のキーワードは `ORDER BY` 句で使用する場合には、引用符で囲む必要があります。  
   
 - CROSS  
@@ -100,6 +104,7 @@ ORDER BY ...
 - VALUE  
   
 ## <a name="ordering-nested-queries"></a>入れ子になったクエリの順序  
+
  Entity Framework では、入れ子になった式をクエリ内の任意の場所に配置できるため、入れ子になったクエリの順序は維持されません。  
 
 次のクエリでは、結果が姓の順に並べ替えられます。  
@@ -120,6 +125,7 @@ SELECT C2.FirstName, C2.LastName
 ```  
   
 ## <a name="example"></a>例  
+
  次の [!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリでは、SELECT ステートメントで返されたオブジェクトの並べ替え順序の指定に ORDER BY 演算子を使用します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
 1. 「[方法: StructuralType 結果を返すクエリを実行する](../how-to-execute-a-query-that-returns-structuraltype-results.md)」の手順に従います。  

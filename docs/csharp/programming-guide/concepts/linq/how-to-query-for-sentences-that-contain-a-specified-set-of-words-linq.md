@@ -3,14 +3,15 @@ title: 指定されたワードのセットを含む文章を照会する方法 
 description: C# で LINQ を使用して、実行時に設定される一連の単語のそれぞれと一致する文言を含む文をテキスト ファイルから検索する方法について説明します。
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: daf86d6641b82fb77ca237e8a190b4f60b9dea4d
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 7c5979fc42b6446948ae974e599807b5cb8db04a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465651"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176280"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>指定されたワードのセットを含む文章を照会する方法 (LINQ) (C#)
+
 この例は、指定された一連の単語と一致する文言を含む文をテキスト ファイルから検索する方法を示しています。 この例では検索語句の配列をハードコーディングしていますが、実行時に動的に設定することもできます。 この例のクエリを実行すると、"Historically"、"data"、"integrated" という単語をすべて含んだ文が返されます。  
   
 ## <a name="example"></a>例  
@@ -68,6 +69,7 @@ Historically, the world of data and the world of objects have not been well inte
  句読点を文字列から削除するために、<xref:System.String.Split%2A> の呼び出しでは句読点を区切り記号として使用しています。 この処理がないと、たとえば "Historically," という文字列があった場合に、`wordsToMatch` 配列内の "Historically" と一致しません。 ソース テキストに使われている句読点の種類によっては、別の区切り記号を使う必要があります。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
+
 System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。
 
 ## <a name="see-also"></a>関連項目

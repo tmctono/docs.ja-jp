@@ -3,19 +3,21 @@ title: 診断トレース
 description: .NET の診断トレースについて説明します。 トレースとは、アプリケーションの実行中に生成される特定のメッセージの発行です。
 ms.date: 03/30/2017
 ms.assetid: 28e77a63-d20d-4b6a-9caf-ddad86550427
-ms.openlocfilehash: 5de8fdf7b95cf01b119118dac75d373c32949dcd
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 1999cd922b9e7299cbf3c10a702eb4d2dc6c3fbb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141812"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177242"
 ---
 # <a name="diagnostic-traces"></a>診断トレース
+
 トレースとは、アプリケーションの実行中に生成される特定のメッセージの発行です。 トレースを使用するときには、送信されたメッセージを収集して記録するための機構が必要です。 トレース メッセージは "リスナー" によって受け取られます。 リスナーの目的は、トレース メッセージの収集、格納、およびルーティングを行うことです。 リスナーにより、トレース出力が適切な場所 (ログ、ウィンドウ、またはテキスト ファイル) に送られます。  
   
  トレースを有効にすると、こうしたリスナーの 1 つである <xref:System.Diagnostics.DefaultTraceListener> が自動的に作成および初期化されます。 トレース出力を別のソースに送るには、別のトレース リスナーを作成して初期化する必要があります。 作成するリスナーには、個別の要求が反映されている必要があります。 たとえば、すべてのトレース出力のテキスト レコードが必要である場合は、 有効になったときにすべての出力を新しいテキスト ファイルに書き込むリスナーを作成します。 また、アプリケーションの実行時に出力を表示するだけでよい場合は、 すべての出力をコンソール ウィンドウに送るリスナーを作成します。 <xref:System.Diagnostics.EventLogTraceListener> はイベント ログにトレース出力を転送し、<xref:System.Diagnostics.TextWriterTraceListener> はストリームにトレース出力を書き込みます。  
   
 ## <a name="enabling-tracing"></a>トレースの有効化  
+
  トランザクション処理中にトレースを有効にするには、アプリケーションの構成ファイルを編集する必要があります。 次に例を示します。  
   
 ```xml  
@@ -46,6 +48,7 @@ ms.locfileid: "85141812"
 |情報|システム ステータスの監視と診断、パフォーマンスの計測、またはプロファイリングに有用なメッセージが生成されます。 これには、トランザクションの作成またはコミット、重要な境界の超過、重要なリソースの割り当てなど、トランザクションと参加の有効期間イベントが含まれる場合があります。 このような情報は、後で開発者が容量設計やパフォーマンス管理に利用できます。|  
   
 ## <a name="trace-codes"></a>トレース コード  
+
  次の表は、<xref:System.Transactions> インフラストラクチャで生成されるトレース コードの一覧です。 この表には、トレース コード識別子、トレースの <xref:System.Diagnostics.EventTypeFilter.EventType%2A> 列挙レベル、およびトレースの **TraceRecord** に含まれる追加データが示されています。 さらに、そのトレースに対応するトレース レベルも **TraceRecord** に保存されます。  
   
 |TraceCode|EventType|TraceRecord の追加データ|  
@@ -78,6 +81,7 @@ ms.locfileid: "85141812"
  上の各追加データ項目に対する XML スキーマの形式は次のとおりです。  
   
 ### <a name="transactiontraceidentifier"></a>TransactionTraceIdentifier  
+
  `<TransactionTraceIdentifier>`  
   
  `<TransactionIdentifier >`  
@@ -95,6 +99,7 @@ ms.locfileid: "85141812"
  `</TransactionTraceIdentifier>`  
   
 ### <a name="enlistmenttraceidentifier"></a>EnlistmentTraceIdentifier  
+
  `<EnlistmentTraceIdentifier>`  
   
  `<ResourceManagerId>`  
@@ -128,6 +133,7 @@ ms.locfileid: "85141812"
  `</EnlistmentTraceIdentifier>`  
   
 ### <a name="resource-manager-identifier"></a>リソース マネージャー識別子  
+
  `<ResourceManagerId>`  
   
  `string form of guid`  
@@ -135,4 +141,5 @@ ms.locfileid: "85141812"
  `</ResourceManagerId>`  
   
 ## <a name="security-issues-for-tracing"></a>トレースのセキュリティに関する問題  
+
  管理者がトレース機能を有効にすると、既定で、パブリックに表示可能なトレース ログに機密情報が書き込まれる可能性があります。 潜在的なセキュリティの脅威を緩和するため、共有およびファイル システムのアクセス許可によって管理される安全な場所にトレース ログを保存することを考慮する必要があります。

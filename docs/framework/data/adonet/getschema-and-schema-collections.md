@@ -5,22 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-ms.openlocfilehash: e18c23e9bbec97a64110aba6eb7241761ecece06
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cea9deb7fe019fea189a87fc08468d010929db9a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149558"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177450"
 ---
 # <a name="getschema-and-schema-collections"></a>GetSchema およびスキーマ コレクション
+
 それぞれの .NET Framework マネージド プロバイダーの **Connection** クラスは、**GetSchema** メソッドを実装します。このメソッドは、現在接続されているデータベースに関するスキーマ情報を取得するために使用されます。**GetSchema** メソッドから返されるスキーマ情報は、<xref:System.Data.DataTable> という形式になります。 **GetSchema** メソッドはオーバーロードされたメソッドであり、オプションのパラメーターで、取得するスキーマ コレクションを指定し、返される情報の量を制限することができます。  
   
 ## <a name="specifying-the-schema-collections"></a>スキーマ コレクションの指定  
+
  **GetSchema** メソッドの最初のオプション パラメーターは、文字列として指定されるコレクションの名前です。 スキーマ コレクションには 2 種類あります。すべてのプロバイダーに共通している一般的なスキーマ コレクションと、各プロバイダーによって固有のスキーマ コレクションです。  
   
  .NET Framework マネージド プロバイダーでは、引数を指定しないで、またはスキーマ コレクション名に "MetaDataCollections" を指定して **GetSchema** メソッドを呼び出すことにより、サポートされるスキーマ コレクションの一覧を決定します。 これにより、サポートされるスキーマ コレクションの一覧、それぞれがサポートする制限数、および使用する識別子部分の数と共に、<xref:System.Data.DataTable> が返されます。  
   
 ### <a name="retrieving-schema-collections-example"></a>スキーマ コレクションの取得例  
+
  .NET Framework Data Provider for the SQL Server の <xref:System.Data.SqlClient.SqlConnection> クラスの <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> メソッドを使って、**AdventureWorks** サンプル データベースに含まれるすべてのテーブルに関するスキーマ情報を取得する方法について、いくつかの例を次に示します。  
   
 ```vb  

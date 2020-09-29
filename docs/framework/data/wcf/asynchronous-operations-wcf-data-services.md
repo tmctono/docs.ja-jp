@@ -6,14 +6,15 @@ helpviewer_keywords:
 - asynchronous operations [WCF Data Services]
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
-ms.openlocfilehash: d1f45979dba5c3ab0dccc8d0a61a7abaa9913e11
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: cf3a81914d78e8f08c06602600ce5dcef4f4d35b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556864"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91191646"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>非同期操作 (WCF Data Services)
+
 Web アプリケーションは、内部ネットワーク内で実行するアプリケーションより長い、クライアントとサーバーとの間の待機時間に対応する必要があります。 Web を介して WCF Data Services サーバーにアクセスする場合、アプリケーションのパフォーマンスとユーザー エクスペリエンスを最適化するために <xref:System.Data.Services.Client.DataServiceContext> クラスおよび <xref:System.Data.Services.Client.DataServiceQuery%601> クラスの非同期メソッドを使用することをお勧めします。  
   
  WCF Data Services サーバーでは、HTTP 要求は非同期として処理されますが、WCF Data Services クライアント ライブラリの一部のメソッドは同期であり、要求と応答のやり取りがすべて完了するまで待ってから実行が継続されます。 WCF Data Services クライアント ライブラリの非同期メソッドでは、このやり取りの完了を待たず、アプリケーションはユーザー インターフェイスの応答性を維持できます。  
@@ -34,6 +35,7 @@ Web アプリケーションは、内部ネットワーク内で実行するア�
 |オブジェクトに対する変更の <xref:System.Data.Services.Client.DataServiceContext> への保存。|-   <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>|  
   
 ## <a name="threading-considerations-for-asynchronous-operations"></a>非同期操作のスレッドに関する考慮事項  
+
  マルチスレッド アプリケーションでは、非同期操作のコールバックとして登録されたデリゲートは、最初の要求を作成する *Begin* メソッドの呼び出しに使用されたものと同じスレッドで必ずしも呼び出す必要はありません。 特定のスレッドでコールバックを呼び出す必要のあるアプリケーションでは、応答を処理する *End* メソッドの実行を目的のスレッドに明示的にマーシャリングする必要があります。 たとえば、Windows Presentation Foundation (WPF) ベースのアプリケーションおよび Silverlight ベースのアプリケーションでは、<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> オブジェクトで <xref:System.Windows.Threading.Dispatcher> メソッドを使用して応答を UI スレッドにマーシャリングする必要があります。 詳細については、「[データ サービスのクエリ (WCF Data Services/Silverlight)](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc903932(v=vs.95))」を参照してください。  
   
 ## <a name="see-also"></a>関連項目

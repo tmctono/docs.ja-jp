@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Office programming [C#], indexed properties
 - properties [C#], indexed
 ms.assetid: 756bfc1e-7c28-4d4d-b114-ac9288c73882
-ms.openlocfilehash: abd785864bd79d455024cb4501c76a21b349aa91
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 5f239a0772f734391bd68ef6618ea8ece8e8c9cd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303011"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178490"
 ---
 # <a name="how-to-use-indexed-properties-in-com-interop-programming-c-programming-guide"></a>COM 相互運用機能を使用したプログラミングでインデックス付きプロパティを使用する方法 (C# プログラミング ガイド)
+
 "*インデックス付きプロパティ*" により、パラメーターを持つ COM プロパティが C# プログラミングでいっそう使いやすくなります。 インデックス付きプロパティは、[名前付き引数と省略可能な引数](../classes-and-structs/named-and-optional-arguments.md)、新しい型 ([dynamic](../../language-reference/builtin-types/reference-types.md))、[埋め込み型情報](../../../standard/assembly/embed-types-visual-studio.md)などの Visual C# の他の機能と連携して、Microsoft Office プログラミングをいっそう強力なものにします。  
   
  以前のバージョンの C# では、プロパティとしてメソッドにアクセスできるのは、`get` メソッドがパラメーターを持たず、`set` メソッドが 1 つだけ値パラメーターを持つ場合に限られました。 しかし、すべての COM プロパティがこのような制限を満たしているわけではありません。 たとえば、Excel の <xref:Microsoft.Office.Interop.Excel.Range.Range%2A> プロパティには、範囲の名前のパラメーターを必要とする `get` アクセサーがあります。 これまでは、このような `Range` プロパティに直接アクセスすることはできず、次の例に示すように、`get_Range` メソッドを代わりに使う必要がありました。  
@@ -39,6 +40,7 @@ ms.locfileid: "87303011"
  独自のインデックス付きプロパティを作成することはできません。 この機能では、既存のインデックス付きプロパティの使用のみがサポートされます。  
   
 ## <a name="example"></a>例  
+
  次に完全なコードの例を示します。 Office API にアクセスするプロジェクトを設定する方法の詳細については、「[C# の機能を使用して Office 相互運用オブジェクトにアクセスする方法](./how-to-access-office-onterop-objects.md)」をご覧ください。
   
  [!code-csharp[csProgGuideIndexedProperties#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideindexedproperties/cs/program.cs#5)]  

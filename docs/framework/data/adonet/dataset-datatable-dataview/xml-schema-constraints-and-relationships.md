@@ -2,19 +2,21 @@
 title: XML スキーマ制約およびリレーションシップ
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 2388d7c277ba1f01bea8d419e5aedf487b843ed7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5861386e42defa189aaa50a3af0bd95d7e9257fd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150715"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173706"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>XML スキーマ制約およびリレーションシップ
+
 XML スキーマ定義言語 (XSD) スキーマでは、制約 (UNIQUE、キー、キー参照) およびリレーションシップ (**msdata:Relationship** 注釈を使用した) を指定できます。 このトピックでは、XML スキーマで指定した制約およびリレーションシップを解釈して <xref:System.Data.DataSet> を生成する方法について説明します。  
   
  一般的に、XML スキーマでは **DataSet** にリレーションシップだけを生成する場合に、**msdata:Relationship** 注釈を指定します。 詳細については、「[XML スキーマ (XSD) からの DataSet リレーションの生成](generating-dataset-relations-from-xml-schema-xsd.md)」を参照してください。 **DataSet** に制約を生成する場合は、制約 (UNIQUE、キー、およびキー参照) を指定します。 このトピックの後に説明されているように、リレーションシップを生成するにはキー制約とキー参照制約も使用するので注意してください。  
   
 ## <a name="generating-a-relationship-from-key-and-keyref-constraints"></a>キー制約およびキー参照制約によるリレーションシップの生成  
+
  **msdata:Relationship** 注釈を指定する代わりに、XML スキーマの割り当て処理時に使用するキー制約とキー参照制約を指定し、制約だけでなく、**DataSet** のリレーションシップも生成することができます。 ただし、**keyref** 要素で `msdata:ConstraintOnly="true"` を指定した場合、**DataSet** には制約だけが作成され、リレーションシップは生成されません。  
   
  入れ子になっていない **Order** 要素と **OrderDetail** 要素を含む XML スキーマの例を次に示します。 スキーマでは、キー制約とキー参照制約も指定します。  

@@ -2,14 +2,15 @@
 title: テーブルの推論
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-ms.openlocfilehash: 52ffd3fe90eb491dd01acf8538276cc828fdb309
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4a3d7b239dbc405cf2acae967b5be401dc772e38
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784486"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177554"
 ---
 # <a name="inferring-tables"></a>テーブルの推論
+
 XML ドキュメントから <xref:System.Data.DataSet> のスキーマを推論するときには、ADO.NET では、テーブルを表す XML 要素を最初に決定します。 次に示す XML 構造では、**DataSet** スキーマのテーブルが推論されます。  
   
 - 属性を持つ要素  
@@ -19,6 +20,7 @@ XML ドキュメントから <xref:System.Data.DataSet> のスキーマを推論
 - 繰り返し出現する要素  
   
 ## <a name="elements-with-attributes"></a>属性を持つ要素  
+
  要素に属性が指定されている場合は、それらの要素はテーブルとして推論されます。 たとえば、次のような XML があるとします。  
   
 ```xml  
@@ -40,6 +42,7 @@ XML ドキュメントから <xref:System.Data.DataSet> のスキーマを推論
 |value2|Text1|  
   
 ## <a name="elements-with-child-elements"></a>子要素を持つ要素  
+
  子要素を持つ要素は、テーブルとして推論されます。 たとえば、次のような XML があるとします。  
   
 ```xml  
@@ -98,6 +101,7 @@ XML ドキュメントから <xref:System.Data.DataSet> のスキーマを推論
 |value1|value2|  
   
 ## <a name="repeating-elements"></a>繰り返し出現する要素  
+
  繰り返し出現する要素は、単一のテーブルとして推論されます。 たとえば、次のような XML があるとします。  
   
 ```xml  

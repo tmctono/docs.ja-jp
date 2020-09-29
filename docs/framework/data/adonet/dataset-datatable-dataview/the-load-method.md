@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
-ms.openlocfilehash: f1c819333225c22efb85946001a1fc8340d57989
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea437d1f8ed567934acafbd8db1f8dba8eb22bcc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150728"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177541"
 ---
 # <a name="the-load-method"></a>Load メソッド
+
 <xref:System.Data.DataTable.Load%2A> メソッドを使用して、データ ソースの行を <xref:System.Data.DataTable> に読み込むことができます。 これはオーバーロードされたメソッドで、最も単純な形式で単一の **DataReader** パラメーターを受け取ります。 この形式により、このメソッドでは **DataTable** に対する行の読み込みのみが行われます。 または、**LoadOption** パラメーターを指定して **DataTable** へのデータの追加方法を制御することもできます。  
   
  **LoadOption** パラメーターは、データ ソースからの受信データをテーブルに既に格納されているデータと組み合わせる方法が記述されているため、**DataTable** に既にデータ行が含まれている場合に特に便利です。 たとえば、**PreserveCurrentValues** (既定値) は、**DataTable** の行が **Added** としてマークされ、データ ソースの行に一致する内容に対して **Original** 値または各列が設定されている場合に指定します。 **Current** 値は、行が追加されたときに割り当てられた値が保持され、その行の **RowState** は **Changed** に設定されます。  

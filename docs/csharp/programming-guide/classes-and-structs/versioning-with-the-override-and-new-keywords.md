@@ -6,14 +6,15 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: c2630741e1055a14dd5b9e4445d660cfd68891b0
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 13321cdc83637105a2b981902ce984e6a90a25d9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86863865"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181818"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Override キーワードと New キーワードによるバージョン管理 (C# プログラミング ガイド)
+
 C# 言語は、異なるライブラリ内の[基底](../../language-reference/keywords/base.md)クラスと派生クラス間でのバージョン管理を進化させると同時に、下位互換性も維持されるよう設計されています。 そのため、たとえば、派生クラスのメンバーと同じ名前を使用して基底[クラス](../../language-reference/keywords/class.md)の新規メンバーが導入されても、C# では完全にサポートされ、予期しない動作は発生しません。 ただしこのことは、メソッドが派生メソッドをオーバーライドするためのものなのか、それとも同じ名前の派生メソッドを非表示にする新規メソッドなのかを、クラスで明示的に記述しなければならないということでもあります。  
   
  C# では、派生クラスに基底クラスと同じ名前のメソッドを含めることができます。  
@@ -65,6 +66,7 @@ C# 言語は、異なるライブラリ内の[基底](../../language-reference/k
  `new` キーワードを使用すると、その定義によって基底クラス内の定義が非表示にされることがコンパイラに伝えられます。 これが既定の動作です。  
   
 ## <a name="override-and-method-selection"></a>オーバーライドとメソッド選択  
+
  クラスでメソッドを指定したときに、その呼び出しと互換性のあるメソッドが 2 つ以上ある場合、C# コンパイラはどのメソッドを呼び出すのが最適かを選択します (たとえば、同じ名前のメソッドが 2 つあり、そのパラメーターと、渡されたパラメーターとの間に互換性がある場合)。 たとえば、次の各メソッドには互換性があります。  
   
  [!code-csharp[csProgGuideInheritance#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#32)]  

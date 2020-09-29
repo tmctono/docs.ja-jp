@@ -2,14 +2,15 @@
 title: リレーションシップの推論
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-ms.openlocfilehash: 4c9c13453e4a830fcda337e8163649ba6491a995
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ee691eee95c34afdb6374cdd7448d4b44ece3055
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785365"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177567"
 ---
 # <a name="inferring-relationships"></a>リレーションシップの推論
+
 テーブルとして推論される要素に、同じくテーブルとして推論される子の要素が含まれている場合には、2 つのテーブル間に <xref:System.Data.DataRelation> が作成されます。 この場合、**ParentTableName_Id** という名前の新しい列が、親の要素に対して作成されたテーブルと、子の要素に対して作成されたテーブルの両方に追加されます。 この ID 列の **ColumnMapping** プロパティは、**MappingType.Hidden** に設定されます。 この列が、親テーブルの自動的にインクリメントされる主キーとなり、2 つのテーブル間の **DataRelation** で使用されます。 推論される他のすべての列のデータ型は **System.String** になりますが、追加される ID 列のデータ型は **System.Int32** になります。 親テーブルと子テーブル両方の新しい列を使用して、**DeleteRule** = **Cascade** である <xref:System.Data.ForeignKeyConstraint> も作成されます。  
   
  たとえば、次のような XML があるとします。  

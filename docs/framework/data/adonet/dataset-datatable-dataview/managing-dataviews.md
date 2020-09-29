@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-ms.openlocfilehash: 5e85fccddf6359791ea702667a36b44f611815dc
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c07f521b94f23b479281b0314d6b89a095ee9624
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784507"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181246"
 ---
 # <a name="managing-dataviews"></a>DataViews の管理
+
 <xref:System.Data.DataViewManager> のすべてのテーブルのビュー設定を管理するには、<xref:System.Data.DataView> を使用します。 リレーションシップを移動するグリッドなどのように、1 つのコントロールを複数のテーブルに連結する場合は、**DataViewManager** が適しています。  
   
  **DataViewManager** には、<xref:System.Data.DataSet> のテーブルのビュー設定に使用される <xref:System.Data.DataViewSetting> オブジェクトのコレクションが含まれています。 <xref:System.Data.DataViewSettingCollection> には、**DataSet** の各テーブルに対応する <xref:System.Data.DataViewSetting> オブジェクトが 1 つずつ含まれています。 **DataViewSetting** を使用することで、参照テーブルの既定の **ApplyDefaultSort**、**Sort**、**RowFilter**、**RowStateFilter** の各プロパティを設定できます。 名前または序数参照によって、または参照をその特定のテーブル オブジェクトに渡すことによって、特定のテーブルの **DataViewSetting** を参照できます。 **DataViewSettings** プロパティを使用することで、**DataViewManager** の **DataViewSetting** オブジェクトのコレクションにアクセスできます。  

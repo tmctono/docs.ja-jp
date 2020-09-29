@@ -2,17 +2,19 @@
 title: '方法: 変更の競合を管理する'
 ms.date: 03/30/2017
 ms.assetid: cd292c51-a3d1-4c6f-8d8e-04323c36054e
-ms.openlocfilehash: 49ccb08a375b612e62a8911e98f8ec08058802db
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 496971a99522c2547759905833ce2e89ea00826b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781838"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173407"
 ---
 # <a name="how-to-manage-change-conflicts"></a>方法: 変更の競合を管理する
+
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] には、コンカレンシーの競合の発見、評価、および解決に使用できる API が用意されています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [方法: 送信の競合を検出および解決する](how-to-detect-and-resolve-conflicting-submissions.md)  
  コンカレンシーの競合を検出および解決する方法を説明します。  
   
@@ -38,5 +40,6 @@ ms.locfileid: "70781838"
  データベースの値と現在の値をマージして競合を解決する方法を説明します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [オプティミスティック コンカレンシー: 概要](optimistic-concurrency-overview.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のオプティミスティック コンカレンシーで使用される用語を説明します。

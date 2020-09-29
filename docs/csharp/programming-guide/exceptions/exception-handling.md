@@ -6,14 +6,15 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: 8e55b44573c40f594e567fc5a4501689e66c7af4
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 8f7dc027396e327f08a591ced6bd6df176a17606
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302036"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178685"
 ---
 # <a name="exception-handling-c-programming-guide"></a>例外処理 (C# プログラミング ガイド)
+
 [try](../../language-reference/keywords/try-catch.md) ブロックは、例外の影響を受ける可能性があるコードを区分化するために、 C# プログラマによって使用されます。 関連付けられた [catch](../../language-reference/keywords/try-catch.md) ブロックは、スローされた例外を処理するために使用されます。 [finally](../../language-reference/keywords/try-finally.md) ブロックには、`try` ブロックで例外がスローされたかどうかにかかわらず実行されるコードが記述されます (`try` ブロックに割り当てられたリソースの解放など)。 `try` ブロックには、1 つ以上の `catch` ブロック、`finally` ブロック、またはその両方が関連付けられる必要があります。  
   
  次のコードは、`try-catch` ステートメント、`try-finally` ステートメント、および `try-catch-finally` ステートメントの例です。  
@@ -27,6 +28,7 @@ ms.locfileid: "87302036"
  `try` ブロックに `catch` または `finally` ブロックがない場合は、コンパイル エラーが発生します。  
   
 ## <a name="catch-blocks"></a>catch ブロック  
+
  `catch` ブロックでは、キャッチする例外の種類を指定できます。 この型指定は、*例外フィルター*と呼ばれます。 例外の種類は、<xref:System.Exception> から派生している必要があります。 一般に、`try` ブロックでスローされる可能性があるすべての例外の処理方法を把握している場合や、`catch` ブロックの末尾に [throw](../../language-reference/keywords/throw.md) ステートメントを記述している場合を除いては、例外フィルターとして <xref:System.Exception> を指定することは避けてください。  
   
  複数の `catch` ブロックに異なる例外フィルターが含まれている場合は、それらを連結することができます。 `catch` ブロックはコード内で上から下に評価されますが、スローされた各例外に対して実行される `catch` ブロックは 1 つだけです。 スローされた例外の厳密な型か、その基底クラスを指定する最初の `catch` ブロックが実行されます。 一致する例外フィルターを指定した `catch` ブロックがない場合は、フィルターのない `catch` ブロックが選択されます (それがステートメント内に存在する場合)。 最初に配置する `catch` ブロックでは、最も具体的な (つまり、最終派生の) 例外の種類を指定することが重要です。  
@@ -44,6 +46,7 @@ ms.locfileid: "87302036"
      [!code-csharp[csProgGuideExceptions#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#10)]  
   
 ## <a name="finally-blocks"></a>Finally ブロック  
+
  `finally` ブロックでは、`try` ブロックで実行されるアクションをクリーンアップすることができます。 `finally` ブロック (存在する場合) は、最後 (`try` ブロックおよび一致する `catch` ブロックの後) に実行されます。 `finally` ブロックは、例外がスローされたかどうかや、例外の種類に一致する `catch` ブロックが見つかったかどうかにかかわらず、常に実行されます。  
   
  `finally` ブロックは、ランタイム内のガベージ コレクターによってオブジェクトがファイナライズされるのを待つことなく、ファイル ストリーム、データベース接続、グラフィックス ハンドルなどのリソースを解放するために使用できます。 詳しくは、「[using ステートメント](../../language-reference/keywords/using-statement.md)」をご覧ください。  

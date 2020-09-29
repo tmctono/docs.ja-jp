@@ -2,17 +2,19 @@
 title: データベースに対するクエリの実行
 ms.date: 03/30/2017
 ms.assetid: eefb8b0c-ff07-4e86-a3d3-567479523fe9
-ms.openlocfilehash: 6ca402600d43eb84c31c499d3f93aca95d4ea1d9
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: b4ce48ee3d49769a353bf7371140b1f5a645f34e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634314"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91184877"
 ---
 # <a name="querying-the-database"></a>データベースに対するクエリの実行
+
 ここでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] プロジェクトにおけるクエリの開発と実行の方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [方法: クエリで情報を取得する](how-to-query-for-information.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のクエリが、基本的には LINQ のクエリとほとんど同じであることを簡単に説明します。  
   

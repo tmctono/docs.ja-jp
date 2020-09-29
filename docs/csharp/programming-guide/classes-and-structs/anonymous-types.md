@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: ccdee1a86ab0c292721e69346cb7cedb03d4c28b
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: f60c1ea4f3f029ec3b81a4197a711523ec372df9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474502"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186160"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>匿名型 (C# プログラミング ガイド)
 
@@ -48,6 +48,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
 ```  
   
 ## <a name="remarks"></a>Remarks  
+
  匿名型は [object](../../language-reference/builtin-types/reference-types.md) から直接派生した [class](../../language-reference/keywords/class.md) 型であり、[object](../../language-reference/builtin-types/reference-types.md) 以外の型にキャストできません。 コンパイラは各匿名型に名前を付けますが、この名前にアプリケーションはアクセスできません。 共通言語ランタイムから見た場合、匿名型と他の参照型に違いはありません。  
   
  アセンブリ内の複数の匿名オブジェクト初期化子が、同じ順序で同じ名前や型を持つプロパティのシーケンスを指定する場合、コンパイラはそれらのオブジェクトを同じ型のインスタンスとして処理します。 これらのオブジェクトは、コンパイラで生成された同一の型情報を共有します。  

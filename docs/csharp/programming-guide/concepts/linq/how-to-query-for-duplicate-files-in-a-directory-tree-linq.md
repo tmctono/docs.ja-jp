@@ -3,14 +3,15 @@ title: ディレクトリ ツリーで重複するファイルを照会する方
 description: C# で LINQ を使用して異なるディレクトリで重複するファイル名を照会する方法、およびサイズと LastWrite 時刻が一致するファイルをクエリする方法について説明します。
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: 72acb0e0823138821d321ed3845ff7ac137aee0c
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 87874fdb5bcfd66ffecf3379e315dfa019e89898
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104561"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176293"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>ディレクトリ ツリーで重複するファイルを照会する方法 (LINQ) (C#)
+
 同じ名前のファイルが複数のフォルダーに存在することがあります。 たとえば、Visual Studio インストール フォルダーでは、複数のフォルダーに readme.htm ファイルが含まれています。 次の例は、指定したルート フォルダーの下で、このような重複したファイル名をクエリする方法を示しています。 また、2 番目の例では、名前のほかにサイズと LastWrite 時刻が一致するファイルをクエリする方法を示します。  
   
 ## <a name="example"></a>例  
@@ -171,6 +172,7 @@ class QueryDuplicateFileNames
  最初のクエリでは、単純なキーを使用して一致を判断します。これにより、同じ名前を持つファイルが検索されますが、この場合、各ファイルの内容が一致するとは限りません。 2 番目のクエリでは、複合キーを使用して、<xref:System.IO.FileInfo> オブジェクトの 3 つのプロパティと照合します。 このクエリでは、名前が同じで、内容も類似または一致するファイルが検索される可能性が高くなります。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
+
  System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。  
   
 ## <a name="see-also"></a>関連項目

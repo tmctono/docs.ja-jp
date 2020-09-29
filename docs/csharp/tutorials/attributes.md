@@ -5,12 +5,12 @@ author: mgroves
 ms.technology: csharp-fundamentals
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 24cb7d35a89fda78511dc4ba725b69c5d601a008
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4e2c0126d0920df18271f8889d8e117cd374d979
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937470"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174187"
 ---
 # <a name="use-attributes-in-c"></a>C\# で属性を使用する
 
@@ -21,6 +21,7 @@ ms.locfileid: "75937470"
 このチュートリアルでは、コードに属性を追加する方法、独自の属性を作成して使用する方法、.NET Core に組み込まれているいくつかの属性を使用する方法について説明します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
+
 お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。 インストールの手順については、[.NET Core のダウンロード](https://dotnet.microsoft.com/download) ページを参照してください。
 このアプリケーションは、Windows、Ubuntu Linux、macOS または Docker コンテナーで実行できます。
 お好みのコード エディターをインストールしてください。 次の説明では、オープン ソースのクロス プラットフォーム エディターである [Visual Studio Code](https://code.visualstudio.com/) を使用しています。 しかし、他の使い慣れたツールを使用しても構いません。
@@ -82,17 +83,17 @@ C# では、属性は `Attribute` 基底クラスを継承するクラスです�
 
 属性はさまざまな "ターゲット" に対して使用できます。 上の例ではクラスに使用しましたが、次のターゲットに対しても使用できます。
 
-* Assembly
+* アセンブリ
 * クラス
 * コンストラクター
-* Delegate
-* Enum
-* event
+* 代理人
+* 列挙型
+* Event
 * フィールド
 * GenericParameter
-* Interface
+* インターフェイス
 * メソッド
-* Module
+* モジュール
 * パラメーター
 * プロパティ
 * ReturnValue
@@ -136,12 +137,12 @@ C# の既定では、属性クラスを作成した場合、その属性は可�
 
 .NET Core の基本クラス ライブラリに組み込まれている、よく使用される属性のいくつかを以下に示します。
 
-* `[Obsolete]`。 これは上の例で使用した属性で、`System` 名前空間に格納されています。 この属性は、コード ベースの変更に関する宣言的なドキュメントを提供するのに便利です。 メッセージは文字列の形式で指定でき、別のブール型パラメーターを使用すると、コンパイラの警告をコンパイラのエラーにエスカレートすることができます。
+* `[Obsolete]`. これは上の例で使用した属性で、`System` 名前空間に格納されています。 この属性は、コード ベースの変更に関する宣言的なドキュメントを提供するのに便利です。 メッセージは文字列の形式で指定でき、別のブール型パラメーターを使用すると、コンパイラの警告をコンパイラのエラーにエスカレートすることができます。
 
-* `[Conditional]`。 この属性は `System.Diagnostics` 名前空間に格納されています。 この属性はメソッド (または属性クラス) に適用できます。 コンス トラクターに文字列を渡す必要があります。
+* `[Conditional]`. この属性は `System.Diagnostics` 名前空間に格納されています。 この属性はメソッド (または属性クラス) に適用できます。 コンス トラクターに文字列を渡す必要があります。
 その文字列が `#define` ディレクティブと一致しない場合、そのメソッドの呼び出し (メソッド自体ではありません) が C# コンパイラによって除外されます。 通常、この属性はデバッグ (診断) 目的で使用されます。
 
-* `[CallerMemberName]`。 この属性はパラメーターに使用でき、`System.Runtime.CompilerServices` 名前空間に格納されています。 この属性は、別のメソッドを呼び出しているメソッドの名前を挿入するために使用します。 これは通常、さまざまな UI フレームワークで INotifyPropertyChanged を実装する際に "マジック文字列" を排除するための方法として使用されます。 以下に例を示します。
+* `[CallerMemberName]`. この属性はパラメーターに使用でき、`System.Runtime.CompilerServices` 名前空間に格納されています。 この属性は、別のメソッドを呼び出しているメソッドの名前を挿入するために使用します。 これは通常、さまざまな UI フレームワークで INotifyPropertyChanged を実装する際に "マジック文字列" を排除するための方法として使用されます。 例
 
 [!code-csharp[Using CallerMemberName when implementing INotifyPropertyChanged](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CallerMemberName1)]
 

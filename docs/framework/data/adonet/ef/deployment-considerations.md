@@ -2,14 +2,15 @@
 title: 配置に関する注意事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
-ms.openlocfilehash: bdc7a6211681c78d81ba750844611b35e779abd2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 034fb48050fb0e6a9aabf6c183f8721f0a7115e4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542693"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181129"
 ---
 # <a name="deployment-considerations-entity-framework"></a>配置に関する注意事項 (Entity Framework)
+
 このトピックでは、データ アクセスに ADO.NET Entity Framework を使用するアプリケーションの配置について説明します。 Entity Framework の詳細については、「[はじめに](getting-started.md)」を参照してください。  
   
  Entity Framework は、Visual Studio に組み込むことにより Visual Studio での開発を容易にする一連のツールを提供します。 詳細については、「[ADO.NET Entity Data Model ツール](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))」を参照してください。 このトピックでは、Entity Framework ベースのアプリケーションを配置するための具体的なテクノロジの使用法については触れません。  

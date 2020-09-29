@@ -5,19 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 0cefca33bde94855a2bb20a6404dfd4e75a954c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 35275206e0486c35f262116fa1deb06b9f285723
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174525"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183131"
 ---
 # <a name="polling-in-console-applications"></a>コンソール アプリケーションでのポーリング
+
 ADO.NET での非同期操作は、1 つのスレッドで他のタスクを実行している間に、別のスレッドで時間のかかるデータベース操作を開始できます。 ただし、ほとんどの場合、データベース操作が完了するまでの間に、アプリケーションの処理を続行してはいけないポイントに最終的に到達します。 このような場合は、非同期操作をポーリングして操作が完了したかどうかを判断すると便利です。  
   
  <xref:System.IAsyncResult.IsCompleted%2A> プロパティを使用すると、操作が完了したかどうかを確認できます。  
   
 ## <a name="example"></a>例  
+
  次のコンソール アプリケーションは、操作を非同期に実行して、**AdventureWorks** サンプル データベース内のデータを更新します。 この例では、実行時間の長いプロセスをエミュレートする目的で、コマンド テキストに WAITFOR ステートメントを挿入します。 通常は、コマンドの実行を遅くする必要はありませんが、非同期動作の例をわかりやすく示すために、この場合はあえて遅くしています。  
   
 ```vb  

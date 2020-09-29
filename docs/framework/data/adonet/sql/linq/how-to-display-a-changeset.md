@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 126e7245-c5a0-4ebf-800d-cc1fcf9cd0ab
-ms.openlocfilehash: 5f49e123e6e980501d330eeecf2719023cdff8e7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 288920567db75dc1d4c7273f698467063af52ed6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781967"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180778"
 ---
 # <a name="how-to-display-a-changeset"></a>方法: 変更セットを表示する
+
 <xref:System.Data.Linq.DataContext> によって追跡される変更を <xref:System.Data.Linq.DataContext.GetChangeSet%2A> を使って表示することができます。  
   
 ## <a name="example"></a>例  
+
  以下の例では、住所がロンドンの顧客を取得し、これをパリに変更してから変更内容をデータベースに送信しています。  
   
  [!code-csharp[DLinqDebuggingSupport#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#2)]

@@ -8,20 +8,22 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 060cdab4f486782e6ad60511fadad95a41255dec
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 3e2bd3f4ca5402abe4a7f8ec8f5410effaee6700
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568824"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180609"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>データ サービスの更新 (WCF Data Services)
+
 WCF Data Services クライアント ライブラリを使用して Open Data Protocol (OData) フィードを操作する場合、フィード内のエントリがクライアント データ サービス クラスのインスタンスに変換されます。 これらのデータ サービス クラスは、<xref:System.Data.Services.Client.DataServiceContext> が属する <xref:System.Data.Services.Client.DataServiceQuery%601> を使用して追跡されます。 クライアントでは、<xref:System.Data.Services.Client.DataServiceContext> にメソッドを使用して報告する、エンティティへの変更が追跡されます。 これらのメソッドを使用すると、クライアントは、追加および削除されたエンティティの追跡に加えて、プロパティ値に対して行われた変更やエンティティ インスタンス間のリレーションシップに対して行われた変更を追跡できます。 追跡されたこれらの変更は、<xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> メソッドが呼び出されたときに、REST ベースの操作としてデータ サービスに送り返されます。  
   
 > [!NOTE]
 > <xref:System.Data.Services.Client.DataServiceCollection%601> のインスタンスを使用してデータをコントロールにバインドする場合、バインドされたコントロールのデータに対して行われた変更は <xref:System.Data.Services.Client.DataServiceContext> に自動的に報告されます。 詳しくは、「[コントロールへのデータのバインド](binding-data-to-controls-wcf-data-services.md)」をご覧ください。  
   
 ## <a name="adding-modifying-and-changing-entities"></a>エンティティの追加および変更  
+
  Visual Studio の **[サービス参照の追加]** ダイアログを使用して OData フィードへの参照を追加した場合、結果のクライアント データ サービス クラスにはそれぞれ、静的な *Create* メソッドが作成されます。このメソッドは、null 非許容のエンティティ プロパティごとに 1 つのパラメーターを受け取ります。 このメソッドを使用すると、次の例に示すように、エンティティ型クラスのインスタンスを作成できます。  
   
  [!code-csharp[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#createnewproduct)]
@@ -47,6 +49,7 @@ WCF Data Services クライアント ライブラリを使用して Open Data Pr
  詳細については、[エンティティを追加、変更、および削除する](how-to-add-modify-and-delete-entities-wcf-data-services.md)」を参照してください。  
   
 ## <a name="attaching-entities"></a>エンティティのアタッチ  
+
  クライアント ライブラリでは、クエリを実行してエンティティを <xref:System.Data.Services.Client.DataServiceContext> に読み込むことなく、エンティティに対して行った変更を保存できます。 <xref:System.Data.Services.Client.DataServiceContext.AttachTo%2A> メソッドを使用して、既存のオブジェクトを <xref:System.Data.Services.Client.DataServiceContext> の特定のエンティティ セットにアタッチします。 その後、オブジェクトを変更して、変更内容をデータ サービスに保存できます。 次の例では、変更された顧客オブジェクトがコンテキストにアタッチされた後、<xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> が呼び出される前に、<xref:System.Data.Services.Client.EntityStates.Modified> が呼び出され、アタッチされたオブジェクトが <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> としてマークされます。  
   
  [!code-csharp[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#attachobjectspecific)]
@@ -65,6 +68,7 @@ WCF Data Services クライアント ライブラリを使用して Open Data Pr
  詳細については、[既存のエンティティを DataServiceContext にアタッチする](attach-an-existing-entity-to-dc-wcf-data.md)」を参照してください。  
   
 ## <a name="creating-and-modifying-relationship-links"></a>リレーションシップ リンクの作成および変更  
+
  **[サービス参照の追加]** ダイアログで生成された <xref:System.Data.Services.Client.DataServiceContext> クラスの <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> メソッド、または適切な *AddTo* メソッドを使用して新しいエンティティを追加する場合、新しいエンティティと関連付けられたエンティティの間のリレーションシップの自動定義は行われません。  
   
  エンティティ インスタンス間のリレーションシップを作成および変更し、クライアント ライブラリを使用して、これらの変更をデータ サービスに反映できます。 エンティティ間のリレーションシップは、モデル内の関連付けとして定義されています。また、<xref:System.Data.Services.Client.DataServiceContext> は、各リレーションシップをコンテキスト内のリンク オブジェクトとして追跡します。 WCF Data Services は、<xref:System.Data.Services.Client.DataServiceContext> クラスで、これらのリンクを作成、変更、および削除する以下のメソッドを提供します。  
@@ -91,6 +95,7 @@ WCF Data Services クライアント ライブラリを使用して Open Data Pr
  詳細については、[エンティティ リレーションシップを定義する](how-to-define-entity-relationships-wcf-data-services.md)」を参照してください。  
   
 ## <a name="saving-changes"></a>変更の保存  
+
  変更は、<xref:System.Data.Services.Client.DataServiceContext> インスタンスで追跡されますが、サーバーには直ちに送信されません。 指定されたアクティビティに対して必要な変更が完了した後、<xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> を呼び出して、すべての変更をデータ サービスに送信します。 詳細については、「[データ サービス コンテキストの管理](managing-the-data-service-context-wcf-data-services.md)」を参照してください。 変更は、<xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> および <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> メソッドを使用して、非同期で保存することもできます。 詳細については、「[非同期操作](asynchronous-operations-wcf-data-services.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目

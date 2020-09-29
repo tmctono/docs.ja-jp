@@ -3,17 +3,19 @@ title: ASP.NET での System.Transactions の使用
 description: ASP.NET アプリケーション内で System.Transactions を使用します。 分散トランザクションのアクセス許可を有効にし、動的コンパイルを使用します。
 ms.date: 03/30/2017
 ms.assetid: 1982c300-7ea6-4242-95ed-dc28ccfacac9
-ms.openlocfilehash: f8bf485389d9633a37201f6293fab8ccae7cf26f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b6663e9258e98e94d7b739ee75c826ced1e2f897
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544467"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186719"
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>ASP.NET での System.Transactions の使用
+
 ここでは、ASP.NET アプリケーション内で <xref:System.Transactions> を正しく使用する方法について説明します。
 
 ## <a name="enable-distributedtransactionpermission-in-aspnet"></a>ASP.NET での DistributedTransactionPermission の有効化
+
  <xref:System.Transactions> では、部分的に信頼された呼び出し元がサポートされており、`AllowPartiallyTrustedCallers` 属性 (APTCA) を使用してマークされます。 <xref:System.Transactions> の信頼レベルは、 <xref:System.Transactions> によって公開されるリソースの種類 (システム メモリ、共有プロセス全体のリソース、システム全体のリソース、その他のリソースなど)、およびそれらのリソースにアクセスするのに必要な信頼レベルに基づいて定義されます。 部分的に信頼された環境では、 <xref:System.Transactions.DistributedTransactionPermission>が付与されていない限り、完全に信頼されていないアセンブリは、アプリケーション ドメイン内でのみトランザクションを使用できます (この場合、保護されている唯一のリソースはシステム メモリです)。
 
  Microsoft 分散トランザクション コーディネーター (MSDTC) で管理されるようトランザクション管理がエスカレートされるたびに、<xref:System.Transactions.DistributedTransactionPermission> が要求されます。 この種のシナリオでは、プロセス全体のリソースと特にグローバルなリソースを使用します。グローバルなリソースは、MSDTC ログで予約されたスペースです。 この使用方法の例として、データベース、または供給するサービスの一部としてデータベースを使用するアプリケーションへの Web フロントエンドがあります。
@@ -44,6 +46,7 @@ ms.locfileid: "90544467"
  ASP.NET のセキュリティ ポリシーについて詳しくは、「[securityPolicy 要素 (ASP.NET 設定スキーマ)](/previous-versions/dotnet/netframework-4.0/zhs35b56(v=vs.100))」をご覧ください。
 
 ## <a name="dynamic-compilation"></a>動的コンパイル
+
  アクセス時に動的にコンパイルされる ASP.NET アプリケーションで <xref:System.Transactions> をインポートして使用する場合、構成ファイルに <xref:System.Transactions> アセンブリへの参照を配置する必要があります。 具体的には、ルートにある既定の **Web.config** 構成ファイル、または特定の Web アプリケーションの構成ファイルの `compilation/assemblies` セクションに、この参照を追加する必要があります。 次に例を示します。
 
 ```xml

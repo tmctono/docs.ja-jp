@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 0d62c8d3c4669673d26f2d5535d7940fce702f66
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ea063b333ea0680071b880f26753bfd74b71d80f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547448"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91188877"
 ---
 # <a name="table-valued-parameters"></a>テーブル値パラメーター
+
 テーブル値パラメーターを使用すると、ラウンド トリップを何度も繰り返したり、サーバー側にデータを処理するための特殊なロジックを組み込んだりすることなく、複数行のデータをクライアント アプリケーションから SQL Server へと簡単にマーシャリングできます。 テーブル値パラメーターを使用すると、クライアント アプリケーションのデータ行をカプセル化して単一のパラメーター化コマンドでサーバーに送ることができます。 受信データ行はテーブル変数に格納され、Transact-SQL によって操作できるようになります。  
   
  テーブル値パラメーターの列値には、Transact-SQL の標準的な SELECT ステートメントを使ってアクセスできます。 テーブル値パラメーターは厳密に型指定されており、その構造は自動的に検証されます。 テーブル値パラメーターのサイズは、サーバーのメモリによってのみ制限されます。  
@@ -29,6 +30,7 @@ ms.locfileid: "90547448"
 |[ユーザー定義テーブル型](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|テーブル値パラメーターを宣言する際に使用するユーザー定義テーブル型について説明します。|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>旧バージョンの SQL Server での複数行の受け渡し  
+
  SQL Server 2008 にテーブル値パラメーターが導入されるまでは、複数行データをストアド プロシージャまたはパラメーター化 SQL コマンドに渡す方法は限られていました。 開発者が選択できる複数の行をサーバーに渡すためのオプションを次に示します。  
   
 - 複数のデータ列とデータ行の値を表すには、一連の個別のパラメーターを使用します。 このメソッドを使用して渡すことができるデータの量は、許可されているパラメーター数によって制限されます。 SQL Server プロシージャが持つことのできるパラメーター数は最大 2,100 です。 これらの個々の値をテーブル変数または一時テーブルにまとめて処理するには、サーバー側ロジックが必要です。  
@@ -40,6 +42,7 @@ ms.locfileid: "90547448"
 - `bcp` ユーティリティ プログラムまたは <xref:System.Data.SqlClient.SqlBulkCopy> オブジェクトを使用して、多数のデータ行をテーブルに読み込みます。 この方法は効率的ですが、データが一時テーブルまたはテーブル変数に読み込まれなければ、サーバー側での処理がサポートされません。  
   
 ## <a name="creating-table-valued-parameter-types"></a>テーブル値パラメーター型の作成  
+
  テーブル値パラメーターは、Transact-SQL の CREATE TYPE ステートメントを使用して定義された厳密に型指定されたテーブルの構造に基づいています。 クライアント アプリケーションでテーブル値パラメーターを使用するには、まず SQL Server でテーブル型を作成し、その構造を定義する必要があります。 テーブル型の作成の詳細については、「[ユーザー定義テーブル型](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))」を参照してください。  
   
  次のステートメントは、CategoryID と CategoryName 列から成る CategoryTableType というテーブル型を作成します。  
@@ -57,6 +60,7 @@ CREATE PROCEDURE usp_UpdateCategories
 ```  
   
 ## <a name="modifying-data-with-table-valued-parameters-transact-sql"></a>テーブル値パラメーターによるデータの変更 (Transact-SQL)  
+
  テーブル値パラメーターは、単一のステートメントを実行して複数行を操作する、セット ベースのデータ変更の中で使用できます。 たとえば、テーブル値パラメーター内のすべての行を選択して、データベース テーブルに挿入できます。また、テーブル値パラメーターを更新対象テーブルに結合して、更新ステートメントを作成することもできます。  
   
  次の Transact-SQL UPDATE ステートメントは、テーブル値パラメーターを Categories テーブルに結合して使用する方法を示しています。 FROM 句の中でテーブル値パラメーターを JOIN と共に使用する場合は、次に示すように、別名も使用する必要があります。ここでは、テーブル値パラメーターは "ec" という別名になっています。  
@@ -76,6 +80,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 ```  
   
 ## <a name="limitations-of-table-valued-parameters"></a>テーブル値パラメーターの制限  
+
  テーブル値パラメーターにはいくつかの制限があります。  
   
 - テーブル値パラメーターを [CLR ユーザー定義の関数](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions)に渡すことはできません。  
@@ -87,6 +92,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 - ALTER TABLE ステートメントをテーブル値パラメーターの設計変更に使用することはできません。  
   
 ## <a name="configuring-a-sqlparameter-example"></a>SqlParameter の構成例  
+
  <xref:System.Data.SqlClient> では、テーブル値パラメーターのデータを <xref:System.Data.DataTable>、<xref:System.Data.Common.DbDataReader>、または <xref:System.Collections.Generic.IEnumerable%601> \ <xref:Microsoft.SqlServer.Server.SqlDataRecord> オブジェクトから読み込むことができます。 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> の <xref:System.Data.SqlClient.SqlParameter> プロパティを使用して、テーブル値パラメーターの型名を指定する必要があります。 `TypeName` は、サーバーで以前に作成した互換性のある型の名前と一致する必要があります。 次のコード フラグメントは、データを挿入するために <xref:System.Data.SqlClient.SqlParameter> を構成する方法を示しています。  
 
 次の例では、`addedCategories` 変数に <xref:System.Data.DataTable> が含まれています。 変数がどのように設定されているかを確認するには、次の「[ストアド プロシージャへのテーブル値パラメーターの受け渡し](#passing)」を参照してください。
@@ -130,6 +136,7 @@ tvpParam.SqlDbType = SqlDbType.Structured
 ```  
   
 ## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a> ストアド プロシージャへのテーブル値パラメーターの受け渡し  
+
  この例は、テーブル値パラメーターのデータをストアド プロシージャに渡す方法を示しています。 追加された行が、<xref:System.Data.DataTable.GetChanges%2A> メソッドを使って新しい <xref:System.Data.DataTable> に抽出された後、 <xref:System.Data.SqlClient.SqlCommand> が定義され、<xref:System.Data.SqlClient.SqlCommand.CommandType%2A> プロパティが <xref:System.Data.CommandType.StoredProcedure> に設定されます。 <xref:System.Data.SqlClient.SqlParameter> は <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> メソッドを使って設定され、<xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> は `Structured` に設定されます。 次に <xref:System.Data.SqlClient.SqlCommand> メソッドを使用して <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> が実行されます。  
   
 ```csharp  
@@ -172,6 +179,7 @@ End Using
 ```  
   
 ### <a name="passing-a-table-valued-parameter-to-a-parameterized-sql-statement"></a>パラメーター化 SQL ステートメントへのテーブル値パラメーターの受け渡し  
+
  次の例は、データ ソースとしてテーブル値パラメーターを持つ SELECT サブクエリ付きの INSERT ステートメントを使用して、dbo.Categories テーブルにデータを挿入する方法を示しています。 テーブル値パラメーターをパラメーター化 SQL ステートメントに渡すときは、<xref:System.Data.SqlClient.SqlParameter> の新しい <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> プロパティを使用して、テーブル値パラメーターの型名を指定する必要があります。 この `TypeName` は、サーバーで以前に作成した互換性のある型の名前と一致する必要があります。 この例のコードは、`TypeName` プロパティを使用して、dbo.CategoryTableType で定義されている型構造体を参照しています。  
   
 > [!NOTE]
@@ -228,6 +236,7 @@ End Using
 ```  
   
 ## <a name="streaming-rows-with-a-datareader"></a>DataReader による行のストリーミング  
+
  テーブル値パラメーターにデータ行をストリーム出力するには、<xref:System.Data.Common.DbDataReader> から派生したオブジェクトを使用します。 次のコード フラグメントは、<xref:System.Data.OracleClient.OracleCommand> と <xref:System.Data.OracleClient.OracleDataReader> を使用して、Oracle データベースからデータを取得する方法を示しています。 その後、<xref:System.Data.SqlClient.SqlCommand> を、1 つの入力パラメーターを使用してストアド プロシージャを呼び出すように構成します。 <xref:System.Data.SqlClient.SqlParameter> の <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> プロパティは `Structured` に設定されます。 <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> は `OracleDataReader` の結果セットをテーブル値パラメーターとしてストアド プロシージャに渡します。  
   
 ```csharp  

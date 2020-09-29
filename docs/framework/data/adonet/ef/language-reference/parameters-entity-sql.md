@@ -2,14 +2,15 @@
 title: パラメーター (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8d618edd-0988-4ff2-8263-ce59448af7a5
-ms.openlocfilehash: e1bb633f7f7c7908a5f424991f20a5cd89aee5aa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 759452902461e1a460b69774bb33f92bbd532ed0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150015"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177517"
 ---
 # <a name="parameters-entity-sql"></a>パラメーター (Entity SQL)
+
 パラメーターは、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] の外部で定義される変数です。通常は、ホスト言語で使用されるバインド API を通じて定義されます。 それぞれのパラメーターには、名前と型があります。 パラメーター名は、クエリ式の中で、先頭に @ 記号を付けることによって定義します。 これにより、クエリ内で定義されている他の名前 (プロパティ名など) と明確に区別されます。  
   
  パラメーターをバインドするための API は、ホスト言語によって提供されます。  

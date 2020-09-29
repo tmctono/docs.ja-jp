@@ -3,14 +3,15 @@ title: LINQ to Entities クエリ内の関数の呼び出し
 description: これらの記事では、EntityFunctions および SqlFunctions クラスにより、Entity Framework の一部として正規関数およびデータベース関数へのアクセスが可能になるしくみについて説明します。
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
-ms.openlocfilehash: eb206e9b331da1ae442c1f310e78fec5c6b57e82
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8c771c93e0c3ed82f3ad550613dd855fd06b6f48
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546049"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177489"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>LINQ to Entities クエリ内の関数の呼び出し
+
 このセクションの各トピックでは、LINQ to Entities クエリで関数を呼び出す方法について説明します。  
   
  <xref:System.Data.Objects.EntityFunctions> クラスおよび <xref:System.Data.Objects.SqlClient.SqlFunctions> クラスを使用すると、Entity Framework の一部として正規関数およびデータベース関数にアクセスできます。 詳細については、[Canonical 関数を呼び出す](how-to-call-canonical-functions.md)」および「[方法:データベース関数を呼び出す](how-to-call-database-functions.md)」を参照してください。  
@@ -26,6 +27,7 @@ ms.locfileid: "90546049"
  詳細については、このセクションの各トピックを参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [方法: Canonical 関数を呼び出す](how-to-call-canonical-functions.md)  
   
  [方法: データベース関数を呼び出す](how-to-call-database-functions.md)  

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8438b995-bd07-4223-b22d-13adadef33fb
-ms.openlocfilehash: 7add62a2792a0fc82346851b7dd835aad5082742
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 96d393a34af69935e75582ef1954ddd661a355f0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397461"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91192049"
 ---
 # <a name="method-based-query-syntax-examples-element-operators"></a>メソッド ベースのクエリ構文例:要素演算子
+
 このトピックでは、メソッド ベースのクエリ構文で、<xref:System.Linq.Enumerable.First%2A> メソッドを使用して、[AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) を照会する例を取り上げます。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
   
  このトピックの例には、次の `using`/`Imports` ステートメントが使用されています。  
@@ -23,6 +24,7 @@ ms.locfileid: "70397461"
 ## <a name="first"></a>First  
   
 ### <a name="example"></a>例  
+
  次の例では、<xref:System.Linq.Enumerable.First%2A> メソッドを使用して、'caroline' で始まる最初の電子メール アドレスを検索します。  
   
  [!code-csharp[DP L2E Examples#FirstCondition_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#firstcondition_mq)]

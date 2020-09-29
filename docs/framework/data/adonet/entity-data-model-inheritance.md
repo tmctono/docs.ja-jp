@@ -2,14 +2,15 @@
 title: Entity Data Model:継承
 ms.date: 03/30/2017
 ms.assetid: 42c7ef24-710a-4af9-8493-cd41c399ecb0
-ms.openlocfilehash: 4c4abc371000006d40ede3d904b0437f3f85e3e7
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 057040eee411988c46adc9c4cabcfe5f5a185e1b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738455"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91175461"
 ---
 # <a name="entity-data-model-inheritance"></a>Entity Data Model:継承
+
 Entity Data Model (EDM) では、[エンティティ型](entity-type.md)の継承がサポートされています。 EDM の継承は、オブジェクト指向プログラミング言語におけるクラスの継承に似ています。 オブジェクト指向言語のクラスと同様、概念モデルでは、別のエンティティ型 ("*基本型*") を継承するエンティティ型 ("*派生型*") を定義できます。 ただし、オブジェクト指向プログラミングのクラスとは異なり、概念モデルでは、派生型は基本型のすべての[プロパティ](property.md)と[ナビゲーション プロパティ](navigation-property.md)を常に継承します。 派生型の継承プロパティは、オーバーライドできません。  
   
  概念モデルでは、派生型が別の派生型を継承する継承階層を構築することができます。 階層の最上位にある型 (階層内で派生型ではない唯一の型) は、"*ルート型*" と呼ばれます。 継承階層では、ルート型に[エンティティ キー](entity-key.md)を定義する必要があります。  

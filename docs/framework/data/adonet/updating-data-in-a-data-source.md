@@ -5,19 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: 18bb03e17b19243ee1bc6e3f7ebd70afb4d4c60b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6b0234337c85ace0797d75b72560ccb55635daae
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174447"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177268"
 ---
 # <a name="updating-data-in-a-data-source"></a>データ ソースのデータの更新
+
 データを変更する SQL ステートメント (INSERT、UPDATE、DELETE など) は行を返しません。 同様に、多くのストアド プロシージャは、アクションを実行しても行を返しません。 行を返さないコマンドを実行するには、適切な SQL コマンドを使用して **Command** オブジェクトを作成し、必要な **Parameters** を含む **Connection** を作成します。 **Command** オブジェクトの **ExecuteNonQuery** メソッドでコマンドを実行します。  
   
  **ExecuteNonQuery** メソッドからは、実行されたステートメントまたはストアド プロシージャの影響を受けた行数を表す整数が返されます。 複数のステートメントが実行された場合は、実行された各ステートメントの影響を受けたレコードの合計を示す値が返されます。  
   
 ## <a name="example"></a>例  
+
  INSERT ステートメントを実行して、**ExecuteNonQuery** でデータベースにレコードを挿入するコードの例を次に示します。  
   
 ```vb  

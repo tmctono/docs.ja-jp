@@ -3,14 +3,15 @@ title: Enterprise Services および COM+ トランザクションとの相互�
 description: System.Transactions 名前空間を利用した、.NET での Enterprise Services および COM+ トランザクションとの相互運用性を理解します。
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
-ms.openlocfilehash: ebd6166fbd99ef102cf10ba1bcef9e3eb8aaa5da
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 48cb006a4294b7c43de262eb2d19c6c4ea9d22fd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141902"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186771"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>Enterprise Services および COM+ トランザクションとの相互運用性
+
 <xref:System.Transactions> 名前空間は、この名前空間を使用して作成されたトランザクション オブジェクトと COM+ によって作成されたトランザクションとの間の相互運用をサポートします。  
   
  新しい <xref:System.Transactions.EnterpriseServicesInteropOption> インスタンスを作成する際に <xref:System.Transactions.TransactionScope> 列挙体を使用すれば、COM+ との相互運用性のレベルを指定することができます。  
@@ -18,6 +19,7 @@ ms.locfileid: "85141902"
  既定では、アプリケーション コードによって静的 <xref:System.Transactions.Transaction.Current%2A> プロパティが検査されると、<xref:System.Transactions> によって、その他の場合は最新であるトランザクション、または <xref:System.Transactions.Transaction.Current%2A> が **null** であることを指示する <xref:System.Transactions.TransactionScope> オブジェクトが探されます。 どちらも見つからないと、<xref:System.Transactions> は COM+ コンテキストに照会してトランザクションを探します。 <xref:System.Transactions> は、COM+ コンテキストからトランザクションが見つかる場合でも、<xref:System.Transactions> にネイティブなトランザクションを優先します。  
   
 ## <a name="interoperability-levels"></a>相互運用性のレベル  
+
  <xref:System.Transactions.EnterpriseServicesInteropOption> 列挙体は、<xref:System.Transactions.EnterpriseServicesInteropOption.None>、<xref:System.Transactions.EnterpriseServicesInteropOption.Full>、および <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> の各相互運用性レベルを定義します。  
   
  <xref:System.Transactions.TransactionScope> クラスは、<xref:System.Transactions.EnterpriseServicesInteropOption> をパラメーターとして受け入れるコンストラクターを提供します。  

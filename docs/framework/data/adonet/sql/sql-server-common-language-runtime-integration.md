@@ -2,14 +2,15 @@
 title: SQL Server の共通言語ランタイム統合
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
-ms.openlocfilehash: 12ae15d72644e314aa694f8d169bc8f45fa284a2
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: d9fe0f03c88584607c6bc38fcbcff3f9424fd40c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452345"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183027"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>SQL Server の共通言語ランタイム統合
+
 SQL Server 2005 で、Microsoft Windows 用の .NET Framework の共通言語ランタイム (CLR) コンポーネントの統合が導入されました。 つまり、Microsoft Visual Basic .NET や Microsoft Visual C# を含む任意の .NET Framework 言語を使用して、ストアド プロシージャ、トリガー、ユーザー定義型、ユーザー定義関数、ユーザー定義集計、およびストリーミング テーブル値関数を作成できるようになりました。 マネージド コードが Microsoft SQL Server 環境とデータをやり取りできるように、<xref:Microsoft.SqlServer.Server> 名前空間には新しいアプリケーション プログラミング インターフェイス (API) のセットが含まれています。  
   
  このセクションでは、SQL Server の共通言語ランタイム (CLR) 統合および SQL Server のインプロセス固有の ADO.NET の拡張に固有の機能や動作ついて説明します。  
@@ -21,6 +22,7 @@ SQL Server 2005 で、Microsoft Windows 用の .NET Framework の共通言語ラ
 1. [CLR (共通言語ランタイム) 統合のプログラミング概念](/sql/relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts)  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [SQL Server の CLR 統合の概要](introduction-to-sql-server-clr-integration.md)  
  SQL Server の CLR 統合の概要について説明します。 追加情報へのリンクもあります。  
   

@@ -7,17 +7,19 @@ helpviewer_keywords:
 - extension methods [C#], for enums
 - enum extensibility [C#]
 ms.assetid: 100106f9-1e54-462c-8ebe-3892fe23b6eb
-ms.openlocfilehash: 6c01a73476e98e8344a7a8dc35a5fd80384fc7a2
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 2714b29d64e18250f0fe379aee1c09c242d3f63f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864489"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174265"
 ---
 # <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>列挙型対応の新しいメソッドを作成する方法 (C# プログラミング ガイド)
+
 拡張メソッドを使用して、特定の列挙型に固有の機能を追加することができます。  
   
 ## <a name="example"></a>例  
+
  次の例では、`Grades` 列挙型は学生が授業で受け取る成績評価を表わしています。 `Passing` という名前の拡張機能メソッドが `Grades` 型に追加されていて、この型の各インスタンスが合格点を表しているかどうかを自ら "認識" できるようになっています。  
   
  [!code-csharp[csProgGuideExtensionMethods#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#2)]  

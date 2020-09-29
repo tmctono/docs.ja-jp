@@ -3,14 +3,15 @@ title: 射影操作 (C#)
 description: 射影操作について説明します。 これらの操作では、オブジェクトが新しい形式に変換されます。多くの場合、それは後ほど使用するプロパティのみで構成されます。
 ms.date: 07/20/2015
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-ms.openlocfilehash: 289100ac9afcfc0d5b93b5f963adc0a123e0a5af
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 6128b1bb2e7ba3dbb1b428d475acc307ba931013
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299163"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186004"
 ---
 # <a name="projection-operations-c"></a>射影操作 (C#)
+
 射影とは、オブジェクトを、必要なプロパティだけで構成された別の形式に変換する操作のことをいいます。 射影を使用することにより、個々のオブジェクトから構築された新しい型を作成できます。 プロパティを投影し、それに対して数値演算関数を実行できます。 また、元のオブジェクトを変更せずに射影することもできます。  
   
  次のセクションでは、射影を実行する標準クエリ演算子メソッドの一覧を示します。  
@@ -25,6 +26,7 @@ ms.locfileid: "87299163"
 ## <a name="query-expression-syntax-examples"></a>クエリ式の構文例  
   
 ### <a name="select"></a>選択  
+
  次の例では、`select` 句を使って、文字列リストにある各文字列の最初の文字を射影します。  
   
 ```csharp  
@@ -46,6 +48,7 @@ foreach (string s in query)
 ```  
   
 ### <a name="selectmany"></a>SelectMany  
+
  次の例では、`from` 句を複数使用して、文字列リストにある各文字列の各単語を射影します。  
   
 ```csharp  
@@ -72,6 +75,7 @@ foreach (string s in query)
 ```  
   
 ## <a name="select-versus-selectmany"></a>Select と SelectMany の比較  
+
  `Select()` と `SelectMany()` の機能はどちらも、ソース値から結果値 (複数も可) を生成することです。 `Select()` は、ソース値ごとに結果値を 1 つ生成します。 そのため、結果全体は、ソース コレクションと同じ数の要素を持つ 1 つのコレクションになります。 これに対し、`SelectMany()` は、各ソース値から、連結されたサブコレクションを含む 1 つの総合的な結果を生成します。 `SelectMany()` に引数として渡される変換関数は、ソース値ごとに列挙可能な値のシーケンスを返す必要があります。 この列挙可能なシーケンスは `SelectMany()` によって連結されて、1 つの大きなシーケンスが作成されます。  
   
  これら 2 つのメソッドのアクションの概念的な違いを次の 2 つの図に示します。 どちらも、セレクター (変換) 関数が各ソース値から花の配列を選択することを想定しています。  
@@ -85,6 +89,7 @@ foreach (string s in query)
  ![SelectMany&#40;&#41; のアクションを示すグラフィック。](./media/projection-operations/select-many-action-graphic.png )  
   
 ### <a name="code-example"></a>コード例  
+
  次の例は、`Select()` と `SelectMany()` の動作を比較しています。 コードは、ソース コレクションの花の名前の各リストから最初の 2 つの項目を取って "花束" を作成します。 この例では、変換関数 <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> が使用する "単一の値" 自体が値のコレクションになっています。 各サブ シーケンスで各文字列を列挙するために追加の `foreach` ループを使用しています。  
   
 ```csharp  

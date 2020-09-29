@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
-ms.openlocfilehash: 2e7fb97e5c0cb42deff43c411f47e8d30e2257ef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 065b509d8385ee37b2a86587f520b5fd3207ceff
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149389"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186953"
 ---
 # <a name="paging-through-a-query-result"></a>クエリ結果のページング
+
 クエリ結果のページングとは、クエリ結果をデータの小さなサブセット、つまりページに分けて返すプロセスです。 クエリ結果のページングは、結果を管理しやすい小さな単位でユーザーに表示するために行われる一般的な処理です。  
   
  **DataAdapter** には、**Fill** メソッドのオーバーロードを通じて、1 ページ分のデータだけを返す機能が用意されています。 しかしこれは大きなクエリ結果のページングには適していません。**DataAdapter** が目的の <xref:System.Data.DataTable> または <xref:System.Data.DataSet> に、要求されたレコードだけを格納する一方で、クエリ全体を返すためのリソースが使用されるためです。 クエリ全体を返す必要があるリソースを使用せずにデータ ソースから 1 ページ分のデータを返すには、必要な行だけ返すように限定する抽出条件をクエリに追加します。  

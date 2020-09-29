@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 297878d0-685b-4c01-b2e0-9d731b7322bc
-ms.openlocfilehash: 1675e4c6a610373e1c981b383ae0229739d96dd0
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 24ab13a1d67eac39c7b3d7be8cb1c16ec7265d5e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003319"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91184884"
 ---
 # <a name="querying-across-relationships"></a>リレーションシップを介したクエリの実行
+
 他のオブジェクトまたは他のオブジェクトのコレクションをクラス定義内で参照することは、データベース内の外部キー リレーションシップに直接対応します。 クエリを実行するときにこのリレーションシップを使用するには、ドット表記を使ってリレーションシップ プロパティにアクセスし、オブジェクト間を移動します。 これらのアクセス操作は、SQL で同等の複雑な結合または相関サブクエリとして変換されます。  
   
  たとえば、次のクエリでは、ロンドン在住の顧客からの注文のみが結果として得られるように注文から顧客へと移動します。  

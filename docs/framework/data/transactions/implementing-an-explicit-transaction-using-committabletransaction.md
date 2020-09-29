@@ -6,17 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 40001422e665a7dda3fb938c8d57860909525404
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 7e1d78b581fcb3c4b2265f1d04cf2aba83faa28a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141992"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91182884"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>CommittableTransaction を使用した明示的なトランザクションの実装
+
 <xref:System.Transactions.CommittableTransaction> クラスは、<xref:System.Transactions.TransactionScope> クラスが暗黙的に使用されるのと対照的に、アプリケーションがトランザクションを明示的に使用する方法を提供します。 これは、複数の関数呼び出しまたは複数のスレッド呼び出しで同じトランザクションを使用するアプリケーションで役立ちます。 <xref:System.Transactions.TransactionScope> クラスとは異なり、アプリケーション作成者はトランザクションをコミットまたは中止するために、具体的に <xref:System.Transactions.CommittableTransaction.Commit%2A> メソッドまたは <xref:System.Transactions.Transaction.Rollback%2A> メソッドを呼び出す必要があります。  
   
 ## <a name="overview-of-the-committabletransaction-class"></a>CommittableTransaction クラスの概要  
+
  <xref:System.Transactions.CommittableTransaction> クラスは、<xref:System.Transactions.Transaction> クラスから派生するため、後者のすべての機能を提供します。 特に有用なのは、<xref:System.Transactions.Transaction.Rollback%2A> クラスの <xref:System.Transactions.Transaction> メソッドで、これは <xref:System.Transactions.CommittableTransaction> オブジェクトのロールバックにも使用できます。  
   
  <xref:System.Transactions.Transaction> クラスは <xref:System.Transactions.CommittableTransaction> クラスに類似していますが、`Commit` メソッドは提供しません。 これにより、トランザクションのコミット時に制御を継続しながら、トランザクション オブジェクト (またはその複製) を他のメソッド (他のスレッド上に存在する可能性もあり) に渡すことができます。 呼び出されたコードでは、トランザクションの参加や処理の選択を行えますが、トランザクションをコミットできるのは <xref:System.Transactions.CommittableTransaction> オブジェクトの作成者のみです。  
@@ -28,6 +30,7 @@ ms.locfileid: "85141992"
 - <xref:System.Transactions.CommittableTransaction> オブジェクトは再利用できません。 <xref:System.Transactions.CommittableTransaction> オブジェクトがコミットまたはロールバックされると、トランザクションで再び使用することはできません。 つまり、現在のアンビエント トランザクション コンテキストとして設定することはできません。  
   
 ## <a name="creating-a-committabletransaction"></a>CommittableTransaction の作成  
+
  新しい <xref:System.Transactions.CommittableTransaction> を作成してコミットする例を次に示します。  
   
  [!code-csharp[Tx_CommittableTx#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/tx_committabletx/cs/committabletxwithsql.cs#1)]
@@ -40,6 +43,7 @@ ms.locfileid: "85141992"
  <xref:System.Transactions.CommittableTransaction> オブジェクトは、複数の関数呼び出しおよびスレッドにわたって使用できます。 ただし、例外を処理し、特に障害発生時に <xref:System.Transactions.Transaction.Rollback%28System.Exception%29> メソッドを呼び出すことはアプリケーション開発者の責任です。  
   
 ## <a name="asynchronous-commit"></a>非同期コミット  
+
  <xref:System.Transactions.CommittableTransaction> クラスは、トランザクションを非同期にコミットするための機構も提供します。 トランザクションのコミットは、複数回のデータベース アクセスや潜在的なネットワーク待機時間が含まれる場合、かなりの時間を要することがあります。 高いスループットのアプリケーションでデッドロックを回避するため、非同期コミットを使用してできるだけ早期にトランザクションの処理を完了し、バックグラウンド タスクとしてコミット処理を実行できます。 このために、<xref:System.Transactions.CommittableTransaction.BeginCommit%2A> クラスの <xref:System.Transactions.CommittableTransaction.EndCommit%2A> メソッドおよび <xref:System.Transactions.CommittableTransaction> メソッドを使用できます。  
   
  <xref:System.Transactions.CommittableTransaction.BeginCommit%2A> を呼び出すことで、スレッド プールからのスレッドにコミット ホールドアップをディスパッチできます。 また、<xref:System.Transactions.CommittableTransaction.EndCommit%2A> を呼び出して、トランザクションが実際にコミットされたかどうかを判断することもできます。 なんらかの理由でトランザクションがコミットされなかった場合、<xref:System.Transactions.CommittableTransaction.EndCommit%2A> はトランザクションの例外を発生させます。 <xref:System.Transactions.CommittableTransaction.EndCommit%2A> が呼び出された時点でトランザクションがまだコミットされていない場合、トランザクションがコミットまたは中止されるまで、呼び出し元がブロックされます。  

@@ -6,16 +6,17 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: d726ab3a882d2e6913fa69c7b82f1d6db78dd47d
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 93fc0296eeb410ba7ca0e781bededbe79820506d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102048"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178867"
 ---
 # <a name="classes-c-programming-guide"></a>クラス (C# プログラミング ガイド)
 
 ## <a name="reference-types"></a>参照型  
+
 [class](../../language-reference/keywords/class.md) として定義された型は、*参照型*です。 実行時には、参照型の変数を宣言すると、[new](../../language-reference/operators/new-operator.md) 演算子を使用してクラスのインスタンスを明示的に作成するまで、変数には値 [null](../../language-reference/keywords/null.md) が格納されています。または、次の例に示すように、別の場所で作成された可能性がある、互換性のある型のオブジェクトを代入することもできます。
 
 ```csharp

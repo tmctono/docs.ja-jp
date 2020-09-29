@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eedf2fbd-f407-4f62-bb1a-c00eb001b1dd
-ms.openlocfilehash: e43208d6ae524a1370b936d42508e9c7a7d196e5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 669c6a34d1179caf4ec40eb8db559bdfdc9fc7f5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149508"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189280"
 ---
 # <a name="method-based-query-syntax-examples-element-operators-linq-to-dataset"></a>メソッド ベースのクエリ構文例:要素演算子 (LINQ to DataSet)
+
 このトピックでは、<xref:System.Linq.Enumerable.First%2A> メソッドおよび <xref:System.Linq.Enumerable.ElementAt%2A> メソッドを使用し、クエリ式の構文を使って <xref:System.Data.DataRow> から <xref:System.Data.DataSet> 要素を取得する例を紹介しています。  
   
  これらの例で使用されている `FillDataSet` メソッドの指定については、「[DataSet へのデータの読み込み](loading-data-into-a-dataset.md)」を参照してください。  
@@ -29,6 +30,7 @@ ms.locfileid: "79149508"
 ## <a name="elementat"></a>ElementAt  
   
 ### <a name="example"></a>例  
+
  この例では、<xref:System.Linq.Enumerable.ElementAt%2A> メソッドを使用し、`PostalCode` == "M4B 1V7" の条件に該当する 5 番目の住所を取得します。  
   
 [!code-csharp[DP LINQ to DataSet Examples#ElementAt](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#elementat)]
@@ -37,6 +39,7 @@ ms.locfileid: "79149508"
 ## <a name="first"></a>First  
   
 ### <a name="example"></a>例  
+
  この例では、<xref:System.Linq.Enumerable.First%2A> メソッドを使用して、名が 'Brooke' である最初の連絡先を取得します。  
   
 [!code-csharp[DP LINQ to DataSet Examples#FirstSimple](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#firstsimple)]

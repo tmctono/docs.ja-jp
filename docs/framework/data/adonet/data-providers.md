@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 2be58251c767c937e817edf1ba19309f0c62ac33
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b61fede9144e554ee68f0b41adac36209adb7288
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554737"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177803"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework データ プロバイダー
+
 .NET Framework データ プロバイダーは、データベースに接続して、コマンドを実行したり、結果を取得したりする目的で使用されます。 その結果は、直接処理されるか、必要に応じてユーザーに公開されるように <xref:System.Data.DataSet> に格納されるか、取得したデータセットを複数のソースからのデータと組み合わせるか、または、層間でリモート処理されます。 軽量な .NET Framework データ プロバイダーでは、データ ソースとコード間に形成される層が最小限で済むため、機能を犠牲にすることなく、パフォーマンスを高めることができます。  
   
  次の表では、.NET Framework に含まれるデータ プロバイダーの一覧を示します。  
@@ -28,6 +29,7 @@ ms.locfileid: "90554737"
 |.NET Framework Data Provider for SQL Server Compact 4.0。|Microsoft SQL Server Compact 4.0 へのデータ アクセスが提供されます。 [System.Data.SqlServerCe](/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) 名前空間を使用します。|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>.NET Framework Data Providers の核となるオブジェクト  
+
  .NET Framework データ プロバイダーを構成する核となる 4 つのオブジェクトの概要を、次の表に示します。  
   
 |Object|説明|  
@@ -50,6 +52,7 @@ ms.locfileid: "90554737"
 |`ClientPermission`|.NET Framework データ プロバイダーにコード アクセス セキュリティ属性を提供します。 すべての `ClientPermission` オブジェクトの基本クラスは <xref:System.Data.Common.DBDataPermission> クラスです。|  
   
 ## <a name="net-framework-data-provider-for-sql-server-sqlclient"></a>.NET Framework Data Provider for SQL Server (SqlClient)  
+
  .NET Framework Data Provider for SQL Server (SqlClient) では、SQL Server との通信に独自のプロトコルが使用されます。 これは軽量で高速に動作します。OLE DB または Open Database Connectivity (ODBC) 層を追加しなくても、直接 SQL Server にアクセスするように最適化されているためです。 次の図は、.NET Framework Data Provider for SQL Server と .NET Framework Data Provider for OLE DB を比較したものです。 .NET Framework Data Provider for OLE DB では、接続プールとトランザクション サービスを提供する OLE DB Service コンポーネントと、データ ソース用の OLE DB プロバイダーの両方をとおして、OLE DB データ ソースとの通信が行われます。  
   
 > [!NOTE]
@@ -73,6 +76,7 @@ using System.Data.SqlClient;
 ```  
   
 ## <a name="net-framework-data-provider-for-ole-db"></a>.NET Framework Data Provider for OLE DB  
+
  .NET Framework Data Provider for OLE DB (OleDb) では、COM 相互運用機能を介したネイティブ OLE DB を使用することで、データ アクセスが可能にされます。 .NET Framework Data Provider for OLE DB では、ローカル トランザクションと分散トランザクションのどちらもサポートされています。 分散トランザクションの場合、既定で、.NET Framework Data Provider for OLE DB は自動的にトランザクションに参加し、トランザクションの詳細を Windows コンポーネント サービスから取得します。 詳しくは、「[トランザクションとコンカレンシー](transactions-and-concurrency.md)」をご覧ください。  
   
  ADO.NET とのテストが完了しているプロバイダーを次の表に示します。  
@@ -101,6 +105,7 @@ using System.Data.OleDb;
 ```  
   
 ## <a name="net-framework-data-provider-for-odbc"></a>.NET Framework Data Provider for ODBC  
+
  .NET Framework Data Provider for ODBC (Odbc) は、ネイティブ ODBC ドライバー マネージャー (DM) を使用することで、データへのアクセスを可能にします。 ODBC データ プロバイダーはローカル トランザクションと分散トランザクションのどちらもサポートします。 分散トランザクションの場合、既定で、ODBC データ プロバイダーは自動的にトランザクションに参加し、トランザクションの詳細を Windows コンポーネント サービスから取得します。 詳しくは、「[トランザクションとコンカレンシー](transactions-and-concurrency.md)」をご覧ください。  
   
  ADO.NET とのテストが完了している ODBC ドライバーを次の表に示します。  
@@ -127,6 +132,7 @@ using System.Data.Odbc;
 > .NET Framework Data Provider for ODBC を使用する場合、MDAC 2.6 以降が必要となります。MDAC 2.8 SP1 をお勧めします。 MDAC 2.8 SP1 は、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=5793)からダウンロードできます。
   
 ## <a name="net-framework-data-provider-for-oracle"></a>.NET Framework Oracle 用データ プロバイダー  
+
  .NET Framework Data Provider for Oracle (OracleClient) は、Oracle クライアント接続ソフトウェアを介して、Oracle データ ソースのデータへのアクセスを可能にします。 このデータ プロバイダーは Oracle クライアント ソフトウェア バージョン 8.1.7 以降をサポートしています。 データ プロバイダーはローカル トランザクションと分散トランザクションのどちらもサポートします。 詳しくは、「[トランザクションとコンカレンシー](transactions-and-concurrency.md)」をご覧ください。  
   
  .NET Framework Data Provider for Oracle を使用する場合、Oracle データ ソースに接続する前に、Oracle クライアント ソフトウェア (バージョン 8.1.7 以降) をシステムにインストールする必要があります。  
@@ -146,6 +152,7 @@ using System.Data.OracleClient;
 ```  
   
 ## <a name="choosing-a-net-framework-data-provider"></a>.NET Framework データ プロバイダーの選択  
+
  アプリケーションのデザインおよびデータ ソースによっては、.NET Framework データ プロバイダーを選択すると、アプリケーションのパフォーマンス、能力、および整合性が向上します。 各 .NET Framework データ プロバイダーが持つ利点と制限事項を次の表で説明します。  
   
 |プロバイダー|メモ|  
@@ -156,6 +163,7 @@ using System.Data.OracleClient;
 |.NET Framework Oracle 用データ プロバイダー|中間層アプリケーションおよび単層アプリケーションで Oracle データ ソースを使用する場合に推奨します。|  
   
 ## <a name="entityclient-provider"></a>EntityClient プロバイダー  
+
  EntityClient プロバイダーは、エンティティ データ モデル (EDM) に基づくデータ アクセスで使用されます。 他の .NET Framework データ プロバイダーとは異なり、データ ソースと直接やり取りしません。 代わりに Entity SQL を使用して、基になるデータ プロバイダーと通信します。 詳細については、「 [Entity Framework 用の EntityClient プロバイダー](./ef/entityclient-provider-for-the-entity-framework.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目

@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: eee04959493914018904b61b0e5a289f172f2f18
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 79026f66137b9e008de2ef7c3d33cb8bbd3b8ec3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063719"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177398"
 ---
 # <a name="queries-in-linq-to-dataset"></a>LINQ to DataSet でのクエリ
+
 クエリは、データ ソースからデータを取得する式です。 一般に、クエリは専用のクエリ言語で表現されます。たとえば、リレーショナル データベースであれば SQL、XML であれば XQuery が使用されます。 そのため、開発者はクエリの対象となるデータ ソースやデータ形式ごとに新しいクエリ言語を習得する必要があります。 統合言語クエリ (LINQ) は、データ ソースや形式の違いを意識することなくデータを扱うことのできる、より簡素化された一貫したモデルを提供します。 LINQ クエリでは、常にプログラミング オブジェクトを操作することになります。  
   
  LINQ のクエリ操作は、データ ソースを取得し、クエリを作成して、クエリを実行するという 3 つのアクションから成ります。  
@@ -27,9 +28,11 @@ ms.locfileid: "88063719"
  遅延実行によって一連の値を返すクエリとは対照的に、シングルトン値を返すクエリは直ちに実行されます。 シングルトン クエリの例としては、<xref:System.Linq.Enumerable.Count%2A>、<xref:System.Linq.Enumerable.Max%2A>、<xref:System.Linq.Enumerable.Average%2A>、<xref:System.Linq.Enumerable.First%2A> があります。 これらのシングルトン クエリは、結果を計算するためにはクエリ結果が必要であるため、直ちに実行されます。 たとえば、クエリ結果の平均を求めるためには、クエリを実行して、平均関数に入力データを与える必要があります。 シングルトン値を生成しないクエリでも、<xref:System.Linq.Enumerable.ToList%2A> メソッドまたは <xref:System.Linq.Enumerable.ToArray%2A> メソッドを使用することによって、即時実行を強制できます。 即時実行を強制するこの手法は、クエリの結果をキャッシュする場合などに使用すると効果的です。
   
 ## <a name="queries"></a>クエリ  
+
  LINQ to DataSet クエリは、クエリ式の構文とメソッド ベースのクエリ構文という 2 種類の構文で作成できます。  
   
 ### <a name="query-expression-syntax"></a>クエリ式の構文  
+
  クエリ式は宣言型のクエリ構文です。 開発者は SQL に似た構文形式を C# または Visual Basic で用いてクエリを作成できます。 クエリ式の構文を使用することにより、フィルター、並べ替え、グループ化など、データ ソースに対するきわめて複雑な処理を最小限のコードで実行できます。 詳しくは、「[LINQ クエリ式](../../../csharp/linq/index.md#query-expression-overview)」および「[基本的なクエリ操作 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)」をご覧ください。
   
  .NET Framework の共通言語ランタイム (CLR) では、クエリ式の構文自体を読み取ることはできません。 そのため、クエリ式はコンパイル時に、CLR が理解できる形式 (メソッド呼び出し) へと変換されます。 これらのメソッドは、"*標準クエリ演算子*" と呼ばれます。 開発者は、クエリ構文を使う代わりに、メソッド構文を使ってそれらを直接呼び出すこともできます。 詳細については、「[LINQ でのクエリ構文とメソッド構文](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)」を参照してください。 標準クエリ演算子について詳しくは、「[標準クエリ演算子の概要](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)」をご覧ください。  
@@ -40,6 +43,7 @@ ms.locfileid: "88063719"
  [!code-vb[DP LINQ to DataSet Examples#SelectSimple1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectsimple1)]  
   
 ### <a name="method-based-query-syntax"></a>メソッド ベースのクエリ構文  
+
  LINQ to DataSet クエリを作成するもう 1 つの方法は、メソッド ベースのクエリを使用するものです。 メソッド ベースのクエリ構文は、LINQ の演算子メソッドに対する直接メソッド呼び出しのシーケンスであり、パラメーターとしてラムダ式を渡します。 詳細については、「[ラムダ式](../../../csharp/language-reference/operators/lambda-expressions.md)」を参照してください。  
   
  次の例では、<xref:System.Linq.Enumerable.Select%2A> を使用して `Product` テーブルからすべての行を取得し、製品名を表示しています。  
@@ -48,6 +52,7 @@ ms.locfileid: "88063719"
  [!code-vb[DP LINQ to DataSet Examples#SelectAnonymousTypes_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectanonymoustypes_mq)]  
   
 ## <a name="composing-queries"></a>クエリの作成  
+
  前述したように、一連の値を返すように設計されたクエリでは、クエリ変数自体にはクエリ コマンドのみが格納されます。 クエリに即時実行を促すメソッドが含まれていなければ、`foreach` ループまたは `For Each` ループでクエリ変数を反復処理するまで、実際にはクエリは実行されません。 遅延実行により、複数のクエリを組み合わせたり、クエリを拡張したりすることが可能となります。 クエリを拡張して新しい操作を追加すると、その変更が最終的な実行時に反映されます。 次の例の最初のクエリでは、すべての製品が返されます。 2 つ目のクエリでは、サイズが "L" のすべての製品を返すように、`Where` を使って 1 つ目のクエリを拡張しています。  
   
  [!code-csharp[DP LINQ to DataSet Examples#Composing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#composing)]

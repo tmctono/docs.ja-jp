@@ -2,14 +2,15 @@
 title: 演算子の優先順位 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e92e4ca5-2889-4266-9625-47f0eb01a948
-ms.openlocfilehash: 2d8c78f410708fd1aa843ee8f14f7243a9f686c0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f8aa0f213a24d6431d8910af849571a67fbd9f57
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249781"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91175643"
 ---
 # <a name="operator-precedence-entity-sql"></a>演算子の優先順位 (Entity SQL)
+
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリに複数の演算子がある場合は、演算子の優先順位によって、操作の実行順序が決まります。 実行される順序により、クエリ結果の値は大きく変わります。  
   
  演算子には、次の表に示す優先順位レベルが定義されています。 優先順位が高い演算子は、優先順位が低い演算子よりも前に評価されます。  

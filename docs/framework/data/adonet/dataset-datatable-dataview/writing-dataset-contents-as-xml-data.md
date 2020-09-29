@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-ms.openlocfilehash: 9a63e79b2fce137ba9d21db861850a471cb42b9f
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: c8a5c747e4ec60fcb97edf631aa3a0ae184ffec5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833963"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173719"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>DataSet 内容の XML データとしての書き込み
+
 ADO.NET では、<xref:System.Data.DataSet> の XML 表現を記述することができます。このとき、 にスキーマが含まれていても、含まれていなくてもかまいません。 XML にインラインで含まれているスキーマ情報は、XML スキーマ定義言語 (XSD) を使用して記述されています。 スキーマには、リレーション定義および制約定義と、<xref:System.Data.DataSet> のテーブル定義が含まれています。  
   
  <xref:System.Data.DataSet> が XML データとして書き込まれると、<xref:System.Data.DataSet> の行は現在のバージョンで書き込まれます。 ただし、行の現在の値と元の値の両方を含めるには、<xref:System.Data.DataSet> を DiffGram として書き込みます。  
@@ -64,6 +65,7 @@ xmlSW.Close();
 ```  
   
 ## <a name="mapping-columns-to-xml-elements-attributes-and-text"></a>XML 要素、属性、およびテキストへの列の割り当て  
+
  テーブルの列を XML 形式で表す方法を指定するには、**DataColumn** オブジェクトの **ColumnMapping** プロパティを使用します。 テーブル列の **ColumnMapping** プロパティに対するさまざまな **MappingType** の値と、結果の XML を、次の表に示します。  
   
 |MappingType の値|説明|  

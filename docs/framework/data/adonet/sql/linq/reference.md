@@ -2,19 +2,21 @@
 title: 関連項目
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 55754ef7bb06a1ceac7d4c12098847f4db16e928
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 05ff05d165ad902eba0e984089ab1dde7f24fca7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553559"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91184860"
 ---
 # <a name="reference"></a>関連項目
+
 このセクションには、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] を使用する開発者向けのリファレンス情報が用意されています。  
   
  特定の問題について Microsoft Docs を検索したり、[LINQ フォーラム](https://social.msdn.microsoft.com/forums/en-us/home?forum=linqtosql)に参加して、複雑なトピックについて専門家と検討したりすることもできます。 また、Visual Basic および C# のコード例を含む、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] テクノロジについて記載されているホワイト ペーパーを参照することもできます。 詳細については、「[LINQ to SQL: .NET Language-Integrated Query for Relational Data](/previous-versions/dotnet/articles/bb425822(v=msdn.10))」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [データ型と関数](data-types-and-functions.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] によって変換エンジンで変換が明示的に提供されている場合にのみ、共通言語ランタイム (CLR) のコンストラクトに対応する式が SQL にあることについて説明します。  
   
@@ -37,6 +39,7 @@ ms.locfileid: "90553559"
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] による標準クエリ演算子から SQL コマンドへの変換について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [LINQ to SQL](index.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 関連トピックのポータルを提供します。  
   

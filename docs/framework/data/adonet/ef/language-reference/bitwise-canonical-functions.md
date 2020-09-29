@@ -2,17 +2,19 @@
 title: ビット単位の正規関数
 ms.date: 03/30/2017
 ms.assetid: 993868ca-16e3-47b6-9915-c29cd63b0a21
-ms.openlocfilehash: 3c1f32acc7a035658198b807646c1ceb95dfed0b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 67ae0302f6faf0fb7284bc0c4a53a90ba6d55e08
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251297"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185263"
 ---
 # <a name="bitwise-canonical-functions"></a>ビット単位の正規関数
+
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] にはビット単位の正規関数があります。  
   
 ## <a name="remarks"></a>Remarks  
+
  次の表に、ビット単位の [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 正規関数を示します。 `Null` が入力された場合、これらの関数では `Null` が返されます。 戻り値の型は、引数の型と同じです。 複数の引数を関数が受け取る場合、それらの引数は同じ型にする必要があります。 異なる型でビット単位の演算を実行するには、明示的に同じ型にキャストする必要があります。  
   
 |関数|説明|  

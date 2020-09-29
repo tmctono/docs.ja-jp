@@ -2,17 +2,19 @@
 title: メソッド ベースのクエリ例 (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: d340775c-7f39-4087-a290-5cbec6cfa68e
-ms.openlocfilehash: 3cda55457df4157f1b0d2cdef1f857cfe6540c66
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1c1ef8f1b6c05415ac6f5ee59d9a415bfab2c410
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783733"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91175383"
 ---
 # <a name="method-based-query-examples-linq-to-dataset"></a>メソッド ベースのクエリ例 (LINQ to DataSet)
+
 このセクションでは、メソッド ベースのクエリ構文で標準クエリ演算子を使用する LINQ to DataSet プログラミングの例を提供します。 これらの例で使用されている <xref:System.Data.DataSet> は、`FillDataSet` メソッド (「[DataSet へのデータの読み込み](loading-data-into-a-dataset.md)」を参照) を使用して設定します。 詳しくは、「[標準クエリ演算子の概要 (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)」または「[標準クエリ演算子の概要 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [射影](method-based-query-syntax-examples-projection.md)  
  このトピックでは、<xref:System.Linq.Enumerable.Select%2A> メソッドおよび <xref:System.Linq.Enumerable.SelectMany%2A> メソッドを使って <xref:System.Data.DataSet> を照会する例を取り上げます。  
   

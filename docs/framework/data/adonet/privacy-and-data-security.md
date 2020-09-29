@@ -2,25 +2,29 @@
 title: プライバシーとデータ セキュリティ
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: a8d7ae2ece966b4649c9c988c123304fe3f1b4d9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b0721cbc4957dfe64627f3a18064110f96a26f2b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348133"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177385"
 ---
 # <a name="privacy-and-data-security"></a>プライバシーとデータ セキュリティ
+
 ADO.NET アプリケーションにおける機密情報の保護と管理は、基になる製品および作成に使用されたテクノロジに依存します。 ADO.NET そのものは、データを保護したり暗号化したりするためのサービスを提供しません。  
   
 ## <a name="cryptography-and-hash-codes"></a>暗号化とハッシュ コード  
+
  ADO.NET アプリケーションから .NET Framework <xref:System.Security.Cryptography> 名前空間のクラスを使用すると、認証されていない第三者によるデータの読み取りや変更を防止できます。 クラスには、アンマネージド Microsoft CryptoAPI 用のラッパーもあれば、マネージド実装もあります。 「[暗号化サービス](../../../standard/security/cryptographic-services.md)」トピックでは、.NET Framework における暗号化の概要や暗号化の実装方法と、暗号化に関連した個々のタスクを実行する方法について説明されています。  
   
  暗号化ではデータを暗号化した後に復号化を行いますが、データのハッシュは不可逆性の処理です。 データのハッシュは、データが変更されていないことを確認することによって改ざんを防止する場合に役立ちます。ハッシュ アルゴリズムは、同一内容の入力文字列に対して、容易に比較できる同一内容の短い値を出力します。 「[ハッシュ コードによるデータの整合性の保証](../../../standard/security/ensuring-data-integrity-with-hash-codes.md)」では、ハッシュ値を生成および検証する方法について説明されています。  
   
 ## <a name="encrypting-configuration-files"></a>構成ファイルの暗号化  
+
  アプリケーションのセキュリティを実現するうえで、データ ソースへのアクセスを保護することは、最も重要な目標の 1 つです。 保護されていない接続文字列は脆弱性を招く原因になります。 構成ファイルに保存された接続文字列は、.NET Framework が基本的な要素を定義するために使用する標準的な XML ファイルに格納されます。 保護構成機能を使用すると、構成ファイル内の機密情報を暗号化できます。 保護構成は、主に ASP.NET アプリケーションを想定して設計されたものですが、Windows アプリケーションの構成ファイル セクションを暗号化する目的でも使用できます。 詳細については、「[接続情報の保護](protecting-connection-information.md)」を参照してください。  
   
 ## <a name="securing-string-values-in-memory"></a>メモリ内の文字列値の保護  
+
  <xref:System.String> オブジェクトにパスワード、クレジット カード番号、個人データなどの機密情報が含まれていると、そのデータの使用後に、情報が漏洩するリスクが生じます。アプリケーションでは、文字列データをコンピューターのメモリから削除することはできません。  
   
  <xref:System.String> は不変であり、いったん作成された文字列値は変更できません。 文字列値を変更したように見えても、実際には <xref:System.String> オブジェクトの新しいインスタンスがメモリ内に作成されているだけです。データはテキスト形式で保存されます。 また、文字列のインスタンスがいつメモリから削除されるかを予測することも不可能です。 文字列型によって占有されたメモリは、.NET のガベージ コレクションによって非確定的に回収されます。 高い機密を要するデータに <xref:System.String> クラスや <xref:System.Text.StringBuilder> クラスを使用することは避けてください。  

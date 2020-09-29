@@ -2,17 +2,19 @@
 title: OLE DB スキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: 2d5718c12100ebea49a6b6fab29a3790918c6ad3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 90899a123b3dafcd47a50ef8f6eb003938b22a03
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783450"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186940"
 ---
 # <a name="ole-db-schema-collections"></a>OLE DB スキーマ コレクション
+
 ここでは、Microsoft SQL Server、Oracle、および Microsoft Jet 用の各 OLE DB プロバイダーでのスキーマ コレクションのサポートについて説明します。  
   
 ## <a name="microsoft-sql-server-ole-db-provider"></a>Microsoft SQL Server OLE DB Provider  
+
  Microsoft SQL Server OLE DB Driver では、共通のスキーマ コレクションに加えて、次の特定のスキーマ コレクションがサポートされています。  
   
 - [テーブル]  
@@ -152,6 +154,7 @@ ms.locfileid: "70783450"
 |INTEGRATED|ブール型|  
   
 ## <a name="microsoft-oracle-ole-db-provider"></a>Microsoft Oracle OLE DB Provider  
+
  Microsoft Oracle OLE DB Driver は、共通のスキーマ コレクションに加えて次のスキーマ コレクションをサポートしています。  
   
 - [テーブル]  
@@ -295,6 +298,7 @@ ms.locfileid: "70783450"
 |INTEGRATED|ブール型|  
   
 ## <a name="microsoft-jet-ole-db-provider"></a>Microsoft Jet OLE DB Provider  
+
  Microsoft Jet OLE DB Driver は、共通のスキーマ コレクションに加えて次のスキーマ コレクションをサポートしています。  
   
 - [テーブル]  

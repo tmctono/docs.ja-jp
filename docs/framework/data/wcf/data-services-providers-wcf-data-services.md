@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: a0160b1b-3d9c-4cc8-8391-cb0986a60a41
-ms.openlocfilehash: eb7d92b1605c6ced8319e0372c8471cd4e388cb8
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: dcca6023349148ac7f65f97028d876514ef31163
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569240"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91182836"
 ---
 # <a name="data-services-providers-wcf-data-services"></a>データ サービス プロバイダー (WCF Data Services)
+
 WCF Data Services では、Open Data Protocol (OData) フィードとしてデータを公開する複数のプロバイダー モデルがサポートされています。 このトピックでは、データ ソースに最適な WCF Data Services プロバイダーを選択するための情報を示します。  
   
 ## <a name="data-source-providers"></a>データ ソース プロバイダー  
+
  WCF Data Services では、データ サービスのデータ モデルを定義する以下のプロバイダーがサポートされています。  
   
 |プロバイダー|説明|  
@@ -24,6 +26,7 @@ WCF Data Services では、Open Data Protocol (OData) フィードとしてデ�
 |カスタム データ サービス プロバイダー|WCF Data Services には、遅延バインディング データ型に基づいてデータ モデルを動的に定義できるプロバイダーのセットが含まれています。 公開されるデータが不明な場合、アプリケーションを設計中の場合、または Entity Framework プロバイダーやリフレクション プロバイダーでは不十分な場合には、これらのインターフェイスを実装する必要があります。 詳しくは、「[カスタム データ サービス プロバイダー](custom-data-service-providers-wcf-data-services.md)」をご覧ください。|  
   
 ## <a name="other-data-service-providers"></a>その他のデータ サービス プロバイダー  
+
  WCF Data Services には、次の追加のデータ サービス プロバイダーがあり、他のいずれかのプロバイダーを使用して定義されたデータ ソースのパフォーマンスが向上します。  
   
 |プロバイダー|説明|  

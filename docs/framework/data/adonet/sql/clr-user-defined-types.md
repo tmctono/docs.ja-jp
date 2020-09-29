@@ -2,14 +2,15 @@
 title: CLR ユーザー定義型
 ms.date: 03/30/2017
 ms.assetid: 9f70e0b0-3a0d-4eb1-b914-07a5d0c167c2
-ms.openlocfilehash: e3b087124773db592b349e07cd022b0f642bdbe3
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 84d588e0c415daa7de19ea695c817f3eb24f732f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910729"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173589"
 ---
 # <a name="clr-user-defined-types"></a>CLR ユーザー定義型
+
 Microsoft SQL Server では、Microsoft .NET Framework 共通言語ランタイム (CLR) を使用して実装されるユーザー定義型 (UDT) をサポートしています。 CLR は SQL Server に統合されており、この機構を利用すると、データベースの型システムを拡張できます。 UDT を利用すれば、SQL Server データ型システムのユーザー拡張が可能であり、複雑な構造化型を定義することもできます。  
   
  UDT は、アプリケーション アーキテクチャの観点から見て 2 つの重要な利点を備えています。  

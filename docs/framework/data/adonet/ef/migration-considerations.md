@@ -2,19 +2,21 @@
 title: 移行に関する注意事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: b0274504fb2b83f7961d4444a8f8e601ba375a8d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d5151f0215cde1c5e35cc87c3cd667e16a23a1df
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554971"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91175474"
 ---
 # <a name="migration-considerations-entity-framework"></a>移行に関する注意事項 (Entity Framework)
+
 ADO.NET の Entity Framework には、既存のアプリケーションにとっていくつかの利点があります。 特に重要な利点の 1 つが、概念モデルを使用して、アプリケーションで使用するデータ構造をデータ ソースのスキーマから分離できることです。 これにより、ストレージ モデルやデータ ソース自体の将来の変更が容易になり、その変更を補うための変更をアプリケーションに加える必要がなくなります。 Entity Framework を使用するメリットについて詳しくは、「[Entity Framework の概要](overview.md)」および「[Entity Data Model](../entity-data-model.md)」をご覧ください。  
   
  Entity Framework の利点を活用するには、既存のアプリケーションを Entity Framework に移行することができます。 移行作業の一部はすべてのアプリケーションに共通です。 こうした共通のタスクには、.NET Framework Version 3.5 Service Pack 1 (SP1) 以降を使用するようにアプリケーションをアップグレードするタスクのほか、モデルおよびマッピングの定義や Entity Framework の構成などが含まれます。 アプリケーションを Entity Framework に移行するときに適用される追加の考慮事項があります。 移行するアプリケーションの種類やアプリケーションの特定の機能に依存する注意点もあります。 このトピックでは、既存のアプリケーションをアップグレードする際に最適な方法を選択するために役立つ情報を紹介します。  
   
 ## <a name="general-migration-considerations"></a>全般的な移行の注意点  
+
  アプリケーションを Entity Framework に移行するときは、次の点に注意してください。  
   
 - .NET Framework バージョン 3.5 SP1 以降を使用しているアプリケーションはどれでも Entity Framework に移行できますが、アプリケーションが使用するデータ ソースのデータ プロバイダーで Entity Framework がサポートされている必要があります。  
@@ -26,6 +28,7 @@ ADO.NET の Entity Framework には、既存のアプリケーションにとっ
 - Entity Framework では ADO.NET のデータ プロバイダーを使用してデータ ソースにアクセスするため、Entity Framework が使用するデータ プロバイダー接続をアプリケーションの他の部分と共有できます。 (たとえば、Entity Framework は SqlClient プロバイダーを使用して SQL Server データベースにアクセスします)。 詳細については、「 [Entity Framework 用の EntityClient プロバイダー](entityclient-provider-for-the-entity-framework.md)」を参照してください。  
   
 ## <a name="common-migration-tasks"></a>共通の移行タスク  
+
  既存アプリケーションの Entity Framework への移行パスは、アプリケーションの種類と既存のデータ アクセス計画の両方に依存します。 ただし、既存のアプリケーションを Entity Framework に移行するときは、以下の作業を常に実行する必要があります。  
   
 > [!NOTE]
@@ -53,9 +56,11 @@ ADO.NET の Entity Framework には、既存のアプリケーションにとっ
      Entity Framework アセンブリへの参照およびモデル ファイルとマッピング ファイルを、Visual Studio プロジェクトに追加する必要があります。 これらのマッピング ファイルをプロジェクトに追加することで、接続文字列で指定された場所にアプリケーションと共に配置されるようにすることができます。 詳細については、[Entity Framework プロジェクトを手動で構成する](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))」を参照してください。  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>既存のオブジェクトを含むアプリケーションの注意点  
+
  .NET Framework 4 以降の Entity Framework では、POCO ("plain old" CLR object、永続化非依存オブジェクトとも呼ばれます) がサポートされています。 ほとんどの場合、既存のオブジェクトを少し変更すれば Entity Framework で使用できます。 詳しくは、「[POCO エンティティの使用](/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100))」をご覧ください。 アプリケーションを Entity Framework に移行し、Entity Framework ツールによって生成されたデータ クラスを使用することもできます。 詳細については、[Entity Data Model ウィザードを使用する](/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))」を参照してください。  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>ADO.NET プロバイダーを使用するアプリケーションの注意点  
+
  SqlClient などの ADO.NET プロバイダーを使用すると、データ ソースに対するクエリを実行して表形式のデータを取得できます。 データを ADO.NET の DataSet に読み込むこともできます。 以下は、既存の ADO.NET プロバイダーを使用するアプリケーションをアップグレードする場合の注意点です。  
   
 - データ リーダーを使用して表形式のデータを表示している場合  
@@ -69,6 +74,7 @@ ADO.NET の Entity Framework には、既存のアプリケーションにとっ
   アプリケーションで必要な DataSet の機能が Entity Framework によって提供されない場合も、LINQ to DataSet を使用して LINQ クエリを活用することができます。 詳細については、「[LINQ to DataSet](../linq-to-dataset.md)」を参照してください。  
   
 ## <a name="considerations-for-applications-that-bind-data-to-controls"></a>データをコントロールにバインドするアプリケーションの注意点  
+
  .NET Framework では、データをデータ ソース (DataSet や ASP.NET データ ソース コントロールなど) にカプセル化して、それらのデータ コントロールにユーザー インターフェイス要素をバインドすることができます。 以下は、コントロールを Entity Framework データにバインドする場合の注意点です。  
   
 - コントロールへのデータ バインディング  
@@ -84,6 +90,7 @@ ADO.NET の Entity Framework には、既存のアプリケーションにとっ
   Entity Framework には、ASP.NET Web アプリケーションのデータ バインディングを単純化するために作られたデータ ソース コントロールが含まれています。 詳しくは、「[EntityDataSource Web サーバー コントロールの概要](/previous-versions/aspnet/cc488502(v=vs.100))」をご覧ください。  
   
 ## <a name="other-considerations"></a>その他の注意事項  
+
  以下は、特定の種類のアプリケーションを Entity Framework に移行する場合の注意点です。  
   
 - データ サービスを公開するアプリケーション  

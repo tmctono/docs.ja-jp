@@ -2,14 +2,15 @@
 title: '方法: DBML ファイルを変更してカスタマイズ コードを生成する'
 ms.date: 03/30/2017
 ms.assetid: 50ad597a-8598-42d3-82dd-fc7d702ebc37
-ms.openlocfilehash: 6619f4b8c0a47b36a0b84fa21bab4109d26ef895
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: ab49f76a0d5e7338a93e21ae9a8d1d9d74a21e82
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002944"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173440"
 ---
 # <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a>方法: DBML ファイルを変更してカスタマイズ コードを生成する
+
 データベース マークアップ言語 (.dbml) のメタデータ ファイルから、Visual Basic または C# のソース コードを生成できます。 この方法を使用すると、アプリケーション マッピング コードを生成する前に、既定の .dbml ファイルをカスタマイズできます。 これは高度な機能です。  
   
  実行手順は次のとおりです。  
@@ -23,6 +24,7 @@ ms.locfileid: "72002944"
  次の例では、SQLMetal コマンド ライン ツールを使用します。 詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。  
   
 ## <a name="example"></a>例  
+
  次のコードでは、Northwind サンプル データベースから .dbml ファイルを生成します。 データベース メタデータのソースとして、データベースの名前または .mdf ファイルの名前を使用します。  
   
 ```console  
@@ -31,6 +33,7 @@ sqlmetal /dbml:mymeta.dbml mydbfile.mdf
 ```  
   
 ## <a name="example"></a>例  
+
  次のコードでは、.dbml ファイルから Visual Basic または C# のソース コードが生成されます。  
   
 ```console

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: cfd2917d330a9229338790c35911502be5cd9391
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bdf91f6f52a68309cfcd276b222083c8cb67a0cc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559149"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176241"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>チュートリアル: C# でのクエリの作成 (LINQ)
+
 このチュートリアルでは、LINQ クエリ式の記述に使用される C# 言語機能について説明します。  
   
 ## <a name="create-a-c-project"></a>C# プロジェクトの作成  
@@ -40,6 +41,7 @@ ms.locfileid: "90559149"
 5. プロジェクトには、System.Core.dll への参照と、<xref:System.Linq?displayProperty=nameWithType> 名前空間の `using` ディレクティブが使用されています。  
   
 ## <a name="create-an-in-memory-data-source"></a>メモリ内データ ソースの作成  
+
  クエリのデータ ソースは、`Student` オブジェクトのシンプルなリストです。 各 `Student` レコードには、名前、姓、およびクラスでのテストの点数を表す整数の配列が含まれます。 このコードをプロジェクトにコピーします。 これには、次のような特徴があります。  
   
 - `Student` クラスは自動実装プロパティで構成されています。  
@@ -173,6 +175,7 @@ ms.locfileid: "90559149"
      [!code-csharp[csLINQGettingStarted#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#21)]  
   
 ## <a name="next-steps"></a>次の手順  
+
  C# でのクエリ操作の基本が理解できたら、興味がある種類の LINQ プロバイダーについて、ドキュメントやサンプルを読んでみましょう。  
   
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  

@@ -2,14 +2,15 @@
 title: LINQ to SQL クエリ
 ms.date: 03/30/2017
 ms.assetid: f4897aaa-7f44-4c20-a471-b948c2971aae
-ms.openlocfilehash: 478138d26d6cdf656b2487c637a5eb13784126e9
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: c49644a866a6e245c6be1f9a8e8f95d003fd0191
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634381"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91175227"
 ---
 # <a name="linq-to-sql-queries"></a>LINQ to SQL クエリ
+
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のクエリは、LINQ と同じ構文を使用して定義します。 異なる点は、クエリ内で参照されるオブジェクトがデータベース内の要素に割り当てられるという点だけです。 詳細については、「[LINQ クエリの概要 (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)」を参照してください。  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、作成したクエリを同等の SQL クエリに変換し、それをサーバーに送って処理します。 具体的には、アプリケーションは [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] API を使用してクエリの実行を要求します。 次に、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] プロバイダーがクエリを SQL テキストに変換し、ADO プロバイダーに実行を委任します。 ADO プロバイダーは、クエリの結果を `DataReader` として返します。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] プロバイダーにより、ADO の結果がユーザー オブジェクトの <xref:System.Linq.IQueryable> コレクションに変換されます。  

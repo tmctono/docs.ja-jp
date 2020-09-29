@@ -2,14 +2,15 @@
 title: トランザクションとコンカレンシー
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: 837fe6c42d64f7416dbd895e56a38d1a409e567a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 049e402345e1abbb46739e48c89101207a43bb27
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791318"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91191672"
 ---
 # <a name="transactions-and-concurrency"></a>トランザクションとコンカレンシー
+
 トランザクションは、単一のコマンド、またはパッケージとして実行されるコマンドのグループで構成されます。 トランザクションを使用することで、複数の操作を 1 つの作業単位にまとめることができます。 トランザクションのあるポイントで障害が発生した場合は、トランザクションが開始される前の状態にすべての更新をロールバックできます。  
   
  データの一貫性を保証するために、トランザクションは ACID プロパティ (原始性、一貫性、分離性、および持続性) に準拠する必要があります。 Microsoft SQL Server など、ほとんどのリレーショナル データベース システムでは、クライアント アプリケーションが更新、挿入、または削除の操作を行うたびに、ロック、ログ、およびトランザクション管理の機能を提供し、トランザクションをサポートします。  
@@ -22,6 +23,7 @@ ms.locfileid: "70791318"
  SQL Server と Oracle 間のトランザクションなど、種類の異なるリソース マネージャーがトランザクションに含まれる場合、分散トランザクションが必要になります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [ローカル トランザクション](local-transactions.md)  
  データベースに対してトランザクションを実行する方法を示します。  
   

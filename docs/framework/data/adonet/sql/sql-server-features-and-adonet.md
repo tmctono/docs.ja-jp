@@ -3,14 +3,15 @@ title: SQL Server の機能と ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: 743e0eb9761cdc58018aab8aaed50a99b197116c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 121381114fadd8b20978d2e932bf3ec8bdcdb193
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552623"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177320"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server の機能と ADO.NET
+
 このセクションのトピックでは、ADO.NET を使用したデータベース アプリケーションの開発を目的とする SQL Server の機能について説明します。  
   
  詳細については、次の表に示すように、使用する SQL Server のバージョンに対応した SQL Server オンライン ブックを参照してください。  
@@ -20,6 +21,7 @@ ms.locfileid: "90552623"
 1. [開発 (データベース エンジン)](/previous-versions/sql/sql-server-2008/bb500155(v=sql.100))  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [SQL Server のインスタンスの列挙 (ADO.NET)](enumerating-instances-of-sql-server.md)  
  SQL Server のアクティブなインスタンスを列挙する方法について説明します。  
   

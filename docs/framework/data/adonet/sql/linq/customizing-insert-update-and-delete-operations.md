@@ -2,14 +2,15 @@
 title: 挿入、更新、および削除の各操作のカスタマイズ
 ms.date: 03/30/2017
 ms.assetid: 07eef055-8f6c-414d-850e-d323ff946cd0
-ms.openlocfilehash: ed3de95a8224f0b4d8f3d5d913274417a6879942
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4b846d1e1f737cec85ecda75df5e3f66982def62
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70247610"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177346"
 ---
 # <a name="customizing-insert-update-and-delete-operations"></a>挿入、更新、および削除の各操作のカスタマイズ
+
 既定で、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、挿入、読み取り、更新、および削除の各操作を実装する動的な SQL を生成します。 ただし、実際の使用では、業務ニーズに合わせてアプリケーションをカスタマイズすることが多くなります。  
   
 > [!NOTE]
@@ -18,6 +19,7 @@ ms.locfileid: "70247610"
  ここでは、挿入、読み取り、更新、および削除の各操作をアプリケーションでカスタマイズするために [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] に用意されている手段について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [操作のカスタマイズ:概要](customizing-operations-overview.md)  
  挿入、読み取り、更新、および削除の各操作をカスタマイズするために [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] に用意されている手段について説明します。  
   

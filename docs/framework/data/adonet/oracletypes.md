@@ -2,14 +2,15 @@
 title: OracleTypes
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
-ms.openlocfilehash: 95a1173dfbcc4cf49ded8c7b8a42d9764fee9aff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 37089649c66c964f8a912c5a227a5281f6c0dfb7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149402"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189150"
 ---
 # <a name="oracletypes"></a>OracleTypes
+
 .NET Framework Data Provider for Oracle には、Oracle データ型で使用されるいくつかの構造体が含まれています。 その中には、<xref:System.Data.OracleClient.OracleNumber> や <xref:System.Data.OracleClient.OracleString> があります。  
   
 > [!NOTE]
@@ -22,6 +23,7 @@ ms.locfileid: "79149402"
 - <xref:System.Data.OracleClient.OracleDataReader> を使用してデータにアクセスし、いくつかの <xref:System.Data.OracleClient.OracleType> 構造体を使用してデータを表示します。  
   
 ## <a name="creating-an-oracle-table"></a>Oracle テーブルの作成  
+
  この例では、Oracle テーブルを作成し、データを読み込みます。 次の例を実行する前に、この例を実行する必要があります。  
   
 ```csharp  
@@ -52,6 +54,7 @@ public void Setup(string connectionString)
 ```  
   
 ## <a name="retrieving-data-from-the-oracle-table"></a>Oracle テーブルからのデータの取得  
+
  この例では、**OracleDataReader** を使用してデータにアクセスし、いくつかの **OracleType** 構造体を使用してデータを表示します。  
   
 ```csharp  

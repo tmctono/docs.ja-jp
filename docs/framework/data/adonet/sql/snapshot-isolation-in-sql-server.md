@@ -6,17 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 7fa769448dd922925a5eccf4c85bd1840155df68
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4934c031eb9dfb26d60c5233937cbc65ca60d4f7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286249"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183079"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server でのスナップショット分離
+
 スナップショット分離により、OLTP アプリケーションのコンカレンシーが向上しています。  
   
 ## <a name="understanding-snapshot-isolation-and-row-versioning"></a>スナップショット分離と行バージョン管理について  
+
  スナップショット分離を有効にしたら、各トランザクションの更新された行のバージョンを保持する必要があります。  SQL Server 2019 より前は、これらのバージョンは **tempdb** に格納されていました。 SQL Server 2019 で導入された新機能の高速データベース復旧 (ADR) では、独自の行バージョンのセットが必要です。  そのため、SQL Server 2019 では、ADR が有効になっていない場合、行バージョンは常に **tempdb** に保持されます。  ADR が有効になっている場合は、スナップショット分離と ADR の両方に関連するすべての行バージョンが、ユーザーが指定したファイル グループ内のユーザー データベースにある ADR の永続的なバージョン ストア (PVS) に保持されます。 一意のトランザクション シーケンス番号が各トランザクションを識別し、これらの一意の番号がそれぞれの行バージョン用に記録されます。 トランザクションは、トランザクションのシーケンス番号の前にシーケンス番号が付いた最新の行バージョンで動作します。 トランザクションの開始後に作成された新しい行バージョンは、トランザクションによって無視されます。  
   
  "スナップショット" という用語は、トランザクション内のすべてのクエリが、トランザクションの開始時点のデータベースの状態に基づいて、データベースの同じバージョン、つまりスナップショットを参照するという事実を表しています。 ロックは、スナップショット トランザクション内の基になるデータ行やデータ ページでは取得されません。スナップショット トランザクションでは、先に開始されてまだ完了していないトランザクションによりブロックされることなく、他のトランザクションを実行できます。 データを変更するトランザクションは、データを読み取るトランザクションをブロックしません。また、データを読み取るトランザクションは、データを書き込むトランザクションをブロックしません。この理由は、通常、これらのトランザクションは SQL Server の既定の READ COMMITTED 分離レベルにあるためです。 また、ブロック不可の動作は、複雑なトランザクションのデッドロックの可能性を大幅に軽減します。  
@@ -36,6 +38,7 @@ SET READ_COMMITTED_SNAPSHOT ON
  READ_COMMITTED_SNAPSHOT ON オプションを設定すると、既定の READ COMMITTED 分離レベルでバージョン管理された行にアクセスできます。 READ_COMMITTED_SNAPSHOT オプションが OFF に設定されている場合、バージョン管理された行にアクセスするためには、各セッションのスナップショット分離レベルを明示的に設定する必要があります。  
   
 ## <a name="managing-concurrency-with-isolation-levels"></a>分離レベルによるコンカレンシーの管理  
+
  Transact-SQL ステートメントを実行する分離レベルは、ロック動作と行バージョン管理動作を決定します。 分離レベルには接続全体のスコープがあり、SET TRANSACTION ISOLATION LEVEL ステートメントを使用して接続に設定すると、接続が閉じられるか別の分離レベルが設定されるまで、有効なままになります。 接続が閉じられ、プールに返されると、最後の SET TRANSACTION ISOLATION LEVEL ステートメントの分離レベルが保持されます。 プールされた接続を再利用する後続の接続では、接続がプールされたときに有効であった分離レベルが使用されます。  
   
  接続内で発行される個々のクエリには、1 つのステートメントまたはトランザクションの分離を変更しても、接続の分離レベルには影響しないロック ヒントを含めることができます。 ストアド プロシージャまたは関数で設定された分離レベルまたはロック ヒントでは、それらを呼び出す接続の分離レベルは変更されず、ストアド プロシージャまたは関数呼び出しの実行中にのみ有効にされます。  
@@ -53,6 +56,7 @@ SET READ_COMMITTED_SNAPSHOT ON
  詳細については、「[トランザクションのロックおよび行のバージョン管理ガイド](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)」を参照してください。  
   
 ### <a name="snapshot-isolation-level-extensions"></a>スナップショット分離レベルの拡張機能  
+
  SQL Server では、SNAPSHOT 分離レベルの導入および READ COMMITTED の追加実装と共に、SQL-92 分離レベルの拡張機能が導入されました。 READ_COMMITTED_SNAPSHOT 分離レベルは、すべてのトランザクションの READ COMMITTED を自動的に置き換えることができます。  
   
 - SNAPSHOT 分離は、トランザクション内で読み取られるデータには、他の同時実行トランザクションによる変更が反映されないことを指定します。 このトランザクションでは、トランザクションの開始時に存在していたデータ行のバージョンが使用されます。 データが読み取られるときにロックが設定されないため、SNAPSHOT トランザクションは、他のトランザクションによるデータの書き込みをブロックしません。 データを書き込むトランザクションは、スナップショット トランザクションによるデータの読み取りをブロックしません。 スナップショット分離を使用するには ALLOW_SNAPSHOT_ISOLATION データベース オプションを設定して、それを有効にする必要があります。  
@@ -60,6 +64,7 @@ SET READ_COMMITTED_SNAPSHOT ON
 - データベースでスナップショット分離が有効になっている場合、READ_COMMITTED_SNAPSHOT データベース オプションによって、既定の READ COMMITTED 分離レベルの動作が決定されます。 READ_COMMITTED_SNAPSHOT ON を明示的に指定しない場合、すべての暗黙のトランザクションに READ COMMITTED が適用されます。 これにより、READ_COMMITTED_SNAPSHOT OFF (既定) を設定する場合と同じ動作が生成されます。 READ_COMMITTED_SNAPSHOT OFF が有効な場合、データベース エンジンでは、共有ロックを使用して既定の分離レベルが適用されます。 READ_COMMITTED_SNAPSHOT データベース オプションが ON に設定されている場合、データベース エンジンは、ロックを使用してデータを保護せずに、既定として行バージョン管理とスナップショット分離を使用します。  
   
 ## <a name="how-snapshot-isolation-and-row-versioning-work"></a>スナップショット分離と行バージョン管理の機能について  
+
  SNAPSHOT 分離レベルが有効になっている場合、行が更新されるたびに、SQL Server データベース エンジンは **tempdb** 内の元の行のコピーを保存し、行にトランザクション シーケンス番号を追加します。 次に一連のイベントの発生を示します。  
   
 - 新しいトランザクションが開始され、トランザクション シーケンス番号が割り当てられます。  
@@ -77,6 +82,7 @@ SET READ_COMMITTED_SNAPSHOT ON
  スナップショット トランザクションでは常にオプティミスティック同時実行制御が使用され、他のトランザクションによる行の更新を妨げるようなロックが行われません。 スナップショット トランザクションは、トランザクションの開始後に変更された行への更新をコミットしようとすると、このトランザクションがロールバックし、エラーになります。  
   
 ## <a name="working-with-snapshot-isolation-in-adonet"></a>ADO.NET でのスナップショット分離の使用  
+
  スナップショット分離は、<xref:System.Data.SqlClient.SqlTransaction> クラスによって ADO.NET 内でサポートされます。 データベースでスナップショット分離が有効になっているが、READ_COMMITTED_SNAPSHOT ON に構成されていない場合、<xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> メソッドの呼び出し時に **IsolationLevel.Snapshot** 列挙値を使って、<xref:System.Data.SqlClient.SqlTransaction> を開始する必要があります。 このコード フラグメントでは、接続が開いている <xref:System.Data.SqlClient.SqlConnection> オブジェクトであることを前提としています。  
   
 ```vb  
@@ -90,6 +96,7 @@ SqlTransaction sqlTran =
 ```  
   
 ### <a name="example"></a>例  
+
  次の例では、ロックされたデータにアクセスを試みて、さまざまな分離レベルがどのように動作するかを示すものですが、運用環境コードでの使用を意図するものではありません。  
   
  このコードは、SQL Server の **AdventureWorks** サンプル データベースに接続し、**TestSnapshot** というテーブルを作成し、1 行のデータを挿入します。 このコードでは、ALTER DATABASE Transact-SQL ステートメントを使用して、データベースのスナップショット分離を有効にしていますが、READ_COMMITTED_SNAPSHOT オプションは設定せず、既定の READ COMMITTED 分離レベルの動作を有効なままにしています。 次に、このコードでは次のアクションを実行します。  
@@ -111,6 +118,7 @@ SqlTransaction sqlTran =
  [!code-vb[DataWorks SnapshotIsolation.Demo#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.Demo/VB/source.vb#1)]  
   
 ### <a name="example"></a>例  
+
  次の例では、データの変更中のスナップショット分離の動作を示しています。 コードは、次のアクションを実行します。  
   
 - **AdventureWorks** サンプル データベースに接続し、SNAPSHOT 分離を有効にします。  
@@ -131,6 +139,7 @@ SqlTransaction sqlTran =
  [!code-vb[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/VB/source.vb#1)]  
   
 ### <a name="using-lock-hints-with-snapshot-isolation"></a>スナップショット分離でのロック ヒントの使用  
+
  前の例では、最初のトランザクションがデータを選択し、このトランザクションが完了する前に 2 つ目のトランザクションがデータを更新しています。その結果、最初のトランザクションが同じ行を更新しようとすると、競合が発生します。 トランザクションの開始時にロック ヒントを指定することで、実行時間の長いスナップショット トランザクションで更新の競合が発生する機会を削減できます。 次の SELECT ステートメントでは、UPDLOCK ヒントを使用して、選択した行をロックします。  
   
 ```sql  

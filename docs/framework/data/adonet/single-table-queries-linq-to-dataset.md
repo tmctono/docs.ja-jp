@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 89c90fd217285fac449aba40682aa947fcfb3a07
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 17a2fcf54cae64d9443b0cc0e8a37e1002bbd394
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249091"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91175357"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>単一テーブルのクエリ (LINQ to DataSet)
+
 LINQ (統合言語クエリ) のクエリは、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスまたは <xref:System.Linq.IQueryable%601> インターフェイスが実装されているデータ ソースに対して動作します。 <xref:System.Data.DataTable> クラスには、いずれのインターフェイスも実装されていません。そのため、LINQ クエリの `From` 句でソースとして <xref:System.Data.DataTable> を使用する場合は、<xref:System.Data.DataTableExtensions.AsEnumerable%2A> メソッドを呼び出す必要があります。  
   
  次の例では、SalesOrderHeader テーブルからオンラインでの注文をすべて取得し、注文 ID、注文日、および注文番号をコンソールに出力します。  

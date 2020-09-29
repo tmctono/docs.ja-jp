@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 15505cd7-0df2-427a-9f86-e0f96f60ee2e
-ms.openlocfilehash: 0ef5ba8e975cb1c59720c96b214ae2696cc6356e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6fe79febd41c040e430dd772b87ca5624824bb65
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781945"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173472"
 ---
 # <a name="how-to-filter-at-the-datacontext-level"></a>方法: DataContext レベルでフィルター処理する
+
 `EntitySets` を `DataContext` レベルでフィルター処理できます。 このフィルター処理は、対象の <xref:System.Data.Linq.DataContext> インスタンスを使って実行されたすべてのクエリに適用されます。  
   
 ## <a name="example"></a>例  
+
  次の例では、あらかじめ読み込まれた顧客からの注文を <xref:System.Data.Linq.DataLoadOptions.AssociateWith%28System.Linq.Expressions.LambdaExpression%29?displayProperty=nameWithType> に基づいてフィルター処理するために `ShippedDate` が使用されます。  
   
  [!code-csharp[DLinqQueryConcepts#10](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#10)]

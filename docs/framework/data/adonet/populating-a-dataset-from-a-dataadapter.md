@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
-ms.openlocfilehash: 3d4da840e1d51ec6f309915787caa8891db3eb59
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ac84af884238b166266d4206802878c1e21169fd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286664"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177411"
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>DataAdapter からの DataSet の読み込み
+
 ADO.NET の <xref:System.Data.DataSet> は、データ ソースに依存しない一貫したリレーショナル プログラミング モデルを提供するメモリ常駐型のデータ表現です。 `DataSet` はテーブル、制約、およびテーブル間のリレーションシップを含む完全なデータのセットを表します。 `DataSet` はデータ ソースとは独立しているため、 `DataSet` にはそのアプリケーションに固有のデータと複数のデータ ソースからのデータを含めることができます。 既存のデータ ソースとの対話は `DataAdapter`によって制御されます。  
   
  `SelectCommand` の `DataAdapter` プロパティは、データ ソースからデータを取得する `Command` オブジェクトです。 `InsertCommand`の `UpdateCommand`、 `DeleteCommand` 、 `DataAdapter` の各プロパティは、 `Command` のデータに対して行われた変更に基づいてデータ ソースのデータ更新を管理する `DataSet`オブジェクトです。 これらのプロパティについて詳しくは、「[DataAdapter によるデータ ソースの更新](updating-data-sources-with-dataadapters.md)」をご覧ください。  
@@ -57,12 +58,15 @@ adapter.Fill(customers, "Customers");
 > このサンプル コードでは、 `Connection`の開始と終了を明示的に行っていません。 `Fill` メソッドは、接続がまだ開いていないことを認識すると `Connection` が使用している `DataAdapter` を暗黙的に開きます。 `Fill` が接続を開いた場合は、 `Fill` の終了時に Fill が接続を終了します。 これにより、 `Fill` や `Update`などの単一の操作を扱う場合にコードを簡略化できます。 これに対し、開いている接続を必要とする複数の操作を実行する場合は、 `Open` の `Connection`メソッドを明示的に呼び出し、データ ソースに対する操作の実行後に `Close` の `Connection`メソッドを呼び出すことでアプリケーションのパフォーマンスを改善できます。 リソースを解放して他のクライアント アプリケーションが使用できるようにするために、データ ソースへの接続を開いたままにする時間は最小限にすることをお勧めします。  
   
 ## <a name="multiple-result-sets"></a>複数結果セット  
+
  `DataAdapter` は複数の結果セットを検出すると、 `DataSet`に複数のテーブルを作成します。 これらのテーブルには、Table0 のように、"Table" で始まるインクリメンタル既定名 Table*N*が割り当てられます。 テーブル名を引数として `Fill` メソッドに渡すと、TableName0 を表す "TableName" で始まるインクリメンタル既定名 TableName*N*が割り当てられます。  
   
 ## <a name="populating-a-dataset-from-multiple-dataadapters"></a>複数の DataAdapter からの DataSet の読み込み  
+
  1 つの `DataSet` で、任意の数の `DataAdapter` オブジェクトを使用できます。 それぞれの `DataAdapter` で 1 つ以上の `DataTable` オブジェクトにデータを格納し、関連するデータ ソースに更新を反映させることができます。 `DataRelation` に対して `Constraint` オブジェクトおよび `DataSet` オブジェクトを部分的に追加できるため、複数の異なるデータ ソースから取得したデータを関連付けることができます。 たとえば、Microsoft SQL Server データベース、OLE DB を通じて公開される IBM DB2 データベース、および XML をストリーム転送するデータ ソースからのデータを `DataSet` に含めることができます。 1 つ以上の `DataAdapter` オブジェクトを使用して、各データ ソースとの通信を行うことができます。  
   
 ### <a name="example"></a>例  
+
  次のコード サンプルでは、Microsoft SQL Server 2000 の `Northwind` データベースおよび Microsoft Access の `Northwind` データベースから、それぞれ顧客リストと注文リストを取得します。 取得したテーブルを `DataRelation`で関連付けて、顧客および対応する注文の一覧を表示します。 `DataRelation` オブジェクトについて詳しくは、「[DataRelation の追加](./dataset-datatable-dataview/adding-datarelations.md)」および「[DataRelation の移動](./dataset-datatable-dataview/navigating-datarelations.md)」をご覧ください。  
   
 ```vb  
@@ -119,11 +123,13 @@ foreach (DataRow pRow in customerOrders.Tables["Customers"].Rows)
 ```  
   
 ## <a name="sql-server-decimal-type"></a>SQL Server の 10 進数型  
+
  既定では、`DataSet` によるデータの格納には、.NET Framework のデータ型が使用されます。 ほとんどのアプリケーションで、これらのデータ型を使用してデータ ソース情報を簡単に表示できます。 しかし、データ ソースのデータ型が SQL Server の 10 進数データ型または数値データ型の場合は、この表現によって問題が生じる場合があります。 .NET Framework の `decimal` データ型の最大有効桁数は 28 桁であるのに対し、SQL Server の `decimal` データ型の有効桁数は 38 桁です。 `SqlDataAdapter` が動作している間に、 `Fill` が、SQL Server の `decimal` フィールドの有効桁数が 28 文字を超えていると判断した場合、現在の行は `DataTable`に追加されません。 その場合は `FillError` イベントが発生するため、開発者は有効桁数の消失が発生していないかどうかを確認し、適切に対応できます。 `FillError` イベントについて詳しくは、「[DataAdapter のイベント処理](handling-dataadapter-events.md)」をご覧ください。 SQL Server の `decimal` 値を取得するために、 <xref:System.Data.SqlClient.SqlDataReader> オブジェクトを使用し、 <xref:System.Data.SqlClient.SqlDataReader.GetSqlDecimal%2A> メソッドを呼び出すこともできます。  
   
  ADO.NET 2.0 では、`DataSet` での <xref:System.Data.SqlTypes> に対するサポート機能が強化されています。 詳細については、「 [SqlTypes and the DataSet](./sql/sqltypes-and-the-dataset.md)」を参照してください。  
   
 ## <a name="ole-db-chapters"></a>OLE DB のチャプター  
+
  階層構造の行セット、つまりチャプター (OLE DB では `DBTYPE_HCHAPTER`型、ADO では `adChapter`型) を使用して `DataSet`の内容を格納できます。 <xref:System.Data.OleDb.OleDbDataAdapter> が `Fill` が動作している間にチャプター列を検出すると、そのチャプター列のための `DataTable` を作成し、チャプターから取得した列と行をこのテーブルに格納します。 チャプター列用に作成されたテーブルには、親テーブルの名前とチャプター列の名前の両方を使用した "*ParentTableNameChapteredColumnName*" 形式の名前が割り当てられます。 `DataSet` にチャプター列の名前と一致するテーブルが既に存在する場合は、現在のテーブルにチャプター データが格納されます。 既存のテーブルにチャプター内の列と一致する列が存在しない場合は、新しい列が追加されます。  
   
  `DataSet` 内のテーブルにチャプター列のデータを格納する前に、親テーブルと子テーブルの両方に 1 つの整数列を追加し、親列を自動インクリメントに設定し、両方のテーブルに追加された列を使用して `DataRelation` を作成すると、階層構造の行セットを形成している親テーブルと子テーブルの間にリレーションが作成されます。 追加されたリレーションには親テーブルの名前とチャプター列の名前を使用した "*ParentTableNameChapterColumnName*" 形式の名前が割り当てられます。  

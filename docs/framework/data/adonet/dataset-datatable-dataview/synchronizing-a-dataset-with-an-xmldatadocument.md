@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: 2ee5b0937f24fac745f72cf6ef6e4bef9ec97ba8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 95f1d21805dde86cd4eb59147f2fd012279b6dc1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150782"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173745"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>DataSet と XmlDataDocument の同期
+
 このセクションでは、<xref:System.Xml.XmlDataDocument> と同期され、厳密に型指定された <xref:System.Data.DataSet> を使用して、注文書を処理する手順の 1 ステップを例に説明します。 この例では、**DataSet** をソース XML ドキュメントの一部だけと一致する最小限のスキーマと共に作成します。 この例では、**XmlDataDocument** を使用してソース XML ドキュメントが完全に保持されるため、XML ドキュメントのサブセットを公開するときに **DataSet** を使用できます。  
   
  注文書に関する情報 (顧客情報、発注品目、出荷情報など) をすべて含む XML ドキュメントの例を次に示します。  

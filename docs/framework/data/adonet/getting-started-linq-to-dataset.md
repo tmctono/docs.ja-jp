@@ -2,17 +2,19 @@
 title: はじめに (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 97522119-f6a3-434c-a1ec-17396b74a556
-ms.openlocfilehash: 7ad81e6187351c5c1d5b98766ce69db4755e7a90
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2ac75677bcb5c23d914993a4487be7649cc49073
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795022"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177437"
 ---
 # <a name="getting-started-linq-to-dataset"></a>はじめに (LINQ to DataSet)
+
 ここでは、LINQ to DataSet を使ったプログラミングに関する概要を説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [LINQ to DataSet の概要](linq-to-dataset-overview.md)  
  LINQ to DataSet の概念的な概要を説明します。  
   
@@ -26,6 +28,7 @@ ms.locfileid: "70795022"
  Visual Studio での LINQ to DataSet プロジェクトの作成に関する情報を提供します。  
   
 ## <a name="reference"></a>関連項目  
+
  <xref:System.Data.DataRowComparer>  
   
  <xref:System.Data.DataRowExtensions>  

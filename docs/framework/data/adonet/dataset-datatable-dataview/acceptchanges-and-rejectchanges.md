@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
-ms.openlocfilehash: c537fa808fc6ba4c740e71bfd70fe9cd1f3bd31a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e29d2404d6d593b9a5b905206af3cdd3bc1a3e51
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785563"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177593"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>AcceptChange と RejectChange
+
 <xref:System.Data.DataTable> 内のデータに行われた変更が正確であるかどうかを検証した後で、<xref:System.Data.DataRow>、<xref:System.Data.DataTable>、または <xref:System.Data.DataSet> の <xref:System.Data.DataRow.AcceptChanges%2A> メソッドを使用して、変更を受け入れることができます。変更を受け入れると、**Current** 行の値が **Original** の値に設定され、**RowState** プロパティが **Unchanged** に設定されます。 変更を受け入れるかまたは拒否すると、**RowError** 情報が削除され、**HasErrors** プロパティが **false** に設定されます。 変更を受け入れるかまたは拒否した場合、データ ソース内で実行中の更新操作にも影響することがあります。 詳しくは、「[DataAdapter によるデータ ソースの更新](../updating-data-sources-with-dataadapters.md)」をご覧ください。  
   
  **DataTable** に外部キー制約が存在する場合、**AcceptChanges** と **RejectChanges** を使用して受け入れられた変更または拒否された変更は、**ForeignKeyConstraint.AcceptRejectRule** に従って **DataRow** の子の行に反映されます。 詳しくは、「[DataTable の制約](datatable-constraints.md)」をご覧ください。  

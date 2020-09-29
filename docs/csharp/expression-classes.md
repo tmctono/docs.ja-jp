@@ -4,12 +4,12 @@ description: 式ツリーをサポートするフレームワークの型、式�
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 8483c46dde3ea97138e55ab84a5924a3d2578730
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 548f5ba6a2de00d9556621791515555b6f6a325c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146087"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180440"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>式ツリーをサポートするフレームワークの型
 
@@ -58,6 +58,7 @@ var addition = Expression.Add(one, two);
 この簡単な例からわかるように、さまざまな型が式ツリーの作成と操作に関わっています。 C# 言語が備える豊富な語彙が提供する機能を発揮するには、こうした複雑さが必要になります。
 
 ## <a name="navigating-the-apis"></a>API の操作
+
 ほぼすべての C# 言語の構文要素に対してマップされる式ノード型がそれぞれ存在します。 各型には、その型の言語要素に特有のメソッドがあります。 一度に覚えておくべきことがたくさんあります。 ここではすべてを記憶しようとするのではなく、式ツリーを操作するときにふだん使うテクニックを紹介します。
 
 1. `ExpressionType` 列挙型のメンバーを調べて、検証するノードを特定します。 式ツリーをたどって理解するときに、この方法が実に役立ちます。

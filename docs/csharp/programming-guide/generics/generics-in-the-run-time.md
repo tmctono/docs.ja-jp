@@ -5,14 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: 8e072e7aa53177929dda0be931beb85863b6a12e
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 1d2afd34d1a80841ba711897492cd4cd6412fa53
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299228"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91184119"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>ランタイムのジェネリック (C# プログラミング ガイド)
+
 ジェネリック型またはメソッドが Microsoft 中間言語 (MSIL) にコンパイルされるとき、型パラメーターありとして識別するメタデータが追加されます。 ジェネリック型の MSIL の使われ方は、指定した型パラメーターの種類 (値型または参照型) によって異なります。  
   
  ジェネリック型が値型をパラメーターとして最初に構築されるとき、ランタイムにより、特殊なジェネリック型が作成されます。このとき、MSIL の適切な場所で指定のパラメーターが代わりに使用されます。 特殊なジェネリック型は、パラメーターとして使用される一意の値型ごとに 1 回作成されます。  

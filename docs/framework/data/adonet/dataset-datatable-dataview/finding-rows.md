@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-ms.openlocfilehash: cfd4587f0dde7687ecf88bf6b31c44b90a2287ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc0661e29e6d3ee5aa3f54179e8abf265cd67d58
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151144"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186979"
 ---
 # <a name="finding-rows"></a>行の検索
+
 <xref:System.Data.DataView.Find%2A> の <xref:System.Data.DataView.FindRows%2A> メソッドと <xref:System.Data.DataView> メソッドを使用すると、並べ替えキーの値に基づいて行を検索できます。 **Find** メソッドと **FindRows** メソッドによる検索で、値の大文字と小文字が区別されるかどうかは、基になる <xref:System.Data.DataTable> の **CaseSensitive** プロパティによって決まります。 検索結果を返すには、検索値が既存の並べ替えキーの値と完全に一致している必要があります。  
   
  **Find** メソッドは、検索条件に一致する <xref:System.Data.DataRowView> のインデックスの整数値を返します。 複数の行が検索条件に一致する場合は、一致した最初の **DataRowView** のインデックスが返されます。 一致する DataRowView がない場合には、**Find** は -1 を返します。  

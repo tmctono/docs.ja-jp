@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c804e4d-f348-4afd-9f63-d3f0f24bc6a9
-ms.openlocfilehash: 38c43fa509b5259aa94ca416aadb51b405fc5dc7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b142ef820e964eaf5f1afed53a6b12a9344c7dda
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542399"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189332"
 ---
 # <a name="how-to-call-model-defined-functions-in-queries"></a>方法: クエリを使用してモデル定義関数を呼び出す
+
 このトピックでは、概念モデルで定義されている関数を LINQ to Entities クエリから呼び出す方法について説明します。  
   
  以下に示す手順は、モデル定義関数を LINQ to Entities クエリから呼び出す方法をまとめたものです。 各手順の詳しい説明は、その後の例で示します。 この手順では、関数を概念モデルで定義済みであると想定します。 詳細については、[概念モデルでカスタム関数を定義する](/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))」を参照してください。  
@@ -24,6 +25,7 @@ ms.locfileid: "90542399"
 2. LINQ to Entities クエリから関数を呼び出します。  
   
 ## <a name="example"></a>例  
+
  次の例は、概念モデルで定義されている関数を LINQ to Entities クエリから呼び出す方法を示しています。 この例では、School モデルを使用します。 School モデルの詳細については、「[School サンプル データベースの作成](/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))」と「[School .edmx ファイルの生成](/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100))」を参照してください。  
   
  次の概念モデル関数は、あるインストラクターが雇用されてから経過した年数を返します。 関数を概念モデルに追加する方法については、「[方法:概念モデルでカスタム関数を定義する](/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))」を参照してください。)  
@@ -31,12 +33,14 @@ ms.locfileid: "90542399"
  [!code-xml[DP ConceptualModelFunctions#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp conceptualmodelfunctions/xml/school.edmx#1)]
   
 ## <a name="example"></a>例  
+
  次に、次のメソッドをアプリケーションに追加し、<xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> を使用して概念モデル関数にマップします。  
   
  [!code-csharp[DP ConceptualModelFunctions#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp conceptualmodelfunctions/cs/program.cs#2)]
  [!code-vb[DP ConceptualModelFunctions#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp conceptualmodelfunctions/vb/module1.vb#2)]  
   
 ## <a name="example"></a>例  
+
  これで、LINQ to Entities クエリから概念モデル関数を呼び出すことができます。 次のコードは、雇用年数が 10 年を超えるすべてのインストラクターを表示するメソッドを呼び出します。  
   
  [!code-csharp[DP ConceptualModelFunctions#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp conceptualmodelfunctions/cs/program.cs#3)]

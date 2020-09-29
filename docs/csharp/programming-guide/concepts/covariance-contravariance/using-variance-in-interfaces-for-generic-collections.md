@@ -3,14 +3,15 @@ title: ジェネリック コレクションに対するインターフェイス
 description: ジェネリック コレクションに対して共変および反変のインターフェイスを使用する方法について説明します。 ジェネリック コレクションの変換と比較の例について確認します。
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
-ms.openlocfilehash: c2ce849e32520cb91422ff36173e418a010476bd
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: a896fe8fda3d9ad08de9a09c6a172f7d75335e7d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105669"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176306"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>ジェネリック コレクションに対するインターフェイスでの変性の使用 (C#)
+
 共変のインターフェイスのメソッドでは、そのインターフェイスで指定された型よりも強い派生型を返すことができます。 反変のインターフェイスのメソッドでは、そのインターフェイスで指定された型よりも弱い派生型のパラメーターを受け取ることができます。  
   
  .NET Framework 4 では、既存のいくつかのインターフェイスが共変および反変になります。 その中には、<xref:System.Collections.Generic.IEnumerable%601> や <xref:System.IComparable%601> があります。 これにより、派生型のコレクションに対して、基本型のジェネリック コレクションを操作するメソッドを再利用できます。  
@@ -18,6 +19,7 @@ ms.locfileid: "87105669"
  .NET のバリアント インターフェイスの一覧については、「[ジェネリック インターフェイスの変性 (C#)](./variance-in-generic-interfaces.md)」を参照してください。  
   
 ## <a name="converting-generic-collections"></a>ジェネリック コレクションの変換  
+
  次の例は、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスにおける共変性のサポートの利点を示しています。 `PrintFullName` メソッドは、パラメーターとして `IEnumerable<Person>` 型のコレクションを受け取ります。 ただし、`Employee` は `Person` を継承しているため、`IEnumerable<Employee>` 型のコレクションで再利用できます。  
   
 ```csharp  
@@ -56,6 +58,7 @@ class Program
 ```  
   
 ## <a name="comparing-generic-collections"></a>ジェネリック コレクションの比較  
+
  次の例は、<xref:System.Collections.Generic.IComparer%601> インターフェイスにおける反変性のサポートの利点を示しています。 `PersonComparer` クラスは、`IComparer<Person>` インターフェイスを実装します。 ただし、`Employee` は `Person` を継承しているため、`Employee` 型の一連のオブジェクトを比較するためにこのクラスを再利用できます。  
   
 ```csharp  

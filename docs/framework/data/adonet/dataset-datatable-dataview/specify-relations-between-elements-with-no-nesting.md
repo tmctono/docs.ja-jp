@@ -2,14 +2,15 @@
 title: 入れ子になっていない要素間のリレーションの指定
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-ms.openlocfilehash: bee427c6cdf76792773ea827c8772b276ff29c31
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6684e992242d5c695f3c237f70de61b4dae1c48f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150819"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183404"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>入れ子になっていない要素間のリレーションの指定
+
 要素が入れ子になっていない場合、暗黙的なリレーションは作成されません。 それに対し、**msdata:Relationship** 注釈を使用すると、入れ子になっていない要素間にリレーションを明示的に指定できます。  
   
  互いに入れ子になっていない **Order** 要素と **OrderDetail** 要素の間に **msdata:Relationship** 注釈を指定する XML スキーマの例を次に示します。 **msdata:Relationship** 注釈は、**Schema** 要素の子要素として指定します。  

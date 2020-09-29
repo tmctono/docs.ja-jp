@@ -3,14 +3,15 @@ title: リソース マネージャーの実装
 description: .NET でリソース マネージャーを実装する リソース マネージャーにより、トランザクションで使用されるリソースが管理されます。 トランザクション マネージャーにより、リソース マネージャー アクションが調整されます。
 ms.date: 03/30/2017
 ms.assetid: d5c153f6-4419-49e3-a5f1-a50ae4c81bf3
-ms.openlocfilehash: bf40c6eaee35a5a548c6de4a286e46c4d4a66aca
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: e6370f6b544255ebdc402f06b7977d4a3a587c32
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141850"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91182897"
 ---
 # <a name="implementing-a-resource-manager"></a>リソース マネージャーの実装
+
 トランザクションで使用される各リソースはリソース マネージャーによって管理され、その動作はトランザクション マネージャーによって調整されます。 リソース マネージャーは、トランザクション マネージャーと連携してアプリケーションに原子性と分離を保証します。 Microsoft SQL Server、永続的なメッセージ キュー、メモリ内ハッシュ テーブルはすべて、リソース マネージャーの例です。  
   
  リソース マネージャーは、永続性データまたは揮発性データを管理します。 リソース マネージャーの永続性または揮発性とは、リソース マネージャーがエラーの回復をサポートするかどうかを意味します。 リソース マネージャーがエラーの回復をサポートする場合、フェーズ 1 (準備) 中にデータが永続ストレージに保存されます。したがって、リソース マネージャーがダウンした場合でも、回復時にトランザクションへの再参加を行い、トランザクション マネージャーから受信した通知に基づいて適切な動作を実行できます。 一般に、揮発性リソース マネージャーは、メモリ内のデータ構造 (たとえば、メモリ内のトランザクション ハッシュ テーブル) などの揮発性リソースを管理し、永続的リソース マネージャーは、より永続的なバッキング ストアを持つリソース (たとえば、バッキング ストアがディスクであるデータベース) を管理します。  
@@ -34,6 +35,7 @@ ms.locfileid: "85141850"
  <xref:System.Transactions.Transaction> クラスは、PSPE (Promotable Single Phase Enlistment) を参加させるための <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> メソッドも提供しています。 これにより、永続的リソース マネージャー (RM) は、MSDTC による管理のために後で必要に応じてエスカレートできるトランザクションをホストおよび "所有" できます。 詳細については、「[単一フェーズ コミットおよび昇格可能単一フェーズ通知を使用した最適化](optimization-spc-and-promotable-spn.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  リソース マネージャーが通常実行する手順の概要については、次のトピックを参照してください。  
   
  [トランザクションの参加要素としてのリソースの参加](enlisting-resources-as-participants-in-a-transaction.md)  

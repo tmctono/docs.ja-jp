@@ -2,17 +2,19 @@
 title: 文字列正規関数
 ms.date: 03/30/2017
 ms.assetid: 5e2cbebd-5df3-47c7-b0e2-49a17ab22bfb
-ms.openlocfilehash: 9013b8bd8505442666dd0688eaf2586959a61b70
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 5a7889511d9e8e276ba026c37f4cd8a4aeba156c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249090"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173654"
 ---
 # <a name="string-canonical-functions"></a>文字列正規関数
+
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] には、文字列正規関数が含まれています。  
   
 ## <a name="remarks"></a>Remarks  
+
  次の表に、文字列 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 正規関数を示します。  
   
 |関数|説明|  

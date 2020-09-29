@@ -8,17 +8,19 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: 6a44d61f29fad7fa7d5304deb8b1e329478bc5b4
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 02e45f4e67a80d3afb600f44ea9fa6a5e175310c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202022"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186679"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>データ サービス リソースへのアクセス (WCF Data Services)
+
 WCF Data Services では、URI でアドレス指定できるリソースでデータをフィードとして公開するため、Open Data Protocol (OData) がサポートされています。 これらのリソースは、[Entity Data Model](../adonet/entity-data-model.md) のエンティティとリレーションシップの変換に従って表現されます。 このモデルでは、エンティティはアプリケーション ドメイン内のデータの操作単位 (データ型) を表します (顧客、注文、項目、製品など)。 エンティティ データは、Representational State Transfer (REST) のセマンティクス (特に、標準的な HTTP 動詞である GET、PUT、POST、および DELETE) を使用してアクセスおよび変更できます。  
   
 ## <a name="addressing-resources"></a>リソースへの対処  
+
  OData では、データ モデルによって公開されたデータを、URI を使用してアドレス指定します。 たとえば、次の URI では Customers エンティティ セットであるフィードが返されます。このフィードには、Customer エンティティ型のすべてのインスタンスのエントリが含まれています。  
   
 <https://services.odata.org/Northwind/Northwind.svc/Customers>
@@ -50,6 +52,7 @@ WCF Data Services では、URI でアドレス指定できるリソースでデ�
  詳細については、[OData のURI 規則](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)に関するページを参照してください。
   
 ## <a name="system-query-options"></a>System Query Options (システム クエリ オプション)  
+
  OData では一連のシステム クエリ オプションが定義されており、フィルター処理、並べ替え、ページングなど、リソースに対する従来のクエリ操作の実行に使用できます。 たとえば、次の URI では、郵便番号の末尾が `100` ではないすべての `Order` エンティティのセットが、関連する `Order_Detail` エンティティと共に返されます。  
   
 `https://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity`
@@ -69,6 +72,7 @@ WCF Data Services では、URI でアドレス指定できるリソースでデ�
 |`$inlinecount`|フィードで返されるエンティティの数のカウントがフィードに含まれるように要求します。|  
   
 ## <a name="addressing-relationships"></a>リレーションシップのアドレス指定  
+
  エンティティ セットとエンティティ インスタンスのアドレス指定に加えて、OData では、2 つのエンティティ間のリレーションシップを表すアソシエーションのアドレスを指定することもできます。 この機能は、2 つのエンティティ インスタンス (Northwind サンプル データベースの注文に関連付けられた配送会社など) の間のリレーションシップを作成または変更するために必要です。 OData では、エンティティ間のアソシエーションをアドレス指定する `$link` 演算子がサポートされています。 たとえば、次の URI を HTTP PUT 要求メッセージで指定した場合、指定した注文の配送会社を新しい配送会社に変更します。  
   
 `https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper`
@@ -76,6 +80,7 @@ WCF Data Services では、URI でアドレス指定できるリソースでデ�
  詳しくは、「`3.2. Addressing Links between Entries`」セクションがある [OData のURI 規則](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)に関するページを参照してください。
   
 ## <a name="consuming-the-returned-feed"></a>返されたフィードの使用  
+
  OData リソースの URI を使用すると、サービスによって公開されるエンティティ データのアドレスを指定できます。 Web ブラウザーの [アドレス] フィールドに URI を入力すると、要求されたリソースの OData フィード表現が返されます。 詳細については、[WCF Data Services のクイックスタート](quickstart-wcf-data-services.md)に関する記事を参照してください。 Web ブラウザーはデータ サービス リソースが予期されたデータを返すかどうかをテストするために便利ですが、データの作成、更新、および削除も行うことができる運用データ サービスには、一般的にアプリケーション コードや Web ページのスクリプト言語を使用してアクセスします。 詳細については、「[クライアント アプリケーションでのデータ サービスの使用](using-a-data-service-in-a-client-application-wcf-data-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目

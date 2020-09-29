@@ -2,14 +2,15 @@
 title: property
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
-ms.openlocfilehash: d1e20a6570c458041ec5d8ececbfa291ca9e4612
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 6aeb29c5aa608987466ec858416a4ac141ff1da3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73735400"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180921"
 ---
 # <a name="property"></a>property
+
 "*プロパティ*" は、[エンティティ型](entity-type.md)および[複合型](complex-type.md)に不可欠な構成要素です。 プロパティは、エンティティ型または複合型のインスタンスに含まれるデータの形と特性を定義します。 概念モデルのプロパティは、クラスに定義されるプロパティに似ています。 クラスのプロパティがクラスの構造を定義し、オブジェクトに関する情報を伝達するのと同様に、概念モデルのプロパティはエンティティ型の構造を定義し、エンティティ型のインスタンスに関する情報を伝達します。  
   
 > [!NOTE]
@@ -29,6 +30,7 @@ ms.locfileid: "73735400"
 > 複合型自体に、複合型のプロパティを指定することができます。  
   
 ## <a name="example"></a>例  
+
  下のダイアグラムは、`Book`、`Publisher`、および `Author` という 3 つのエンティティ型の概念モデルを示しています。 各エンティティ型には、いくつかのプロパティがありますが、ダイアグラムには各プロパティの型情報が示されていません。 [エンティティ キー](entity-key.md)のプロパティには、"(キー)" と示されています。  
   
  ![3 種類のエンティティを持つモデルの例](./media/property/example-model-three-entity-types.gif)  

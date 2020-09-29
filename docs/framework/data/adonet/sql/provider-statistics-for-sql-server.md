@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: 5e37a04ff731a99664d636e0d4175f99214c2646
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 21bf7662094d5bc8948a1ce6378c454713cacc62
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174512"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183118"
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server のプロバイダー統計情報
+
 .NET Framework version 2.0 以降では、.NET Framework Data Provider for SQL Server によって実行時の統計がサポートされています。 統計情報を有効にするには、有効な接続オブジェクトを作成した後で、<xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> オブジェクトの <xref:System.Data.SqlClient.SqlConnection> プロパティを `True` に設定する必要があります。 統計情報が有効になったら、<xref:System.Data.SqlClient.SqlConnection> オブジェクトの <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> メソッドを使用して、<xref:System.Collections.IDictionary> 参照を取得することにより、それらを "特定の時点のスナップショット" として確認できます。 名前と値のペアの辞書エントリのセットとしてリストを列挙します。 これらの名前と値のペアは順不同です。 カウンターはいつでも、<xref:System.Data.SqlClient.SqlConnection> オブジェクトの <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> メソッドを呼び出してリセットできます。 統計情報の収集が有効にされていない場合、例外は生成されません。 さらに、最初に <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> を呼び出すことなく <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> が呼び出された場合、取得される値は各エントリの初期値になります。 統計を有効にし、アプリケーションをしばらく実行してから統計を無効にした場合、取得される値には、統計を無効にした時点までに収集された値が反映されます。 すべての統計情報の値は、接続ごとに収集されます。  
   
 ## <a name="statistical-values-available"></a>使用できる統計情報の値  
+
  現在、Microsoft SQL Server プロバイダーから使用できる項目は 18 種類あります。 使用できる項目の数を確認するには、<xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> により返される <xref:System.Collections.IDictionary> インターフェイス参照の **Count** プロパティを使用します。 プロバイダーの統計情報のカウンターはすべて、64 ビット幅である共通言語ランタイムの <xref:System.Int64> 型 (C# と Visual Basic の場合は **long**) を使用します。 **int64** データ型の最大値は、**int64.MaxValue** フィールドにより定義されているように、((2^63)-1)) です。 カウンターの値がこの最大値に達すると、正確であると見なされなくなります。 つまり、**int64.MaxValue**-1((2^63)-2) は、事実上、すべての統計情報について有効な値の最大値になります。  
   
 > [!NOTE]
@@ -45,6 +47,7 @@ ms.locfileid: "79174512"
 |`UnpreparedExecs`|アプリケーションがプロバイダーを使って開始され、統計情報が有効になった後に接続を通じて準備解除された、ステートメントの数を返します。|  
   
 ### <a name="retrieving-a-value"></a>値の取得  
+
  次のコンソール アプリケーションは、接続で統計情報を有効にして、4 つの各統計情報の値を取得し、コンソール ウィンドウに出力する方法を示します。  
   
 > [!NOTE]
@@ -201,6 +204,7 @@ namespace CS_Stats_Console_GetValue
 ```  
   
 ### <a name="retrieving-all-values"></a>すべての値の取得  
+
  次のコンソール アプリケーションは、接続で統計情報を有効にし、使用可能なすべての統計情報の値を列挙子を使って取得して、コンソール ウィンドウに出力する方法を示します。  
   
 > [!NOTE]

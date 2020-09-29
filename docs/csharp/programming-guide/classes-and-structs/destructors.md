@@ -7,14 +7,15 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 392b69633e596f0682fdfb4a5875f46755203ff7
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 61a00e766b0f975691b9f2a7c7561bb4f1d33c02
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474892"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174304"
 ---
 # <a name="finalizers-c-programming-guide"></a>ファイナライザー (C# プログラミング ガイド)
+
 ガベージ コレクターによってクラス インスタンスが収集されている場合は、ファイナライザー (**デストラクター**とも呼ばれます) を使用して、最終的に必要なすべてのクリーンアップが実行されます。  
   
 ## <a name="remarks"></a>Remarks  
@@ -65,9 +66,11 @@ protected override void Finalize()
  <xref:System.GC.Collect%2A> を呼び出すことによって、ガベージ コレクションを強制的に行うことができます。ただし、パフォーマンスに問題が発生する可能性があるため、通常はこの呼び出しを避けます。  
   
 ## <a name="using-finalizers-to-release-resources"></a>ファイナライザーを使ったリソースの解放  
+
  一般に C# の場合、ガベージ コレクションでランタイムをターゲットにしない言語のような大量のメモリ管理は開発者側で必要になりません。 .NET のガベージ コレクターが、オブジェクトに対するメモリの割り当てと解放を暗黙的に管理するからです。 ただし、ウィンドウ、ファイル、ネットワーク接続などのアンマネージ リソースをアプリケーションでカプセル化する場合は、ファイナライザーを使ってこれらのリソースを解放する必要があります。 終了処理が可能なオブジェクトの場合、ガベージ コレクターはそのオブジェクトの `Finalize` メソッドを実行します。
   
 ## <a name="explicit-release-of-resources"></a>リソースの明示的な解放  
+
  アプリケーションで高額な外部リソースを使用している場合、ガベージ コレクターがオブジェクトを解放する前にリソースを明示的に解放する手段を用意することが推奨されます。 リソースを解放するには、オブジェクトに必要なクリーンアップを実行する <xref:System.IDisposable> インターフェイスから `Dispose` メソッドを実装します。 これによって、アプリケーションのパフォーマンスを大幅に向上させることができます。 このようにリソースを明示的に制御する場合でも、ファイナライザーは、`Dispose` メソッドの呼び出しが失敗したときにリソースをクリーンアップするための安全装置になります。  
   
  リソースのクリーンアップの詳細については、次の記事を参照してください。  
@@ -79,6 +82,7 @@ protected override void Finalize()
 - [using ステートメント](../../language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>例  
+
  次の例では、継承チェーンを形成する 3 つのクラスを作成します。 `First` が基底クラスであり、`Second` は `First` から派生し、`Third` は `Second` から派生します。 3 つのクラスのいずれにもファイナライザーがあります。 `Main` では、派生が最も多いクラスのインスタンスが作成されます。 プログラムを実行すると、3 つのクラスのファイナライザーが派生が最も多いクラスから派生が最も少ないクラスの順に自動的に呼び出されます。  
   
  [!code-csharp[csProgGuideObjects#85](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#85)]  

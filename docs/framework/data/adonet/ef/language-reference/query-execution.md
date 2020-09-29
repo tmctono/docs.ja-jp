@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c0e6cf23-63ac-47dd-bfe9-d5bdca826fac
-ms.openlocfilehash: e776df6d35b6cc8c24cd83e902bc4d050347343b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e5961330eab5f25508319f276df1e9b4572f49ee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286793"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189306"
 ---
 # <a name="query-execution"></a>クエリの実行
+
 ユーザーによって作成された LINQ クエリは、コマンド ツリーに変換されます。 コマンド ツリーは、Entity Framework と互換性のあるクエリの表現です。 コマンド ツリーは、その後データ ソースに対して実行されます。 クエリの実行時には、すべてのクエリ式 (つまりクエリの全コンポーネント) が評価されます。これには結果の具体化で使用される式も含まれます。  
   
  クエリ式が評価されるタイミングはさまざまです。 LINQ クエリは、クエリ変数の作成時ではなく、常にクエリ変数の反復処理時に実行されます。 これを "*遅延実行*" といいます。 クエリを即時に実行することもできます。これは、クエリの結果をキャッシュする場合に有効です。 このことについては、このトピックの後半で説明します。  
@@ -24,6 +25,7 @@ ms.locfileid: "84286793"
 > 演算子の実行動作が簡単にわかる表形式のクエリ演算子の便利なまとめについては、「[実行方法による標準クエリ演算子の分類 (C#)](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)」をご覧ください。
 
 ## <a name="deferred-query-execution"></a>クエリの遅延実行  
+
  一連の値を返すクエリでは、クエリ変数そのものはクエリ結果を保持しません。クエリ変数には、クエリのコマンドが格納されるだけです。 クエリ変数が `foreach` ループまたは `For Each` ループで反復処理されるまで、クエリは実行されません。 これは "*遅延実行*" と呼ばれます。つまり、作成されたクエリはすぐには実行されません。 これは、任意のタイミングでクエリを実行できるということを意味します。 これは、たとえば他のアプリケーションによって更新されるデータベースがある場合に便利です。 アプリケーションで、最新情報を取得するクエリを作成し、それを繰り返し実行することにより、更新のたびに最新の情報を取得できます。  
   
  遅延実行により、複数のクエリを組み合わせたり、クエリを拡張したりすることが可能となります。 クエリを拡張して新しい操作を追加すると、その変更が最終的な実行時に反映されます。 次の例の最初のクエリでは、すべての製品が返されます。 2 つ目のクエリでは、サイズが "L" のすべての製品を返すように、`Where` を使って 1 つ目のクエリを拡張しています。  
@@ -34,6 +36,7 @@ ms.locfileid: "84286793"
  クエリが実行された後、後続のすべてのクエリでメモリ内の LINQ 演算子が使用されます。 `foreach` ステートメントや `For Each` ステートメントを使用することによって、または LINQ 変換演算子の 1 つを呼び出すことによって、クエリ変数を反復処理すると、即時実行が発生します。 これらの変換演算子には、<xref:System.Linq.Enumerable.ToList%2A>、<xref:System.Linq.Enumerable.ToArray%2A>、<xref:System.Linq.Enumerable.ToLookup%2A>、<xref:System.Linq.Enumerable.ToDictionary%2A> などがあります。  
   
 ## <a name="immediate-query-execution"></a>クエリの即時実行  
+
  一連の値を生成するクエリの遅延実行とは対照的に、シングルトン値を返すクエリは直ちに実行されます。 シングルトン クエリの例としては、<xref:System.Linq.Enumerable.Average%2A>、<xref:System.Linq.Enumerable.Count%2A>、<xref:System.Linq.Enumerable.First%2A>、<xref:System.Linq.Enumerable.Max%2A> があります。 これらのシングルトン クエリは、結果を計算するためにはシーケンスを生成する必要があるため、直ちに実行されます。 即時実行は強制することもできます。 これはクエリの結果をキャッシュする場合などに便利です。 クエリまたはクエリ変数で <xref:System.Linq.Enumerable.ToList%2A> メソッド、<xref:System.Linq.Enumerable.ToDictionary%2A> メソッド、または <xref:System.Linq.Enumerable.ToArray%2A> メソッドを呼び出すと、シングルトン値を生成しないクエリの即時実行を強制できます。 次の例では、<xref:System.Linq.Enumerable.ToArray%2A> メソッドを使用して、シーケンスを配列として即時評価します。  
   
  [!code-csharp[DP L2E Examples#ToArray](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#toarray)]
@@ -42,6 +45,7 @@ ms.locfileid: "84286793"
  また、`foreach` ループまたは `For Each` ループをクエリ式の直後に配置して実行を強制することも、<xref:System.Linq.Enumerable.ToList%2A> または <xref:System.Linq.Enumerable.ToArray%2A> を呼び出すことにより、単一のコレクション オブジェクト内のすべてのデータをキャッシュすることにより、実行を強制することもできます。  
   
 ## <a name="store-execution"></a>ストア実行  
+
  一般的に、LINQ to Entities の式はサーバー上で評価されるため、式の動作がデータ ソースのセマンティクスではなく、共通言語ランタイム (CLR) セマンティクスに従っているとは限りません。 ただし、これには式がクライアント上で実行された場合などの例外があります。 これは、サーバーとクライアントが異なるタイム ゾーンに存在する場合など、予期しない結果をもたらすことがあります。  
   
  クエリ内の一部の式はクライアント上で実行される場合があります。 通常、ほとんどのクエリ実行はサーバーで発生するものと見なされます。 データ ソースにマップされたクエリ要素に対して実行されたメソッドの他に、クエリにはローカルで実行できる式が含まれる場合がよくあります。 クエリ式のローカルでの実行では、クエリ実行または結果の作成で使用できる値が生成されます。  
@@ -51,6 +55,7 @@ ms.locfileid: "84286793"
  このセクションでは、コードをクライアント上でローカルに実行するシナリオについて説明します。 ローカルで実行される式の種類について詳しくは、「[LINQ to Entities クエリ内の式](expressions-in-linq-to-entities-queries.md)」をご覧ください。  
   
 ### <a name="literals-and-parameters"></a>リテラルとパラメーター  
+
  次の例に示した `orderID` 変数などのローカル変数は、クライアントで評価されます。  
   
  [!code-csharp[DP L2E Conceptual Examples#LiteralParameter1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#literalparameter1)]
@@ -62,6 +67,7 @@ ms.locfileid: "84286793"
  [!code-vb[DP L2E Conceptual Examples#MethodParameterExample](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#methodparameterexample)]  
   
 ### <a name="casting-literals-on-the-client"></a>クライアントでのリテラルのキャスト  
+
  `null` から CLR 型へのキャストは、次のようにクライアントで実行されます。  
   
  [!code-csharp[DP L2E Conceptual Examples#NullCastToString](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#nullcasttostring)]
@@ -73,6 +79,7 @@ ms.locfileid: "84286793"
  [!code-vb[DP L2E Conceptual Examples#CastToNullable](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#casttonullable)]  
   
 ### <a name="constructors-for-literals"></a>リテラルのコンストラクター  
+
  概念モデル型にマップできる新しい CLR 型は、次のようにクライアントで実行されます。  
   
  [!code-csharp[DP L2E Conceptual Examples#ConstructorForLiteral](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#constructorforliteral)]
@@ -81,9 +88,11 @@ ms.locfileid: "84286793"
  新しい配列もクライアントで実行されます。  
   
 ## <a name="store-exceptions"></a>ストアの例外  
+
  クエリ実行時に発生したストア エラーはすべてクライアントに渡され、マッピングも処理もされません。  
   
 ## <a name="store-configuration"></a>ストアの構成  
+
  ストアでクエリが実行される場合、ストアの構成はすべてのクライアント動作をオーバーライドし、ストア セマンティクスはすべての演算および式で表現されます。 これにより、Null 比較、GUID 順序付け、precise 以外のデータ型 (浮動小数点型や <xref:System.DateTime> など) を含む演算の精度や正確性、および文字列型演算などの領域において、CLR とストアの実行間で違いが発生する可能性があります。 クエリ結果を調べる場合にはこのことに留意することが重要です。  
   
  CLR および SQL Server 間での動作の違いの例を次に示します。  

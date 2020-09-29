@@ -5,20 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fd6db0b8-c29c-48ff-b768-31d28e7a148c
-ms.openlocfilehash: 1da2abcbbb3b87d44aa99016112d9ef2674912c6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1dc112350451bde28d27c63961733b96f6fc84be
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781719"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91191711"
 ---
 # <a name="how-to-resolve-conflicts-by-overwriting-database-values"></a>方法: データベース値を上書きすることで競合を解決する
+
 変更を再送信する前に、データベース内の予期した値と実際の値の違いを調整するために、<xref:System.Data.Linq.RefreshMode.KeepCurrentValues> を使用してデータベース内の値を上書きできます。 詳細については、「[オプティミスティック コンカレンシー:概要)](optimistic-concurrency-overview.md) の下のステートメントを右クリックします。  
   
 > [!NOTE]
 > どの場合も、データベースから最新のデータを取得することで、まずクライアントのレコードが更新されます。 この処理によって、次の更新処理が同じコンカレンシー チェックで失敗することを防止できます。  
   
 ## <a name="example"></a>例  
+
  このシナリオでは、ユーザー 1 が変更を送信しようとしたときに <xref:System.Data.Linq.ChangeConflictException> 例外がスローされます。これは、途中でユーザー 2 が Assistant 列と Department 列を変更していたためです。 次の表は、この状況を示しています。  
   
 ||管理者|Assistant|Department|  

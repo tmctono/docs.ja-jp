@@ -2,14 +2,15 @@
 title: SQL Server のセキュリティ
 ms.date: 03/30/2017
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-ms.openlocfilehash: c5fd9cc82a3b1e4ffa217d65c542376fe067db06
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5db14e681b5a9445c034be60993661a61a038e08
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791621"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177307"
 ---
 # <a name="sql-server-security"></a>SQL Server のセキュリティ
+
 SQL Server は、安全なデータベース アプリケーションの作成を支援するさまざまな機能を備えています。  
   
  データの盗難や破壊など、セキュリティに関する基本的な考慮事項は、使用している SQL Server のバージョンに関係なく当てはまります。 データの整合性も、セキュリティの問題と見なす必要があります。 データが保護されていない場合、アドホック データ操作が許可されていて、そのデータが誤って、または悪意を持って正しくない値に変更されたり、完全に削除されたりすると、そのデータは使い物にならなくなる可能性があります。 また、機密情報を適切に保存するなど、遵守しなければならない法的要件が存在することもよくあります。 特定の管轄区域に適用される法律によっては、特定の種類の個人データを保存することが完全に禁止されています。  
@@ -23,6 +24,7 @@ SQL Server は、安全なデータベース アプリケーションの作成�
  このセクションの各トピックでは、開発者に関係のある SQL Server のセキュリティ機能を簡単に説明します。SQL Server オンライン ブックの関連項目へのリンクのほか、より掘り下げて解説したリソースへのリンクも示しています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [SQL Server セキュリティの概要](overview-of-sql-server-security.md)  
  SQL Server のアーキテクチャおよびセキュリティ機能について説明します。  
   
@@ -33,6 +35,7 @@ SQL Server は、安全なデータベース アプリケーションの作成�
  SQL Server Express のセキュリティ上の考慮事項を説明します。  
   
 ## <a name="related-sections"></a>関連項目  
+
 [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
 SQL Server と Azure SQL Database のセキュリティ上の考慮事項について説明します。
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-ms.openlocfilehash: 097e387fa8f79345e4f0b64f1368435fddc3417f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e45e09e821928d110e67f82810f51e2d9d4a85e8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543421"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180687"
 ---
 # <a name="securing-wcf-data-services"></a>WCF Data Services のセキュリティ保護
 
@@ -22,9 +22,11 @@ ms.locfileid: "90543421"
 WCF Data Services ベースの OData サービスをセキュリティで保護する方法を計画するときには、認証 (プリンシパルの ID を発見および確認するプロセス) と承認 (認証されたプリンシパルが要求されたリソースにアクセスできるかどうかを判断するプロセス) の両方を解決する必要があります。 また、SSL を使用してメッセージを暗号化するかどうかを検討します。  
   
 ## <a name="authenticating-client-requests"></a>クライアント要求の認証  
+
 WCF Data Services は、認証を独自に実装する代わりにデータ サービス ホストに依存しています。 したがって、ネットワーク ホストによって受信要求が既に認証されていること、WCF Data Services によって提供されるインターフェイスを使用して要求のプリンシパルが正しく識別されていることが前提とされます。 これらの認証オプションと方法の詳細については、[OData と認証に関する複数パートの記事](https://devblogs.microsoft.com/odata/?s=%22OData+and+authentication%22)を参照してください。  
   
 ### <a name="authentication-options-for-a-wcf-data-service"></a>WCF Data Service の認証オプション  
+
  次の表に、WCF Data Service への要求を認証するために使用できる認証メカニズムを示します。  
   
 |認証オプション|説明|  
@@ -36,7 +38,9 @@ WCF Data Services は、認証を独自に実装する代わりにデータ サ�
 |クレーム ベースの認証|クレーム ベースの認証では、データ サービスはユーザー認証を "サードパーティ" の信頼された ID プロバイダー サービスに依存します。 ID プロバイダーは、データ サービス リソースへのアクセスを要求しているユーザーを確実に認証し、要求されたリソースへのアクセスを許可するトークンを発行します。 このトークンがデータ サービスに提示され、そのアクセス トークンを発行した識別情報サービスとの信頼関係に基づいてユーザーのアクセスが許可されます。<br /><br /> クレーム ベースの認証プロバイダーの利点は、信頼ドメイン間でさまざまな種類のクライアントの認証に使用できることです。 このようなサードパーティ プロバイダーを使用することにより、ユーザーの管理と認証の要件をデータ サービスからオフロードできます。 OAuth 2.0 は、サービスとしてのフェデレーション認証のために Azure AppFabric アクセス制御によってサポートされているクレーム ベースの認証プロトコルであり、 REST ベースのサービスをサポートします。 WCF Data Services で OAuth 2.0 を使用する方法の例については、ブログ記事「[OData と認証の – パート 8 – OAuth WRAP](https://devblogs.microsoft.com/odata/odata-and-authentication-part-8-oauth-wrap/)」を参照してください。|  
   
 <a name="clientAuthentication"></a>
+
 ### <a name="authentication-in-the-client-library"></a>クライアント ライブラリの認証  
+
  既定では、OData サービスに要求を送信する際、WCF Data Services クライアント ライブラリから資格情報は提供されません。 データ サービスでユーザー認証のためにログイン資格情報が要求されている場合は、<xref:System.Net.NetworkCredential> の <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> プロパティからアクセスできる <xref:System.Data.Services.Client.DataServiceContext> で資格情報を渡すことができます。以下に例を示します。  
   
 ```csharp  
@@ -56,31 +60,39 @@ context.Credentials = _
  クレーム ベースのトークンやクッキーなど、<xref:System.Net.NetworkCredential> オブジェクトでは指定できないログイン資格情報がデータ サービスで要求されている場合は、手動で HTTP 要求のヘッダー (通常は `Authorization` と `Cookie`) を設定する必要があります。 このような認証シナリオの詳細については、ブログ記事「[OData と認証の – パート 3 – クライアント側フック](https://devblogs.microsoft.com/odata/odata-and-authentication-part-3-clientside-hooks/)」を参照してください。 要求メッセージの HTTP ヘッダーを設定する方法の例については、「[方法: クライアント要求のヘッダーを設定する](how-to-set-headers-in-the-client-request-wcf-data-services.md)」を参照してください。  
   
 ## <a name="impersonation"></a>偽装  
+
  データ サービスは通常、データ サービスをホストしているワーカー プロセスの資格情報を使用して、要求されたリソース (サーバー上のファイル、データベースなど) にアクセスします。 偽装を使用しているときは、要求を出しているユーザーの Window ID (ユーザー アカウント) で ASP.NET アプリケーションを実行できます。 偽装は、IIS を使用してユーザーを認証するアプリケーションで使用されるのが一般的です。この場合、要求されたリソースへのアクセスにそのプリンシパルの資格情報が使用されます。 詳細については、「[ASP.NET の偽装](/previous-versions/aspnet/xh507fc5(v=vs.100))」参照してください。  
   
 ## <a name="configuring-data-service-authorization"></a>データ サービスの承認の構成  
+
  承認とは、事前に行われた認証に基づいて識別されるプリンシパルまたはプロセスにアプリケーション リソースへのアクセスを許可することです。 一般に、データ サービスのユーザーには、クライアント アプリケーションで必要とされている操作を実行するのに十分な権限のみを与えるようにします。  
   
 ### <a name="restrict-access-to-data-service-resources"></a>データ サービス リソースへのアクセスの制限  
+
  WCF Data Services では、データ サービスにアクセスできるすべてのユーザーにデータ サービス リソース (エンティティ セットおよびサービス操作) に対する共通の読み取りおよび書き込みのアクセス権が既定で付与されます。 読み取りおよび書き込みのアクセスを定義する規則は、データ サービスによって公開される各エンティティ セットおよびサービス操作に対して個別に定義できます。 読み取りおよび書き込みの両方のアクセスを、クライアント アプリケーションで必要なリソースのみに制限することをお勧めします。 詳細については、「[最小限のリソース アクセス要件](configuring-the-data-service-wcf-data-services.md#accessRequirements)」を参照してください。  
   
 ### <a name="implement-role-based-interceptors"></a>ロール ベースのインターセプターの実装  
+
  インターセプターを使用すると、データ サービス リソースに対する要求を、データ サービスによって処理される前にインターセプトすることができます。 詳細については、「[インターセプター](interceptors-wcf-data-services.md)」を参照してください。 インターセプターを使用すると、要求を行っている認証されたユーザーに基づいて承認決定を行うことができます。 認証されたユーザーの ID に基づいてデータ サービス リソースへのアクセスを制限する方法の例については、「[方法: データ サービス メッセージを先に取得する](how-to-intercept-data-service-messages-wcf-data-services.md)」を参照してください。  
   
 ### <a name="restrict-access-to-the-persisted-data-store-and-local-resources"></a>永続化データ ストアとローカル リソースへのアクセスの制限  
+
  永続化ストアにアクセスするためのアカウントには、データベースまたはファイル システムでデータ サービスの要件をサポートするのに十分な権限のみを与えるようにしてください。 匿名認証が使用されている場合は、そのアカウントがホスト アプリケーションの実行に使用されます。 詳細については、[IIS 上で実行する WCF Data Service を開発する](how-to-develop-a-wcf-data-service-running-on-iis.md)」を参照してください。 偽装を使用する場合は、認証されたユーザーにそれらのリソースへのアクセスを (通常は Windows グループの一部として) 許可する必要があります。  
   
 ## <a name="other-security-considerations"></a>その他のセキュリティの考慮事項  
   
 ### <a name="secure-the-data-in-the-payload"></a>ペイロードのデータの保護  
+
 OData は HTTP プロトコルに基づいています。 データ サービスで実装されている認証によっては、HTTP メッセージのヘッダーに重要なユーザー資格情報が含まれている場合があります。 メッセージの本文にも、保護する必要がある貴重な顧客データが含まれている場合があります。 いずれの場合も、SSL を使用してその情報をネットワークで保護することをお勧めします。  
   
 ### <a name="ignored-message-headers-and-cookies"></a>無視されるメッセージ ヘッダーとクッキー  
+
  HTTP 要求のヘッダーは、コンテンツ タイプとリソースの場所を宣言するもの以外は無視されます。また、データ サービスによって設定されることはありません。  
   
  Cookie は、認証方式の一部としては使用できます (ASP.NET フォーム認証など)。 一方、受信要求で設定された HTTP Cookie は、WCF Data Service によって無視されます。 データ サービスのホストによって処理されることはありますが、WCF Data Services ランタイムによって分析されたり返されたりすることはありません。 応答で送信された Cookie が WCF Data Services クライアント ライブラリで処理されることもありません。  
   
 ### <a name="custom-hosting-requirements"></a>カスタム ホストの要件  
+
  既定では、WCF Data Services は IIS でホストされる ASP.NET アプリケーションとして作成されます。 そのため、データ サービスでこのプラットフォームのセキュリティ動作を活用できます。 カスタム ホストによってホストされる WCF Data Services を定義することもできます。 詳細については、「[データ サービスのホスティング](hosting-the-data-service-wcf-data-services.md)」を参照してください。 データ サービスをホストするコンポーネントとプラットフォームでは、データ サービスへの攻撃を防ぐために次のセキュリティ動作を確保する必要があります。  
   
 - 可能なすべての操作について、データ サービス要求で受け入れる URI の長さを制限します。  
@@ -94,9 +106,11 @@ OData は HTTP プロトコルに基づいています。 データ サービス
 - TCP SYN 攻撃やメッセージ リプレイ攻撃などの既知の攻撃を検出して阻止します。  
   
 ### <a name="values-are-not-further-encoded"></a>値のさらなるエンコード  
+
  データ サービスに送信されたプロパティ値が WCF Data Services ランタイムによってさらにエンコードされることはありません。 たとえば、書式設定された HTML コンテンツがエンティティの文字列プロパティに含まれていた場合、データ サービスによってタグが HTML エンコードされることはありません。 応答のプロパティ値についても、データ サービスによってさらなるエンコードが行われることはありません。 クライアント ライブラリで追加のエンコードが行われることもありません。  
   
 ### <a name="considerations-for-client-applications"></a>クライアント アプリケーションに関する注意点  
+
  以下のセキュリティの注意点は、WCF Data Services クライアントを使用して OData サービスにアクセスするアプリケーションに当てはまります。  
   
 - クライアント ライブラリは、データ サービスへのアクセスに使用されるプロトコルで十分なレベルのセキュリティが確保されていることを前提としています。  

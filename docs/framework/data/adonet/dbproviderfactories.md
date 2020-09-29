@@ -2,19 +2,21 @@
 title: DbProviderFactories
 ms.date: 03/30/2017
 ms.assetid: 2a8e2640-3a49-42a1-a3a9-b43026907ae1
-ms.openlocfilehash: e3ea9e3d083314f8df25f9edadbd1a18f1227293
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b5f2dbb687348afac98247cb21bae831dea26bfe
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784104"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183313"
 ---
 # <a name="dbproviderfactories"></a>DbProviderFactories
+
 <xref:System.Data.Common> 名前空間には、特定のデータ ソースを使用するための <xref:System.Data.Common.DbProviderFactory> インスタンスを作成するクラスが用意されています。 <xref:System.Data.Common.DbProviderFactory> インスタンスを作成し、データ プロバイダーに関する情報をそのインスタンスに渡すと、`DbProviderFactory` はあらかじめ提供された情報に基づいて厳密に型指定された正しいオブジェクトを判断して返すことができます。  
   
  .NET Framework バージョン 4 以降では、<xref:System.Data.Odbc>、<xref:System.Data.OleDb>、<xref:System.Data.SqlClient>、および <xref:System.Data.OracleClient> などのデータ プロバイダーは machine.config ファイルに表示されなくなりますが、カスタム プロバイダーは表示されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [ファクトリ モデルの概要](factory-model-overview.md)  
  ファクトリ デザイン パターンとプログラミング インターフェイスの概要を説明します。  
   

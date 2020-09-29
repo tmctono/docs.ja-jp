@@ -2,14 +2,15 @@
 title: XML スキーマ (XSD) 制約の DataSet 制約への割り当て
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
-ms.openlocfilehash: b44c3193e1b9e2e52e086111eab0ab0b0cae5c97
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a2b28b0dcb2e2858c7328854650667f51e83166a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786075"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185289"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>XML スキーマ (XSD) 制約の DataSet 制約への割り当て
+
 XML スキーマ定義言語 (XSD) を使用すると、定義する要素と属性で制約を指定できます。 XML スキーマを <xref:System.Data.DataSet> のリレーショナル スキーマにマップすると、XML スキーマの制約が **DataSet** 内のテーブルと列の適切なリレーショナル制約にマップされます。  
   
  このセクションでは、次の XML スキーマの制約の割り当てについて説明します。  
@@ -27,6 +28,7 @@ XML スキーマ定義言語 (XSD) を使用すると、定義する要素と属
  マッピング処理では、これらのスキーマ制約が **DataSet** 内に作成されたテーブルでの適切な制約に変換されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [XML スキーマ (XSD) の UNIQUE 制約の DataSet 制約への割り当て](map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  **DataSet** での一意制約の作成に使用する XML スキーマの要素について説明します。  
   
@@ -37,6 +39,7 @@ XML スキーマ定義言語 (XSD) を使用すると、定義する要素と属
  **DataSet** でのキー参照 (外部キー) 制約の作成に使用する XML スキーマの要素について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [XML スキーマ (XSD) からの DataSet リレーショナル構造の派生](deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  XSD スキーマから作成された **DataSet** のリレーショナル構造 (スキーマ) について説明します。  
   
