@@ -2,29 +2,31 @@
 title: DataSet のクエリ (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: bb68d2e4-623d-4d60-85e3-965254f6fee7
-ms.openlocfilehash: bb64abcffdbbcd46dfb11b2564619c565e461436
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: f42cd792772a4e2b9f24ea8f76ea588da10d9c51
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634782"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91184977"
 ---
-# <a name="querying-datasets-linq-to-dataset"></a><span data-ttu-id="9c577-102">DataSet のクエリ (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="9c577-102">Querying DataSets (LINQ to DataSet)</span></span>
-<span data-ttu-id="9c577-103"><xref:System.Data.DataSet> オブジェクトへのデータの読み込みが完了すると、そのデータセットに対してクエリを実行できるようになります。</span><span class="sxs-lookup"><span data-stu-id="9c577-103">After a <xref:System.Data.DataSet> object has been populated with data, you can begin querying it.</span></span> <span data-ttu-id="9c577-104">LINQ to DataSet でのクエリの作成は、他の LINQ (統合言語クエリ) 対応データ ソースに対して LINQ を使用する場合と似ています。</span><span class="sxs-lookup"><span data-stu-id="9c577-104">Formulating queries with LINQ to DataSet is similar to using Language-Integrated Query (LINQ) against other LINQ-enabled data sources.</span></span> <span data-ttu-id="9c577-105">ただし、<xref:System.Data.DataSet> オブジェクトに対して LINQ クエリを使用する場合は、カスタム型の列挙型ではなく、<xref:System.Data.DataRow> オブジェクトの列挙型のクエリを実行しているということに注意してください。</span><span class="sxs-lookup"><span data-stu-id="9c577-105">Remember, however, that when you use LINQ queries over a <xref:System.Data.DataSet> object, you're querying an enumeration of <xref:System.Data.DataRow> objects instead of an enumeration of a custom type.</span></span> <span data-ttu-id="9c577-106">つまり、LINQ クエリでは、<xref:System.Data.DataRow> クラスの任意のメンバーを使用できます。</span><span class="sxs-lookup"><span data-stu-id="9c577-106">This means that you can use any of the members of the <xref:System.Data.DataRow> class in your LINQ queries.</span></span> <span data-ttu-id="9c577-107">これにより、高度で複雑なクエリを作成できます。</span><span class="sxs-lookup"><span data-stu-id="9c577-107">This lets you create rich, complex queries.</span></span>  
-  
- <span data-ttu-id="9c577-108">LINQ の他の実装と同じように、LINQ to DataSet クエリは、クエリ式の構文とメソッド ベースのクエリ構文という 2 つの異なる形式で作成できます。</span><span class="sxs-lookup"><span data-stu-id="9c577-108">As with other implementations of LINQ, you can create LINQ to DataSet queries in two different forms: query expression syntax and method-based query syntax.</span></span> <span data-ttu-id="9c577-109">クエリ式の構文またはメソッド ベースのクエリ構文を使用して、<xref:System.Data.DataSet> 内の単一テーブル、<xref:System.Data.DataSet> 内の複数テーブル、または、型指定された <xref:System.Data.DataSet> 内のテーブルを対象にクエリを実行できます。</span><span class="sxs-lookup"><span data-stu-id="9c577-109">You can use query expression syntax or method-based query syntax to perform queries against single tables in a <xref:System.Data.DataSet>, against multiple tables in a <xref:System.Data.DataSet>, or against tables in a typed <xref:System.Data.DataSet>.</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="9c577-110">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="9c577-110">In This Section</span></span>  
- [<span data-ttu-id="9c577-111">単一テーブルのクエリ</span><span class="sxs-lookup"><span data-stu-id="9c577-111">Single-Table Queries</span></span>](single-table-queries-linq-to-dataset.md)  
- <span data-ttu-id="9c577-112">単一テーブルのクエリを実行する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="9c577-112">Describes how to perform single-table queries.</span></span>  
-  
- [<span data-ttu-id="9c577-113">複数テーブルにまたがるクエリ</span><span class="sxs-lookup"><span data-stu-id="9c577-113">Cross-Table Queries</span></span>](cross-table-queries-linq-to-dataset.md)  
- <span data-ttu-id="9c577-114">複数テーブルにまたがるクエリを実行する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="9c577-114">Describes how to perform cross-table queries.</span></span>  
-  
- [<span data-ttu-id="9c577-115">型指定された DataSet のクエリ</span><span class="sxs-lookup"><span data-stu-id="9c577-115">Querying Typed DataSets</span></span>](querying-typed-datasets.md)  
- <span data-ttu-id="9c577-116">型指定された <xref:System.Data.DataSet> オブジェクトに対してクエリを実行する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="9c577-116">Describes how to query typed <xref:System.Data.DataSet> objects.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="9c577-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="9c577-117">See also</span></span>
+# <a name="querying-datasets-linq-to-dataset"></a><span data-ttu-id="fad9d-102">DataSet のクエリ (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="fad9d-102">Querying DataSets (LINQ to DataSet)</span></span>
 
-- [<span data-ttu-id="9c577-118">LINQ to DataSet の例</span><span class="sxs-lookup"><span data-stu-id="9c577-118">LINQ to DataSet Examples</span></span>](linq-to-dataset-examples.md)
-- [<span data-ttu-id="9c577-119">DataSet へのデータの読み込み</span><span class="sxs-lookup"><span data-stu-id="9c577-119">Loading Data Into a DataSet</span></span>](loading-data-into-a-dataset.md)
+<span data-ttu-id="fad9d-103"><xref:System.Data.DataSet> オブジェクトへのデータの読み込みが完了すると、そのデータセットに対してクエリを実行できるようになります。</span><span class="sxs-lookup"><span data-stu-id="fad9d-103">After a <xref:System.Data.DataSet> object has been populated with data, you can begin querying it.</span></span> <span data-ttu-id="fad9d-104">LINQ to DataSet でのクエリの作成は、他の LINQ (統合言語クエリ) 対応データ ソースに対して LINQ を使用する場合と似ています。</span><span class="sxs-lookup"><span data-stu-id="fad9d-104">Formulating queries with LINQ to DataSet is similar to using Language-Integrated Query (LINQ) against other LINQ-enabled data sources.</span></span> <span data-ttu-id="fad9d-105">ただし、<xref:System.Data.DataSet> オブジェクトに対して LINQ クエリを使用する場合は、カスタム型の列挙型ではなく、<xref:System.Data.DataRow> オブジェクトの列挙型のクエリを実行しているということに注意してください。</span><span class="sxs-lookup"><span data-stu-id="fad9d-105">Remember, however, that when you use LINQ queries over a <xref:System.Data.DataSet> object, you're querying an enumeration of <xref:System.Data.DataRow> objects instead of an enumeration of a custom type.</span></span> <span data-ttu-id="fad9d-106">つまり、LINQ クエリでは、<xref:System.Data.DataRow> クラスの任意のメンバーを使用できます。</span><span class="sxs-lookup"><span data-stu-id="fad9d-106">This means that you can use any of the members of the <xref:System.Data.DataRow> class in your LINQ queries.</span></span> <span data-ttu-id="fad9d-107">これにより、高度で複雑なクエリを作成できます。</span><span class="sxs-lookup"><span data-stu-id="fad9d-107">This lets you create rich, complex queries.</span></span>  
+  
+ <span data-ttu-id="fad9d-108">LINQ の他の実装と同じように、LINQ to DataSet クエリは、クエリ式の構文とメソッド ベースのクエリ構文という 2 つの異なる形式で作成できます。</span><span class="sxs-lookup"><span data-stu-id="fad9d-108">As with other implementations of LINQ, you can create LINQ to DataSet queries in two different forms: query expression syntax and method-based query syntax.</span></span> <span data-ttu-id="fad9d-109">クエリ式の構文またはメソッド ベースのクエリ構文を使用して、<xref:System.Data.DataSet> 内の単一テーブル、<xref:System.Data.DataSet> 内の複数テーブル、または、型指定された <xref:System.Data.DataSet> 内のテーブルを対象にクエリを実行できます。</span><span class="sxs-lookup"><span data-stu-id="fad9d-109">You can use query expression syntax or method-based query syntax to perform queries against single tables in a <xref:System.Data.DataSet>, against multiple tables in a <xref:System.Data.DataSet>, or against tables in a typed <xref:System.Data.DataSet>.</span></span>  
+  
+## <a name="in-this-section"></a><span data-ttu-id="fad9d-110">このセクションの内容</span><span class="sxs-lookup"><span data-stu-id="fad9d-110">In This Section</span></span>  
+
+ [<span data-ttu-id="fad9d-111">単一テーブルのクエリ</span><span class="sxs-lookup"><span data-stu-id="fad9d-111">Single-Table Queries</span></span>](single-table-queries-linq-to-dataset.md)  
+ <span data-ttu-id="fad9d-112">単一テーブルのクエリを実行する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="fad9d-112">Describes how to perform single-table queries.</span></span>  
+  
+ [<span data-ttu-id="fad9d-113">複数テーブルにまたがるクエリ</span><span class="sxs-lookup"><span data-stu-id="fad9d-113">Cross-Table Queries</span></span>](cross-table-queries-linq-to-dataset.md)  
+ <span data-ttu-id="fad9d-114">複数テーブルにまたがるクエリを実行する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="fad9d-114">Describes how to perform cross-table queries.</span></span>  
+  
+ [<span data-ttu-id="fad9d-115">型指定された DataSet のクエリ</span><span class="sxs-lookup"><span data-stu-id="fad9d-115">Querying Typed DataSets</span></span>](querying-typed-datasets.md)  
+ <span data-ttu-id="fad9d-116">型指定された <xref:System.Data.DataSet> オブジェクトに対してクエリを実行する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="fad9d-116">Describes how to query typed <xref:System.Data.DataSet> objects.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="fad9d-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="fad9d-117">See also</span></span>
+
+- [<span data-ttu-id="fad9d-118">LINQ to DataSet の例</span><span class="sxs-lookup"><span data-stu-id="fad9d-118">LINQ to DataSet Examples</span></span>](linq-to-dataset-examples.md)
+- [<span data-ttu-id="fad9d-119">DataSet へのデータの読み込み</span><span class="sxs-lookup"><span data-stu-id="fad9d-119">Loading Data Into a DataSet</span></span>](loading-data-into-a-dataset.md)

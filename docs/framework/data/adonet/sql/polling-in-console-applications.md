@@ -5,20 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 0cefca33bde94855a2bb20a6404dfd4e75a954c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 35275206e0486c35f262116fa1deb06b9f285723
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174525"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183131"
 ---
-# <a name="polling-in-console-applications"></a><span data-ttu-id="67f1c-102">コンソール アプリケーションでのポーリング</span><span class="sxs-lookup"><span data-stu-id="67f1c-102">Polling in Console Applications</span></span>
-<span data-ttu-id="67f1c-103">ADO.NET での非同期操作は、1 つのスレッドで他のタスクを実行している間に、別のスレッドで時間のかかるデータベース操作を開始できます。</span><span class="sxs-lookup"><span data-stu-id="67f1c-103">Asynchronous operations in ADO.NET allow you to initiate time-consuming database operations on one thread while performing other tasks on another thread.</span></span> <span data-ttu-id="67f1c-104">ただし、ほとんどの場合、データベース操作が完了するまでの間に、アプリケーションの処理を続行してはいけないポイントに最終的に到達します。</span><span class="sxs-lookup"><span data-stu-id="67f1c-104">In most scenarios, however, you will eventually reach a point where your application should not continue until the database operation is complete.</span></span> <span data-ttu-id="67f1c-105">このような場合は、非同期操作をポーリングして操作が完了したかどうかを判断すると便利です。</span><span class="sxs-lookup"><span data-stu-id="67f1c-105">For such cases, it is useful to poll the asynchronous operation to determine whether the operation has completed or not.</span></span>  
+# <a name="polling-in-console-applications"></a><span data-ttu-id="3dd5d-102">コンソール アプリケーションでのポーリング</span><span class="sxs-lookup"><span data-stu-id="3dd5d-102">Polling in Console Applications</span></span>
+
+<span data-ttu-id="3dd5d-103">ADO.NET での非同期操作は、1 つのスレッドで他のタスクを実行している間に、別のスレッドで時間のかかるデータベース操作を開始できます。</span><span class="sxs-lookup"><span data-stu-id="3dd5d-103">Asynchronous operations in ADO.NET allow you to initiate time-consuming database operations on one thread while performing other tasks on another thread.</span></span> <span data-ttu-id="3dd5d-104">ただし、ほとんどの場合、データベース操作が完了するまでの間に、アプリケーションの処理を続行してはいけないポイントに最終的に到達します。</span><span class="sxs-lookup"><span data-stu-id="3dd5d-104">In most scenarios, however, you will eventually reach a point where your application should not continue until the database operation is complete.</span></span> <span data-ttu-id="3dd5d-105">このような場合は、非同期操作をポーリングして操作が完了したかどうかを判断すると便利です。</span><span class="sxs-lookup"><span data-stu-id="3dd5d-105">For such cases, it is useful to poll the asynchronous operation to determine whether the operation has completed or not.</span></span>  
   
- <span data-ttu-id="67f1c-106"><xref:System.IAsyncResult.IsCompleted%2A> プロパティを使用すると、操作が完了したかどうかを確認できます。</span><span class="sxs-lookup"><span data-stu-id="67f1c-106">You can use the <xref:System.IAsyncResult.IsCompleted%2A> property to find out whether or not the operation has completed.</span></span>  
+ <span data-ttu-id="3dd5d-106"><xref:System.IAsyncResult.IsCompleted%2A> プロパティを使用すると、操作が完了したかどうかを確認できます。</span><span class="sxs-lookup"><span data-stu-id="3dd5d-106">You can use the <xref:System.IAsyncResult.IsCompleted%2A> property to find out whether or not the operation has completed.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="67f1c-107">例</span><span class="sxs-lookup"><span data-stu-id="67f1c-107">Example</span></span>  
- <span data-ttu-id="67f1c-108">次のコンソール アプリケーションは、操作を非同期に実行して、**AdventureWorks** サンプル データベース内のデータを更新します。</span><span class="sxs-lookup"><span data-stu-id="67f1c-108">The following console application updates data within the **AdventureWorks** sample database, doing its work asynchronously.</span></span> <span data-ttu-id="67f1c-109">この例では、実行時間の長いプロセスをエミュレートする目的で、コマンド テキストに WAITFOR ステートメントを挿入します。</span><span class="sxs-lookup"><span data-stu-id="67f1c-109">In order to emulate a long-running process, this example inserts a WAITFOR statement in the command text.</span></span> <span data-ttu-id="67f1c-110">通常は、コマンドの実行を遅くする必要はありませんが、非同期動作の例をわかりやすく示すために、この場合はあえて遅くしています。</span><span class="sxs-lookup"><span data-stu-id="67f1c-110">Normally, you would not try to make your commands run slower, but doing so in this case makes it easier to demonstrate asynchronous behavior.</span></span>  
+## <a name="example"></a><span data-ttu-id="3dd5d-107">例</span><span class="sxs-lookup"><span data-stu-id="3dd5d-107">Example</span></span>  
+
+ <span data-ttu-id="3dd5d-108">次のコンソール アプリケーションは、操作を非同期に実行して、**AdventureWorks** サンプル データベース内のデータを更新します。</span><span class="sxs-lookup"><span data-stu-id="3dd5d-108">The following console application updates data within the **AdventureWorks** sample database, doing its work asynchronously.</span></span> <span data-ttu-id="3dd5d-109">この例では、実行時間の長いプロセスをエミュレートする目的で、コマンド テキストに WAITFOR ステートメントを挿入します。</span><span class="sxs-lookup"><span data-stu-id="3dd5d-109">In order to emulate a long-running process, this example inserts a WAITFOR statement in the command text.</span></span> <span data-ttu-id="3dd5d-110">通常は、コマンドの実行を遅くする必要はありませんが、非同期動作の例をわかりやすく示すために、この場合はあえて遅くしています。</span><span class="sxs-lookup"><span data-stu-id="3dd5d-110">Normally, you would not try to make your commands run slower, but doing so in this case makes it easier to demonstrate asynchronous behavior.</span></span>  
   
 ```vb  
 Imports System  
@@ -190,7 +192,7 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="67f1c-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="67f1c-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3dd5d-111">関連項目</span><span class="sxs-lookup"><span data-stu-id="3dd5d-111">See also</span></span>
 
-- [<span data-ttu-id="67f1c-112">非同期操作</span><span class="sxs-lookup"><span data-stu-id="67f1c-112">Asynchronous Operations</span></span>](asynchronous-operations.md)
-- [<span data-ttu-id="67f1c-113">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="67f1c-113">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="3dd5d-112">非同期操作</span><span class="sxs-lookup"><span data-stu-id="3dd5d-112">Asynchronous Operations</span></span>](asynchronous-operations.md)
+- [<span data-ttu-id="3dd5d-113">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="3dd5d-113">ADO.NET Overview</span></span>](../ado-net-overview.md)
