@@ -7,23 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC32126
 ms.assetid: 2325668b-e2ad-40ee-a1ec-30450236c20d
-ms.openlocfilehash: 61c6fe7c33b3292066e653304ded43a863413723
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 421766918c03c2378bbf906f85c5855f44ffbdea
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397221"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873738"
 ---
-# <a name="methods-of-systemnullableof-t-cannot-be-used-as-operands-of-the-addressof-operator"></a><span data-ttu-id="43ade-102">'System.Nullable(Of T)' のメソッドを 'AddressOf' 演算子のオペランドとして使用することはできません。</span><span class="sxs-lookup"><span data-stu-id="43ade-102">Methods of 'System.Nullable(Of T)' cannot be used as operands of the 'AddressOf' operator</span></span>
-<span data-ttu-id="43ade-103">ステートメントで、<xref:System.Nullable%601> 構造のプロシージャを表すオペランドで、`AddressOf` 演算子を使用します。</span><span class="sxs-lookup"><span data-stu-id="43ade-103">A statement uses the `AddressOf` operator with an operand that represents a procedure of the <xref:System.Nullable%601> structure.</span></span>  
+# <a name="methods-of-systemnullableof-t-cannot-be-used-as-operands-of-the-addressof-operator"></a><span data-ttu-id="df1a5-102">'System.Nullable(Of T)' のメソッドを 'AddressOf' 演算子のオペランドとして使用することはできません。</span><span class="sxs-lookup"><span data-stu-id="df1a5-102">Methods of 'System.Nullable(Of T)' cannot be used as operands of the 'AddressOf' operator</span></span>
+
+<span data-ttu-id="df1a5-103">ステートメントで、<xref:System.Nullable%601> 構造のプロシージャを表すオペランドで、`AddressOf` 演算子を使用します。</span><span class="sxs-lookup"><span data-stu-id="df1a5-103">A statement uses the `AddressOf` operator with an operand that represents a procedure of the <xref:System.Nullable%601> structure.</span></span>  
   
- <span data-ttu-id="43ade-104">**エラー ID:** BC32126</span><span class="sxs-lookup"><span data-stu-id="43ade-104">**Error ID:** BC32126</span></span>  
+ <span data-ttu-id="df1a5-104">**エラー ID:** BC32126</span><span class="sxs-lookup"><span data-stu-id="df1a5-104">**Error ID:** BC32126</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="43ade-105">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="43ade-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="df1a5-105">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="df1a5-105">To correct this error</span></span>  
   
-- <span data-ttu-id="43ade-106">`AddressOf` 句のプロシージャ名を、<xref:System.Nullable%601> のメンバーではないオペランドに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="43ade-106">Replace the procedure name in the `AddressOf` clause with an operand that is not a member of <xref:System.Nullable%601>.</span></span>  
+- <span data-ttu-id="df1a5-106">`AddressOf` 句のプロシージャ名を、<xref:System.Nullable%601> のメンバーではないオペランドに置き換えます。</span><span class="sxs-lookup"><span data-stu-id="df1a5-106">Replace the procedure name in the `AddressOf` clause with an operand that is not a member of <xref:System.Nullable%601>.</span></span>  
   
-- <span data-ttu-id="43ade-107">使用する <xref:System.Nullable%601> のメソッドをラップするクラスを記述します。</span><span class="sxs-lookup"><span data-stu-id="43ade-107">Write a class that wraps the method of <xref:System.Nullable%601> that you want to use.</span></span> <span data-ttu-id="43ade-108">次の例では、`NullableWrapper` クラスで `GetValueOrDefault` という名前の新しいメソッドを定義しています。</span><span class="sxs-lookup"><span data-stu-id="43ade-108">In the following example, the `NullableWrapper` class defines a new method named `GetValueOrDefault`.</span></span> <span data-ttu-id="43ade-109">この新しいメソッドは <xref:System.Nullable%601> のメンバーではないため、null 許容型のインスタンスである `nullInstance` に適用して `AddressOf` の引数を形成できます。</span><span class="sxs-lookup"><span data-stu-id="43ade-109">Because this new method is not a member of <xref:System.Nullable%601>, it can be applied to `nullInstance`, an instance of a nullable type, to form an argument for `AddressOf`.</span></span>  
+- <span data-ttu-id="df1a5-107">使用する <xref:System.Nullable%601> のメソッドをラップするクラスを記述します。</span><span class="sxs-lookup"><span data-stu-id="df1a5-107">Write a class that wraps the method of <xref:System.Nullable%601> that you want to use.</span></span> <span data-ttu-id="df1a5-108">次の例では、`NullableWrapper` クラスで `GetValueOrDefault` という名前の新しいメソッドを定義しています。</span><span class="sxs-lookup"><span data-stu-id="df1a5-108">In the following example, the `NullableWrapper` class defines a new method named `GetValueOrDefault`.</span></span> <span data-ttu-id="df1a5-109">この新しいメソッドは <xref:System.Nullable%601> のメンバーではないため、null 許容型のインスタンスである `nullInstance` に適用して `AddressOf` の引数を形成できます。</span><span class="sxs-lookup"><span data-stu-id="df1a5-109">Because this new method is not a member of <xref:System.Nullable%601>, it can be applied to `nullInstance`, an instance of a nullable type, to form an argument for `AddressOf`.</span></span>  
   
 ```vb  
 Module Module1  
@@ -61,9 +62,9 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="43ade-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="43ade-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="df1a5-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="df1a5-110">See also</span></span>
 
 - <xref:System.Nullable%601>
-- [<span data-ttu-id="43ade-111">AddressOf 演算子</span><span class="sxs-lookup"><span data-stu-id="43ade-111">AddressOf Operator</span></span>](../operators/addressof-operator.md)
-- [<span data-ttu-id="43ade-112">null 許容値型</span><span class="sxs-lookup"><span data-stu-id="43ade-112">Nullable Value Types</span></span>](../../programming-guide/language-features/data-types/nullable-value-types.md)
-- [<span data-ttu-id="43ade-113">Generic Types in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="43ade-113">Generic Types in Visual Basic</span></span>](../../programming-guide/language-features/data-types/generic-types.md)
+- [<span data-ttu-id="df1a5-111">AddressOf 演算子</span><span class="sxs-lookup"><span data-stu-id="df1a5-111">AddressOf Operator</span></span>](../operators/addressof-operator.md)
+- [<span data-ttu-id="df1a5-112">null 許容値型</span><span class="sxs-lookup"><span data-stu-id="df1a5-112">Nullable Value Types</span></span>](../../programming-guide/language-features/data-types/nullable-value-types.md)
+- [<span data-ttu-id="df1a5-113">Generic Types in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="df1a5-113">Generic Types in Visual Basic</span></span>](../../programming-guide/language-features/data-types/generic-types.md)

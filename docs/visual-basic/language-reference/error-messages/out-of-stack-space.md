@@ -4,30 +4,31 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
-ms.openlocfilehash: 9ae604a9727413f2705d42a4b68f5a50b7dd3feb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: afb6a42372bdbd2e49ac15fbbf2b9e254f8db431
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349185"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871316"
 ---
-# <a name="out-of-stack-space-visual-basic"></a><span data-ttu-id="f2ebb-102">スタック領域が不足しています。(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f2ebb-102">Out of stack space (Visual Basic)</span></span>
-<span data-ttu-id="f2ebb-103">スタックは、実行中のプログラムの要求に応じて、動的に拡張および縮小されるメモリの作業領域です。</span><span class="sxs-lookup"><span data-stu-id="f2ebb-103">The stack is a working area of memory that grows and shrinks dynamically with the demands of your executing program.</span></span> <span data-ttu-id="f2ebb-104">その制限を超えました。</span><span class="sxs-lookup"><span data-stu-id="f2ebb-104">Its limits have been exceeded.</span></span>  
-  
-## <a name="to-correct-this-error"></a><span data-ttu-id="f2ebb-105">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="f2ebb-105">To correct this error</span></span>  
-  
-1. <span data-ttu-id="f2ebb-106">プロシージャの入れ子が深すぎないことをチェックします。</span><span class="sxs-lookup"><span data-stu-id="f2ebb-106">Check that procedures are not nested too deeply.</span></span>  
-  
-2. <span data-ttu-id="f2ebb-107">再帰プロシージャが正常に終了することを確認します。</span><span class="sxs-lookup"><span data-stu-id="f2ebb-107">Make sure recursive procedures terminate properly.</span></span>  
-  
-3. <span data-ttu-id="f2ebb-108">ローカル変数で、使用可能な量よりも多くのローカル変数領域が必要な場合は、一部の変数をモジュール レベルで宣言してみてください。</span><span class="sxs-lookup"><span data-stu-id="f2ebb-108">If local variables require more local variable space than is available, try declaring some variables at the module level.</span></span> <span data-ttu-id="f2ebb-109">また、`Static` を `Property`、`Sub`、または `Function` キーワードの前に付けて、プロシージャ内のすべての変数を静的に宣言することもできます。</span><span class="sxs-lookup"><span data-stu-id="f2ebb-109">You can also declare all variables in the procedure static by preceding the `Property`, `Sub`, or `Function` keyword with `Static`.</span></span> <span data-ttu-id="f2ebb-110">または、`Static` ステートメントを使用して、プロシージャ内で個々の静的変数を宣言することもできます。</span><span class="sxs-lookup"><span data-stu-id="f2ebb-110">Or you can use the `Static` statement to declare individual static variables within procedures.</span></span>  
-  
-4. <span data-ttu-id="f2ebb-111">固定長文字列は可変長文字列よりも多くのスタック領域を使用するため、一部の固定長文字列を可変長文字列として再定義します。</span><span class="sxs-lookup"><span data-stu-id="f2ebb-111">Redefine some of your fixed-length strings as variable-length strings, as fixed-length strings use more stack space than variable-length strings.</span></span> <span data-ttu-id="f2ebb-112">スタック領域を必要としない、モジュール レベルで文字列を定義することもできます。</span><span class="sxs-lookup"><span data-stu-id="f2ebb-112">You can also define the string at module level where it requires no stack space.</span></span>  
-  
-5. <span data-ttu-id="f2ebb-113">`Calls` ダイアログ ボックスを使用して、スタック上でアクティブになっているプロシージャを表示して、入れ子になった `DoEvents` 関数呼び出しの数をチェックします。</span><span class="sxs-lookup"><span data-stu-id="f2ebb-113">Check the number of nested `DoEvents` function calls, by using the `Calls` dialog box to view which procedures are active on the stack.</span></span>  
-  
-6. <span data-ttu-id="f2ebb-114">既にスタックにあるイベント プロシージャを呼び出すイベントをトリガーすることによって、"イベントのカスケード" が発生していないことを確認します。</span><span class="sxs-lookup"><span data-stu-id="f2ebb-114">Make sure you did not cause an "event cascade" by triggering an event that calls an event procedure already on the stack.</span></span> <span data-ttu-id="f2ebb-115">イベントのカスケードは、未終了の再帰プロシージャ呼び出しに似ていますが、コード内の明示的な呼び出しではなく Visual Basic によって呼び出しが行われるため、目立ちません。</span><span class="sxs-lookup"><span data-stu-id="f2ebb-115">An event cascade is similar to an unterminated recursive procedure call, but it is less obvious, since the call is made by Visual Basic rather than an explicit call in the code.</span></span> <span data-ttu-id="f2ebb-116">`Calls` ダイアログ ボックスを使用すると、スタック上でアクティブになっているプロシージャが表示されます。</span><span class="sxs-lookup"><span data-stu-id="f2ebb-116">Use the `Calls` dialog box to view which procedures are active on the stack.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="f2ebb-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="f2ebb-117">See also</span></span>
+# <a name="out-of-stack-space-visual-basic"></a><span data-ttu-id="9a827-102">スタック領域が不足しています。(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9a827-102">Out of stack space (Visual Basic)</span></span>
 
-- <span data-ttu-id="f2ebb-118">[[メモリ] ウィンドウ](/visualstudio/debugger/memory-windows)</span><span class="sxs-lookup"><span data-stu-id="f2ebb-118">[Memory Windows](/visualstudio/debugger/memory-windows)</span></span>
+<span data-ttu-id="9a827-103">スタックは、実行中のプログラムの要求に応じて、動的に拡張および縮小されるメモリの作業領域です。</span><span class="sxs-lookup"><span data-stu-id="9a827-103">The stack is a working area of memory that grows and shrinks dynamically with the demands of your executing program.</span></span> <span data-ttu-id="9a827-104">その制限を超えました。</span><span class="sxs-lookup"><span data-stu-id="9a827-104">Its limits have been exceeded.</span></span>  
+  
+## <a name="to-correct-this-error"></a><span data-ttu-id="9a827-105">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="9a827-105">To correct this error</span></span>  
+  
+1. <span data-ttu-id="9a827-106">プロシージャの入れ子が深すぎないことをチェックします。</span><span class="sxs-lookup"><span data-stu-id="9a827-106">Check that procedures are not nested too deeply.</span></span>  
+  
+2. <span data-ttu-id="9a827-107">再帰プロシージャが正常に終了することを確認します。</span><span class="sxs-lookup"><span data-stu-id="9a827-107">Make sure recursive procedures terminate properly.</span></span>  
+  
+3. <span data-ttu-id="9a827-108">ローカル変数で、使用可能な量よりも多くのローカル変数領域が必要な場合は、一部の変数をモジュール レベルで宣言してみてください。</span><span class="sxs-lookup"><span data-stu-id="9a827-108">If local variables require more local variable space than is available, try declaring some variables at the module level.</span></span> <span data-ttu-id="9a827-109">また、`Static` を `Property`、`Sub`、または `Function` キーワードの前に付けて、プロシージャ内のすべての変数を静的に宣言することもできます。</span><span class="sxs-lookup"><span data-stu-id="9a827-109">You can also declare all variables in the procedure static by preceding the `Property`, `Sub`, or `Function` keyword with `Static`.</span></span> <span data-ttu-id="9a827-110">または、`Static` ステートメントを使用して、プロシージャ内で個々の静的変数を宣言することもできます。</span><span class="sxs-lookup"><span data-stu-id="9a827-110">Or you can use the `Static` statement to declare individual static variables within procedures.</span></span>  
+  
+4. <span data-ttu-id="9a827-111">固定長文字列は可変長文字列よりも多くのスタック領域を使用するため、一部の固定長文字列を可変長文字列として再定義します。</span><span class="sxs-lookup"><span data-stu-id="9a827-111">Redefine some of your fixed-length strings as variable-length strings, as fixed-length strings use more stack space than variable-length strings.</span></span> <span data-ttu-id="9a827-112">スタック領域を必要としない、モジュール レベルで文字列を定義することもできます。</span><span class="sxs-lookup"><span data-stu-id="9a827-112">You can also define the string at module level where it requires no stack space.</span></span>  
+  
+5. <span data-ttu-id="9a827-113">`Calls` ダイアログ ボックスを使用して、スタック上でアクティブになっているプロシージャを表示して、入れ子になった `DoEvents` 関数呼び出しの数をチェックします。</span><span class="sxs-lookup"><span data-stu-id="9a827-113">Check the number of nested `DoEvents` function calls, by using the `Calls` dialog box to view which procedures are active on the stack.</span></span>  
+  
+6. <span data-ttu-id="9a827-114">既にスタックにあるイベント プロシージャを呼び出すイベントをトリガーすることによって、"イベントのカスケード" が発生していないことを確認します。</span><span class="sxs-lookup"><span data-stu-id="9a827-114">Make sure you did not cause an "event cascade" by triggering an event that calls an event procedure already on the stack.</span></span> <span data-ttu-id="9a827-115">イベントのカスケードは、未終了の再帰プロシージャ呼び出しに似ていますが、コード内の明示的な呼び出しではなく Visual Basic によって呼び出しが行われるため、目立ちません。</span><span class="sxs-lookup"><span data-stu-id="9a827-115">An event cascade is similar to an unterminated recursive procedure call, but it is less obvious, since the call is made by Visual Basic rather than an explicit call in the code.</span></span> <span data-ttu-id="9a827-116">`Calls` ダイアログ ボックスを使用すると、スタック上でアクティブになっているプロシージャが表示されます。</span><span class="sxs-lookup"><span data-stu-id="9a827-116">Use the `Calls` dialog box to view which procedures are active on the stack.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="9a827-117">関連項目</span><span class="sxs-lookup"><span data-stu-id="9a827-117">See also</span></span>
+
+- <span data-ttu-id="9a827-118">[[メモリ] ウィンドウ](/visualstudio/debugger/memory-windows)</span><span class="sxs-lookup"><span data-stu-id="9a827-118">[Memory Windows](/visualstudio/debugger/memory-windows)</span></span>

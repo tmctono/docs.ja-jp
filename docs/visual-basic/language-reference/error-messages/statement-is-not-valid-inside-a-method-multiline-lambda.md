@@ -7,25 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC30024
 ms.assetid: 758e7a8f-429b-42c1-9a78-778e5b480e04
-ms.openlocfilehash: f3c43d640259d5e1af545e2610088aab5d70453d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d5d756f1772b9519613e163119b88a3057d36cf3
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396247"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870622"
 ---
-# <a name="statement-is-not-valid-inside-a-methodmultiline-lambda"></a><span data-ttu-id="3a38d-102">メソッドや複数行のラムダの内部では有効でないステートメントです。</span><span class="sxs-lookup"><span data-stu-id="3a38d-102">Statement is not valid inside a method/multiline lambda</span></span>
-<span data-ttu-id="3a38d-103">ステートメントは、`Sub`、`Function`、プロパティ `Get`、またはプロパティ `Set` プロシージャ内で無効です。</span><span class="sxs-lookup"><span data-stu-id="3a38d-103">The statement is not valid within a `Sub`, `Function`, property `Get`, or property `Set` procedure.</span></span> <span data-ttu-id="3a38d-104">一部のステートメントは、モジュール レベルまたはクラス レベルで配置できます。</span><span class="sxs-lookup"><span data-stu-id="3a38d-104">Some statements can be placed at the module or class level.</span></span> <span data-ttu-id="3a38d-105">`Option Strict` などの他のものは、名前空間レベルで、他のすべての宣言の前に配置する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3a38d-105">Others, such as `Option Strict`, must be at namespace level and precede all other declarations.</span></span>  
-  
- <span data-ttu-id="3a38d-106">**エラー ID:** BC30024</span><span class="sxs-lookup"><span data-stu-id="3a38d-106">**Error ID:** BC30024</span></span>  
-  
-## <a name="to-correct-this-error"></a><span data-ttu-id="3a38d-107">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="3a38d-107">To correct this error</span></span>  
-  
-- <span data-ttu-id="3a38d-108">プロシージャからステートメントを削除します。</span><span class="sxs-lookup"><span data-stu-id="3a38d-108">Remove the statement from the procedure.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="3a38d-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="3a38d-109">See also</span></span>
+# <a name="statement-is-not-valid-inside-a-methodmultiline-lambda"></a><span data-ttu-id="9dab2-102">メソッドや複数行のラムダの内部では有効でないステートメントです。</span><span class="sxs-lookup"><span data-stu-id="9dab2-102">Statement is not valid inside a method/multiline lambda</span></span>
 
-- [<span data-ttu-id="3a38d-110">Sub ステートメント</span><span class="sxs-lookup"><span data-stu-id="3a38d-110">Sub Statement</span></span>](../statements/sub-statement.md)
-- [<span data-ttu-id="3a38d-111">Function ステートメント</span><span class="sxs-lookup"><span data-stu-id="3a38d-111">Function Statement</span></span>](../statements/function-statement.md)
-- [<span data-ttu-id="3a38d-112">Get ステートメント</span><span class="sxs-lookup"><span data-stu-id="3a38d-112">Get Statement</span></span>](../statements/get-statement.md)
-- [<span data-ttu-id="3a38d-113">Set ステートメント</span><span class="sxs-lookup"><span data-stu-id="3a38d-113">Set Statement</span></span>](../statements/set-statement.md)
+<span data-ttu-id="9dab2-103">ステートメントは、`Sub`、`Function`、プロパティ `Get`、またはプロパティ `Set` プロシージャ内で無効です。</span><span class="sxs-lookup"><span data-stu-id="9dab2-103">The statement is not valid within a `Sub`, `Function`, property `Get`, or property `Set` procedure.</span></span> <span data-ttu-id="9dab2-104">一部のステートメントは、モジュール レベルまたはクラス レベルで配置できます。</span><span class="sxs-lookup"><span data-stu-id="9dab2-104">Some statements can be placed at the module or class level.</span></span> <span data-ttu-id="9dab2-105">`Option Strict` などの他のものは、名前空間レベルで、他のすべての宣言の前に配置する必要があります。</span><span class="sxs-lookup"><span data-stu-id="9dab2-105">Others, such as `Option Strict`, must be at namespace level and precede all other declarations.</span></span>  
+  
+ <span data-ttu-id="9dab2-106">**エラー ID:** BC30024</span><span class="sxs-lookup"><span data-stu-id="9dab2-106">**Error ID:** BC30024</span></span>  
+  
+## <a name="to-correct-this-error"></a><span data-ttu-id="9dab2-107">このエラーを解決するには</span><span class="sxs-lookup"><span data-stu-id="9dab2-107">To correct this error</span></span>  
+  
+- <span data-ttu-id="9dab2-108">プロシージャからステートメントを削除します。</span><span class="sxs-lookup"><span data-stu-id="9dab2-108">Remove the statement from the procedure.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="9dab2-109">関連項目</span><span class="sxs-lookup"><span data-stu-id="9dab2-109">See also</span></span>
+
+- [<span data-ttu-id="9dab2-110">Sub ステートメント</span><span class="sxs-lookup"><span data-stu-id="9dab2-110">Sub Statement</span></span>](../statements/sub-statement.md)
+- [<span data-ttu-id="9dab2-111">Function ステートメント</span><span class="sxs-lookup"><span data-stu-id="9dab2-111">Function Statement</span></span>](../statements/function-statement.md)
+- [<span data-ttu-id="9dab2-112">Get ステートメント</span><span class="sxs-lookup"><span data-stu-id="9dab2-112">Get Statement</span></span>](../statements/get-statement.md)
+- [<span data-ttu-id="9dab2-113">Set ステートメント</span><span class="sxs-lookup"><span data-stu-id="9dab2-113">Set Statement</span></span>](../statements/set-statement.md)
