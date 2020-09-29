@@ -2,24 +2,25 @@
 title: XML スキーマ (XSD) の UNIQUE 制約の DataSet 制約への割り当て
 ms.date: 03/30/2017
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
-ms.openlocfilehash: 8bcf705ce4415929e685be79f813846bbb40bb36
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b2dad44176e52adcf32e2e3ccff3d82ba23f6ed
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150845"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153236"
 ---
-# <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="d72b0-102">XML スキーマ (XSD) の UNIQUE 制約の DataSet 制約への割り当て</span><span class="sxs-lookup"><span data-stu-id="d72b0-102">Map unique XML Schema (XSD) Constraints to DataSet Constraints</span></span>
-<span data-ttu-id="d72b0-103">XML スキーマ定義言語 (XSD) スキーマでは、**unique** 要素を使用して要素または属性の一意性制約を指定します。</span><span class="sxs-lookup"><span data-stu-id="d72b0-103">In an XML Schema definition language (XSD) schema, the **unique** element specifies the uniqueness constraint on an element or attribute.</span></span> <span data-ttu-id="d72b0-104">XML スキーマをリレーショナル スキーマに変換する処理では、XML スキーマの要素または属性で指定した UNIQUE 制約が、生成される <xref:System.Data.DataTable> に対応する <xref:System.Data.DataSet> の UNIQUE 制約に割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="d72b0-104">In the process of translating an XML Schema into a relational schema, the unique constraint specified on an element or attribute in the XML Schema is mapped to a unique constraint in the <xref:System.Data.DataTable> in the corresponding <xref:System.Data.DataSet> that is generated.</span></span>  
+# <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="a6c6e-102">XML スキーマ (XSD) の UNIQUE 制約の DataSet 制約への割り当て</span><span class="sxs-lookup"><span data-stu-id="a6c6e-102">Map unique XML Schema (XSD) Constraints to DataSet Constraints</span></span>
+
+<span data-ttu-id="a6c6e-103">XML スキーマ定義言語 (XSD) スキーマでは、**unique** 要素を使用して要素または属性の一意性制約を指定します。</span><span class="sxs-lookup"><span data-stu-id="a6c6e-103">In an XML Schema definition language (XSD) schema, the **unique** element specifies the uniqueness constraint on an element or attribute.</span></span> <span data-ttu-id="a6c6e-104">XML スキーマをリレーショナル スキーマに変換する処理では、XML スキーマの要素または属性で指定した UNIQUE 制約が、生成される <xref:System.Data.DataTable> に対応する <xref:System.Data.DataSet> の UNIQUE 制約に割り当てられます。</span><span class="sxs-lookup"><span data-stu-id="a6c6e-104">In the process of translating an XML Schema into a relational schema, the unique constraint specified on an element or attribute in the XML Schema is mapped to a unique constraint in the <xref:System.Data.DataTable> in the corresponding <xref:System.Data.DataSet> that is generated.</span></span>  
   
- <span data-ttu-id="d72b0-105">**unique** 要素で指定できる **msdata** 属性を次の表に示します。</span><span class="sxs-lookup"><span data-stu-id="d72b0-105">The following table outlines the **msdata** attributes that you can specify in the **unique** element.</span></span>  
+ <span data-ttu-id="a6c6e-105">**unique** 要素で指定できる **msdata** 属性を次の表に示します。</span><span class="sxs-lookup"><span data-stu-id="a6c6e-105">The following table outlines the **msdata** attributes that you can specify in the **unique** element.</span></span>  
   
-|<span data-ttu-id="d72b0-106">属性名</span><span class="sxs-lookup"><span data-stu-id="d72b0-106">Attribute name</span></span>|<span data-ttu-id="d72b0-107">説明</span><span class="sxs-lookup"><span data-stu-id="d72b0-107">Description</span></span>|  
+|<span data-ttu-id="a6c6e-106">属性名</span><span class="sxs-lookup"><span data-stu-id="a6c6e-106">Attribute name</span></span>|<span data-ttu-id="a6c6e-107">説明</span><span class="sxs-lookup"><span data-stu-id="a6c6e-107">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="d72b0-108">**msdata:ConstraintName**</span><span class="sxs-lookup"><span data-stu-id="d72b0-108">**msdata:ConstraintName**</span></span>|<span data-ttu-id="d72b0-109">この属性を指定した場合、その値が制約名として使用されます。</span><span class="sxs-lookup"><span data-stu-id="d72b0-109">If this attribute is specified, its value is used as the constraint name.</span></span> <span data-ttu-id="d72b0-110">それ以外の場合は、**name** 属性によって制約名の値が設定されます。</span><span class="sxs-lookup"><span data-stu-id="d72b0-110">Otherwise, the **name** attribute provides the value of the constraint name.</span></span>|  
-|<span data-ttu-id="d72b0-111">**msdata:PrimaryKey**</span><span class="sxs-lookup"><span data-stu-id="d72b0-111">**msdata:PrimaryKey**</span></span>|<span data-ttu-id="d72b0-112">**unique** 要素が `PrimaryKey="true"` である場合、一意制約は、**IsPrimaryKey** プロパティが **true** に設定された状態で作成されます。</span><span class="sxs-lookup"><span data-stu-id="d72b0-112">If `PrimaryKey="true"` is present in the **unique** element, a unique constraint is created with the **IsPrimaryKey** property set to **true**.</span></span>|  
+|<span data-ttu-id="a6c6e-108">**msdata:ConstraintName**</span><span class="sxs-lookup"><span data-stu-id="a6c6e-108">**msdata:ConstraintName**</span></span>|<span data-ttu-id="a6c6e-109">この属性を指定した場合、その値が制約名として使用されます。</span><span class="sxs-lookup"><span data-stu-id="a6c6e-109">If this attribute is specified, its value is used as the constraint name.</span></span> <span data-ttu-id="a6c6e-110">それ以外の場合は、**name** 属性によって制約名の値が設定されます。</span><span class="sxs-lookup"><span data-stu-id="a6c6e-110">Otherwise, the **name** attribute provides the value of the constraint name.</span></span>|  
+|<span data-ttu-id="a6c6e-111">**msdata:PrimaryKey**</span><span class="sxs-lookup"><span data-stu-id="a6c6e-111">**msdata:PrimaryKey**</span></span>|<span data-ttu-id="a6c6e-112">**unique** 要素が `PrimaryKey="true"` である場合、一意制約は、**IsPrimaryKey** プロパティが **true** に設定された状態で作成されます。</span><span class="sxs-lookup"><span data-stu-id="a6c6e-112">If `PrimaryKey="true"` is present in the **unique** element, a unique constraint is created with the **IsPrimaryKey** property set to **true**.</span></span>|  
   
- <span data-ttu-id="d72b0-113">**unique** 要素を使用して一意性制約を指定する XML スキーマの例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d72b0-113">The following example shows an XML Schema that uses the **unique** element to specify a uniqueness constraint.</span></span>  
+ <span data-ttu-id="a6c6e-113">**unique** 要素を使用して一意性制約を指定する XML スキーマの例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="a6c6e-113">The following example shows an XML Schema that uses the **unique** element to specify a uniqueness constraint.</span></span>  
   
 ```xml  
 <xs:schema id="SampleDataSet"
@@ -48,13 +49,13 @@ ms.locfileid: "79150845"
 </xs:schema>  
 ```  
   
- <span data-ttu-id="d72b0-114">スキーマの **unique** 要素では、ドキュメント インスタンスのすべての **Customers** 要素に対し、**CustomerID** 子要素の値が一意である必要があることが指定されます。</span><span class="sxs-lookup"><span data-stu-id="d72b0-114">The **unique** element in the schema specifies that for all **Customers** elements in a document instance, the value of the **CustomerID** child element must be unique.</span></span> <span data-ttu-id="d72b0-115">**DataSet** を作成する場合は、割り当て処理によってスキーマが読み込まれ、次のテーブルが生成されます。</span><span class="sxs-lookup"><span data-stu-id="d72b0-115">In building the **DataSet**, the mapping process reads this schema and generates the following table:</span></span>  
+ <span data-ttu-id="a6c6e-114">スキーマの **unique** 要素では、ドキュメント インスタンスのすべての **Customers** 要素に対し、**CustomerID** 子要素の値が一意である必要があることが指定されます。</span><span class="sxs-lookup"><span data-stu-id="a6c6e-114">The **unique** element in the schema specifies that for all **Customers** elements in a document instance, the value of the **CustomerID** child element must be unique.</span></span> <span data-ttu-id="a6c6e-115">**DataSet** を作成する場合は、割り当て処理によってスキーマが読み込まれ、次のテーブルが生成されます。</span><span class="sxs-lookup"><span data-stu-id="a6c6e-115">In building the **DataSet**, the mapping process reads this schema and generates the following table:</span></span>  
   
 ```text  
 Customers (CustomerID, CompanyName, Phone)  
 ```  
   
- <span data-ttu-id="d72b0-116">次の **DataSet** に示すように、マッピング プロセスによって **CustomerID** 列に対する一意制約も作成されます。</span><span class="sxs-lookup"><span data-stu-id="d72b0-116">The mapping process also creates a unique constraint on the **CustomerID** column, as shown in the following **DataSet**.</span></span> <span data-ttu-id="d72b0-117">(わかりやすいように、関連するプロパティだけを示します)。</span><span class="sxs-lookup"><span data-stu-id="d72b0-117">(For simplicity, only relevant properties are shown.)</span></span>  
+ <span data-ttu-id="a6c6e-116">次の **DataSet** に示すように、マッピング プロセスによって **CustomerID** 列に対する一意制約も作成されます。</span><span class="sxs-lookup"><span data-stu-id="a6c6e-116">The mapping process also creates a unique constraint on the **CustomerID** column, as shown in the following **DataSet**.</span></span> <span data-ttu-id="a6c6e-117">(わかりやすいように、関連するプロパティだけを示します)。</span><span class="sxs-lookup"><span data-stu-id="a6c6e-117">(For simplicity, only relevant properties are shown.)</span></span>  
   
 ```text  
       DataSetName: MyDataSet  
@@ -68,11 +69,11 @@ TableName: Customers
       IsPrimaryKey: False  
 ```  
   
- <span data-ttu-id="d72b0-118">生成される **DataSet** では、一意制約のために **IsPrimaryKey** プロパティが **False** に設定されます。</span><span class="sxs-lookup"><span data-stu-id="d72b0-118">In the **DataSet** that is generated, the **IsPrimaryKey** property is set to **False** for the unique constraint.</span></span> <span data-ttu-id="d72b0-119">列の **unique** プロパティでは、**CustomerID** 列の値が一意であることが示されます (ただし、列の **AllowDBNull** プロパティで指定されているように、null 参照でもかまいません)。</span><span class="sxs-lookup"><span data-stu-id="d72b0-119">The **unique** property on the column indicates that the **CustomerID** column values must be unique (but they can be a null reference, as specified by the **AllowDBNull** property of the column).</span></span>  
+ <span data-ttu-id="a6c6e-118">生成される **DataSet** では、一意制約のために **IsPrimaryKey** プロパティが **False** に設定されます。</span><span class="sxs-lookup"><span data-stu-id="a6c6e-118">In the **DataSet** that is generated, the **IsPrimaryKey** property is set to **False** for the unique constraint.</span></span> <span data-ttu-id="a6c6e-119">列の **unique** プロパティでは、**CustomerID** 列の値が一意であることが示されます (ただし、列の **AllowDBNull** プロパティで指定されているように、null 参照でもかまいません)。</span><span class="sxs-lookup"><span data-stu-id="a6c6e-119">The **unique** property on the column indicates that the **CustomerID** column values must be unique (but they can be a null reference, as specified by the **AllowDBNull** property of the column).</span></span>  
   
- <span data-ttu-id="d72b0-120">スキーマを変更し、オプションの **msdata:PrimaryKey** 属性を **True** に設定すると、一意制約がテーブルに作成されます。</span><span class="sxs-lookup"><span data-stu-id="d72b0-120">If you modify the schema and set the optional **msdata:PrimaryKey** attribute value to **True**, the unique constraint is created on the table.</span></span> <span data-ttu-id="d72b0-121">**AllowDBNull** 列プロパティが **False** に設定され、制約の **IsPrimaryKey** プロパティが **True** に設定されるため、**CustomerID** 列が主キー列になります。</span><span class="sxs-lookup"><span data-stu-id="d72b0-121">The **AllowDBNull** column property is set to **False**, and the **IsPrimaryKey** property of the constraint set to **True**, thus making the **CustomerID** column a primary key column.</span></span>  
+ <span data-ttu-id="a6c6e-120">スキーマを変更し、オプションの **msdata:PrimaryKey** 属性を **True** に設定すると、一意制約がテーブルに作成されます。</span><span class="sxs-lookup"><span data-stu-id="a6c6e-120">If you modify the schema and set the optional **msdata:PrimaryKey** attribute value to **True**, the unique constraint is created on the table.</span></span> <span data-ttu-id="a6c6e-121">**AllowDBNull** 列プロパティが **False** に設定され、制約の **IsPrimaryKey** プロパティが **True** に設定されるため、**CustomerID** 列が主キー列になります。</span><span class="sxs-lookup"><span data-stu-id="a6c6e-121">The **AllowDBNull** column property is set to **False**, and the **IsPrimaryKey** property of the constraint set to **True**, thus making the **CustomerID** column a primary key column.</span></span>  
   
- <span data-ttu-id="d72b0-122">XML スキーマの要素や属性を組み合わせて UNIQUE 制約を指定できます。</span><span class="sxs-lookup"><span data-stu-id="d72b0-122">You can specify a unique constraint on a combination of elements or attributes in the XML Schema.</span></span> <span data-ttu-id="d72b0-123">次の例では、スキーマに別の **xs:field** 要素を追加することにより、**CustomerID** の値と **CompanyName** の値の組み合わせを任意のインスタンスのすべての **Customers** に対して必ず一意になるように指定する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="d72b0-123">The following example demonstrates how to specify that a combination of **CustomerID** and **CompanyName** values must be unique for all **Customers** in any instance, by adding another **xs:field** element in the schema.</span></span>  
+ <span data-ttu-id="a6c6e-122">XML スキーマの要素や属性を組み合わせて UNIQUE 制約を指定できます。</span><span class="sxs-lookup"><span data-stu-id="a6c6e-122">You can specify a unique constraint on a combination of elements or attributes in the XML Schema.</span></span> <span data-ttu-id="a6c6e-123">次の例では、スキーマに別の **xs:field** 要素を追加することにより、**CustomerID** の値と **CompanyName** の値の組み合わせを任意のインスタンスのすべての **Customers** に対して必ず一意になるように指定する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="a6c6e-123">The following example demonstrates how to specify that a combination of **CustomerID** and **CompanyName** values must be unique for all **Customers** in any instance, by adding another **xs:field** element in the schema.</span></span>  
   
 ```xml  
       <xs:unique
@@ -84,7 +85,7 @@ TableName: Customers
 </xs:unique>  
 ```  
   
- <span data-ttu-id="d72b0-124">その結果、**DataSet** に作成される制約を次に示します。</span><span class="sxs-lookup"><span data-stu-id="d72b0-124">This is the constraint that is created in the resulting **DataSet**.</span></span>  
+ <span data-ttu-id="a6c6e-124">その結果、**DataSet** に作成される制約を次に示します。</span><span class="sxs-lookup"><span data-stu-id="a6c6e-124">This is the constraint that is created in the resulting **DataSet**.</span></span>  
   
 ```text  
 ConstraintName: SomeName  
@@ -93,8 +94,8 @@ ConstraintName: SomeName
   IsPrimaryKey: False  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d72b0-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="d72b0-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a6c6e-125">関連項目</span><span class="sxs-lookup"><span data-stu-id="a6c6e-125">See also</span></span>
 
-- [<span data-ttu-id="d72b0-126">XML スキーマ (XSD) 制約の DataSet 制約への割り当て</span><span class="sxs-lookup"><span data-stu-id="d72b0-126">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [<span data-ttu-id="d72b0-127">XML スキーマ (XSD) からの DataSet リレーションの生成</span><span class="sxs-lookup"><span data-stu-id="d72b0-127">Generating DataSet Relations from XML Schema (XSD)</span></span>](generating-dataset-relations-from-xml-schema-xsd.md)
-- [<span data-ttu-id="d72b0-128">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="d72b0-128">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="a6c6e-126">XML スキーマ (XSD) 制約の DataSet 制約への割り当て</span><span class="sxs-lookup"><span data-stu-id="a6c6e-126">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [<span data-ttu-id="a6c6e-127">XML スキーマ (XSD) からの DataSet リレーションの生成</span><span class="sxs-lookup"><span data-stu-id="a6c6e-127">Generating DataSet Relations from XML Schema (XSD)</span></span>](generating-dataset-relations-from-xml-schema-xsd.md)
+- [<span data-ttu-id="a6c6e-128">ADO.NET の概要</span><span class="sxs-lookup"><span data-stu-id="a6c6e-128">ADO.NET Overview</span></span>](../ado-net-overview.md)

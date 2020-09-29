@@ -5,29 +5,31 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f80d4327-b6a5-4aa8-a743-e95d09a2a02e
-ms.openlocfilehash: 01ba9ab4359cbd124b2207c87d5dae904641911a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 24b23c436fd7d4d5f3fdd0c364c0bdaf6feb8d1b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002989"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161348"
 ---
-# <a name="how-to-call-user-defined-functions-inline"></a><span data-ttu-id="8dcde-102">方法: ユーザー定義関数をインラインで呼び出す</span><span class="sxs-lookup"><span data-stu-id="8dcde-102">How to: Call User-Defined Functions Inline</span></span>
-<span data-ttu-id="8dcde-103">ユーザー定義関数はインラインで呼び出すことができますが、遅延実行のクエリに含まれる関数は、そのクエリが実行されるまで実行されません。</span><span class="sxs-lookup"><span data-stu-id="8dcde-103">Although you can call user-defined functions inline, functions that are included in a query whose execution is deferred are not executed until the query is executed.</span></span> <span data-ttu-id="8dcde-104">詳細については、「[LINQ クエリの概要 (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="8dcde-104">For more information, see [Introduction to LINQ Queries (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).</span></span>  
+# <a name="how-to-call-user-defined-functions-inline"></a><span data-ttu-id="16421-102">方法: ユーザー定義関数をインラインで呼び出す</span><span class="sxs-lookup"><span data-stu-id="16421-102">How to: Call User-Defined Functions Inline</span></span>
+
+<span data-ttu-id="16421-103">ユーザー定義関数はインラインで呼び出すことができますが、遅延実行のクエリに含まれる関数は、そのクエリが実行されるまで実行されません。</span><span class="sxs-lookup"><span data-stu-id="16421-103">Although you can call user-defined functions inline, functions that are included in a query whose execution is deferred are not executed until the query is executed.</span></span> <span data-ttu-id="16421-104">詳細については、「[LINQ クエリの概要 (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="16421-104">For more information, see [Introduction to LINQ Queries (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).</span></span>  
   
- <span data-ttu-id="8dcde-105">同じ関数をクエリの外部で呼び出すと、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] によって、メソッド呼び出し式から単純なクエリが作成されます。</span><span class="sxs-lookup"><span data-stu-id="8dcde-105">When you call the same function outside a query, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] creates a simple query from the method call expression.</span></span> <span data-ttu-id="8dcde-106">この SQL 構文を次に示します (`@p0` パラメーターは渡される定数にバインドされます)。</span><span class="sxs-lookup"><span data-stu-id="8dcde-106">The following is the SQL syntax (the parameter `@p0` is bound to the constant passed in):</span></span>  
+ <span data-ttu-id="16421-105">同じ関数をクエリの外部で呼び出すと、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] によって、メソッド呼び出し式から単純なクエリが作成されます。</span><span class="sxs-lookup"><span data-stu-id="16421-105">When you call the same function outside a query, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] creates a simple query from the method call expression.</span></span> <span data-ttu-id="16421-106">この SQL 構文を次に示します (`@p0` パラメーターは渡される定数にバインドされます)。</span><span class="sxs-lookup"><span data-stu-id="16421-106">The following is the SQL syntax (the parameter `@p0` is bound to the constant passed in):</span></span>  
   
 ```sql  
 SELECT dbo.ReverseCustName(@p0)  
 ```  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="8dcde-107">によって、次の結果が作成されます。</span><span class="sxs-lookup"><span data-stu-id="8dcde-107">creates the following:</span></span>  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="16421-107">によって、次の結果が作成されます。</span><span class="sxs-lookup"><span data-stu-id="16421-107">creates the following:</span></span>  
   
  [!code-csharp[DLinqUDFS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/Program.cs#4)]
  [!code-vb[DLinqUDFS#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#4)]  
   
-## <a name="example"></a><span data-ttu-id="8dcde-108">例</span><span class="sxs-lookup"><span data-stu-id="8dcde-108">Example</span></span>  
- <span data-ttu-id="8dcde-109">次の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のクエリでは、生成されたユーザー定義関数メソッド `ReverseCustName` のインライン呼び出しを確認できます。</span><span class="sxs-lookup"><span data-stu-id="8dcde-109">In the following [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] query, you can see an inline call to the generated user-defined function method `ReverseCustName`.</span></span> <span data-ttu-id="8dcde-110">クエリは遅延実行されるので、この関数は即座には実行されません。</span><span class="sxs-lookup"><span data-stu-id="8dcde-110">The function is not executed immediately because query execution is deferred.</span></span> <span data-ttu-id="8dcde-111">このクエリ用に作成される SQL は、データベース内のユーザー定義関数の呼び出しに変換されます (クエリの後の SQL コードを参照してください)。</span><span class="sxs-lookup"><span data-stu-id="8dcde-111">The SQL built for this query translates to a call to the user-defined function in the database (see the SQL code following the query).</span></span>  
+## <a name="example"></a><span data-ttu-id="16421-108">例</span><span class="sxs-lookup"><span data-stu-id="16421-108">Example</span></span>  
+
+ <span data-ttu-id="16421-109">次の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のクエリでは、生成されたユーザー定義関数メソッド `ReverseCustName` のインライン呼び出しを確認できます。</span><span class="sxs-lookup"><span data-stu-id="16421-109">In the following [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] query, you can see an inline call to the generated user-defined function method `ReverseCustName`.</span></span> <span data-ttu-id="16421-110">クエリは遅延実行されるので、この関数は即座には実行されません。</span><span class="sxs-lookup"><span data-stu-id="16421-110">The function is not executed immediately because query execution is deferred.</span></span> <span data-ttu-id="16421-111">このクエリ用に作成される SQL は、データベース内のユーザー定義関数の呼び出しに変換されます (クエリの後の SQL コードを参照してください)。</span><span class="sxs-lookup"><span data-stu-id="16421-111">The SQL built for this query translates to a call to the user-defined function in the database (see the SQL code following the query).</span></span>  
   
  [!code-csharp[DLinqUDFS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/Program.cs#5)]
  [!code-vb[DLinqUDFS#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#5)]  
@@ -38,6 +40,6 @@ SELECT [t0].[ContactName],
 FROM [Customers] AS [t0]  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8dcde-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="8dcde-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="16421-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="16421-112">See also</span></span>
 
-- [<span data-ttu-id="8dcde-113">ユーザー定義関数</span><span class="sxs-lookup"><span data-stu-id="8dcde-113">User-Defined Functions</span></span>](user-defined-functions.md)
+- [<span data-ttu-id="16421-113">ユーザー定義関数</span><span class="sxs-lookup"><span data-stu-id="16421-113">User-Defined Functions</span></span>](user-defined-functions.md)

@@ -5,45 +5,49 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 343e8dda-70b2-409d-9334-ce9a880c3cea
-ms.openlocfilehash: 422179171819f1a78a33f93545c92547830ab5fb
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3a99038f9432ffc485742587350e2752ba55706f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543642"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158397"
 ---
-# <a name="query-expression-syntax-examples-join-operators"></a><span data-ttu-id="2960e-102">クエリ式の構文例:結合演算子</span><span class="sxs-lookup"><span data-stu-id="2960e-102">Query Expression Syntax Examples: Join Operators</span></span>
-<span data-ttu-id="2960e-103">結合は、リレーショナル データベース テーブルのように互いにナビゲート可能なリレーションシップを持たないデータ ソースをターゲットとするクエリにおいて重要な操作です。</span><span class="sxs-lookup"><span data-stu-id="2960e-103">Joining is an important operation in queries that target data sources that have no navigable relationships to each other, such as relational database tables.</span></span> <span data-ttu-id="2960e-104">2 つのデータ ソースを結合する操作とは、あるデータ ソース内のオブジェクトを、他方のデータ ソース内で共通の属性を持つオブジェクトと関連付けることです。</span><span class="sxs-lookup"><span data-stu-id="2960e-104">A join of two data sources is the association of objects in one data source with objects that share a common attribute in the other data source.</span></span> <span data-ttu-id="2960e-105">詳細については、「[標準クエリ演算子の概要](/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="2960e-105">For more information, see [Standard Query Operators Overview](/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120)).</span></span>  
+# <a name="query-expression-syntax-examples-join-operators"></a><span data-ttu-id="47dce-102">クエリ式の構文例:結合演算子</span><span class="sxs-lookup"><span data-stu-id="47dce-102">Query Expression Syntax Examples: Join Operators</span></span>
+
+<span data-ttu-id="47dce-103">結合は、リレーショナル データベース テーブルのように互いにナビゲート可能なリレーションシップを持たないデータ ソースをターゲットとするクエリにおいて重要な操作です。</span><span class="sxs-lookup"><span data-stu-id="47dce-103">Joining is an important operation in queries that target data sources that have no navigable relationships to each other, such as relational database tables.</span></span> <span data-ttu-id="47dce-104">2 つのデータ ソースを結合する操作とは、あるデータ ソース内のオブジェクトを、他方のデータ ソース内で共通の属性を持つオブジェクトと関連付けることです。</span><span class="sxs-lookup"><span data-stu-id="47dce-104">A join of two data sources is the association of objects in one data source with objects that share a common attribute in the other data source.</span></span> <span data-ttu-id="47dce-105">詳細については、「[標準クエリ演算子の概要](/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="47dce-105">For more information, see [Standard Query Operators Overview](/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120)).</span></span>  
   
- <span data-ttu-id="2960e-106">このトピックでは、クエリ式構文で、<xref:System.Linq.Enumerable.GroupJoin%2A> メソッドおよび <xref:System.Linq.Enumerable.Join%2A> メソッドを使用して、[AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) を照会する例を取り上げます。</span><span class="sxs-lookup"><span data-stu-id="2960e-106">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.GroupJoin%2A> and <xref:System.Linq.Enumerable.Join%2A> methods to query the [AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) using query expression syntax.</span></span> <span data-ttu-id="2960e-107">これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。</span><span class="sxs-lookup"><span data-stu-id="2960e-107">The AdventureWorks Sales Model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+ <span data-ttu-id="47dce-106">このトピックでは、クエリ式構文で、<xref:System.Linq.Enumerable.GroupJoin%2A> メソッドおよび <xref:System.Linq.Enumerable.Join%2A> メソッドを使用して、[AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) を照会する例を取り上げます。</span><span class="sxs-lookup"><span data-stu-id="47dce-106">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.GroupJoin%2A> and <xref:System.Linq.Enumerable.Join%2A> methods to query the [AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) using query expression syntax.</span></span> <span data-ttu-id="47dce-107">これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。</span><span class="sxs-lookup"><span data-stu-id="47dce-107">The AdventureWorks Sales Model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="2960e-108">このトピックの例には、次の `using`/`Imports` ステートメントが使用されています。</span><span class="sxs-lookup"><span data-stu-id="2960e-108">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="47dce-108">このトピックの例には、次の `using`/`Imports` ステートメントが使用されています。</span><span class="sxs-lookup"><span data-stu-id="47dce-108">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## <a name="groupjoin"></a><span data-ttu-id="2960e-109">GroupJoin</span><span class="sxs-lookup"><span data-stu-id="2960e-109">GroupJoin</span></span>  
+## <a name="groupjoin"></a><span data-ttu-id="47dce-109">GroupJoin</span><span class="sxs-lookup"><span data-stu-id="47dce-109">GroupJoin</span></span>  
   
-### <a name="example"></a><span data-ttu-id="2960e-110">例</span><span class="sxs-lookup"><span data-stu-id="2960e-110">Example</span></span>  
- <span data-ttu-id="2960e-111">次の例では、SalesOrderHeader テーブルおよび SalesOrderDetail テーブルに対して <xref:System.Linq.Enumerable.GroupJoin%2A> を実行することによって、顧客ごとの注文数を調べます。</span><span class="sxs-lookup"><span data-stu-id="2960e-111">The following example performs a <xref:System.Linq.Enumerable.GroupJoin%2A> over the SalesOrderHeader and SalesOrderDetail tables to find the number of orders per customer.</span></span> <span data-ttu-id="2960e-112">GroupJoin は、左外部結合に相当します。つまり、1 つ目 (左側) のデータ ソースに存在するすべての要素は、関連する要素がもう一方のデータ ソースに存在するかどうかに関係なく返されます。</span><span class="sxs-lookup"><span data-stu-id="2960e-112">A group join is the equivalent of a left outer join, which returns each element of the first (left) data source, even if no correlated elements are in the other data source.</span></span>  
+### <a name="example"></a><span data-ttu-id="47dce-110">例</span><span class="sxs-lookup"><span data-stu-id="47dce-110">Example</span></span>  
+
+ <span data-ttu-id="47dce-111">次の例では、SalesOrderHeader テーブルおよび SalesOrderDetail テーブルに対して <xref:System.Linq.Enumerable.GroupJoin%2A> を実行することによって、顧客ごとの注文数を調べます。</span><span class="sxs-lookup"><span data-stu-id="47dce-111">The following example performs a <xref:System.Linq.Enumerable.GroupJoin%2A> over the SalesOrderHeader and SalesOrderDetail tables to find the number of orders per customer.</span></span> <span data-ttu-id="47dce-112">GroupJoin は、左外部結合に相当します。つまり、1 つ目 (左側) のデータ ソースに存在するすべての要素は、関連する要素がもう一方のデータ ソースに存在するかどうかに関係なく返されます。</span><span class="sxs-lookup"><span data-stu-id="47dce-112">A group join is the equivalent of a left outer join, which returns each element of the first (left) data source, even if no correlated elements are in the other data source.</span></span>  
   
  [!code-csharp[DP L2E Examples#GroupJoin2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#groupjoin2)]
  [!code-vb[DP L2E Examples#GroupJoin2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#groupjoin2)]  
   
-### <a name="example"></a><span data-ttu-id="2960e-113">例</span><span class="sxs-lookup"><span data-stu-id="2960e-113">Example</span></span>  
- <span data-ttu-id="2960e-114">次の例では、Contact テーブルおよび SalesOrderHeader テーブルに対して <xref:System.Linq.Enumerable.GroupJoin%2A> を実行して、連絡先ごとの注文数を調べます。</span><span class="sxs-lookup"><span data-stu-id="2960e-114">The following example performs a <xref:System.Linq.Enumerable.GroupJoin%2A> over the Contact and SalesOrderHeader tables to find the number of orders per contact.</span></span> <span data-ttu-id="2960e-115">各連絡先の注文数と ID が表示されます。</span><span class="sxs-lookup"><span data-stu-id="2960e-115">The order count and IDs for each contact are displayed.</span></span>  
+### <a name="example"></a><span data-ttu-id="47dce-113">例</span><span class="sxs-lookup"><span data-stu-id="47dce-113">Example</span></span>  
+
+ <span data-ttu-id="47dce-114">次の例では、Contact テーブルおよび SalesOrderHeader テーブルに対して <xref:System.Linq.Enumerable.GroupJoin%2A> を実行して、連絡先ごとの注文数を調べます。</span><span class="sxs-lookup"><span data-stu-id="47dce-114">The following example performs a <xref:System.Linq.Enumerable.GroupJoin%2A> over the Contact and SalesOrderHeader tables to find the number of orders per contact.</span></span> <span data-ttu-id="47dce-115">各連絡先の注文数と ID が表示されます。</span><span class="sxs-lookup"><span data-stu-id="47dce-115">The order count and IDs for each contact are displayed.</span></span>  
   
  [!code-csharp[DP L2E Examples#GroupJoin](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#groupjoin)]
  [!code-vb[DP L2E Examples#GroupJoin](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#groupjoin)]  
   
-## <a name="join"></a><span data-ttu-id="2960e-116">Join</span><span class="sxs-lookup"><span data-stu-id="2960e-116">Join</span></span>  
+## <a name="join"></a><span data-ttu-id="47dce-116">Join</span><span class="sxs-lookup"><span data-stu-id="47dce-116">Join</span></span>  
   
-### <a name="example"></a><span data-ttu-id="2960e-117">例</span><span class="sxs-lookup"><span data-stu-id="2960e-117">Example</span></span>  
- <span data-ttu-id="2960e-118">次の例では、SalesOrderHeader テーブルと SalesOrderDetail テーブルを結合し、8 月以降のオンラインでの注文を取得します。</span><span class="sxs-lookup"><span data-stu-id="2960e-118">The following example performs a join over the SalesOrderHeader and SalesOrderDetail tables to get online orders from the month of August.</span></span>  
+### <a name="example"></a><span data-ttu-id="47dce-117">例</span><span class="sxs-lookup"><span data-stu-id="47dce-117">Example</span></span>  
+
+ <span data-ttu-id="47dce-118">次の例では、SalesOrderHeader テーブルと SalesOrderDetail テーブルを結合し、8 月以降のオンラインでの注文を取得します。</span><span class="sxs-lookup"><span data-stu-id="47dce-118">The following example performs a join over the SalesOrderHeader and SalesOrderDetail tables to get online orders from the month of August.</span></span>  
   
  [!code-csharp[DP L2E Examples#Join](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#join)]
  [!code-vb[DP L2E Examples#Join](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#join)]  
   
-## <a name="see-also"></a><span data-ttu-id="2960e-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="2960e-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="47dce-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="47dce-119">See also</span></span>
 
-- [<span data-ttu-id="2960e-120">LINQ to Entities でのクエリ</span><span class="sxs-lookup"><span data-stu-id="2960e-120">Queries in LINQ to Entities</span></span>](queries-in-linq-to-entities.md)
+- [<span data-ttu-id="47dce-120">LINQ to Entities でのクエリ</span><span class="sxs-lookup"><span data-stu-id="47dce-120">Queries in LINQ to Entities</span></span>](queries-in-linq-to-entities.md)

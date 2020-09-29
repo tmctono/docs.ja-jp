@@ -3,17 +3,18 @@ title: フォルダー内のテキスト ファイルの内容にクエリを実
 description: C# で LINQ を使用してディレクトリ ツリーに含まれるすべてのファイルを照会し、個々のファイルを開いて、その内容を調べる方法について説明します。
 ms.date: 07/20/2015
 ms.assetid: f5b4dce7-1a34-4eb4-9bf1-60d5bdda264c
-ms.openlocfilehash: 216edc2ee6fc43fd06a3c89b1b6b73f693f752f8
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: a1f3e29751cd91ac1fd8e6601aa078d967776f5a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104270"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159021"
 ---
-# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a><span data-ttu-id="3c3f0-103">フォルダー内のテキスト ファイルの内容にクエリを実行する方法 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="3c3f0-103">How to query the contents of text files in a folder (LINQ) (C#)</span></span>
-<span data-ttu-id="3c3f0-104">この例では、指定したディレクトリ ツリーに含まれるすべてのファイルを照会し、個々のファイルを開いて、その内容を調べています。</span><span class="sxs-lookup"><span data-stu-id="3c3f0-104">This example shows how to query over all the files in a specified directory tree, open each file, and inspect its contents.</span></span> <span data-ttu-id="3c3f0-105">同様の手法を使えば、ディレクトリ ツリーの内容に対するインデックスや逆インデックスを作成することもできます。</span><span class="sxs-lookup"><span data-stu-id="3c3f0-105">This type of technique could be used to create indexes or reverse indexes of the contents of a directory tree.</span></span> <span data-ttu-id="3c3f0-106">この例で行っているのは単純な文字列検索です。</span><span class="sxs-lookup"><span data-stu-id="3c3f0-106">A simple string search is performed in this example.</span></span> <span data-ttu-id="3c3f0-107">しかし正規表現を使うと、もっと複雑なパターン マッチングを行うことができます。</span><span class="sxs-lookup"><span data-stu-id="3c3f0-107">However, more complex types of pattern matching can be performed with a regular expression.</span></span> <span data-ttu-id="3c3f0-108">詳細については、「[LINQ クエリと正規表現を組み合わせる方法 (C#)](./how-to-combine-linq-queries-with-regular-expressions.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c3f0-108">For more information, see [How to combine LINQ queries with regular expressions (C#)](./how-to-combine-linq-queries-with-regular-expressions.md).</span></span>  
+# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a><span data-ttu-id="c2601-103">フォルダー内のテキスト ファイルの内容にクエリを実行する方法 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c2601-103">How to query the contents of text files in a folder (LINQ) (C#)</span></span>
+
+<span data-ttu-id="c2601-104">この例では、指定したディレクトリ ツリーに含まれるすべてのファイルを照会し、個々のファイルを開いて、その内容を調べています。</span><span class="sxs-lookup"><span data-stu-id="c2601-104">This example shows how to query over all the files in a specified directory tree, open each file, and inspect its contents.</span></span> <span data-ttu-id="c2601-105">同様の手法を使えば、ディレクトリ ツリーの内容に対するインデックスや逆インデックスを作成することもできます。</span><span class="sxs-lookup"><span data-stu-id="c2601-105">This type of technique could be used to create indexes or reverse indexes of the contents of a directory tree.</span></span> <span data-ttu-id="c2601-106">この例で行っているのは単純な文字列検索です。</span><span class="sxs-lookup"><span data-stu-id="c2601-106">A simple string search is performed in this example.</span></span> <span data-ttu-id="c2601-107">しかし正規表現を使うと、もっと複雑なパターン マッチングを行うことができます。</span><span class="sxs-lookup"><span data-stu-id="c2601-107">However, more complex types of pattern matching can be performed with a regular expression.</span></span> <span data-ttu-id="c2601-108">詳細については、「[LINQ クエリと正規表現を組み合わせる方法 (C#)](./how-to-combine-linq-queries-with-regular-expressions.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="c2601-108">For more information, see [How to combine LINQ queries with regular expressions (C#)](./how-to-combine-linq-queries-with-regular-expressions.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3c3f0-109">例</span><span class="sxs-lookup"><span data-stu-id="3c3f0-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="c2601-109">例</span><span class="sxs-lookup"><span data-stu-id="c2601-109">Example</span></span>  
   
 ```csharp  
 class QueryContents  
@@ -71,10 +72,11 @@ class QueryContents
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="3c3f0-110">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="3c3f0-110">Compiling the Code</span></span>  
-<span data-ttu-id="3c3f0-111">System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="3c3f0-111">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
-  
-## <a name="see-also"></a><span data-ttu-id="3c3f0-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="3c3f0-112">See also</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="c2601-110">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="c2601-110">Compiling the Code</span></span>  
 
-- [<span data-ttu-id="3c3f0-113">LINQ とファイル ディレクトリ (C#)</span><span class="sxs-lookup"><span data-stu-id="3c3f0-113">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
-- [<span data-ttu-id="3c3f0-114">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="3c3f0-114">LINQ to Objects (C#)</span></span>](./linq-to-objects.md)
+<span data-ttu-id="c2601-111">System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="c2601-111">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
+  
+## <a name="see-also"></a><span data-ttu-id="c2601-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="c2601-112">See also</span></span>
+
+- [<span data-ttu-id="c2601-113">LINQ とファイル ディレクトリ (C#)</span><span class="sxs-lookup"><span data-stu-id="c2601-113">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+- [<span data-ttu-id="c2601-114">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="c2601-114">LINQ to Objects (C#)</span></span>](./linq-to-objects.md)
