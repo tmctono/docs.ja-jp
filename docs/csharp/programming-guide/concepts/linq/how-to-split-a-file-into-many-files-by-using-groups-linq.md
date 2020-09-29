@@ -3,19 +3,20 @@ title: グループを使用して 1 つのファイルを複数のファイル�
 description: グループを使用して 1 つのファイルを複数のファイルに分割する方法について説明します。 コード例を参照し、使用可能なその他のリソースを確認します。
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 1db16a48db257069eca83127c0b1fed7e49f19d6
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: b7be01be0f1539eb6ed4f4857af2625672319493
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301061"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203931"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="0a0cf-104">グループを使用して 1 つのファイルを複数のファイルに分割する方法 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="0a0cf-104">How to split a file into many files by using groups (LINQ) (C#)</span></span>
-<span data-ttu-id="0a0cf-105">この例では、2 つのファイルの内容をマージし、新しい方法でデータを整理する一連の新しいファイルを作成するための、1 つの方法を示します。</span><span class="sxs-lookup"><span data-stu-id="0a0cf-105">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="90597-104">グループを使用して 1 つのファイルを複数のファイルに分割する方法 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="90597-104">How to split a file into many files by using groups (LINQ) (C#)</span></span>
+
+<span data-ttu-id="90597-105">この例では、2 つのファイルの内容をマージし、新しい方法でデータを整理する一連の新しいファイルを作成するための、1 つの方法を示します。</span><span class="sxs-lookup"><span data-stu-id="90597-105">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="0a0cf-106">データ ファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="0a0cf-106">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="90597-106">データ ファイルを作成するには</span><span class="sxs-lookup"><span data-stu-id="90597-106">To create the data files</span></span>  
   
-1. <span data-ttu-id="0a0cf-107">次の名前を names1.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="0a0cf-107">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
+1. <span data-ttu-id="90597-107">次の名前を names1.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。</span><span class="sxs-lookup"><span data-stu-id="90597-107">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```text  
     Bankov, Peter  
@@ -30,7 +31,7 @@ ms.locfileid: "87301061"
     Garcia, Debra  
     ```  
   
-2. <span data-ttu-id="0a0cf-108">次の名前を names2.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。2 つのファイルには、共通の名前がいくつか含まれていることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="0a0cf-108">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
+2. <span data-ttu-id="90597-108">次の名前を names2.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。2 つのファイルには、共通の名前がいくつか含まれていることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="90597-108">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
   
     ```text  
     Liu, Jinghao  
@@ -45,7 +46,7 @@ ms.locfileid: "87301061"
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a><span data-ttu-id="0a0cf-109">例</span><span class="sxs-lookup"><span data-stu-id="0a0cf-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="90597-109">例</span><span class="sxs-lookup"><span data-stu-id="90597-109">Example</span></span>  
   
 ```csharp  
 class SplitWithGroups  
@@ -123,13 +124,13 @@ class SplitWithGroups
  */  
 ```  
   
- <span data-ttu-id="0a0cf-110">このプログラムは、データ ファイルとしてグループごとに異なるファイルを同じフォルダーに書き込みます。</span><span class="sxs-lookup"><span data-stu-id="0a0cf-110">The program writes a separate file for each group in the same folder as the data files.</span></span>  
+ <span data-ttu-id="90597-110">このプログラムは、データ ファイルとしてグループごとに異なるファイルを同じフォルダーに書き込みます。</span><span class="sxs-lookup"><span data-stu-id="90597-110">The program writes a separate file for each group in the same folder as the data files.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="0a0cf-111">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="0a0cf-111">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="90597-111">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="90597-111">Compiling the Code</span></span>
 
-<span data-ttu-id="0a0cf-112">System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="0a0cf-112">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
+<span data-ttu-id="90597-112">System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。</span><span class="sxs-lookup"><span data-stu-id="90597-112">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="0a0cf-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="0a0cf-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="90597-113">関連項目</span><span class="sxs-lookup"><span data-stu-id="90597-113">See also</span></span>
 
-- [<span data-ttu-id="0a0cf-114">LINQ と文字列 (C#)</span><span class="sxs-lookup"><span data-stu-id="0a0cf-114">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
-- [<span data-ttu-id="0a0cf-115">LINQ とファイル ディレクトリ (C#)</span><span class="sxs-lookup"><span data-stu-id="0a0cf-115">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+- [<span data-ttu-id="90597-114">LINQ と文字列 (C#)</span><span class="sxs-lookup"><span data-stu-id="90597-114">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="90597-115">LINQ とファイル ディレクトリ (C#)</span><span class="sxs-lookup"><span data-stu-id="90597-115">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)

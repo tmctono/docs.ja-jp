@@ -10,39 +10,44 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: 80ac6f8412f456b23d05ee87882dca8e16a132c3
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 64ac99ec0a72ba7df120f6732edccf160a351738
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301659"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201838"
 ---
-# <a name="how-to-read-from-a-text-file-c-programming-guide"></a><span data-ttu-id="a4f9f-104">テキスト ファイルから読み取る方法 (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="a4f9f-104">How to read from a text file (C# Programming Guide)</span></span>
-<span data-ttu-id="a4f9f-105">この例では、<xref:System.IO.File?displayProperty=nameWithType> クラスの静的メソッド <xref:System.IO.File.ReadAllText%2A> と <xref:System.IO.File.ReadAllLines%2A> を使用してテキスト ファイルの内容を読み取ります。</span><span class="sxs-lookup"><span data-stu-id="a4f9f-105">This example reads the contents of a text file by using the static methods <xref:System.IO.File.ReadAllText%2A> and <xref:System.IO.File.ReadAllLines%2A> from the <xref:System.IO.File?displayProperty=nameWithType> class.</span></span>  
+# <a name="how-to-read-from-a-text-file-c-programming-guide"></a><span data-ttu-id="48589-104">テキスト ファイルから読み取る方法 (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="48589-104">How to read from a text file (C# Programming Guide)</span></span>
+
+<span data-ttu-id="48589-105">この例では、<xref:System.IO.File?displayProperty=nameWithType> クラスの静的メソッド <xref:System.IO.File.ReadAllText%2A> と <xref:System.IO.File.ReadAllLines%2A> を使用してテキスト ファイルの内容を読み取ります。</span><span class="sxs-lookup"><span data-stu-id="48589-105">This example reads the contents of a text file by using the static methods <xref:System.IO.File.ReadAllText%2A> and <xref:System.IO.File.ReadAllLines%2A> from the <xref:System.IO.File?displayProperty=nameWithType> class.</span></span>  
   
-<span data-ttu-id="a4f9f-106"><xref:System.IO.StreamReader> の使用例については、「[テキスト ファイルを 1 行ずつ読み取る方法](./how-to-read-a-text-file-one-line-at-a-time.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="a4f9f-106">For an example that uses <xref:System.IO.StreamReader>, see [How to read a text file one line at a time](./how-to-read-a-text-file-one-line-at-a-time.md).</span></span>
+<span data-ttu-id="48589-106"><xref:System.IO.StreamReader> の使用例については、「[テキスト ファイルを 1 行ずつ読み取る方法](./how-to-read-a-text-file-one-line-at-a-time.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="48589-106">For an example that uses <xref:System.IO.StreamReader>, see [How to read a text file one line at a time](./how-to-read-a-text-file-one-line-at-a-time.md).</span></span>
   
 > [!NOTE]
-> <span data-ttu-id="a4f9f-107">この例では、「[テキスト ファイルに書き込む方法](./how-to-write-to-a-text-file.md)」トピックで作成したファイルを使用しています。</span><span class="sxs-lookup"><span data-stu-id="a4f9f-107">The files that are used in this example are created in the topic [How to write to a text file](./how-to-write-to-a-text-file.md).</span></span>
+> <span data-ttu-id="48589-107">この例では、「[テキスト ファイルに書き込む方法](./how-to-write-to-a-text-file.md)」トピックで作成したファイルを使用しています。</span><span class="sxs-lookup"><span data-stu-id="48589-107">The files that are used in this example are created in the topic [How to write to a text file](./how-to-write-to-a-text-file.md).</span></span>
   
-## <a name="example"></a><span data-ttu-id="a4f9f-108">例</span><span class="sxs-lookup"><span data-stu-id="a4f9f-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="48589-108">例</span><span class="sxs-lookup"><span data-stu-id="48589-108">Example</span></span>  
+
  [!code-csharp[csFilesandFolders#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#4)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="a4f9f-109">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="a4f9f-109">Compiling the Code</span></span>  
- <span data-ttu-id="a4f9f-110">コードをコピーし、C# のコンソール アプリケーションに貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="a4f9f-110">Copy the code and paste it into a C# console application.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="48589-109">コードのコンパイル</span><span class="sxs-lookup"><span data-stu-id="48589-109">Compiling the Code</span></span>  
+
+ <span data-ttu-id="48589-110">コードをコピーし、C# のコンソール アプリケーションに貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="48589-110">Copy the code and paste it into a C# console application.</span></span>  
   
-<span data-ttu-id="a4f9f-111">「[テキスト ファイルに書き込む方法](./how-to-write-to-a-text-file.md)」のテキスト ファイルを使用せずに独自のテキスト ファイルを使用する場合は、`ReadAllText` と `ReadAllLines` の引数を、ご使用のコンピューター上の該当するパスおよびファイル名に置き換えてください。</span><span class="sxs-lookup"><span data-stu-id="a4f9f-111">If you are not using the text files from [How to write to a text file](./how-to-write-to-a-text-file.md), replace the argument to `ReadAllText` and `ReadAllLines` with the appropriate path and file name on your computer.</span></span>
+<span data-ttu-id="48589-111">「[テキスト ファイルに書き込む方法](./how-to-write-to-a-text-file.md)」のテキスト ファイルを使用せずに独自のテキスト ファイルを使用する場合は、`ReadAllText` と `ReadAllLines` の引数を、ご使用のコンピューター上の該当するパスおよびファイル名に置き換えてください。</span><span class="sxs-lookup"><span data-stu-id="48589-111">If you are not using the text files from [How to write to a text file](./how-to-write-to-a-text-file.md), replace the argument to `ReadAllText` and `ReadAllLines` with the appropriate path and file name on your computer.</span></span>
   
-## <a name="robust-programming"></a><span data-ttu-id="a4f9f-112">信頼性の高いプログラミング</span><span class="sxs-lookup"><span data-stu-id="a4f9f-112">Robust Programming</span></span>  
- <span data-ttu-id="a4f9f-113">次の条件を満たす場合は、例外が発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="a4f9f-113">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="48589-112">信頼性の高いプログラミング</span><span class="sxs-lookup"><span data-stu-id="48589-112">Robust Programming</span></span>  
+
+ <span data-ttu-id="48589-113">次の条件を満たす場合は、例外が発生する可能性があります。</span><span class="sxs-lookup"><span data-stu-id="48589-113">The following conditions may cause an exception:</span></span>  
   
-- <span data-ttu-id="a4f9f-114">ファイルが存在しない、または指定した場所に存在しない。</span><span class="sxs-lookup"><span data-stu-id="a4f9f-114">The file doesn't exist or doesn't exist at the specified location.</span></span> <span data-ttu-id="a4f9f-115">ファイル名のパスとスペルを確認してください。</span><span class="sxs-lookup"><span data-stu-id="a4f9f-115">Check the path and the spelling of the file name.</span></span>  
+- <span data-ttu-id="48589-114">ファイルが存在しない、または指定した場所に存在しない。</span><span class="sxs-lookup"><span data-stu-id="48589-114">The file doesn't exist or doesn't exist at the specified location.</span></span> <span data-ttu-id="48589-115">ファイル名のパスとスペルを確認してください。</span><span class="sxs-lookup"><span data-stu-id="48589-115">Check the path and the spelling of the file name.</span></span>  
   
-## <a name="net-security"></a><span data-ttu-id="a4f9f-116">.NET セキュリティ</span><span class="sxs-lookup"><span data-stu-id="a4f9f-116">.NET Security</span></span>  
- <span data-ttu-id="a4f9f-117">ファイル名に基づいてファイルの内容を判断しないでください。</span><span class="sxs-lookup"><span data-stu-id="a4f9f-117">Do not rely on the name of a file to determine the contents of the file.</span></span> <span data-ttu-id="a4f9f-118">たとえば、`myFile.cs` というファイルが C# のソース ファイルではない可能性もあります。</span><span class="sxs-lookup"><span data-stu-id="a4f9f-118">For example, the file `myFile.cs` might not be a C# source file.</span></span>  
+## <a name="net-security"></a><span data-ttu-id="48589-116">.NET セキュリティ</span><span class="sxs-lookup"><span data-stu-id="48589-116">.NET Security</span></span>  
+
+ <span data-ttu-id="48589-117">ファイル名に基づいてファイルの内容を判断しないでください。</span><span class="sxs-lookup"><span data-stu-id="48589-117">Do not rely on the name of a file to determine the contents of the file.</span></span> <span data-ttu-id="48589-118">たとえば、`myFile.cs` というファイルが C# のソース ファイルではない可能性もあります。</span><span class="sxs-lookup"><span data-stu-id="48589-118">For example, the file `myFile.cs` might not be a C# source file.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a4f9f-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="a4f9f-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="48589-119">関連項目</span><span class="sxs-lookup"><span data-stu-id="48589-119">See also</span></span>
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [<span data-ttu-id="a4f9f-120">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="a4f9f-120">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="a4f9f-121">ファイル システムとレジストリ (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="a4f9f-121">File System and the Registry (C# Programming Guide)</span></span>](./index.md)
+- [<span data-ttu-id="48589-120">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="48589-120">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="48589-121">ファイル システムとレジストリ (C# プログラミング ガイド)</span><span class="sxs-lookup"><span data-stu-id="48589-121">File System and the Registry (C# Programming Guide)</span></span>](./index.md)
