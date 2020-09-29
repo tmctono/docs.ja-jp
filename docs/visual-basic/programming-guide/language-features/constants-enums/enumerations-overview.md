@@ -5,17 +5,19 @@ helpviewer_keywords:
 - Visual Basic code, enumerations
 - enumerations [Visual Basic], about enumerations
 ms.assetid: b42a38ee-5e77-4f99-a037-e3a127ead89c
-ms.openlocfilehash: 8262cc2742435abef0a05fefd7a40d5be2ec3e88
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7d0f28ff8b7f773b8b4ecc68320fbfa34c263136
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414493"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91095656"
 ---
 # <a name="enumerations-overview-visual-basic"></a>列挙型の概要 (Visual Basic)
+
 一連の関連する定数を操作する場合や、定数値に名前を関連付ける場合は、列挙型を使うと便利です。 たとえば、一連の整数型の定数を曜日に関連付けて列挙型として宣言すると、コードで整数値ではなく曜日名を使用することができます。  
   
 ## <a name="tasks-involving-enumerations"></a>列挙型に関連するタスク  
+
  次の表に、列挙型に関連する一般的なタスクを示します。  
   
 |目的|解決方法については、|  

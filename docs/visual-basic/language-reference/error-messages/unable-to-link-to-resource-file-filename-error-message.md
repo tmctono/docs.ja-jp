@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30144
 ms.assetid: 67ae276e-80d4-4162-ba00-e546c9294340
-ms.openlocfilehash: 5d775fab8de7cdbfa1982e455a6a46fef83114d5
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: fa610902d07e6ad2e169b26d67080e294982e02d
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197234"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875699"
 ---
-# <a name="unable-to-link-to-resource-file-filename-error-message"></a>リソース ファイル '\<filename>' にリンクできません: \<error message>
+# <a name="unable-to-link-to-resource-file-filename-error-message"></a>リソース ファイル '\<filename>' にリンクできません : \<error message>
+
 Visual Basic コンパイラはアセンブリ リンカー (Al.exe、Alink とも呼ばれる) を呼び出し、マニフェストを伴うアセンブリを生成します。 リンカーが、アセンブリからネイティブな COM+ リソース ファイルにリンクするときにエラーが発生したことを報告しています。  
   
  **エラー ID:** BC30144  

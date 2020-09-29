@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-ms.openlocfilehash: 33dd15e3f5f5538963597f2b00f4214895e1f47a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4918ac2e11dfaf682b1c00275f30c171bf241fe3
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403006"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874127"
 ---
 # <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>'\<constructorname>' の基本クラス '\<baseclassname>' にある '\<derivedclassname>' が古い形式に設定されているため、この 'Sub New' の最初のステートメントは、明示的な 'MyBase.New' または 'MyClass.New' への呼び出しでなければなりません: '\<errormessage>'
+
 クラス コンストラクターが基底クラスのコンストラクターを明示的に呼び出さず、暗黙的な基底クラスのコンストラクターが <xref:System.ObsoleteAttribute> 属性およびエラーとして扱うことを示すディレクティブでマークされています。  
   
  派生クラスのコンストラクターが基底クラスのコンストラクターを呼び出さない場合、Visual Basic では、パラメーターなしの基底クラスのコンストラクターの暗黙的な呼び出しを生成しようとします。 引数を指定せずに呼び出すことができるアクセス可能なコンストラクターが基底クラスにない場合、Visual Basic では暗黙的な呼び出しを生成できません。 この場合、必要なコンストラクターが <xref:System.ObsoleteAttribute> 属性でマークされるため、Visual Basic では呼び出すことができません。  

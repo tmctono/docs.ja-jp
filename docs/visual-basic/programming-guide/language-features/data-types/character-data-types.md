@@ -8,19 +8,21 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character data types
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
-ms.openlocfilehash: 33dd4c62776ae8c5ec0ce0a6d0858a7ed0d047fb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5fde5eff40d83bdd7d90cd611bd6749106db6e16
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401993"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077177"
 ---
 # <a name="character-data-types-visual-basic"></a>文字データ型 (Visual Basic)
+
 Visual Basic には、印刷や表示が可能な文字を処理するための "*文字データ型*" が用意されています。 どちらも Unicode 文字を処理しますが、`Char` は 1 つの文字を保持するのに対し、`String` は不特定数の文字を含みます。  
   
  Visual Basic データ型を並べて比較している表を、[データ型](../../../language-reference/data-types/index.md)に関するページで参照してください。  
   
 ## <a name="char-type"></a>Char 型  
+
  `Char` データ型は、1 つの 2 バイト (16 ビット) Unicode 文字です。 常に変数が厳密に 1 つの文字を格納する場合は、`Char` として宣言します。 次に例を示します。  
   
  [!code-vb[VbVbalrCharTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#1)]
@@ -33,6 +35,7 @@ Visual Basic には、印刷や表示が可能な文字を処理するための 
  詳細については、「[文字型 (Char)](../../../language-reference/data-types/char-data-type.md)」を参照してください。  
   
 ## <a name="string-type"></a>文字列の種類  
+
  `String` データ型は、0 個以上の 2 バイト (16 ビット) Unicode 文字のシーケンスです。 変数が不特定数の文字を含む可能性がある場合は、`String` として宣言します。 次に例を示します。  
   
  [!code-vb[VbVbalrCharTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#2)]

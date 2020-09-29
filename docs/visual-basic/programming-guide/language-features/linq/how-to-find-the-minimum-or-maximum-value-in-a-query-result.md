@@ -14,14 +14,15 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], aggregate queries
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 238b763b-7dcd-4b14-8050-b65500a4f71c
-ms.openlocfilehash: a148d8b726da78261eda152fcaafdd64ea01bb24
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e397ccd6fe21caaeb9d56ff3b0cc1ce16032639a
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404979"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91084009"
 ---
 # <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>方法: LINQ を使用したクエリ結果内の最小値と最大値の検索 (Visual Basic)
+
 統合言語クエリ (LINQ) を使用すると、データベース情報に簡単にアクセスしてクエリを実行できます。  
   
  次の例は、SQL Server データベースに対してクエリを実行する新しいアプリケーションを作成する方法を示しています。 このサンプルでは、`Aggregate` 句と `Group By` 句を使用して、結果の最小値と最大値を特定します。 詳細については、「[Aggregate 句](../../../language-reference/queries/aggregate-clause.md)」および「[Group By 句](../../../language-reference/queries/group-by-clause.md)」を参照してください。  

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-ms.openlocfilehash: 006961a0f1d4be6b0d52be5bc273dad9733bfe56
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0b35751136937d4cee5b3ca9669b43d3fbdf71a1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388700"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071953"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>方法: プロパティ プロシージャを呼び出す (Visual Basic)
+
 プロパティ プロシージャを呼び出すには、プロパティに値を格納するか、その値を取得します。 プロパティには、変数にアクセスするのと同じ方法でアクセスします。  
   
  プロパティの `Set` プロシージャによって値が格納され、その `Get` プロシージャによって値が取得されます。 ただし、これらのプロシージャを名前で明示的に呼び出すことはしません。 変数の値を格納または取得する場合と同様に、代入ステートメントまたは式でもプロパティを使用します。 Visual Basic によってプロパティのプロシージャが呼び出されます。  

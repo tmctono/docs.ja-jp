@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: 0a7c8f005b90484ef2f9c7e48218bda40533696a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 064688f173e375481373e9a33d66c64666e1583f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287013"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148362"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>クエリによる DataTable の作成 (LINQ to DataSet)
+
 <xref:System.Data.DataTable> オブジェクトの一般的な利用法の 1 つが、データ バインディングです。 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドは、クエリの結果を受け取り、そのデータを <xref:System.Data.DataTable> にコピーします。これをデータ バインディングに利用できます。 このデータ操作が実行されると、新しい <xref:System.Data.DataTable> が、基となった <xref:System.Data.DataTable> にマージ バックされます。  
   
  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドでは、次の処理を実行することでクエリの結果から <xref:System.Data.DataTable> を作成します。  
@@ -38,6 +39,7 @@ ms.locfileid: "84287013"
  [!code-vb[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#copytodatatable1)]  
   
 ## <a name="creating-a-custom-copytodatatablet-method"></a>カスタム CopyToDataTable\<T> メソッドの作成  
+
  既存の <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドは、ジェネリック パラメーター <xref:System.Collections.Generic.IEnumerable%601> が `T` 型である <xref:System.Data.DataRow> ソースに対してのみ作用します。 有用ではありますが、一連のスカラー型、匿名型を返すクエリ、またはテーブルの結合を実行するクエリからは、テーブルを作成できません。 一連のスカラー型または匿名型からテーブルを読み込む 2 つのカスタム `CopyToDataTable` メソッドの実装例については、「[方法: ジェネリック型 T が DataRow](implement-copytodatatable-where-type-not-a-datarow.md) ではない CopyToDataTable\<T> を実装する」を参照してください。  
   
  このセクションの例には、次のカスタム型が使用されています。  
@@ -46,30 +48,35 @@ ms.locfileid: "84287013"
  [!code-vb[DP Custom CopyToDataTable Examples#ItemClass](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#itemclass)]  
   
 ### <a name="example"></a>例  
+
  この例では、`SalesOrderHeader` テーブルと `SalesOrderDetail` テーブルを結合し、8 月以降のオンラインでの注文を取得して、クエリからテーブルを作成します。  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#Join](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#join)]
  [!code-vb[DP Custom CopyToDataTable Examples#Join](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#join)]  
   
 ### <a name="example"></a>例  
+
  次の例では、価格が $9.99 を超える一連の商品を照会し、そのクエリの結果からテーブルを作成します。  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsIntoTable](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsintotable)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsIntoTable](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsintotable)]  
   
 ### <a name="example"></a>例  
+
  次の例では、価格が $9.99 を超える一連の商品を照会し、その結果を射影します。 返された一連の匿名型は、既存のテーブルに読み込まれます。  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsIntoExistingTable](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsintoexistingtable)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsIntoExistingTable](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsintoexistingtable)]  
   
 ### <a name="example"></a>例  
+
  次の例では、価格が $9.99 を超える一連の商品を照会し、その結果を射影します。 返された一連の匿名型は、既存のテーブルに読み込まれます。 `Book` 型と `Movies` 型は `Item` 型から派生するため、テーブル スキーマは自動的に展開されます。  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsExpandSchema](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsexpandschema)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsExpandSchema](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsexpandschema)]  
   
 ### <a name="example"></a>例  
+
  次の例では、価格が $9.99 を超える一連の商品を照会し、新しいテーブルに読み込まれる一連の <xref:System.Double> を返します。  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loadscalarsequence)]

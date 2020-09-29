@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30617
 ms.assetid: 5e9de8e5-d26b-4fb2-9e28-814413fe9cef
-ms.openlocfilehash: d01c30571fc34e142300ac8706c56d5e99175fcf
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 91e6c81bb64c259411cbef8a36629b8b320ea584
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397208"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873758"
 ---
 # <a name="module-statements-can-occur-only-at-file-or-namespace-level"></a>'Module' ステートメントは、ファイルまたは名前空間レベルでのみ発生します。
+
 `Module` ステートメントは、ソース ファイルの先頭の、`Option` および `Imports` ステートメント、グローバル属性、および名前空間宣言の直後、ただし他のすべての宣言の前に記述する必要があります。  
   
  **エラー ID:** BC30617  

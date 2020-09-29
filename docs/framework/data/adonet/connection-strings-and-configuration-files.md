@@ -6,21 +6,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 2148aa984f8289b82b8efcee2404f08cab25c797
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e2bea3d962998b2778d22e232e7f7062cfda3143
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556552"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148408"
 ---
 # <a name="connection-strings-and-configuration-files"></a>接続文字列と構成ファイル
 
 接続文字列をアプリケーションのコードに組み込むと、セキュリティ上の脆弱性やメンテナンスの問題を引き起こす可能性があります。 アプリケーションのソース コード内にコンパイルされた暗号化されていない接続文字列は、[Ildasm.exe (IL 逆アセンブラー)](../../tools/ildasm-exe-il-disassembler.md) ツールを使用して参照することができます。 さらに、接続文字列が変わるたびにアプリケーションを再コンパイルする必要性が生じます。 そのため、接続文字列はアプリケーション構成ファイルに保存することをお勧めします。  
   
 ## <a name="working-with-application-configuration-files"></a>アプリケーション構成ファイルの使用  
+
  アプリケーション構成ファイルには、特定のアプリケーションに固有の設定が格納されます。 たとえば、ASP.NET アプリケーションには少なくとも 1 つの **web.config** ファイルが存在するほか、Windows アプリケーションにも必要に応じて **app.config** ファイルを割り当てることができます。 構成ファイルの名前と場所はアプリケーションのホストによって異なりますが、どの構成ファイルにも共通の要素があります。  
   
 ### <a name="the-connectionstrings-section"></a>connectionStrings セクション  
+
  接続文字列は、アプリケーション構成ファイルの**connectionStrings** 要素の **configuration** セクションにキーと値のペアとして格納できます。 子要素には、**add**、**clear**、および **remove** が存在します。  
   
  次の構成ファイル フラグメントは、接続文字列を格納するためのスキーマと構文の例を示しています。 **name** 属性は、実行時に取得する接続文字列を一意に識別するための名前です。 **providerName** は、machine.config ファイルに登録された .NET Framework データ プロバイダーの不変名です。  
@@ -41,6 +43,7 @@ ms.locfileid: "90556552"
 > 構成ファイルに接続文字列の一部を保存しておき、<xref:System.Data.Common.DbConnectionStringBuilder> クラスを使用して実行時に補完できます。 接続文字列の要素を事前に知ることができない場合や、機密情報を構成ファイルに保存したくない場合には有効な手段です。 詳細については、「[接続文字列ビルダー](connection-string-builders.md)」をご覧ください。  
   
 ### <a name="using-external-configuration-files"></a>外部構成ファイルの使用  
+
  外部構成ファイルとは、単一のセクションから成る、構成ファイルのフラグメントを含んだ独立したファイルを言います。 外部構成ファイルは、メインの構成ファイルによって参照されます。 **connectionStrings** セクションを物理的に分かれたファイルに保存できるため、アプリケーションの配置後に接続文字列を編集する場合に有効な手段です。 たとえば、構成ファイルに修正が加えられた場合、ASP.NET の標準的な動作ではアプリケーション ドメインが再起動され、その結果、状態情報が失われてしまいます。 しかし、外部構成ファイルに対する修正であればアプリケーションの再起動は伴いません。 外部構成ファイルは ASP.NET だけでなく、Windows アプリケーションでも使用できます。 また、ファイルのアクセス セキュリティや権限を使用して、外部構成ファイルへのアクセスを制限することもできます。 実行時における外部構成ファイルの使用は透過的であり、特殊なコーディングも不要です。  
   
  外部構成ファイルに接続文字列を保存するには、**connectionStrings** セクションだけを含んだファイルを別途作成します。 それ以外の要素、セクション、または属性は含めないでください。 外部構成ファイルの構文の例を次に示します。  
@@ -63,12 +66,14 @@ ms.locfileid: "90556552"
 ```  
   
 ## <a name="retrieving-connection-strings-at-run-time"></a>接続文字列の実行時の取得  
+
  .NET Framework 2.0 では、<xref:System.Configuration> 名前空間に新しいクラスが導入され、実行時に簡単に構成ファイルから接続文字列を取得できるようになりました。 プログラムから名前またはプロバイダー名を使用して接続文字列を取得できます。  
   
 > [!NOTE]
 > **connectionStrings** セクションは、**machine.config** ファイルにも存在します。このセクションには、Visual Studio によって使用される接続文字列が格納されます。 Windows アプリケーションの **app.config** ファイルからプロバイダー名で接続文字列を取得した場合、まず **machine.config** 内の接続文字列が読み込まれ、その後、**app.config** のエントリが読み込まれます。**connectionStrings** 要素の直後に **clear** を追加すると、継承されたすべての参照がメモリ内のデータ構造から削除され、ローカルの **app.config** ファイルに定義されている接続文字列だけが考慮されます。  
   
 ### <a name="working-with-the-configuration-classes"></a>構成クラスの使用  
+
  .NET Framework 2.0 以降では、ローカル コンピューター上の構成ファイルで作業するときに、非推奨とされた <xref:System.Configuration.ConfigurationManager> に代わって <xref:System.Configuration.ConfigurationSettings> を使用します。 ASP.NET 構成ファイルでの作業では、<xref:System.Web.Configuration.WebConfigurationManager> を使用します。 Web サーバー上の構成ファイルを扱うことを目的に設計され、**system.web** など、構成ファイルのセクションにプログラムからアクセスできます。  
   
 > [!NOTE]
@@ -83,6 +88,7 @@ ms.locfileid: "90556552"
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|接続文字列。 **connectionString** 属性にマップされています。|  
   
 ### <a name="example-listing-all-connection-strings"></a>例:すべての接続文字列を一覧表示する  
+
  この例では、<xref:System.Configuration.ConnectionStringSettingsCollection> を反復処理しながら、<xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>、<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>、<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> の各プロパティをコンソール ウィンドウに表示します。  
   
 > [!NOTE]
@@ -92,18 +98,21 @@ ms.locfileid: "90556552"
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/VB/source.vb#1)]  
   
 ### <a name="example-retrieving-a-connection-string-by-name"></a>例:接続文字列を名前で取得する  
+
  次の例では、接続文字列の名前を指定することによって、接続文字列を構成ファイルから取得する方法を説明します。 このコードでは、指定された入力パラメーターと <xref:System.Configuration.ConnectionStringSettings> の名前とを照合することによって、<xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A> オブジェクトを作成します。 一致する名前が見つからなかった場合は `null` (Visual Basic の場合は `Nothing`) が返されます。  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/VB/source.vb#1)]  
   
 ### <a name="example-retrieving-a-connection-string-by-provider-name"></a>例:プロバイダー名による接続文字列の取得  
+
  次の例では、プロバイダーの不変名を *System.Data.ProviderName* の形式で指定することによって接続文字列を取得する方法を説明します。 このコードでは、<xref:System.Configuration.ConnectionStringSettingsCollection> を反復処理し、最初に見つかった <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> の接続文字列を返します。 プロバイダー名が見つからなかった場合は `null` (Visual Basic の場合は `Nothing`) が返されます。  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/VB/source.vb#1)]  
   
 ## <a name="encrypting-configuration-file-sections-using-protected-configuration"></a>保護構成を使った構成ファイル セクションの暗号化  
+
  ASP.NET 2.0 では、*保護構成*と呼ばれる、構成ファイルの機密情報を暗号化するための新しい機能が導入されました。 保護構成は、主に ASP.NET を想定して設計されたものですが、Windows アプリケーションの構成ファイル セクションを暗号化する目的でも使用できます。 保護構成機能の詳細については、「[保護された構成を使用した構成情報の暗号化](/previous-versions/aspnet/53tyfkaw(v=vs.100))」を参照してください。  
   
  次の構成ファイル フラグメントは、暗号化後の **connectionStrings** セクションを示しています。 **configProtectionProvider** には、接続文字列の暗号化と復号化に使用される、保護構成プロバイダーが指定されています。 **EncryptedData** セクションには暗号文が格納されています。  
@@ -121,6 +130,7 @@ ms.locfileid: "90556552"
  暗号化された接続文字列は実行時に取得されることになります。このとき、.NET Framework は、指定されたプロバイダーを使用して **CipherValue** を復号化し、アプリケーションに利用可能な接続文字列を提供します。 復号化のプロセスを管理するためのコードを自分で作成する必要はありません。  
   
 ### <a name="protected-configuration-providers"></a>保護構成プロバイダー  
+
  保護構成プロバイダーは、ローカル コンピューターの **machine.config** ファイルの **configProtectedData** セクションに登録されます。次のフラグメントを見ると、.NET Framework が備えている 2 つの保護構成プロバイダーが指定されていることがわかります。 ここでは、読みやすくするために一部の値を省略しています。  
   
 ```xml  
@@ -144,12 +154,14 @@ ms.locfileid: "90556552"
  どちらのプロバイダーも、強力なデータ暗号化機能を備えています。 ただし、Web ファームなど、複数のサーバーで、同じ構成ファイルを暗号化して使用する場合、データの暗号化に使用される暗号化キーをエクスポートしたり、それを別のサーバーにインポートしたりできるのは、<xref:System.Configuration.RsaProtectedConfigurationProvider> だけです。 詳細については、「[保護された構成 RSA キー コンテナのインポートとエクスポート](/previous-versions/aspnet/yxw286t2(v=vs.100))」を参照してください。  
   
 ### <a name="using-the-configuration-classes"></a>構成クラスの使用  
+
  <xref:System.Configuration> 名前空間には、構成設定をプログラムから行うためのクラスが存在します。 <xref:System.Configuration.ConfigurationManager> クラスは、コンピューター、アプリケーション、ユーザーの各構成ファイルへのアクセスを提供します。 ASP.NET アプリケーションを作成している場合は、同じ機能を持った <xref:System.Web.Configuration.WebConfigurationManager> クラスを使用します。他にも **\<system.web>** の設定など、ASP.NET アプリケーション固有の設定にもアクセスできます。  
   
 > [!NOTE]
 > <xref:System.Security.Cryptography> 名前空間には、データの暗号化と復号化に関連した補足的なオプションを提供するクラスが存在します。 これらのクラスは、保護構成では利用できない暗号化サービスが必要な場合に使用します。 これらのクラスは必ずしも純粋なマネージド実装とは限らず、アンマネージド Microsoft CryptoAPI 用のラッパーもあります。 詳細については、「[暗号サービス](/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90))」をご覧ください。  
   
 ### <a name="appconfig-example"></a>App.config の例  
+
  ここでは、Windows アプリケーションの **app.config** ファイルにある **connectionStrings** セクションを条件に応じて暗号化したり復号化したりする方法を紹介します。 この例に示したプロシージャは、MyApplication.exe など、アプリケーションの名前を引数として受け取ります。 その後、**app.config** ファイルを暗号化して、その実行可能ファイルと同じフォルダーに MyApplication.exe.config という名前でコピーします。  
   
 > [!NOTE]
@@ -164,6 +176,7 @@ ms.locfileid: "90556552"
  [!code-vb[DataWorks ConnectionStrings.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStrings.Encrypt/VB/source.vb#1)]  
   
 ### <a name="webconfig-example"></a>Web.config の例  
+
  この例では、<xref:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration%2A> の `WebConfigurationManager` メソッドを使用しています。 この場合、チルダを使用して、**Web.config** ファイルの相対パスを指定できる点に注目してください。 このコードを実行するには、`System.Web.Configuration` クラスへの参照が必要です。  
   
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]

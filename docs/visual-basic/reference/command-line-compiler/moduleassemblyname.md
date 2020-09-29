@@ -6,14 +6,15 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: 99f2b9d65f3c2a128e026666c5efb384e22643f9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9fb9287f9472d4b33eff4cb601aff5eed370b2c0
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403149"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91065568"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
+
 このモジュールが一部となるアセンブリの名前を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -29,6 +30,7 @@ ms.locfileid: "84403149"
 |`assembly_name`|このモジュールが一部となるアセンブリの名前。|  
   
 ## <a name="remarks"></a>Remarks  
+
  `-target:module` オプションが指定されている場合にのみ、コンパイラで `-moduleassemblyname` オプションが処理されます。 これにより、コンパイラでモジュールが作成されます。 コンパイラによって作成されたモジュールは、`-moduleassemblyname` オプションで指定されたアセンブリに対してのみ有効です。 モジュールを別のアセンブリに配置すると、実行時エラーが発生します。  
   
  `-moduleassemblyname` オプションは、次の条件に該当する場合にのみ必要です。  

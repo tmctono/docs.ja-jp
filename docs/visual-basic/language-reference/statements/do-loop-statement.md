@@ -20,14 +20,15 @@ helpviewer_keywords:
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-ms.openlocfilehash: a9ec6caccbe161a39b592a642a938b81bae911a6
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 86a702aefeea1e5e359a579a3f29e9c06f1c619c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404785"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90865935"
 ---
 # <a name="doloop-statement-visual-basic"></a>Do...Loop ステートメント (Visual Basic)
+
 `Boolean` 条件が `True` の場合、または条件が `True` になるまで、ステートメントのブロックを繰り返します。  
   
 ## <a name="syntax"></a>構文  
@@ -64,6 +65,7 @@ Loop { While | Until } condition
 |`Loop`|必須です。 `Do` ループの定義を終了します。|  
   
 ## <a name="remarks"></a>Remarks  
+
  条件が満たされるまで、一連のステートメントを無限に繰り返す場合は、`Do...Loop` 構造体を使用します。 ステートメントを設定した回数だけ繰り返す場合は、通常、[For...Next ステートメント](for-next-statement.md)のほうが適しています。  
   
  `While` または `Until` のいずれかを使用して `condition` を指定できますが、両方を指定することはできません。  
@@ -78,6 +80,7 @@ Loop { While | Until } condition
 > `Do...Loop` 構造は、[While...End While ステートメント](while-end-while-statement.md)よりも柔軟性があります。`condition` が `True` でなくなったとき、または初めて `True` になったときに、ループを終了するかどうかを判断できるためです。 ループの開始時または終了時に `condition` をテストすることもできます。  
   
 ## <a name="exit-do"></a>Exit Do  
+
  [Exit Do](exit-statement.md) ステートメントを使用すると、別の方法で `Do…Loop` を終了させることができます。 `Exit Do` は `Loop` ステートメントの次のステートメントに制御を直ちに渡します。  
   
  `Exit Do` は、何らかの条件を評価した (`If...Then...Else` 構造など) 後によく使用されます。 誤った値や終了要求など、反復処理を続行することが不要であるか、不可能である状況が検出された場合に、ループを終了させることができます。 `Exit Do` の用途の 1 つとしては、*無限ループ*を引き起こす可能性がある条件をテストすることがあります。無限ループは、膨大な回数または無限に実行されるループです。 `Exit Do` を使用すると、ループを終了できます。  
@@ -87,21 +90,25 @@ Loop { While | Until } condition
  入れ子になった `Do` ループ内で使用した場合、`Exit Do` は最も内側のループから次の上位レベルの入れ子に制御を渡します。  
   
 ## <a name="example"></a>例  
+
  次の例では、ループ内のステートメントは `index` 変数が 10 を超えるまで実行されます。 `Until` 句はループの最後にあります。  
   
  [!code-vb[VbVbalrStatements#131](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#131)]  
   
 ## <a name="example"></a>例  
+
  次の例では、`Until` 句ではなく `While` 句が使用されています。`condition` はループの終了時ではなく開始時にテストされます。  
   
  [!code-vb[VbVbalrStatements#132](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#132)]  
   
 ## <a name="example"></a>例  
+
  次の例では、`index` 変数が 100 を超えた場合、`condition` によってループが停止します。 ただし、ループ内の `If` ステートメントでは、インデックス変数が 10 より大きい場合、`Exit Do` ステートメントによってループが停止します。  
   
  [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]  
   
 ## <a name="example"></a>例  
+
  次の例では、テキスト ファイル内のすべての行を読み取ります。 <xref:System.IO.File.OpenText%2A> メソッドは、ファイルを開いて、文字を読み取る <xref:System.IO.StreamReader> を返します。 `Do...Loop` 条件では、`StreamReader` の <xref:System.IO.StreamReader.Peek%2A> メソッドによって、追加の文字があるかどうかが判別されます。  
   
  [!code-vb[VbVbalrStatements#134](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#134)]  

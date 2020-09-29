@@ -7,14 +7,15 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: cf4954059a4b0bf015bed82a74357ecfd5f5987e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 61f520a528c3d40b9d34807d517a9bf27ad40da8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404876"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075227"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>方法: オブジェクト初期化子を使用してオブジェクトを宣言する (Visual Basic)
+
 オブジェクト初期化子を使用すると、1 つのステートメントで、クラスのインスタンスを宣言してインスタンス化できます。 また、パラメーター化されたコンストラクターを呼び出さずに、インスタンスの 1 つ以上のメンバーを同時に初期化できます。  
   
  オブジェクト初期化子を使用して、名前付きの型のインスタンスを作成すると、クラスのパラメーターなしのコンストラクターが呼び出され、続いて指定した順番で、指定したメンバーの初期化が行われます。  

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: b94259326b42104db05d9fc5bb09f686075d0759
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 03d693653cd166bbf1096031f1a864b492e2e896
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414532"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086297"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>定数とリテラルのデータ型 (Visual Basic)
+
 リテラルとは、数字の 3 や文字列 "Hello" など、変数値や式の結果ではなく、それ自体として表される値のことです。 定数とは、リテラルの代わりとなるわかりやすい名前のことです。プログラム内で値が変わりうる変数とは異なり、プログラム全体で同じ値を保持します。  
   
  [Option Infer](../../../language-reference/statements/option-infer-statement.md) に `Off` を指定し、[Option Strict](../../../language-reference/statements/option-strict-statement.md) に `On` を指定した場合、すべての定数にデータ型を指定して明示的に宣言する必要があります。 次の例では、`MyByte` のデータ型をデータ型 `Byte` として明示的に宣言しています。  
@@ -26,6 +27,7 @@ ms.locfileid: "84414532"
  `Option Infer` に `On` を指定するか、`Option Strict` に `Off` を指定している場合は、`As` 句でデータ型を指定することなく定数を宣言できます。 コンパイラは、式の型から定数の型を判断します。 既定では、数値整数型のリテラルは `Integer` データ型にキャストされます。 浮動小数点数の既定のデータ型は `Double` であり、 `Boolean` 定数は `True` と `False` の各キーワードで指定します。  
   
 ## <a name="literals-and-type-coercion"></a>リテラルと強制型変換  
+
  `Decimal` 型変数に非常に大きな整数型リテラルの値を割り当てる場合など、リテラルの特定のデータ型への強制変換が必要になることがあります。 次の例ではエラーが発生します。  
   
 ```vb  

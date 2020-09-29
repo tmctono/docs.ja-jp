@@ -2,20 +2,22 @@
 title: クエリの例
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-ms.openlocfilehash: 8f86c4aa94dcc70ce79526b0f4a3685cfef3f389
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f3f135850fb5f40b3b8882f72f5cc24512f21084
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781139"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91147555"
 ---
 # <a name="query-examples"></a>クエリの例
+
 このセクションでは、Visual Basic および C# で一般的な [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] クエリの例を示して説明します。 Visual Studio を使用している場合は、「サンプル」セクションに多数のサンプル ソリューションが用意されています。 詳細については、「[サンプル](samples.md)」を参照してください。  
   
 > [!IMPORTANT]
 > *db* は、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ドキュメントのコード サンプルでよく使用されます。 *db* は、*Northwind* クラスのインスタンスであることが前提です。このクラスは、<xref:System.Data.Linq.DataContext> から継承されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [集計クエリ](aggregate-queries.md)  
  <xref:System.Linq.Enumerable.Average%2A>、<xref:System.Linq.Enumerable.Count%2A> などの使用方法について説明します。  
   
@@ -65,6 +67,7 @@ ms.locfileid: "70781139"
  `select` と他の機能 (*匿名型*など) を組み合わせてクエリ射影を作成する方法の例を示して説明します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [標準クエリ演算子の概要 (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  C# を使用した標準クエリ演算子の概念について説明します。  
   

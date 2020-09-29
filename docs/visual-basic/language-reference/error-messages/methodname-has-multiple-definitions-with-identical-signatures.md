@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30269
 ms.assetid: 39489621-6617-4e5c-9b24-c2faf8273891
-ms.openlocfilehash: 3b397711cc2fb1fd0c1dfd76899b162ab5fc1542
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2934a5666c55e1ca57b91ab86585261e6d71a2d3
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397234"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873729"
 ---
 # <a name="methodname-has-multiple-definitions-with-identical-signatures"></a>メソッド '\<methodname>' には、同じシグネチャを持つ複数の定義が含まれています。
+
 `Function` または `Sub` プロシージャ宣言で、前の宣言と同じプロシージャ名と引数リストを使用しています。 考えられる原因の 1 つは、元のプロシージャをオーバーロードしようとしたことです。 オーバーロードされたプロシージャには、異なる引数リストが必要です。  
   
  **エラー ID:** BC30269  

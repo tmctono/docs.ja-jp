@@ -2,12 +2,12 @@
 title: IHttpClientFactory を使用して回復力の高い HTTP 要求を実装する
 description: .NET Core 2.1 以降で使用できる IHttpClientFactory を使用して、`HttpClient` インスタンスを作成し、それをアプリケーションで簡単に使用できるようにする方法について説明します。
 ms.date: 08/31/2020
-ms.openlocfilehash: c54965a9bbb700cfb1f14150773c2df45d109c39
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: ae093ef960b2540bf4916bf72ad3bec51fa33ebe
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90678817"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152573"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>IHttpClientFactory を使用して回復力の高い HTTP 要求を実装する
 
@@ -23,7 +23,7 @@ ms.locfileid: "90678817"
 
 開発者が遭遇するもう 1 つの問題は、長時間実行されるプロセスで `HttpClient` の共有インスタンスを使用するタイミングです。 HttpClient がシングルトンまたは静的オブジェクトとしてインスタンス化される状況では、dotnet/runtime GitHub リポジトリのこちらの[問題](https://github.com/dotnet/runtime/issues/18348)で説明されているように、DNS の変更を処理できません。
 
-ただし、この問題は実際には `HttpClient` にあるのではなく、[HttpClient の既定のコンストラクター](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient.-ctor?view=netcore-3.1#System_Net_Http_HttpClient__ctor)にあります。理由として、それによって、前述の "*ソケット枯渇*" および DNS 変更の問題を抱える、<xref:System.Net.Http.HttpMessageHandler> の新しい具象インスタンスが作成されるということが挙げられます。
+ただし、この問題は実際には `HttpClient` にあるのではなく、[HttpClient の既定のコンストラクター](/dotnet/api/system.net.http.httpclient.-ctor?view=netcore-3.1#System_Net_Http_HttpClient__ctor)にあります。理由として、それによって、前述の "*ソケット枯渇*" および DNS 変更の問題を抱える、<xref:System.Net.Http.HttpMessageHandler> の新しい具象インスタンスが作成されるということが挙げられます。
 
 上記の問題に対処し、`HttpClient` インスタンスを管理しやすくするために、.NET Core 2.1 では、<xref:System.Net.Http.IHttpClientFactory> インターフェイスが導入されました。これを使用すれば、依存関係の挿入 (DI) を介してアプリ内で `HttpClient` インスタンスを構成および作成することができます。 HttpClient でのハンドラーのデリゲートを利用するために、Polly ベースのミドルウェアに対する拡張機能も提供されます。
 

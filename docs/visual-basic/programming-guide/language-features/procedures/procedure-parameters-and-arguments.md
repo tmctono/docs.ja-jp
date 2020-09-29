@@ -18,14 +18,15 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: 178206ca2ee103bbdb5a4ac03bca0df903c8c5d8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c7f8eb1fa4e1fa3d87474d048d5a60994b0b7fc5
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406717"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071275"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>プロシージャのパラメーターと引数 (Visual Basic)
+
 ほとんどの場合、プロシージャには呼び出された状況に関する情報が必要です。 反復的なタスクや共有タスクを実行するプロシージャでは、呼び出しごとに異なる情報を使用します。 この情報は、呼び出し時にプロシージャに渡す変数、定数、式で構成されます。  
   
  "*パラメーター*" は、プロシージャを呼び出すときに指定する必要がある値を表します。 プロシージャの宣言でパラメーターを定義します。  
@@ -41,6 +42,7 @@ ms.locfileid: "84406717"
  詳細については、「[Differences Between Parameters and Arguments (パラメーターと引数の違い)](./differences-between-parameters-and-arguments.md)」をご覧ください。  
   
 ## <a name="parameter-data-type"></a>パラメーターのデータ型  
+
  パラメーターのデータ型を定義するには、宣言で `As` 句を使用します。 たとえば、次の関数は文字列と整数を受け入れます。  
   
  [!code-vb[VbVbcnProcedures#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#32)]  
@@ -56,6 +58,7 @@ ms.locfileid: "84406717"
 - 変換キーワードを使用して、データ型を明示的に変換する。  
   
 ### <a name="type-parameters"></a>型パラメーター  
+
  "*ジェネリック プロシージャ*" では、通常のパラメーターに加え、1 つ以上の "*型パラメーター*" も定義します。 ジェネリック プロシージャを使用すると、呼び出し元のコードは、プロシージャを呼び出すたびに異なるデータ型を渡すことができるため、個々の呼び出しの要件に合わせてデータ型を調整できます。 「 [Generic Procedures in Visual Basic](../data-types/generic-procedures.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目

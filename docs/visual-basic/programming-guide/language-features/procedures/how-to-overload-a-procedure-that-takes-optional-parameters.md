@@ -10,14 +10,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 9ae6818b1e03ccd00ed554e98690e02ffa45de99
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 78ca6b2b95dfd5a7f208e5251f08dfccc5514946
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387843"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071522"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>方法: 省略可能なパラメーターを受け取るプロシージャをオーバーロードする (Visual Basic)
+
 プロシージャに 1 つ以上の [Optional](../../../language-reference/modifiers/optional.md) パラメーターがある場合、暗黙的なオーバーロードのいずれかに一致するオーバーロードされたバージョンを定義することはできません。 詳細については、「[プロシージャのオーバーロードに関する注意事項](./considerations-in-overloading-procedures.md)」の「Optional パラメーターの暗黙的なオーバーロード」をご覧ください。  
   
 ## <a name="one-optional-parameter"></a>1 つの省略可能なパラメーター  
@@ -45,6 +46,7 @@ ms.locfileid: "84387843"
      [!code-vb[VbVbcnProcedures#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#61)]  
   
 ## <a name="multiple-optional-parameters"></a>複数の省略可能なパラメーター  
+
  複数の省略可能なパラメーターがあるプロシージャでは、通常、3 つ以上のオーバーロードされたバージョンが必要です。 たとえば、2 つの省略可能なパラメーターがあり、呼び出し元のコードが各パラメーターを相互に独立して指定または省略できる場合、4 つのオーバーロードされたバージョン (指定された引数の可能な組み合わせごとに 1 つ) が必要です。  
   
  省略可能なパラメーターの数が増えると、オーバーロードの複雑さが増します。 指定された引数の一部の組み合わせが許容されない場合を除き、N 個の省略可能なパラメーターには 2 ^ N 個のオーバーロードされたバージョンが必要となります。 プロシージャの性質によっては、オーバーロードされたバージョンをすべて定義することによってロジックが明確になることから、余分な労力をかけるだけの価値がある場合もあります。  

@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30137
 ms.assetid: 61c23f48-0e06-42fc-be00-5598053c86dd
-ms.openlocfilehash: fe07bdf063b5e1be3150f118f3e8090caf31d336
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 3db84d9c781688418e8ad9648644480952a03c56
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191966"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874367"
 ---
-# <a name="error-saving-temporary-win32-resource-file-filename-error-message"></a>一時 Win32 リソース ファイル '\<filename>' を保存中にエラーが発生しました: \<error message>
+# <a name="error-saving-temporary-win32-resource-file-filename-error-message"></a>一時 Win32 リソース ファイル '\<filename>' を保存中にエラーが発生しました : \<error message>
+
 Visual Basic コンパイラはアセンブリ リンカー (Al.exe、Alink とも呼ばれる) を呼び出し、マニフェストを伴うアセンブリを生成します。 リンカーが、インメモリ リソースの書き込み先となるファイルの名前の取得エラーを報告しています。  
   
  **エラー ID:** BC30137  

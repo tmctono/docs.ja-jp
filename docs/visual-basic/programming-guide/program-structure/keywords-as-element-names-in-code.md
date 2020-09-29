@@ -7,14 +7,15 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: a98f0b027700717b414d58e1284ddec655eb25f7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e895db180dbb44cd4cfe4053d4be429f13324fe8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403227"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91065750"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>コード内の要素名としてのキーワード (Visual Basic)
+
 変数、クラス、メンバーなどのプログラム要素には、制限付きキーワードと同じ名前を付けることができます。 たとえば、`Loop` という名前の変数を作成できます。 ただし、制限付きキーワード `Loop` と同じ名前のバージョンを参照するには、次の例に示すように、名前の前に完全修飾文字列を指定するか、名前を角かっこ (`[ ]`) で囲む必要があります。  
   
  [!code-vb[VbVbcnConventions#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#8)]  

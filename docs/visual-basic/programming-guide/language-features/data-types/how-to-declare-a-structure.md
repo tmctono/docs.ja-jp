@@ -7,14 +7,15 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: a6b70d0973e92db90e35e61b7fed2279c5b0bac3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bffdc5974eff6b71e0abc4780a61aa300769eed6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393975"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058548"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>方法: 構造体を宣言する (Visual Basic)
+
 構造体宣言は、[Structure ステートメント](../../../language-reference/statements/structure-statement.md)で始まり、`End Structure` ステートメントで終了します。 これら 2 つのステートメントの間には、少なくとも 1 つの "*要素*" を宣言する必要があります。 要素は任意のデータ型にすることができますが、少なくとも 1 つは非共有変数または非共有非カスタム イベントのいずれかである必要があります。  
   
  構造体宣言で構造体の要素を初期化することはできません。 変数を構造体型として宣言するときは、変数を使用して値にアクセスすることによって、要素に値を代入します。  

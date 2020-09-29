@@ -2,14 +2,15 @@
 title: OLE DB データ型のマッピング
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-ms.openlocfilehash: 969433b2582771a0ed57217180c2795f9359956f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7f3b498e39feac4a6fe98e739793d20e0268b8f4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783486"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150701"
 ---
 # <a name="ole-db-data-type-mappings"></a>OLE DB データ型のマッピング
+
 次の表では、.NET Framework Data Provider for ADO および OLE DB (<xref:System.Data.OleDb>) のデータ型から推論される .NET Framework の型を示します。 <xref:System.Data.OleDb.OleDbDataReader> の型指定されたアクセサー メソッドも示します。  
   
 |ADO 型|OLE DB 型|.NET Framework 型|.NET Framework の型指定されたアクセサー|  

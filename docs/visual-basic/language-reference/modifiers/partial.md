@@ -14,14 +14,15 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: 650ead2f0deb9813b26241a6a4676907de3f263d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2482facadd0e0528ed1b71df6edb4a447947a902
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84362243"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867771"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
+
 型宣言が、型の部分定義であることを示します。  
   
  `Partial` キーワードを使用して、型の定義を複数の宣言に分割できます。 部分宣言は必要に応じていくつでも使用でき、複数のソース ファイルとして作成することもできます。 ただし、すべての宣言は同じアセンブリおよび同じ名前空間にある必要があります。  
@@ -62,6 +63,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
 |`End Class` または `End Structure`|この `Class` または `Structure` の部分定義を終了します。|  
   
 ## <a name="remarks"></a>Remarks  
+
  Visual Basic では、部分クラス定義を使用して、生成されたコードとユーザーが作成したコードとを別々のソース ファイルに分離します。 たとえば、**Windows フォーム デザイナー**では、<xref:System.Windows.Forms.Form> などのコントロールに部分クラスを定義します。 これらのコントロールでは、生成されたコードを変更しないでください。  
   
  部分型を作成する際、クラス、構造体、インターフェイス、およびモジュールの作成に関するすべての規則 (修飾子の利用法や継承に関する規則など) が適用されます。  
@@ -87,6 +89,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
  [Structure ステートメント](../statements/structure-statement.md)  
   
 ## <a name="example"></a>例  
+
  次の例では、クラス `sampleClass` の定義を 2 つの宣言に分割し、それぞれ別の `Sub` プロシージャを定義します。  
   
  [!code-vb[VbVbalrKeywords#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#3)]  

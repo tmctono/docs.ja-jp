@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: bac5f9a88df719bc64a8b0541f65e5912275866e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 971110c505800b0ceba73506f2b2702516a7a23a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409752"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874544"
 ---
 # <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>'ByRef' パラメーター '\<parametername>' の値を一致する引数へ戻してコピーすると、型 '\<typename1>' から型 '\<typename2>' に下位変換します
+
 対応するパラメーターの型に拡大変換する引数でプロシージャが呼び出され、パラメーターから引数への変換が縮小されます。  
   
  クラスまたは構造体を定義するときは、そのクラスまたは構造体の型を他の型に変換する 1 つまたは複数の変換演算子を定義できます。 その他の型をクラスまたは構造体の型に変換する逆の変換演算子を定義することもできます。 プロシージャ呼び出しでクラスまたは構造体の型を使用すると、Visual Basic ではこれらの変換演算子を使用して、引数の型を、対応するパラメーターの型に変換できます。  

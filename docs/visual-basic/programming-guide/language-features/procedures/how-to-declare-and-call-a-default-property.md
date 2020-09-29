@@ -10,14 +10,15 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: 4de5d94a94e764d1fc543ffae41b00a9bb729c94
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 21aa6e6a9bba23d767b9d1fac610eaac3265550d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388155"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91087454"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>方法: Visual Basic で既定のプロパティを宣言して呼び出す
+
 "*既定のプロパティ*" とは、コードで指定しなくてもアクセスできるクラスまたは構造体のプロパティです。 呼び出し元のコードでクラスまたは構造体の名前を指定し、プロパティ名を指定していないときに、コンテキストでプロパティへのアクセスが許可されている場合、Visual Basic はアクセスをそのクラスまたは構造体の既定のプロパティ (存在する場合) に解決します。  
   
  クラスまたは構造体は、最大 1 つの既定のプロパティを持つことができます。 ただし、既定のプロパティをオーバーロードし、複数のバージョンを用意することができます。  
@@ -61,11 +62,13 @@ ms.locfileid: "84388155"
      [!code-vb[VbVbcnProcedures#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#19)]  
   
 ## <a name="example"></a>例  
+
  次の例では、クラスの既定のプロパティを宣言しています。  
   
  [!code-vb[VbVbcnProcedures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#12)]  
   
 ## <a name="example"></a>例  
+
  次の例は、`class1` クラスの既定のプロパティ `myProperty` を呼び出す方法を示しています。 3 つの代入ステートメントで `myProperty` に値を格納し、<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 呼び出しで値を読み取ります。  
   
  [!code-vb[VbVbcnProcedures#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#13)]  
@@ -73,6 +76,7 @@ ms.locfileid: "84388155"
  既定のプロパティの最も一般的な用途は、さまざまなコレクション クラスの <xref:Microsoft.VisualBasic.Collection.Item%2A> プロパティです。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
+
  既定のプロパティを使用すると、ソース コード文字が少し少なくなる可能性がありますが、コードが読みにくくなる可能性があります。 呼び出し元のコードがクラスまたは構造体をよく理解していない場合は、クラスまたは構造体の名前を参照するときに、その参照がクラスまたは構造体自体、または既定のプロパティにアクセスするかどうかがわかりません。 これにより、コンパイラ エラーや実行時の微妙なロジック エラーが発生する可能性があります。  
   
  常に [Option Strict ステートメント](../../../language-reference/statements/option-strict-statement.md)を使用してコンパイラの型チェックを `On` に設定することにより、既定のプロパティ エラーが発生する可能性を多少減らすことができます。  

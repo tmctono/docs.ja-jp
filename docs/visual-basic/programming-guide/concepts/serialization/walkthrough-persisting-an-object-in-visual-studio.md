@@ -2,14 +2,15 @@
 title: オブジェクトの永続化 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 3febd3f74510d11a7103edbd52bcae8043a5edc0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0b2fff171164a29e6066839371fc95ad41b452f1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558603"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086466"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>チュートリアル: Visual Studio でのオブジェクトの永続化 (Visual Basic)
+
 オブジェクトのプロパティはデザイン時に既定値に設定できますが、そのオブジェクトが破棄されると、実行時に入力した値はすべて失われます。 シリアル化によってインスタンス間でオブジェクトのデータを永続化すると、値を保存しておき、次にそのオブジェクトをインスタンス化するときに、その値を取得することができます。  
   
 > [!NOTE]
@@ -27,6 +28,7 @@ ms.locfileid: "90558603"
 > 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
 ## <a name="creating-the-loan-object"></a>Loan オブジェクトの作成  
+
  まず、`Loan` クラスとそのクラスを使用するテスト アプリケーションを作成します。  
   
 ### <a name="to-create-the-loan-class"></a>Loan クラスを作成するには  
@@ -123,6 +125,7 @@ ms.locfileid: "90558603"
  実際には利率は定期的に変わりますが、アプリケーションを実行するたびに変わるとは限りません。 アプリケーションを実行するたびにユーザーが利率を更新するのではなく、アプリケーションのインスタンス間で最新の利率を保持できるようにすると便利です。 次の手順では、Loan クラスにシリアル化を追加して、利率を保持できるようにします。  
   
 ## <a name="using-serialization-to-persist-the-object"></a>シリアル化を使用したオブジェクトの永続化  
+
  Loan クラスの値を永続化するには、まず、クラスを `Serializable` 属性でマークする必要があります。  
   
 ### <a name="to-mark-a-class-as-serializable"></a>クラスをシリアル化可能としてマークするには  

@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30014
 ms.assetid: 5215585e-2efa-485a-9efe-9833a1cc83a0
-ms.openlocfilehash: 808cf35fb05da092cdef560721b2f667778aa78f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 06af269508db6a2b258251272fdc18ef20eb1c0f
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409661"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874440"
 ---
 # <a name="elseif-must-be-preceded-by-a-matching-if-or-elseif"></a>'#Else' の前には、対応する '#If' または '#ElseIf' が必要です。
+
 `#ElseIf` は条件付きコンパイル ディレクティブです。 `#If` または `#ElseIf` 句の前には、対応する `#ElseIf` が必要です。  
   
  **エラー ID:** BC30014  

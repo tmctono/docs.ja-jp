@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-ms.openlocfilehash: 0ee235252d69e6f77ce53b048f45e73d0969e864
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e0be18509d0d4b1b4f5eadfadce7a0785e9309f0
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409453"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871503"
 ---
 # <a name="namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>プロジェクト レベルのインポート '\<qualifiedelementname>' で指定された名前空間または型が、パブリック メンバーを含んでいないか、または見つかりません。
+
 プロジェクト レベルのインポート '\<qualifiedelementname>' で指定された名前空間または型が、パブリック メンバーを含んでいないか、または見つかりません。 名前空間または型が定義されており、少なくとも 1 つのパブリック メンバーが含まれていることを確認してください。 別名の名前に他の別名が含まれていないことを確認してください。  
   
  プロジェクトの import プロパティが、見つからないか、`Public` メンバーを定義しないコンテナー要素を指定しています。  

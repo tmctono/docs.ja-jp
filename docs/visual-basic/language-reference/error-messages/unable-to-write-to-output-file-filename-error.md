@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: 087735722fcd4dd789e25aacf6eeefffb490dac5
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 73fce70c0740992e2e9159946d428d214576e163
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198192"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870286"
 ---
-# <a name="unable-to-write-to-output-file-filename-error"></a>出力ファイル '\<filename>' に書き込めません: \<error>
+# <a name="unable-to-write-to-output-file-filename-error"></a>出力ファイル '\<filename>' に書き込めません : \<error>
+
 ファイルの作成で問題が発生しました。  
   
  出力ファイルを書き込み用に開くことができません。 ファイル (または、そのファイルが格納されているフォルダー) は、別のプロセスによって排他的に開かれているか、読み取り専用属性が設定されている可能性があります。  

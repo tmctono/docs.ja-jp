@@ -10,14 +10,15 @@ helpviewer_keywords:
 - += operator [Visual Basic], appending strings
 - compound assignment statements [Visual Basic]
 ms.assetid: d3e959f4-85d4-4e47-87c4-77b62335a5b3
-ms.openlocfilehash: c2ce384901a9f0207e8279a5a07a88600c875e7f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a3a37798a3ddb480ac5322c4b2d3e9396e739aa6
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372208"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873483"
 ---
 # <a name="-operator-visual-basic"></a>+= 演算子 (Visual Basic)
+
 数値式の値を数値変数またはプロパティの値に加算し、結果をその変数またはプロパティに代入します。 また、`String` 式を `String` 変数またはプロパティに連結し、結果をその変数またはプロパティに代入するために使用することもできます。  
   
 ## <a name="syntax"></a>構文  
@@ -27,6 +28,7 @@ variableorproperty += expression
 ```  
   
 ## <a name="parts"></a>指定項目  
+
  `variableorproperty`  
  必須です。 任意の数値または `String` 変数またはプロパティ。  
   
@@ -34,6 +36,7 @@ variableorproperty += expression
  必須です。 任意の数値または `String` 式。  
   
 ## <a name="remarks"></a>Remarks  
+
  `+=` 演算子の左側の要素には、単純なスカラー変数、プロパティ、または配列の要素を指定できます。 変数またはプロパティを [ReadOnly](../modifiers/readonly.md) にすることはできません。  
   
  `+=` 演算子は、右側の値を左側の変数またはプロパティに追加し、その結果を左側の変数またはプロパティに代入します。 `+=` 演算子を使用して、右側の `String` 式を左側の `String` 変数またはプロパティに連結し、その結果を左側の変数またはプロパティに代入することもできます。  
@@ -46,9 +49,11 @@ variableorproperty += expression
  寛容なセマンティクスが許可されている場合、`+=` 演算子は、`+` 演算子によって実行されるものと同じ各種変換 (文字列変換および数値変換) を暗黙的に実行します。 これらの変換の詳細については、「[+ 演算子](addition-operator.md)」を参照してください。  
   
 ## <a name="overloading"></a>オーバーロード  
+
  `+` 演算子は "*オーバーロード*" できます。つまり、オペランドがクラスまたは構造体の型を持っているときに、このクラスまたは構造体はその動作を再定義できます。 `+` 演算子をオーバーロードすると、`+=` 演算子の動作に影響します。 コードで、`+` をオーバーロードするクラスまたは構造体に `+=` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
+
  次の例では、`+=` 演算子を使用して、ある変数の値を別の値と結合します。 最初の部分では `+=` を数値変数と共に使用して、ある値を別の値に追加します。 2 番目の部分では、`+=` を `String` 変数と共に使用して、ある値を別の値と連結します。 どちらの場合も、結果は最初の変数に代入されます。  
   
  [!code-vb[VbVbalrOperators#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#7)]  

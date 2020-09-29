@@ -10,14 +10,15 @@ helpviewer_keywords:
 - operator >>
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
-ms.openlocfilehash: 10b07da22b8b43d6a966fa7c334ac6a0ef4b430d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 00f43bc9bae6d550ed175906777ac273fc8e9a23
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406367"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873343"
 ---
 # <a name="-operator-visual-basic"></a>>> 演算子 (Visual Basic)
+
 ビット パターンに対して算術右シフトを実行します。  
   
 ## <a name="syntax"></a>構文  
@@ -27,6 +28,7 @@ result = pattern >> amount
 ```  
   
 ## <a name="parts"></a>指定項目  
+
  `result`  
  必須です。 整数数値。 ビット パターンをシフトした結果。 データ型は `pattern` のデータ型と同じです。  
   
@@ -37,6 +39,7 @@ result = pattern >> amount
  必須です。 数値式。 ビット パターンをシフトするビット数。 データ型は `Integer` であるか、`Integer` に拡大変換する必要があります。  
   
 ## <a name="remarks"></a>Remarks  
+
  算術シフトは循環ではありません。つまり、結果の一方の端からシフトされたビットはもう一方の端に再入されません。 算術右シフトでは、右端のビット位置を超えてシフトされたビットは破棄され、左端 (符号) ビットは左側の空いたビット位置に伝搬されます。 したがって、`pattern` に負の値がある場合、空いている位置は 1 に設定されます。それ以外の場合は 0 に設定されます。  
   
  `Byte`、`UShort`、`UInteger`、および `ULong` データ型は符号なしであるため、伝搬する符号ビットはありません。 `pattern` が符号なしの型の場合、空いている位置は常に 0 に設定されます。  
@@ -55,9 +58,11 @@ result = pattern >> amount
  算術シフトではオーバーフロー例外は生成されません。  
   
 ## <a name="overloading"></a>オーバーロード  
+
  `>>` 演算子は "*オーバーロード*" できます。つまり、オペランドがクラスまたは構造体の型を持っているときに、クラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
+
  次の例では、`>>` 演算子を使用して、整数値に対して算術右シフトを実行しています。 結果のデータ型は、シフトする式のデータ型と常に同じになります。  
   
  [!code-vb[VbVbalrOperators#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#14)]  

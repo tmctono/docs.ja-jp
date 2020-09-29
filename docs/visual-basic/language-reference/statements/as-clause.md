@@ -8,17 +8,19 @@ helpviewer_keywords:
 - As keyword [Visual Basic], statement syntax
 - As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
-ms.openlocfilehash: 4afc2800a98ceeda8eeb3a1fada0b82c2e8bcedb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2f0b217fb299a9c7c05f211c17d10efd80168ab5
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408459"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873315"
 ---
 # <a name="as-clause-visual-basic"></a>As 句 (Visual Basic)
+
 宣言ステートメントのデータ型またはジェネリック型パラメーターの制約リストを識別する `As` 句について紹介します。  
   
 ## <a name="remarks"></a>Remarks  
+
  キーワード `As` は次のコンテキストで使用できます。  
   
  [Aggregate 句](../queries/aggregate-clause.md)  

@@ -12,14 +12,15 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-ms.openlocfilehash: 5fce4f818e22373de7f1b37b941fd88155f3a33f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b60f6759ada845d8eab048bceb1e47f9546ee7d0
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359891"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869946"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By 句 (Visual Basic)
+
 クエリ結果の要素をグループ化します。 これを使用して、グループごとに集計関数を適用することもできます。 グループ化操作は、1 つ以上のキーに基づきます。  
   
 ## <a name="syntax"></a>構文  
@@ -60,11 +61,13 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
      グループに適用する集計関数を含めることもできます。  
   
 ## <a name="remarks"></a>Remarks  
+
  `Group By` 句を使用して、クエリの結果をグループに分割できます。 グループ化は、1 つのキー、または複数のキーで構成される複合キーに基づいて行われます。 一致するキー値と関連付けられた要素は、同じグループに入れられます。  
   
  グループの参照に使用するメンバー名を示すには、 `aggregateList` 句の `Into` パラメーターと `Group` キーワードを使用します。 `Into` 句に集計関数を含めることで、グループ化された要素の値を計算することもできます。 標準的な集計関数の一覧については、「 [Aggregate Clause](aggregate-clause.md)」をご覧ください。  
   
 ## <a name="example"></a>例  
+
  以下のコード例では、場所 (国/地域) に基づいて顧客の一覧をグループ化し、各グループ内の顧客の数を返します。 結果は、国/地域名によって並べ替えられます。 グループ化した結果は、市区町村名によって並べ替えられます。  
   
  [!code-vb[VbSimpleQuerySamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#11)]  

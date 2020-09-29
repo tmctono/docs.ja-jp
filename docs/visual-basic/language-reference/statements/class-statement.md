@@ -13,14 +13,15 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-ms.openlocfilehash: bdb73772dfe0e6d49d89a4ef006b1bceac14c8ee
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3b64597fcd7453c20ed295fe263eeaa8783b20ae
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397156"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866036"
 ---
 # <a name="class-statement-visual-basic"></a>Class ステートメント (Visual Basic)
+
 クラスの名前を宣言し、クラスを構成する変数、プロパティ、イベント、およびプロシージャの定義を示します。  
   
 ## <a name="syntax"></a>構文  
@@ -55,6 +56,7 @@ End Class
 |`End Class`|必須です。 `Class` の定義を終了します。|  
   
 ## <a name="remarks"></a>Remarks  
+
  `Class` ステートメントは新しいデータ型を定義します。 *クラス*は、オブジェクト指向プログラミング (OOP) の基本的な構成要素です。 詳細については、[オブジェクトとクラス](../../programming-guide/language-features/objects-and-classes/index.md)に関するページを参照してください。  
   
  `Class` は、名前空間またはモジュール レベルでのみ使用できます。 つまり、クラスの*宣言コンテキスト*は、ソース ファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスのいずれかである必要があり、プロシージャまたはブロックでは宣言できません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。  
@@ -94,6 +96,7 @@ End Class
      入れ子になったクラスの内側のコードでプログラミング要素を修飾なしで参照した場合、Visual Basic はその要素をまず入れ子になったクラスの内側で探し、その次に含まれているクラスの内側で探します。この手順が、最も外側のコンテナー要素にまで繰り返されます。  
   
 ## <a name="classes-and-modules"></a>クラスとモジュール  
+
  これらの要素には多くの類似点がありますが、重要な相違点もいくつかあります。  
   
 - **用語。** 以前のバージョンの Visual Basic は、*クラス モジュール* (.cls ファイル) と*標準モジュール* (.bas ファイル) の 2 種類のモジュールを認識します。 現在のバージョンでは、これらの*クラス*と*モジュール*をそれぞれ呼び出します。  
@@ -103,6 +106,7 @@ End Class
 - **オブジェクト指向。** クラスはオブジェクト指向ですが、モジュールはそうではありません。 クラスの 1 つ以上のインスタンスを作成できます。 詳細については、[オブジェクトとクラス](../../programming-guide/language-features/objects-and-classes/index.md)に関するページを参照してください。  
   
 ## <a name="example"></a>例  
+
  次の例では、`Class` ステートメントを使用して 1 つのクラスといくつかのメンバーを定義します。  
   
  [!code-vb[VbVbalrStatements#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#62)]  

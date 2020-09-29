@@ -12,14 +12,15 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 2efc0410b9d4bb663e1ff19d5a5456d7ff2c99bd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 558601f038fccdcb9b94acb7c796e2b49fb6e6f4
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84394066"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059198"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Visual Basic におけるジェネリック プロシージャ
+
 "*ジェネリック プロシージャ*" は、"*ジェネリック メソッド*" とも呼ばれる、少なくとも 1 つの型パラメーターを含むように定義されたプロシージャです。 これによって、呼び出し元のコードが、プロシージャを呼び出すたびに、要件に合わせてデータ型を調整できるようになります。  
   
  プロシージャは、ジェネリック クラスまたはジェネリック構造体内で定義されているというだけの理由ではジェネリックになりません。 プロシージャがジェネリックになるためには、通常のパラメーター以外に、少なくとも 1 つの型パラメーターを受け取る必要があります。 ジェネリックのクラスまたは構造体に非ジェネリック プロシージャを含めることができます。また、非ジェネリックのクラス、構造体、またはモジュールにジェネリック プロシージャを含めることができます。  
@@ -27,6 +28,7 @@ ms.locfileid: "84394066"
  ジェネリック プロシージャは、通常のパラメーター リスト、戻り値の型 (存在する場合)、およびプロシージャ コード内で、その型パラメーターを使用できます。  
   
 ## <a name="type-inference"></a>型推論  
+
  型引数をまったく指定せずにジェネリック プロシージャを呼び出すことができます。 このように呼び出した場合、コンパイラが、プロシージャの型引数に渡す適切なデータ型を決定しようとします。 これは "*型の推定*" と呼ばれます。 次のコードに示す呼び出しでは、型 `String` を型パラメーター `t` に渡す必要があるとコンパイラによって推定されます。  
   
  [!code-vb[VbVbalrDataTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#15)]  
@@ -50,12 +52,15 @@ End Sub
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
+
  次の例では、配列内の特定の要素を探す、ジェネリック `Function` プロシージャを定義しています。 1 つの型パラメーターを定義し、それを使用してパラメーター リスト内の 2 つのパラメーターを構築します。  
   
 ### <a name="code"></a>コード  
+
  [!code-vb[VbVbalrDataTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#14)]  
   
 ### <a name="comments"></a>コメント  
+
  前の例は、`searchArray` の各要素に対して `searchValue` を比較する必要があります。 この動作を保証するために、型パラメーター `T` が <xref:System.IComparable%601> インターフェイスを実装するように制約します。 コードは、<xref:System.IComparable%601.CompareTo%2A> メソッドを `=` 演算子の代わりに使用します。`T` に提供される型引数で `=` 演算子がサポートされる保証がないためです。  
   
  次のコードを使用して `findElement` プロシージャをテストできます。  

@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: 81d2c8d305e828b2963a0af9d97ec35b1745197a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9e12f6f5d86957a7f9aaea6047a79957fac8ce1e
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398332"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072133"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>XML ファイルの処理 (Visual Basic)
+
 コンパイラは、ドキュメントを生成するためにタグ付けされたコードのコンストラクトごとに、ID 文字列を生成します。 (コードをタグ付けする方法については、[XML ドキュメント コメントのタグ](../../language-reference/xmldoc/index.md)に関する記事をご覧ください。)ID 文字列によって、コンストラクトは一意に識別されます。 XML ファイルを処理するプログラムでは、ID 文字列を使用して、対応する .NET Framework のメタデータまたはリフレクション項目を識別できます。  
   
  XML ファイルは、コードの階層表現ではなく、要素ごとに生成された ID を持つフラット リストです。  
@@ -37,6 +38,7 @@ ms.locfileid: "84398332"
 - プロパティおよびメソッドについては、メソッドに引数がある場合は、引数のリストをかっこで囲み、メソッドに続けて指定します。 引数がない場合は、かっこはありません。 引数はコンマで区切られます。 各引数のエンコードは、.NET Framework のシグネチャでのエンコード方法にそのまま従います。  
   
 ## <a name="example"></a>例  
+
  次のコードは、クラスとそのメンバーの ID 文字列を生成する方法を示しています。  
   
  [!code-vb[VbVbcnXmlDocComments#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#10)]  

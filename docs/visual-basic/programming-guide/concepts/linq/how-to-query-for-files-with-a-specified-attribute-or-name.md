@@ -2,14 +2,15 @@
 title: '方法: 指定された属性または名前のファイルをクエリする'
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: 4a6a5630f4ac0eb0cb08aed0dc8a390225194675
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: eeacd94fb303a439e8034b84d285ab11b2333581
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396416"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059315"
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>方法: 指定された属性または名前のファイルを照会する (Visual Basic)
+
 この例では、指定されたディレクトリ ツリーで、指定されたファイル名拡張子 (".txt" など) を持つすべてのファイルを検索する方法を示します。 また、ファイルの作成日時に基づいて、ツリー内の最も新しいファイルまたは最も古いファイルを返す方法も示します。  
   
 ## <a name="example"></a>例  
@@ -61,6 +62,7 @@ End Module
 ```  
   
 ## <a name="compile-the-code"></a>コードのコンパイル  
+
 System.Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソール アプリケーション プロジェクトを作成します。
   
 ## <a name="see-also"></a>関連項目

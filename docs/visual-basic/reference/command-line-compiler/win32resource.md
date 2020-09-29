@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -win32resource compiler option [Visual Basic]
 - win32resource compiler option [Visual Basic]
 ms.assetid: e226946d-19ce-4cc9-91f5-aed24f77aa2b
-ms.openlocfilehash: bcbc690690993a094bc5360d0c13bddebf8cd615
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d146f5967058b05795026cd7726ed5eda7ba3153
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414247"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91095409"
 ---
 # <a name="-win32resource"></a>-win32resource
+
 Win32 リソース ファイルを出力ファイルに挿入します。  
   
 ## <a name="syntax"></a>構文  
@@ -26,10 +27,12 @@ Win32 リソース ファイルを出力ファイルに挿入します。
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `filename`  
  出力ファイルに追加するリソース ファイルの名前。 ファイル名に空白が含まれている場合は、名前を二重引用符 (" ") で囲みます。  
   
 ## <a name="remarks"></a>Remarks  
+
  Win32 リソース ファイルは、Microsoft Windows リソース コンパイラ (RC) を使用して作成することができます。  
   
  Win32 リソースは、バージョンまたはビットマップ (アイコン) 情報を格納することができ、**エクスプローラー**でアプリケーションを識別するのに役立ちます。 `-win32resource` を指定しない場合、コンパイラでアセンブリ バージョンに基づいてバージョン情報が生成されます。 `-win32resource` オプションと `-win32icon` オプションは同時に指定できません。  
@@ -40,6 +43,7 @@ Win32 リソース ファイルを出力ファイルに挿入します。
 > `-win32resource` オプションは、Visual Studio 開発環境からは利用できません。これはコマンド ラインからコンパイルするときにのみ使用できます。  
   
 ## <a name="example"></a>例  
+
  次のコードでは `In.vb` がコンパイルされ、Win32 リソース ファイル `Rf.res` がアタッチされます。  
   
 ```console  

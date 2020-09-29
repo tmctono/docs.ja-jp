@@ -10,17 +10,19 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 4ac8e5942cf6097642ec111992ebfcdb91e8d7c1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d37a93343822d069295477958780c2b9c72043fa
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392172"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875459"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
+
 1 つ以上の宣言されたプログラミング要素が、その宣言を含むアセンブリ内からのみアクセス可能であることを示します。  
   
 ## <a name="remarks"></a>Remarks  
+
  多くの場合、クラスや構造体などのプログラミング要素は、それを宣言するコンポーネントだけでなく、アセンブリ全体で使用する必要があります。 ただし、アセンブリ外部のコードからアクセスできないようにすることもできます (アプリケーションが専用のものである場合など)。 この方法で要素へのアクセスを制限する場合は、`Friend` 修飾子を使用して宣言できます。  
   
  同じアセンブリにコンパイルされる他のクラス、構造体、およびモジュール内のコードは、そのアセンブリ内のすべての `Friend` 要素にアクセスできます。  
@@ -38,11 +40,13 @@ ms.locfileid: "84392172"
 > 別のアセンブリがフレンド アセンブリであることを指定できます。これにより、`Friend` としてマークされているすべての型とメンバーにアクセスできるようになります。 詳細については、[Friend アセンブリ](../../../standard/assembly/friend.md)に関するページを参照してください。
 
 ## <a name="example"></a>例  
+
  次のクラスは、`Friend` 修飾子を使用して、同じアセンブリ内の他のプログラミング要素が特定のメンバーにアクセスできるようにします。  
   
  [!code-vb[VbVbalrAccessModifiers#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalraccessmodifiers/vb/class1.vb#1)]  
   
 ## <a name="usage"></a>使用方法  
+
  `Friend` 修飾子は、次のコンテキストで使用できます。  
   
  [Class ステートメント](../statements/class-statement.md)  

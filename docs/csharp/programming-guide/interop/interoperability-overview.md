@@ -9,17 +9,19 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 41ee25397d519f189b462291d823586113c78b67
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f05c53eec326517052eb9a46e57e8b9c18ea698f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541540"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149687"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>相互運用性の概要 (C# プログラミング ガイド)
+
 C# マネージド コードとアンマネージド コード間で相互運用を可能にする方法について説明します。  
   
 ## <a name="platform-invoke"></a>プラットフォーム呼び出し  
+
  "*プラットフォーム呼び出し*" とは、Microsoft Windows API にあるような、ダイナミックリンク ライブラリ (DLL) で実装されているアンマネージド関数をマネージド コードで呼び出すことを可能にするサービスです。 これはエクスポートされた関数を見つけて呼び出し、必要に応じて相互運用の境界を越えて、その引数 (整数、文字列、配列、構造体、その他) をマーシャリングします。  
   
 詳細については、「[アンマネージ DLL 関数の処理](../../../framework/interop/consuming-unmanaged-dll-functions.md)」と「[プラットフォーム呼び出しを使用して WAV ファイルを再生する方法](./how-to-use-platform-invoke-to-play-a-wave-file.md)」を参照してください。
@@ -28,9 +30,11 @@ C# マネージド コードとアンマネージド コード間で相互運用
 > [共通言語ランタイム](../../../standard/clr.md) (CLR) が、システム リソースへのアクセスを管理します。 CLR の外部のアンマネージ コードを呼び出すと、このセキュリティ メカニズムがバイパスされるため、セキュリティ リスクが生じます。 たとえば、アンマネージ コードがアンマネージ コード内のリソースを直接呼び出した場合、CLR のセキュリティ機構がバイパスされます。 詳細については、「[.NET でのセキュリティ](../../../standard/security/index.md)」を参照してください。  
   
 ## <a name="c-interop"></a>C++ Interop  
+
  It Just Works (IJW) とも呼ばれる C++ interop を使用してネイティブ C++ クラスをラップすると、このクラスを C# またはその他の .NET 言語で作成されたコードで使用できるようになります。 これを行うには、C++ コードを記述して、ネイティブ DLL または COM コンポーネントをラップします。 他の .NET 言語とは異なり、Visual C++ には相互運用性サポートが備えられています。これにより、マネージド コードとアンマネージド コードは同じアプリケーション内、また同じファイルでも共存できるようになります。 C++ コードは、マネージド アセンブリを生成する **/clr** コンパイラ スイッチを使用して構築できます。 最後に、C# プロジェクトのアセンブリへの参照を追加し、他のマネージド クラスを使用するときと同じように、ラップされたオブジェクトを使用します。  
   
 ## <a name="exposing-com-components-to-c"></a>C\# への COM コンポーネントの公開
+
  C# プロジェクトから COM コンポーネントを使用することができます。 一般的な手順は次のとおりです。  
   
 1. 使用する COM コンポーネントを探して登録します。 regsvr32.exe を使用して、COM DLL の登録または登録解除を行います。  
@@ -46,6 +50,7 @@ C# マネージド コードとアンマネージド コード間で相互運用
  詳細については、「[.NET Framework への COM コンポーネントの公開](../../../framework/interop/exposing-com-components.md)」を参照してください。  
   
 ## <a name="exposing-c-to-com"></a>COM への C# の公開  
+
  COM クライアントは、適切に公開されている C# 型を使用できます。 C# 型を公開する基本的な手順は次のとおりです。  
   
 1. C# プロジェクトに相互運用属性を追加します。  

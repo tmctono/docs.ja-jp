@@ -8,17 +8,19 @@ helpviewer_keywords:
 - LINQ [Visual Basic]
 - LINQ, Visual Basic
 ms.assetid: 53c66373-ff43-431f-b4bb-f98362830279
-ms.openlocfilehash: cea6a5973104d34c058a51c404c13d26dd1aab14
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2097eb9caccd65a7983244cd06cbc18759677be1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554385"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090314"
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>Visual Basic の LINQ の概要
+
 このセクションでは、Visual Basic と統合言語クエリ (LINQ) を理解して使用するのに役立つ概要、例、および背景情報を示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [初めての LINQ クエリの作成](writing-your-first-linq-query.md)  
  基本的な LINQ クエリを作成する際の 3 つの段階 (データ ソースの取得、クエリの作成、クエリの実行) について説明します。  
   
@@ -35,6 +37,7 @@ ms.locfileid: "90554385"
  Visual Basic LINQ プロジェクトの作成、簡単なデータ ソースの追加、およびいくつかの基本的なクエリ操作の実行に関する手順を説明します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [Visual Basic における LINQ の概要](../../language-features/linq/introduction-to-linq.md)  
  LINQ でのクエリの概要を説明し、他のリソースへのリンクを示します。  
   

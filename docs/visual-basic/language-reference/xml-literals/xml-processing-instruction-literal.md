@@ -8,14 +8,15 @@ helpviewer_keywords:
 - XML processing instruction literal [Visual Basic]
 - processing instruction literal [Visual Basic]
 ms.assetid: cef4f7f8-0011-4f64-8602-795077ad4f15
-ms.openlocfilehash: 9bd1781e01bc4cbf1ce5da8c454ab2f5a679aead
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3d18e58cb643fa075f6eb08eb6fe909d27a6737b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400177"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866407"
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>XML 処理命令リテラル (Visual Basic)
+
 <xref:System.Xml.Linq.XProcessingInstruction> オブジェクトを表すリテラル。  
   
 ## <a name="syntax"></a>構文  
@@ -25,6 +26,7 @@ ms.locfileid: "84400177"
 ```  
   
 ## <a name="parts"></a>指定項目  
+
  `<?`  
  必須です。 XML 処理命令リテラルの先頭を表します。  
   
@@ -38,9 +40,11 @@ ms.locfileid: "84400177"
  必須です。 処理命令の末尾を表します。  
   
 ## <a name="return-value"></a>戻り値  
+
  <xref:System.Xml.Linq.XProcessingInstruction> オブジェクト。  
   
 ## <a name="remarks"></a>Remarks  
+
  XML 処理命令リテラルは、アプリケーションが XML ドキュメントを処理する方法を示します。 アプリケーションは XML ドキュメントを読み込むとき、XML 処理命令を確認して、そのドキュメントの処理方法を判断します。 アプリケーションによって解釈されるのは、`piName` と `piData` の意味です。  
   
  XML ドキュメント リテラルでは、XML 処理命令と似た構文が使用されます。 詳細については、「[XML ドキュメント リテラル](xml-document-literal.md)」を参照してください。  
@@ -56,6 +60,7 @@ ms.locfileid: "84400177"
  XML 処理命令リテラルは、Visual Basic コンパイラによって、<xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> コンストラクターへの呼び出しに変換されます。  
   
 ## <a name="example"></a>例  
+
  次の例では、XML ドキュメントのスタイルシートを特定する処理命令を作成します。  
   
  [!code-vb[VbXMLSamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#28)]  

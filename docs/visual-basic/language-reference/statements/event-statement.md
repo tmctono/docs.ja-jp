@@ -18,14 +18,15 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: a136a517c7ce865b4e1d349270696e2704d61592
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0575a67f89f734c79259036fe48d6e2671c2d1ed
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404668"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873258"
 ---
 # <a name="event-statement"></a>Event ステートメント
+
 ユーザー定義イベントを宣言します。  
   
 ## <a name="syntax"></a>構文  
@@ -80,6 +81,7 @@ End Event
 |`End Event`|必須です。 `Event` ブロックを終了します。|  
   
 ## <a name="remarks"></a>Remarks  
+
  宣言したイベントは、`RaiseEvent` ステートメントを使って発生させます。 通常、イベントの宣言と発生は、次のように行われます。  
   
  [!code-vb[VbVbalrEvents#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#13)]  
@@ -94,6 +96,7 @@ End Event
  ほとんどの状況で、このトピックの「構文」のセクションにある最初の構文を使ってイベントを宣言できますが、 一部のシナリオでは、イベントの動作をより詳細に制御することが必要になります。 このトピックの「構文」セクションの最後には、`Custom` キーワードを使用した構文があります。これを使用すると、カスタム イベントを定義してイベントを詳細に制御できます。 カスタム イベントでは、コードでイベント ハンドラーを追加または削除するときに、つまりコードでイベントを生成するときに、何が起こるかを正確に指定します。 たとえば、「[方法:カスタム イベントを宣言してメモリを節約する](../../programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)」および「[方法:カスタム イベントを宣言してブロックを回避する](../../programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)」を参照してください。  
   
 ## <a name="example"></a>例  
+
  次の例では、イベントを使用して 10 秒から 0 秒までカウント ダウンします。 このコードは、イベント関連のいくつかのメソッド、プロパティ、およびステートメントの例を示しています。 `RaiseEvent` ステートメントの使用例も含まれています。  
   
  イベントを発生させるクラスをイベント ソース、イベントを処理するメソッドをイベント ハンドラーと呼びます。 イベント ソースでは、生成されるイベントに対して複数のイベント ハンドラーを設定できます。 クラスでイベントが発生すると、そのイベントは、オブジェクトのインスタンスに対するイベントを処理するために選択されたすべてのクラスで発生します。  

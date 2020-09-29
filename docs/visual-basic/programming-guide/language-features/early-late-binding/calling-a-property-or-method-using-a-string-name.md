@@ -12,17 +12,19 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: 29072479db36f9f8a81ffd7f3f5b10208ebaa984
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9f28548c27545d94dde38cef3e9c56f98a69b259
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410658"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086089"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>文字列名によるプロパティまたはメソッドの呼び出し (Visual Basic)
+
 オブジェクトのプロパティやメソッドは、デザイン時に把握して、これらを処理するコードを作成できることがほとんどです。 しかし、オブジェクトのプロパティやメソッドを事前に知ることができない場合や、実行時にエンド ユーザーがプロパティを指定したりメソッドを実行したりできる柔軟性を持たせたい場合があります。  
   
 ## <a name="callbyname-function"></a>CallByName 関数  
+
  例として、COM コンポーネントにユーザーが演算子を渡すことで入力した式を評価する、クライアント アプリケーションを考えます。 ここでは、新しい演算子が必要な新しい関数を、継続的にコンポーネントに追加するものとします。 標準的なオブジェクトへのアクセス手法を使用する場合、新しい演算子を使用するには、クライアント アプリケーションを再コンパイルして配布し直す必要があります。 これは、`CallByName` 関数を使用して新しい演算子を文字列として渡すことで回避できます。アプリケーションを変更する必要はありません。  
   
  `CallByName` 関数を使用すると、文字列を使用して実行時にプロパティまたはメソッドを指定することができます。 `CallByName` 関数のシグネチャは次のようになります。  

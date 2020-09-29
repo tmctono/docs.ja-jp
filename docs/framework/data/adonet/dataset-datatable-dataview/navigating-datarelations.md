@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-ms.openlocfilehash: 73523297454be37716acedad13498954ef9a89a0
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 5eb2ee16712be5ccd5e9aa0af4dde22dcaaeea09
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040344"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148387"
 ---
 # <a name="navigating-datarelations"></a>DataRelation の移動
+
 <xref:System.Data.DataRelation> の主な機能の 1 つは、<xref:System.Data.DataTable> の 1 つの <xref:System.Data.DataSet> から別の  を移動できることです。 これにより、関連付けられた **DataTable** から単一の **DataRow** を指定して、関連するすべての <xref:System.Data.DataRow> オブジェクトを 1 つの **DataTable** に取得できます。 たとえば、顧客のテーブルと注文のテーブル間に **DataRelation** を確立した後、**GetChildRows** を使用して、特定の顧客行に対するすべての注文行を取得できます。  
   
  次のコード例では、**DataSet** の **Customers** テーブルと **Orders** テーブルの間に **DataRelation** を作成し、各顧客に対するすべての注文を返します。  

@@ -5,14 +5,15 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: 7affc84fa501ba98bdfa93835f0b0e381580b9bd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cc2de38f7375848d104edff6f419656d9caa9cb2
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388388"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071925"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>方法: ラムダ式を作成する (Visual Basic)
+
 "*ラムダ式*" は、名前のない関数またはサブルーチンです。 ラムダ式は、デリゲート型が有効であれば使用できます。  
   
 ### <a name="to-create-a-single-line-lambda-expression-function"></a>単一行のラムダ式関数を作成するには  
@@ -96,6 +97,7 @@ ms.locfileid: "84388388"
      [!code-vb[VbVbalrLambdas#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#22)]  
   
 ## <a name="example"></a>例  
+
  ラムダ式の一般的な用途は、型が `Delegate` のパラメーターの引数として渡すことができる関数を定義することです。 次の例では、<xref:System.Diagnostics.Process.GetProcesses%2A> メソッドはローカルコンピューターで実行されているプロセスの配列を返します。 <xref:System.Linq.Enumerable> クラスの <xref:System.Linq.Enumerable.Where%2A> メソッドには、引数として `Boolean` デリゲートが必要です。 この例のラムダ式は、そのために使用されています。 スレッドが 1 つしかないプロセスごとに `True` が返されます。それらは `filteredList` で選択されています。  
   
  [!code-vb[VbVbalrLambdas#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class4.vb#10)]  

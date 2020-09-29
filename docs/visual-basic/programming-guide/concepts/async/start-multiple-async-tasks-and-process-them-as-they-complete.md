@@ -2,14 +2,15 @@
 title: 完了時での複数の同期タスクとプロセスの実行
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: e227029928676e21d3ed14450140e92b386bf216
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 52e4d786667a70730f311ca20a30acd7108107e3
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400798"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090370"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>完了時での複数の同期タスクとプロセスの実行 (Visual Basic)
+
 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> を使用すると、複数のタスクを、開始された順番に処理するのでなく、同時に開始して完了するごとに 1 つずつ処理できます。  
   
  クエリを使用して、タスクのコレクションを作成する例を次に示します。 各タスクは、指定された Web サイトのコンテンツをダウンロードします。 while ループの各反復で、待機されている `WhenAny` への呼び出しは、最初にダウンロードを終了するタスクのコレクションにあるタスクを返します。 タスクはコレクションから削除され、処理されます。 ループは、コレクションのタスクがなくなるまで繰り返されます。  
@@ -18,6 +19,7 @@ ms.locfileid: "84400798"
 > この例を実行するには、Visual Studio 2012 以降および .NET Framework 4.5 以降が、コンピューターにインストールされている必要があります。  
   
 ## <a name="downloading-the-example"></a>例をダウンロードする  
+
  完全な Windows Presentation Foundation (WPF) プロジェクトは、「[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」(非同期のサンプル: アプリケーションの微調整) からダウンロードできます。その後、次の手順に従います。  
   
 1. ダウンロードしたファイルを圧縮解除し、Visual Studio を起動します。  
@@ -37,6 +39,7 @@ ms.locfileid: "84400798"
  プロジェクトをダウンロードしない場合は、このトピックの最後の MainWindow.xaml.vb ファイルをレビューできます。  
   
 ## <a name="building-the-example"></a>例のビルド  
+
  この例では、「[完了後の残りの非同期タスクのキャンセル (Visual Basic)](cancel-remaining-async-tasks-after-one-is-complete.md)」で開発したコードを追加し、同じ UI を使用します。  
   
  この例を自分でビルドするには、「例をダウンロードする」のセクションの詳細な手順の指示に従いますが、 **[スタートアップ プロジェクト]** では **CancelAfterOneTask** を選択します。 そのプロジェクトの `AccessTheWebAsync` メソッドに、このトピックでの変更を追加します。 変更部分にはアスタリスクが付いています。  
@@ -83,6 +86,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
 > ループで `WhenAny` を使って、例に示すように、いくつかのタスクを格納する問題を解決できます。 ただし、多数のタスクが処理する場合、他のアプローチがより効率的です。 使用例を含む詳細については、「[Processing Tasks as they complete (完了したタスクを処理する)](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/)」を参照してください。  
   
 ## <a name="complete-example"></a>コード例全体  
+
  次のコードは、この例の MainWindow.xaml.vb ファイルのテキスト全体です。 アスタリスクはこの例のために追加された要素を示しています。  
   
  <xref:System.Net.Http> の参照を追加する必要があることに注意してください。  

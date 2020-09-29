@@ -5,20 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7d8e9a46-1af6-4a02-bf61-969d77ae07e0
-ms.openlocfilehash: 46c92301b717e285c4c18241f84d0069069c7bdc
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 65116a48533fd6ce86894c6a4522929285f8e1f0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783526"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150753"
 ---
 # <a name="modifying-data-with-stored-procedures"></a>ストアド プロシージャでのデータの変更
+
 ストアド プロシージャは、入力パラメーターとしてデータを受け取り、出力パラメーター、結果セット、または戻り値としてデータを返すことができます。 以下のサンプルでは、入力パラメーター、出力パラメーター、および戻り値が ADO.NET によってどのようにやり取りされるかを示したものです。 この例では、主キー列が SQL Server データベースの ID 列であるテーブルに新しいレコードを挿入しています。  
   
 > [!NOTE]
 > SQL Server のストアド プロシージャで、<xref:System.Data.SqlClient.SqlDataAdapter> を使用してデータを編集または削除する場合、ストアド プロシージャの定義に SET NOCOUNT ON は使用しないでください。 処理された行数がゼロとして返され、`DataAdapter` によってコンカレンシーの競合として解釈されてしまいます。 この場合、<xref:System.Data.DBConcurrencyException> がスローされます。  
   
 ## <a name="example"></a>例  
+
  この例では、次のストアド プロシージャを使用して、**Northwind** **Categories** テーブルに新しいカテゴリを挿入します。 このストアド プロシージャは、**CategoryName** 列の値を入力パラメーターとして受け取り、SCOPE_IDENTITY() 関数を使用して ID フィールド **CategoryID** の新しい値を取得し、その値を出力パラメーター内に返します。 RETURN ステートメントは、@@ROWCOUNT 関数を使用して、挿入された行の数を返します。  
   
 ```sql

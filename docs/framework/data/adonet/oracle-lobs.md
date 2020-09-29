@@ -2,14 +2,15 @@
 title: Oracle LOB
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: 62525fed85525e26b7c61208fe44b108de562fb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 072e3e3514c2dd32ddff0bac941da30788feae16
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149428"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91147841"
 ---
 # <a name="oracle-lobs"></a>Oracle LOB
+
 .NET Framework Data Provider for Oracle には、<xref:System.Data.OracleClient.OracleLob> クラスが含まれています。このクラスは、Oracle の **LOB** データ型を操作するために使用されます。  
   
  **OracleLob** は、これらの <xref:System.Data.OracleClient.OracleType> データ型の 1 つです。  
@@ -23,6 +24,7 @@ ms.locfileid: "79149428"
  **OracleLob** は、データがオペレーティング システムの物理ファイルにではなくサーバーに格納されるという点で、<xref:System.Data.OracleClient.OracleBFile> とは異なります。 また、常に読み取り専用になっている **OracleBFile** とは異なり、読み書き可能なオブジェクトにもなります。  
   
 ## <a name="creating-retrieving-and-writing-to-a-lob"></a>LOB の作成、取得、および書き込み  
+
  次の C# の例では、Oracle テーブルに LOB を作成し、それらを取得して **OracleLob** オブジェクトの形式で書き込む方法について説明します。 この例では、<xref:System.Data.OracleClient.OracleDataReader> オブジェクトと **OracleLob** の **Read** および **Write** メソッドを使用する方法について説明します。 Oracle の **BLOB**、**CLOB**、**NCLOB** データ型を使用します。  
   
 ```csharp  
@@ -216,6 +218,7 @@ public class LobExample
 ```  
   
 ## <a name="creating-a-temporary-lob"></a>一時 LOB の作成  
+
  次の C# の例では、一時 LOB の作成方法について説明します。  
   
 ```csharp  

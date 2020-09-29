@@ -10,17 +10,19 @@ helpviewer_keywords:
 - procedures [Visual Basic], indefinite number of argument values
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-ms.openlocfilehash: dac0575d73ffd4159e89bff344915a33b9d0e5d3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2c8c60015d834ffa3f8618dd98616350e13f0e5c
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84364280"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100660"
 ---
 # <a name="parameter-arrays-visual-basic"></a>パラメーター配列 (Visual Basic)
+
 通常、プロシージャ宣言で指定されている引数よりも多くの引数でプロシージャを呼び出すことはできません。 不特定数の引数が必要な場合は、"*パラメーター配列*" を宣言できます。これにより、プロシージャはパラメーターの値の配列を受け入れることができます。 プロシージャを定義するときに、パラメーター配列の要素の数がわかっている必要はありません。 配列のサイズは、プロシージャの呼び出しごとに個別に決定されます。  
   
 ## <a name="declaring-a-paramarray"></a>ParamArray の宣言  
+
  [ParamArray](../../../language-reference/modifiers/paramarray.md) キーワードを使用して、パラメーター リスト内のパラメーター配列を示します。 次の規則が適用されます。  
   
 - プロシージャではパラメーター配列を 1 つだけ定義でき、プロシージャ定義の最後のパラメーターである必要があります。  
@@ -32,6 +34,7 @@ ms.locfileid: "84364280"
 - パラメーター配列の前にあるすべてのパラメーターが必須である必要があります。 パラメーター配列が唯一の省略可能なパラメーターでなければなりません。  
   
 ## <a name="calling-a-paramarray"></a>ParamArray の呼び出し  
+
  パラメーター配列が定義されているプロシージャを呼び出すときは、次のいずれかの方法で引数を指定できます。  
   
 - Nothing - つまり、[ParamArray](../../../language-reference/modifiers/paramarray.md) 引数を省略できます。 この場合、プロシージャに空の配列が渡されます。 [Nothing](../../../language-reference/nothing.md) キーワードを明示的に渡すと、プロシージャに null 配列が渡されます。呼び出されたプロシージャがこの条件をチェックしない場合、NullReferenceException が発生する可能性があります。
@@ -46,6 +49,7 @@ ms.locfileid: "84364280"
 > 無限に大きくなる可能性がある配列を処理する場合は常に、アプリケーションの何らかの内部容量が超過するリスクがあります。 パラメーター配列を受け入れる場合は、呼び出し元のコードから渡された配列のサイズをテストする必要があります。 アプリケーションにとって大きすぎる場合は、適切な手順を実行してください。 詳細については、「[配列](../arrays/index.md)」を参照してください。  
   
 ## <a name="example"></a>例  
+
  次の例では、`calcSum` 関数を定義して呼び出します。 `args` パラメーターの `ParamArray` 修飾子により、関数は可変数の引数を受け入れることができます。  
   
  [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]  

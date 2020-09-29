@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: ca16c6604ee071668a5c65d7e9052b233e2313c7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a93dd0a5422ce2a01a01c6fc77224e3ee946910e
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403019"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874149"
 ---
 # <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>バイナリ 'If' 式の最初のオペランドは Null 許容または参照型である必要があります
+
 `If` 式は、2 つまたは 3 つの引数を取ることができます。 2 つの引数のみを送信する場合、最初の引数は参照型または Null 許容値型である必要があります。 最初の引数が `Nothing` 以外に評価される場合は、その値が返されます。 最初の引数が `Nothing` に評価される場合は、2 番目の引数が評価されて返されます。  
   
  たとえば、次のコードには、3 つの引数を含むものと 2 つの引数を含むものの、2 つの `If` 式が含まれています。 これらの式は、同じ値を計算して返します。  

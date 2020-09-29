@@ -6,14 +6,15 @@ helpviewer_keywords:
 - -recurse compiler option [Visual Basic]
 - recurse compiler option [Visual Basic]
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
-ms.openlocfilehash: fc8dfe41ea56531ff34cd5e551ef24d636227e47
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7ded2b7d102430d8d4e545da5ab6ce8bafe3609e
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400501"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91095423"
 ---
 # <a name="-recurse"></a>-recurse
+
 指定したディレクトリまたはプロジェクト ディレクトリのすべての子ディレクトリ内のソース コード ファイルをコンパイルします。  
   
 ## <a name="syntax"></a>構文  
@@ -23,6 +24,7 @@ ms.locfileid: "84400501"
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `dir`  
  任意。 検索を開始するディレクトリ。 指定しない場合は、プロジェクト ディレクトリから検索が開始されます。  
   
@@ -30,12 +32,14 @@ ms.locfileid: "84400501"
  必須です。 検索するファイル。 ワイルドカード文字を使用できます。  
   
 ## <a name="remarks"></a>Remarks  
+
  `-recurse` を使わなくても、ファイル名にワイルドカードを使用することで、プロジェクト ディレクトリ内の一致するすべてのファイルをコンパイルできます。 出力ファイル名が指定されていない場合、コンパイラで最初に処理される入力ファイルに基づいて、出力ファイル名が決定されます。 これは通常、コンパイルされるファイルの一覧をアルファベット順に表示したときの先頭のファイルです。 このため、出力ファイルは `-out` オプションを使用して指定することをお勧めします。  
   
 > [!NOTE]
 > `-recurse` オプションは、Visual Studio 開発環境からは利用できません。これはコマンド ラインからコンパイルするときにのみ使用できます。  
   
 ## <a name="example"></a>例  
+
  次のコマンドでは、現在のディレクトリにあるすべての Visual Basic ファイルをコンパイルします。  
   
 ```console

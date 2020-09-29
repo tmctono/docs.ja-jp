@@ -8,14 +8,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: 870a18dbf3a7e28b7d7b612e853beeec6908cf6f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2661603ba33dd0bc28ac1a192794a4534225b641
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387934"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071639"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>方法: プロシージャの複数のバージョンを定義する (Visual Basic)
+
 同じ名前を使用し、バージョンごとに異なるパラメーター リストを使用して、"*オーバーロード*" することにより、複数のバージョンのプロシージャを定義できます。 オーバーロードの目的は、名前で区別する必要なく、プロシージャの密接に関連する複数のバージョンを定義することです。  
   
  詳細については、「 [Procedure Overloading](./procedure-overloading.md)」を参照してください。  
@@ -31,6 +32,7 @@ ms.locfileid: "84387934"
 4. プロシージャの各バージョンを、必要に応じて `End Sub` または `End Function` ステートメントで終了します。  
   
 ## <a name="example"></a>例  
+
  次の例では、顧客の残高に対してトランザクションを転記する `Sub` プロシージャを定義します。 `Overloads` キーワードを使用して、プロシージャの 2 つのバージョンを定義します。1 つは顧客を名前で受け入れ、もう 1 つは口座番号で受け入れます。  
   
  [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]  
@@ -40,6 +42,7 @@ ms.locfileid: "84387934"
  `post` プロシージャのこれらのバージョンを呼び出す方法については、「[How to: Call an Overloaded Procedure (方法: オーバーロードされたプロシージャを呼び出す)](./how-to-call-an-overloaded-procedure.md)」をご覧ください。  
   
 ## <a name="compile-the-code"></a>コードのコンパイル  
+
  オーバーロードされた各バージョンのプロシージャ名が同じであり、パラメーター リストが異なることを確認します。  
   
 ## <a name="see-also"></a>関連項目

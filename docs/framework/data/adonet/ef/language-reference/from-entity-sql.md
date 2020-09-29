@@ -2,14 +2,15 @@
 title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 2334a30009d6bef9544d2ca1e0ab923a7441d6f2
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 8affac82fb1813aa0282540b5dc2f47d42234a1b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833826"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148057"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
+
 [SELECT](select-entity-sql.md) ステートメントで使用するコレクションを指定します。
 
 ## <a name="syntax"></a>構文
@@ -125,6 +126,7 @@ FROM C AS c, D AS d, c.Names AS e
 `FROM (C AS c JOIN D AS d) CROSS APPLY c.Names AS e`
 
 ## <a name="left-correlation"></a>左の相関関係
+
  `FROM` 句の項目は、前の句で指定された項目を参照できます。 次の例で、`C` と `D` は独立したコレクションですが、`c.Names` は `C` に依存しています。
 
 ```sql

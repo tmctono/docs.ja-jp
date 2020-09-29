@@ -13,14 +13,15 @@ helpviewer_keywords:
 - parentheses [Visual Basic], complex expressions
 - numeric expressions
 ms.assetid: bd22340e-b5be-458b-8772-3916c02309a4
-ms.openlocfilehash: 3088072646278dac13e4d483cb4f99297eaad9ca
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9ba6be8e1dd03c0589f712b0e9b39258953cd223
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403473"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077086"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>演算子の効率のよい組み合わせ (Visual Basic)
+
 複合式にはさまざまな演算子を含めることができます。 次の例を使って説明します。  
   
  `x = (45 * (y + z)) ^ (2 / 85) * 5 + z`  
@@ -28,6 +29,7 @@ ms.locfileid: "84403473"
  前の例のいずれかのような複雑な式を作成するには、演算子の優先順位のルールを十分に理解している必要があります。 詳細については、「[Visual Basic における演算子の優先順位](../../../language-reference/operators/operator-precedence.md)」を参照してください。  
   
 ## <a name="parenthetical-expressions"></a>かっこで囲まれた式  
+
  多くの場合、演算子の優先順位によって決定される順序とは異なる順序で操作を進める必要があります。 例を次に示します。  
   
  `x = z * y + 4`  
@@ -39,6 +41,7 @@ ms.locfileid: "84403473"
  前の例では、`y` と `4` を加算し、その合計を `z` で乗算しています。  
   
 ### <a name="nested-parenthetical-expressions"></a>入れ子になったかっこで囲まれた式  
+
  式を複数のレベルのかっこで入れ子にして、優先順位をさらにオーバーライドすることができます。 かっこ内で最も深く入れ子にされている式が最初に評価され、次に最も深く入れ子にされている式、次に最も深く入れ子にされていない式、最後にかっこの外側の式が評価されます。 次の例を使って説明します。  
   
  `x = (z * 4) ^ (y * (z + 2))`  

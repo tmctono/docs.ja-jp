@@ -13,14 +13,15 @@ helpviewer_keywords:
 - item XML tag
 - <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-ms.openlocfilehash: 955c1a4c5c5619f908b8d03dbf12360c23574478
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 900cd8c467a21812d980cffa7e41120ae557704b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400087"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872786"
 ---
 # <a name="list-visual-basic"></a>\<list> (Visual Basic)
+
 リストまたはテーブルを定義します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,6 +40,7 @@ ms.locfileid: "84400087"
 ```  
   
 ## <a name="parameters"></a>パラメーター  
+
  `type`  
  リストの種類。 箇条書きの場合は "bullet"、番号付きリストの場合は "number"、2 列のテーブルの場合は "table" にする必要があります。  
   
@@ -49,6 +51,7 @@ ms.locfileid: "84400087"
  `type` が "bullet" または "number" の場合、`description` は リストの項目です。`type` が "table" の場合、`description` は `term` の定義です。  
   
 ## <a name="remarks"></a>Remarks  
+
  `<listheader>` ブロックでは、テーブルまたは定義リストの見出しが定義されます。 テーブルを定義するときは、見出しの `term` のエントリを指定することだけが必要です。  
   
  リストの各項目は、`<item>` ブロックで指定されます。 定義リストを作成する場合は、`term` と `description` の両方を指定する必要があります。 ただし、テーブル、箇条書き、または番号付きリストの場合は、`description` のエントリを指定するだけです。  
@@ -58,6 +61,7 @@ ms.locfileid: "84400087"
  コンパイル時に [-doc](../../reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
+
  この例では、`<list>` タグを使用して、解説セクションの箇条書きを定義します。  
   
  [!code-vb[VbVbcnXmlDocComments#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#5)]  

@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#undef directive [C#]'
 ms.assetid: 686c92d2-7194-4be4-b2f4-80091712d513
-ms.openlocfilehash: 97f99ab4230585e61fed0e057552b78c7a4c2bb5
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 7db79be7ea9d8462e09b6ae874bf0ae7d265afe2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89137865"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150558"
 ---
 # <a name="undef-c-reference"></a>#undef (C# リファレンス)
+
 `#undef` を使用すると、シンボルを未定義にすることができます。未定義のシンボルを [#if](./preprocessor-if.md) ディレクティブで式として使用すると、その式は `false` と評価されます。  
   
  シンボルは、[#define](./preprocessor-define.md) ディレクティブまたは [-define](../compiler-options/define-compiler-option.md) コンパイラ オプションのいずれかで定義できます。 `#undef` ディレクティブは、ファイル内で、ディレクティブではない他のステートメントよりも前に記述する必要があります。  

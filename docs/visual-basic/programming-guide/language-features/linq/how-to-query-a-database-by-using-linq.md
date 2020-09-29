@@ -9,14 +9,15 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: bcf5e9c3-a236-4399-9a7f-3991eca7cf56
-ms.openlocfilehash: ad4744e1734fd968f610ec02b60814eadd3ebe9a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 60dbe3b4e164e266202cac4abaea009869d08cc4
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404966"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075266"
 ---
 # <a name="how-to-query-a-database-by-using-linq-visual-basic"></a>方法: LINQ を使用してデータベースを照会する (Visual Basic)
+
 統合言語クエリ (LINQ) を使用すると、データベース情報に簡単にアクセスしてクエリを実行できます。  
   
  次の例は、SQL Server データベースに対してクエリを実行する新しいアプリケーションを作成する方法を示しています。  

@@ -36,14 +36,15 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: b14c7a3f1f667e7c13ec0ae46185ed3ece92beb8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f9b343c664baaf316e5cd6df72da8dcf56222382
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84394053"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090262"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic におけるジェネリック型 (Visual Basic)
+
 *ジェネリック型* はさまざまなデータ型に対して同じ機能を実行するために必要な処理を行う、1 つのプログラミング要素です。 ジェネリック クラスまたはジェネリック プロシージャを定義すると、同じ機能を実行させる各データ型に対して、その機能を別々に定義する必要がありません。  
   
  これは、ヘッドの部分が交換可能な、ねじ回しのセットにたとえることができます。 回すねじを調べて、そのねじに合った正しいヘッド (マイナス、プラス、星型) を選択します。 ねじ回しのハンドルに正しいヘッドを挿入したら、ねじ回しを使ってまったく同じ作業 (ねじを回すこと) を行います。  
@@ -61,6 +62,7 @@ ms.locfileid: "84394053"
  ジェネリック型の使い方の詳細については、「[方法:ジェネリック クラスを使用する](how-to-use-a-generic-class.md)」をご覧ください。  
   
 ## <a name="example-of-a-generic-class"></a>ジェネリック クラスの例  
+
  次の例は、ジェネリック クラスのスケルトン定義を示しています。  
   
  [!code-vb[VbVbalrDataTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#2)]  
@@ -76,11 +78,13 @@ ms.locfileid: "84394053"
  より完全なコード例については、「[方法:複数のデータ型に同一の機能を提供できるクラスを定義する](how-to-define-a-class-that-can-provide-identical-functionality.md)」をご覧ください。  
   
 ## <a name="eligible-programming-elements"></a>使用できるプログラミング要素  
+
  ジェネリック クラス、構造体、インターフェイス、プロシージャ、およびデリゲートを定義して使用することができます。 .NET Framework では、よく使われるジェネリックな要素を表すジェネリックのクラス、構造体、インターフェイスが定義されています。 <xref:System.Collections.Generic?displayProperty=nameWithType> 名前空間には、ディクショナリ、リスト、キュー、スタックが用意されています。 独自のジェネリックな要素を定義する前に、それに相当する要素が既に <xref:System.Collections.Generic?displayProperty=nameWithType>に用意されていないかをご確認ください。  
   
  プロシージャは型ではありませんが、ジェネリック プロシージャを定義し、使用できます。 「 [Generic Procedures in Visual Basic](generic-procedures.md)」を参照してください。  
   
 ## <a name="advantages-of-generic-types"></a>ジェネリック型の利点  
+
  ジェネリック型は、それぞれが特定のデータ型を操作する複数のプログラミング要素を宣言するための基礎となります。 ジェネリック型の代わりになるものを以下に示します。  
   
 1. `Object` データ型を操作する単一の型。  
@@ -104,9 +108,11 @@ ms.locfileid: "84394053"
 - **ジェネリックなアルゴリズム。** 型に依存しない抽象アルゴリズムは、ジェネリック型にすることをお勧めします。 たとえば、 <xref:System.IComparable> インターフェイスを使って項目を並べ替えるジェネリック プロシージャは、 <xref:System.IComparable>を実装する任意のデータ型に使用できます。  
   
 ## <a name="constraints"></a>制約  
+
  ジェネリック型定義のコードはできる限り型に依存しない必要がありますが、なんらかのデータ型の機能がジェネリック型に必要な場合もあります。 たとえば、並べ替えや照合順序のために 2 つの項目を比較する必要がある場合、それらのデータ型は <xref:System.IComparable> インターフェイスを実装する必要があります。 この要件を強制するには、 *制約* を型パラメーターに追加します。  
   
 ### <a name="example-of-a-constraint"></a>制約の例  
+
  次の例は、 <xref:System.IComparable>の実装を型引数に強制する制約があるクラスのスケルトン定義を示しています。  
   
  [!code-vb[VbVbalrDataTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#5)]  
@@ -114,6 +120,7 @@ ms.locfileid: "84394053"
  後続のコードで、 `itemManager` を実装しない型を渡して <xref:System.IComparable>からクラスを作成しようとすると、コンパイラがエラーを生成します。  
   
 ### <a name="types-of-constraints"></a>制約の種類  
+
  次の要件を任意に組み合わせて制約を指定できます。  
   
 - 型引数は、1 つまたは複数のインターフェイスを実装する必要があります  
@@ -129,11 +136,13 @@ ms.locfileid: "84394053"
  制約の詳細については、「 [Type List](../../../language-reference/statements/type-list.md)」をご覧ください。  
   
 ### <a name="example-of-multiple-constraints"></a>複数の制約の例  
+
  次の例は、型パラメーターに制約リストがあるジェネリック クラスのスケルトン定義を示しています。 このクラスのインスタンスを作成するコードでは、型引数が <xref:System.IComparable> インターフェイスと <xref:System.IDisposable> インターフェイスの両方を実装し、参照型であり、アクセス可能なパラメーターなしのコンストラクターを公開する必要があります。  
   
  [!code-vb[VbVbalrDataTypes#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#6)]  
   
 ## <a name="important-terms"></a>重要な用語  
+
  ジェネリック型に関連して、以下の新しい用語が使用されます。  
   
 - *ジェネリック型*。 宣言時に少なくとも 1 つのデータ型を指定するクラス、構造体、インターフェイス、プロシージャ、またはデリゲートの定義です。  

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: b71c1eeaa136d01c701191f1bb145674efccbc56
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: eae283c757ddeb1290c15d82a41c8028a8941e63
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551042"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059159"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic のコーディング規則
+
 Microsoft は、ここで示すガイドラインに従ってサンプルおよびドキュメントを開発しています。 同じコーディング規則に従うと、次のような利点があります。  
   
 - コードの見た目が統一されるため、コードを読むときに、レイアウトではなく内容に重点を置くことができます。  
@@ -86,6 +87,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
      [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
 ### <a name="relaxed-delegates-in-event-handlers"></a>イベント ハンドラー内の厳密でないデリゲート  
+
  イベント ハンドラーの引数 (Object および EventArgs) は明示的に修飾しません。 イベントに渡されるイベント引数 (sender as Object、e as EventArgs など) を使用しない場合は、厳密でないデリゲートを使用して、コードでイベント引数を省略します。  
   
  [!code-vb[VbVbalrGuidelines#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#7)]  
@@ -121,14 +123,17 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
      [!code-vb[VbVbalrGuidelines#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#13)]  
   
 ### <a name="use-the-with-keyword"></a>With キーワードの使用  
+
  同じオブジェクトの呼び出しを複数回使用する場合には、`With` キーワードの使用を検討します。  
   
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
 ### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>例外処理を使用する場合の Try...Catch/Using ステートメントの使用  
+
  `On Error Goto`は使用しないでください。  
   
 ### <a name="use-the-isnot-keyword"></a>IsNot キーワードの使用  
+
  `IsNot` の代わりに `Not...Is Nothing` キーワードを使用します。  
   
 ### <a name="new-keyword"></a>New キーワード  
@@ -162,9 +167,11 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
 - `Nothing` メソッドを呼び出す前にイベントが `RaiseEvent` (null) かどうか確認しないようにします。 `RaiseEvent` は、イベントを発生させる前に `Nothing` かどうか確認します。  
   
 ### <a name="using-shared-members"></a>共有メンバーの使用  
+
  `Shared` メンバーの呼び出しにはクラス名を使用し、インスタンス変数からは行わないようにします。  
   
 ### <a name="use-xml-literals"></a>XML リテラルの使用  
+
  XML リテラルを使用すると、XML 操作時に行う最も一般的なタスク (読み込み、クエリ、変換など) を簡素化できます。 XML を使用して開発を行う場合は、次のガイドラインに従います。  
   
 - XML API を直接呼び出す代わりに XML リテラルを使用して XML ドキュメントおよびフラグメントを作成します。  

@@ -10,14 +10,15 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: bcb99ef3845c1ce3998dc9dc8d9f1d335515c0a9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9b83eba8efc8dfe14b6ec1cbab270984977198e5
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84364371"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071366"
 ---
 # <a name="overload-resolution-visual-basic"></a>オーバーロードの解決法 (Visual Basic)
+
 Visual Basic コンパイラは、複数のオーバーロードされたバージョンで定義されているプロシージャの呼び出しを検出したときに、呼び出すオーバーロードを決定する必要があります。 そのために、次の手順が実行されます。  
   
 1. **アクセシビリティ。** 呼び出し元のコードから呼び出すことができないようにするためのアクセス レベルが設定されたオーバーロードが排除されます。  
@@ -49,6 +50,7 @@ Visual Basic コンパイラは、複数のオーバーロードされたバー�
  2 番目の呼び出しでは、コンパイラは縮小変換に基づいてオーバーロードのいずれかを排除することができません。 最初の呼び出しと同じ理由で、3 番目のオーバーロードが排除されます。引数の型の拡大変換が少ない 2 番目のオーバーロードを呼び出すことができるためです。 ただし、コンパイラは最初と 2 番目のオーバーロード間で解決することはできません。 それぞれ、もう一方の対応する型に拡大変換されるパラメーターの型が定義されています (`Byte` から `Short`、`Single` から `Double`)。 そのため、コンパイラはオーバーロード解決エラーを生成します。  
   
 ## <a name="overloaded-optional-and-paramarray-arguments"></a>オーバーロードされた Optional および ParamArray 引数  
+
  最後のパラメーターが一方では [Optional](../../../language-reference/modifiers/optional.md)、もう一方では [ParamArray](../../../language-reference/modifiers/paramarray.md) として宣言されている点を除き、プロシージャの 2 つのオーバーロードが同じシグネチャを持つ場合、コンパイラはそのプロシージャの呼び出しを次のように解決します。  
   
 |呼び出しで指定されている最後の引数|コンパイラは、最後の引数を次のように宣言するオーバーロードに呼び出しを解決する|  

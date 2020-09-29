@@ -3,12 +3,12 @@ title: WCF svcutil ツールの概要
 description: .NET Framework プロジェクトの WCF svcutil ツールと同様に、.NET Core プロジェクトと ASP.NET Core プロジェクトの機能を追加する Microsoft WCF dotnet-svcutil ツールの概要。
 author: mlacouture
 ms.date: 02/22/2019
-ms.openlocfilehash: fde42f7d040fba91f51ce6faa58282ed0206a853
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 403bcf78ccebd983d378cfdd7965c4ca5097ccc9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396217"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078256"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core 用 WCF dotnet-svcutil ツール
 
@@ -75,6 +75,7 @@ Windows、macOS、または Linux のコマンド ウィンドウから次の手
     ```
 
     # <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+
     `HelloSvcutil.csproj` プロジェクト ファイルをエディターで開いて `Project` 要素を編集し、次のコードを使用して [`dotnet-svcutil` NuGet パッケージ](https://nuget.org/packages/dotnet-svcutil)を CLI ツールの参照として追加します。
 
     ```xml
@@ -156,6 +157,7 @@ Windows、macOS、または Linux のコマンド ウィンドウから次の手
 次の出力が表示されます。"Hello dotnet-svcutil!"
 
 `dotnet-svcutil` ツールのパラメーターの詳細な説明については、次に示すように、help パラメーターを渡してツールを呼び出してください。
+
 # <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
 ```dotnetcli

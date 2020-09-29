@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /baseaddress compiler option [Visual Basic]
 - baseaddress compiler option [Visual Basic]
 ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
-ms.openlocfilehash: d241584195da7d6f74b45b191c4f63204c200d45
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c794d1fc1c9d20e22ffa747e3175c846341ad8ad
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357181"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91097762"
 ---
 # <a name="-baseaddress"></a>-baseaddress
+
 DLL を作成するときの既定のベース アドレスを指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -32,6 +33,7 @@ DLL を作成するときの既定のベース アドレスを指定します。
 |`address`|必須です。 DLL のベース アドレス。 このアドレスは 16 進数として指定する必要があります。|  
   
 ## <a name="remarks"></a>Remarks  
+
  DLL の既定のベース アドレスは、.NET Framework により設定されます。  
   
  このアドレスの下位ワードは丸められることにご注意ください。 たとえば、0x11110001 と指定すると、丸められて 0x11110000 になります。  

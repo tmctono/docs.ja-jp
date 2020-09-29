@@ -5,19 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-ms.openlocfilehash: 571904d36293caa6d4330b2ffda2cff5aca8e6b2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de925afd071a5c92dfa3f6a5e35e62a8ba734cd8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174460"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91147620"
 ---
 # <a name="windows-applications-using-callbacks"></a>コールバックを使用した Windows アプリケーション
+
 非同期処理は多くの場合、データベース操作を開始し、データベース操作が完了するまで待つことなく、他のプロセスの実行を継続できるようにします。 ただし、多くのシナリオでは、データベース操作が完了した後で何かを実行する必要があります。 たとえば、Windows アプリケーションでは、実行時間の長い操作をバックグラウンド スレッドに委任している間、ユーザー インターフェイス スレッドの応答性を維持することができます。 ただし、データベース操作が完了したら、その結果を使用してフォームにデータを入力する必要があります。 この種類のシナリオは、コールバックを使用した実装が最も適しています。  
   
  コールバックは、<xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>、<xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>、または <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> メソッドで <xref:System.AsyncCallback> 委任を指定して定義します。 この委任は、操作が完了したときに呼び出されます。 この委任に <xref:System.Data.SqlClient.SqlCommand> 自体への参照を渡すと、グローバル変数を使用しなくても、容易に <xref:System.Data.SqlClient.SqlCommand> オブジェクトにアクセスして適切な `End` メソッドを呼び出すことができます。  
   
 ## <a name="example"></a>例  
+
  次の Windows アプリケーションは、<xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> メソッドを使用して、数秒の遅延を含む Transact-SQL ステートメントを実行する方法 (実行時間の長いコマンドのエミュレーション) を示しています。  
   
  この例は、別のスレッドからフォームを操作するメソッドの呼び出しなど、いくつかの重要な手法を示しています。 さらに、この例には、ユーザーがコマンドを複数回同時に実行しないようにブロックするための方法や、コールバック プロシージャが呼び出される前にフォームを閉じないようにするための方法が示されています。  

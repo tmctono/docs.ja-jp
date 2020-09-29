@@ -6,14 +6,15 @@ helpviewer_keywords:
 - keyfile compiler option [Visual Basic]
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
-ms.openlocfilehash: 3f476f6b6db1a788002a938eb5ae4bbbed7a5dae
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c81486243195f7d022bd474ef6db20d069b3a018
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408576"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085153"
 ---
 # <a name="-keyfile"></a>-keyfile
+
 アセンブリに厳密な名前を付けるキーまたはキー ペアを含むファイルを指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -23,10 +24,12 @@ ms.locfileid: "84408576"
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `file`  
  必須です。 キーが含まれるファイル。 ファイル名に空白が含まれている場合は、名前を二重引用符 (" ") で囲みます。  
   
 ## <a name="remarks"></a>Remarks  
+
  コンパイラでは、アセンブリ マニフェストに公開キーを挿入してから、秘密キーで最終的なアセンブリに署名します。 キー ファイルを生成するには、コマンド ラインで「`sn -k file`」と入力します。 詳細については、「[Sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md)」を参照してください。  
   
  `-target:module` を指定してコンパイルした場合は、キー ファイルの名前がモジュールに保持され、[-addmodule](addmodule.md) でアセンブリをコンパイルすると作成されるアセンブリに組み込まれます。  

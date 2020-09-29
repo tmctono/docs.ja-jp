@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - operators [Visual Basic]
 ms.assetid: d1fb027c-872b-4ccc-afc8-2380e3f65d4a
-ms.openlocfilehash: bf3b1e4bf60f91fa40d1d0bdb934150041c4b7db
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7eaf7390e0c6ba1c9e350a6aab903c0a794e4e80
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401434"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874772"
 ---
 # <a name="operators-listed-by-functionality-visual-basic"></a>機能別の演算子一覧 (Visual Basic)
+
 次に示すカテゴリのいずれかを参照するか、ヘルプの目次のこの部分を開いて、Visual Basic 演算子のアルファベット順の一覧をご覧ください。  
   
 ## <a name="categories-of-operators"></a>演算子のカテゴリ  

@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40025
 ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
-ms.openlocfilehash: 030cb31b8f1ba0e8eaa82eeb8e37153411a53404
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 12155062f04b7619cae581540abfc4ce1a8ae34f
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400306"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875131"
 ---
 # <a name="type-of-member-membername-is-not-cls-compliant"></a>メンバー '\<membername>' の型は CLS に準拠していません。
+
 このメンバーに指定されたデータ型は、[言語への非依存性、および言語非依存コンポーネント](../../../standard/language-independence-and-language-independent-components.md) (CLS) の一部ではありません。 .NET Framework と Visual Basic では、このデータ型をサポートしているため、コンポーネント内でエラーにはなりません。 ただし、厳密に CLS に準拠しているコードで記述された別のコンポーネントでは、このデータ型をサポートしていない可能性があります。 そのようなコンポーネントでは、使用しているコンポーネントと正常にやり取りできない場合があります。  
   
  次の Visual Basic データ型は CLS に準拠していません。  

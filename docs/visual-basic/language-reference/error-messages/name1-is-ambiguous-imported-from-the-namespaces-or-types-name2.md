@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30561
 ms.assetid: 761091f7-1018-4299-b481-3966a4a2c126
-ms.openlocfilehash: 63e61d412e4d1238b08ccae94f11adb0c3d1b54d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fe67dc70c18297319225c3d2ae97f1ce949603d6
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401577"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871536"
 ---
 # <a name="name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a>'\<name1>' 名前空間または型からインポートされた '\<name2>' があいまいです。
+
 あいまいな名前を指定したため、別の名前と競合しています。 Visual Basic コンパイラには、競合解決規則がありません。ユーザー自身が名前のあいまいさを解消する必要があります。  
   
  **エラー ID:** BC30561  

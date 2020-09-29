@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-ms.openlocfilehash: 4d0f9aac795f683cf58210ea38b3783e451ccfc3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fced95fe24d42d4af2118706bcaf3337429fea91
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402863"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873990"
 ---
 # <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>'ByRef' パラメーター '\<typename1>' の値を、一致する引数に戻してコピーする際の、'\<typename2>' から '\<parametername>' への暗黙的な変換です。
+
 プロシージャが、対応するパラメーターとは異なる型の [ByRef](../modifiers/byref.md) 引数を指定して呼び出されました。  
   
  引数 `ByRef` を渡した場合、Visual Basic は参照を渡す代わりに、引数の値をプロシージャのローカル変数にコピーすることがあります。 このような場合は、プロシージャから戻るときに、Visual Basic で呼び出し元のコードの引数にローカル変数の値をコピーする必要があります。  

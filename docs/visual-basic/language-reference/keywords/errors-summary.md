@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - errors [Visual Basic]
 ms.assetid: 2557da60-c6dc-4e99-8128-fceb6f8a0736
-ms.openlocfilehash: f2cab2dab8e5ea5981ebc375c1aaa901302a9921
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ed3e4b358c7364fd555f753e219df96a596b4231
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373863"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90868848"
 ---
 # <a name="errors-summary-visual-basic"></a>エラーの概要 (Visual Basic)
+
 Visual Basic 言語のキーワードとランタイム ライブラリ メンバーを、目的と使用方法に応じて編成しました。  
   
 |アクション|言語要素|  

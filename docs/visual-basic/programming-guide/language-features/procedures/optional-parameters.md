@@ -12,14 +12,15 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: 4e07b75c94b4aea681e6e862e161bda80b2833fc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 73a51ab65a8ea4c38b6fd6737279fb19fb1cfe73
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84364332"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071860"
 ---
 # <a name="optional-parameters-visual-basic"></a>省略可能なパラメーター (Visual Basic)
+
 プロシージャのパラメーターを省略可能にすると、呼び出し時に引数を指定する必要がなくなります。 "*省略可能なパラメーター*" は、プロシージャ定義で `Optional` キーワードによって示されます。 次の規則が適用されます。  
   
 - プロシージャ定義のすべての省略可能なパラメーターについて、既定値を指定する必要があります。  
@@ -35,6 +36,7 @@ Sub name(ByVal parameter1 As datatype1, Optional ByVal parameter2 As datatype2 =
 ```  
   
 ## <a name="calling-procedures-with-optional-parameters"></a>省略可能なパラメーターを使ったプロシージャ呼び出し  
+
  省略可能なパラメーターを使ってプロシージャを呼び出すときには、引数を指定するかどうかを選択できます。 引数を指定しない場合は、そのパラメーターに対して宣言されている既定値が使用されます。  
   
  引数リストで省略可能な引数を省略する場合は、コンマを続けて、省略する引数の位置を表します。 次の例では、1 番目と 4 番目の引数は指定されていますが、2 番目と 3 番目の引数は省略されています。  
@@ -50,6 +52,7 @@ Sub name(argument 1, , , argument 4)
  [!code-vb[VbVbcnProcedures#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#47)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>省略可能な引数があるかどうかの確認  
+
  引数が省略されているのか、呼び出し元のコードで既定値が明示的に指定されているのかについて、プロシージャで実行時に検出することはできません。 この区別が必要な場合は、ありそうにない値を既定値に設定します。 次のプロシージャでは、省略可能なパラメーター `office` を定義し、その既定値 `QJZ` をテストして、呼び出しで省略されているかどうかを確認します。  
   
  [!code-vb[VbVbcnProcedures#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#46)]  
@@ -57,6 +60,7 @@ Sub name(argument 1, , , argument 4)
  省略可能なパラメーターが `String` などの参照型の場合は、`Nothing` を既定値として使用できます。ただし、 が引数の値として使用されることが予想される場合を除きます。  
   
 ## <a name="optional-parameters-and-overloading"></a>省略可能なパラメーターとオーバーロード  
+
  省略可能なパラメーターを持つプロシージャを定義するには、オーバーロードを使用する方法もあります。 省略可能なパラメーターが 1 つあるとすると、パラメーターを受け取る場合と受け取らない場合の、2 つのオーバーロードされたバージョンのプロシージャを定義できます。 この方法は、省略可能なパラメーターの数が増えるにつれて複雑になります。 しかし、それぞれの省略可能な引数が呼び出しプログラムによって指定されているかどうかを確実に把握できるという利点があります。  
   
 ## <a name="see-also"></a>関連項目

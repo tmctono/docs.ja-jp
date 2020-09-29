@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fa93af15-28af-4b5e-846b-897308410edb
-ms.openlocfilehash: 481c0ed7e39b8f958ccdae01e4589d54b3ff2446
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f91d009e66f1f0da25e508994040d7e9f80fc681
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783580"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91147867"
 ---
 # <a name="method-based-query-syntax-examples-set-operators-linq-to-dataset"></a>メソッド ベースのクエリ構文例:集合演算子 (LINQ to DataSet)
+
 このトピックの例では、<xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Except%2A>、<xref:System.Linq.Enumerable.Intersect%2A>、<xref:System.Linq.Enumerable.Union%2A> の各演算子を使用して、データ行の集合に対して値ベースの比較操作を実行する方法を示します。[DataSet へのデータの読み込み](loading-data-into-a-dataset.md)。<xref:System.Data.DataRowComparer> について詳しくは、「[DataRow の比較](comparing-datarows-linq-to-dataset.md)」をご覧ください。  
   
  これらの例で使用されている `FillDataSet` メソッドは、「[DataSet へのデータの読み込み](loading-data-into-a-dataset.md)」で指定されています。  
@@ -29,6 +30,7 @@ ms.locfileid: "70783580"
 ## <a name="distinct"></a>Distinct  
   
 ### <a name="example"></a>例  
+
  この例では、<xref:System.Linq.Enumerable.Distinct%2A> メソッドを使用してシーケンス内の重複する要素を削除します。  
   
  [!code-csharp[DP LINQ to DataSet Examples#DistinctRows](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#distinctrows)]
@@ -37,6 +39,7 @@ ms.locfileid: "70783580"
 ## <a name="except"></a>除く  
   
 ### <a name="example"></a>例  
+
  この例では、最初のテーブルにのみ存在し、かつ 2 つ目のテーブルには存在しない連絡先だけを、<xref:System.Linq.Enumerable.Except%2A> メソッドを使用して取得します。  
   
  [!code-csharp[DP LINQ to DataSet Examples#Except2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#except2)]
@@ -45,6 +48,7 @@ ms.locfileid: "70783580"
 ## <a name="intersect"></a>交差  
   
 ### <a name="example"></a>例  
+
  この例では、両方のテーブルに存在する連絡先を <xref:System.Linq.Enumerable.Intersect%2A> メソッドを使用して取得します。  
   
  [!code-csharp[DP LINQ to DataSet Examples#Intersect2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#intersect2)]
@@ -53,6 +57,7 @@ ms.locfileid: "70783580"
 ## <a name="union"></a>和集合  
   
 ### <a name="example"></a>例  
+
  この例では、<xref:System.Linq.Enumerable.Union%2A> メソッドを使用して、2 つのテーブルのいずれかから一意の連絡先を取得します。  
   
  [!code-csharp[DP LINQ to DataSet Examples#Union2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#union2)]

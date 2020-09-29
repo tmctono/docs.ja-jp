@@ -19,14 +19,15 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: 177ff6c6fe15c57563d2f62ed8927f9ee975be48
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c0e10f5593ce5c81002233516444e415571541f3
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393001"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058535"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>拡大変換と縮小変換 (Visual Basic)
+
 型変換に関する重要な考慮事項は、変換結果が変換先のデータ型の範囲内に収まるかどうかです。  
   
  "*拡大変換*" では、値が元のデータのあらゆる値を収容できるデータ型に変更されます。  拡大変換では変換元の値が保持されますが、その表現が変化する可能性があります。 そのようになるのは、整数型から `Decimal`、または `Char` から `String` に変換した場合です。  
@@ -34,6 +35,7 @@ ms.locfileid: "84393001"
  *縮小変換* により、有効値の一部を保持できない可能性のあるデータ型に値が変更されます。 たとえば、小数値を整数型に変換すると丸められます。また、`Boolean` に変換される数値型は `True` または `False` に縮小されます。  
   
 ## <a name="widening-conversions"></a>拡大変換  
+
  次の表は、標準の拡大変換を示しています。  
   
 |データの種類|拡大変換先のデータ型<sup>1</sup>|  
@@ -66,6 +68,7 @@ ms.locfileid: "84393001"
  拡大変換は実行時に必ず成功し、データの損失が発生することはありません。 [Option Strict ステートメント](../../../language-reference/statements/option-strict-statement.md)で、型チェック スイッチが `On` と `Off` のどちらに設定されていても、これらは常に暗黙で実行できます。  
   
 ## <a name="narrowing-conversions"></a>縮小変換  
+
  標準的な縮小変換には、次のようなものがあります。  
   
 - 前の表に示した拡大変換の逆方向 (すべての型のそれ自体への拡大変換を除く)  
@@ -84,9 +87,11 @@ ms.locfileid: "84393001"
 > `For Each…Next` コレクション内の要素からループ制御変数への変換では、縮小変換エラーが抑制されます。 詳細と例については、「[For Each...Next ステートメント](../../../language-reference/statements/for-each-next-statement.md)」の縮小変換に関するセクションを参照してください。  
   
 ### <a name="when-to-use-narrowing-conversions"></a>縮小変換を使用する場合  
+
  縮小変換を使用するのは、変換元の値を変換先データ型に変換することができ、エラーやデータの損失が発生しないとわかっている場合です。 たとえば、"True" または "False" のいずれかが含まれていることがわかっている `String` がある場合、`CBool` キーワードを使用して `Boolean` に変換できます。  
   
 ## <a name="exceptions-during-conversion"></a>変換時の例外  
+
  拡大変換は常に成功するため、例外はスローされません。 縮小変換では、エラーが発生した場合によくスローされるのは次の例外です。  
   
 - <xref:System.InvalidCastException> — 2 つの型の間に変換が定義されていない場合  
@@ -96,6 +101,7 @@ ms.locfileid: "84393001"
  クラスまたは構造体によって、そのクラスまたは構造体との間の変換演算子として使用される [CType 関数](../../../language-reference/functions/ctype-function.md)が定義されている場合、その `CType` によって該当する例外がスローされます。 また、この `CType` が Visual Basic 関数または .NET Framework メソッドを呼び出して、さらにさまざまな例外がスローされる可能性があります。  
   
 ## <a name="changes-during-reference-type-conversions"></a>参照型変換時の変更  
+
  "*参照型*" からの変換では、ポインターが値にコピーされるだけです。 値そのものがコピーされたり変更されたりすることはありません。 変更できるのは、ポインターを保持している変数のデータ型だけです。 次の例では、データ型は派生クラスから基本クラスに変換されますが、両方の変数が参照するオブジェクトは変更されません。  
   
 ```vb  

@@ -18,14 +18,15 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 1ffe3e45a296d02364f488540d987d85133013bd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 396770a2fc6996475d408cf8023a4eafdf6d3011
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404383"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869651"
 ---
 # <a name="option-compare-statement"></a>Option Compare ステートメント
+
 文字列データを比較するときに使用する既定の比較方法を宣言します。  
   
 ## <a name="syntax"></a>構文  
@@ -42,6 +43,7 @@ Option Compare { Binary | Text }
 |`Text`|任意。 文字列比較は、システムのロケールによって決まる、大文字と小文字を区別しないテキストの並べ替え順序に基づきます。<br /><br /> この種類の比較は、文字列にすべてのテキスト文字が含まれており、大文字と小文字を区別しないことや類縁の文字など、アルファベットの等値を考慮して文字列を比較する場合に便利です。 たとえば、`A` と `a` は等しく、`Ä` と `ä` は `B` と `b` よりも前に位置すると見なされるようにできます。|  
   
 ## <a name="remarks"></a>Remarks  
+
  使用した場合、`Option Compare` ステートメントはファイル内で他のソース コード ステートメントよりも前に記述する必要があります。  
   
  `Option Compare` ステートメントでは、文字列の比較方法 (`Binary` または `Text`) を指定します。  既定のテキスト比較方法は `Binary` です。  
@@ -59,6 +61,7 @@ Option Compare { Binary | Text }
  `(A=a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
 ## <a name="when-an-option-compare-statement-is-not-present"></a>Option Compare ステートメントが指定されていない場合  
+
  ソース コードに `Option Compare` ステートメントが含まれていない場合は、[[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) の **[Option Compare]** 設定が使用されます。 コマンド ライン コンパイラを使用した場合は、[-optioncompare](../../reference/command-line-compiler/optioncompare.md) コンパイラ オプションによって指定された設定が使用されます。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -78,11 +81,13 @@ Option Compare { Binary | Text }
 - **vbc** コマンドに [-optioncompare](../../reference/command-line-compiler/optioncompare.md) コンパイラ オプションを含めます。  
   
 ## <a name="example"></a>例  
+
  次の例では、`Option Compare` ステートメントを使用して、既定の文字列比較方法としてバイナリ比較を設定します。 このコードを使用するには、`Option Compare Binary` ステートメントのコメントを解除し、ソース ファイルの先頭に配置します。  
   
  [!code-vb[VbVbalrStatements#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#45)]  
   
 ## <a name="example"></a>例  
+
  次の例では、`Option Compare` ステートメントを使用して、既定の文字列比較方法として大文字と小文字を区別しないテキスト並べ替え順序を設定します。 このコードを使用するには、`Option Compare Text` ステートメントのコメントを解除し、ソース ファイルの先頭に配置します。  
   
  [!code-vb[VbVbalrStatements#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#46)]  

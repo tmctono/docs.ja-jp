@@ -7,14 +7,15 @@ helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: 02d258084aaaa53dcc559cfaa0dec27556351037
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3025adfe8c881a08df3b5f03253510c263c624d1
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404487"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873229"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface ステートメント (Visual Basic)
+
 インターフェイスの名前を宣言し、インターフェイスを構成しているメンバーの定義を取り込みます。  
   
 ## <a name="syntax"></a>構文  
@@ -57,6 +58,7 @@ End Interface
 |`End Interface`|`Interface` の定義を終了します。|  
   
 ## <a name="remarks"></a>Remarks  
+
  *インターフェイス*では、クラスおよび構造体で実装できる、プロパティやプロシージャなどの一連のメンバーを定義します。 インターフェイスでは、メンバーのシグネチャのみを定義し、それらの内部動作は定義しません。  
   
  クラスまたは構造体では、インターフェイスで定義されているすべてのメンバーにコードを提供することによって、インターフェイスを実装します。 最後に、アプリケーションによって、そのクラスまたは構造体からインスタンスが作成されると、メモリ内にオブジェクトが存在し、実行されます。 詳細については、「[オブジェクトとクラス](../../programming-guide/language-features/objects-and-classes/index.md)」と「[インターフェイス](../../programming-guide/language-features/interfaces/index.md)」を参照してください。  
@@ -106,6 +108,7 @@ End Interface
 - **有効期間。** インターフェイス自体には、有効期間やメンバーがありません。 クラスでインターフェイスを実装し、そのクラスのインスタンスとしてオブジェクトが作成される場合、そのオブジェクトには、それが実行されているアプリケーション内での有効期間があります。 詳細については、「[Class ステートメント](class-statement.md)」の「有効期間」を参照してください。  
   
 ## <a name="example"></a>例  
+
  次の例では、`Interface` ステートメントを使用して、`thisInterface` という名前のインターフェイスを定義しています。これは、`Property` ステートメントと `Function` ステートメントで実装する必要があります。  
   
  [!code-vb[VbVbalrStatements#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#40)]  

@@ -2,14 +2,15 @@
 title: '方法: リフレクションを使用してアセンブリのメタデータをクエリする (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 53caa336-ab83-4181-b0f6-5c87c5f9e4ee
-ms.openlocfilehash: a4f73bd2c8c01cbf92fac67991f01a1cb3dee932
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fda27f41d31bf8aa3931bf5923ff4011628107fe
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396455"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075331"
 ---
 # <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-visual-basic"></a>方法: リフレクションを使用してアセンブリのメタデータにクエリを実行する (LINQ) (Visual Basic)
+
 次の例では、LINQ でリフレクションを使用して、指定した検索条件に一致するメソッドについてのメタデータを取得する方法を示します。 この例のクエリでは、配列などの列挙可能な型を返すすべてのメソッドの名前をアセンブリ内で検索します。  
   
 ## <a name="example"></a>例  

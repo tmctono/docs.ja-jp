@@ -7,14 +7,15 @@ helpviewer_keywords:
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-ms.openlocfilehash: 7feaf71fa1c59c24aa751f2b9e28328d47ba357c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1add054a6cb6468f4581f92ca3a258c5b0cdc77d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413067"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058860"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>方法: Visual Basic で配列変数を初期化する
+
 配列リテラルを `New` 句に含めること、および配列の初期値を指定することで、配列変数を初期化します。 型を指定するか、配列リテラル内の値から推論することを許可できます。 型の推論方法の詳細については、[配列](index.md)に関するページで、配列への初期値の取り込みに関するトピックをご覧ください。  
   
 ### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>配列リテラルを使用して配列変数を初期化するには  

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-ms.openlocfilehash: c0fb3e137010390097a68aea161efcff93839d94
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7d85066d4678ee2a53b8339bee2db20374482579
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414338"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071405"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>方法: プロパティに値を格納する (Visual Basic)
+
 プロパティに値を格納するには、代入ステートメントの左辺にプロパティ名を指定します。  
   
  プロパティの `Set` プロシージャによって値が格納されますが、名前で明示的に呼び出すことはありません。 変数を使用する場合と同様に、プロパティを使用します。 Visual Basic によってプロパティのプロシージャが呼び出されます。  

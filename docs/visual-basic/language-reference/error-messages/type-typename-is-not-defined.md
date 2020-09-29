@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30002
 ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
-ms.openlocfilehash: 89e2d1d18b456c96f62d6b9ee1dd8dc9d41bf665
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3c22e6a5199bd52cb9fae66a15a66ac9ce095e81
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84386933"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872195"
 ---
 # <a name="type-typename-is-not-defined"></a>型 '\<typename>' が定義されていません。
+
 ステートメントで、定義されていない型の参照が行われました。 `Enum`、`Structure`、`Class`、`Interface` などの宣言ステートメントで型を定義できます。  
   
  **エラー ID:** BC30002  

@@ -10,17 +10,19 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 5561812a53e2fe45c3ad4d12d0e18a8a1e948559
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 724407fed5bf90ed6e3e470cbabc9e42856cb99a
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411767"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91087480"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>オブジェクト初期化子:名前付きの型と匿名型 (Visual Basic)
+
 オブジェクト初期化子を使用すると、1 つの式を使用して複雑なオブジェクトのプロパティを指定できます。 それらを使用して、名前付きの型と匿名型のインスタンスを作成できます。  
   
 ## <a name="declarations"></a>宣言  
+
  名前付きの型と匿名型のインスタンスの宣言はほぼ同じように見えますが、それらの効果は同じではありません。 各カテゴリには、独自の機能と制限があります。 次の例は、オブジェクト初期化子リストを使用して、名前付きクラス `Customer` のインスタンスを宣言して初期化する便利な方法を示しています。 クラスの名前がキーワード `New` の後に指定されていることに注意してください。  
   
  [!code-vb[VbVbalrObjectInit#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#1)]  
@@ -32,6 +34,7 @@ ms.locfileid: "84411767"
  2 つの宣言の要件と結果は同じではありません。 `namedCust` の場合、`Name` プロパティを持つ `Customer` クラスが既に存在している必要があり、宣言によってそのクラスのインスタンスが作成されます。 `anonymousCust` の場合、コンパイラによって、1 つのプロパティ、`Name` という文字列を持つ新しいクラスが定義され、そのクラスの新しいインスタンスが作成されます。  
   
 ## <a name="named-types"></a>名前付きの型  
+
  オブジェクト初期化子は、型のコンストラクターを呼び出し、1 つのステートメントで一部またはすべてのプロパティの値を設定するシンプルな方法を提供します。 コンパイラによって、ステートメントの適切なコンストラクターが呼び出されます。引数が指定されていない場合はパラメーターなしのコンストラクター、または 1 つ以上の引数が渡された場合はパラメーター化されたコンストラクターです。 その後、指定したプロパティが、初期化子リストに提示されている順序で初期化されます。  
   
  初期化子リストの各初期化は、クラスのメンバーへの初期値の代入から構成されます。 メンバーの名前とデータ型は、クラスを定義するときに決定します。 次の例では、`Customer` クラスが存在する必要があり、文字列値を受け入れる `Name` と `City` という名前のメンバーが必要です。  
@@ -57,6 +60,7 @@ ms.locfileid: "84411767"
  ただし、初期化リストを空にすることはできません。 初期化されていないプロパティでは、それらの既定値が保持されます。  
   
 ### <a name="type-inference-with-named-types"></a>名前付きの型による型の推定  
+
  オブジェクト初期化子とローカル型推論を組み合わせて、`cust1` の宣言のコードを短縮できます。 これにより、変数宣言で `As` 句を省略できます。 変数のデータ型は、代入によって作成されたオブジェクトの型から推論されます。 次の例では、`cust6` の型は `Customer` です。  
   
  [!code-vb[VbVbalrObjectInit#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#8)]  
@@ -94,6 +98,7 @@ ms.locfileid: "84411767"
      `' Dim c2 = New Customer with {.Address.City = "Springfield"}`  
   
 ## <a name="anonymous-types"></a>匿名型  
+
  匿名型では、オブジェクト初期化子を使用して、明示的に定義して名前を付けない新しい型のインスタンスを作成します。 代わりに、コンパイラによって、オブジェクト初期化子リストに指定したプロパティに従って型が生成されます。 型の名前を指定しないため、*匿名型*と呼ばれます。 たとえば、次の宣言を先述の `cust6` の宣言と比較します。  
   
  [!code-vb[VbVbalrObjectInit#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#13)]  

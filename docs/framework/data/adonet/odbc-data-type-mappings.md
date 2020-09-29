@@ -2,14 +2,15 @@
 title: ODBC データ型のマッピング
 ms.date: 03/30/2017
 ms.assetid: 43c35d32-831d-480f-a150-78f7e869d17f
-ms.openlocfilehash: 6611ca35ab5e5b44fa9adacfe25593bb4a5b9c44
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b08c649c148aacf4050c1f7ebcc17f79d1305e0c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783515"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150714"
 ---
 # <a name="odbc-data-type-mappings"></a>ODBC データ型のマッピング
+
 次の表では、.NET Framework Data Provider for ODBC (<xref:System.Data.Odbc>) のデータ型から推論される .NET Framework の型を示します。 <xref:System.Data.Odbc.OdbcDataReader> の型指定されたアクセサー メソッドも示します。  
   
 |ODBC 型|.NET Framework 型|.NET Framework の型指定されたアクセサー|  

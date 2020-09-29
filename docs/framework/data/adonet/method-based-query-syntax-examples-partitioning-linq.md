@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a582c53f-f203-44ae-a797-d7f169a4fbb5
-ms.openlocfilehash: 7e01bd9702ae267f80ecf24de0c0cc90d638a84c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0ef7176ccffb7037a7d4496cc7d4da7991741d38
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783588"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91147932"
 ---
 # <a name="method-based-query-syntax-examples-partitioning-linq"></a>メソッド ベースのクエリ構文例:パーティション分割 (LINQ to DataSet)
+
 このトピックでは、<xref:System.Linq.Enumerable.Skip%2A>、<xref:System.Linq.Enumerable.SkipWhile%2A>、<xref:System.Linq.Enumerable.Take%2A>、<xref:System.Linq.Enumerable.TakeWhile%2A> の各メソッドで、クエリ式の構文を使って <xref:System.Data.DataSet> に対するクエリを実行する例を紹介しています。  
   
  これらの例で使用されている `FillDataSet` メソッドは、「[DataSet へのデータの読み込み](loading-data-into-a-dataset.md)」で指定されています。  
@@ -29,12 +30,14 @@ ms.locfileid: "70783588"
 ## <a name="skip"></a>Skip  
   
 ### <a name="example"></a>例  
+
  この例では、<xref:System.Linq.Enumerable.Skip%2A> テーブルから最初の 5 つを除くすべての連絡先を、`Contact` メソッドを使って取得します。  
   
  [!code-csharp[DP LINQ to DataSet Examples#SkipSimple](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#skipsimple)]
  [!code-vb[DP LINQ to DataSet Examples#SkipSimple](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#skipsimple)]  
   
 ### <a name="example"></a>例  
+
  この例では、Seattle から最初の 2 つを除くすべての住所を、<xref:System.Linq.Enumerable.Skip%2A> メソッドを使って取得します。  
   
  [!code-csharp[DP LINQ to DataSet Examples#SkipNested](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#skipnested)]
@@ -43,6 +46,7 @@ ms.locfileid: "70783588"
 ## <a name="skipwhile"></a>SkipWhile  
   
 ### <a name="example"></a>例  
+
  この例では、<xref:System.Linq.Enumerable.OrderBy%2A> メソッドおよび <xref:System.Linq.Enumerable.SkipWhile%2A> メソッドを使用し、表示価格が 300.00 を超える製品を `Product` テーブルから取得します。  
   
  [!code-csharp[DP LINQ to DataSet Examples#SkipWhileSimple_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#skipwhilesimple_mq)]
@@ -51,12 +55,14 @@ ms.locfileid: "70783588"
 ## <a name="take"></a>Take  
   
 ### <a name="example"></a>例  
+
  この例では、<xref:System.Linq.Enumerable.Take%2A> テーブルから最初の 5 つの連絡先だけを、`Contact` メソッドを使って取得します。  
   
  [!code-csharp[DP LINQ to DataSet Examples#TakeSimple](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#takesimple)]
  [!code-vb[DP LINQ to DataSet Examples#TakeSimple](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#takesimple)]  
   
 ### <a name="example"></a>例  
+
  この例では、Seattle から最初の 3 つの住所を、<xref:System.Linq.Enumerable.Take%2A> メソッドを使って取得します。  
   
  [!code-csharp[DP LINQ to DataSet Examples#TakeNested](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#takenested)]
@@ -65,6 +71,7 @@ ms.locfileid: "70783588"
 ## <a name="takewhile"></a>TakeWhile  
   
 ### <a name="example"></a>例  
+
  この例では、<xref:System.Linq.Enumerable.OrderBy%2A> メソッドおよび <xref:System.Linq.Enumerable.TakeWhile%2A> メソッドを使用し、表示価格が 300.00 未満の製品を `Product` テーブルから取得します。  
   
  [!code-csharp[DP LINQ to DataSet Examples#TakeWhileSimple_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#takewhilesimple_mq)]

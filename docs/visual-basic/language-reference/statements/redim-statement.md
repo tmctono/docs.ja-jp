@@ -26,14 +26,15 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 82f19762865fdf3c3f32a0349e21e3b97bebd567
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 17bc806f2e92c61f1dd7425de40b1a68f926a583
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404279"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872027"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim ステートメント (Visual Basic)
+
 配列変数の記憶域を再割り当てします。  
   
 ## <a name="syntax"></a>構文  
@@ -51,6 +52,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 |`boundlist`|必須です。 再定義された配列の各次元の境界を一覧表示します。|  
   
 ## <a name="remarks"></a>Remarks  
+
  `ReDim` ステートメントを使用し、既に宣言されている配列の 1 つまたは複数の次元のサイズを変更できます。 大きな配列があり、その要素の一部が必要ない場合、`ReDim` で配列のサイズを減らし、メモリを解放できます。 一方で、配列に要素を追加する必要がある場合、`ReDim` は要素を追加できます。  
   
  `ReDim` ステートメントは配列のみを対象としています。 スカラー (単一の値のみが含まれる変数)、コレクション、構造体では有効ではありません。 `Array` 型の変数を宣言する場合、`ReDim` ステートメントには新しい配列を作成するために十分な型情報が与えられません。  
@@ -86,6 +88,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 - **Preserve による初期化。** `Preserve` を指定する場合、Visual Basic では既存の配列から新しい配列に要素がコピーされます。  
   
 ## <a name="example"></a>例  
+
  次の例では、配列の既存データを失うことなく動的配列の最後の次元のサイズを増やし、その後、一部のデータを損失しサイズを減らします。 最後に、サイズを減らして元の値に戻し、すべての配列要素を再初期化します。  
   
  [!code-vb[VbVbalrStatements#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#52)]  

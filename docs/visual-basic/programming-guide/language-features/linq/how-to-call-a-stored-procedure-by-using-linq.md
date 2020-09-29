@@ -7,14 +7,15 @@ helpviewer_keywords:
 - stored procedures [LINQ to SQL]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
-ms.openlocfilehash: b451642a16f36c4f7fd19c853fdfd2282f5bede5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7e5fecf0c4c0d3a561ec7d0c4ac03c9d9ce7f759
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405031"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075136"
 ---
 # <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>方法: LINQ を使用してストアド プロシージャを呼び出す (Visual Basic)
+
 統合言語クエリ (LINQ) を使用すると、ストアド プロシージャなどのデータベース オブジェクトを始めとするデータベース情報に簡単にアクセスできます。  
   
  次の例では、SQL Server データベースのストアド プロシージャを呼び出すアプリケーションを作成する方法を示します。 このサンプルでは、データベース内の 2 つの異なるストアド プロシージャを呼び出す方法を示します。 各プロシージャは、クエリの結果を返します。 プロシージャのうちの 1 つは入力パラメーターを受け取りますが、もう 1 つのプロシージャはパラメーターを受け取りません。  

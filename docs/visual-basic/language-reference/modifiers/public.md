@@ -8,17 +8,19 @@ helpviewer_keywords:
 - Public keyword [Visual Basic], syntax
 - Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
-ms.openlocfilehash: 35332e50227cdef6386362df17c10b5b2cdaa689
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f2b6a126435b111ef56ee2a9870ea6fbddf87901
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415350"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867684"
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
+
 1 つ以上の宣言されたプログラミング要素にアクセス制限がないことを示します。  
   
 ## <a name="remarks"></a>Remarks  
+
  クラス ライブラリなどのコンポーネントまたはコンポーネントのセットを公開する場合は、通常、アセンブリと相互運用できるコードでプログラミング要素にアクセスできるようにする必要があります。 要素に対してこのような無制限のアクセス権を付与するには、`Public` で宣言します。  
   
  パブリック アクセスは、プログラミング要素へのアクセスを制限する必要がない場合の通常のレベルです。 インターフェイス、モジュール、クラス、または構造体で宣言されている要素のアクセス レベルは、宣言しない場合、既定では `Public` になることに注意してください。  

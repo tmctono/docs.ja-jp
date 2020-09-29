@@ -9,14 +9,15 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 54203dfa-c24b-463f-9942-d5153e89e762
-ms.openlocfilehash: 53b0211c6304625edd7ac24fa52ff0c051d8f0a0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2fabcf6c6ceb38fe77d4eed4f02dcb5a5e447bf1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388090"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085673"
 ---
 # <a name="how-to-define-a-conversion-operator-visual-basic"></a>方法: 変換演算子を定義する (Visual Basic)
+
 クラスまたは構造体を定義している場合は、クラスまたは構造体の型と別のデータ型 (`Integer`、`Double`、`String` など) の間の型変換演算子を定義できます。  
   
  型変換をクラスまたは構造体内の [CType 関数](../../../language-reference/functions/ctype-function.md)プロシージャとして定義します。 すべての変換プロシージャは `Public Shared` である必要があります。また、それぞれ [Widening](../../../language-reference/modifiers/widening.md) または [Narrowing](../../../language-reference/modifiers/narrowing.md) を指定する必要があります。  
@@ -24,6 +25,7 @@ ms.locfileid: "84388090"
  クラスまたは構造体での演算子の定義は、演算子の "*オーバーロード*" とも呼ばれます。  
   
 ## <a name="example"></a>例  
+
  次の例では、`digit` という構造体と `Byte` の間の変換演算子を定義しています。  
   
  [!code-vb[VbVbcnProcedures#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#27)]  

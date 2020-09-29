@@ -17,22 +17,25 @@ helpviewer_keywords:
 - members [Visual Basic], Implements keyword
 - reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
-ms.openlocfilehash: 46ab1a1148e8d73d91293aedfc407e5efdc7cfb4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7c95cf76b1bac24e2a0f20857b8984d54ebbea85
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404564"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866165"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements 句 (Visual Basic)
+
 クラスまたは構造体のメンバーがインターフェイスで定義されているメンバーの実装を提供していることを示します。  
   
 ## <a name="remarks"></a>Remarks  
+
 `Implements` キーワードは、[Implements ステートメント](implements-statement.md)と同じではありません。 `Implements` ステートメントを使用して、クラスまたは構造体が 1 つ以上のインターフェイスを実装することを指定し、メンバーごとに `Implements` キーワードを使用して、実装するインターフェイスとメンバーを指定します。
 
 クラスまたは構造体がインターフェイスを実装する場合は、[Class ステートメント](class-statement.md)または [Structure ステートメント](structure-statement.md)の直後に `Implements` ステートメントを含める必要があります。また、インターフェイスによって定義されたすべてのメンバーを実装する必要があります。
 
 ## <a name="reimplementation"></a>再実装  
+
 派生クラスでは、基底クラスによって既に実装されているインターフェイス メンバーを再実装できます。 これは、基底クラスのメンバーのオーバーライドとは、次の点で異なります。
 
 - 基底クラスのメンバーは、再実装するために [Overridable](../modifiers/overridable.md) である必要はありません。

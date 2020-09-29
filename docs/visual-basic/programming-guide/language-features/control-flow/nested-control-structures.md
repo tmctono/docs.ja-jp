@@ -10,17 +10,19 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: 539ad639320615c1e53176fe47e5468864aa21d8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 290366d9d9428cefee108ac472fbe7c0eb66d82e
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414390"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91084165"
 ---
 # <a name="nested-control-structures-visual-basic"></a>入れ子になった制御構造 (Visual Basic)
+
 `For...Next` ループ内の `If...Then...Else` ブロックなど、制御ステートメントを他の制御ステートメントに配置することができます。 別の制御ステートメントに配置された制御ステートメントは、"*入れ子にされた*" ステートメントと呼ばれます。  
   
 ## <a name="nesting-levels"></a>入れ子のレベル  
+
  Visual Basic の制御構造は、必要な数のレベルで入れ子にできます。 一般的には、入れ子構造を読みやすくするには、各本体をインデントします。 統合開発環境 (IDE) エディターでは、これが自動的に行われます。  
   
  次の例では、プロシージャ `sumRows` は、マトリックスの各行の正の要素をすべて加算します。  
@@ -47,6 +49,7 @@ End Sub
 > 多くの制御構造で、キーワードの 1 つをクリックすると、構造内のすべてのキーワードが強調表示されます。 たとえば、`If...Then...Else` コンストラクションで `If` をクリックすると、コンストラクション内の `If`、`Then`、`ElseIf`、`Else`、および `End If` のすべてのインスタンスが強調表示されます。 次または前の強調表示されたキーワードに移動するには、Ctrl + Shift + ↓キーを押すか、Ctrl + Shift + ↑キーを押します。  
   
 ## <a name="nesting-different-kinds-of-control-structures"></a>入れ子にされたさまざまな種類の制御構造  
+
  ある種類の制御構造を、別の種類の制御構造の中で入れ子にできます。 次の例は、`For Each` ループ内の `With` ブロックと、`With` ブロック内の入れ子にされた `If` ブロックを使用しています。  
   
 ```vb
@@ -65,6 +68,7 @@ Next ctl
 ```  
   
 ## <a name="overlapping-control-structures"></a>制御構造のオーバーラップ  
+
  制御構造をオーバーラップさせることはできません。 つまり、入れ子構造は、次の最も内側にある構造に完全に含まれている必要があります。 たとえば、次の配置は、内側の `With` ブロックが終了する前に `For` ループが終了するため無効です。  
   
  ![無効な入れ子の例を示す図。](./media/nested-control-structures/example-invalid-nesting.gif)

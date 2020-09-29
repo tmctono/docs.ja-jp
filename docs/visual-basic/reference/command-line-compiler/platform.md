@@ -6,14 +6,15 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: a6226b73d5d5d4d48a71afe39e8a546019d4c0bc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 488a1da6b25bcb4b42f0d355c6faee542046d0f5
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352342"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098892"
 ---
 # <a name="-platform-visual-basic"></a>-platform (Visual Basic)
+
 出力ファイルをどのプラットフォーム用の共通言語ランタイム (CLR) で実行するかを指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -24,7 +25,7 @@ ms.locfileid: "74352342"
   
 ## <a name="arguments"></a>引数  
   
-|用語|定義|  
+|期間|定義|  
 |---|---|  
 |`x86`|32 ビット x86 互換 CLR で実行されるように、アセンブリをコンパイルします。|  
 |`x64`|AMD64 または EM64T 命令セットをサポートするコンピューター上の 64 ビット CLR で実行されるように、アセンブリをコンパイルします。|  
@@ -34,6 +35,7 @@ ms.locfileid: "74352342"
 |`anycpu32bitpreferred`|任意のプラットフォーム上で実行されるように、アセンブリをコンパイルします。 アプリケーションは、Windows の 32 ビット バージョンおよび 64 ビット バージョンの両方で、 32 ビット アプリケーションとして実行されます。 このフラグは、実行可能ファイル (.EXE) に対してのみ有効であり、.NET Framework 4.5 が必要です。|  
   
 ## <a name="remarks"></a>Remarks  
+
  出力ファイルの対象となるプロセッサの種類を指定するには、`-platform` オプションを使用します。  
   
  通常、Visual Basic で記述された .NET Framework アセンブリは、プラットフォームに関係なく、同じように実行されます。 ただし、プラットフォーム間で動作が異なる場合があります。 その一般的な例を次に示します。  
@@ -75,6 +77,7 @@ ms.locfileid: "74352342"
      詳細については、「[[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)」を参照してください。  
   
 ## <a name="example"></a>例  
+
  次の例は、`-platform` コンパイラ オプションを使用する方法を示しています。  
   
 ```console

@@ -10,14 +10,15 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-ms.openlocfilehash: 49d4c36805b64d7232a94e818256723a0437b6ef
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b3524769567a56a87184bf916a3e5ccb1fd4fa1c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404188"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871760"
 ---
 # <a name="set-statement-visual-basic"></a>Set ステートメント (Visual Basic)
+
 値をプロパティに割り当てるのに使用する `Set` プロパティ プロシージャを宣言します。  
   
 ## <a name="syntax"></a>構文  
@@ -29,6 +30,7 @@ End Set
 ```  
   
 ## <a name="parts"></a>指定項目  
+
  `attributelist`  
  任意。 「[属性リスト](attribute-list.md)」を参照してください。  
   
@@ -58,6 +60,7 @@ End Set
  必須です。 `Set` プロパティ プロシージャの定義を終了します。  
   
 ## <a name="remarks"></a>Remarks  
+
  プロパティが `ReadOnly` とマークされている場合を除き、すべてのプロパティには `Set` プロパティ プロシージャが必要です。 `Set` プロシージャは、プロパティの値を設定するために使用します。  
   
  Visual Basic は、プロパティに格納される値が代入ステートメントによって提供されるときに、プロパティの `Set` プロシージャを自動的に呼び出します。  
@@ -83,6 +86,7 @@ End Set
      `Exit Property` および `Return` ステートメントでは、プロパティ プロシージャがすぐに終了します。 任意の数の `Exit Property` および `Return` ステートメントをプロシージャ内の任意の場所に記述でき、`Exit Property` ステートメントと `Return` ステートメントを混在させることができます。  
   
 ## <a name="example"></a>例  
+
  次の例では、`Set` ステートメントを使用してプロパティの値を設定します。  
   
  [!code-vb[VbVbalrStatements#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#55)]  

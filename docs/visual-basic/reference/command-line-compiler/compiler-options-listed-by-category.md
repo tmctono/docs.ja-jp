@@ -4,14 +4,15 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 533d3da2f76854d311262ce97b43f240acab5f7d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 77a130b684d26cf7e4b9df9382348a371a60bc5d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408752"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072042"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic コンパイラ オプション一覧 (カテゴリ別)
+
 Visual Basic コマンドライン コンパイラは、Visual Studio 統合開発環境 (IDE) 内からプログラムをコンパイルする方法の代替手段として提供されています。 機能のカテゴリ順に並べ替えた Visual Basic コマンド ライン コンパイラ オプションの一覧を次に示します。  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - event handling, troubleshooting
 - event handlers, troubleshooting
 ms.assetid: e1c8759f-5370-4308-8476-8c48b73509bf
-ms.openlocfilehash: 4e7bedd1de5197fcf8b69091f4cc878f41b01cd5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d228e916e45054bc088aa633afd9d591e592210d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405107"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058002"
 ---
 # <a name="troubleshooting-inherited-event-handlers-in-visual-basic"></a>Visual Basic での継承されたイベント ハンドラーのトラブルシューティング
+
 このトピックでは、継承されたコンポーネントのイベント ハンドラーで生じる一般的な問題を示します。  
   
 ## <a name="procedures"></a>プロシージャ  

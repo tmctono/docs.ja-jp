@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
-ms.openlocfilehash: 79faf0038b2b313bdc21e12c8ae76854bcd6957f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8d27039c28cd3f680e441db9182dd415bd8e91ba
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406574"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870271"
 ---
 # <a name="underlying-type-typename-of-enum-is-not-cls-compliant"></a>enum の基になる型 '\<typename>' は CLS に準拠していません。
+
 この列挙型に指定されたデータ型は、[言語への非依存性、および言語非依存コンポーネント](../../../standard/language-independence-and-language-independent-components.md) (CLS) の一部ではありません。 .NET Framework と Visual Basic では、このデータ型をサポートしているため、コンポーネント内でエラーにはなりません。 ただし、厳密に CLS に準拠しているコードで記述された別のコンポーネントでは、このデータ型をサポートしていない可能性があります。 そのようなコンポーネントでは、使用しているコンポーネントと正常にやり取りできない場合があります。  
   
  次の Visual Basic データ型は CLS に準拠していません。  

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-ms.openlocfilehash: 2c92cd4a869acbb7c8c52fbf4117112967386498
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 983e2fd22badf4296004404d885df0a07ab2dc74
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387895"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071561"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>方法: プロパティから値を取得する (Visual Basic)
+
 プロパティの値を取得するには、プロパティ名を式に含めます。  
   
  プロパティの `Get` プロシージャによって値が取得されますが、名前で明示的に呼び出すことはありません。 変数を使用する場合と同様に、プロパティを使用します。 Visual Basic によってプロパティのプロシージャが呼び出されます。  

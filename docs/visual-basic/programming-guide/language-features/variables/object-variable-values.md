@@ -7,17 +7,19 @@ helpviewer_keywords:
 - data types [Visual Basic], object variable
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
-ms.openlocfilehash: 1dd3e8cd68086fe116daf0678a1a19881f1ae9c3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 800b9754ce27cc6a494dd781d06f4bdca8a10e87
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410349"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91080232"
 ---
 # <a name="object-variable-values-visual-basic"></a>オブジェクト変数の値 (Visual Basic)
+
 [Object データ型](../../../language-reference/data-types/object-data-type.md)の変数は、任意の型のデータを参照できます。 `Object` 変数に格納した値はメモリ内のどこかに保持されますが、変数自体にはデータへのポインターが保持されます。  
   
 ## <a name="object-classifier-functions"></a>オブジェクト分類子関数  
+
  Visual Basic には、次の表に示すように、`Object` 変数の参照先に関する情報を返す関数が用意されています。  
   
 |関数|オブジェクト変数が参照している場合に True を返す|  
@@ -33,6 +35,7 @@ ms.locfileid: "84410349"
  これらの関数を使用すると、操作やプロシージャに無効な値が送信されるのを回避できます。  
   
 ## <a name="typeof-operator"></a>TypeOf 演算子  
+
  また、[TypeOf 演算子](../../../language-reference/operators/typeof-operator.md)を使用すると、オブジェクト変数が現在、特定のデータ型を参照しているかどうかを判断することもできます。 オペランドのランタイム型が指定された型から派生しているか、または指定された型を実装している場合、`TypeOf`...`Is` 式の結果は `True` になります。  
   
  次の例では、値型と参照型を参照するオブジェクト変数に対して `TypeOf` を使用しています。  
@@ -64,6 +67,7 @@ If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")
  オブジェクト変数 `num` は `Integer` 型のデータを参照し、`frm` はクラス <xref:System.Windows.Forms.Form> のオブジェクトを参照します。  
   
 ## <a name="object-arrays"></a>オブジェクトの配列  
+
  `Object` 変数の配列を宣言して使用することができます。 これは、さまざまなデータ型とオブジェクト クラスを処理する必要がある場合に便利です。 配列内のすべての要素が、宣言されたデータ型と同じである必要があります。 このデータ型を `Object` として宣言すると、オブジェクトとクラス インスタンスを配列内の他のデータ型と共に格納できます。  
   
 ## <a name="see-also"></a>関連項目

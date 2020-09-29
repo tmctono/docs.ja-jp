@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: e53c54dc446d9fea87a9b7a336a38ffaa31704e9
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 9478501ea98ec1b9d3ec2761bc4ebf3f6bef656c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125450"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152443"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (C# コンパイラ オプション)
+
 **-lib** オプションは、[-reference (C# コンパイラ オプション)](./reference-compiler-option.md) オプションによって参照されるアセンブリの場所を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -26,6 +27,7 @@ ms.locfileid: "89125450"
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `dir1`  
  参照されているアセンブリが現在の作業ディレクトリ (コンパイラを起動したディレクトリ) または共通言語ランタイムのシステム ディレクトリに見つからない場合にコンパイラが検索するディレクトリです。  
   
@@ -33,6 +35,7 @@ ms.locfileid: "89125450"
  アセンブリ参照を検索する 1 つまたは複数の追加ディレクトリです。 複数のディレクトリはコンマで区切り、それらの間に空白文字は入れません。  
   
 ## <a name="remarks"></a>注釈  
+
  コンパイラは、完全に修飾されていないアセンブリ参照を次の順序で検索します。  
   
 1. 現在の作業ディレクトリ。 これは、コンパイラを起動したディレクトリです。  
@@ -62,6 +65,7 @@ ms.locfileid: "89125450"
  このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>」を参照してください。  
   
 ## <a name="example"></a>例  
+
  t2.cs をコンパイルして .exe ファイルを作成します。 コンパイラは、作業ディレクトリと C ドライブのルート ディレクトリで、アセンブリ参照を探します。  
   
 ```console  

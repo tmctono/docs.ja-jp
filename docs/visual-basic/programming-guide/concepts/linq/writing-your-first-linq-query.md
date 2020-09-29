@@ -6,19 +6,21 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 9d85f9c0390a659e59e372ad949cffdd17715189
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c7d0595b991bdad6ef05b567f95ead8c7fccdbc2
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413259"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077281"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>初めての LINQ クエリの作成 (Visual Basic)
+
 "*クエリ*" は、データ ソースからデータを取得する式です。 クエリは、専用のクエリ言語で表されます。 これまでに、リレーショナル データベース用の SQL や XML 用の XQuery など、各種データ ソースに合わせてさまざまな言語が開発されてきました。 このため、アプリケーション開発者は、サポートするデータ ソースの種類やデータ形式ごとに、新しいクエリ言語を習得する必要がありました。  
   
  統合言語クエリ (LINQ) は、さまざまな種類のデータ ソースやデータ形式のデータを操作するための一貫したモデルを提供することにより、この負担を軽減します。 LINQ クエリでは、操作の対象は常にオブジェクトになります。 共通の基本的なコーディング パターンを使用することで、XML ドキュメント、SQL データベース、ADO.NET データセットおよびエンティティ、.NET Framework のコレクションなど、LINQ プロバイダーを利用できるあらゆるソースまたは形式のデータを照会したり変換したりすることができます。 このドキュメントでは、基本的な LINQ クエリの作成と使用の 3 つのフェーズについて説明しています。  
   
 ## <a name="three-stages-of-a-query-operation"></a>クエリ操作の 3 つのステージ  
+
  LINQ クエリ操作はすべて、次の 3 つのアクションで構成されます。  
   
 1. データ ソースまたはソースを取得します。  
@@ -41,6 +43,7 @@ ms.locfileid: "84413259"
  `0 2 4 6`  
   
 ## <a name="the-data-source"></a>データ ソース  
+
  前の例では、データ ソースが配列であるため、暗黙的にジェネリック <xref:System.Collections.Generic.IEnumerable%601> インターフェイスがサポートされます。 配列を LINQ クエリのデータ ソースとして使用できるのは、そのためです。 <xref:System.Collections.Generic.IEnumerable%601> をサポートする型や、ジェネリック <xref:System.Linq.IQueryable%601> などの派生インターフェイスは、*クエリ可能型*と呼ばれます。  
   
  配列は、暗黙的なクエリ可能型として、変更や特別な処理を行わなくても、LINQ データ ソースとして使用できます。 同じことは、ジェネリックである <xref:System.Collections.Generic.List%601> や <xref:System.Collections.Generic.Dictionary%602>、その他 .NET Framework クラス ライブラリのクラスなど、<xref:System.Collections.Generic.IEnumerable%601> をサポートするすべてのコレクション型に言えます。  
@@ -63,6 +66,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
 > 非ジェネリック <xref:System.Collections.IEnumerable> インターフェイスをサポートする <xref:System.Collections.ArrayList> などの型も、LINQ データ ソースとして使用できます。 <xref:System.Collections.ArrayList> の使用例については、「[方法: LINQ を使用して ArrayList を照会する (Visual Basic)](how-to-query-an-arraylist-with-linq.md)」を参照してください。  
   
 ## <a name="the-query"></a>クエリ  
+
  クエリには、データ ソースまたはソースから取得したい情報を指定します。 また、どのように情報を並べ替え、グループ化、または構造化して返されるようにするかをオプションで指定することもできます。 Visual Basic 言語には、クエリの作成に対応するために、新しいクエリ構文が導入されています。  
   
  次の例のクエリを実行すると、整数の配列 `numbers` からすべての偶数が返されます。  
@@ -74,9 +78,11 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
  クエリ変数自体は何も処理を行わず、データを返さないという点に注意してください。 あくまでクエリの定義が格納されるだけです。 前の例で、クエリを実行するのは `For Each` ループです。  
   
 ## <a name="query-execution"></a>クエリの実行  
+
  クエリの実行とクエリの作成は分離しています。 クエリを作成することによってクエリは定義されますが、その実行をトリガーするのは別のメカニズムになります。 クエリは、定義後すぐに実行 ("*即時実行*)" することも、定義を保存しておき、後でクエリを実行 ("*遅延実行*") することもできます。  
   
 ### <a name="deferred-execution"></a>遅延実行  
+
  一般的な LINQ クエリは、前の例のようなものです。前の例には `evensQuery` が定義されています。 クエリは作成されても、すぐには実行されません。 その代わりに、クエリ変数 `evensQuery` にクエリの定義が格納されます。 通常は、一連の値を返す `For Each` ループを使用するか、標準クエリ演算子 (`Count`、`Max` など) を適用することによって、クエリを後から実行することになります。 この処理を "*遅延実行*" と呼びます。  
   
  [!code-vb[VbLINQFirstQuery#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#7)]  
@@ -98,6 +104,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
  `0  10  2  22  8`  
   
 ### <a name="immediate-execution"></a>即時実行  
+
  クエリの遅延実行では、クエリの定義がクエリ変数に格納され、後から実行されます。 即時実行では、クエリがその定義時に実行されます。 クエリ結果の個々の要素にアクセスする必要があるメソッドを適用したときに、実行がトリガーされます。 即時実行は多くの場合、単一の値を返すいずれかの標準クエリ演算子を使用することで強制的に発生します。 たとえば、`Count`、`Max`、`Average`、`First` が該当します。 これらの標準クエリ演算子では、シングルトンの結果を算出して返すために、適用された時点ですぐにクエリが実行されます。 単一の値を返す標準クエリ演算子の詳細については、「[集計操作](aggregation-operations.md)」、「[要素の操作](element-operations.md)」、「[量指定子操作](quantifier-operations.md)」を参照してください。  
   
  次のクエリからは、整数の配列に格納されている偶数の数が返されます。 クエリの定義は保存されません。`numEvens` は単純な `Integer` です。  

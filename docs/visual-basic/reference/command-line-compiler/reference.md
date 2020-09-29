@@ -9,14 +9,15 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 633b457106203e213f5d30003e576b7e8132f4d2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b489a164e56a5e3bdbf7e3cdf24ec330fadedf38
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400488"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91097554"
 ---
 # <a name="-reference-visual-basic"></a>-reference (Visual Basic)
+
 コンパイラによって、指定されたアセンブリ内の型情報を、現在のコンパイル対象のプロジェクトで使用できるようにします。  
   
 ## <a name="syntax"></a>構文  
@@ -33,11 +34,12 @@ or
   
 ## <a name="arguments"></a>引数  
   
-|項目|定義|  
+|期間|定義|  
 |---|---|  
 |`fileList`|必須です。 アセンブリ ファイル名のコンマ区切りリスト。 ファイル名に空白が含まれている場合は、名前を二重引用符で囲みます。|  
   
 ## <a name="remarks"></a>Remarks  
+
  インポートするファイルには、アセンブリ メタデータが含まれている必要があります。 アセンブリ外で表示されるのはパブリック型のみです。 [-addmodule](addmodule.md) オプションでは、モジュールからメタデータをインポートします。  
   
  あるアセンブリ (アセンブリ A) を参照していて、それ自体では別のアセンブリ (アセンブリ B) が参照される場合、次の場合はアセンブリ B を参照する必要があります。  
@@ -55,6 +57,7 @@ or
  `-reference` の省略形は `-r` です。  
   
 ## <a name="example"></a>例  
+
  次のコマンドでは、ソース ファイル `Input.vb` と、`Metad1.dll` および `Metad2.dll` からの参照アセンブリをコンパイルして、`Out.exe` を生成します。  
   
 ```console

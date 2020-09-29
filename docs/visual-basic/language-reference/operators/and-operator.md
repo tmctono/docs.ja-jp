@@ -13,14 +13,15 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - bitwise comparison [Visual Basic]
 ms.assetid: 2ea711f3-439a-4c7c-9e3a-1ffe3b0d6046
-ms.openlocfilehash: c2b135d27e14816c011a4f70793543aa835d960a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b4d6d08cca2907befeab2e31c6804b69849c9e38
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371948"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874864"
 ---
 # <a name="and-operator-visual-basic"></a>And 演算子 (Visual Basic)
+
 2 つの `Boolean` 式の場合は論理積、2 つの数値式の場合はビットごとの積を求めます。  
   
 ## <a name="syntax"></a>構文  
@@ -30,6 +31,7 @@ result = expression1 And expression2
 ```  
   
 ## <a name="parts"></a>指定項目  
+
  `result`  
  必須です。 任意の `Boolean` または数値式。 ブール型の比較の場合、`result` は 2 つの `Boolean` 値の論理積となります。 ビットごとの演算の場合、`result` は 2 つの数値ビット パターンのビットごとの積を表す数値です。  
   
@@ -40,6 +42,7 @@ result = expression1 And expression2
  必須です。 任意の `Boolean` または数値式。  
   
 ## <a name="remarks"></a>Remarks  
+
  ブール値の比較では、`expression1` と `expression2` の両方が `True` に評価される場合にのみ、`result` は `True` になります。 次の表は、`result` がどのように決定されるかを示しています。  
   
 |`expression1` が次の場合|かつ、`expression2` が次の場合|`result` の値は次のようになります|  
@@ -65,6 +68,7 @@ result = expression1 And expression2
 > 論理演算子とビット処理演算子は、他の算術演算子および関係演算子より優先順位が低いので、正確な結果を確実に得るために、ビットごとの演算はかっこで囲む必要があります。  
   
 ## <a name="data-types"></a>データの種類  
+
  オペランドが 1 つの `Boolean` 式と 1 つの数値式で構成されている場合、Visual Basic は `Boolean` 式を数値に変換し (`True` の場合は 1、`False` の場合は 0)、ビットごとの演算を実行します。  
   
  ブール値の比較の場合、結果のデータ型は `Boolean` になります。 ビットごとの比較の場合、結果のデータ型は `expression1` および `expression2` のデータ型に適した数値型になります。 「[演算子の結果のデータ型](data-types-of-operator-results.md)」の「関係とビットごとの比較」の表を参照してください。  
@@ -73,6 +77,7 @@ result = expression1 And expression2
 > `And` 演算子は "*オーバーロード*" できます。つまり、オペランドがクラスまたは構造体の型を持っているときに、クラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
+
  次の例では、`And` 演算子を使用して、2 つの式の論理積を実行します。 結果は、両方の式が `True` かどうかを表す `Boolean` 値です。  
   
  [!code-vb[VbVbalrOperators#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#22)]  
@@ -80,6 +85,7 @@ result = expression1 And expression2
  前の例では、それぞれ `True` と `False` の結果が生成されます。  
   
 ## <a name="example"></a>例  
+
  次の例では、`And` 演算子を使用して、2 つの数値式の個々のビットに対して論理積を実行します。 オペランドの対応するビットが両方とも 1 に設定されている場合、結果パターンのビットが設定されます。  
   
  [!code-vb[VbVbalrOperators#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#23)]  

@@ -5,17 +5,19 @@ helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-ms.openlocfilehash: a6ea83fadf18ef3be778e6de31c0eb4e65e74824
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 98c073f8fa403416b2425431ff4334b990726f44
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392871"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91095448"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>シャドウとオーバーライドの違い (Visual Basic)
+
 基底クラスから継承するクラスを定義する場合、派生クラスの 1 つ以上の基底クラス要素を再定義する必要があることがあります。 この目的では、シャドウとオーバーライドの両方を使用できます。  
   
 ## <a name="comparison"></a>比較  
+
  シャドウとオーバーライドは、どちらも派生クラスが基底クラスから継承されるときに使用し、どちらも一方の宣言された要素を他方の要素で再定義します。 しかし、この 2 つには、大きな違いがあります。  
   
  次の表で、シャドウとオーバーライドを比較しています。  
@@ -39,6 +41,7 @@ ms.locfileid: "84392871"
  <sup>3</sup> さらに派生したクラスから、シャドウする要素にアクセスできない場合、シャドウは継承されません。 たとえば、シャドウする要素を `Private` として宣言した場合、派生クラスから派生したクラスでは、シャドウする要素ではなく元の要素が継承されます。  
   
 ## <a name="guidelines"></a>ガイドライン  
+
  通常、オーバーライドは次の場合に使用します。  
   
 - ポリモーフィックな派生クラスを定義している。  

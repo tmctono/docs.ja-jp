@@ -2,12 +2,12 @@
 title: OLE DB、ODBC、および Oracle 接続プール
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: c19f341d869ee983531fa5c90c0d7c94978dadb1
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0ff3cbd89482645ff8d52e3144f1a82fd05d8013
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535372"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150688"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB、ODBC、および Oracle 接続プール
 
@@ -26,19 +26,23 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
  OLE DB セッション プール機能とリソース プール機能の説明、および OLE DB プロバイダー サービスの既定値をオーバーライドしてプール機能を無効にする方法については、「[OLE DB プログラマー ガイド](/previous-versions/windows/desktop/ms713643(v=vs.85))」を参照してください。
 
 ## <a name="odbc"></a>ODBC
+
  .NET Framework Data Provider for ODBC の接続プールは、接続に使用される ODBC ドライバー マネージャーによって管理されるため、.NET Framework Data Provider for ODBC の影響は受けません。
 
  接続プール機能を有効または無効にするには、[コントロール パネル] の [管理ツール] フォルダーにある **[ODBC データ ソース アドミニストレーター]** を開きます。 **[接続プール]** タブで、インストールされている各 ODBC ドライバーに対する接続プール パラメーターを指定できます。 特定の ODBC ドライバーの接続プールを変更すると、その ODBC ドライバーを使用するすべてのアプリケーションに影響します。
 
 ## <a name="oracleclient"></a>OracleClient
+
  Oracle の .NET データ プロバイダーは ADO.NET クライアント アプリケーションに自動的に接続プールを提供します。 また、接続プール機能の動作を制御する接続文字列修飾子を指定することもできます (このトピックの後の「接続文字列キーワードによる接続プールの制御」を参照してください)。
 
 ### <a name="create-and-assign-pools"></a>プールを作成して割り当てる
+
  接続が開かれると、厳密一致のアルゴリズムに基づいて接続プールが作成され、接続内の接続文字列に関連付けられます。 各接続プールが別の接続文字列に関連付けられます。 新しい接続が開かれたとき、接続文字列が既存のプールと完全に一致しない場合は、新しいプールが作成されます。
 
  接続プールは一度作成されるとアクティブなプロセスが終了するまで破棄されません。 アクティブでないプールまたは空のプールの維持には、システム リソースはほとんど使用されません。
 
 ### <a name="connection-addition"></a>接続の追加
+
  一意の接続文字列ごとに 1 つの接続プールが作成されます。 プールが作成された段階で、複数の接続オブジェクトが作成されてそのプールへ追加され、最小プール サイズ要件を満たします。 必要に応じて、最大プール サイズに達するまで、接続がプールへ追加されます。
 
  <xref:System.Data.OracleClient.OracleConnection> オブジェクトが要求されたとき、プールに使用可能な接続がある場合はプールから取得されます。 使用可能な接続とは、サーバーへの有効なリンクを持つ接続のうち、現在使用中でないか、一致するトランザクション コンテキストを持っているか、またはどのトランザクション コンテキストにも関連付けられていない接続のことです。
@@ -46,6 +50,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
  最大プール サイズに達すると、使用可能な接続を取得できなくなり、要求はキューに置かれます。 接続プーラーは、接続がプールに解放されたときに接続の再割り当てを行ってそれらの要求に応えます。 接続が終了または破棄されると、その接続は解放され、プールに戻されます。
 
 ### <a name="connection-removal"></a>接続の削除
+
  接続が長時間アイドル状態のとき、またはサーバーとの接続が切断されたことが検出されると、接続プーラーによってプールから接続が削除されます。 これを検出できるのは、サーバーとの通信を試みた後だけです。 接続がサーバーに接続していないことがわかると、その接続は無効としてマークされます。 接続プーラーは、定期的に接続プールをスキャンし、プールから解放して無効としてマークするオブジェクトを検索します。 その後、それらの接続は永久に削除されます。
 
  既に存在しないサーバーへの接続が存在する場合は、接続プーラーが、その接続が切断されていることをまだ検出せず、無効というマークを付けていない状況のときに、プールからその接続を削除できます。 このような状況が発生したときは、例外が生成されます。 ただし、その場合も開発者は接続を終了して解放し、プールへ返す必要があります。
@@ -53,11 +58,13 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
  クラスの `Close` メソッド内で `Dispose`、`Connection`、またはその他のマネージド オブジェクトの `DataReader` または `Finalize` を呼び出さないでください。 終了処理では、クラスに直接所有されているアンマネージ リソースだけを解放してください。 クラスがアンマネージ リソースを所有していない場合は、クラス定義に `Finalize` メソッドを含めないでください。 詳しくは、「[ガベージ コレクション](../../../standard/garbage-collection/index.md)」をご覧ください。
 
 ### <a name="transaction-support"></a>トランザクションのサポート
+
  接続はプールから取り出され、トランザクション コンテキストに基づいて割り当てられます。 要求スレッドのコンテキストと割り当てられた接続は一致している必要があります。 したがって、各接続プールは、トランザクション コンテキストに関連付けられていない接続の部分と、それぞれが特定のトランザクション コンテキストに関連付けられている接続を含む *N* 個の部分に分かれています。
 
  接続が終了すると、その接続は解放されてプールへ返り、さらに、そのトランザクション コンテキストに基づいて特定のサブプールへ返ります。 そのため、分散トランザクションが保留状態である場合を含め、エラーを発生させることなく、開発者が接続を終了させることは可能です。 これにより、分散トランザクションを後でコミットまたはアボートできます。
 
 ### <a name="control-connection-pooling-with-connection-string-keywords"></a>接続文字列キーワードで接続プールを制御する
+
  <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> オブジェクトの <xref:System.Data.OracleClient.OracleConnection> プロパティは、接続プール ロジックの動作を調整するために使用できる接続文字列キーおよび値のペアをサポートします。
 
  接続プールの動作を調整するための <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> 値についての説明を次の表に示します。

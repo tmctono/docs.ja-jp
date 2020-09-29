@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID385
 ms.assetid: 69ec6d59-ffc4-48ac-8a28-fe6853389843
-ms.openlocfilehash: 2d9a4f83e21982f232b9c5fd2fcf240e2135b85e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b5f1b3f7a95ec2214dd4c526cfdfab87d813aeac
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409440"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871490"
 ---
 # <a name="need-property-array-index"></a>プロパティ配列のインデックスが必要です。
+
 このプロパティ値は、単一の値ではなく配列で構成されています。 アクセス先のプロパティ配列のインデックスが指定されていません。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  

@@ -2,17 +2,19 @@
 title: 日付と時刻の正規関数
 ms.date: 03/30/2017
 ms.assetid: 9628b74f-1585-436a-b385-8b02ed0cdd63
-ms.openlocfilehash: 3dd6c0da3f9851df7bb9725d9d6c08fef5a0d3d3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9b7650990232face3a7c3673a6fb789912acf15c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251097"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148283"
 ---
 # <a name="date-and-time-canonical-functions"></a>日付と時刻の正規関数
+
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] には、日付および時刻の正規関数が含まれます。  
   
 ## <a name="remarks"></a>Remarks  
+
  次の表に、日付と時刻の [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 正規関数を示します。 `datetime` は <xref:System.DateTime> 値です。  
   
 |関数|説明|  

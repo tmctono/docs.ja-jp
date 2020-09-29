@@ -5,14 +5,15 @@ helpviewer_keywords:
 - c XML tag
 - <c> XML tag
 ms.assetid: 36ad5d1b-11f7-4012-8932-41962ac327d1
-ms.openlocfilehash: c8ba03d9cc01c4751d15c01530c6cbf7d499dc3b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 969df339eb766d2edb444ab5626af4e69accddba
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400164"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871701"
 ---
 # <a name="c-visual-basic"></a>\<c> (Visual Basic)
+
 説明内のテキストがコードであることを示します。  
   
 ## <a name="syntax"></a>構文  
@@ -28,11 +29,13 @@ ms.locfileid: "84400164"
 |`text`|コードとして指定するテキストです。|  
   
 ## <a name="remarks"></a>Remarks  
+
  `<c>` タグを使用すると、説明内のテキストをコードとしてマークする必要があることを指定できます。 複数行をコードとして示す場合は、[\<code>](code.md) を使用します。  
   
  コンパイル時に [-doc](../../reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
+
  この例では、summary セクションで `<c>` タグを使用して、`Counter` がコードであることを示します。  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  

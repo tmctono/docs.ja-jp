@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30996
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
-ms.openlocfilehash: 13fa8917f228661fc44f5e0920d91c596e250c38
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2c5a65443dc16a600e25fcf6dfd11c4597b3a086
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402838"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873955"
 ---
 # <a name="initializer-expected"></a>初期化子が必要です
+
 次の例に示すように、初期化リストが空のオブジェクト初期化子を使用して、クラスのインスタンスを宣言しようとしました。  
   
  `' Not valid.`  

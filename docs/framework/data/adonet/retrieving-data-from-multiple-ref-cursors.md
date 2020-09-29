@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 361e9bd4-447d-44b7-8629-3c11f1a7ffbb
-ms.openlocfilehash: 8ece2617dd81161cb19a08d62f14d37c0f8c1f33
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5f0c50cb2c1ec4581c67d2f055e5bf50a82f4809
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149038"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150649"
 ---
 # <a name="retrieving-data-from-multiple-ref-cursors-using-an-oracledatareader"></a>OracleDataReader を使用した複数の REF CURSOR からのデータの取得
+
 この Microsoft Visual Basic の例では、2 つの REF CURSOR パラメーターを返し、<xref:System.Data.OracleClient.OracleDataReader> を使用して値を読み取る PL/SQL ストアド プロシージャを実行します。  
   
 ```vb  

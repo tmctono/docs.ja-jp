@@ -26,14 +26,15 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 3b1f47250453c32735d633b98da0bd0ddb1ed5b9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 268daf333dc5463e5436304cec188a9e6d477166
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393858"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077125"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>方法: 複数のデータ型に同一の機能を提供できるクラスを定義する (Visual Basic)
+
 複数の異なるデータ型に同一の機能を提供するオブジェクトを作成するために使用できるクラスを定義できます。 これを行うには、1 つ以上の *型パラメーター* を定義内で指定します。 このようなクラスは、さまざまなデータ型を使用するオブジェクトのテンプレートとして使用できます。 この方法で定義したクラスは、 *ジェネリック クラス*と呼ばれます。  
   
  ジェネリック クラスを定義する利点は、クラスを一度だけ定義すれば、コードの中でそれを使って、さまざまなデータ型を使用する多くのオブジェクトを作成できることです。 これにより、クラスを `Object` 型で定義した場合よりパフォーマンスが向上します。  

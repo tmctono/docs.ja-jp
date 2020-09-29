@@ -6,14 +6,15 @@ helpviewer_keywords:
 - symbols, operators
 - Visual Basic code, operators
 ms.assetid: cb44c210-686f-4417-a13f-51c0d60161f8
-ms.openlocfilehash: ccc2ce6e1e5abbd21ba39f387baeabf885ff7017
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c268ee548a43d31e353f1f1b2679db36d7f86f14
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373318"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875565"
 ---
 # <a name="operators-summary-visual-basic"></a>演算子の概要 (Visual Basic)
+
 Visual Basic 言語のキーワードとランタイム ライブラリ メンバーを、目的と使用方法に応じて編成しました。  
   
 |アクション|言語要素|  

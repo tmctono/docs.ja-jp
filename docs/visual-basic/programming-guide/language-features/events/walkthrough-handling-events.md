@@ -9,14 +9,15 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 29d878afbe3669fc88e62b1fec98b306918c303d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4489f75e50a783a9b1acfb9c30568fdec6614488
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405081"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91057911"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>チュートリアル: イベントの処理 (Visual Basic)
+
 これは、イベントの処理方法について説明した 2 つのトピックのうちの 2 番目にあたります。 1 番目のトピックである「[チュートリアル: イベントの宣言と発生](walkthrough-declaring-and-raising-events.md)」では、イベントを宣言し、発生させる方法について説明しました。 このセクションでは、そのチュートリアルのフォームとクラスを使用して、イベントの発生時にそれらを処理する方法を示します。  
   
  `Widget` クラスの例では、従来のイベント処理ステートメントを使用しています。 Visual Basic には、別のイベント処理手法も用意されています。 演習として、この例を変更し、`AddHandler` ステートメントと `Handles` ステートメントを使用してみましょう。  
@@ -34,6 +35,7 @@ ms.locfileid: "84405081"
      変数 `mblnCancel` は、`LongTask` メソッドを取り消すためのものです。  
   
 ## <a name="writing-code-to-handle-an-event"></a>イベントを処理するコードの作成  
+
  `WithEvents` を使用して変数を宣言すると、このクラスの**コード エディター**の左側にあるドロップダウン リストに、その変数の名前が表示されます。 `mWidget` を選択すると、右側のドロップダウン リストに `Widget` クラスのイベントが表示されます。 イベントを選択すると、対応するイベント プロシージャが、接頭辞 `mWidget` とアンダースコア付きで表示されます。 `WithEvents` 変数に関連するすべてのイベント プロシージャに、変数名が接頭辞として付与されます。  
   
 #### <a name="to-handle-an-event"></a>イベントを処理するには  
@@ -58,6 +60,7 @@ ms.locfileid: "84405081"
  `LongTask` の実行中にユーザーが **[キャンセル]** ボタンをクリックすると、`DoEvents` ステートメントによりイベント処理の実行が許可されしだい、`Button2_Click` イベントが実行されます。 クラスレベルの変数 `mblnCancel` が `True` に設定された後、`mWidget_PercentDone` イベントによりテストが行われ、`ByRef Cancel` 引数が `True` に設定されます。  
   
 ## <a name="connecting-a-withevents-variable-to-an-object"></a>オブジェクトへの WithEvents 変数の接続  
+
  これで、`Widget` オブジェクトのイベントを処理するように `Form1` を設定できました。 あとは、`Widget` を見つけるだけです。  
   
  デザイン時に変数 `WithEvents` を宣言しても、変数にオブジェクトは関連付けられません。 `WithEvents` 変数は、単に他のオブジェクト変数と似たものです。 オブジェクトを作成してから、そのオブジェクトに対する参照を `WithEvents` 変数に割り当てる必要があります。  

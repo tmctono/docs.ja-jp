@@ -1,13 +1,13 @@
 ---
 title: dotnet-install スクリプト
 description: .NET Core SDK と共有ランタイムをインストールするための dotnet-install スクリプトについて学習します。
-ms.date: 04/30/2020
-ms.openlocfilehash: 8f27b8a7794e84e6e2b288d6cc2ec33ffcb7600f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 09/22/2020
+ms.openlocfilehash: 35161edd2a4862e064373d75f1e19396983f3a64
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538043"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078204"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install スクリプト リファレンス
 
@@ -185,7 +185,6 @@ bash スクリプトは PowerShell のスイッチも読み取るので、Linux/
   特定のビルド バージョンを表します。 次の値を指定できます。
 
   - `latest` - チャネルの最新ビルド (`-Channel` オプションで使用)。
-  - `coherent` - チャネルの最新のコヒーレント ビルド。最新の安定版パッケージの組み合わせを使用します (ブランチ名の `-Channel` オプションで使用)。
   - 特定のビルド バージョンを表す X.Y.Z 形式の 3 部構成のバージョン。`-Channel` オプションよりも優先されます。 たとえば、`2.0.0-preview2-006120` のように指定します。
 
   指定しない場合、`-Version` の既定値は `latest` です。

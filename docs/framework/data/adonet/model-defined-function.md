@@ -2,14 +2,15 @@
 title: モデル定義関数
 ms.date: 03/30/2017
 ms.assetid: 8bb2edc8-e8e7-44c2-adc7-f44e11bda4f0
-ms.openlocfilehash: 973d7ff9f7b76650782d62dcdcab60c8cedde18f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 04d27387c30d5fe09d31c1b2cc94741f21ffe8e0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73735580"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150779"
 ---
 # <a name="model-defined-function"></a>モデル定義関数
+
 "*モデル定義関数*" は、概念モデルで定義される関数です。 モデル定義関数の本体は、[Entity SQL](./ef/language-reference/entity-sql-language.md) により表現されます。これにより、データ ソースでサポートされる規則または言語に関係なく関数を表現することが可能になります。  
   
  モデル定義関数の定義には、次の情報が含まれます。  
@@ -28,6 +29,7 @@ ms.locfileid: "73735580"
  モデル定義関数では、出力パラメーターがサポートされません。 この制約は、モデル定義関数を構成できるようにするためにあります。  
   
 ## <a name="example"></a>例  
+
  下のダイアグラムは、`Book`、`Publisher`、および `Author` という 3 つのエンティティ型の概念モデルを示しています。  
   
  ![発行日を含むモデルを示すスクリーンショット。](./media/model-defined-function/model-published-date-three-entity-types.gif)  

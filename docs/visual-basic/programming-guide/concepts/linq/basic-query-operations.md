@@ -15,14 +15,15 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: 92ac5beb70526795eb140bd794e47981cebfea93
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6f4c58b15c33d8d2007069df88b2984e692df0a8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410917"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078373"
 ---
 # <a name="basic-query-operations-visual-basic"></a>基本的なクエリ操作 (Visual Basic)
+
 このトピックでは、Visual Basic における統合言語クエリ (LINQ) 式と、クエリで実行されるいくつかの一般的な操作について簡単に紹介します。 詳細については、次のトピックを参照してください。  
   
  [Visual Basic における LINQ の概要](../../language-features/linq/introduction-to-linq.md)  
@@ -32,6 +33,7 @@ ms.locfileid: "84410917"
  [チュートリアル: Visual Basic でのクエリの作成](walkthrough-writing-queries.md)  
   
 ## <a name="specifying-the-data-source-from"></a>データ ソースを指定する (From)  
+
  LINQ クエリで最初に行う手順は、照会するデータ ソースの指定です。 そのためクエリでは、`From` 句が必ず先頭に来ます。 クエリ演算子は、ソースの種類に基づいて結果を選択し、整形します。  
   
  [!code-vb[VbLINQBasicOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#1)]  
@@ -41,6 +43,7 @@ ms.locfileid: "84410917"
  Visual Basic での `From` 句の使い方について詳しくは、「[From 句](../../../language-reference/queries/from-clause.md)」を参照してください。  
   
 ## <a name="filtering-data-where"></a>データをフィルター処理する (Where)  
+
  最も一般的なクエリ操作は、ブール式の形式でフィルターを適用することです。 その場合、クエリからは、式が true となる要素のみが返されます。 フィルター処理は、`Where` 句を使用して実行されます。 データ ソース内のどの要素を結果のシーケンスに含めるかをフィルターで指定します。 次の例では、住所がロンドンにある顧客だけが結果に含まれます。  
   
  [!code-vb[VbLINQBasicOps#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#2)]  
@@ -60,6 +63,7 @@ Where cust.City = "London" Or cust.City = "Paris"
  Visual Basic での `Where` 句の使い方について詳しくは、「[Where 句](../../../language-reference/queries/where-clause.md)」を参照してください。  
   
 ## <a name="ordering-data-order-by"></a>データを並べ替える (Order By)  
+
  返されたデータを特定の順序で並べ替えると都合がよい場合は少なくありません。 `Order By` 句を使用すると、返されたシーケンス内の要素が、指定された 1 つまたは複数のフィールドを基準に並べ替えられます。 たとえば、次のクエリは `Name` プロパティに基づいて結果を並べ替えます。 `Name` は文字列であるため、返されるデータはアルファベット順 (A から Z) に並べ替えられます。  
   
  [!code-vb[VbLINQBasicOps#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#3)]  
@@ -69,6 +73,7 @@ Where cust.City = "London" Or cust.City = "Paris"
  Visual Basic での `Order By` 句の使い方について詳しくは、「[Order By 句](../../../language-reference/queries/order-by-clause.md)」を参照してください。  
   
 ## <a name="selecting-data-select"></a>データを選択する (Select)  
+
  `Select` 句は、返された要素の形式と内容を指定します。 たとえば、`Customer` オブジェクト全体、1 つの `Customer` プロパティのみ、プロパティのサブセット、各種データ ソースのプロパティの組み合わせ、計算に基づくなんらかの新しい結果型のいずれで結果が構成されるかを指定できます。 `Select` 句でソース要素のコピー以外のものを生成する場合、その操作は*投影*と呼ばれます。  
   
  `Customer` オブジェクト全体から成るコレクションを取得するには、範囲変数自体を選択します。  
@@ -98,6 +103,7 @@ Where cust.City = "London" Or cust.City = "Paris"
  Visual Basic での `Select` 句の使い方について詳しくは、「[Select 句](../../../language-reference/queries/select-clause.md)」を参照してください。  
   
 ## <a name="joining-data-join-and-group-join"></a>データを結合する (Join と Group Join)  
+
  `From` 句では、いくつかの方法で複数のデータ ソースを結合することができます。 たとえば次のコードでは、2 つのデータ ソースを使用し、その両方のプロパティを結果の中で暗黙的に結合しています。 このクエリでは、姓が母音で始まる学生が選択されます。  
   
  [!code-vb[VbLINQBasicOps#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#9)]  
@@ -112,6 +118,7 @@ Where cust.City = "London" Or cust.City = "Paris"
  SQL の `LEFT JOIN` のように、複数のコレクションを結合して 1 つの階層コレクションにするには、`Group Join` を使用します。 詳細については、「[Join 句](../../../language-reference/queries/join-clause.md)」および「[Group Join 句](../../../language-reference/queries/group-join-clause.md)」を参照してください。  
   
 ## <a name="grouping-data-group-by"></a>データをグループ化する (Group By)  
+
  `Group By` 句を追加すれば、クエリの結果に含まれる要素を、その要素の 1 つ以上のフィールドに従ってグループ化することができます。 たとえば、次のコードは、学生を学年ごとにグループ化するものです。  
   
  [!code-vb[VbLINQBasicOps#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#11)]  

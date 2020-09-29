@@ -11,24 +11,27 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
-ms.openlocfilehash: a9fa0a3a23561215d6ff122bc8e609b68ca6fc30
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 12a1030a423359a3e4122eea98e223a1a02f680c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84386635"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867623"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
+
 プロパティを書き込めるが、読み込みはできないことを示します。  
   
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="rules"></a>ルール  
+
  **宣言コンテキスト。** `WriteOnly` は、モジュール レベルでのみ使用できます。 つまり、`WriteOnly` プロパティの宣言コンテキストは、クラス、構造体、またはモジュールにする必要があり、ソース ファイル、名前空間、またはプロシージャにすることはできません。  
   
  プロパティは、変数ではなく `WriteOnly` として宣言できます。  
   
 ## <a name="when-to-use-writeonly"></a>WriteOnly を使用するタイミング  
+
  場合によっては、使用しているコードで値を設定できても、それが何であるかを検出できないようにする必要があります。 たとえば、社会登録番号やパスワードなどの機密データは、それが設定されていないコンポーネントからはアクセスできないようにする必要があります。 このような場合は、`WriteOnly` プロパティを使用して値を設定できます。  
   
 > [!IMPORTANT]

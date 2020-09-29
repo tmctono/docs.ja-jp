@@ -2,12 +2,12 @@
 title: マイクロサービス間でイベント ベースの通信を実装する (統合イベント)
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービス間でイベント ベースの通信を実装する統合イベントを理解する
 ms.date: 10/02/2018
-ms.openlocfilehash: cbc9d28f9fbcaea528eabc4930476545cb919bb4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a778acba3e17b084840b77d903533f9180ca01d9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539347"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152534"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>マイクロサービス間でイベント ベースの通信を実装する (統合イベント)
 
@@ -76,7 +76,7 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 
 ### <a name="publishsubscribe-pubsub-pattern"></a>発行/サブスクライブ (Pub/Sub) パターン
 
-[発行/サブスクライブ パターン](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10))の目的はオブザーバー パターンと同じです。特定のイベントが発生したことを他のサービスに通知する必要があります。 ただし、オブザーバー パターンと Pub/Sub パターンの間には重要な違いがあります。 オブザーバー パターンでは、オブザーバブルからオブザーバーに直接ブロードキャストされるため、これらは互いを "認識" しています。 しかし、Pub/Sub パターンを使う場合は、ブローカー、メッセージ ブローカー、またはイベント バスと呼ばれる、発行者とサブスクライバーの両方から認識される第 3 のコンポーネントが存在します。 そのため、Pub/Sub パターンを使うと、前述したイベント バス (またはメッセージ ブローカー) によって、発行者とサブスクライバーが厳密に切り離されます。
+[発行/サブスクライブ パターン](/previous-versions/msp-n-p/ff649664(v=pandp.10))の目的はオブザーバー パターンと同じです。特定のイベントが発生したことを他のサービスに通知する必要があります。 ただし、オブザーバー パターンと Pub/Sub パターンの間には重要な違いがあります。 オブザーバー パターンでは、オブザーバブルからオブザーバーに直接ブロードキャストされるため、これらは互いを "認識" しています。 しかし、Pub/Sub パターンを使う場合は、ブローカー、メッセージ ブローカー、またはイベント バスと呼ばれる、発行者とサブスクライバーの両方から認識される第 3 のコンポーネントが存在します。 そのため、Pub/Sub パターンを使うと、前述したイベント バス (またはメッセージ ブローカー) によって、発行者とサブスクライバーが厳密に切り離されます。
 
 ### <a name="the-middleman-or-event-bus"></a>仲介者またはイベント バス
 

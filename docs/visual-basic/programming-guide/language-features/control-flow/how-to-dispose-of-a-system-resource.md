@@ -10,14 +10,15 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: dd15c6746628f45b072d46eea40051ed9afb7921
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c430bc7744f5aefaa65f2a86f3e5e22743ffed57
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403499"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077203"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>方法: システム リソースを破棄する (Visual Basic)
+
 `Using` ブロックを使用すると、コードがこのブロックを終了するときに、リソースが必ず破棄されることを保証できます。 これは、大量のメモリを消費するシステム リソースを使用している場合、または、他のコンポーネントでもそのシステム リソースを使いたい場合に役立ちます。  
   
 ### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>コードでの使用が済んだ時点でデータベース接続を破棄するには  

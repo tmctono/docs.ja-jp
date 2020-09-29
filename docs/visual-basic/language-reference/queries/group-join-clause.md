@@ -11,14 +11,15 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-ms.openlocfilehash: 7916e51293c06016b2581b7109df3f0a599404ca
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8d5f3ec80cb39825a3a283907d614b9be28e6e91
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359835"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869910"
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join 句 (Visual Basic)
+
 2 つのコレクションを、単一の階層コレクションに結合します。 結合操作は、一致するキーに基づきます。  
   
 ## <a name="syntax"></a>構文  
@@ -40,6 +41,7 @@ Group Join element [As type] In collection _
 |`expressionList`|必須です。 コレクションの要素のグループを集計する方法を示す 1 つ以上の式です。 グループ化された結果のメンバー名を特定するには、`Group` キーワード (`<alias> = Group`) を使用します。 グループに適用する集計関数を含めることもできます。|  
   
 ## <a name="remarks"></a>Remarks  
+
  `Group Join` 句は、結合されるコレクションからの一致するキー値に基づいて、2 つのコレクションを組み合わせます。 結果のコレクションには、最初のコレクションのキー値に一致する 2 つ目のコレクションの要素のコレクションを参照するメンバーを含めることができます。 さらに、2 つ目のコレクションのグループ化された要素に適用する集計関数を指定することもできます。 集計関数の詳細については、「[Aggregate 句 ](aggregate-clause.md)」を参照してください。  
   
  たとえば、マネージャーのコレクションと従業員のコレクションを考えてみましょう。 両方のコレクションの要素には、特定のマネージャーに報告する従業員を識別する ManagerID プロパティがあります。 結合操作の結果には、一致する ManagerID 値を持つ各マネージャーと従業員の結果が含まれます。 `Group Join` 操作の結果には、マネージャーの完全な一覧が含まれます。 各マネージャーの結果には、特定のマネージャーに一致した従業員の一覧を参照したメンバーが含まれます。  
@@ -51,6 +53,7 @@ Group Join element [As type] In collection _
  `Join` 句を使用して、コレクションを単一のコレクションに結合することができます。 これは、SQL の `INNER JOIN` と同じです。  
   
 ## <a name="example"></a>例  
+
  次のコード例では、`Group Join` 句を使用して 2 つのコレクションを結合しています。  
   
  [!code-vb[VbSimpleQuerySamples#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#14)]  

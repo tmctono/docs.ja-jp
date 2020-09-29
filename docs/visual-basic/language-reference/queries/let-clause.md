@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-ms.openlocfilehash: 4bf832651d9753c41ee5a02defec4adc55af1ff1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a6ff3fc80a2b6752c61a8b8f7d4ce62b5a46baad
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359762"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869888"
 ---
 # <a name="let-clause-visual-basic"></a>Let 句 (Visual Basic)
+
 値を計算し、その値をクエリ内の新しい変数に代入します。  
   
 ## <a name="syntax"></a>構文  
@@ -32,11 +33,13 @@ Let variable = expression [, ...]
 |`expression`|必須です。 評価され、指定された変数に割り当てられる式。|  
   
 ## <a name="remarks"></a>Remarks  
+
  `Let` 句を使用すると、各クエリ結果の値を計算し、別名を使用してその値を参照できます。 別名は、`Where` 句などの他の句で使用できます。 `Let` 句を使用すると、クエリに含まれる式の句の別名を指定し、その式の句が使用されるたびに別名を置き換えることができるため、読みやすいクエリ ステートメントを作成できます。  
   
  `Let` 句には、任意の数の `variable` と `expression` の代入を含めることができます。 各代入はコンマ (,) で区切ります。  
   
 ## <a name="example"></a>例  
+
  次のコード例では、`Let` 句を使用して、製品に対して 10% の割引を計算します。  
   
  [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  

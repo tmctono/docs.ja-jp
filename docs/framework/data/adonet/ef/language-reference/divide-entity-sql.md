@@ -2,14 +2,15 @@
 title: '- (除算) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: ef48c368-f3ed-4275-8ada-4e9649781262
-ms.openlocfilehash: 79fdbebc648daac4f695387d52d2a915383f99ca
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: d7d25d8c5b91850b21e36ba8f6f668af7a7d0045
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833885"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148162"
 ---
 # <a name="-divide-entity-sql"></a>/ (除算) (Entity SQL)
+
 1 つの値を別の値で除算します。  
   
 ## <a name="syntax"></a>構文  
@@ -19,6 +20,7 @@ dividend / divisor
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `dividend`  
  除算する数値式。 `dividend` は、任意の数値データ型の有効な式です。  
   
@@ -26,9 +28,11 @@ dividend / divisor
  被除数を除算する数値式。 `divisor` は、任意の数値データ型の有効な式です。  
   
 ## <a name="result-types"></a>戻り値の型  
+
  2 つの引数の暗黙の型の昇格の結果であるデータ型。 暗黙の型の昇格について詳しくは、「[型システム](type-system-entity-sql.md)」をご覧ください。  
   
 ## <a name="example"></a>例  
+
  次の Entity SQL クエリでは、/ 算術演算子を使用して 2 つの数値の間で除算をします。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
 1. 「[方法: StructuralType 結果を返すクエリを実行する](../how-to-execute-a-query-that-returns-structuraltype-results.md)」の手順に従います。  

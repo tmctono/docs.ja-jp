@@ -10,14 +10,15 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 35ba1f19654d1d23ac1ec73564bc36b0af4f6777
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f3f9f5ecb96686fe525e98cf64672d81a3145796
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404746"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873276"
 ---
 # <a name="error-statement"></a>Error ステートメント
+
 エラーの発生をシミュレートします。  
   
 ## <a name="syntax"></a>構文  
@@ -27,10 +28,12 @@ Error errornumber
 ```  
   
 ## <a name="parts"></a>指定項目  
+
  `errornumber`  
  必須です。 任意の有効なエラー番号を指定できます。  
   
 ## <a name="remarks"></a>Remarks  
+
  `Error` ステートメントは下位互換性のためにサポートされています。 新しいコードでは、特にオブジェクトを作成する場合に、`Err` オブジェクトの `Raise` メソッドを使用して、実行時エラーを生成します。  
   
  `errornumber` を定義している場合、`Err` オブジェクトのプロパティに次の既定値が代入されると、`Error` ステートメントによって、エラー ハンドラーが呼び出されます。  
@@ -50,6 +53,7 @@ Error errornumber
 > 一部の Visual Basic ホストアプリケーションでは、オブジェクトを作成できない場合があります。 ホスト アプリケーションでクラスとオブジェクトを作成できるかどうかを判断するには、そのドキュメントを参照してください。  
   
 ## <a name="example"></a>例  
+
  この例では、`Error` ステートメントを使用して、エラー番号 11 を生成しています。  
   
 ```vb  
@@ -58,6 +62,7 @@ Error 11   ' Simulate the "Division by zero" error.
 ```  
   
 ## <a name="requirements"></a>必要条件  
+
  **名前空間:** [Microsoft.VisualBasic](../runtime-library-members.md)  
   
  **アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)  

@@ -5,14 +5,15 @@ helpviewer_keywords:
 - My feature
 - My reference
 ms.assetid: 6f803bd7-21ff-4569-b1fe-b00a6678b1e3
-ms.openlocfilehash: f54ecf4f60a620818ea57093d8c2325cf2ed0d04
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 60dadc2918d4926c2b8bf1004a09d9b3a1ec56ab
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373344"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875574"
 ---
 # <a name="my-reference-visual-basic"></a>My の参照 (Visual Basic)
+
 `My` 機能により、よく使用されるメソッド、プロパティ、およびイベントに直観的にアクセスできることで、プログラミングがより高速かつ簡単になります。 次の表に、`My` に含まれるオブジェクトと、それぞれで実行できるアクションを示します。  
   
 |**動作**|**オブジェクト**|  

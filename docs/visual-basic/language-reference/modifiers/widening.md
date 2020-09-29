@@ -10,17 +10,19 @@ helpviewer_keywords:
 - Widening keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 646ae263-94d3-40a2-b0cc-64f619292f56
-ms.openlocfilehash: 69040bf48b44a54f7a231738b88db1cbc716ebb3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 14e0b026f4fc3b0bf202ea643a28d6f1a7df2b7c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359904"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867642"
 ---
 # <a name="widening-visual-basic"></a>Widening (Visual Basic)
+
 変換演算子 (`CType`) が、クラスまたは構造体を、元のクラスまたは構造体のすべての使用可能な値を保持できる型に変換することを示します。  
   
 ## <a name="converting-with-the-widening-keyword"></a>Widening キーワードを使用した変換  
+
  変換プロシージャでは、`Widening` に加えて `Public Shared` を指定する必要があります。  
   
  拡大変換は実行時に必ず成功し、データの損失が発生することはありません。 例として、`Single` から `Double`、`Char` から `String`、および派生型からその基本型があります。 この最後の変換は拡大変換です。これは、派生型に基本型のすべてのメンバーが含まれており、基本型のインスタンスであるためです。  

@@ -23,14 +23,15 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: ffaa98f6af3d4b276f5c0b1153841acdea0809d7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 138dd58dac9d1983e35e61f8b98a77810fc6e38b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414480"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058847"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>方法: 定数を宣言する (Visual Basic)
+
 定数とその値を宣言するには、`Const` ステートメントを使用します。 定数を宣言することで、値にわかりやすい名前を割り当てます。 宣言した定数を変更したり、新しい値を割り当てたりすることはできません。  
   
  定数の宣言は、プロシージャ内、またはモジュール、クラス、構造体の宣言セクション内で行います。 既定では、クラスレベルまたは構造体レベルの定数は `Private` になりますが、適切なコード アクセス レベルで `Public`、`Friend`、`Protected`、または `Protected Friend` として宣言することもできます。  

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: d4ff9442aa82a3eb46d56500159562174646ea58
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 44a6c3408b57fa7f89e2834aa677fe8801ef21f3
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410258"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058314"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML での埋め込み式 (Visual Basic)
+
 埋め込み式を使用すると、実行時に評価される式を含む XML リテラルを作成できます。 埋め込み式の構文は `<%=` `expression` `%>` となります。これは ASP.NET で使用される構文と同じです。  
   
  たとえば、XML 要素リテラルを作成して、埋め込み式をリテラル テキスト コンテンツと組み合わせることができます。  
@@ -31,6 +32,7 @@ ms.locfileid: "84410258"
 ```  
   
 ## <a name="embedded-expression-location-and-validation"></a>埋め込み式の場所と検証  
+
  埋め込み式は、XML リテラル式内の特定の場所でのみ使用できます。 このような式の場所により、式から返すことができる型と `Nothing` の処理方法が制御されます。 次の表では、埋め込み式の許可される場所と型について説明します。  
   
 |リテラル内の場所|式の型|`Nothing` の処理|  
@@ -73,6 +75,7 @@ ms.locfileid: "84410258"
  特定の型のリテラル内に埋め込み式を使用する方法の詳細については、[XML ドキュメント リテラル](../../../language-reference/xml-literals/xml-document-literal.md)に関するページ、および [XML 要素リテラル](../../../language-reference/xml-literals/xml-element-literal.md)に関するページを参照してください。  
   
 ## <a name="scoping-rules"></a>スコープの規則  
+
  各 XML リテラルはコンパイラによって、適切なリテラル型のコンストラクター呼び出しに変換されます。 XML リテラル内のリテラル コンテンツと埋め込み式は、引数としてコンストラクターに渡されます。 これは、XML リテラルで使用できる Visual Basic プログラミング要素はすべて、その埋め込み式でも使用できることを意味します。  
   
  XML リテラル内では、`Imports` ステートメントで宣言された XML 名前空間プレフィックスにアクセスできます。 `xmlns` 属性を使用すれば、要素内で、新しい XML 名前空間プレフィックスを宣言することも、既存の XML 名前空間プレフィックスをシャドウすることもできます。 その要素の子ノードでは新しい名前空間を使用できますが、埋め込み式内の XML リテラルではそれを使用できません。  

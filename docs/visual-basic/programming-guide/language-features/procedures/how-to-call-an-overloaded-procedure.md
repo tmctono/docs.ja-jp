@@ -8,14 +8,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure calls [Visual Basic], overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
-ms.openlocfilehash: de101309fa1edaaddc3defc5759d9293fbef684c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 68b8a9898cba846b63ed8ce9d8329516f12e90cb
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388544"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075175"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>方法: オーバーロードされたプロシージャを呼び出す (Visual Basic)
+
 プロシージャをオーバーロードする利点は、呼び出しの柔軟性にあります。 呼び出し元のコードは、プロシージャに渡す必要がある情報を取得し、渡す引数に関係なく、1 つのプロシージャ名を呼び出すことができます。  
   
 ### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a>複数のバージョンが定義されているプロシージャを呼び出すには  

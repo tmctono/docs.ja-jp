@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Continue statement [Visual Basic]
 - loops, transferring to next iteration
 ms.assetid: 3ad00103-358b-4af3-a3a8-1b9ea0e995d3
-ms.openlocfilehash: fd604b281a590073a5e76398788d7648cadd145c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cf73ea1b3d402609c9966980dcab9ddd9bc096c2
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84382095"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874972"
 ---
 # <a name="continue-statement-visual-basic"></a>Continue ステートメント (Visual Basic)
+
 ループの次の反復に直ちに制御を移します。  
   
 ## <a name="syntax"></a>構文  
@@ -24,6 +25,7 @@ Continue { Do | For | While }
 ```  
   
 ## <a name="remarks"></a>Remarks  
+
  `Do`、`For`、または `While` ループ内から、そのループの次の反復に移すことができます。 制御はすぐにループ条件テストに渡されます。これは、`For` または `While` ステートメントに移ったり、`Until` または `While` 句が含まれている `Do` または `Loop` ステートメントに移ったりするのと同じです。  
   
  `Continue` は、移動を許可するループ内の任意の場所で使用できます。 制御の移動を許可するルールは、[GoTo ステートメント](goto-statement.md)を使用する場合と同じです。  
@@ -35,6 +37,7 @@ Continue { Do | For | While }
  さまざまな種類のループが入れ子になっている場合 (`For` ループ内の `Do` ループなど)、`Continue Do` または `Continue For` のいずれかを使用して、いずれかのループの次の反復にスキップできます。  
   
 ## <a name="example"></a>例  
+
  次のコード例では、除数が 0 の場合に、`Continue While` ステートメントを使用して配列の次の列にスキップします。 `Continue While` は `For` ループ内にあります。 これにより `While col < lastcol` ステートメントに移動します。これは、`For` ループが含まれている最も内側の `While` ループの次の反復です。  
   
  [!code-vb[VbVbalrStatements#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#14)]  

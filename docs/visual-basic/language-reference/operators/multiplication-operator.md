@@ -10,14 +10,15 @@ helpviewer_keywords:
 - multiplication operator [Visual Basic], syntax
 - math operators [Visual Basic]
 ms.assetid: 2b210382-99da-4195-89ba-b1d06f5e89ad
-ms.openlocfilehash: f1a7653fb3006ab3c9736ec168a8c5ea028f4763
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7038fef4258d190b726a851b26f2a2840ff3c0ea
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409321"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873367"
 ---
 # <a name="-operator-visual-basic"></a>* 演算子 (Visual Basic)
+
 2 つの数値を乗算します。  
   
 ## <a name="syntax"></a>構文  
@@ -34,12 +35,15 @@ number1 * number2
 |`number2`|必須です。 任意の数式。|  
   
 ## <a name="result"></a>結果  
+
  結果は `number1` と `number2` の積になります。  
   
 ## <a name="supported-types"></a>サポートされている型  
+
  すべての数値型。これには、符号なしおよび浮動小数点型と `Decimal` が含まれます。  
   
 ## <a name="remarks"></a>Remarks  
+
  結果のデータ型は、オペランドの型によって異なります。 次の表は、結果のデータ型がどのように決定されるかを示しています。  
   
 |オペランドのデータ型|結果のデータ型|  
@@ -52,9 +56,11 @@ number1 * number2
  式が [Nothing](../nothing.md) に評価される場合、0 として扱われます。  
   
 ## <a name="overloading"></a>オーバーロード  
+
  `*` 演算子は "*オーバーロード*" できます。つまり、オペランドがクラスまたは構造体の型を持っているときに、クラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
+
  この例では、`*` 演算子を使用して 2 つの数値を乗算しています。 結果は 2 つのオペランドの積になります。  
   
  [!code-vb[VbVbalrOperators#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#4)]  

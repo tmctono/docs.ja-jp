@@ -2,14 +2,15 @@
 title: Entity SQL 言語
 ms.date: 03/30/2017
 ms.assetid: 9e7d8837-28c5-429d-a824-7bafb59724cf
-ms.openlocfilehash: 2600b7626ebc5196c702f2d1e3159fd9549227f7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 721a4cd9d4e5618c083392bbe1ae203f285f8feb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553383"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148115"
 ---
 # <a name="entity-sql-language"></a>Entity SQL 言語
+
 Entity SQL は、ストレージに依存しない SQL と似たクエリ言語です。 Entity SQL を使用すると、オブジェクトとして、または表形式でエンティティ データに対してクエリを実行できます。 次の場合には Entity SQL の使用を検討してください。  
   
 - クエリを実行時に動的に作成する必要がある場合。 その場合、実行時に Entity SQL クエリ文字列を作成する代わりに、<xref:System.Data.Objects.ObjectQuery%601> のクエリ ビルダー メソッドを使用することも検討してください。  
@@ -21,6 +22,7 @@ Entity SQL は、ストレージに依存しない SQL と似たクエリ言語�
 - SQL ベースのクエリ言語に詳しい場合、Entity SQL の使用が最も適切に思われるでしょう。  
   
 ## <a name="using-entity-sql-with-the-entityclient-provider"></a>Entity SQL と EntityClient プロバイダーの使用  
+
  Entity SQL を EntityClient プロバイダーと一緒に使用する際の詳細については、次のトピックを参照してください。  
   
  [Entity Framework 用の EntityClient プロバイダー](../entityclient-provider-for-the-entity-framework.md)  
@@ -46,6 +48,7 @@ Entity SQL は、ストレージに依存しない SQL と似たクエリ言語�
  [方法: Navigate 演算子でリレーションシップをナビゲートする](../how-to-navigate-relationships-with-the-navigate-operator.md)  
   
 ## <a name="using-entity-sql-with-object-queries"></a>Entity SQL とオブジェクト クエリの使用  
+
  Entity SQL をオブジェクト クエリと一緒に使用する際の詳細については、次のトピックを参照してください。  
   
  [方法: エンティティ型オブジェクトを返すクエリを実行する](/previous-versions/dotnet/netframework-4.0/bb738694(v=vs.100))  
@@ -75,6 +78,7 @@ Entity SQL は、ストレージに依存しない SQL と似たクエリ言語�
  [方法: クエリの結果をページングする](/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [Entity SQL の概要](entity-sql-overview.md)  
   
  [Entity SQL リファレンス](entity-sql-reference.md)  

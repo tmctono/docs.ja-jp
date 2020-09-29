@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - data types [Visual Basic], Visual Basic
 ms.assetid: 4ea2ef2a-3d4d-42d9-9f8f-173a37c96e53
-ms.openlocfilehash: 0c7761e840ae17341450014f3cc055c4ed3e036a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 27e179b49505d8dac1ff48792d02c1d8c991703c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402734"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869081"
 ---
 # <a name="data-types-summary-visual-basic"></a>データ型の概要 (Visual Basic)
+
 Visual Basic 言語のキーワードとランタイム ライブラリ メンバーを、目的と使用方法に応じて編成しました。  
   
 |アクション|言語要素|  

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: c8f228c205c93adf7f2f555dc840a7daac61950b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 752b425ba32efe41a1ab1aa75de20039d36f5e50
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414454"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058899"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>方法: 列挙型を宣言する (Visual Basic)
+
 列挙型は、クラスまたはモジュールの宣言セクションで `Enum` ステートメントを使用して作成します。 メソッド内で列挙型を宣言することはできません。 `Private`、`Protected`、`Friend`、`Public` のいずれかを使用して、適切なアクセス レベルを指定します。  
   
  `Enum` 型には、名前、基になる型、フィールド一式を、それぞれ定数で指定します。 名前は、有効な Visual Basic .NET 修飾子である必要があります。 基になる型は、いずれかの整数型 (`Byte`、`Short`、`Long` または `Integer`) である必要があります。 `Integer` が既定値です。 列挙型の型指定は常に厳密であり、整数型との互換性はありません。  

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: e703346113348556b8a3ea41a7934a55a8008522
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 73b53dcf7cd732af1a4f1d23cd0d3b9ef5b5529b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388077"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91087441"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>方法: プロシージャにパラメーターを定義する (Visual Basic)
+
 "*パラメーター*" では、その呼び出し時に呼び出し元コードでプロシージャに値を渡すことができます。 プロシージャの各パラメーターは、変数を宣言する場合と同じ方法で、その名前とデータ型を指定して宣言します。 引渡し方法と、パラメーターが省略可能かどうかを指定することもできます。  
   
  詳細については、「[プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)」を参照してください。  

@@ -10,14 +10,15 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - naming conventions [Visual Basic], classes
 ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
-ms.openlocfilehash: 20531e379ddf9b93a278795e9b3c0eb91b47e077
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b25d246bd31147b7a9ba2c72214926fdb5ca8895
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398345"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072146"
 ---
 # <a name="visual-basic-naming-conventions"></a>Visual Basic の名前付け規則
+
 Visual Basic アプリケーションで要素に名前を付けるときは、その名前の最初の文字を英文字またはアンダースコアにする必要があります。 ただし、アンダースコアで始まる名前は、[言語への非依存性、および言語非依存コンポーネント](../../../standard/language-independence-and-language-independent-components.md) (CLS) に準拠していないことに注意してください。  
   
  名前付けには、次の推奨事項が適用されます。  

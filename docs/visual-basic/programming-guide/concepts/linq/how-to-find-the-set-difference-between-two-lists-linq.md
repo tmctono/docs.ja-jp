@@ -2,14 +2,15 @@
 title: '方法: 2 つのリストの差集合を見つける (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-ms.openlocfilehash: f533b63b40325b34c5881c1e2f14aa4e576191c7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1671cd32c0c0b8a3ff7fa6be87bd43dde9750776
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396598"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100218"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>方法: 2 つのリストの差集合を見つける (LINQ) (Visual Basic)
+
 この例では、LINQ を使用して、2 つの文字列リストを比較し、names2.txt ではなく names1.txt でそれらの行を出力する方法を示します。  
   
 ### <a name="to-create-the-data-files"></a>データ ファイルを作成するには  
@@ -54,6 +55,7 @@ End Class
  <xref:System.Linq.Enumerable.Except%2A>、<xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Union%2A>、および <xref:System.Linq.Enumerable.Concat%2A> など、Visual Basic のいくつかの種類のクエリ操作は、メソッドベースの構文でのみ表すことができます。  
   
 ## <a name="compile-the-code"></a>コードのコンパイル  
+
 System.Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソール アプリケーション プロジェクトを作成します。
   
 ## <a name="see-also"></a>関連項目

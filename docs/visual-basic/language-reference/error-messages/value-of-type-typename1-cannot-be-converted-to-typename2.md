@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: f6b35efbc445887c537b94dd299b317a28e5f689
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 67cb8ac602437474f35c89c9aecf66fbf40c91c9
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406561"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875051"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>型 '\<typename1>' の値を '\<typename2>' に変換できません。
+
 型 '\<typename1>' の値を '\<typename2>' に変換できません。 ファイル参照とアセンブリ '\<assemblyname>' へのプロジェクト参照との混在により、型の不一致が生じた可能性があります。 プロジェクト '\<projectname1>' の '\<filepath>' へのファイル参照を '\<projectname2>' へのプロジェクト参照で置き換えてください。  
   
  プロジェクトがプロジェクト参照とファイル参照の両方を行う場合、コンパイラは、1 つの型を別の型に変換できることを保証できません。  

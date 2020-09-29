@@ -9,17 +9,19 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: 3b1c4ad0ab4fd8d2897aff6ad9097cdc81272455
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ae338bc9bad9646abc045a652d4ef33a8863354b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410645"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086063"
 ---
 # <a name="determining-object-type-visual-basic"></a>オブジェクトの型の決定 (Visual Basic)
+
 汎用オブジェクト変数 (`Object` として宣言する変数) では、あらゆるクラスのオブジェクトを保持できます。 `Object` 型の変数を使用する場合、オブジェクトのクラスによって異なるアクションを実行しなければならないことがあります。たとえば、オブジェクトによっては、特定のプロパティやメソッドがサポートされません。 Visual Basic では、`TypeName` 関数と `TypeOf...Is` 演算子という 2 つの方法によって、オブジェクト変数に格納されているオブジェクトの型を特定できます。  
   
 ## <a name="typename-and-typeofis"></a>TypeName と TypeOf…Is  
+
  `TypeName` 関数の戻り値は文字列であり、次のコードで示すように、オブジェクトのクラス名を格納または表示する必要がある場合に最適です。  
   
  [!code-vb[VbVbalrOOP#92](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#92)]  

@@ -8,19 +8,21 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: cf6003206566dfe8f70a7f75cd4d7ec7565794a5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d6708ee13963aaae43a73b159032f64f0fffac10
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403175"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072211"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic の Main プロシージャ
+
 すべての Visual Basic アプリケーションには、`Main` と呼ばれるプロシージャが含まれている必要があります。 このプロシージャは、アプリケーションの開始点となり、アプリケーションの全体的な制御を行います。 .NET Framework では、アプリケーションが読み込まれ、制御を渡す準備ができると、`Main` プロシージャを呼び出します。 Windows フォーム アプリケーションを作成する場合を除き、単独で実行されるアプリケーションでは、`Main` プロシージャを記述する必要があります。
 
  `Main` には、最初に実行されるコードが含まれます。 `Main` では、プログラムの起動時に最初に読み込まれるフォームを決定したり、アプリケーションのコピーがシステムで既に実行されているかどうかを確認したりできます。また、アプリケーションの一連の変数を確立したり、アプリケーションに必要なデータベースを開いたりすることもできます。
 
 ## <a name="requirements-for-the-main-procedure"></a>Main プロシージャの要件
+
  単独で実行されるファイル (通常は拡張子が .exe) には、`Main` プロシージャが含まれている必要があります。 ライブラリ (拡張子.dll など) は単独では実行されないので、`Main` プロシージャは不要です。 作成できるさまざまな種類のプロジェクトの要件は次のとおりです。
 
 - コンソール アプリケーションは単独で実行されるので、少なくとも 1 つの `Main` プロシージャを指定する必要があります。
@@ -30,6 +32,7 @@ ms.locfileid: "84403175"
 - クラス ライブラリには、`Main` プロシージャは不要です。 これには、Windows コントロール ライブラリや Web コントロール ライブラリが含まれます。 Web アプリケーションは、クラス ライブラリとして展開されます。
 
 ## <a name="declaring-the-main-procedure"></a>Main プロシージャの宣言
+
  `Main` プロシージャを宣言するには、4 つの方法があります。 引数を受け取ることも、受け取らないこともできます。また、値を返すことも返さないこともできます。
 
 > [!NOTE]

@@ -6,17 +6,19 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 935926b8b83afa47c20ea68aecd6bc8c40bd0234
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 44736f4db9977d9f69a0571cc80fa327dcf96581
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363698"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072510"
 ---
 # <a name="string-basics-in-visual-basic"></a>Visual Basic における文字列の基本
+
 `String` データ型は、一連の文字を表します (各文字は `Char` データ型のインスタンスを表しています)。 このトピックでは、Visual Basic の文字列の基本的な概念について説明します。  
   
 ## <a name="string-variables"></a>文字列変数  
+
  文字列のインスタンスには、一連の文字を表すリテラル値を代入できます。 次に例を示します。  
   
  [!code-vb[VbVbalrStrings#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#63)]  
@@ -50,6 +52,7 @@ World]]></xml>.Value
 ```  
   
 ## <a name="characters-in-strings"></a>文字列内の文字  
+
  文字列は、一連の `Char` 値であると考えることができます。また、配列の場合と同様に、`String` 型には文字列に対してさまざまな操作を行うことができる、組み込み関数があります。 .NET Framework のすべての配列と同様に、これらは 0 ベース配列です。 文字列内の特定の文字は、`Chars` プロパティを通じて参照できます。このプロパティでは、文字列内で文字が現れる位置を使用して、文字にアクセスできます。 次に例を示します。  
   
  [!code-vb[VbVbalrStrings#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#67)]  
@@ -61,6 +64,7 @@ World]]></xml>.Value
  これで、変数 `myArray` の内容は、`Char` 値の配列になりました。各値は `myString` の文字を表しています。  
   
 ## <a name="the-immutability-of-strings"></a>文字列の不変性  
+
  文字列は*不変*です。つまり、その値は作成後に変更することができません。 ただし、文字列変数に複数の値を代入できないわけではありません。 次に例を示します。  
   
  [!code-vb[VbVbalrStrings#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#69)]  

@@ -5,17 +5,19 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 9cbd3a5b8685178259b76d97919ea097ae72f6ae
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 878e028f7c7f0e93752765272e93baa3ffe1426d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401967"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059216"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Visual Basic においてカルチャが文字列に与える影響
+
 このヘルプ ページでは、Visual Basic でカルチャ情報を使用して、文字列の変換と比較を実行する方法について説明します。  
   
 ## <a name="when-to-use-culture-specific-strings"></a>カルチャ固有の文字列を使用する場合  
+
  通常、ユーザーに表示し、ユーザーが読み取るすべてのデータにはカルチャ固有の文字列を使用し、アプリケーションの内部データにはカルチャ不変の文字列を使用する必要があります。  
   
  たとえば、アプリケーションが日付を文字列として入力するようユーザーに要求する場合、アプリケーションでは、ユーザーが各自のカルチャに従って文字列を書式設定することを想定し、文字列を適切に変換する必要があります。 アプリケーションがその日付をユーザー インターフェイスに表示する場合は、ユーザーのカルチャで表示する必要があります。  
@@ -23,6 +25,7 @@ ms.locfileid: "84401967"
  ただし、アプリケーションが日付を中央サーバーにアップロードする場合は、異なる可能性がある日付形式間での混乱を防ぐために、1 つの特定のカルチャに従って文字列を書式設定する必要があります。  
   
 ## <a name="culture-sensitive-functions"></a>カルチャに依存する関数  
+
  Visual Basic のすべての文字列変換関数 (`Str` および `Val` 関数を除く) は、アプリケーションのカルチャ情報を使用して、変換と比較がアプリケーションのユーザーのカルチャに適していることを確認します。  
   
  カルチャ設定が異なるコンピューターで実行されるアプリケーションで文字列変換関数を正しく使用するには、特定のカルチャ設定を使用する関数と、現在のカルチャ設定を使用する関数を理解することが重要です。 既定では、アプリケーションのカルチャ設定は、オペレーティング システムのカルチャ設定から継承されることに注意してください。 詳細については、<xref:Microsoft.VisualBasic.Strings.Asc%2A>、<xref:Microsoft.VisualBasic.Strings.AscW%2A>、<xref:Microsoft.VisualBasic.Strings.Chr%2A>、<xref:Microsoft.VisualBasic.Strings.ChrW%2A>、<xref:Microsoft.VisualBasic.Strings.Format%2A>、<xref:Microsoft.VisualBasic.Conversion.Hex%2A>、<xref:Microsoft.VisualBasic.Conversion.Oct%2A> に関する記事、および「[データ型変換関数](../../../language-reference/functions/type-conversion-functions.md)」をご覧ください。  
@@ -36,6 +39,7 @@ ms.locfileid: "84401967"
  詳細については、次のトピックを参照してください。 <xref:Microsoft.VisualBasic.Conversion.Str%2A> および <xref:Microsoft.VisualBasic.Conversion.Val%2A>  
   
 ## <a name="using-a-specific-culture"></a>特定のカルチャの使用  
+
  (文字列として書式設定された) 日付を Web サービスに送信するアプリケーションを開発しているとします。 この場合、アプリケーションでは、文字列変換に特定のカルチャを使用する必要があります。 その理由を説明するために、日付の <xref:System.DateTime.ToString> メソッドを使用した場合の結果を考えてみましょう。アプリケーションでこのメソッドを使用して、日付 July 4, 2005 を書式設定する場合、米国英語 (en-US) カルチャで実行すると、"7/4/2005 12:00:00 AM" が返されますが、ドイツ語 (de-DE) カルチャで実行すると、"04.07.2005 00:00:00" が返されます。  
   
  特定のカルチャの形式で文字列変換を実行する必要がある場合は、.NET Framework に組み込まれている `CultureInfo` クラスを使用します。 カルチャの名前を <xref:System.Globalization.CultureInfo.%23ctor%2A> コンストラクターに渡して、特定のカルチャの新しい `CultureInfo` オブジェクトを作成できます。 サポートされているカルチャ名は、<xref:System.Globalization.CultureInfo> クラスのヘルプ ページに記載されています。  
@@ -50,6 +54,7 @@ ms.locfileid: "84401967"
 > 日付リテラルは、常に英語カルチャに従って解釈されます。  
   
 ## <a name="comparing-strings"></a>文字列の比較  
+
  文字列の比較が必要になる 2 つの重要な状況があります。  
   
 - **ユーザーに表示するためにデータを並べ替える場合:** 文字列が適切に並べ替えられるように、現在のカルチャに基づいた操作を使用します。  
@@ -76,6 +81,7 @@ ms.locfileid: "84401967"
 |`InvariantCulture` または `InvariantCultureIgnoreCase`|インバリアント カルチャでの文字列の解釈に基づく比較。<br /><br /> これは、`Ordinal` および `OrdinalIgnoreCase` とは異なります。インバリアント カルチャでは、許容範囲外の文字を同等の不変文字として扱うためです。|永続データを比較するとき、または固定の並べ替え順序が必要な言語関連のデータを表示するときにのみ、これらの値を使用します。|  
   
 ### <a name="security-considerations"></a>セキュリティの考慮事項  
+
  アプリケーションが、比較操作または大文字/小文字の変更操作の結果に基づいてセキュリティ上の決定を行う場合は、操作で <xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドを使用し、`comparisonType` 引数に `Ordinal` または `OrdinalIgnoreCase` を渡す必要があります。  
   
 ## <a name="see-also"></a>関連項目

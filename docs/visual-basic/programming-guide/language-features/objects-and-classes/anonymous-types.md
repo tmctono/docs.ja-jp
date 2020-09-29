@@ -8,14 +8,15 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: bbe84ce8a62705027c00bc26db74a3c21fa34fd9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5ab3cf8c3c02ff35890f71ad6c7f314b51b87133
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411801"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075240"
 ---
 # <a name="anonymous-types-visual-basic"></a>匿名型 (Visual Basic)
+
 Visual Basic では匿名型がサポートされています。これを使用すると、データ型のクラス定義を記述せずにオブジェクトを作成できます。 クラスは、コンパイラによって生成されます。 このクラスには使用可能な名前がなく、<xref:System.Object> から直接継承され、オブジェクトの宣言時に指定したプロパティが格納されます。 データ型の名前を指定しないため、*匿名型*と呼ばれます。  
   
  次の例では、`Name` と `Price` の 2 つのプロパティを持つ匿名型のインスタンスとして、変数 `product` を宣言して作成します。  
@@ -38,6 +39,7 @@ Visual Basic では匿名型がサポートされています。これを使用�
 > 匿名型の名前はコンパイラによって生成され、コンパイルごとに異なる可能性があります。 プロジェクトが再コンパイルされるときに名前が変更される可能性があるため、コードでは、匿名型の名前を使用したり、それに依存したりしないでください。  
   
 ## <a name="declaring-an-anonymous-type"></a>匿名型の宣言  
+
  匿名型のインスタンスの宣言では、初期化子リストを使用して型のプロパティを指定します。 メソッドやイベントなどの他のクラス要素ではなく、匿名型を宣言する場合は、プロパティのみを指定できます。 次の例では、`product1` は、`Name` と `Price` の 2 つのプロパティを持つ匿名型のインスタンスです。  
   
  [!code-vb[VbVbalrAnonymousTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#4)]  
@@ -51,6 +53,7 @@ Visual Basic では匿名型がサポートされています。これを使用�
  匿名型のプロパティを指定するその他の方法の詳細については、「[方法: 匿名型の宣言におけるプロパティ名と型を推論する](how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)」を参照してください。  
   
 ## <a name="key-properties"></a>キー プロパティ  
+
  キー プロパティは、次のいくつかの基本的な点で、キー以外のプロパティとは異なります。  
   
 - 2 つのインスタンスが等しいかどうかを確認するためには、キー プロパティの値のみが比較されます。  
@@ -60,6 +63,7 @@ Visual Basic では匿名型がサポートされています。これを使用�
 - コンパイラによって生成された匿名型のハッシュ コード アルゴリズムには、キー プロパティ値のみが含まれます。  
   
 ### <a name="equality"></a>等式  
+
  匿名型のインスタンスは、同じ匿名型のインスタンスである場合にのみ等しくすることができます。 コンパイラは、次の条件を満たす場合、2 つのインスタンスを同じ型のインスタンスとして扱います。  
   
 - これらは同じアセンブリ内で宣言されています。  
@@ -79,11 +83,13 @@ Visual Basic では匿名型がサポートされています。これを使用�
  [!code-vb[VbVbalrAnonymousTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#7)]  
   
 ### <a name="read-only-values"></a>読み取り専用の値  
+
  キー プロパティの値は変更できません。 たとえば、前の例の `prod8` では、`Name` フィールドと `Price` フィールドは `read-only` ですが、`OnHand` は変更できます。  
   
  [!code-vb[VbVbalrAnonymousTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#8)]  
   
 ## <a name="anonymous-types-from-query-expressions"></a>クエリ式からの匿名型  
+
  クエリ式では、必ずしも匿名型を作成する必要はありません。 可能な場合は、既存の型を使用して列データを保持します。 これは、クエリがデータ ソースからレコード全体を返すか、または各レコードのフィールドを 1 つだけ返す場合に行われます。 次のコード例では、`customers` は `Customer` クラスのオブジェクトのコレクションです。 クラスには多くのプロパティがあり、クエリの結果には、任意の順序で 1 つ以上のプロパティを含めることができます。 最初の 2 つの例では、クエリで名前付きの型の要素が選択されるため、匿名型は必要ありません。  
   
 - `custs1` には文字列のコレクションが含まれます。`cust.Name` が文字列であるためです。  
@@ -107,6 +113,7 @@ Visual Basic では匿名型がサポートされています。これを使用�
  詳細については、「[Visual Basic における LINQ の概要](../linq/introduction-to-linq.md)」を参照してください。  
   
 ## <a name="deciding-whether-to-use-anonymous-types"></a>匿名型を使用するかどうかの決定  
+
  オブジェクトを匿名クラスのインスタンスとして作成する前に、それが最適な選択肢かどうかを検討してください。 たとえば、関連データを格納する一時オブジェクトを作成する場合に、完全なクラスに含まれる可能性のある他のフィールドやメソッドが不要な場合は、匿名型が適切な解決策です。 匿名型は、宣言ごとに異なるプロパティを選択する場合や、プロパティの順序を変更する場合にも便利です。 ただし、プロジェクトに同じプロパティを持つ複数のオブジェクトが一定の順序で含まれている場合は、クラス コンストラクターを持つ名前付きの型を使用して、より簡単に宣言することができます。 たとえば、適切なコンストラクターを使用すると、匿名型の複数のインスタンスを宣言するよりも、`Product` クラスの複数のインスタンスを宣言する方が簡単になります。  
   
  [!code-vb[VbVbalrAnonymousTypes#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#9)]  
@@ -118,6 +125,7 @@ Visual Basic では匿名型がサポートされています。これを使用�
  さらに重要な点として、匿名型の使用には、名前付きの型のインスタンスには適用されない制限があります。 `firstProd2`、`secondProd2`、`thirdProd2` は、同じ匿名型のインスタンスです。 ただし、共有されている匿名型の名前は使用できません。また、コードで型名を指定する場所を指定することはできません。 たとえば、匿名型を使用して、メソッド シグネチャを定義したり、別の変数やフィールドを宣言したり、任意の型宣言で宣言したりすることはできません。 そのため、メソッド間で情報を共有する必要がある場合、匿名型は適切ではありません。  
   
 ## <a name="an-anonymous-type-definition"></a>匿名型の定義  
+
  匿名型のインスタンスの宣言に応答して、コンパイラは、指定されたプロパティを含む新しいクラス定義を作成します。  
   
  匿名型に少なくとも 1 つのキー プロパティが含まれている場合、<xref:System.Object>: <xref:System.Object.Equals%2A>、<xref:System.Object.GetHashCode%2A>、および <xref:System.Object.ToString%2A> から継承された 3 つのメンバーは、この定義によってオーバーライドされます。 等価性をテストし、ハッシュ コード値を決定するために生成されたコードは、キー プロパティのみを考慮します。 匿名型にキー プロパティが含まれていない場合は、<xref:System.Object.ToString%2A> のみがオーバーライドされます。 匿名型の明示的に名前が付けられたプロパティは、生成されたこれらのメソッドと競合しません。 つまり、`.Equals`、`.GetHashCode`、または `.ToString` を使用してプロパティの名前を指定することはできません。  

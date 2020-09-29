@@ -11,14 +11,15 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: 0bfa7fa2bdac4746827884c1dad62734c549a48e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e6173a0eaa0bf84abb1979711c6df932533c5ce9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357388"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086115"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>方法: 変数の可用性を制御する (Visual Basic)
+
 変数の可用性を制御するには、その*アクセス レベル*を指定します。 アクセス レベルによって、変数への読み取りまたは書き込みのアクセス許可を持つコードが決まります。  
   
 - *メンバー変数* (モジュール レベルのプロシージャの外部で定義される) は、既定でパブリック アクセスになります。これは、それらを参照できるすべてのコードで、それらにアクセスできることを意味します。 これを変更するには、アクセス修飾子を指定します。  
@@ -54,6 +55,7 @@ ms.locfileid: "84357388"
      変数の読み取りや書き込みは、プロシージャ内のどこからでも行うことができますが、その外部から行うことはできません。  
   
 ## <a name="protected-and-friend-access"></a>Protected アクセスと Friend アクセス  
+
  変数のアクセス レベルは、そのクラス、任意の派生クラス、またはそのアセンブリに制限できます。 また、これらの制限の和集合を指定することもできます。これにより、任意の派生クラスまたは同じアセンブリ内の他の任意の場所のコードからアクセスできるようになります。 この和集合を指定するには、同じ宣言で `Protected` キーワードと `Friend` キーワードを組み合わせます。  
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>そのクラスと任意の派生クラス内からのみ変数にアクセスできるようにするには  
@@ -73,6 +75,7 @@ ms.locfileid: "84357388"
      変数の読み取りや書き込みは、モジュール、クラス、または構造体内のどこからでも、また同じアセンブリ内の任意のコードから行うことができますが、アセンブリの外部から行うことはできません。  
   
 ## <a name="example"></a>例  
+
  次の例は、`Public`、`Protected`、`Friend`、`Protected Friend`、および `Private` アクセス レベルによる変数の宣言を示しています。 `Dim` ステートメントでアクセス レベルを指定する場合は、`Dim` キーワードを含める必要はありません。  
   
 ```vb  
@@ -84,6 +87,7 @@ Private numberForMeOnly As Integer
 ```  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
+
  変数のアクセス レベルの制限を強めるほど、悪意のあるコードによってそれが不正使用される可能性が低くなります。  
   
 ## <a name="see-also"></a>関連項目

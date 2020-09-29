@@ -5,14 +5,15 @@ helpviewer_keywords:
 - financial functions
 - payment
 ms.assetid: 474f973e-7103-42b7-aa4d-367c935e07e1
-ms.openlocfilehash: 3b96dbfb3c5c218e1d63ef56735c9887ba28b489
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: abbb522798528ca5c2f19cf069277f35d9f110f9
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373720"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875630"
 ---
 # <a name="financial-summary-visual-basic"></a>財務処理の概要 (Visual Basic)
+
 Visual Basic 言語のキーワードとランタイム ライブラリ メンバーを、目的と使用方法に応じて編成しました。  
   
 |アクション|言語要素|  

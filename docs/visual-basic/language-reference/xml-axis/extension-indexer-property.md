@@ -9,14 +9,15 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: c91061d49e22e648b7bf75a812071b352793abcb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 23417cd982c2ddf06afce69d9b120ae0737fb87d
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401343"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866106"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>拡張インデクサー プロパティ (Visual Basic)
+
 コレクション内の個々の要素にアクセスできます。  
   
 ## <a name="syntax"></a>構文  
@@ -35,9 +36,11 @@ object(index)
 |)|必須です。 インデクサー プロパティの末尾を表します。|  
   
 ## <a name="return-value"></a>戻り値  
+
  コレクション内の指定した位置からのオブジェクト、または `Nothing` (インデックスが範囲外の場合)。  
   
 ## <a name="remarks"></a>Remarks  
+
  拡張インデクサー プロパティを使用して、コレクションの個別の要素にアクセスできます。 このインデクサー プロパティは、通常、XML 軸プロパティの出力で使用されます。 XML 子軸プロパティおよび XML 子孫軸プロパティは、<xref:System.Xml.Linq.XElement> オブジェクトのコレクションまたは属性値を返します。  
   
  拡張インデクサーのプロパティは、Visual Basic コンパイラによって、`ElementAtOrDefault` メソッドへの呼び出しに変換されます。 配列インデクサーとは異なり、`ElementAtOrDefault` メソッドは、インデックスが範囲外の場合に `Nothing` を返します。 この動作は、コレクション内の要素の数を簡単には判断できない場合に便利です。  
@@ -47,6 +50,7 @@ object(index)
  <xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XAttribute> オブジェクト コレクションの最初の要素の値には、XML `Value` プロパティを使用してアクセスできます。 詳細については、「[XML Value プロパティ](xml-value-property.md)」を参照してください。  
   
 ## <a name="example"></a>例  
+
  次の例は、拡張インデクサーを使用して、<xref:System.Xml.Linq.XElement> オブジェクト コレクションの 2 番目の子ノードにアクセスする方法を示しています。 コレクションには子軸プロパティを使用してアクセスします。これにより、`contact` オブジェクトの `phone` という名前の子要素すべてが取得されます。  
   
  [!code-vb[VbXMLSamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#24)]  

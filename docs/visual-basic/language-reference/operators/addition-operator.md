@@ -10,14 +10,15 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-ms.openlocfilehash: 6ae3feae6ecb63b82426f2aa69359625bbffcec8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bc31e4c66c64d891e3fffd809b7ae99b9c9a0520
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372117"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873452"
 ---
 # <a name="-operator-visual-basic"></a>+ 演算子 (Visual Basic)
+
 2 つの数値を加算するか、数値式の正の値を返します。 2 つの文字列式の連結にも使用できます。  
   
 ## <a name="syntax"></a>構文  
@@ -40,6 +41,7 @@ or
 |`expression2`|`+` 演算子が負の値を計算する場合を除き、必須です。 任意の数値または文字列の式。|  
   
 ## <a name="result"></a>結果  
+
  `expression1` と `expression2` が両方とも数値の場合、結果はそれらの算術和になります。  
   
  `expression2` がない場合、`+` 演算子は、変更されていない式の値の "*単項*" 恒等演算子です。 この意味では、この演算は `expression1` の符号を維持するため、`expression1` が負の場合は、結果が負になります。  
@@ -49,9 +51,11 @@ or
  `expression1` と `expression2` の型が混在している場合、実行される処理は、その型、内容、および [Option Strict ステートメント](../statements/option-strict-statement.md)の設定によって異なります。 詳細については、「Remarks」の表を参照してください。  
   
 ## <a name="supported-types"></a>サポートされている型  
+
  すべての数値型。これには、符号なしおよび浮動小数点の型、`Decimal`、`String` が含まれます。  
   
 ## <a name="remarks"></a>Remarks  
+
  一般に、`+` は可能な場合は算術加算を実行し、両方の式が文字列である場合にのみ連結します。  
   
  どちらの式も `Object` でない場合、Visual Basic では次の処理が実行されます。  
@@ -87,9 +91,11 @@ or
 > `+` 演算子を使用すると、加算と文字列連結のどちらが発生するか判断できない可能性があります。 連結には `&` 演算子を使用してあいまいさをなくし、自己文書化コードを実現してください。  
   
 ## <a name="overloading"></a>オーバーロード  
- `+` 演算子は "*オーバーロード*" できます。つまり、オペランドがクラスまたは構造体の型を持っているときに、クラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+
+ `+` 演算子は "*オーバーロード*" できます。つまり、オペランドの型がクラスまたは構造体であるとき、そのクラスまたは構造体で、演算子の動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
+
  次の例では、`+` 演算子を使用して数値を加算します。 オペランドが両方とも数値の場合、Visual Basic は演算結果を計算します。 算術結果は、2 つのオペランドの和を表します。  
   
  [!code-vb[VbVbalrOperators#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#6)]  

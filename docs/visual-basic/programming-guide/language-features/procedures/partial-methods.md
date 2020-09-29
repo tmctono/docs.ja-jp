@@ -11,19 +11,21 @@ helpviewer_keywords:
 - methods [Visual Basic], partial methods
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-ms.openlocfilehash: 61a1398ba7de8dab005fa1e9efa13dc2ba18cc3c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0e7c1315df50e83c919270f76405e80862bdd03b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84364124"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071262"
 ---
 # <a name="partial-methods-visual-basic"></a>部分メソッド (Visual Basic)
+
 部分メソッドを使用すると、開発者はカスタム ロジックをコードに挿入できます。 通常、このコードはデザイナーによって生成されるクラスの一部です。 部分メソッドは、コード ジェネレーターによって作成された部分クラスで定義され、何かが変更されたことを通知するためによく使用されます。 部分メソッドにより、開発者は変更に対応するためのカスタム動作を指定できます。  
   
  コード ジェネレーターのデザイナーは、メソッド シグネチャとメソッドの 1 つ以上の呼び出しのみを定義します。 開発者は、生成されたコードの動作をカスタマイズする場合にメソッドの実装を提供できます。 実装が提供されていない場合、メソッドの呼び出しはコンパイラによって削除されるため、パフォーマンスの追加のオーバーヘッドは発生しません。  
   
 ## <a name="declaration"></a>宣言  
+
  生成されたコードでは、シグネチャ行の先頭に `Partial` キーワードを配置することによって部分メソッドの定義をマークします。  
   
 ```vb  
@@ -40,6 +42,7 @@ End Sub
 - アクセス修飾子は `Private` である必要があります。  
   
 ## <a name="implementation"></a>実装  
+
  実装は、部分メソッドの本体の入力で主に構成されます。 通常、実装は定義とは別の部分クラスにあり、生成されたコードを拡張する開発者が記述します。  
   
 ```vb  
@@ -51,9 +54,11 @@ End Sub
  上記の例では、宣言のシグネチャを正確に複製していますが、バリエーションが可能です。 具体的には、`Overloads` や `Overrides` などの他の修飾子を追加できます。 `Overrides` 修飾子は 1 つだけ許可されます。 メソッド修飾子の詳細については、「[Sub Statement (Sub ステートメント)](../../../language-reference/statements/sub-statement.md)」をご覧ください。  
   
 ## <a name="use"></a>使用  
+
  他の `Sub` プロシージャを呼び出す場合と同様に、部分メソッドを呼び出します。 メソッドが実装されている場合、引数が評価され、メソッドの本体が実行されます。 ただし、部分メソッドの実装は省略可能であることに注意してください。 メソッドが実装されていない場合、その呼び出しは無効であり、メソッドに引数として渡された式は評価されません。  
   
 ## <a name="example"></a>例  
+
  Product.Designer.vb という名前のファイルで、`Quantity` プロパティを持つ `Product` クラスを定義します。  
   
  [!code-vb[VbVbalrPartialMeths#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#4)]  

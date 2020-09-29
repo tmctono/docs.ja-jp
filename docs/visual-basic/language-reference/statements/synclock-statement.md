@@ -9,14 +9,15 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-ms.openlocfilehash: fd932a20af274faf2b56136a94675b28399989b8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cc8706b95e0785459e36abe27ce915b5bab8711a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404162"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875200"
 ---
 # <a name="synclock-statement"></a>SyncLock ステートメント
+
 ブロックを実行する前に、ステートメント ブロックの排他ロックを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -28,6 +29,7 @@ End SyncLock
 ```  
   
 ## <a name="parts"></a>指定項目  
+
  `lockobject`  
  必須です。 オブジェクト参照として評価される式。  
   
@@ -38,6 +40,7 @@ End SyncLock
  `SyncLock` ブロックを終了します。  
   
 ## <a name="remarks"></a>Remarks  
+
  `SyncLock` ステートメントは、複数のスレッドがステートメント ブロックを同時に実行しないようにします。 `SyncLock` は、ブロックを実行する他のスレッドがなくなるまで、各スレッドがそのブロックに入らないようにします。  
   
  `SyncLock` の最も一般的な使用方法は、複数のスレッドによってデータが同時に更新されないようにすることです。 データを操作するステートメントが中断せずに完了する必要がある場合は、`SyncLock` ブロック内に配置します。  
@@ -67,6 +70,7 @@ End SyncLock
 - フレームワークの呼び出し。 `SyncLock` ブロックは、<xref:System.Threading> 名前空間の `Monitor` クラスの `Enter` および `Exit` メソッドを呼び出すことによって、排他ロックを取得したり解放したりします。  
   
 ## <a name="programming-practices"></a>プログラミング プラクティス  
+
  `lockobject` 式は、常に、クラスに排他的に属しているオブジェクトに評価される必要があります。 現在のインスタンスに属するデータを保護するには `Private` オブジェクト変数を宣言し、すべてのインスタンスに共通のデータを保護するには `Private Shared` オブジェクト変数を宣言する必要があります。  
   
  インスタンス データ用のロック オブジェクトを指定するために、`Me` キーワードを使用しないでください。 クラスの外部のコードにクラスのインスタンスへの参照が含まれている場合、その参照を、ユーザーのものとはまったく異なる `SyncLock` ブロックのロック オブジェクトとして使用して、さまざまなデータを保護することができます。 このようにして、ユーザーのクラスとその他のクラスは、関連付けられていない `SyncLock` ブロックの実行を互いにブロックできます。 同様に、文字列のロックも問題になる可能性があります。同じ文字列を使用するコードがプロセス内に他にも存在した場合、そのコードも同じロックを共有するためです。  
@@ -76,17 +80,21 @@ End SyncLock
 ## <a name="examples"></a>使用例  
   
 ### <a name="description"></a>説明  
+
  次の例では、メッセージの単純なリストを保持するクラスを示します。 これは、メッセージを配列内に保持し、その配列の最後に使用された要素を変数に保持します。 `addAnotherMessage` プロシージャは、最後の要素をインクリメントし、新しいメッセージを格納します。 これら 2 つの操作は、`SyncLock` および `End SyncLock` ステートメントによって保護されます。最後の要素がインクリメントされた後、他のすべてのスレッドが最後の要素を再度インクリメントできるようになる前に、新しいメッセージが格納される必要があるためです。  
   
  `simpleMessageList` クラスがそのすべてのインスタンス間で 1 つのメッセージ リストを共有している場合、変数 `messagesList` および `messagesLast` は `Shared` として宣言されます。 この場合、変数 `messagesLock` も `Shared` にして、すべてのインスタンスで 1 つのロック オブジェクトが使用されるようにする必要があります。  
   
 ### <a name="code"></a>コード  
+
  [!code-vb[VbVbalrThreading#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/Class1.vb#1)]  
   
 ### <a name="description"></a>説明  
+
  次の例では、スレッドと `SyncLock` を使用しています。 `SyncLock` ステートメントが存在する限り、このステートメント ブロックはクリティカル セクションとなり、`balance` が負の数になることはありません。 `SyncLock` および `End SyncLock` ステートメントをコメント アウトして、`SyncLock` キーワードを残すことによる影響を確認できます。  
   
 ### <a name="code"></a>コード  
+
  [!code-vb[VbVbalrThreading#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/class2.vb#21)]  
   
 ### <a name="comments"></a>コメント  

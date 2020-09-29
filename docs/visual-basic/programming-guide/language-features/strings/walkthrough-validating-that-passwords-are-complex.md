@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: 8cb04286e98cf78f0fb66dde92002ee09e2ea0f5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9597d7a9d6b68b8c91f32d97da3532f181585cf6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556246"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072354"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>チュートリアル: パスワードの複雑さの検証 (Visual Basic)
+
 このメソッドでは、強力なパスワードの特性をチェックし、不合格になったチェックに関する情報で文字列パラメーターを更新します。  
   
  セキュリティで保護されたシステムでは、パスワードを使用してユーザーを承認できます。 ただし、パスワードは、承認されていないユーザーが推測するのは難しいものである必要があります。 攻撃者は、辞書 (またはさまざまな言語の複数の辞書) のすべての単語を反復処理する "*辞書攻撃*" プログラムを使用し、単語のいずれかがユーザーのパスワードとして機能するかどうかをテストする可能性があります。 "Yankees" や "Mustang" のような脆弱なパスワードはすぐに推測できます。 "?You'L1N3vaFiNdMeyeP@sSWerd!" のような強力なパスワードは、推測される可能性がはるかに低くなります。 パスワードで保護されたシステムでは、ユーザーが強力なパスワードを選択できるようにする必要があります。  
@@ -21,9 +22,11 @@ ms.locfileid: "90556246"
 ## <a name="example"></a>例  
   
 ### <a name="code"></a>コード  
+
  [!code-vb[VbVbcnRegEx#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#1)]  
   
 ## <a name="compile-the-code"></a>コードのコンパイル  
+
  対象のパスワードを含む文字列を渡して、このメソッドを呼び出します。  
   
  この例で必要な要素は次のとおりです。  
@@ -31,6 +34,7 @@ ms.locfileid: "90556246"
 - <xref:System.Text.RegularExpressions> 名前空間のメンバーへのアクセス許可。 コード内でメンバー名を完全修飾していない場合は、`Imports` ステートメントを追加します。 詳細については、「[Imports ステートメント (.NET 名前空間および型)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)」を参照してください。  
   
 ## <a name="security"></a>セキュリティ  
+
  ネットワーク経由でパスワードを移動する場合は、セキュリティで保護された方法でデータを転送する必要があります。 詳細については、「[ASP.NET Web Application Security (ASP.NET Web アプリケーションのセキュリティ)](/previous-versions/aspnet/330a99hc(v=vs.100))」をご覧ください。
   
  複雑さのチェックをさらに追加することで、`ValidatePassword` 関数の精度を高めることができます。  

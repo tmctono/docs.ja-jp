@@ -15,17 +15,19 @@ helpviewer_keywords:
 - comparison operators [Visual Basic], comparing numeric values
 - operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
-ms.openlocfilehash: 7a93928ff95e307c64149da7ab21476ffd4fa77d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fbe81532bb435e54e694f9b5fe9dd497392f31e1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388830"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071769"
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Visual Basic における比較演算子
+
 比較演算子は、2 つの式を比較し、それらの値の関係を表す `Boolean` 値を返します。 数値を比較するための演算子、文字列を比較するための演算子、およびオブジェクトを比較するための演算子があります。 ここでは、3 種類のすべての演算子について説明します。  
   
 ## <a name="comparing-numeric-values"></a>数値の比較  
+
  Visual Basic は、6 つの数値比較演算子を使用して数値を比較します。 各演算子は、数値として評価される 2 つの式をオペランドとして受け取ります。 次の表に、演算子の一覧とそれぞれの例を示します。  
   
 |演算子|テストされた条件|使用例|  
@@ -38,6 +40,7 @@ ms.locfileid: "84388830"
 |`>=` (以上)|最初の式の値が 2 番目の式の値以上であるかどうかを示します。|`23`   `>=`   `33    ' False`<br /><br /> `23`   `>=`   `23    ' True`<br /><br /> `23`   `>=`   `12    ' True`|  
   
 ## <a name="comparing-strings"></a>文字列の比較  
+
  Visual Basic は、[Like 演算子](../../../language-reference/operators/like-operator.md)および数値比較演算子を使用して文字列を比較します。 `Like` 演算子を使用すると、パターンを指定できます。 その後、文字列がパターンと比較され、一致する場合、結果は `True` です。 それ以外の場合、結果は `False` です。 数値演算子を使用すると、次の例に示すように、並べ替え順序に基づいて `String` 値を比較できます。  
   
  `"73" < "9"`  
@@ -59,6 +62,7 @@ ms.locfileid: "84388830"
  並べ替え順序は、`Option Compare` の設定に応じて、バイナリ比較またはテキスト比較のいずれかに基づきます。 詳細については、「[Option Compare ステートメント](../../../language-reference/statements/option-compare-statement.md)」を参照してください。  
   
 ## <a name="comparing-objects"></a>オブジェクトの比較  
+
  Visual Basic は、[Is 演算子](../../../language-reference/operators/is-operator.md)および [IsNot 演算子](../../../language-reference/operators/isnot-operator.md)を使用して 2 つのオブジェクト参照変数を比較します。 これらの演算子のいずれかを使用して、2 つの参照変数が同じオブジェクト インスタンスを参照しているかどうかを判断できます。 次の例を使って説明します。  
   
  [!code-vb[VbVbalrOperators#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#65)]  
@@ -76,6 +80,7 @@ ms.locfileid: "84388830"
  前の例では、`If a IsNot b` は `If Not a Is b` に相当します。  
   
 ### <a name="comparing-object-type"></a>オブジェクトの種類の比較  
+
  `TypeOf`...`Is` 式を使用して、オブジェクトが特定の型であるかどうかをテストできます。 構文は次のとおりです。  
   
  `TypeOf <objectexpression> Is <typename>`  

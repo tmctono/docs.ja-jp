@@ -21,14 +21,15 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Select Case statements
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-ms.openlocfilehash: 3dedd43f920b493a0aca9ce48460b00815e1af5c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 750e765390ad223976b000fe64e656fa2d62a34b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404240"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871782"
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case ステートメント (Visual Basic)
+
 式の値に応じて、いくつかのステートメント グループのいずれかを実行します。  
   
 ## <a name="syntax"></a>構文  
@@ -53,6 +54,7 @@ End Select
 |`End Select`|`Select`...`Case` コンストラクションの定義を終了します。|  
   
 ## <a name="remarks"></a>Remarks  
+
  `testexpression` が `Case` `expressionlist` 句と一致する場合、その `Case` ステートメントの後のステートメントは、次の `Case`、`Case Else`、または `End Select` ステートメントまで実行されます。 その後、制御は `End Select` の後のステートメントに渡されます。 `testexpression` が複数の `Case` 句の `expressionlist` 句と一致する場合は、最初の一致の後のステートメントのみが実行されます。  
   
  `Case Else` ステートメントを使用して、他のいずれかの `Case` ステートメントで `testexpression` 句と `expressionlist` 句の間に一致が検出されなかった場合に実行する `elsestatements` を導入します。 必須ではありませんが、予期しない `testexpression` 値を処理するために、`Select Case` コンストラクションに `Case Else` ステートメントを指定することをお勧めします。 `Case` `expressionlist` 句が `testexpression` に一致せず、`Case Else` ステートメントが存在しない場合、制御は `End Select` の後のステートメントに渡されます。  
@@ -78,6 +80,7 @@ End Select
  `Select Case` コンストラクションは入れ子にできます。 入れ子になった `Select Case` コンストラクションのそれぞれには、一致する `End Select` ステートメントが必要です。また、入れ子になっている外側の `Select Case` コンストラクションの 1 つの `Case` または `Case Else` ステートメント ブロック内に完全に含まれている必要があります。  
   
 ## <a name="example"></a>例  
+
  次の例では、`Select Case` コンストラクションを使用して、変数 `number` の値に対応する行を記述します。 2 番目の `Case` ステートメントには、`number` の現在の値と一致する値が含まれています。そのため、"Between 6 and 8, inclusive" を記述するステートメントが実行されます。  
   
  [!code-vb[VbVbalrStatements#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#54)]  

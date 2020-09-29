@@ -6,14 +6,15 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: 6f77649365f8ca7b163cd55854aa9960d88f2984
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f8329ce2e7597f802d75ec85a580f1a3bd5cfc97
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414260"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098879"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
+
 プロジェクトのポータブル実行可能 (PE) ファイルに埋め込まれる、ユーザー定義の Win32 アプリケーション マニフェスト ファイルを識別します。  
   
 ## <a name="syntax"></a>構文  
@@ -29,6 +30,7 @@ ms.locfileid: "84414260"
 |`fileName`|カスタム マニフェスト ファイルのパス。|  
   
 ## <a name="remarks"></a>Remarks  
+
  既定では、asInvoker の要求実行レベルを指定するアプリケーション マニフェストが、Visual Basic コンパイラによって埋め込まれます。 マニフェストは、実行可能ファイルがビルドされたのと同じフォルダー (Visual Studio を使用している場合、通常は bin\Debug または bin\Release フォルダー) に作成されます。 カスタム マニフェストを指定する (たとえば、highestAvailable または requireAdministrator の要求実行レベルを指定する) 場合は、このオプションを使用してファイルの名前を指定します。  
   
 > [!NOTE]
@@ -47,6 +49,7 @@ ms.locfileid: "84414260"
  アプリケーション マニフェストは、カスタムのビルド後手順として提供するか、`-nowin32manifest` オプションを使用して、Win32 リソース ファイルの一部として提供できます。 アプリケーションを Windows Vista でファイルまたはレジストリの仮想化の対象にする場合は、これと同じオプションを使用します。 これにより、コンパイラで PE ファイル内に既定のマニフェストが作成されて埋め込まれなくなります。  
   
 ## <a name="example"></a>例  
+
  次の例は、Visual Basic コンパイラによって PE に挿入される既定のマニフェストを示しています。  
   
 > [!NOTE]

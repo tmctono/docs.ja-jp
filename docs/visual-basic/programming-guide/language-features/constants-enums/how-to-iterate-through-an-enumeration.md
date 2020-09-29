@@ -6,14 +6,15 @@ helpviewer_keywords:
 - enumerations [Visual Basic], iterating
 - ListBox control [Windows Forms], populating from an enumeration
 ms.assetid: e5aa10eb-cfcd-4a3b-8e76-f06b8f2002be
-ms.openlocfilehash: fb6fbdd45ca0e84ccb9fc55296d78e3867d5fe25
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 21c170d4708b90987a3f1e9c18969b8803fcdbe0
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414428"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058717"
 ---
 # <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a>方法: Visual Basic で列挙型を反復処理する
+
 一連の関連する定数を操作する場合や、定数値に名前を関連付ける場合は、列挙型を使うと便利です。 <xref:System.Enum.GetValues%2A> メソッドを使用して列挙型を配列に入れると、列挙型の反復処理を行うことができます。 また、`For...Each` ステートメント、<xref:System.Enum.GetNames%2A> メソッド、または <xref:System.Enum.GetValues%2A> メソッドを使用して列挙型の反復処理を行うと、文字列値または数値を抽出できます。  
   
 ### <a name="to-iterate-through-an-enumeration"></a>列挙型を反復処理するには  

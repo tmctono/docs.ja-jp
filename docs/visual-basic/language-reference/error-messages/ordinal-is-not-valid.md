@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
-ms.openlocfilehash: 7b9bd8435b56dd5e33d14eb35d76aacc7d60c8b5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 64f56b2ecace0ceafb310a175ea605e6959b7256
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413054"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871390"
 ---
 # <a name="ordinal-is-not-valid"></a>序数が有効ではありません。
+
 ダイナミック リンク ライブラリ (DLL) への呼び出しが、`#num` 構文を使用して、プロシージャ名の代わりに数値を使用するように指定されています。 このエラーには、次のような原因が考えられます。  
   
 - `#num` 式を序数に変換しようとして失敗しました。  

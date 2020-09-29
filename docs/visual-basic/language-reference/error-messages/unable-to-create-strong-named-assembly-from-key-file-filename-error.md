@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31026
 ms.assetid: 5dd09785-bc10-4ae7-ba24-b795057aca31
-ms.openlocfilehash: df6de037cf7cd5b41ed417a8ebfa6f9586e4ebb4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db89f4cbaa7008e59f3698eec0f2603cfc06439e
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764180"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873569"
 ---
-# <a name="unable-to-create-strong-named-assembly-from-key-file-filename-error"></a>キー ファイル '\<filename>' から厳密な名前のアセンブリを作成できません: \<error>
+# <a name="unable-to-create-strong-named-assembly-from-key-file-filename-error"></a>キー ファイル '\<filename>' から厳密な名前のアセンブリを作成できません : \<error>
+
 指定されたキー ファイルから厳密な名前のアセンブリを作成できませんでした。  
   
  **エラー ID:** BC31026  

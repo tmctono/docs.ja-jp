@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40027
 ms.assetid: 33c088c7-48e7-400c-920e-6d8967e1f3fc
-ms.openlocfilehash: 9cc7e25ef1be21ff2f6a71dcb61bc29ec92da30f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8ced0b6e06edadd9aed787aab2e715a2853e73a9
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400358"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870843"
 ---
 # <a name="return-type-of-function-procedurename-is-not-cls-compliant"></a>関数 '\<procedurename>' の戻り値の型は CLS に準拠していません。
+
 `Function` プロシージャが `<CLSCompliant(True)>` としてマークされていますが、`<CLSCompliant(False)>` としてマークされている型、マークされていない型、または非準拠の型であるために修飾されていない型を返します。  
   
  プロシージャを[言語への非依存性および言語非依存コンポーネント](../../../standard/language-independence-and-language-independent-components.md) (CLS) に準拠させるには、CLS 準拠型のみを使用する必要があります。 これは、パラメーターの型、戻り値の型、およびすべてのローカル変数の型に適用されます。  

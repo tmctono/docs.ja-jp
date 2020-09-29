@@ -7,14 +7,15 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: 582957c91eac63cf7f72dd2f6c0cf40e627be686
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f1f0036c38299f2392f8c8705e67b7bb6b7db068
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402032"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058639"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>チュートリアル: Visual Basic での IEnumerable(Of T) の実装
+
 <xref:System.Collections.Generic.IEnumerable%601> インターフェイスは、値のシーケンスを、一度に 1 項目ずつ返すことができるクラスによって実装されます。 一度に 1 項目ずつデータを返す利点は、データ セット全体をメモリに読み込んで操作する必要がないことです。 データから 1 つの項目を読み込むのに必要なメモリを使用するだけで済みます。 `IEnumerable(T)` インターフェイスを実装するクラスを、`For Each` ループまたは LINQ クエリで使用できます。  
   
  たとえば、大きなテキスト ファイルを読み取り、そのファイルから、特定の検索条件に一致する各行を返す必要があるアプリケーションがあるとします。 アプリケーションは LINQ クエリを使用して、指定された条件に一致する行をファイルから返します。 LINQ クエリを使用してファイルのコンテンツにクエリを実行するために、アプリケーションでは、ファイルのコンテンツを配列またはコレクションに読み込むことができます。 ただし、ファイル全体を配列またはコレクションに読み込むと、必要以上にメモリが消費されます。 LINQ クエリは、列挙可能なクラスを使用してファイルのコンテンツにクエリを実行し、検索条件に一致する値のみを返すことができます。 一致する値だけをいくつか返すクエリの場合、消費メモリは格段に少なくなります。  

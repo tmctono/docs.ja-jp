@@ -8,14 +8,15 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 6ff23f73af384a1440bcebd4b6bac21714e01756
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 90a21b70b45902a9f4fd559a97e777f26043fffb
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051481"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075617"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>チュートリアル: Visual Basic での COM オブジェクトの作成
+
 新しいアプリケーションまたはコンポーネントを作成する場合は、.NET Framework アセンブリを作成することをお勧めします。 ただし、Visual Basic を使用すると、COM への .NET Framework コンポーネントの公開も簡単になります。 これにより、COM コンポーネントを必要とする以前のアプリケーション スイートに対して新しいコンポーネントが提供できるようになります。 このチュートリアルでは、Visual Basic を使用して、COM クラス テンプレートを使用するかどうかにかかわらず、.NET Framework オブジェクトを COM オブジェクトとして公開する方法について説明します。  
   
  COM オブジェクトを公開する最も簡単な方法は、COM クラス テンプレートを使用することです。 このテンプレートでは、新しいクラスが作成され、クラスと相互運用性レイヤーを COM オブジェクトとして生成してオペレーティング システムに登録するようにプロジェクトが構成されます。  
@@ -40,6 +41,7 @@ ms.locfileid: "86051481"
 6. **[ビルド]** メニューから **[ClassLibrary1 のビルド]** を選択します。 Visual Basic は、アセンブリをビルドし、オペレーティング システムに COM オブジェクトを登録します。  
   
 ## <a name="creating-com-objects-without-the-com-class-template"></a>COM クラス テンプレートを使用しない COM オブジェクトの作成  
+
  COM クラス テンプレートを使用する代わりに、手動で COM クラスを作成することもできます。 この手順は、コマンド ラインから作業する場合や、COM オブジェクトの定義方法をより細かく制御する必要がある場合に便利です。  
   
 #### <a name="to-set-up-your-project-to-generate-a-com-object"></a>COM オブジェクトを生成するようにプロジェクトを設定するには  

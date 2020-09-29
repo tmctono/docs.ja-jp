@@ -5,14 +5,15 @@ helpviewer_keywords:
 - conditional compilation [Visual Basic], about conditional compilation
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-ms.openlocfilehash: c3eb1eb57b3d76e762ed53edb3b168ad96abec39
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e59296882edc018259816c73b6ae861b3b296783
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403266"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098970"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Visual Basic での条件付きコンパイル
+
 "*条件付きコンパイル*" では、プログラム内の特定のコード ブロックが選択的にコンパイルされ、他のコード ブロックは無視されます。  
   
  たとえば、同じプログラミング タスクに対するさまざまなアプローチの速度を比較するデバッグ ステートメントを記述したり、複数の言語用にアプリケーションをローカライズしたりできます。 条件付きコンパイル ステートメントは、実行時ではなく、コンパイル時に実行するように設計されています。  
@@ -27,6 +28,7 @@ ms.locfileid: "84403266"
 > コードが現在のブランチに含まれていない場合、コードを編集し、条件付きコンパイル ディレクティブを使用したときに、オートコンプリートは機能しません。  
   
 ## <a name="declaring-conditional-compilation-constants"></a>条件付きコンパイル定数の宣言  
+
  条件付きコンパイル定数は、次の 3 つの方法のいずれかで設定できます。  
   
 - **プロジェクト デザイナー**内  
@@ -62,6 +64,7 @@ ms.locfileid: "84403266"
 |[プログラム構造とコード規則](program-structure-and-code-conventions.md)|コードを読みやすくし、管理しやすくするための推奨事項を示します。|  
   
 ## <a name="reference"></a>関連項目  
+
  [#Const ディレクティブ](../../language-reference/directives/const-directive.md)  
   
  [#If...Then...#Else ディレクティブ](../../language-reference/directives/if-then-else-directives.md)  

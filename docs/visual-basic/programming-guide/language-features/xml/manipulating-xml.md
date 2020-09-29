@@ -6,17 +6,19 @@ helpviewer_keywords:
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-ms.openlocfilehash: fca6c05b4baae4689e9d5e5698cee75f0c5470ec
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 52c8822c34a85af81dde505d36e6e159745a0d12
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374747"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085692"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Visual Basic での XML の操作
+
 *XML リテラル*を使用すると、文字列、ファイル、ストリームなどの外部ソースから XML を読み込むことができます。 さらに、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用して XML を操作し、統合言語クエリ (LINQ) を使用して XML をクエリできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [方法: ファイル、文字列、またはストリームからの XML の読み込み](how-to-load-xml-from-a-file-string-or-stream.md)  
  テキスト ファイル、文字列、またはストリームから <xref:System.Xml.Linq.XDocument> または <xref:System.Xml.Linq.XElement> オブジェクトに XML を読み込む方法について説明します。  
   
@@ -27,6 +29,7 @@ ms.locfileid: "84374747"
  XML リテラル内の要素、属性、および値を変更する方法を示します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [XML 軸プロパティ](../../../language-reference/xml-axis/index.md)  
  さまざまな XML アクセス プロパティについて説明するセクションへのリンクを示します。  
   

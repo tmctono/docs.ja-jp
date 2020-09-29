@@ -15,14 +15,15 @@ helpviewer_keywords:
 - logical disjunction
 - disjunction operator [Visual Basic]
 ms.assetid: 41ed6905-bf3d-468a-9e3b-03c10d461891
-ms.openlocfilehash: 657b2a473b23789a8ba25fbd11c6b83538fa7803
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f6cfd1073ada42aa2db8be9b14c81319bc0db294
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401421"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874758"
 ---
 # <a name="or-operator-visual-basic"></a>Or 演算子 (Visual Basic)
+
 2 つの `Boolean` 式の場合は論理和演算、2 つの数値式の場合はビットごとの論理和演算を実行します。  
   
 ## <a name="syntax"></a>構文  
@@ -32,6 +33,7 @@ result = expression1 Or expression2
 ```  
   
 ## <a name="parts"></a>指定項目  
+
  `result`  
  必須です。 任意の `Boolean` または数値式。 `Boolean` の比較の場合、`result` は 2 つの `Boolean` 値の包含論理和演算となります。 ビットごとの演算の場合、`result` は 2 つの数値ビット パターンのビットごとの包含論理和演算を表す数値です。  
   
@@ -42,6 +44,7 @@ result = expression1 Or expression2
  必須です。 任意の `Boolean` または数値式。  
   
 ## <a name="remarks"></a>Remarks  
+
  `Boolean` の比較では、`expression1` と `expression2` の両方が `False` に評価された場合にのみ、`result` は `False` になります。 次の表は、`result` がどのように決定されるかを示しています。  
   
 |`expression1` が次の場合|かつ、`expression2` が次の場合|`result` の値は次のようになります|  
@@ -67,14 +70,17 @@ result = expression1 Or expression2
 > 論理およびビット処理演算子は、他の算術演算子および関係演算子より優先順位が低いので、正確に実行するために、ビットごとの演算はかっこで囲む必要があります。  
   
 ## <a name="data-types"></a>データの種類  
+
  オペランドが 1 つの `Boolean` 式と 1 つの数値式で構成されている場合、Visual Basic は `Boolean` 式を数値に変換し (`True` の場合は 1、`False` の場合は 0)、ビットごとの演算を実行します。  
   
  `Boolean` の比較の場合、結果のデータ型は `Boolean` になります。 ビットごとの比較の場合、結果のデータ型は `expression1` および `expression2` のデータ型に適した数値型になります。 「[演算子の結果のデータ型](data-types-of-operator-results.md)」の「関係とビットごとの比較」の表を参照してください。  
   
 ## <a name="overloading"></a>オーバーロード  
+
  `Or` 演算子は "*オーバーロード*" できます。つまり、オペランドがクラスまたは構造体の型を持っているときに、クラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
+
  次の例では、`Or` 演算子を使用して、2 つの式の包含論理和演算を実行します。 結果は、2 つの式のいずれかが `True` かどうかを表す `Boolean` 値です。  
   
  [!code-vb[VbVbalrOperators#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#35)]  
@@ -82,6 +88,7 @@ result = expression1 Or expression2
  前の例では、それぞれ `True`、`True`、`False` の結果が生成されます。  
   
 ## <a name="example"></a>例  
+
  次の例では、`Or` 演算子を使用して、2 つの数値式の個々のビットに対して包含論理和演算を実行します。 オペランドの対応するビットのいずれかが 1 に設定されている場合、結果パターンのビットが設定されます。  
   
  [!code-vb[VbVbalrOperators#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#36)]  

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - XML documents [Visual Basic], creating
 - document literal [Visual Basic]
 ms.assetid: f7bbee56-0911-41de-b907-96f20450137b
-ms.openlocfilehash: 3a2182d2937827bc8dc45e22307a3668420261a2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bd1b2f43fce563af431d67b3817b05c7c1048314
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400203"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866024"
 ---
 # <a name="xml-document-literal-visual-basic"></a>XML ドキュメント リテラル (Visual Basic)
+
 <xref:System.Xml.Linq.XDocument> オブジェクトを表すリテラル。  
   
 ## <a name="syntax"></a>構文  
@@ -38,9 +39,11 @@ rootElement
 |`rootElement`|必須です。 ドキュメントのルート要素。 形式は次のいずれかです。<br /><br /> <ul><li>[XML 要素リテラル](xml-element-literal.md)。</li><li>`<%=` `elementExp` `%>` 形式の埋め込み式。 `elementExp` は次のいずれかを返します。<br /><br /> <ul><li><xref:System.Xml.Linq.XElement> オブジェクト。</li><li>1 つの <xref:System.Xml.Linq.XElement> オブジェクトと、任意の数の <xref:System.Xml.Linq.XProcessingInstruction> および <xref:System.Xml.Linq.XComment> オブジェクトを含むコレクション。</li></ul></li></ul><br /> 詳細については、「[XML での埋め込み式](../../programming-guide/language-features/xml/embedded-expressions-in-xml.md)」を参照してください。|  
   
 ## <a name="return-value"></a>戻り値  
+
  <xref:System.Xml.Linq.XDocument> オブジェクト。  
   
 ## <a name="remarks"></a>Remarks  
+
  リテラルの先頭にある XML 宣言によって、XML ドキュメント リテラルが特定されます。 各 XML ドキュメント リテラルにルート XML 要素が 1 つ必要ですが、XML 処理命令と XML コメントは任意の数を挿入できます。  
   
  XML ドキュメント リテラルは、XML 要素には記述できません。  
@@ -51,6 +54,7 @@ rootElement
  XML ドキュメント リテラルは、Visual Basic コンパイラによって、<xref:System.Xml.Linq.XDocument.%23ctor%2A> コンストラクターおよび <xref:System.Xml.Linq.XDeclaration.%23ctor%2A> コンストラクターへの呼び出しに変換されます。  
   
 ## <a name="example"></a>例  
+
  次の例で作成する XML ドキュメントには、XML 宣言、処理命令、コメント、および別の要素を含む要素が含まれます。  
   
  [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-ms.openlocfilehash: c8ed792bf3ffefd903d60522f621958e44546d32
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 249c3eebaeec3d09a297fead07ab056caff1b618
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404953"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071808"
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>方法: 特定の型での LINQ クエリ結果の取得 (Visual Basic)
+
 統合言語クエリ (LINQ) を使用すると、データベース情報に簡単にアクセスしてクエリを実行できます。 既定では、LINQ クエリは、オブジェクトの一覧を匿名型として返します。 また、`Select` 句を使用して、クエリが特定の型の一覧を返すように指定することもできます。  
   
  次の例は、SQL Server データベースに対してクエリを実行し、特定の名前付きの型として結果を射影する新しいアプリケーションの作成方法を示しています。 詳細については、「[匿名型](../objects-and-classes/anonymous-types.md)」および「[Select 句](../../../language-reference/queries/select-clause.md)」を参照してください。  

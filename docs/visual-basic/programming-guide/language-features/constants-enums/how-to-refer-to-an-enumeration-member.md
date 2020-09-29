@@ -7,14 +7,15 @@ helpviewer_keywords:
 - enumeration members
 - constants [Visual Basic], enumerated
 ms.assetid: bbb5c3cc-7cdb-4814-8d6a-a6d91546ed1e
-ms.openlocfilehash: 66c527bd4ba4721065de8fca8534fe652d0139be
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d1b239e7d6be3ebf1e64d6589a4cc14dce8946f5
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414415"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91095669"
 ---
 # <a name="how-to-refer-to-an-enumeration-member-visual-basic"></a>方法: 列挙型のメンバーを参照する (Visual Basic)
+
 一連の関連する定数を操作する場合や、定数値に名前を関連付ける場合は、列挙型を使うと便利です。 たとえば、一連の整数型の定数を曜日に関連付けて列挙型として宣言すると、コードで整数値ではなく曜日名を使用することができます。  
   
  `Imports` ステートメントを使用することで、完全修飾名の使用を回避できます。 詳細については、[列挙型と名前の修飾](enumerations-and-name-qualification.md)に関するページを参照してください。  

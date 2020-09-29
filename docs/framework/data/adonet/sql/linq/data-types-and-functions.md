@@ -2,14 +2,15 @@
 title: データ型と関数
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-ms.openlocfilehash: 864c3a4668e3a405260d897596c4e94cc83419a8
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 456cf5acf42221379e68ff79ee57c084664e30e5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70247221"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91147763"
 ---
 # <a name="data-types-and-functions"></a>データ型と関数
+
 次の表の各トピックでは、共通言語ランタイム (CLR) のメンバー、コンストラクト、およびキャストに対する LINQ to SQL でのサポートについて説明します。 サポートされているメンバーおよびコンストラクトは、LINQ to SQL クエリで使用できます。  
   
  この表でサポートされていないアイテムは、LINQ to SQL では、SQL Server で実行するために CLR のメンバー、コンストラクト、またはキャストを変換できないことを意味します。 それらをコード内で使用することはできる場合もありますが、クエリが Transact-SQL に変換される前、またはデータベースから結果が取得された後に評価する必要があります。  

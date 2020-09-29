@@ -7,14 +7,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-ms.openlocfilehash: a110cf9f3b42c7244d8d5bf7b49d5e6dac8c2e21
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 53589f84c6675d1e7ae2a593341e5dac747132a9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388765"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91083978"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>方法: 値を返すプロシージャを呼び出す (Visual Basic)
+
 `Function` プロシージャからは、呼び出し元のコードに値が返されます。 それを呼び出すには、その名前と引数を代入ステートメントの右辺に、または式に含めます。  
   
 ### <a name="to-call-a-function-procedure-within-an-expression"></a>式内で Function プロシージャを呼び出すには  
@@ -40,6 +41,7 @@ ms.locfileid: "84388765"
 4. プロシージャから返された値は、代入ステートメントの左側にある変数またはプロパティに格納されます。  
   
 ## <a name="example"></a>例  
+
  次の例では、Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> を呼び出して、オペレーティング システムの環境変数の値を取得します。 最初の行では式内で `Environ` が呼び出され、2 番目の行では代入ステートメントでそれが呼び出されます。 `Environ` では、その唯一の引数として変数名を取ります。 これにより、呼び出し元のコードに変数の値が返されます。  
   
  [!code-vb[VbVbcnProcedures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#7)]  

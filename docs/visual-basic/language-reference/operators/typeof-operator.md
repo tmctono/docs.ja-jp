@@ -12,14 +12,15 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: 0cce36073b53442bce63f966f3bd94bd5d70d2a8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0a01b49cf1e0bf9ad7b2ce541cee39cba83025ca
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406328"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875299"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf 演算子 (Visual Basic)
+
 式の結果の実行時の型に、指定された型との型互換性があるかどうかを確認します。
   
 ## <a name="syntax"></a>構文  
@@ -33,6 +34,7 @@ result = TypeOf objectexpression IsNot typename
 ```  
   
 ## <a name="parts"></a>指定項目  
+
  `result`  
  必須。 `Boolean` 値。  
   
@@ -43,6 +45,7 @@ result = TypeOf objectexpression IsNot typename
  必須です。 任意のデータ型名。  
   
 ## <a name="remarks"></a>Remarks  
+
  `TypeOf` 演算子は、`objectexpression` の実行時の型が `typename` と互換性があるかどうかを調べます。 互換性は、`typename` の型のカテゴリに依存します。 互換性を決定する方法を次の表に示します。  
   
 |`typename` の型のカテゴリ|互換性の条件|  
@@ -56,6 +59,7 @@ result = TypeOf objectexpression IsNot typename
  `TypeOf` は、常に `Is` キーワードと共に `TypeOf`...`Is` 式を構築するか、または `IsNot` キーワードと共に `TypeOf`...`IsNot` 式を構築します。  
   
 ## <a name="example"></a>例  
+
  次の例では、`TypeOf`...`Is` 式でさまざまなデータ型を使用して、2 つのオブジェクト参照変数の型の互換性をテストしています。  
   
  [!code-vb[VbVbalrOperators#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#39)]  

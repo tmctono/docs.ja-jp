@@ -14,14 +14,15 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 9f9174896181e427c73936a1bb91fa13235e70be
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b0077bdae3bad1d67c3d26e503d05f318982eb80
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550990"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91099022"
 ---
 # <a name="comments-in-code-visual-basic"></a>コード内のコメント (Visual Basic)
+
 コード例にはコメント記号 (`'`) がしばしば見られます。 この記号は、後続のテキスト ("*コメント*") を無視するように Visual Basic コンパイラに指示します。 コメントは、コードを読むユーザーに役立つように追加される簡単な説明です。  
   
  プロシージャの先頭に、そのプロシージャの機能の特性 (何を実行するか) について説明する簡単なコメントを常に配置するのは、推奨されるプログラミング方法です。 コードを作成した本人にとっても、コードを調べる他人にとっても、この説明は役に立ちます。 実装の詳細 (プロシージャの実行手順) は、機能の特性を説明するコメントとは別に記述する必要があります。 実装の詳細を記述に入れる場合は、関数を更新するときにその説明も更新してください。  
@@ -35,6 +36,7 @@ ms.locfileid: "90550990"
  [!code-vb[VbVbcnConventions#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#17)]  
   
 ## <a name="commenting-guidelines"></a>コメントのガイドライン  
+
  次の表は、どの種類のコメントをコードのセクションの前に配置できるかに関する一般的なガイドラインを示しています。 これらは推奨事項です。Visual Basic にはコメントの追加に関する規則はありません。 コードの作成者自身およびコードを読む他のユーザーに最適な内容を記述してください。  
   
 |||  

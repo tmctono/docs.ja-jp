@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30648
 ms.assetid: eefb77a4-efbc-4000-8871-edce7ef7f2df
-ms.openlocfilehash: 2eb28c342e485658f1550d95c6e4e0629272ad2c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5a456dc3a387f275f2e4afe7c7c6837124941cb2
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374097"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870571"
 ---
 # <a name="string-constants-must-end-with-a-double-quote"></a>文字列定数の終わりには、二重引用符を指定しなければなりません。
+
 文字列定数の先頭と末尾は引用符でなければなりません。  
   
  **エラー ID:** BC30648  

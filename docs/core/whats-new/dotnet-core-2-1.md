@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 94f3db14046ad5d63975d0ca44425abed5d52062
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: f125a6a8d9287cb515478a10c2679c07817ae9a6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281538"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91087363"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 の新機能
 
@@ -131,6 +131,7 @@ dotnet tool install -g dotnetsay
 .NET Core 2.0 SDK を使用すると、`RuntimeFrameworkVersion` プロパティで別のバージョンが指定されている場合を除き、自己完結型アプリケーションが .NET Core 2.0.0 ランタイムでパブリッシュされます。 この新しい動作により、このプロパティを設定して、より新しいバージョンのランタイムを自己完結型アプリケーションに対して選択する必要がなくなりました。 今後は常に .NET Core 2.1 SDK (v 2.1.300) でパブリッシュするのが最も簡単な方法です。
 
 詳細については、「[自己完結型展開ランタイムのロール フォワード](../deploying/runtime-patch-selection.md)」をご覧ください。
+
 ## <a name="windows-compatibility-pack"></a>Windows 互換機能パック
 
 既存のコードを .NET Framework から .NET Core に移植する場合は、[Windows 互換機能パック](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)を使用できます。 この Windows 互換機能パックでは、.NET Core よりも 20,000 個も多い API にアクセスできます。 これらの API には、<xref:System.Drawing?displayProperty=nameWithType> 名前空間の型、<xref:System.Diagnostics.EventLog> クラス、WMI、パフォーマンス カウンター、Windows サービス、および Windows レジストリの型とメンバーが含まれています。

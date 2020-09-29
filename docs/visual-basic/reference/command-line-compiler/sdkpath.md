@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /sdkpath compiler option [Visual Basic]
 - sdkpath compiler option [Visual Basic]
 ms.assetid: fec8a3f1-b791-4a37-8af7-344859f8212d
-ms.openlocfilehash: 85aba17b330af1b25b39f462844bc1a4856a448a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 18bf22861c1cbc3a37ef917b421491c2d01efba8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403110"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085114"
 ---
 # <a name="-sdkpath"></a>-sdkpath
+
 mscorlib.dll および Microsoft.VisualBasic.dll の場所を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -26,10 +27,12 @@ mscorlib.dll および Microsoft.VisualBasic.dll の場所を指定します。
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `path`  
  コンパイルに使用する mscorlib.dll と Microsoft.VisualBasic.dll のバージョンを格納しているディレクトリ。 このパスは、読み込まれるまで検証されません。 ディレクトリ名に空白が含まれている場合は、名前を二重引用符 (" ") で囲みます。  
   
 ## <a name="remarks"></a>Remarks  
+
  このオプションにより、Visual Basic コンパイラに対して、既定以外の場所から mscorlib.dll ファイルと Microsoft.VisualBasic.dll ファイルを読み込むように指示します。 `-sdkpath` オプションは、[-netcf](netcf.md) と共に使用するように設計されています。 .NET Compact Framework では、これらのサポート ライブラリのさまざまなバージョンを使用して、デバイスに見つからない型と言語機能の使用を回避します。  
   
 > [!NOTE]
@@ -38,6 +41,7 @@ mscorlib.dll および Microsoft.VisualBasic.dll の場所を指定します。
  `-vbruntime` コンパイラ オプションを使うと、コンパイラで Visual Basic ランタイム ライブラリを参照せずにコンパイルすることを指定できます。 詳細については、「[-vbruntime](vbruntime.md)」を参照してください。  
   
 ## <a name="example"></a>例  
+
  次のコードでは、C ドライブ上の .NET Compact Framework の既定のインストール ディレクトリにある Mscorlib.dll と Microsoft.VisualBasic.dll のバージョンを使用して、.NET Compact Framework で `Myfile.vb` がコンパイルされます。 通常は、最新バージョンの .NET Compact Framework を使用します。  
   
 ```console

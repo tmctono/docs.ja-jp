@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID59
 ms.assetid: 0926a3a4-177b-4452-9b33-d8a01e24cc21
-ms.openlocfilehash: 7ec0a8c27f425ec717bca5d45d5dfd2b601c11d5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6967015572b2567f52697f7ddcb1ff594013a2c4
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665736"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869261"
 ---
 # <a name="bad-record-length"></a>レコード長が正しくありません。
+
 このエラーでは以下の原因が考えられます。  
   
 - `FileGet`、`FileGetObject`、`FilePut`、または `FilePutObject` ステートメントに指定されたレコード変数の長さが、対応する `FileOpen` ステートメントに指定された長さと異なります。  

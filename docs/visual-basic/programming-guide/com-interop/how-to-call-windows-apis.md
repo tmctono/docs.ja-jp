@@ -7,25 +7,29 @@ helpviewer_keywords:
 - API calls [Visual Basic], platform invoke
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-ms.openlocfilehash: 863986e94855e02e9fd04685f7dc3e8e7f7b1cc3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 40b40c1a489d514c82cbccdeacda27900d9ec87d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548066"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91083359"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>方法: Windows API を呼び出す (Visual Basic)
+
 この例では、`MessageBox` 関数を user32.dll に定義して呼び出し、文字列を関数に渡します。  
   
 ## <a name="example"></a>例  
+
  [!code-vb[VbVbalrInterop#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#1)]  
   
 ## <a name="compile-the-code"></a>コードのコンパイル  
+
  この例で必要な要素は次のとおりです。  
   
 - <xref:System> 名前空間への参照  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
+
  次の条件を満たす場合は、例外が発生する可能性があります。  
   
 - メソッドが静的ではない、抽象である、または以前に定義されています。 親の型がインターフェイスであるか、*name* または *dllName* の長さが 0 です。 (<xref:System.ArgumentException>)  

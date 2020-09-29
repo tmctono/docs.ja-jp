@@ -8,14 +8,15 @@ helpviewer_keywords:
 - current instance
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
-ms.openlocfilehash: 43bfd54592fb1d26cbf7f268b7e098e01e3745d8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 64d21fe4aaf6fd34bf880373a7ab3067fb67820e
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410426"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077060"
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>方法: オブジェクトの現在のインスタンスを参照する (Visual Basic)
+
 オブジェクトの "*現在のインスタンス*" は、コードが現在実行されているインスタンスです。  
   
  現在のインスタンスを参照するには、`Me` キーワードを使用します。  

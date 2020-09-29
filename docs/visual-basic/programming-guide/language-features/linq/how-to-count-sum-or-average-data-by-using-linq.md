@@ -15,14 +15,15 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - count operator [LINQ in Visual Basic]
 ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
-ms.openlocfilehash: 8be585c3e11bc3637b2dd1cfaf3437620aa2ba09
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 617c6959e2d3add6d36266b0827ef7281b0c77a9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405018"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059250"
 ---
 # <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>方法: LINQ を使用したデータの数、合計、または平均の算出 (Visual Basic)
+
 統合言語クエリ (LINQ) を使用すると、データベース情報に簡単にアクセスしてクエリを実行できます。  
   
  次の例は、SQL Server データベースに対してクエリを実行する新しいアプリケーションを作成する方法を示しています。 このサンプルでは、`Aggregate` と `Group By` 句を使用して、結果の数、合計、平均を算出します。 詳細については、「[Aggregate 句](../../../language-reference/queries/aggregate-clause.md)」および「[Group By 句](../../../language-reference/queries/group-by-clause.md)」を参照してください。  

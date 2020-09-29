@@ -3,12 +3,12 @@ title: .NET Core の csproj 形式に追加されたもの
 description: 既存の csproj ファイルと .NET Core の csproj ファイルの違いについて説明します
 ms.topic: reference
 ms.date: 04/08/2019
-ms.openlocfilehash: 7760dc095fa894b1f356c939eb030e675f58a876
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 3ef6a89a8cd4f811bcdd41b9c9bedbc45da78098
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810886"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078217"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core の csproj 形式に追加されたもの
 
@@ -364,9 +364,11 @@ SPDX 識別子が割り当てられていないライセンス、またはカス
 パックされたパッケージをドロップする出力パスを指定します。 既定値は `$(OutputPath)` です。
 
 ### <a name="includesymbols"></a>IncludeSymbols
+
 このブール値は、プロジェクトをパックするときに、パッケージが追加のシンボル パッケージを作成するかどうかを指定します。 シンボル パッケージの形式は、`SymbolPackageFormat` プロパティで制御します。
 
 ### <a name="symbolpackageformat"></a>SymbolPackageFormat
+
 シンボル パッケージの形式を指定します。 "symbols.nupkg" では、 *.symbols.nupkg* 拡張子と共に、PDB、DLL、およびその他の出力ファイルを含む従来のシンボル パッケージが作成されます。 "snupkg" では、ポータブル PDB を含む snupkg シンボル パッケージが作成されます。 既定値は "symbols.nupkg" です。
 
 ### <a name="includesource"></a>IncludeSource
@@ -386,9 +388,11 @@ SPDX 識別子が割り当てられていないライセンス、またはカス
 リポジトリの種類を指定します。 既定値は "git" です。
 
 ### <a name="repositorybranch"></a>RepositoryBranch
+
 リポジトリ内のソース ブランチの名前を指定します。 プロジェクトが NuGet パッケージにパッケージ化されると、パッケージ メタデータに追加されます。
 
 ### <a name="repositorycommit"></a>RepositoryCommit
+
 任意のリポジトリ コミットまたは変更セット。パッケージがどのソースに対してビルドされたかを示します。 このプロパティを含めるには、`RepositoryUrl` も指定する必要があります。 プロジェクトが NuGet パッケージにパッケージ化されると、このコミットまたは変更セットがパッケージ メタデータに追加されます。
 
 ### <a name="nopackageanalysis"></a>NoPackageAnalysis

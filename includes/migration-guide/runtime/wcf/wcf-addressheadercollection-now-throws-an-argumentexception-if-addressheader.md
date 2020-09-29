@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e8b98e465228afd07432e737bb16aefb1b979973
-ms.sourcegitcommit: 261e0c98a111357692b3b63c596edf0cacf72991
+ms.openlocfilehash: 3506653bfc749ae3d8002715ca72ca89de7a681b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90770966"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91024867"
 ---
 ### <a name="wcf-addressheadercollection-now-throws-an-argumentexception-if-an-addressheader-element-is-null"></a>addressHeader 要素が null の場合、WCF AddressHeaderCollection で ArgumentException がスローされるようになった
 
@@ -22,14 +22,15 @@ ms.locfileid: "90770966"
     <AppContextSwitchOverrides value="Switch.System.ServiceModel.DisableAddressHeaderCollectionValidation=true" />
   </runtime>
 </configuration>
+```
 
-| Name    | Value   |
+| Name    | 値   |
 |:--------|:--------|
-| Scope   | Minor   |
-| Version | 4.7.1   |
-| Type    | Runtime |
+| スコープ   | マイナー   |
+| バージョン | 4.7.1   |
+| 種類    | ランタイム |
 
-#### Affected APIs
+#### <a name="affected-apis"></a>影響を受ける API
 
 - <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})>
 

@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30737
 ms.assetid: 3f40bacd-3fac-4741-b204-852f693d4340
-ms.openlocfilehash: 6760b931ceb2ad5c2c04169d664da8629badc487
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6958e778701066760aa74e3b4d566800b7527b76
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409414"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871481"
 ---
 # <a name="no-accessible-main-method-with-an-appropriate-signature-was-found-in-name"></a>正しいシグネチャを持つ、アクセス可能な 'Main' メソッドは、'\<name>' に見つかりませんでした。
+
 コマンドライン アプリケーションには `Sub Main` が定義されている必要があります。 `Main` は、クラスで定義されている場合は `Public Shared` として、またはモジュールで定義されている場合は `Public` として宣言する必要があります。  
   
  **エラー ID:** BC30737  

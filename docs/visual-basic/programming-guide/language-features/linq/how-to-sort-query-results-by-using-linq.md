@@ -11,14 +11,15 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 07a4584d-9fd8-4a1d-b7d9-ccf2efa5c84e
-ms.openlocfilehash: c1bc6ab863f9de118d59e102d3d5d251d326f497
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 94c2907f05aa9b5b2bc8659cef6f523187f1ef6b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404940"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071795"
 ---
 # <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>方法: LINQ を使用してクエリ結果を並べ替える (Visual Basic)
+
 統合言語クエリ (LINQ) を使用すると、データベース情報に簡単にアクセスしてクエリを実行できます。  
   
  次の例は、SQL Server データベースに対してクエリを実行し、`Order By` 句を使用して複数のフィールドで結果を並べ替える新しいアプリケーションの作成方法を示しています。 各フィールドの並べ替え順序は、昇順または降順にすることができます。 詳細については、「[Order By 句](../../../language-reference/queries/order-by-clause.md)」を参照してください。  

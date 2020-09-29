@@ -6,14 +6,15 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: a9b621ff03f833fcf0f07f876fd864ee963bef75
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 719969be23a6d94f22a1d86cb4ad3f37e4c3b254
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371182"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873416"
 ---
 # <a name="function-expression-visual-basic"></a>Function 式 (Visual Basic)
+
 関数ラムダ式を定義するパラメーターとコードを宣言します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,9 +36,11 @@ End Function
 |`statements`|必須です。 `Return` ステートメントを使用して値を返すステートメントのリスト。 (「[Return ステートメント](../statements/return-statement.md)」を参照してください。)戻される値の型は、関数の戻り値の型です。|  
   
 ## <a name="remarks"></a>Remarks  
+
  *ラムダ式*は、値を計算して返す、名前を持たない関数です。 ラムダ式は、デリゲート型を使用できる場所であればどこでも使用できます。ただし、`RemoveHandler` の引数として使用することはできません。 デリゲートの詳細と、デリゲートでのラムダ式の使用の詳細については、「[Delegate ステートメント](../statements/delegate-statement.md)」と「[厳密でないデリゲート変換](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md)」をご覧ください。  
   
 ## <a name="lambda-expression-syntax"></a>ラムダ式の構文  
+
  ラムダ式の構文は、標準の関数の構文に似ています。 相違点は、次のとおりです。  
   
 - ラムダ式には名前はありません。  
@@ -55,6 +58,7 @@ End Function
 - ジェネリック パラメーターは使用できません。  
   
 ## <a name="example"></a>例  
+
  次の例は、単純なラムダ式を作成する 2 つの方法を示しています。 最初の方法では、`Dim` を使用して関数の名前を指定しています。 関数を呼び出すには、パラメーターの値を送信します。  
   
  [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
@@ -62,16 +66,19 @@ End Function
  [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
 ## <a name="example"></a>例  
+
  別の方法として、関数の宣言と実行を同時に行うこともできます。  
   
  [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>例  
+
  次の例は、引数をインクリメントして値を返すラムダ式です。 この例は、関数の単一行および複数行のラムダ式の構文を示しています。 その他の例については、「[ラムダ式](../../programming-guide/language-features/procedures/lambda-expressions.md)」を参照してください。  
   
  [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>例  
+
  ラムダ式は、統合言語クエリ (LINQ) のクエリ演算子の多くを基にしており、メソッド ベースのクエリで明示的に使用できます。 次の例は、一般的な LINQ クエリを示し、続いてそのクエリをメソッド形式のクエリに変換する方法を示しています。  
   
 ```vb  

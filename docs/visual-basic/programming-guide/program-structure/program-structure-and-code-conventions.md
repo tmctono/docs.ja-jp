@@ -13,14 +13,15 @@ helpviewer_keywords:
 - Visual Basic code
 - programming [Visual Basic], Visual Basic coding conventions
 ms.assetid: dd9be76f-6944-4e78-ad72-0b6084a3fc13
-ms.openlocfilehash: c8d851afc33e7e898ab16abc941d8680f74145e3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ee61c676f3ff554267f6659453ec55e45df69aee
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398306"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072120"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>プログラム構造とコード規則 (Visual Basic)
+
 このセクションでは、一般的な Visual Basic プログラムの構造を紹介します。また、単純な Visual Basic プログラム "Hello World" を示し、Visual Basic のコード規則について説明します。 コード規則は、プログラムのロジックではなくプログラムの物理的な構造と外観に焦点を合わせた提案です。 コード規則に従うと、コードの読み取り、理解、保守が簡単になります。 コード規則には、以下の内容が含まれます。  
   
 - コードのラベル付けとコメント付けに関する標準化された書式  
@@ -32,6 +33,7 @@ ms.locfileid: "84398306"
  以下のトピックでは、Visual Basic プログラムの一連のプログラミング ガイドラインを適切な使用例と共に示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [Visual Basic プログラムの構造](structure-of-a-visual-basic-program.md)  
  Visual Basic プログラムを構成する要素の概要を説明します。  
   
@@ -78,6 +80,7 @@ ms.locfileid: "84398306"
  Visual Basic におけるコーディングの既知の制限の排除について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [表記規則とコード規則](../../language-reference/typographic-and-code-conventions.md)  
  Visual Basic の標準的なコーディング規則について説明します。  
   

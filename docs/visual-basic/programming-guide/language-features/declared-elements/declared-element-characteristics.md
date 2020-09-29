@@ -13,14 +13,15 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: 9d1e327c25689bed1405ea9a627da6232abb707b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 36c55475b4930dc6c3202d52ef742072d5cee3e1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392949"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075279"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>宣言された要素の特性 (Visual Basic)
+
 宣言された要素の "*特性*" は、その要素の側面の 1 つで、コードが要素とやり取りする方法に影響を与えます。 宣言されたすべての要素には、次の 1 つ以上の特性が関連付けられています。  
   
 - *データ型*: 要素で保持できる値と、その値を格納する方法。 詳細については、「[Data Types](../../../language-reference/data-types/index.md)」(データ型) を参照してください。  
@@ -32,6 +33,7 @@ ms.locfileid: "84392949"
 - *アクセス レベル*: 要素を使用するコードのアクセス許可。 詳細については、「[方法:方法: 変数の可用性を制御する](how-to-control-the-availability-of-a-variable.md)」を参照してください。  
   
 ## <a name="characteristics-of-the-elements"></a>要素の特性  
+
  次の表に、宣言された要素と、それぞれに適用される特性を示します。  
   
 |要素|データの種類|有効期間|スコープ <sup>1</sup>|アクセス レベル|  

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - optimization [Visual Basic], enabling
 - -optimize compiler option [Visual Basic]
 ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
-ms.openlocfilehash: 337cb794ef9a405a178f1998cbe27b5da7709382
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d4b50d56373676bf78a7591102095209401c907d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397442"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91097593"
 ---
 # <a name="-optimize"></a>-optimize
+
 コンパイラ最適化を有効または無効にします。  
   
 ## <a name="syntax"></a>構文  
@@ -25,11 +26,12 @@ ms.locfileid: "84397442"
   
 ## <a name="arguments"></a>引数  
   
-|用語|定義|  
+|期間|定義|  
 |---|---|  
 |`+` &#124; `-`|任意。 `-optimize-` オプションにより、コンパイラ最適化が無効になります。 `-optimize+` オプションにより、最適化が有効になります。 既定では、最適化が無効になります。|  
   
 ## <a name="remarks"></a>Remarks  
+
  コンパイラを最適化すると、出力ファイルのサイズが小さくなり、動作が速くなり、処理の効率が向上します。 ただし、最適化によって出力ファイル内のコードの配置が変更されるため、`-optimize+` を使用するとデバッグが困難になる可能性があります。  
   
  `-target:module` で生成されるアセンブリのすべてのモジュールには、アセンブリと同じ `-optimize` 設定を使用する必要があります。 詳細については、「[-target (Visual Basic)](target.md)」を参照してください。  
@@ -41,6 +43,7 @@ ms.locfileid: "84397442"
 |1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。<br />     <br />2. **[コンパイル]** タブをクリックします。<br />3. **[詳細設定]** ボタンをクリックします。<br />4. **[最適化を有効にする]** チェック ボックスを変更します。|  
   
 ## <a name="example"></a>例  
+
  次のコードでは、`T2.vb` がコンパイルされ、コンパイラの最適化が有効になります。  
   
 ```console

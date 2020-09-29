@@ -6,14 +6,15 @@ helpviewer_keywords:
 - declaring constants [Visual Basic], keywords
 - declarations [Visual Basic], Visual Basic language elements
 ms.assetid: 79d64f3e-941d-4d39-bc5b-79f225d5be6e
-ms.openlocfilehash: dbb7736d46d09f2f9fb744a8b4339c058c5c3068
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b5ddf0146837ee7a2b4ee1eca6253dfd72d1db27
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373896"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869042"
 ---
 # <a name="declarations-and-constants-summary-visual-basic"></a>宣言と定数の概要 (Visual Basic)
+
 Visual Basic 言語のキーワードとランタイム ライブラリ メンバーを、目的と使用方法に応じて編成しました。  
   
 |アクション|言語要素|  

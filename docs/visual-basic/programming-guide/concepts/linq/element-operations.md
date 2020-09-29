@@ -2,14 +2,15 @@
 title: 要素操作
 ms.date: 07/20/2015
 ms.assetid: 5fcb0631-dce5-45ff-8abb-353cae21e14f
-ms.openlocfilehash: 73d8b5b308b4d1cb8863f38592647a71e62dd15a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c082bf18f19e29485cc80a0c9c86e09c270ecb25
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84375292"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078321"
 ---
 # <a name="element-operations-visual-basic"></a>要素操作 (Visual Basic)
+
 要素操作では、シーケンスから単一の特定の要素が返されます。  
   
  次のセクションでは、要素操作を実行する標準クエリ演算子のメソッドの一覧を示します。  

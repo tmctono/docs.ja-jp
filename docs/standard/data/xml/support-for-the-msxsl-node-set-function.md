@@ -3,12 +3,12 @@ title: msxsl:node-set() 関数のサポート
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-ms.openlocfilehash: 747a0ff8c155f7635d5a6d2ebc76f287cf8646d4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 30652d8cbaac333cc1cb35954742b16dc7c4764b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291449"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071990"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>msxsl:node-set() 関数のサポート
 `msxsl:node-set` 関数を使用すると、結果ツリー フラグメントをノード セットに変換できます。 結果として得られるノード セットには、常に単一のノードが含まれています。また、このノード セットは、常にそのツリーのルート ノードです。  
@@ -19,7 +19,7 @@ ms.locfileid: "84291449"
  `msxsl:node-set` 関数を使用すると、結果ツリー フラグメントをノード セットに変換できます。 結果として得られるノード セットには、常に単一のノードが含まれています。また、このノード セットは、常にそのツリーのルート ノードです。  
   
 ## <a name="example"></a>例  
- `$var` という変数がスタイル シート内のノード ツリーである例を次に示します。 for-each ステートメントを `node-set` 関数と組み合わせて使用すれば、このノード ツリーをノード セットとして反復処理できます。  
+ `$books` という変数がスタイル シート内のノード ツリーである例を次に示します。 for-each ステートメントを `node-set` 関数と組み合わせて使用すれば、このノード ツリーをノード セットとして反復処理できます。  
   
 ## <a name="nodesetxsl"></a>nodeset.xsl  
   

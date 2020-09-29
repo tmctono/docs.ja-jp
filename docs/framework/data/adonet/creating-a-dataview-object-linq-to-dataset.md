@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-ms.openlocfilehash: 054898a3520cbc2b607fc26b94b72b9896ad9c71
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f76574a912128918ed575cbf0eca892041dc354c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786685"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148322"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>DataView オブジェクトの作成 (LINQ to DataSet)
+
 LINQ to DataSet のコンテキストで <xref:System.Data.DataView> を作成するには 2 つの方法があります。 <xref:System.Data.DataView> は、<xref:System.Data.DataTable> に対する LINQ to DataSet のクエリから作成したり、型指定されているまたは型指定されていない <xref:System.Data.DataTable> から作成したりできます。 どちらの場合でも、<xref:System.Data.DataView> を作成するには、いずれかの <xref:System.Data.DataTableExtensions.AsDataView%2A> 拡張メソッドを使用します。LINQ to DataSet のコンテキストで <xref:System.Data.DataView> を直接作成することはできません。  
   
  <xref:System.Data.DataView> を作成した後に、Windows フォーム アプリケーションまたは ASP.NET アプリケーションの UI コントロールにバインドしたり、フィルターおよび並べ替えの設定を変更したりできます。  
@@ -22,6 +23,7 @@ LINQ to DataSet のコンテキストで <xref:System.Data.DataView> を作成�
  <xref:System.Data.DataView> でのフィルター処理と並べ替えについて詳しくは、「[DataView によるフィルター処理](filtering-with-dataview-linq-to-dataset.md)」および「[DataView による並べ替え](sorting-with-dataview-linq-to-dataset.md)」をご覧ください。  
   
 ## <a name="creating-dataview-from-a-linq-to-dataset-query"></a>LINQ to DataSet クエリの結果からの DataView の作成  
+
  <xref:System.Data.DataView> オブジェクトは、<xref:System.Data.DataRow> オブジェクトの射影である LINQ to DataSet のクエリの結果から作成できます。 新しく作成される <xref:System.Data.DataView> は、その基となるクエリからのフィルター処理および並べ替え情報を継承します。  
   
 > [!NOTE]
@@ -56,6 +58,7 @@ LINQ to DataSet のコンテキストで <xref:System.Data.DataView> を作成�
  [!code-vb[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquerystringsort)]  
   
 ## <a name="creating-a-dataview-from-a-datatable"></a>DataTable からの DataView の作成  
+
  <xref:System.Data.DataView> オブジェクトは、LINQ to DataSet のクエリから作成できるほか、<xref:System.Data.DataTableExtensions.AsDataView%2A> メソッドを使用して <xref:System.Data.DataTable> から作成することもできます。  
   
  次の例では、<xref:System.Data.DataView> を SalesOrderDetail テーブルから作成した後、<xref:System.Windows.Forms.BindingSource> オブジェクトのデータ ソースとして設定します。 このオブジェクトは、<xref:System.Windows.Forms.DataGridView> コントロールのプロキシとして動作します。  

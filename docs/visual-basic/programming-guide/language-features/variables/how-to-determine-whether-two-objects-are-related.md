@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-ms.openlocfilehash: 30e88a21e737aa57513745899577381ed34151a2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b33815d58b0ef40f7f75a6a41bb4b1eeef591859
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410465"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072224"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>方法: 2 つのオブジェクトが関連しているかどうかを判別する (Visual Basic)
 
@@ -28,6 +28,7 @@ ms.locfileid: "84410465"
     その引数の型がオブジェクトの型 <xref:System.Type?displayProperty=nameWithType> を継承している場合は、<xref:System.Type.IsInstanceOfType%2A> から `True` が返されます。
 
 ## <a name="example"></a>例
+
  次の例では、あるオブジェクトが、別のオブジェクトのクラスから派生したクラスを表しているかどうかを判別します。
 
 ```vb

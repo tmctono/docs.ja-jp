@@ -8,14 +8,15 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: 524660fca7c56fa490cc85169898bf2bf6d1a16e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3edb1f74ab63497aeda0d72847bce92ad315a1a5
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400579"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098918"
 ---
 # <a name="-optioninfer"></a>-optioninfer
+
 変数宣言でローカル型推論を使用できるようにします。  
   
 ## <a name="syntax"></a>構文  
@@ -34,6 +35,7 @@ ms.locfileid: "84400579"
 > `-noconfig` オプションを使用すると、vbc.rsp に指定するのではなく、コンパイラの内部既定値を保持できます。 このオプションのコンパイラの既定値は `-optioninfer-` です。  
   
 ## <a name="remarks"></a>Remarks  
+
  ソース コード ファイルに [Option Infer](../../language-reference/statements/option-infer-statement.md) ステートメントが含まれている場合、そのステートメントによって `-optioninfer` コマンド ライン コンパイラ設定がオーバーライドされます。  
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Visual Studio IDE で -optioninfer を設定するには  
@@ -43,6 +45,7 @@ ms.locfileid: "84400579"
 2. **[コンパイル]** タブで、 **[Option infer]** ボックスの値を変更します。  
   
 ## <a name="example"></a>例  
+
  次のコードは、ローカル型推論を有効にした状態で `test.vb` をコンパイルします。  
   
 ```console

@@ -2,12 +2,12 @@
 title: データ ソースの LINQ クエリの有効化 2
 ms.date: 07/20/2015
 ms.assetid: c412f0cf-ff0e-4993-ab3d-1b49e23f00f8
-ms.openlocfilehash: 4ab0e2a2fc3d04eb375a4646e4133e6e5cbb47db
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a60527f0594964ec9642cdd565fd06eb5d46cf85
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84375305"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078347"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>データ ソースの LINQ クエリの有効化
 
@@ -26,12 +26,15 @@ LINQ を拡張して、データ ソースを LINQ パターンでクエリで�
 ## <a name="how-to-enable-linq-querying-of-your-data-source"></a>データ ソースの LINQ クエリを有効にする方法
 
 ### <a name="in-memory-data"></a>インメモリ データ
+
  インメモリ データの LINQ クエリを有効にする方法は 2 つあります。 データ型が <xref:System.Collections.Generic.IEnumerable%601> を実装する型の場合、LINQ to Objects を使用してデータをクエリすることができます。 <xref:System.Collections.Generic.IEnumerable%601> インターフェイスを実装して型の列挙体を有効にしても意味がない場合は、その型の LINQ 標準クエリ演算子メソッドを定義するか、または型を拡張する LINQ 標準クエリ演算子メソッドを作成することができます。 標準クエリ演算子のカスタム実装は、結果を返すために遅延実行を使用する必要があります。
 
 ### <a name="remote-data"></a>リモート データ
+
  リモート データ ソースの LINQ クエリを有効にするための最善の選択肢は、<xref:System.Linq.IQueryable%601> インターフェイスを実装することです。 しかしこれは、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] などのプロバイダーをデータ ソースに対して拡張することとは別です。 Visual Studio 2008 では、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] などの既存の LINQ テクノロジを別の型のデータ ソースに拡張するためにプロバイダー モデルを使用することができません。
 
 ## <a name="iqueryable-linq-providers"></a>IQueryable LINQ プロバイダー
+
  <xref:System.Linq.IQueryable%601> を実装する LINQ プロバイダーの複雑度にはかなりのばらつきがあります。 このセクションでは、さまざまなレベルの複雑度について説明します。
 
  複雑度が低めの `IQueryable` プロバイダーは、多くの場合、Web サービスの単一のメソッドとやり取りします。 この種のプロバイダーは処理するクエリに特定の情報を受け取るので非常に高い固有性を持ちます。 クローズされた型システムを持ち、おそらく 1 つの結果型を公開します。 クエリはほとんどの場合、標準クエリ演算子の <xref:System.Linq.Enumerable> 実装などを使用して、ローカルで実行されます。 複雑度が低めのプロバイダーは、クエリを表す式ツリーのメソッド呼び出し式を 1 つだけ調べ、残りのクエリのロジックは他の場所で処理されるようにします。

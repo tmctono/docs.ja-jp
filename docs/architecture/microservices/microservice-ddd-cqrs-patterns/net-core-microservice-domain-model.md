@@ -2,12 +2,12 @@
 title: .NET Core でマイクロサービス ドメイン モデルを実装する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | DDD 指向ドメイン モデルの実装の詳細について
 ms.date: 10/08/2018
-ms.openlocfilehash: 4017d9d658ff73fd935507dad79e9ffab7973de1
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.openlocfilehash: e24f4e643d258450a2b33ed4dc4aded718bebd82
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738750"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152547"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core でマイクロサービス ドメイン モデルを実装する
 
@@ -152,7 +152,7 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 
 さらに、新しい OrderItem(params) 操作も、Order 集約ルートの AddOrderItem メソッドにより制御され、実行されます。 そのため、この操作に関連するほとんどのロジックまたは検証 (特に、他の子エンティティ間の整合性に影響を与えるあらゆるもの) は、集約ルート内の 1 か所に配置されます。 これが、集約ルート パターンの最終目的です。
 
-Entity Framework Core 1.1 以降を使用する場合、DDD エンティティをより優れた方法で表すことができます。プロパティに加えて、[フィールドへのマッピング](https://docs.microsoft.com/ef/core/modeling/backing-field)が行えるためです。 これは、子エンティティや値オブジェクトのコレクションを保護する場合に役立ちます。 この機能拡張によって、プロパティではなく簡単なプライベート フィールドを使用できます。また、パブリック メソッドでフィールド コレクションへの更新を実装し、AsReadOnly メソッドを使用して読み取り専用アクセスを提供できます。
+Entity Framework Core 1.1 以降を使用する場合、DDD エンティティをより優れた方法で表すことができます。プロパティに加えて、[フィールドへのマッピング](/ef/core/modeling/backing-field)が行えるためです。 これは、子エンティティや値オブジェクトのコレクションを保護する場合に役立ちます。 この機能拡張によって、プロパティではなく簡単なプライベート フィールドを使用できます。また、パブリック メソッドでフィールド コレクションへの更新を実装し、AsReadOnly メソッドを使用して読み取り専用アクセスを提供できます。
 
 DDD では、エンティティのメソッド (またはコンストラクター) だけをとおしてエンティティを更新して、不変条件とデータの整合性を制御し、こうしてプロパティが get アクセサーによってのみ定義されることが望まれます。 プロパティは、プライベート フィールドによってサポートされます。 プライベート メンバーには、クラス内からのみアクセスできます。 ただし、1 つ例外があります。EF Core ではこれらのフィールドも設定する必要があります (適切な値でオブジェクトを返せるようにするため)。
 

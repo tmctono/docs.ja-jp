@@ -7,17 +7,19 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: 524f03e77e075bef08a1b41b563985de41baacb6
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 59f1c1666ce38923a2861244fb377007cd0fa992
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404811"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874982"
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
+
 1 つ以上の宣言されたプログラミング要素が、含まれている型の中からを含め、その宣言コンテキスト内からのみアクセス可能であることを示します。  
   
 ## <a name="remarks"></a>Remarks  
+
  プログラミング要素が独自の機能を表している場合、または機密データが含まれている場合は、通常、できるだけ厳密にアクセスを制限することをお勧めします。 最大の制限を達成するには、それを定義するモジュール、クラス、または構造体だけがアクセスできるようにします。 この方法で要素へのアクセスを制限するには、`Private` を使用して宣言できます。  
 
 > [!NOTE]

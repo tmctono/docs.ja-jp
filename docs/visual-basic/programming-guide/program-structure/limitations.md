@@ -8,14 +8,15 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-ms.openlocfilehash: 46294b68bda8a5d2d21c0e4efea6a78e6a265ffe
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: abe4acd5850aa6065bf4f6fd41bc610ede7ad13f
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403188"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91097957"
 ---
 # <a name="visual-basic-limitations"></a>Visual Basic の制限事項
+
 以前のバージョンの Visual Basic では、変数名の長さ、モジュールで許可される変数の数、モジュール サイズなど、コードに上限が適用されていました。 Visual Basic .NET では、これらの制限が緩和され、コードをより自由に記述および配置できるようになりました。  
   
  物理的な制限は、コンパイル時の考慮事項よりも実行時のメモリに大きく依存します。 慎重なプログラミング プラクティスを使用し、大規模なアプリケーションを複数のクラスやモジュールに分割すれば、Visual Basic の内部的な制限が発生する可能性はほとんどありません。  

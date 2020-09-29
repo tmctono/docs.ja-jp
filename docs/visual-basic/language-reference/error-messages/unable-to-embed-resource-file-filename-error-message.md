@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30143
 ms.assetid: 319e95b5-5176-4fe1-bc04-90075594b397
-ms.openlocfilehash: b54d7c5716453be47aff2245e0e58174aaf1f7bf
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: c23a1013326fc3af0b0dd29bb8007d4f17553185
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197302"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875721"
 ---
-# <a name="unable-to-embed-resource-file-filename-error-message"></a>リソース ファイル '\<filename>' を埋め込めません: \<error message>
+# <a name="unable-to-embed-resource-file-filename-error-message"></a>リソース ファイル '\<filename>' を埋め込めません : \<error message>
+
 Visual Basic コンパイラはアセンブリ リンカー (Al.exe、Alink とも呼ばれる) を呼び出し、マニフェストを伴うアセンブリを生成します。 リンカーが、ネイティブな COM+ リソース ファイルをアセンブリに直接埋め込むときにエラーが発生したことを報告しています。  
   
  **エラー ID:** BC30143  

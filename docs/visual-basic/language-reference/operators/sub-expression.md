@@ -6,14 +6,15 @@ helpviewer_keywords:
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-ms.openlocfilehash: f862730220d0595faecaa915b1eaad2a3cdc0053
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e564fa3f717fc1a9f4e9961d9b3e961912a4d56b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406316"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873332"
 ---
 # <a name="sub-expression-visual-basic"></a>部分式 (Visual Basic)
+
 サブルーチン ラムダ式を定義するパラメーターとコードを宣言します。  
   
 ## <a name="syntax"></a>構文  
@@ -35,9 +36,11 @@ End Sub
 |`statements`|必須です。 ステートメントの一覧。|  
   
 ## <a name="remarks"></a>Remarks  
+
  *ラムダ式*は、1 つ以上のステートメントを実行する、名前のないサブルーチンです。 ラムダ式は、デリゲート型を使用できる場所であればどこでも使用できます。ただし、`RemoveHandler` の引数として使用することはできません。 デリゲートの詳細と、デリゲートでのラムダ式の使用の詳細については、「[Delegate ステートメント](../statements/delegate-statement.md)」と「[厳密でないデリゲート変換](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md)」をご覧ください。  
   
 ## <a name="lambda-expression-syntax"></a>ラムダ式の構文  
+
  ラムダ式の構文は、標準のサブルーチンの構文に似ています。 相違点は、次のとおりです。  
   
 - ラムダ式には名前がありません。  
@@ -53,6 +56,7 @@ End Sub
 - ラムダ式では、ジェネリック パラメーターは使用できません。  
   
 ## <a name="example"></a>例  
+
  次の例は、コンソールに値を書き込むラムダ式です。 この例は、サブルーチンの単一行および複数行のラムダ式の構文を示しています。 その他の例については、「[ラムダ式](../../programming-guide/language-features/procedures/lambda-expressions.md)」を参照してください。  
   
  [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
-ms.openlocfilehash: c914a9b0780e2e87e177502b0f9faff0e7c4b617
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 11f7a81bc0d4b0e2a8d66387410d9a24503c7519
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149051"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150662"
 ---
 # <a name="retrieving-binary-data"></a>バイナリ データの取得
+
 既定では、データの行全体が使用可能になるとすぐに、**DataReader** によって受信データが行として読み込まれます。 バイナリ ラージ オブジェクト (BLOB) には、1 行に収まらない数ギガバイトのデータが含まれる場合があるため、別の処理が必要です。 **Command.ExecuteReader** メソッドには、<xref:System.Data.CommandBehavior> 引数を受け取って **DataReader** の既定の動作を変更するオーバーロードがあります。 **ExecuteReader** メソッドに <xref:System.Data.CommandBehavior.SequentialAccess> を渡すと、データの行を読み込む代わりに、データを受け取った時点で順次読み込むように、**DataReader** の既定の動作を変更できます。 これは BLOB やその他の大きなデータ構造を読み込む場合に理想的な処理です。 この動作は、データ ソースによって異なる場合があります。 たとえば、Microsoft Access から BLOB を返すと、受け取ったデータから順に読み込むのではなく、BLOB 全体をメモリに読み込みます。  
   
  **SequentialAccess** を使用するように **DataReader** を設定するときは、返されたフィールドにアクセスする順序に注意してください。 使用可能になるとすぐに行全体を読み込む **DataReader** の既定の動作では、次の行が読み取られるまでは、返されたフィールドに任意の順序でアクセスできます。 しかし、**SequentialAccess** を使用しているときは、**DataReader** によって返された各フィールドに順番にアクセスする必要があります。 たとえば、クエリが 3 つの列 (3 番目の列は BLOB) を返す場合、最初のフィールドおよび 2 番目のフィールドの値は、3 番目のフィールドの BLOB データにアクセスする前に返す必要があります。 最初のフィールドまたは 2 番目のフィールドの前に 3 番目のフィールドにアクセスした場合は、最初のフィールドと 2 番目のフィールドの値は使用できなくなります。 これは、**SequentialAccess** によって、**DataReader** はデータを順番に返すように変更されており、**DataReader** による読み取りが通過した後のデータは使用できなくなるためです。  
@@ -20,6 +21,7 @@ ms.locfileid: "79149051"
  BLOB フィールドのデータにアクセスするときは、**DataReader** の **GetBytes** 型または **GetChars** 型のアクセサーを使用します。これらのアクセサーでは、データは配列に設定されます。 文字データには **GetString** を使用することもできます。ただし、 システム リソースを節約するためには、BLOB 値全体を 1 つの文字列変数に読み込むことは望ましくありません。 特定のバッファー サイズのデータを返すように指定する代わりに、返されたデータから読み込む先頭バイトまたは先頭文字の開始位置を指定できます。 **GetBytes** と **GetChars** では、返されたバイト数または文字数を表す `long` 値が返されます。 **GetBytes** または **GetChars** に null 配列を渡した場合、返される long 値は BLOB の総バイト数または総文字数になります。 オプションで、データ読み込みの開始位置を示す、配列内のインデックスを指定できます。  
   
 ## <a name="example"></a>例  
+
  次の例では、Microsoft SQL Server の **pubs** サンプル データベースから、発行者 ID とロゴを取得します。 発行者 ID (`pub_id`) は文字フィールドであり、ロゴはイメージ、つまり、BLOB です。 **logo** フィールドはビットマップなので、この例では、**GetBytes** を使用してバイナリ データを返します。 フィールドには順番にアクセスする必要があるため、現在の行のデータに対して発行者 ID はロゴの前にアクセスされることに注意してください。  
   
 ```vb  

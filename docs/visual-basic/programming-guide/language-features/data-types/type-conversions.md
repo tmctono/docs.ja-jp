@@ -10,17 +10,19 @@ helpviewer_keywords:
 - changing data types [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
-ms.openlocfilehash: be388998da5e88f99c62128e6ad63d5a476153ba
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ee8700ea757cee9c20e2598de029f54ae33a7114
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393053"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090158"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Visual Basic における型変換
+
 あるデータ型から別の型に値を変更するプロセスは、"*変換*" と呼ばれます。 変換は、関連する型のデータ容量に応じて、"*拡大*" または "*縮小*" のいずれかになります。 また、ソース コードの構文に応じて、"*暗黙的*" または "*明示的*" があります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [拡大変換と縮小変換](widening-and-narrowing-conversions.md)  
  変換先の型がデータを保持できるかどうかによって分類される変換について説明します。  
   
@@ -37,6 +39,7 @@ ms.locfileid: "84393053"
  さまざまなデータ型の配列間での変換を行う手順について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [データの種類](index.md)  
  Visual Basic のデータ型の概要とそれらの使用方法について説明します。  
   

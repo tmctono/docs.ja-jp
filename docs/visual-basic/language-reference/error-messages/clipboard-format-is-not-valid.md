@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID460
 ms.assetid: 71a4a045-65bb-417d-b3bd-99a9fa3c53f6
-ms.openlocfilehash: 15bc530d1030a8c4d720321ea249fdd7fb6cd8b6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 429d1e120a0044152a358a87663eb09989f45b0e
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623094"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874591"
 ---
 # <a name="clipboard-format-is-not-valid"></a>クリップボードの形式が有効ではありません。
+
 指定されたクリップボードの形式が、実行されるメソッドと互換性がありません。 このエラーでは以下の原因が考えられます。  
   
 - クリップボードの `GetText` または `SetText` メソッドに `vbCFText` または `vbCFLink` 以外のクリップボードの形式を使用している。  

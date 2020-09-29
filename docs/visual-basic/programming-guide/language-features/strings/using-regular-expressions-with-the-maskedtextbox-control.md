@@ -5,17 +5,19 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: 1bb5ac5381dc85f598ef46638fbc8cd1a8643825
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 493da7b8583b5cc73a9832afa81b7b1d84742f2d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555745"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072432"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Visual Basic の MaskedTextBox コントロールによる正規表現を使用する
+
 この例では、単純な正規表現を変換して、<xref:System.Windows.Forms.MaskedTextBox> コントロールで使用する方法を示します。  
   
 ## <a name="description-of-the-masking-language"></a>マスク言語の説明  
+
  標準の <xref:System.Windows.Forms.MaskedTextBox> マスク言語は、Visual Basic 6.0 の `Masked Edit` コントロールで使用されているものに基づいているので、そのプラットフォームから移行するユーザーにはよく知られています。  
   
  <xref:System.Windows.Forms.MaskedTextBox> コントロールの <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> プロパティでは、使用する入力マスクを指定します。 マスクは、次の表の 1 つ以上のマスク要素で構成される文字列である必要があります。  
@@ -44,6 +46,7 @@ ms.locfileid: "90555745"
  小数点 (.)、桁区切り (,)、時刻 (:)、日付 (/)、通貨 ($) の各記号は、アプリケーションのカルチャで定義されている記号が既定で表示されます。 <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> プロパティを使用すると、別のカルチャの記号を強制的に表示できます。  
   
 ## <a name="regular-expressions-and-masks"></a>正規表現とマスク  
+
  正規表現とマスクを使用してユーザー入力を検証できますが、これらは完全に同等であるわけではありません。 正規表現ではマスクよりも複雑なパターンを表現できますが、マスクでは同じ情報をカルチャに関連する形式でより簡潔に表現できます。  
   
  次の表では、4 つの正規表現とそれぞれに対応するマスクを比較しています。  

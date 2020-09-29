@@ -7,17 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-ms.openlocfilehash: a52f9f5f5b044273a45da5ef9478e2212def57a5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0b63b44c2cd9d55094fb83fed6c04e4de528a25c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372363"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867198"
 ---
 # <a name="mywebservices-object"></a>My.WebServices オブジェクト
+
 現在のプロジェクトによって参照される各 XML Web サービスの単一のインスタンスを作成してアクセスするためのプロパティを提供します。  
   
 ## <a name="remarks"></a>Remarks  
+
  `My.WebServices` オブジェクトは、現在のプロジェクトにより参照されている各 Web サービスのインスタンスを提供します。 各インスタンスは要求に応じてインスタンス化されます。 これらの Web サービスには `My.WebServices` オブジェクトのプロパティを介してアクセスできます。 プロパティの名前は、プロパティがアクセスする Web サービスの名前と同じになります。 <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> から継承されたクラスはすべて Web サービスです。 プロジェクトへの Web サービスの追加の詳細については、「[アプリケーションの Web サービスへのアクセス](../../developing-apps/programming/accessing-application-web-services.md)」を参照してください。  
   
  `My.WebServices` オブジェクトでは、現在のプロジェクトに関連付けられている Web サービスのみが公開されます。 参照されている DLL で宣言されている Web サービスへのアクセスは提供されません。 DLL で提供されている Web サービスにアクセスするには、Web サービスの修飾名を *DllName*.*WebServiceName* の形式で使用する必要があります。 詳細については、「[アプリケーションの Web サービスへのアクセス](../../developing-apps/programming/accessing-application-web-services.md)」を参照してください。  
@@ -25,6 +27,7 @@ ms.locfileid: "84372363"
  オブジェクトとそのプロパティは、Web アプリケーションで使用できません。  
   
 ## <a name="properties"></a>プロパティ  
+
  `My.WebServices` オブジェクトの各プロパティにより、現在のプロジェクトで参照されている Web サービスのインスタンスにアクセスできます。 プロパティの名前は、プロパティがアクセスする Web サービスの名前と同じになり、プロパティの型は Web サービスの型と同じになります。  
   
 > [!NOTE]
@@ -40,6 +43,7 @@ ms.locfileid: "84372363"
 > 通常、`Is` または `IsNot` 演算子では、比較を実行するためにプロパティの値を読み取る必要があります。 ただし、プロパティに現在 `Nothing` が格納されている場合は、プロパティによって Web サービスの新しいインスタンスが作成され、そのインスタンスが返されます。 ただし、Visual Basic コンパイラでは、`My.WebServices` オブジェクトのプロパティが特別に処理されるため、`Is` または `IsNot` 演算子によって、値を変更せずにプロパティの状態をチェックできます。  
   
 ## <a name="example"></a>例  
+
  この例では、`TemperatureConverter` XML Web サービスの `FahrenheitToCelsius` メソッドを呼び出して、その結果を返しています。  
   
  [!code-vb[VbVbalrMyWebService#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWebService/VB/Form1.vb#1)]  

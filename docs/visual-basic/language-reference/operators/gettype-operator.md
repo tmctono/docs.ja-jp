@@ -7,14 +7,15 @@ helpviewer_keywords:
 - GetType operator [Visual Basic]
 - GetType keyword [Visual Basic]
 ms.assetid: 4f733297-2503-4607-850c-15eba65fff90
-ms.openlocfilehash: 37644a9c37ffde084120c5f1e1ee8c87a04ffc3c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9ff207ea4f2b89ea30eb8f46a3e640ccf3789974
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371156"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867012"
 ---
 # <a name="gettype-operator-visual-basic"></a>GetType 演算子 (Visual Basic)
+
 指定した型の <xref:System.Type> オブジェクトを返します。 <xref:System.Type> オブジェクトは、そのプロパティ、メソッド、イベントなど、型に関する情報を提供します。  
   
 ## <a name="syntax"></a>構文  
@@ -30,6 +31,7 @@ GetType(typename)
 |`typename`|情報を必要とする型の名前。|  
   
 ## <a name="remarks"></a>Remarks  
+
  `GetType` 演算子は、指定された `typename` の <xref:System.Type> オブジェクトを返します。 定義された型の名前を `typename` で渡すことができます。 次に例を示します。  
   
 - Visual Basic の任意のデータ型 (`Boolean` や `Date` など)。  
@@ -53,6 +55,7 @@ GetType(typename)
 - 2 つのオブジェクト参照を比較して、それらが同じ型のインスタンスを参照しているかどうかを確認する必要がある場合。 そうである場合、`GetType` は同じ <xref:System.Type> オブジェクトへの参照を返します。  
   
 ## <a name="example"></a>例  
+
  `GetType` 演算子の使用例を次に示します。  
   
  [!code-vb[VbVbalrOperators#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#26)]  

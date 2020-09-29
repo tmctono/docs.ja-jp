@@ -9,14 +9,15 @@ helpviewer_keywords:
 - XML comment literal [Visual Basic]
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
-ms.openlocfilehash: 93c1346e54106b93f3932a494dea85d082ec994d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3272cc0f976d6e8819e51bb5d5fce73066007963
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400216"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875188"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML コメント リテラル (Visual Basic)
+
 <xref:System.Xml.Linq.XComment> オブジェクトを表すリテラル。  
   
 ## <a name="syntax"></a>構文  
@@ -34,9 +35,11 @@ ms.locfileid: "84400216"
 |`-->`|必須です。 XML コメントの末尾を表します。|  
   
 ## <a name="return-value"></a>戻り値  
+
  <xref:System.Xml.Linq.XComment> オブジェクト。  
   
 ## <a name="remarks"></a>Remarks  
+
  XML コメント リテラルにはドキュメントのコンテンツではなく、ドキュメントに関する情報が含まれています。 XML コメント セクションの末尾には "-->" シーケンスが使用されます。 これは以下を意味します。  
   
 - 埋め込み式の区切り記号は有効な XML コメント コンテンツであるため、XML コメント リテラルでは埋め込み式を使用できません。  
@@ -51,6 +54,7 @@ ms.locfileid: "84400216"
  XML コメント リテラルは、Visual Basic コンパイラによって、<xref:System.Xml.Linq.XComment.%23ctor%2A> コンストラクターへの呼び出しに変換されます。  
   
 ## <a name="example"></a>例  
+
  次の例では、"This is a comment" というテキストを含む XML コメントを作成します。  
   
  [!code-vb[VbXMLSamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#9)]  

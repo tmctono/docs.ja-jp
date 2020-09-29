@@ -4,17 +4,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: cdb78bc66867ce27076d7b7e42de6a2880cb3a8c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b89e996324d9ec22fc243b59502f3d36fefdee60
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393962"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090223"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>方法: Visual Basic でオブジェクトを別の型に変換する
+
 [CType 関数](../../../language-reference/functions/ctype-function.md)などの変換キーワードを使用して、`Object` 変数を別のデータ型に変換します。  
   
 ## <a name="example"></a>例  
+
  次の例では、`Object` 変数を `Integer` と `String` に変換します。  
   
 ```vb  
@@ -29,6 +31,7 @@ End Sub
  `Object` 変数の内容が特定のデータ型であることがわかっている場合は、変数をそのデータ型に変換することをお勧めします。 `Object` 変数を引き続き使用すると、"*ボックス化*" と "*ボックス化解除*" (値型の場合) または "*遅延バインディング*" (参照型の場合) のいずれかが発生します。 これらの処理にはすべて追加の実行時間がかかり、パフォーマンスが低下します。  
   
 ## <a name="compile-the-code"></a>コードのコンパイル  
+
  この例で必要な要素は次のとおりです。  
   
 - <xref:System?displayProperty=nameWithType> 名前空間への参照  

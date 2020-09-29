@@ -10,14 +10,15 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-ms.openlocfilehash: 1e284b99a36cdf0f62aee2c45fd9f3bf544d1d81
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6c28ca22e96616ff09e147400bfdb2adb922ff0e
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410709"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085803"
 ---
 # <a name="type-promotion-visual-basic"></a>型の上位変換 (Visual Basic)
+
 モジュールでプログラミング要素を宣言すると、Visual Basic によって、そのスコープがモジュールを含む名前空間に昇格されます。 これは*型の上位変換*と呼ばれます。  
   
  次の例では、モジュールのスケルトン定義とそのモジュールの 2 つのメンバーを示しています。  
@@ -27,6 +28,7 @@ ms.locfileid: "84410709"
  `projModule` 内で、モジュール レベルで宣言されたプログラミング要素が `projNamespace` に昇格されます。 前の例では、`basicEnum` と `innerClass` は昇格されますが、`numberSub` は、モジュール レベルで宣言されていないため、昇格されません。  
   
 ## <a name="effect-of-type-promotion"></a>型の上位変換の効果  
+
  型の上位変換の効果は、修飾文字列にモジュール名を含める必要がないことです。 次の例では、前の例のプロシージャを 2 回呼び出しています。  
   
  [!code-vb[VbVbalrDeclaredElements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#2)]  
@@ -34,6 +36,7 @@ ms.locfileid: "84410709"
  前の例では、最初の呼び出しで完全修飾文字列を使用しています。 ただし、型の上位変換のため、これは必要ありません。 2 番目の呼び出しでは、修飾文字列に `projModule` を含めずに、モジュールのメンバーにアクセスしています。  
   
 ## <a name="defeat-of-type-promotion"></a>型の上位変換の無効化  
+
  名前空間にモジュール メンバーと同じ名前のメンバーが既に存在する場合、そのモジュール メンバーに対して型の上位変換は無効になります。 次の例では、同じ名前空間内の列挙とモジュールのスケルトン定義を示しています。  
   
  [!code-vb[VbVbalrDeclaredElements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#3)]  
@@ -41,6 +44,7 @@ ms.locfileid: "84410709"
  前の例では、名前空間レベルで同じ名前を持つ列挙が既に存在するため、Visual Basic がクラス `abc` を `thisNameSpace` に昇格できません。 `abcSub` にアクセスするには、完全修飾文字列 `thisNamespace.thisModule.abc.abcSub` を使用する必要があります。 ただし、クラス `xyz` は引き続き昇格され、短い修飾文字列 `thisNamespace.xyz.xyzSub` で、`xyzSub` にアクセスできます。  
   
 ### <a name="defeat-of-type-promotion-for-partial-types"></a>部分型の型の上位変換の無効化  
+
  モジュール内のクラスまたは構造体で [Partial](../../../language-reference/modifiers/partial.md) キーワードを使用している場合は、名前空間に同じ名前のメンバーが含まれているかどうかに関係なく、そのクラスまたは構造体に対する型の上位変換が自動的に無効になります。 モジュール内の他の要素は、引き続き型の上位変換の対象になります。  
   
  **結果。** 部分定義の型の上位変換の無効化によって、予期しない結果が発生したり、コンパイラ エラーが発生したりすることもあります。 次の例では、クラスのスケルトンの部分定義を示しており、そのうちの 1 つがモジュール内にあります。  
@@ -52,6 +56,7 @@ ms.locfileid: "84410709"
  コンパイラは、完全修飾されたパスがまったく同じ場合にのみ、部分定義をマージします。  
   
 ## <a name="recommendations"></a>推奨事項  
+
  次の推奨事項は、優れたプログラミング方法を示しています。  
   
 - **一意の名前。** プログラミング要素の名前付けを完全に制御できる場合は、どこでも一意の名前を使用することをお勧めします。 同一の名前は追加の修飾が必要であり、コードが読みにくくなる可能性があります。 それらは、軽度のエラーや予期しない結果につながる可能性もあります。  

@@ -11,14 +11,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-ms.openlocfilehash: 903e05facccd1f2afdf4bb51b200531feb64aa79
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 816d6388a0dbb7ae346074d258ff651c793c5e0e
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387778"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071509"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>方法: プロシージャに引数を渡す (Visual Basic)
+
 プロシージャを呼び出すときは、プロシージャ名の後に、かっこで囲んだ引数リストを追加します。 プロシージャで定義されているすべての必須パラメーターに対応する引数を指定します。また、必要に応じて `Optional` パラメーターに引数を指定することもできます。 呼び出しに `Optional` パラメーターを指定しない場合に、後続の引数を指定するのであれば、引数リスト内にコンマを含めてその位置をマークする必要があります。  
   
  対応するパラメーターとは異なるデータ型の引数 (`Byte` など) を `String` に渡す場合は、型チェック スイッチ ([Option Strict ステートメント](../../../language-reference/statements/option-strict-statement.md)) を `Off` に設定できます。 `Option Strict` が `On` の場合は、拡大変換または明示的な変換キーワードのいずれかを使用する必要があります。 詳細については、「[拡大変換と縮小変換](../data-types/widening-and-narrowing-conversions.md)」および「[データ型変換関数](../../../language-reference/functions/type-conversion-functions.md)」を参照してください。  

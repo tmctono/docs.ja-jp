@@ -2,14 +2,15 @@
 title: データのグループ化
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: 8996eee748489c596bc5adc32f53b6b39dbfc6ac
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: aae48543472ee71990d0bc96defa9ad6a6ab4c0d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398384"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91084204"
 ---
 # <a name="grouping-data-visual-basic"></a>データのグループ化 (Visual Basic)
+
 グループ化とは、各グループの要素が共通の属性を持つようにデータをグループに分ける操作を指します。  
   
  次の図は、文字のシーケンスをグループ化した結果を示しています。 各グループのキーは文字です。  
@@ -26,6 +27,7 @@ ms.locfileid: "84398384"
 |ToLookup|キー セレクター関数に基づいて、<xref:System.Linq.Lookup%602> (一対多の辞書) に要素を挿入します。|該当なし。|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>クエリ式の構文例  
+
  次のコード例では、`Group By` 句を使用して、偶数か奇数かによってリスト内の整数をグループ化します。  
   
 ```vb  

@@ -10,14 +10,15 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: 326c3306368ceca2122e912556efd84e4bfef1f1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: be2e401c7931b2637c14a3ea3b742a2c09917939
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413002"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869987"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate 句 (Visual Basic)
+
 1 つ以上の集計関数をコレクションに適用します。  
   
 ## <a name="syntax"></a>構文  
@@ -40,6 +41,7 @@ Aggregate element [As type] In collection _
 |`expressionList`|必須です。 コレクションに適用する集計関数を識別する 1 つ以上のコンマ区切り式。 集計関数に別名を適用して、クエリ結果のメンバー名を指定できます。 別名が指定されていない場合、集計関数の名前が使用されます。 例については、このトピックで後述する集計関数に関するセクションを参照してください。|  
   
 ## <a name="remarks"></a>Remarks  
+
  `Aggregate` 句を使用して、クエリに集計関数を含めることができます。 集計関数は、値の集まりに対して、チェックと計算を実行し、1 つの値を返します。 クエリ結果の型のメンバーを使用して、計算された値にアクセスできます。 使用できる標準の集計関数は、`All`、`Any`、`Average`、`Count`、`LongCount`、`Max`、`Min`、`Sum` 関数です。 これらの関数は、SQL での集計に精通している開発者になじみがあります。 このトピックの以降のセクションで、それらについて説明します。  
   
  集計関数の結果は、クエリ結果の型のフィールドとしてクエリ結果に含まれます。 集計関数の結果に別名を指定して、集計値を保持するクエリ結果の型のメンバーの名前を指定できます。 別名が指定されていない場合、集計関数の名前が使用されます。  

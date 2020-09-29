@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - decision structures [Visual Basic]
 ms.assetid: 6885d426-fa87-4e1c-881f-f0e9ec8d98af
-ms.openlocfilehash: 5b178c2360d5a987311f5f525ec65de1ecf34ff6
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 43821fe52db1b24cfa017107f3ffdb4f1f716b57
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402760"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875653"
 ---
 # <a name="control-flow-summary-visual-basic"></a>制御フローの概要 (Visual Basic)
+
 Visual Basic 言語のキーワードとランタイム ライブラリ メンバーを、目的と使用方法に応じて編成しました。  
   
 |アクション|言語要素|  

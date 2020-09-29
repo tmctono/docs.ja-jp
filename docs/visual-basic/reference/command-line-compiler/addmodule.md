@@ -6,14 +6,15 @@ helpviewer_keywords:
 - addmodule compiler option [Visual Basic]
 - -addmodule compiler option [Visual Basic]
 ms.assetid: fb4b89d4-4926-4f20-868d-427fa28497b2
-ms.openlocfilehash: 9e8146497d63d949f138d6cd08c9ea8c7b03c651
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2db122acc03056a9cb6f355119d4c4e6da6ed175
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414312"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91097788"
 ---
 # <a name="-addmodule"></a>-addmodule
+
 指定ファイル内のすべての型情報を現在のコンパイル対象のプロジェクトで使用できるようにします。  
   
 ## <a name="syntax"></a>構文  
@@ -23,10 +24,12 @@ ms.locfileid: "84414312"
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `fileList`  
  必須です。 メタデータは含まれるが、アセンブリ マニフェストは含まれないファイルのコンマ区切りのリスト。 ファイル名に空白が含まれる場合は、名前を二重引用符 ("") で囲みます。  
   
 ## <a name="remarks"></a>Remarks  
+
  `fileList` パラメーターで指定するファイルは、`-target:module` オプションを使用して作成するか、`-target:module` と同等の別のコンパイラを使用して作成する必要があります。  
   
  `-addmodule` で追加したモジュールはすべて、実行時に出力ファイルと同じディレクトリに置かれている必要があります。 つまり、コンパイル時には任意のディレクトリからモジュールを指定できますが、実行時にはアプリケーション ディレクトリにこのモジュールが置かれている必要があります。 そうでない場合、<xref:System.TypeLoadException> エラーが発生します。  
@@ -39,6 +42,7 @@ ms.locfileid: "84414312"
 > `-addmodule` オプションは、Visual Studio 開発環境からは利用できません。これはコマンド ラインからコンパイルするときにのみ使用できます。  
   
 ## <a name="example"></a>例  
+
  モジュールは、次のコード例で作成されます。  
   
  [!code-vb[VbVbalrCompiler#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#47)]  

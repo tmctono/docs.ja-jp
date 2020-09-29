@@ -9,17 +9,19 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-ms.openlocfilehash: 3dd4be6ea6de9dfe8eb165e5d4ba9a990fc40585
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b7430b209f53a0a924ec587a0097178baf0075e3
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363955"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059221"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>引数の値渡しと参照渡し (Visual Basic)
+
 Visual Basic では、プロシージャに引数を渡すときに、"*値*" 渡しまたは "*参照*" 渡しにすることができます。 これは "*引渡し方法*" と呼ばれ、引数の基になる呼び出し元のコードのプログラミング要素をプロシージャが変更できるかどうかを決定します。 プロシージャの宣言で [ByVal](../../../language-reference/modifiers/byval.md) または [ByRef](../../../language-reference/modifiers/byref.md) キーワードを指定することによって、各パラメーターの引渡し方法を決定します。  
   
 ## <a name="distinctions"></a>相違点  
+
  プロシージャに引数を渡すときは、相互作用するいくつかの相違点に注意してください。  
   
 - 基になるプログラミング要素が変更可能か変更不可能か  
@@ -33,6 +35,7 @@ Visual Basic では、プロシージャに引数を渡すときに、"*値*" �
  詳細については、「[Differences Between Modifiable and Nonmodifiable Arguments (変更できる引数と変更できない引数の違い)](./differences-between-modifiable-and-nonmodifiable-arguments.md)」および「[Differences Between Passing an Argument By Value and By Reference (引数の値渡しと参照渡しの違い)](./differences-between-passing-an-argument-by-value-and-by-reference.md)」をご覧ください。  
   
 ## <a name="choice-of-passing-mechanism"></a>引渡し方法の選択  
+
  引数ごとに引渡し方法を慎重に選択する必要があります。  
   
 - **保護**。 2 つの引渡し方法のいずれかを選択する際に、最も重要な基準は、呼び出し元の変数が変更の影響を受けるかどうかです。 引数を `ByRef` で渡す利点は、プロシージャがその引数を使用して呼び出し元のコードに値を返すことができることです。 引数を `ByVal` で渡す利点は、プロシージャによって変更されないように変数を保護することです。  
@@ -42,6 +45,7 @@ Visual Basic では、プロシージャに引数を渡すときに、"*値*" �
      参照型の場合、データへのポインターだけがコピーされます (32 ビット プラットフォームでは 4 バイト、64 ビット プラットフォームでは 8 バイト)。 そのため、パフォーマンスを損なうことなく、`String` または `Object` 型の引数を値渡しにすることができます。  
   
 ## <a name="determination-of-the-passing-mechanism"></a>引渡し方法の決定  
+
  プロシージャの宣言で、各パラメーターの引渡し方法を指定します。 呼び出し元のコードは、引渡し方法 `ByVal` をオーバーライドできません。  
   
  パラメーターが `ByRef` で宣言されている場合、呼び出し元のコードは、呼び出しで引数名をかっこで囲むことによって、引渡し方法を強制的に `ByVal` にすることができます。 詳細については、「[方法:方法: 引数の値渡しを強制する](./how-to-force-an-argument-to-be-passed-by-value.md)」をご覧ください。  
@@ -63,9 +67,11 @@ Visual Basic では、プロシージャに引数を渡すときに、"*値*" �
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
+
  次の例は、引数を値渡しにする場合と参照渡しにする場合を示しています。 `Calculate` プロシージャには、`ByVal` パラメーターと `ByRef` パラメーターの両方があります。 このプロシージャのタスクは、指定された `rate` (金利) と `debt` (合計金額) を使用して、`debt` の新しい値を計算することです。これは、`debt` の元の値に金利を適用した結果です。 `debt` は `ByRef` パラメーターであるため、新しい合計は、`debt` に対応する呼び出し元のコードの引数の値に反映されます。 `Calculate` が値を変更しないようにする必要があるため、`rate` パラメーターは `ByVal` パラメーターです。  
   
 ### <a name="code"></a>コード  
+
  [!code-vb[VbVbcnProcedures#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class2.vb#74)]  
   
 ## <a name="see-also"></a>関連項目

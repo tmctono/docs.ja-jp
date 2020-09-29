@@ -2,16 +2,17 @@
 title: DNX から .NET Core CLI への移行
 description: DNX ツールの使用から .NET Core CLI ツールの使用に移行します。
 ms.date: 06/20/2016
-ms.openlocfilehash: 31317f110ae1e8586b78becd757d0a8ff07f1459
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e5ebbab2551cf750a5b1136e7b1d4b67816c3b03
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503821"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071119"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>DNX から .NET Core CLI への移行 (project.json)
 
 ## <a name="overview"></a>概要
+
 NET Core と ASP.NET Core 1.0 の RC1 リリースでは、DNX ツールが導入されました。 NET Core と ASP.NET Core 1.0 の RC2 リリースでは、DNX から .NET Core CLI に移行しました。
 
 補足情報として、DNX とは何であったのかを要約します。 DNX は、ランタイムであると共に、.NET Core (具体的には ASP.NET Core 1.0 アプリケーション) を構築するために使用するツールセットでした。 おもに次の 3 つの部分で構成されていました。
@@ -25,9 +26,11 @@ CLI の導入により、上記のすべてが単一のツールセットに含�
 この移行ガイドでは、DNX からと .NET Core CLI にプロジェクトを移行する方法の要点を説明します。 プロジェクトを一から .NET Core で始める場合は、このドキュメントは自由にスキップできます。
 
 ## <a name="main-changes-in-the-tooling"></a>ツールの主な変更
+
 まずツールの全般的な変更点をいくつか説明しておく必要があります。
 
 ### <a name="no-more-dnvm"></a>DNVM の終了
+
 DNVM (*DotNet Version Manager* の略) は、コンピューターに DNX をインストールするための bash/PowerShell スクリプトでした。 DNVM を使用することにより、ユーザーは自分で指定したフィード (または既定のフィード) から必要な DNX を容易に取得することができ、さらに、特定のセッションで $PATH にプッシュされるように特定の DNX に "アクティブ" マークを付けることができました。 これがあれば、さまざまなツールを使用できます。
 
 .NET Core CLI に加えられた変更によって DNVM の機能セットが冗長になったため、DNVM は廃止されました。
@@ -42,6 +45,7 @@ CLI は、主に次の 2 つの方法でパッケージ化されています。
 `project.json` 内でランタイムを参照するには、特定のバージョンのパッケージを依存関係に追加します。 この変更により、アプリケーションは新しいランタイム コンポーネントを使用できるようになります。 これらのコンポーネントをコンピューターに組み込む方法は、CLI の場合と同じです。サポートされているネイティブ インストーラーのいずれか、またはインストール スクリプトを使用してランタイムをインストールします。
 
 ### <a name="different-commands"></a>種々のコマンド
+
 DNX の場合、一部のコマンドについては 3 つのパート (DNX、DNU、DNVM) のいずれかから使用していました。 CLI になって、これらのコマンドの一部は変更され、一部は使用できなくなり、一部は同じであるがセマンティクスが若干異なる状況となりました。
 
 次の表では、DNX/DNU コマンドと、対応する CLI コマンドのマッピングを示します。
@@ -61,22 +65,27 @@ DNX の場合、一部のコマンドについては 3 つのパート (DNX、DN
 (\*) - これらの機能は、CLI では設計上サポートされていません。
 
 ## <a name="dnx-features-that-are-not-supported"></a>サポートされていない DNX 機能
+
 上表に示すように、DNX 環境の機能の中には、少なくとも当面の間、CLI でサポートしないことに決定した機能があります。 このセクションでは、その中で最も重要なものを取り上げ、それらのサポートを中止した論理的根拠と、必要になった場合の解決策について概説します。
 
 ### <a name="global-commands"></a>グローバル コマンド
+
 DNU には、"グローバル コマンド" と呼ばれる概念が採用されています。 これらは基本的に、NuGet パッケージとしてパッケージ化されたコンソール アプリケーションであり、指定された DNX を呼び出してアプリケーションを実行するシェル スクリプトが含まれていました。
 
 CLI では、この概念をサポートしていません。 しかし、使い慣れた `dotnet <command>` 構文を使用して呼び出し可能なプロジェクトごとのコマンドを追加する、という概念はサポートされています。
 
 ### <a name="installing-dependencies"></a>依存関係のインストール
+
 v1 の時点で、.NET Core CLI には依存関係をインストールするための `install` コマンドが用意されていません。 NuGet からパッケージをインストールするには、該当するパッケージを依存関係として `project.json` ファイルに追加し、`dotnet restore` を実行する必要があります ([注記参照](#dotnet-restore-note))。
 
 ### <a name="running-your-code"></a>コードの実行
+
 コードを実行する方法は、主に 2 つあります。 1 つは、`dotnet run` を使用してソースから実行する方法です。 この方法では、`dnx run` の場合とは異なり、メモリ内のコンパイルを行いません。 `dotnet build` を実際に呼び出すことで、コードをビルドし、ビルドされたバイナリを実行します。
 
 もう 1 つは、`dotnet` 自体を使用してコードを実行する方法です。 そのためには、アセンブリへのパス `dotnet path/to/an/assembly.dll` を指定します。
 
 ## <a name="migrating-your-dnx-project-to-net-core-cli"></a>DNX プロジェクトを .NET Core CLI に移行する
+
 DNX から移行する際には、コードの操作時に新しいコマンドを使用することに加えて、重要なことが他に 3 つあります。
 
 1. `global.json` ファイルで CLI を使用できるようにする場合は、このファイルを移行します。
@@ -84,6 +93,7 @@ DNX から移行する際には、コードの操作時に新しいコマンド�
 3. 任意の DNX API を、対応する BCL API に移行します。
 
 ### <a name="changing-the-globaljson-file"></a>global.json ファイルの変更
+
 `global.json` ファイルは、RC1 プロジェクトと RC2 (またはそれ以降の) プロジェクトの両方に対して、ソリューション ファイルのように機能します。 .NET Core CLI (および Visual Studio) で RC1 とそれ以降のバージョンを区別するために、`"sdk": { "version" }` プロパティを使用して、RC1 のプロジェクトまたはそれ以降のプロジェクトが区別されます。 `global.json` にこのノードがまったく存在しない場合は、最新の状態であると見なされます。
 
 `global.json` ファイルを更新するには、プロパティを削除するか、使用するツールの正確なバージョンをプロパティに設定します (次の例では、**1.0.0-preview2-003121**)。

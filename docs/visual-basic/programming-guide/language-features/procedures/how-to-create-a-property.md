@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: fa220998d12206e620c242b9b39df3dc1b639d29
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bd138177d5f4b7ee1eb63833360d227baa54f66d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388259"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072744"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>方法: プロパティを作成する (Visual Basic)
+
 プロパティ定義は、`Property` ステートメントと `End Property` ステートメントで囲みます。 この定義内で、`Get` プロシージャ、`Set` プロシージャ、またはその両方を定義します。 プロパティのすべてのコードは、これらのプロシージャ内にあります。  
   
  `Get` プロシージャ はプロパティの値を取得し、`Set` プロシージャは値を格納します。 プロパティに読み取り/書き込みアクセスが必要な場合は、両方のプロシージャを定義する必要があります。 読み取り専用プロパティでは `Get` のみを定義し、書き込み専用プロパティでは `Set` のみを定義します。  
@@ -52,6 +53,7 @@ ms.locfileid: "84388259"
  読み取り/書き込みプロパティと書き込み専用プロパティの `Set` プロシージャを記述する必要があります。 読み取り専用プロパティの `Set` プロシージャを定義することはできません。  
   
 ## <a name="example"></a>例  
+
  次の例では、フル ネームを 2 つの構成要素名 (名と姓) として格納する読み取り/書き込みプロパティを作成します。 呼び出し元のコードが `fullName` を読み取ると、`Get` プロシージャが 2 つの構成要素名を結合し、フル ネームを返します。 呼び出し元のコードが新しいフル ネームを割り当てると、`Set` プロシージャがそれを 2 つの構成要素名に分割することを試みます。 スペースが見つからない場合は、すべてが名として格納されます。  
   
  [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  

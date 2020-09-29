@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
-ms.openlocfilehash: 9ae604a9727413f2705d42a4b68f5a50b7dd3feb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: afb6a42372bdbd2e49ac15fbbf2b9e254f8db431
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349185"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871316"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>スタック領域が不足しています。(Visual Basic)
+
 スタックは、実行中のプログラムの要求に応じて、動的に拡張および縮小されるメモリの作業領域です。 その制限を超えました。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  

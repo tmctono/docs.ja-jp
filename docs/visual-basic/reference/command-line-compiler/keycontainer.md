@@ -6,14 +6,15 @@ helpviewer_keywords:
 - keycontainer compiler option [Visual Basic]
 - /keycontainer compiler option [Visual Basic]
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
-ms.openlocfilehash: 575b337c262fbb36a9e118aa293916c296cc2db3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 243583e55dcf278f951b813cca8384246d2d6db9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408563"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085231"
 ---
 # <a name="-keycontainer"></a>-keycontainer
+
 アセンブリに厳密な名前を付けるキー ペアのキー コンテナー名を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -29,6 +30,7 @@ ms.locfileid: "84408563"
 |`container`|必須です。 キーが格納されているコンテナー ファイル。 ファイル名に空白が含まれている場合は、名前を二重引用符 ("") で囲みます。|  
   
 ## <a name="remarks"></a>Remarks  
+
  コンパイラにより、アセンブリ マニフェストに公開キーが挿入され、秘密キーで最終アセンブリに署名されて、共有可能なコンポーネントが作成されます。 キー ファイルを生成するには、コマンド ラインで「`sn -k file`」と入力します。 `-i` オプションでは、キー ペアがコンテナーにインストールされます。 詳細については、「[Sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md)」を参照してください。  
   
  `-target:module` を指定してコンパイルした場合は、キー ファイルの名前はモジュールに保持され、[-addmodule](addmodule.md) を使用してコンパイルして作成したアセンブリに組み込まれます。  
@@ -43,6 +45,7 @@ ms.locfileid: "84408563"
 > `-keycontainer` オプションは、Visual Studio 開発環境からは利用できません。これはコマンド ラインからコンパイルするときにのみ使用できます。  
   
 ## <a name="example"></a>例  
+
  次のコードでは、ソース ファイル `Input.vb` がコンパイルされ、キー コンテナーが指定されます。  
   
 ```console  

@@ -14,23 +14,27 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-ms.openlocfilehash: 162bd71eaebdf55f6be89e0c5dce7acc1b975d79
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 95bafcaca98e1a0fbdd62a550291c8ece932c1ba
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403305"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075032"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Visual Basic のプロパティと変数の違い
+
 変数とプロパティはどちらも、アクセスできる値を表します。 ただし、ストレージと実装には相違点があります。  
   
 ## <a name="variables"></a>変数  
+
  "*変数*" は、メモリ位置に直接対応します。 変数は、1 つの宣言ステートメントで定義します。 変数は "*ローカル変数*" (プロシージャ内で定義され、そのプロシージャ内でのみ使用できる) とすることも、"*メンバー変数*" (モジュール、クラス、または構造体内で定義されるが、プロシージャ内では定義されない) とすることもできます。 メンバー変数は "*フィールド*" とも呼ばれます。  
   
 ## <a name="properties"></a>プロパティ  
+
  "*プロパティ*" は、モジュール、クラス、または構造体上で定義されたデータ要素です。 `Property` と `End Property` のステートメント間のコード ブロックを使用してプロパティを定義します。 コード ブロックには、`Get` プロシージャまたは `Set` プロシージャのいずれか、またはその両方が含まれます。 これらのプロシージャは、"*プロパティ プロシージャ*" または "*プロパティ アクセサー*" と呼ばれています。 プロパティの値を取得または格納するだけでなく、アクセス カウンターの更新などのカスタム アクションを実行することもできます。  
   
 ## <a name="differences"></a>相違点  
+
  次の表に変数とプロパティのいくつかの重要な相違点を示します。  
   
 |相違点|変数|プロパティ|  

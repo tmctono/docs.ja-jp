@@ -6,14 +6,15 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-ms.openlocfilehash: 57a81983278c26090c62995f4da55c5cbfd66047
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8b80629ce9b2cd62f10d9a53279b83ba41bc4ece
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408674"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91097710"
 ---
 # <a name="-doc"></a>-doc
+
 ドキュメント コメントを XML ファイルに出力します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ or
 |`file`|`-doc:` を使用する場合に、必ず指定します。 出力の XML ファイルを指定します。これにはコンパイルのソース コード ファイルからのコメントが入力されます。 ファイル名に空白が含まれている場合は、名前を引用符 (" ") で囲みます。|  
   
 ## <a name="remarks"></a>Remarks  
+
  `-doc` オプションでは、コンパイラにドキュメント コメントを含む XML ファイルを生成させるかどうかを制御できます。 `-doc:file` 構文を使用する場合、`file` パラメーターによって XML ファイルの名前を指定します。 `-doc` または `-doc+` を使用する場合、コンパイラは、コンパイラが作成中の実行可能ファイルまたはライブラリから XML ファイルの名前を取得します。 `-doc-` を使用する場合、または `-doc` オプションを指定しない場合、コンパイラは XML ファイルを作成しません。  
   
  ソース コード ファイルで、ドキュメント コメントを次の定義の前に置くことができます。  
@@ -55,6 +57,7 @@ or
 |1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[コンパイル]** タブをクリックします。<br />3. **[XML ドキュメント ファイルを生成する]** ボックスに値を設定します。|  
   
 ## <a name="example"></a>例  
+
  サンプルについては、「[XML の使用によるコードのドキュメントの作成](../../programming-guide/program-structure/documenting-your-code-with-xml.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目

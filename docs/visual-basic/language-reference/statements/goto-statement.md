@@ -13,14 +13,15 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: eb6f48d04b7d14591003e340464451da7df45cd6
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 000f6754575bcce6b2d79d85541e755219aca956
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404616"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866625"
 ---
 # <a name="goto-statement"></a>GoTo ステートメント
+
 プロシージャ内の指定した行に無条件に分岐します。  
   
 ## <a name="syntax"></a>構文  
@@ -30,10 +31,12 @@ GoTo line
 ```  
   
 ## <a name="part"></a>パーツ  
+
  `line`  
  必須です。 任意の行ラベル。  
   
 ## <a name="remarks"></a>Remarks  
+
  `GoTo` ステートメントでは、それが存在するプロシージャ内の行にのみ分岐できます。 行には、`GoTo` で参照できる行ラベルが必要です。 詳細については、「[方法:ステートメントへのラベル付け](../../programming-guide/program-structure/how-to-label-statements.md)」を参照してください。  
   
 > [!NOTE]
@@ -42,6 +45,7 @@ GoTo line
  `GoTo` ステートメントを使用して、`For`...`Next`、`For Each`...`Next`、`SyncLock`...`End SyncLock`、`Try`...`Catch`...`Finally`、`With`...`End With`、または `Using`...`End Using` コンストラクションの外部から、内部のラベルに分岐することはできません。  
   
 ## <a name="branching-and-try-constructions"></a>分岐と Try コンストラクション  
+
  `Try`...`Catch``Finally` コンストラクション内では、`GoTo` ステートメントによる分岐に、次のルールが適用されます。  
   
 |ブロックまたは領域|外部からの分岐|内部からの分岐|  
@@ -57,6 +61,7 @@ GoTo line
  ![Try 構造内の分岐のグラフィック ダイアグラム](./media/goto-statement/try-construction-branching.gif)  
   
 ## <a name="example"></a>例  
+
  次の例では、`GoTo` ステートメントを使用して、プロシージャ内の行ラベルに分岐します。  
   
  [!code-vb[VbVbalrStatements#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#31)]  

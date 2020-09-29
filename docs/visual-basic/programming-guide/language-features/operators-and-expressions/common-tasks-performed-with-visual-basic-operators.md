@@ -13,17 +13,19 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - operators [Visual Basic], short-circuiting logical
 ms.assetid: d181afe5-fafa-460f-a13b-81203f6f4587
-ms.openlocfilehash: 62ced7f2048ae41c7ea4c9d62c0ff0a903c37856
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a8a8d7898e52077fef47b91172e34ad50d7f54e7
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388921"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075214"
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a>Visual Basic の演算子で実行される一般的な演算
+
 演算子によって、"*オペランド*" と呼ばれる 1 つ以上の式を含む多くの一般的なタスクが実行されます。  
   
 ## <a name="arithmetic-and-bit-shift-tasks"></a>算術とビットシフト タスク  
+
  次の表は、使用できる算術演算とビットシフト演算をまとめたものです。  
   
 |終了|解決方法については、|  
@@ -40,6 +42,7 @@ ms.locfileid: "84388921"
 |数値のビット パターンを右にシフトします|[>> 演算子](../../../language-reference/operators/right-shift-operator.md)|  
   
 ## <a name="comparison-tasks"></a>比較タスク  
+
  次の表は、使用できる比較演算をまとめたものです。  
   
 |終了|解決方法については、|  
@@ -55,6 +58,7 @@ ms.locfileid: "84388921"
 |オブジェクトが特定の型であるかどうかを判断します|[TypeOf 演算子](../../../language-reference/operators/typeof-operator.md)|  
   
 ## <a name="concatenation-tasks"></a>連結タスク  
+
  次の表は、使用できる連結演算をまとめたものです。  
   
 |終了|解決方法については、|  
@@ -63,6 +67,7 @@ ms.locfileid: "84388921"
 |数値と文字列値を結合します|`+` 演算子 ([Visual Basic の連結演算子](concatenation-operators.md))|  
   
 ## <a name="logical-and-bitwise-tasks"></a>論理タスクとビットごとのタスク  
+
  次の表は、使用できる論理演算とビットごとの演算をまとめたものです。  
   
 |終了|解決方法については、|  

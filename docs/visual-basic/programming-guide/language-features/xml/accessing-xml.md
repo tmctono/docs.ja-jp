@@ -8,14 +8,15 @@ helpviewer_keywords:
 - XML [Visual Basic], axis properties
 - XML [Visual Basic], accessing
 ms.assetid: c47f88b2-3cbc-4bb1-b4b9-be60f71ffc6a
-ms.openlocfilehash: 282b7d91ec7cfe2f587c67bc9a982f0da22ad925
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8ffe6d5ed368aee6d6984ec6ab28c8832921a3f8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410310"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91080180"
 ---
 # <a name="accessing-xml-in-visual-basic"></a>Visual Basic での XML へのアクセス
+
 Visual Basic には、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 構造体にアクセスして移動するための XML 軸プロパティが用意されています。 これらのプロパティでは、XML 名を指定して、要素と属性にアクセスできる特殊な構文を使用します。  
   
  次の表に、Visual Basic で XML 要素と属性にアクセスできる言語機能を一覧表示しています。  
@@ -31,6 +32,7 @@ Visual Basic には、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 構�
 |*value*|`contacts...<name>.Value`|シーケンス内の最初のオブジェクトの文字列表現、またはシーケンスが空の場合は `Nothing` を取得します。|  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [方法: XML 子孫要素にアクセスする](how-to-access-xml-descendant-elements.md)  
  子孫軸プロパティを使用して、指定した名前を持ち、指定した XML 要素の下に含まれているすべての XML 要素にアクセスする方法を示します。  
   
@@ -44,6 +46,7 @@ Visual Basic には、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 構�
  XML 名前空間プレフィックスを宣言し、それを使用して XML 要素を作成し、アクセスする方法を示します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [XML 軸プロパティ](../../../language-reference/xml-axis/index.md)  
  さまざまな XML アクセス プロパティについて説明するセクションへのリンクを示します。  
   

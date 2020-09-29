@@ -8,28 +8,33 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], passing arguments by value
 - arguments [Visual Basic], passing by value or by reference
 ms.assetid: 5f5c38fe-3e2d-494c-8fff-f4025b55ec93
-ms.openlocfilehash: bd316ae2239ad85e4ef6dadbb8a634d5fe7ecf02
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f9fdb1e98fb827391b615f5fe0afd1ee43c9f8e1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403331"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075045"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>引数の値渡しと参照渡しの違い (Visual Basic)
+
 プロシージャに 1 つまたは複数の引数を渡す場合、各引数は、呼び出し元のコード内の基になるプログラミング要素に対応します。 この基になる要素の値を渡すことも、それへの参照を渡すこともできます。 これは "*引渡し方法*" と呼ばれます。  
   
 ## <a name="passing-by-value"></a>値渡し  
+
  引数を "*値渡し*" するには、プロシージャ定義内の対応するパラメーターに [ByVal](../../../language-reference/modifiers/byval.md) キーワードを指定します。 この引渡し方法を使用すると、基になるプログラミング要素の値がプロシージャ内のローカル変数に Visual Basic によってコピーされます。 プロシージャコードには、呼び出し元のコード内の基になる要素へのアクセス権がありません。  
   
 ## <a name="passing-by-reference"></a>参照渡し  
+
  引数を "*参照渡し*" するには、プロシージャ定義内の対応するパラメーターに [ByRef](../../../language-reference/modifiers/byref.md) キーワードを指定します。 この引渡し方法を使用した場合、呼び出し元のコード内の基になるプログラミング要素への直接参照が Visual Basic によってプロシージャに渡されます。  
   
 ## <a name="passing-mechanism-and-element-type"></a>引渡し方法と要素型  
+
  引渡し方法を選択することは、基になる要素型を分類することと同じではありません。 値渡しまたは参照渡しでは、Visual Basic によってプロシージャ コードに提供されるものを示します。 値型または参照型では、プログラミング要素がメモリ内に格納される方法を示します。  
   
  ただし、引渡し方法と要素型は相互に関連しています。 参照型の値は、メモリ内の別の場所にあるデータを指すポインターです。 つまり、参照型を値渡しすると、プロシージャ コードには、基になる要素自体にアクセスできなくても、基になる要素のデータを指すポインターが用意されます。 たとえば、要素が配列変数である場合、プロシージャ コードから変数自体にアクセスすることはできませんが、配列のメンバーにはアクセスすることができます。  
   
 ## <a name="ability-to-modify"></a>変更する機能  
+
  変更できない要素を引数として渡した場合、その要素が `ByVal` または `ByRef` のどちらで渡されたかに関係なく、プロシージャでは呼び出し元のコード内のそれを変更することはできません。  
   
  変更可能な要素については、次の表に、要素型と引渡し方法のやり取りをまとめてあります。  

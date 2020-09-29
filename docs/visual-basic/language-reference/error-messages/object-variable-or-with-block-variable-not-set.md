@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: d1778e2bb58d32e976f10b3fba1637918278d36e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0264a4235a056c93edb703ec2ef70e7124e0df4e
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409284"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873629"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>オブジェクト変数または With ブロック変数が設定されていません。
+
 無効なオブジェクト変数が参照されています。   このエラーが発生する原因は複数あります。
 
 - 型を指定せずに変数が宣言されました。 型を指定せずに変数が宣言されている場合、既定で `Object` 型になります。

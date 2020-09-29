@@ -2,14 +2,15 @@
 title: ステートメント F ～ P
 ms.date: 07/20/2015
 ms.assetid: cdce7ab0-c52e-4d33-a29b-bf32cdacc79f
-ms.openlocfilehash: 0da540df9485fcb9a5b386d76488a5e99264b377
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 81a3c27dd49ce7f870e9609d582945641567e483
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404681"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90865890"
 ---
 # <a name="f-p-statements"></a>ステートメント F ～ P
+
 次の表に、Visual Basic 言語ステートメントの一覧を示します。  
   
 |||||  

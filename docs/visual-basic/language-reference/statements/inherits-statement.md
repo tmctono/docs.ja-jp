@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: 5d88a01f90bc91a88229d19aa2368f8c71075b2f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dd8fbc71fdc859bb127764951464278267c0984c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404500"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875231"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
+
 現在のクラスまたはインターフェイスで、属性、変数、プロパティ、プロシージャ、およびイベントを別のクラスまたは一連のインターフェイスから継承させます。  
   
 ## <a name="syntax"></a>構文  
@@ -31,6 +32,7 @@ Inherits basetypenames
 |`basetypenames`|必須です。 このクラスの派生元のクラスの名前です。<br /><br /> \- または -<br /><br /> このインターフェイスの派生元のインターフェイスの名前です。 複数の名前を区切るには、コンマを使用します。|  
   
 ## <a name="remarks"></a>Remarks  
+
  使用した場合、`Inherits` ステートメントが、クラスまたはインターフェイス定義の最初の空行でもコメント行でもない行に記述されている必要があります。 それは、`Class` または `Interface` ステートメントの直後に追加する必要があります。  
   
  `Inherits` は、クラスまたはインターフェイスでのみ使用できます。 つまり、継承の宣言コンテキストは、ソース ファイル、名前空間、構造体、モジュール、プロシージャ、ブロックにすることができません。  
@@ -52,11 +54,13 @@ Inherits basetypenames
  .NET Framework でのインターフェイスの継承の例として、<xref:System.Collections.IEnumerable> インターフェイスから継承する <xref:System.Collections.ICollection> インターフェイスがあります。 これにより、<xref:System.Collections.ICollection> で、コレクションを走査するために必要な列挙子の定義が継承されます。  
   
 ## <a name="example"></a>例  
+
  次の例では、`Inherits` ステートメントを使用して、`thisClass` という名前のクラスで `anotherClass` という名前の基底クラスのすべてのメンバーを継承する方法を示しています。  
   
  [!code-vb[VbVbalrStatements#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#37)]  
   
 ## <a name="example"></a>例  
+
  次の例では、複数インターフェイスの継承を示しています。  
   
  [!code-vb[VbVbalrStatements#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#38)]  

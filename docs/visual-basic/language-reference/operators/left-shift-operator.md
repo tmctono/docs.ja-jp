@@ -8,14 +8,15 @@ helpviewer_keywords:
 - << operator [Visual Basic]
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
-ms.openlocfilehash: 1128b32a739e7dbf3893dcd19b37247cd4643c85
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 77bf26d4e6bb068f9130deed5eb1ecbaee62afce
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84370636"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866784"
 ---
 # <a name="-operator-visual-basic"></a>\<\< 演算子 (Visual Basic)
+
 ビット パターンに対して算術左シフトを実行します。  
   
 ## <a name="syntax"></a>構文  
@@ -25,6 +26,7 @@ result = pattern << amount
 ```  
   
 ## <a name="parts"></a>指定項目  
+
  `result`  
  必須です。 整数数値。 ビット パターンをシフトした結果。 データ型は `pattern` のデータ型と同じです。  
   
@@ -35,6 +37,7 @@ result = pattern << amount
  必須です。 数値式。 ビット パターンをシフトするビット数。 データ型は `Integer` であるか、`Integer` に拡大変換する必要があります。  
   
 ## <a name="remarks"></a>Remarks  
+
  算術シフトは循環ではありません。つまり、結果の一方の端からシフトされたビットはもう一方の端には再入されません。 算術左シフトでは、結果のデータ型の範囲を超えてシフトされたビットは破棄され、右側に空いたビット位置は 0 に設定されます。  
   
  結果で保持できるよりも多くのビットがシフトされないようにするため、Visual Basic は `pattern` のデータ型に対応するサイズ マスクを使用して `amount` の値をマスクします。 これらの値のバイナリ AND がシフト量に使用されます。 サイズ マスクを次に示します。  
@@ -54,6 +57,7 @@ result = pattern << amount
 > `<<` 演算子は "*オーバーロード*" できます。つまり、オペランドがクラスまたは構造体の型を持っているときに、クラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
+
  次の例では、`<<` 演算子を使用して、整数値に対して算術左シフトを実行しています。 結果のデータ型は、シフトする式のデータ型と常に同じになります。  
   
  [!code-vb[VbVbalrOperators#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#12)]  

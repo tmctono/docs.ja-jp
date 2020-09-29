@@ -8,17 +8,19 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-ms.openlocfilehash: 733f92cc2cdaa6e923c57649774ceb64de172c18
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 662ad3039bb3fd5c44847d5b2a97a033a18ad063
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403344"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071963"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>変更できる引数と変更できない引数の違い (Visual Basic)
+
 プロシージャを呼び出す場合、通常は 1 つ以上の引数を渡します。 各引数は、基となるプログラミング要素に対応します。 基となる要素と引数自体のいずれも、変更可能な場合と変更不可能な場合があります。  
   
 ## <a name="modifiable-and-nonmodifiable-elements"></a>変更可能な要素と変更不可能な要素  
+
  プログラミング要素は、値を変更できる "*変更可能な要素*"、または作成後は固定値を持つ "*変更不可能な要素*" のいずれかの場合があります。  
   
  次の表に、変更可能なプログラミング要素と変更不可能なプログラミング要素を示します。  
@@ -31,6 +33,7 @@ ms.locfileid: "84403344"
 |配列要素|式 (要素が変更可能な場合でも)|  
   
 ## <a name="modifiable-and-nonmodifiable-arguments"></a>変更可能な引数と変更不可能な引数  
+
  "*変更可能な引数*" とは、基となる要素が変更可能なものです。 呼び出し元のコードにはいつでも新しい値を格納できます。引数 [ByRef](../../../language-reference/modifiers/byref.md) を渡すと、プロシージャのコードによって呼び出し元のコードの基となる要素を変更することもできます。  
   
  "*変更不可能な引数*" には、変更不可能な基となる要素があるか、[ByVal](../../../language-reference/modifiers/byval.md) が渡されます。 変更可能な要素であっても、プロシージャを使用して、呼び出し元のコードの基となる要素を変更することはできません。 変更不可能な要素の場合、呼び出し元のコード自体でそれを変更することはできません。  

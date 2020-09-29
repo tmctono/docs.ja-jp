@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-ms.openlocfilehash: e61b4dac109f714b5cf25226d1029237ca77032d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 78b47601bf0a013d079f638f6dac27511e01aec4
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409479"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874206"
 ---
 # <a name="expression-of-type-type-is-not-queryable"></a>型 \<type> の式はクエリ不可能です
+
 型 \<type> の式はクエリ不可能です。 LINQ プロバイダーに対してアセンブリ参照や名前空間インポートが不足していないことを確認してください。  
   
  クエリ可能型は、<xref:System.Linq>、<xref:System.Data.Linq>、および <xref:System.Xml.Linq> 名前空間で定義します。 LINQ クエリを実行するには、これらの名前空間の 1 つ以上をインポートする必要があります。  

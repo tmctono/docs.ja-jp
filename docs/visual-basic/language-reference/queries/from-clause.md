@@ -10,14 +10,15 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: 33680f49247b3b2a6082b3a6b27ca64f8401e42d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 120ba6da11bffc3a0e81873d1fd606633724723d
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396182"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875249"
 ---
 # <a name="from-clause-visual-basic"></a>From 句 (Visual Basic)
+
 クエリを実行する 1 つ以上の範囲変数とコレクションを指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,6 +37,7 @@ From element [ As type ] In collection [ _ ]
 |`collection`|必須です。 クエリ対象のコレクションを参照します。 列挙可能な型である必要があります。|  
   
 ## <a name="remarks"></a>Remarks  
+
  `From` 句は、クエリのソース データと、ソース コレクションの要素を参照するために使用される変数を識別するために使用します。 このような変数は*範囲変数*と呼ばれます。 `Aggregate` 句を使用して、集計結果のみを返すクエリを識別する場合を除き、クエリには `From` 句が必要です。 詳細については、「[Aggregate 句](aggregate-clause.md)」を参照してください。  
   
  クエリで複数の `From` 句を指定して、結合する複数のコレクションを識別できます。 複数のコレクションを指定している場合、それらは個別に反復処理するか、またはそれらが関連付けられている場合は結合できます。 コレクションは、`Select` 句を使用して暗黙的に結合することも、`Join` または `Group Join` 句を使用して明示的に結合することもできます。 または、1 つの `From` 句で、関連する各範囲変数とコレクションをそれぞれコンマで区切って、複数の範囲変数とコレクションを指定することもできます。 次のコード例に、`From` 句の両方の構文オプションを示しています。  
@@ -65,6 +67,7 @@ From element [ As type ] In collection [ _ ]
 - `Skip`、`Take`、`Skip While`、および `Take While` 句を使用して、返される結果の部分を特定します。  
   
 ## <a name="example"></a>例  
+
  次のクエリ式では、`From` 句を使用して、`customers` コレクション内の各 `Customer` オブジェクトに対して `cust` 範囲変数を宣言しています。 `Where` 句では、範囲変数を使用して、指定した地域の顧客に出力を制限します。 `For Each` ループによって、クエリ結果に各顧客の会社名を表示します。  
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  

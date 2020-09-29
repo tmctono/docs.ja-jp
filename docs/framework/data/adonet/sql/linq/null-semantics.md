@@ -2,14 +2,15 @@
 title: null セマンティクス
 ms.date: 03/30/2017
 ms.assetid: a97017ae-d634-4cf3-bbaf-054a528fd683
-ms.openlocfilehash: d0b18c0a699840d11f5e4add05147672f9bb69e9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 739ee95be45d7d64a4ad1678837b9706a533f07d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792982"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91147542"
 ---
 # <a name="null-semantics"></a>null セマンティクス
+
 次の表では、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のドキュメントで `null` (Visual Basic では `Nothing`) に関する問題について説明されている各部分へのリンクを示します。  
   
 |トピック|説明|  

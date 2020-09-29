@@ -7,20 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: c905ff85c8e9729dd4d6068f0d34f729962bbb57
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f3348e9eea5bdd7f4fd911150877c9aefdd66bcc
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372402"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867292"
 ---
 # <a name="mysettings-object"></a>My.Settings オブジェクト
+
 アプリケーションの設定にアクセスするためのプロパティとメソッドを提供します。  
   
 ## <a name="remarks"></a>Remarks  
+
  `My.Settings` オブジェクトは、アプリケーションの設定へのアクセスを提供し、アプリケーションのプロパティ設定やその他の情報を動的に格納し、取得できるようにします。 詳細については、「[アプリケーションの設定の管理 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)」を参照してください。  
   
 ## <a name="properties"></a>プロパティ  
+
  `My.Settings` オブジェクトのプロパティを使用すると、アプリケーションの設定にアクセスできます。 設定を追加または削除するには、**設定デザイナー**を使用します。  
   
  各設定には **[名前]** 、 **[型]** 、 **[スコープ]** 、および **[値]** が含まれ、これらの設定によって、各設定にアクセスするためのプロパティが `My.Settings` オブジェクトにどのように表示されるかが決まります。  
@@ -43,6 +46,7 @@ ms.locfileid: "84372402"
  `My.Settings` オブジェクトは、<xref:System.Configuration.ApplicationSettingsBase> クラスから継承された高度なプロパティやメソッドも提供します。  
   
 ## <a name="tasks"></a>タスク  
+
  次の表に、`My.Settings` オブジェクトに関連するタスクの例を示します。  
   
 |終了|解決方法については、|  
@@ -53,6 +57,7 @@ ms.locfileid: "84372402"
 |ユーザー設定のためのプロパティ グリッドを作成する|[方法: Visual Basic でユーザー設定のためのプロパティ グリッドを作成する](../../developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
   
 ## <a name="example"></a>例  
+
  次の例は、`Nickname` の設定値を表示します。  
   
  [!code-vb[VbVbalrMyResources#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#14)]  

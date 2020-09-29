@@ -6,17 +6,19 @@ helpviewer_keywords:
 - delegates [Visual Basic], relaxed conversion
 - conversions [Visual Basic], relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
-ms.openlocfilehash: a581ffae77c496908d2e4e38df53491a54ae2ab8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b914d0479f160199744a8f9923c0bebc87321329
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410671"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086076"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>厳密でないデリゲート変換 (Visual Basic)
+
 厳密でないデリゲート変換を使用すると、シグネチャが同じでない場合でも、Sub プロシージャや関数をデリゲートまたはハンドラーに割り当てることができます。 したがって、デリゲートへのバインドは、メソッドの呼び出しに対して既に許可されているバインドと整合します。  
   
 ## <a name="parameters-and-return-type"></a>パラメーターと戻り値の型  
+
  厳密なシグネチャ一致の代わりに、厳密でない変換では、`Option Strict` が `On` に設定されている場合は次の条件を満たす必要があります。  
   
 - 各デリゲート パラメーターのデータ型から、割り当てられた関数または `Sub` の対応するパラメーターのデータ型に、拡大変換が存在する必要があります。 次の例では、デリゲート `Del1` に 1 つのパラメーター `Integer` があります。 割り当てられたラムダ式のパラメーター `m` には、`Integer` からの拡大変換に対するデータ型、`Long` や `Double` などが含まれている必要があります。  
@@ -38,6 +40,7 @@ ms.locfileid: "84410671"
  [!code-vb[VbVbalrRelaxedDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#4)]  
   
 ## <a name="omitting-parameter-specifications"></a>パラメーターの指定値の省略  
+
  厳密でないデリゲートを使用すると、割り当てられたメソッドで、パラメーターの指定値を完全に省略することもできます。  
   
  [!code-vb[VbVbalrRelaxedDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#5)]  
@@ -61,6 +64,7 @@ End Sub
 ```  
   
 ## <a name="addressof-examples"></a>AddressOf の例  
+
  前の例では、ラムダ式を使用して、型の関係を簡単に確認できます。 ただし、`AddressOf`、`Handles`、または `AddHandler` が使用されているデリゲート割り当てに対して、同じ緩和が許可されています。  
   
  次の例では、関数 `f1`、`f2`、`f3`、`f4` のすべてを `Del1` に割り当てることができます。  
@@ -76,6 +80,7 @@ End Sub
  [!code-vb[VbVbalrRelaxedDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#14)]  
   
 ## <a name="dropping-function-returns"></a>関数の戻り値の破棄  
+
  厳密でないデリゲート変換を使用すると、関数を `Sub` デリゲートに割り当てて、関数の戻り値を効果的に無視できます。 ただし、`Sub` を関数デリゲートに割り当てることはできません。 次の例では、関数 `doubler` のアドレスが `Sub` デリゲート `Del3` に割り当てられています。  
   
  [!code-vb[VbVbalrRelaxedDelegates#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#10)]  

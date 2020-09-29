@@ -15,14 +15,15 @@ helpviewer_keywords:
 - execution
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-ms.openlocfilehash: 3f49f05f1deb2027b03bbf3443ca44f30c44344e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: db9d47798d087d60f4318b06fe3291fb895e6618
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404214"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871872"
 ---
 # <a name="resume-statement"></a>Resume ステートメント
+
 エラー処理ルーチンが終了した後、実行を再開します。  
   
  コードでは、非構造化例外処理と `On Error` および `Resume` ステートメントを使用するのではなく、可能な限り、構造化例外処理を使用することをお勧めします。 詳しくは、「[Try...Catch...Finally ステートメント](try-catch-finally-statement.md)」をご覧ください。  
@@ -34,6 +35,7 @@ Resume [ Next | line ]
 ```  
   
 ## <a name="parts"></a>指定項目  
+
  `Resume`  
  必須です。 エラー ハンドラーと同じプロシージャでエラーが発生した場合は、エラーの原因となったステートメントを使用して実行が再開されます。 呼び出されたプロシージャでエラーが発生した場合、エラー処理ルーチンを含むプロシージャから最後に呼び出されたステートメントで実行が再開されます。  
   
@@ -53,11 +55,13 @@ Resume [ Next | line ]
  `Resume` ステートメントは、`Try...Catch...Finally` ステートメントを含むプロシージャ内では使用できません。  
   
 ## <a name="example"></a>例  
+
  この例では、`Resume` ステートメントを使用してプロシージャのエラー処理を終了し、エラーの原因となったステートメントを使用して実行を再開します。 `Resume` ステートメントの使用方法を示すために、エラー番号 55 が生成されます。  
   
  [!code-vb[VbVbalrErrorHandling#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#16)]  
   
 ## <a name="requirements"></a>必要条件  
+
  **名前空間:** [Microsoft.VisualBasic](../runtime-library-members.md)  
   
  **アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)  

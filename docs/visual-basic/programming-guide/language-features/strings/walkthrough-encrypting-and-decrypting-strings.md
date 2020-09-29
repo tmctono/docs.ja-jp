@@ -7,14 +7,15 @@ helpviewer_keywords:
 - decryption [Visual Basic], strings
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
-ms.openlocfilehash: 36e405c7362993471d3e6da8e319bccb854e1026
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e0e3fc332bf9430b1fa56dbb7630f849d3a29c2e
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343584"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072406"
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>チュートリアル: Visual Basic での文字列の暗号化と暗号化解除
+
 このチュートリアルでは、<xref:System.Security.Cryptography.DESCryptoServiceProvider> クラスを使用して、Triple Data Encryption Standard (<xref:System.Security.Cryptography.TripleDES>) アルゴリズムの暗号化サービス プロバイダー (CSP) バージョンを使用して文字列を暗号化および復号化する方法について説明します。 最初の手順は、3DES アルゴリズムをカプセル化し、暗号化されたデータを base-64 エンコード文字列として格納する単純なラッパー クラスを作成することです。 次に、そのラッパーを使用して、プライベート ユーザー データをパブリックにアクセス可能なテキスト ファイルに安全に格納します。  
   
  暗号化を使用すると、ユーザー シークレット (パスワードなど) を保護し、承認されていないユーザーが資格情報を読み取れないようにすることができます。 これにより、承認されたユーザーの ID を盗難から保護し、ユーザーの資産を保護し、否認防止を提供することができます。 暗号化を使用すると、承認されていないユーザーによるアクセスからユーザーのデータを保護することもできます。  
