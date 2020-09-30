@@ -3,12 +3,12 @@ title: 診断ツールの概要 - .NET Core
 description: .NET Core アプリケーションの診断に使用できるツールと手法の概要。
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: e97acccbe3bdd577ee600cefb9f1f0528d3c1ac0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d78b73e53637927ecb877dd69054f75a1f5ac91f
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538528"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91438003"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core で使用できる診断ツール
 
@@ -27,6 +27,10 @@ ms.locfileid: "90538528"
 ## <a name="unit-testing"></a>単体テスト
 
 [単体テスト](../testing/index.md)は、高品質のソフトウェアを継続的に統合して展開するための重要なコンポーネントです。 単体テストは、何かを中断するときに早期警告を提供するように設計されています。
+
+## <a name="collect-diagnostics-in-containers"></a>コンテナーでの診断の収集
+
+コンテナー化されていない Linux 環境で使用されているのと同じ診断ツールを使用して、[コンテナーで診断を収集](diagnostics-in-containers.md)することもできます。 Docker コンテナーでツールを動作させるために必要ないくつかの使用方法が変更されています。
 
 ## <a name="debug-linux-dumps"></a>Linux ダンプのデバッグ
 
