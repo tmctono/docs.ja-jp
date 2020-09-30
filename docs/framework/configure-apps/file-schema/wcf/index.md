@@ -2,12 +2,12 @@
 title: WCF 構成スキーマ
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-ms.openlocfilehash: ab64b41e6e79c934ac0145dd7eec0a943f5dc473
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 44d5e0acc6f5a9ca43949bce0c7964354ad18270
+ms.sourcegitcommit: 665f8fc55258356f4d2f4a6585b750c974b26675
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91165131"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91573658"
 ---
 # <a name="wcf-configuration-schema"></a>WCF 構成スキーマ
 
@@ -19,12 +19,12 @@ Windows Communication Foundation (WCF) 構成要素を使用すると、WCF サ�
   
  [構成設定のロック](/previous-versions/aspnet/55th21y4(v=vs.100))  
   
- このセクションでは、各構成項目のすべての可能な値についてと各構成項目が他の WCF 構成要素とやり取りする方法について説明します。 次のマップは、WCF 構成スキーマを示しています。  
-  
- ![WCF 構成スキーマを示す図。](./media/index/windows-communication-foundation-configuration-schema.gif)  
+ このセクションでは、各構成項目のすべての可能な値についてと各構成項目が他の WCF 構成要素とやり取りする方法について説明します。 次のマップは、WCF 構成スキーマを示しています。
+
+:::image type="content" source="./media/index/windows-communication-foundation-configuration-schema.gif" alt-text="WCF 構成スキーマを示す図。" lightbox="./media/index/windows-communication-foundation-configuration-schema.gif":::
   
 > [!CAUTION]
-> アプリケーション構成ファイル (app.config) の WCF 構成セクションは、適切な Access Control リスト (ACL) を使用して保護し、潜在的なセキュリティ上の脅威を防ぐ必要があります。  たとえば、適切なユーザーだけが、アプリケーション バインドのセキュリティ設定、またはサービスの構成ファイルのサービス モデル セクションにアクセスまたは変更できるようにする必要があります。  
+> アプリケーション構成ファイル (app.config) の WCF 構成セクションを適切な Access Control リスト (ACL) で保護して、潜在的なセキュリティ上の脅威が発生しないようにします。 たとえば、適切な担当者だけがアプリケーションバインドのセキュリティ設定にアクセスしたり、サービスの構成ファイルのサービスモデルセクションにアクセスしたり、変更したりできるようにします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
 
