@@ -56,7 +56,7 @@
       href: tutorials/upgrade-to-nullable-references.md
     - name: 非同期ストリームの生成と使用
       href: tutorials/generate-consume-asynchronous-stream.md
-    - name: パターン マッチングを使用してデータ機能を拡張する
+    - name: パターン マッチングを使用したデータドリブン アルゴリズムの構築
       href: tutorials/pattern-matching.md
     - name: コンソール アプリケーション
       href: tutorials/console-teleprompter.md
