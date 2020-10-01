@@ -2,12 +2,12 @@
 title: C# での非同期プログラミング
 description: C# 言語での async、await、Task、Task<T> を使用した非同期プログラミングのサポートの概要です
 ms.date: 06/04/2020
-ms.openlocfilehash: 853019c39880b1f4ef6536aed5841ecab53d7304
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 02290e374aa97cb5d5ec6410c917751066949b23
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414982"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91438103"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>async および await を使用した非同期プログラミング
 
@@ -123,7 +123,7 @@ Console.WriteLine("bacon is ready");
 Console.WriteLine("Breakfast is ready!");
 ```
 
-:::image type="content" source="media/asynchronous-breakfast.png" alt-text="非同期的な朝食":::
+:::image type="content" source="media/asynchronous-breakfast.png" alt-text="同期的な朝食":::
 
 非同期的に準備された朝食は、約 20 分かかりました。これは、いくつかのタスクを同時に実行できたことが理由です。
 
@@ -184,7 +184,7 @@ while (breakfastTasks.Count > 0)
 すべてを変更した後、コードの最終バージョンは <a id="final-version"></a> のようになります。
 :::code language="csharp" source="snippets/index/AsyncBreakfast-final/Program.cs" highlight="9-40":::
 
-:::image type="content" source="media/whenany-async-breakfast.png" alt-text="非同期的な朝食がある場合":::
+:::image type="content" source="media/whenany-async-breakfast.png" alt-text="同期的な朝食":::
 
 非同期に準備された朝食の最終バージョンは、約 15 分かかりました。これは、いくつかのタスクを同時に実行でき、コードで一度に複数のタスクを監視して必要なときにのみアクションを実行できるようになったためです。
 
