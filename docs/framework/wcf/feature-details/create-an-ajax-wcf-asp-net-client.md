@@ -2,14 +2,14 @@
 title: Visual Studio で AJAX 対応 WCF サービスと ASP.NET クライアントを作成する
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: a6d6e87de6200a5cb9bba566d595066673cdf9cf
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 0bfe55c68f68bfef7b7ec2034413b53d41b0c785
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834785"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609357"
 ---
-# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>方法: AJAX 対応 WCF サービスと、サービスにアクセスする ASP.NET クライアントを作成する
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>方法 : AJAX 対応 WCF サービスとこのサービスにアクセスする ASP.NET クライアントを作成する
 
 このトピックでは、Visual Studio を使用して、AJAX 対応の Windows Communication Foundation (WCF) サービスと、サービスにアクセスする ASP.NET クライアントを作成する方法について説明します。
 
@@ -17,27 +17,27 @@ ms.locfileid: "71834785"
 
 1. Visual Studio を開きます。
 
-1. **[ファイル]** メニューの [**新しい** > **プロジェクト**] をクリックします。
+1. [**ファイル**] メニューの [**新しい**  >  **プロジェクト**] をクリックします。
 
-1. **[新しいプロジェクト]** ダイアログで、[**インストールされ** > た > **ビジュアルC#**  **web** ] カテゴリを展開し、 **[ASP.NET Web Application (.NET Framework)]** を選択します。
+1. [**新しいプロジェクト**] ダイアログで、[**インストールされている**  >  **Visual C#**  >  **web** ] カテゴリを展開し、[ **ASP.NET Web Application (.NET Framework)**] を選択します。
 
-1. プロジェクトに**SandwichServices**という名前を指定し、[ **OK]** をクリックします。
+1. プロジェクトに **SandwichServices** という名前を指定し、[ **OK]** をクリックします。
 
-1. **[New ASP.NET Web Application]** ダイアログボックスで **[Empty]** を選択し、 **[OK]** を選択します。
+1. **[新しい ASP.NET Web アプリケーション]** ダイアログで、 **[空]** を選択し、 **[OK]** を選択します。
 
    ![ASP.NET Visual Studio の [web アプリの種類] ダイアログボックス](./media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
 
 ## <a name="add-a-web-form"></a>Web フォームを追加する
 
-1. **ソリューションエクスプローラー**で SandwichServices プロジェクトを右クリックし、[**新しい項目**の**追加** > ] を選択します。
+1. **ソリューションエクスプローラー**で SandwichServices プロジェクトを右クリックし、[ **Add**  >  **新しい項目**の追加] を選択します。
 
-1. **[新しい項目の追加]** ダイアログで、[**インストールされ** > た**ビジュアルC#**   >  **web** ] カテゴリを展開し、 **[Web フォーム]** テンプレートを選択します。
+1. [**新しい項目の追加**] ダイアログで、[**インストールされている**  >  **Visual C#**]  >  **web**カテゴリを展開し、[ **web フォーム**] テンプレートを選択します。
 
-1. 既定の名前 (**WebForm1**) をそのまま使用し、 **[追加]** を選択します。
+1. 既定の名前 (**WebForm1**) をそのまま使用し、[ **追加**] を選択します。
 
    **ソース**ビューで*WebForm1*が開きます。
 
-1. **\<本文 >** タグ内に次のマークアップを追加します。
+1. タグ内に次のマークアップを追加し **\<body>** ます。
 
    ```html
    <input type="button" value="Price of 3 sandwiches" onclick="Calculate()"/>
@@ -47,15 +47,15 @@ ms.locfileid: "71834785"
 
 ## <a name="create-an-ajax-enabled-wcf-service"></a>AJAX 対応 WCF サービスを作成する
 
-1. **ソリューションエクスプローラー**で SandwichServices プロジェクトを右クリックし、[**新しい項目**の**追加** > ] を選択します。
+1. **ソリューションエクスプローラー**で SandwichServices プロジェクトを右クリックし、[ **Add**  >  **新しい項目**の追加] を選択します。
 
-1. **[新しい項目の追加]** ダイアログで、[**インストールされ** > た**ビジュアルC#**   > Web] カテゴリを展開し、 **[WCF サービス (AJAX 対応)]** テンプレートを選択します。
+1. [**新しい項目の追加**] ダイアログで、[**インストールされている**  >  **Visual C#**]  >  **Web**カテゴリを展開し、[ **WCF サービス (AJAX 対応)** ] テンプレートを選択します。
 
    ![Visual Studio での WCF サービス (AJAX 対応) 項目テンプレート](./media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
 
-1. サービスにサービスの**名前を指定**し、 **[追加]** を選択します。
+1. サービスにサービスの **名前を指定** し、[ **追加**] を選択します。
 
-   *CostService.svc.cs*がエディターで開きます。
+   *CostService.svc.cs* がエディターで開きます。
 
 1. サービスに操作を実装します。 サンドイッチの数量のコストを計算するには、次のメソッドを cost Service クラスに追加します。
 
@@ -69,13 +69,13 @@ ms.locfileid: "71834785"
 
 ## <a name="configure-the-client-to-access-the-service"></a>サービスにアクセスするようにクライアントを構成する
 
-1. *WebForm1*ファイルを開き、 **[デザイン]** ビューを選択します。
+1. *WebForm1*ファイルを開き、[**デザイン**] ビューを選択します。
 
-2. **[表示]** メニューの **[ツールボックス]** をクリックします。
+2. [ **表示** ] メニューの [ **ツールボックス**] をクリックします。
 
-3. **[AJAX Extensions]** ノードを展開し、 **ScriptManager**をフォームにドラッグアンドドロップします。
+3. [ **AJAX Extensions** ] ノードを展開し、 **ScriptManager** をフォームにドラッグアンドドロップします。
 
-4. **ソース**ビューに戻り、  **\<ScriptManager >** タグの間に次のコードを追加して、WCF サービスへのパスを指定します。
+4. **ソース**ビューに戻り、次のコードをタグの間に追加して、 **\<ScriptManager>** WCF サービスへのパスを指定します。
 
     ```xml
     <Services>
@@ -83,7 +83,7 @@ ms.locfileid: "71834785"
     </Services>
     ```
 
-5. Javascript 関数`Calculate()`のコードを追加します。 次のコードを web フォームの**head**セクションに配置します。
+5. JavaScript 関数のコードを追加 `Calculate()` します。 次のコードを web フォームの **head** セクションに配置します。
 
     ```html
     <script type="text/javascript">
@@ -102,9 +102,9 @@ ms.locfileid: "71834785"
 
    このコードは、3つのサンドイッチの価格を計算するために、コストサービスのメソッドを呼び出し、 **additionResult**というスパンに結果を表示します。
 
-## <a name="run-the-program"></a>プログラムを実行する
+## <a name="run-the-program"></a>プログラムの実行
 
-*WebForm1*にフォーカスがあることを確認し、 **[開始]** ボタンをクリックして web クライアントを起動します。 ボタンには緑色の三角形が表示され、 **IIS Express (Microsoft Edge)** のようなものが表示されます。 または、 <kbd>F5</kbd>キーを押します。 **[Price-3 サンドイッチ]** ボタンをクリックして、予想される出力 "3.75" を生成します。
+*WebForm1*にフォーカスがあることを確認し、[**開始**] ボタンをクリックして web クライアントを起動します。 ボタンには緑色の三角形が表示され、 **IIS Express (Microsoft Edge)** のようなものが表示されます。 または、 <kbd>F5</kbd>キーを押します。 [ **Price-3 サンドイッチ** ] ボタンをクリックして、予想される出力 "3.75" を生成します。
 
 ## <a name="example"></a>例
 
@@ -129,7 +129,7 @@ namespace SandwichServices
 }
 ```
 
-次に、 *WebForm1*ページの完全な内容を示します。
+次に、 *WebForm1* ページの完全な内容を示します。
 
 ```aspx-csharp
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SandwichServices.WebForm1" %>

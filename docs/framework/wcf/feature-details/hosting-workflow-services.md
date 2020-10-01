@@ -2,12 +2,12 @@
 title: ワークフロー サービスのホスティング
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: 95d8d8b8ea15ef543471afb19462ccb424e8e39b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0b89eb05513d6b3973de50cd6360711c4f967f68
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555810"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609461"
 ---
 # <a name="hosting-workflow-services"></a>ワークフロー サービスのホスティング
 
@@ -46,7 +46,7 @@ ms.locfileid: "90555810"
  ワークフローサービスを定義する .xamlx ファイルには、<`Service`> ルート要素、またはから派生した任意の型を含むルート要素が含まれている必要があり <xref:System.Workflow.ComponentModel.Activity> ます。 Visual Studio アクティビティテンプレートを使用すると、.xamlx ファイルが作成されます。 WCF ワークフローサービステンプレートを使用すると、.xamlx ファイルが作成されます。
 
 ## <a name="hosting-workflow-services-under-windows-server-app-fabric"></a>Windows Server AppFabric でのワークフロー サービスのホスティング
- Windows Server AppFabric でのワークフロー サービスのホスティングは IIS/WAS でのホスティングと同じ方法で行われます。 唯一の違いは、Windows Server AppFabric がインストールされるということです。 Windows Server AppFabric には、PowerShell コマンドと同様に、インターネット インフォメーション サービス マネージャーに追加されるツールが用意されています。 これらのツールによって、ワークフロー サービスおよび WCF サービスの配置、管理、および追跡を簡略化することができます。
+ Windows Server AppFabric でのワークフロー サービスのホスティングは IIS/WAS でのホスティングと同じ方法で行われます。 唯一の違いは、Windows Server AppFabric がインストールされるということです。 Windows Server App Fabric には、インターネットインフォメーションサービス Manager に追加されるツールと PowerShell コマンドレットが用意されています。 これらのツールによって、ワークフロー サービスおよび WCF サービスの配置、管理、および追跡を簡略化することができます。
 
 ## <a name="referencing-custom-activities"></a>カスタム アクティビティの参照
  カスタムアクティビティへの参照は、 `Assemblies` `System.Web.Compilation` アプリケーションドメインに読み込まれ、XAML デシリアライザーが型を見つけることができるように、<> の下の <> セクションに追加する必要があります。 これらの設定をコンピューター上のすべてのアプリケーションに適用する必要がある場合は、アプリケーション レベルまたはルートの Web.config で設定できます。

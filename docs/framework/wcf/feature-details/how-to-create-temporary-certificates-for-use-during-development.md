@@ -6,16 +6,16 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 0907f7f8a3767db9d83e5deaae1d86141fbee7b0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a249f0de00c45b1588762ffa0f826e890f961334
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557412"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91607773"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>方法: 開発中に使用する一時的な証明書を作成する
 
-Windows Communication Foundation (WCF) を使用してセキュリティで保護されたサービスまたはクライアントを開発する場合、資格情報として使用される x.509 証明書を指定することが必要になることがよくあります。 証明書は通常、単独ではなく、いくつもの証明書が信頼チェーンとしてつながった形で存在しており、その最上位に位置するルート証明機関の証明書は、各コンピューターの [信頼されたルート証明機関] の証明書ストアに格納されています。 証明書を調べて順に信頼チェーンをたどっていくと、たとえば所属する会社や事業部門が運営する、ルート証明機関に到達します。 開発時にこの過程をエミュレートするためには、セキュリティ要件を満たす 2 種類の証明書を作る必要があります。 1 つは自己署名証明書で、[信頼されたルート証明機関] の証明書ストアに配置します。もう 1 つは、先の自己署名証明書を使って署名を施した証明書で、[ローカル コンピューター] の [個人] ストア、または [現在のユーザー] の [個人] ストアに配置します。 このトピックでは、Powershell の [新しい SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) コマンドレットを使用して、これら2つの証明書を作成する手順について説明します。
+Windows Communication Foundation (WCF) を使用してセキュリティで保護されたサービスまたはクライアントを開発する場合、資格情報として使用される x.509 証明書を指定することが必要になることがよくあります。 証明書は通常、単独ではなく、いくつもの証明書が信頼チェーンとしてつながった形で存在しており、その最上位に位置するルート証明機関の証明書は、各コンピューターの [信頼されたルート証明機関] の証明書ストアに格納されています。 証明書を調べて順に信頼チェーンをたどっていくと、たとえば所属する会社や事業部門が運営する、ルート証明機関に到達します。 開発時にこの過程をエミュレートするためには、セキュリティ要件を満たす 2 種類の証明書を作る必要があります。 1 つは自己署名証明書で、[信頼されたルート証明機関] の証明書ストアに配置します。もう 1 つは、先の自己署名証明書を使って署名を施した証明書で、[ローカル コンピューター] の [個人] ストア、または [現在のユーザー] の [個人] ストアに配置します。 このトピックでは、PowerShell の [新しい SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) コマンドレットを使用して、これら2つの証明書を作成する手順について説明します。
 
 > [!IMPORTANT]
 > 新しい SelfSignedCertificate コマンドレットによって生成される証明書は、テスト目的でのみ提供されます。 実際にサービスやクライアントを業務に使用する際には、証明機関から取得した、適切な証明書が必要です。 これは、組織内の Windows Server 証明書サーバーまたはサードパーティのいずれかになります。
