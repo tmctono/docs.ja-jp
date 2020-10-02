@@ -3,12 +3,12 @@ title: プログラミングの概念 (C#)
 description: このセクションのリソースを使用して、オブジェクト指向プログラミングなど、C# 言語でのプログラミングの概念を理解します。
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: 0e11fb3a184cb828be58cd43dde281366ed533d4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5594bd93d70a4f9cf0ab6136b011a5cceea7bf3f
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91159333"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609396"
 ---
 # <a name="programming-concepts-c"></a>プログラミングの概念 (C#)
 
@@ -26,7 +26,6 @@ ms.locfileid: "91159333"
 |[式ツリー (C#)](./expression-trees/index.md)|式ツリーを使用して、実行可能コードの動的変更を有効にする方法について説明します。|  
 |[反復子 (C#)](./iterators.md)|コレクションのステップ実行に使用し、要素を一度に 1 つずつ返す、反復子について説明します。|  
 |[統合言語クエリ (LINQ) (C#)](./linq/index.md)|C# の言語構文の強力なクエリ機能と、リレーショナル データベース、XML ドキュメント、データセット、およびインメモリ コレクションを照会するためのモデルについて説明します。|  
-|[オブジェクト指向プログラミング (C#)](./object-oriented-programming.md)|カプセル化、継承、ポリモーフィズムなど、オブジェクト指向に関する一般的な概念について説明します。|  
 |[リフレクション (C#)](./reflection.md)|リフレクションを使用して、動的に型のインスタンスを作成する方法、作成したインスタンスを既存のオブジェクトにバインドする方法、または既存のオブジェクトから型を取得して、そのオブジェクトのメソッドを呼び出したり、フィールドやプロパティにアクセスしたりする方法について説明します。|  
 |[シリアル化 (C#)](./serialization/index.md)|バイナリ、XML、および SOAP のシリアル化の主要な概念について説明します。|  
   
