@@ -3,12 +3,12 @@ title: C# の概要 - 対話型チュートリアル
 description: お使いのブラウザーで C# を学習し、独自の開発環境で使用を開始します
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 9a93e34f7b54d12b3f69589d7bb2181fc240403c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 52b680ffe8c477624f3b5e085b7f2de13c271d81
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554568"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609181"
 ---
 # <a name="introduction-to-c"></a>C\# の概要
 
@@ -52,7 +52,13 @@ Hello World レッスンに続くすべての入門用チュートリアルは�
 
 ## <a name="introduction-to-classes"></a>[クラスの概要](introduction-to-classes.md)
 
-この最後のチュートリアルは、お使いのマシンで、独自のローカルの開発環境と .NET Core を使用して行うためにのみ使用できます。
+このチュートリアルは、お使いのマシンで、独自のローカルの開発環境と .NET Core を使用して行うためにのみ使用できます。
 コンソール アプリケーションを構築し、C# 言語に含まれるオブジェクト指向の基本的な機能について学習します。
 
 このチュートリアルでは、オンラインの入門用チュートリアルを終了していること、さらに [.NET Core SDK](https://dotnet.microsoft.com/download) と [Visual Studio Code](https://code.visualstudio.com/) をインストール済みであることを前提としています。
+
+## <a name="object-oriented-programming"></a>[オブジェクト指向プログラミング](object-oriented-programming.md)
+
+このチュートリアルでは、オブジェクト指向プログラミングで使用される概念について説明します。 "*抽象化*"、"*カプセル化*"、"*継承*"、"*ポリモーフィズム*" の概念を C# の例を使用して説明します。
+
+このチュートリアルでは、オンラインの入門用チュートリアルを終了していること、さらに開発用マシンに [.NET Core SDK](https://dotnet.microsoft.com/download)、および [Visual Studio Code](https://code.visualstudio.com/) と [Visual Studio](https://visualstudio.com) のどちらかをインストール済みであることを前提としています。

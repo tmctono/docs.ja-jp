@@ -366,6 +366,8 @@ items:
             items:
               - name: '[全般] オプション'
                 href: code-analysis/configuration-options.md
+              - name: 構成ファイル
+                href: code-analysis/configuration-files.md
               - name: コード品質規則
                 items:
                   - name: ルール オプション
@@ -1318,9 +1320,17 @@ items:
       - name: 汎用ホスト
         href: ../core/extensions/generic-host.md
       - name: ログの記録
-        href: /aspnet/core/fundamentals/logging
+        items:
+          - name: 概要
+            href: ../core/extensions/logging.md
+          - name: ログ プロバイダー
+            href: ../core/extensions/logging-providers.md
+          - name: カスタム ログ プロバイダーを実装する
+            href: ../core/extensions/custom-logging-provider.md
+          - name: 高パフォーマンスのログ
+            href: ../core/extensions/high-performance-logging.md
       - name: オプションのパターン
-        href: /aspnet/core/fundamentals/configuration/options
+        href: ../core/extensions/options.md
   - name: データ アクセス
     items:
       - name: LINQ
