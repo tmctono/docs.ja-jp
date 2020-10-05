@@ -7,12 +7,12 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: 1b5ca6484f45dcee33009d8b8c12a43fa41f63de
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c5ee2fae9167dd508332d8e97a589a8ddb0394ac
+ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554450"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91712625"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework のパフォーマンスカウンター
 
@@ -130,8 +130,8 @@ ms.locfileid: "90554450"
 |**Connections Established**|プロセスの開始後に <xref:System.AppDomain> 内で接続されていたストリーム ソケットの <xref:System.Net.Sockets.Socket> オブジェクトの累計数。|  
 |**Datagrams Received**|プロセスの開始後に <xref:System.AppDomain> 内のすべての <xref:System.Net.Sockets.Socket> オブジェクトが受信したデータグラム パケットの累計バイト数。|  
 |**Datagrams Sent**|プロセスの開始後に <xref:System.AppDomain> 内のすべての <xref:System.Net.Sockets.Socket> オブジェクトが送信したデータグラム パケットの累計バイト数。|  
-|**HttpWebRequest Average Lifetime**|プロセスの開始後に <xref:System.AppDomain> 内で最後の間隔で終了したすべての <xref:System.Net.HttpWebRequest> オブジェクトの平均完了時間。|  
-|**HttpWebRequest Average Queue Time**|プロセスの開始後に <xref:System.AppDomain> 内で最後の間隔でキューに残ったすべての <xref:System.Net.HttpWebRequest> オブジェクトのキューでの平均待機時間。|  
+|**HttpWebRequests の平均有効期間**|プロセスの開始後に <xref:System.AppDomain> 内で最後の間隔で終了したすべての <xref:System.Net.HttpWebRequest> オブジェクトの平均完了時間。|  
+|**HttpWebRequests の平均キュー時間**|プロセスの開始後に <xref:System.AppDomain> 内で最後の間隔でキューに残ったすべての <xref:System.Net.HttpWebRequest> オブジェクトのキューでの平均待機時間。|  
 |**HttpWebRequests Created/sec**|<xref:System.AppDomain> 内で 1 秒あたりに作成された <xref:System.Net.HttpWebRequest> オブジェクトの数。|  
 |**HttpWebRequests Queued/sec**|<xref:System.AppDomain> 内で 1 秒あたりにキューに追加された <xref:System.Net.HttpWebRequest> オブジェクトの数。|  
 |**HttpWebRequests Aborted/sec**|<xref:System.AppDomain> 内でアプリケーションが <xref:System.Net.HttpWebRequest.Abort%2A> メソッドを呼び出した <xref:System.Net.HttpWebRequest> オブジェクトの 1 秒あたりの数。|  
@@ -169,11 +169,11 @@ ms.locfileid: "90554450"
   
  <xref:System.Net.HttpWebRequest> オブジェクトが有効期間全体またはその一部を通過するのに要する時間を計測する時間計測カウンターには、次の 2 つがあります。  
   
-- **HttpWebRequest Average Lifetime**  
+- **HttpWebRequests の平均有効期間**  
   
-- **HttpWebRequest Average Queue Time**  
+- **HttpWebRequests の平均キュー時間**  
   
- **HttpWebRequest Average Lifetime** カウンターの場合、大部分の <xref:System.Net.HttpWebRequest> オブジェクトの有効期間は、常に、オブジェクトが作成されたときに開始し、アプリケーションによって応答ストリームが閉じられたときに終了します。 ただし、例外的なシナリオが 2 つあります。  
+ **Httpwebrequests Average lifetime**カウンターでは、ほとんどのオブジェクトの有効期間は、 <xref:System.Net.HttpWebRequest> アプリケーションによって応答ストリームが閉じられるまで、オブジェクトが作成された時間で開始されます。 ただし、例外的なシナリオが 2 つあります。  
   
 - アプリケーションが  <xref:System.Net.HttpWebRequest.GetResponse%2A> メソッドまたは <xref:System.Net.HttpWebRequest.BeginGetResponse%2A>  メソッドの呼び出しをしない場合、<xref:System.Net.HttpWebRequest> オブジェクトの有効期間は無視されます。  
   
