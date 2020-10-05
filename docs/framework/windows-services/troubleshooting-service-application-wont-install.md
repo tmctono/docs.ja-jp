@@ -10,22 +10,21 @@ helpviewer_keywords:
 - troubleshooting NT services
 - Windows Service applications, troubleshooting
 ms.assetid: 45c48e2e-b97d-44bc-8896-14f328e0ce33
-author: ghogen
-ms.openlocfilehash: 4a57fb6975a6ded48abf7c8fd7eacec16e4f94d8
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: d606adc7fddeb9f7e76a6974699c2455eda084b2
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925528"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608882"
 ---
-# <a name="troubleshooting-service-application-wont-install"></a><span data-ttu-id="850f2-104">トラブルシューティング:サービス アプリケーションをインストールできない場合</span><span class="sxs-lookup"><span data-stu-id="850f2-104">Troubleshooting: Service Application Won't Install</span></span>
-<span data-ttu-id="850f2-105">サービス アプリケーションが正しくインストールされない場合は、サービス クラスの <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> プロパティが、そのサービスのインストーラーで示されているのと同じ値に設定されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="850f2-105">If your service application will not install correctly, check to make sure that the <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> property for the service class is set to the same value as is shown in the installer for that service.</span></span> <span data-ttu-id="850f2-106">サービスが正しくインストールされるためには、両方のインスタンスで同じ値になっている必要があります。</span><span class="sxs-lookup"><span data-stu-id="850f2-106">The value must be the same in both instances in order for your service to install correctly.</span></span>  
+# <a name="troubleshooting-service-application-wont-install"></a><span data-ttu-id="1ab60-104">トラブルシューティング:サービス アプリケーションをインストールできない場合</span><span class="sxs-lookup"><span data-stu-id="1ab60-104">Troubleshooting: Service Application Won't Install</span></span>
+<span data-ttu-id="1ab60-105">サービス アプリケーションが正しくインストールされない場合は、サービス クラスの <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> プロパティが、そのサービスのインストーラーで示されているのと同じ値に設定されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="1ab60-105">If your service application will not install correctly, check to make sure that the <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> property for the service class is set to the same value as is shown in the installer for that service.</span></span> <span data-ttu-id="1ab60-106">サービスが正しくインストールされるためには、両方のインスタンスで同じ値になっている必要があります。</span><span class="sxs-lookup"><span data-stu-id="1ab60-106">The value must be the same in both instances in order for your service to install correctly.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="850f2-107">また、インストール ログを見て、インストール プロセスについてのフィードバックを確認することもできます。</span><span class="sxs-lookup"><span data-stu-id="850f2-107">You can also look at the installation logs to get feedback on the installation process.</span></span>  
+> <span data-ttu-id="1ab60-107">また、インストール ログを見て、インストール プロセスについてのフィードバックを確認することもできます。</span><span class="sxs-lookup"><span data-stu-id="1ab60-107">You can also look at the installation logs to get feedback on the installation process.</span></span>  
   
- <span data-ttu-id="850f2-108">同じ名前の別のサービスが既にインストールされているかどうかも確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="850f2-108">You should also check to determine whether you have another service with the same name already installed.</span></span> <span data-ttu-id="850f2-109">インストールが成功するには、サービス名が一意である必要があります。</span><span class="sxs-lookup"><span data-stu-id="850f2-109">Service names must be unique for installation to succeed.</span></span>  
+ <span data-ttu-id="1ab60-108">同じ名前の別のサービスが既にインストールされているかどうかも確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="1ab60-108">You should also check to determine whether you have another service with the same name already installed.</span></span> <span data-ttu-id="1ab60-109">インストールが成功するには、サービス名が一意である必要があります。</span><span class="sxs-lookup"><span data-stu-id="1ab60-109">Service names must be unique for installation to succeed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="850f2-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="850f2-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1ab60-110">関連項目</span><span class="sxs-lookup"><span data-stu-id="1ab60-110">See also</span></span>
 
-- [<span data-ttu-id="850f2-111">Windows サービス アプリケーションの概要</span><span class="sxs-lookup"><span data-stu-id="850f2-111">Introduction to Windows Service Applications</span></span>](introduction-to-windows-service-applications.md)
+- [<span data-ttu-id="1ab60-111">Windows サービス アプリケーションの概要</span><span class="sxs-lookup"><span data-stu-id="1ab60-111">Introduction to Windows Service Applications</span></span>](introduction-to-windows-service-applications.md)
