@@ -6,14 +6,15 @@ helpviewer_keywords:
 - operators [Visual Basic], shift
 - bit shift operators [Visual Basic]
 ms.assetid: 64889319-a057-471b-85d8-69fcd4af6230
-ms.openlocfilehash: 549f3caf2c3ccf8b985891acca689e6af0aad73b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 986e641d7e3cdfb9dfeb5120c64271f5a54dc079
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371714"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873430"
 ---
 # <a name="bit-shift-operators-visual-basic"></a>ビット シフト演算子 (Visual Basic)
+
 次に示すのは、Visual Basic で定義されているビット シフト演算子です。  
   
  [<\< 演算子](left-shift-operator.md)  

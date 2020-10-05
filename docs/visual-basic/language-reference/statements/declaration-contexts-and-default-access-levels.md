@@ -9,17 +9,19 @@ helpviewer_keywords:
 - access levels, Visual Basic
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
-ms.openlocfilehash: b5bb943a062ac648f88645fb6de1acb42213071c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a659481b34b8b44f1f387b464d5d9656ed98ab3f
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404798"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874951"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>宣言コンテキストと既定のアクセス レベル (Visual Basic)
+
 このトピックでは、どの Visual Basic の型を他のどの型内に宣言できるか、およびそれらのアクセス レベルが指定されていない場合の既定値について説明します。  
   
 ## <a name="declaration-context-levels"></a>宣言コンテキスト レベル  
+
  プログラミング要素の*宣言コンテキスト*は、それが宣言されているコードの領域です。 これは、多くの場合、別のプログラミング要素であり、そのために*親要素*と呼ばれます。  
   
  宣言コンテキストのレベルは次のとおりです。  

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Auto keyword [Visual Basic]
 - Auto keyword [Visual Basic], marshaling strings
 ms.assetid: bf79ba95-a62c-48a5-916f-0ac7a52c13ec
-ms.openlocfilehash: b9bdeed55788252c71b8fb1c995c140cbfdf60eb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 799a7320b701384dc5f4b4b46fef8544f6b15b02
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373129"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875517"
 ---
 # <a name="auto-visual-basic"></a>Auto (Visual Basic)
+
 Visual Basic で、宣言されている外部プロシージャの外部名に基づいて、.NET Framework ルールに従い、文字列をマーシャリングする必要があることを指定します。  
   
  プロジェクトの外部で定義されたプロシージャを呼び出すと、Visual Basic コンパイラが、プロシージャを正しく呼び出すために必要な情報にアクセスできません。 この情報には、プロシージャの配置場所、識別方法、呼び出し元のシーケンスと戻り値の型、および使用されている文字列の文字セットが含まれます。 [Declare ステートメント](../statements/declare-statement.md)は、外部プロシージャへの参照を作成し、この必要な情報を提供します。  
@@ -26,11 +27,13 @@ Visual Basic で、宣言されている外部プロシージャの外部名に�
  文字セット修飾子が指定されていない場合は、`Ansi` が既定値になります。  
   
 ## <a name="remarks"></a>Remarks  
+
  `Auto` 修飾子は、次のコンテキストで使用できます。  
   
  [Declare ステートメント](../statements/declare-statement.md)  
   
 ## <a name="smart-device-developer-notes"></a>スマート デバイス開発者向けのメモ  
+
  このキーワードはサポートされていません。  
   
 ## <a name="see-also"></a>関連項目

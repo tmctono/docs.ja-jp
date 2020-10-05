@@ -7,14 +7,15 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 8dec28620b0409f05007b2c0b1c1fd4494c2d7c8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 29de4c174273c3c6c0d4f0cea1ee6dc254a1339b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404759"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866661"
 ---
 # <a name="delegate-statement"></a>Delegate ステートメント
+
 デリゲートの宣言に使用します。 デリゲートは、型の `Shared` メソッドまたはオブジェクトのインスタンス メソッドを参照する参照型です。 パラメーターおよび戻り値の型が一致するプロシージャを使用すると、このデリゲート クラスのインスタンスを作成できます。 このプロシージャは、後でデリゲート インスタンスを使用して呼び出すことができます。  
   
 ## <a name="syntax"></a>構文  
@@ -39,6 +40,7 @@ ms.locfileid: "84404759"
 |`type`|`Function` プロシージャを指定する場合は、必ず指定します。 戻り値のデータ型。|  
   
 ## <a name="remarks"></a>Remarks  
+
  `Delegate` ステートメントでは、デリゲート クラスのパラメーターと戻り値の型を定義します。 パラメーターおよび戻り値の型が一致するプロシージャを使用すると、このデリゲート クラスのインスタンスを作成できます。 このプロシージャは、デリゲートの `Invoke` メソッドを呼び出すことによって、後でデリゲート インスタンスを使用して呼び出すことができます。  
   
  デリゲートは、名前空間、モジュール、クラス、または構造体レベルで宣言できますが、プロシージャ内では宣言できません。  
@@ -60,6 +62,7 @@ ms.locfileid: "84404759"
  デリゲートの詳細については、「[デリゲート](../../programming-guide/language-features/delegates/index.md)」を参照してください。  
   
 ## <a name="example"></a>例  
+
  次の例では、`Delegate` ステートメントを使用して、2 つの数値を演算して 1 つの数値を返すためのデリゲートを宣言します。 `DelegateTest` メソッドは、この型のデリゲートのインスタンスを受け取り、それを使用して数値のペアを演算します。  
   
  [!code-vb[VbVbalrDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#14)]  

@@ -2,12 +2,12 @@
 title: dotnet publish コマンド
 description: dotnet publish コマンドを実行すると、.NET Core プロジェクトまたはソリューションをディレクトリに発行できます。
 ms.date: 02/24/2020
-ms.openlocfilehash: 53dc6010352d92489017c3aa776bcb6a3601ec2d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2c33f99ce652dadc6e0c1a4c5e9e78fff9f54254
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537770"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654895"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -145,7 +145,7 @@ dotnet publish -p:PublishProfile=FolderProfile
 
 - **`-p:PublishReadyToRun=true`**
 
-  アプリケーション アセンブリは ReadyToRun (R2R) 形式にコンパイルされます。 R2R とは、Ahead-Of-Time (AOT) コンパイルの一種です。 詳細については、「[ReadyToRun イメージ](../whats-new/dotnet-core-3-0.md#readytorun-images)」を参照してください。 .NET Core 3.0 SDK 以降で使用できます。
+  アプリケーション アセンブリは ReadyToRun (R2R) 形式にコンパイルされます。 R2R とは、Ahead-Of-Time (AOT) コンパイルの一種です。 詳細については、「[ReadyToRun イメージ](../deploying/ready-to-run.md)」を参照してください。 .NET Core 3.0 SDK 以降で使用できます。
 
   このオプションは、コマンド ラインではなく、発行プロファイルで指定することをお勧めします。 詳細については、「[MSBuild](#msbuild)」を参照してください。
 

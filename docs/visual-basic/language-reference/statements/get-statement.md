@@ -11,14 +11,15 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-ms.openlocfilehash: 31936fb2c8f658203a43702a2b5fa4ee2481beb5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3da6c099b3f43a144484eaddf58605609eb0bbfe
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404603"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866204"
 ---
 # <a name="get-statement"></a>Get ステートメント
+
 プロパティの値を取得するために使用する `Get` プロパティ プロシージャを宣言します。  
   
 ## <a name="syntax"></a>構文  
@@ -39,6 +40,7 @@ End Get
 |`End Get`|必須です。 `Get` プロパティ プロシージャの定義を終了します。|  
   
 ## <a name="remarks"></a>Remarks  
+
  プロパティが `WriteOnly` とマークされている場合を除き、すべてのプロパティには `Get` プロパティ プロシージャが必要です。 `Get` プロシージャは、プロパティの現在の値を返すために使用します。  
   
  Visual Basic では、式でプロパティの値が要求されると、プロパティの `Get` プロシージャが自動的に呼び出されます。  
@@ -78,6 +80,7 @@ End Get
      [!code-vb[VbVbalrStatements#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#29)]  
   
 ## <a name="example"></a>例  
+
  次の例では、`Get` ステートメントを使用してプロパティの値を返しています。  
   
  [!code-vb[VbVbalrStatements#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#30)]  

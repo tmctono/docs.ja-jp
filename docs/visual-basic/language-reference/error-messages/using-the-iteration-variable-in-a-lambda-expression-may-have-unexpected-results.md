@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
-ms.openlocfilehash: aa3e1d6281af22b301a4697b265ed3fbf23e3de4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e7975dc767ae652359c904271d6610be34e4cb80
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373915"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870240"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>ラムダ式内で繰り返し変数を使用すると、予期しない結果が発生する可能性があります。
+
 ラムダ式内で反復変数を使用すると、予期しない結果が発生する可能性があります。 代わりに、ループ内にローカル変数を作成して反復変数の値を割り当ててください。  
   
  この警告は、ループ内で宣言されているラムダ式でループの反復変数を使用すると表示されます。 たとえば、次のコード例では、警告が表示されます。  

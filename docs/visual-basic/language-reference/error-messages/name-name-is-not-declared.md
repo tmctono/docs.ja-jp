@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30451
 ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
-ms.openlocfilehash: 6fa4639b97e4314d8752ae520e94a58a189b7cbb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 76c1ab4fb5f1f8e4c76a06110f4b0f9026cca201
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397169"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871540"
 ---
 # <a name="name-name-is-not-declared"></a>名前 '\<name>' は宣言されていません。
+
 ステートメントでプログラミング要素を参照していますが、名前が完全に一致する要素をコンパイラが見つけることができません。  
   
  **エラー ID:** BC30451  

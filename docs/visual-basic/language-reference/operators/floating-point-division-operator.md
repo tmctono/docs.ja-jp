@@ -16,14 +16,15 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-ms.openlocfilehash: e9400b50a84522f87a9a2ea4cd05b479d7a4538e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 765a80d45908e0ecf17e4c21b748dbf6b2a4c0f5
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371169"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867041"
 ---
 # <a name="-operator-visual-basic"></a>/ 演算子 (Visual Basic)
+
 2 つの数値の商を計算し、結果を浮動小数点で返します。  
   
 ## <a name="syntax"></a>構文  
@@ -33,6 +34,7 @@ expression1 / expression2
 ```  
   
 ## <a name="parts"></a>指定項目  
+
  `expression1`  
  必須です。 任意の数式。  
   
@@ -40,14 +42,17 @@ expression1 / expression2
  必須です。 任意の数式。  
   
 ## <a name="supported-types"></a>サポートされている型  
+
  符号なし型、浮動小数点型、`Decimal` を含む、すべての数値型。  
   
 ## <a name="result"></a>結果  
+
  結果は、`expression1` を `expression2` で除算した完全な商で、剰余も含まれます。  
   
  [\ 演算子 (Visual Basic)](integer-division-operator.md) では整数の商が返され、剰余は捨てられます。  
   
 ## <a name="remarks"></a>Remarks  
+
  結果のデータ型は、オペランドの型によって異なります。 次の表は、結果のデータ型がどのように決定されるかを示しています。  
   
 |オペランドのデータ型|結果のデータ型|  
@@ -62,6 +67,7 @@ expression1 / expression2
  `expression1` または `expression2` が [Nothing](../nothing.md) に評価される場合、0 として扱われます。  
   
 ## <a name="attempted-division-by-zero"></a>0 除算が試行された場合  
+
  `expression2` が 0 に評価される場合、`/` 演算子の動作は、オペランドのデータ型によって異なります。 次の表に、起こりうる動作を示します。  
   
 |オペランドのデータ型|`expression2` が 0 の場合の動作|  
@@ -74,6 +80,7 @@ expression1 / expression2
 > `/` 演算子は "*オーバーロード*" できます。つまり、オペランドの型がクラスまたは構造体であるとき、そのクラスまたは構造体で、演算子の動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
+
  次の例では、`/` 演算子を使用して、浮動小数点除算を実行します。 結果は 2 つのオペランドの商になります。  
   
  [!code-vb[VbVbalrOperators#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#16)]  

@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30491
 ms.assetid: 8399d7ae-bc0a-49e6-81dc-2e7229708bc9
-ms.openlocfilehash: 97cf3208e47eb0514296927e86eefc768280f61f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: eaa6633996b6fef8ba949e1d8aa7f19d7d5fb6a4
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409544"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874263"
 ---
 # <a name="expression-does-not-produce-a-value"></a>式は値を生成しません。
+
 `Function` が想定されるコンテキストで `Sub` を呼び出すなど、値が生成されるコンテキストで値を生成しない式を使用しようとしました。  
   
  **エラー ID:** BC30491  
