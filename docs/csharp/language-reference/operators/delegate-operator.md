@@ -1,16 +1,16 @@
 ---
 description: delegate 演算子 - C# リファレンス
 title: delegate 演算子 - C# リファレンス
-ms.date: 07/18/2019
+ms.date: 09/25/2020
 helpviewer_keywords:
 - delegate [C#]
 - anonymous method [C#]
-ms.openlocfilehash: 1dfaaf40c0f5a19534adef3be7e3c917bc95c4a8
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: db2bf673db12e4a10741a26112820726a4b8aaee
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89122252"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247658"
 ---
 # <a name="delegate-operator-c-reference"></a>delegate 演算子 (C# リファレンス)
 
@@ -30,6 +30,18 @@ ms.locfileid: "89122252"
 [!code-csharp-interactive[no parameter list](snippets/shared/DelegateOperator.cs#WithoutParameterList)]
 
 これは、ラムダ式でサポートされていない匿名メソッドの唯一の機能です。 それ以外の場合は、すべてラムダ式を使用してインライン コードを書くことをお勧めします。
+
+C# 9.0 以降では、[破棄](../../discards.md)を使用して、メソッドで使用しない匿名メソッドの 2 つ以上の入力パラメーターを指定できます。
+
+:::code language="csharp" source="snippets/shared/DelegateOperator.cs" id="SnippetDiscards" :::
+
+下位互換性のために、1 つのパラメーターにのみ `_` という名前が付けられた場合、`_` は匿名メソッド内でそのパラメーターの名前として扱われます。
+
+また、C# 9.0 以降では、`static` 修飾子を匿名メソッドの宣言で使用できます。
+
+:::code language="csharp" source="snippets/shared/DelegateOperator.cs" id="SnippetStatic" :::
+
+静的な匿名メソッドでは、外側のスコープからローカル変数またはインスタンスの状態をキャプチャすることはできません。
 
 `delegate` キーワードは、[デリゲート型](../builtin-types/reference-types.md#the-delegate-type)を宣言するためにも使います。
 

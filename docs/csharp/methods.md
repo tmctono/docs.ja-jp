@@ -4,12 +4,12 @@ description: メソッド、メソッド パラメーター、メソッド戻り
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 879c553f8df560a3e2f3dccdbbf0d7e8a05c50cd
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 520aeed85ee00127c2bd3eee681b980d05f46d05
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495539"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874705"
 ---
 # <a name="methods-in-c"></a>(C#) のメソッド
 
@@ -121,13 +121,14 @@ C# の型は、*値型*と*参照型*のどちらかに区別されます。 組
 
 メソッドに厳密な数の引数を指定する要件が限定的になることがあります。 `params` キーワードを利用し、パラメーターがパラメーター配列であることを示すことで、可変数の引数でメソッドを呼び出すことができます。 `params` キーワードでタグが付けられたパラメーターは配列型にする必要があり、メソッドのパラメーター リストの最後のパラメーターにする必要があります。
 
-呼び出し元は、次の 3 つの方法のいずれかでメソッドを呼び出すことができます。
+呼び出し元は、次の 4 つの方法のいずれかでメソッドを呼び出すことができます。
 
 - 必要な数の要素を含む、適切な型の配列を渡す。
 - 適切な型の引数をコンマで区切った一覧をメソッドに渡す。
+- `null` を渡す。
 - パラメーター配列に引数を指定しない。
 
-次の例は、パラメーター配列からすべての母音を返す `GetVowels` という名前のメソッドを定義します。 `Main` メソッドには、メソッド呼び出しの 3 つ全部の方法が入っています。 呼び出し元は、`params` 修飾子が含まれるパラメーターに引数を指定する必要はありません。 その場合、パラメーターは `null` になります。
+次の例は、パラメーター配列からすべての母音を返す `GetVowels` という名前のメソッドを定義します。 `Main` メソッドには、メソッド呼び出しの 4 つの方法すべてが入っています。 呼び出し元は、`params` 修飾子が含まれるパラメーターに引数を指定する必要はありません。 その場合、パラメーターは空の配列になります。
 
 [!code-csharp[csSnippets.Methods#75](~/samples/snippets/csharp/concepts/methods/params75.cs#75)]
 

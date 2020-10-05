@@ -4,12 +4,12 @@ description: .NET Core ランタイムの動作を制御する必要がある高
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 9f45a75d7ec836c14a2285a1707649cc32c2a25c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 03cf188fc74e8a70798c0bcc4a6940730abfc07c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537549"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180465"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>ネイティブ コードから .NET ランタイムを制御するカスタム .NET Core ホストを作成する
 
@@ -26,11 +26,11 @@ ms.locfileid: "90537549"
 ホストをテストするための単純な .NET Core アプリケーションも必要です。そのため、[.NET Core SDK](https://dotnet.microsoft.com/download) をインストールし、[小さい .NET Core テスト アプリを作成](with-visual-studio.md)してください ('Hello World' アプリなど)。 新しい .NET Core コンソール プロジェクト テンプレートで作成される 'Hello World' アプリで十分です。
 
 ## <a name="hosting-apis"></a>ホスト API
+
 .NET Core をホストするために使用できる API が 3 種類あります。 この記事 (および関連する[サンプル](https://github.com/dotnet/samples/tree/master/core/hosting)) では、すべてのオプションについて説明します。
 
 * .NET Core 3.0 以降の .NET Core ランタイムをホストする推奨される方法は、`nethost` および `hostfxr` ライブラリの API を使うことです。 これらのエントリ ポイントは、初期化のためにランタイムを検索して設定する複雑な処理が行われ、マネージド アプリケーションの起動と静的マネージド メソッドの呼び出しの両方が可能です。
-* .NET Core 3.0 より前の .NET Core ランタイムをホストする推奨される方法は、[CoreClrHost.h](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/hosts/inc/coreclrhost.h) API を使うことです。 この API では、ランタイムを簡単に開始および停止し、(マネージド exe を起動するか、静的マネージド メソッドを呼び出すことで) マネージド コードを呼び出すために関数が公開されます。
-* .NET Core は [mscoree.h](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/pal/prebuilt/inc/mscoree.h) の `ICLRRuntimeHost4` インターフェイスでホストすることもできます。 この API は CoreClrHost.h より歴史が古く、これを利用している古いホストを見たことがあるかもしれません。 今でも動作しますし、CoreClrHost よりもホスト プロセスを制御できる幅が広くなります。 ただし、ほとんどのシナリオでは現在、CoreClrHost が好まれます。API が単純であるためです。
+* .NET Core 3.0 より前の .NET Core ランタイムをホストする推奨される方法は、[`coreclrhost.h`](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/hosts/inc/coreclrhost.h) API を使うことです。 この API では、ランタイムを簡単に開始および停止し、(マネージド exe を起動するか、静的マネージド メソッドを呼び出すことで) マネージド コードを呼び出すために関数が公開されます。
 
 ## <a name="sample-hosts"></a>サンプル ホスト
 
@@ -38,11 +38,11 @@ dotnet/samples GitHub リポジトリには、以下のチュートリアルで�
 
 サンプル ホストは学習目的のために利用されるものです。エラーのチェック時に軽くなっており、効率性より読みやすさを重視して設計されています。
 
-## <a name="create-a-host-using-nethosth-and-hostfxrh"></a>NetHost.h と HostFxr.h を使用してホストを作成する
+## <a name="create-a-host-using-nethosth-and-hostfxrh"></a>`nethost.h` と `hostfxr.h` を使用してホストを作成する
 
 以下は、`nethost` および `hostfxr` ライブラリを使用してネイティブ アプリケーションで .NET Core ランタイムを起動し、静的マネージド メソッドを呼び出す手順を詳しくまとめたものです。 [サンプル](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithHostFxr)では、.NET SDK でインストールされる `nethost` ヘッダーとライブラリ、および [dotnet/core-setup](https://github.com/dotnet/core-setup) リポジトリからの [`coreclr_delegates.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/coreclr_delegates.h) および [`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) ファイルのコピーが使用されます。
 
-### <a name="step-1---load-hostfxr-and-get-exported-hosting-functions"></a>ステップ 1 - HostFxr を読み込んで、エクスポートされたホスティング関数を取得する
+### <a name="step-1---load-hostfxr-and-get-exported-hosting-functions"></a>ステップ 1 - `hostfxr` を読み込んで、エクスポートされたホスティング関数を取得する
 
 `nethost` ライブラリでは、`hostfxr` ライブラリを検索するための `get_hostfxr_path` 関数が提供されています。 `hostfxr` ライブラリでは、.NET Core ランタイムをホストするための関数が公開されています。 関数の完全な一覧については、[`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) および[ネイティブ ホスティング デザインのドキュメント](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/native-hosting.md)をご覧ください。 サンプルとこのチュートリアルでは以下を使います。
 
@@ -80,11 +80,11 @@ public delegate int ComponentEntryPoint(IntPtr args, int sizeBytes);
 
 [!code-cpp[HostFxrHost#CallManaged](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithHostFxr/src/NativeHost/nativehost.cpp#CallManaged)]
 
-## <a name="create-a-host-using-coreclrhosth"></a>CoreClrHost.h を使用してホストを作成する
+## <a name="create-a-host-using-coreclrhosth"></a>`coreclrhost.h` を使用してホストを作成する
 
-以下は、CoreClrHost.h API を使用してネイティブ アプリケーションで .NET Core ランタイムを起動し、静的マネージド メソッドを呼び出す手順を詳しくまとめたものです。 このドキュメントのコード スニペットでは Windows 固有の API が使用されてますが、[こちら](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithCoreClrHost)にある完全版サンプル ホストでは、Windows コード パスと Linux コード パスの両方を確認できます。
+以下は、`coreclrhost.h` API を使用してネイティブ アプリケーションで .NET Core ランタイムを起動し、静的マネージド メソッドを呼び出す手順を詳しくまとめたものです。 このドキュメントのコード スニペットでは Windows 固有の API が使用されてますが、[こちら](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithCoreClrHost)にある完全版サンプル ホストでは、Windows コード パスと Linux コード パスの両方を確認できます。
 
-[Unix CoreRun ホスト](https://github.com/dotnet/runtime/tree/master/src/coreclr/src/hosts/unixcorerun)では、coreclrhost.h を使ったホスティングの、より複雑で現実的な例が示されています。
+[Unix CoreRun ホスト](https://github.com/dotnet/runtime/tree/master/src/coreclr/src/hosts/unixcorerun)では、`coreclrhost.h` を使ったホスティングの、より複雑で現実的な例が示されています。
 
 ### <a name="step-1---find-and-load-coreclr"></a>手順 1 - CoreCLR を見つけて読み込む
 
@@ -130,7 +130,7 @@ CoreCLR ライブラリを読み込んだ後、次の手順は、`GetProcAddress
 
 ### <a name="step-4---start-the-runtime"></a>手順 4 - ランタイムを起動する
 
-mscoree.h をホストする API (下記参照) とは異なり、CoreCLRHost.h API では、1 回の呼び出しによってランタイムを起動し、既定の AppDomain を作成します。 `coreclr_initialize` 関数はベース パス、名前、前述のプロパティを取得し、`hostHandle` パラメーターを介してホストにハンドルを戻します。
+`coreclrhost.h` API により、1 回の呼び出しでランタイムの起動と既定の AppDomain の作成が行われます。 `coreclr_initialize` 関数はベース パス、名前、前述のプロパティを取得し、`hostHandle` パラメーターを介してホストにハンドルを戻します。
 
 [!code-cpp[CoreClrHost#4](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithCoreClrHost/src/SampleHost.cpp#4)]
 
@@ -162,99 +162,8 @@ int hr = executeAssembly(
 
 CoreCLR では、再初期化またはアンロードはサポートされていません。 `coreclr_initialize` を再度呼び出したり、CoreCLR ライブラリをアンロードしたりしないでください。
 
-## <a name="create-a-host-using-mscoreeh"></a>Mscoree.h を使用してホストを作成する
-
-前述のように、現在、CoreClrHost.h が .NET Core ランタイムのホスティング方法として推奨されています。 ただし、CoreClrHost.h インターフェイスでは十分でない場合 (標準以外の起動フラグが必要な場合や既定のドメインで AppDomainManager が必要になる場合など)、`ICLRRuntimeHost4` インターフェイスを引き続き使用できます。 mscoree.h を使用して .NET Core をホストする手順は以下のようになります。
-
-[CoreRun ホスト](https://github.com/dotnet/runtime/tree/master/src/coreclr/src/hosts/corerun)では、mscoree.h を使ったホスティングの、より複雑で現実的な例が示されています。
-
-### <a name="a-note-about-mscoreeh"></a>mscoree.h に関する注記
-`ICLRRuntimeHost4` .NET Core ホスティング インターフェイスは [MSCOREE.IDL](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/inc/MSCOREE.IDL) で定義されます。 ホストで参照する必要がある、このファイルのヘッダー バージョン (mscoree.h) は、[.NET Core ランタイム](https://github.com/dotnet/runtime/)がビルドされるときに MIDL 経由で生成されます。 .NET Core ランタイムをビルドしない場合、dotnet/runtime リポジトリの[ビルド済みヘッダー](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/pal/prebuilt/inc/)として mscoree.h を利用することもできます。
-
-### <a name="step-1---identify-the-managed-entry-point"></a>手順 1 - マネージド エントリ ポイントを特定する
-必要なヘッダーを参照した後 ([mscoree.h](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/pal/prebuilt/inc/mscoree.h) や stdio.h など)、.NET Core ホストが最初に行うことは、それが使用するマネージド エントリ ポイントを見つけることです。 その作業は、このサンプル ホストでは、`main` メソッドが実行されるマネージド バイナリのパスとして最初のコマンド ライン引数をホストに渡すことで行われます。
-
-[!code-cpp[NetCoreHost#1](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#1)]
-
-### <a name="step-2---find-and-load-coreclr"></a>手順 2 - CoreCLR を見つけて読み込む
-.NET Core ランタイム API は *CoreCLR.dll* にあります (Windows)。 ホスティング インターフェイス (`ICLRRuntimeHost4`) を取得するには、*CoreCLR.dll* を見つけて読み込む必要があります。 *CoreCLR.dll* の見つけ方を定義するのはホストです。 一部のホストは、コンピューター全体の既知の場所にこのファイルがあるものと予測します ( *%programfiles%\dotnet\shared\Microsoft.NETCore.App\2.1.6* など)。 他のホストは、ホスト自体またはホスティングするアプリの隣にある場所から *CoreCLR.dll* を読み込むものと予測します。 環境変数を参照してライブラリを見つける場合もあります。
-
-Linux または macOS の場合、コア ランタイム ライブラリはそれぞれ、*libcoreclr.so* と *libcoreclr.dylib* です。
-
-このサンプル ホストでは、いくつかの一般的な場所で *CoreCLR.dll* を探します。 見つかると、`LoadLibrary` (Linux/macOS の場合は `dlopen`) 経由で読み込まれます。
-
-[!code-cpp[NetCoreHost#2](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#2)]
-
-### <a name="step-3---get-an-iclrruntimehost4-instance"></a>手順 3 - ICLRRuntimeHost4 インスタンスを取得する
-`ICLRRuntimeHost4` ホスティング インターフェイスは、`GetCLRRuntimeHost` で `GetProcAddress` を呼び出し (Linux/macOS の場合は `dlsym`)、その関数を実行することで取得されます。
-
-[!code-cpp[NetCoreHost#3](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#3)]
-
-### <a name="step-4---set-startup-flags-and-start-the-runtime"></a>手順 4 - スタートアップ フラグを設定し、ランタイムを開始する
-`ICLRRuntimeHost4` が用意されたので、ランタイム全体のスタートアップ フラグを指定し、ランタイムを開始できます。 スタートアップ フラグは、使用するガベージ コレクター (GC) (同時実行またはサーバー)、シングル AppDomain とマルチ AppDomain のいずれを使用するのか、使用するローダー最適化ポリシー (アセンブリのドメイン中立読み込み用) を決定します。
-
-[!code-cpp[NetCoreHost#4](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#4)]
-
-ランタイムは `Start` 関数を呼び出すことで開始されます。
-
-```c++
-hr = runtimeHost->Start();
-```
-
-### <a name="step-5---preparing-appdomain-settings"></a>手順 5 - AppDomain 設定を準備する
-ランタイムが開始したら、AppDomain を設定します。 ただし、.NET AppDomain を作成するとき、たくさんのオプションを指定する必要があります。それらを最初に用意する必要があります。
-
-AppDomain フラグは、セキュリティと相互運用に関連する AppDomain 動作を指定します。 以前の Siliverlight ホストはこれらの設定を利用し、ユーザー コードをサンドボックス化していましたが、最新の .NET Core ホストは完全な信頼としてユーザー コードを実行し、相互運用を有効にします。
-
-[!code-cpp[NetCoreHost#5](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#5)]
-
-使用する AppDomain フラグを決定したら、AppDomain プロパティを定義する必要があります。 プロパティは文字列のキー/値のペアです。 プロパティの多くは、AppDomain がアセンブリを読み込む方法に関連します。
-
-共通 AppDomain プロパティ:
-
-* `TRUSTED_PLATFORM_ASSEMBLIES` これはアセンブリ パスの一覧です (Windows は `;` で、Linux/macOS は `:` で区切られています)。これに対して AppDomain は読み込みに優先順位を設定し、完全信頼を与えます (部分信頼ドメインでも)。 .NET Framework シナリオの GAC と同様に、このリストには 'Framework' アセンブリとその他の信頼されるモジュールを含めます。 目的に応じて、このリストの *coreclr.dll* の隣にライブラリが置かれるホストもあれば、ハードコーディングされたマニフェストに信頼されるアセンブリが一覧表示されるホストもあります。
-* `APP_PATHS` これは、信頼されるプラットフォーム アセンブリ (TPA) リストでアセンブリが見つからない場合、アセンブリを探すパスのリストです。 TPA リストの場合、読み込まれるアセンブリをホスト側でより細かく制御できるため、ホストで読み込み、列挙するアセンブリを明示的に決定することがホストにとってはベスト プラクティスです。 ただし、実行時にプローブが必要な場合は、このプロパティでそのシナリオに対処できます。
-* `APP_NI_PATHS` このリストは、ネイティブ イメージを探すパスであることを除き、APP_PATHS とよく似ています。
-* `NATIVE_DLL_SEARCH_DIRECTORIES` このプロパティは、p/invoke で呼び出されたネイティブ DLL を探すときにローダーが調べるパスの一覧です。
-* `PLATFORM_RESOURCE_ROOTS` このリストには、(カルチャ固有の下位ディレクトリで) リソース サテライト アセンブリを探すパスが含まれています。
-
-この[単純なサンプル ホスト](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithMscoree)では、これらのプロパティは次のように設定されています。
-
-[!code-cpp[NetCoreHost#6](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#6)]
-
-### <a name="step-6---create-the-appdomain"></a>手順 6 - AppDomain を作成する
-すべての AppDomain フラグとプロパティを用意したら、`ICLRRuntimeHost4::CreateAppDomainWithManager` を利用して AppDomain を設定できます。 この関数は任意で完全修飾アセンブリ名と型の名前を取得し、ドメインの AppDomain マネージャーとして使用します。 AppDomain マネージャーは、AppDomain の一部の動作の制御をホストに許可できます。ホストがユーザー コードを直接呼び出さない場合、マネージド コードを起動するエントリ ポイントを提供することもあります。
-
-[!code-cpp[NetCoreHost#7](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#7)]
-
-### <a name="step-7---run-managed-code"></a>手順 7 - マネージド コードを実行する
-AppDomain が稼働したら、ホストはマネージド コードを実行できます。 これを行う最も簡単な方法は、`ICLRRuntimeHost4::ExecuteAssembly` を利用してマネージド アセンブリのエントリ ポイント メソッドを呼び出すことです。 この関数は単一ドメインのシナリオでのみ動作します。
-
-[!code-cpp[NetCoreHost#8](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#8)]
-
-別の選択肢としては、`ExecuteAssembly` がホストのニーズを満たさない場合、`CreateDelegate` を利用し、静的マネージド メソッドの関数ポインターを作成します。 その場合、ホストにそれが呼び出すメソッドのシグネチャを通知する必要があります (関数ポインターの種類を作成する目的で)。ただし、アセンブリのエントリ ポイント以外のコードを呼び出す柔軟性が許可されます。 2 番目のパラメーターに指定されたアセンブリ名は、読み込むライブラリの[フル マネージド アセンブリ名](../../standard/assembly/names.md)です。
-
-```c++
-void *pfnDelegate = NULL;
-hr = runtimeHost->CreateDelegate(
-    domainId,
-    L"HW, Version=1.0.0.0, Culture=neutral", // Target managed assembly
-    L"ConsoleApplication.Program",           // Target managed type
-    L"Main",                                 // Target entry point (static method)
-    (INT_PTR*)&pfnDelegate);
-
-((MainMethodFp*)pfnDelegate)(NULL);
-```
-
-### <a name="step-8---clean-up"></a>手順 8 - クリーンアップ
-最後に、ホストはそれ自体のクリーンアップを行います。AppDomain をアンロードし、ランタイムを停止し、`ICLRRuntimeHost4` 参照を解放します。
-
-[!code-cpp[NetCoreHost#9](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#9)]
-
-CoreCLR では、アンロードはサポートされていません。 CoreCLR ライブラリをアンロードしないでください。
-
 ## <a name="conclusion"></a>まとめ
-ホストがビルドされたら、コマンド ラインから実行し、ホストが期待する引数を渡すことでテストできます (mscoree サンプル アプリで実行するマネージド アプリなど)。 実行するホストの .NET Core アプリを指定するとき、`dotnet build` により生成された .dll を使用してください。 自己完結型アプリケーションのために `dotnet publish` で生成された実行可能ファイル (.exe ファイル) が実質的に既定の .NET Core ホストになります (メインライン シナリオでコマンド ラインから直接、アプリを起動できるように)。ユーザー コードがコンパイルされ、同じ名前の dll が作られます。
+ホストがビルドされたら、テストを行うことができます。コマンド ラインから実行し、ホストで想定される引数を渡します。 実行するホストの .NET Core アプリを指定するとき、`dotnet build` により生成された .dll を使用してください。 自己完結型アプリケーションのために `dotnet publish` で生成された実行可能ファイル (.exe ファイル) が実質的に既定の .NET Core ホストになります (メインライン シナリオでコマンド ラインから直接、アプリを起動できるように)。ユーザー コードがコンパイルされ、同じ名前の dll が作られます。
 
 最初の実行で動作しなかった場合、ホストが期待している場所に *coreclr.dll* があること、必要なすべての Framework ライブラリが TPA 一覧にあること、CoreCLR のビット数 (32 ビットまたは 64 ビット) がホストのビルド方法に一致することをもう一度確認してください。
 

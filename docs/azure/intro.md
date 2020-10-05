@@ -2,12 +2,12 @@
 title: Azure と .NET を使用して作業を開始する
 description: Azure と .NET について知っておくべき基本的事項について説明します。
 ms.date: 06/20/2020
-ms.openlocfilehash: c64de800f47035b22cc62b6d08cb7b71246984a7
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: e4a071e302247332cdc98c1aabf595cb4f8e2eff
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174323"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171573"
 ---
 # <a name="introduction-to-azure-and-net"></a>Azure と .NET の概要
 
@@ -28,7 +28,7 @@ ms.locfileid: "86174323"
 
 **マネージド サービス**: Azure には、ユーザーがデータや情報を Azure に提供するためのサービスがいくつか用意されており、Azure の実装によって適切なアクションが実行されます。 一例として Azure Blob Storage があります。このサービスでは、ユーザーがファイルを提供すると、Azure によってそれらの読み取り、書き込み、永続化が処理されます。
 
-**Azure SDK for .NET**:これは **Azure libraries for .NET** とも呼ばれていますが、Azure サービスでさまざまなやりとりや機能性を提供するプロジェクトにインストールする [NuGet パッケージ](https://www.nuget.org/profiles/azure-sdk)の総称です。 これらのパッケージには、リソースのプロビジョニングと管理に使用される管理ライブラリも含まれます。
+**Azure SDK for .NET** はプロジェクトにインストールする [NuGet パッケージ](packages.md)の総称であり、Azure サービスとのさまざまな相互作用や機能が提供されます。 これらのパッケージには、リソースのプロビジョニングと管理に使用される管理ライブラリも含まれます。
 
 ## <a name="choosing-a-hosting-option"></a>ホスティング オプションの選択
 
@@ -77,6 +77,7 @@ Azure SDK for .NET を使用して Azure リソースにアクセスし、管理
 * **REST API**:Azure SDK for .NET は [Azure REST API](/rest/api/azure/) から抽出されたものです。 必要に応じて、Azure REST API を Azure SDK for .NET の代わりに使用したり、Azure SDK for .NET と並行して使用したりすることができます。
 
 ## <a name="diagnosing-problems-in-the-cloud"></a>クラウドでの問題の診断
+
 アプリケーションを Azure にデプロイした後、開発環境では動作していても、Azure では動作しない状況に遭遇することがあります。 問題を診断するときは、まず次の 2 つを使用することをお勧めします。
 
 * **Visual Studio からのリモート デバッグ**: (このドキュメントで説明するサービスを含め) ほとんどの Azure コンピューティング サービスでは、Visual Studio を使用したリモート デバッグとログの取得がサポートされています。 アプリケーションで Visual Studio の機能を調べるには、Visual Studio のクイック起動ツール バー (右上隅) に「Cloud Explorer」と入力して、Cloud Explorer ツール ウィンドウを開き、ツリーで目的のアプリケーションを見つけます。 詳細については、[Visual Studio を使用した Azure App Service の Web アプリのトラブルシューティング](/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio#remotedebug)に関するページをご覧ください。

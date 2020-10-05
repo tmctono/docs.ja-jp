@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 049f0636b1c2c2df33461714aea5a11810ef00ad
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 04d0120622697d1e0c84fc169dfc50951cb8aa3c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359195"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177294"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>チュートリアル: Visual Studio を使用して .NET Core で .NET Standard クラス ライブラリをテストする
 
@@ -186,6 +186,12 @@ Visual Studio で単体テストを実行すると、<xref:Microsoft.VisualStudi
    > ![StringLibrary のコンテキスト メニューとビルド コマンド](./media/testing-library-with-visual-studio/build-library-context-menu.png)
 
 1. **[テストの実行]**  >  **[すべてのテスト]** をメニュー バーから選択して単体テストを実行します。 テストが成功します。
+
+## <a name="debug-tests"></a>テストのデバッグ
+
+IDE として Visual Studio を使用する場合は、「[チュートリアル:Visual Studio を使用して .NET Core コンソール アプリケーションをデバッグする](debugging-with-visual-studio.md)」に記載されているのと同じプロセスに従って、単体テスト プロジェクトを使用してコードをデバッグできます。 *ShowCase* アプリ プロジェクトを開始する代わりに、**StringLibraryTests** プロジェクトを右クリックし、コンテキスト メニューから **[テストのデバッグ]** を選択します。
+
+Visual Studio により、デバッガーがアタッチされた状態でテスト プロジェクトが開始されます。 実行は、テスト プロジェクトまたは基になるライブラリ コードに追加したブレークポイントで停止します。
 
 ## <a name="additional-resources"></a>その他の技術情報
 

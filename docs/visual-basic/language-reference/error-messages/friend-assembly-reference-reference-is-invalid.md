@@ -7,15 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC31535
 ms.assetid: 6540c1d0-bb19-4051-a579-2e4f9094585e
-ms.openlocfilehash: 6eb46c6479adc69eaf65b34c69aa69977b4d62ef
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 72c030d18d5339908c5088e104f6a8ad3e76943b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972389"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874090"
 ---
-# <a name="friend-assembly-reference-reference-is-invalid"></a>フレンド アセンブリ参照 \<reference> は使用できません
-フレンド アセンブリ参照 \<reference> は使用できません。 厳密な名前の署名つきアセンブリはその InternalsVisibleTo 宣言内で公開キーを指定しなければなりません。  
+# <a name="friend-assembly-reference-reference-is-invalid"></a>フレンド アセンブリ参照 \<reference> は無効です
+
+フレンド アセンブリ参照 \<reference> は無効です。 厳密な名前の署名つきアセンブリはその InternalsVisibleTo 宣言内で公開キーを指定しなければなりません。  
   
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性コンストラクターに渡されたアセンブリ名は、厳密な名前のアセンブリを識別しますが、`PublicKey` 属性を含みません。  
   

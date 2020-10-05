@@ -1,22 +1,22 @@
 ---
 title: Microsoft.NET.Sdk の MSBuild プロパティ
-description: .NET Core SDK によって認識される MSBuild のプロパティと項目のリファレンスです。
+description: .NET SDK によって認識される MSBuild のプロパティと項目のリファレンスです。
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: c1093a0acd5b75ae6478767d690966a30fe84a31
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: ac5d082acae582352680782deadb71a86f977f3b
+ms.sourcegitcommit: 2e4adc490c1d2a705a0592b295d606b10b9f51f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656263"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91354454"
 ---
-# <a name="msbuild-reference-for-net-core-sdk-projects"></a>.NET Core SDK プロジェクトの MSBuild リファレンス
+# <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK プロジェクトの MSBuild リファレンス
 
-このページは、.NET Core プロジェクトの構成に使用できる、MSBuild のプロパティと項目のリファレンスです。
+このページは、.NET プロジェクトの構成に使用できる、MSBuild のプロパティと項目のリファレンスです。
 
 > [!NOTE]
-> このページの編集は進行中であり、.NET Core SDK の便利な MSBuild プロパティがすべて記載されている訳ではありません。 一般的な MSBuild プロパティの一覧については、「[MSBuild プロジェクトの共通プロパティ](/visualstudio/msbuild/common-msbuild-project-properties)」を参照してください。
+> このページの編集は進行中であり、.NET SDK の便利な MSBuild プロパティがすべて記載されている訳ではありません。 一般的な MSBuild プロパティの一覧については、「[MSBuild プロジェクトの共通プロパティ](/visualstudio/msbuild/common-msbuild-project-properties)」を参照してください。
 
 ## <a name="framework-properties"></a>フレームワークのプロパティ
 
@@ -123,7 +123,7 @@ ms.locfileid: "89656263"
 
 ### <a name="useapphost"></a>UseAppHost
 
-`UseAppHost` プロパティは、.NET Core SDK の 2.1.400 バージョンで導入されました。 デプロイ用にネイティブ実行可能ファイルを作成するかどうかを制御できます。 自己完結型の配置にはネイティブの実行可能ファイルが必要です。
+`UseAppHost` プロパティは、.NET SDK の 2.1.400 バージョンで導入されました。 デプロイ用にネイティブ実行可能ファイルを作成するかどうかを制御できます。 自己完結型の配置にはネイティブの実行可能ファイルが必要です。
 
 .NET Core 3.0 以降のバージョンでは、既定でフレームワークに依存する実行可能ファイルが作成されます。 実行可能ファイルの生成を無効にするには、`UseAppHost` プロパティを `false` に設定します。
 
@@ -133,7 +133,7 @@ ms.locfileid: "89656263"
 </PropertyGroup>
 ```
 
-配置の詳細については、[.NET Core アプリケーションの配置](../deploying/index.md)に関するページを参照してください。
+配置の詳細については、[.NET アプリケーションの配置](../deploying/index.md)に関するページを参照してください。
 
 ## <a name="compile-properties"></a>コンパイルのプロパティ
 
@@ -147,7 +147,7 @@ ms.locfileid: "89656263"
 > [!NOTE]
 > `LogicalName`、`ManifestResourceName`、または `DependentUpon` メタデータが `EmbeddedResource` 項目に対して指定されている場合、そのリソース ファイルに対して生成されたマニフェスト ファイル名は、代わりにそのメタデータがベースになります。
 
-既定では、新しい .NET Core プロジェクトでは、このプロパティは `true` に設定されます。 `false` に設定され、かつプロジェクト ファイルの `EmbeddedResource` 項目に `LogicalName`、`ManifestResourceName`、`DependentUpon` のメタデータがどれも指定されていない場合、リソース マニフェストのファイル名は、プロジェクトのルート名前空間と、 *.resx* ファイルへの相対ファイル パスがベースになります。 詳細については、「[リソース マニフェスト ファイルの名前付けの方法](../resources/manifest-file-names.md)」を参照してください。
+既定では、新しい .NET プロジェクトでは、このプロパティは `true` に設定されます。 `false` に設定され、かつプロジェクト ファイルの `EmbeddedResource` 項目に `LogicalName`、`ManifestResourceName`、`DependentUpon` のメタデータがどれも指定されていない場合、リソース マニフェストのファイル名は、プロジェクトのルート名前空間と、 *.resx* ファイルへの相対ファイル パスがベースになります。 詳細については、「[リソース マニフェスト ファイルの名前付けの方法](../resources/manifest-file-names.md)」を参照してください。
 
 ```xml
 <PropertyGroup>
@@ -190,7 +190,7 @@ ms.locfileid: "89656263"
 
 ### <a name="analysismode"></a>AnalysisMode
 
-.NET 5.0 RC2 以降、.NET SDK には、すべての ["CA" コード品質ルール](/visualstudio/code-quality/code-analysis-for-managed-code-warnings)が付属しています。 既定では、ビルド警告として[一部のルールが有効](../../fundamentals/productivity/code-analysis.md#enabled-rules)になっています。 `AnalysisMode` プロパティを使用すると、既定で有効になるルールのセットをカスタマイズできます。 より積極的な (オプトアウト) 分析モード、またはより保守的な (オプトイン) 分析モードに切り替えることができます。 たとえば、既定ですべてのルールをビルド警告として有効にする場合は、値を `AllEnabledByDefault` に設定します。
+.NET 5.0 RC2 以降、.NET SDK には、すべての ["CA" コード品質ルール](../../fundamentals/code-analysis/quality-rules/index.md)が付属しています。 既定では、ビルド警告として[一部のルールが有効](../../fundamentals/code-analysis/overview.md#enabled-rules)になっています。 `AnalysisMode` プロパティを使用すると、既定で有効になるルールのセットをカスタマイズできます。 より積極的な (オプトアウト) 分析モード、またはより保守的な (オプトイン) 分析モードに切り替えることができます。 たとえば、既定ですべてのルールをビルド警告として有効にする場合は、値を `AllEnabledByDefault` に設定します。
 
 ```xml
 <PropertyGroup>
@@ -203,12 +203,12 @@ ms.locfileid: "89656263"
 | 値 | 説明 |
 |-|-|
 | `Default` | 既定のモードでは、特定のルールがビルド警告として有効になり、特定のルールが Visual Studio IDE の提案として有効になり、残りは無効になります。 |
-| `AllEnabledByDefault` | 積極的な (オプトアウト) モード。すべてのルールが既定でビルド警告として有効になっています。 個々のルールを選択的に[オプトアウト](../../fundamentals/productivity/configure-code-analysis-rules.md)して無効にすることができます。 |
-| `AllDisabledByDefault` | 保守的な (オプトイン) モード。すべてのルールが既定で無効になっています。 個々のルールを選択的に[オプトイン](../../fundamentals/productivity/configure-code-analysis-rules.md)して有効にすることができます。 |
+| `AllEnabledByDefault` | 積極的な (オプトアウト) モード。すべてのルールが既定でビルド警告として有効になっています。 個々のルールを選択的に[オプトアウト](../../fundamentals/code-analysis/configuration-options.md)して無効にすることができます。 |
+| `AllDisabledByDefault` | 保守的な (オプトイン) モード。すべてのルールが既定で無効になっています。 個々のルールを選択的に[オプトイン](../../fundamentals/code-analysis/configuration-options.md)して有効にすることができます。 |
 
 ### <a name="codeanalysistreatwarningsaserrors"></a>CodeAnalysisTreatWarningsAsErrors
 
-`CodeAnalysisTreatWarningsAsErrors` プロパティを使用すると、コード品質分析の警告 (CAxxxx) を警告として扱い、ビルドを中断するかどうかを構成できます。 プロジェクトをビルドするときに `-warnaserror` フラグを使用すると、[.NET コード品質分析](../../fundamentals/productivity/code-analysis.md#code-quality-analysis)の警告もエラーとして扱われます。 コード品質分析の警告がエラーとして扱われないようにするには、プロジェクト ファイル内の `CodeAnalysisTreatWarningsAsErrors` MSBuild プロパティを `false` に設定します。
+`CodeAnalysisTreatWarningsAsErrors` プロパティを使用すると、コード品質分析の警告 (CAxxxx) を警告として扱い、ビルドを中断するかどうかを構成できます。 プロジェクトをビルドするときに `-warnaserror` フラグを使用すると、[.NET コード品質分析](../../fundamentals/code-analysis/overview.md#code-quality-analysis)の警告もエラーとして扱われます。 コード品質分析の警告がエラーとして扱われないようにするには、プロジェクト ファイル内の `CodeAnalysisTreatWarningsAsErrors` MSBuild プロパティを `false` に設定します。
 
 ```xml
 <PropertyGroup>
@@ -218,7 +218,7 @@ ms.locfileid: "89656263"
 
 ### <a name="enablenetanalyzers"></a>EnableNETAnalyzers
 
-.NET 5.0 以降をターゲットとするプロジェクトでは、[.NET コード品質分析](../../fundamentals/productivity/code-analysis.md#code-quality-analysis)が既定で有効になっています。 以前のバージョンの .NET をターゲットとするプロジェクトで .NET コード分析を有効にするには、`EnableNETAnalyzers` プロパティを `true` に設定します。 任意のプロジェクトでコード分析を無効にするには、このプロパティを `false` に設定します。
+.NET 5.0 以降をターゲットとするプロジェクトでは、[.NET コード品質分析](../../fundamentals/code-analysis/overview.md#code-quality-analysis)が既定で有効になっています。 以前のバージョンの .NET をターゲットとするプロジェクトで .NET コード分析を有効にするには、`EnableNETAnalyzers` プロパティを `true` に設定します。 任意のプロジェクトでコード分析を無効にするには、このプロパティを `false` に設定します。
 
 ```xml
 <PropertyGroup>
@@ -231,7 +231,7 @@ ms.locfileid: "89656263"
 
 ### <a name="enforcecodestyleinbuild"></a>EnforceCodeStyleInBuild
 
-すべての .NET プロジェクトのビルドでは、[.NET コード スタイル分析](../../fundamentals/productivity/code-analysis.md#code-style-analysis)は既定で無効になっています。 `EnforceCodeStyleInBuild` プロパティを `true` に設定して、.NET プロジェクトのコード スタイル分析を有効にできます。
+すべての .NET プロジェクトのビルドでは、[.NET コード スタイル分析](../../fundamentals/code-analysis/overview.md#code-style-analysis)は既定で無効になっています。 `EnforceCodeStyleInBuild` プロパティを `true` に設定して、.NET プロジェクトのコード スタイル分析を有効にできます。
 
 ```xml
 <PropertyGroup>
@@ -239,11 +239,11 @@ ms.locfileid: "89656263"
 </PropertyGroup>
 ```
 
-警告またはエラーになるように[構成](../../fundamentals/productivity/code-analysis.md#code-style-analysis)されているすべてのコード スタイル ルールは、ビルド時に実行され、違反を報告します。
+警告またはエラーになるように[構成](../../fundamentals/code-analysis/overview.md#code-style-analysis)されているすべてのコード スタイル ルールは、ビルド時に実行され、違反を報告します。
 
 ## <a name="run-time-configuration-properties"></a>ランタイム構成プロパティ
 
-アプリのプロジェクト ファイルに MSBuild プロパティを指定することで一部のランタイム動作を構成できます。 ランタイム動作のその他の構成方法については、「[.NET Core ランタイム構成設定](../run-time-config/index.md)」を参照してください。
+アプリのプロジェクト ファイルに MSBuild プロパティを指定することで一部のランタイム動作を構成できます。 ランタイム動作のその他の構成方法については、[ランタイム構成設定](../run-time-config/index.md)に関する記事をご覧ください。
 
 - [ConcurrentGarbageCollection](#concurrentgarbagecollection)
 - [InvariantGlobalization](#invariantglobalization)

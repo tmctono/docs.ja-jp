@@ -2,14 +2,15 @@
 title: GROUP BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-ms.openlocfilehash: 711fbdc2d51177037cf349150c3431de14b11974
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 281d5d2df389f0952f0552747fa12b67b14d470c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833777"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204490"
 ---
 # <a name="group-by-entity-sql"></a>GROUP BY (Entity SQL)
+
 クエリ ([SELECT](select-entity-sql.md)) 式によって返されるオブジェクトをグループ化するよう指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -19,10 +20,12 @@ ms.locfileid: "71833777"
 ```  
   
 ## <a name="arguments"></a>引数  
+
  `aliasedExpression`  
  グループ化の実行対象となる有効なクエリ式。 `expression` には、プロパティを指定することも、FROM 句から返されたプロパティを参照する非集計式を指定することもできます。 GROUP BY 句内の各式は、等価かどうかを比較できる型に評価される必要があります。 通常、これらの型は数値、文字列、日付などのスカラー プリミティブです。 コレクション別にグループ化することはできません。  
   
 ## <a name="remarks"></a>Remarks  
+
  SELECT 句の \<select list> に集計関数が含まれている場合は、GROUP BY によって各グループの集計値が計算されます。 GROUP BY を指定する場合は、選択リスト内の非集計式内の各プロパティ名が GROUP BY リストに含まれるか、GROUP BY 式が選択リスト式に正確に一致する必要があります。  
   
 > [!NOTE]
@@ -60,6 +63,7 @@ GROUP BY 1   -- BAD, a constant is not allowed
  GROUP BY を使用する場合の例については、「 [HAVING](having-entity-sql.md)」をご覧ください。  
   
 ## <a name="example"></a>例  
+
  次の Entity SQL クエリでは、GROUP BY 演算子を使用して、クエリによって返されるオブジェクトをグループ化するよう指定します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
 1. 「[方法: PrimitiveType 結果を返すクエリを実行する](../how-to-execute-a-query-that-returns-primitivetype-results.md)」の手順に従います。  

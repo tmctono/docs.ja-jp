@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cd7860a5dfff1eb595625665382689733cffc94a
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 4a7616d2ffaabab5279342ebc1082c93a174a52d
+ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90721249"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91406175"
 ---
 ### <a name="ca1416-platform-compatibility"></a>CA1416: プラットフォームの互換性
 
@@ -20,7 +20,7 @@ ms.locfileid: "90721249"
 
 #### <a name="examples"></a>例
 
-- <xref:System.Console.Beep(System.Int32,System.Int32)?displayProperty=nameWithType> メソッドは、Windows でのみサポートされています (`[SupportedOSPlatform("windows")]` で修飾されます)。 次のコードでは、プロジェクトの[ターゲット](../../../../docs/standard/frameworks.md)が `net5.0` である場合 (ただし `net5.0-windows` は除きます)、ビルド時に CA1416 警告が生成されます。 警告を回避するために実行できる対応については、「[推奨アクション](#recommended-action)」を参照してください。
+- <xref:System.Console.Beep(System.Int32,System.Int32)?displayProperty=nameWithType> メソッドは Windows でのみサポートされており、`[SupportedOSPlatform("windows")]` で修飾されます。 次のコードでは、プロジェクトの[ターゲット](../../../../docs/standard/frameworks.md)が `net5.0` である場合 (ただし `net5.0-windows` は除きます)、ビルド時に CA1416 警告が生成されます。 警告を回避するために実行できる対応については、「[推奨アクション](#recommended-action)」を参照してください。
 
   ```csharp
   public void PlayCMajor()
@@ -29,7 +29,7 @@ ms.locfileid: "90721249"
   }
   ```
 
-- <xref:System.Drawing.Image.FromFile(System.String)?displayProperty=nameWithType> メソッドは、ブラウザーではサポートされていません (`[UnsupportedOSPlatform("browser")]` で修飾されています)。 プロジェクトで Blazor WebAssembly SDK (`<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">`) が使用されている場合、またはプロジェクト ファイルにサポートされるプラットフォーム (`<SupportedPlatform Include="browser" />`) として `browser` が含まれている場合、次のコードではビルド時に CA1416 警告が生成されます。
+- <xref:System.Drawing.Image.FromFile(System.String)?displayProperty=nameWithType> メソッドは、ブラウザーではサポートされておらず、`[UnsupportedOSPlatform("browser")]` で修飾されます。 次のコードでは、プロジェクトでブラウザー プラットフォームがサポートされている場合、ビルド時に CA1416 警告が生成されます。
 
   ```csharp
   public void CreateImage()
@@ -37,6 +37,17 @@ ms.locfileid: "90721249"
       Image newImage = Image.FromFile("SampImag.jpg");
   }
   ```
+
+  > [!TIP]
+  >
+  > - Blazor WebAssembly プロジェクトおよび Razor クラス ライブラリ プロジェクトには、ブラウザー サポートが自動的に含まれます。
+  > - プロジェクトのサポート対象プラットフォームとしてブラウザーを手動で追加するには、プロジェクト ファイルに次のエントリを追加します。
+  >
+  >  ```xml
+  >  <ItemGroup>
+  >    <SupportedPlatform Include="browser" />
+  >  </ItemGroup>
+  >  ```
 
 #### <a name="version-introduced"></a>導入されたバージョン
 
@@ -68,7 +79,7 @@ public void PlayCMajor()
 }
 ```
 
-また、API をプラットフォーム固有としてマークすることもできます。その場合、要件の確認は呼び出し元で行う必要があります。 特定のメソッドや型、またはアセンブリ全体をマークできます。
+ライブラリを作成している場合は、API をプラットフォーム固有としてマークできます。 この場合、要件を確認する責任は呼び出し元にあります。 特定のメソッドや型、またはアセンブリ全体をマークできます。
 
 ```csharp
 [SupportedOSPlatform("windows")]

@@ -2,12 +2,12 @@
 title: ASP.NET Core サービスと Web アプリのテスト
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | コンテナーで ASP.NET Core サービスと Web アプリをテストするためのアーキテクチャについて調べる。
 ms.date: 08/07/2020
-ms.openlocfilehash: a27b3b8d392c5e1a7d1961307e6de95659cd823e
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: f76f502adf8321c9015cc6cfd0e12214a7576b5c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024603"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872456"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core サービスと Web アプリのテスト
 
@@ -140,7 +140,7 @@ Compose アプリケーションが起動し実行されると、Visual Studio �
 
 3. **アプリケーションの機能/統合テスト**。マイクロサービスの統合に集中します。複数のマイクロサービスを実行するテスト ケースが含まれています。 これらのテストはプロジェクト **Application.FunctionalTests** にあります。
 
-図 6-25 に示すように、マイクロサービスごとの単体および統合テストは各マイクロサービスの test フォルダーに含まれており、アプリケーションのロード テストはソリューション フォルダーの test フォルダーの下に含まれています。
+図 6-25 に示すように、単体テストと統合テストはマイクロサービス プロジェクト内のテスト フォルダーに編成されますが、アプリケーションとロード テストはルート フォルダー下で個別に管理されます。
 
 ![ソリューション内のテスト プロジェクトの一部を指している VS のスクリーンショット。](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
 

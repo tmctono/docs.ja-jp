@@ -1,39 +1,41 @@
 ---
-title: .NET Core プロジェクト SDK の概要
+title: .NET プロジェクト SDK の概要
 titleSuffix: ''
-description: .NET Core プロジェクト SDK について説明します。
-ms.date: 02/02/2020
+description: .NET プロジェクト SDK について説明します。
+ms.date: 09/17/2020
 ms.topic: conceptual
-ms.openlocfilehash: 873c06007307c5892c4828f987486b4dd98dc9ae
-ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
+ms.openlocfilehash: 6b6651f674f09d5d0d18ddb873096037ad3b2ba5
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88187912"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247575"
 ---
-# <a name="net-core-project-sdks"></a>.NET Core プロジェクト SDK
+# <a name="net-project-sdks"></a>.NET プロジェクト SDK
 
-.NET Core プロジェクトは、ソフトウェア開発キット (SDK) に関連付けられています。 各 "*プロジェクト SDK*" は、MSBuild [ターゲット](/visualstudio/msbuild/msbuild-targets)と、コードのコンパイル、パッキング、発行を行う関連する[タスク](/visualstudio/msbuild/msbuild-tasks)のセットです。 プロジェクト SDK を参照するプロジェクトは、"*SDK スタイルのプロジェクト*" と呼ばれることもあります。
+.NET Core および .NET 5.0 以降のプロジェクトは、ソフトウェア開発キット (SDK) に関連付けられています。 各 "*プロジェクト SDK*" は、MSBuild [ターゲット](/visualstudio/msbuild/msbuild-targets)と、コードのコンパイル、パッキング、発行を行う関連する[タスク](/visualstudio/msbuild/msbuild-tasks)のセットです。 プロジェクト SDK を参照するプロジェクトは、"*SDK スタイルのプロジェクト*" と呼ばれることもあります。
 
 ## <a name="available-sdks"></a>使用可能な SDK
 
-.NET Core では、次の SDK を利用できます。
+次の SDK を利用できます。
 
 | ID | 説明 | リポジトリ|
 | - | - | - |
-| `Microsoft.NET.Sdk` | .NET Core SDK | <https://github.com/dotnet/sdk> |
-| `Microsoft.NET.Sdk.Web` | .NET Core [Web SDK](/aspnet/core/razor-pages/web-sdk) | <https://github.com/dotnet/sdk> |
-| `Microsoft.NET.Sdk.Razor` | .NET Core [Razor SDK](/aspnet/core/razor-pages/sdk) |
-| `Microsoft.NET.Sdk.Worker` | .NET Core Worker Service SDK |
-| `Microsoft.NET.Sdk.WindowsDesktop` | .NET Core WinForms と WPF SDK |
+| `Microsoft.NET.Sdk` | .NET SDK | <https://github.com/dotnet/sdk> |
+| `Microsoft.NET.Sdk.Web` | .NET [Web SDK](/aspnet/core/razor-pages/web-sdk) | <https://github.com/dotnet/sdk> |
+| `Microsoft.NET.Sdk.Razor` | .NET [Razor SDK](/aspnet/core/razor-pages/sdk) |
+| `Microsoft.NET.Sdk.Worker` | .NET Worker Service SDK |
+| `Microsoft.NET.Sdk.WindowsDesktop` | WinForms および WPF SDK\* | <https://github.com/dotnet/winforms> および <https://github.com/dotnet/wpf> |
 
-.NET Core SDK は、.NET Core の基本 SDK です。 他の SDK から .NET Core SDK が参照され、他の SDK に関連付けられているプロジェクトで、すべての .NET Core SDK プロパティが使用可能になります。 たとえば、Web SDK は、.NET Core SDK と Razor SDK の両方に依存しています。
+.NET SDK は、.NET の基本 SDK です。 その他の SDK からは .NET SDK が参照され、その他の SDK に関連付けられているプロジェクトでは、すべての .NET SDK プロパティが使用可能になります。 たとえば、Web SDK は、.NET SDK と Razor SDK の両方に依存しています。
 
 NuGet を使用して配布できる独自の SDK を作成することもできます。
 
+\* .NET 5.0 以降、Windows フォームおよび Windows Presentation Foundation (WPF) プロジェクトでは、`Microsoft.NET.Sdk.WindowsDesktop` ではなく .NET SDK (`Microsoft.NET.Sdk`) を指定する必要があります。 これらのプロジェクトでは、`TargetFramework` を `net5.0-windows` に、`UseWPF` または `UseWindowsForms` を `true` に設定することで、Windows デスクトップ SDK が自動的にインポートされます。 プロジェクトで .NET 5.0 以降をターゲットとし、`Microsoft.NET.Sdk.WindowsDesktop` SDK を指定すると、ビルド警告 NETSDK1137 が表示されます。
+
 ## <a name="project-files"></a>プロジェクト ファイル
 
-.NET Core プロジェクトは、[MSBuild](/visualstudio/msbuild/msbuild) 形式に基づいています。 プロジェクト ファイルは、C# プロジェクトでは *.csproj*、F# プロジェクトでは *.fsproj* のような拡張子が付いていて、XML 形式です。 MSBuild プロジェクト ファイルのルート要素は、[Project](/visualstudio/msbuild/project-element-msbuild) 要素です。 `Project` 要素には、使用する SDK (およびバージョン) を指定する省略可能な `Sdk` 属性があります。 .NET Core ツールを使用してコードをビルドするには、`Sdk` 属性を、「[使用可能な SDK](#available-sdks)」の表にあるいずれかの ID に設定します。
+.NET プロジェクトは、[MSBuild](/visualstudio/msbuild/msbuild) 形式に基づいています。 プロジェクト ファイルは、C# プロジェクトでは *.csproj*、F# プロジェクトでは *.fsproj* のような拡張子が付いていて、XML 形式です。 MSBuild プロジェクト ファイルのルート要素は、[Project](/visualstudio/msbuild/project-element-msbuild) 要素です。 `Project` 要素には、使用する SDK (およびバージョン) を指定する省略可能な `Sdk` 属性があります。 .NET ツールを使用してコードをビルドするには、`Sdk` 属性を、「[使用可能な SDK](#available-sdks)」の表にあるいずれかの ID に設定します。
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -58,7 +60,7 @@ SDK を指定する別の方法として、トップレベルの [SDK](/visualst
 </Project>
 ```
 
-これらの方法のいずれかで SDK を参照すると、.NET Core のプロジェクト ファイルが大幅に簡素化されます。 プロジェクトの評価中に、MSBuild によってプロジェクト ファイルの先頭に `Sdk.props` の暗黙的なインポートと、末尾に `Sdk.targets` の暗黙的なインポートが追加されます。
+これらの方法のいずれかで SDK を参照すると、.NET のプロジェクト ファイルが大幅に簡素化されます。 プロジェクトの評価中に、MSBuild によってプロジェクト ファイルの先頭に `Sdk.props` の暗黙的なインポートと、末尾に `Sdk.targets` の暗黙的なインポートが追加されます。
 
 ```xml
 <Project>
@@ -85,7 +87,7 @@ MSBuild では、`dotnet msbuild -preprocess` コマンドを使用して、SDK 
 
 コンパイル項目、埋め込みリソース、および `None` 項目の既定の組み込みと除外が SDK で定義されています。 SDK 以外の .NET Framework プロジェクトとは異なり、既定値がほとんどの一般的なユース ケースに対応しているため、これらの項目をプロジェクト ファイルで指定する必要はありません。 これにより、プロジェクト ファイルのサイズがより小さく、より簡単に理解できるようになり、必要に応じて手作業で編集できます。
 
-次の表は、.NET Core SDK に組み込まれる、および除外される要素と [glob](https://en.wikipedia.org/wiki/Glob_(programming)) の一覧を示します。
+次の表は、.NET SDK に組み込まれる、および除外される要素と [glob](https://en.wikipedia.org/wiki/Glob_(programming)) の一覧を示します。
 
 | 要素           | 含まれる glob                              | 除外される glob                                                  | glob の削除              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|--------------------------|
@@ -132,11 +134,11 @@ MSBuild では、`dotnet msbuild -preprocess` コマンドを使用して、SDK 
 
 ## <a name="customize-the-build"></a>ビルドのカスタマイズ
 
-[ビルドをカスタマイズする](/visualstudio/msbuild/customize-your-build)には、さまざまな方法があります。 プロパティを引数として [msbuild](/visualstudio/msbuild/msbuild-command-line-reference) または [dotnet](../tools/index.md) コマンドに渡すことによって、プロパティをオーバーライドすることができます。 また、プロパティをプロジェクト ファイルに追加することや、*Directory.Build.props* ファイルに追加することができます。 .NET Core プロジェクトの便利なプロパティの一覧については、「[.NET Core SDK プロジェクトの MSBuild リファレンス](msbuild-props.md)」を参照してください。
+[ビルドをカスタマイズする](/visualstudio/msbuild/customize-your-build)には、さまざまな方法があります。 プロパティを引数として [msbuild](/visualstudio/msbuild/msbuild-command-line-reference) または [dotnet](../tools/index.md) コマンドに渡すことによって、プロパティをオーバーライドすることができます。 また、プロパティをプロジェクト ファイルに追加することや、*Directory.Build.props* ファイルに追加することができます。 .NET プロジェクトの便利なプロパティの一覧については、「[.NET SDK プロジェクトの MSBuild リファレンス](msbuild-props.md)」をご覧ください。
 
 ### <a name="custom-targets"></a>カスタム ターゲット
 
-.NET Core プロジェクトでは、プロジェクトで使用するカスタムの MSBuild ターゲットとプロパティをパッケージ化し、そのパッケージをプロジェクトで使用することができます。 この種の拡張機能を使用するのは、次の場合です。
+.NET プロジェクトでは、プロジェクトで使用するカスタムの MSBuild ターゲットとプロパティをパッケージ化し、そのパッケージをプロジェクトで使用することができます。 この種の拡張機能を使用するのは、次の場合です。
 
 - ビルド処理を拡張する。
 - ビルド プロセスの成果物 (生成されたファイルなど) にアクセスする。

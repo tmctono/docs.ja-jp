@@ -2,14 +2,15 @@
 title: 集計関数 (Entity Framework 用 SqlClient)
 ms.date: 03/30/2017
 ms.assetid: 03303f01-b591-4efc-9875-f9c608edff0b
-ms.openlocfilehash: 1fad25f2229b4fa810cf82a96dcb8c50a9de3070
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c32ccfe18c67c9baeb7df0f981c9129b3bbc8bb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150650"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204516"
 ---
 # <a name="aggregate-functions-sqlclient-for-entity-framework"></a>集計関数 (Entity Framework 用 SqlClient)
+
 .NET Framework Data Provider for SQL Server (SqlClient) には、集計関数が用意されています。 集計関数は、一連の入力値に対して計算を実行し、値を返します。 これらの関数は、SqlClient の SqlServer 名前空間に存在します。 Entity Framework は、プロバイダーの名前空間プロパティを使用することにより、型や関数など、特定のコンストラクターに対してこのプロバイダーによってどのプレフィックスが使用されているかを特定できます。  
   
  以下は、SqlClient の集計関数です。  
@@ -52,7 +53,7 @@ ms.locfileid: "79150650"
 
 **引数**
 
-Collection\<T>。T は次のいずれかの型です。
+Collection\<T>。T は次のいずれかの型です:
 
 |   |   |   |   |
 |---|---|---|---|

@@ -4,12 +4,12 @@ description: プラグインをサポートする .NET Core アプリケーシ�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: eae792ddaa6655bfdcd932d3cb695f9dafa68130
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ce7ac826feaf4542307abefde6d40a319d78e423
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240845"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247593"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>プラグインがある .NET Core アプリケーションを作成する
 
@@ -109,7 +109,7 @@ namespace AppWithPlugin
 
 この `ICommand` インターフェイスは、すべてのプラグインで実装されるインターフェイスです。
 
-これで `ICommand` インターフェイスが定義されたので、アプリケーション プロジェクトをもう少し詳しく入力することができます。 ルート フォルダーから `dotnet add AppWithPlugin\AppWithPlugin.csproj reference PluginBase\PluginBase.csproj` コマンドを使用して、参照を `AppWithPlugin` プロジェクトから `PluginBase` に追加します。
+これで `ICommand` インターフェイスが定義されたので、アプリケーション プロジェクトをもう少し詳しく入力することができます。 ルート フォルダーから `dotnet add AppWithPlugin/AppWithPlugin.csproj reference PluginBase/PluginBase.csproj` コマンドを使用して、参照を `AppWithPlugin` プロジェクトから `PluginBase` に追加します。
 
 `// Load commands from plugins` コメントを次のコード スニペットに置き換えて、指定したファイル パスからプラグインを読み込めるようにします。
 
@@ -261,7 +261,7 @@ static Assembly LoadPlugin(string relativePath)
 
 同様に、`PluginBase` が他のパッケージを参照している場合は、`<ExcludeAssets>runtime</ExcludeAssets>` 要素も重要になります。 この設定は `<Private>false</Private>` と同じ効果を持ちますが、`PluginBase` プロジェクトまたはその依存関係のいずれかに含まれている場合があるパッケージ参照に対して機能します。
 
-これで `HelloPlugin` プロジェクトが完了したので、`AppWithPlugin` プロジェクトを更新して、`HelloPlugin` プラグインが配置されている場所を認識できるようにする必要があります。 `// Paths to plugins to load` コメントの後に、`pluginPaths` 配列の要素として `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` を追加します。
+これで `HelloPlugin` プロジェクトが完了したので、`AppWithPlugin` プロジェクトを更新して、`HelloPlugin` プラグインが配置されている場所を認識できるようにする必要があります。 `// Paths to plugins to load` コメントの後に、`@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` (このパスは使用する .NET Core のバージョンによって異なる可能性があります) を `pluginPaths` 配列の要素として追加します。
 
 ## <a name="plugin-with-library-dependencies"></a>ライブラリ依存関係を持つプラグイン
 

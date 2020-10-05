@@ -2,12 +2,12 @@
 title: Visual Studio Code を使用して .NET Core で .NET Standard クラス ライブラリをテストする
 description: .NET Core クラス ライブラリ用の単体テスト プロジェクトを作成します。 .NET Core クラス ライブラリが単体テストで正しく動作することを確認します。
 ms.date: 06/08/2020
-ms.openlocfilehash: f49974e1b918424ae5b5d7f3969f52c371e37154
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 6ae8f6637319cd2c8c24f3e673fb6094f36b9f2f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359169"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180454"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET Core で .NET Standard クラス ライブラリをテストする
 
@@ -120,7 +120,7 @@ Visual Studio で単体テストを実行すると、<xref:Microsoft.VisualStudi
    Test Run Successful.
    Total tests: 3
         Passed: 3
-   Total time: 5.1116 Seconds
+    Total time: 5.1116 Seconds
    ```
 
 ## <a name="handle-test-failures"></a>テストの失敗の処理
@@ -150,14 +150,14 @@ Visual Studio で単体テストを実行すると、<xref:Microsoft.VisualStudi
      Error Message:
       Assert.IsFalse failed. Expected for 'Error': false; Actual: True
      Stack Trace:
-     at StringLibraryTest.UnitTest1.TestDoesNotStartWithUpper()
-       in C:\Projects\ClassLibraryProjects\StringLibraryTest\UnitTest1.cs:line 33
+        at StringLibraryTest.UnitTest1.TestDoesNotStartWithUpper() in C:\
+   Projects\ClassLibraryProjects\StringLibraryTest\UnitTest1.cs:line 33
 
    Test Run Failed.
    Total tests: 3
         Passed: 2
         Failed: 1
-   Total time: 1.7825 Seconds
+    Total time: 1.7825 Seconds
    ```
 
 1. 手順 1 で追加した文字列 "Error" を削除します。 テストを再実行すると、テストは成功します。
@@ -173,6 +173,12 @@ Visual Studio で単体テストを実行すると、<xref:Microsoft.VisualStudi
    ```
 
    テストが成功します。
+
+## <a name="debug-tests"></a>テストのデバッグ
+
+IDE として Visual Studio Code を使用する場合は、[Visual Studio Code を使用して .NET Core コンソール アプリケーションをデバッグする方法](debugging-with-visual-studio-code.md)に関する記事に記載されているのと同じプロセスに従って、単体テスト プロジェクトを使用してコードをデバッグできます。 *ShowCase* アプリ プロジェクトを開始する代わりに、*StringLibraryTest/UnitTest1.cs* を開き、7 行目と 8 行目の間で **[すべてのテストを実行する]** を選択します。 見つからない場合は、<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> キーを押してコマンド パレットを開き、「**Reload Window**」と入力します。
+
+Visual Studio Code により、デバッガーがアタッチされた状態でテスト プロジェクトが開始されます。 実行は、テスト プロジェクトまたは基になるライブラリ コードに追加したブレークポイントで停止します。
 
 ## <a name="additional-resources"></a>その他の技術情報
 

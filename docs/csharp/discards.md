@@ -2,13 +2,13 @@
 title: 破棄 - C# ガイド
 description: C# の破棄のサポートについて説明します。破棄は、未割り当てで破棄可能な変数です。また、破棄の使用例についても説明します。
 ms.technology: csharp-fundamentals
-ms.date: 07/21/2017
-ms.openlocfilehash: a76e7fc13f92ec0de87153bb35eb3924bb317616
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 09/22/2020
+ms.openlocfilehash: 4de48aebaeb896b198b2e9f2431c6a38ba11469e
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73100639"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869322"
 ---
 # <a name="discards---c-guide"></a>破棄 - C# ガイド
 
@@ -20,12 +20,14 @@ C# 7.0 以降、C# は破棄をサポートしています。破棄は、アプ�
 (_, _, area) = city.GetCityInformation(cityName);
 ```
 
-C# 7.0 では、破棄は次のコンテキストの割り当てでサポートされます。
+C# 7.0 以降では、破棄は次のコンテキストの割り当てでサポートされます。
 
 - タプルとオブジェクトの[分解](deconstruct.md)。
 - [is](language-reference/keywords/is.md) と [switch](language-reference/keywords/switch.md) によるパターン マッチング。
 - `out` パラメーターを使用したメソッドの呼び出し。
 - `_` がスコープ内にない場合のスタンドアロンの `_`。
+
+C# 9.0 以降では、破棄を使用して、ラムダ式の未使用の入力パラメーターを指定できます。 詳細については、[ラムダ式](language-reference/operators/lambda-expressions.md)に関する記事の「[ラムダ式の入力パラメーター](language-reference/operators/lambda-expressions.md#input-parameters-of-a-lambda-expression)」セクションを参照してください。
 
 `_` が有効な破棄の場合、その値を取得しようとすると、または代入演算で使用しようとすると、"名前 '\_' は、現在のコンテキストに存在していません" というコンパイラ エラー CS0301 が生成されます。 これは、`_` に値が割り当てられておらず、記憶域の場所も割り当てることができないためです。 実際の変数であれば、前の例のように、複数の値を破棄できません。
 
@@ -79,8 +81,8 @@ C# 7.0 では、破棄は次のコンテキストの割り当てでサポート�
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [タプルおよびその他の型の分解](deconstruct.md)
+- [タプルとその他の型の分解](deconstruct.md)
 - [`is` キーワード](language-reference/keywords/is.md)
 - [`switch` キーワード](language-reference/keywords/switch.md)

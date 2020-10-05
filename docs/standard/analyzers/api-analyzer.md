@@ -4,12 +4,12 @@ description: 非推奨の API およびプラットフォームの互換性の�
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 8da4b2add206daa431124a7d24efc2676cbcaa69
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: f1268d5f208e19f1b69ed487370fb4c96723a204
+ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598095"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91406246"
 ---
 # <a name="net-api-analyzer"></a>.NET API アナライザー
 
@@ -85,6 +85,9 @@ ID をクリックすると、API が非推奨になった理由に関する詳�
 
 ## <a name="discover-cross-platform-issues"></a>クロスプラットフォームの問題を検出する
 
+> [!NOTE]
+> .NET 5.0 では、この機能の置き換えとして[プラットフォーム互換性アナライザー](platform-compat-analyzer.md)が導入されます。 プラットフォーム互換性アナライザーは .NET SDK に含まれており (個別にインストールする必要はありません)、既定で有効です。
+
 非推奨の API と同様に、アナライザーはクロスプラットフォームではないすべての API を識別します。 たとえば、<xref:System.Console.WindowWidth?displayProperty=nameWithType> は Windows では動作しますが、Linux や macOS では動作しません。 診断 ID は、 **[エラー一覧]** ウィンドウに表示されます。 右クリックして **[クイック アクションとリファクタリング]** を選ぶことで、その警告を抑制することができます。 2 つのオプション (非推奨のメンバーを使い続けて警告を抑制するか、まったく使わない) がある非推奨の場合とは異なり、特定のプラットフォーム用にのみコードを開発している場合は、コードを実行する予定のない他のすべてのプラットフォームですべての警告を抑制できます。 そのために必要なことは、プロジェクト ファイルを編集し、無視するすべてのプラットフォームを列記した `PlatformCompatIgnore` プロパティを追加するだけです。 指定できる値は、`Linux`、`macOS`、`Windows` です。
 
 ```xml
@@ -129,3 +132,4 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 - 「[Introducing API Analyzer](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/)」(API アナライザーの概要) のブログ投稿。
 - YouTube の「[API Analyzer](https://youtu.be/eeBEahYXGd0)」(API アナライザー) デモ ビデオ。
+- [プラットフォーム互換性アナライザー](platform-compat-analyzer.md)

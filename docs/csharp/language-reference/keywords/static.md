@@ -1,25 +1,27 @@
 ---
 description: static 修飾子 - C# リファレンス
 title: static 修飾子 - C# リファレンス
-ms.date: 04/22/2020
+ms.date: 09/25/2020
 f1_keywords:
 - static
 - static_CSharpKeyword
 helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
-ms.openlocfilehash: f42636d1bbdf4342297f46f50ec6dfc2a70eacad
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: ccd575748c2286fa7348e2880acbfadd036d9ccd
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89142064"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247723"
 ---
 # <a name="static-c-reference"></a>static (C# リファレンス)
 
 このページでは、`static` 修飾子キーワードについて説明します。 `static` キーワードも [`using static`](using-static.md) ディレクティブに含まれます。
 
 `static` 修飾子は、静的メンバーの宣言に使用します。静的メンバーは、特定のオブジェクトではなく、型自体に属するメンバーです。 `static` 修飾子は `static` クラスの宣言に使用できます。 クラス、インターフェイス、構造体では、`static` 修飾子をフィールド、メソッド、プロパティ、演算子、イベント、コンストラクターに追加できます。 `static` 修飾子はインデクサーおよびファイナライザーと併用できません。 詳細については、「[静的クラスと静的クラス メンバー](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)」を参照してください。
+
+C# 9.0 以降では、`static` 修飾子を[ラムダ式](../operators/lambda-expressions.md)または[匿名メソッド](../operators/delegate-operator.md)に追加できます。 静的ラムダまたは匿名メソッドでは、ローカル変数またはインスタンスの状態をキャプチャすることはできません。
 
 ## <a name="example---static-class"></a>例 - 静的クラス
 

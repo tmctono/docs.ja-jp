@@ -3,12 +3,12 @@ title: dotnet new のカスタム テンプレート
 description: あらゆる種類の .NET プロジェクトまたはファイルのカスタム テンプレートについて説明します。
 author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: 1d2e5ffcb0b279f1686855834c2357827a4dc7d5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 55091ef9bb9f7a2aa24f585c94aa2a47960b1829
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538096"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874717"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new のカスタム テンプレート
 
@@ -63,6 +63,8 @@ dotnet new --list
 | `identity`        | string        | このテンプレートの一意の名前。 |
 | `name`            | string        | ユーザーに対して表示されるテンプレートの名前。 |
 | `shortName`       | string        | テンプレートを選択するための既定の省略名。テンプレート名が GUI 経由で選択されるのではなく、ユーザーによって指定される環境に適用されます。 たとえば、CLI コマンドでコマンド プロンプトからテンプレートを利用するときに省略名が便利です。 |
+| `sourceName`       | string        | ユーザーが指定した名前に置き換えるソース ツリー内の名前です。 テンプレート エンジンによって、構成ファイルで示されている `sourceName` が検索され、ファイル名とファイルの内容で置き換えられます。 置き換えられる値は、テンプレートの実行中に `-n` または `--name` オプションを使用して指定できます。 名前が指定されていない場合は、現在のディレクトリが使用されます。|
+| `preferNameDirectory`       | boolean        | 名前が指定されているが出力ディレクトリが設定されていない場合に、(現在のディレクトリに直接コンテンツを作成するのではなく) テンプレートのディレクトリを作成するかどうかを示します。 既定値は false です。|
 
 *template.json* ファイルの完全スキーマは [JSON Schema Store](http://json.schemastore.org/template) にあります。 *template.json* ファイルについて詳しくは、[dotnet テンプレート wiki](https://github.com/dotnet/templating/wiki) をご覧ください。
 

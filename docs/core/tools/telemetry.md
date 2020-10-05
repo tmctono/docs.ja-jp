@@ -3,18 +3,18 @@ title: .NET Core SDK 製品利用統計情報
 description: 利用情報を収集して分析する .NET Core SDK の製品利用統計情報機能や収集されるデータ、およびこの機能を無効にする方法について説明します。
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 01376cabc4f59f64c59a78dcff061fb6ec11e3c3
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: bad6de138b9c35bcd8c5556df82103f959508b52
+ms.sourcegitcommit: d04388f94dbcd756ffd608536c869aee3242cdb0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359234"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91206355"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 製品利用統計情報
 
 [.NET Core SDK](index.md) には、.NET Core CLI がクラッシュしたとき、利用データと例外情報を収集する製品利用統計情報機能が含まれています。 .NET Core CLI は .NET Core SDK を備える、.NET Core アプリのビルド、テスト、発行を可能にする動詞のセットです。 .NET Team が、ツールの改善に向けて、その使用方法を把握することが重要です。 エラーに関する情報は、チームが問題を解決し、バグを修正するのに役立ちます。
 
-収集されたデータは匿名であり、[Creative Commons Attribution License](https://creativecommons.org/licenses/by/4.0/) の下で全体が公開されます。
+収集されたデータは、[Creative Commons Attribution License](https://creativecommons.org/licenses/by/4.0/) の下で全体が公開されます。
 
 ## <a name="scope"></a>スコープ
 
@@ -41,7 +41,7 @@ ms.locfileid: "89359234"
 ```console
 Telemetry
 ---------
-The .NET Core tools collect usage data in order to help us improve your experience. The data is anonymous. It is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
+The .NET Core tools collect usage data in order to help us improve your experience. The data is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
 
 Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
@@ -68,7 +68,7 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 | >=2.0        | コマンドの引数とオプション: (任意の文字列ではなく) いくつかの引数とオプションが収集されます。 [収集されるオプション](#collected-options)に関するページを参照してください。 2\.1.300 以降はハッシュされます。 |
 | >=2.0         | SDK がコンテナーで実行されているかどうか。 |
 | >=2.0         | ターゲット フレームワーク (`TargetFramework` イベントから)、2.1 以降はハッシュされます。 |
-| >=2.0         | ハッシュされたメディア アクセス制御 (MAC) アドレス: マシンの、暗号化された (SHA256) 匿名で一意の ID。 |
+| >=2.0         | ハッシュされたメディア アクセス制御 (MAC) アドレス (SHA256)。 |
 | >=2.0         | ハッシュされた現在の作業ディレクトリ。 |
 | >=2.0         | インストール成功レポート、インストーラーの実行ファイルの名前がハッシュされます。 |
 | >=2.1.300     | カーネル バージョン。 |

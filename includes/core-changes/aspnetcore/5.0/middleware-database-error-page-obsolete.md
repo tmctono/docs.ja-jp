@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f1129500c9b779256b2650fe6fa855152cb3ae80
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 10521759d31c3183232cdb1793d78d139f13ce41
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811273"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077567"
 ---
 ### <a name="middleware-database-error-page-marked-as-obsolete"></a>ミドルウェア:非推奨とマークされたデータベース エラー ページ
 
@@ -55,6 +55,8 @@ ms.locfileid: "88811273"
         }
     }
     ```
+
+1. プロジェクト ファイルに [Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore](https://www.nuget.org/packages/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore) NuGet パッケージを追加します。
 
 1. データベース開発者ページ例外フィルターをサービス コレクションに追加します。 たとえば、`Startup.ConfigureServices` で `AddDatabaseDeveloperPageExceptionFilter` メソッドを呼び出します。
 

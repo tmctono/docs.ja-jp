@@ -1,13 +1,13 @@
 ---
 title: 暗号化
-ms.date: 12/13/2019
+ms.date: 09/08/2020
 description: データベースファイルを暗号化する方法について説明します。
-ms.openlocfilehash: ccdd4b6b8642b3cde1c2667c9ca432a9b0ef21f2
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1b33e1510a269aba87caba2cd39faab33791aa55
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450484"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203411"
 ---
 # <a name="encryption"></a>暗号化
 
@@ -37,13 +37,16 @@ Install-Package SQLitePCLRaw.bundle_e_sqlcipher
 
 ## <a name="specify-the-key"></a>キーを指定する
 
-暗号化を有効にするには、`Password` 接続文字列キーワードを使用してキーを指定します。 <xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder> を使用して、ユーザー入力の値を追加または更新し、接続文字列のインジェクション攻撃を回避します。
+新しいデータベースで暗号化を有効にするには、`Password` 接続文字列キーワードを使用してキーを指定します。 <xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder> を使用して、ユーザー入力の値を追加または更新し、接続文字列のインジェクション攻撃を回避します。
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/EncryptionSample/Program.cs?name=snippet_ConnectionStringBuilder)]
 
+> [!TIP]
+> 既存のデータベースを暗号化および暗号化解除する方法は、使用しているソリューションによって異なります。 たとえば、SQLCipher では `sqlcipher_export()` 関数を使用する必要があります。 詳細については、ソリューションのドキュメントを参照してください。
+
 ## <a name="rekeying-the-database"></a>データベースのキーを更新する
 
-データベースの暗号化キーを変更する場合は、`PRAGMA rekey` ステートメントを実行します。 データベースの暗号化を解除するには、`NULL` を指定します。
+暗号化されたデータベースのキーを変更する場合は、`PRAGMA rekey` ステートメントを実行します。
 
 ただし、SQLite では `PRAGMA` ステートメントのパラメーターはサポートされません。 代わりに、`quote()` 関数を使用して、SQL インジェクションを防止してください。
 

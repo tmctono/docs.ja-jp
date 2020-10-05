@@ -1,7 +1,7 @@
 ---
 title: ラムダ式 - C# リファレンス
 description: ラムダ式について説明します。 本体として式を持つ式形式のラムダと、本体としてステートメント ブロックを持つステートメント形式のラムダがあります。
-ms.date: 07/29/2019
+ms.date: 09/25/2020
 helpviewer_keywords:
 - lambda expressions [C#]
 - outer variables [C#]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 7f80c1a5d9136609935b25b5cce3792e80b9ac94
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a3a753ccea45193c57f31453d7318c14f4898864
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536445"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247710"
 ---
 # <a name="lambda-expressions-c-reference"></a>ラムダ式 (C# リファレンス)
 
@@ -50,29 +50,13 @@ ms.locfileid: "90536445"
   
 ## <a name="expression-lambdas"></a>式形式のラムダ
 
-`=>` 演算子の右辺に式があるラムダ式を "*式形式のラムダ*" と呼びます。 式形式のラムダは、[式ツリー](../../programming-guide/concepts/expression-trees/index.md)の構築に幅広く使用されます。 式形式のラムダは式の結果を返します。基本的な形式は次のとおりです。
+`=>` 演算子の右辺に式があるラムダ式を "*式形式のラムダ*" と呼びます。 式形式のラムダは式の結果を返します。基本的な形式は次のとおりです。
 
 ```csharp
 (input-parameters) => expression
 ```
 
-かっこはラムダの入力パラメーターが 1 つの場合のみ省略可能で、それ以外の場合は必須です。
-
-入力パラメーターがないことを指定するには、次のように空のかっこを使用します。  
-
-[!code-csharp[zero parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#ZeroParameters)]
-
-入力パラメーターが 2 つ以上ある場合は、かっこで囲んで各パラメーターをコンマで区切ります。
-
-[!code-csharp[two parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#TwoParameters)]
-
-コンパイラによる入力の型の推論が不可能な場合があります。 次の例のように、型を明示的に指定できます。
-
-[!code-csharp[explicitly typed parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#ExplicitlyTypedParameters)]
-
-入力パラメーターの型は、すべて明示的またはすべて暗黙的である必要があります。それ以外の場合は、[CS0748](../../misc/cs0748.md) コンパイラ エラーが発生します。
-
-式形式のラムダの本体を、メソッド呼び出しで構成できます。 ただし、SQL Server などの .NET 共通言語ランタイムの外部で評価される式ツリーを作成する場合は、ラムダ式内でメソッド呼び出しを使用することはできません。 .NET 共通言語ランタイムのコンテキストの外部では、これらのメソッドは通用しません。
+式形式のラムダの本体を、メソッド呼び出しで構成できます。 ただし、SQL Server などの .NET 共通言語ランタイムのコンテキスト外部で評価される[式ツリー](../../programming-guide/concepts/expression-trees/index.md)を作成する場合は、ラムダ式内でメソッド呼び出しを使用しないでください。 .NET 共通言語ランタイムのコンテキストの外部では、これらのメソッドは通用しません。
 
 ## <a name="statement-lambdas"></a>ステートメント形式のラムダ
 
@@ -84,10 +68,39 @@ ms.locfileid: "90536445"
 
 ステートメント形式のラムダの本体は任意の数のステートメントで構成できますが、実際面では通常、2、3 個以下にします。
 
-[!code-csharp-interactive[statement lambda](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#StatementLambda)]
+:::code language="csharp" interactive="try-dotnet-method" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetStatementLambda":::
 
 ステートメント形式のラムダを使用して式ツリーを作成することはできません。
-  
+
+## <a name="input-parameters-of-a-lambda-expression"></a>ラムダ式の入力パラメーター
+
+ラムダ式の入力パラメーターをかっこで囲みます。 入力パラメーターがないことを指定するには、次のように空のかっこを使用します。  
+
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetZeroParameters":::
+
+ラムダ式に入力パラメーターが 1 つしかない場合、かっこは省略可能です。
+
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetOneParameter":::
+
+入力パラメーターが 2 つ以上ある場合は、コンマで区切ります。
+
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetTwoParameters":::
+
+場合によっては、コンパイラで入力パラメーターの型を推論できないことがあります。 次の例のように、型を明示的に指定できます。
+
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetExplicitlyTypedParameters":::
+
+入力パラメーターの型は、すべて明示的またはすべて暗黙的である必要があります。それ以外の場合は、[CS0748](../../misc/cs0748.md) コンパイラ エラーが発生します。
+
+C# 9.0 以降では、[破棄](../../discards.md)を使用して、式で使用しないラムダ式の 2 つ以上の入力パラメーターを指定できます。
+
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetDiscards":::
+
+ラムダの破棄パラメーターは、ラムダ式を使用して[イベント ハンドラー指定する](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)場合に便利です。
+
+> [!NOTE]
+> 下位互換性のために、1 つの入力パラメーターにのみ `_` という名前が付けられた場合、ラムダ式内で `_` はそのパラメーターの名前として扱われます。
+
 ## <a name="async-lambdas"></a>非同期ラムダ
 
 [async](../keywords/async.md) キーワードと [await](await.md) キーワードを使用すると、非同期処理を組み込んだラムダ式およびステートメントを簡単に作成できます。 たとえば、次に示す Windows フォーム例には、非同期メソッド `ExampleMethodAsync`を呼び出して待機するイベント ハンドラーが含まれています。
@@ -218,14 +231,21 @@ customers.Where(c => c.City == "London");
 
 - ジャンプ先がラムダ式ブロックの外側にある場合は、ラムダ式に [goto](../keywords/goto.md)、[break](../keywords/break.md)、または [continue](../keywords/continue.md) ステートメントを含めることはできません。 また、ジャンプ先がブロックの内部にある場合に、ラムダ式ブロックの外部でジャンプ ステートメントを使用するとエラーになります。
 
+C# 9.0 以降では、ラムダ式に `static` 修飾子を適用して、ラムダによる意図しないローカル変数またはインスタンスの状態のキャプチャを防ぐことができます。
+
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetStatic":::
+
+静的ラムダでは外側のスコープからローカル変数またはインスタンスの状態をキャプチャすることはできませんが、静的メンバーと定数の定義は参照することができます。
+
 ## <a name="c-language-specification"></a>C# 言語仕様
 
 詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の[無名関数の式](~/_csharplang/spec/expressions.md#anonymous-function-expressions)に関するセクションを参照してください。
 
-## <a name="featured-book-chapter"></a>参考書籍の該当する章
+C# 9.0 で追加された機能の詳細については、機能の提案に関する次の記述を参照してください。
 
-「[Delegates, Events, and Lambda Expressions (デリゲート、イベント、およびラムダ式)](/previous-versions/visualstudio/visual-studio-2008/ff518994(v=orm.10))」(『[C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers (C# 3.0 クックブック (第 3 版): C# 3.0 プログラマ向けの 250 以上のソリューション)](/previous-versions/visualstudio/visual-studio-2008/ff518995(v=orm.10))』)  
-  
+- [ラムダ ディスカード パラメーター](~/_csharplang/proposals/csharp-9.0/lambda-discard-parameters.md)
+- [静的な匿名関数](~/_csharplang/proposals/csharp-9.0/static-anonymous-functions.md)
+
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)

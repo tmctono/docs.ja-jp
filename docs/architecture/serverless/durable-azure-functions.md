@@ -4,12 +4,12 @@ description: 持続性のある Azure Functions によって Azure Functions ラ
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 2c0ad086640409ac187c3aa882add4d6b39b6ff9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1498b5a19bc92b7db16f7422a35ac3afffb82b60
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522855"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171794"
 ---
 # <a name="durable-azure-functions"></a>永続的な Azure Functions
 
@@ -96,9 +96,9 @@ public static bool CheckAndReserveInventory([ActivityTrigger] DurableActivityCon
 
 ## <a name="recommended-resources"></a>推奨リソース
 
-- [Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
-- [Durable Functions のバインド](https://docs.microsoft.com/azure/azure-functions/durable-functions-bindings)
-- [Durable Functions でのインスタンスの管理](https://docs.microsoft.com/azure/azure-functions/durable-functions-instance-management)
+- [Durable Functions](/azure/azure-functions/durable-functions-overview)
+- [Durable Functions のバインド](/azure/azure-functions/durable-functions-bindings)
+- [Durable Functions でのインスタンスの管理](/azure/azure-functions/durable-functions-instance-management)
 
 >[!div class="step-by-step"]
 >[前へ](event-grid.md)
