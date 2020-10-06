@@ -2,12 +2,12 @@
 title: アプリケーションの発行
 description: .NET Core アプリケーションを発行する方法について説明します。 .NET Core では、プラットフォーム固有の、またはクロスプラットフォームのアプリを発行できます。 アプリは、自己完結型として、またはフレームワーク依存として発行できます。 各モードは、お客様のアプリをユーザーが実行する方法に影響を与えます。
 ms.date: 04/01/2020
-ms.openlocfilehash: ece5e46162fd4a8de0b996ba239e89cceca4dbca
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: 27206065c899e41a44685f72cfb35ae57986aa4c
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720112"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654673"
 ---
 # <a name="net-core-application-publishing-overview"></a>.NET Core アプリケーションの発行の概要
 
@@ -149,6 +149,34 @@ dotnet publish -r osx-x64
 
 ```dotnet
 dotnet publish -r win-x64
+```
+
+## <a name="publish-with-readytorun-images"></a>ReadyToRun イメージを使用した発行
+
+ReadyToRun イメージを使用して発行すると、アプリケーションの起動時間が短縮されますが、アプリケーションのサイズは大きくなります。 ReadyToRun を使用して発行する方法の詳細については、[ReadyToRun](ready-to-run.md) に関する記事をご覧ください。
+
+### <a name="advantages"></a>長所
+
+- **起動時間の短縮**\
+アプリケーションで JIT の実行にかかる時間が短縮されます。
+
+### <a name="disadvantages"></a>短所
+
+- **サイズの増加**\
+ディスク上のアプリケーションのサイズが大きくなります。
+
+### <a name="examples"></a>使用例
+
+アプリを自己完結型として、ReadyToRun を使用して発行します。 macOS 64 ビット実行可能ファイルが作成されます。
+
+```dotnet
+dotnet publish -c Release -r osx-x64 -p:PublishReadyToRun=true
+```
+
+アプリを自己完結型として、ReadyToRun を使用して発行します。 Windows 64 ビット実行可能ファイルが作成されます。
+
+```dotnet
+dotnet publish -c Release -r win-x64 -p:PublishReadyToRun=true
 ```
 
 ## <a name="see-also"></a>関連項目
