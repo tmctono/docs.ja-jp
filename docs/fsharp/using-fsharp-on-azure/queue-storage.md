@@ -4,12 +4,12 @@ description: Azure Queue は、アプリケーション コンポーネント間
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: 5d6074751f226f0587c4c73bfa9ff56d9aca2bc1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: daa5372b7903f10c0d966c5c92e35c8bf9d362d8
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100088"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756222"
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>F を使用して Azure Queue storage の使用を開始する\#
 
@@ -46,7 +46,7 @@ Queue storage の概念の概要については、「 [.net のキュースト�
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L9-L9)]
 
-ただし、実際のプロジェクトではこの方法は **お勧めできません** 。 ストレージ アカウント キーは、ストレージ アカウントの root パスワードに似ています。 ストレージ アカウント キーは常に慎重に保護してください。 このキーを他のユーザーに配布したり、ハードコーディングしたり、他のユーザーがアクセスできるプレーン テキスト ファイルに保存したりしないでください。 侵害された可能性があると思われる場合は、Azure ポータルを使用してキーを再生成することができます。
+ただし、実際のプロジェクトではこの方法は **お勧めできません** 。 ストレージ アカウント キーは、ストレージ アカウントの root パスワードに似ています。 ストレージ アカウント キーは常に慎重に保護してください。 このキーを他のユーザーに配布したり、ハードコーディングしたり、他のユーザーがアクセスできるプレーン テキスト ファイルに保存したりしないでください。 侵害された可能性があると思われる場合は、Azure portal を使用してキーを再生成することができます。
 
 実際のアプリケーションでは、ストレージ接続文字列を維持する最善の方法は構成ファイルにあります。 構成ファイルから接続文字列を取得するには、次の手順を実行します。
 
@@ -117,7 +117,7 @@ Azure Configuration Manager の使用はオプションです。 .NET Framework 
 ## <a name="additional-options-for-de-queuing-messages"></a>メッセージのデキュー用の追加オプション
 
 キューからのメッセージの取得をカスタマイズする方法は 2 つあります。
-1 つ目の方法では、(最大 32 個の) メッセージのバッチを取得できます。 2 つ目の方法では、コードで各メッセージを完全に処理できるように、非表示タイムアウトの設定を長くまたは短くすることができます。 次のコード例では、を使用し `GetMessages` て1回の呼び出しで20個のメッセージを取得し、各メッセージを処理します。 また、各メッセージの非表示タイムアウトを 5 分に設定します。 この 5 分間は、すべてのメッセージに対して同時に開始されます。そのため、`GetMessages` の呼び出しから 5 分が経過すると、削除されていないすべてのメッセージが再び表示されます。
+1 つ目の方法では、(最大 32 個の) メッセージのバッチを取得できます。 2 つ目の方法では、コードで各メッセージを完全に処理できるように、非表示タイムアウトの設定を長くまたは短くすることができます。 次のコード例では、を使用し `GetMessages` て1回の呼び出しで20個のメッセージを取得し、各メッセージを処理します。 また、各メッセージの非表示タイムアウトを 5 分に設定します。 5分がすべてのメッセージに対して同時に開始されます。そのため、の呼び出しから5分が経過すると `GetMessages` 、削除されていないメッセージは再び表示されるようになります。
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L97-L99)]
 

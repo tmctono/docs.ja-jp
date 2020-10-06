@@ -1,15 +1,15 @@
 ---
 title: 'Azure での F # での Package Management の使用'
-description: 'パケットまたは Nuget を使用して F # Azure の依存関係を管理する'
+description: 'パケットまたは NuGet を使用して F # Azure の依存関係を管理する'
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: 011a363b264079599e8b7d402fe9896045b1fe04
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 7816c82e87db113a35fef967886c8c3e27959332
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100114"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756235"
 ---
 # <a name="package-management-for-f-azure-dependencies"></a>F# の Azure の依存関係のためのパッケージ管理
 
@@ -53,7 +53,7 @@ ms.locfileid: "91100114"
 > mono paket.exe update
 ```
 
-## <a name="using-nuget"></a>Nuget の使用
+## <a name="using-nuget"></a>NuGet の使用
 
 依存関係マネージャーとして [NuGet](https://www.nuget.org/) を使用している場合は、ツールを使用して `nuget.exe` Azure の依存関係を追加できます。 次に例を示します。
 

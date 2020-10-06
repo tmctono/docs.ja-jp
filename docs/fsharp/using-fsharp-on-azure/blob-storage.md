@@ -4,12 +4,12 @@ description: Azure Blob storage を使用して、非構造化データをクラ
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: d9c587cdd21a1b81205d182652b3690b976687c0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 91aec8fc2b57c71ce4ba47d62619912af6c71e59
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100153"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756248"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>F を使用して Azure Blob storage を使ってみる\#
 
@@ -43,7 +43,7 @@ Blob storage の概念の概要については、「 [.net ガイド](/azure/sto
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L11-L11)]
 
-ただし、実際のプロジェクトではこの方法は **お勧めできません** 。 ストレージ アカウント キーは、ストレージ アカウントの root パスワードに似ています。 ストレージ アカウント キーは常に慎重に保護してください。 このキーを他のユーザーに配布したり、ハードコーディングしたり、他のユーザーがアクセスできるプレーン テキスト ファイルに保存したりしないでください。 侵害された可能性があると思われる場合は、Azure ポータルを使用してキーを再生成することができます。
+ただし、実際のプロジェクトではこの方法は **お勧めできません** 。 ストレージ アカウント キーは、ストレージ アカウントの root パスワードに似ています。 ストレージ アカウント キーは常に慎重に保護してください。 このキーを他のユーザーに配布したり、ハードコーディングしたり、他のユーザーがアクセスできるプレーン テキスト ファイルに保存したりしないでください。 侵害された可能性があると思われる場合は、Azure portal を使用してキーを再生成することができます。
 
 実際のアプリケーションでは、ストレージ接続文字列を維持する最善の方法は構成ファイルにあります。 構成ファイルから接続文字列を取得するには、次の手順を実行します。
 
@@ -99,7 +99,7 @@ Azure Blob Storage では、ブロック BLOB とページ BLOB がサポート�
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L67-L80)]
 
-Blob には、名前にパス情報を指定することもできます。 これで、従来のファイル システムと同じように、整理およびスキャン可能な仮想ディレクトリ構造が作成されます。 ディレクトリ構造は仮想のみであり、BLOB ストレージで使用できるリソースはコンテナーと BLOB のみであることに注意してください。 ただし、ストレージクライアントライブラリは、 `CloudBlobDirectory` 仮想ディレクトリを参照するオブジェクトを提供し、この方法で構成されている blob を操作するプロセスを簡略化します。
+Blob には、名前にパス情報を指定することもできます。 これで、従来のファイル システムと同じように、整理およびスキャン可能な仮想ディレクトリ構造が作成されます。 ディレクトリ構造は仮想のみであり、Blob storage で使用できるリソースはコンテナーと blob のみです。 ただし、ストレージクライアントライブラリは、 `CloudBlobDirectory` 仮想ディレクトリを参照するオブジェクトを提供し、この方法で構成されている blob を操作するプロセスを簡略化します。
 
 たとえば、 `photos`という名前のコンテナーに次の一連のブロック BLOB があったとします。
 
@@ -173,7 +173,7 @@ Blob を削除するには、まず blob の参照を取得し、次 `Delete` �
 
 ## <a name="writing-to-an-append-blob"></a>追加 BLOB への書き込み
 
-追加 BLOB は、ログ記録などの追加操作のために最適化されています。 ブロック BLOB のように、追加 BLOB はブロックで構成されますが、追加 BLOB に新しいブロックを追加する場合は常に BLOB の最後に追加されます。 追加 BLOB の既存のブロックは更新したり、削除することはできません。 追加 BLOB のブロック ID はブロック BLOB 用のため、公開されることはありません。
+追加 BLOB は、ログ記録などの追加操作のために最適化されています。 ブロック blob と同様に、追加 blob はブロックで構成されますが、追加 blob に新しいブロックを追加すると、常に blob の末尾に追加されます。 追加 BLOB の既存のブロックは更新したり、削除することはできません。 追加 BLOB のブロック ID はブロック BLOB 用のため、公開されることはありません。
 
 追加 BLOB 内の各ブロックは、最大 4 MB のサイズにすることができます。また追加 BLOB には最大 50,000 のブロックを含めることができます。 よって追加 BLOB の最大サイズは 195 GB (4 MB X 50,000 ブロック) よりも少し大きくなります。
 
@@ -189,7 +189,7 @@ Blob を削除するには、まず blob の参照を取得し、次 `Delete` �
 
 - **Etag** - BLOB またはコンテナーが別のプロセスによって変更されていることを検出する手段を提供します。
 
-- **占有** - 一定期間、BLOB に対する排他的で更新可能な書き込みアクセスまたは削除アクセスを取得する手段を提供します。
+- **リース** -一定期間、blob に対する排他、更新、書き込み、または削除のアクセス権を取得する方法を提供します。
 
 詳細については、「 [Microsoft Azure Storage での同時実行の管理](https://azure.microsoft.com/blog/managing-concurrency-in-microsoft-azure-storage-2/)」を参照してください。
 
@@ -207,7 +207,7 @@ Azure Storage のどの BLOB もコンテナーに格納する必要がありま
 1. コンテナー名の文字はすべて小文字である必要があります。
 1. コンテナー名の長さは、3 ～ 63 文字にする必要があります。
 
-コンテナーの名前は、常に小文字にする必要があります。 コンテナー名に大文字が含まれている場合や、コンテナーの名前付け規則の他の違反がある場合、400 エラー (無効な要求) が発生することがあります。
+コンテナーの名前は、常に小文字である必要があります。 コンテナー名に大文字が含まれている場合や、コンテナーの名前付け規則の他の違反がある場合、400 エラー (無効な要求) が発生することがあります。
 
 ## <a name="managing-security-for-blobs"></a>BLOB のセキュリティの管理
 
@@ -228,7 +228,7 @@ Azure Storage は、クライアントとサーバーの両方で blob データ
 ### <a name="tools"></a>ツール
 
 - [F # AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/)\
-Blob、テーブル、およびキュー Azure Storage 資産を探索し、それらに対して CRUD 操作を簡単に適用するために使用できる F # 型プロバイダー。
+Blob、テーブル、およびキューの Azure Storage を探索し、その資産に CRUD 操作を簡単に適用するために使用できる F # 型プロバイダー。
 
 - [Fsharp.core](https://github.com/fsprojects/FSharp.Azure.Storage)\
 Microsoft Azure Table Storage サービスを使用するための F # API
