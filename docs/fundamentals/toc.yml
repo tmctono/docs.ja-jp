@@ -944,6 +944,68 @@ items:
                       - name: 概要
                         displayName: language rules
                         href: code-analysis/style-rules/language-rules.md
+                      - name: this と Me の設定
+                        items:
+                          - name: IDE0003、IDE0009
+                            href: code-analysis/style-rules/ide0003-ide0009.md
+                      - name: 型に言語キーワードを使用する
+                        items:
+                          - name: IDE0049
+                            href: code-analysis/style-rules/ide0049.md
+                      - name: 修飾子の基本設定
+                        items:
+                          - name: 概要
+                            href: code-analysis/style-rules/modifier-preferences.md
+                          - name: IDE0036
+                            href: code-analysis/style-rules/ide0036.md
+                          - name: IDE0040
+                            href: code-analysis/style-rules/ide0040.md
+                          - name: IDE0044
+                            href: code-analysis/style-rules/ide0044.md
+                      - name: かっこの基本設定
+                        items:
+                          - name: IDE0047 と IDE0048
+                            href: code-analysis/style-rules/ide0047-ide0048.md
+                      - name: 式レベルの基本設定
+                        items:
+                          - name: 概要
+                            href: code-analysis/style-rules/expression-level-preferences.md
+                          - name: IDE0017
+                            href: code-analysis/style-rules/ide0017.md
+                          - name: IDE0028
+                            href: code-analysis/style-rules/ide0028.md
+                          - name: IDE0032
+                            href: code-analysis/style-rules/ide0032.md
+                          - name: IDE0033
+                            href: code-analysis/style-rules/ide0033.md
+                          - name: IDE0037
+                            href: code-analysis/style-rules/ide0037.md
+                          - name: IDE0045
+                            href: code-analysis/style-rules/ide0045.md
+                          - name: IDE0046
+                            href: code-analysis/style-rules/ide0046.md
+                          - name: IDE0054
+                            href: code-analysis/style-rules/ide0054.md
+                          - name: IDE0058
+                            href: code-analysis/style-rules/ide0058.md
+                          - name: IDE0059
+                            href: code-analysis/style-rules/ide0059.md
+                      - name: '"Null" 検査設定'
+                        items:
+                          - name: 概要
+                            href: code-analysis/style-rules/null-checking-preferences.md
+                          - name: IDE0029
+                            href: code-analysis/style-rules/ide0029.md
+                          - name: IDE0031
+                            href: code-analysis/style-rules/ide0031.md
+                          - name: IDE0041
+                            href: code-analysis/style-rules/ide0041.md
+                      - name: パラメーターのユーザー設定
+                        items:
+                          - name: 概要
+                            href: code-analysis/style-rules/parameter-preferences.md
+                          - name: IDE0060
+                            href: code-analysis/style-rules/ide0060.md
                   - name: 書式設定規則
                     items:
                       - name: 概要
@@ -1260,7 +1322,7 @@ items:
                     href: ../standard/base-types/compilation-and-reuse-in-regular-expressions.md
                   - name: スレッド セーフ
                     href: ../standard/base-types/thread-safety-in-regular-expressions.md
-              - name: 使用例
+              - name: 例
                 items:
                   - name: HREF のスキャン
                     href: ../standard/base-types/regular-expression-example-scanning-for-hrefs.md
@@ -1542,7 +1604,7 @@ items:
             href: ../standard/serialization/xml-and-soap-serialization.md
           - name: XML シリアル化の詳細
             href: ../standard/serialization/introducing-xml-serialization.md
-          - name: 使用例
+          - name: 例
             href: ../standard/serialization/examples-of-xml-serialization.md
           - name: XML スキーマ定義ツール
             href: ../standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md
