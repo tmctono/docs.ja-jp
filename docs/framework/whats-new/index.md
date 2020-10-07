@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 15350f93ffabb10136af1b9a4d12d5301e661b29
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1e9657c60ef2ff0ef30ae1607a0e7f2cedd01187
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551713"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756079"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework の新機能
 
@@ -731,7 +731,7 @@ Windows Communication Foundation (WCF) では以下の機能が追加または�
 
 **既定のメッセージ セキュリティ設定を TLS1.1 または TLS1.2 に構成する機能。**
 
-.NET Framework 4.7 以降の WCF では、既定のメッセージ セキュリティ プロトコルとして、SSL 3.0 と TSL 1.0 に加えて、TSL 1.1 または TLS 1.2 を構成できます。 これはオプトイン設定です。有効にするには、アプリケーション構成ファイルに次のエントリを追加する必要があります。
+.NET Framework 4.7 以降の WCF では、既定のメッセージ セキュリティ プロトコルとして、SSL 3.0 と TLS 1.0 に加えて、TLS 1.1 または TLS 1.2 を構成できます。 これはオプトイン設定です。有効にするには、アプリケーション構成ファイルに次のエントリを追加する必要があります。
 
 ```xml
 <runtime>
@@ -1431,7 +1431,7 @@ NGen PDB を使用すれば、IL PDB に依存することなく、NGen で IL �
 
     HTTP/2 は、<xref:System.Net.Http.HttpClient?displayProperty=nameWithType> API を使用する Windows 10 ユニバーサル Windows プラットフォーム (UWP) アプリでもサポートされ、既定で有効になります。
 
-    ASP.NET アプリケーションで [PUSH_PROMISE](https://http2.github.io/http2-spec/#PUSH_PROMISE) 機能を使用する手段を提供するために、<xref:System.Web.HttpResponse.PushPromise%28System.String%29> と <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29> の 2 つのオーバーロードを持つ新しいメソッドが <xref:System.Web.HttpResponse> クラスに追加されました。
+    ASP.NET アプリケーションで [PUSH_PROMISE](https://httpwg.github.io/http2-spec/#PUSH_PROMISE) 機能を使用する手段を提供するために、<xref:System.Web.HttpResponse.PushPromise%28System.String%29> と <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29> の 2 つのオーバーロードを持つ新しいメソッドが <xref:System.Web.HttpResponse> クラスに追加されました。
 
     > [!NOTE]
     > ASP.NET Core では HTTP/2 がサポートされますが、PUSH PROMISE 機能のサポートはまだ追加されていません。

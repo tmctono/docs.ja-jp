@@ -49,16 +49,12 @@ items:
             href: ../core/install/localized-intellisense.md
   - name: 概要 (第 1 週)
     items:
-      - name: .NET のツアー
-        href: ../standard/tour.md
+      - name: .NET の概要
+        href: ../core/introduction.md
       - name: .NET アーキテクチャ コンポーネント
         href: ../standard/components.md
       - name: .NET クラス ライブラリ
         href: ../standard/class-libraries.md
-      - name: .NET Core の概要
-        href: ../core/introduction.md
-      - name: .NET Core の概要
-        href: ../core/about.md
       - name: .NET Standard の概要
         href: ../standard/net-standard.md
       - name: .NET 用語集
@@ -157,7 +153,7 @@ items:
         items:
           - name: 概要
             href: ../core/tools/index.md
-          - name: 関連項目
+          - name: リファレンス
             items:
               - name: dotnet
                 href: ../core/tools/dotnet.md

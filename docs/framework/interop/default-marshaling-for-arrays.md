@@ -185,7 +185,7 @@ void New3(ref String ar);
 |------------------------|-----------------|  
 |**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 型はシグネチャで提供されます。 ランクは常に 1 で、下限は常に 0 です。 サイズは実行時に常に把握されています。|  
 |**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>** [ **\<** *bounds* **>** ]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 型、ランク、境界はシグネチャで提供されます。 サイズは実行時に常に把握されています。|  
-|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>** >**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> 型、ランク、境界、およびサイズは実行時に常に把握されています。|  
+|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> 型、ランク、境界、およびサイズは実行時に常に把握されています。|  
   
  LPSTR または LPWSTR を含む構造体の配列に関連する OLE オートメーションの制限があります。  そのため、**String** フィールドは **UnmanagedType.BSTR** としてマーシャリングする必要があります。 この操作を行わない場合、例外がスローされます。  
   
