@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f561550d57e98a515fa3bdf56eea1dc1759b4e69
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: 4ffef401c07dbb27db7c0225acdc6817d95bfe11
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024976"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91451586"
 ---
 ## <a name="available-counters"></a>利用できるカウンター
 
@@ -18,7 +18,7 @@ ms.locfileid: "88024976"
 |--|--|
 | :::no-loc text="% Time in GC since last GC"::: (`time-in-gc`) | 最後の GC からの GC の時間 (パーセント) |
 | :::no-loc text="Allocation Rate"::: (`alloc-rate`) | 割り当ての比率 (バイト単位) |
-| :::no-loc text="CPU Usage"::: (`cpu-usage`) | CPU 使用率 (パーセント) |
+| :::no-loc text="CPU Usage"::: (`cpu-usage`) | プロセスの CPU 使用率 (パーセント) |
 | :::no-loc text="Exception Count"::: (`exception-count`) | 発生した例外の数 |
 | :::no-loc text="GC Heap Size"::: (`gc-heap-size`) | <xref:System.GC.GetTotalMemory(System.Boolean)?displayProperty=nameWithType> に基づいて割り当てられていると考えられるバイト数 |
 | :::no-loc text="Gen 0 GC Count"::: (`gen-0-gc-count`) | Gen 0 に対して GC が発生した回数 |
@@ -28,6 +28,8 @@ ms.locfileid: "88024976"
 | :::no-loc text="Gen 2 GC Count"::: (`gen-2-gc-count`) | Gen 2 に対して GC が発生した回数 |
 | :::no-loc text="Gen 2 Size"::: (`gen-2-size`) | Gen 2 GC のバイト数 |
 | :::no-loc text="LOH Size"::: (`loh-size`) | Gen 3 GC のバイト数 |
+| :::no-loc text="POH Size"::: (`poh-size`) | ピン留めされたオブジェクト ヒープのバイト数 (.NET 5 以降のバージョンで取得可能) |
+| :::no-loc text="GC Fragmentation"::: (`gc-fragmentation`) | GC ヒープの断片化 (.NET 5 以降のバージョンで取得可能) |
 | :::no-loc text="Monitor Lock Contention Count"::: (`monitor-lock-contention-count`) | <xref:System.Threading.Monitor.LockContentionCount?displayProperty=nameWithType> に基づく、モニターのロックを取得しようとするときに競合があった回数 |
 | :::no-loc text="Number of Active Timers"::: (`active-timer-count`) | <xref:System.Threading.Timer.ActiveCount?displayProperty=nameWithType> に基づく、現在アクティブになっている <xref:System.Threading.Timer> インスタンスの数 |
 | :::no-loc text="Number of Assemblies Loaded"::: (`assembly-count`) | 特定の時点でプロセスに読み込まれた <xref:System.Reflection.Assembly> インスタンスの数 |
@@ -35,6 +37,8 @@ ms.locfileid: "88024976"
 | :::no-loc text="ThreadPool Queue Length"::: (`threadpool-queue-length`) | <xref:System.Threading.ThreadPool> 内の処理対象のキューに現在登録されている作業項目の数 |
 | :::no-loc text="ThreadPool Thread Count"::: (`threadpool-thread-count`) | <xref:System.Threading.ThreadPool.ThreadCount?displayProperty=nameWithType> に基づく、<xref:System.Threading.ThreadPool> に現在存在しているスレッド プールのスレッドの数 |
 | :::no-loc text="Working Set"::: (`working-set`) | <xref:System.Environment.WorkingSet?displayProperty=nameWithType> に基づく、ある時点でプロセス コンテキストにマップされた物理メモリの量 |
+| :::no-loc text="IL Bytes Jitted"::: (`il-bytes-jitted`) | JIT コンパイルされる IL のバイト単位の合計サイズ (.NET 5 以降のバージョンで取得可能) |
+| :::no-loc text="Method Jitted Count"::: (`method-jitted-count`) | JIT コンパイルされるメソッドの数 (.NET 5 以降のバージョンで取得可能) |
 
 ### <a name="microsoftaspnetcorehosting-counters"></a>"Microsoft.AspNetCore.Hosting" カウンター
 

@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: ed669364efe9dd8f57d831a3764dd3fc68cd5e05
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: d61a3b3dd855d783d7bff7cb74e5b84969e60860
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89496182"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608050"
 ---
 ### <a name="aspnet-incorrect-multipart-handling-may-result-in-lost-form-data"></a>ASP.NET 正しくないマルチパート処理により、フォーム データが失われる場合がある。
 
 #### <a name="details"></a>説明
 
-.NET Framework 4.7.2 以前のバージョンをターゲットとするアプリケーションでは、ASP.Net でマルチパート境界の値が正しく解析されないために、要求の実行中にフォーム データが使用できなくなる場合があります。 .NET Framework 4.8 以降のバージョンをターゲットとするアプリケーションではマルチパート データが正しく解析されるため、要求の実行中にフォーム値を使用することができます。
+.NET Framework 4.7.2 以前のバージョンをターゲットとするアプリケーションでは、ASP.NET でマルチパート境界の値が正しく解析されないために、要求の実行中にフォーム データが使用できなくなる場合があります。 .NET Framework 4.8 以降のバージョンをターゲットとするアプリケーションではマルチパート データが正しく解析されるため、要求の実行中にフォーム値を使用することができます。
 
 #### <a name="suggestion"></a>提案される解決策
 
