@@ -477,11 +477,6 @@ f1_keywords:
 - CS8387
 - CS8388
 - CS8389
-- CS8400
-- CS8401
-- CS8403
-- CS8410
-- CS8411
 - CS8412
 - CS8413
 - CS8414
@@ -521,6 +516,7 @@ f1_keywords:
 - CS8521
 - CS8522
 - CS8523
+- CS8524
 - CS8597
 - CS8598
 - CS8600
@@ -675,13 +671,15 @@ f1_keywords:
 - CS8821
 - CS8822
 - CS8823
+- CS8824
+- CS8825
 - CS8830
 - CS8831
 - CS8846
 - CS8847
 - CS8848
 - CS8849
-- CS8850
+- CS8851
 - CS8852
 - CS8853
 - CS8854
@@ -690,6 +688,7 @@ f1_keywords:
 - CS8857
 - CS8858
 - CS8859
+- CS8860
 - CS8861
 - CS8862
 - CS8863
@@ -721,31 +720,44 @@ f1_keywords:
 - CS8889
 - CS8890
 - CS8891
+- CS8893
+- CS8894
+- CS8895
+- CS8896
+- CS8897
+- CS8898
+- CS8899
+- CS8900
+- CS8901
+- CS8902
+- CS8903
+- CS8904
+- CS9100
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 8cdcc3bb091bfa277903ecd680d8895108274243
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: 16420ee5889779e3aefdbc15f1050aeeeea8f624
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271933"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804613"
 ---
-# <a name="sorry-we-dont-have-specifics-on-this-c-error"></a><span data-ttu-id="d5e0e-102">申し訳ありませんが、この C# エラーに関する詳細情報はありません。</span><span class="sxs-lookup"><span data-stu-id="d5e0e-102">Sorry, we don't have specifics on this C# error</span></span>
+# <a name="sorry-we-dont-have-specifics-on-this-c-error"></a><span data-ttu-id="904d3-102">申し訳ありませんが、この C# エラーに関する詳細情報はありません。</span><span class="sxs-lookup"><span data-stu-id="904d3-102">Sorry, we don't have specifics on this C# error</span></span>
 
-<span data-ttu-id="d5e0e-103">申し訳ありませんが、このエラーに関する具体的な情報はありません。</span><span class="sxs-lookup"><span data-stu-id="d5e0e-103">We're sorry, but we don't have any specific information about this error.</span></span> <span data-ttu-id="d5e0e-104">Web でエラー番号とメッセージ テキストを検索して情報を探すことができます。</span><span class="sxs-lookup"><span data-stu-id="d5e0e-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="d5e0e-105">または、次のいずれかを使用して、他の開発者に問い合わせることもできます。</span><span class="sxs-lookup"><span data-stu-id="d5e0e-105">Or you can ask other developers using one of these:</span></span>
+<span data-ttu-id="904d3-103">申し訳ありませんが、このエラーに関する具体的な情報はありません。</span><span class="sxs-lookup"><span data-stu-id="904d3-103">We're sorry, but we don't have any specific information about this error.</span></span> <span data-ttu-id="904d3-104">Web でエラー番号とメッセージ テキストを検索して情報を探すことができます。</span><span class="sxs-lookup"><span data-stu-id="904d3-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="904d3-105">または、次のいずれかを使用して、他の開発者に問い合わせることもできます。</span><span class="sxs-lookup"><span data-stu-id="904d3-105">Or you can ask other developers using one of these:</span></span>
   
- [<span data-ttu-id="d5e0e-106">Msdn フォーラム-Visual C#</span><span class="sxs-lookup"><span data-stu-id="d5e0e-106">Msdn forums - Visual C#</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)  
- <span data-ttu-id="d5e0e-107">他のフォーラムでは説明されていない Visual C# に関する質問や問題についてのフォーラムを提供します。</span><span class="sxs-lookup"><span data-stu-id="d5e0e-107">Provides a forum for questions about and issues with Visual C# that are not discussed in other forums.</span></span>  
+ [<span data-ttu-id="904d3-106">Msdn フォーラム-Visual C#</span><span class="sxs-lookup"><span data-stu-id="904d3-106">Msdn forums - Visual C#</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)  
+ <span data-ttu-id="904d3-107">他のフォーラムでは説明されていない Visual C# に関する質問や問題についてのフォーラムを提供します。</span><span class="sxs-lookup"><span data-stu-id="904d3-107">Provides a forum for questions about and issues with Visual C# that are not discussed in other forums.</span></span>  
 
- [<span data-ttu-id="d5e0e-108">Stack Overflow</span><span class="sxs-lookup"><span data-stu-id="d5e0e-108">Stack Overflow</span></span>](https://stackoverflow.com/questions/tagged/c%23)  
-<span data-ttu-id="d5e0e-109">Visual C# に関する質問や問題のための QA web サイトを提供します。</span><span class="sxs-lookup"><span data-stu-id="d5e0e-109">Provides a QA website for questions about and issues with Visual C#.</span></span>  
+ [<span data-ttu-id="904d3-108">Stack Overflow</span><span class="sxs-lookup"><span data-stu-id="904d3-108">Stack Overflow</span></span>](https://stackoverflow.com/questions/tagged/c%23)  
+<span data-ttu-id="904d3-109">Visual C# に関する質問や問題のための QA web サイトを提供します。</span><span class="sxs-lookup"><span data-stu-id="904d3-109">Provides a QA website for questions about and issues with Visual C#.</span></span>  
 
- <span data-ttu-id="d5e0e-110">こちらもご覧ください。</span><span class="sxs-lookup"><span data-stu-id="d5e0e-110">Also see:</span></span>  
- [<span data-ttu-id="d5e0e-111">C# プログラマのための追加リソース</span><span class="sxs-lookup"><span data-stu-id="d5e0e-111">Additional Resources for Visual C# Programmers</span></span>](../getting-started/index.md)  
+ <span data-ttu-id="904d3-110">関連項目:</span><span class="sxs-lookup"><span data-stu-id="904d3-110">Also see:</span></span>  
+ [<span data-ttu-id="904d3-111">C# プログラマのための追加リソース</span><span class="sxs-lookup"><span data-stu-id="904d3-111">Additional Resources for Visual C# Programmers</span></span>](../getting-started/index.md)  
   
-## <a name="see-also"></a><span data-ttu-id="d5e0e-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="d5e0e-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="904d3-112">関連項目</span><span class="sxs-lookup"><span data-stu-id="904d3-112">See also</span></span>
 
-- [<span data-ttu-id="d5e0e-113">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="d5e0e-113">C# Programming Guide</span></span>](../programming-guide/index.md)
-- [<span data-ttu-id="d5e0e-114">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="d5e0e-114">C# Reference</span></span>](../language-reference/index.md)
-- [<span data-ttu-id="d5e0e-115">ご意見</span><span class="sxs-lookup"><span data-stu-id="d5e0e-115">Talk to Us</span></span>](/visualstudio/ide/feedback-options)
+- [<span data-ttu-id="904d3-113">C# プログラミング ガイド</span><span class="sxs-lookup"><span data-stu-id="904d3-113">C# Programming Guide</span></span>](../programming-guide/index.md)
+- [<span data-ttu-id="904d3-114">C# リファレンス</span><span class="sxs-lookup"><span data-stu-id="904d3-114">C# Reference</span></span>](../language-reference/index.md)
+- [<span data-ttu-id="904d3-115">ご意見</span><span class="sxs-lookup"><span data-stu-id="904d3-115">Talk to Us</span></span>](/visualstudio/ide/feedback-options)
