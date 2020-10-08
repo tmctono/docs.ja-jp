@@ -4,12 +4,12 @@ description: .NET Core、ASP.NET Core、C# 言語に関する、.NET の学習�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/19/2020
-ms.openlocfilehash: 7e477683834b46439626e03e6ff411fabc52672d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 00718491df00e5747ba6e0043b70dc1019dd906b
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557191"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805012"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET サンプルおよびチュートリアル
 
@@ -99,7 +99,7 @@ ms.locfileid: "90557191"
 
 **[Windows Docker コンテナーでの ASP.NET MVC アプリケーションの実行](/aspnet/mvc/overview/deployment/docker-aspnetmvc)**
 
-このチュートリアルでは、Windows Docker コンテナーで既存の ASP.NET MVC アプリを展開する方法について説明します。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator)は、GitHub の dotnet/samples リポジトリにあります。
+このチュートリアルでは、Windows Docker コンテナーで既存の ASP.NET MVC アプリを展開する方法について説明します。
 
 ## <a name="view-and-download-samples"></a>サンプルを表示してダウンロードする
 
