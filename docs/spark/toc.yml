@@ -32,7 +32,7 @@
     - name: アプリケーションをデバッグする
       href: how-to-guides/debug.md
     - name: Azure Synapse Analytics にジョブを送信する
-      href: 'https://docs.microsoft.com/azure/synapse-analytics/spark/spark-dotnet'
+      href: /azure/synapse-analytics/spark/spark-dotnet
     - name: HDInsight にジョブを送信する
       href: how-to-guides/hdinsight-deploy-methods.md
     - name: Databricks にジョブを送信する
