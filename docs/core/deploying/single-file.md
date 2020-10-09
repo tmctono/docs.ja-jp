@@ -4,32 +4,72 @@ description: 単一ファイル アプリケーションの概要、およびこ
 author: lakshanf
 ms.author: lakshanf
 ms.date: 08/28/2020
-ms.openlocfilehash: 795ea98a9fd9d672b199eb2d9b24151340ef8246
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 0167e62ea46e1c23c3d4ef6ea505ee051ffaf264
+ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495748"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91712638"
 ---
-# <a name="single-file-deployment-and-executable"></a><span data-ttu-id="654b2-103">単一ファイルの配置と実行可能ファイル</span><span class="sxs-lookup"><span data-stu-id="654b2-103">Single file deployment and executable</span></span>
+# <a name="single-file-deployment-and-executable"></a><span data-ttu-id="28c8c-103">単一ファイルの配置と実行可能ファイル</span><span class="sxs-lookup"><span data-stu-id="28c8c-103">Single file deployment and executable</span></span>
 
-<span data-ttu-id="654b2-104">アプリケーションに依存するすべてのファイルを単一のバイナリにバンドルすることで、アプリケーション開発者は、アプリケーションを単一ファイルとして配置し、配布することができます。</span><span class="sxs-lookup"><span data-stu-id="654b2-104">Bundling all application-dependent files into a single binary provides an application developer with the attractive option to deploy and distribute the application as a single file.</span></span> <span data-ttu-id="654b2-105">このデプロイ モデルは、.NET Core 3.0 以降で利用可能であり、.NET 5.0 で拡張されています。</span><span class="sxs-lookup"><span data-stu-id="654b2-105">This deployment model has been available since .NET Core 3.0 and has been enhanced in .NET 5.0.</span></span> <span data-ttu-id="654b2-106">以前の .NET Core 3.0 では、ユーザーが単一ファイル アプリを実行する場合、そのアプリケーションが実行される前に、まず .NET Core ホストがすべてのファイルを一時ディレクトリに抽出します。</span><span class="sxs-lookup"><span data-stu-id="654b2-106">Previously in .NET Core 3.0, when a user runs your single-file app, .NET Core host first extracts all files to a temporary directory before running the application.</span></span> <span data-ttu-id="654b2-107">.NET 5.0 では、アプリからファイルを抽出する必要がなく、コードを直接実行するので、このエクスペリエンスが向上しています。</span><span class="sxs-lookup"><span data-stu-id="654b2-107">.NET 5.0 improves this experience by directly running the code without the need to extract the files from the app.</span></span>
+<span data-ttu-id="28c8c-104">アプリケーションに依存するすべてのファイルを単一のバイナリにバンドルすることで、アプリケーション開発者は、アプリケーションを単一ファイルとして配置し、配布することができます。</span><span class="sxs-lookup"><span data-stu-id="28c8c-104">Bundling all application-dependent files into a single binary provides an application developer with the attractive option to deploy and distribute the application as a single file.</span></span> <span data-ttu-id="28c8c-105">このデプロイ モデルは、.NET Core 3.0 以降で利用可能であり、.NET 5.0 で拡張されています。</span><span class="sxs-lookup"><span data-stu-id="28c8c-105">This deployment model has been available since .NET Core 3.0 and has been enhanced in .NET 5.0.</span></span> <span data-ttu-id="28c8c-106">以前の .NET Core 3.0 では、ユーザーが単一ファイル アプリを実行する場合、そのアプリケーションが実行される前に、まず .NET Core ホストがすべてのファイルを一時ディレクトリに抽出します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-106">Previously in .NET Core 3.0, when a user runs your single-file app, .NET Core host first extracts all files to a temporary directory before running the application.</span></span> <span data-ttu-id="28c8c-107">.NET 5.0 では、アプリからファイルを抽出する必要がなく、コードを直接実行するので、このエクスペリエンスが向上しています。</span><span class="sxs-lookup"><span data-stu-id="28c8c-107">.NET 5.0 improves this experience by directly running the code without the need to extract the files from the app.</span></span>
 
-<span data-ttu-id="654b2-108">[フレームワークに依存するデプロイ モデル](index.md#publish-framework-dependent)と[自己完結型アプリケーション](index.md#publish-self-contained)の両方で、単一ファイルの配置が可能です。</span><span class="sxs-lookup"><span data-stu-id="654b2-108">Single File deployment is available for both the [framework-dependent deployment model](index.md#publish-framework-dependent) and [self-contained applications](index.md#publish-self-contained).</span></span> <span data-ttu-id="654b2-109">自己完結型アプリケーション内にある単一ファイルは、ランタイム ライブラリとフレームワーク ライブラリが含まれるため、大きなサイズとなります。</span><span class="sxs-lookup"><span data-stu-id="654b2-109">The size of the single file in a self-contained application will be large since it will include the runtime and the framework libraries.</span></span> <span data-ttu-id="654b2-110">単一ファイル配置オプションは、[ReadyToRun](../tools/dotnet-publish.md) と [Trim (.NET 5.0 の試験的な機能)](trim-self-contained.md) の各発行オプションと組み合わせることができます。</span><span class="sxs-lookup"><span data-stu-id="654b2-110">The single file deployment option can be combined with [ReadyToRun](../tools/dotnet-publish.md) and [Trim (an experimental feature in .NET 5.0)](trim-self-contained.md) publish options.</span></span>
+<span data-ttu-id="28c8c-108">[フレームワークに依存するデプロイ モデル](index.md#publish-framework-dependent)と[自己完結型アプリケーション](index.md#publish-self-contained)の両方で、単一ファイルの配置が可能です。</span><span class="sxs-lookup"><span data-stu-id="28c8c-108">Single File deployment is available for both the [framework-dependent deployment model](index.md#publish-framework-dependent) and [self-contained applications](index.md#publish-self-contained).</span></span> <span data-ttu-id="28c8c-109">自己完結型アプリケーション内にある単一ファイルは、ランタイム ライブラリとフレームワーク ライブラリが含まれるため、大きなサイズとなります。</span><span class="sxs-lookup"><span data-stu-id="28c8c-109">The size of the single file in a self-contained application will be large since it will include the runtime and the framework libraries.</span></span> <span data-ttu-id="28c8c-110">単一ファイル配置オプションは、[ReadyToRun](../tools/dotnet-publish.md) と [Trim (.NET 5.0 の試験的な機能)](trim-self-contained.md) の各発行オプションと組み合わせることができます。</span><span class="sxs-lookup"><span data-stu-id="28c8c-110">The single file deployment option can be combined with [ReadyToRun](../tools/dotnet-publish.md) and [Trim (an experimental feature in .NET 5.0)](trim-self-contained.md) publish options.</span></span>
 
-<span data-ttu-id="654b2-111">単一ファイルを使用する場合に把握しておくべきいくつかの注意事項があります。1 つめは、アプリケーションの場所を基準としてファイルを検索するときのパス情報の使用です。</span><span class="sxs-lookup"><span data-stu-id="654b2-111">There are some caveats that you need to be aware for single-file use, first of which is the use of path information to locate a file relative to the location of your application.</span></span> <span data-ttu-id="654b2-112"><xref:System.Reflection.Assembly.Location?displayProperty=nameWithType> API は、空の文字列を返します。これは、メモリから読み込まれたアセンブリの既定の動作です。</span><span class="sxs-lookup"><span data-stu-id="654b2-112">The <xref:System.Reflection.Assembly.Location?displayProperty=nameWithType> API will return an empty string, which is the default behavior for assemblies loaded from memory.</span></span> <span data-ttu-id="654b2-113">コンパイラは、ビルド時にこの API に対する警告を表示し、特定の動作について開発者に注意を促します。</span><span class="sxs-lookup"><span data-stu-id="654b2-113">The compiler will give a warning for this API during build time to alert the developer to the specific behavior.</span></span> <span data-ttu-id="654b2-114">アプリケーション ディレクトリへのパスが必要な場合、<xref:System.AppContext.BaseDirectory?displayProperty=nameWithType> API は AppHost (単一ファイル バンドル自体) が存在するディレクトリを返します。</span><span class="sxs-lookup"><span data-stu-id="654b2-114">If the path to the application directory is needed, the <xref:System.AppContext.BaseDirectory?displayProperty=nameWithType> API will return the directory where the AppHost (the single-file bundle itself) resides.</span></span> <span data-ttu-id="654b2-115">マネージド C++ アプリケーションは、単一ファイルの配置には適していません。単一ファイルとの互換性を確保するには、アプリケーションを C# で記述することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="654b2-115">Managed C++ applications aren't well suited for single-file deployment and we recommend that you write applications in C# to be single-file compatible.</span></span>
+## <a name="api-incompatibility"></a><span data-ttu-id="28c8c-111">API の非互換性</span><span class="sxs-lookup"><span data-stu-id="28c8c-111">API incompatibility</span></span>
 
-<span data-ttu-id="654b2-116">既定では、単一ファイルを使用してネイティブ ライブラリをバンドルすることができません。</span><span class="sxs-lookup"><span data-stu-id="654b2-116">Single-file doesn't bundle native libraries by default.</span></span> <span data-ttu-id="654b2-117">Linux では、ランタイム ライブラリをバンドルに事前にリンクして、アプリケーション ネイティブ ライブラリのみを単一ファイル アプリと同じディレクトリに配置します。</span><span class="sxs-lookup"><span data-stu-id="654b2-117">On Linux, we prelink the runtime into the bundle and only application native libraries are deployed to the same directory as the single-file app.</span></span> <span data-ttu-id="654b2-118">Windows では、ホスト コードのみを事前にリンクして、ランタイム ライブラリとアプリケーション ネイティブ ライブラリの両方を単一ファイル アプリと同じディレクトリに配置します。</span><span class="sxs-lookup"><span data-stu-id="654b2-118">On Windows, we prelink only the hosting code and both the runtime and application native libraries are deployed to the same directory as the single-file app.</span></span> <span data-ttu-id="654b2-119">これにより、優れたデバッグ エクスペリエンスが確保されます。それには、ネイティブ ファイルを単一ファイルから除外する必要があります。</span><span class="sxs-lookup"><span data-stu-id="654b2-119">This is to ensure a good debugging experience, which requires native files to be excluded from the single file.</span></span> <span data-ttu-id="654b2-120">単一ファイル バンドルにネイティブ ライブラリを含めるようにフラグ `IncludeNativeLibrariesForSelfExtract` を設定するオプションがありますが、これらのファイルは、単一ファイル アプリケーションが実行されるときに、クライアント コンピューターの一時ディレクトリに抽出されます。</span><span class="sxs-lookup"><span data-stu-id="654b2-120">There is an option to set a flag, `IncludeNativeLibrariesForSelfExtract`, to include native libraries in the single file bundle, but these files will be extracted to a temporary directory in the client machine when the single file application is run.</span></span>
+<span data-ttu-id="28c8c-112">一部の API は、単一ファイルの配置と互換性がありません。また、これらの API を使用する場合、アプリケーションで変更が必要になることがあります。</span><span class="sxs-lookup"><span data-stu-id="28c8c-112">Some APIs are not compatible with single-file deployment and applications may require modification if they use these APIs.</span></span> <span data-ttu-id="28c8c-113">サードパーティのフレームワークまたはパッケージを使用する場合、それらでこれらの API のいずれかが使用されていて、変更が必要になる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="28c8c-113">If you use a third-party framework or package, it's possible that they may also use one of these APIs and need modification.</span></span> <span data-ttu-id="28c8c-114">問題の最も一般的な原因は、アプリケーションに付属するファイルまたは DLL のファイル パスに依存していることです。</span><span class="sxs-lookup"><span data-stu-id="28c8c-114">The most common cause of problems is dependence on file paths for files or DLLs shipped with the application.</span></span>
 
-## <a name="exclude-files-from-being-embedded"></a><span data-ttu-id="654b2-121">ファイルを埋め込み対象から除外する</span><span class="sxs-lookup"><span data-stu-id="654b2-121">Exclude files from being embedded</span></span>
+<span data-ttu-id="28c8c-115">次の表では、単一ファイルの使用に関連するランタイム ライブラリ API の詳細を示します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-115">The table below has the relevant runtime library API details for single-file use.</span></span>
 
-<span data-ttu-id="654b2-122">次のメタデータを設定すると、特定のファイルを単一ファイルの埋め込み対象から明示的に除外することができます。</span><span class="sxs-lookup"><span data-stu-id="654b2-122">Certain files can be explicitly excluded from being embedded in the single-file by setting following metadata:</span></span>
+| <span data-ttu-id="28c8c-116">API</span><span class="sxs-lookup"><span data-stu-id="28c8c-116">API</span></span>                            | <span data-ttu-id="28c8c-117">Note</span><span class="sxs-lookup"><span data-stu-id="28c8c-117">Note</span></span>                                                                   |
+|--------------------------------|------------------------------------------------------------------------|
+| `Assembly.Location`            | <span data-ttu-id="28c8c-118">空の文字列を返します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-118">Returns an empty string.</span></span>                                               |
+| `Module.FullyQualifiedName`    | <span data-ttu-id="28c8c-119">値が `<Unknown>` である文字列が返されるか、例外がスローされます。</span><span class="sxs-lookup"><span data-stu-id="28c8c-119">Returns a string with the value of `<Unknown>` or throws an exception.</span></span> |
+| `Module.Name`                  | <span data-ttu-id="28c8c-120">値が `<Unknown>` である文字列が返されます。</span><span class="sxs-lookup"><span data-stu-id="28c8c-120">Returns a string with the value of `<Unknown>`.</span></span>                        |
+| `Assembly.GetFile`             | <span data-ttu-id="28c8c-121"><xref:System.IO.IOException> をスローします。</span><span class="sxs-lookup"><span data-stu-id="28c8c-121">Throws <xref:System.IO.IOException>.</span></span>                                   |
+| `Assembly.GetFiles`            | <span data-ttu-id="28c8c-122"><xref:System.IO.IOException> をスローします。</span><span class="sxs-lookup"><span data-stu-id="28c8c-122">Throws <xref:System.IO.IOException>.</span></span>                                   |
+| `Assembly.CodeBase`            | <span data-ttu-id="28c8c-123"><xref:System.PlatformNotSupportedException> をスローします。</span><span class="sxs-lookup"><span data-stu-id="28c8c-123">Throws <xref:System.PlatformNotSupportedException>.</span></span>                    |
+| `Assembly.EscapedCodeBase`     | <span data-ttu-id="28c8c-124"><xref:System.PlatformNotSupportedException> をスローします。</span><span class="sxs-lookup"><span data-stu-id="28c8c-124">Throws <xref:System.PlatformNotSupportedException>.</span></span>                    |
+| `AssemblyName.CodeBase`        | <span data-ttu-id="28c8c-125">`null` を返します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-125">Returns `null`.</span></span>                                                        |
+| `AssemblyName.EscapedCodeBase` | <span data-ttu-id="28c8c-126">`null` を返します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-126">Returns `null`.</span></span>                                                        |
+
+<span data-ttu-id="28c8c-127">一般的なシナリオを修正するための推奨事項がいくつかあります。</span><span class="sxs-lookup"><span data-stu-id="28c8c-127">We have some recommendations for fixing common scenarios:</span></span>
+
+* <span data-ttu-id="28c8c-128">実行可能ファイルの隣にあるファイルにアクセスするには、<xref:System.AppContext.BaseDirectory?displayProperty=nameWithType> を使用します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-128">To access files next to the executable, use <xref:System.AppContext.BaseDirectory?displayProperty=nameWithType>.</span></span>
+
+* <span data-ttu-id="28c8c-129">実行可能ファイルのファイル名を検索するには、<xref:System.Environment.GetCommandLineArgs?displayProperty=nameWithType> の最初の要素を使用します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-129">To find the file name of the executable, use the first element of <xref:System.Environment.GetCommandLineArgs?displayProperty=nameWithType>.</span></span>
+
+* <span data-ttu-id="28c8c-130">Loose ファイルが完全に配布されないようにするには、[埋め込みリソース](../../framework/resources/creating-resource-files-for-desktop-apps.md)を使用することを検討します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-130">To avoid shipping loose files entirely, consider using [embedded resources](../../framework/resources/creating-resource-files-for-desktop-apps.md).</span></span>
+
+## <a name="attaching-a-debugger"></a><span data-ttu-id="28c8c-131">デバッガーのアタッチ</span><span class="sxs-lookup"><span data-stu-id="28c8c-131">Attaching a debugger</span></span>
+
+<span data-ttu-id="28c8c-132">Linux では、自己完結型の単一ファイル プロセスにアタッチしたり、クラッシュ ダンプをデバッグしたりできる唯一のデバッガーは、[LLDB を使用する SOS](../diagnostics/dotnet-sos.md) です。</span><span class="sxs-lookup"><span data-stu-id="28c8c-132">On Linux, the only debugger which can attach to self-contained single-file processes or debug crash dumps is [SOS with LLDB](../diagnostics/dotnet-sos.md).</span></span>
+
+<span data-ttu-id="28c8c-133">Windows と Mac では、Visual Studio と VS Code を使用してクラッシュ ダンプをデバッグできます。</span><span class="sxs-lookup"><span data-stu-id="28c8c-133">On Windows and Mac, Visual Studio and VS Code can be used to debug crash dumps.</span></span> <span data-ttu-id="28c8c-134">実行中の自己完結型単一ファイルの実行可能ファイルにアタッチするには、余分なファイル _mscordbi.{dll,so}_ が必要です。</span><span class="sxs-lookup"><span data-stu-id="28c8c-134">Attaching to a running self-contained single-file executable requires an extra file: _mscordbi.{dll,so}_.</span></span>
+
+<span data-ttu-id="28c8c-135">このファイルがないと、Visual Studio で次のエラーが発生することがあります: "プロセスにアタッチできません。</span><span class="sxs-lookup"><span data-stu-id="28c8c-135">Without this file Visual Studio may produce the error "Unable to attach to the process.</span></span> <span data-ttu-id="28c8c-136">デバッグ コンポーネントはインストールされていません。"</span><span class="sxs-lookup"><span data-stu-id="28c8c-136">A debug component is not installed."</span></span> <span data-ttu-id="28c8c-137">また、VS Code では、次のエラーが発生することがあります: "プロセスにアタッチできませんでした: 不明なエラー: 0x80131c3c。"</span><span class="sxs-lookup"><span data-stu-id="28c8c-137">and VS Code may produce the error "Failed to attach to process: Unknown Error: 0x80131c3c."</span></span>
+
+<span data-ttu-id="28c8c-138">これらのエラーを修正するには、実行可能ファイルの隣に _mscordbi_ をコピーする必要があります。</span><span class="sxs-lookup"><span data-stu-id="28c8c-138">To fix these errors, _mscordbi_ needs to be copied next to the executable.</span></span> <span data-ttu-id="28c8c-139">_mscordbi_ は、既定では、アプリケーションのランタイム ID でサブディレクトリに `publish` されます。</span><span class="sxs-lookup"><span data-stu-id="28c8c-139">_mscordbi_ is `publish`ed by default in the subdirectory with the application's runtime ID.</span></span> <span data-ttu-id="28c8c-140">そのため、たとえば、`dotnet` CLI と `-r win-x64` パラメーターを使用して Windows 用に自己完結型単一ファイルの実行可能ファイルを発行する場合、実行可能ファイルは _bin/Debug/net5.0/win-x64/publish_ に配置されます。</span><span class="sxs-lookup"><span data-stu-id="28c8c-140">So, for example, if one were to publish a self-contained single-file executable using the `dotnet` CLI for Windows using the parameters `-r win-x64`, the executable would be placed in _bin/Debug/net5.0/win-x64/publish_.</span></span> <span data-ttu-id="28c8c-141">_mscordbi.dll_ のコピーは _bin/Debug/net5.0/win-x64_ にあります。</span><span class="sxs-lookup"><span data-stu-id="28c8c-141">A copy of _mscordbi.dll_ would be present in _bin/Debug/net5.0/win-x64_.</span></span>
+
+## <a name="other-considerations"></a><span data-ttu-id="28c8c-142">その他の考慮事項</span><span class="sxs-lookup"><span data-stu-id="28c8c-142">Other considerations</span></span>
+
+<span data-ttu-id="28c8c-143">既定では、単一ファイルを使用してネイティブ ライブラリをバンドルすることができません。</span><span class="sxs-lookup"><span data-stu-id="28c8c-143">Single-file doesn't bundle native libraries by default.</span></span> <span data-ttu-id="28c8c-144">Linux では、ランタイム ライブラリをバンドルに事前にリンクして、アプリケーション ネイティブ ライブラリのみを単一ファイル アプリと同じディレクトリに配置します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-144">On Linux, we prelink the runtime into the bundle and only application native libraries are deployed to the same directory as the single-file app.</span></span> <span data-ttu-id="28c8c-145">Windows では、ホスト コードのみを事前にリンクして、ランタイム ライブラリとアプリケーション ネイティブ ライブラリの両方を単一ファイル アプリと同じディレクトリに配置します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-145">On Windows, we prelink only the hosting code and both the runtime and application native libraries are deployed to the same directory as the single-file app.</span></span> <span data-ttu-id="28c8c-146">これにより、優れたデバッグ エクスペリエンスが確保されます。それには、ネイティブ ファイルを単一ファイルから除外する必要があります。</span><span class="sxs-lookup"><span data-stu-id="28c8c-146">This is to ensure a good debugging experience, which requires native files to be excluded from the single file.</span></span> <span data-ttu-id="28c8c-147">単一ファイル バンドルにネイティブ ライブラリを含めるようにフラグ `IncludeNativeLibrariesForSelfExtract` を設定するオプションがありますが、これらのファイルは、単一ファイル アプリケーションが実行されるときに、クライアント コンピューターの一時ディレクトリに抽出されます。</span><span class="sxs-lookup"><span data-stu-id="28c8c-147">There is an option to set a flag, `IncludeNativeLibrariesForSelfExtract`, to include native libraries in the single file bundle, but these files will be extracted to a temporary directory in the client machine when the single file application is run.</span></span>
+
+<span data-ttu-id="28c8c-148">単一ファイル アプリケーションでは、関連するすべての PDB ファイルは隣に配置され、既定ではバンドルされません。</span><span class="sxs-lookup"><span data-stu-id="28c8c-148">Single-file application will have all related PDB files alongside it and will not be bundled by default.</span></span> <span data-ttu-id="28c8c-149">ビルドするプロジェクトのアセンブリ内に PDB を含めるには、[以下](#include-pdb-files-inside-the-bundle)で詳しく説明するように、`DebugType` を `embedded` に設定します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-149">If you want to include PDBs inside the assembly for projects you build, set the `DebugType` to `embedded` as described [below](#include-pdb-files-inside-the-bundle) in detail.</span></span>
+
+<span data-ttu-id="28c8c-150">マネージド C++ コンポーネントは、単一ファイルの配置には適していません。単一ファイルとの互換性を確保するには、アプリケーションを C# または別の非マネージド C++ 言語で記述することをお勧めします。</span><span class="sxs-lookup"><span data-stu-id="28c8c-150">Managed C++ components aren't well suited for single-file deployment and we recommend that you write applications in C# or another non-managed C++ language to be single-file compatible.</span></span>
+
+## <a name="exclude-files-from-being-embedded"></a><span data-ttu-id="28c8c-151">ファイルを埋め込み対象から除外する</span><span class="sxs-lookup"><span data-stu-id="28c8c-151">Exclude files from being embedded</span></span>
+
+<span data-ttu-id="28c8c-152">次のメタデータを設定すると、特定のファイルを単一ファイルの埋め込み対象から明示的に除外することができます。</span><span class="sxs-lookup"><span data-stu-id="28c8c-152">Certain files can be explicitly excluded from being embedded in the single-file by setting following metadata:</span></span>
 
 ```xml
 <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
 ```
 
-<span data-ttu-id="654b2-123">たとえば、いくつかのファイルを発行ディレクトリに配置するものの、単一ファイルへのバンドルは行わない場合などです。</span><span class="sxs-lookup"><span data-stu-id="654b2-123">For example, to place some files in the publish directory but not bundle them in the single-file:</span></span>
+<span data-ttu-id="28c8c-153">たとえば、いくつかのファイルを発行ディレクトリに配置するものの、単一ファイルへのバンドルは行わない場合などです。</span><span class="sxs-lookup"><span data-stu-id="28c8c-153">For example, to place some files in the publish directory but not bundle them in the single-file:</span></span>
 
 ```xml
 <ItemGroup>
@@ -40,62 +80,78 @@ ms.locfileid: "89495748"
 </ItemGroup>
 ```
 
-## <a name="publish-a-single-file-app---cli"></a><span data-ttu-id="654b2-124">単一ファイル アプリを発行する - CLI</span><span class="sxs-lookup"><span data-stu-id="654b2-124">Publish a single file app - CLI</span></span>
+## <a name="include-pdb-files-inside-the-bundle"></a><span data-ttu-id="28c8c-154">バンドル内に PDB ファイルを含める</span><span class="sxs-lookup"><span data-stu-id="28c8c-154">Include PDB files inside the bundle</span></span>
 
-<span data-ttu-id="654b2-125">[dotnet publish](../tools/dotnet-publish.md) コマンドを使用して、単一ファイル アプリケーションを発行します。</span><span class="sxs-lookup"><span data-stu-id="654b2-125">Publish a single file application using the [dotnet publish](../tools/dotnet-publish.md) command.</span></span> <span data-ttu-id="654b2-126">アプリを発行する場合、次のプロパティを設定します。</span><span class="sxs-lookup"><span data-stu-id="654b2-126">When you publish your app, set the following properties:</span></span>
+<span data-ttu-id="28c8c-155">アセンブリの PDB ファイルは、次の設定を使用して、アセンブリ自体 (`.dll`) に埋め込むことができます。</span><span class="sxs-lookup"><span data-stu-id="28c8c-155">The PDB file for an assembly can be embedded into the assembly itself (the `.dll`) using the setting below.</span></span> <span data-ttu-id="28c8c-156">シンボルはアセンブリの一部であるため、単一ファイル アプリケーションの一部にもなります。</span><span class="sxs-lookup"><span data-stu-id="28c8c-156">Since the symbols are part of the assembly, they will be part of the single-file application as well:</span></span>
 
-- <span data-ttu-id="654b2-127">特定のランタイムに対して発行する: `-r win-x64`</span><span class="sxs-lookup"><span data-stu-id="654b2-127">Publish for a specific runtime: `-r win-x64`</span></span>
-- <span data-ttu-id="654b2-128">単一ファイルとして発行する: `-p:PublishSingleFile=true`</span><span class="sxs-lookup"><span data-stu-id="654b2-128">Publish as a single-file: `-p:PublishSingleFile=true`</span></span>
+```xml
+<DebugType>embedded</DebugType>
+```
 
-<span data-ttu-id="654b2-129">次の例では、Windows 用のアプリを自己完結型の単一ファイル アプリケーションとして発行します。</span><span class="sxs-lookup"><span data-stu-id="654b2-129">The following example publishes an app for Windows as a self-contained single file application.</span></span>
+<span data-ttu-id="28c8c-157">たとえば、アセンブリに PDB ファイルを埋め込むには、そのアセンブリのプロジェクト ファイルに次のプロパティを追加します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-157">For example, add the following property to the project file of an assembly to embed the PDB file to that assembly:</span></span>
+
+```xml
+<PropertyGroup>
+  <DebugType>embedded</DebugType>
+</PropertyGroup>
+```
+
+## <a name="publish-a-single-file-app---cli"></a><span data-ttu-id="28c8c-158">単一ファイル アプリを発行する - CLI</span><span class="sxs-lookup"><span data-stu-id="28c8c-158">Publish a single file app - CLI</span></span>
+
+<span data-ttu-id="28c8c-159">[dotnet publish](../tools/dotnet-publish.md) コマンドを使用して、単一ファイル アプリケーションを発行します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-159">Publish a single file application using the [dotnet publish](../tools/dotnet-publish.md) command.</span></span> <span data-ttu-id="28c8c-160">アプリを発行する場合、次のプロパティを設定します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-160">When you publish your app, set the following properties:</span></span>
+
+- <span data-ttu-id="28c8c-161">特定のランタイムに対して発行する: `-r win-x64`</span><span class="sxs-lookup"><span data-stu-id="28c8c-161">Publish for a specific runtime: `-r win-x64`</span></span>
+- <span data-ttu-id="28c8c-162">単一ファイルとして発行する: `-p:PublishSingleFile=true`</span><span class="sxs-lookup"><span data-stu-id="28c8c-162">Publish as a single-file: `-p:PublishSingleFile=true`</span></span>
+
+<span data-ttu-id="28c8c-163">次の例では、Windows 用のアプリを自己完結型の単一ファイル アプリケーションとして発行します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-163">The following example publishes an app for Windows as a self-contained single file application.</span></span>
 
 ```dotnetcli
 dotnet publish -r win-x64 -p:PublishSingleFile=true --self-contained true
 ```
 
-<span data-ttu-id="654b2-130">次の例では、Linux 用のアプリをフレームワークに依存する単一ファイル アプリケーションとして発行します。</span><span class="sxs-lookup"><span data-stu-id="654b2-130">The following example publishes an app for Linux as a framework dependent single file application.</span></span>
+<span data-ttu-id="28c8c-164">次の例では、Linux 用のアプリをフレームワークに依存する単一ファイル アプリケーションとして発行します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-164">The following example publishes an app for Linux as a framework dependent single file application.</span></span>
 
 ```dotnetcli
 dotnet publish -r linux-x64 -p:PublishSingleFile=true --self-contained false
 ```
 
-<span data-ttu-id="654b2-131">詳細については、「[.NET Core CLI を使用して .NET Core アプリを発行する](deploy-with-cli.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="654b2-131">For more information, see [Publish .NET Core apps with .NET Core CLI](deploy-with-cli.md).</span></span>
+<span data-ttu-id="28c8c-165">詳細については、「[.NET Core CLI を使用して .NET Core アプリを発行する](deploy-with-cli.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="28c8c-165">For more information, see [Publish .NET Core apps with .NET Core CLI](deploy-with-cli.md).</span></span>
 
-## <a name="publish-a-single-file-app---visual-studio"></a><span data-ttu-id="654b2-132">単一ファイル アプリを発行する - Visual Studio</span><span class="sxs-lookup"><span data-stu-id="654b2-132">Publish a single file app - Visual Studio</span></span>
+## <a name="publish-a-single-file-app---visual-studio"></a><span data-ttu-id="28c8c-166">単一ファイル アプリを発行する - Visual Studio</span><span class="sxs-lookup"><span data-stu-id="28c8c-166">Publish a single file app - Visual Studio</span></span>
 
-<span data-ttu-id="654b2-133">Visual Studio を使用すると、アプリケーションの発行方法を制御する再利用可能な発行プロファイルを作成できます。</span><span class="sxs-lookup"><span data-stu-id="654b2-133">Visual Studio creates reusable publishing profiles that control how your application is published.</span></span>
+<span data-ttu-id="28c8c-167">Visual Studio を使用すると、アプリケーションの発行方法を制御する再利用可能な発行プロファイルを作成できます。</span><span class="sxs-lookup"><span data-stu-id="28c8c-167">Visual Studio creates reusable publishing profiles that control how your application is published.</span></span>
 
-01. <span data-ttu-id="654b2-134">**[ソリューション エクスプローラー]** ペインで、発行するプロジェクトを右クリックします。</span><span class="sxs-lookup"><span data-stu-id="654b2-134">On the **Solution Explorer** pane, right-click on the project you want to publish.</span></span> <span data-ttu-id="654b2-135">**[発行]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="654b2-135">Select **Publish**.</span></span>
+01. <span data-ttu-id="28c8c-168">**[ソリューション エクスプローラー]** ペインで、発行するプロジェクトを右クリックします。</span><span class="sxs-lookup"><span data-stu-id="28c8c-168">On the **Solution Explorer** pane, right-click on the project you want to publish.</span></span> <span data-ttu-id="28c8c-169">**[発行]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-169">Select **Publish**.</span></span>
 
     :::image type="content" source="media/single-file/visual-studio-solution-explorer.png" alt-text="右クリック メニューの [発行] オプションが強調表示されたソリューション エクスプローラー。":::
 
-    <span data-ttu-id="654b2-137">発行プロファイルがまだない場合は、指示に従って作成し、ターゲットの種類として **[フォルダー]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="654b2-137">If you don't already have a publishing profile, follow the instructions to create one and choose the **Folder** target-type.</span></span>
+    <span data-ttu-id="28c8c-171">発行プロファイルがまだない場合は、指示に従って作成し、ターゲットの種類として **[フォルダー]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-171">If you don't already have a publishing profile, follow the instructions to create one and choose the **Folder** target-type.</span></span>
 
-01. <span data-ttu-id="654b2-138">**[編集]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="654b2-138">Choose **Edit**.</span></span>
+01. <span data-ttu-id="28c8c-172">**[編集]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-172">Choose **Edit**.</span></span>
 
-    :::image type="content" source="media/single-file/visual-studio-publish-edit-settings.png" alt-text="Visual Studio の発行プロファイルと [編集] ボタン":::
+    :::image type="content" source="media/single-file/visual-studio-publish-edit-settings.png" alt-text="右クリック メニューの [発行] オプションが強調表示されたソリューション エクスプローラー。":::
 
-01. <span data-ttu-id="654b2-140">**[プロファイル設定]** ダイアログで、次のオプションを設定します。</span><span class="sxs-lookup"><span data-stu-id="654b2-140">In the **Profile settings** dialog, set the following options:</span></span>
+01. <span data-ttu-id="28c8c-174">**[プロファイル設定]** ダイアログで、次のオプションを設定します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-174">In the **Profile settings** dialog, set the following options:</span></span>
 
-    - <span data-ttu-id="654b2-141">**[配置モード]** を **[自己完結]** に設定します。</span><span class="sxs-lookup"><span data-stu-id="654b2-141">Set **Deployment mode** to **Self-contained**.</span></span>
-    - <span data-ttu-id="654b2-142">**[ターゲット ランタイム]** を発行先のプラットフォームに設定します。</span><span class="sxs-lookup"><span data-stu-id="654b2-142">Set **Target runtime** to the platform you want to publish to.</span></span>
-    - <span data-ttu-id="654b2-143">**[単一ファイルの作成]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="654b2-143">Select **Produce single file**.</span></span>
+    - <span data-ttu-id="28c8c-175">**[配置モード]** を **[自己完結]** に設定します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-175">Set **Deployment mode** to **Self-contained**.</span></span>
+    - <span data-ttu-id="28c8c-176">**[ターゲット ランタイム]** を発行先のプラットフォームに設定します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-176">Set **Target runtime** to the platform you want to publish to.</span></span>
+    - <span data-ttu-id="28c8c-177">**[単一ファイルの作成]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-177">Select **Produce single file**.</span></span>
 
-    <span data-ttu-id="654b2-144">**[保存]** を選択して設定を保存し、 **[発行]** ダイアログに戻ります。</span><span class="sxs-lookup"><span data-stu-id="654b2-144">Choose **Save** to save the settings and return to the **Publish** dialog.</span></span>
+    <span data-ttu-id="28c8c-178">**[保存]** を選択して設定を保存し、 **[発行]** ダイアログに戻ります。</span><span class="sxs-lookup"><span data-stu-id="28c8c-178">Choose **Save** to save the settings and return to the **Publish** dialog.</span></span>
 
-    :::image type="content" source="media/single-file/visual-studio-publish-single-file-properties.png" alt-text="[配置モード]、[ターゲット ランタイム]、[単一ファイルの作成] の各オプションが強調表示されている [プロファイル設定] ダイアログ。":::
+    :::image type="content" source="media/single-file/visual-studio-publish-single-file-properties.png" alt-text="右クリック メニューの [発行] オプションが強調表示されたソリューション エクスプローラー。":::
 
-01. <span data-ttu-id="654b2-146">**[発行]** を選択して、アプリを単一ファイルとして発行します。</span><span class="sxs-lookup"><span data-stu-id="654b2-146">Choose **Publish** to publish your app as a single file.</span></span>
+01. <span data-ttu-id="28c8c-180">**[発行]** を選択して、アプリを単一ファイルとして発行します。</span><span class="sxs-lookup"><span data-stu-id="28c8c-180">Choose **Publish** to publish your app as a single file.</span></span>
 
-<span data-ttu-id="654b2-147">詳細については、[Visual Studio を使用した .NET Core アプリの発行](deploy-with-vs.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="654b2-147">For more information, see [Publish .NET Core apps with Visual Studio](deploy-with-vs.md).</span></span>
+<span data-ttu-id="28c8c-181">詳細については、[Visual Studio を使用した .NET Core アプリの発行](deploy-with-vs.md)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="28c8c-181">For more information, see [Publish .NET Core apps with Visual Studio](deploy-with-vs.md).</span></span>
 
-## <a name="publish-a-single-file-app---visual-studio-for-mac"></a><span data-ttu-id="654b2-148">単一ファイル アプリを発行する - Visual Studio for Mac</span><span class="sxs-lookup"><span data-stu-id="654b2-148">Publish a single file app - Visual Studio for Mac</span></span>
+## <a name="publish-a-single-file-app---visual-studio-for-mac"></a><span data-ttu-id="28c8c-182">単一ファイル アプリを発行する - Visual Studio for Mac</span><span class="sxs-lookup"><span data-stu-id="28c8c-182">Publish a single file app - Visual Studio for Mac</span></span>
 
-<span data-ttu-id="654b2-149">Visual Studio for Mac には、アプリを単一ファイルとして発行するためのオプションがありません。</span><span class="sxs-lookup"><span data-stu-id="654b2-149">Visual Studio for Mac doesn't provide options to publish your app as a single file.</span></span> <span data-ttu-id="654b2-150">「[単一ファイル アプリを発行する - CLI](#publish-a-single-file-app---cli)」セクションの手順に従って、手動で発行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="654b2-150">You'll need to publish manually by following the instructions from the [Publish a single file app - CLI](#publish-a-single-file-app---cli) section.</span></span> <span data-ttu-id="654b2-151">詳細については、「[.NET Core CLI を使用して .NET Core アプリを発行する](deploy-with-cli.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="654b2-151">For more information, see [Publish .NET Core apps with .NET Core CLI](deploy-with-cli.md).</span></span>
+<span data-ttu-id="28c8c-183">Visual Studio for Mac には、アプリを単一ファイルとして発行するためのオプションがありません。</span><span class="sxs-lookup"><span data-stu-id="28c8c-183">Visual Studio for Mac doesn't provide options to publish your app as a single file.</span></span> <span data-ttu-id="28c8c-184">「[単一ファイル アプリを発行する - CLI](#publish-a-single-file-app---cli)」セクションの手順に従って、手動で発行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="28c8c-184">You'll need to publish manually by following the instructions from the [Publish a single file app - CLI](#publish-a-single-file-app---cli) section.</span></span> <span data-ttu-id="28c8c-185">詳細については、「[.NET Core CLI を使用して .NET Core アプリを発行する](deploy-with-cli.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="28c8c-185">For more information, see [Publish .NET Core apps with .NET Core CLI](deploy-with-cli.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="654b2-152">関連項目</span><span class="sxs-lookup"><span data-stu-id="654b2-152">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="28c8c-186">関連項目</span><span class="sxs-lookup"><span data-stu-id="28c8c-186">See also</span></span>
 
-- <span data-ttu-id="654b2-153">[.NET Core アプリケーションの配置](index.md)。</span><span class="sxs-lookup"><span data-stu-id="654b2-153">[.NET Core application deployment](index.md).</span></span>
-- <span data-ttu-id="654b2-154">[.NET Core CLI を使用して .NET Core アプリを発行する](deploy-with-cli.md)。</span><span class="sxs-lookup"><span data-stu-id="654b2-154">[Publish .NET Core apps with .NET Core CLI](deploy-with-cli.md).</span></span>
-- <span data-ttu-id="654b2-155">[Visual Studio を使用して .NET Core アプリを発行する](deploy-with-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="654b2-155">[Publish .NET Core apps with Visual Studio](deploy-with-vs.md).</span></span>
-- <span data-ttu-id="654b2-156">[`dotnet publish` コマンド](../tools/dotnet-publish.md)。</span><span class="sxs-lookup"><span data-stu-id="654b2-156">[`dotnet publish` command](../tools/dotnet-publish.md).</span></span>
+- <span data-ttu-id="28c8c-187">[.NET Core アプリケーションの配置](index.md)。</span><span class="sxs-lookup"><span data-stu-id="28c8c-187">[.NET Core application deployment](index.md).</span></span>
+- <span data-ttu-id="28c8c-188">[.NET Core CLI を使用して .NET Core アプリを発行する](deploy-with-cli.md)。</span><span class="sxs-lookup"><span data-stu-id="28c8c-188">[Publish .NET Core apps with .NET Core CLI](deploy-with-cli.md).</span></span>
+- <span data-ttu-id="28c8c-189">[Visual Studio を使用して .NET Core アプリを発行する](deploy-with-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="28c8c-189">[Publish .NET Core apps with Visual Studio](deploy-with-vs.md).</span></span>
+- <span data-ttu-id="28c8c-190">[`dotnet publish` コマンド](../tools/dotnet-publish.md)。</span><span class="sxs-lookup"><span data-stu-id="28c8c-190">[`dotnet publish` command](../tools/dotnet-publish.md).</span></span>
