@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
-ms.openlocfilehash: 0445ac33473c7e2d1916705893b22ba21bb981ff
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4e73b34390143a2ac9b839e1da79b7894232c4b4
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536847"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437875"
 ---
 # <a name="partial-type-c-reference"></a>partial 型 (C# リファレンス)
 
-部分型定義では、クラス、構造体、またはインターフェイスの定義を複数のファイルに分割することができます。
+部分型定義を使用すると、クラス、構造体、インターフェイス、またはレコードの定義を複数のファイルに分割することができます。
 
 *File1.cs* 内:
 

@@ -3,12 +3,12 @@ title: コンパイルの構成設定
 description: .NET Core アプリの JIT コンパイラの動作方法を構成するランタイム設定について説明します。
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: cfcf9b5fc8d11a4ae35ab9b152f32133cd6930bf
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: e5f9e1245b749864787fb808527d022665197edf
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762007"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654843"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>コンパイルのランタイム構成オプション
 
@@ -135,7 +135,7 @@ ms.locfileid: "83762007"
 ## <a name="readytorun"></a>ReadyToRun
 
 - 使用可能な ReadyToRun データを含むイメージに対して、.NET Core ランタイムでプリコンパイル済みコードを使用するかどうかを構成します。 このオプションを無効にすると、ランタイムでフレームワーク コードが JIT コンパイルされます。
-- 詳細については、「[ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images)」を参照してください。
+- 詳細については、[ReadyToRun](../deploying/ready-to-run.md) に関する記事をご覧ください。
 - この設定を省略すると、.NET では ReadyToRun データが使用可能なときはそれが使用されます。 これは、値を `1` に設定した場合と同じです。
 
 | | 設定の名前 | 値 |

@@ -8,18 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
-ms.openlocfilehash: ccd575748c2286fa7348e2880acbfadd036d9ccd
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 239163fc2f91ccbfe8b1c111a358db87d36a8308
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247723"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654640"
 ---
 # <a name="static-c-reference"></a>static (C# リファレンス)
 
 このページでは、`static` 修飾子キーワードについて説明します。 `static` キーワードも [`using static`](using-static.md) ディレクティブに含まれます。
 
 `static` 修飾子は、静的メンバーの宣言に使用します。静的メンバーは、特定のオブジェクトではなく、型自体に属するメンバーです。 `static` 修飾子は `static` クラスの宣言に使用できます。 クラス、インターフェイス、構造体では、`static` 修飾子をフィールド、メソッド、プロパティ、演算子、イベント、コンストラクターに追加できます。 `static` 修飾子はインデクサーおよびファイナライザーと併用できません。 詳細については、「[静的クラスと静的クラス メンバー](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)」を参照してください。
+
+C# 8.0 以降では、[ローカル関数](../../programming-guide/classes-and-structs/local-functions.md)に `static` 修飾子を追加できます。 静的なローカル関数では、ローカル変数やインスタンスの状態をキャプチャすることはできません。
 
 C# 9.0 以降では、`static` 修飾子を[ラムダ式](../operators/lambda-expressions.md)または[匿名メソッド](../operators/delegate-operator.md)に追加できます。 静的ラムダまたは匿名メソッドでは、ローカル変数またはインスタンスの状態をキャプチャすることはできません。
 

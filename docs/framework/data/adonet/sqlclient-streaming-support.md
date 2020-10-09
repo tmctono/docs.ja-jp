@@ -2,12 +2,12 @@
 title: SqlClient ストリーミング サポート
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 9dc7ee573bd011bd18d6c4b8bbd2d147b1fe907f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a396e3e172c63b0b71b085d4694184c42cc42f3e
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791402"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609246"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient ストリーミング サポート
 
@@ -20,11 +20,11 @@ SQL Server との間のストリーミングのサポートにより、データ
 > [!WARNING]
 > 非同期呼び出しは、アプリケーションで `Context Connection` 接続文字列キーワードも使用されている場合はサポートされません。
 >
-> ストリーミング サポートに追加されたメンバーは、クエリからデータを取得し、クエリおよびストアド プロシージャにパラメーターを渡すために使用されます。 ストリーミング機能は、基本的な OLTP およびデータ移行のシナリオに対処し、社内および社外のデータ移行環境に適用できます。
+> ストリーミング サポートに追加されたメンバーは、クエリからデータを取得し、クエリおよびストアド プロシージャにパラメーターを渡すために使用されます。 ストリーミング機能は、基本的な OLTP およびデータ移行のシナリオに対処し、オンプレミスおよびオフプレミスのデータ移行環境に適用できます。
 
 ## <a name="streaming-support-from-sql-server"></a>SQL Server からのストリーミングのサポート
 
-SQL Server からのストリーミングのサポートでは、<xref:System.IO.Stream>、<xref:System.Xml.XmlReader>、<xref:System.IO.TextReader> の各オブジェクトを取得して対応するために、<xref:System.Data.Common.DbDataReader> クラスと <xref:System.Data.SqlClient.SqlDataReader> クラスに新機能が導入されています。 これらのクラスはクエリからデータを取得するために使用されます。 その結果、SQL Server からのストリーミングのサポートは OLTP シナリオに対応しており、社内および社外環境に適用されます。
+SQL Server からのストリーミングのサポートでは、<xref:System.IO.Stream>、<xref:System.Xml.XmlReader>、<xref:System.IO.TextReader> の各オブジェクトを取得して対応するために、<xref:System.Data.Common.DbDataReader> クラスと <xref:System.Data.SqlClient.SqlDataReader> クラスに新機能が導入されています。 これらのクラスはクエリからデータを取得するために使用されます。 その結果、SQL Server からのストリーミングのサポートは OLTP シナリオに対応しており、オンプレミスおよびオフプレミス環境に適用されます。
 
 SQL Server からのストリーミングのサポートを有効にするために、次のメンバーが <xref:System.Data.SqlClient.SqlDataReader> に追加されました。
 

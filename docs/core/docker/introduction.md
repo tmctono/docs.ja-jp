@@ -3,12 +3,12 @@ title: Docker の概要
 description: この記事では、.NET Core アプリケーションのコンテキストでの Docker の基本と概要について説明します。
 ms.date: 03/20/2019
 ms.custom: mvc
-ms.openlocfilehash: eedfd1e7c1b361beb9d4f271e739657ef5e894a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 16ad49c39d588aac8f8a7a918eb4d799f37823ac
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157792"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654823"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET および Docker の概要
 
@@ -36,7 +36,7 @@ Docker をインストールする方法について詳しくは、次のダウ�
 
 Docker には、自分が使用できる [Docker Hub](https://hub.docker.com/) でホストされているパブリック レジストリが含まれます。 [.NET Core 関連イメージ](https://hub.docker.com/_/microsoft-dotnet-core/)は Docker Hub に一覧表示されます。
 
-Microsoft Container Registry (MCR) は、Microsoft が提供するコンテナー イメージの公式ソースです。 MCR は Azure CDN に基づいて構築され、グローバルにレプリケートされたイメージを備えています。 ただし、MCR には一般公開された Web サイトがありません。Microsoft が提供するコンテナー イメージについて学習する主な方法は、[Microsoft Docker Hub のページ](https://hub.docker.com/_/microsoft-dotnet-core/)を使うことです。
+[Microsoft Container Registry (MCR)](/azure/container-registry) は、Microsoft が提供するコンテナー イメージの公式ソースです。 MCR は Azure CDN に基づいて構築され、グローバルにレプリケートされたイメージを備えています。 ただし、MCR には一般公開された Web サイトがありません。Microsoft が提供するコンテナー イメージについて学習する主な方法は、[Microsoft Docker Hub のページ](https://hub.docker.com/_/microsoft-dotnet-core/)を使うことです。
 
 ### <a name="dockerfile"></a>Dockerfile
 
@@ -68,11 +68,11 @@ PaaS 環境で Linux コンテナーを使用して Web アプリまたは API �
 Windows Server コンテナーを使用して、.NET アプリケーションをマイクロサービスにリフト、シフト、および最新化します。
 
 - [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)\
-すべての種類の Azure デプロイでコンテナー イメージを格納し、管理します。
+あらゆる種類の Azure デプロイ間でコンテナー イメージを格納して管理します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-- [.NET Core アプリケーションをコンテナー化する方法について説明します。](build-container.md)
+- [.NET Core アプリケーションをコンテナー化する方法を学習します。](build-container.md)
 - [ASP.NET Core アプリケーションをコンテナー化する方法を学習します。](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
-- [Learn の ASP.NET Core マイクロサービスのチュートリアルをお試しください。](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
+- [Learn の ASP.NET Core マイクロサービスのチュートリアルを試します。](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
 - [Visual Studio でのコンテナー ツールについて学習します](/visualstudio/containers/overview)

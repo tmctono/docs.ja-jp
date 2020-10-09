@@ -2,15 +2,15 @@
 title: ASP.NET Core の破壊的変更
 titleSuffix: ''
 description: ASP.NET Core における破壊的変更をリストアップします。
-ms.date: 09/18/2020
+ms.date: 09/29/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: a4534367184127604ed53bf1fdafabbf8ff575d1
-ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
+ms.openlocfilehash: 0c7ed795868ad4a03dd52e2e23014a3d0f220c86
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91406194"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609331"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core の破壊的変更
 
@@ -83,6 +83,7 @@ ASP.NET Core 3.0、3.1、5.0 の次の破壊的変更はこのページに記録
 - [ミドルウェア:ハンドラーが見つからない場合、例外ハンドラー ミドルウェアから元の例外がスローされる](#middleware-exception-handler-middleware-throws-original-exception-if-handler-not-found)
 - [MVC:コントローラー アクション Async サフィックスを削除](#mvc-async-suffix-trimmed-from-controller-action-names)
 - [MVC:JsonResult を Microsoft.AspNetCore.Mvc.Core に移動](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
+- [MVC:ObjectModelValidator で ValidationVisitor.Validate の新しいオーバーロードが呼び出される](#mvc-objectmodelvalidator-calls-a-new-overload-of-validationvisitorvalidate)
 - [MVC:プリコンパイル ツールを非推奨](#mvc-precompilation-tool-deprecated)
 - [MVC:型を internal に変更](#mvc-pubternal-types-changed-to-internal)
 - [MVC:Web API 互換性 shim を削除](#mvc-web-api-compatibility-shim-removed)
@@ -197,6 +198,10 @@ ASP.NET Core 3.0、3.1、5.0 の次の破壊的変更はこのページに記録
 ***
 
 [!INCLUDE[Middleware: Exception Handler Middleware throws original exception if handler not found](~/includes/core-changes/aspnetcore/5.0/middleware-exception-handler-throws-original-exception.md)]
+
+***
+
+[!INCLUDE[MVC: ObjectModelValidator calls a new overload of ValidationVisitor.Validate](~/includes/core-changes/aspnetcore/5.0/mvc-objectmodelvalidator-calls-new-overload.md)]
 
 ***
 

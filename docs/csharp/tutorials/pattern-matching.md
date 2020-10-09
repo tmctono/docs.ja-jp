@@ -1,21 +1,21 @@
 ---
-title: パターン マッチング機能を使用してデータ型を拡張する
+title: 'チュートリアル: パターン マッチングを使用してアルゴリズムを構築する'
 description: この高度なチュートリアルでは、パターン マッチング手法を使用して、別々に作成されたデータとアルゴリズムを使用して機能を作成する方法を示します。
 ms.date: 03/13/2019
-ms-technology: csharp-whats-new
-ms.custom: mvc
-ms.openlocfilehash: df1054d8e0ec2b2539e6a1d00bf353d8ca927397
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.technology: csharp-whats-new
+ms.custom: contperfq1
+ms.openlocfilehash: 9fff9f286bd0aa7baf7632f9144dfe693bab0c32
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156533"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437983"
 ---
-# <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>チュートリアル: パターン マッチング機能を使用してデータ型を拡張する
+# <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>チュートリアル: パターン マッチングを使用して、型ドリブンおよびデータ ドリブンのアルゴリズムを構築する
 
 C# 7 で、基本的なパターン マッチング機能が導入されました。 C# 8 では、これらの機能が新しい式とパターンで拡張されています。 他のライブラリ内に存在する可能性がある型を拡張したかのように動作する機能を記述できます。 パターンの別の用途は、アプリケーションで必要な、拡張される型の基本機能ではない機能を作成することです。
 
-このチュートリアルでは、次の作業を行う方法について説明します。
+このチュートリアルで学習する内容は次のとおりです。
 
 > [!div class="checklist"]
 >
@@ -89,7 +89,7 @@ namespace toll_calculator
 }
 ```
 
-上記のコードでは、**型パターン**をテストする **switch 式** ([`switch`](../language-reference/keywords/switch.md) ステートメントとは異なります) が使用されています。 上記のコードでは、**switch 式**は変数 `vehicle` で始まり、`switch` キーワードが続きます。 次に、すべての **switch アーム**が中かっこ内に指定されます。 `switch` 式は、`switch` ステートメントを囲む構文に対して、その他の絞り込みを行います。 `case` キーワードは省略され、各アームの結果が式になります。 最後の 2 つのアームは、新しい言語機能を示しています。 `{ }` case は、前のアームと一致しなかった null 以外のオブジェクトと一致します。 このアームは、このメソッドに渡された正しくない型をキャッチします。  `{ }` case は、車種ごとの case に従う必要があります。 順序が逆になった場合は、`{ }` case が優先されます。 最後に、`null` パターンで、このメソッドに `null` が渡されたときを検出します。 他の型パターンが null 以外の正しい車種のオブジェクトのみと一致するため、`null` パターンを最後にすることができます。
+上記のコードでは、**型パターン**をテストする **switch 式 **([`switch`](../language-reference/keywords/switch.md) ステートメントとは異なります) が使用されています。 上記のコードでは、**switch 式**は変数 `vehicle` で始まり、`switch` キーワードが続きます。 次に、すべての **switch アーム**が中かっこ内に指定されます。 `switch` 式は、`switch` ステートメントを囲む構文に対して、その他の絞り込みを行います。 `case` キーワードは省略され、各アームの結果が式になります。 最後の 2 つのアームは、新しい言語機能を示しています。 `{ }` case は、前のアームと一致しなかった null 以外のオブジェクトと一致します。 このアームは、このメソッドに渡された正しくない型をキャッチします。  `{ }` case は、車種ごとの case に従う必要があります。 順序が逆になった場合は、`{ }` case が優先されます。 最後に、`null` パターンで、このメソッドに `null` が渡されたときを検出します。 他の型パターンが null 以外の正しい車種のオブジェクトのみと一致するため、`null` パターンを最後にすることができます。
 
 このコードを `Program.cs` の次のコードを使用してテストできます。
 
@@ -298,7 +298,7 @@ public decimal CalculateToll(object vehicle) =>
 
 次の表に、入力値の組み合わせとピーク時の乗数を示します。
 
-| Day        | 時刻         | 方向 | 割り増し |
+| 日間        | Time         | Direction | Premium |
 | ---------- | ------------ | --------- |--------:|
 | 平日    | 朝のラッシュ時 | インバウンド   | x 2.00  |
 | 平日    | 朝のラッシュ時 | アウトバウンド  | x 1.00  |
@@ -386,6 +386,6 @@ public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
 
 パターン マッチングによって、ある種のコードが読みやすくなり、クラスにコードを追加できない場合はオブジェクト指向の手法の代替として機能します。 クラウドによって、データと機能は分離されています。 データの "*形状*" とデータに対する "*操作*" は、必ずしも一緒に記述されるわけではありません。 このチュートリアルでは、既存のデータを、元の関数とは完全に異なる方法で使用しています。 パターン マッチングでは、型を拡張できない場合でも、それらをオーバーライドする機能を記述できます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 GitHub リポジトリの [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/finished) から、完成したコードをダウンロードできます。 自分のパターンを調査し、通常のコーディング アクティビティにこの手法を追加してください。 これらの手法を習得することで、別の方法で問題にアプローチし、新しい機能を作成できます。

@@ -1,18 +1,18 @@
 ---
 description: new 演算子 - C# リファレンス
 title: new 演算子 - C# リファレンス
-ms.date: 06/25/2019
+ms.date: 10/02/2020
 f1_keywords:
 - new_CSharpKeyword
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: 88ec929317d4e6c6651233c1a1aa0ce8a8cce611
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 3125f3d2c694dcfc5682ee482f3f76072ac3726d
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89118274"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609383"
 ---
 # <a name="new-operator-c-reference"></a>new 演算子 (C# リファレンス)
 
@@ -29,6 +29,14 @@ ms.locfileid: "89118274"
 [オブジェクトまたはコレクション初期化子](../../programming-guide/classes-and-structs/object-and-collection-initializers.md)を `new` 演算子と共に使用して、1 つのステートメント内でオブジェクトのインスタンス化と初期化を行うことができます。次に例を示します。
 
 [!code-csharp-interactive[constructor with initializer](snippets/shared/NewOperator.cs#ConstructorWithInitializer)]
+
+C# 9.0 以降、コンストラクターの呼び出し式はターゲット型になっています。 つまり、式のターゲット型がわかっている場合は、次の例に示すように、型名を省略できます。
+
+:::code language="csharp" source="snippets/shared/NewOperator.cs" id="SnippetTargetTyped":::
+
+前の例に示されているように、ターゲット型の `new` 式では常にかっこを使用します。
+
+`new` 式のターゲット型が不明な場合 (たとえば [`var`](../keywords/var.md) キーワードを使用する場合) は、型名を指定する必要があります。
 
 ## <a name="array-creation"></a>配列の作成
 
@@ -62,7 +70,9 @@ ms.locfileid: "89118274"
 
 詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の [new 演算子](~/_csharplang/spec/expressions.md#the-new-operator)に関するセクションを参照してください。
 
-## <a name="see-also"></a>関連項目
+ターゲット型の `new` 式について詳しくは、[機能提案メモ](~/_csharplang/proposals/csharp-9.0/target-typed-new.md)をご覧ください。
+
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
 - [C# の演算子と式](index.md)

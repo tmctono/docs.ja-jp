@@ -4,12 +4,12 @@ description: 単一ファイル アプリケーションの概要、およびこ
 author: lakshanf
 ms.author: lakshanf
 ms.date: 08/28/2020
-ms.openlocfilehash: 795ea98a9fd9d672b199eb2d9b24151340ef8246
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 0167e62ea46e1c23c3d4ef6ea505ee051ffaf264
+ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495748"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91712638"
 ---
 # <a name="single-file-deployment-and-executable"></a>単一ファイルの配置と実行可能ファイル
 
@@ -17,9 +17,49 @@ ms.locfileid: "89495748"
 
 [フレームワークに依存するデプロイ モデル](index.md#publish-framework-dependent)と[自己完結型アプリケーション](index.md#publish-self-contained)の両方で、単一ファイルの配置が可能です。 自己完結型アプリケーション内にある単一ファイルは、ランタイム ライブラリとフレームワーク ライブラリが含まれるため、大きなサイズとなります。 単一ファイル配置オプションは、[ReadyToRun](../tools/dotnet-publish.md) と [Trim (.NET 5.0 の試験的な機能)](trim-self-contained.md) の各発行オプションと組み合わせることができます。
 
-単一ファイルを使用する場合に把握しておくべきいくつかの注意事項があります。1 つめは、アプリケーションの場所を基準としてファイルを検索するときのパス情報の使用です。 <xref:System.Reflection.Assembly.Location?displayProperty=nameWithType> API は、空の文字列を返します。これは、メモリから読み込まれたアセンブリの既定の動作です。 コンパイラは、ビルド時にこの API に対する警告を表示し、特定の動作について開発者に注意を促します。 アプリケーション ディレクトリへのパスが必要な場合、<xref:System.AppContext.BaseDirectory?displayProperty=nameWithType> API は AppHost (単一ファイル バンドル自体) が存在するディレクトリを返します。 マネージド C++ アプリケーションは、単一ファイルの配置には適していません。単一ファイルとの互換性を確保するには、アプリケーションを C# で記述することをお勧めします。
+## <a name="api-incompatibility"></a>API の非互換性
+
+一部の API は、単一ファイルの配置と互換性がありません。また、これらの API を使用する場合、アプリケーションで変更が必要になることがあります。 サードパーティのフレームワークまたはパッケージを使用する場合、それらでこれらの API のいずれかが使用されていて、変更が必要になる可能性があります。 問題の最も一般的な原因は、アプリケーションに付属するファイルまたは DLL のファイル パスに依存していることです。
+
+次の表では、単一ファイルの使用に関連するランタイム ライブラリ API の詳細を示します。
+
+| API                            | Note                                                                   |
+|--------------------------------|------------------------------------------------------------------------|
+| `Assembly.Location`            | 空の文字列を返します。                                               |
+| `Module.FullyQualifiedName`    | 値が `<Unknown>` である文字列が返されるか、例外がスローされます。 |
+| `Module.Name`                  | 値が `<Unknown>` である文字列が返されます。                        |
+| `Assembly.GetFile`             | <xref:System.IO.IOException> をスローします。                                   |
+| `Assembly.GetFiles`            | <xref:System.IO.IOException> をスローします。                                   |
+| `Assembly.CodeBase`            | <xref:System.PlatformNotSupportedException> をスローします。                    |
+| `Assembly.EscapedCodeBase`     | <xref:System.PlatformNotSupportedException> をスローします。                    |
+| `AssemblyName.CodeBase`        | `null` を返します。                                                        |
+| `AssemblyName.EscapedCodeBase` | `null` を返します。                                                        |
+
+一般的なシナリオを修正するための推奨事項がいくつかあります。
+
+* 実行可能ファイルの隣にあるファイルにアクセスするには、<xref:System.AppContext.BaseDirectory?displayProperty=nameWithType> を使用します。
+
+* 実行可能ファイルのファイル名を検索するには、<xref:System.Environment.GetCommandLineArgs?displayProperty=nameWithType> の最初の要素を使用します。
+
+* Loose ファイルが完全に配布されないようにするには、[埋め込みリソース](../../framework/resources/creating-resource-files-for-desktop-apps.md)を使用することを検討します。
+
+## <a name="attaching-a-debugger"></a>デバッガーのアタッチ
+
+Linux では、自己完結型の単一ファイル プロセスにアタッチしたり、クラッシュ ダンプをデバッグしたりできる唯一のデバッガーは、[LLDB を使用する SOS](../diagnostics/dotnet-sos.md) です。
+
+Windows と Mac では、Visual Studio と VS Code を使用してクラッシュ ダンプをデバッグできます。 実行中の自己完結型単一ファイルの実行可能ファイルにアタッチするには、余分なファイル _mscordbi.{dll,so}_ が必要です。
+
+このファイルがないと、Visual Studio で次のエラーが発生することがあります: "プロセスにアタッチできません。 デバッグ コンポーネントはインストールされていません。" また、VS Code では、次のエラーが発生することがあります: "プロセスにアタッチできませんでした: 不明なエラー: 0x80131c3c。"
+
+これらのエラーを修正するには、実行可能ファイルの隣に _mscordbi_ をコピーする必要があります。 _mscordbi_ は、既定では、アプリケーションのランタイム ID でサブディレクトリに `publish` されます。 そのため、たとえば、`dotnet` CLI と `-r win-x64` パラメーターを使用して Windows 用に自己完結型単一ファイルの実行可能ファイルを発行する場合、実行可能ファイルは _bin/Debug/net5.0/win-x64/publish_ に配置されます。 _mscordbi.dll_ のコピーは _bin/Debug/net5.0/win-x64_ にあります。
+
+## <a name="other-considerations"></a>その他の考慮事項
 
 既定では、単一ファイルを使用してネイティブ ライブラリをバンドルすることができません。 Linux では、ランタイム ライブラリをバンドルに事前にリンクして、アプリケーション ネイティブ ライブラリのみを単一ファイル アプリと同じディレクトリに配置します。 Windows では、ホスト コードのみを事前にリンクして、ランタイム ライブラリとアプリケーション ネイティブ ライブラリの両方を単一ファイル アプリと同じディレクトリに配置します。 これにより、優れたデバッグ エクスペリエンスが確保されます。それには、ネイティブ ファイルを単一ファイルから除外する必要があります。 単一ファイル バンドルにネイティブ ライブラリを含めるようにフラグ `IncludeNativeLibrariesForSelfExtract` を設定するオプションがありますが、これらのファイルは、単一ファイル アプリケーションが実行されるときに、クライアント コンピューターの一時ディレクトリに抽出されます。
+
+単一ファイル アプリケーションでは、関連するすべての PDB ファイルは隣に配置され、既定ではバンドルされません。 ビルドするプロジェクトのアセンブリ内に PDB を含めるには、[以下](#include-pdb-files-inside-the-bundle)で詳しく説明するように、`DebugType` を `embedded` に設定します。
+
+マネージド C++ コンポーネントは、単一ファイルの配置には適していません。単一ファイルとの互換性を確保するには、アプリケーションを C# または別の非マネージド C++ 言語で記述することをお勧めします。
 
 ## <a name="exclude-files-from-being-embedded"></a>ファイルを埋め込み対象から除外する
 
@@ -38,6 +78,22 @@ ms.locfileid: "89495748"
     <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
   </Content>
 </ItemGroup>
+```
+
+## <a name="include-pdb-files-inside-the-bundle"></a>バンドル内に PDB ファイルを含める
+
+アセンブリの PDB ファイルは、次の設定を使用して、アセンブリ自体 (`.dll`) に埋め込むことができます。 シンボルはアセンブリの一部であるため、単一ファイル アプリケーションの一部にもなります。
+
+```xml
+<DebugType>embedded</DebugType>
+```
+
+たとえば、アセンブリに PDB ファイルを埋め込むには、そのアセンブリのプロジェクト ファイルに次のプロパティを追加します。
+
+```xml
+<PropertyGroup>
+  <DebugType>embedded</DebugType>
+</PropertyGroup>
 ```
 
 ## <a name="publish-a-single-file-app---cli"></a>単一ファイル アプリを発行する - CLI
@@ -73,7 +129,7 @@ Visual Studio を使用すると、アプリケーションの発行方法を制
 
 01. **[編集]** を選択します。
 
-    :::image type="content" source="media/single-file/visual-studio-publish-edit-settings.png" alt-text="Visual Studio の発行プロファイルと [編集] ボタン":::
+    :::image type="content" source="media/single-file/visual-studio-publish-edit-settings.png" alt-text="右クリック メニューの [発行] オプションが強調表示されたソリューション エクスプローラー。":::
 
 01. **[プロファイル設定]** ダイアログで、次のオプションを設定します。
 
@@ -83,7 +139,7 @@ Visual Studio を使用すると、アプリケーションの発行方法を制
 
     **[保存]** を選択して設定を保存し、 **[発行]** ダイアログに戻ります。
 
-    :::image type="content" source="media/single-file/visual-studio-publish-single-file-properties.png" alt-text="[配置モード]、[ターゲット ランタイム]、[単一ファイルの作成] の各オプションが強調表示されている [プロファイル設定] ダイアログ。":::
+    :::image type="content" source="media/single-file/visual-studio-publish-single-file-properties.png" alt-text="右クリック メニューの [発行] オプションが強調表示されたソリューション エクスプローラー。":::
 
 01. **[発行]** を選択して、アプリを単一ファイルとして発行します。
 

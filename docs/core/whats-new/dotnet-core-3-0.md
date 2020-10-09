@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: ac2b4193849c56002c5bba35932f2882b987a0d6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 60b511adecf37855de91f45245fc55911ba281dc
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537497"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654772"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 の新機能
 
@@ -27,7 +27,13 @@ ms.locfileid: "90537497"
 
 ## <a name="language-improvements-c-80"></a>C# 8.0 の言語自体の強化
 
-C#8.0 も、このリリースの一部であり、[null を許容する参照型の機能](../../csharp/tutorials/nullable-reference-types.md)、[非同期ストリーム](../../csharp/tutorials/generate-consume-asynchronous-stream.md)、[追加のパターン](../../csharp/tutorials/pattern-matching.md)が含まれます。 C# 8.0 の機能の詳細については、「[C# 8.0 の新機能](../../csharp/whats-new/csharp-8.md)」を参照してください。
+C# 8.0 もこのリリースの一部であり、[null 許容参照型](../../csharp/language-reference/builtin-types/nullable-reference-types.md)の機能、非同期ストリーム、追加のパターンが含まれます。 C# 8.0 の機能の詳細については、「[C# 8.0 の新機能](../../csharp/whats-new/csharp-8.md)」を参照してください。
+
+C# 8.0 の言語機能に関連するチュートリアル:
+
+- [チュートリアル: null 許容参照型と null 非許容参照型を使用して設計意図をもっと明確に示す](../../csharp/tutorials/nullable-reference-types.md)
+- [チュートリアル: C#8.0 および .NET Core 3.0 を使用して非同期ストリームを生成および使用する](../../csharp/tutorials/generate-consume-asynchronous-stream.md)
+- [チュートリアル: パターン マッチングを使用して、型ドリブンおよびデータ ドリブンのアルゴリズムを構築する](../../csharp/tutorials/pattern-matching.md)
 
 次のような API 機能をサポートするために、言語の機能強化が追加されました。これらについては、以下で詳細に説明します。
 
@@ -205,6 +211,8 @@ ReadyToRun としてプロジェクトをコンパイルするには、次の手
 - Windows x64 を使って、Windows ARM32、ARM64、x86 のイメージをコンパイルできます。
 - Windows x86 を使って、Windows ARM32 のイメージをコンパイルできます。
 - Linux x64 を使って、Linux ARM32 と ARM64 のイメージをコンパイルできます。
+
+詳細については、[ReadyToRun](../deploying/ready-to-run.md) に関する記事をご覧ください。
 
 ## <a name="runtimesdk"></a>ランタイム/SDK
 

@@ -2,12 +2,12 @@
 title: C# 9.0 の新機能 - C# ガイド
 description: C# 9.0 で使用できる新しい機能の概要を説明します。
 ms.date: 09/04/2020
-ms.openlocfilehash: 6a0227b408b894fe450c2a6bb6017d9059d229c0
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: c165ca764d93b74aac21028ed3e55e80f2a23ee0
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247619"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654908"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 の新機能
 
@@ -194,7 +194,7 @@ if (e is not null)
 
 3 つの新機能により、高パフォーマンスを必要とするネイティブ相互運用および低レベル ライブラリのサポートが向上します (ネイティブ サイズの整数、関数ポインター、`localsinit` フラグの省略)。
 
-ネイティブ サイズの整数 `nint` と `nuint` は整数型です。 これらは、基になる型 <xref:System.IntPtr?displayProperty=nameWithType> および <xref:System.UIntPtr?displayProperty=nameWithType> によって表されます。 コンパイラによって、これらの型に対する追加の変換と操作がネイティブ int として公開されます。 ネイティブ サイズの整数には、`MaxValue` または `MinValue` の定数はありません。ただし、`0` の `MinValue` を持つ `nuint.MinValue` は除きます。 他の値は、ターゲット コンピューターでの整数のネイティブ サイズに依存するため、定数として表すことはできません。 `nint` に対する定数値は、[`int.MinValue` .. `int.MaxValue`]. `nuint` に対する定数値は、[`uint.MinValue` .. `uint.MaxValue`]. コンパイラによって、<xref:System.Int32?displayProperty=nameWithType> 型と <xref:System.UInt32?displayProperty=nameWithType> 型を使用するすべての単項演算子と二項演算子に対して、定数の折りたたみが実行されます。 結果が 32 ビットに収まらない場合、演算は実行時に実行され、定数とは見なされません。 ネイティブ サイズの整数を使用すると、整数演算が広く使用されており、最速のパフォーマンスを実現する必要があるシナリオで、パフォーマンスを向上させることができます。
+ネイティブ サイズの整数 `nint` と `nuint` は整数型です。 これらは、基になる型 <xref:System.IntPtr?displayProperty=nameWithType> および <xref:System.UIntPtr?displayProperty=nameWithType> によって表されます。 コンパイラによって、これらの型に対する追加の変換と操作がネイティブ int として公開されます。 ネイティブ サイズの整数では、`MaxValue` または `MinValue` のプロパティが定義されます。 これらの値は、ターゲット コンピューターでの整数のネイティブ サイズに依存するため、コンパイル時の定数として表すことはできません。 これらの値は実行時に読み取り専用になります。 `nint` に対する定数値は、[`int.MinValue` .. `int.MaxValue`]. `nuint` に対する定数値は、[`uint.MinValue` .. `uint.MaxValue`]. コンパイラによって、<xref:System.Int32?displayProperty=nameWithType> 型と <xref:System.UInt32?displayProperty=nameWithType> 型を使用するすべての単項演算子と二項演算子に対して、定数の折りたたみが実行されます。 結果が 32 ビットに収まらない場合、演算は実行時に実行され、定数とは見なされません。 ネイティブ サイズの整数を使用すると、整数演算が広く使用されており、最速のパフォーマンスを実現する必要があるシナリオで、パフォーマンスを向上させることができます。
 
 関数ポインターでは、IL オペコード `ldftn` および `calli` にアクセスするための簡単な構文が提供されます。 関数ポインターは、新しい `delegate*` 構文を使用して宣言できます。 `delegate*` 型はポインター型です。 `Invoke()` メソッドで `callvirt` が使用されるデリゲートとは異なり、`delegate*` 型の呼び出しでは `calli` が使用されます。 構文的には、呼び出しは同じです。 関数ポインターの呼び出しでは、`managed` の呼び出し規約が使用されます。 `unmanaged` の呼び出し規約が必要であることを宣言するには、`delegate*` 構文の後に `unmanaged` キーワードを追加します。 その他の呼び出し規約は、`delegate*` 宣言の属性を使用して指定できます。
 
@@ -204,11 +204,11 @@ if (e is not null)
 
 ## <a name="fit-and-finish-features"></a>適合性と完成度の機能
 
-他の多くの機能は、コードをより効率的に記述するのに役立ちます。 C# 9.0 では、作成されたオブジェクトの型が既にわかっている場合、新しい式で型を省略できます。 最も一般的な使用方法は、フィールドの宣言です。
+他の多くの機能は、コードをより効率的に記述するのに役立ちます。 C# 9.0 では、作成されるオブジェクトの型が既にわかっている場合、[`new` 式](../language-reference/operators/new-operator.md)で型を省略できます。 最も一般的な使用方法は、フィールドの宣言です。
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="WeatherStationField":::
 
-ターゲット型 new は、メソッドにパラメーターとして渡す新しいオブジェクトを作成する必要がある場合にも使用できます。 次のようなシグネチャを持つ `ForecastFor()` メソッドについて考えます。
+ターゲット型の `new` は、メソッドへの引数として渡す新しいオブジェクトを作成する必要がある場合にも使用できます。 次のようなシグネチャを持つ `ForecastFor()` メソッドについて考えます。
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="ForecastSignature":::
 
@@ -220,7 +220,7 @@ if (e is not null)
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="InitWeatherStation":::
 
-`return new();` 式を使用することで、既定のコンストラクターによって作成されたインスタンスを返すことができます。
+`return new();` ステートメントを使用することで、既定のコンストラクターによって作成されたインスタンスを返すことができます。
 
 同様の機能により、[条件式](../language-reference/operators/conditional-operator.md)の対象となる型の解決が向上します。 この変更により、2 つの式の間で暗黙的な変換を行う必要はありませんが、どちらもターゲット型への暗黙的な変換を行うことができます。 多くの場合、この変更に気付くことはありません。 気付くとすれば、以前はキャストを必要としたり、コンパイルされなかったりした一部の条件式が、機能するようになることです。
 

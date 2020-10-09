@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 469ed872c1c8c4eb41eecd04277d4fc53fb3d112
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: c7521f6aef79825a8cc20d5455588a2d684b9ccb
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414644"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609604"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() の戻り値 (C# プログラミング ガイド)
 
@@ -36,7 +36,7 @@ ms.locfileid: "89414644"
 
 [dotnet CLI](../../../core/tools/dotnet.md) の `dotnet build` コマンドを使用してアプリケーションを構築できます。
 
-次に、PowerShell スクリプトを使用してアプリケーションを実行し、結果を表示します。 次のコードをテキスト ファイルに貼り付け、プロジェクトが保存されているフォルダーに `test.ps1` として保存します。 PowerShell プロンプトに「`test.ps1`」と入力して PowerShell スクリプトを実行します。
+次に、アプリケーションを実行して結果を表示する PowerShell スクリプトを作成します。 次のコードをテキスト ファイルに貼り付け、プロジェクトが保存されているフォルダーに `test.ps1` として保存します。 PowerShell プロンプトに「`test.ps1`」と入力して PowerShell スクリプトを実行します。
 
 コードがゼロを返すため、バッチ ファイルで成功が報告されます。 ただし、MainReturnValTest.cs が 0 以外の値を返すように変更して、プログラムを再コンパイルする場合、PowerShell スクリプトの後続の実行では失敗が報告されます。
 

@@ -5,12 +5,12 @@ ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 3f1ca48ab29b04931961b52743bb6c7fab70b06d
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: f588d4681ee277ad15b50d5553473b1c9e84d578
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81608076"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608765"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>ASP.NET Core Web API でのモデルのデプロイ
 
@@ -19,7 +19,7 @@ ASP.NET Core Web API を使用して、事前トレーニング済みの ML.NET 
 ## <a name="prerequisites"></a>必須コンポーネント
 
 - ".NET Core クロスプラットフォーム開発" ワークロードがインストールされた [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 以降または Visual Studio 2017 バージョン 15.6 以降。
-- PowerShell
+- PowerShell。
 - 事前トレーニング済みのモデル。 [ML.NET Sentiment Analysis のチュートリアル](../tutorials/sentiment-analysis.md)を使用して独自のモデルを構築するか、こちらの[事前トレーニング済みの感情分析の機械学習モデル](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)をダウンロードすること。
 
 ## <a name="create-aspnet-core-web-api-project"></a>ASP.NET Core Web API プロジェクトを作成する
@@ -193,7 +193,7 @@ HTTP 要求の受信の処理をするために、コントローラーを作成
 すべてが設定されたので、アプリケーションをテストしましょう。
 
 1. アプリケーションを実行します。
-1. PowerShell を開き、次のコードを入力します。PORT には、アプリケーションがリスニングしているポートを入力します。
+1. PowerShell を開き、次のコードを入力します。PORT には、アプリケーションがリッスンしているポートを入力します。
 
     ```powershell
     Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{SentimentText="This was a very bad steak"} | ConvertTo-Json) -ContentType "application/json"

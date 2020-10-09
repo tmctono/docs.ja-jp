@@ -1,15 +1,15 @@
 ---
 title: ローカル関数 - C# プログラミング ガイド
 description: C# のローカル関数は、別のメンバーの入れ子になっているプライベート メソッドであり、その親メンバーから呼び出すことができます。
-ms.date: 06/14/2017
+ms.date: 10/02/2020
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: c1c6c6becb3894b05cb9ed89f7f33dcf249b20eb
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: a91995757048c8c54253d7f4b923d5194f69bc7b
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656186"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654921"
 ---
 # <a name="local-functions-c-programming-guide"></a>ローカル関数 (C# プログラミング ガイド)
 
@@ -36,17 +36,19 @@ C# 7.0 以降、C# では*ローカル関数*がサポートされています�
 ローカル関数は、親メンバーの内側に、入れ子になったメソッドとして定義されます。 その定義の構文は次のとおりです。
 
 ```csharp
-<modifiers: async | unsafe> <return-type> <method-name> <parameter-list>
+<modifiers> <return-type> <method-name> <parameter-list>
 ```
 
-ローカル関数では、[async](../../language-reference/keywords/async.md) および [unsafe](../../language-reference/keywords/unsafe.md) 修飾子を使用できます。
+ローカル関数と共に次の修飾子を使用できます。
 
-メソッドのパラメーターを含め、親メンバーに定義されたすべてのローカル変数は、ローカル関数からアクセス可能です。
+- [`async`](../../language-reference/keywords/async.md)
+- [`unsafe`](../../language-reference/keywords/unsafe.md)
+- [`static`](../../language-reference/keywords/static.md) (C# 8.0 以降)。 静的なローカル関数では、ローカル変数やインスタンスの状態をキャプチャすることはできません。
+- [`extern`](../../language-reference/keywords/extern.md) (C# 9.0 以降)。 外部ローカル関数は `static` である必要があります。
+
+メソッドのパラメーターを含め、親メンバー内で定義されているすべてのローカル変数は、非静的ローカル関数からアクセス可能です。
 
 メソッド定義とは異なり、ローカル関数の定義にメンバー アクセス修飾子を含めることはできません。 すべてのローカル関数はプライベートであるため、`private` キーワードなどのアクセス修飾子が含まれていると、コンパイラ エラー CS0106 "修飾子 'private' がこの項目に対して有効ではありません" が生成されます。
-
-> [!NOTE]
-> C# 8.0 より前では、ローカル関数に `static` 修飾子を含めることはできません。 `static` のキーワードが含まれていると、コンパイラ エラー CS0106 "修飾子 'static' がこの項目に対して有効ではありません" または、C# 8.0 以降を使用することを推奨するコンパイラ エラーが生成されます。
 
 さらに、ローカル関数またはローカル関数のパラメーターと型パラメーターには属性を適用できません。
 
