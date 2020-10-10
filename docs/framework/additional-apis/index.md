@@ -9,12 +9,12 @@ helpviewer_keywords:
 - out-of-band releases
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 ms.topic: conceptual
-ms.openlocfilehash: c6404df5d4f0be381bc0a9c1924fcf82cf078306
-ms.sourcegitcommit: 70d6a7e4f7187cbfa332f0f8be76566f7828cfcd
+ms.openlocfilehash: 55cb37cc2c9184eeb55ee0aab39e97f4a3f7b7d8
+ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88075476"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91877640"
 ---
 # <a name="additional-class-libraries-and-apis"></a>追加のクラス ライブラリと API
 
@@ -24,25 +24,25 @@ ms.locfileid: "88075476"
 
 クロスプラットフォームの開発を改善し、新しい機能を早期に導入するために、一部の .NET Framework 機能がアウトオブバンド (OOB) でリリースされました。
 
-| プロジェクト | 説明 |  
-| ------- | ----------- |  
+| プロジェクト | 説明 |
+| ------- | ----------- |
 | <xref:System.Collections.Immutable> | スレッド セーフであり、内容が変更されないことが保証されているコレクションを提供します。 |
 | <xref:System.Net.Http.WinHttpHandler> | Windows の WinHTTP インターフェイスに基づいた <xref:System.Net.Http.HttpClient> のメッセージ ハンドラーを提供します。 |
 | <xref:System.Numerics> | SIMD ハードウェア ベースのアクセラレータを利用できるベクター型のライブラリを提供します。|
-| <xref:System.Threading.Tasks.Dataflow> | TPL データフロー ライブラリはデータ フロー コンポーネントを提供し、コンカレンシー対応アプリケーションの堅牢性を強化します。 |  
+| <xref:System.Threading.Tasks.Dataflow> | TPL データフロー ライブラリはデータ フロー コンポーネントを提供し、コンカレンシー対応アプリケーションの堅牢性を強化します。 |
 
 ## <a name="platform-specific-libraries"></a>プラットフォーム固有のライブラリ
 
 一部のライブラリは特定のプラットフォームを対象としています。 たとえば、クラスを <xref:System.Text.CodePagesEncodingProvider> 使用すると、.NET Framework を使用して開発された UWP アプリでコードページエンコーディングを使用できるようになります。
-  
-| プロジェクト | 説明 |  
-| ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | クラスを拡張して <xref:System.Text.EncodingProvider> 、ユニバーサル Windows プラットフォームを対象とするアプリでコードページエンコーディングを使用できるようにします。 |  
-  
-## <a name="private-apis"></a>プライベート API  
 
-これらの Api は製品インフラストラクチャをサポートします。コードから直接使用するためのものでも、サポートもされていません。  
-  
+| プロジェクト | 説明 |
+| ------- | ----------- |
+| <xref:System.Text.CodePagesEncodingProvider> | クラスを拡張して <xref:System.Text.EncodingProvider> 、ユニバーサル Windows プラットフォームを対象とするアプリでコードページエンコーディングを使用できるようにします。 |
+
+## <a name="private-apis"></a>プライベート API
+
+これらの Api は製品インフラストラクチャをサポートします。コードから直接使用するためのものでも、サポートもされていません。
+
 * [SmiOrderProperty プロパティの値です。](microsoft.sqlserver.server.smiorderproperty.item.md)
 * [PrepForRemoting メソッド](system.exception.prepforremoting.md)
 * [SqlTypes プロパティ (system.object のプロパティ)](system.data.sqltypes.sqlchars.stream.md)
@@ -82,12 +82,15 @@ ms.locfileid: "88075476"
 * [System .Net. ServicePoint. m \_ connectiongrouplist フィールド](m_connectiongrouplist.md)
 * [System .Net. ServicePointManager. CloseConnectionGroups メソッド](system.net.servicepointmanager.closeconnectiongroups.md)
 * [System .Net. ServicePointManager. s \_ servicepointmanager フィールド](s_servicepointtable.md)
-* [M_Worker TlsStream (システム) フィールド](system.net.tlsstream.m_worker.md)
+* [System.Net.TlsStream.m_Worker フィールド](system.net.tlsstream.m_worker.md)
 * [UnsafeNclNativeMethods クラス](system.net.unsafenclnativemethods.md)
 * [System .Net. WebHeaderCollection. AddInternal メソッド](system.net.webheadercollection.addinternal.md)
 * [System.servicemodel. Channels. Message. BodyToString メソッド](system.servicemodel.channels.message.bodytostring.md)
 * [WriteStartHeaders メソッド (System.servicemodel.)](system.servicemodel.channels.message.writestartheaders.md)
 * [System.web. ControlBuilderInterceptor クラス](controlbuilderinterceptor-class.md)
+* [GridViewHeaderRowPresenter メソッドの設定を行います。](system.windows.controls.gridviewheaderrowpresenter.findheaderbycolumn.md)
+* [GridViewHeaderRowPresenter (システム.... MakeParentItemsControlGotFocus メソッド)](system.windows.controls.gridviewheaderrowpresenter.makeparentitemscontrolgotfocus.md)
+* [GridViewHeaderRowPresenter をドラッグした場合のメソッド](system.windows.controls.gridviewheaderrowpresenter.prepareheaderdrag.md)
 * [IsDebuggerCheckDisabledForTestPurposes (システムの診断の \_ フィールド)](s-isdebuggercheckdisabledfortestpurposes-field.md)
 * [System.string クラス (DataMemberFieldEditor クラス)](datamemberfieldeditor-class.md)
 * [System.string クラス (DataMemberListEditor クラス)](datamemberlisteditor-class.md)
@@ -103,7 +106,7 @@ ms.locfileid: "88075476"
 * [stdole.IPictureDisp プロパティ](stdole.ipicturedisp.handle.md)
 * [stdole.StdFont インターフェイス](stdole.stdfont.md)
 * [stdole.StdPicture インターフェイス](stdole.stdpicture.md)
-  
+
 ## <a name="see-also"></a>関連項目
 
 * [.NET Framework および特別なリリース](../get-started/the-net-framework-and-out-of-band-releases.md)

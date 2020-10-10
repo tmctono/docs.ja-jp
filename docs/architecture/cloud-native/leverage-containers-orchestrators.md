@@ -2,12 +2,12 @@
 title: コンテナーとコンテナー オーケストレーターの活用
 description: Azure での Docker コンテナーと Kubernetes Orchestrators 活用
 ms.date: 05/31/2020
-ms.openlocfilehash: b4bdbe5c6b3946658e6c11a40cbbb2feb07cc951
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 07e66ece1d1d1b3f252e56789461ae2922d9649a
+ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91755910"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91877575"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>コンテナーとコンテナー オーケストレーターの活用
 
@@ -25,7 +25,7 @@ ms.locfileid: "91755910"
 
 ### <a name="deployment"></a>デプロイ
 
-モノリシックアプリケーションでは、わずかな変更しか加えられていない場合でも、アプリケーション全体を完全に展開する必要があります。 完全な展開はコストが高く、エラーが発生しやすい場合があります。 また、アプリケーションを再起動する必要があり、一時的に使用不可に影響します。
+また、展開中にダウンタイムなしの手法が適用されていない場合、アプリケーションの再起動が必要になることがあります。
 
 ### <a name="scaling"></a>Scaling
 
@@ -139,7 +139,7 @@ status:
 
 ## <a name="when-should-you-avoid-using-containers-and-orchestrators"></a>コンテナーと orchestrators 使用する必要があるのはどのような場合ですか。
 
-12要素アプリの原則に従ってアプリケーションをビルドできない場合は、コンテナーと orchestrators 避けることを検討してください。 このような場合は、VM ベースのホスティングプラットフォームや、場合によっては一部のハイブリッドシステムを検討してください。 この機能を使用すると、特定の機能をいつでも個別のコンテナーやサーバーレス機能に分解できます。
+Twelve-Factor アプリの原則に従ってアプリケーションをビルドできない場合は、コンテナーと orchestrators 避けることを検討してください。 このような場合は、VM ベースのホスティングプラットフォームや、場合によっては一部のハイブリッドシステムを検討してください。 この機能を使用すると、特定の機能をいつでも個別のコンテナーやサーバーレス機能に分解できます。
 
 ## <a name="development-resources"></a>開発リソース
 
