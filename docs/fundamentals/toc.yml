@@ -1,7 +1,7 @@
 items:
   - name: .NET のドキュメント
     href: index.yml
-  - name: 作業開始
+  - name: 開始
     items:
       - name: Hello World
         href: ../core/get-started.md
@@ -57,6 +57,8 @@ items:
         href: ../standard/class-libraries.md
       - name: .NET Standard の概要
         href: ../standard/net-standard.md
+      - name: リリース、パッチ、サポート
+        href: ../core/releases-and-support.md
       - name: .NET 用語集
         href: ../standard/glossary.md
       - name: チュートリアル
@@ -1388,7 +1390,7 @@ items:
                     href: ../standard/base-types/compilation-and-reuse-in-regular-expressions.md
                   - name: スレッド セーフ
                     href: ../standard/base-types/thread-safety-in-regular-expressions.md
-              - name: 使用例
+              - name: 例
                 items:
                   - name: HREF のスキャン
                     href: ../standard/base-types/regular-expression-example-scanning-for-hrefs.md
@@ -1670,7 +1672,7 @@ items:
             href: ../standard/serialization/xml-and-soap-serialization.md
           - name: XML シリアル化の詳細
             href: ../standard/serialization/introducing-xml-serialization.md
-          - name: 使用例
+          - name: 例
             href: ../standard/serialization/examples-of-xml-serialization.md
           - name: XML スキーマ定義ツール
             href: ../standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md
