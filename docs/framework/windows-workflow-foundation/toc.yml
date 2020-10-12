@@ -7,8 +7,11 @@
       href: whats-new.md
     - name: .NET 4.5 での Windows Workflow Foundation の新機能
       href: whats-new-in-wf-in-dotnet.md
-    - name: Windows Workflow Foundation で非推奨の型
+    - name: 古い型とツール
       href: deprecated-types.md
+      items:
+        - name: wfc.exe ワークフロー コンパイラ ツール
+          href: wfc-exe-workflow-compiler-tool.md
     - name: Windows Workflow Foundation の機能仕様
       href: feature-specifics.md
     - name: Windows Workflow の概念
