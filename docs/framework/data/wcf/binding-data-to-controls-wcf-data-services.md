@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: f2cb1004ef6316bc67189c4e00930f6086cf0dad
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 178d77c225144497982487afa00f4493e17d1744
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152924"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805214"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>コントロールへのデータのバインド (WCF Data Services)
 
@@ -36,7 +36,7 @@ WCF Data Services では、`ComboBox` や `ListView` などのコントロール
   
 ## <a name="binding-data-to-windows-presentation-foundation-elements"></a>Windows Presentation Foundation 要素へのデータのバインド  
 
- <xref:System.Data.Services.Client.DataServiceCollection%601> クラスは <xref:System.Collections.ObjectModel.ObservableCollection%601> クラスを継承しているため、バインディングに <xref:System.Collections.ObjectModel.ObservableCollection%601> クラスを使用する場合と同様に、オブジェクトを Windows Presentation Foundation (WPF) アプリケーション内の要素 (またはコントロール) にバインドできます。 詳細については、「[データ バインディング (Windows Presentation Foundation)](../../../desktop-wpf/data/data-binding-overview.md)」を参照してください。 データ サービスのデータを WPF コントロールにバインドする 1 つの方法は、要素の `DataContext` プロパティをクエリ結果を含む <xref:System.Data.Services.Client.DataServiceCollection%601> クラスのインスタンスに設定することです。 この場合、<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> プロパティを使用して、コントロールのオブジェクト ソースを設定します。 <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A> プロパティを使用して、バインドされたオブジェクトのどのプロパティを表示するかを指定します。 ナビゲーション プロパティから返される関連オブジェクトに要素をバインドする場合は、<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> プロパティに対して定義されているバインドにパスを含めます。 このパスは、親コントロールの <xref:System.Windows.FrameworkElement.DataContext%2A> プロパティで設定されたルート オブジェクトを基準とした相対パスになります。 次の例では、<xref:System.Windows.FrameworkElement.DataContext%2A> 要素の <xref:System.Windows.Controls.StackPanel> プロパティを設定して、親コントロールをカスタム オブジェクトの <xref:System.Data.Services.Client.DataServiceCollection%601> にバインドします。  
+ <xref:System.Data.Services.Client.DataServiceCollection%601> クラスは <xref:System.Collections.ObjectModel.ObservableCollection%601> クラスを継承しているため、バインディングに <xref:System.Collections.ObjectModel.ObservableCollection%601> クラスを使用する場合と同様に、オブジェクトを Windows Presentation Foundation (WPF) アプリケーション内の要素 (またはコントロール) にバインドできます。 詳細については、「[データ バインディング (Windows Presentation Foundation)](/dotnet/desktop/wpf/data/data-binding-overview)」を参照してください。 データ サービスのデータを WPF コントロールにバインドする 1 つの方法は、要素の `DataContext` プロパティをクエリ結果を含む <xref:System.Data.Services.Client.DataServiceCollection%601> クラスのインスタンスに設定することです。 この場合、<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> プロパティを使用して、コントロールのオブジェクト ソースを設定します。 <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A> プロパティを使用して、バインドされたオブジェクトのどのプロパティを表示するかを指定します。 ナビゲーション プロパティから返される関連オブジェクトに要素をバインドする場合は、<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> プロパティに対して定義されているバインドにパスを含めます。 このパスは、親コントロールの <xref:System.Windows.FrameworkElement.DataContext%2A> プロパティで設定されたルート オブジェクトを基準とした相対パスになります。 次の例では、<xref:System.Windows.FrameworkElement.DataContext%2A> 要素の <xref:System.Windows.Controls.StackPanel> プロパティを設定して、親コントロールをカスタム オブジェクトの <xref:System.Data.Services.Client.DataServiceCollection%601> にバインドします。  
   
  [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderscustom.xaml.cs#masterdetailbinding)]
  [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf.xaml.cs#masterdetailbinding)]

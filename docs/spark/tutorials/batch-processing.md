@@ -3,14 +3,14 @@ title: .NET for Apache Spark を使用したバッチ処理のチュートリア
 description: .NET for Apache Spark を使用してバッチ処理を実行する方法について説明します。
 author: mamccrea
 ms.author: mamccrea
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: dbc3ab5cc4bd7f438e9f3f8e5d36c764d785ce4b
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 666292fa2e9cecbd4e0aacd291f1008810eb257e
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618286"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955396"
 ---
 # <a name="tutorial-do-batch-processing-with-net-for-apache-spark"></a>チュートリアル: .NET for Apache Spark を使用してバッチ処理を実行する
 
@@ -25,8 +25,6 @@ ms.locfileid: "85618286"
 > * .NET for Apache Spark アプリケーションを作成して実行する
 > * データを DataFrame に読み込み、分析を行うために準備する
 > * Spark SQL を使用してデータを処理する
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>必須コンポーネント
 

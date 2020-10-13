@@ -1,26 +1,26 @@
 ---
 title: .NET for Apache Spark ワーカーとユーザー定義関数のバイナリを展開する
 description: .NET for Apache Spark ワーカーとユーザー定義関数のバイナリを展開する方法について説明します。
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 672a32c430bd702167a294d2b895ac1ac90bf67e
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 001798bfda628ce979570bcd89e7c5553347b275
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617718"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91954959"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>.NET for Apache Spark ワーカーとユーザー定義関数のバイナリを展開する
 
 この手引きでは、.NET for Apache Spark ワーカーとユーザー定義関数のバイナリを展開する方法について説明します。 設定する環境変数と、アプリケーションを `spark-submit` で起動するときによく使用されるパラメーターについて説明します。
 
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
-
 ## <a name="configurations"></a>構成
+
 構成では、.NET for Apache Spark ワーカーおよびユーザー定義関数のバイナリを展開する場合の一般的な環境変数とパラメーター設定について説明します。
 
 ### <a name="environment-variables"></a>環境変数
+
 ワーカーを展開して UDF を記述する場合、次のようないくつかの環境変数を設定する必要があります。
 
 | 環境変数         | 説明

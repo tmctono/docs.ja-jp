@@ -4,12 +4,12 @@ description: キャンセル トークンを使用して、タスクの一覧に
 ms.date: 08/19/2020
 ms.topic: tutorial
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 84cd1bb413d20b6c13be8415c13c72b57873b1cf
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 79c9db53674182489c89d657786bf39e8bb44b21
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654706"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805253"
 ---
 # <a name="cancel-a-list-of-tasks-c"></a>タスクの一覧をキャンセルする (C#)
 
@@ -115,7 +115,7 @@ static async Task Main()
 }
 ```
 
-更新した `Main` メソッドは、[async main](../../../whats-new/csharp-7-1.md#async-main) と見なされるようになります。これにより、実行可能ファイルへの非同期エントリ ポイントが可能になります。 いくつかの指示メッセージがコンソールに出力され、次に `cancelTask` という名前の <xref:System.Threading.Tasks.Task> インスタンスが宣言されます。これにより、コンソールのキー ストロークが読み取られるようになります。 <kbd>Enter</kbd> キーが押されると、<xref:System.Threading.CancellationTokenSource.Cancel?displayProperty=nameWithType> の呼び出しが行われます。 これにより、キャンセルが通知されるようになります。 次に、`sumPageSizesTask` 変数が `SumPageSizesAsync` メソッドから割り当てられています。 両方のタスクは次に <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])?displayProperty=nameWithType> に渡され、2 つのタスクのいずれかが完了したときに続行されるようになります。
+更新した `Main` メソッドは、[async main](../../../whats-new/csharp-7.md#async-main) と見なされるようになります。これにより、実行可能ファイルへの非同期エントリ ポイントが可能になります。 いくつかの指示メッセージがコンソールに出力され、次に `cancelTask` という名前の <xref:System.Threading.Tasks.Task> インスタンスが宣言されます。これにより、コンソールのキー ストロークが読み取られるようになります。 <kbd>Enter</kbd> キーが押されると、<xref:System.Threading.CancellationTokenSource.Cancel?displayProperty=nameWithType> の呼び出しが行われます。 これにより、キャンセルが通知されるようになります。 次に、`sumPageSizesTask` 変数が `SumPageSizesAsync` メソッドから割り当てられています。 両方のタスクは次に <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])?displayProperty=nameWithType> に渡され、2 つのタスクのいずれかが完了したときに続行されるようになります。
 
 ## <a name="create-the-asynchronous-sum-page-sizes-method"></a>非同期の合計ページ サイズ メソッドの作成
 

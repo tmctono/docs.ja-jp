@@ -1,15 +1,15 @@
 ---
 title: .NET for Apache Spark アプリケーションを Amazon EMR Spark にデプロイする
 description: .NET for Apache Spark アプリケーションを Amazon EMR Spark にデプロイする方法を説明します。
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c6cf26044693c5d923d11e1bbc72232e7009fe73
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 0232896254e93525f2a6f0be05417107cf7f5432
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618260"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955474"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>.NET for Apache Spark アプリケーションを Amazon EMR Spark にデプロイする
 
@@ -23,8 +23,6 @@ ms.locfileid: "85618260"
 > * Spark .NET アプリを発行する
 > * アプリを Amazon EMR Spark にデプロイする
 > * アプリの実行
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>必須コンポーネント
 

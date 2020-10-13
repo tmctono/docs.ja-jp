@@ -3,14 +3,14 @@ title: .NET for Apache Spark と ML.NET での感情分析のチュートリア�
 description: このチュートリアルでは、感情分析に ML.NET と .NET for Apache Spark を使用する方法について説明します。
 author: mamccrea
 ms.author: mamccrea
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 69deb30419b98536fa309547d94f59bb266e413c
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 16b4d34e4c581da2cd0ba798d87e53ccfc49f0e9
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617582"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91954894"
 ---
 # <a name="tutorial-sentiment-analysis-with-net-for-apache-spark-and-mlnet"></a>チュートリアル: .NET for Apache Spark と ML.NET での感情分析
 
@@ -24,8 +24,6 @@ ms.locfileid: "85617582"
 > * .NET for Apache Spark コンソール アプリを作成します。
 > * ユーザー定義関数を記述して実装します。
 > * .NET for Apache Spark コンソール アプリを実行します。
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>必須コンポーネント
 

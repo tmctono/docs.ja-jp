@@ -1,23 +1,21 @@
 ---
 title: .NET for Apache Spark でブロードキャスト変数を使用する
 description: .NET for Apache Spark アプリケーションでブロードキャスト変数を使用する方法について説明します。
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: d86b160855cc4d3f3a6502f5606d4766b7c06aa0
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 3cf2215f59ce28878f44138386c01597ec852905
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617857"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955024"
 ---
 # <a name="use-broadcast-variables-in-net-for-apache-spark"></a>.NET for Apache Spark でブロードキャスト変数を使用する
 
 この記事では、.NET for Apache Spark でブロードキャスト変数を使用する方法を学習します。 [Apache Spark のブロードキャスト変数](https://spark.apache.org/docs/2.2.0/rdd-programming-guide.html#broadcast-variables)は、読み取り専用であることを意図した、Executor で変数を共有するためのメカニズムです。 ブロードキャスト変数を使用すると、読み取り専用の変数をコピーしたものをタスクと共に送るのではなく、各マシンにキャッシュしたままにすることができます。 ブロードキャスト変数を使用すると、すべてのノードに大きな入力データセットのコピーを効率的な方法で渡すことができます。
 
 データは 1 回しか送信されないため、タスクごとに Executor に送られるローカル変数と比較した場合、ブロードキャスト変数の方がパフォーマンスが優れています。 ブロードキャスト変数とそれらが使用される理由について理解を深めるには、[ブロードキャスト変数の公式ドキュメント](https://spark.apache.org/docs/2.2.0/rdd-programming-guide.html#broadcast-variables)を参照してください。
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="create-broadcast-variables"></a>ブロードキャスト変数を作成する
 
