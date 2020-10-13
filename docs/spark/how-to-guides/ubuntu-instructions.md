@@ -1,39 +1,37 @@
 ---
 title: Ubuntu で .NET for Apache Spark アプリケーションをビルドする
 description: Ubuntu で .NET for Apache Spark アプリケーションをビルドする方法を学習する
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: b5e06619611ac06c453df0314bcecb30e1b673a2
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: dfe105bb1549560ebdd2526a8441c4e2c5d141bf
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812199"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955063"
 ---
-# <a name="learn-how-to-build-your-net-for-apache-spark-application-on-ubuntu"></a><span data-ttu-id="cfc3b-103">Ubuntu で .NET for Apache Spark アプリケーションをビルドする方法を学習する</span><span class="sxs-lookup"><span data-stu-id="cfc3b-103">Learn how to build your .NET for Apache Spark application on Ubuntu</span></span>
+# <a name="learn-how-to-build-your-net-for-apache-spark-application-on-ubuntu"></a><span data-ttu-id="8d7a3-103">Ubuntu で .NET for Apache Spark アプリケーションをビルドする方法を学習する</span><span class="sxs-lookup"><span data-stu-id="8d7a3-103">Learn how to build your .NET for Apache Spark application on Ubuntu</span></span>
 
-<span data-ttu-id="cfc3b-104">この記事では、Ubuntu で .NET for Apache Spark アプリケーションをビルドする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-104">This article teaches you how to build your .NET for Apache Spark applications on Ubuntu.</span></span>
+<span data-ttu-id="8d7a3-104">この記事では、Ubuntu で .NET for Apache Spark アプリケーションをビルドする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-104">This article teaches you how to build your .NET for Apache Spark applications on Ubuntu.</span></span>
 
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
+## <a name="prerequisites"></a><span data-ttu-id="8d7a3-105">前提条件</span><span class="sxs-lookup"><span data-stu-id="8d7a3-105">Prerequisites</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="cfc3b-105">前提条件</span><span class="sxs-lookup"><span data-stu-id="cfc3b-105">Prerequisites</span></span>
+<span data-ttu-id="8d7a3-106">以下の必須コンポーネントがすべて揃っている場合は、「[ビルド](#build)」の手順に進んでください。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-106">If you already have all of the following prerequisites, skip to the [build](#build) steps.</span></span>
 
-<span data-ttu-id="cfc3b-106">以下の必須コンポーネントがすべて揃っている場合は、「[ビルド](#build)」の手順に進んでください。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-106">If you already have all of the following prerequisites, skip to the [build](#build) steps.</span></span>
+1. <span data-ttu-id="8d7a3-107">**[.NET Core 2.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.1)** または **[.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)** をダウンロードしてインストールする - SDK をインストールすると、`dotnet` ツールチェーンがパスに追加されます。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-107">Download and install **[.NET Core 2.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.1)** or the **[.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)** - installing the SDK adds the `dotnet` toolchain to your path.</span></span>  <span data-ttu-id="8d7a3-108">.NET Core 2.1、2.2、および 3.1 がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-108">.NET Core 2.1, 2.2 and 3.1 are supported.</span></span>
 
-1. <span data-ttu-id="cfc3b-107">**[.NET Core 2.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.1)** または **[.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)** をダウンロードしてインストールする - SDK をインストールすると、`dotnet` ツールチェーンがパスに追加されます。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-107">Download and install **[.NET Core 2.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.1)** or the **[.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)** - installing the SDK adds the `dotnet` toolchain to your path.</span></span>  <span data-ttu-id="cfc3b-108">.NET Core 2.1、2.2、および 3.1 がサポートされています。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-108">.NET Core 2.1, 2.2 and 3.1 are supported.</span></span>
+2. <span data-ttu-id="8d7a3-109">**[OpenJDK 8](https://openjdk.java.net/install/)** をインストールする。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-109">Install **[OpenJDK 8](https://openjdk.java.net/install/)**.</span></span>
 
-2. <span data-ttu-id="cfc3b-109">**[OpenJDK 8](https://openjdk.java.net/install/)** をインストールする。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-109">Install **[OpenJDK 8](https://openjdk.java.net/install/)**.</span></span>
-
-   - <span data-ttu-id="cfc3b-110">次のコマンドを使用できます。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-110">You can use the following command:</span></span>
+   - <span data-ttu-id="8d7a3-110">次のコマンドを使用できます。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-110">You can use the following command:</span></span>
 
    ```bash
    sudo apt install openjdk-8-jdk
    ```
 
-   * <span data-ttu-id="cfc3b-111">コマンド ラインから `java` を実行できることを確認します。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-111">Verify you are able to run `java` from your command-line.</span></span>
+   * <span data-ttu-id="8d7a3-111">コマンド ラインから `java` を実行できることを確認します。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-111">Verify you are able to run `java` from your command-line.</span></span>
 
-      <span data-ttu-id="cfc3b-112">java -version の出力サンプル:</span><span class="sxs-lookup"><span data-stu-id="cfc3b-112">Sample java -version output:</span></span>
+      <span data-ttu-id="8d7a3-112">java -version の出力サンプル:</span><span class="sxs-lookup"><span data-stu-id="8d7a3-112">Sample java -version output:</span></span>
 
       ```bash
       openjdk version "1.8.0_191"
@@ -41,15 +39,15 @@ ms.locfileid: "88812199"
       OpenJDK 64-Bit Server VM (build 25.191-b12, mixed mode)
       ```
 
-   * <span data-ttu-id="cfc3b-113">既に複数の OpenJDK バージョンをインストールしていて、OpenJDK 8 を選択したい場合は、次のコマンドを使用します。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-113">If you already have multiple OpenJDK versions installed and want to select OpenJDK 8, use the following command:</span></span>
+   * <span data-ttu-id="8d7a3-113">既に複数の OpenJDK バージョンをインストールしていて、OpenJDK 8 を選択したい場合は、次のコマンドを使用します。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-113">If you already have multiple OpenJDK versions installed and want to select OpenJDK 8, use the following command:</span></span>
 
       ```bash
       sudo update-alternatives --config java
       ```
 
-3. <span data-ttu-id="cfc3b-114">**[Apache Maven 3.6.0 以降](https://maven.apache.org/download.cgi)** をインストールする。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-114">Install **[Apache Maven 3.6.0+](https://maven.apache.org/download.cgi)**.</span></span>
+3. <span data-ttu-id="8d7a3-114">**[Apache Maven 3.6.0 以降](https://maven.apache.org/download.cgi)** をインストールする。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-114">Install **[Apache Maven 3.6.0+](https://maven.apache.org/download.cgi)**.</span></span>
 
-   * <span data-ttu-id="cfc3b-115">次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-115">Run the following command:</span></span>
+   * <span data-ttu-id="8d7a3-115">次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-115">Run the following command:</span></span>
 
       ```bash
       mkdir -p ~/bin/maven
@@ -62,11 +60,11 @@ ms.locfileid: "88812199"
       source ~/.bashrc
       ```
 
-       <span data-ttu-id="cfc3b-116">これらの環境変数は、ターミナルを閉じると失われることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-116">Note that these environment variables will be lost when you close your terminal.</span></span> <span data-ttu-id="cfc3b-117">変更を永続させたい場合は、`~/.bashrc` ファイルに `export` の行を追加します。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-117">If you want the changes to be permanent, add the `export` lines to your `~/.bashrc` file.</span></span>
+       <span data-ttu-id="8d7a3-116">これらの環境変数は、ターミナルを閉じると失われることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-116">Note that these environment variables will be lost when you close your terminal.</span></span> <span data-ttu-id="8d7a3-117">変更を永続させたい場合は、`~/.bashrc` ファイルに `export` の行を追加します。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-117">If you want the changes to be permanent, add the `export` lines to your `~/.bashrc` file.</span></span>
 
-   * <span data-ttu-id="cfc3b-118">コマンド ラインから `mvn` を実行できることを確認します</span><span class="sxs-lookup"><span data-stu-id="cfc3b-118">Verify you are able to run `mvn` from your command-line</span></span>
+   * <span data-ttu-id="8d7a3-118">コマンド ラインから `mvn` を実行できることを確認します</span><span class="sxs-lookup"><span data-stu-id="8d7a3-118">Verify you are able to run `mvn` from your command-line</span></span>
 
-       <span data-ttu-id="cfc3b-119">mvn -version の出力サンプル:</span><span class="sxs-lookup"><span data-stu-id="cfc3b-119">Sample mvn -version output:</span></span>
+       <span data-ttu-id="8d7a3-119">mvn -version の出力サンプル:</span><span class="sxs-lookup"><span data-stu-id="8d7a3-119">Sample mvn -version output:</span></span>
 
        ```output
        Apache Maven 3.6.0 (97c98ec64a1fdfee7767ce5ffb20918da4f719f3; 2018-10-24T18:41:47Z)
@@ -76,14 +74,14 @@ ms.locfileid: "88812199"
        OS name: "linux", version: "4.4.0-17763-microsoft", arch: "amd64", family: "unix"
        ```
 
-4. <span data-ttu-id="cfc3b-120">**[Apache Spark 2.3 以降](https://spark.apache.org/downloads.html)** をインストールする。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-120">Install **[Apache Spark 2.3+](https://spark.apache.org/downloads.html)**.</span></span>
-<span data-ttu-id="cfc3b-121">[Apache Spark 2.3 以降](https://spark.apache.org/downloads.html)をダウンロードし、ローカル フォルダーに抽出します (`~/bin/spark-2.3.2-bin-hadoop2.7` など)。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-121">Download [Apache Spark 2.3+](https://spark.apache.org/downloads.html) and extract it into a local folder (e.g., `~/bin/spark-2.3.2-bin-hadoop2.7`).</span></span> <span data-ttu-id="cfc3b-122">(サポートされている Spark のバージョンは 2.3.\*、2.4.0、2.4.1、2.4.3、および 2.4.4 です)</span><span class="sxs-lookup"><span data-stu-id="cfc3b-122">(The supported spark versions are 2.3.\*, 2.4.0, 2.4.1, 2.4.3 and 2.4.4)</span></span>
+4. <span data-ttu-id="8d7a3-120">**[Apache Spark 2.3 以降](https://spark.apache.org/downloads.html)** をインストールする。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-120">Install **[Apache Spark 2.3+](https://spark.apache.org/downloads.html)**.</span></span>
+<span data-ttu-id="8d7a3-121">[Apache Spark 2.3 以降](https://spark.apache.org/downloads.html)をダウンロードし、ローカル フォルダーに抽出します (`~/bin/spark-2.3.2-bin-hadoop2.7` など)。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-121">Download [Apache Spark 2.3+](https://spark.apache.org/downloads.html) and extract it into a local folder (e.g., `~/bin/spark-2.3.2-bin-hadoop2.7`).</span></span> <span data-ttu-id="8d7a3-122">(サポートされている Spark のバージョンは 2.3.\*、2.4.0、2.4.1、2.4.3、および 2.4.4 です)</span><span class="sxs-lookup"><span data-stu-id="8d7a3-122">(The supported spark versions are 2.3.\*, 2.4.0, 2.4.1, 2.4.3 and 2.4.4)</span></span>
 
    ```bash
    tar -xvzf /path/to/spark-2.3.2-bin-hadoop2.7.tgz -C ~/bin/spark-2.3.2-bin-hadoop2.7
    ```
 
-   * <span data-ttu-id="cfc3b-123">必要な[環境変数](https://www.java.com/en/download/help/path.xml) `SPARK_HOME` (`~/bin/spark-2.3.2-bin-hadoop2.7/` など) と `PATH` (`$SPARK_HOME/bin:$PATH` など) を追加します</span><span class="sxs-lookup"><span data-stu-id="cfc3b-123">Add the necessary [environment variables](https://www.java.com/en/download/help/path.xml) `SPARK_HOME` (e.g., `~/bin/spark-2.3.2-bin-hadoop2.7/`) and `PATH` (e.g., `$SPARK_HOME/bin:$PATH`)</span></span>
+   * <span data-ttu-id="8d7a3-123">必要な[環境変数](https://www.java.com/en/download/help/path.xml) `SPARK_HOME` (`~/bin/spark-2.3.2-bin-hadoop2.7/` など) と `PATH` (`$SPARK_HOME/bin:$PATH` など) を追加します</span><span class="sxs-lookup"><span data-stu-id="8d7a3-123">Add the necessary [environment variables](https://www.java.com/en/download/help/path.xml) `SPARK_HOME` (e.g., `~/bin/spark-2.3.2-bin-hadoop2.7/`) and `PATH` (e.g., `$SPARK_HOME/bin:$PATH`)</span></span>
 
       ```bash
       export SPARK_HOME=~/bin/spark-2.3.2-hadoop2.7
@@ -91,11 +89,11 @@ ms.locfileid: "88812199"
       source ~/.bashrc
       ```
 
-      <span data-ttu-id="cfc3b-124">これらの環境変数は、ターミナルを閉じると失われることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-124">Note that these environment variables will be lost when you close your terminal.</span></span> <span data-ttu-id="cfc3b-125">変更を永続させたい場合は、`~/.bashrc` ファイルに `export` の行を追加します。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-125">If you want the changes to be permanent, add the `export` lines to your `~/.bashrc` file.</span></span>
+      <span data-ttu-id="8d7a3-124">これらの環境変数は、ターミナルを閉じると失われることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-124">Note that these environment variables will be lost when you close your terminal.</span></span> <span data-ttu-id="8d7a3-125">変更を永続させたい場合は、`~/.bashrc` ファイルに `export` の行を追加します。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-125">If you want the changes to be permanent, add the `export` lines to your `~/.bashrc` file.</span></span>
 
-   * <span data-ttu-id="cfc3b-126">コマンド ラインから `spark-shell` を実行できることを確認します。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-126">Verify you are able to run `spark-shell` from your command-line.</span></span>
+   * <span data-ttu-id="8d7a3-126">コマンド ラインから `spark-shell` を実行できることを確認します。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-126">Verify you are able to run `spark-shell` from your command-line.</span></span>
 
-      <span data-ttu-id="cfc3b-127">コンソール出力の例:</span><span class="sxs-lookup"><span data-stu-id="cfc3b-127">Sample console output:</span></span>
+      <span data-ttu-id="8d7a3-127">コンソール出力の例:</span><span class="sxs-lookup"><span data-stu-id="8d7a3-127">Sample console output:</span></span>
 
       ```
       Welcome to
@@ -113,44 +111,44 @@ ms.locfileid: "88812199"
       res0: org.apache.spark.SparkContext = org.apache.spark.SparkContext@6eaa6b0c
       ```
 
-<span data-ttu-id="cfc3b-128">次のセクションに進む前に、コマンド ラインから `dotnet`、`java`、`mvn`、`spark-shell` を実行できることを確認してください。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-128">Make sure you are able to run `dotnet`, `java`, `mvn`, `spark-shell` from your command-line before you move to the next section.</span></span> <span data-ttu-id="cfc3b-129">もっと良い方法があると思いますか。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-129">Feel there is a better way?</span></span> <span data-ttu-id="cfc3b-130">[イシューを作成](https://github.com/dotnet/spark/issues)して、お気軽にご投稿ください。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-130">Please [open an issue](https://github.com/dotnet/spark/issues) and feel free to contribute.</span></span>
+<span data-ttu-id="8d7a3-128">次のセクションに進む前に、コマンド ラインから `dotnet`、`java`、`mvn`、`spark-shell` を実行できることを確認してください。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-128">Make sure you are able to run `dotnet`, `java`, `mvn`, `spark-shell` from your command-line before you move to the next section.</span></span> <span data-ttu-id="8d7a3-129">もっと良い方法があると思いますか。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-129">Feel there is a better way?</span></span> <span data-ttu-id="8d7a3-130">[イシューを作成](https://github.com/dotnet/spark/issues)して、お気軽にご投稿ください。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-130">Please [open an issue](https://github.com/dotnet/spark/issues) and feel free to contribute.</span></span>
 
-## <a name="build"></a><span data-ttu-id="cfc3b-131">Build</span><span class="sxs-lookup"><span data-stu-id="cfc3b-131">Build</span></span>
+## <a name="build"></a><span data-ttu-id="8d7a3-131">Build</span><span class="sxs-lookup"><span data-stu-id="8d7a3-131">Build</span></span>
 
-<span data-ttu-id="cfc3b-132">このガイドの残りの部分では、.NET for Apache Spark リポジトリをご自分のコンピューターにクローンしておく必要があります (`~/dotnet.spark/` など)。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-132">For the remainder of this guide, you will need to have cloned the .NET for Apache Spark repository into your machine e.g., `~/dotnet.spark/`.</span></span>
+<span data-ttu-id="8d7a3-132">このガイドの残りの部分では、.NET for Apache Spark リポジトリをご自分のコンピューターにクローンしておく必要があります (`~/dotnet.spark/` など)。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-132">For the remainder of this guide, you will need to have cloned the .NET for Apache Spark repository into your machine e.g., `~/dotnet.spark/`.</span></span>
 
 ```bash
 git clone https://github.com/dotnet/spark.git ~/dotnet.spark
 ```
 
-### <a name="build-net-for-spark-scala-extensions-layer"></a><span data-ttu-id="cfc3b-133">.NET for Spark の Scala 拡張機能レイヤーをビルドする</span><span class="sxs-lookup"><span data-stu-id="cfc3b-133">Build .NET for Spark Scala extensions layer</span></span>
+### <a name="build-net-for-spark-scala-extensions-layer"></a><span data-ttu-id="8d7a3-133">.NET for Spark の Scala 拡張機能レイヤーをビルドする</span><span class="sxs-lookup"><span data-stu-id="8d7a3-133">Build .NET for Spark Scala extensions layer</span></span>
 
-<span data-ttu-id="cfc3b-134">.NET アプリケーションを送信したとき、.NET for Apache Spark には、要求の処理方法を Apache Spark に伝える、Scala で記述された必要なロジックが含まれています (たとえば、新しい Spark セッションを作成する要求や、.NET 側から JVM 側にデータを転送する要求など)。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-134">When you submit a .NET application, .NET for Apache Spark has the necessary logic written in Scala that informs Apache Spark how to handle your requests (e.g., request to create a new Spark Session, request to transfer data from .NET side to JVM side etc.).</span></span> <span data-ttu-id="cfc3b-135">このロジックは、[.NET for Apache Spark の Scala ソース コード](https://github.com/dotnet/spark/tree/master/src/scala)に含まれています。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-135">This logic can be found in the [.NET for Apache Spark Scala Source Code](https://github.com/dotnet/spark/tree/master/src/scala).</span></span>
+<span data-ttu-id="8d7a3-134">.NET アプリケーションを送信したとき、.NET for Apache Spark には、要求の処理方法を Apache Spark に伝える、Scala で記述された必要なロジックが含まれています (たとえば、新しい Spark セッションを作成する要求や、.NET 側から JVM 側にデータを転送する要求など)。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-134">When you submit a .NET application, .NET for Apache Spark has the necessary logic written in Scala that informs Apache Spark how to handle your requests (e.g., request to create a new Spark Session, request to transfer data from .NET side to JVM side etc.).</span></span> <span data-ttu-id="8d7a3-135">このロジックは、[.NET for Apache Spark の Scala ソース コード](https://github.com/dotnet/spark/tree/master/src/scala)に含まれています。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-135">This logic can be found in the [.NET for Apache Spark Scala Source Code](https://github.com/dotnet/spark/tree/master/src/scala).</span></span>
 
-<span data-ttu-id="cfc3b-136">次の手順は、.NET for Apache Spark の Scala 拡張機能レイヤーをビルドすることです。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-136">The next step is to build the .NET for Apache Spark Scala extension layer:</span></span>
+<span data-ttu-id="8d7a3-136">次の手順は、.NET for Apache Spark の Scala 拡張機能レイヤーをビルドすることです。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-136">The next step is to build the .NET for Apache Spark Scala extension layer:</span></span>
 
 ```bash
 cd src/scala
 mvn clean package
 ```
 
-<span data-ttu-id="cfc3b-137">サポートされている Spark バージョンに対して作成された JAR を確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-137">You should see JARs created for the supported Spark versions:</span></span>
+<span data-ttu-id="8d7a3-137">サポートされている Spark バージョンに対して作成された JAR を確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-137">You should see JARs created for the supported Spark versions:</span></span>
 
 * `microsoft-spark-2.3.x/target/microsoft-spark-2.3.x-<version>.jar`
 * `microsoft-spark-2.4.x/target/microsoft-spark-2.4.x-<version>.jar`
 
-### <a name="build-net-sample-applications-using-net-core-cli"></a><span data-ttu-id="cfc3b-138">.NET Core CLI を使用して .NET サンプル アプリケーションをビルドする</span><span class="sxs-lookup"><span data-stu-id="cfc3b-138">Build .NET sample applications using .NET Core CLI</span></span>
+### <a name="build-net-sample-applications-using-net-core-cli"></a><span data-ttu-id="8d7a3-138">.NET Core CLI を使用して .NET サンプル アプリケーションをビルドする</span><span class="sxs-lookup"><span data-stu-id="8d7a3-138">Build .NET sample applications using .NET Core CLI</span></span>
 
-<span data-ttu-id="cfc3b-139">このセクションでは、.NET for Apache Spark の[サンプル アプリケーション](https://github.com/dotnet/spark/tree/master/examples)をビルドする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-139">This section explains how to build the [sample applications](https://github.com/dotnet/spark/tree/master/examples) for .NET for Apache Spark.</span></span> <span data-ttu-id="cfc3b-140">これらの手順は、あらゆる .NET for Spark アプリケーションのビルド プロセス全体を理解するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-140">These steps will help in understanding the overall building process for any .NET for Spark application.</span></span>
+<span data-ttu-id="8d7a3-139">このセクションでは、.NET for Apache Spark の[サンプル アプリケーション](https://github.com/dotnet/spark/tree/master/examples)をビルドする方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-139">This section explains how to build the [sample applications](https://github.com/dotnet/spark/tree/master/examples) for .NET for Apache Spark.</span></span> <span data-ttu-id="8d7a3-140">これらの手順は、あらゆる .NET for Spark アプリケーションのビルド プロセス全体を理解するのに役立ちます。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-140">These steps will help in understanding the overall building process for any .NET for Spark application.</span></span>
 
-1. <span data-ttu-id="cfc3b-141">ワーカーをビルドします。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-141">Build the worker:</span></span>
+1. <span data-ttu-id="8d7a3-141">ワーカーをビルドします。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-141">Build the worker:</span></span>
 
    ```dotnetcli
    cd ~/dotnet.spark/src/csharp/Microsoft.Spark.Worker/
    dotnet publish -f netcoreapp2.1 -r ubuntu.18.04-x64
    ```
 
-   <span data-ttu-id="cfc3b-142">コンソール出力の例:</span><span class="sxs-lookup"><span data-stu-id="cfc3b-142">Sample console output:</span></span>
+   <span data-ttu-id="8d7a3-142">コンソール出力の例:</span><span class="sxs-lookup"><span data-stu-id="8d7a3-142">Sample console output:</span></span>
 
    ```bash
    user@machine:/home/user/dotnet.spark/src/csharp/Microsoft.Spark.Worker$ dotnet publish -f netcoreapp2.1 -r ubuntu.18.04-x64
@@ -164,14 +162,14 @@ mvn clean package
       Microsoft.Spark.Worker -> /home/user/dotnet.spark/artifacts/bin/Microsoft.Spark.Worker/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish/
    ```
 
-2. <span data-ttu-id="cfc3b-143">サンプルをビルドします。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-143">Build the samples:</span></span>
+2. <span data-ttu-id="8d7a3-143">サンプルをビルドします。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-143">Build the samples:</span></span>
 
    ```dotnetcli
    cd ~/dotnet.spark/examples/Microsoft.Spark.CSharp.Examples/
    dotnet publish -f netcoreapp2.1 -r ubuntu.18.04-x64
    ```
 
-   <span data-ttu-id="cfc3b-144">コンソール出力の例:</span><span class="sxs-lookup"><span data-stu-id="cfc3b-144">Sample console output:</span></span>
+   <span data-ttu-id="8d7a3-144">コンソール出力の例:</span><span class="sxs-lookup"><span data-stu-id="8d7a3-144">Sample console output:</span></span>
 
    ```bash
    user@machine:/home/user/dotnet.spark/examples/Microsoft.Spark.CSharp.Examples$ dotnet publish -f netcoreapp2.1 -r ubuntu.18.04-x64
@@ -185,23 +183,23 @@ mvn clean package
       Microsoft.Spark.CSharp.Examples -> /home/user/dotnet.spark/artifacts/bin/Microsoft.Spark.CSharp.Examples/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish/
    ```  
 
-## <a name="run-the-net-for-spark-sample-applications"></a><span data-ttu-id="cfc3b-145">.NET for Spark のサンプル アプリケーションを実行する</span><span class="sxs-lookup"><span data-stu-id="cfc3b-145">Run the .NET for Spark sample applications</span></span>
+## <a name="run-the-net-for-spark-sample-applications"></a><span data-ttu-id="8d7a3-145">.NET for Spark のサンプル アプリケーションを実行する</span><span class="sxs-lookup"><span data-stu-id="8d7a3-145">Run the .NET for Spark sample applications</span></span>
 
-<span data-ttu-id="cfc3b-146">サンプルをビルドしたら、`spark-submit` を使用して .NET Core アプリを送信できます。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-146">Once you build the samples, you can use `spark-submit` to submit your .NET Core apps.</span></span> <span data-ttu-id="cfc3b-147">[必須コンポーネント](#prerequisites)のセクションに従っていることと、Apache Spark がインストール済みであることを確認してください。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-147">Make sure you have followed the [prerequisites](#prerequisites) section and installed Apache Spark.</span></span>
+<span data-ttu-id="8d7a3-146">サンプルをビルドしたら、`spark-submit` を使用して .NET Core アプリを送信できます。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-146">Once you build the samples, you can use `spark-submit` to submit your .NET Core apps.</span></span> <span data-ttu-id="8d7a3-147">[必須コンポーネント](#prerequisites)のセクションに従っていることと、Apache Spark がインストール済みであることを確認してください。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-147">Make sure you have followed the [prerequisites](#prerequisites) section and installed Apache Spark.</span></span>
 
-1. <span data-ttu-id="cfc3b-148">`DOTNET_WORKER_DIR` または `PATH` 環境変数を設定して、`Microsoft.Spark.Worker` バイナリが生成されたパスが含まれるようにします (`~/dotnet.spark/artifacts/bin/Microsoft.Spark.Worker/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish` など)。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-148">Set the `DOTNET_WORKER_DIR` or `PATH` environment variable to include the path where the `Microsoft.Spark.Worker` binary has been generated (e.g., `~/dotnet.spark/artifacts/bin/Microsoft.Spark.Worker/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish`).</span></span>
+1. <span data-ttu-id="8d7a3-148">`DOTNET_WORKER_DIR` または `PATH` 環境変数を設定して、`Microsoft.Spark.Worker` バイナリが生成されたパスが含まれるようにします (`~/dotnet.spark/artifacts/bin/Microsoft.Spark.Worker/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish` など)。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-148">Set the `DOTNET_WORKER_DIR` or `PATH` environment variable to include the path where the `Microsoft.Spark.Worker` binary has been generated (e.g., `~/dotnet.spark/artifacts/bin/Microsoft.Spark.Worker/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish`).</span></span>
 
    ```bash
    export DOTNET_WORKER_DIR=~/dotnet.spark/artifacts/bin/Microsoft.Spark.Worker/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish
    ```
 
-2. <span data-ttu-id="cfc3b-149">ターミナルを開き、アプリのバイナリが生成されたディレクトリに移動します (`~/dotnet.spark/artifacts/bin/Microsoft.Spark.CSharp.Examples/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish` など)。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-149">Open a terminal and go to the directory where your app binary has been generated (e.g., `~/dotnet.spark/artifacts/bin/Microsoft.Spark.CSharp.Examples/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish`).</span></span>
+2. <span data-ttu-id="8d7a3-149">ターミナルを開き、アプリのバイナリが生成されたディレクトリに移動します (`~/dotnet.spark/artifacts/bin/Microsoft.Spark.CSharp.Examples/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish` など)。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-149">Open a terminal and go to the directory where your app binary has been generated (e.g., `~/dotnet.spark/artifacts/bin/Microsoft.Spark.CSharp.Examples/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish`).</span></span>
 
    ```bash
    cd ~/dotnet.spark/artifacts/bin/Microsoft.Spark.CSharp.Examples/Debug/netcoreapp2.1/ubuntu.18.04-x64/publish
    ```
 
-3. <span data-ttu-id="cfc3b-150">次の基本構造に従ってアプリを実行します。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-150">Running your app follows the basic structure:</span></span>
+3. <span data-ttu-id="8d7a3-150">次の基本構造に従ってアプリを実行します。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-150">Running your app follows the basic structure:</span></span>
 
    ```bash
    spark-submit \
@@ -212,9 +210,9 @@ mvn clean package
      <path-to-your-app-binary> <argument(s)-to-your-app>
    ```
 
-   <span data-ttu-id="cfc3b-151">実行できるいくつかの例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="cfc3b-151">Here are some examples you can run:</span></span>
+   <span data-ttu-id="8d7a3-151">実行できるいくつかの例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="8d7a3-151">Here are some examples you can run:</span></span>
 
-   * <span data-ttu-id="cfc3b-152">**[Microsoft.Spark.Examples.Sql.Batch.Basic](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**</span><span class="sxs-lookup"><span data-stu-id="cfc3b-152">**[Microsoft.Spark.Examples.Sql.Batch.Basic](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**</span></span>
+   * <span data-ttu-id="8d7a3-152">**[Microsoft.Spark.Examples.Sql.Batch.Basic](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**</span><span class="sxs-lookup"><span data-stu-id="8d7a3-152">**[Microsoft.Spark.Examples.Sql.Batch.Basic](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**</span></span>
 
       ```bash
       spark-submit \
@@ -224,7 +222,7 @@ mvn clean package
       Microsoft.Spark.CSharp.Examples Sql.Batch.Basic $SPARK_HOME/examples/src/main/resources/people.json
       ```
 
-   * <span data-ttu-id="cfc3b-153">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredNetworkWordCount](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**</span><span class="sxs-lookup"><span data-stu-id="cfc3b-153">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredNetworkWordCount](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**</span></span>
+   * <span data-ttu-id="8d7a3-153">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredNetworkWordCount](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**</span><span class="sxs-lookup"><span data-stu-id="8d7a3-153">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredNetworkWordCount](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**</span></span>
 
       ```bash
       spark-submit \
@@ -234,7 +232,7 @@ mvn clean package
       Microsoft.Spark.CSharp.Examples Sql.Streaming.StructuredNetworkWordCount localhost 9999
       ```
 
-   * <span data-ttu-id="cfc3b-154">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (Maven アクセス可能)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span><span class="sxs-lookup"><span data-stu-id="cfc3b-154">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (maven accessible)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span></span>
+   * <span data-ttu-id="8d7a3-154">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (Maven アクセス可能)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span><span class="sxs-lookup"><span data-stu-id="8d7a3-154">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (maven accessible)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span></span>
 
       ```bash
       spark-submit \
@@ -245,7 +243,7 @@ mvn clean package
       Microsoft.Spark.CSharp.Examples Sql.Streaming.StructuredKafkaWordCount localhost:9092 subscribe test
       ```
 
-   * <span data-ttu-id="cfc3b-155">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (jar 提供)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span><span class="sxs-lookup"><span data-stu-id="cfc3b-155">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (jars provided)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span></span>
+   * <span data-ttu-id="8d7a3-155">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (jar 提供)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span><span class="sxs-lookup"><span data-stu-id="8d7a3-155">**[Microsoft.Spark.Examples.Sql.Streaming.StructuredKafkaWordCount (jars provided)](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**</span></span>
 
       ```bash
       spark-submit \
