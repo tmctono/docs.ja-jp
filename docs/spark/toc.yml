@@ -25,24 +25,46 @@
       href: tutorials/ml-sentiment-analysis.md
 - name: 使い方ガイド
   items:
+    - name: データへの接続
+      items:
+        - name: Azure Storage
+          href: how-to-guides/connect-to-azure-storage.md
+        - name: Event Hubs
+          href: how-to-guides/connect-to-event-hub.md
+        - name: Mongo DB
+          href: how-to-guides/connect-to-mongo-db.md
+        - name: SQL Server
+          href: how-to-guides/connect-to-sql-server.md
+    - name: アプリケーションをビルドする
+      items:
+        - name: Ubuntu
+          href: how-to-guides/ubuntu-instructions.md
+        - name: Windows
+          href: how-to-guides/windows-instructions.md
+    - name: リモート ジョブを送信する
+      items:
+        - name: Azure Synapse Analytics にジョブを送信する
+          href: /azure/synapse-analytics/spark/spark-dotnet
+        - name: Databricks にジョブを送信する
+          href: how-to-guides/databricks-deploy-methods.md
+        - name: HDInsight にジョブを送信する
+          href: how-to-guides/hdinsight-deploy-methods.md
+    - name: ユーザー定義関数 (UDF)
+      items:
+        - name: UDF ガイド
+          href: how-to-guides/udf-guide.md
+        - name: .NET での Java UDF
+          href: how-to-guides/java-udf-from-dotnet.md
+        - name: .NET Interactive での UDF
+          href: how-to-guides/dotnet-interactive-udf-issue.md
+        - name: ワーカーおよび UDF のバイナリを展開する
+          href: how-to-guides/deploy-worker-udf-binaries.md
+    - name: Jupyter Notebook の使用
+      href: how-to-guides/dotnet-spark-jupyter-notebooks.md
     - name: 配信ガイド
       href: how-to-guides/broadcast-guide.md
-    - name: UDF ガイド
-      href: how-to-guides/udf-guide.md
     - name: アプリケーションをデバッグする
       href: how-to-guides/debug.md
-    - name: Azure Synapse Analytics にジョブを送信する
-      href: /azure/synapse-analytics/spark/spark-dotnet
-    - name: HDInsight にジョブを送信する
-      href: how-to-guides/hdinsight-deploy-methods.md
-    - name: Databricks にジョブを送信する
-      href: how-to-guides/databricks-deploy-methods.md
-    - name: ワーカーおよび UDF のバイナリを展開する
-      href: how-to-guides/deploy-worker-udf-binaries.md
-    - name: Ubuntu 上でアプリケーションをビルドする
-      href: how-to-guides/ubuntu-instructions.md
-    - name: Windows 上でアプリケーションをビルドする
-      href: how-to-guides/windows-instructions.md
     - name: Azure HDInsight に対話型ノートブックをインストールする
       href: how-to-guides/hdinsight-notebook-installation.md
 - name: 関連項目
@@ -53,7 +75,7 @@
   items:
     - name: リソースの概要
       href: resources/index.md
-    - name: GitHub
+    - name: .NET for Apache Spark の GitHub
       href: 'https://github.com/dotnet/spark'
-    - name: スタック オーバーフロー
+    - name: Stack Overflow
       href: 'https://stackoverflow.com/questions/tagged/.net-spark'
