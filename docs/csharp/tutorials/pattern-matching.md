@@ -1,19 +1,19 @@
 ---
 title: 'チュートリアル: パターン マッチングを使用してアルゴリズムを構築する'
 description: この高度なチュートリアルでは、パターン マッチング手法を使用して、別々に作成されたデータとアルゴリズムを使用して機能を作成する方法を示します。
-ms.date: 03/13/2019
+ms.date: 10/06/2020
 ms.technology: csharp-whats-new
 ms.custom: contperfq1
-ms.openlocfilehash: 9fff9f286bd0aa7baf7632f9144dfe693bab0c32
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: ee8b3a90a06fabd4e9d73d7682efecda6cbfd23e
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91437983"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955630"
 ---
 # <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>チュートリアル: パターン マッチングを使用して、型ドリブンおよびデータ ドリブンのアルゴリズムを構築する
 
-C# 7 で、基本的なパターン マッチング機能が導入されました。 C# 8 では、これらの機能が新しい式とパターンで拡張されています。 他のライブラリ内に存在する可能性がある型を拡張したかのように動作する機能を記述できます。 パターンの別の用途は、アプリケーションで必要な、拡張される型の基本機能ではない機能を作成することです。
+C# 7 で、基本的なパターン マッチング機能が導入されました。 C# 8 と C# 9 では、これらの機能が新しい式とパターンで拡張されています。 他のライブラリ内に存在する可能性がある型を拡張したかのように動作する機能を記述できます。 パターンの別の用途は、アプリケーションで必要な、拡張される型の基本機能ではない機能を作成することです。
 
 このチュートリアルで学習する内容は次のとおりです。
 
@@ -25,7 +25,7 @@ C# 7 で、基本的なパターン マッチング機能が導入されまし�
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。C# 8.0 コンパイラも実行されるようにします。 C# 8 コンパイラは [Visual Studio 2019 バージョン 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) または [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) 以降で使用できます。
+お使いのマシンを、.NET 5 が実行されるように設定する必要があります。これには C# 9 コンパイラが含まれます。 C# 9 コンパイラは [Visual Studio 2019 バージョン 16.9 プレビュー 1](https://visualstudio.microsoft.com/vs/preview/) または [.NET 5.0 SDK](https://dot.net/get-dotnet5) 以降で使用できます。
 
 このチュートリアルでは、.NET と、C# と Visual Studio または .NET Core CLI のいずれかに精通していることを前提としています。
 
@@ -127,7 +127,7 @@ namespace toll_calculator
             }
             try
             {
-                tollCalc.CalculateToll(null);
+                tollCalc.CalculateToll(null!);
             }
             catch (ArgumentNullException e)
             {
@@ -157,10 +157,10 @@ namespace toll_calculator
 ```csharp
 vehicle switch
 {
-    Car { Passengers: 0}        => 2.00m + 0.50m,
-    Car { Passengers: 1 }       => 2.0m,
-    Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c                       => 2.00m - 1.0m,
+    Car {Passengers: 0}        => 2.00m + 0.50m,
+    Car {Passengers: 1}        => 2.0m,
+    Car {Passengers: 2}        => 2.0m - 0.50m,
+    Car c                      => 2.00m - 1.0m,
 
     // ...
 };
@@ -175,10 +175,10 @@ vehicle switch
 {
     // ...
 
-    Taxi { Fares: 0}  => 3.50m + 1.00m,
-    Taxi { Fares: 1 } => 3.50m,
-    Taxi { Fares: 2}  => 3.50m - 0.50m,
-    Taxi t            => 3.50m - 1.00m,
+    Taxi {Fares: 0}  => 3.50m + 1.00m,
+    Taxi {Fares: 1}  => 3.50m,
+    Taxi {Fares: 2}  => 3.50m - 0.50m,
+    Taxi t           => 3.50m - 1.00m,
 
     // ...
 };
@@ -219,20 +219,20 @@ vehicle switch
 };
 ```
 
-前のコードは、switch アームの `when` 句を示しています。 `when` 句を使用して、プロパティの等価以外の条件をテストできます。 完了すると、以下によく似たメソッドが作成されます。
+前のコードは、switch アームの `when` 句を示しています。 `when` 句を使用して、プロパティの等価以外の条件をテストできます。 完了すると、次のコードによく似たメソッドが作成されます。
 
 ```csharp
 vehicle switch
 {
-    Car { Passengers: 0}        => 2.00m + 0.50m,
-    Car { Passengers: 1}        => 2.0m,
-    Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c                       => 2.00m - 1.0m,
+    Car {Passengers: 0}        => 2.00m + 0.50m,
+    Car {Passengers: 1}        => 2.0m,
+    Car {Passengers: 2}        => 2.0m - 0.50m,
+    Car c                      => 2.00m - 1.0m,
 
-    Taxi { Fares: 0}  => 3.50m + 1.00m,
-    Taxi { Fares: 1 } => 3.50m,
-    Taxi { Fares: 2}  => 3.50m - 0.50m,
-    Taxi t            => 3.50m - 1.00m,
+    Taxi {Fares: 0}  => 3.50m + 1.00m,
+    Taxi {Fares: 1}  => 3.50m,
+    Taxi {Fares: 2}  => 3.50m - 0.50m,
+    Taxi t           => 3.50m - 1.00m,
 
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
     Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
@@ -288,9 +288,11 @@ public decimal CalculateToll(object vehicle) =>
 
 ## <a name="add-peak-pricing"></a>ピーク料金を追加する
 
-最後の機能として、料金徴収機関は、時間に依存するピーク料金を追加することを望んでいます。 朝と夕方のラッシュ アワーの間は、通行料金を倍にします。 このルールは、片方向の通行のみに影響し、朝のラッシュ時は市内に入る (インバウンド) 通行が、夕方のラッシュ時は市外に出てゆく (アウトバウンド) 通行が対象になります。 平日のその他の時間帯では、通行料金は 50% 増額される。 深夜と早朝の通行料金は、25% 減額される。 週末は、時間に関係なく、通常料金になる。
+最後の機能として、料金徴収機関は、時間に依存するピーク料金を追加することを望んでいます。 朝と夕方のラッシュ アワーの間は、通行料金を倍にします。 このルールは、片方向の通行のみに影響し、朝のラッシュ時は市内に入る (インバウンド) 通行が、夕方のラッシュ時は市外に出てゆく (アウトバウンド) 通行が対象になります。 平日のその他の時間帯では、通行料金は 50% 増額される。 深夜と早朝の通行料金は、25% 減額される。 週末は、時間に関係なく、通常料金になる。 次のコードを使用して、`if` および `else` ステートメントの連続使用によりこれを表すことができます。
 
-この機能のためにパターン マッチングを使用しますが、それは他の手法と統合します。 方向、曜日、および時間帯のすべてを組み合わせた単一のパターン マッチ式を作成できますが、 結果は、複雑な式になるでしょう。 読みにくく、理解しにくくなるでしょう。 それは、正確さを保証することを難しくします。 代わりに、メソッドを組み合わせて、すべての状態を簡潔に記述する値のタプルを作成します。 その後、パターン マッチングを使用して、通行料金の乗数を計算できます。 タプルには、3 つの個別の条件が含まれています。
+[!code-csharp[FullTuplePattern](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#SnippetPremiumWithoutPattern)]
+
+上記のコードは正常に動作しますが、読みにくいものです。 コードを理解するには、すべての入力ケースと入れ子になった `if` ステートメントを連結する必要があります。 代わりに、この機能のためにパターン マッチングを使用しますが、それは他の手法と統合します。 方向、曜日、および時間帯のすべてを組み合わせた単一のパターン マッチ式を作成できますが、 結果は、複雑な式になるでしょう。 読みにくく、理解しにくくなるでしょう。 それは、正確さを保証することを難しくします。 代わりに、メソッドを組み合わせて、すべての状態を簡潔に記述する値のタプルを作成します。 その後、パターン マッチングを使用して、通行料金の乗数を計算できます。 タプルには、3 つの個別の条件が含まれています。
 
 - その日が平日または週末のどちらであるか。
 - 通行料金が収集される時間帯。
@@ -335,7 +337,7 @@ private static bool IsWeekDay(DateTime timeOfToll) =>
     };
 ```
 
-このメソッドは機能しますが、繰り返しが含まれています。 次のコードに示すように簡略化できます。
+このメソッドは正しいものですが、繰り返しが含まれています。 次のコードに示すように簡略化できます。
 
 [!code-csharp[IsWeekDay](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
 
@@ -343,7 +345,7 @@ private static bool IsWeekDay(DateTime timeOfToll) =>
 
 [!code-csharp[GetTimeBand](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
-上記のメソッドでは、パターン マッチングは使用されていません。 使い慣れた `if` ステートメントの連鎖を使用するほうがわかりやすくなります。 プライベート `enum` を追加して、時間の各範囲を個別の値に変換します。
+プライベート `enum` を追加して、時間の各範囲を個別の値に変換します。 次に、`GetTimeBand` メソッドにより、"*リレーショナル パターン*" と "*結合 or パターン*" が使用されます。どちらも C# 9.0 で追加されたものです。 リレーショナル パターンを使用すると、`<`、`>`、`<=`、または `>=` の使用により数値をテストできます。 `or` パターンを使用すると、式が 1 つ以上のパターンに一致するかどうかをテストできます。 また、`and` パターンを使用して、式が 2 つの異なるパターンに一致することを確認し、`not` パターンを使用して、式がパターンに一致しないことをテストすることもできます。
 
 これらのメソッドを作成したら、別の `switch` 式と**タプル パターン**を使用して、割増料金を計算できます。 全部で 16 のアームがある `switch` 式を作成できます。
 

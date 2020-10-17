@@ -2,12 +2,12 @@
 title: C# 9.0 の新機能 - C# ガイド
 description: C# 9.0 で使用できる新しい機能の概要を説明します。
 ms.date: 09/04/2020
-ms.openlocfilehash: c165ca764d93b74aac21028ed3e55e80f2a23ee0
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 0ac3b410cd9ba886ee55aede952700f145f1b31b
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654908"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955168"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 の新機能
 
@@ -232,7 +232,7 @@ C# 9.0 以降では、`static` 修飾子を[ラムダ式](../language-reference/
 
 次に、ラムダ式に対するパラメーターとして破棄を使用できます。 このようにすると、引数の名前付けを避けることができ、コンパイラではその使用を避けることができます。 任意の引数に対して `_` を使用します。 詳細については、[ラムダ式](../language-reference/operators/lambda-expressions.md)に関する記事の「[ラムダ式の入力パラメーター](../language-reference/operators/lambda-expressions.md#input-parameters-of-a-lambda-expression)」セクションを参照してください。
 
-最後に、ローカル関数に属性を適用できるようになりました。 たとえば、null 許容属性の注釈をローカル関数に適用できます。
+ようやく、[ローカル関数](../programming-guide/classes-and-structs/local-functions.md)に属性を適用できるようになりました。 たとえば、[null 許容属性の注釈](../language-reference/attributes/nullable-analysis.md)をローカル関数に適用できます。
 
 ## <a name="support-for-code-generators"></a>コード ジェネレーターのサポート
 

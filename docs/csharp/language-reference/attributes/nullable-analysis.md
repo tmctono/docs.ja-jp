@@ -2,18 +2,18 @@
 title: C# の予約済み属性:Null 許容のスタティック分析
 ms.date: 04/14/2020
 description: これらの属性は、null 許容および null 非許容参照型に対するより適切な静的分析を提供するために、コンパイラによって解釈されます。
-ms.openlocfilehash: d2405162ece3df209111de65fdef54f70cc86d45
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: 6678cd21de23d4ed391eff089e33939b5adff0fa
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656310"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955604"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>予約済み属性はコンパイラの null 状態の静的分析に寄与する
 
 null 許容コンテキストの場合、コンパイラではコードの静的分析を実行して、すべての参照型変数の null 状態を判断します。
 
-- *null 以外*:静的分析では、変数が null 以外の値に割り当てられていると判断されました。
+- *null 以外*:静的分析によって、変数に null 以外の値が割り当てられていることが判断されます。
 - *null の可能性あり*:静的分析では、変数に null 以外の値が割り当てられていることを判断できません。
 
 API のセマンティクスについての情報をコンパイラに提供する、いくつかの属性を適用できます。 この情報は、コンパイラで静的分析を実行し、変数が null でないかどうかを判断するのに役立ちます。 この記事では、これらの各属性とその使用方法について簡単に説明します。 すべての例では C# 8.0 以降を想定しており、コードは null 許容コンテキストに含まれています。
