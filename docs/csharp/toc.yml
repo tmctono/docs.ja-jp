@@ -2,11 +2,19 @@
   href: index.yml
 - name: 作業開始
   items:
-    - name: 概要
+    - name: C# 言語と .NET の概要
       displayName: get started
       href: getting-started/index.md
-    - name: C# 言語と .NET の概要
-      href: getting-started/introduction-to-the-csharp-language-and-the-net-framework.md
+    - name: C# のツアー
+      items:
+        - name: はじめに
+          href: tour-of-csharp/index.md
+        - name: 型
+          href: tour-of-csharp/types.md
+        - name: プログラムの構成要素
+          href: tour-of-csharp/program-building-blocks.md
+        - name: 主な言語の領域
+          href: tour-of-csharp/features.md
 - name: チュートリアル
   items:
     - name: 概要
@@ -70,16 +78,6 @@
       href: tutorials/working-with-linq.md
     - name: 属性の使用
       href: tutorials/attributes.md
-- name: C# のツアー
-  items:
-    - name: はじめに
-      href: tour-of-csharp/index.md
-    - name: 型
-      href: tour-of-csharp/types.md
-    - name: プログラムの構成要素
-      href: tour-of-csharp/program-building-blocks.md
-    - name: 主な言語の領域
-      href: tour-of-csharp/features.md
 - name: C# の新機能
   items:
     - name: C# 9.0
