@@ -317,6 +317,10 @@ items:
               - name: 作業開始
                 tocHref: /dotnet/csharp/getting-started/
                 topicHref: /dotnet/csharp/getting-started/index
+                items:
+                  - name: C# のツアー
+                    tocHref: /dotnet/csharp/tour-of-csharp/
+                    topicHref: /dotnet/csharp/tour-of-csharp/index
               - name: チュートリアル
                 tocHref: /dotnet/csharp/tutorials/
                 topicHref: /dotnet/csharp/tutorials/index

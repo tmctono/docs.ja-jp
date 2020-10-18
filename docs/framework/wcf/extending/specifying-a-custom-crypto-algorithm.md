@@ -2,12 +2,12 @@
 title: カスタム暗号アルゴリズムの指定
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: 673d177a665e265d77f0221e0a00f4b814c8795c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b4690071ac148966601a1c0f50edfd5a9fd52fc
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186489"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163234"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>カスタム暗号アルゴリズムの指定
 WCF では、データの暗号化やデジタル署名の計算を行う際に使用するカスタム暗号アルゴリズムを指定できます。 そのためには、次の手順に従います。  
@@ -97,7 +97,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
            <cryptoClasses>  
               <cryptoClass SHA256CSP="System.Security.Cryptography.SHA256CryptoServiceProvider, System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
            </cryptoClasses>  
-           <nameEntry name="http://constoso.com/CustomAlgorithms/CustomHashAlgorithm"  
+           <nameEntry name="http://contoso.com/CustomAlgorithms/CustomHashAlgorithm"  
               class="SHA256CSP" />  
            </cryptoNameMapping>  
         </cryptographySettings>  
@@ -105,14 +105,14 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- <>`cryptoClasses`要素の下のセクションは SHA256CryptoServiceProvider とエイリアス "SHA256CSP" の間のマッピングを作成します。 <`nameEntry`>要素は、"SHA256CSP" エイリアスと指定された URL`http://constoso.com/CustomAlgorithms/CustomHashAlgorithm`との間のマッピングを作成します。  
+ <> 要素の下のセクションで、 `cryptoClasses` SHA256CryptoServiceProvider とエイリアス "SHA256CSP" の間のマッピングを作成します。 <`nameEntry`> 要素は、"SHA256CSP" エイリアスと指定した URL の間のマッピングを作成し `http://contoso.com/CustomAlgorithms/CustomHashAlgorithm` ます。  
   
  コードでカスタム アルゴリズムを登録するには、<xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> メソッドを使用します。 このメソッドによって、両方のマッピングを作成します。 次の例は、このメソッドを呼び出す方法を示しています。  
   
 ```csharp
 // Register the custom URI string defined for the hashAlgorithm in MyCustomAlgorithmSuite class to create the
 // SHA256CryptoServiceProvider hash algorithm object.  
-CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://constoso.com/CustomAlgorithms/CustomHashAlgorithm");  
+CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://contoso.com/CustomAlgorithms/CustomHashAlgorithm");  
 ```  
   
 ## <a name="configure-the-binding"></a>バインディングの構成  
@@ -123,11 +123,11 @@ WSHttpBinding binding = new WSHttpBinding();
             binding.Security.Message.AlgorithmSuite = new MyCustomAlgorithmSuite();  
 ```  
   
- 完全なコード例については[、WCF セキュリティのサンプルの暗号化の俊敏性を](../samples/cryptographic-agility-in-wcf-security.md)参照してください。  
+ 完全なコード例については、「 [WCF セキュリティサンプルでの暗号化の俊敏性](../samples/cryptographic-agility-in-wcf-security.md) 」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [Securing Services and Clients](../feature-details/securing-services-and-clients.md)
+- [サービスおよびクライアントのセキュリティ保護](../feature-details/securing-services-and-clients.md)
 - [サービスのセキュリティ保護](../securing-services.md)
 - [セキュリティの概要](../feature-details/security-overview.md)
 - [セキュリティの概念](../feature-details/security-concepts.md)
