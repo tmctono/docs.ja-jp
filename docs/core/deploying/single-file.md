@@ -4,18 +4,18 @@ description: 単一ファイル アプリケーションの概要、およびこ
 author: lakshanf
 ms.author: lakshanf
 ms.date: 08/28/2020
-ms.openlocfilehash: 0167e62ea46e1c23c3d4ef6ea505ee051ffaf264
-ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
+ms.openlocfilehash: 16e9586cfc29072fa2ca70dc482272a5a0e7306a
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91712638"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050417"
 ---
 # <a name="single-file-deployment-and-executable"></a>単一ファイルの配置と実行可能ファイル
 
 アプリケーションに依存するすべてのファイルを単一のバイナリにバンドルすることで、アプリケーション開発者は、アプリケーションを単一ファイルとして配置し、配布することができます。 このデプロイ モデルは、.NET Core 3.0 以降で利用可能であり、.NET 5.0 で拡張されています。 以前の .NET Core 3.0 では、ユーザーが単一ファイル アプリを実行する場合、そのアプリケーションが実行される前に、まず .NET Core ホストがすべてのファイルを一時ディレクトリに抽出します。 .NET 5.0 では、アプリからファイルを抽出する必要がなく、コードを直接実行するので、このエクスペリエンスが向上しています。
 
-[フレームワークに依存するデプロイ モデル](index.md#publish-framework-dependent)と[自己完結型アプリケーション](index.md#publish-self-contained)の両方で、単一ファイルの配置が可能です。 自己完結型アプリケーション内にある単一ファイルは、ランタイム ライブラリとフレームワーク ライブラリが含まれるため、大きなサイズとなります。 単一ファイル配置オプションは、[ReadyToRun](../tools/dotnet-publish.md) と [Trim (.NET 5.0 の試験的な機能)](trim-self-contained.md) の各発行オプションと組み合わせることができます。
+[フレームワークに依存するデプロイ モデル](index.md#publish-framework-dependent)と[自己完結型アプリケーション](index.md#publish-self-contained)の両方で、単一ファイルの配置が可能です。 自己完結型アプリケーション内にある単一ファイルは、ランタイム ライブラリとフレームワーク ライブラリが含まれるため、大きなサイズとなります。 単一ファイル配置オプションは、[ReadyToRun](ready-to-run.md) と [Trim (.NET 5.0 の試験的な機能)](trim-self-contained.md) の各発行オプションと組み合わせることができます。
 
 ## <a name="api-incompatibility"></a>API の非互換性
 

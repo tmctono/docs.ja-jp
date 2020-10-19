@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 8ba64a6e3bee4a5d27a07ab4ad4ef3a3f0749778
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: b0b1f4492d68ff2f2218b7c977f57cad3f582bb0
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804633"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050281"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 の新機能
 
@@ -395,7 +395,7 @@ GPIO パッケージには、*GPIO*、*SPI*、*I2C*、および *PWM* デバイ�
 使用できる場合、.NET Core 3.0 では Linux システム上で **OpenSSL 1.1.1**、**OpenSSL 1.1.0**、または **OpenSSL 1.0.2** が使用されます。 **OpenSSL 1.1.1** が使用できる場合、<xref:System.Net.Security.SslStream?displayProperty=nameWithType> 型と <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 型の両方が **TLS 1.3** を使用します (クライアントとサーバーの両方が **TLS 1.3** をサポートしている場合)。
 
 > [!IMPORTANT]
-> Windows と macOS はまだ **TLS 1.3** をサポートしていません。 サポートされるようになったら、.NET Core 3.0 はこれらのオペレーティング システムで **TLS 1.3** をサポートする予定です。
+> Windows と macOS はまだ **TLS 1.3** をサポートしていません。
 
 次の C# 8.0 の例は、<https://www.cloudflare.com> に接続している Ubuntu 18.10 上の .NET Core 3.0 を示しています。
 
