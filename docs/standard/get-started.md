@@ -1,41 +1,61 @@
 ---
-title: .NET の使用を開始する
-description: 言語とプラットフォームの観点から、.NET の使用開始に関するさまざまな記事の一覧を示します。
-author: cartermp
-ms.date: 01/21/2020
+title: .NET の使用を開始するためのチュートリアル
+description: .NET アプリ開発の学習用のチュートリアル、または .NET プログラミング言語の 1 つを選択します。
+author: tdykstra
+ms.date: 09/30/2020
 ms.technology: dotnet-standard
-ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: f1d5854d8bddea21bbb8a0a7fa032c9fbd15f3d5
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: da98bda4a6a2d637a8a899c9d7315d5cbfcb18fa
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438179"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91755877"
 ---
-# <a name="get-started"></a>作業開始
+# <a name="tutorials-for-getting-started-with-net"></a>.NET の使用を開始するためのチュートリアル
 
-.NET を使い始めるにはさまざまな方法があります。 .NET は巨大なプラットフォームであるため、このドキュメントには異なる観点から .NET の使用開始に役立つ複数の記事があります。
+次のステップバイステップのチュートリアルは、特に断りがない限り、Windows、Linux、または macOS で実行します。
 
-## <a name="get-started-using-net-languages"></a>.NET 言語の使用を開始する
+## <a name="tutorials-for-creating-apps"></a>アプリを作成するためのチュートリアル
 
-C#、Visual Basic、F# の入門用チュートリアルについては、以下を参照してください。
+* コンソール アプリを作成する
+  * [Visual Studio Code を使用](../core/tutorials/with-visual-studio-code.md)
+  * [Visual Studio を使用](../core/tutorials/with-visual-studio.md) (Windows)
+  * [Visual Studio for Mac を使用](../core/tutorials/with-visual-studio-mac.md) (macOS)
+* Web アプリを作成する
+  * [サーバー側 Web UI で](/aspnet/core/tutorials/razor-pages/razor-pages-start)
+  * [クライアント側 Web UI で](https://dotnet.microsoft.com/learn/aspnet/blazor-tutorial/intro)
+* [Web API の作成](/aspnet/core/tutorials/first-web-api)
+* [リモート プロシージャ コール Web アプリを作成する](/aspnet/core/tutorials/grpc/grpc-start)
+* [リアルタイム Web アプリを作成する](/aspnet/core/tutorials/signalr)
+* [クラウドでサーバーレス関数を作成する](/azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-csharp)
+* [Android および iOS 用のモバイル アプリを作成する](https://dotnet.microsoft.com/learn/xamarin/hello-world-tutorial/intro) (Windows)
+* Windows デスクトップ アプリを作成する
+  * [WPF](/visualstudio/get-started/csharp/tutorial-wpf)
+  * [Windows フォーム](/visualstudio/ide/create-csharp-winform-visual-studio)
+  * [ユニバーサル Windows プラットフォーム (UWP)](/visualstudio/get-started/csharp/tutorial-uwp)
+* [Unity を使用してゲームを作成する](https://dotnet.microsoft.com/learn/games/unity-tutorial/intro)
+* [Windows サービスを作成する](/aspnet/core/host-and-deploy/windows-service)
 
-* [C# の概要](../csharp/getting-started/index.md)
-* [C# のチュートリアル](../csharp/tutorials/index.md)
-* [F# の入門用チュートリアル](../fsharp/get-started/index.md)
+## <a name="tutorials-for-creating-class-libraries"></a>クラス ライブラリを作成するためのチュートリアル
+
+* クラス ライブラリを作成する
+  * [Visual Studio Code を使用](../core/tutorials/library-with-visual-studio-code.md)
+  * [Visual Studio を使用](../core/tutorials/library-with-visual-studio.md) (Windows)
+  * [Visual Studio for Mac を使用](../core/tutorials/library-with-visual-studio-mac.md) (macOS)
+
+## <a name="resources-for-learning-net-languages"></a>.NET 言語を学習するためのリソース
+
+* [C# で作業を開始する](../csharp/getting-started/index.md)
+* [F# の使用を開始する](../fsharp/get-started/index.md)
 * [Visual Basic 入門](../visual-basic/getting-started/index.md)
 
-## <a name="get-started-using-net-core"></a>.NET Core の使用を開始する
+## <a name="other-get-started-resources"></a>その他の入門用リソース
 
-.NET Core 固有のガイダンスについては、以下を参照してください。
+次のリソースは .NET アプリの開発を開始するためのものですが、ステップバイステップのチュートリアルではありません。
 
-* [.NET Core の概要](../core/get-started.md)
-* [.NET Core チュートリアル](../core/tutorials/index.md)
+* [モノのインターネット (IoT)](https://dotnet.microsoft.com/apps/iot)
+* [Machine Learning](../machine-learning/index.yml)
 
-## <a name="get-started-using-net-standard"></a>.NET Standard の使用を開始する
+## <a name="next-steps"></a>次のステップ
 
-導入のチュートリアルについては、「[Visual Studio で .NET Standard ライブラリを構築する](../core/tutorials/library-with-visual-studio.md)」を参照してください。
-
-## <a name="get-started-using-net-core-on-docker"></a>Docker で .NET Core の使用を開始する
-
-「[.NET および Docker の概要](../core/docker/introduction.md)」では Windows Docker コンテナーで .NET Core を使用する方法が示されています。
+.NET の詳細については、「[.NET の概要](../core/introduction.md)」を参照してください。
