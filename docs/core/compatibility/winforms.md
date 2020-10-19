@@ -2,12 +2,12 @@
 title: Windows フォームに関する破壊的変更
 description: .NET Core および .NET 5 の Windows フォームにおける破壊的変更の一覧を示します。
 ms.date: 09/08/2020
-ms.openlocfilehash: 3e7d077d07203d9c231ae4a7805e593c5432c135
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 2311faab026bf1dfde348e231937eff73ec46172
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679002"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804863"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows フォームでの破壊的変更
 
@@ -17,6 +17,7 @@ Windows フォームのサポートは、.NET Core にバージョン 3.0 で追
 
 | 互換性に影響する変更点 | 導入されたバージョン |
 | - | :-: |
+| [カスタマイズされたセル スタイルのフォントが DataGridView によってリセットされなくなった](#datagridview-no-longer-resets-fonts-for-customized-cell-styles) | 5.0 |
 | [WPF アプリと WinForms アプリで OutputType が WinExe に設定されている](#outputtype-set-to-winexe-for-wpf-and-winforms-apps) | 5.0 |
 | [DataGridView 関連の API が InvalidOperationException をスローするようになった](#datagridview-related-apis-now-throw-invalidoperationexception) | 5.0 |
 | [WinForms と WPF アプリで Microsoft.NET.Sdk が使用される](#winforms-and-wpf-apps-use-microsoftnetsdk) | 5.0 |
@@ -39,6 +40,10 @@ Windows フォームのサポートは、.NET Core にバージョン 3.0 で追
 | [UseLegacyImages 互換性スイッチがサポートされない](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [datagridview-doesnt-reset-custom-font-settings](../../../includes/core-changes/windowsforms/5.0/datagridview-doesnt-reset-custom-font-settings.md)]
+
+***
 
 [!INCLUDE [automatically-infer-winexe-output-type](../../../includes/core-changes/windowsforms/5.0/automatically-infer-winexe-output-type.md)]
 

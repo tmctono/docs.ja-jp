@@ -4,12 +4,12 @@ description: 非推奨の API およびプラットフォームの互換性の�
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: f1268d5f208e19f1b69ed487370fb4c96723a204
-ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
+ms.openlocfilehash: a689ae347efbc8c2dd933b2f6920ac6cc06cda7d
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91406246"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756196"
 ---
 # <a name="net-api-analyzer"></a>.NET API アナライザー
 

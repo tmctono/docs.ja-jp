@@ -4,12 +4,12 @@ description: この高度なチュートリアルでは、null 許容参照型�
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 54cf9d812999cae837483b48cdedd89d9dc40fc9
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: bd575b226a2ff61e938719b064ff5ede0cf66013
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249130"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805181"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>チュートリアル: null 許容参照型と null 非許容参照型を使用して設計意図をもっと明確に示す
 
@@ -221,3 +221,6 @@ null 許容参照型と null 非許容参照型の間で型宣言を変更する
 既存のアプリケーションを null 許容参照型を使用するように移行することについてさらに詳しく学習します。
 > [!div class="nextstepaction"]
 > [Null 許容参照型を使用するようにアプリケーションをアップグレードする](upgrade-to-nullable-references.md)
+
+Entity Framework を使用する場合に null 許容参照型を使用する方法について説明します。
+> [Entity Framework Core の基礎: null 許容参照型の使用](/ef/core/miscellaneous/nullable-reference-types)

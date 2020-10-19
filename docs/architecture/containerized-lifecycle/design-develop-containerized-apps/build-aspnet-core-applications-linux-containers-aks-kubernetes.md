@@ -2,12 +2,12 @@
 title: Linux コンテナーとして AKS/Kubernetes クラスターにデプロイされる ASP.NET Core アプリケーションをビルドする
 description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
 ms.date: 08/06/2020
-ms.openlocfilehash: 4b04e5d56c73918c665ad6e2825205870aac9606
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 8b3141d79eeb252ec3721d57293bed0e335b41d3
+ms.sourcegitcommit: a6bd4cad438fe479cbd112eae10f2cd449f06e40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916440"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91844564"
 ---
 # <a name="build-aspnet-core-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Linux コンテナーとして AKS/Kubernetes オーケストレーターにデプロイされる ASP.NET Core アプリケーションをビルドする
 
@@ -148,7 +148,7 @@ services:
     #...
 ```
 
-これで、**F5** キーで、または図 4-42 に示すように **[再生]** ボタン、あるいは **Ctrl + F5** キーを使用して、docker-compose プロジェクトを選択し、アプリケーションを実行できます。
+これで、**F5** キーを使い、または図 4-42 に示すように **[再生]** ボタンか、あるいは **Ctrl + F5** キーを使用して、docker-compose プロジェクトを選択し、アプリケーションを実行できます。
 
 ![Visual Studio での docker-compose プロジェクトの実行](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/running-docker-compose-with-visual-studio.png)
 
@@ -198,6 +198,9 @@ docker images
 ```powershell
 az acr create --name exploredocker --resource-group explore-docker-aks-rg --sku basic --admin-enabled
 ```
+
+> [!NOTE]
+> コンテナー レジストリ名 (`exploredocker` など) は、Azure 内で一意にし、5 から 50 文字の英数字を含める必要があります。 詳細については、「[コンテナー レジストリの作成](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli#create-a-container-registry)」を参照してください。
 
 ### <a name="create-the-image-in-release-mode"></a>リリース モードでイメージを作成する
 
@@ -257,7 +260,7 @@ az acr login --name exploredocker
 docker push <login-server-name>/<image-name>:v1
 ```
 
-このコマンドでのイメージのアップロードにはしばらく時間がかかりますが、プロセス時にフィードバックが提供されます。 次の図から、1 つのイメージからの出力が完了しており、もう 1 つは進行中であることがわかります。
+このコマンドでのイメージのアップロードにはしばらく時間がかかりますが、プロセス時にフィードバックが提供されます。 次の図により、1 つのイメージからの出力が完了しており、もう 1 つは進行中であることがわかります。
 
 ![docker push コマンドからのコンソール出力。](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/uploading-docker-images-complete.png)
 

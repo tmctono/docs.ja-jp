@@ -1,12 +1,12 @@
 ---
 title: 補間文字列
 ms.date: 10/31/2017
-ms.openlocfilehash: d1220f3804d571f6da229dc5dfa099a22ab1478d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c427b48ce58a59ff3878f24f1989db6ac8c8239a
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344324"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805279"
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>補間文字列 (Visual Basic リファレンス)
 
@@ -43,7 +43,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 挿入文字列に中かっこ "{" または "}" を含めるには、2 つの中かっこ "{{" または "}}" を使用します。  詳細については、「暗黙の型変換」を参照してください。
 
-挿入文字列には、引用符 (")、コロン (:)、コンマ (,) など、特別な意味を持つその他の文字が含まれることがあります。これらの文字がリテラル テキストに出現する場合は、エスケープする必要があります。また、これらの文字が言語要素として挿入式に含まれる場合は、かっこで区切られた式に含める必要があります。 次の例では、引用符をエスケープして、結果文字列に引用符を含めています。さらに、かっこを使用して式 `(age == 1 ? "" : "s")` を区切り、コロンが書式指定文字列の先頭として解釈されないようにしています。
+挿入文字列には、引用符 (")、コロン (:)、コンマ (,) など、特別な意味を持つその他の文字が含まれることがあります。これらの文字がリテラル テキストに出現する場合は、エスケープする必要があります。また、これらの文字が言語要素として挿入式に含まれる場合は、かっこで区切られた式に含める必要があります。 次の例では、引用符をエスケープして、それらを結果の文字列に含めます。
 
 [!code-vb[interpolated-strings](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings4.vb)]
 

@@ -3,12 +3,12 @@ title: プラットフォーム互換性アナライザー
 description: クロスプラットフォームのアプリとライブラリにおいてプラットフォームの互換性に関する問題を検出するのに役立つ Roslyn アナライザーです。
 author: buyaa-n
 ms.date: 09/17/2020
-ms.openlocfilehash: 4e842e5bbe90dd5006d9b27d0365f908b6441997
-ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
+ms.openlocfilehash: 44c2c2d9674b13f314a057f847df2d4d474cc2be
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91406587"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805299"
 ---
 # <a name="platform-compatibility-analyzer"></a>プラットフォーム互換性アナライザー
 
@@ -25,7 +25,7 @@ ms.locfileid: "91406587"
 
 ## <a name="prerequisites"></a>[前提条件]
 
-プラットフォーム互換性アナライザーは、Roslyn コード品質アナライザーの 1 つです。 .NET 5.0 以降、これらのアナライザーは [.NET SDK に含まれる](../../fundamentals/productivity/code-analysis.md)ようになりました。 プラットフォーム互換性アナライザーは、`net5.0` 以降のバージョンをターゲットとするプロジェクトに対してのみ既定で有効になります。 ただし、他のフレームワークをターゲットとするプロジェクトに対しても[有効にする](/visualstudio/code-quality/ca1416.md#configurability)ことができます。
+プラットフォーム互換性アナライザーは、Roslyn コード品質アナライザーの 1 つです。 .NET 5.0 以降、これらのアナライザーは [.NET SDK に含まれる](../../fundamentals/code-analysis/overview.md)ようになりました。 プラットフォーム互換性アナライザーは、`net5.0` 以降のバージョンをターゲットとするプロジェクトに対してのみ既定で有効になります。 ただし、他のフレームワークをターゲットとするプロジェクトに対しても[有効にする](/visualstudio/code-quality/ca1416.md#configurability)ことができます。
 
 ## <a name="how-the-analyzer-determines-platform-dependency"></a>アナライザーによってプラットフォームの依存関係が判断されるしくみ
 
@@ -70,7 +70,7 @@ ms.locfileid: "91406587"
     ```
 
   - **サポート対象外のみのリスト**。 各 OS プラットフォームの最小バージョンが `[UnsupportedOSPlatform]` 属性である場合、その API はリストに含まれているプラットフォームでのみサポートされず、他のすべてのプラットフォームではサポートされると見なされます。 リストには、同じプラットフォームのより上位のバージョンの `[SupportedOSPlatform]` 属性を含めることができます。これは、そのバージョン以降で API がサポートされることを示します。
-  
+
     ```csharp
     // The API was unsupported on Windows until version 10.0.19041.0.
     // The API is considered supported everywhere else without constraints.
@@ -84,11 +84,11 @@ ms.locfileid: "91406587"
 - プラットフォーム属性は、型、メンバー (メソッド、フィールド、プロパティ、イベント)、およびプラットフォーム名やバージョンが異なるアセンブリに適用できます。
   - 最上位レベルの `target` に適用される属性は、そのすべてのメンバーと型に影響します。
   - 子レベルの属性が適用されるのは、それが "子注釈によってプラットフォームのサポートを絞り込むことはできるが、拡大することはできない" という規則に準拠している場合のみです。
-    - 親が**サポート対象のみ**のリストを持っている場合、子のメンバー属性で新しいプラットフォームのサポートを追加することはできません。親のサポートが拡大されるためです。新しいプラットフォームのサポートは親自体にのみ追加できます。 ただし、同じプラットフォームのそれ以降のバージョンに対して `Supported` 属性を設定することはできます。サポートが絞り込まれるためです。 また、同じプラットフォームの `Unsupported` 属性も、親のサポートが絞り込まれるため設定可能です。
-    - 親が**サポート対象外のみ**のリストを持っている場合、子のメンバー属性では、親のサポートを絞り込むことになるため新しいプラットフォームのサポートを追加することはできますが、親と同じプラットフォームに対して `Supported` 属性を設定することはできません。親のサポートが拡大されるためです。 同じプラットフォームのサポートは、元の `Unsupported` 属性が適用されている親レベルに対してのみ追加できます。
-  - 同じ `platform` 名を持つ API に対して `[SupportedOSPlatform("platformVersion")]` が複数回適用されている場合は、最小バージョンのものだけがアナライザーによって考慮されます。
-  - 同じ `platform` 名を持つ API に対して `[UnsupportedOSPlatform("platformVersion")]` が 3 回以上適用されている場合は、最もバージョンの低い 2 つだけがアナライザーによって考慮されます。
-  
+    - 親が**サポート対象のみ**のリストを持っている場合、子のメンバー属性で新しいプラットフォームのサポートを追加することはできません。親のサポートが拡大されるためです。 新しいプラットフォームのサポートは、親自体にのみ追加できます。 ただし、子が同じプラットフォームのそれ以降のバージョンに対して `Supported` 属性を持つことはできます。それによりサポートが絞り込まれるためです。 また、子が同じプラットフォームで `Unsupported` 属性を持つこともできます。親のサポートも絞り込まれるためです。
+    - 親が**サポート対象外のみ**のリストを持っている場合、親のサポートを絞り込むために、子のメンバー属性で新しいプラットフォームのサポートを追加することができます。 しかし、親と同じプラットフォームの `Supported` 属性を持つことはできません。親のサポートが拡張されるからです。 同じプラットフォームのサポートは、元の `Unsupported` 属性が適用された親に対してのみ追加できます。
+  - 同じ `platform` 名の API に対して `[SupportedOSPlatform("platformVersion")]` が 2 回以上適用されている場合、最小バージョンのものだけがアナライザーによって考慮されます。
+  - 同じ `platform` 名の API に対して `[UnsupportedOSPlatform("platformVersion")]` が 3 回以上適用されている場合、最も古いバージョンの 2 つだけがアナライザーによって考慮されます。
+
   > [!NOTE]
   > 最初はサポートされていたが後のバージョンではサポートされていない (削除された) API は、さらに後のバージョンで再びサポートされることはないと想定されます。
 
@@ -123,7 +123,7 @@ ms.locfileid: "91406587"
       // warns: 'SupportedOnWindowsAndLinuxOnly' is supported on 'Linux'
       SupportedOnWindowsAndLinuxOnly();
 
-      // warns: 'ApiSupportedFromWindows8UnsupportFromWindows10' is supported on 'windows' 8.0 and later  
+      // warns: 'ApiSupportedFromWindows8UnsupportFromWindows10' is supported on 'windows' 8.0 and later
       // warns: 'ApiSupportedFromWindows8UnsupportFromWindows10' is unsupported on 'windows' 10.0.19041.0 and later
       ApiSupportedFromWindows8UnsupportFromWindows10();
 
@@ -133,7 +133,7 @@ ms.locfileid: "91406587"
   }
 
   // an API not supported on android but supported on all other.
-  [UnsupportedOSPlatform("android")]  
+  [UnsupportedOSPlatform("android")]
   public void DoesNotWorkOnAndroid() { }
 
   // an API was unsupported on Windows until version 8.0.
@@ -154,11 +154,11 @@ ms.locfileid: "91406587"
   {
       DoesNotWorkOnAndroid(); // warns 'DoesNotWorkOnAndroid' is unsupported on 'android'
 
-      // warns:'StartedWindowsSupportFromVersion8' is unsupported on 'windows'  
+      // warns:'StartedWindowsSupportFromVersion8' is unsupported on 'windows'
       // warns:'StartedWindowsSupportFromVersion8' is supported on 'windows' 8.0 and later
       StartedWindowsSupportFromVersion8();
 
-      // warns:'StartedWindowsSupportFrom8UnsupportedFrom10' is unsupported on 'windows'  
+      // warns:'StartedWindowsSupportFrom8UnsupportedFrom10' is unsupported on 'windows'
       // warns:'StartedWindowsSupportFrom8UnsupportedFrom10' is supported on 'windows' 8.0 and later
       // even there were 3 diagnostics found analyzer warn only for the first 2.
       StartedWindowsSupportFrom8UnsupportedFrom10();
@@ -177,7 +177,7 @@ ms.locfileid: "91406587"
 
 - **コードを削除する**。 通常は望ましい方法ではありません。Windows ユーザーがコードを使用する場合に忠実性が失われることを意味するためです。 クロスプラットフォームの代替手段が存在する場合は、プラットフォーム固有の API よりもそちらを使用した方がよい可能性があります。
 
-- **警告を抑制する**。 単に警告を抑制することもできます。それには editor.config または `#pragma warning disable ca1416` を使用します。 ただし、プラットフォーム固有の API を使用する場合、このオプションは最後の手段にするべきです。
+- **警告を抑制する**。 EditorConfig エントリまたは `#pragma warning disable ca1416` を使用して、単に警告を抑制することもできます。 ただし、プラットフォーム固有の API を使用する場合、このオプションは最後の手段にするべきです。
 
 ### <a name="guard-platform-specific-apis-with-guard-methods"></a>保護メソッドを使用してプラットフォーム固有の API を保護する
 
@@ -231,7 +231,7 @@ ms.locfileid: "91406587"
   }
   ```
 
-- 新しい <xref:System.OperatingSystem> API を使用できない netstandard または netcoreapp をターゲットとするコードを保護する必要がある場合、<xref:System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform%2A?displayProperty=nameWithType> API が使用可能であり、アナライザーによって適用されます。 ただし、これは <xref:System.OperatingSystem> に追加された新しい API ほど最適化されていません。 プラットフォームが <xref:System.Runtime.InteropServices.OSPlatform> 構造体でサポートされていない場合は、<xref:System.Runtime.InteropServices.OSPlatform.Create%2A?displayProperty=nameWithType>("platform") を使用できます。これもアナライザーによって適用されます。
+- 新しい <xref:System.OperatingSystem> API を使用できない `netstandard` または `netcoreapp` をターゲットとするコードを保護する必要がある場合、<xref:System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform%2A?displayProperty=nameWithType> API が使用可能であり、アナライザーによって考慮されます。 ただし、これは <xref:System.OperatingSystem> に追加された新しい API ほど最適化されていません。 プラットフォームが <xref:System.Runtime.InteropServices.OSPlatform> 構造体でサポートされていない場合は、<xref:System.Runtime.InteropServices.OSPlatform.Create(System.String)?displayProperty=nameWithType> を呼び出して、アナライザーでも考慮される、プラットフォーム名を渡すことができます。
 
   ```csharp
   public void CallingSupportedOnlyApis()
@@ -316,7 +316,7 @@ ms.locfileid: "91406587"
   }
 
   // an API not supported on Android but supported on all other.
-  [UnsupportedOSPlatform("android")]  
+  [UnsupportedOSPlatform("android")]
   public void DoesNotWorkOnAndroid() { }
 
   // an API was unsupported on Windows until version 8.0.
@@ -381,5 +381,5 @@ ms.locfileid: "91406587"
 - [.NET 5 でのターゲット フレームワーク名](https://github.com/dotnet/designs/blob/master/accepted/2020/net5/net5.md)
 - [プラットフォーム固有の API に注釈を付け、その使用を検出する](https://github.com/dotnet/designs/blob/master/accepted/2020/platform-checks/platform-checks.md)
 - [特定のプラットフォームでサポートされていない API に注釈を付ける](https://github.com/dotnet/designs/blob/master/accepted/2020/platform-exclusion/platform-exclusion.md)
-- [CA1416 プラットフォーム互換性アナライザー](/visualstudio/code-quality/ca1416)
+- [CA1416 プラットフォーム互換性アナライザー](../../fundamentals/code-analysis/quality-rules/ca1416.md)
 - [.NET API アナライザー](../../standard/analyzers/api-analyzer.md)

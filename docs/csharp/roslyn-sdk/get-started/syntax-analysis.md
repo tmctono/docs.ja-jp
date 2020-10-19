@@ -3,12 +3,12 @@ title: 構文解析の概要 (Roslyn API)
 description: 構文ツリーの走査、クエリおよびウォークに関する概要。
 ms.date: 02/05/2018
 ms.custom: mvc
-ms.openlocfilehash: 22d1303c9daa2ae35cf130b0c857cd7a5efdbe76
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b9dd909a83877755dc1ebafd58aae892e460b93
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240520"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756157"
 ---
 # <a name="get-started-with-syntax-analysis"></a>構文解析の概要
 
@@ -51,7 +51,7 @@ C# コードの構造の分析には Syntax API を使用します。 **Syntax A
 
 構文ツリーの 4 つの基本的な構成要素は次のとおりです。
 
-* <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType> クラス。インスタンスで解析ツリー全体を表します。 <xref:Microsoft.CodeAnalysis.SyntaxTree> は、言語固有の派生物を持つ抽象クラスです。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> (または <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>) クラスの解析メソッドを使用して、C# または Visual Basic のテキストを解析します。
+* <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType> クラス。インスタンスで解析ツリー全体を表します。 <xref:Microsoft.CodeAnalysis.SyntaxTree> は、言語固有の派生物を持つ抽象クラスです。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> (または <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>) クラスの解析メソッドを使用して、C# (または Visual Basic) のテキストを解析します。
 * <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType> クラス。インスタンスで、宣言、ステートメント、句、および式などの構文構造を表します。
 * <xref:Microsoft.CodeAnalysis.SyntaxToken?displayProperty=nameWithType> 構造。個々のキーワード、ID、演算子、または句読点を表します。
 * 最後は <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType> 構造です。これは、トークン、プリプロセス ディレクティブ、およびコメントの間の空白など、重要でない情報を構文的に表します。
