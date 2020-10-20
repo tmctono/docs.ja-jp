@@ -3,12 +3,12 @@ title: C# の概要 - 対話型チュートリアル
 description: お使いのブラウザーで C# を学習し、独自の開発環境で使用を開始します
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 52b680ffe8c477624f3b5e085b7f2de13c271d81
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 6037862c52fd59ba540e1f65297d787f0a964762
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609181"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162155"
 ---
 # <a name="introduction-to-c"></a>C\# の概要
 
@@ -62,3 +62,7 @@ Hello World レッスンに続くすべての入門用チュートリアルは�
 このチュートリアルでは、オブジェクト指向プログラミングで使用される概念について説明します。 "*抽象化*"、"*カプセル化*"、"*継承*"、"*ポリモーフィズム*" の概念を C# の例を使用して説明します。
 
 このチュートリアルでは、オンラインの入門用チュートリアルを終了していること、さらに開発用マシンに [.NET Core SDK](https://dotnet.microsoft.com/download)、および [Visual Studio Code](https://code.visualstudio.com/) と [Visual Studio](https://visualstudio.com) のどちらかをインストール済みであることを前提としています。
+
+## <a name="101-linq-samples"></a>[101 個の LINQ サンプル](https://github.com/dotnet/try-samples/tree/master/101-linq-samples)
+
+このサンプルには [dotnet-try](https://github.com/dotnet/try/blob/main/README.md#setup) グローバルツールが必要です。 ツールをインストールし、[try-samples](https://github.com/dotnet/try-samples) リポジトリを複製すると、対話形式で実行できる一連の 101 個のサンプルを通じて、統合言語クエリ (LINQ) を学習できます。 さまざまな方法でデータ シーケンスのクエリ、探索、および変換を行うことができます。
